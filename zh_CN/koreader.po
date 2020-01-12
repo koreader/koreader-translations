@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-07 11:32+0000\n"
-"PO-Revision-Date: 2020-01-01 10:53+0000\n"
+"PO-Revision-Date: 2020-01-12 07:21+0000\n"
 "Last-Translator: Jim Jiang <jiangming1399@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "koreader/koreader/zh_Hans/>\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 3.10.1\n"
 
 #: reader.lua:181
 msgid ""
@@ -773,7 +773,7 @@ msgstr "文件夹快捷方式"
 
 #: frontend/apps/filemanager/filemanager.lua:564
 msgid "Import files here"
-msgstr ""
+msgstr "导入文件到此处"
 
 #: frontend/apps/filemanager/filemanager.lua:675
 msgid "Set '%1' as HOME directory?"
@@ -1126,7 +1126,7 @@ msgstr "禁用软件抖动"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:392
 msgid "Start E-ink test"
-msgstr ""
+msgstr "开始 E-ink 测试"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:400
 msgid "Disable enhanced UI text shaping (xtext)"
@@ -1883,9 +1883,8 @@ msgid "Show footer separator"
 msgstr "显示脚注分隔符"
 
 #: frontend/apps/reader/modules/readerfooter.lua:787
-#, fuzzy
 msgid "Footer font size"
-msgstr "设置字号"
+msgstr "设置脚注字号"
 
 #. @translators Text alignment. Options given as icons: left, right, center, justify.
 #: frontend/apps/reader/modules/readerfooter.lua:808
@@ -2811,7 +2810,6 @@ msgid "Follow Link"
 msgstr "链接跳转"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:504
-#, fuzzy
 msgid "Share text"
 msgstr "分享"
 
@@ -2910,14 +2908,12 @@ msgstr "连字符号"
 
 #. @translators to RTL language translators: %1/left is the min length of the start of a hyphenated word, %2/right is the min length of the end of a hyphenated word (note that there is yet no support for hyphenation with RTL languages, so this will mostly apply to LTR documents)
 #: frontend/apps/reader/modules/readerhyphenation.lua:34
-#, fuzzy
 msgid "Left/right minimal sizes: %1 - %2"
-msgstr "左/右最小尺寸：%1"
+msgstr "左/右最小尺寸：%1 - %2"
 
 #: frontend/apps/reader/modules/readerhyphenation.lua:38
-#, fuzzy
 msgid "Left/right minimal sizes: language defaults"
-msgstr "左/右最小尺寸：%1"
+msgstr "左/右最小尺寸：语言默认值"
 
 #: frontend/apps/reader/modules/readerhyphenation.lua:59
 msgid "Use language defaults"
@@ -5036,7 +5032,6 @@ msgid "Invert Images"
 msgstr "图像反色"
 
 #: frontend/ui/data/strings.lua:49
-#, fuzzy
 msgid "Page Gap"
 msgstr "页面切边"
 
@@ -5446,23 +5441,27 @@ msgid ""
 "data after a software crash, but will cause more I/O writes the lower the "
 "interval is, and may slowly wear out your storage media in the long run."
 msgstr ""
+"这个设定会影响全局设置和书籍元数据写入磁盘的频率，包括但不限于你在阅读时候的阅读位置、标记高亮和书签。\n"
+"\n"
+"默认的行为是仅在文档被关闭、设备休眠或退出KOReader时写入。\n"
+"\n"
+"设置为定期写入可以有效地防止因软件崩溃带来的数据丢失问题， 但过短的写入间隔可能会引起写入IO增加，导致磁盘损耗增加。"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:366
 msgid ""
 "Please be warned that on this device, setting a low interval may exacerbate "
 "the potential for filesystem corruption and complete data loss after a "
 "hardware crash."
-msgstr ""
+msgstr "警告！在此设备上使用过短的写入间隔会增加文件系统的崩溃可能，并可能在软件崩溃后导致数据完全丢失。"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:374
 msgid "Only on close, suspend and exit"
-msgstr ""
+msgstr "仅关闭、休眠和退出时"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:376
-#, fuzzy
 msgid "Every minute"
 msgid_plural "Every %1 minutes"
-msgstr[0] "%1 分"
+msgstr[0] "每隔 %1 分"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:391
 msgid "Document"
@@ -5471,15 +5470,15 @@ msgstr "文档"
 #: frontend/ui/elements/common_settings_menu_table.lua:400
 msgid "every 1 m"
 msgid_plural "every %1 m"
-msgstr[0] ""
+msgstr[0] "每隔 %1 分"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:402
 msgid "Auto-save book metadata: %1"
-msgstr ""
+msgstr "自动保存书籍元数据: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:411
 msgid "Important info about this auto-save option"
-msgstr ""
+msgstr "关于自动保存选项的重要信息"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:420
 msgid "Save document (write highlights into PDF)"
@@ -6016,6 +6015,8 @@ msgid ""
 "Your device seems to be unable to download packages.\n"
 "Retry using the browser?"
 msgstr ""
+"你的设备似乎无法下载软件包。\n"
+"想要用浏览器重试吗？"
 
 #: frontend/ui/otamanager.lua:273 frontend/ui/otamanager.lua:305
 msgid "Retry"
@@ -6724,7 +6725,6 @@ msgid "Powered off"
 msgstr "已关机"
 
 #: frontend/ui/uimanager.lua:72
-#, fuzzy
 msgid "Rebooting…"
 msgstr "正在重启……"
 
@@ -7326,7 +7326,7 @@ msgstr ""
 
 #: frontend/ui/widget/sortwidget.lua:426
 msgid "%1 / %2"
-msgstr ""
+msgstr "%1 / %2"
 
 #: frontend/ui/widget/spinwidget.lua:43
 msgid "Use default"
@@ -7729,9 +7729,8 @@ msgid "Port"
 msgstr "端口"
 
 #: plugins/calibrecompanion.koplugin/main.lua:218
-#, fuzzy
 msgid "Connected to calibre server at %1"
-msgstr "已连接至位于 %1:%2 的 caliber 服务器"
+msgstr "已连接至位于 %1 的 caliber 服务器"
 
 #: plugins/calibrecompanion.koplugin/main.lua:261
 #: plugins/calibrecompanion.koplugin/main.lua:281
@@ -8011,9 +8010,8 @@ msgid "Show files in bold"
 msgstr "文件名粗体显示"
 
 #: plugins/coverbrowser.koplugin/main.lua:109
-#, fuzzy
 msgid "(Classic mode) %1"
-msgstr "(经典模式) "
+msgstr "(经典模式) %1"
 
 #: plugins/coverbrowser.koplugin/main.lua:116
 msgid "Don't show files in bold"
@@ -8108,9 +8106,8 @@ msgid "Show hint for opened books in favorites"
 msgstr "显示收藏夹已打开书籍的提示"
 
 #: plugins/coverbrowser.koplugin/main.lua:370
-#, fuzzy
 msgid "Series"
-msgstr "丛书："
+msgstr "丛书"
 
 #: plugins/coverbrowser.koplugin/main.lua:373
 msgid "Append series metadata to authors"
@@ -8297,7 +8294,6 @@ msgid "Export to Joplin"
 msgstr "导出至Joplin"
 
 #: plugins/evernote.koplugin/main.lua:237
-#, fuzzy
 msgid ""
 "You can enter your auth token on your computer by saving an empty token. "
 "Then quit KOReader, edit the evernote.joplin_token field in %1/settings."
@@ -8315,20 +8311,18 @@ msgid ""
 "For more information, please visit https://github.com/koreader/koreader/wiki/"
 "Evernote-export."
 msgstr ""
-"你可以通过以下方法使用电脑编辑此口令：先在此填写空白的口令，然后退出"
-"KOReader，备份并编辑位于 %1/settings.reader.lua 文件内的 evernote."
-"joplin_token 字段，然后保存此文件并重启你的KOReader即可。\n"
+"你可以通过以下方法使用电脑编辑此口令：先在此填写空白的口令，然后退出KOReader，备份并编辑位于 %1/settings.reader.lua "
+"文件内的 evernote.joplin_token 字段，然后保存此文件并重启你的KOReader即可。\n"
 "\n"
-"要导出到Joplin，你必须将此插件使用的IP和端口转发到你的Joplin侦听的端口 "
-"localhost:port 上。这可以通过使用socat或者其他类似的程序实现。例如：\n"
+"要导出到Joplin，你必须将此插件使用的IP和端口转发到你的Joplin侦听的端口 localhost:port "
+"上。这可以通过使用socat或者其他类似的程序实现。例如：\n"
 "\n"
-"在Windows上： netsh interface portproxy add listeningaddress:0.0.0.0 "
-"listeningport:41185 connectaddress:localhost connectport:41184\n"
+"在Windows上： netsh interface portproxy add v4tov4 listeningaddress=0.0.0.0 "
+"listeningport=41185 connectaddress=localhost connectport=41184\n"
 "\n"
 "在Linux上： $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
 "\n"
-"请访问 https://github.com/koreader/koreader/wiki/Evernote-export 了解更多详细"
-"信息。"
+"请访问 https://github.com/koreader/koreader/wiki/Evernote-export 了解更多详细信息。"
 
 #: plugins/evernote.koplugin/main.lua:253
 msgid "Export all notes in this book"
@@ -9078,11 +9072,12 @@ msgstr "接收从 Send2Ebook PC/Android 发送的文章。"
 
 #. @translators: %1 is the SSH port, %2 is the network info.
 #: plugins/SSH.koplugin/main.lua:71
-#, fuzzy
 msgid ""
 "SSH port: %1\n"
 "%2"
-msgstr "SSH 端口: "
+msgstr ""
+"SSH 端口: %1\n"
+"%2"
 
 #: plugins/SSH.koplugin/main.lua:79
 msgid "Error"
