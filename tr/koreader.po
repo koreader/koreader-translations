@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-24 22:38+0000\n"
+"POT-Creation-Date: 2020-02-25 20:29+0000\n"
 "PO-Revision-Date: 2019-12-30 18:46+0000\n"
 "Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/houqp/koreader/language/"
@@ -50,7 +50,7 @@ msgid "Ignore"
 msgstr "<H1> yok sayılsın"
 
 #: reader.lua:194 frontend/apps/reader/modules/readerdictionary.lua:1001
-#: frontend/apps/reader/modules/readerhighlight.lua:1260
+#: frontend/apps/reader/modules/readerhighlight.lua:1272
 #: frontend/apps/reader/modules/readertypeset.lua:461
 #: frontend/ui/elements/common_settings_menu_table.lua:258
 #: frontend/ui/elements/common_settings_menu_table.lua:444
@@ -188,7 +188,7 @@ msgstr ""
 #: plugins/evernote.koplugin/main.lua:198
 #: plugins/evernote.koplugin/main.lua:332
 #: plugins/goodreads.koplugin/main.lua:127
-#: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:269
+#: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:296
 #: plugins/perceptionexpander.koplugin/main.lua:138
 #: plugins/SSH.koplugin/main.lua:112 plugins/statistics.koplugin/main.lua:1754
 #: plugins/terminal.koplugin/main.lua:30
@@ -1484,7 +1484,7 @@ msgstr "Pil şarjı azaldı uyarısı"
 
 #: frontend/apps/reader/modules/readerdevicestatus.lua:61
 #: frontend/apps/reader/modules/readerdictionary.lua:1007
-#: frontend/apps/reader/modules/readerhighlight.lua:1266
+#: frontend/apps/reader/modules/readerhighlight.lua:1278
 #: frontend/apps/reader/modules/readertypeset.lua:467
 #: frontend/ui/plugin/switch_plugin.lua:64
 #: plugins/autofrontlight.koplugin/main.lua:118
@@ -1713,13 +1713,13 @@ msgstr ""
 "Geçerli varsayılan (★) etkin."
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1001
-#: frontend/apps/reader/modules/readerhighlight.lua:1260
+#: frontend/apps/reader/modules/readerhighlight.lua:1272
 #: frontend/apps/reader/modules/readertypeset.lua:461
 msgid "Disable (★)"
 msgstr "Devre Dışı Bırak (★)"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1007
-#: frontend/apps/reader/modules/readerhighlight.lua:1266
+#: frontend/apps/reader/modules/readerhighlight.lua:1278
 #: frontend/apps/reader/modules/readertypeset.lua:467
 msgid "Enable (★)"
 msgstr "Etkinleştir (★)"
@@ -3036,7 +3036,17 @@ msgstr "Varsayılan vurgulama işlemi '%1' olarak değiştirildi."
 msgid "Default highlight style changed to '%1'."
 msgstr "Varsayılan vurgulama biçemi '%1' olarak değiştirildi."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1257
+#: frontend/apps/reader/modules/readerhighlight.lua:1177
+msgid ""
+"Highlights in this document will be saved in the settings file, but they "
+"won't be written in the document itself because the file is in a read-only "
+"location.\n"
+"\n"
+"If you wish your highlights to be saved in the document, just move it to a "
+"writable directory first."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerhighlight.lua:1269
 msgid ""
 "Would you like to enable or disable highlighting by default?\n"
 "\n"
@@ -3047,7 +3057,7 @@ msgstr ""
 "\n"
 "Geçerli varsayılan (★) devre dışı."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1258
+#: frontend/apps/reader/modules/readerhighlight.lua:1270
 msgid ""
 "Would you like to enable or disable highlighting by default?\n"
 "\n"
@@ -8796,13 +8806,13 @@ msgstr "Not:"
 msgid "Evernote"
 msgstr "Evernote"
 
-#: plugins/evernote.koplugin/main.lua:102 plugins/kosync.koplugin/main.lua:102
+#: plugins/evernote.koplugin/main.lua:102 plugins/kosync.koplugin/main.lua:129
 msgid "Logout"
 msgstr "Oturumu Kapatın"
 
 #: plugins/evernote.koplugin/main.lua:103
-#: plugins/evernote.koplugin/main.lua:339 plugins/kosync.koplugin/main.lua:103
-#: plugins/kosync.koplugin/main.lua:276
+#: plugins/evernote.koplugin/main.lua:339 plugins/kosync.koplugin/main.lua:130
+#: plugins/kosync.koplugin/main.lua:303
 msgid "Login"
 msgstr "Oturum Açın"
 
@@ -8905,12 +8915,12 @@ msgid ""
 "All notes will be exported again next time.\n"
 msgstr ""
 
-#: plugins/evernote.koplugin/main.lua:349 plugins/kosync.koplugin/main.lua:286
+#: plugins/evernote.koplugin/main.lua:349 plugins/kosync.koplugin/main.lua:320
 msgid "Logging in. Please wait…"
 msgstr "Oturum açılırken lütfen bekleyin…"
 
 #: plugins/evernote.koplugin/main.lua:387
-#: plugins/evernote.koplugin/main.lua:403 plugins/kosync.koplugin/main.lua:372
+#: plugins/evernote.koplugin/main.lua:403 plugins/kosync.koplugin/main.lua:415
 msgid "An error occurred while logging in:"
 msgstr "Oturum açılırken bir sorun çıktı:"
 
@@ -9183,108 +9193,132 @@ msgstr ""
 "Eşitleme sırasında bir sorun çıktı. Lütfen ağ bağlantınızı denetleyip "
 "yeniden deneyin."
 
-#: plugins/kosync.koplugin/main.lua:98 plugins/kosync.koplugin/_meta.lua:4
+#: plugins/kosync.koplugin/main.lua:88
+msgid "invalid username and password"
+msgstr ""
+
+#: plugins/kosync.koplugin/main.lua:90
+#, fuzzy
+msgid "invalid username"
+msgstr "FTP kullanıcı adı"
+
+#: plugins/kosync.koplugin/main.lua:92
+#, fuzzy
+msgid "invalid password"
+msgstr "FTP parolası"
+
+#: plugins/kosync.koplugin/main.lua:125 plugins/kosync.koplugin/_meta.lua:4
 msgid "Progress sync"
 msgstr "Eşitleme ilerlemesi"
 
-#: plugins/kosync.koplugin/main.lua:103 plugins/kosync.koplugin/main.lua:292
+#: plugins/kosync.koplugin/main.lua:130 plugins/kosync.koplugin/main.lua:327
 msgid "Register"
 msgstr "Hesap Açın"
 
-#: plugins/kosync.koplugin/main.lua:121
+#: plugins/kosync.koplugin/main.lua:148
 msgid "Auto sync now and future"
 msgstr "Artık otomatik eşitlensin"
 
-#: plugins/kosync.koplugin/main.lua:138
+#: plugins/kosync.koplugin/main.lua:165
 msgid "Whisper sync"
 msgstr "Whisper Eşitleme"
 
-#: plugins/kosync.koplugin/main.lua:142
+#: plugins/kosync.koplugin/main.lua:169
 msgid "Sync to latest record >>>>"
 msgstr "Son kayıt ile eşitle >>>>"
 
-#: plugins/kosync.koplugin/main.lua:146 plugins/kosync.koplugin/main.lua:177
+#: plugins/kosync.koplugin/main.lua:173 plugins/kosync.koplugin/main.lua:204
 msgid "  Auto"
 msgstr "Otomatik"
 
-#: plugins/kosync.koplugin/main.lua:155 plugins/kosync.koplugin/main.lua:186
+#: plugins/kosync.koplugin/main.lua:182 plugins/kosync.koplugin/main.lua:213
 msgid "  Prompt"
 msgstr "Soru"
 
-#: plugins/kosync.koplugin/main.lua:164 plugins/kosync.koplugin/main.lua:195
+#: plugins/kosync.koplugin/main.lua:191 plugins/kosync.koplugin/main.lua:222
 msgid "  Disable"
 msgstr "Devre Dışı Bırak"
 
-#: plugins/kosync.koplugin/main.lua:173
+#: plugins/kosync.koplugin/main.lua:200
 msgid "Sync to a previous record <<<<"
 msgstr "Önceki bir kayıt ile eşitle <<<<"
 
-#: plugins/kosync.koplugin/main.lua:206
+#: plugins/kosync.koplugin/main.lua:233
 msgid "Push progress from this device"
 msgstr "Bu aygıttaki güncellemeleri gönder"
 
-#: plugins/kosync.koplugin/main.lua:215
+#: plugins/kosync.koplugin/main.lua:242
 msgid "Pull progress from other devices"
 msgstr "Diğer aygıtlardan güncellemeleri al"
 
-#: plugins/kosync.koplugin/main.lua:224
+#: plugins/kosync.koplugin/main.lua:251
 msgid "Custom sync server"
 msgstr "Özel eşitleme sunucusu"
 
 #. @translators Server address defined by user for progress sync.
-#: plugins/kosync.koplugin/main.lua:229
+#: plugins/kosync.koplugin/main.lua:256
 msgid "Custom progress sync server address"
 msgstr "Özel işlem eşitleme sunucusunun adresi"
 
-#: plugins/kosync.koplugin/main.lua:302
+#: plugins/kosync.koplugin/main.lua:310
+#, fuzzy
+msgid "Cannot login: %1"
+msgstr "Katalog bilgileri %1 üzerinden alınamadı"
+
+#: plugins/kosync.koplugin/main.lua:334
+#, fuzzy
+msgid "Cannot register: %1"
+msgstr "Kenar boşlukları: %1"
+
+#: plugins/kosync.koplugin/main.lua:344
 msgid "Registering. Please wait…"
 msgstr "Lütfen hesap açılırken bekleyin…"
 
-#: plugins/kosync.koplugin/main.lua:337
+#: plugins/kosync.koplugin/main.lua:380
 msgid "An error occurred while registering:"
 msgstr "Hesap açılırken bir sorun çıktı:"
 
-#: plugins/kosync.koplugin/main.lua:342
+#: plugins/kosync.koplugin/main.lua:385
 msgid "An unknown error occurred while registering."
 msgstr "Hesap açılırken bir sorun çıktı."
 
-#: plugins/kosync.koplugin/main.lua:350
+#: plugins/kosync.koplugin/main.lua:393
 msgid "Registered to KOReader server."
 msgstr "KOReader sunucusunda hesap açıldı."
 
-#: plugins/kosync.koplugin/main.lua:354 plugins/kosync.koplugin/main.lua:390
+#: plugins/kosync.koplugin/main.lua:397 plugins/kosync.koplugin/main.lua:433
 msgid "Unknown server error"
 msgstr "Bilinmeyen sunucu sorunu"
 
-#: plugins/kosync.koplugin/main.lua:377
+#: plugins/kosync.koplugin/main.lua:420
 msgid "An unknown error occurred while logging in."
 msgstr "Oturum açılırken bir sorun çıktı:"
 
-#: plugins/kosync.koplugin/main.lua:386
+#: plugins/kosync.koplugin/main.lua:429
 msgid "Logged in to KOReader server."
 msgstr "KOReader sunucusuna oturum açıldı."
 
-#: plugins/kosync.koplugin/main.lua:459
+#: plugins/kosync.koplugin/main.lua:502
 msgid "Progress has been pushed."
 msgstr "Güncelleme gönderildi."
 
-#: plugins/kosync.koplugin/main.lua:504
+#: plugins/kosync.koplugin/main.lua:547
 msgid "No progress found for this document."
 msgstr "Bu belge için bir güncelleme yapılmamış."
 
-#: plugins/kosync.koplugin/main.lua:515
+#: plugins/kosync.koplugin/main.lua:558
 msgid "Latest progress is coming from this device."
 msgstr "Bu aygıttan alınan son güncelleme."
 
-#: plugins/kosync.koplugin/main.lua:531
+#: plugins/kosync.koplugin/main.lua:574
 msgid "The progress has already been synchronized."
 msgstr "İlerleme zaten eşitlenmiş."
 
-#: plugins/kosync.koplugin/main.lua:561
+#: plugins/kosync.koplugin/main.lua:604
 msgid "Sync to latest location %1% from device '%2'?"
 msgstr "'%2' aygıtından en son %1% konumu eşitlensin mi?"
 
-#: plugins/kosync.koplugin/main.lua:575
+#: plugins/kosync.koplugin/main.lua:618
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "'%2' aygıtından önceki %1% konumu eşitlensin mi?"
 

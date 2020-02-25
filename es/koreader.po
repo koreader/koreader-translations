@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-24 22:38+0000\n"
+"POT-Creation-Date: 2020-02-25 20:29+0000\n"
 "PO-Revision-Date: 2020-02-25 20:29+0000\n"
 "Last-Translator: hombretranquilo <hombretranquilo.mbp@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/koreader/"
@@ -53,7 +53,7 @@ msgid "Ignore"
 msgstr "Ignorar"
 
 #: reader.lua:194 frontend/apps/reader/modules/readerdictionary.lua:1001
-#: frontend/apps/reader/modules/readerhighlight.lua:1260
+#: frontend/apps/reader/modules/readerhighlight.lua:1272
 #: frontend/apps/reader/modules/readertypeset.lua:461
 #: frontend/ui/elements/common_settings_menu_table.lua:258
 #: frontend/ui/elements/common_settings_menu_table.lua:444
@@ -191,7 +191,7 @@ msgstr ""
 #: plugins/evernote.koplugin/main.lua:198
 #: plugins/evernote.koplugin/main.lua:332
 #: plugins/goodreads.koplugin/main.lua:127
-#: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:269
+#: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:296
 #: plugins/perceptionexpander.koplugin/main.lua:138
 #: plugins/SSH.koplugin/main.lua:112 plugins/statistics.koplugin/main.lua:1754
 #: plugins/terminal.koplugin/main.lua:30
@@ -1479,7 +1479,7 @@ msgstr "Advertencia de batería baja"
 
 #: frontend/apps/reader/modules/readerdevicestatus.lua:61
 #: frontend/apps/reader/modules/readerdictionary.lua:1007
-#: frontend/apps/reader/modules/readerhighlight.lua:1266
+#: frontend/apps/reader/modules/readerhighlight.lua:1278
 #: frontend/apps/reader/modules/readertypeset.lua:467
 #: frontend/ui/plugin/switch_plugin.lua:64
 #: plugins/autofrontlight.koplugin/main.lua:118
@@ -1709,13 +1709,13 @@ msgstr ""
 "El valor predeterminado por defecto (★) está configurado."
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1001
-#: frontend/apps/reader/modules/readerhighlight.lua:1260
+#: frontend/apps/reader/modules/readerhighlight.lua:1272
 #: frontend/apps/reader/modules/readertypeset.lua:461
 msgid "Disable (★)"
 msgstr "Desactivar (★)"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1007
-#: frontend/apps/reader/modules/readerhighlight.lua:1266
+#: frontend/apps/reader/modules/readerhighlight.lua:1278
 #: frontend/apps/reader/modules/readertypeset.lua:467
 msgid "Enable (★)"
 msgstr "Activar (★)"
@@ -3025,7 +3025,17 @@ msgstr "La acción de subrayado por defecto ha sido cambiada a '%1'."
 msgid "Default highlight style changed to '%1'."
 msgstr "Estilo de subrayado por defecto cambiado a '%1'."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1257
+#: frontend/apps/reader/modules/readerhighlight.lua:1177
+msgid ""
+"Highlights in this document will be saved in the settings file, but they "
+"won't be written in the document itself because the file is in a read-only "
+"location.\n"
+"\n"
+"If you wish your highlights to be saved in the document, just move it to a "
+"writable directory first."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerhighlight.lua:1269
 msgid ""
 "Would you like to enable or disable highlighting by default?\n"
 "\n"
@@ -3035,7 +3045,7 @@ msgstr ""
 "\n"
 "El valor predeterminado por defecto (★) está desactivado."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1258
+#: frontend/apps/reader/modules/readerhighlight.lua:1270
 msgid ""
 "Would you like to enable or disable highlighting by default?\n"
 "\n"
@@ -8845,13 +8855,13 @@ msgstr "Nota: "
 msgid "Evernote"
 msgstr "Evernote"
 
-#: plugins/evernote.koplugin/main.lua:102 plugins/kosync.koplugin/main.lua:102
+#: plugins/evernote.koplugin/main.lua:102 plugins/kosync.koplugin/main.lua:129
 msgid "Logout"
 msgstr "Cerrar sesión"
 
 #: plugins/evernote.koplugin/main.lua:103
-#: plugins/evernote.koplugin/main.lua:339 plugins/kosync.koplugin/main.lua:103
-#: plugins/kosync.koplugin/main.lua:276
+#: plugins/evernote.koplugin/main.lua:339 plugins/kosync.koplugin/main.lua:130
+#: plugins/kosync.koplugin/main.lua:303
 msgid "Login"
 msgstr "Iniciar sesión"
 
@@ -8954,12 +8964,12 @@ msgstr ""
 "Los registros del historial han sido purgados.\n"
 "Todas las notas serán exportadas de nuevo en la próxima conexión.\n"
 
-#: plugins/evernote.koplugin/main.lua:349 plugins/kosync.koplugin/main.lua:286
+#: plugins/evernote.koplugin/main.lua:349 plugins/kosync.koplugin/main.lua:320
 msgid "Logging in. Please wait…"
 msgstr "Iniciando sesión, por favor espere…"
 
 #: plugins/evernote.koplugin/main.lua:387
-#: plugins/evernote.koplugin/main.lua:403 plugins/kosync.koplugin/main.lua:372
+#: plugins/evernote.koplugin/main.lua:403 plugins/kosync.koplugin/main.lua:415
 msgid "An error occurred while logging in:"
 msgstr "Ha ocurrido un error al iniciar sesión:"
 
@@ -9233,108 +9243,132 @@ msgstr ""
 "Se ha producido un error al sincronizar, por favor revise su conexión de red "
 "e inténtelo de nuevo más tarde."
 
-#: plugins/kosync.koplugin/main.lua:98 plugins/kosync.koplugin/_meta.lua:4
+#: plugins/kosync.koplugin/main.lua:88
+msgid "invalid username and password"
+msgstr ""
+
+#: plugins/kosync.koplugin/main.lua:90
+#, fuzzy
+msgid "invalid username"
+msgstr "Nombre de usuario FTP"
+
+#: plugins/kosync.koplugin/main.lua:92
+#, fuzzy
+msgid "invalid password"
+msgstr "Contraseña FTP"
+
+#: plugins/kosync.koplugin/main.lua:125 plugins/kosync.koplugin/_meta.lua:4
 msgid "Progress sync"
 msgstr "Sincronizar la posición de lectura"
 
-#: plugins/kosync.koplugin/main.lua:103 plugins/kosync.koplugin/main.lua:292
+#: plugins/kosync.koplugin/main.lua:130 plugins/kosync.koplugin/main.lua:327
 msgid "Register"
 msgstr "Registrar"
 
-#: plugins/kosync.koplugin/main.lua:121
+#: plugins/kosync.koplugin/main.lua:148
 msgid "Auto sync now and future"
 msgstr "Sincronizar automáticamente ahora y en el futuro"
 
-#: plugins/kosync.koplugin/main.lua:138
+#: plugins/kosync.koplugin/main.lua:165
 msgid "Whisper sync"
 msgstr "Whisper sync"
 
-#: plugins/kosync.koplugin/main.lua:142
+#: plugins/kosync.koplugin/main.lua:169
 msgid "Sync to latest record >>>>"
 msgstr "Sincronizar con el último registro >>>>"
 
-#: plugins/kosync.koplugin/main.lua:146 plugins/kosync.koplugin/main.lua:177
+#: plugins/kosync.koplugin/main.lua:173 plugins/kosync.koplugin/main.lua:204
 msgid "  Auto"
 msgstr "  Auto"
 
-#: plugins/kosync.koplugin/main.lua:155 plugins/kosync.koplugin/main.lua:186
+#: plugins/kosync.koplugin/main.lua:182 plugins/kosync.koplugin/main.lua:213
 msgid "  Prompt"
 msgstr "  Preguntar"
 
-#: plugins/kosync.koplugin/main.lua:164 plugins/kosync.koplugin/main.lua:195
+#: plugins/kosync.koplugin/main.lua:191 plugins/kosync.koplugin/main.lua:222
 msgid "  Disable"
 msgstr "  Desactivar"
 
-#: plugins/kosync.koplugin/main.lua:173
+#: plugins/kosync.koplugin/main.lua:200
 msgid "Sync to a previous record <<<<"
 msgstr "Sincronizar con un registro anterior <<<<"
 
-#: plugins/kosync.koplugin/main.lua:206
+#: plugins/kosync.koplugin/main.lua:233
 msgid "Push progress from this device"
 msgstr "Exportar posición de lectura de este dispositivo"
 
-#: plugins/kosync.koplugin/main.lua:215
+#: plugins/kosync.koplugin/main.lua:242
 msgid "Pull progress from other devices"
 msgstr "Importar posición de lectura de otros dispositivos"
 
-#: plugins/kosync.koplugin/main.lua:224
+#: plugins/kosync.koplugin/main.lua:251
 msgid "Custom sync server"
 msgstr "Servidor de sincronización personalizado"
 
 #. @translators Server address defined by user for progress sync.
-#: plugins/kosync.koplugin/main.lua:229
+#: plugins/kosync.koplugin/main.lua:256
 msgid "Custom progress sync server address"
 msgstr "Dirección del servidor de sincronización personalizado"
 
-#: plugins/kosync.koplugin/main.lua:302
+#: plugins/kosync.koplugin/main.lua:310
+#, fuzzy
+msgid "Cannot login: %1"
+msgstr "No se puede obtener información del catálogo desde %1"
+
+#: plugins/kosync.koplugin/main.lua:334
+#, fuzzy
+msgid "Cannot register: %1"
+msgstr "Márgenes: %1"
+
+#: plugins/kosync.koplugin/main.lua:344
 msgid "Registering. Please wait…"
 msgstr "Registrando. Espere, por favor…"
 
-#: plugins/kosync.koplugin/main.lua:337
+#: plugins/kosync.koplugin/main.lua:380
 msgid "An error occurred while registering:"
 msgstr "Ha ocurrido un error al registrarse:"
 
-#: plugins/kosync.koplugin/main.lua:342
+#: plugins/kosync.koplugin/main.lua:385
 msgid "An unknown error occurred while registering."
 msgstr "Ha ocurrido un error desconocido al registrarse."
 
-#: plugins/kosync.koplugin/main.lua:350
+#: plugins/kosync.koplugin/main.lua:393
 msgid "Registered to KOReader server."
 msgstr "El registro en el servidor de Koreader ha sido realizado."
 
-#: plugins/kosync.koplugin/main.lua:354 plugins/kosync.koplugin/main.lua:390
+#: plugins/kosync.koplugin/main.lua:397 plugins/kosync.koplugin/main.lua:433
 msgid "Unknown server error"
 msgstr "Error desconocido en el servidor"
 
-#: plugins/kosync.koplugin/main.lua:377
+#: plugins/kosync.koplugin/main.lua:420
 msgid "An unknown error occurred while logging in."
 msgstr "Ha ocurrido un error desconocido al iniciar sesión."
 
-#: plugins/kosync.koplugin/main.lua:386
+#: plugins/kosync.koplugin/main.lua:429
 msgid "Logged in to KOReader server."
 msgstr "Sesión iniciada en el servidor de Koreader."
 
-#: plugins/kosync.koplugin/main.lua:459
+#: plugins/kosync.koplugin/main.lua:502
 msgid "Progress has been pushed."
 msgstr "La posición de lectura ha sido sincronizada."
 
-#: plugins/kosync.koplugin/main.lua:504
+#: plugins/kosync.koplugin/main.lua:547
 msgid "No progress found for this document."
 msgstr "La posición de lectura no se ha modificado."
 
-#: plugins/kosync.koplugin/main.lua:515
+#: plugins/kosync.koplugin/main.lua:558
 msgid "Latest progress is coming from this device."
 msgstr "Actualizando posición de lectura."
 
-#: plugins/kosync.koplugin/main.lua:531
+#: plugins/kosync.koplugin/main.lua:574
 msgid "The progress has already been synchronized."
 msgstr "La posición de lectura ha sido sincronizada."
 
-#: plugins/kosync.koplugin/main.lua:561
+#: plugins/kosync.koplugin/main.lua:604
 msgid "Sync to latest location %1% from device '%2'?"
 msgstr "¿Sincronizar desde la última posición %1% del dispositivo '%2'?"
 
-#: plugins/kosync.koplugin/main.lua:575
+#: plugins/kosync.koplugin/main.lua:618
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "¿Sincronizar desde desde una posición previa %1% del dispositivo '%2'?"
 
