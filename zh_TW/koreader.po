@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-27 17:45+0000\n"
-"PO-Revision-Date: 2020-04-05 17:05+0000\n"
+"PO-Revision-Date: 2020-04-10 20:56+0000\n"
 "Last-Translator: Hsiu-Ming Chang <cges30901@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "koreader/koreader/zh_Hant/>\n"
@@ -3393,13 +3393,15 @@ msgid ""
 "\n"
 "%1"
 msgstr ""
+"參考頁碼的來源（書籍的紙本版本）：\n"
+"\n"
+"%1"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:322
 msgid "Use reference page numbers"
 msgstr "使用參考頁碼"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:335
-#, fuzzy
 msgid ""
 "The default (★) for newly opened books that have a reference page numbers "
 "map is to use these reference page numbers instead of the renderer page "
@@ -3407,12 +3409,11 @@ msgid ""
 "\n"
 "Would you like to change it?"
 msgstr ""
-"新開啟書籍的預設值 (★) 是從右到左 (RTL) 翻頁。\n"
+"具有參考頁碼映射的新開啟書籍的預設值 (★) 是使用參考頁碼，而不是繪製頁碼。\n"
 "\n"
 "您要變更嗎？"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:336
-#, fuzzy
 msgid ""
 "The default (★) for newly opened books that have a reference page numbers "
 "map is to not use these reference page numbers and keep using the renderer "
@@ -3420,7 +3421,7 @@ msgid ""
 "\n"
 "Would you like to change it?"
 msgstr ""
-"新開啟書籍的預設值 (★) 是從右到左 (RTL) 翻頁。\n"
+"具有參考頁碼映射的新開啟書籍的預設值 (★) 是不使用參考頁碼，繼續使用繪製頁碼。\n"
 "\n"
 "您要變更嗎？"
 
@@ -3445,26 +3446,24 @@ msgid "Show reference page labels in margin"
 msgstr "在邊緣顯示參考頁面標籤"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:368
-#, fuzzy
 msgid ""
 "The default (★) for newly opened books that have a reference page numbers "
 "map is to show reference page number labels in the margin.\n"
 "\n"
 "Would you like to change it?"
 msgstr ""
-"新開啟書籍的預設值 (★) 是從右到左 (RTL) 翻頁。\n"
+"具有參考頁碼映射的新開啟書籍的預設值 (★) 是在邊緣顯示參考頁碼標籤。\n"
 "\n"
 "您要變更嗎？"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:369
-#, fuzzy
 msgid ""
 "The default (★) for newly opened books that have a reference page numbers "
 "map is to not show reference page number labels in the margin.\n"
 "\n"
 "Would you like to change it?"
 msgstr ""
-"新開啟書籍的預設值 (★) 是從右到左 (RTL) 翻頁。\n"
+"具有參考頁碼映射的新開啟書籍的預設值 (★) 是不在邊緣顯示參考頁碼標籤。\n"
 "\n"
 "您要變更嗎？"
 
@@ -3631,6 +3630,8 @@ msgid ""
 "toggle Rendering mode between 'legacy' and 'flat', and re-open this book, "
 "and see if they are found again, before proceeding."
 msgstr ""
+"注意，書籍中的書籤和反白找不到 %1 個（共 %2 "
+"個）xpath，可能已經遺失。您可能想要在繼續之前，切換繪製模式為「傳統」或「平坦」並重新開啟書籍，看看是否能再次找到它們。"
 
 #: frontend/apps/reader/modules/readerrolling.lua:1269
 msgid ""
@@ -3639,6 +3640,8 @@ msgid ""
 "synchronizing your reading between multiple devices, you'll need to update "
 "KOReader on all of them)."
 msgstr ""
+"注意，已標準化書籤和反白中 %1 個（共 %2 個）xpath，可能無法在舊版的 KOReader 中運作（如果您在多個裝置間同步閱讀，"
+"您需要將所有裝置的 KOReader 升級）。"
 
 #: frontend/apps/reader/modules/readerrolling.lua:1284
 msgid "Not now"
@@ -4857,18 +4860,17 @@ msgid ""
 "Do not indent the first line of the first paragraph of its container. This "
 "might be needed to correctly display drop caps, while still having "
 "indentation on following paragraphs."
-msgstr ""
+msgstr "不縮排容器中第一段的第一行。這對於正確顯示首字放大，並且保持接下來的段落的縮排可能有需要。"
 
 #: frontend/ui/data/css_tweaks.lua:383
-#, fuzzy
 msgid "No indentation on following paragraphs"
-msgstr "不要在段落的第一行縮排"
+msgstr "非首段不縮排"
 
 #: frontend/ui/data/css_tweaks.lua:384
 msgid ""
 "Do not indent the first line of following paragraphs, but leave the first "
 "paragraph of its container untouched."
-msgstr ""
+msgstr "不縮排接下來的段落的第一行，但是容器的第一段保持不變。"
 
 #: frontend/ui/data/css_tweaks.lua:390 frontend/ui/data/css_tweaks.lua:393
 msgid "Spacing between paragraphs"
@@ -5114,20 +5116,18 @@ msgid "In-page FB2 footnotes"
 msgstr "頁面內 FB2 腳註"
 
 #: frontend/ui/data/css_tweaks.lua:628
-#, fuzzy
 msgid ""
 "Show FB2 footnote text at the bottom of pages that contain links to them."
-msgstr "在維基百科轉存為 EPUB 頁面的下方顯示註解。"
+msgstr "在頁面底部顯示包含連結的 FB2 腳註。"
 
 #: frontend/ui/data/css_tweaks.lua:643
 msgid "In-page FB2 endnotes"
 msgstr "頁面內 FB2 尾註"
 
 #: frontend/ui/data/css_tweaks.lua:644
-#, fuzzy
 msgid ""
 "Show FB2 endnote text at the bottom of pages that contain links to them."
-msgstr "在維基百科轉存為 EPUB 頁面的下方顯示註解。"
+msgstr "在頁面底部顯示包含連結的 FB2 尾註。"
 
 #: frontend/ui/data/css_tweaks.lua:659
 msgid "Keep regular font size"
@@ -5137,7 +5137,7 @@ msgstr "保持正常字型大小"
 msgid ""
 "FB2 footnotes and endnotes get a smaller font size when displayed in-page. "
 "This allows them to be shown with the normal font size."
-msgstr ""
+msgstr "FB2 腳註和尾註在頁面內顯示時字型大小較小。這個選項讓它們以正常大小顯示。"
 
 #: frontend/ui/data/css_tweaks.lua:674
 msgid "In-page EPUB footnotes"
@@ -9820,27 +9820,27 @@ msgstr ""
 
 #: plugins/statistics.koplugin/main.lua:751
 msgid "Calendar weeks start on %1"
-msgstr ""
+msgstr "%1是一週的開始"
 
 #: plugins/statistics.koplugin/main.lua:779
 msgid "Books per calendar day: %1"
-msgstr ""
+msgstr "每日書籍數量：%1"
 
 #: plugins/statistics.koplugin/main.lua:789
 msgid "Books per calendar day"
-msgstr ""
+msgstr "每日書籍數量"
 
 #: plugins/statistics.koplugin/main.lua:790
 msgid "Set the max number of book spans to show for a day"
-msgstr ""
+msgstr "設定一天顯示的最大書籍數量"
 
 #: plugins/statistics.koplugin/main.lua:805
 msgid "Show hourly histogram in calendar days"
-msgstr ""
+msgstr "在每日日曆中顯示小時直方圖"
 
 #: plugins/statistics.koplugin/main.lua:812
 msgid "Allow browsing coming months"
-msgstr ""
+msgstr "允許瀏覽之後的月分"
 
 #: plugins/statistics.koplugin/main.lua:821
 msgid "Reset statistics"
@@ -10029,7 +10029,6 @@ msgid "Total hours read %1"
 msgstr "總計閱讀 %1 小時"
 
 #: plugins/statistics.koplugin/main.lua:1683
-#, fuzzy
 msgid "Reset statistics per book"
 msgstr "重設書籍統計資料"
 
