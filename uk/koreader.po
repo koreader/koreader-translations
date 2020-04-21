@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-19 11:55+0000\n"
+"POT-Creation-Date: 2020-04-21 19:33+0000\n"
 "PO-Revision-Date: 2019-12-30 15:24+0000\n"
 "Last-Translator: Андрій М. <dexteritymaster@gmail.com>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/houqp/koreader/language/"
@@ -39,7 +39,7 @@ msgid ""
 "This will subtly break some features, and adversely affect performance."
 msgstr ""
 
-#: reader.lua:190
+#: reader.lua:190 frontend/apps/reader/modules/readertypography.lua:325
 #, fuzzy
 msgid "Ignore"
 msgstr "Ігнорувати <H1>"
@@ -47,6 +47,10 @@ msgstr "Ігнорувати <H1>"
 #: reader.lua:194 frontend/apps/reader/modules/readerdictionary.lua:1000
 #: frontend/apps/reader/modules/readerhighlight.lua:1292
 #: frontend/apps/reader/modules/readertypeset.lua:461
+#: frontend/apps/reader/modules/readertypography.lua:358
+#: frontend/apps/reader/modules/readertypography.lua:451
+#: frontend/apps/reader/modules/readertypography.lua:508
+#: frontend/apps/reader/modules/readertypography.lua:545
 #: frontend/ui/elements/common_settings_menu_table.lua:258
 #: frontend/ui/elements/common_settings_menu_table.lua:444
 #: frontend/ui/elements/screensaver_menu.lua:217
@@ -1445,6 +1449,10 @@ msgstr "Сигнал низького зарядку акумулятора"
 #: frontend/apps/reader/modules/readerdictionary.lua:1006
 #: frontend/apps/reader/modules/readerhighlight.lua:1298
 #: frontend/apps/reader/modules/readertypeset.lua:467
+#: frontend/apps/reader/modules/readertypography.lua:364
+#: frontend/apps/reader/modules/readertypography.lua:457
+#: frontend/apps/reader/modules/readertypography.lua:514
+#: frontend/apps/reader/modules/readertypography.lua:551
 #: frontend/ui/plugin/switch_plugin.lua:64
 #: plugins/autofrontlight.koplugin/main.lua:118
 #: plugins/perceptionexpander.koplugin/main.lua:167
@@ -1648,12 +1656,20 @@ msgstr ""
 #: frontend/apps/reader/modules/readerdictionary.lua:1000
 #: frontend/apps/reader/modules/readerhighlight.lua:1292
 #: frontend/apps/reader/modules/readertypeset.lua:461
+#: frontend/apps/reader/modules/readertypography.lua:358
+#: frontend/apps/reader/modules/readertypography.lua:451
+#: frontend/apps/reader/modules/readertypography.lua:508
+#: frontend/apps/reader/modules/readertypography.lua:545
 msgid "Disable (★)"
 msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1006
 #: frontend/apps/reader/modules/readerhighlight.lua:1298
 #: frontend/apps/reader/modules/readertypeset.lua:467
+#: frontend/apps/reader/modules/readertypography.lua:364
+#: frontend/apps/reader/modules/readertypography.lua:457
+#: frontend/apps/reader/modules/readertypography.lua:514
+#: frontend/apps/reader/modules/readertypography.lua:551
 msgid "Enable (★)"
 msgstr ""
 
@@ -1698,7 +1714,7 @@ msgid ""
 msgstr ""
 
 #: frontend/apps/reader/modules/readerfont.lua:294
-#: frontend/apps/reader/modules/readerhyphenation.lua:144
+#: frontend/apps/reader/modules/readertypography.lua:283
 msgid "Default"
 msgstr "За замовчуванням"
 
@@ -2982,58 +2998,6 @@ msgid ""
 "The current default (★) is enabled."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhyphenation.lua:17
-msgid "Hyphenation"
-msgstr "Перенесення"
-
-#. @translators to RTL language translators: %1/left is the min length of the start of a hyphenated word, %2/right is the min length of the end of a hyphenated word (note that there is yet no support for hyphenation with RTL languages, so this will mostly apply to LTR documents)
-#: frontend/apps/reader/modules/readerhyphenation.lua:34
-#, fuzzy
-msgid "Left/right minimal sizes: %1 - %2"
-msgstr "Мінімальний розмір зліва/справа: %1"
-
-#: frontend/apps/reader/modules/readerhyphenation.lua:38
-#, fuzzy
-msgid "Left/right minimal sizes: language defaults"
-msgstr "Мінімальний розмір зліва/справа: %1"
-
-#: frontend/apps/reader/modules/readerhyphenation.lua:63
-msgid "Use language defaults"
-msgstr "Використовувати типові значення мови"
-
-#: frontend/apps/reader/modules/readerhyphenation.lua:64
-msgid "Hyphenation limits"
-msgstr "Обмеження переносів"
-
-#: frontend/apps/reader/modules/readerhyphenation.lua:65
-msgid ""
-"Set minimum length before hyphenation occurs.\n"
-"These settings will apply to all books with any hyphenation dictionary.\n"
-"'Use language defaults' resets them."
-msgstr ""
-
-#: frontend/apps/reader/modules/readerhyphenation.lua:85
-msgid "Trust soft hyphens"
-msgstr "Довіряти м'яким переносам"
-
-#: frontend/apps/reader/modules/readerhyphenation.lua:129
-msgid "Changed hyphenation to %1."
-msgstr "Змінити перенесення на %1."
-
-#: frontend/apps/reader/modules/readerhyphenation.lua:143
-msgid ""
-"Would you like %1 to be used as the default (★) or fallback (�) hyphenation "
-"language?\n"
-"\n"
-"Default will always take precedence while fallback will only be used if the "
-"language of the book can't be automatically determined."
-msgstr ""
-
-#: frontend/apps/reader/modules/readerhyphenation.lua:150
-msgctxt "Hyphenation"
-msgid "Fallback"
-msgstr "Резервний"
-
 #: frontend/apps/reader/modules/readerlink.lua:126
 #: frontend/ui/data/css_tweaks.lua:496
 msgid "Links"
@@ -3681,8 +3645,8 @@ msgid "Style"
 msgstr "Стиль"
 
 #: frontend/apps/reader/modules/readertypeset.lua:210
-msgid "Clear all external styles"
-msgstr "Очистити всі зовнішні стилі"
+msgid "None"
+msgstr ""
 
 #: frontend/apps/reader/modules/readertypeset.lua:211
 #: frontend/ui/widget/frontlightwidget.lua:420
@@ -3741,6 +3705,438 @@ msgid ""
 "  bottom: %5 (%6px)\n"
 "\n"
 "Tap to dismiss."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:21
+#: frontend/apps/reader/modules/readertypography.lua:62
+#: frontend/ui/translator.lua:38
+msgid "Bulgarian"
+msgstr "Болгарська"
+
+#: frontend/apps/reader/modules/readertypography.lua:22
+#: frontend/apps/reader/modules/readertypography.lua:63
+#: frontend/ui/translator.lua:39
+msgid "Catalan"
+msgstr "Каталонська"
+
+#: frontend/apps/reader/modules/readertypography.lua:23
+#: frontend/apps/reader/modules/readertypography.lua:66
+#: frontend/ui/translator.lua:45
+msgid "Czech"
+msgstr "Чеська"
+
+#: frontend/apps/reader/modules/readertypography.lua:24
+#: frontend/apps/reader/modules/readertypography.lua:67
+#: frontend/ui/translator.lua:46
+msgid "Danish"
+msgstr "Данська"
+
+#: frontend/apps/reader/modules/readertypography.lua:25
+#: frontend/apps/reader/modules/readertypography.lua:68
+#: frontend/ui/translator.lua:47
+msgid "Dutch"
+msgstr "Голландська"
+
+#: frontend/apps/reader/modules/readertypography.lua:26
+#: frontend/apps/reader/modules/readertypography.lua:69
+#, fuzzy
+msgid "English (UK)"
+msgstr "Англійська"
+
+#: frontend/apps/reader/modules/readertypography.lua:27
+#: frontend/apps/reader/modules/readertypography.lua:70
+#, fuzzy
+msgid "English (US)"
+msgstr "Англійська"
+
+#: frontend/apps/reader/modules/readertypography.lua:28
+#: frontend/apps/reader/modules/readertypography.lua:71
+#: frontend/ui/translator.lua:51
+msgid "Finnish"
+msgstr "Фінська"
+
+#: frontend/apps/reader/modules/readertypography.lua:29
+#: frontend/apps/reader/modules/readertypography.lua:72
+#: frontend/ui/translator.lua:52
+msgid "French"
+msgstr "Французька"
+
+#: frontend/apps/reader/modules/readertypography.lua:30
+#: frontend/apps/reader/modules/readertypography.lua:73
+#: frontend/ui/translator.lua:54
+msgid "Galician"
+msgstr "Галісійська"
+
+#: frontend/apps/reader/modules/readertypography.lua:31
+#: frontend/apps/reader/modules/readertypography.lua:74
+#: frontend/ui/translator.lua:56
+msgid "German"
+msgstr "Німецька"
+
+#: frontend/apps/reader/modules/readertypography.lua:32
+#: frontend/apps/reader/modules/readertypography.lua:75
+#: frontend/ui/translator.lua:57
+msgid "Greek"
+msgstr "Грецька"
+
+#: frontend/apps/reader/modules/readertypography.lua:33
+#: frontend/apps/reader/modules/readertypography.lua:76
+#: frontend/ui/translator.lua:66
+msgid "Hungarian"
+msgstr "Угорська"
+
+#: frontend/apps/reader/modules/readertypography.lua:34
+#: frontend/apps/reader/modules/readertypography.lua:77
+#: frontend/ui/translator.lua:67
+msgid "Icelandic"
+msgstr "Ісландська"
+
+#: frontend/apps/reader/modules/readertypography.lua:35
+#: frontend/apps/reader/modules/readertypography.lua:78
+#: frontend/ui/translator.lua:70
+msgid "Irish"
+msgstr "Ірландська"
+
+#: frontend/apps/reader/modules/readertypography.lua:36
+#: frontend/apps/reader/modules/readertypography.lua:79
+#: frontend/ui/translator.lua:71
+msgid "Italian"
+msgstr "Італійська"
+
+#: frontend/apps/reader/modules/readertypography.lua:37
+#: frontend/apps/reader/modules/readertypography.lua:82
+#: frontend/ui/translator.lua:96
+msgid "Norwegian"
+msgstr "Норвезька"
+
+#: frontend/apps/reader/modules/readertypography.lua:38
+#: frontend/apps/reader/modules/readertypography.lua:83
+#: frontend/ui/translator.lua:100
+msgid "Polish"
+msgstr "Польська"
+
+#: frontend/apps/reader/modules/readertypography.lua:39
+#: frontend/apps/reader/modules/readertypography.lua:84
+#: frontend/ui/translator.lua:101
+msgid "Portuguese"
+msgstr "Португальська"
+
+#: frontend/apps/reader/modules/readertypography.lua:40
+#: frontend/apps/reader/modules/readertypography.lua:85
+#: frontend/ui/translator.lua:103
+msgid "Romanian"
+msgstr "Румунська"
+
+#: frontend/apps/reader/modules/readertypography.lua:41
+#: frontend/apps/reader/modules/readertypography.lua:86
+msgid "Russian + English (UK)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:42
+#: frontend/apps/reader/modules/readertypography.lua:87
+msgid "Russian + English (US)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:43
+#: frontend/apps/reader/modules/readertypography.lua:88
+#: frontend/ui/translator.lua:104
+msgid "Russian"
+msgstr "Російська"
+
+#: frontend/apps/reader/modules/readertypography.lua:44
+#: frontend/apps/reader/modules/readertypography.lua:89
+#: frontend/ui/translator.lua:112
+msgid "Slovak"
+msgstr "Словацька"
+
+#: frontend/apps/reader/modules/readertypography.lua:45
+#: frontend/apps/reader/modules/readertypography.lua:90
+#: frontend/ui/translator.lua:113
+msgid "Slovenian"
+msgstr "Словенська"
+
+#: frontend/apps/reader/modules/readertypography.lua:46
+#: frontend/apps/reader/modules/readertypography.lua:91
+#: frontend/ui/translator.lua:115
+msgid "Spanish"
+msgstr "Іспанська"
+
+#: frontend/apps/reader/modules/readertypography.lua:47
+#: frontend/apps/reader/modules/readertypography.lua:92
+#: frontend/ui/translator.lua:118
+msgid "Swedish"
+msgstr "Шведська"
+
+#: frontend/apps/reader/modules/readertypography.lua:48
+#: frontend/apps/reader/modules/readertypography.lua:93
+#: frontend/ui/translator.lua:124
+msgid "Turkish"
+msgstr "Турецька"
+
+#: frontend/apps/reader/modules/readertypography.lua:49
+#: frontend/apps/reader/modules/readertypography.lua:94
+#: frontend/ui/translator.lua:125
+msgid "Ukrainian"
+msgstr "Українська"
+
+#: frontend/apps/reader/modules/readertypography.lua:64
+#: frontend/ui/translator.lua:41
+msgid "Chinese (Simplified)"
+msgstr "Китайська (спрощена)"
+
+#: frontend/apps/reader/modules/readertypography.lua:65
+#: frontend/ui/translator.lua:42
+msgid "Chinese (Traditional)"
+msgstr "Китайська (традиційна)"
+
+#: frontend/apps/reader/modules/readertypography.lua:80
+#: frontend/ui/translator.lua:72
+msgid "Japanese"
+msgstr "Японська"
+
+#: frontend/apps/reader/modules/readertypography.lua:81
+#: frontend/ui/translator.lua:78
+msgid "Korean"
+msgstr "Корейська"
+
+#: frontend/apps/reader/modules/readertypography.lua:162
+msgid ""
+"Some languages have specific typographic rules: these include hyphenation, "
+"line breaking rules, and language specific glyph variants.\n"
+"KOReader will chose one according to the language tag from the book's "
+"metadata, but you can select another one.\n"
+"You can also set a default language or a fallback one with a long-press.\n"
+"\n"
+"Features available per language are marked with:\n"
+"‐ : language specific hyphenation dictionary\n"
+" : specific line breaking rules (mostly related to quotation marks)\n"
+" : more line breaking rules (e.g., single letter prepositions not allowed "
+"at end of line)\n"
+"\n"
+"Note that when a language does not come with its own hyphenation dictionary, "
+"the English (US) one will be used.\n"
+"When the book's language tag is not among our presets, no specific features "
+"will be enabled, but it might be enough to get language specific glyph "
+"variants (when supported by the fonts)."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:175
+msgid "About typography rules"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:188
+msgid "Current main language tag:"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:205
+#, fuzzy
+msgid "Other language tags:"
+msgstr "Використовувати типові значення мови"
+
+#: frontend/apps/reader/modules/readertypography.lua:231
+msgid "Language tags (and hyphenation dictionaries) used since start up"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:269
+msgid "Changed language for typography rules to %1."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:282
+msgid ""
+"Would you like %1 to be used as the default (★) or fallback (�) language for "
+"typography rules?\n"
+"\n"
+"Default will always take precedence while fallback will only be used if the "
+"language of the book can't be automatically determined."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:289
+#, fuzzy
+msgctxt "Typography"
+msgid "Fallback"
+msgstr "Резервний"
+
+#: frontend/apps/reader/modules/readertypography.lua:307
+#: frontend/apps/reader/modules/readertypography.lua:594
+msgid "Typography rules: %1"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:313
+msgid "Respect embedded lang tags"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:322
+msgid ""
+"Would you like to respect or ignore embedded lang tags by default?\n"
+"\n"
+"Respecting them will use relevant typographic rules to render their content, "
+"while ignoring them will always use the main language typography rules.\n"
+"\n"
+"The current default (★) is to respect them."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:323
+msgid ""
+"Would you like to respect or ignore embedded lang tags by default?\n"
+"\n"
+"Respecting them will use relevant typographic rules to render their content, "
+"while ignoring them will always use the main language typography rules\n"
+"\n"
+"The current default (★) is to ignore them."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:325
+#, fuzzy
+msgid "Ignore (★)"
+msgstr "Ігнорувати <H1>"
+
+#: frontend/apps/reader/modules/readertypography.lua:331
+msgid "Respect (★)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:331
+msgid "Respect"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:346
+#, fuzzy
+msgid "Enable hyphenation"
+msgstr "Перенесення"
+
+#: frontend/apps/reader/modules/readertypography.lua:355
+msgid ""
+"Would you like to enable or disable hyphenation by default?\n"
+"\n"
+"The current default (★) is enabled."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:356
+msgid ""
+"Would you like to enable or disable hyphenation by default?\n"
+"\n"
+"The current default (★) is disabled."
+msgstr ""
+
+#. @translators to RTL language translators: %1/left is the min length of the start of a hyphenated word, %2/right is the min length of the end of a hyphenated word (note that there is yet no support for hyphenation with RTL languages, so this will mostly apply to LTR documents)
+#: frontend/apps/reader/modules/readertypography.lua:382
+#, fuzzy
+msgid "Left/right minimal sizes: %1 - %2"
+msgstr "Мінімальний розмір зліва/справа: %1"
+
+#: frontend/apps/reader/modules/readertypography.lua:386
+#, fuzzy
+msgid "Left/right minimal sizes: language defaults"
+msgstr "Мінімальний розмір зліва/справа: %1"
+
+#: frontend/apps/reader/modules/readertypography.lua:417
+msgid "Use language defaults"
+msgstr "Використовувати типові значення мови"
+
+#: frontend/apps/reader/modules/readertypography.lua:418
+msgid "Hyphenation limits"
+msgstr "Обмеження переносів"
+
+#: frontend/apps/reader/modules/readertypography.lua:419
+msgid ""
+"Set minimum length before hyphenation occurs.\n"
+"These settings will apply to all books with any hyphenation dictionary.\n"
+"'Use language defaults' resets them."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:439
+msgid "Trust soft hyphens"
+msgstr "Довіряти м'яким переносам"
+
+#: frontend/apps/reader/modules/readertypography.lua:448
+msgid ""
+"Would you like to enable or disable trusting soft hyphens by default?\n"
+"\n"
+"The current default (★) is enabled."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:449
+msgid ""
+"Would you like to enable or disable trusting soft hyphens by default?\n"
+"\n"
+"The current default (★) is disabled."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:475
+#, fuzzy
+msgid "Hyphenation dictionary: %1"
+msgstr ""
+"Шукаємо в словнику:\n"
+"%1"
+
+#: frontend/apps/reader/modules/readertypography.lua:494
+msgid "Algorithmic hyphenation"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:505
+msgid ""
+"Would you like to enable or disable algorithmic hyphenation by default?\n"
+"\n"
+"The current default (★) is enabled."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:506
+msgid ""
+"Would you like to enable or disable algorithmic hyphenation by default?\n"
+"\n"
+"The current default (★) is disabled."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:531
+msgid "Soft-hyphens only"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:542
+msgid ""
+"Would you like to enable or disable hyphenation with soft hyphens only by "
+"default?\n"
+"\n"
+"The current default (★) is enabled."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:543
+msgid ""
+"Would you like to enable or disable hyphenation with soft hyphens only by "
+"default?\n"
+"\n"
+"The current default (★) is disabled."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:572
+#, fuzzy
+msgid "disabled"
+msgstr "вимкнути"
+
+#: frontend/apps/reader/modules/readertypography.lua:574
+#, fuzzy
+msgid "soft-hyphens only"
+msgstr "Довіряти м'яким переносам"
+
+#: frontend/apps/reader/modules/readertypography.lua:576
+msgid "algorithmic"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:580
+#, fuzzy
+msgid "Hyphenation: %1"
+msgstr "Перенесення"
+
+#: frontend/apps/reader/modules/readertypography.lua:761
+#, fuzzy
+msgid "Book language: %1"
+msgstr "Книжки в %1"
+
+#: frontend/apps/reader/modules/readertypography.lua:761
+#: plugins/batterystat.koplugin/main.lua:78
+msgid "n/a"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertypography.lua:764
+msgid "Changed language for typography rules to book language: %1."
 msgstr ""
 
 #: frontend/apps/reader/modules/readerview.lua:739
@@ -6411,25 +6807,9 @@ msgstr "Бенгальська"
 msgid "Bosnian"
 msgstr "Боснійська"
 
-#: frontend/ui/translator.lua:38
-msgid "Bulgarian"
-msgstr "Болгарська"
-
-#: frontend/ui/translator.lua:39
-msgid "Catalan"
-msgstr "Каталонська"
-
 #: frontend/ui/translator.lua:40
 msgid "Cebuano"
 msgstr "Себуанська"
-
-#: frontend/ui/translator.lua:41
-msgid "Chinese (Simplified)"
-msgstr "Китайська (спрощена)"
-
-#: frontend/ui/translator.lua:42
-msgid "Chinese (Traditional)"
-msgstr "Китайська (традиційна)"
 
 #: frontend/ui/translator.lua:43
 msgid "Corsican"
@@ -6438,18 +6818,6 @@ msgstr "Корсиканська"
 #: frontend/ui/translator.lua:44
 msgid "Croatian"
 msgstr "Хорватська"
-
-#: frontend/ui/translator.lua:45
-msgid "Czech"
-msgstr "Чеська"
-
-#: frontend/ui/translator.lua:46
-msgid "Danish"
-msgstr "Данська"
-
-#: frontend/ui/translator.lua:47
-msgid "Dutch"
-msgstr "Голландська"
 
 #: frontend/ui/translator.lua:48
 msgid "English"
@@ -6463,33 +6831,13 @@ msgstr "Есперанто"
 msgid "Estonian"
 msgstr "Естонська"
 
-#: frontend/ui/translator.lua:51
-msgid "Finnish"
-msgstr "Фінська"
-
-#: frontend/ui/translator.lua:52
-msgid "French"
-msgstr "Французька"
-
 #: frontend/ui/translator.lua:53
 msgid "Frisian"
 msgstr ""
 
-#: frontend/ui/translator.lua:54
-msgid "Galician"
-msgstr "Галісійська"
-
 #: frontend/ui/translator.lua:55
 msgid "Georgian"
 msgstr "Грузинська"
-
-#: frontend/ui/translator.lua:56
-msgid "German"
-msgstr "Німецька"
-
-#: frontend/ui/translator.lua:57
-msgid "Greek"
-msgstr "Грецька"
 
 #. @translators Many of the names for languages can be conveniently found pre-translated in the relevant language of this Wikipedia article: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 #: frontend/ui/translator.lua:59
@@ -6520,14 +6868,6 @@ msgstr "Гінді"
 msgid "Hmong"
 msgstr "Хмонг"
 
-#: frontend/ui/translator.lua:66
-msgid "Hungarian"
-msgstr "Угорська"
-
-#: frontend/ui/translator.lua:67
-msgid "Icelandic"
-msgstr "Ісландська"
-
 #: frontend/ui/translator.lua:68
 msgid "Igbo"
 msgstr "Ігбо"
@@ -6535,18 +6875,6 @@ msgstr "Ігбо"
 #: frontend/ui/translator.lua:69
 msgid "Indonesian"
 msgstr "Індонезійська"
-
-#: frontend/ui/translator.lua:70
-msgid "Irish"
-msgstr "Ірландська"
-
-#: frontend/ui/translator.lua:71
-msgid "Italian"
-msgstr "Італійська"
-
-#: frontend/ui/translator.lua:72
-msgid "Japanese"
-msgstr "Японська"
 
 #: frontend/ui/translator.lua:73
 msgid "Javanese"
@@ -6564,10 +6892,6 @@ msgstr "Казахська"
 #: frontend/ui/translator.lua:77
 msgid "Khmer"
 msgstr "Кхмерська"
-
-#: frontend/ui/translator.lua:78
-msgid "Korean"
-msgstr "Корейська"
 
 #: frontend/ui/translator.lua:79
 msgid "Kurdish"
@@ -6637,10 +6961,6 @@ msgstr "М'янма (бірманська)"
 msgid "Nepali"
 msgstr "Непальська"
 
-#: frontend/ui/translator.lua:96
-msgid "Norwegian"
-msgstr "Норвезька"
-
 #: frontend/ui/translator.lua:97
 msgid "Nyanja (Chichewa)"
 msgstr ""
@@ -6653,25 +6973,9 @@ msgstr "Пушту"
 msgid "Persian"
 msgstr "Перська"
 
-#: frontend/ui/translator.lua:100
-msgid "Polish"
-msgstr "Польська"
-
-#: frontend/ui/translator.lua:101
-msgid "Portuguese"
-msgstr "Португальська"
-
 #: frontend/ui/translator.lua:102
 msgid "Punjabi"
 msgstr ""
-
-#: frontend/ui/translator.lua:103
-msgid "Romanian"
-msgstr "Румунська"
-
-#: frontend/ui/translator.lua:104
-msgid "Russian"
-msgstr "Російська"
 
 #: frontend/ui/translator.lua:105
 msgid "Samoan"
@@ -6701,21 +7005,9 @@ msgstr "Сіндхі"
 msgid "Sinhala (Sinhalese)"
 msgstr "Сингальська (сингальська)"
 
-#: frontend/ui/translator.lua:112
-msgid "Slovak"
-msgstr "Словацька"
-
-#: frontend/ui/translator.lua:113
-msgid "Slovenian"
-msgstr "Словенська"
-
 #: frontend/ui/translator.lua:114
 msgid "Somali"
 msgstr "Сомалійська"
-
-#: frontend/ui/translator.lua:115
-msgid "Spanish"
-msgstr "Іспанська"
 
 #: frontend/ui/translator.lua:116
 msgid "Sundanese"
@@ -6724,10 +7016,6 @@ msgstr "Сунданська"
 #: frontend/ui/translator.lua:117
 msgid "Swahili"
 msgstr "Суахілі"
-
-#: frontend/ui/translator.lua:118
-msgid "Swedish"
-msgstr "Шведська"
 
 #: frontend/ui/translator.lua:119
 msgid "Tagalog (Filipino)"
@@ -6748,14 +7036,6 @@ msgstr ""
 #: frontend/ui/translator.lua:123
 msgid "Thai"
 msgstr "Тайська"
-
-#: frontend/ui/translator.lua:124
-msgid "Turkish"
-msgstr "Турецька"
-
-#: frontend/ui/translator.lua:125
-msgid "Ukrainian"
-msgstr "Українська"
 
 #: frontend/ui/translator.lua:126
 msgid "Urdu"
@@ -7747,10 +8027,6 @@ msgstr "Робота в фоні"
 #: plugins/backgroundrunner.koplugin/_meta.lua:5
 msgid ""
 "Service to other plugins: allows tasks to run regularly in the background."
-msgstr ""
-
-#: plugins/batterystat.koplugin/main.lua:78
-msgid "n/a"
 msgstr ""
 
 #: plugins/batterystat.koplugin/main.lua:83
@@ -10393,6 +10669,16 @@ msgstr "Натисніть на правий нижній кут екрану"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Натисніть на правий верхній кут екрану"
+
+#~ msgid "Changed hyphenation to %1."
+#~ msgstr "Змінити перенесення на %1."
+
+#~ msgctxt "Hyphenation"
+#~ msgid "Fallback"
+#~ msgstr "Резервний"
+
+#~ msgid "Clear all external styles"
+#~ msgstr "Очистити всі зовнішні стилі"
 
 #~ msgid "Failed to execute command."
 #~ msgstr "Не вдалося виконати команду."
