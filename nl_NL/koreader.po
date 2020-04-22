@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-21 19:33+0000\n"
-"PO-Revision-Date: 2020-04-13 17:27+0000\n"
+"PO-Revision-Date: 2020-04-23 09:32+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/koreader/koreader/"
 "nl/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.0.2-dev\n"
 
 #: reader.lua:181
 msgid ""
@@ -3866,7 +3866,7 @@ msgstr "Stijl"
 
 #: frontend/apps/reader/modules/readertypeset.lua:210
 msgid "None"
-msgstr ""
+msgstr "Geen"
 
 #: frontend/apps/reader/modules/readertypeset.lua:211
 #: frontend/ui/widget/frontlightwidget.lua:420
@@ -3972,15 +3972,13 @@ msgstr "Nederlands"
 
 #: frontend/apps/reader/modules/readertypography.lua:26
 #: frontend/apps/reader/modules/readertypography.lua:69
-#, fuzzy
 msgid "English (UK)"
-msgstr "Engels"
+msgstr "Engels (VK)"
 
 #: frontend/apps/reader/modules/readertypography.lua:27
 #: frontend/apps/reader/modules/readertypography.lua:70
-#, fuzzy
 msgid "English (US)"
-msgstr "Engels"
+msgstr "Engels (VS)"
 
 #: frontend/apps/reader/modules/readertypography.lua:28
 #: frontend/apps/reader/modules/readertypography.lua:71
@@ -4063,12 +4061,12 @@ msgstr "Roemeens"
 #: frontend/apps/reader/modules/readertypography.lua:41
 #: frontend/apps/reader/modules/readertypography.lua:86
 msgid "Russian + English (UK)"
-msgstr ""
+msgstr "Russisch + Engels (VK)"
 
 #: frontend/apps/reader/modules/readertypography.lua:42
 #: frontend/apps/reader/modules/readertypography.lua:87
 msgid "Russian + English (US)"
-msgstr ""
+msgstr "Russisch + Engels (VS)"
 
 #: frontend/apps/reader/modules/readertypography.lua:43
 #: frontend/apps/reader/modules/readertypography.lua:88
@@ -4152,30 +4150,49 @@ msgid ""
 "will be enabled, but it might be enough to get language specific glyph "
 "variants (when supported by the fonts)."
 msgstr ""
+"Sommige talen hebben specifieke typografische regels: deze omvatten "
+"woordafbreking, regels voor het afbreken van regels en taalspecifieke "
+"gliefvarianten.\n"
+"KOReader de regels volgens de taaltag uit de metadata van het boek, maar "
+"andere regels kunnen eventueel worden gekozen.\n"
+"Het is ook mogelijk om een standaardtaal of reservetaal in te stellen met "
+"door langer te drukken.\n"
+"\n"
+"Functies die per taal beschikbaar zijn, zijn gemarkeerd met:\n"
+"‐ : taalspecifiek afbreekwoordenboek\n"
+" : specifieke regels voor het afbreken van tekstregels (meestal in verband "
+"met aanhalingstekens)\n"
+" : meer regels voor het afbreken van tekstregels (bv. eenlettervoorzetsels "
+"die niet aan het einde van een regel horen)\n"
+"\n"
+"Merk op dat wanneer een taal niet met een eigen woordenboek voor "
+"woordafbreking komt, de Engelse (VS) taal wordt gebruikt.\n"
+"Wanneer de taaltag van het boek niet met een woordafbrekingswoordenboek kan "
+"worden geassocieerd, zullen er geen specifieke functies worden ingeschakeld. "
+"Maar het kan voldoende zijn om taalspecifieke gliefvarianten te hebben ("
+"wanneer deze worden ondersteund door de lettertypen)."
 
 #: frontend/apps/reader/modules/readertypography.lua:175
 msgid "About typography rules"
-msgstr ""
+msgstr "Over typografische regels"
 
 #: frontend/apps/reader/modules/readertypography.lua:188
 msgid "Current main language tag:"
-msgstr ""
+msgstr "Huidige hoofdtaaltag:"
 
 #: frontend/apps/reader/modules/readertypography.lua:205
-#, fuzzy
 msgid "Other language tags:"
-msgstr "Standaard voor taal"
+msgstr "Andere taaltags:"
 
 #: frontend/apps/reader/modules/readertypography.lua:231
 msgid "Language tags (and hyphenation dictionaries) used since start up"
-msgstr ""
+msgstr "Taaltags (en afbrekingswoordenboeken) sinds het opstarten gebruikt"
 
 #: frontend/apps/reader/modules/readertypography.lua:269
 msgid "Changed language for typography rules to %1."
-msgstr ""
+msgstr "Taal voor typografische regels gewijzigd in %1."
 
 #: frontend/apps/reader/modules/readertypography.lua:282
-#, fuzzy
 msgid ""
 "Would you like %1 to be used as the default (★) or fallback (�) language for "
 "typography rules?\n"
@@ -4183,13 +4200,13 @@ msgid ""
 "Default will always take precedence while fallback will only be used if the "
 "language of the book can't be automatically determined."
 msgstr ""
-"Wil je %1 als standaard- (★) of reservewoordafbrekingstaal instellen (�)?\n"
+"Wil je %1 als standaard- (★) of reservewoordafbrekingstaal (�) voor "
+"typografische regels instellen?\n"
 "\n"
 "Standaard wordt altijd gebruikt terwijl reserve alleen gebruikt wordt als de "
 "taal van het boek niet automatisch kan worden bepaald."
 
 #: frontend/apps/reader/modules/readertypography.lua:289
-#, fuzzy
 msgctxt "Typography"
 msgid "Fallback"
 msgstr "Reserve"
@@ -4197,11 +4214,11 @@ msgstr "Reserve"
 #: frontend/apps/reader/modules/readertypography.lua:307
 #: frontend/apps/reader/modules/readertypography.lua:594
 msgid "Typography rules: %1"
-msgstr ""
+msgstr "Typografieregels: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:313
 msgid "Respect embedded lang tags"
-msgstr ""
+msgstr "Respecteer ingebedde lang tags"
 
 #: frontend/apps/reader/modules/readertypography.lua:322
 msgid ""
@@ -4212,6 +4229,13 @@ msgid ""
 "\n"
 "The current default (★) is to respect them."
 msgstr ""
+"Wil je ingebedde lang tags standaard respecteren of negeren?\n"
+"\n"
+"Door ze te respecteren zullen relevante typografische regels worden gebruikt "
+"om hun inhoud weer te geven, terwijl de algemene typografische regels zullen "
+"worden gebruikt door de te negeren.\n"
+"\n"
+"De huidige standaardinstelling (★) is om ze te respecteren."
 
 #: frontend/apps/reader/modules/readertypography.lua:323
 msgid ""
@@ -4222,45 +4246,47 @@ msgid ""
 "\n"
 "The current default (★) is to ignore them."
 msgstr ""
+"Wil je ingebedde lang tags standaard respecteren of negeren?\n"
+"\n"
+"Door ze te respecteren zullen relevante typografische regels worden gebruikt "
+"om hun inhoud weer te geven, terwijl de algemene typografische regels zullen "
+"worden gebruikt door de te negeren.\n"
+"\n"
+"De huidige standaardinstelling (★) is om ze te negeren."
 
 #: frontend/apps/reader/modules/readertypography.lua:325
-#, fuzzy
 msgid "Ignore (★)"
-msgstr "Renderer (★)"
+msgstr "Negeren (★)"
 
 #: frontend/apps/reader/modules/readertypography.lua:331
-#, fuzzy
 msgid "Respect (★)"
-msgstr "Referentie (★)"
+msgstr "Respecteren (★)"
 
 #: frontend/apps/reader/modules/readertypography.lua:331
 msgid "Respect"
-msgstr ""
+msgstr "Respecteren"
 
 #: frontend/apps/reader/modules/readertypography.lua:346
-#, fuzzy
 msgid "Enable hyphenation"
-msgstr "Woordafbreking"
+msgstr "Woordafbreking inschakelen"
 
 #: frontend/apps/reader/modules/readertypography.lua:355
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation by default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Markeren standaard in- of uitschakelen?\n"
+"Woordafbreking standaard in- of uitschakelen?\n"
 "\n"
 "De huidige standaardinstelling (★) is ingeschakeld."
 
 #: frontend/apps/reader/modules/readertypography.lua:356
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation by default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Markeren standaard in- of uitschakelen?\n"
+"Woordafbreking standaard in- of uitschakelen?\n"
 "\n"
 "De huidige standaardinstelling (★) is uitgeschakeld."
 
@@ -4297,111 +4323,100 @@ msgid "Trust soft hyphens"
 msgstr "Vertrouw zwakke afbrekingsstreepjes"
 
 #: frontend/apps/reader/modules/readertypography.lua:448
-#, fuzzy
 msgid ""
 "Would you like to enable or disable trusting soft hyphens by default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Markeren standaard in- of uitschakelen?\n"
+"Zachte koppeltekens vertrouwen standaard in- of uitschakelen?\n"
 "\n"
 "De huidige standaardinstelling (★) is ingeschakeld."
 
 #: frontend/apps/reader/modules/readertypography.lua:449
-#, fuzzy
 msgid ""
 "Would you like to enable or disable trusting soft hyphens by default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Markeren standaard in- of uitschakelen?\n"
+"Zachte koppeltekens vertrouwen standaard in- of uitschakelen?\n"
 "\n"
 "De huidige standaardinstelling (★) is uitgeschakeld."
 
 #: frontend/apps/reader/modules/readertypography.lua:475
-#, fuzzy
 msgid "Hyphenation dictionary: %1"
-msgstr ""
-"In woordenboek aan het zoeken naar:\n"
-"%1"
+msgstr "Woordafbrekingswoordenboek: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:494
 msgid "Algorithmic hyphenation"
-msgstr ""
+msgstr "Algoritmische woordafbreking"
 
 #: frontend/apps/reader/modules/readertypography.lua:505
-#, fuzzy
 msgid ""
 "Would you like to enable or disable algorithmic hyphenation by default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Hangende interpunctie standaard in- of uitschakelen?\n"
+"Algoritmische woordafbreking standaard in- of uitschakelen?\n"
 "\n"
 "De huidige standaardinstelling (★) is ingeschakeld."
 
 #: frontend/apps/reader/modules/readertypography.lua:506
-#, fuzzy
 msgid ""
 "Would you like to enable or disable algorithmic hyphenation by default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Hangende interpunctie standaard in- of uitschakelen?\n"
+"Algoritmische woordafbreking standaard in- of uitschakelen?\n"
 "\n"
 "De huidige standaardinstelling (★) is uitgeschakeld."
 
 #: frontend/apps/reader/modules/readertypography.lua:531
 msgid "Soft-hyphens only"
-msgstr ""
+msgstr "Alleen zachte koppeltekens"
 
 #: frontend/apps/reader/modules/readertypography.lua:542
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation with soft hyphens only by "
 "default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Hangende interpunctie standaard in- of uitschakelen?\n"
+"Woordafbreking met alleen zachte koppeltekens standaard in- of uitschakelen?"
+"\n"
 "\n"
 "De huidige standaardinstelling (★) is ingeschakeld."
 
 #: frontend/apps/reader/modules/readertypography.lua:543
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation with soft hyphens only by "
 "default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Hangende interpunctie standaard in- of uitschakelen?\n"
+"Woordafbreking met alleen zachte koppeltekens standaard in- of uitschakelen?"
+"\n"
 "\n"
 "De huidige standaardinstelling (★) is uitgeschakeld."
 
 #: frontend/apps/reader/modules/readertypography.lua:572
-#, fuzzy
 msgid "disabled"
-msgstr "uitschakelen"
+msgstr "uitgeschakeld"
 
 #: frontend/apps/reader/modules/readertypography.lua:574
-#, fuzzy
 msgid "soft-hyphens only"
-msgstr "Vertrouw zwakke afbrekingsstreepjes"
+msgstr "alleen zachte koppeltekens"
 
 #: frontend/apps/reader/modules/readertypography.lua:576
 msgid "algorithmic"
-msgstr ""
+msgstr "algoritmisch"
 
 #: frontend/apps/reader/modules/readertypography.lua:580
-#, fuzzy
 msgid "Hyphenation: %1"
-msgstr "Woordafbreking"
+msgstr "Woordafbreking: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:761
-#, fuzzy
 msgid "Book language: %1"
-msgstr "Boeken in %1"
+msgstr "Taal van boek: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:761
 #: plugins/batterystat.koplugin/main.lua:78
@@ -4410,7 +4425,7 @@ msgstr "n.v.t."
 
 #: frontend/apps/reader/modules/readertypography.lua:764
 msgid "Changed language for typography rules to book language: %1."
-msgstr ""
+msgstr "Typografische regels voor boek gewijzigd naar: %1."
 
 #: frontend/apps/reader/modules/readerview.lua:739
 msgid ""
@@ -11210,9 +11225,8 @@ msgid "Synchronize remotely deleted files"
 msgstr "Synchroniseer op afstand verwijderde bestanden"
 
 #: plugins/wallabag.koplugin/main.lua:245
-#, fuzzy
 msgid "Remove finished articles from history"
-msgstr "Verwijder afgewerkte artikels op afstand"
+msgstr "Gelezen artikelen uit de geschiedenis verwijderen"
 
 #: plugins/wallabag.koplugin/main.lua:260
 msgid ""
