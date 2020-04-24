@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-21 19:33+0000\n"
-"PO-Revision-Date: 2020-04-21 19:33+0000\n"
+"PO-Revision-Date: 2020-04-25 07:07+0000\n"
 "Last-Translator: Piero Sangino <simonedotto@protonmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/koreader/"
 "koreader/it/>\n"
@@ -3888,7 +3888,7 @@ msgstr "Stile"
 
 #: frontend/apps/reader/modules/readertypeset.lua:210
 msgid "None"
-msgstr ""
+msgstr "Nessuno"
 
 #: frontend/apps/reader/modules/readertypeset.lua:211
 #: frontend/ui/widget/frontlightwidget.lua:420
@@ -3996,15 +3996,13 @@ msgstr "Olandese"
 
 #: frontend/apps/reader/modules/readertypography.lua:26
 #: frontend/apps/reader/modules/readertypography.lua:69
-#, fuzzy
 msgid "English (UK)"
-msgstr "Inglese"
+msgstr "Inglese (Regno Unito)"
 
 #: frontend/apps/reader/modules/readertypography.lua:27
 #: frontend/apps/reader/modules/readertypography.lua:70
-#, fuzzy
 msgid "English (US)"
-msgstr "Inglese"
+msgstr "Inglese (Stati Uniti)"
 
 #: frontend/apps/reader/modules/readertypography.lua:28
 #: frontend/apps/reader/modules/readertypography.lua:71
@@ -4087,12 +4085,12 @@ msgstr "Rumeno"
 #: frontend/apps/reader/modules/readertypography.lua:41
 #: frontend/apps/reader/modules/readertypography.lua:86
 msgid "Russian + English (UK)"
-msgstr ""
+msgstr "Russo + Inglese (Regno Unito)"
 
 #: frontend/apps/reader/modules/readertypography.lua:42
 #: frontend/apps/reader/modules/readertypography.lua:87
 msgid "Russian + English (US)"
-msgstr ""
+msgstr "Russo + Inglese (Stati Uniti)"
 
 #: frontend/apps/reader/modules/readertypography.lua:43
 #: frontend/apps/reader/modules/readertypography.lua:88
@@ -4176,30 +4174,48 @@ msgid ""
 "will be enabled, but it might be enough to get language specific glyph "
 "variants (when supported by the fonts)."
 msgstr ""
+"Alcune lingue hanno regole tipografiche specifiche: queste includono la "
+"sillabazione, le regole di ritorno a capo e le varianti dei glifi specifiche "
+"per la lingua.\n"
+"KOReader ne sceglierà una in base all'etichetta della lingua dai metadati "
+"del libro, ma è possibile selezionarne un'altra.\n"
+"È anche possibile impostare una lingua predefinita o una lingua di riserva "
+"con una pressione prolungata.\n"
+"\n"
+"Le caratteristiche disponibili per lingua sono contrassegnate con:\n"
+"‐ : dizionario di sillabazione specifico per la lingua\n"
+" : regole specifiche di ritorno a capo (per lo più legate alle virgolette)\n"
+" : altre regole di ritorno a capo (ad esempio, non sono ammesse "
+"preposizioni di una sola lettera a fine riga)\n"
+"\n"
+"Si noti che quando una lingua non è dotata di un proprio dizionario di "
+"sillabazione, verrà utilizzato quello inglese (Stati Uniti).\n"
+"Quando l'etichetta della lingua del libro non è tra le nostre predefinite, "
+"non sarà abilitata nessuna funzione specifica, ma potrebbe essere "
+"sufficiente per ottenere varianti di glifi specifiche per la lingua (se "
+"supportate dai font)."
 
 #: frontend/apps/reader/modules/readertypography.lua:175
 msgid "About typography rules"
-msgstr ""
+msgstr "Sulle regole tipografiche"
 
 #: frontend/apps/reader/modules/readertypography.lua:188
 msgid "Current main language tag:"
-msgstr ""
+msgstr "Etichetta della lingua principale attuale:"
 
 #: frontend/apps/reader/modules/readertypography.lua:205
-#, fuzzy
 msgid "Other language tags:"
-msgstr "Usa impostazioni lingua predefinite"
+msgstr "Altre etichette di lingua:"
 
 #: frontend/apps/reader/modules/readertypography.lua:231
 msgid "Language tags (and hyphenation dictionaries) used since start up"
-msgstr ""
+msgstr "Etichette di lingua (e dizionari di sillabazione) usati dall'inizio"
 
 #: frontend/apps/reader/modules/readertypography.lua:269
 msgid "Changed language for typography rules to %1."
-msgstr ""
+msgstr "La lingua delle regole di tipografia è stata cambiata a %1."
 
 #: frontend/apps/reader/modules/readertypography.lua:282
-#, fuzzy
 msgid ""
 "Would you like %1 to be used as the default (★) or fallback (�) language for "
 "typography rules?\n"
@@ -4207,27 +4223,26 @@ msgid ""
 "Default will always take precedence while fallback will only be used if the "
 "language of the book can't be automatically determined."
 msgstr ""
-"Vorresti che %1 sia usato come lingua di sillabazione predefinita (★) o di "
-"ripiego (�)?\n"
+"Vuoi che %1 sia usato come lingua predefinita (★) o di ripiego (�) per le "
+"regole tipografiche?\n"
 "\n"
-"Il valore predefinito avrà sempre la precedenza mentre il ripiego verrà "
-"utilizzata solo se la lingua del libro non può essere determinata "
+"Il valore predefinito avrà sempre la precedenza, mentre il ripiego sarà "
+"utilizzato solo se la lingua del libro non può essere determinata "
 "automaticamente."
 
 #: frontend/apps/reader/modules/readertypography.lua:289
-#, fuzzy
 msgctxt "Typography"
 msgid "Fallback"
-msgstr "Ripiegare"
+msgstr "Ripiego"
 
 #: frontend/apps/reader/modules/readertypography.lua:307
 #: frontend/apps/reader/modules/readertypography.lua:594
 msgid "Typography rules: %1"
-msgstr ""
+msgstr "Regole di tipografia: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:313
 msgid "Respect embedded lang tags"
-msgstr ""
+msgstr "Applica le etichette di lingua integrate"
 
 #: frontend/apps/reader/modules/readertypography.lua:322
 msgid ""
@@ -4238,6 +4253,14 @@ msgid ""
 "\n"
 "The current default (★) is to respect them."
 msgstr ""
+"Vuoi rispettare o ignorare le etichette di lingua integrate in modo "
+"predefinito?\n"
+"\n"
+"Rispettandole si utilizzeranno le regole tipografiche pertinenti per "
+"rappresentare il contenuto, mentre ignorandole si utilizzeranno sempre le "
+"regole tipografiche della lingua principale.\n"
+"\n"
+"L'impostazione predefinita attuale (★) è di rispettarle."
 
 #: frontend/apps/reader/modules/readertypography.lua:323
 msgid ""
@@ -4248,47 +4271,48 @@ msgid ""
 "\n"
 "The current default (★) is to ignore them."
 msgstr ""
+"Vuoi rispettare o ignorare le etichette di lingua integrate in modo "
+"predefinito?\n"
+"\n"
+"Rispettandole si utilizzeranno le regole tipografiche pertinenti per "
+"rappresentare il contenuto, mentre ignorandole si utilizzeranno sempre le "
+"regole tipografiche della lingua principale.\n"
+"\n"
+"L'impostazione predefinita attuale (★) è di ignorarle."
 
 #: frontend/apps/reader/modules/readertypography.lua:325
-#, fuzzy
 msgid "Ignore (★)"
-msgstr "Renderizzatore (★)"
+msgstr "Ignora (★)"
 
 #: frontend/apps/reader/modules/readertypography.lua:331
-#, fuzzy
 msgid "Respect (★)"
-msgstr "Edizione stampata (★)"
+msgstr "Applica (★)"
 
 #: frontend/apps/reader/modules/readertypography.lua:331
 msgid "Respect"
-msgstr ""
+msgstr "Applica"
 
 #: frontend/apps/reader/modules/readertypography.lua:346
-#, fuzzy
 msgid "Enable hyphenation"
-msgstr "Sillabazione"
+msgstr "Abilita la sillabazione"
 
 #: frontend/apps/reader/modules/readertypography.lua:355
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation by default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Si desidera abilitare o disabilitare l'evidenziazione per impostazione "
-"predefinita?\n"
+"Si desidera abilitare o disabilitare la sillabazione in modo predefinito?\n"
 "\n"
 "L'impostazione predefinita corrente (★) è abilitata."
 
 #: frontend/apps/reader/modules/readertypography.lua:356
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation by default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Si desidera abilitare o disabilitare l'evidenziazione per impostazione "
-"predefinita?\n"
+"Si desidera abilitare o disabilitare la sillabazione in modo predefinito?\n"
 "\n"
 "L'impostazione predefinita corrente (★) è disabilitata."
 
@@ -4325,117 +4349,104 @@ msgid "Trust soft hyphens"
 msgstr "Affidati ai trattini"
 
 #: frontend/apps/reader/modules/readertypography.lua:448
-#, fuzzy
 msgid ""
 "Would you like to enable or disable trusting soft hyphens by default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Si desidera abilitare o disabilitare l'evidenziazione per impostazione "
-"predefinita?\n"
+"Si desidera abilitare o disabilitare in modo predefinito i trattini di "
+"separazione?\n"
 "\n"
 "L'impostazione predefinita corrente (★) è abilitata."
 
 #: frontend/apps/reader/modules/readertypography.lua:449
-#, fuzzy
 msgid ""
 "Would you like to enable or disable trusting soft hyphens by default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Si desidera abilitare o disabilitare l'evidenziazione per impostazione "
-"predefinita?\n"
+"Si desidera abilitare o disabilitare in modo predefinito i trattini di "
+"separazione?\n"
 "\n"
 "L'impostazione predefinita corrente (★) è disabilitata."
 
 #: frontend/apps/reader/modules/readertypography.lua:475
-#, fuzzy
 msgid "Hyphenation dictionary: %1"
-msgstr ""
-"Ricerca nel dizionario:\n"
-"%1"
+msgstr "Dizionario di sillabazione: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:494
 msgid "Algorithmic hyphenation"
-msgstr ""
+msgstr "Sillabazione algoritmica"
 
 #: frontend/apps/reader/modules/readertypography.lua:505
-#, fuzzy
 msgid ""
 "Would you like to enable or disable algorithmic hyphenation by default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Vuoi abilitare o disabilitare la punteggiatura flottante per impostazione "
-"predefinita?\n"
+"Vuoi abilitare o disabilitare la sillabazione algoritmica in modo "
+"predefinito?\n"
 "\n"
 "L'impostazione predefinita corrente (★) è abilitata."
 
 #: frontend/apps/reader/modules/readertypography.lua:506
-#, fuzzy
 msgid ""
 "Would you like to enable or disable algorithmic hyphenation by default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Vuoi abilitare o disabilitare la punteggiatura flottante per impostazione "
-"predefinita?\n"
+"Vuoi abilitare o disabilitare la sillabazione algoritmica in modo "
+"predefinito?\n"
 "\n"
 "L'impostazione predefinita corrente (★) è disabilitata."
 
 #: frontend/apps/reader/modules/readertypography.lua:531
 msgid "Soft-hyphens only"
-msgstr ""
+msgstr "Solo trattini di non separazione"
 
 #: frontend/apps/reader/modules/readertypography.lua:542
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation with soft hyphens only by "
 "default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Vuoi abilitare o disabilitare la punteggiatura flottante per impostazione "
-"predefinita?\n"
+"Vuoi abilitare o disabilitare la sillabazione con solo trattini di non "
+"separazione in modo predefinito?\n"
 "\n"
 "L'impostazione predefinita corrente (★) è abilitata."
 
 #: frontend/apps/reader/modules/readertypography.lua:543
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation with soft hyphens only by "
 "default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Vuoi abilitare o disabilitare la punteggiatura flottante per impostazione "
-"predefinita?\n"
+"Vuoi abilitare o disabilitare la sillabazione con solo trattini di non "
+"separazione in modo predefinito?\n"
 "\n"
 "L'impostazione predefinita corrente (★) è disabilitata."
 
 #: frontend/apps/reader/modules/readertypography.lua:572
-#, fuzzy
 msgid "disabled"
-msgstr "disattivare"
+msgstr "disabilitata"
 
 #: frontend/apps/reader/modules/readertypography.lua:574
-#, fuzzy
 msgid "soft-hyphens only"
-msgstr "Affidati ai trattini"
+msgstr "solo trattini di non separazione"
 
 #: frontend/apps/reader/modules/readertypography.lua:576
 msgid "algorithmic"
-msgstr ""
+msgstr "algoritmica"
 
 #: frontend/apps/reader/modules/readertypography.lua:580
-#, fuzzy
 msgid "Hyphenation: %1"
-msgstr "Sillabazione"
+msgstr "Sillabazione: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:761
-#, fuzzy
 msgid "Book language: %1"
-msgstr "Libri in %1"
+msgstr "Lingua del libro: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:761
 #: plugins/batterystat.koplugin/main.lua:78
@@ -4444,7 +4455,7 @@ msgstr "n.d."
 
 #: frontend/apps/reader/modules/readertypography.lua:764
 msgid "Changed language for typography rules to book language: %1."
-msgstr ""
+msgstr "La lingua per le regole di tipografia del libro è stata cambiata: %1."
 
 #: frontend/apps/reader/modules/readerview.lua:739
 msgid ""
