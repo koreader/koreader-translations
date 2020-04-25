@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 07:07+0000\n"
+"POT-Creation-Date: 2020-04-25 07:09+0000\n"
 "PO-Revision-Date: 2020-04-24 05:52+0000\n"
 "Last-Translator: Hsiu-Ming Chang <cges30901@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -60,7 +60,8 @@ msgstr "忽略"
 #: frontend/ui/elements/screensaver_menu.lua:217
 #: frontend/ui/plugin/switch_plugin.lua:64
 #: plugins/autofrontlight.koplugin/main.lua:118
-#: plugins/autoturn.koplugin/main.lua:129
+#: plugins/autoturn.koplugin/main.lua:129 plugins/kosync.koplugin/main.lua:56
+#: plugins/kosync.koplugin/main.lua:198 plugins/kosync.koplugin/main.lua:232
 msgid "Disable"
 msgstr "停用"
 
@@ -191,7 +192,7 @@ msgstr ""
 #: plugins/evernote.koplugin/main.lua:198
 #: plugins/evernote.koplugin/main.lua:332
 #: plugins/goodreads.koplugin/main.lua:127
-#: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:292
+#: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:308
 #: plugins/perceptionexpander.koplugin/main.lua:138
 #: plugins/SSH.koplugin/main.lua:112 plugins/statistics.koplugin/main.lua:1746
 #: plugins/terminal.koplugin/main.lua:32
@@ -3796,6 +3797,8 @@ msgstr "無"
 
 #: frontend/apps/reader/modules/readertypeset.lua:211
 #: frontend/ui/widget/frontlightwidget.lua:420
+#: plugins/kosync.koplugin/main.lua:54 plugins/kosync.koplugin/main.lua:180
+#: plugins/kosync.koplugin/main.lua:214
 msgid "Auto"
 msgstr "自動"
 
@@ -6275,7 +6278,8 @@ msgstr "導航"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:256
 #: frontend/ui/elements/common_settings_menu_table.lua:424
-#: frontend/ui/network/manager.lua:312
+#: frontend/ui/network/manager.lua:312 plugins/kosync.koplugin/main.lua:52
+#: plugins/kosync.koplugin/main.lua:189 plugins/kosync.koplugin/main.lua:223
 msgid "Prompt"
 msgstr "提示"
 
@@ -9064,13 +9068,13 @@ msgstr "筆記："
 msgid "Evernote"
 msgstr "Evernote"
 
-#: plugins/evernote.koplugin/main.lua:102 plugins/kosync.koplugin/main.lua:125
+#: plugins/evernote.koplugin/main.lua:102 plugins/kosync.koplugin/main.lua:135
 msgid "Logout"
 msgstr "登出"
 
 #: plugins/evernote.koplugin/main.lua:103
-#: plugins/evernote.koplugin/main.lua:339 plugins/kosync.koplugin/main.lua:126
-#: plugins/kosync.koplugin/main.lua:299
+#: plugins/evernote.koplugin/main.lua:339 plugins/kosync.koplugin/main.lua:136
+#: plugins/kosync.koplugin/main.lua:315
 msgid "Login"
 msgstr "登入"
 
@@ -9169,12 +9173,12 @@ msgid ""
 "All notes will be exported again next time.\n"
 msgstr "已清除歷史記錄。下次將再次匯出所有筆記。\n"
 
-#: plugins/evernote.koplugin/main.lua:349 plugins/kosync.koplugin/main.lua:316
+#: plugins/evernote.koplugin/main.lua:349 plugins/kosync.koplugin/main.lua:332
 msgid "Logging in. Please wait…"
 msgstr "登入中。請等待……"
 
 #: plugins/evernote.koplugin/main.lua:387
-#: plugins/evernote.koplugin/main.lua:403 plugins/kosync.koplugin/main.lua:411
+#: plugins/evernote.koplugin/main.lua:403 plugins/kosync.koplugin/main.lua:427
 msgid "An error occurred while logging in:"
 msgstr "登入時發生錯誤："
 
@@ -9418,143 +9422,133 @@ msgstr "確保裝置維持清醒以避免 Wi-Fi 斷線。"
 msgid "Register/login to KOReader server"
 msgstr "註冊 / 登入到 KOReader 伺服器"
 
-#: plugins/kosync.koplugin/main.lua:52
+#: plugins/kosync.koplugin/main.lua:62
 msgid "Progress has been synchronized."
 msgstr "進度已被同步。"
 
-#: plugins/kosync.koplugin/main.lua:59
+#: plugins/kosync.koplugin/main.lua:69
 msgid ""
 "Please register or login before using the progress synchronization feature."
 msgstr "在使用進度同步功能之前，請先註冊或登入。"
 
-#: plugins/kosync.koplugin/main.lua:66
+#: plugins/kosync.koplugin/main.lua:76
 msgid ""
 "Something went wrong when syncing progress, please check your network "
 "connection and try again later."
 msgstr "在同步過程中某些東西出錯了，請檢查您的網路連線並於稍後再嘗試一次。"
 
-#: plugins/kosync.koplugin/main.lua:84
+#: plugins/kosync.koplugin/main.lua:94
 msgid "invalid username and password"
 msgstr "無效的使用者名稱和密碼"
 
-#: plugins/kosync.koplugin/main.lua:86
+#: plugins/kosync.koplugin/main.lua:96
 msgid "invalid username"
 msgstr "無效的使用者名稱"
 
-#: plugins/kosync.koplugin/main.lua:88
+#: plugins/kosync.koplugin/main.lua:98
 msgid "invalid password"
 msgstr "無效的密碼"
 
-#: plugins/kosync.koplugin/main.lua:121 plugins/kosync.koplugin/_meta.lua:4
+#: plugins/kosync.koplugin/main.lua:131 plugins/kosync.koplugin/_meta.lua:4
 msgid "Progress sync"
 msgstr "進度同步"
 
-#: plugins/kosync.koplugin/main.lua:126 plugins/kosync.koplugin/main.lua:323
+#: plugins/kosync.koplugin/main.lua:136 plugins/kosync.koplugin/main.lua:339
 msgid "Register"
 msgstr "註冊"
 
-#: plugins/kosync.koplugin/main.lua:144
+#: plugins/kosync.koplugin/main.lua:154
 msgid "Auto sync now and future"
 msgstr "自動同步"
 
-#: plugins/kosync.koplugin/main.lua:161
+#: plugins/kosync.koplugin/main.lua:171
 msgid "Whisper sync"
 msgstr "背景同步"
 
-#: plugins/kosync.koplugin/main.lua:165
-msgid "Sync to latest record >>>>"
+#: plugins/kosync.koplugin/main.lua:176
+#, fuzzy
+msgid "Sync to latest record (%1)"
 msgstr "同步到最新的記錄 >>>>"
 
-#: plugins/kosync.koplugin/main.lua:169 plugins/kosync.koplugin/main.lua:200
-msgid "  Auto"
-msgstr "  自動"
-
-#: plugins/kosync.koplugin/main.lua:178 plugins/kosync.koplugin/main.lua:209
-msgid "  Prompt"
-msgstr "  提示"
-
-#: plugins/kosync.koplugin/main.lua:187 plugins/kosync.koplugin/main.lua:218
-msgid "  Disable"
-msgstr "  停用"
-
-#: plugins/kosync.koplugin/main.lua:196
-msgid "Sync to a previous record <<<<"
+#: plugins/kosync.koplugin/main.lua:210
+#, fuzzy
+msgid "Sync to a previous record (%1)"
 msgstr "同步到之前的記錄 <<<<"
 
-#: plugins/kosync.koplugin/main.lua:229
+#: plugins/kosync.koplugin/main.lua:245
 msgid "Push progress from this device"
 msgstr "從這臺裝置推送閱讀進度"
 
-#: plugins/kosync.koplugin/main.lua:238
+#: plugins/kosync.koplugin/main.lua:254
 msgid "Pull progress from other devices"
 msgstr "從其他裝置拉取閱讀進度"
 
-#: plugins/kosync.koplugin/main.lua:247
+#: plugins/kosync.koplugin/main.lua:263
 msgid "Custom sync server"
 msgstr "自訂同步伺服器"
 
 #. @translators Server address defined by user for progress sync.
-#: plugins/kosync.koplugin/main.lua:252
+#: plugins/kosync.koplugin/main.lua:268
 msgid "Custom progress sync server address"
 msgstr "自訂進度同步伺服器位址"
 
-#: plugins/kosync.koplugin/main.lua:306
+#: plugins/kosync.koplugin/main.lua:322
 msgid "Cannot login: %1"
 msgstr "無法登入：%1"
 
-#: plugins/kosync.koplugin/main.lua:330
+#: plugins/kosync.koplugin/main.lua:346
 msgid "Cannot register: %1"
 msgstr "無法註冊：%1"
 
-#: plugins/kosync.koplugin/main.lua:340
+#: plugins/kosync.koplugin/main.lua:356
 msgid "Registering. Please wait…"
 msgstr "正在註冊中。請等待……"
 
-#: plugins/kosync.koplugin/main.lua:376
+#: plugins/kosync.koplugin/main.lua:392
 msgid "An error occurred while registering:"
 msgstr "註冊時發生錯誤："
 
-#: plugins/kosync.koplugin/main.lua:381
+#: plugins/kosync.koplugin/main.lua:397
 msgid "An unknown error occurred while registering."
 msgstr "註冊時發生不明錯誤。"
 
-#: plugins/kosync.koplugin/main.lua:389
+#: plugins/kosync.koplugin/main.lua:405
 msgid "Registered to KOReader server."
 msgstr "已註冊到 KOReader 伺服器。"
 
-#: plugins/kosync.koplugin/main.lua:393 plugins/kosync.koplugin/main.lua:429
+#: plugins/kosync.koplugin/main.lua:409 plugins/kosync.koplugin/main.lua:445
 msgid "Unknown server error"
 msgstr "未知伺服器錯誤"
 
-#: plugins/kosync.koplugin/main.lua:416
+#: plugins/kosync.koplugin/main.lua:432
 msgid "An unknown error occurred while logging in."
 msgstr "登入時發生不明錯誤。"
 
-#: plugins/kosync.koplugin/main.lua:425
+#: plugins/kosync.koplugin/main.lua:441
 msgid "Logged in to KOReader server."
 msgstr "已登入 KOReader 伺服器。"
 
-#: plugins/kosync.koplugin/main.lua:498
+#: plugins/kosync.koplugin/main.lua:514
 msgid "Progress has been pushed."
 msgstr "進度已被推送。"
 
-#: plugins/kosync.koplugin/main.lua:543
+#: plugins/kosync.koplugin/main.lua:559
 msgid "No progress found for this document."
 msgstr "沒找到當前這份文件的閱讀進度。"
 
-#: plugins/kosync.koplugin/main.lua:554
+#: plugins/kosync.koplugin/main.lua:570
 msgid "Latest progress is coming from this device."
 msgstr "最新的閱讀進度正從此裝置匯入。"
 
-#: plugins/kosync.koplugin/main.lua:570
+#: plugins/kosync.koplugin/main.lua:586
 msgid "The progress has already been synchronized."
 msgstr "閱讀進度已經同步了。"
 
-#: plugins/kosync.koplugin/main.lua:600
+#: plugins/kosync.koplugin/main.lua:616
 msgid "Sync to latest location %1% from device '%2'?"
 msgstr "要從裝置「%2」同步最新的位置 %1%嗎？"
 
-#: plugins/kosync.koplugin/main.lua:614
+#: plugins/kosync.koplugin/main.lua:630
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "要從裝置「%2」同步早先之前的位置 %1% 嗎？"
 
@@ -11168,6 +11162,15 @@ msgstr "點擊右下角"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "點擊右上角"
+
+#~ msgid "  Auto"
+#~ msgstr "  自動"
+
+#~ msgid "  Prompt"
+#~ msgstr "  提示"
+
+#~ msgid "  Disable"
+#~ msgstr "  停用"
 
 #~ msgid "Changed hyphenation to %1."
 #~ msgstr "已變更斷字模式為 %1。"

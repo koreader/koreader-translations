@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 07:07+0000\n"
+"POT-Creation-Date: 2020-04-25 07:09+0000\n"
 "PO-Revision-Date: 2020-04-23 09:32+0000\n"
 "Last-Translator: elvvis <elvvis@hotmail.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -68,7 +68,8 @@ msgstr "Ignorieren"
 #: frontend/ui/elements/screensaver_menu.lua:217
 #: frontend/ui/plugin/switch_plugin.lua:64
 #: plugins/autofrontlight.koplugin/main.lua:118
-#: plugins/autoturn.koplugin/main.lua:129
+#: plugins/autoturn.koplugin/main.lua:129 plugins/kosync.koplugin/main.lua:56
+#: plugins/kosync.koplugin/main.lua:198 plugins/kosync.koplugin/main.lua:232
 msgid "Disable"
 msgstr "Aus"
 
@@ -200,7 +201,7 @@ msgstr ""
 #: plugins/evernote.koplugin/main.lua:198
 #: plugins/evernote.koplugin/main.lua:332
 #: plugins/goodreads.koplugin/main.lua:127
-#: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:292
+#: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:308
 #: plugins/perceptionexpander.koplugin/main.lua:138
 #: plugins/SSH.koplugin/main.lua:112 plugins/statistics.koplugin/main.lua:1746
 #: plugins/terminal.koplugin/main.lua:32
@@ -3903,6 +3904,8 @@ msgstr "Keine"
 
 #: frontend/apps/reader/modules/readertypeset.lua:211
 #: frontend/ui/widget/frontlightwidget.lua:420
+#: plugins/kosync.koplugin/main.lua:54 plugins/kosync.koplugin/main.lua:180
+#: plugins/kosync.koplugin/main.lua:214
 msgid "Auto"
 msgstr "Auto"
 
@@ -6530,7 +6533,8 @@ msgstr "Navigation"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:256
 #: frontend/ui/elements/common_settings_menu_table.lua:424
-#: frontend/ui/network/manager.lua:312
+#: frontend/ui/network/manager.lua:312 plugins/kosync.koplugin/main.lua:52
+#: plugins/kosync.koplugin/main.lua:189 plugins/kosync.koplugin/main.lua:223
 msgid "Prompt"
 msgstr "Nachfragen"
 
@@ -9384,13 +9388,13 @@ msgstr "Notiz: "
 msgid "Evernote"
 msgstr "Evernote"
 
-#: plugins/evernote.koplugin/main.lua:102 plugins/kosync.koplugin/main.lua:125
+#: plugins/evernote.koplugin/main.lua:102 plugins/kosync.koplugin/main.lua:135
 msgid "Logout"
 msgstr "Ausloggen"
 
 #: plugins/evernote.koplugin/main.lua:103
-#: plugins/evernote.koplugin/main.lua:339 plugins/kosync.koplugin/main.lua:126
-#: plugins/kosync.koplugin/main.lua:299
+#: plugins/evernote.koplugin/main.lua:339 plugins/kosync.koplugin/main.lua:136
+#: plugins/kosync.koplugin/main.lua:315
 msgid "Login"
 msgstr "Einloggen"
 
@@ -9493,12 +9497,12 @@ msgstr ""
 "Die Verlaufseinträge wurden bereinigt.\n"
 "Alle Notizen werden beim nächsten Mal wieder exportiert.\n"
 
-#: plugins/evernote.koplugin/main.lua:349 plugins/kosync.koplugin/main.lua:316
+#: plugins/evernote.koplugin/main.lua:349 plugins/kosync.koplugin/main.lua:332
 msgid "Logging in. Please wait…"
 msgstr "Anmeldung. Bitte warten…"
 
 #: plugins/evernote.koplugin/main.lua:387
-#: plugins/evernote.koplugin/main.lua:403 plugins/kosync.koplugin/main.lua:411
+#: plugins/evernote.koplugin/main.lua:403 plugins/kosync.koplugin/main.lua:427
 msgid "An error occurred while logging in:"
 msgstr "Während der Anmeldung ist ein Fehler aufgetreten:"
 
@@ -9755,18 +9759,18 @@ msgstr ""
 msgid "Register/login to KOReader server"
 msgstr "Registrieren/anmelden in den KOReader server"
 
-#: plugins/kosync.koplugin/main.lua:52
+#: plugins/kosync.koplugin/main.lua:62
 msgid "Progress has been synchronized."
 msgstr "Fortschritt wurde synchronisiert."
 
-#: plugins/kosync.koplugin/main.lua:59
+#: plugins/kosync.koplugin/main.lua:69
 msgid ""
 "Please register or login before using the progress synchronization feature."
 msgstr ""
 "Bitte registrieren oder einloggen, bevor Sie die Funktion zur "
 "Fortschrittssynchronisation nutzen."
 
-#: plugins/kosync.koplugin/main.lua:66
+#: plugins/kosync.koplugin/main.lua:76
 msgid ""
 "Something went wrong when syncing progress, please check your network "
 "connection and try again later."
@@ -9774,128 +9778,118 @@ msgstr ""
 "Beim Synchronisieren des Fortschritts ging etwas schief, bitte "
 "Netzwerkverbindung überprüfen und später erneut versuchen."
 
-#: plugins/kosync.koplugin/main.lua:84
+#: plugins/kosync.koplugin/main.lua:94
 msgid "invalid username and password"
 msgstr "ungültiger Benutzername und Passwort"
 
-#: plugins/kosync.koplugin/main.lua:86
+#: plugins/kosync.koplugin/main.lua:96
 msgid "invalid username"
 msgstr "ungültiger Benutzername"
 
-#: plugins/kosync.koplugin/main.lua:88
+#: plugins/kosync.koplugin/main.lua:98
 msgid "invalid password"
 msgstr "ungültiges Passwort"
 
-#: plugins/kosync.koplugin/main.lua:121 plugins/kosync.koplugin/_meta.lua:4
+#: plugins/kosync.koplugin/main.lua:131 plugins/kosync.koplugin/_meta.lua:4
 msgid "Progress sync"
 msgstr "Fortschrittssynchronisierung"
 
-#: plugins/kosync.koplugin/main.lua:126 plugins/kosync.koplugin/main.lua:323
+#: plugins/kosync.koplugin/main.lua:136 plugins/kosync.koplugin/main.lua:339
 msgid "Register"
 msgstr "Registrieren"
 
-#: plugins/kosync.koplugin/main.lua:144
+#: plugins/kosync.koplugin/main.lua:154
 msgid "Auto sync now and future"
 msgstr "Automatische Synchronisierung jetzt und in Zukunft"
 
-#: plugins/kosync.koplugin/main.lua:161
+#: plugins/kosync.koplugin/main.lua:171
 msgid "Whisper sync"
 msgstr "Flüster-Sync"
 
-#: plugins/kosync.koplugin/main.lua:165
-msgid "Sync to latest record >>>>"
+#: plugins/kosync.koplugin/main.lua:176
+#, fuzzy
+msgid "Sync to latest record (%1)"
 msgstr "Mit dem letzten Datensatz synchronisieren >>>>"
 
-#: plugins/kosync.koplugin/main.lua:169 plugins/kosync.koplugin/main.lua:200
-msgid "  Auto"
-msgstr "  Auto"
-
-#: plugins/kosync.koplugin/main.lua:178 plugins/kosync.koplugin/main.lua:209
-msgid "  Prompt"
-msgstr "  Nachfragen"
-
-#: plugins/kosync.koplugin/main.lua:187 plugins/kosync.koplugin/main.lua:218
-msgid "  Disable"
-msgstr "  Aus"
-
-#: plugins/kosync.koplugin/main.lua:196
-msgid "Sync to a previous record <<<<"
+#: plugins/kosync.koplugin/main.lua:210
+#, fuzzy
+msgid "Sync to a previous record (%1)"
 msgstr "Synchronisation mit einem vorherigen Datensatz <<<<"
 
-#: plugins/kosync.koplugin/main.lua:229
+#: plugins/kosync.koplugin/main.lua:245
 msgid "Push progress from this device"
 msgstr "Übertrage Fortschritt von diesem Gerät"
 
-#: plugins/kosync.koplugin/main.lua:238
+#: plugins/kosync.koplugin/main.lua:254
 msgid "Pull progress from other devices"
 msgstr "Lade Fortschritt von anderen Geräten"
 
-#: plugins/kosync.koplugin/main.lua:247
+#: plugins/kosync.koplugin/main.lua:263
 msgid "Custom sync server"
 msgstr "Eigener Sync-Server"
 
 #. @translators Server address defined by user for progress sync.
-#: plugins/kosync.koplugin/main.lua:252
+#: plugins/kosync.koplugin/main.lua:268
 msgid "Custom progress sync server address"
 msgstr "Eigene Sync-Server Adresse"
 
-#: plugins/kosync.koplugin/main.lua:306
+#: plugins/kosync.koplugin/main.lua:322
 msgid "Cannot login: %1"
 msgstr "Anmeldung nicht möglich: %1"
 
-#: plugins/kosync.koplugin/main.lua:330
+#: plugins/kosync.koplugin/main.lua:346
 msgid "Cannot register: %1"
 msgstr "Kann nicht registriert werden: %1"
 
-#: plugins/kosync.koplugin/main.lua:340
+#: plugins/kosync.koplugin/main.lua:356
 msgid "Registering. Please wait…"
 msgstr "Registrierung. Bitte warten…"
 
-#: plugins/kosync.koplugin/main.lua:376
+#: plugins/kosync.koplugin/main.lua:392
 msgid "An error occurred while registering:"
 msgstr "Während der Registrierung ist ein Fehler aufgetreten:"
 
-#: plugins/kosync.koplugin/main.lua:381
+#: plugins/kosync.koplugin/main.lua:397
 msgid "An unknown error occurred while registering."
 msgstr "Unbekannter Fehler während der Registrierung."
 
-#: plugins/kosync.koplugin/main.lua:389
+#: plugins/kosync.koplugin/main.lua:405
 msgid "Registered to KOReader server."
 msgstr "In den KOReader server registriert."
 
-#: plugins/kosync.koplugin/main.lua:393 plugins/kosync.koplugin/main.lua:429
+#: plugins/kosync.koplugin/main.lua:409 plugins/kosync.koplugin/main.lua:445
 msgid "Unknown server error"
 msgstr "Unbekannter Server-Fehler"
 
-#: plugins/kosync.koplugin/main.lua:416
+#: plugins/kosync.koplugin/main.lua:432
 msgid "An unknown error occurred while logging in."
 msgstr "Fehler beim Einloggen."
 
-#: plugins/kosync.koplugin/main.lua:425
+#: plugins/kosync.koplugin/main.lua:441
 msgid "Logged in to KOReader server."
 msgstr "In den KOReader server eingeloggt."
 
-#: plugins/kosync.koplugin/main.lua:498
+#: plugins/kosync.koplugin/main.lua:514
 msgid "Progress has been pushed."
 msgstr "Fortschritt wurde übertragen."
 
-#: plugins/kosync.koplugin/main.lua:543
+#: plugins/kosync.koplugin/main.lua:559
 msgid "No progress found for this document."
 msgstr "Es wurde kein Fortschritt für dieses Dokument gefunden."
 
-#: plugins/kosync.koplugin/main.lua:554
+#: plugins/kosync.koplugin/main.lua:570
 msgid "Latest progress is coming from this device."
 msgstr "Letzter Fortschritt stammt von diesem Gerät."
 
-#: plugins/kosync.koplugin/main.lua:570
+#: plugins/kosync.koplugin/main.lua:586
 msgid "The progress has already been synchronized."
 msgstr "Der Fortschritt wurde bereits synchronisiert."
 
-#: plugins/kosync.koplugin/main.lua:600
+#: plugins/kosync.koplugin/main.lua:616
 msgid "Sync to latest location %1% from device '%2'?"
 msgstr "Synchronisiere mit letztem Fortschritt %1% von Gerät '%2'?"
 
-#: plugins/kosync.koplugin/main.lua:614
+#: plugins/kosync.koplugin/main.lua:630
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "Synchronisiere mit vorherigem Fortschritt %1% von Gerät '%2'?"
 
@@ -11557,6 +11551,15 @@ msgstr "Die untere rechte Ecke tippen"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Die obere rechte Ecke tippen"
+
+#~ msgid "  Auto"
+#~ msgstr "  Auto"
+
+#~ msgid "  Prompt"
+#~ msgstr "  Nachfragen"
+
+#~ msgid "  Disable"
+#~ msgstr "  Aus"
 
 #~ msgid "Changed hyphenation to %1."
 #~ msgstr "Silbentrennung geändert zu %1."

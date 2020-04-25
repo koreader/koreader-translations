@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 07:07+0000\n"
+"POT-Creation-Date: 2020-04-25 07:09+0000\n"
 "PO-Revision-Date: 2020-04-14 10:23+0000\n"
 "Last-Translator: Jeannette L <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -74,7 +74,8 @@ msgstr "Ignorer"
 #: frontend/ui/elements/screensaver_menu.lua:217
 #: frontend/ui/plugin/switch_plugin.lua:64
 #: plugins/autofrontlight.koplugin/main.lua:118
-#: plugins/autoturn.koplugin/main.lua:129
+#: plugins/autoturn.koplugin/main.lua:129 plugins/kosync.koplugin/main.lua:56
+#: plugins/kosync.koplugin/main.lua:198 plugins/kosync.koplugin/main.lua:232
 msgid "Disable"
 msgstr "Désactiver"
 
@@ -206,7 +207,7 @@ msgstr ""
 #: plugins/evernote.koplugin/main.lua:198
 #: plugins/evernote.koplugin/main.lua:332
 #: plugins/goodreads.koplugin/main.lua:127
-#: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:292
+#: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:308
 #: plugins/perceptionexpander.koplugin/main.lua:138
 #: plugins/SSH.koplugin/main.lua:112 plugins/statistics.koplugin/main.lua:1746
 #: plugins/terminal.koplugin/main.lua:32
@@ -3907,6 +3908,8 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readertypeset.lua:211
 #: frontend/ui/widget/frontlightwidget.lua:420
+#: plugins/kosync.koplugin/main.lua:54 plugins/kosync.koplugin/main.lua:180
+#: plugins/kosync.koplugin/main.lua:214
 msgid "Auto"
 msgstr "Automatique"
 
@@ -6534,7 +6537,8 @@ msgstr "Navigation"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:256
 #: frontend/ui/elements/common_settings_menu_table.lua:424
-#: frontend/ui/network/manager.lua:312
+#: frontend/ui/network/manager.lua:312 plugins/kosync.koplugin/main.lua:52
+#: plugins/kosync.koplugin/main.lua:189 plugins/kosync.koplugin/main.lua:223
 msgid "Prompt"
 msgstr "Demander"
 
@@ -9390,13 +9394,13 @@ msgstr "Note : "
 msgid "Evernote"
 msgstr "Evernote"
 
-#: plugins/evernote.koplugin/main.lua:102 plugins/kosync.koplugin/main.lua:125
+#: plugins/evernote.koplugin/main.lua:102 plugins/kosync.koplugin/main.lua:135
 msgid "Logout"
 msgstr "Se déconnecter"
 
 #: plugins/evernote.koplugin/main.lua:103
-#: plugins/evernote.koplugin/main.lua:339 plugins/kosync.koplugin/main.lua:126
-#: plugins/kosync.koplugin/main.lua:299
+#: plugins/evernote.koplugin/main.lua:339 plugins/kosync.koplugin/main.lua:136
+#: plugins/kosync.koplugin/main.lua:315
 msgid "Login"
 msgstr "S’identifier"
 
@@ -9500,12 +9504,12 @@ msgstr ""
 "Les enregistrements de l'historique ont été purgés.\n"
 "Toutes les notes seront exportées de nouveau la prochaine fois.\n"
 
-#: plugins/evernote.koplugin/main.lua:349 plugins/kosync.koplugin/main.lua:316
+#: plugins/evernote.koplugin/main.lua:349 plugins/kosync.koplugin/main.lua:332
 msgid "Logging in. Please wait…"
 msgstr "Connexion. Attendez, s’il vous plaît…"
 
 #: plugins/evernote.koplugin/main.lua:387
-#: plugins/evernote.koplugin/main.lua:403 plugins/kosync.koplugin/main.lua:411
+#: plugins/evernote.koplugin/main.lua:403 plugins/kosync.koplugin/main.lua:427
 msgid "An error occurred while logging in:"
 msgstr "Une erreur s’est produite à l’ouverture de la session :"
 
@@ -9764,18 +9768,18 @@ msgstr ""
 msgid "Register/login to KOReader server"
 msgstr "S’inscrire/se connecter au serveur KOreader"
 
-#: plugins/kosync.koplugin/main.lua:52
+#: plugins/kosync.koplugin/main.lua:62
 msgid "Progress has been synchronized."
 msgstr "La progression a été synchronisée."
 
-#: plugins/kosync.koplugin/main.lua:59
+#: plugins/kosync.koplugin/main.lua:69
 msgid ""
 "Please register or login before using the progress synchronization feature."
 msgstr ""
 "Veuillez vous enregistrer ou vous connecter avant d’utiliser la "
 "fonctionnalité de synchronisation de la progression."
 
-#: plugins/kosync.koplugin/main.lua:66
+#: plugins/kosync.koplugin/main.lua:76
 msgid ""
 "Something went wrong when syncing progress, please check your network "
 "connection and try again later."
@@ -9783,128 +9787,118 @@ msgstr ""
 "Une erreur s’est produite lors de la synchronisation de la progression. "
 "Vérifiez votre connexion ou essayez plus tard."
 
-#: plugins/kosync.koplugin/main.lua:84
+#: plugins/kosync.koplugin/main.lua:94
 msgid "invalid username and password"
 msgstr "Utilisateur et mot de passe invalides"
 
-#: plugins/kosync.koplugin/main.lua:86
+#: plugins/kosync.koplugin/main.lua:96
 msgid "invalid username"
 msgstr "Nom d’utilisateur invalide"
 
-#: plugins/kosync.koplugin/main.lua:88
+#: plugins/kosync.koplugin/main.lua:98
 msgid "invalid password"
 msgstr "Mot de passe invalide"
 
-#: plugins/kosync.koplugin/main.lua:121 plugins/kosync.koplugin/_meta.lua:4
+#: plugins/kosync.koplugin/main.lua:131 plugins/kosync.koplugin/_meta.lua:4
 msgid "Progress sync"
 msgstr "Synchronisation de la progression"
 
-#: plugins/kosync.koplugin/main.lua:126 plugins/kosync.koplugin/main.lua:323
+#: plugins/kosync.koplugin/main.lua:136 plugins/kosync.koplugin/main.lua:339
 msgid "Register"
 msgstr "S’inscrire"
 
-#: plugins/kosync.koplugin/main.lua:144
+#: plugins/kosync.koplugin/main.lua:154
 msgid "Auto sync now and future"
 msgstr "Synchronisation automatique maintenant et à l’avenir"
 
-#: plugins/kosync.koplugin/main.lua:161
+#: plugins/kosync.koplugin/main.lua:171
 msgid "Whisper sync"
 msgstr "Whispersync"
 
-#: plugins/kosync.koplugin/main.lua:165
-msgid "Sync to latest record >>>>"
+#: plugins/kosync.koplugin/main.lua:176
+#, fuzzy
+msgid "Sync to latest record (%1)"
 msgstr "Synchroniser avec le dernier enregistrement >>>>"
 
-#: plugins/kosync.koplugin/main.lua:169 plugins/kosync.koplugin/main.lua:200
-msgid "  Auto"
-msgstr "  Auto"
-
-#: plugins/kosync.koplugin/main.lua:178 plugins/kosync.koplugin/main.lua:209
-msgid "  Prompt"
-msgstr "  Demander"
-
-#: plugins/kosync.koplugin/main.lua:187 plugins/kosync.koplugin/main.lua:218
-msgid "  Disable"
-msgstr "  Désactiver"
-
-#: plugins/kosync.koplugin/main.lua:196
-msgid "Sync to a previous record <<<<"
+#: plugins/kosync.koplugin/main.lua:210
+#, fuzzy
+msgid "Sync to a previous record (%1)"
 msgstr "Synchroniser avec un enregistrement précédent <<<<"
 
-#: plugins/kosync.koplugin/main.lua:229
+#: plugins/kosync.koplugin/main.lua:245
 msgid "Push progress from this device"
 msgstr "Envoyer la progression à partir de cet appareil"
 
-#: plugins/kosync.koplugin/main.lua:238
+#: plugins/kosync.koplugin/main.lua:254
 msgid "Pull progress from other devices"
 msgstr "Recevoir la progression depuis les autres appareils"
 
-#: plugins/kosync.koplugin/main.lua:247
+#: plugins/kosync.koplugin/main.lua:263
 msgid "Custom sync server"
 msgstr "Serveur de synchronisation personnel"
 
 #. @translators Server address defined by user for progress sync.
-#: plugins/kosync.koplugin/main.lua:252
+#: plugins/kosync.koplugin/main.lua:268
 msgid "Custom progress sync server address"
 msgstr "Adresse pour serveur de synchronisation personnel"
 
-#: plugins/kosync.koplugin/main.lua:306
+#: plugins/kosync.koplugin/main.lua:322
 msgid "Cannot login: %1"
 msgstr "Impossible de se connecter : %1"
 
-#: plugins/kosync.koplugin/main.lua:330
+#: plugins/kosync.koplugin/main.lua:346
 msgid "Cannot register: %1"
 msgstr "Impossible de s'enregistrer : %1"
 
-#: plugins/kosync.koplugin/main.lua:340
+#: plugins/kosync.koplugin/main.lua:356
 msgid "Registering. Please wait…"
 msgstr "Inscription. Veuillez patienter…"
 
-#: plugins/kosync.koplugin/main.lua:376
+#: plugins/kosync.koplugin/main.lua:392
 msgid "An error occurred while registering:"
 msgstr "Une erreur s’est produite au cours de l’enregistrement :"
 
-#: plugins/kosync.koplugin/main.lua:381
+#: plugins/kosync.koplugin/main.lua:397
 msgid "An unknown error occurred while registering."
 msgstr "Une erreur inconnue s’est produite lors de l’enregistrement."
 
-#: plugins/kosync.koplugin/main.lua:389
+#: plugins/kosync.koplugin/main.lua:405
 msgid "Registered to KOReader server."
 msgstr "Inscrit sur le serveur KOReader."
 
-#: plugins/kosync.koplugin/main.lua:393 plugins/kosync.koplugin/main.lua:429
+#: plugins/kosync.koplugin/main.lua:409 plugins/kosync.koplugin/main.lua:445
 msgid "Unknown server error"
 msgstr "Erreur de serveur inconnue"
 
-#: plugins/kosync.koplugin/main.lua:416
+#: plugins/kosync.koplugin/main.lua:432
 msgid "An unknown error occurred while logging in."
 msgstr "Une erreur inconnue s’est produite pendant l’ouverture de la session."
 
-#: plugins/kosync.koplugin/main.lua:425
+#: plugins/kosync.koplugin/main.lua:441
 msgid "Logged in to KOReader server."
 msgstr "Connecté au serveur KOReader."
 
-#: plugins/kosync.koplugin/main.lua:498
+#: plugins/kosync.koplugin/main.lua:514
 msgid "Progress has been pushed."
 msgstr "La progression a été envoyée."
 
-#: plugins/kosync.koplugin/main.lua:543
+#: plugins/kosync.koplugin/main.lua:559
 msgid "No progress found for this document."
 msgstr "Pas de progression trouvée pour ce document."
 
-#: plugins/kosync.koplugin/main.lua:554
+#: plugins/kosync.koplugin/main.lua:570
 msgid "Latest progress is coming from this device."
 msgstr "La progression la plus récente provient de cet appareil."
 
-#: plugins/kosync.koplugin/main.lua:570
+#: plugins/kosync.koplugin/main.lua:586
 msgid "The progress has already been synchronized."
 msgstr "La progression a déjà été synchronisée."
 
-#: plugins/kosync.koplugin/main.lua:600
+#: plugins/kosync.koplugin/main.lua:616
 msgid "Sync to latest location %1% from device '%2'?"
 msgstr "Synchroniser le dernier emplacement %1% depuis l’appareil « %2 » ?"
 
-#: plugins/kosync.koplugin/main.lua:614
+#: plugins/kosync.koplugin/main.lua:630
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr ""
 "Synchroniser l’emplacement précédent %1% à partir de l’appareil « %2 » ?"
@@ -11566,6 +11560,15 @@ msgstr "Toucher le coin inférieur droit"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Toucher le coin supérieur droit"
+
+#~ msgid "  Auto"
+#~ msgstr "  Auto"
+
+#~ msgid "  Prompt"
+#~ msgstr "  Demander"
+
+#~ msgid "  Disable"
+#~ msgstr "  Désactiver"
 
 #~ msgid "Changed hyphenation to %1."
 #~ msgstr "Coupure des mots passée à %1."
