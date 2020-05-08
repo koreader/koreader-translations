@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-07 18:27+0000\n"
-"PO-Revision-Date: 2020-05-06 19:16+0000\n"
+"PO-Revision-Date: 2020-05-09 22:21+0000\n"
 "Last-Translator: hombretranquilo <hombretranquilo.mbp@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/koreader/"
 "koreader/es/>\n"
@@ -4961,6 +4961,11 @@ msgid ""
 "- 'continuous' mode allows you to scroll the text like you would in a web "
 "browser (the 'Page Overlap' setting is only available in this mode)."
 msgstr ""
+"- El modo 'página' divide el texto en páginas en los lugares más apropiados ("
+"los números de página y el número de páginas pueden variar cuando se "
+"modifican las fuentes, los márgenes, los estilos, etc.).\n"
+"- El modo 'continuo' permite desplazar el texto como en un navegador web (el "
+"ajuste 'Solapamiento de páginas' sólo está disponible en este modo)."
 
 #: frontend/ui/data/creoptions.lua:207
 msgid ""
@@ -5023,9 +5028,8 @@ msgstr ""
 "no hay reducción)."
 
 #: frontend/ui/data/creoptions.lua:361
-#, fuzzy
 msgid "Max word expansion %"
-msgstr "Espaciado de palabras permitido (%)"
+msgstr "Expansión de palabras máxima"
 
 #: frontend/ui/data/creoptions.lua:377
 msgid ""
@@ -5089,7 +5093,6 @@ msgstr ""
 "obtener el mejor resultado al usar el interletraje)."
 
 #: frontend/ui/data/creoptions.lua:473
-#, fuzzy
 msgid ""
 "Enable or disable the rendering engine alternative status bar at the top of "
 "the screen (this status bar can't be customized).\n"
@@ -5098,11 +5101,13 @@ msgid ""
 "screen can be toggled by tapping. The items displayed can be customized via "
 "the main menu."
 msgstr ""
-"- 'completa' muestra una barra de estado en la parte superior de la pantalla "
-"(esta barra de estado no se puede personalizar).\n"
-"- 'mini' muestra una barra de estado en la parte inferior de la pantalla, "
-"que se puede desactivar pulsando. Los elementos mostrados se pueden "
-"personalizar a través del menú principal."
+"Habilitar o deshabilitar, en la parte superior de la pantalla, la barra de "
+"estado alternativa del motor de renderizado  (esta barra de estado no se "
+"puede personalizar).\n"
+"\n"
+"Tanto si está activada como si no, la barra de estado de KOReader de la "
+"parte inferior de la pantalla, se puede alternar pulsando en ella. Los "
+"elementos a mostrar pueden ser personalizar a través del menú principal."
 
 #: frontend/ui/data/creoptions.lua:487
 msgid ""
@@ -6024,10 +6029,26 @@ msgid ""
 "odd page number, and once on an even page number (these areas will then be "
 "used for all odd, or even, page numbers)."
 msgstr ""
+"Permite recortar los márgenes de las páginas en blanco en el documento "
+"original.\n"
+"Este ajuste puede ser útil en documentos escaneados, que pueden tener motas "
+"o huellas dactilares en los márgenes, para poder usar el zoom para ajustar "
+"el ancho del contenido.\n"
+"- \"ninguno\" no recorta los márgenes del documento original.\n"
+"- 'auto' encuentra el área de contenido automáticamente.\n"
+"- \"semi-automático\" encuentra el área de contenido automáticamente, dentro "
+"de un área mayor definida manualmente.\n"
+"- \"manual\" usa el área que ha sido definida manualmente.\n"
+"\n"
+"En los modos \"semi-automático\" y \"manual\", es posible que sea necesario "
+"definir una área para las páginas impares y otra para las pares (estas áreas "
+"se utilizarán para todos las páginas pares e impares)."
 
 #: frontend/ui/data/koptoptions.lua:74
 msgid "Set margins to be applied after page-crop and zoom modes are applied."
 msgstr ""
+"Configurar los márgenes que se emplearán después de aplicar los modos de "
+"recorte de página y de zoom."
 
 #: frontend/ui/data/koptoptions.lua:90
 msgid ""
@@ -6035,16 +6056,22 @@ msgid ""
 "- 'continuous' mode allows you to scroll the pages like you would in a web "
 "browser."
 msgstr ""
+"- El modo 'página' muestra una única página del documento a la vez.\n"
+"- El modo 'continuo' permite desplazarse por las páginas como en un "
+"navegador web."
 
 #: frontend/ui/data/koptoptions.lua:105
 msgid ""
 "In continuous view mode, sets the thickness of the separator between "
 "document pages."
 msgstr ""
+"En el modo de vista continua, establece el grosor del separador entre las "
+"páginas del documento."
 
 #: frontend/ui/data/koptoptions.lua:130
 msgid "In reflow mode, sets the spacing between lines."
 msgstr ""
+"En el modo de redistribución de texto, establece el espacio entre las líneas."
 
 #: frontend/ui/data/koptoptions.lua:150
 msgid ""
@@ -6052,16 +6079,22 @@ msgid ""
 "The first option (\"auto\") tries to automatically align reflowed text as it "
 "is in the original document."
 msgstr ""
+"En el modo de redistribución de texto, establece la alineación del texto.\n"
+"La primera opción (\"auto\") intenta alinear el texto redistribuido "
+"automáticamente, tal como está en el documento original."
 
 #: frontend/ui/data/koptoptions.lua:192
 msgid ""
 "In reflow mode, sets a font scaling factor that is applied to the original "
 "document font sizes."
 msgstr ""
+"En el modo de redistribución de texto, establece un factor de escalado de "
+"fuentes que se aplica a los tamaños de fuente del documento original."
 
 #: frontend/ui/data/koptoptions.lua:207
 msgid "In reflow mode, sets the spacing between words."
 msgstr ""
+"En el modo de redistribución de texto, establece el espaciado entre palabras."
 
 #: frontend/ui/data/koptoptions.lua:227
 msgid ""
@@ -6070,6 +6103,12 @@ msgid ""
 "reading.\n"
 "Some of the other settings are only available when reflow mode is enabled."
 msgstr ""
+"El modo de redistribución de texto extrae el texto y las imágenes del "
+"documento original, aunque posiblemente algunas características del "
+"formateado sean descartadas , y lo redistribuye en la pantalla para "
+"facilitar su lectura.\n"
+"Algunos de los otros ajustes sólo están disponibles cuando el modo de "
+"redistribución de texto está activado."
 
 #: frontend/ui/data/koptoptions.lua:257
 msgid ""
@@ -6084,32 +6123,37 @@ msgstr ""
 "contraste para una lectura más fácil."
 
 #: frontend/ui/data/koptoptions.lua:269
-#, fuzzy
 msgid "Enable Hardware dithering."
-msgstr "Deshabilitar tramado por HW"
+msgstr "Habilitar el tramado por hardware."
 
 #: frontend/ui/data/koptoptions.lua:282
 msgid ""
 "In reflow mode, sets the quality of the text and image extraction processing "
 "and output."
 msgstr ""
+"En el modo de redistribución de texto, establece la calidad de procesamiento "
+"y salida de la extracción de texto e imágenes."
 
 #: frontend/ui/data/koptoptions.lua:298
-#, fuzzy
 msgid "Set the language to be used by the OCR engine."
-msgstr "(Utilizado por el motor OCR)"
+msgstr "Configurar el idioma que debe usar el motor de OCR."
 
 #: frontend/ui/data/koptoptions.lua:308
 msgid ""
 "Force the use of OCR for text selection, even if the document has a text "
 "layer."
 msgstr ""
+"Forzar el uso de OCR para la selección de texto, incluso si el documento "
+"tiene una capa de texto."
 
 #: frontend/ui/data/koptoptions.lua:320
 msgid ""
 "In reflow mode, sets the original text direction. This needs to be set to "
 "RTL to correctly extract and reflow RTL languages like Arabic or Hebrew."
 msgstr ""
+"En el modo de redistribución de texto, establece la dirección del texto "
+"original. Este ajuste debe ser configurado como RTL para extraer y "
+"redistribuir correctamente los idiomas RTL como el árabe o el hebreo."
 
 #: frontend/ui/data/koptoptions.lua:373
 msgid ""
@@ -6118,6 +6162,11 @@ msgid ""
 "You might need to set it to 1 column if, in a full width document, text is "
 "incorrectly detected as multiple columns because of unlucky word spacing."
 msgstr ""
+"En el modo de redistribución de texto, establece el número máximo de "
+"columnas a tratar de detectar en el documento original.\n"
+"Puede que sea necesario establecerlo en 1 columna si, en un documento de "
+"ancho completo, se detectan por error varias columnas debido a un "
+"desafortunado espaciado de palabras."
 
 #: frontend/ui/data/optionsutil.lua:39 frontend/ui/data/optionsutil.lua:49
 msgid "custom"
@@ -6236,9 +6285,8 @@ msgid "Line Spacing"
 msgstr "Interlineado"
 
 #: frontend/ui/data/strings.lua:16
-#, fuzzy
 msgid "Document Columns"
-msgstr "Menú de documentos"
+msgstr "Columnas del documento"
 
 #: frontend/ui/data/strings.lua:20
 msgid "Contrast"
@@ -6331,9 +6379,8 @@ msgid "Progress Bar"
 msgstr "Barra de progreso"
 
 #: frontend/ui/data/strings.lua:44
-#, fuzzy
 msgid "Alt Status Bar"
-msgstr "Barra de estado"
+msgstr "Barra de estado alternativa"
 
 #. @translators If OCR is unclear, please see https://en.wikipedia.org/wiki/Optical_character_recognition
 #: frontend/ui/data/strings.lua:46
