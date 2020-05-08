@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-07 18:27+0000\n"
-"PO-Revision-Date: 2020-05-07 18:27+0000\n"
+"PO-Revision-Date: 2020-05-09 22:21+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/koreader/koreader/"
 "nl/>\n"
@@ -4927,6 +4927,11 @@ msgid ""
 "- 'continuous' mode allows you to scroll the text like you would in a web "
 "browser (the 'Page Overlap' setting is only available in this mode)."
 msgstr ""
+"- 'pagina' modus splitst de tekst in pagina's waar van toepassing ("
+"paginanummers en het aantal pagina's kunnen wijzigen afhankelijk van het "
+"gekozen lettertype, de marges, stijlen, enz.).\n"
+"- 'ononderbroken' modus staat toe om te scrollen zoals in een webbrowser (de "
+"'Pagina-overlap'-instelling is enkel beschikbaar in deze modus)."
 
 #: frontend/ui/data/creoptions.lua:207
 msgid ""
@@ -4985,9 +4990,8 @@ msgstr ""
 "regel te laten passen (100% betekent geen vermindering)."
 
 #: frontend/ui/data/creoptions.lua:361
-#, fuzzy
 msgid "Max word expansion %"
-msgstr "Toegestane woorduitbreiding (%)"
+msgstr "Max woorduitbreiding %"
 
 #: frontend/ui/data/creoptions.lua:377
 msgid ""
@@ -5047,7 +5051,6 @@ msgstr ""
 "een specifieke overhang-implementatie.)"
 
 #: frontend/ui/data/creoptions.lua:473
-#, fuzzy
 msgid ""
 "Enable or disable the rendering engine alternative status bar at the top of "
 "the screen (this status bar can't be customized).\n"
@@ -5056,11 +5059,12 @@ msgid ""
 "screen can be toggled by tapping. The items displayed can be customized via "
 "the main menu."
 msgstr ""
-"- 'volledig' geeft een statusbalk bovenaan het scherm weer (deze statusbalk "
-"kan niet worden aangepast).\n"
-"- 'mini' geeft een statusbalk onderaan het scherm weer, die kan worden in en "
-"uitgeschakeld door erop te tikken. Wat erop wordt weergegeven kan worden "
-"aangepast via het hoofdmenu."
+"Schakel de alternatieve statusbalk van de renderengine bovenaan het scherm "
+"in of uit (deze statusbalk kan niet worden aangepast).\n"
+"\n"
+"KOReaders eigen statusbalk onderin het scherm kan worden omgeschakeld door "
+"te tikken, ongeacht of deze is ingeschakeld of uitgeschakeld. De weergegeven "
+"items kunnen worden aangepast via het hoofdmenu."
 
 #: frontend/ui/data/creoptions.lua:487
 msgid ""
@@ -5948,10 +5952,27 @@ msgid ""
 "odd page number, and once on an even page number (these areas will then be "
 "used for all odd, or even, page numbers)."
 msgstr ""
+"Maakt het mogelijk om lege paginamarges in het originele document bij te "
+"snijden.\n"
+"Dit kan nodig zijn bij gescande documenten, die mogelijk spikkels of "
+"vingerafdrukken in de marges hebben, om zoomen naar inhoudsbreedte te kunnen "
+"toepassen.\n"
+"- 'geen' snijdt de originele documentmarges niet bij.\n"
+"- 'auto' vindt automatisch de inhoud.\n"
+"- 'semi-automatisch\" vindt automatisch de inhoud, binnen een groter gebied "
+"dat handmatig is gedefinieerd.\n"
+"- 'handmatig' gebruikt het handmatig gedefinieerde gebied zonder poespas.\n"
+"\n"
+"In de 'semi-automatische' en 'handmatige' modus kan het nodig zijn om "
+"gebieden eenmalig te definiëren op een oneven paginanummer, en eenmalig op "
+"een even paginanummer (deze gebieden worden dan gebruikt voor alle oneven of "
+"even paginanummers)."
 
 #: frontend/ui/data/koptoptions.lua:74
 msgid "Set margins to be applied after page-crop and zoom modes are applied."
 msgstr ""
+"Stel de marges in om toe te passen na het bijsnijden van de pagina en het "
+"toepassen van de zoommodi."
 
 #: frontend/ui/data/koptoptions.lua:90
 msgid ""
@@ -5959,16 +5980,18 @@ msgid ""
 "- 'continuous' mode allows you to scroll the pages like you would in a web "
 "browser."
 msgstr ""
+"- 'pagina' modus toont telkens een pagina van het document.\n"
+"- 'ononderbroken' modus staat toe om te scrollen zoals in een webbrowser."
 
 #: frontend/ui/data/koptoptions.lua:105
 msgid ""
 "In continuous view mode, sets the thickness of the separator between "
 "document pages."
-msgstr ""
+msgstr "In ononderbroken modus, de dikte van de scheiding tussen pagina's."
 
 #: frontend/ui/data/koptoptions.lua:130
 msgid "In reflow mode, sets the spacing between lines."
-msgstr ""
+msgstr "In tekstherschikkingsmodus, de regelafstand."
 
 #: frontend/ui/data/koptoptions.lua:150
 msgid ""
@@ -5976,16 +5999,21 @@ msgid ""
 "The first option (\"auto\") tries to automatically align reflowed text as it "
 "is in the original document."
 msgstr ""
+"In tekstherschikkingsmodus, de tekstuitlijning.\n"
+"De eerste optie (\"auto\") probeert om de uitlijning automatisch hetzelfde "
+"te houden als in het oorspronkelijke document."
 
 #: frontend/ui/data/koptoptions.lua:192
 msgid ""
 "In reflow mode, sets a font scaling factor that is applied to the original "
 "document font sizes."
 msgstr ""
+"In tekstherschikkingsmodus, een lettertypeschaalfactor die wordt toegepast "
+"op de oorspronkelijke lettertypegrootte van het document."
 
 #: frontend/ui/data/koptoptions.lua:207
 msgid "In reflow mode, sets the spacing between words."
-msgstr ""
+msgstr "In tekstherschikkingsmodus, de afstand tussen woorden."
 
 #: frontend/ui/data/koptoptions.lua:227
 msgid ""
@@ -5994,6 +6022,11 @@ msgid ""
 "reading.\n"
 "Some of the other settings are only available when reflow mode is enabled."
 msgstr ""
+"Tekstherschikkingsmodus haalt tekst en afbeeldingen uit het originele "
+"document, waarbij eventueel wat opmaak wordt genegeerd, die vervolgens op "
+"het scherm wordt herschikt om het lezen te vergemakkelijken.\n"
+"Sommige instellingen zijn alleen beschikbaar als tekstherschikkingsmodus is "
+"ingeschakeld."
 
 #: frontend/ui/data/koptoptions.lua:257
 msgid ""
@@ -6008,32 +6041,39 @@ msgstr ""
 "voor een beter contrast en makkelijker leesbare tekst zorgen."
 
 #: frontend/ui/data/koptoptions.lua:269
-#, fuzzy
 msgid "Enable Hardware dithering."
-msgstr "Hardware-dithering uitschakelen"
+msgstr "Hardware-dithering inschakelen."
 
 #: frontend/ui/data/koptoptions.lua:282
 msgid ""
 "In reflow mode, sets the quality of the text and image extraction processing "
 "and output."
 msgstr ""
+"In tekstherschikkingsmodus, de kwaliteit van de tekst- en "
+"beeldextractieverwerking en -uitvoer."
 
 #: frontend/ui/data/koptoptions.lua:298
-#, fuzzy
 msgid "Set the language to be used by the OCR engine."
-msgstr "(Gebruikt door de OCR-motor.)"
+msgstr ""
+"De taal die zal worden gebruikt door de OCR-engine (automatische "
+"tekenherkenning)."
 
 #: frontend/ui/data/koptoptions.lua:308
 msgid ""
 "Force the use of OCR for text selection, even if the document has a text "
 "layer."
 msgstr ""
+"Forceer het gebruik van OCR voor tekstselectie, zelfs als het document een "
+"tekstlaag heeft."
 
 #: frontend/ui/data/koptoptions.lua:320
 msgid ""
 "In reflow mode, sets the original text direction. This needs to be set to "
 "RTL to correctly extract and reflow RTL languages like Arabic or Hebrew."
 msgstr ""
+"In tekstherschikkingsmodus, de oorspronkelijke tekstrichting. Deze moet "
+"worden ingesteld op RTL om RTL-talen zoals Arabisch of Hebreeuws op de "
+"juiste manier te extraheren en te herschikken."
 
 #: frontend/ui/data/koptoptions.lua:373
 msgid ""
@@ -6042,6 +6082,11 @@ msgid ""
 "You might need to set it to 1 column if, in a full width document, text is "
 "incorrectly detected as multiple columns because of unlucky word spacing."
 msgstr ""
+"In tekstherschikkingsmodus, het maximum aantal kolommen dat in het originele "
+"document zal worden gedetecteerd.\n"
+"Het kan nodig zijn om het in te stellen op 1 kolom als een document met "
+"tekst over de volledige breedte ten onrechte wordt gedetecteerd als meerdere "
+"kolommen vanwege de ongelukkige woordspeling."
 
 #: frontend/ui/data/optionsutil.lua:39 frontend/ui/data/optionsutil.lua:49
 msgid "custom"
@@ -6160,9 +6205,8 @@ msgid "Line Spacing"
 msgstr "Regelafstand"
 
 #: frontend/ui/data/strings.lua:16
-#, fuzzy
 msgid "Document Columns"
-msgstr "Documentmenu"
+msgstr "Documentkolommen"
 
 #: frontend/ui/data/strings.lua:20
 msgid "Contrast"
@@ -6255,9 +6299,8 @@ msgid "Progress Bar"
 msgstr "Voortgangsbalk"
 
 #: frontend/ui/data/strings.lua:44
-#, fuzzy
 msgid "Alt Status Bar"
-msgstr "Statusbalk"
+msgstr "Alt statusbalk"
 
 #. @translators If OCR is unclear, please see https://en.wikipedia.org/wiki/Optical_character_recognition
 #: frontend/ui/data/strings.lua:46
