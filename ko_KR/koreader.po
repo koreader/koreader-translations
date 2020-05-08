@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-07 18:27+0000\n"
-"PO-Revision-Date: 2020-05-07 18:27+0000\n"
+"PO-Revision-Date: 2020-05-08 05:01+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
 "ko/>\n"
@@ -4861,6 +4861,9 @@ msgid ""
 "- 'continuous' mode allows you to scroll the text like you would in a web "
 "browser (the 'Page Overlap' setting is only available in this mode)."
 msgstr ""
+"- '페이지' 모드는 본문을 페이지 형태로 분할하여 알맞게 표시합니다 (글꼴, 여백, 스타일 등을 변경하면 페이지 번호와 페이지 수가 "
+"변경될 수 있음).\n"
+"- '연속' 모드를 사용하면 웹 브라우저에서와 같이 텍스트를 스크롤할 수 있습니다 ( '페이지 오버랩' 설정은 이 모드에서만 사용 가능)."
 
 #: frontend/ui/data/creoptions.lua:207
 msgid ""
@@ -4920,9 +4923,8 @@ msgstr ""
 "를 알려줍니다 (100%는 축소 없음을 뜻함)."
 
 #: frontend/ui/data/creoptions.lua:361
-#, fuzzy
 msgid "Max word expansion %"
-msgstr "허용된 낱말 확장 (%)"
+msgstr "최대 낱말 확장 %"
 
 #: frontend/ui/data/creoptions.lua:377
 msgid ""
@@ -4978,7 +4980,6 @@ msgstr ""
 "(커닝 구현에서 최상의 결과를 얻으려면 글꼴 힌팅을 조정해야 할 수도 있습니다.)"
 
 #: frontend/ui/data/creoptions.lua:473
-#, fuzzy
 msgid ""
 "Enable or disable the rendering engine alternative status bar at the top of "
 "the screen (this status bar can't be customized).\n"
@@ -4987,10 +4988,10 @@ msgid ""
 "screen can be toggled by tapping. The items displayed can be customized via "
 "the main menu."
 msgstr ""
-"- '전체'는 화면 상단에 상태 막대를 표시합니다 (이 상태 막대는 사용자 정의할 "
-"수 없음).\n"
-"- '미니'는 화면 하단에 상태 막대를 표시하며, 탭으로 켜고 끌 수 있습니다. 표"
-"시 항목은 주 메뉴에서 사용자 정의할 수 있습니다."
+"화면 상단에서 렌더링 엔진 대체 상태 표시 줄을 활성화 또는 비활성화합니다(이 상태 표시 줄은 변경할 수 없음).\n"
+"\n"
+"활성화 또는 비활성화 여부에 관계없이, 화면 하단의 KOReader 자체 상태 표시 줄을 눌러 전환할 수 있습니다. 표시되는 항목은 주 "
+"메뉴에서 변경할 수 있습니다."
 
 #: frontend/ui/data/creoptions.lua:487
 msgid ""
@@ -5854,10 +5855,19 @@ msgid ""
 "odd page number, and once on an even page number (these areas will then be "
 "used for all odd, or even, page numbers)."
 msgstr ""
+"원본 문서에서 빈 페이지 여백을 제거할 수 있습니다.\n"
+"스캔 한 문서(여백에 얼룩이나 지문이 있을 수 있음)에 필요할 수 있으며, 내용 너비에 맞게 확대/축소를 사용할 수 있습니다.\n"
+"- '없음'은 원본 문서 여백을 자르지 않습니다.\n"
+"- 'auto'는 컨텐츠 영역을 자동으로 찾습니다.\n"
+"- '반자동'은 수동으로 정의된 일부 큰 영역 내에서 컨텐츠 영역을 자동으로 찾습니다.\n"
+"- 'manual'은 수동으로 정의된 영역을 그대로 사용합니다.\n"
+"\n"
+"'반자동'과 '수동' 모드에서는 홀수 페이지 번호에서 한 번, 짝수 페이지 번호에서 한 번만 영역을 정의해야 할 수 있습니다(이러한 "
+"영역은 모든 홀수나 짝수 페이지 번호에 사용됨)."
 
 #: frontend/ui/data/koptoptions.lua:74
 msgid "Set margins to be applied after page-crop and zoom modes are applied."
-msgstr ""
+msgstr "페이지 여백 제거와 확대/축소 모드를 적용한 후에 사용할 여백을 설정하세요."
 
 #: frontend/ui/data/koptoptions.lua:90
 msgid ""
@@ -5865,16 +5875,18 @@ msgid ""
 "- 'continuous' mode allows you to scroll the pages like you would in a web "
 "browser."
 msgstr ""
+"- '페이지' 모드는 한 번에 한 페이지의 문서 만 표시합니다.\n"
+"- '연속' 모드를 사용하면 웹 브라우저에서와 같이 페이지를 스크롤할 수 있습니다."
 
 #: frontend/ui/data/koptoptions.lua:105
 msgid ""
 "In continuous view mode, sets the thickness of the separator between "
 "document pages."
-msgstr ""
+msgstr "연속 보기 모드에서 문서 페이지 사이의 분할선 두께를 설정합니다."
 
 #: frontend/ui/data/koptoptions.lua:130
 msgid "In reflow mode, sets the spacing between lines."
-msgstr ""
+msgstr "리플로우 모드에서 줄 간격을 설정합니다."
 
 #: frontend/ui/data/koptoptions.lua:150
 msgid ""
@@ -5882,16 +5894,18 @@ msgid ""
 "The first option (\"auto\") tries to automatically align reflowed text as it "
 "is in the original document."
 msgstr ""
+"리플로우 모드에서 본문 정렬을 설정합니다.\n"
+"첫번째 옵션(\"자동\")은 원본 문서에서와 같이 리플로우된 텍스트를 자동으로 정렬하려고 시도합니다."
 
 #: frontend/ui/data/koptoptions.lua:192
 msgid ""
 "In reflow mode, sets a font scaling factor that is applied to the original "
 "document font sizes."
-msgstr ""
+msgstr "리플로우 모드에서 원본 문서 글꼴 크기에 적용되는 글꼴 배율을 설정합니다."
 
 #: frontend/ui/data/koptoptions.lua:207
 msgid "In reflow mode, sets the spacing between words."
-msgstr ""
+msgstr "리플로우 모드에서 낱말 사이의 간격을 설정합니다."
 
 #: frontend/ui/data/koptoptions.lua:227
 msgid ""
@@ -5900,6 +5914,8 @@ msgid ""
 "reading.\n"
 "Some of the other settings are only available when reflow mode is enabled."
 msgstr ""
+"리플로우 모드는 원본 문서에서 텍스트와 이미지를 추출하여 일부 서식을 버리고 더 쉽게 읽을 수 있도록 화면에 맞게 리플로우합니다.\n"
+"다른 설정 중 일부는 리플로우 모드가 활성화된 경우에만 사용할 수 있습니다."
 
 #: frontend/ui/data/koptoptions.lua:257
 msgid ""
@@ -5913,32 +5929,32 @@ msgstr ""
 "기 쉬운 농도로 조절할 수 있습니다."
 
 #: frontend/ui/data/koptoptions.lua:269
-#, fuzzy
 msgid "Enable Hardware dithering."
-msgstr "HW 디더링 비활성"
+msgstr "하드웨어 디더링을 활성화하세요."
 
 #: frontend/ui/data/koptoptions.lua:282
 msgid ""
 "In reflow mode, sets the quality of the text and image extraction processing "
 "and output."
-msgstr ""
+msgstr "리플로우 모드에서 텍스트와 이미지 추출 처리 및 출력의 품질을 설정합니다."
 
 #: frontend/ui/data/koptoptions.lua:298
-#, fuzzy
 msgid "Set the language to be used by the OCR engine."
-msgstr "(OCR 엔진에서 사용됨.)"
+msgstr "OCR 엔진에서 사용할 언어를 설정하세요."
 
 #: frontend/ui/data/koptoptions.lua:308
 msgid ""
 "Force the use of OCR for text selection, even if the document has a text "
 "layer."
-msgstr ""
+msgstr "문서에 텍스트 레이어가 있더라도 텍스트 선택에 OCR을 사용합니다."
 
 #: frontend/ui/data/koptoptions.lua:320
 msgid ""
 "In reflow mode, sets the original text direction. This needs to be set to "
 "RTL to correctly extract and reflow RTL languages like Arabic or Hebrew."
 msgstr ""
+"리플로우 모드에서 원래 텍스트 방향을 설정합니다. 아랍어나 히브리어와 같은 RTL 언어를 올바르게 추출하고 리플로우하려면이를 RTL로 "
+"설정해야 합니다."
 
 #: frontend/ui/data/koptoptions.lua:373
 msgid ""
@@ -5947,6 +5963,8 @@ msgid ""
 "You might need to set it to 1 column if, in a full width document, text is "
 "incorrectly detected as multiple columns because of unlucky word spacing."
 msgstr ""
+"리플로우 모드에서 원본 문서에서 감지할 최대 열 수를 설정합니다.\n"
+"전체 너비 문서에서 예상치 못한 낱말 간격 때문에 텍스트가 여러 열로 잘못 감지되는 경우에는 1열로 설정해야 할 수 있습니다."
 
 #: frontend/ui/data/optionsutil.lua:39 frontend/ui/data/optionsutil.lua:49
 msgid "custom"
@@ -6065,9 +6083,8 @@ msgid "Line Spacing"
 msgstr "줄 간격"
 
 #: frontend/ui/data/strings.lua:16
-#, fuzzy
 msgid "Document Columns"
-msgstr "문서 메뉴"
+msgstr "문서 열"
 
 #: frontend/ui/data/strings.lua:20
 msgid "Contrast"
@@ -6160,9 +6177,8 @@ msgid "Progress Bar"
 msgstr "진행 막대"
 
 #: frontend/ui/data/strings.lua:44
-#, fuzzy
 msgid "Alt Status Bar"
-msgstr "상태 표시줄"
+msgstr "대체 상태 표시 줄"
 
 #. @translators If OCR is unclear, please see https://en.wikipedia.org/wiki/Optical_character_recognition
 #: frontend/ui/data/strings.lua:46
