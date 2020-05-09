@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-07 18:27+0000\n"
-"PO-Revision-Date: 2020-05-06 09:43+0000\n"
+"PO-Revision-Date: 2020-05-09 22:21+0000\n"
 "Last-Translator: Jim Jiang <jiangming1399@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "koreader/koreader/zh_Hans/>\n"
@@ -4831,6 +4831,8 @@ msgid ""
 "- 'continuous' mode allows you to scroll the text like you would in a web "
 "browser (the 'Page Overlap' setting is only available in this mode)."
 msgstr ""
+"- “页面” 模式会将文本在适当的地方分成多页（页码和每页的文本数量可能会在修改字体、边距、样式等情况下改变）。\n"
+"- “连续” 模式允许你像使用网页浏览器一样滚动文本（“页面重叠”选项仅在此模式下可用）。"
 
 #: frontend/ui/data/creoptions.lua:207
 msgid ""
@@ -4883,7 +4885,6 @@ msgstr ""
 "味着不压缩）。"
 
 #: frontend/ui/data/creoptions.lua:361
-#, fuzzy
 msgid "Max word expansion %"
 msgstr "允许扩展字母间间隙（%）"
 
@@ -4939,7 +4940,6 @@ msgstr ""
 "（启用字体微调可能达到更好的字距微调效果。）"
 
 #: frontend/ui/data/creoptions.lua:473
-#, fuzzy
 msgid ""
 "Enable or disable the rendering engine alternative status bar at the top of "
 "the screen (this status bar can't be customized).\n"
@@ -4948,9 +4948,9 @@ msgid ""
 "screen can be toggled by tapping. The items displayed can be customized via "
 "the main menu."
 msgstr ""
-"- '完整' 在屏幕顶端显示状态栏（无法自定义样式）。\n"
-"- '迷你' 在屏幕底端显示状态栏，可以通过点击来显示或隐藏状态栏，也可以在设置中"
-"自定义样式。"
+"启用或禁用屏幕顶部使用渲染引擎渲染的替代状态栏（此状态栏无法自定义）。\n"
+"\n"
+"无论是否启用，KOReader 在底部的状态栏依然可以通过点击来切换显示状态。底部状态栏显示的项目也可以在主菜单中自定义。"
 
 #: frontend/ui/data/creoptions.lua:487
 msgid ""
@@ -5775,10 +5775,18 @@ msgid ""
 "odd page number, and once on an even page number (these areas will then be "
 "used for all odd, or even, page numbers)."
 msgstr ""
+"允许在原始文档中裁剪空白边缘。\n"
+"这项设置通常对于扫描文档很有用，可以去除文档边缘的斑点和指纹，使内容缩放到适合屏幕宽度。\n"
+"- “无” 意味着不做任何裁剪。\n"
+"- “自动” 会自动查找内容区域。\n"
+"- “半自动” 会自动查找内容区域，并可以手动调整内容间距。\n"
+"- “手动” 需要自行定义内容区域。\n"
+"\n"
+"在“半自动”和“手动”模式下，你需要分别定义奇数和偶数页面的内容区域。"
 
 #: frontend/ui/data/koptoptions.lua:74
 msgid "Set margins to be applied after page-crop and zoom modes are applied."
-msgstr ""
+msgstr "设置页面裁剪并缩放后的边距。"
 
 #: frontend/ui/data/koptoptions.lua:90
 msgid ""
@@ -5786,16 +5794,18 @@ msgid ""
 "- 'continuous' mode allows you to scroll the pages like you would in a web "
 "browser."
 msgstr ""
+"- “分页” 模式一次仅显示文档的一页。\n"
+"- “连续” 模式允许你像在使用网页浏览器一样滚动页面。"
 
 #: frontend/ui/data/koptoptions.lua:105
 msgid ""
 "In continuous view mode, sets the thickness of the separator between "
 "document pages."
-msgstr ""
+msgstr "在连续模式下，设置文档页面之间的分隔符的粗细。"
 
 #: frontend/ui/data/koptoptions.lua:130
 msgid "In reflow mode, sets the spacing between lines."
-msgstr ""
+msgstr "在重排模式下，设置行之间的间距。"
 
 #: frontend/ui/data/koptoptions.lua:150
 msgid ""
@@ -5803,16 +5813,18 @@ msgid ""
 "The first option (\"auto\") tries to automatically align reflowed text as it "
 "is in the original document."
 msgstr ""
+"在重排模式下，设置文本对齐方式。\n"
+"首选的选项（自动）会尝试使用原始文档中的对齐方式。"
 
 #: frontend/ui/data/koptoptions.lua:192
 msgid ""
 "In reflow mode, sets a font scaling factor that is applied to the original "
 "document font sizes."
-msgstr ""
+msgstr "在重排模式下，设置字号相对于原文档的缩放比例。"
 
 #: frontend/ui/data/koptoptions.lua:207
 msgid "In reflow mode, sets the spacing between words."
-msgstr ""
+msgstr "在重排模式下，设置单词之间的间距。"
 
 #: frontend/ui/data/koptoptions.lua:227
 msgid ""
@@ -5821,6 +5833,8 @@ msgid ""
 "reading.\n"
 "Some of the other settings are only available when reflow mode is enabled."
 msgstr ""
+"重排模式会尝试从原文档中解析文本和图像，在忽略部分原始排版的情况下尝试对他们重排，以在此设备上提供更好的可读性。\n"
+"部分选项仅在重排模式开启时可用。"
 
 #: frontend/ui/data/koptoptions.lua:257
 msgid ""
@@ -5833,32 +5847,30 @@ msgstr ""
 "此选项也可以用于移除灰色、灰阶或彩色背景，以提高文本对比度。"
 
 #: frontend/ui/data/koptoptions.lua:269
-#, fuzzy
 msgid "Enable Hardware dithering."
-msgstr "禁用硬件抖动"
+msgstr "启用硬件抖动。"
 
 #: frontend/ui/data/koptoptions.lua:282
 msgid ""
 "In reflow mode, sets the quality of the text and image extraction processing "
 "and output."
-msgstr ""
+msgstr "在重排模式下，设置文本和图像在解析和输出过程中的质量。"
 
 #: frontend/ui/data/koptoptions.lua:298
-#, fuzzy
 msgid "Set the language to be used by the OCR engine."
-msgstr "由OCR引擎使用"
+msgstr "设置 OCR 引擎使用的语言。"
 
 #: frontend/ui/data/koptoptions.lua:308
 msgid ""
 "Force the use of OCR for text selection, even if the document has a text "
 "layer."
-msgstr ""
+msgstr "强制使用 OCR 的文本，忽略文档中存在的文本层。"
 
 #: frontend/ui/data/koptoptions.lua:320
 msgid ""
 "In reflow mode, sets the original text direction. This needs to be set to "
 "RTL to correctly extract and reflow RTL languages like Arabic or Hebrew."
-msgstr ""
+msgstr "在重排模式下，设置原始文本的方向。若要正确重排从右向左书写的文本（例如阿拉伯语或希伯来语），需要将此项设置改为 RTL。"
 
 #: frontend/ui/data/koptoptions.lua:373
 msgid ""
@@ -5867,6 +5879,8 @@ msgid ""
 "You might need to set it to 1 column if, in a full width document, text is "
 "incorrectly detected as multiple columns because of unlucky word spacing."
 msgstr ""
+"在重排模式下，设置检测原始文档中列数的最大值。\n"
+"若在部分全宽文档中，错误的将其识别为了多列文档，则你可以将这个设置修改为 1。"
 
 #: frontend/ui/data/optionsutil.lua:39 frontend/ui/data/optionsutil.lua:49
 msgid "custom"
@@ -5985,9 +5999,8 @@ msgid "Line Spacing"
 msgstr "行间距"
 
 #: frontend/ui/data/strings.lua:16
-#, fuzzy
 msgid "Document Columns"
-msgstr "文档菜单"
+msgstr "文档列数"
 
 #: frontend/ui/data/strings.lua:20
 msgid "Contrast"
@@ -6080,9 +6093,8 @@ msgid "Progress Bar"
 msgstr "进度条"
 
 #: frontend/ui/data/strings.lua:44
-#, fuzzy
 msgid "Alt Status Bar"
-msgstr "状态栏"
+msgstr "备选状态栏"
 
 #. @translators If OCR is unclear, please see https://en.wikipedia.org/wiki/Optical_character_recognition
 #: frontend/ui/data/strings.lua:46
@@ -6231,7 +6243,7 @@ msgstr "连续"
 
 #: frontend/ui/data/strings.lua:85
 msgid "page"
-msgstr "分页模式"
+msgstr "分页"
 
 #. @translators TBRTL is top-to-bottom-right-to-left, which is a traditional Chinese/Japanese writing direction.
 #: frontend/ui/data/strings.lua:91
@@ -6431,7 +6443,7 @@ msgstr "忽略按住角落手势"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:216
 msgid "Force haptic feedback"
-msgstr ""
+msgstr "强制触觉反馈"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:226
 msgid "Volume key page turning"
