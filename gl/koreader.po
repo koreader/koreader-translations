@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 22:21+0000\n"
-"PO-Revision-Date: 2020-05-09 22:21+0000\n"
+"PO-Revision-Date: 2020-05-19 06:41+0000\n"
 "Last-Translator: Juan Comesaña Fernández <xan.comesana@gmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/koreader/"
 "koreader/gl/>\n"
@@ -2519,7 +2519,7 @@ msgstr "Conmutar pasar páxina"
 
 #: frontend/apps/reader/modules/readergesture.lua:89
 msgid "Toggle reflow"
-msgstr "Conmutar reorganización"
+msgstr "Conmutar redistribución de texto"
 
 #: frontend/apps/reader/modules/readergesture.lua:90
 msgid "Toggle page turn direction"
@@ -4982,12 +4982,10 @@ msgid "Font Size"
 msgstr "Tamaño da Fonte"
 
 #: frontend/ui/data/creoptions.lua:334
-#, fuzzy
 msgid "Word spacing"
-msgstr "Separación de Palabras"
+msgstr "Espazado de palabras"
 
 #: frontend/ui/data/creoptions.lua:335
-#, fuzzy
 msgid ""
 "Set word spacing percentages:\n"
 "- how much to scale the width of each space character from its regular "
@@ -4995,42 +4993,40 @@ msgid ""
 "- by how much some of them can then be reduced to make more words fit on a "
 "line."
 msgstr ""
-"Indica ao motor de renderizado canto pode variar o largo de cada espacio en "
-"branco no texto con respecto ao seu tamaño normal e canto se poden reducir "
-"adicionalmente para que más palabras encaixen nunha liña (100% significa sen "
-"redución)."
+"Configurar porcentaxes de espazado de palabras:\n"
+"- canto se pode escalar o largo de cada espazo en branco con respecto ao seu "
+"tamaño normal,\n"
+"- canto se poden reducir algúns deles para que más palabras caiban nunha "
+"liña."
 
 #: frontend/ui/data/creoptions.lua:338
-#, fuzzy
 msgid "Scaling %"
-msgstr "Cambiar tamaño de imaxes"
+msgstr "Escalado %"
 
 #: frontend/ui/data/creoptions.lua:343
-#, fuzzy
 msgid "Reduction %"
-msgstr "Axustar duración"
+msgstr "Redución %"
 
 #: frontend/ui/data/creoptions.lua:363
-#, fuzzy
 msgid ""
 "Tells the rendering engine by how much to scale the width of each 'space' "
 "character in the text from its regular width, and by how much it can "
 "additionally reduce them to make more words fit on a line (100% means no "
 "reduction)."
 msgstr ""
-"Indica ao motor de renderizado canto pode variar o largo de cada espacio en "
+"Indica ao motor de renderizado canto pode variar o largo de cada espazo en "
 "branco no texto con respecto ao seu tamaño normal e canto se poden reducir "
-"adicionalmente para que más palabras encaixen nunha liña (100% significa sen "
-"redución)."
+"adicionalmente para que máis palabras encaixen nunha liña (100% significa "
+"sen redución)."
 
 #: frontend/ui/data/creoptions.lua:380
-#, fuzzy
 msgid "Max word expansion"
-msgstr "Máx. expansión de palabra (%)"
+msgstr "Expansión máxima de palabra"
 
 #: frontend/ui/data/creoptions.lua:381
 msgid "Set max word expansion as a % of the font size."
 msgstr ""
+"Configurar a expansión máxima de palabra como unha % do tamaño de fonte."
 
 #: frontend/ui/data/creoptions.lua:397
 msgid ""
@@ -5992,10 +5988,25 @@ msgid ""
 "odd page number, and once on an even page number (these areas will then be "
 "used for all odd, or even, page numbers)."
 msgstr ""
+"Permite recortar as marxes das páxinas en branco no documento orixinal.\n"
+"Isto pode ser necesario en documentos escaneados, que poden ter manchas ou "
+"pegadas dixitais nas marxes, para poder usar o zoom para axustar o largo do "
+"contido.\n"
+"- 'ningún' non recorta as marxes do documento orixinal.\n"
+"- 'auto' procura automaticamente a área de contido. \n"
+"- 'semi-auto' procura a área de contido automaticamente dentro dunha área "
+"maior definida manualmente.\n"
+"- 'manual' usa a área definida tal cal.\n"
+"\n"
+"Nos modos 'semi-auto' e 'manual', poida que teñas que definir unha área "
+"nunha páxina impar e outra nunha páxina par (estas áreas usaranse en todas "
+"as seguintes páxinas impares e pares)."
 
 #: frontend/ui/data/koptoptions.lua:74
 msgid "Set margins to be applied after page-crop and zoom modes are applied."
 msgstr ""
+"Configurar as marxes para usar despois de aplicar o modos recorte e zoom de "
+"páxina."
 
 #: frontend/ui/data/koptoptions.lua:90
 msgid ""
@@ -6003,16 +6014,20 @@ msgid ""
 "- 'continuous' mode allows you to scroll the pages like you would in a web "
 "browser."
 msgstr ""
+"- o modo 'páxina' mostra só unha páxina do documento de cada vez.\n"
+"- o modo 'continuo' permite desprazar o texto coma nun navegador web."
 
 #: frontend/ui/data/koptoptions.lua:105
 msgid ""
 "In continuous view mode, sets the thickness of the separator between "
 "document pages."
 msgstr ""
+"No modo de vista continua, establece o grosor do separador entre páxinas do "
+"documento."
 
 #: frontend/ui/data/koptoptions.lua:130
 msgid "In reflow mode, sets the spacing between lines."
-msgstr ""
+msgstr "No modo de redistribución, configura o espazado entre liñas."
 
 #: frontend/ui/data/koptoptions.lua:150
 msgid ""
@@ -6020,16 +6035,21 @@ msgid ""
 "The first option (\"auto\") tries to automatically align reflowed text as it "
 "is in the original document."
 msgstr ""
+"No modo de redistribución, configura o aliñamento de texto.\n"
+"A primeira opción (\"auto\") intenta aliñar o texto reorganizado "
+"automaticamente tal como está no documento orixinal."
 
 #: frontend/ui/data/koptoptions.lua:192
 msgid ""
 "In reflow mode, sets a font scaling factor that is applied to the original "
 "document font sizes."
 msgstr ""
+"En modo de redistribución, configura un factor de escalado da fonte para ser "
+"aplicado aos tamaños de fonte do documento orixinal."
 
 #: frontend/ui/data/koptoptions.lua:207
 msgid "In reflow mode, sets the spacing between words."
-msgstr ""
+msgstr "No modo de redistribución, configurar o espazado entre palabras."
 
 #: frontend/ui/data/koptoptions.lua:227
 msgid ""
@@ -6038,6 +6058,11 @@ msgid ""
 "reading.\n"
 "Some of the other settings are only available when reflow mode is enabled."
 msgstr ""
+"O modo de redistribución extrae texto e imaxes do documento orixinal, coa "
+"posibilidade de descartar partes do formato, e os redistribúe na pantalla "
+"para facilitar a lectura.\n"
+"Algúns dos outros axustes están dispoñibles só cando o modo de "
+"redistribución é activado."
 
 #: frontend/ui/data/koptoptions.lua:257
 msgid ""
@@ -6060,23 +6085,29 @@ msgid ""
 "In reflow mode, sets the quality of the text and image extraction processing "
 "and output."
 msgstr ""
+"No modo de redistribución, configura as calidades do proceso de extracción e "
+"saída de texto e imaxes."
 
 #: frontend/ui/data/koptoptions.lua:298
-#, fuzzy
 msgid "Set the language to be used by the OCR engine."
-msgstr "(Usado polo motor OCR)"
+msgstr "Configura o idioma para ser usado polo motor OCR."
 
 #: frontend/ui/data/koptoptions.lua:308
 msgid ""
 "Force the use of OCR for text selection, even if the document has a text "
 "layer."
 msgstr ""
+"Forza o uso de OCR para a selección de texto, incluso se o documento contén "
+"unha capa de texto."
 
 #: frontend/ui/data/koptoptions.lua:320
 msgid ""
 "In reflow mode, sets the original text direction. This needs to be set to "
 "RTL to correctly extract and reflow RTL languages like Arabic or Hebrew."
 msgstr ""
+"En modo de redistribución, configura a dirección do texto orixinal. Esta ten "
+"que configurarse como DAE para extraer e redistribuír correctamente idiomas "
+"DAE como o árabe ou hebreo."
 
 #: frontend/ui/data/koptoptions.lua:373
 msgid ""
@@ -6085,6 +6116,11 @@ msgid ""
 "You might need to set it to 1 column if, in a full width document, text is "
 "incorrectly detected as multiple columns because of unlucky word spacing."
 msgstr ""
+"En modo de redistribución, configura o número máximo de columnas para "
+"detectar no documento orixinal.\n"
+"Podes necesitar configuralo a 1 columna se ocorre que nun texto a páxina "
+"completa, se detectan múltiples columnas debido a un espazado de palabras "
+"pouco afortunado."
 
 #: frontend/ui/data/optionsutil.lua:39 frontend/ui/data/optionsutil.lua:49
 msgid "custom"
@@ -7999,9 +8035,8 @@ msgid "Save review"
 msgstr "Gardar crítica"
 
 #: frontend/ui/widget/configdialog.lua:1119
-#, fuzzy
 msgid "Set values"
-msgstr "Axustar valor"
+msgstr "Configurar valores"
 
 #: frontend/ui/widget/configdialog.lua:1137
 #: frontend/ui/widget/configdialog.lua:1148
@@ -8009,9 +8044,8 @@ msgstr "Axustar valor"
 #: frontend/ui/widget/configdialog.lua:1204
 #: frontend/ui/widget/configdialog.lua:1290
 #: frontend/ui/widget/configdialog.lua:1328
-#, fuzzy
 msgid "Set as default"
-msgstr "Aceptar"
+msgstr "Establecer como valor por defecto"
 
 #: frontend/ui/widget/configdialog.lua:1147
 #: frontend/ui/widget/configdialog.lua:1203
