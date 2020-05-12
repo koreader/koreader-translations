@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-09 22:21+0000\n"
-"PO-Revision-Date: 2020-05-06 19:16+0000\n"
+"PO-Revision-Date: 2020-05-19 06:41+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Moldavian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ro_MD/>\n"
@@ -1796,6 +1796,15 @@ msgid ""
 "it will be used before these.\n"
 "If that font happens to be part of this list already, it will be used first."
 msgstr ""
+"Activează fonturi de rezervă adiționale, pentru a acoperi cel mai bine toate "
+"limbile.\n"
+"Aceste fonturi vor fi folosite în următoarea ordine:\n"
+"\n"
+"%1\n"
+"\n"
+"Poți seta un font de rezervă preferat cu o apăsare lungă pe numele unui font "
+"și astfel va fi folosit înaintea acestora.\n"
+"Dacă fontul este deja parte din această listă, va fi folosit primul."
 
 #: frontend/apps/reader/modules/readerfont.lua:384
 msgid "Generate font test document"
@@ -2299,14 +2308,12 @@ msgid "Next chapter"
 msgstr "Capitolul următor"
 
 #: frontend/apps/reader/modules/readergesture.lua:31
-#, fuzzy
 msgid "First page"
-msgstr "Deschis prima dată"
+msgstr "Prima pagină"
 
 #: frontend/apps/reader/modules/readergesture.lua:32
-#, fuzzy
 msgid "Last page"
-msgstr "Ultimul deschis"
+msgstr "Ultima pagină"
 
 #: frontend/apps/reader/modules/readergesture.lua:33
 msgid "Previous bookmark"
@@ -4189,6 +4196,25 @@ msgid ""
 "will be enabled, but it might be enough to get language specific glyph "
 "variants (when supported by the fonts)."
 msgstr ""
+"Unele limbi au reguli tipografice specifice: acestea includ despărțirea în "
+"silabe, întreruperile de linie și caractere specifice.\n"
+"KOReader va alege o regulă în funcție de eticheta lingvistică din metadatele "
+"cărții, dar poți alege alta dacă dorești.\n"
+"Poți de asemenea să alegi o limbă implicită sau una de rezervă prin apăsare "
+"lungă.\n"
+"\n"
+"Caracteristicile disponibile per limbă sînt marcate cu:\n"
+"‐ : dicționar de silabisire specific\n"
+" : reguli de întrerupere de linie (de obicei strîns legate de ghilimele)\n"
+" : alte reguli de întrerupere de linie (ex: prepoziții de o singură literă "
+"nu sînt permise la capăt de linie)\n"
+"\n"
+"Ia aminte că dacă o limbă nu vine cu un dicționar de silabisire, dicționarul "
+"englez (SUA) va fi utilizat.\n"
+"Dacă eticheta lingvistică a cărții nu este găsită în lista noastră "
+"implicită, nici o caracteristică specifică nu va fi activată, dar acest "
+"lucru poate fi suficient pentru a folosi caracterele specifice (dacă sînt "
+"suportate de font)."
 
 #: frontend/apps/reader/modules/readertypography.lua:175
 msgid "About typography rules"
@@ -4205,13 +4231,13 @@ msgstr "Alte etichete de limbă:"
 #: frontend/apps/reader/modules/readertypography.lua:231
 msgid "Language tags (and hyphenation dictionaries) used since start up"
 msgstr ""
+"Etichete lingvistice (și dicționare de silabisire) folosite de la pornire"
 
 #: frontend/apps/reader/modules/readertypography.lua:269
 msgid "Changed language for typography rules to %1."
 msgstr "Limba pentru regulile tipografice a fost schimbată în %1."
 
 #: frontend/apps/reader/modules/readertypography.lua:282
-#, fuzzy
 msgid ""
 "Would you like %1 to be used as the default (★) or fallback (�) language for "
 "typography rules?\n"
@@ -4219,11 +4245,11 @@ msgid ""
 "Default will always take precedence while fallback will only be used if the "
 "language of the book can't be automatically determined."
 msgstr ""
-"Dorești ca %1 să fie folosită ca limbă de silabisire implicită (★) sau ca "
-"rezervă (�)?\n"
+"Dorești ca %1 să fie folosită ca limbă implicită (★) pentru regulile "
+"tipografice sau ca rezervă (�)?\n"
 "\n"
-"Implicitul va fi folosit întotdeauna, cu excepția cazului în care limba "
-"cărții nu se poate determina automat."
+"Implicitul va fi folosit întotdeauna, în timp ce rezerva se va folosi dacă "
+"limba cărții nu se poate determina automat."
 
 #: frontend/apps/reader/modules/readertypography.lua:289
 msgctxt "Typography"
@@ -4237,7 +4263,7 @@ msgstr "Reguli tipografice: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:313
 msgid "Respect embedded lang tags"
-msgstr ""
+msgstr "Respectă etichetele lingvistice incluse"
 
 #: frontend/apps/reader/modules/readertypography.lua:322
 msgid ""
@@ -4248,6 +4274,14 @@ msgid ""
 "\n"
 "The current default (★) is to respect them."
 msgstr ""
+"Dorești să respecți sau să ignori etichetele lingvistice încorporate ca "
+"implicit?\n"
+"\n"
+"Dacă le respecți se vor folosi reguli tipografice relevante pentru a randa "
+"conținutul, pe cînd ignorîndu-le se vor folosi regulile tipografice ale "
+"limbii principale.\n"
+"\n"
+"Implicitul curent (★) este să le respecți."
 
 #: frontend/apps/reader/modules/readertypography.lua:323
 msgid ""
@@ -4258,45 +4292,48 @@ msgid ""
 "\n"
 "The current default (★) is to ignore them."
 msgstr ""
+"Dorești să respecți sau să ignori etichetele lingvistice încorporate ca "
+"implicit?\n"
+"\n"
+"Dacă le respecți se vor folosi reguli tipografice relevante pentru a randa "
+"conținutul, pe cînd ignorîndu-le se vor folosi regulile tipografice ale "
+"limbii principale.\n"
+"\n"
+"Implicitul curent (★) este să le ignori."
 
 #: frontend/apps/reader/modules/readertypography.lua:325
-#, fuzzy
 msgid "Ignore (★)"
-msgstr "Motor randare (★)"
+msgstr "Ignoră (★)"
 
 #: frontend/apps/reader/modules/readertypography.lua:331
-#, fuzzy
 msgid "Respect (★)"
-msgstr "Referință (★)"
+msgstr "Respectă (★)"
 
 #: frontend/apps/reader/modules/readertypography.lua:331
 msgid "Respect"
-msgstr ""
+msgstr "Respectă"
 
 #: frontend/apps/reader/modules/readertypography.lua:346
-#, fuzzy
 msgid "Enable hyphenation"
-msgstr "Silabisire"
+msgstr "Activează despărțirea în silabe"
 
 #: frontend/apps/reader/modules/readertypography.lua:355
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation by default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Dorești să activezi sau să dezactivezi evidențierea ca implicit?\n"
+"Dorești să activezi sau să dezactivezi despărțirea în silabe implicit?\n"
 "\n"
 "Acum setarea implicită (★) este „activat”."
 
 #: frontend/apps/reader/modules/readertypography.lua:356
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation by default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Dorești să activezi sau să dezactivezi evidențierea ca implicit?\n"
+"Dorești să activezi sau să dezactivezi despărțirea în silabe ca implicit?\n"
 "\n"
 "Acum setarea implicită (★) este „dezactivat”."
 
@@ -4333,111 +4370,102 @@ msgid "Trust soft hyphens"
 msgstr "Încrede-te în cratimele „soft”"
 
 #: frontend/apps/reader/modules/readertypography.lua:449
-#, fuzzy
 msgid ""
 "Would you like to enable or disable trusting soft hyphens by default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Dorești să activezi sau să dezactivezi evidențierea ca implicit?\n"
+"Dorești să activezi sau să dezactivezi încrederea în cratimele soft ca "
+"implicit?\n"
 "\n"
 "Acum setarea implicită (★) este „activat”."
 
 #: frontend/apps/reader/modules/readertypography.lua:450
-#, fuzzy
 msgid ""
 "Would you like to enable or disable trusting soft hyphens by default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Dorești să activezi sau să dezactivezi evidențierea ca implicit?\n"
+"Dorești să activezi sau să dezactivezi încrederea în cratimele soft ca "
+"implicit?\n"
 "\n"
 "Acum setarea implicită (★) este „dezactivat”."
 
 #: frontend/apps/reader/modules/readertypography.lua:476
-#, fuzzy
 msgid "Hyphenation dictionary: %1"
-msgstr ""
-"Se caută în dicționar după:\n"
-"%1"
+msgstr "Dicționar despărțire în silabe: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:495
 msgid "Algorithmic hyphenation"
-msgstr ""
+msgstr "Silabisire algoritmică"
 
 #: frontend/apps/reader/modules/readertypography.lua:506
-#, fuzzy
 msgid ""
 "Would you like to enable or disable algorithmic hyphenation by default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Dorești să activezi sau să dezactivezi punctuația atîrnată ca implicit?\n"
+"Dorești să activezi sau să dezactivezi silabisirea algoritmică ca implicit?\n"
 "\n"
 "Implicitul curent (★) este activată."
 
 #: frontend/apps/reader/modules/readertypography.lua:507
-#, fuzzy
 msgid ""
 "Would you like to enable or disable algorithmic hyphenation by default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Dorești să activezi sau să dezactivezi punctuația atîrnată ca implicit?\n"
+"Dorești să activezi sau să dezactivezi silabisirea algoritmică ca implicit?\n"
 "\n"
 "Implicitul curent (★) este dezactivată."
 
 #: frontend/apps/reader/modules/readertypography.lua:532
 msgid "Soft-hyphens only"
-msgstr ""
+msgstr "Doar cratime soft"
 
 #: frontend/apps/reader/modules/readertypography.lua:543
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation with soft hyphens only by "
 "default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Dorești să activezi sau să dezactivezi punctuația atîrnată ca implicit?\n"
+"Dorești să activezi sau să dezactivezi silabisirea cu cratime soft doar ca "
+"implicit?\n"
 "\n"
 "Implicitul curent (★) este activată."
 
 #: frontend/apps/reader/modules/readertypography.lua:544
-#, fuzzy
 msgid ""
 "Would you like to enable or disable hyphenation with soft hyphens only by "
 "default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Dorești să activezi sau să dezactivezi punctuația atîrnată ca implicit?\n"
+"Dorești să activezi sau să dezactivezi silabisirea cu cratime soft doar ca "
+"implicit?\n"
 "\n"
 "Implicitul curent (★) este dezactivată."
 
 #: frontend/apps/reader/modules/readertypography.lua:573
-#, fuzzy
 msgid "disabled"
-msgstr "dezactivează"
+msgstr "dezactivată"
 
 #: frontend/apps/reader/modules/readertypography.lua:575
-#, fuzzy
 msgid "soft-hyphens only"
-msgstr "Încrede-te în cratimele „soft”"
+msgstr "doar cratime soft"
 
 #: frontend/apps/reader/modules/readertypography.lua:577
 msgid "algorithmic"
-msgstr ""
+msgstr "algoritmică"
 
 #: frontend/apps/reader/modules/readertypography.lua:581
-#, fuzzy
 msgid "Hyphenation: %1"
-msgstr "Silabisire"
+msgstr "Despărțire în silabe: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:762
-#, fuzzy
 msgid "Book language: %1"
-msgstr "Cărți în %1"
+msgstr "Limba cărții: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:762
 #: plugins/batterystat.koplugin/main.lua:78
@@ -4446,7 +4474,7 @@ msgstr "(indisponibil)"
 
 #: frontend/apps/reader/modules/readertypography.lua:765
 msgid "Changed language for typography rules to book language: %1."
-msgstr ""
+msgstr "Limba pentru regulile tipografice a fost schimbată în limba cărții: %1."
 
 #: frontend/apps/reader/modules/readerview.lua:739
 msgid ""
@@ -4892,6 +4920,11 @@ msgid ""
 "- 'continuous' mode allows you to scroll the text like you would in a web "
 "browser (the 'Page Overlap' setting is only available in this mode)."
 msgstr ""
+"- modul „pagină” împarte textul în pagini în cele mai potivite locuri ("
+"numerele de pagină și numărul total de pagini se pot schimba atunci cînd se "
+"modifică fonturi, margini, stiluri etc.)\n"
+"- modul „continuu” permite derularea textului ca într-un navigator web ("
+"setarea „Suprapunere pagini” este disponibilă doar în acest mod)."
 
 #: frontend/ui/data/creoptions.lua:207
 msgid ""
@@ -4940,12 +4973,10 @@ msgid "Font Size"
 msgstr "Dimensiune font"
 
 #: frontend/ui/data/creoptions.lua:334
-#, fuzzy
 msgid "Word spacing"
 msgstr "Spațiere cuvinte"
 
 #: frontend/ui/data/creoptions.lua:335
-#, fuzzy
 msgid ""
 "Set word spacing percentages:\n"
 "- how much to scale the width of each space character from its regular "
@@ -4953,42 +4984,40 @@ msgid ""
 "- by how much some of them can then be reduced to make more words fit on a "
 "line."
 msgstr ""
-"Spune motorului de redare cît de mult să scaleze lățimea fiecărui caracter "
-"„spațiu” din text față de dimensiunea lui standard și cît de mult îl poate "
-"micșora pentru a face să încapă mai multe cuvinte pe o singură linie (100% "
-"înseamnă fără reducere)."
+"Setează procentului de spațiere a cuvintelor:\n"
+"- cît de mult să scaleze lățimea fiecărui caracter „spațiu” din text față de "
+"dimensiunea lui standard,\n"
+"- cu cît de mult îl poate micșora pentru a face să încapă mai multe cuvinte "
+"pe o singură linie."
 
 #: frontend/ui/data/creoptions.lua:338
-#, fuzzy
 msgid "Scaling %"
-msgstr "Scalare imag."
+msgstr "Scalare %"
 
 #: frontend/ui/data/creoptions.lua:343
-#, fuzzy
 msgid "Reduction %"
-msgstr "Setează durată"
+msgstr "Reducere %"
 
 #: frontend/ui/data/creoptions.lua:363
-#, fuzzy
 msgid ""
 "Tells the rendering engine by how much to scale the width of each 'space' "
 "character in the text from its regular width, and by how much it can "
 "additionally reduce them to make more words fit on a line (100% means no "
 "reduction)."
 msgstr ""
-"Spune motorului de redare cît de mult să scaleze lățimea fiecărui caracter "
-"„spațiu” din text față de dimensiunea lui standard și cît de mult îl poate "
+"Spune motorului de randare cu cît să scaleze lățimea fiecărui caracter "
+"„spațiu” din text față de dimensiunea lui standard și cu cît îl poate "
 "micșora pentru a face să încapă mai multe cuvinte pe o singură linie (100% "
 "înseamnă fără reducere)."
 
 #: frontend/ui/data/creoptions.lua:380
-#, fuzzy
 msgid "Max word expansion"
-msgstr "Spațiere cuvinte"
+msgstr "Expansiunea maximă a cuvîntului"
 
 #: frontend/ui/data/creoptions.lua:381
 msgid "Set max word expansion as a % of the font size."
 msgstr ""
+"Setează expansiunea maximă a cuvîntului ca un procent din mărimea fontului."
 
 #: frontend/ui/data/creoptions.lua:397
 msgid ""
@@ -4996,6 +5025,9 @@ msgid ""
 "space into words by expanding them with letter spacing. This sets the max "
 "allowed letter spacing as a % of the font size."
 msgstr ""
+"Se permite extinderea spațierii literelor cuvintelor de pe liniile "
+"justificate care au spații prea mari. Aceasta setează spațierea maximă "
+"permisă a literelor ca procent din mărimea fontului."
 
 #: frontend/ui/data/creoptions.lua:454
 msgid ""
@@ -5043,7 +5075,6 @@ msgstr ""
 "spațiere.)"
 
 #: frontend/ui/data/creoptions.lua:493
-#, fuzzy
 msgid ""
 "Enable or disable the rendering engine alternative status bar at the top of "
 "the screen (this status bar can't be customized).\n"
@@ -5052,11 +5083,13 @@ msgid ""
 "screen can be toggled by tapping. The items displayed can be customized via "
 "the main menu."
 msgstr ""
-"- „complet” afișează o bară de stare în partea de sus a ecranului (această "
-"bară de stare nu poate fi modificată).\n"
-"- „mini” afișează o bară de stare în partea de jos a ecranului care poate fi "
-"ascunsă apăsînd pe ea. Elementele afișate pot fi modificate din meniul "
-"principal."
+"Activează sau dezactivează o bară de stare alternativă a motorului de "
+"randare în partea de sus a ecranului (această bară de stare nu poate fi "
+"modificată).\n"
+"\n"
+"Indiferent dacă este activată sau dezactivată, barade stare proprie KOReader "
+"din partea de jos a ecranului poate fi ascunsă sau afișată prin atingere. "
+"Elementele afișate pot fi modificate din meniul principal."
 
 #: frontend/ui/data/creoptions.lua:507
 msgid ""
@@ -5949,10 +5982,24 @@ msgid ""
 "odd page number, and once on an even page number (these areas will then be "
 "used for all odd, or even, page numbers)."
 msgstr ""
+"Permite decuparea marginilor paginilor libere din documentul original.\n"
+"Acest lucru poate fi necesar în cazul documentelor scanate care pot avea "
+"amprente, urme de praf pentru a putea folosi modul mărire lățime conținut.\n"
+"- „fără” nu va decupa marginile documentului original;\n"
+"- „auto” va găsi aria de decupat automat;\n"
+"- „semi-auto” va găsi aria de decupat automat în interiorul unei casete "
+"definite manual;\n"
+"- „manual” va folosi caseta de decupare definită manual.\n"
+"\n"
+"În modurile „semi-auto” și „manual” va trebui să definești caseta de "
+"decupare atît pe paginile pare cît și pe cele impare (casetele vor fi "
+"folosite apoi pe toate paginile corespunzătoare)."
 
 #: frontend/ui/data/koptoptions.lua:74
 msgid "Set margins to be applied after page-crop and zoom modes are applied."
 msgstr ""
+"Setează marginile care vor fi aplicate după ce se aplică decuparea sau "
+"mărirea paginii."
 
 #: frontend/ui/data/koptoptions.lua:90
 msgid ""
@@ -5960,16 +6007,19 @@ msgid ""
 "- 'continuous' mode allows you to scroll the pages like you would in a web "
 "browser."
 msgstr ""
+"- modul „pagină” afișează doar o singură pagină din document o dată.\n"
+"- modul „continuu” permite derularea paginilor ca într-un navigator web."
 
 #: frontend/ui/data/koptoptions.lua:105
 msgid ""
 "In continuous view mode, sets the thickness of the separator between "
 "document pages."
 msgstr ""
+"În modul de vizualizare continuu setează grosimea separatorilor de pagină."
 
 #: frontend/ui/data/koptoptions.lua:130
 msgid "In reflow mode, sets the spacing between lines."
-msgstr ""
+msgstr "În modul de rearanjare setează spațierea dintre linii."
 
 #: frontend/ui/data/koptoptions.lua:150
 msgid ""
@@ -5977,16 +6027,21 @@ msgid ""
 "The first option (\"auto\") tries to automatically align reflowed text as it "
 "is in the original document."
 msgstr ""
+"În modul de rearanjare setează alinierea textului.\n"
+"Prima opțiune („auto”) va încerca să alinieze automat textul rearanjat "
+"precum este în documentul original."
 
 #: frontend/ui/data/koptoptions.lua:192
 msgid ""
 "In reflow mode, sets a font scaling factor that is applied to the original "
 "document font sizes."
 msgstr ""
+"În modul rearanjare setează un factor de scalare al fontului care este "
+"aplicat mărimii fontului documentului original."
 
 #: frontend/ui/data/koptoptions.lua:207
 msgid "In reflow mode, sets the spacing between words."
-msgstr ""
+msgstr "În modul rearanjare setează spațierea dintre cuvinte."
 
 #: frontend/ui/data/koptoptions.lua:227
 msgid ""
@@ -5995,6 +6050,11 @@ msgid ""
 "reading.\n"
 "Some of the other settings are only available when reflow mode is enabled."
 msgstr ""
+"Modul rearanjare extrage textul și imaginile din documentul original, cu "
+"posibila pierdere a formatării, și le rearanjează pe ecran pentru o citire "
+"mai facilă.\n"
+"Unele din celelalte setări sînt disponibile doar dacă modul rearanjare este "
+"activat."
 
 #: frontend/ui/data/koptoptions.lua:257
 msgid ""
@@ -6009,32 +6069,37 @@ msgstr ""
 "contrastul."
 
 #: frontend/ui/data/koptoptions.lua:269
-#, fuzzy
 msgid "Enable Hardware dithering."
-msgstr "Dezactivare ditering HW"
+msgstr "Activare ditering hardware."
 
 #: frontend/ui/data/koptoptions.lua:282
 msgid ""
 "In reflow mode, sets the quality of the text and image extraction processing "
 "and output."
 msgstr ""
+"În modul rearanjare setează calitatea procesării textului și extragerea "
+"imaginilor."
 
 #: frontend/ui/data/koptoptions.lua:298
-#, fuzzy
 msgid "Set the language to be used by the OCR engine."
-msgstr "(Folosit de motorul de OCR.)"
+msgstr "Alege limba folosită pentru motorul de OCR."
 
 #: frontend/ui/data/koptoptions.lua:308
 msgid ""
 "Force the use of OCR for text selection, even if the document has a text "
 "layer."
 msgstr ""
+"Forțează utilizarea OCR pentru selectarea textului chiar dacă documentul are "
+"un layer de text."
 
 #: frontend/ui/data/koptoptions.lua:320
 msgid ""
 "In reflow mode, sets the original text direction. This needs to be set to "
 "RTL to correctly extract and reflow RTL languages like Arabic or Hebrew."
 msgstr ""
+"În modul rearanjare setează direcția originală a textului. Aceasta trebuie "
+"să fie setată la RTL pentru a putea extrage corect și rearanja textele în "
+"limbi precum araba sau ebraica."
 
 #: frontend/ui/data/koptoptions.lua:373
 msgid ""
@@ -6043,6 +6108,11 @@ msgid ""
 "You might need to set it to 1 column if, in a full width document, text is "
 "incorrectly detected as multiple columns because of unlucky word spacing."
 msgstr ""
+"În modul rearanjare setează numărul maxim de coloane care trebuie "
+"identificate în documentul original.\n"
+"Va trebuie să setezi acest număr la 1 dacă într-un document fără coloane "
+"textul este detectat incorect ca fiind pe mai multe coloane din cauza "
+"spațiului dintre cuvinte prea mare."
 
 #: frontend/ui/data/optionsutil.lua:39 frontend/ui/data/optionsutil.lua:49
 msgid "custom"
@@ -6161,9 +6231,8 @@ msgid "Line Spacing"
 msgstr "Spațiere linii"
 
 #: frontend/ui/data/strings.lua:16
-#, fuzzy
 msgid "Document Columns"
-msgstr "Meniu document"
+msgstr "Coloane document"
 
 #: frontend/ui/data/strings.lua:20
 msgid "Contrast"
@@ -6228,9 +6297,8 @@ msgid "Word Spacing"
 msgstr "Spațiere cuvinte"
 
 #: frontend/ui/data/strings.lua:37
-#, fuzzy
 msgid "Word Expansion"
-msgstr "Spațiere cuvinte"
+msgstr "Expansiune cuvînt"
 
 #: frontend/ui/data/strings.lua:38
 msgid "View Mode"
@@ -6257,9 +6325,8 @@ msgid "Progress Bar"
 msgstr "Bară progres"
 
 #: frontend/ui/data/strings.lua:44
-#, fuzzy
 msgid "Alt Status Bar"
-msgstr "Bară de stare"
+msgstr "Bară de stare alt."
 
 #. @translators If OCR is unclear, please see https://en.wikipedia.org/wiki/Optical_character_recognition
 #: frontend/ui/data/strings.lua:46
@@ -6316,11 +6383,11 @@ msgstr "mare"
 
 #: frontend/ui/data/strings.lua:62
 msgid "some"
-msgstr ""
+msgstr "cîteva"
 
 #: frontend/ui/data/strings.lua:63
 msgid "more"
-msgstr ""
+msgstr "mai multe"
 
 #: frontend/ui/data/strings.lua:64
 msgid "decrease"
@@ -6609,7 +6676,7 @@ msgstr "Ignoră „ține apăsat în colțuri”"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:216
 msgid "Force haptic feedback"
-msgstr ""
+msgstr "Forțează feedback haptic"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:226
 msgid "Volume key page turning"
@@ -6782,9 +6849,8 @@ msgid "Highlight action"
 msgstr "Acțiune evidențiere"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:560
-#, fuzzy
 msgid "Enable on single word selection"
-msgstr "Nu s-a putut citi HTML-ul pentru selecție"
+msgstr "Activează la selecția unui cuvînt singur"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:570
 msgid "Ask with popup dialog"
@@ -7974,9 +8040,8 @@ msgid "Save review"
 msgstr "Salvează recenzie"
 
 #: frontend/ui/widget/configdialog.lua:1119
-#, fuzzy
 msgid "Set values"
-msgstr "Setează valoare"
+msgstr "Setează valori"
 
 #: frontend/ui/widget/configdialog.lua:1137
 #: frontend/ui/widget/configdialog.lua:1148
@@ -7984,7 +8049,6 @@ msgstr "Setează valoare"
 #: frontend/ui/widget/configdialog.lua:1204
 #: frontend/ui/widget/configdialog.lua:1290
 #: frontend/ui/widget/configdialog.lua:1328
-#, fuzzy
 msgid "Set as default"
 msgstr "Setează ca implicit"
 
@@ -9584,9 +9648,8 @@ msgid "Exporting may take several minutes…"
 msgstr "Exportarea poate dura cîteva minute…"
 
 #: plugins/evernote.koplugin/main.lua:293
-#, fuzzy
 msgid "Export to local JSON files"
-msgstr "Exportă în fișiere HTML locale"
+msgstr "Exportă în fișiere JSON locale"
 
 #: plugins/evernote.koplugin/main.lua:306
 msgid "Export to local HTML files"
@@ -9925,14 +9988,12 @@ msgid "Whisper sync"
 msgstr "Whisper sync"
 
 #: plugins/kosync.koplugin/main.lua:176
-#, fuzzy
 msgid "Sync to latest record (%1)"
-msgstr "Sincronizează pînă la ultima înregistrare >>>>"
+msgstr "Sincronizează pînă la ultima înregistrare (%1)"
 
 #: plugins/kosync.koplugin/main.lua:210
-#, fuzzy
 msgid "Sync to a previous record (%1)"
-msgstr "Sincronizează pînă la înregistrarea anterioară <<<<"
+msgstr "Sincronizează pînă la înregistrarea anterioară (%1)"
 
 #: plugins/kosync.koplugin/main.lua:263
 msgid "Custom sync server"
@@ -10013,63 +10074,63 @@ msgstr ""
 #: plugins/movetoarchive.koplugin/main.lua:29
 #: plugins/movetoarchive.koplugin/_meta.lua:4
 msgid "Move to archive"
-msgstr ""
+msgstr "Mută în arhivă"
 
 #: plugins/movetoarchive.koplugin/main.lua:32
 msgid "Move current book to archive"
-msgstr ""
+msgstr "Mută cartea curentă în arhivă"
 
 #: plugins/movetoarchive.koplugin/main.lua:39
-#, fuzzy
 msgid "Copy current book to archive"
-msgstr "Cartea curentă"
+msgstr "Copiază cartea curentă în arhivă"
 
 #: plugins/movetoarchive.koplugin/main.lua:46
-#, fuzzy
 msgid "Go to archive folder"
-msgstr "Mergi în dosarul părinte"
+msgstr "Mergi în dosarul arhivei"
 
 #: plugins/movetoarchive.koplugin/main.lua:56
 msgid "Go to last copied/moved from folder"
-msgstr ""
+msgstr "Mergi la ultimul copiat/mutat din dosar"
 
 #: plugins/movetoarchive.koplugin/main.lua:60
-#, fuzzy
 msgid "No previous folder found."
-msgstr "Nu s-a găsit nici o carte."
+msgstr "Nu s-a găsit nici un dosar anterior."
 
 #: plugins/movetoarchive.koplugin/main.lua:68
-#, fuzzy
 msgid "Set archive directory"
-msgstr "Selectează alt dosar"
+msgstr "Alege dosar arhivă"
 
 #: plugins/movetoarchive.koplugin/main.lua:79
 msgid ""
 "Book moved.\n"
 "Do you want to open it from the archive folder?"
 msgstr ""
+"Cartea a fost mutată.\n"
+"Dorești să o deschizi din dosarul de arhive?"
 
 #: plugins/movetoarchive.koplugin/main.lua:84
 msgid ""
 "Book copied.\n"
 "Do you want to open it from the archive folder?"
 msgstr ""
+"Cartea a fost copiată.\n"
+"Dorești să o deschizi din dosarul de arhive?"
 
 #: plugins/movetoarchive.koplugin/main.lua:134
-#, fuzzy
 msgid ""
 "No archive directory.\n"
 "Do you want to set it now?"
-msgstr "Dosarul %1 există deja. Dorești să îl suprascrii?"
+msgstr ""
+"Nu exită dosar de arhivare.\n"
+"Dorești să îl setezi acum?"
 
 #: plugins/movetoarchive.koplugin/main.lua:135
-#, fuzzy
 msgid "Set archive folder"
-msgstr "Dosar pornire"
+msgstr "Alege dosar arhivă"
 
 #: plugins/movetoarchive.koplugin/_meta.lua:5
 msgid "Moves/copies current book to archive folder"
-msgstr ""
+msgstr "Mută/copiază cartea curentă în dosarul de arhive"
 
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:301
 msgid ""
@@ -11483,9 +11544,8 @@ msgid "Synchronize remotely deleted files"
 msgstr "Sincronizează fișierele șterse de pe server"
 
 #: plugins/wallabag.koplugin/main.lua:245
-#, fuzzy
 msgid "Remove finished articles from history"
-msgstr "Șterge articolele finalizate de pe server"
+msgstr "Șterge articolele finalizate din istoric"
 
 #: plugins/wallabag.koplugin/main.lua:260
 msgid ""
