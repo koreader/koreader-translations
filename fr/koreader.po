@@ -28,7 +28,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-05 18:17+0000\n"
 "PO-Revision-Date: 2020-06-06 09:09+0000\n"
-"Last-Translator: Dekani <dekani1500@gmail.com>\n"
+"Last-Translator: Melkior <r.mel@protonmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/koreader/koreader/"
 "fr/>\n"
 "Language: fr\n"
@@ -3489,7 +3489,6 @@ msgid "Use reference page numbers"
 msgstr "Utiliser les numéros de page de référence"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:335
-#, fuzzy
 msgid ""
 "The default (★) for newly opened books that have a reference page numbers "
 "map is to use these reference page numbers instead of the renderer page "
@@ -3497,10 +3496,10 @@ msgid ""
 "\n"
 "Would you like to change it?"
 msgstr ""
-"La valeur par défaut (★) pour les livres nouvellement ouverts qui ont une "
-"carte des numéros de page de l'édition imprimée est d'utiliser ces pages de "
-"références au lieu du numéro des pages de l'outil de restitution.\n"
-"\n"
+"La valeur par défaut (★) pour les livres nouvellement ouverts qui possèdent "
+"déjà des numéros de page dans l'édition imprimée est d'utiliser ces numéros "
+"de pages de référence de préférence à la numérotation de pages de l'outil de "
+"restitution.\n"
 "Voulez-vous la changer ?"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:336
@@ -4220,6 +4219,7 @@ msgid "Korean"
 msgstr "Coréen"
 
 #: frontend/apps/reader/modules/readertypography.lua:162
+#, fuzzy
 msgid ""
 "Some languages have specific typographic rules: these include hyphenation, "
 "line breaking rules, and language specific glyph variants.\n"
@@ -4239,6 +4239,27 @@ msgid ""
 "will be enabled, but it might be enough to get language specific glyph "
 "variants (when supported by the fonts)."
 msgstr ""
+"Certaines langues ont des règles typographiques spécifiques : elle inclue la "
+"césure, les règles de saut de ligne, et les glyphes spécifiques à la langue."
+"\n"
+"KOReader en choisira une en fonction de l’étiquette « langue » des "
+"métadonnées du livre, mais vous pouvez en sélectionner une autre.\n"
+"Vous pouvez aussi définir une langue par défaut ou de secours avec un appui "
+"long.\n"
+"\n"
+"Les fonctionnalités disponibles par langue sont marquées par :\n"
+"‐ : dictionnaire de césure spécifique à la langue\n"
+" : règles de saut de ligne spécifique (principalement en relation avec les "
+"guillemets)\n"
+" : règles de saut de ligne supplémentaire (e.g., préposition d’une lettre "
+"seule non autorisé en fin de ligne)\n"
+"\n"
+"À noté que lorsqu’une langue ne viens pas avec son propre dictionnaire de "
+"césure, celui de l’Anglais(US) sera utilisé.\n"
+"Quand l’étiquette « langue » du livre n’est pas parmi nos préréglages, "
+"aucune fonctionnalité spécifique ne sera activée, mais cela peu être "
+"suffisant pour obtenir les glyphes spécifiques de la langue (si supporté par "
+"la police)."
 
 #: frontend/apps/reader/modules/readertypography.lua:175
 msgid "About typography rules"
@@ -4457,8 +4478,8 @@ msgid ""
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"Voulez-vous activer ou désactiver la ponctuation hors justification par "
-"défaut ?\n"
+"Voulez-vous activer ou désactiver la césure avec seulement les traits d’"
+"union conditionnels par défaut ?\n"
 "\n"
 "La valeur par défaut actuelle (★) est activée."
 
@@ -4470,8 +4491,8 @@ msgid ""
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"Voulez-vous activer ou désactiver la ponctuation hors justification par "
-"défaut ?\n"
+"Voulez-vous activer ou désactiver la césure avec seulement des traits d’"
+"union conditionnels par défaut ?\n"
 "\n"
 "La valeur par défaut actuelle (★) est désactivée."
 
@@ -4482,7 +4503,7 @@ msgstr "désactivé"
 #: frontend/apps/reader/modules/readertypography.lua:575
 #, fuzzy
 msgid "soft-hyphens only"
-msgstr "Faire confiance aux traits d’union conditionnels"
+msgstr "seulement les traits d’union conditionnels"
 
 #: frontend/apps/reader/modules/readertypography.lua:577
 msgid "algorithmic"
@@ -4948,6 +4969,7 @@ msgstr ""
 "barre d'état."
 
 #: frontend/ui/data/creoptions.lua:194
+#, fuzzy
 msgid ""
 "- 'page' mode splits the text into pages, at the most acceptable places "
 "(page numbers and the number of pages may change when you change fonts, "
@@ -4955,6 +4977,12 @@ msgid ""
 "- 'continuous' mode allows you to scroll the text like you would in a web "
 "browser (the 'Page Overlap' setting is only available in this mode)."
 msgstr ""
+"– mode « page » sépare le texte en pages, à la place la plus acceptable (les "
+"numéros de page et le nombre de pages peuvent changer quand vous changez de "
+"police, marges, style, etc.).\n"
+"– mode « continue » vous permet de faire défiler le texte comme vous le "
+"feriez dans un navigateur (le réglage « Recouvrement de page » est seulement "
+"disponible dans ce mode)."
 
 #: frontend/ui/data/creoptions.lua:207
 msgid ""
@@ -5047,15 +5075,23 @@ msgid "Max word expansion"
 msgstr "Espacement de mots maximale"
 
 #: frontend/ui/data/creoptions.lua:381
+#, fuzzy
 msgid "Set max word expansion as a % of the font size."
 msgstr ""
+"Définir l’espacement de mots maximale comme un pourcentage de la taille de "
+"police."
 
 #: frontend/ui/data/creoptions.lua:397
+#, fuzzy
 msgid ""
 "On justified lines having too wide spaces, allow distributing the excessive "
 "space into words by expanding them with letter spacing. This sets the max "
 "allowed letter spacing as a % of the font size."
 msgstr ""
+"Sur les lignes justifiées qui ont des espaces trop larges, autoriser la "
+"distribution de l’excès d’espace dans les mots en les étendant avec un "
+"écartement des lettres. Ceci défini l’espacement de lettre maximum autorisé "
+"comme un pourcentage de la taille de police."
 
 #: frontend/ui/data/creoptions.lua:454
 msgid ""
@@ -6052,6 +6088,7 @@ msgid "GNU/FDL"
 msgstr "GNU / FDL"
 
 #: frontend/ui/data/koptoptions.lua:57
+#, fuzzy
 msgid ""
 "Allows cropping blank page margins in the original document.\n"
 "This might be needed on scanned documents, that may have speckles or "
@@ -6066,17 +6103,38 @@ msgid ""
 "odd page number, and once on an even page number (these areas will then be "
 "used for all odd, or even, page numbers)."
 msgstr ""
+"Autoriser le rognage des marges blanches du document original.\n"
+"Cela peut être nécessaire sur les documents scannés, qui on des taches ou "
+"empreintes dans les marges, pour pouvoir utiliser l’agrandissement adaptatif "
+"à la largeur du contenu.\n"
+"– « aucun » ne coupe pas les marges du document original.\n"
+"– « auto » trouve la zone du contenu automatiquement.\n"
+"– « semi-auto » trouve la zone du contenu automatiquement, à l’intérieur d’"
+"une région défini manuellement.\n"
+"– « manuel » utilise la région défini manuellement tel quel.\n"
+"\n"
+"Dans les modes « semi-auto » et « manuel », vous aurez peut être besoin de "
+"définir deux régions, une fois sur une page impaire, et une fois sur une "
+"page paire (ces régions seront alors utilisées pour toutes les pages "
+"impaires et paires)."
 
 #: frontend/ui/data/koptoptions.lua:74
+#, fuzzy
 msgid "Set margins to be applied after page-crop and zoom modes are applied."
 msgstr ""
+"Définir les marges à appliquer après que le mode « rognage de page et "
+"agrandissement » soit appliqué."
 
 #: frontend/ui/data/koptoptions.lua:90
+#, fuzzy
 msgid ""
 "- 'page' mode shows only one page of the document at a time.\n"
 "- 'continuous' mode allows you to scroll the pages like you would in a web "
 "browser."
 msgstr ""
+"– mode « page » affiche seulement une page du document à la fois.\n"
+"– mode « continue » vous permet de faire défiler le texte comme vous le "
+"feriez dans un navigateur."
 
 #: frontend/ui/data/koptoptions.lua:105
 msgid ""
@@ -6087,33 +6145,48 @@ msgstr ""
 "document."
 
 #: frontend/ui/data/koptoptions.lua:130
+#, fuzzy
 msgid "In reflow mode, sets the spacing between lines."
-msgstr ""
+msgstr "En mode « réarrangement », définir l’espace entre les lignes."
 
 #: frontend/ui/data/koptoptions.lua:150
+#, fuzzy
 msgid ""
 "In reflow mode, sets the text alignment.\n"
 "The first option (\"auto\") tries to automatically align reflowed text as it "
 "is in the original document."
 msgstr ""
+"En mode « réarrangement », défini l’alignement du texte.\n"
+"La première option (« auto ») essaye d’aligner automatiquement le texte "
+"réarrangé tel qu’il était dans le document original."
 
 #: frontend/ui/data/koptoptions.lua:192
+#, fuzzy
 msgid ""
 "In reflow mode, sets a font scaling factor that is applied to the original "
 "document font sizes."
 msgstr ""
+"En mode « réarrangement », définir un facteur de mise à l’échelle qui est "
+"appliqué à la taille de police du document original."
 
 #: frontend/ui/data/koptoptions.lua:207
+#, fuzzy
 msgid "In reflow mode, sets the spacing between words."
-msgstr ""
+msgstr "En mode « réarrangement », défini l’espace entre les mots."
 
 #: frontend/ui/data/koptoptions.lua:227
+#, fuzzy
 msgid ""
 "Reflow mode extracts text and images from the original document, possibly "
 "discarding some formatting, and reflows it on the screen for easier "
 "reading.\n"
 "Some of the other settings are only available when reflow mode is enabled."
 msgstr ""
+"Le mode « réarrangement » extrait le texte et les images du document "
+"original, avec une perte possible de mise en page, et les réarrange sur l’"
+"écran pour lecture simplifier.\n"
+"Certains des autres réglages sont seulement disponible quand le mode « "
+"réarrangement » est activé."
 
 #: frontend/ui/data/koptoptions.lua:257
 msgid ""
@@ -6133,10 +6206,13 @@ msgid "Enable Hardware dithering."
 msgstr "Désactiver le tramage HW"
 
 #: frontend/ui/data/koptoptions.lua:282
+#, fuzzy
 msgid ""
 "In reflow mode, sets the quality of the text and image extraction processing "
 "and output."
 msgstr ""
+"En mode « réarrangement », défini la qualité du traitement d’extraction et "
+"de rendu du texte et des images."
 
 #: frontend/ui/data/koptoptions.lua:298
 msgid "Set the language to be used by the OCR engine."
@@ -6151,18 +6227,28 @@ msgstr ""
 "document à un calque de texte."
 
 #: frontend/ui/data/koptoptions.lua:320
+#, fuzzy
 msgid ""
 "In reflow mode, sets the original text direction. This needs to be set to "
 "RTL to correctly extract and reflow RTL languages like Arabic or Hebrew."
 msgstr ""
+"Dans le mode « réarrangement », définir la direction du texte original. Cela "
+"doit être défini sur DàG pour extraire et réarranger correctement les "
+"langues sinistroverse tel que l’Arabe ou l’Hébreux."
 
 #: frontend/ui/data/koptoptions.lua:373
+#, fuzzy
 msgid ""
 "In reflow mode, sets the max number of columns to try to detect in the "
 "original document.\n"
 "You might need to set it to 1 column if, in a full width document, text is "
 "incorrectly detected as multiple columns because of unlucky word spacing."
 msgstr ""
+"En mode « réarrangement », défini le nombre maximum de colonnes pour essayer "
+"la détection dans le document original.\n"
+"Au besoin définir à 1 colonne si, dans un document pleine largeur, le texte "
+"est incorrectement détecté comme multiples colonnes à cause d’espacement de "
+"mots malchanceux."
 
 #: frontend/ui/data/optionsutil.lua:39 frontend/ui/data/optionsutil.lua:49
 msgid "custom"
@@ -6434,12 +6520,14 @@ msgid "large"
 msgstr "grand"
 
 #: frontend/ui/data/strings.lua:62
+#, fuzzy
 msgid "some"
-msgstr ""
+msgstr "faible"
 
 #: frontend/ui/data/strings.lua:63
+#, fuzzy
 msgid "more"
-msgstr ""
+msgstr "fort"
 
 #: frontend/ui/data/strings.lua:64
 msgid "decrease"
