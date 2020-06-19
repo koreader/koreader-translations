@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-19 07:45+0000\n"
+"POT-Creation-Date: 2020-06-19 10:25+0000\n"
 "PO-Revision-Date: 2020-06-19 07:45+0000\n"
 "Last-Translator: Sari Gabor <sari.gabor@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
@@ -84,7 +84,7 @@ msgid "Choose cloud type"
 msgstr "Felhőtárhely típusa"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:31
-#: frontend/apps/filemanager/filemanagermenu.lua:466
+#: frontend/apps/filemanager/filemanagermenu.lua:465
 msgid "Cloud storage"
 msgstr "Felhőtárhely"
 
@@ -150,7 +150,6 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:121
 #: frontend/apps/filemanager/filemanager.lua:277
 #: frontend/apps/filemanager/filemanager.lua:532
-#: frontend/apps/filemanager/filemanagersearch.lua:185
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:112
 #: frontend/apps/filemanager/filemanagershortcuts.lua:81
 #: frontend/apps/filemanager/filemanagershortcuts.lua:170
@@ -158,7 +157,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:533
 #: frontend/apps/reader/modules/readercropping.lua:20
 #: frontend/apps/reader/modules/readerdictionary.lua:641
-#: frontend/apps/reader/modules/readergesture.lua:376
+#: frontend/apps/reader/modules/readergesture.lua:379
 #: frontend/apps/reader/modules/readergoto.lua:68
 #: frontend/apps/reader/modules/readerlink.lua:577
 #: frontend/apps/reader/modules/readersearch.lua:43
@@ -183,7 +182,9 @@ msgstr ""
 #: frontend/ui/widget/opdsbrowser.lua:695
 #: frontend/ui/widget/opdsbrowser.lua:779
 #: frontend/ui/widget/pathchooser.lua:123 frontend/ui/widget/timewidget.lua:32
-#: plugins/calibrecompanion.koplugin/main.lua:174
+#: plugins/calibre.koplugin/main.lua:300
+#: plugins/calibre.koplugin/search.lua:217
+#: plugins/calibre.koplugin/wireless.lua:390
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:695
 #: plugins/evernote.koplugin/main.lua:161
 #: plugins/evernote.koplugin/main.lua:206
@@ -510,7 +511,7 @@ msgid "Format:"
 msgstr "Fájlformátum:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:65
-#: frontend/apps/filemanager/filemanagersearch.lua:501
+#: plugins/calibre.koplugin/search.lua:160
 msgid "Size:"
 msgstr "Fájlméret:"
 
@@ -539,6 +540,7 @@ msgid "N/A"
 msgstr "nem elérhető"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:141
+#: plugins/calibre.koplugin/search.lua:158
 msgid "Title:"
 msgstr "Cím:"
 
@@ -547,6 +549,7 @@ msgid "Authors:"
 msgstr "Szerzők:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:163
+#: plugins/calibre.koplugin/search.lua:167
 msgid "Series:"
 msgstr "Sorozat:"
 
@@ -651,7 +654,7 @@ msgid "Overwrite existing HTML file?"
 msgstr "Felülírja a létező HTML fájlt?"
 
 #: frontend/apps/filemanager/filemanagerconverter.lua:90
-#: frontend/apps/filemanager/filemanager.lua:811
+#: frontend/apps/filemanager/filemanager.lua:817
 #: frontend/apps/reader/modules/readerdictionary.lua:871
 #: frontend/ui/widget/opdsbrowser.lua:601
 msgid "Overwrite"
@@ -674,7 +677,7 @@ msgid "Home folder"
 msgstr "Kezdőkönyvtár"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:181
-#: frontend/apps/filemanager/filemanagersearch.lua:568
+#: plugins/calibre.koplugin/search.lua:451
 msgid "Search Results"
 msgstr "A keresés eredménye"
 
@@ -777,8 +780,8 @@ msgid "Exit KOReader?"
 msgstr "Kilép a KOReader-ből?"
 
 #: frontend/apps/filemanager/filemanager.lua:490
-#: frontend/apps/filemanager/filemanagermenu.lua:526
-#: frontend/apps/filemanager/filemanagermenu.lua:532
+#: frontend/apps/filemanager/filemanagermenu.lua:517
+#: frontend/apps/filemanager/filemanagermenu.lua:523
 #: frontend/apps/reader/modules/readermenu.lua:198
 #: frontend/apps/reader/modules/readermenu.lua:204
 msgid "Exit"
@@ -820,58 +823,58 @@ msgstr "Mappahivatkozások"
 msgid "Import files here"
 msgstr "Fájlok importálása ide"
 
-#: frontend/apps/filemanager/filemanager.lua:702
+#: frontend/apps/filemanager/filemanager.lua:708
 msgid "Set '%1' as HOME directory?"
 msgstr "Legyen '%1' a kezdőkönyvtár?"
 
-#: frontend/apps/filemanager/filemanager.lua:703
+#: frontend/apps/filemanager/filemanager.lua:709
 msgid "Set as HOME"
 msgstr "Kezdőkönyvtár mentése"
 
-#: frontend/apps/filemanager/filemanager.lua:715
+#: frontend/apps/filemanager/filemanager.lua:721
 msgid "Do you want to open %1?"
 msgstr "Megnyitja ezt: %1?"
 
-#: frontend/apps/filemanager/filemanager.lua:716
+#: frontend/apps/filemanager/filemanager.lua:722
 #: frontend/ui/widget/filechooser.lua:444
 msgid "Open"
 msgstr "Megnyitás"
 
 #. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:723
+#: frontend/apps/filemanager/filemanager.lua:729
 msgid "Another"
 msgstr "Másikat"
 
-#: frontend/apps/filemanager/filemanager.lua:731
+#: frontend/apps/filemanager/filemanager.lua:737
 msgid "File not found"
 msgstr "A fájl nem található"
 
-#: frontend/apps/filemanager/filemanager.lua:760
+#: frontend/apps/filemanager/filemanager.lua:766
 msgid "Copied to: %1"
 msgstr "Másolva: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:765
+#: frontend/apps/filemanager/filemanager.lua:771
 msgid "An error occurred while trying to copy %1"
 msgstr "Hiba történt %1 másolása során"
 
-#: frontend/apps/filemanager/filemanager.lua:782
+#: frontend/apps/filemanager/filemanager.lua:788
 msgid "Moved to: %1"
 msgstr "Átmozgatva ide: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:787
+#: frontend/apps/filemanager/filemanager.lua:793
 msgid "An error occurred while trying to move %1"
 msgstr "Hiba történt %1 áthelyezése közben"
 
-#: frontend/apps/filemanager/filemanager.lua:804
+#: frontend/apps/filemanager/filemanager.lua:810
 #: frontend/ui/widget/opdsbrowser.lua:600
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "A %1 fájl már létezik. Felülírja?"
 
-#: frontend/apps/filemanager/filemanager.lua:806
+#: frontend/apps/filemanager/filemanager.lua:812
 msgid "The directory %1 already exists. Do you want to overwrite it?"
 msgstr "A %1 könyvtár már létezik. Felülírja?"
 
-#: frontend/apps/filemanager/filemanager.lua:832
+#: frontend/apps/filemanager/filemanager.lua:838
 msgid ""
 "Folder created:\n"
 "%1"
@@ -879,27 +882,27 @@ msgstr ""
 "Mappa létrehozva:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:834
+#: frontend/apps/filemanager/filemanager.lua:840
 msgid "The folder has not been created."
 msgstr "A mappa nem jött létre."
 
-#: frontend/apps/filemanager/filemanager.lua:847
+#: frontend/apps/filemanager/filemanager.lua:853
 msgid "File %1 not found"
 msgstr "A(z) %1 fájl nem található"
 
-#: frontend/apps/filemanager/filemanager.lua:871
+#: frontend/apps/filemanager/filemanager.lua:877
 msgid "Deleted %1"
 msgstr "%1 törölve"
 
-#: frontend/apps/filemanager/filemanager.lua:876
+#: frontend/apps/filemanager/filemanager.lua:882
 msgid "An error occurred while trying to delete %1"
 msgstr "Hiba történt a(z) %1 törlése közben"
 
-#: frontend/apps/filemanager/filemanager.lua:900
+#: frontend/apps/filemanager/filemanager.lua:906
 msgid "Renamed from %1 to %2"
 msgstr "%1 átnevezve: %2"
 
-#: frontend/apps/filemanager/filemanager.lua:906
+#: frontend/apps/filemanager/filemanager.lua:912
 msgid ""
 "Failed to move history data of %1 to %2.\n"
 "The reading history may be lost."
@@ -907,148 +910,148 @@ msgstr ""
 "% 1 előzményadatait nem sikerült áthelyezni % 2-be.\n"
 "Az olvasási előzmények elveszhetnek."
 
-#: frontend/apps/filemanager/filemanager.lua:914
+#: frontend/apps/filemanager/filemanager.lua:920
 msgid "Failed to rename from %1 to %2"
 msgstr "Nem sikerült átnevezni %1 -t %2 névre"
 
-#: frontend/apps/filemanager/filemanager.lua:923
+#: frontend/apps/filemanager/filemanager.lua:929
 msgid "filename"
 msgstr "fájlnév"
 
-#: frontend/apps/filemanager/filemanager.lua:923
+#: frontend/apps/filemanager/filemanager.lua:929
 msgid "Sort by filename"
 msgstr "Rendezés fájlnév szerint"
 
-#: frontend/apps/filemanager/filemanager.lua:924
+#: frontend/apps/filemanager/filemanager.lua:930
 msgid "name mixed"
 msgstr "kevert név"
 
-#: frontend/apps/filemanager/filemanager.lua:924
+#: frontend/apps/filemanager/filemanager.lua:930
 msgid "Sort by name – mixed files and folders"
 msgstr "Rendezés név szerint - fájlok és mappák keverve"
 
-#: frontend/apps/filemanager/filemanager.lua:925
+#: frontend/apps/filemanager/filemanager.lua:931
 msgid "date read"
 msgstr "legutóbbi olvasás dátuma"
 
-#: frontend/apps/filemanager/filemanager.lua:925
+#: frontend/apps/filemanager/filemanager.lua:931
 msgid "Sort by last read date"
 msgstr "Rendezés legutóbbi olvasás dátuma szerint"
 
-#: frontend/apps/filemanager/filemanager.lua:926
+#: frontend/apps/filemanager/filemanager.lua:932
 msgid "date added"
 msgstr "dátum hozzáadva"
 
-#: frontend/apps/filemanager/filemanager.lua:926
+#: frontend/apps/filemanager/filemanager.lua:932
 msgid "Sort by date added"
 msgstr "Rendezés hozzáadási dátum szerint"
 
-#: frontend/apps/filemanager/filemanager.lua:927
+#: frontend/apps/filemanager/filemanager.lua:933
 msgid "date modified"
 msgstr "módosítás dátuma"
 
-#: frontend/apps/filemanager/filemanager.lua:927
+#: frontend/apps/filemanager/filemanager.lua:933
 msgid "Sort by date modified"
 msgstr "Rendezés módosítás dátuma szerint"
 
-#: frontend/apps/filemanager/filemanager.lua:928
+#: frontend/apps/filemanager/filemanager.lua:934
 msgid "size"
 msgstr "méret"
 
-#: frontend/apps/filemanager/filemanager.lua:928
+#: frontend/apps/filemanager/filemanager.lua:934
 msgid "Sort by size"
 msgstr "Rendezés méret szerint"
 
-#: frontend/apps/filemanager/filemanager.lua:929
+#: frontend/apps/filemanager/filemanager.lua:935
 msgid "type"
 msgstr "típus"
 
-#: frontend/apps/filemanager/filemanager.lua:929
+#: frontend/apps/filemanager/filemanager.lua:935
 msgid "Sort by type"
 msgstr "Rendezés típus szerint"
 
-#: frontend/apps/filemanager/filemanager.lua:930
+#: frontend/apps/filemanager/filemanager.lua:936
 msgid "percent – unopened first"
 msgstr "százalék - meg nem nyitottak elöl"
 
-#: frontend/apps/filemanager/filemanager.lua:930
+#: frontend/apps/filemanager/filemanager.lua:936
 msgid "Sort by percent – unopened first"
 msgstr "Százalék szerinti rendezés - meg nem nyitottak elöl"
 
-#: frontend/apps/filemanager/filemanager.lua:931
+#: frontend/apps/filemanager/filemanager.lua:937
 msgid "percent – unopened last"
 msgstr "százalék – nem megnyitottak hátul"
 
-#: frontend/apps/filemanager/filemanager.lua:931
+#: frontend/apps/filemanager/filemanager.lua:937
 msgid "Sort by percent – unopened last"
 msgstr "Százalék szerinti rendezés - meg nem nyitottak hátul"
 
-#: frontend/apps/filemanager/filemanager.lua:947
+#: frontend/apps/filemanager/filemanager.lua:953
 msgid "Sort by percent"
 msgstr "Százalék szerinti rendezés"
 
-#: frontend/apps/filemanager/filemanager.lua:953
+#: frontend/apps/filemanager/filemanager.lua:959
 msgid "Sort by: %1"
 msgstr "Rendezés: %1 szerint"
 
-#: frontend/apps/filemanager/filemanager.lua:983
+#: frontend/apps/filemanager/filemanager.lua:989
 msgid "file browser"
 msgstr "fájlböngésző"
 
-#: frontend/apps/filemanager/filemanager.lua:983
+#: frontend/apps/filemanager/filemanager.lua:989
 msgid "Start with file browser"
 msgstr "Indítás a Fájlböngészővel"
 
-#: frontend/apps/filemanager/filemanager.lua:984
+#: frontend/apps/filemanager/filemanager.lua:990
 msgid "history"
 msgstr "előzmények"
 
-#: frontend/apps/filemanager/filemanager.lua:984
+#: frontend/apps/filemanager/filemanager.lua:990
 msgid "Start with history"
 msgstr "Indítás az Előzményekkel"
 
-#: frontend/apps/filemanager/filemanager.lua:985
+#: frontend/apps/filemanager/filemanager.lua:991
 msgid "folder shortcuts"
 msgstr "mappahivatkozások"
 
-#: frontend/apps/filemanager/filemanager.lua:985
+#: frontend/apps/filemanager/filemanager.lua:991
 msgid "Start with folder shortcuts"
 msgstr "Indítás a Mappahivatkozásokkal"
 
-#: frontend/apps/filemanager/filemanager.lua:986
+#: frontend/apps/filemanager/filemanager.lua:992
 msgid "last file"
 msgstr "legutóbbi fájl"
 
-#: frontend/apps/filemanager/filemanager.lua:986
+#: frontend/apps/filemanager/filemanager.lua:992
 msgid "Start with last file"
 msgstr "Indítás a legutóbbi fájllal"
 
-#: frontend/apps/filemanager/filemanager.lua:1003
+#: frontend/apps/filemanager/filemanager.lua:1009
 msgid "Start with: %1"
 msgstr "Indítás ezzel: %1"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:96
+#: frontend/apps/filemanager/filemanagermenu.lua:95
 msgid "Cannot open last document"
 msgstr "A legutóbbi dokumentum nem nyitható meg"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:122
+#: frontend/apps/filemanager/filemanagermenu.lua:121
 msgid "Show hidden files"
 msgstr "Rejtett fájlok megjelenítése"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:127
+#: frontend/apps/filemanager/filemanagermenu.lua:126
 msgid "Show unsupported files"
 msgstr "Nem támogatott fájlok megjelenítése"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:132
+#: frontend/apps/filemanager/filemanagermenu.lua:131
 msgid "Items"
 msgstr "Elemek"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:135
-#: frontend/apps/filemanager/filemanagermenu.lua:150
+#: frontend/apps/filemanager/filemanagermenu.lua:134
+#: frontend/apps/filemanager/filemanagermenu.lua:149
 msgid "Items per page"
 msgstr "Elemszám oldalanként"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:136
+#: frontend/apps/filemanager/filemanagermenu.lua:135
 msgid ""
 "This sets the number of items per page in:\n"
 "- File browser and history in 'classic' display mode\n"
@@ -1057,74 +1060,74 @@ msgid ""
 "- Bookmarks list"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagermenu.lua:161
+#: frontend/apps/filemanager/filemanagermenu.lua:160
 msgid "Font size"
 msgstr "Betűméret"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:175
+#: frontend/apps/filemanager/filemanagermenu.lua:174
 msgid "Maximum font size for item"
 msgstr "Elem max. betűmérete"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:185
+#: frontend/apps/filemanager/filemanagermenu.lua:184
 msgid "Reduce font size to show more text"
 msgstr "Betűméret csökkentése, hogy több szöveg jelenjen meg"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:198
+#: frontend/apps/filemanager/filemanagermenu.lua:197
 msgid "Reverse sorting"
 msgstr "Fordított rendezés"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:205
+#: frontend/apps/filemanager/filemanagermenu.lua:204
 #: frontend/apps/reader/modules/readermenu.lua:181
 msgid "Screensaver"
 msgstr "Képernyővédő"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:216
+#: frontend/apps/filemanager/filemanagermenu.lua:215
 msgid "Advanced settings"
 msgstr "Haladó beállítások"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:225
+#: frontend/apps/filemanager/filemanagermenu.lua:224
 #: frontend/apps/reader/modules/readermenu.lua:188
 msgid "Plugin management"
 msgstr "Bővítmények kezelése"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:230
+#: frontend/apps/filemanager/filemanagermenu.lua:229
 msgid "OPDS catalog"
 msgstr "OPDS katalógus"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:242
+#: frontend/apps/filemanager/filemanagermenu.lua:241
 msgid "Developer options"
 msgstr "Fejlesztői beállítások"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:245
+#: frontend/apps/filemanager/filemanagermenu.lua:244
 msgid "Clear readers' caches"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagermenu.lua:248
+#: frontend/apps/filemanager/filemanagermenu.lua:247
 msgid "Clear cache/ and cr3cache/ ?"
 msgstr "Törli ezeket: cache/ és cr3cache/ ?"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:263
+#: frontend/apps/filemanager/filemanagermenu.lua:262
 msgid "Caches cleared. Please exit and restart KOReader."
 msgstr "Gyorsítótárak törölve. Lépjen ki és indítsa újra a KOReader-t."
 
-#: frontend/apps/filemanager/filemanagermenu.lua:270
+#: frontend/apps/filemanager/filemanagermenu.lua:269
 msgid "Enable debug logging"
 msgstr "Hibakeresési naplózás engedélyezése"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:286
+#: frontend/apps/filemanager/filemanagermenu.lua:285
 msgid "Enable verbose debug logging"
 msgstr "Részletes hibakeresési naplózás engedélyezése"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:306
+#: frontend/apps/filemanager/filemanagermenu.lua:305
 msgid "Disable forced 8-bit pixel depth"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagermenu.lua:314
-#: frontend/apps/filemanager/filemanagermenu.lua:330
-#: frontend/apps/filemanager/filemanagermenu.lua:348
-#: frontend/apps/filemanager/filemanagermenu.lua:408
-#: frontend/apps/filemanager/filemanagermenu.lua:424
-#: frontend/apps/filemanager/filemanagermenu.lua:437
+#: frontend/apps/filemanager/filemanagermenu.lua:313
+#: frontend/apps/filemanager/filemanagermenu.lua:329
+#: frontend/apps/filemanager/filemanagermenu.lua:347
+#: frontend/apps/filemanager/filemanagermenu.lua:407
+#: frontend/apps/filemanager/filemanagermenu.lua:423
+#: frontend/apps/filemanager/filemanagermenu.lua:436
 #: frontend/pluginloader.lua:165
 #: frontend/ui/elements/common_settings_menu_table.lua:145
 #: frontend/ui/elements/common_settings_menu_table.lua:159
@@ -1134,71 +1137,68 @@ msgstr ""
 #: frontend/ui/elements/menu_activate.lua:55
 #: frontend/ui/elements/screen_android.lua:76
 #: frontend/ui/elements/screen_disable_double_tap_table.lua:14
+#: plugins/calibre.koplugin/main.lua:163
 msgid "This will take effect on next restart."
 msgstr "A következő újraindítással aktiválódik."
 
-#: frontend/apps/filemanager/filemanagermenu.lua:322
+#: frontend/apps/filemanager/filemanagermenu.lua:321
 msgid "Always abort on crash"
 msgstr "Összeomlás esetén mindig megszakítás"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:337
+#: frontend/apps/filemanager/filemanagermenu.lua:336
 msgid "Disable C blitter"
 msgstr "C blitter kikapcsolása"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:355
+#: frontend/apps/filemanager/filemanagermenu.lua:354
 msgid "Disable HW dithering"
 msgstr "HW dithering kikapcsolása"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:372
+#: frontend/apps/filemanager/filemanagermenu.lua:371
 msgid "Disable SW dithering"
 msgstr "SW dithering kikapcsolása"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:392
+#: frontend/apps/filemanager/filemanagermenu.lua:391
 msgid "Start E-ink test"
 msgstr "E-ink teszt indítása"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:400
+#: frontend/apps/filemanager/filemanagermenu.lua:399
 msgid "Disable enhanced UI text shaping (xtext)"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagermenu.lua:416
+#: frontend/apps/filemanager/filemanagermenu.lua:415
 msgid "Reverse UI layout mirroring"
 msgstr "Fordított UI elrendezés tükrözés"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:429
+#: frontend/apps/filemanager/filemanagermenu.lua:428
 msgid "Reverse UI text direction"
 msgstr "Fordított UI szöveg irány"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:447
+#: frontend/apps/filemanager/filemanagermenu.lua:446
 msgid "Enable CRE call cache (with stats)"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagermenu.lua:449
+#: frontend/apps/filemanager/filemanagermenu.lua:448
 msgid "Enable CRE call cache"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagermenu.lua:480
-msgid "Find a book via calibre metadata"
-msgstr "Könyv keresése a Calibre metaadatokban"
-
 #. @translators Search for files by name.
-#: frontend/apps/filemanager/filemanagermenu.lua:488
+#: frontend/apps/filemanager/filemanagermenu.lua:479
 msgid "Find a file"
 msgstr "Fájlkeresés"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:498
+#: frontend/apps/filemanager/filemanagermenu.lua:489
 msgid "Open last document"
 msgstr "Legutóbbi dokumentum megnyitása"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:502
+#: frontend/apps/filemanager/filemanagermenu.lua:493
 msgid "Last: %1"
 msgstr "Legutóbbi: %1"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:513
+#: frontend/apps/filemanager/filemanagermenu.lua:504
 msgid "Would you like to open the last document: %1?"
 msgstr "Megnyitja a legutóbbi dokumentumot: %1?"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:514
+#: frontend/apps/filemanager/filemanagermenu.lua:505
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:188
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:231
 #: frontend/apps/reader/modules/readercropping.lua:19
@@ -1207,98 +1207,21 @@ msgstr "Megnyitja a legutóbbi dokumentumot: %1?"
 #: frontend/ui/widget/container/inputcontainer.lua:287
 #: frontend/ui/widget/datewidget.lua:31
 #: frontend/ui/widget/numberpickerwidget.lua:143
-#: frontend/ui/widget/timewidget.lua:31
-#: plugins/calibrecompanion.koplugin/main.lua:180
+#: frontend/ui/widget/timewidget.lua:31 plugins/calibre.koplugin/main.lua:306
 #: plugins/evernote.koplugin/main.lua:167
 #: plugins/wallabag.koplugin/main.lua:819
 msgid "OK"
 msgstr "Rendben"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:538
+#: frontend/apps/filemanager/filemanagermenu.lua:529
 #: frontend/apps/reader/modules/readergesture.lua:68
 #: frontend/apps/reader/modules/readermenu.lua:210
 msgid "Restart KOReader"
 msgstr "A KOReader újraindítása (Restart)"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:611
+#: frontend/apps/filemanager/filemanagermenu.lua:602
 msgid "File manager menu"
 msgstr "Fájlböngésző menü"
-
-#: frontend/apps/filemanager/filemanagersearch.lua:83
-msgid ""
-"The SEARCH_LIBRARY_PATH variable must be defined in 'persistent.defaults."
-"lua' in order to use the calibre file search functionality."
-msgstr ""
-
-#: frontend/apps/filemanager/filemanagersearch.lua:91
-msgid "not found."
-msgstr "nem található."
-
-#: frontend/apps/filemanager/filemanagersearch.lua:102
-msgid ""
-"You must specify at least one field to search at! (SEARCH_XXX = true in "
-"defaults.lua)"
-msgstr ""
-"Legalább egy keresési mezőt meg kell adni! (SEARCH_XXX = igaz defaults.lua)"
-
-#: frontend/apps/filemanager/filemanagersearch.lua:150
-msgid "Search books"
-msgstr "Könyvek keresése"
-
-#: frontend/apps/filemanager/filemanagersearch.lua:155
-msgid "Browse series"
-msgstr "Sorozat böngészése"
-
-#: frontend/apps/filemanager/filemanagersearch.lua:169
-msgid "Browse tags"
-msgstr "Címkék böngészése"
-
-#. @translators Search for books in calibre Library, via on-device metadata (as setup by Calibre's 'Send To Device').
-#: frontend/apps/filemanager/filemanagersearch.lua:194
-msgid "Find books"
-msgstr "Könyv keresése"
-
-#: frontend/apps/filemanager/filemanagersearch.lua:219
-msgid "Unable to find a calibre metadata file."
-msgstr "Nem található Calibre metaadatfájl."
-
-#: frontend/apps/filemanager/filemanagersearch.lua:487
-msgid "No match for %1."
-msgstr "Nincs egyezés a következővel: %1."
-
-#: frontend/apps/filemanager/filemanagersearch.lua:499
-msgid "File not found."
-msgstr "Fájl nem található."
-
-#: frontend/apps/filemanager/filemanagersearch.lua:545
-#: frontend/apps/filemanager/filemanagersearch.lua:642
-msgid "Title: %1"
-msgstr "Cím: %1"
-
-#: frontend/apps/filemanager/filemanagersearch.lua:546
-#: frontend/apps/filemanager/filemanagersearch.lua:643
-msgid "Author(s): %1"
-msgstr "Szerző(k): %1"
-
-#: frontend/apps/filemanager/filemanagersearch.lua:547
-#: frontend/apps/filemanager/filemanagersearch.lua:644
-msgid "Tags: %1"
-msgstr "Címke: %1"
-
-#: frontend/apps/filemanager/filemanagersearch.lua:548
-#: frontend/apps/filemanager/filemanagersearch.lua:645
-#: plugins/goodreads.koplugin/goodreadsbook.lua:145
-msgid "Series: %1"
-msgstr "Sorozat: %1"
-
-#: frontend/apps/filemanager/filemanagersearch.lua:552
-#: frontend/apps/filemanager/filemanagersearch.lua:649
-msgid "Path: "
-msgstr "Elérési útvonal: "
-
-#: frontend/apps/filemanager/filemanagersearch.lua:678
-msgid "Browse"
-msgstr "Böngészés"
 
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:46
 msgid ""
@@ -1430,7 +1353,7 @@ msgid "Do you want remove this bookmark?"
 msgstr "Törli ezt a könyvjelzőt?"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:326
-#: frontend/apps/reader/modules/readergesture.lua:881
+#: frontend/apps/reader/modules/readergesture.lua:888
 #: plugins/statistics.koplugin/main.lua:1840
 msgid "Remove"
 msgstr "Törlés"
@@ -2424,7 +2347,7 @@ msgid "Reboot the device"
 msgstr "Készülék újraindítása"
 
 #: frontend/apps/reader/modules/readergesture.lua:70
-#: frontend/apps/reader/modules/readergesture.lua:1554
+#: frontend/apps/reader/modules/readergesture.lua:1561
 #: frontend/ui/elements/common_info_menu_table.lua:90
 #: frontend/ui/elements/common_info_menu_table.lua:95
 msgid "Power off"
@@ -2575,7 +2498,22 @@ msgstr "Olvasási állapot 'push' erről az eszközről"
 msgid "Pull progress from other devices"
 msgstr "Olvasási állapot 'pull' másik eszközről"
 
-#: frontend/apps/reader/modules/readergesture.lua:163
+#: frontend/apps/reader/modules/readergesture.lua:111
+#, fuzzy
+msgid "Search in calibre metadata"
+msgstr "Könyv keresése a Calibre metaadatokban"
+
+#: frontend/apps/reader/modules/readergesture.lua:112
+#, fuzzy
+msgid "Browse all calibre tags"
+msgstr "Címkék böngészése"
+
+#: frontend/apps/reader/modules/readergesture.lua:113
+#, fuzzy
+msgid "Browse all calibre series"
+msgstr "Sorozat böngészése"
+
+#: frontend/apps/reader/modules/readergesture.lua:166
 msgid ""
 "Multiswipes allow you to perform complex gestures built up out of multiple "
 "swipe directions, never losing touch with the screen.\n"
@@ -2590,72 +2528,72 @@ msgstr ""
 "Ezek a fejlett gesztusok egyenes vagy átlós mozdulatokból állnak. A "
 "pontosság érdekében ezek nem keverhetőek."
 
-#: frontend/apps/reader/modules/readergesture.lua:293
+#: frontend/apps/reader/modules/readergesture.lua:296
 msgid "Multiswipe"
 msgstr "Kombinált suhintás"
 
-#: frontend/apps/reader/modules/readergesture.lua:304
-#: frontend/apps/reader/modules/readergesture.lua:621
-#: frontend/apps/reader/modules/readergesture.lua:873
+#: frontend/apps/reader/modules/readergesture.lua:307
+#: frontend/apps/reader/modules/readergesture.lua:624
+#: frontend/apps/reader/modules/readergesture.lua:880
 msgid "Available"
 msgstr "Elérhető"
 
-#: frontend/apps/reader/modules/readergesture.lua:305
-#: frontend/apps/reader/modules/readergesture.lua:622
-#: frontend/apps/reader/modules/readergesture.lua:874
+#: frontend/apps/reader/modules/readergesture.lua:308
+#: frontend/apps/reader/modules/readergesture.lua:625
+#: frontend/apps/reader/modules/readergesture.lua:881
 msgid "%1   (%2)"
 msgstr "%1   (%2)"
 
-#: frontend/apps/reader/modules/readergesture.lua:308
+#: frontend/apps/reader/modules/readergesture.lua:311
 msgid "Tap corner"
 msgstr "Sarkok érintése"
 
-#: frontend/apps/reader/modules/readergesture.lua:311
-#: frontend/apps/reader/modules/readergesture.lua:334
-#: frontend/apps/reader/modules/readergesture.lua:630
+#: frontend/apps/reader/modules/readergesture.lua:314
+#: frontend/apps/reader/modules/readergesture.lua:337
+#: frontend/apps/reader/modules/readergesture.lua:633
 msgid "Top left"
 msgstr "Bal felső"
 
-#: frontend/apps/reader/modules/readergesture.lua:316
-#: frontend/apps/reader/modules/readergesture.lua:339
-#: frontend/apps/reader/modules/readergesture.lua:634
+#: frontend/apps/reader/modules/readergesture.lua:319
+#: frontend/apps/reader/modules/readergesture.lua:342
+#: frontend/apps/reader/modules/readergesture.lua:637
 msgid "Top right"
 msgstr "Jobb felső"
 
-#: frontend/apps/reader/modules/readergesture.lua:320
-#: frontend/apps/reader/modules/readergesture.lua:343
-#: frontend/apps/reader/modules/readergesture.lua:638
+#: frontend/apps/reader/modules/readergesture.lua:323
+#: frontend/apps/reader/modules/readergesture.lua:346
+#: frontend/apps/reader/modules/readergesture.lua:641
 msgid "Bottom left"
 msgstr "Bal alsó"
 
-#: frontend/apps/reader/modules/readergesture.lua:324
-#: frontend/apps/reader/modules/readergesture.lua:347
-#: frontend/apps/reader/modules/readergesture.lua:642
+#: frontend/apps/reader/modules/readergesture.lua:327
+#: frontend/apps/reader/modules/readergesture.lua:350
+#: frontend/apps/reader/modules/readergesture.lua:645
 msgid "Bottom right"
 msgstr "Jobb alsó"
 
-#: frontend/apps/reader/modules/readergesture.lua:331
+#: frontend/apps/reader/modules/readergesture.lua:334
 msgid "Hold corner"
 msgstr "Sarkok nyomvatartása"
 
-#: frontend/apps/reader/modules/readergesture.lua:353
+#: frontend/apps/reader/modules/readergesture.lua:356
 msgid "Gesture manager"
 msgstr "Gesztuskezelő"
 
-#: frontend/apps/reader/modules/readergesture.lua:356
+#: frontend/apps/reader/modules/readergesture.lua:359
 msgid "Turn on multiswipes"
 msgstr "Kombinált suhintás engedélyezése"
 
-#: frontend/apps/reader/modules/readergesture.lua:365
-#: frontend/apps/reader/modules/readergesture.lua:371
+#: frontend/apps/reader/modules/readergesture.lua:368
+#: frontend/apps/reader/modules/readergesture.lua:374
 msgid "Multiswipe recorder"
 msgstr "Többujjas érintésműveletek felvétele"
 
-#: frontend/apps/reader/modules/readergesture.lua:372
+#: frontend/apps/reader/modules/readergesture.lua:375
 msgid "Make a multiswipe gesture"
 msgstr "Kombinált többujjas érintésművelet létrehozása"
 
-#: frontend/apps/reader/modules/readergesture.lua:382
+#: frontend/apps/reader/modules/readergesture.lua:385
 #: frontend/apps/reader/modules/readerstyletweak.lua:641
 #: frontend/apps/reader/modules/readerwikipedia.lua:157
 #: frontend/apps/reader/readerui.lua:671 frontend/ui/widget/inputdialog.lua:622
@@ -2663,66 +2601,66 @@ msgstr "Kombinált többujjas érintésművelet létrehozása"
 msgid "Save"
 msgstr "Mentés"
 
-#: frontend/apps/reader/modules/readergesture.lua:392
+#: frontend/apps/reader/modules/readergesture.lua:395
 msgid "Recorded multiswipe already exists."
 msgstr "A rögzített kombinált suhintás már létezik."
 
-#: frontend/apps/reader/modules/readergesture.lua:430
+#: frontend/apps/reader/modules/readergesture.lua:433
 msgid ""
 "The number of possible multiswipe gestures is theoretically infinite. With "
 "the multiswipe recorder you can easily record your own."
 msgstr ""
 
-#: frontend/apps/reader/modules/readergesture.lua:437
+#: frontend/apps/reader/modules/readergesture.lua:440
 msgid "Short diagonal swipe"
 msgstr "Rövid átlós suhintás"
 
-#: frontend/apps/reader/modules/readergesture.lua:441
+#: frontend/apps/reader/modules/readergesture.lua:444
 msgid "One-finger swipe"
 msgstr "Egyujjas suhintás"
 
-#: frontend/apps/reader/modules/readergesture.lua:444
+#: frontend/apps/reader/modules/readergesture.lua:447
 msgid "Left edge down"
 msgstr "Bal szélen lefelé"
 
-#: frontend/apps/reader/modules/readergesture.lua:448
+#: frontend/apps/reader/modules/readergesture.lua:451
 msgid "Left edge up"
 msgstr "Bal szélen felfelé"
 
-#: frontend/apps/reader/modules/readergesture.lua:452
+#: frontend/apps/reader/modules/readergesture.lua:455
 msgid "Right edge down"
 msgstr "Jobb szélen lefelé"
 
-#: frontend/apps/reader/modules/readergesture.lua:456
+#: frontend/apps/reader/modules/readergesture.lua:459
 msgid "Right edge up"
 msgstr "Jobb szélen felfelé"
 
-#: frontend/apps/reader/modules/readergesture.lua:460
+#: frontend/apps/reader/modules/readergesture.lua:463
 msgid "Top edge right"
 msgstr "Felső szélen jobbra"
 
-#: frontend/apps/reader/modules/readergesture.lua:464
+#: frontend/apps/reader/modules/readergesture.lua:467
 msgid "Top edge left"
 msgstr "Felső szélen balra"
 
-#: frontend/apps/reader/modules/readergesture.lua:468
+#: frontend/apps/reader/modules/readergesture.lua:471
 msgid "Bottom edge right"
 msgstr "Alsó szélen jobbra"
 
-#: frontend/apps/reader/modules/readergesture.lua:472
+#: frontend/apps/reader/modules/readergesture.lua:475
 msgid "Bottom edge left"
 msgstr "Alsó szélen balra"
 
-#: frontend/apps/reader/modules/readergesture.lua:480
+#: frontend/apps/reader/modules/readergesture.lua:483
 msgid "Gesture intervals"
 msgstr "Gesztusok időzítései"
 
-#: frontend/apps/reader/modules/readergesture.lua:483
-#: frontend/apps/reader/modules/readergesture.lua:499
+#: frontend/apps/reader/modules/readergesture.lua:486
+#: frontend/apps/reader/modules/readergesture.lua:502
 msgid "Double tap interval"
 msgstr "Kettős érintés időzítése"
 
-#: frontend/apps/reader/modules/readergesture.lua:488
+#: frontend/apps/reader/modules/readergesture.lua:491
 msgid ""
 "Set double tap interval in milliseconds.\n"
 "The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
@@ -2732,19 +2670,19 @@ msgstr ""
 "Az intervallum értéke 100 (0,1 mp) és 2000 (2 mp) között lehet.\n"
 "Alapértelmezett érték: %1"
 
-#: frontend/apps/reader/modules/readergesture.lua:498
-#: frontend/apps/reader/modules/readergesture.lua:552
-#: frontend/apps/reader/modules/readergesture.lua:579
-#: frontend/apps/reader/modules/readergesture.lua:606
+#: frontend/apps/reader/modules/readergesture.lua:501
+#: frontend/apps/reader/modules/readergesture.lua:555
+#: frontend/apps/reader/modules/readergesture.lua:582
+#: frontend/apps/reader/modules/readergesture.lua:609
 msgid "Set interval"
 msgstr "Intervallum beállítása"
 
-#: frontend/apps/reader/modules/readergesture.lua:510
-#: frontend/apps/reader/modules/readergesture.lua:526
+#: frontend/apps/reader/modules/readergesture.lua:513
+#: frontend/apps/reader/modules/readergesture.lua:529
 msgid "Two finger tap duration"
 msgstr "Kétujjas érintés időzítése"
 
-#: frontend/apps/reader/modules/readergesture.lua:515
+#: frontend/apps/reader/modules/readergesture.lua:518
 msgid ""
 "Set two finger tap duration in milliseconds.\n"
 "The duration value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
@@ -2754,16 +2692,16 @@ msgstr ""
 "Az intervallum értéke 100 (0,1 mp) és 2000 (2 mp) között lehet.\n"
 "Alapértelmezett érték: %1"
 
-#: frontend/apps/reader/modules/readergesture.lua:525
+#: frontend/apps/reader/modules/readergesture.lua:528
 msgid "Set duration"
 msgstr "Időtartam beállítása"
 
-#: frontend/apps/reader/modules/readergesture.lua:537
-#: frontend/apps/reader/modules/readergesture.lua:553
+#: frontend/apps/reader/modules/readergesture.lua:540
+#: frontend/apps/reader/modules/readergesture.lua:556
 msgid "Hold interval"
 msgstr "Nyomva tartás intervalluma"
 
-#: frontend/apps/reader/modules/readergesture.lua:542
+#: frontend/apps/reader/modules/readergesture.lua:545
 msgid ""
 "Set hold interval in milliseconds.\n"
 "The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
@@ -2773,12 +2711,12 @@ msgstr ""
 "Az intervallum értéke 100 (0,1 mp) és 2000 (2 mp) között lehet.\n"
 "Alapértelmezett érték: %1"
 
-#: frontend/apps/reader/modules/readergesture.lua:564
-#: frontend/apps/reader/modules/readergesture.lua:580
+#: frontend/apps/reader/modules/readergesture.lua:567
+#: frontend/apps/reader/modules/readergesture.lua:583
 msgid "Pan delay interval"
 msgstr ""
 
-#: frontend/apps/reader/modules/readergesture.lua:569
+#: frontend/apps/reader/modules/readergesture.lua:572
 msgid ""
 "Set pan delay interval in milliseconds.\n"
 "The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
@@ -2788,12 +2726,12 @@ msgstr ""
 "Az intervallum értéke 100 (0,1 mp) és 2000 (2 mp) között lehet.\n"
 "Alapértelmezett érték: %1"
 
-#: frontend/apps/reader/modules/readergesture.lua:591
-#: frontend/apps/reader/modules/readergesture.lua:607
+#: frontend/apps/reader/modules/readergesture.lua:594
+#: frontend/apps/reader/modules/readergesture.lua:610
 msgid "Swipe interval"
 msgstr "Suhintás intervalluma"
 
-#: frontend/apps/reader/modules/readergesture.lua:596
+#: frontend/apps/reader/modules/readergesture.lua:599
 msgid ""
 "Set swipe interval in milliseconds.\n"
 "The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
@@ -2803,113 +2741,113 @@ msgstr ""
 "Az intervallum értéke 100 (0,1 mp) és 2000 (2 mp) között lehet.\n"
 "Alapértelmezett érték: %1"
 
-#: frontend/apps/reader/modules/readergesture.lua:627
+#: frontend/apps/reader/modules/readergesture.lua:630
 msgid "Two-finger tap corner"
 msgstr "Sarkok kétujjas érintése"
 
-#: frontend/apps/reader/modules/readergesture.lua:649
+#: frontend/apps/reader/modules/readergesture.lua:652
 msgid "Two-finger swipe"
 msgstr "Kétujjas suhintás"
 
-#: frontend/apps/reader/modules/readergesture.lua:686
+#: frontend/apps/reader/modules/readergesture.lua:689
 msgid "Spread and pinch"
 msgstr "Kétujjas kicsinyítés és nagyítás"
 
-#: frontend/apps/reader/modules/readergesture.lua:689
+#: frontend/apps/reader/modules/readergesture.lua:692
 msgid "Spread"
 msgstr "Kétujjas nagyítás"
 
-#: frontend/apps/reader/modules/readergesture.lua:693
+#: frontend/apps/reader/modules/readergesture.lua:696
 msgid "Pinch"
 msgstr "Kétujjas kicsinyítés"
 
-#: frontend/apps/reader/modules/readergesture.lua:800
+#: frontend/apps/reader/modules/readergesture.lua:807
 msgid "%1 (default)"
 msgstr "%1 (alapértelmezés)"
 
-#: frontend/apps/reader/modules/readergesture.lua:880
+#: frontend/apps/reader/modules/readergesture.lua:887
 msgid "Remove custom multiswipe %1?"
 msgstr ""
 "Eltávolítja ezt az egyéni kombinált suhintást?\n"
 "%1"
 
-#: frontend/apps/reader/modules/readergesture.lua:1242
+#: frontend/apps/reader/modules/readergesture.lua:1249
 msgid "You have just performed your first multiswipe gesture."
 msgstr "Most hajtotta végre az első többujjas mozdulatot."
 
-#: frontend/apps/reader/modules/readergesture.lua:1243
+#: frontend/apps/reader/modules/readergesture.lua:1250
 #: frontend/ui/network/manager.lua:73
 msgid "Turn on"
 msgstr "Bekapcsolás"
 
-#: frontend/apps/reader/modules/readergesture.lua:1248
+#: frontend/apps/reader/modules/readergesture.lua:1255
 #: frontend/ui/network/manager.lua:85
 msgid "Turn off"
 msgstr "Kikapcsolás"
 
-#: frontend/apps/reader/modules/readergesture.lua:1395
-#: frontend/apps/reader/modules/readergesture.lua:1410
-#: frontend/apps/reader/modules/readergesture.lua:1443
+#: frontend/apps/reader/modules/readergesture.lua:1402
+#: frontend/apps/reader/modules/readergesture.lua:1417
+#: frontend/apps/reader/modules/readergesture.lua:1450
 msgid "Frontlight controlled by system settings."
 msgstr "Megvilágítás a rendszer beállításainak megfelelően."
 
-#: frontend/apps/reader/modules/readergesture.lua:1483
+#: frontend/apps/reader/modules/readergesture.lua:1490
 msgid "Turning on Wi-Fi…"
 msgstr "Wi-Fi bekapcsolása…"
 
-#: frontend/apps/reader/modules/readergesture.lua:1494
-#: frontend/apps/reader/modules/readergesture.lua:1504
+#: frontend/apps/reader/modules/readergesture.lua:1501
+#: frontend/apps/reader/modules/readergesture.lua:1511
 msgid "Wi-Fi off."
 msgstr "Wi-Fi kikapcsolva."
 
-#: frontend/apps/reader/modules/readergesture.lua:1512
+#: frontend/apps/reader/modules/readergesture.lua:1519
 msgid "Enabling wifi…"
 msgstr "Wi-Fi engedélyezése…"
 
-#: frontend/apps/reader/modules/readergesture.lua:1524
+#: frontend/apps/reader/modules/readergesture.lua:1531
 msgid "Already connected to network %1."
 msgstr "Csatlakozva a %1 hálózathoz."
 
-#: frontend/apps/reader/modules/readergesture.lua:1526
+#: frontend/apps/reader/modules/readergesture.lua:1533
 msgid "Already connected."
 msgstr "Már csatlakozva."
 
-#: frontend/apps/reader/modules/readergesture.lua:1545
+#: frontend/apps/reader/modules/readergesture.lua:1552
 #: frontend/ui/elements/common_info_menu_table.lua:79
 msgid "Are you sure you want to reboot the device?"
 msgstr "Újraindítja a készüléket?"
 
-#: frontend/apps/reader/modules/readergesture.lua:1546
+#: frontend/apps/reader/modules/readergesture.lua:1553
 #: frontend/ui/elements/common_info_menu_table.lua:80
 msgid "Reboot"
 msgstr "Újraindítás"
 
-#: frontend/apps/reader/modules/readergesture.lua:1553
+#: frontend/apps/reader/modules/readergesture.lua:1560
 #: frontend/ui/elements/common_info_menu_table.lua:94
 msgid "Are you sure you want to power off the device?"
 msgstr "Kikapcsolja a készüléket?"
 
-#: frontend/apps/reader/modules/readergesture.lua:1620
+#: frontend/apps/reader/modules/readergesture.lua:1633
 msgid "Frontlight on."
 msgstr "Kijelzővilágítás bekapcsolva."
 
-#: frontend/apps/reader/modules/readergesture.lua:1622
+#: frontend/apps/reader/modules/readergesture.lua:1635
 msgid "Frontlight off."
 msgstr "Kijelzővilágítás kikapcsolva."
 
-#: frontend/apps/reader/modules/readergesture.lua:1634
+#: frontend/apps/reader/modules/readergesture.lua:1647
 msgid "Accelerometer rotation events off."
 msgstr ""
 
-#: frontend/apps/reader/modules/readergesture.lua:1636
+#: frontend/apps/reader/modules/readergesture.lua:1649
 msgid "Accelerometer rotation events on."
 msgstr ""
 
-#: frontend/apps/reader/modules/readergesture.lua:1654
+#: frontend/apps/reader/modules/readergesture.lua:1667
 msgid "RTL page turning."
 msgstr "J->B lapozás."
 
-#: frontend/apps/reader/modules/readergesture.lua:1654
+#: frontend/apps/reader/modules/readergesture.lua:1667
 msgid "LTR page turning."
 msgstr "B->J lapozás."
 
@@ -7633,6 +7571,7 @@ msgid "Paused"
 msgstr "Leállítva"
 
 #: frontend/ui/trapper.lua:158 frontend/ui/wikipedia.lua:1367
+#: plugins/calibre.koplugin/wireless.lua:193
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:695
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:524
 msgid "Continue"
@@ -8027,7 +7966,7 @@ msgstr "Elfelejt"
 
 #: frontend/ui/widget/networksetting.lua:298
 #: frontend/ui/widget/networksetting.lua:329
-#: plugins/calibrecompanion.koplugin/main.lua:107
+#: plugins/calibre.koplugin/main.lua:75
 msgid "Connect"
 msgstr "Kapcsolódás"
 
@@ -8409,26 +8348,26 @@ msgid "%1h%2'%3''"
 msgstr "%1ó%2'%3''"
 
 #. @translators This is an abbreviation for the gigabyte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:702
+#: frontend/util.lua:760
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. @translators This is an abbreviation for the megabyte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:706
+#: frontend/util.lua:764
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. @translators This is an abbreviation for the kilobyte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:710
+#: frontend/util.lua:768
 msgid "%1 KB"
 msgstr "%1 kB"
 
 #. @translators This is an abbreviation for the byte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:713
+#: frontend/util.lua:771
 msgid "%1 B"
 msgstr "%1 B"
 
-#: frontend/util.lua:1030
+#: frontend/util.lua:1105
 msgid ""
 "Couldn't extract archive:\n"
 "\n"
@@ -8442,7 +8381,7 @@ msgstr ""
 "\n"
 "Ismeretlen fájlkiterjesztés."
 
-#: frontend/util.lua:1033
+#: frontend/util.lua:1108
 msgid ""
 "Extracting archive failed:\n"
 "\n"
@@ -8624,70 +8563,246 @@ msgstr "A legutóbbi töltés óta"
 msgid "Collects and displays battery statistics."
 msgstr "Akkumulátor statisztika összegyűjtés, megjelenítés."
 
-#: plugins/calibrecompanion.koplugin/main.lua:100
-msgid "calibre wireless connection"
-msgstr "Vezeték nélküli Calibre kapcsolat"
+#: plugins/calibre.koplugin/main.lua:68 plugins/calibre.koplugin/_meta.lua:4
+#, fuzzy
+msgid "Calibre"
+msgstr "calibre host"
 
-#: plugins/calibrecompanion.koplugin/main.lua:105
+#: plugins/calibre.koplugin/main.lua:73
 msgid "Disconnect"
 msgstr "Szétkapcsolás"
 
-#: plugins/calibrecompanion.koplugin/main.lua:119
+#: plugins/calibre.koplugin/main.lua:90
+#, fuzzy
+msgid "Search settings"
+msgstr "Szöveg keresése"
+
+#: plugins/calibre.koplugin/main.lua:95
+#, fuzzy
+msgid "Wireless settings"
+msgstr "Wi-Fi beállítások"
+
+#: plugins/calibre.koplugin/main.lua:104
+msgid "Find a book via calibre metadata"
+msgstr "Könyv keresése a Calibre metaadatokban"
+
+#: plugins/calibre.koplugin/main.lua:116
+msgid "Manage libraries"
+msgstr ""
+
+#: plugins/calibre.koplugin/main.lua:140
+#: plugins/calibre.koplugin/search.lua:317
+#, fuzzy
+msgid "No calibre libraries"
+msgstr "Helyi Calibre könyvtár"
+
+#: plugins/calibre.koplugin/main.lua:145
+#, fuzzy
+msgid "Rescan disk for calibre libraries"
+msgstr "Helyi Calibre könyvtár"
+
+#: plugins/calibre.koplugin/main.lua:155
+msgid "Enable searches in the reader"
+msgstr ""
+
+#: plugins/calibre.koplugin/main.lua:168
+#, fuzzy
+msgid "Store metadata in cache"
+msgstr "Sorozat metaadatok megjelenítése külön sorban"
+
+#: plugins/calibre.koplugin/main.lua:177
+msgid "Case sensitive search"
+msgstr ""
+
+#: plugins/calibre.koplugin/main.lua:186
+#, fuzzy
+msgid "Search by title"
+msgstr "Keresés a könyvek címében"
+
+#: plugins/calibre.koplugin/main.lua:195
+#, fuzzy
+msgid "Search by authors"
+msgstr "Keresés a könyvek szerzőiben"
+
+#: plugins/calibre.koplugin/main.lua:204
+#, fuzzy
+msgid "Search by path"
+msgstr "Keresés a könyvek szerzőiben"
+
+#: plugins/calibre.koplugin/main.lua:223
+#, fuzzy
+msgid "Enable wireless client"
+msgstr "Vezeték nélküli Calibre kapcsolat"
+
+#: plugins/calibre.koplugin/main.lua:236
+#: plugins/calibre.koplugin/wireless.lua:396
+#, fuzzy
+msgid "Set password"
+msgstr "Jelszó megjelenítése"
+
+#: plugins/calibre.koplugin/main.lua:243
 msgid "Set inbox directory"
 msgstr "Célmappa (inbox) beállítása"
 
-#: plugins/calibrecompanion.koplugin/main.lua:126
+#: plugins/calibre.koplugin/main.lua:251
 msgid "automatic"
 msgstr "automatikus"
 
-#: plugins/calibrecompanion.koplugin/main.lua:131
+#: plugins/calibre.koplugin/main.lua:256
 msgid "Server address (%1)"
 msgstr "Szerver címe (%1)"
 
-#: plugins/calibrecompanion.koplugin/main.lua:135
+#: plugins/calibre.koplugin/main.lua:261
 msgid "Automatic"
 msgstr "Automatikus"
 
-#: plugins/calibrecompanion.koplugin/main.lua:144
+#: plugins/calibre.koplugin/main.lua:270
 msgid "Manual"
 msgstr "Manuális"
 
-#: plugins/calibrecompanion.koplugin/main.lua:158
+#: plugins/calibre.koplugin/main.lua:284
 msgid "Set custom calibre address"
 msgstr "Egyéni Calibre cím"
 
-#: plugins/calibrecompanion.koplugin/main.lua:163
+#: plugins/calibre.koplugin/main.lua:289
 msgid "IP Address"
 msgstr "IP cím"
 
-#: plugins/calibrecompanion.koplugin/main.lua:168
+#: plugins/calibre.koplugin/main.lua:294
 msgid "Port"
 msgstr "Port"
 
-#: plugins/calibrecompanion.koplugin/main.lua:218
+#: plugins/calibre.koplugin/_meta.lua:5
+msgid ""
+"Integration with calibre. Send documents from calibre library via Wi-Fi and "
+"search calibre metadata."
+msgstr ""
+
+#: plugins/calibre.koplugin/search.lua:159
+msgid "Author(s):"
+msgstr "Szerző(k):"
+
+#: plugins/calibre.koplugin/search.lua:163
+msgid "Tags:"
+msgstr "Címkék:"
+
+#: plugins/calibre.koplugin/search.lua:192
+msgid "Search books"
+msgstr "Könyvek keresése"
+
+#: plugins/calibre.koplugin/search.lua:197
+msgid "Browse series"
+msgstr "Sorozat böngészése"
+
+#: plugins/calibre.koplugin/search.lua:206
+msgid "Browse tags"
+msgstr "Címkék böngészése"
+
+#. @translators Search for books in calibre Library, via on-device metadata (as setup by Calibre's 'Send To Device').
+#: plugins/calibre.koplugin/search.lua:226
+msgid "Find books"
+msgstr "Könyv keresése"
+
+#: plugins/calibre.koplugin/search.lua:330
+#, fuzzy
+msgid "No metadata found"
+msgstr "Metaadat elrejtése"
+
+#: plugins/calibre.koplugin/search.lua:416
+#, fuzzy
+msgid "Browse by tags"
+msgstr "Címkék böngészése"
+
+#: plugins/calibre.koplugin/search.lua:419
+#, fuzzy
+msgid "Browse by series"
+msgstr "Sorozat böngészése"
+
+#: plugins/calibre.koplugin/search.lua:477
+msgid ""
+"Scanning libraries can take time. All storage media under %1 will be analyzed"
+msgstr ""
+
+#: plugins/calibre.koplugin/search.lua:483
+msgid "Scan"
+msgstr ""
+
+#: plugins/calibre.koplugin/search.lua:509
+#, fuzzy
+msgid "No calibre libraries were found"
+msgstr "Nem találhatóak könyvek."
+
+#: plugins/calibre.koplugin/search.lua:511
+msgid "Found %1 calibre libraries with %2 books:%3"
+msgstr ""
+
+#: plugins/calibre.koplugin/wireless.lua:136
+#, fuzzy
+msgid "Invalid password"
+msgstr "érvénytelen jelszó"
+
+#: plugins/calibre.koplugin/wireless.lua:140
+#, fuzzy
+msgid "Disconnected by calibre"
+msgstr "Kapcsolódva a Calibre szerverhez %1"
+
+#: plugins/calibre.koplugin/wireless.lua:143
 msgid "Connected to calibre server at %1"
 msgstr "Kapcsolódva a Calibre szerverhez %1"
 
-#: plugins/calibrecompanion.koplugin/main.lua:261
-#: plugins/calibrecompanion.koplugin/main.lua:281
+#: plugins/calibre.koplugin/wireless.lua:187
+msgid ""
+"This folder is already initialized as a %1.\n"
+"\n"
+"Mixing calibre libraries is not recommended unless you know what you're "
+"doing.\n"
+"\n"
+"Do you want to continue? "
+msgstr ""
+
+#: plugins/calibre.koplugin/wireless.lua:218
+#: plugins/calibre.koplugin/wireless.lua:239
 msgid "Cannot connect to calibre server."
 msgstr "A Calibre szerver nem elérhető."
 
-#: plugins/calibrecompanion.koplugin/main.lua:471
-#: plugins/zsync.koplugin/main.lua:275
-msgid "Received file:"
+#: plugins/calibre.koplugin/wireless.lua:386
+msgid "Set a password for calibre wireless server"
+msgstr ""
+
+#: plugins/calibre.koplugin/wireless.lua:506
+msgid ""
+"Can't receive file %1/%2: %3\n"
+"No space left on device"
+msgstr ""
+
+#: plugins/calibre.koplugin/wireless.lua:538
+#, fuzzy
+msgid "Received file %1/%2: %3"
 msgstr "Fogadott fájl:"
 
-#: plugins/calibrecompanion.koplugin/_meta.lua:4
-msgid "Calibre wireless connection"
-msgstr "Calibre vezeték nélküli kapcsolat"
-
-#: plugins/calibrecompanion.koplugin/_meta.lua:5
+#: plugins/calibre.koplugin/wireless.lua:567
 msgid ""
-"Send documents from calibre library directly to device via Wi-Fi connection"
+"Insufficient disk space.\n"
+"\n"
+"calibre %1 will report all books as in device. This might lead to errors. "
+"Please reconnect to get updated info"
 msgstr ""
-"Dokumentumok közvetlen küldése az eszközre Calibre könyvtárból, Wi-Fi "
-"kapcsolaton keresztül"
+
+#: plugins/calibre.koplugin/wireless.lua:569
+#, fuzzy
+msgid "Reconnect"
+msgstr "Kapcsolódás"
+
+#: plugins/calibre.koplugin/wireless.lua:604
+#, fuzzy
+msgid "Deleted file: %1"
+msgstr "Fájl törlése"
+
+#: plugins/calibre.koplugin/wireless.lua:606
+msgid ""
+"Deleted %1 files in %2:\n"
+" %3"
+msgstr ""
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:211
 msgid "Failed compacting database: %1"
@@ -9355,6 +9470,10 @@ msgstr "Nincs találat!"
 #: plugins/goodreads.koplugin/goodreadsbook.lua:57
 msgid "Book info"
 msgstr "Könyv infó"
+
+#: plugins/goodreads.koplugin/goodreadsbook.lua:145
+msgid "Series: %1"
+msgstr "Sorozat: %1"
 
 #: plugins/goodreads.koplugin/goodreadsbook.lua:157
 msgid "Rating: %1"
@@ -11272,6 +11391,10 @@ msgstr "Feliratkozás könyvmegosztásra"
 msgid "Unsubscribe from book share"
 msgstr "Leiratkozás könyvmegosztásról"
 
+#: plugins/zsync.koplugin/main.lua:275
+msgid "Received file:"
+msgstr "Fogadott fájl:"
+
 #: plugins/zsync.koplugin/_meta.lua:4
 msgid "Zsync"
 msgstr "Zsync"
@@ -11289,6 +11412,50 @@ msgstr "Jobb alsó sarok érintése"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Jobb felső sarok érintése"
+
+#~ msgid "not found."
+#~ msgstr "nem található."
+
+#~ msgid ""
+#~ "You must specify at least one field to search at! (SEARCH_XXX = true in "
+#~ "defaults.lua)"
+#~ msgstr ""
+#~ "Legalább egy keresési mezőt meg kell adni! (SEARCH_XXX = igaz defaults."
+#~ "lua)"
+
+#~ msgid "Unable to find a calibre metadata file."
+#~ msgstr "Nem található Calibre metaadatfájl."
+
+#~ msgid "No match for %1."
+#~ msgstr "Nincs egyezés a következővel: %1."
+
+#~ msgid "File not found."
+#~ msgstr "Fájl nem található."
+
+#~ msgid "Title: %1"
+#~ msgstr "Cím: %1"
+
+#~ msgid "Author(s): %1"
+#~ msgstr "Szerző(k): %1"
+
+#~ msgid "Tags: %1"
+#~ msgstr "Címke: %1"
+
+#~ msgid "Path: "
+#~ msgstr "Elérési útvonal: "
+
+#~ msgid "Browse"
+#~ msgstr "Böngészés"
+
+#~ msgid "Calibre wireless connection"
+#~ msgstr "Calibre vezeték nélküli kapcsolat"
+
+#~ msgid ""
+#~ "Send documents from calibre library directly to device via Wi-Fi "
+#~ "connection"
+#~ msgstr ""
+#~ "Dokumentumok közvetlen küldése az eszközre Calibre könyvtárból, Wi-Fi "
+#~ "kapcsolaton keresztül"
 
 #~ msgid "Total highlights"
 #~ msgstr "Összes kijelölés"
@@ -11379,12 +11546,6 @@ msgstr "Jobb felső sarok érintése"
 
 #~ msgid "Title: "
 #~ msgstr "Cím:"
-
-#~ msgid "Author(s):"
-#~ msgstr "Szerző(k):"
-
-#~ msgid "Tags:"
-#~ msgstr "Címkék:"
 
 #, fuzzy
 #~ msgid "Series "
