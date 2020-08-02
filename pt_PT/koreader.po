@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-02 20:30+0000\n"
+"POT-Creation-Date: 2020-08-02 21:20+0000\n"
 "PO-Revision-Date: 2020-08-01 11:13+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese (Portugal) <https://hosted.weblate.org/projects/"
@@ -144,8 +144,8 @@ msgstr ""
 #: frontend/apps/cloudstorage/ftp.lua:117
 #: frontend/apps/cloudstorage/webdav.lua:107
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:121
-#: frontend/apps/filemanager/filemanager.lua:288
-#: frontend/apps/filemanager/filemanager.lua:556
+#: frontend/apps/filemanager/filemanager.lua:287
+#: frontend/apps/filemanager/filemanager.lua:551
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:112
 #: frontend/apps/filemanager/filemanagershortcuts.lua:81
 #: frontend/apps/filemanager/filemanagershortcuts.lua:170
@@ -153,14 +153,13 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:533
 #: frontend/apps/reader/modules/readercropping.lua:20
 #: frontend/apps/reader/modules/readerdictionary.lua:641
-#: frontend/apps/reader/modules/readergesture.lua:419
 #: frontend/apps/reader/modules/readergoto.lua:68
 #: frontend/apps/reader/modules/readerlink.lua:577
 #: frontend/apps/reader/modules/readersearch.lua:43
 #: frontend/apps/reader/modules/readerstatus.lua:123
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:151
-#: frontend/apps/reader/readerui.lua:608 frontend/device/android/device.lua:384
+#: frontend/apps/reader/readerui.lua:599 frontend/device/android/device.lua:384
 #: frontend/ui/screensaver.lua:207 frontend/ui/widget/bookstatuswidget.lua:625
 #: frontend/ui/widget/confirmbox.lua:47
 #: frontend/ui/widget/container/inputcontainer.lua:281
@@ -185,6 +184,7 @@ msgstr ""
 #: plugins/evernote.koplugin/main.lua:163
 #: plugins/evernote.koplugin/main.lua:208
 #: plugins/evernote.koplugin/main.lua:360
+#: plugins/gestures.koplugin/main.lua:322
 #: plugins/goodreads.koplugin/main.lua:127
 #: plugins/goodreads.koplugin/main.lua:202 plugins/kosync.koplugin/main.lua:308
 #: plugins/perceptionexpander.koplugin/main.lua:138
@@ -225,12 +225,12 @@ msgstr "Editar"
 #: frontend/apps/cloudstorage/cloudstorage.lua:394
 #: frontend/apps/filemanager/filemanagerhistory.lua:79
 #: frontend/apps/filemanager/filemanagerhistory.lua:85
-#: frontend/apps/filemanager/filemanager.lua:265
-#: frontend/apps/filemanager/filemanager.lua:269
+#: frontend/apps/filemanager/filemanager.lua:264
+#: frontend/apps/filemanager/filemanager.lua:268
 #: frontend/apps/filemanager/filemanagershortcuts.lua:145
 #: frontend/apps/reader/modules/readerhighlight.lua:374
 #: frontend/apps/reader/modules/readerstatus.lua:204
-#: frontend/apps/reader/readerui.lua:507 frontend/ui/widget/opdsbrowser.lua:843
+#: frontend/apps/reader/readerui.lua:498 frontend/ui/widget/opdsbrowser.lua:843
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -506,8 +506,7 @@ msgstr "Adicionar conta WebDAV"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:235
 #: frontend/apps/filemanager/filemanagercollection.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:97
-#: frontend/apps/filemanager/filemanager.lua:367
-#: frontend/apps/reader/modules/readergesture.lua:48 frontend/dispatcher.lua:96
+#: frontend/apps/filemanager/filemanager.lua:366 frontend/dispatcher.lua:96
 msgid "Book information"
 msgstr "Informação do livro"
 
@@ -607,7 +606,7 @@ msgid "No cover image available."
 msgstr "Sem imagem de capa disponível."
 
 #: frontend/apps/filemanager/filemanagercollection.lua:17
-#: frontend/apps/reader/modules/readergesture.lua:56 frontend/dispatcher.lua:70
+#: frontend/dispatcher.lua:70
 msgid "Favorites"
 msgstr "Favoritos"
 
@@ -625,23 +624,23 @@ msgstr "Remover da coleção"
 
 #. @translators This is the script's programming language (e.g., shell or python)
 #: frontend/apps/filemanager/filemanagercollection.lua:101
-#: frontend/apps/filemanager/filemanager.lua:320
+#: frontend/apps/filemanager/filemanager.lua:319
 msgid "Execute %1 script"
 msgstr "Executar script %1"
 
 #. @translators %1 is the script's programming language (e.g., shell or python), %2 is the filename
 #: frontend/apps/filemanager/filemanagercollection.lua:107
-#: frontend/apps/filemanager/filemanager.lua:326
+#: frontend/apps/filemanager/filemanager.lua:325
 msgid "Running %1 script %2…"
 msgstr "A executar script%1 %2…"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:115
-#: frontend/apps/filemanager/filemanager.lua:341
+#: frontend/apps/filemanager/filemanager.lua:340
 msgid "The script exited successfully."
 msgstr "Saída do script com sucesso."
 
 #: frontend/apps/filemanager/filemanagercollection.lua:119
-#: frontend/apps/filemanager/filemanager.lua:346
+#: frontend/apps/filemanager/filemanager.lua:345
 msgid "The script returned a non-zero status code: %1!"
 msgstr ""
 
@@ -663,7 +662,7 @@ msgid "Overwrite existing HTML file?"
 msgstr "Sobrescrever ficheiro HTML existente?"
 
 #: frontend/apps/filemanager/filemanagerconverter.lua:90
-#: frontend/apps/filemanager/filemanager.lua:841
+#: frontend/apps/filemanager/filemanager.lua:836
 #: frontend/apps/reader/modules/readerdictionary.lua:870
 #: frontend/ui/widget/opdsbrowser.lua:606
 msgid "Overwrite"
@@ -691,17 +690,17 @@ msgid "Search Results"
 msgstr "Resultados da pesquisa"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:14
-#: frontend/apps/reader/modules/readergesture.lua:53 frontend/dispatcher.lua:48
+#: frontend/dispatcher.lua:48
 msgid "History"
 msgstr "Histórico"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:52
-#: frontend/apps/filemanager/filemanager.lua:240
+#: frontend/apps/filemanager/filemanager.lua:239
 msgid "Purge .sdr"
 msgstr "Limpar .sdr"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:57
-#: frontend/apps/filemanager/filemanager.lua:244
+#: frontend/apps/filemanager/filemanager.lua:243
 msgid ""
 "Purge .sdr to reset settings for this document?\n"
 "\n"
@@ -712,7 +711,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:58
-#: frontend/apps/filemanager/filemanager.lua:245
+#: frontend/apps/filemanager/filemanager.lua:244
 #: plugins/coverbrowser.koplugin/main.lua:530
 msgid "Purge"
 msgstr "Limpar"
@@ -722,12 +721,12 @@ msgid "Remove from history"
 msgstr "Remover do histórico"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:84
-#: frontend/apps/filemanager/filemanager.lua:268
+#: frontend/apps/filemanager/filemanager.lua:267
 msgid "Are you sure that you want to delete this file?\n"
 msgstr "Tem a certeza que quer apagar este ficheiro?\n"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:84
-#: frontend/apps/filemanager/filemanager.lua:268
+#: frontend/apps/filemanager/filemanager.lua:267
 msgid "If you delete a file, it is permanently lost."
 msgstr "Se apagar um ficheiro, ele será perdido permanentemente."
 
@@ -735,60 +734,60 @@ msgstr "Se apagar um ficheiro, ele será perdido permanentemente."
 msgid "Clear history of deleted files"
 msgstr "Limpar histórico e ficheiros apagados"
 
-#: frontend/apps/filemanager/filemanager.lua:52
+#: frontend/apps/filemanager/filemanager.lua:51
 msgid "KOReader"
 msgstr "KOReader"
 
-#: frontend/apps/filemanager/filemanager.lua:225
+#: frontend/apps/filemanager/filemanager.lua:224
 msgctxt "File"
 msgid "Copy"
 msgstr "Copiar"
 
-#: frontend/apps/filemanager/filemanager.lua:232
+#: frontend/apps/filemanager/filemanager.lua:231
 msgctxt "File"
 msgid "Paste"
 msgstr "Colar"
 
-#: frontend/apps/filemanager/filemanager.lua:258
+#: frontend/apps/filemanager/filemanager.lua:257
 msgid "Cut"
 msgstr "Cortar"
 
-#: frontend/apps/filemanager/filemanager.lua:280
-#: frontend/apps/filemanager/filemanager.lua:295
+#: frontend/apps/filemanager/filemanager.lua:279
+#: frontend/apps/filemanager/filemanager.lua:294
 #: frontend/apps/reader/modules/readerbookmark.lua:540
 msgid "Rename"
 msgstr "Renomear"
 
-#: frontend/apps/filemanager/filemanager.lua:284
+#: frontend/apps/filemanager/filemanager.lua:283
 msgid "Rename file"
 msgstr "Renomear ficheiro"
 
-#: frontend/apps/filemanager/filemanager.lua:359
+#: frontend/apps/filemanager/filemanager.lua:358
 msgid "Open with…"
 msgstr "Abrir com…"
 
-#: frontend/apps/filemanager/filemanager.lua:379
+#: frontend/apps/filemanager/filemanager.lua:378
 msgid "Remove from favorites"
 msgstr "Remover dos favoritos"
 
-#: frontend/apps/filemanager/filemanager.lua:381
+#: frontend/apps/filemanager/filemanager.lua:380
 msgid "Add to favorites"
 msgstr "Adicionar aos favoritos"
 
-#: frontend/apps/filemanager/filemanager.lua:398
+#: frontend/apps/filemanager/filemanager.lua:397
 msgid "Convert"
 msgstr "Converter"
 
-#: frontend/apps/filemanager/filemanager.lua:412
-#: frontend/apps/filemanager/filemanager.lua:592
+#: frontend/apps/filemanager/filemanager.lua:411
+#: frontend/apps/filemanager/filemanager.lua:587
 msgid "Set as HOME directory"
 msgstr "Definir como pasta INICIAL"
 
-#: frontend/apps/filemanager/filemanager.lua:513
+#: frontend/apps/filemanager/filemanager.lua:508
 msgid "Exit KOReader?"
 msgstr "Sair do KOReader?"
 
-#: frontend/apps/filemanager/filemanager.lua:514
+#: frontend/apps/filemanager/filemanager.lua:509
 #: frontend/apps/filemanager/filemanagermenu.lua:519
 #: frontend/apps/filemanager/filemanagermenu.lua:525
 #: frontend/apps/reader/modules/readermenu.lua:198
@@ -796,95 +795,94 @@ msgstr "Sair do KOReader?"
 msgid "Exit"
 msgstr "Sair"
 
-#: frontend/apps/filemanager/filemanager.lua:547
+#: frontend/apps/filemanager/filemanager.lua:542
 msgid "New folder"
 msgstr "Nova pasta"
 
-#: frontend/apps/filemanager/filemanager.lua:551
+#: frontend/apps/filemanager/filemanager.lua:546
 msgid "Create new folder"
 msgstr "Criar nova pasta"
 
-#: frontend/apps/filemanager/filemanager.lua:562 frontend/ui/wikipedia.lua:1378
+#: frontend/apps/filemanager/filemanager.lua:557 frontend/ui/wikipedia.lua:1378
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:535
 #: plugins/statistics.koplugin/main.lua:243
 msgid "Create"
 msgstr "Criar"
 
-#: frontend/apps/filemanager/filemanager.lua:581
+#: frontend/apps/filemanager/filemanager.lua:576
 msgid "Paste"
 msgstr "Colar"
 
-#: frontend/apps/filemanager/filemanager.lua:601
+#: frontend/apps/filemanager/filemanager.lua:596
 msgid "Go to HOME directory"
 msgstr "Ir para pasta INICIAL"
 
-#: frontend/apps/filemanager/filemanager.lua:610
+#: frontend/apps/filemanager/filemanager.lua:605
 msgid "Open random document"
 msgstr "Abrir documento aleatório"
 
-#: frontend/apps/filemanager/filemanager.lua:619
+#: frontend/apps/filemanager/filemanager.lua:614
 #: frontend/apps/filemanager/filemanagershortcuts.lua:219
-#: frontend/apps/reader/modules/readergesture.lua:104
 #: frontend/dispatcher.lua:75
 msgid "Folder shortcuts"
 msgstr "Atalhos de pasta"
 
-#: frontend/apps/filemanager/filemanager.lua:631
+#: frontend/apps/filemanager/filemanager.lua:626
 msgid "Import files here"
 msgstr "Importar ficheiros aqui"
 
-#: frontend/apps/filemanager/filemanager.lua:732
+#: frontend/apps/filemanager/filemanager.lua:727
 msgid "Set '%1' as HOME directory?"
 msgstr "Guardar '%1' como pasta INICIAL?"
 
-#: frontend/apps/filemanager/filemanager.lua:733
+#: frontend/apps/filemanager/filemanager.lua:728
 msgid "Set as HOME"
 msgstr "Marcar como pasta INICIAL"
 
-#: frontend/apps/filemanager/filemanager.lua:745
+#: frontend/apps/filemanager/filemanager.lua:740
 msgid "Do you want to open %1?"
 msgstr "Deseja abrir %1?"
 
-#: frontend/apps/filemanager/filemanager.lua:746
+#: frontend/apps/filemanager/filemanager.lua:741
 #: frontend/ui/widget/filechooser.lua:458
 msgid "Open"
 msgstr "Abrir"
 
 #. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:753
+#: frontend/apps/filemanager/filemanager.lua:748
 msgid "Another"
 msgstr "Abrir outro"
 
-#: frontend/apps/filemanager/filemanager.lua:761
+#: frontend/apps/filemanager/filemanager.lua:756
 msgid "File not found"
 msgstr "Ficheiro não encontrado"
 
-#: frontend/apps/filemanager/filemanager.lua:790
+#: frontend/apps/filemanager/filemanager.lua:785
 msgid "Copied to: %1"
 msgstr "Copiado para: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:795
+#: frontend/apps/filemanager/filemanager.lua:790
 msgid "An error occurred while trying to copy %1"
 msgstr "Ocorreu um erro enquanto se tentava copiar %1"
 
-#: frontend/apps/filemanager/filemanager.lua:812
+#: frontend/apps/filemanager/filemanager.lua:807
 msgid "Moved to: %1"
 msgstr "Movido para: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:817
+#: frontend/apps/filemanager/filemanager.lua:812
 msgid "An error occurred while trying to move %1"
 msgstr "Ocorreu um erro enquanto se tentava mover %1"
 
-#: frontend/apps/filemanager/filemanager.lua:834
+#: frontend/apps/filemanager/filemanager.lua:829
 #: frontend/ui/widget/opdsbrowser.lua:605
 msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "O ficheiro %1 já existe. Quer sobrescrevê-lo?"
 
-#: frontend/apps/filemanager/filemanager.lua:836
+#: frontend/apps/filemanager/filemanager.lua:831
 msgid "The directory %1 already exists. Do you want to overwrite it?"
 msgstr "A pasta %1 já existe. Quer sobrescrevê-la?"
 
-#: frontend/apps/filemanager/filemanager.lua:862
+#: frontend/apps/filemanager/filemanager.lua:857
 msgid ""
 "Folder created:\n"
 "%1"
@@ -892,27 +890,27 @@ msgstr ""
 "Pasta criada:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:864
+#: frontend/apps/filemanager/filemanager.lua:859
 msgid "The folder has not been created."
 msgstr "A pasta não foi criada."
 
-#: frontend/apps/filemanager/filemanager.lua:877
+#: frontend/apps/filemanager/filemanager.lua:872
 msgid "File %1 not found"
 msgstr "Ficheiro %1 não encontrado"
 
-#: frontend/apps/filemanager/filemanager.lua:901
+#: frontend/apps/filemanager/filemanager.lua:896
 msgid "Deleted %1"
 msgstr "Eliminado %1"
 
-#: frontend/apps/filemanager/filemanager.lua:906
+#: frontend/apps/filemanager/filemanager.lua:901
 msgid "An error occurred while trying to delete %1"
 msgstr "Ocorreu um erro ao tentar apagar %1"
 
-#: frontend/apps/filemanager/filemanager.lua:930
+#: frontend/apps/filemanager/filemanager.lua:925
 msgid "Renamed from %1 to %2"
 msgstr "Renomeado de %1 para %2"
 
-#: frontend/apps/filemanager/filemanager.lua:936
+#: frontend/apps/filemanager/filemanager.lua:931
 msgid ""
 "Failed to move history data of %1 to %2.\n"
 "The reading history may be lost."
@@ -920,131 +918,131 @@ msgstr ""
 "Falha ao mover dados do histórico de %1 para %2.\n"
 "O histórico de leitura pode ser perdido."
 
-#: frontend/apps/filemanager/filemanager.lua:944
+#: frontend/apps/filemanager/filemanager.lua:939
 msgid "Failed to rename from %1 to %2"
 msgstr "Falha ao renomear de %1 para %2"
 
-#: frontend/apps/filemanager/filemanager.lua:953
+#: frontend/apps/filemanager/filemanager.lua:948
 msgid "filename"
 msgstr "nome do ficheiro"
 
-#: frontend/apps/filemanager/filemanager.lua:953
+#: frontend/apps/filemanager/filemanager.lua:948
 msgid "Sort by filename"
 msgstr "Ordenar por nome de ficheiro"
 
-#: frontend/apps/filemanager/filemanager.lua:954
+#: frontend/apps/filemanager/filemanager.lua:949
 msgid "numeric"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanager.lua:954
+#: frontend/apps/filemanager/filemanager.lua:949
 msgid "Sort by filename (natural sorting)"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanager.lua:955
+#: frontend/apps/filemanager/filemanager.lua:950
 msgid "name mixed"
 msgstr "nome misto"
 
-#: frontend/apps/filemanager/filemanager.lua:955
+#: frontend/apps/filemanager/filemanager.lua:950
 msgid "Sort by name – mixed files and folders"
 msgstr "Ordenar por nome – ficheiros e pastas"
 
-#: frontend/apps/filemanager/filemanager.lua:956
+#: frontend/apps/filemanager/filemanager.lua:951
 msgid "date read"
 msgstr "data de leitura"
 
-#: frontend/apps/filemanager/filemanager.lua:956
+#: frontend/apps/filemanager/filemanager.lua:951
 msgid "Sort by last read date"
 msgstr "Ordenar pela última data de leitura"
 
-#: frontend/apps/filemanager/filemanager.lua:957
+#: frontend/apps/filemanager/filemanager.lua:952
 msgid "date added"
 msgstr "data de adição"
 
-#: frontend/apps/filemanager/filemanager.lua:957
+#: frontend/apps/filemanager/filemanager.lua:952
 msgid "Sort by date added"
 msgstr "Ordenar por data adicionada"
 
-#: frontend/apps/filemanager/filemanager.lua:958
+#: frontend/apps/filemanager/filemanager.lua:953
 msgid "date modified"
 msgstr "data de modificação"
 
-#: frontend/apps/filemanager/filemanager.lua:958
+#: frontend/apps/filemanager/filemanager.lua:953
 msgid "Sort by date modified"
 msgstr "Ordenar por data modificada"
 
-#: frontend/apps/filemanager/filemanager.lua:959
+#: frontend/apps/filemanager/filemanager.lua:954
 msgid "size"
 msgstr "tamanho"
 
-#: frontend/apps/filemanager/filemanager.lua:959
+#: frontend/apps/filemanager/filemanager.lua:954
 msgid "Sort by size"
 msgstr "Ordenar por tamanho"
 
-#: frontend/apps/filemanager/filemanager.lua:960
+#: frontend/apps/filemanager/filemanager.lua:955
 msgid "type"
 msgstr "tipo"
 
-#: frontend/apps/filemanager/filemanager.lua:960
+#: frontend/apps/filemanager/filemanager.lua:955
 msgid "Sort by type"
 msgstr "Ordenar por tipo"
 
-#: frontend/apps/filemanager/filemanager.lua:961
+#: frontend/apps/filemanager/filemanager.lua:956
 msgid "percent – unopened first"
 msgstr "percentagem – primeiro os não abertos"
 
-#: frontend/apps/filemanager/filemanager.lua:961
+#: frontend/apps/filemanager/filemanager.lua:956
 msgid "Sort by percent – unopened first"
 msgstr "Ordenar por percentagem – primeiro os não abertos"
 
-#: frontend/apps/filemanager/filemanager.lua:962
+#: frontend/apps/filemanager/filemanager.lua:957
 msgid "percent – unopened last"
 msgstr "porcentagem – os não abertos por último"
 
-#: frontend/apps/filemanager/filemanager.lua:962
+#: frontend/apps/filemanager/filemanager.lua:957
 msgid "Sort by percent – unopened last"
 msgstr "Ordenar por percentagem – os não abertos por último"
 
-#: frontend/apps/filemanager/filemanager.lua:978
+#: frontend/apps/filemanager/filemanager.lua:973
 msgid "Sort by percent"
 msgstr "Ordenar por percentagem"
 
-#: frontend/apps/filemanager/filemanager.lua:984
+#: frontend/apps/filemanager/filemanager.lua:979
 msgid "Sort by: %1"
 msgstr "Ordenar por: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:1015
+#: frontend/apps/filemanager/filemanager.lua:1010
 msgid "file browser"
 msgstr "navegador de ficheiros"
 
-#: frontend/apps/filemanager/filemanager.lua:1015
+#: frontend/apps/filemanager/filemanager.lua:1010
 msgid "Start with file browser"
 msgstr "Comece com o navegador de ficheiros"
 
-#: frontend/apps/filemanager/filemanager.lua:1016
+#: frontend/apps/filemanager/filemanager.lua:1011
 msgid "history"
 msgstr "histórico"
 
-#: frontend/apps/filemanager/filemanager.lua:1016
+#: frontend/apps/filemanager/filemanager.lua:1011
 msgid "Start with history"
 msgstr "Comece com o histórico"
 
-#: frontend/apps/filemanager/filemanager.lua:1017
+#: frontend/apps/filemanager/filemanager.lua:1012
 msgid "folder shortcuts"
 msgstr "atalhos de pasta"
 
-#: frontend/apps/filemanager/filemanager.lua:1017
+#: frontend/apps/filemanager/filemanager.lua:1012
 msgid "Start with folder shortcuts"
 msgstr "Comece com atalhos de pasta"
 
-#: frontend/apps/filemanager/filemanager.lua:1018
+#: frontend/apps/filemanager/filemanager.lua:1013
 msgid "last file"
 msgstr "último ficheiro"
 
-#: frontend/apps/filemanager/filemanager.lua:1018
+#: frontend/apps/filemanager/filemanager.lua:1013
 msgid "Start with last file"
 msgstr "Comece com o último ficheiro"
 
-#: frontend/apps/filemanager/filemanager.lua:1035
+#: frontend/apps/filemanager/filemanager.lua:1030
 msgid "Start with: %1"
 msgstr "Comece com: %1"
 
@@ -1226,7 +1224,7 @@ msgstr "Gostaria de abrir o último documento: %1?"
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:231
 #: frontend/apps/reader/modules/readercropping.lua:19
 #: frontend/apps/reader/modules/readermenu.lua:240
-#: frontend/apps/reader/readerui.lua:616 frontend/device/android/device.lua:384
+#: frontend/apps/reader/readerui.lua:607 frontend/device/android/device.lua:384
 #: frontend/ui/widget/confirmbox.lua:46
 #: frontend/ui/widget/container/inputcontainer.lua:287
 #: frontend/ui/widget/datewidget.lua:31
@@ -1238,7 +1236,6 @@ msgid "OK"
 msgstr "OK"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:531
-#: frontend/apps/reader/modules/readergesture.lua:67
 #: frontend/apps/reader/modules/readermenu.lua:210 frontend/dispatcher.lua:60
 msgid "Restart KOReader"
 msgstr "Reiniciar o KOReader"
@@ -1338,7 +1335,7 @@ msgstr "Ler depois"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:20
 #: frontend/apps/reader/modules/readerbookmark.lua:267
-#: frontend/apps/reader/modules/readergesture.lua:44 frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:93
 msgid "Bookmarks"
 msgstr "Marcadores"
 
@@ -1377,7 +1374,7 @@ msgid "Do you want remove this bookmark?"
 msgstr "Deseja remover este marcador?"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:326
-#: frontend/apps/reader/modules/readergesture.lua:929
+#: plugins/gestures.koplugin/main.lua:399
 #: plugins/statistics.koplugin/main.lua:1808
 msgid "Remove"
 msgstr "Remover"
@@ -1440,7 +1437,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:179
 #: frontend/apps/reader/modules/readerdictionary.lua:765
-#: frontend/apps/reader/modules/readergesture.lua:58 frontend/dispatcher.lua:51
+#: frontend/dispatcher.lua:51
 msgid "Dictionary lookup"
 msgstr "Consultar dicionário"
 
@@ -2206,636 +2203,9 @@ msgstr ""
 msgid "Minimal progress bar width in percentage of screen width"
 msgstr ""
 
-#: frontend/apps/reader/modules/readergesture.lua:21
-msgid "Nothing"
-msgstr "Nada"
-
-#: frontend/apps/reader/modules/readergesture.lua:22
-msgid "Pass through"
-msgstr "Passar"
-
-#: frontend/apps/reader/modules/readergesture.lua:24
-msgid "Back 10 pages"
-msgstr "Voltar 10 páginas"
-
-#: frontend/apps/reader/modules/readergesture.lua:25
-msgid "Previous page"
-msgstr "Página anterior"
-
-#: frontend/apps/reader/modules/readergesture.lua:26
-msgid "Forward 10 pages"
-msgstr "10 páginas à frente"
-
-#: frontend/apps/reader/modules/readergesture.lua:27
-msgid "Next page"
-msgstr "Próxima página"
-
-#: frontend/apps/reader/modules/readergesture.lua:28 frontend/dispatcher.lua:78
-msgid "Previous chapter"
-msgstr "Capítulo anterior"
-
-#: frontend/apps/reader/modules/readergesture.lua:29 frontend/dispatcher.lua:79
-msgid "Next chapter"
-msgstr "Próximo capítulo"
-
-#: frontend/apps/reader/modules/readergesture.lua:30 frontend/dispatcher.lua:80
-msgid "First page"
-msgstr "Primeira pada"
-
-#: frontend/apps/reader/modules/readergesture.lua:31 frontend/dispatcher.lua:81
-msgid "Last page"
-msgstr "Última página"
-
-#: frontend/apps/reader/modules/readergesture.lua:32 frontend/dispatcher.lua:82
-msgid "Previous bookmark"
-msgstr "Marcador anterior"
-
-#: frontend/apps/reader/modules/readergesture.lua:33 frontend/dispatcher.lua:83
-msgid "Next bookmark"
-msgstr "Marcador seguinte"
-
-#: frontend/apps/reader/modules/readergesture.lua:34
 #: frontend/apps/reader/modules/readergoto.lua:10 frontend/dispatcher.lua:84
 msgid "Go to"
 msgstr "Ir para"
-
-#: frontend/apps/reader/modules/readergesture.lua:35
-#: frontend/apps/reader/skimtowidget.lua:65 frontend/dispatcher.lua:85
-msgid "Skim"
-msgstr "Folhear"
-
-#: frontend/apps/reader/modules/readergesture.lua:36 frontend/dispatcher.lua:86
-msgid "Back"
-msgstr "Voltar"
-
-#: frontend/apps/reader/modules/readergesture.lua:37 frontend/dispatcher.lua:87
-msgid "Back to previous location"
-msgstr "Voltar ao local anterior"
-
-#: frontend/apps/reader/modules/readergesture.lua:38 frontend/dispatcher.lua:88
-msgid "Go to latest bookmark"
-msgstr "Ir para o marcador mais recente"
-
-#: frontend/apps/reader/modules/readergesture.lua:39 frontend/dispatcher.lua:89
-msgid "Follow nearest link"
-msgstr "Siga a ligação mais próxima"
-
-#: frontend/apps/reader/modules/readergesture.lua:40 frontend/dispatcher.lua:90
-msgid "Follow nearest internal link"
-msgstr "Siga a ligação interna mais próxima"
-
-#: frontend/apps/reader/modules/readergesture.lua:41 frontend/dispatcher.lua:91
-msgid "Clear location history"
-msgstr "Limpar histórico de localização"
-
-#: frontend/apps/reader/modules/readergesture.lua:43
-#: frontend/apps/reader/modules/readertoc.lua:25 frontend/dispatcher.lua:92
-msgid "Table of contents"
-msgstr "Tabela de conteúdos"
-
-#: frontend/apps/reader/modules/readergesture.lua:45 frontend/dispatcher.lua:46
-#: plugins/statistics.koplugin/main.lua:813
-msgid "Reading progress"
-msgstr "Progresso de leitura"
-
-#: frontend/apps/reader/modules/readergesture.lua:46 frontend/dispatcher.lua:94
-msgid "Book statistics"
-msgstr "Estatísticas do livro"
-
-#: frontend/apps/reader/modules/readergesture.lua:47
-#: frontend/apps/reader/modules/readerstatus.lua:36
-#: frontend/apps/reader/modules/readerstatus.lua:80 frontend/dispatcher.lua:95
-#: frontend/ui/elements/common_settings_menu_table.lua:509
-msgid "Book status"
-msgstr "Estado do livro"
-
-#: frontend/apps/reader/modules/readergesture.lua:49 frontend/dispatcher.lua:97
-msgid "Book description"
-msgstr "Descrição do livro"
-
-#: frontend/apps/reader/modules/readergesture.lua:50 frontend/dispatcher.lua:98
-msgid "Book cover"
-msgstr "Capa do livro"
-
-#: frontend/apps/reader/modules/readergesture.lua:51 frontend/dispatcher.lua:47
-msgid "Statistics calendar view"
-msgstr ""
-
-#: frontend/apps/reader/modules/readergesture.lua:54
-#: frontend/apps/reader/modules/readermenu.lua:225 frontend/dispatcher.lua:49
-msgid "Open previous document"
-msgstr "Abrir o documento anterior"
-
-#: frontend/apps/reader/modules/readergesture.lua:55
-#: frontend/apps/reader/modules/readerstatus.lua:114 frontend/dispatcher.lua:50
-#: frontend/dispatcher.lua:466
-msgid "File browser"
-msgstr "Navegador de ficheiros"
-
-#: frontend/apps/reader/modules/readergesture.lua:59
-#: frontend/apps/reader/modules/readerwikipedia.lua:68
-#: frontend/apps/reader/modules/readerwikipedia.lua:417
-#: frontend/dispatcher.lua:52
-msgid "Wikipedia lookup"
-msgstr "Pesquisa da Wikipédia"
-
-#: frontend/apps/reader/modules/readergesture.lua:60
-#: frontend/apps/reader/modules/readersearch.lua:24 frontend/dispatcher.lua:53
-#: frontend/ui/elements/common_settings_menu_table.lua:636
-msgid "Fulltext search"
-msgstr "Pesquisa de texto completa"
-
-#: frontend/apps/reader/modules/readergesture.lua:61 frontend/dispatcher.lua:54
-msgid "File search"
-msgstr "Pesquisa de ficheiros"
-
-#: frontend/apps/reader/modules/readergesture.lua:63 frontend/dispatcher.lua:55
-msgid "Full screen refresh"
-msgstr "Atualizar ecrã cheio"
-
-#: frontend/apps/reader/modules/readergesture.lua:64
-#: frontend/ui/elements/common_settings_menu_table.lua:165
-msgid "Night mode"
-msgstr "Modo noturno"
-
-#: frontend/apps/reader/modules/readergesture.lua:65
-#: frontend/device/sdl/device.lua:300 frontend/dispatcher.lua:58
-msgid "Suspend"
-msgstr "Suspender"
-
-#: frontend/apps/reader/modules/readergesture.lua:66 frontend/dispatcher.lua:59
-msgid "Exit KOReader"
-msgstr "Sair do KOReader"
-
-#: frontend/apps/reader/modules/readergesture.lua:68 frontend/dispatcher.lua:61
-#: frontend/ui/elements/common_info_menu_table.lua:75
-msgid "Reboot the device"
-msgstr "Reinicie o aparelho"
-
-#: frontend/apps/reader/modules/readergesture.lua:69
-#: frontend/device/devicelistener.lua:308 frontend/dispatcher.lua:62
-#: frontend/ui/elements/common_info_menu_table.lua:84
-msgid "Power off"
-msgstr "Desligar"
-
-#: frontend/apps/reader/modules/readergesture.lua:70 frontend/dispatcher.lua:63
-msgid "Show menu"
-msgstr "Mostrar menu"
-
-#: frontend/apps/reader/modules/readergesture.lua:71 frontend/dispatcher.lua:99
-msgid "Show bottom menu"
-msgstr "Mostrar menu inferior"
-
-#: frontend/apps/reader/modules/readergesture.lua:72 frontend/dispatcher.lua:34
-msgid "Show frontlight dialog"
-msgstr "Mostrar janela de iluminação de frente"
-
-#: frontend/apps/reader/modules/readergesture.lua:73 frontend/dispatcher.lua:35
-msgid "Toggle frontlight"
-msgstr "Alternar iluminação de frente"
-
-#: frontend/apps/reader/modules/readergesture.lua:74 frontend/dispatcher.lua:37
-msgid "Increase frontlight brightness"
-msgstr "Aumentar a luminosidade da iluminação de frente"
-
-#: frontend/apps/reader/modules/readergesture.lua:75 frontend/dispatcher.lua:38
-msgid "Decrease frontlight brightness"
-msgstr "Diminuir o brilho da iluminação de frente"
-
-#: frontend/apps/reader/modules/readergesture.lua:76 frontend/dispatcher.lua:40
-msgid "Increase frontlight warmth"
-msgstr "Aumentar o calor da iluminação de frente"
-
-#: frontend/apps/reader/modules/readergesture.lua:77 frontend/dispatcher.lua:41
-msgid "Decrease frontlight warmth"
-msgstr "Diminuir o calor da iluminação de frente"
-
-#: frontend/apps/reader/modules/readergesture.lua:78 frontend/dispatcher.lua:64
-msgid "Toggle hold corners"
-msgstr "Alternar pressionamento longo dos cantos"
-
-#: frontend/apps/reader/modules/readergesture.lua:79 frontend/dispatcher.lua:42
-msgid "Toggle accelerometer"
-msgstr "Alternar acelerómetro"
-
-#: frontend/apps/reader/modules/readergesture.lua:80 frontend/dispatcher.lua:65
-msgid "Toggle rotation"
-msgstr "Alternar rotação"
-
-#: frontend/apps/reader/modules/readergesture.lua:82 frontend/dispatcher.lua:43
-msgid "Turn on Wi-Fi"
-msgstr ""
-
-#: frontend/apps/reader/modules/readergesture.lua:83 frontend/dispatcher.lua:44
-msgid "Turn off Wi-Fi"
-msgstr ""
-
-#: frontend/apps/reader/modules/readergesture.lua:84 frontend/dispatcher.lua:45
-msgid "Toggle Wi-Fi"
-msgstr "Alternar Wi-Fi"
-
-#: frontend/apps/reader/modules/readergesture.lua:86
-#: frontend/dispatcher.lua:100
-msgid "Toggle bookmark"
-msgstr "Alternar marcador"
-
-#: frontend/apps/reader/modules/readergesture.lua:87
-#: frontend/dispatcher.lua:113
-msgid "Toggle page flipping"
-msgstr "Alternar voltar páginas"
-
-#: frontend/apps/reader/modules/readergesture.lua:88
-#: frontend/dispatcher.lua:114
-msgid "Toggle reflow"
-msgstr "Alternar refluxo"
-
-#: frontend/apps/reader/modules/readergesture.lua:89
-#: frontend/dispatcher.lua:101
-msgid "Toggle page turn direction"
-msgstr "Alternar sentido de voltar da página"
-
-#: frontend/apps/reader/modules/readergesture.lua:91
-#: frontend/apps/reader/modules/readerzooming.lua:386
-msgid "Zoom to fit content width"
-msgstr "Ampliação para ajustar largura do conteúdo"
-
-#: frontend/apps/reader/modules/readergesture.lua:92
-#: frontend/apps/reader/modules/readerzooming.lua:387
-msgid "Zoom to fit content height"
-msgstr "Ampliação para ajustar altura do conteúdo"
-
-#: frontend/apps/reader/modules/readergesture.lua:93
-#: frontend/apps/reader/modules/readerzooming.lua:388
-msgid "Zoom to fit page width"
-msgstr "Ampliação para ajustar na largura da página"
-
-#: frontend/apps/reader/modules/readergesture.lua:94
-#: frontend/apps/reader/modules/readerzooming.lua:389
-msgid "Zoom to fit page height"
-msgstr "Ampliação para ajustar altura da página"
-
-#: frontend/apps/reader/modules/readergesture.lua:95
-#: frontend/apps/reader/modules/readerzooming.lua:390
-msgid "Zoom to fit column"
-msgstr "Ampliação para ajustar a coluna"
-
-#: frontend/apps/reader/modules/readergesture.lua:96
-#: frontend/apps/reader/modules/readerzooming.lua:391
-msgid "Zoom to fit content"
-msgstr "Ampliação para ajustar o conteúdo"
-
-#: frontend/apps/reader/modules/readergesture.lua:97
-#: frontend/apps/reader/modules/readerzooming.lua:392
-msgid "Zoom to fit page"
-msgstr "Ampliação para caber na página"
-
-#: frontend/apps/reader/modules/readergesture.lua:99
-#: frontend/dispatcher.lua:109
-msgid "Increase font size"
-msgstr "Aumentar o tamanho da fonte"
-
-#: frontend/apps/reader/modules/readergesture.lua:100
-#: frontend/dispatcher.lua:110
-msgid "Decrease font size"
-msgstr "Diminuir tamanho da fonte"
-
-#: frontend/apps/reader/modules/readergesture.lua:102
-#: frontend/dispatcher.lua:73
-msgid "Folder up"
-msgstr "Pasta acima"
-
-#: frontend/apps/reader/modules/readergesture.lua:103
-#: frontend/dispatcher.lua:74
-msgid "Show plus menu"
-msgstr "Mostrar menu adicional"
-
-#: frontend/apps/reader/modules/readergesture.lua:105
-#: frontend/dispatcher.lua:102
-msgid "Cycle highlight action"
-msgstr "Ação de destaque do ciclo"
-
-#: frontend/apps/reader/modules/readergesture.lua:106
-#: frontend/dispatcher.lua:103
-msgid "Cycle highlight style"
-msgstr "Estilo de destaque do ciclo"
-
-#: frontend/apps/reader/modules/readergesture.lua:107
-#: frontend/dispatcher.lua:66
-msgid "Wallabag retrieval"
-msgstr "Recuperação de Wallabag"
-
-#: frontend/apps/reader/modules/readergesture.lua:108
-#: frontend/dispatcher.lua:104 plugins/kosync.koplugin/main.lua:245
-msgid "Push progress from this device"
-msgstr "Forçar progresso para este aparelho"
-
-#: frontend/apps/reader/modules/readergesture.lua:109
-#: frontend/dispatcher.lua:105 plugins/kosync.koplugin/main.lua:254
-msgid "Pull progress from other devices"
-msgstr "Puxando o progresso de outros aparelhos"
-
-#: frontend/apps/reader/modules/readergesture.lua:110
-#: frontend/dispatcher.lua:67
-msgid "Search in calibre metadata"
-msgstr ""
-
-#: frontend/apps/reader/modules/readergesture.lua:111
-#: frontend/dispatcher.lua:68
-msgid "Browse all calibre tags"
-msgstr "Explorar todas as etiquetas do calibre"
-
-#: frontend/apps/reader/modules/readergesture.lua:112
-#: frontend/dispatcher.lua:69
-msgid "Browse all calibre series"
-msgstr "Explorar todas as séries de calibre"
-
-#: frontend/apps/reader/modules/readergesture.lua:165
-msgid ""
-"Multiswipes allow you to perform complex gestures built up out of multiple "
-"swipe directions, never losing touch with the screen.\n"
-"\n"
-"These advanced gestures consist of either straight swipes or diagonal "
-"swipes. To ensure accuracy, they can't be mixed."
-msgstr ""
-"Os deslizamentos múltiplos permitem que execute gestos complexos criados a "
-"partir de várias direções de deslizamento, sem perder o toque no ecrã.\n"
-"\n"
-"Esses gestos avançados consistem em deslizamentos retos ou na diagonal. Para "
-"garantir a precisão, eles não podem ser misturados."
-
-#: frontend/apps/reader/modules/readergesture.lua:303
-msgid "Multiswipe"
-msgstr "Deslizamento múltiplo"
-
-#: frontend/apps/reader/modules/readergesture.lua:314
-#: frontend/apps/reader/modules/readergesture.lua:665
-#: frontend/apps/reader/modules/readergesture.lua:921
-msgid "Available"
-msgstr "Disponível"
-
-#: frontend/apps/reader/modules/readergesture.lua:315
-#: frontend/apps/reader/modules/readergesture.lua:666
-#: frontend/apps/reader/modules/readergesture.lua:922
-msgid "%1   (%2)"
-msgstr "%1   (%2)"
-
-#: frontend/apps/reader/modules/readergesture.lua:318
-msgid "Tap corner"
-msgstr "Toque no canto"
-
-#: frontend/apps/reader/modules/readergesture.lua:321
-#: frontend/apps/reader/modules/readergesture.lua:344
-#: frontend/apps/reader/modules/readergesture.lua:377
-#: frontend/apps/reader/modules/readergesture.lua:674
-msgid "Top left"
-msgstr "Superior esquerdo"
-
-#: frontend/apps/reader/modules/readergesture.lua:326
-#: frontend/apps/reader/modules/readergesture.lua:349
-#: frontend/apps/reader/modules/readergesture.lua:381
-#: frontend/apps/reader/modules/readergesture.lua:678
-msgid "Top right"
-msgstr "Superior direito"
-
-#: frontend/apps/reader/modules/readergesture.lua:330
-#: frontend/apps/reader/modules/readergesture.lua:353
-#: frontend/apps/reader/modules/readergesture.lua:385
-#: frontend/apps/reader/modules/readergesture.lua:682
-msgid "Bottom left"
-msgstr "Inferior esquerdo"
-
-#: frontend/apps/reader/modules/readergesture.lua:334
-#: frontend/apps/reader/modules/readergesture.lua:357
-#: frontend/apps/reader/modules/readergesture.lua:389
-#: frontend/apps/reader/modules/readergesture.lua:686
-msgid "Bottom right"
-msgstr "Inferior direito"
-
-#: frontend/apps/reader/modules/readergesture.lua:341
-msgid "Hold corner"
-msgstr "Segure no canto"
-
-#: frontend/apps/reader/modules/readergesture.lua:363
-msgid "Double tap"
-msgstr ""
-
-#: frontend/apps/reader/modules/readergesture.lua:369
-msgid "Left side"
-msgstr ""
-
-#: frontend/apps/reader/modules/readergesture.lua:373
-msgid "Right side"
-msgstr "Lado direito"
-
-#: frontend/apps/reader/modules/readergesture.lua:396
-msgid "Gesture manager"
-msgstr "Gestor de gestos"
-
-#: frontend/apps/reader/modules/readergesture.lua:399
-msgid "Turn on multiswipes"
-msgstr ""
-
-#: frontend/apps/reader/modules/readergesture.lua:408
-#: frontend/apps/reader/modules/readergesture.lua:414
-msgid "Multiswipe recorder"
-msgstr "Gravador multideslizamentos"
-
-#: frontend/apps/reader/modules/readergesture.lua:415
-msgid "Make a multiswipe gesture"
-msgstr "Faça um gesto de multideslizamento"
-
-#: frontend/apps/reader/modules/readergesture.lua:425
-#: frontend/apps/reader/modules/readerstyletweak.lua:642
-#: frontend/apps/reader/modules/readerwikipedia.lua:157
-#: frontend/apps/reader/readerui.lua:678 frontend/ui/widget/inputdialog.lua:622
-#: frontend/ui/widget/inputdialog.lua:665 plugins/profiles.koplugin/main.lua:66
-#: plugins/SSH.koplugin/main.lua:118
-msgid "Save"
-msgstr "Guardar"
-
-#: frontend/apps/reader/modules/readergesture.lua:435
-msgid "Recorded multiswipe already exists."
-msgstr "O multideslizamento gravado já existe."
-
-#: frontend/apps/reader/modules/readergesture.lua:473
-msgid ""
-"The number of possible multiswipe gestures is theoretically infinite. With "
-"the multiswipe recorder you can easily record your own."
-msgstr ""
-"A quantidade de gestos multideslizamento possíveis é teoricamente infinito. "
-"Com o gravador multideslizamento, pode facilmente gravar o seu."
-
-#: frontend/apps/reader/modules/readergesture.lua:480
-msgid "Short diagonal swipe"
-msgstr "Deslize diagonal curto"
-
-#: frontend/apps/reader/modules/readergesture.lua:484
-msgid "One-finger swipe"
-msgstr "Deslizar com um dedo"
-
-#: frontend/apps/reader/modules/readergesture.lua:487
-msgid "Left edge down"
-msgstr "Margem esquerda para baixo"
-
-#: frontend/apps/reader/modules/readergesture.lua:491
-msgid "Left edge up"
-msgstr "Margem esquerda para cima"
-
-#: frontend/apps/reader/modules/readergesture.lua:495
-msgid "Right edge down"
-msgstr "Margem direita para baixo"
-
-#: frontend/apps/reader/modules/readergesture.lua:499
-msgid "Right edge up"
-msgstr "Margem direita para cima"
-
-#: frontend/apps/reader/modules/readergesture.lua:503
-msgid "Top edge right"
-msgstr "Margem superior para a direita"
-
-#: frontend/apps/reader/modules/readergesture.lua:507
-msgid "Top edge left"
-msgstr "Margem superior para a esquerda"
-
-#: frontend/apps/reader/modules/readergesture.lua:511
-msgid "Bottom edge right"
-msgstr "Margem inferior para a direita"
-
-#: frontend/apps/reader/modules/readergesture.lua:515
-msgid "Bottom edge left"
-msgstr "Margem inferior para a esquerda"
-
-#: frontend/apps/reader/modules/readergesture.lua:524
-msgid "Gesture intervals"
-msgstr "Intervalos de gestos"
-
-#: frontend/apps/reader/modules/readergesture.lua:527
-#: frontend/apps/reader/modules/readergesture.lua:543
-msgid "Double tap interval"
-msgstr "Intervalo de toque duplo"
-
-#: frontend/apps/reader/modules/readergesture.lua:532
-msgid ""
-"Set double tap interval in milliseconds.\n"
-"The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
-"Default value: %1"
-msgstr ""
-"Definir intervalo de toque duplo em milissegundos.\n"
-"O valor do intervalo pode variar de 100 (0,1 segundo) a 2000 (2 segundos).\n"
-"Valor predefinido: %1"
-
-#: frontend/apps/reader/modules/readergesture.lua:542
-#: frontend/apps/reader/modules/readergesture.lua:596
-#: frontend/apps/reader/modules/readergesture.lua:623
-#: frontend/apps/reader/modules/readergesture.lua:650
-msgid "Set interval"
-msgstr "Definir intervalo"
-
-#: frontend/apps/reader/modules/readergesture.lua:554
-#: frontend/apps/reader/modules/readergesture.lua:570
-msgid "Two finger tap duration"
-msgstr "Duração do toque de dois dedos"
-
-#: frontend/apps/reader/modules/readergesture.lua:559
-msgid ""
-"Set two finger tap duration in milliseconds.\n"
-"The duration value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
-"Default value: %1"
-msgstr ""
-"Define a duração de dois toques em milissegundos.\n"
-"O valor da duração pode variar de 100 (0,1 segundo) a 2000 (2 segundos).\n"
-"Valor predefinido: %1"
-
-#: frontend/apps/reader/modules/readergesture.lua:569
-msgid "Set duration"
-msgstr "Definir duração"
-
-#: frontend/apps/reader/modules/readergesture.lua:581
-#: frontend/apps/reader/modules/readergesture.lua:597
-msgid "Hold interval"
-msgstr "Intervalo de espera"
-
-#: frontend/apps/reader/modules/readergesture.lua:586
-msgid ""
-"Set hold interval in milliseconds.\n"
-"The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
-"Default value: %1"
-msgstr ""
-"Defina o intervalo de espera em milissegundos.\n"
-"O valor do intervalo pode variar de 100 (0,1 segundo) a 2000 (2 segundos).\n"
-"Valor predefinido: %1"
-
-#: frontend/apps/reader/modules/readergesture.lua:608
-#: frontend/apps/reader/modules/readergesture.lua:624
-msgid "Pan delay interval"
-msgstr "Intervalo de atraso de girar"
-
-#: frontend/apps/reader/modules/readergesture.lua:613
-msgid ""
-"Set pan delay interval in milliseconds.\n"
-"The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
-"Default value: %1"
-msgstr ""
-"Defina o intervalo de atraso de girar em milissegundos.\n"
-"O valor do intervalo pode variar de 100 (0,1 segundo) a 2000 (2 segundos).\n"
-"Valor predefinido: %1"
-
-#: frontend/apps/reader/modules/readergesture.lua:635
-#: frontend/apps/reader/modules/readergesture.lua:651
-msgid "Swipe interval"
-msgstr "Intervalo de deslizamento"
-
-#: frontend/apps/reader/modules/readergesture.lua:640
-msgid ""
-"Set swipe interval in milliseconds.\n"
-"The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
-"Default value: %1"
-msgstr ""
-"Defina o intervalo de deslizamento em milissegundos.\n"
-"O valor do intervalo pode variar de 100 (0,1 segundo) a 2000 (2 segundos).\n"
-"Valor predefinido: %1"
-
-#: frontend/apps/reader/modules/readergesture.lua:671
-msgid "Two-finger tap corner"
-msgstr "Toque no canto com dois dedos"
-
-#: frontend/apps/reader/modules/readergesture.lua:693
-msgid "Two-finger swipe"
-msgstr "Deslizar com dois dedos"
-
-#: frontend/apps/reader/modules/readergesture.lua:730
-msgid "Spread and pinch"
-msgstr "Estender e pinçar"
-
-#: frontend/apps/reader/modules/readergesture.lua:733
-msgid "Spread"
-msgstr "Estender"
-
-#: frontend/apps/reader/modules/readergesture.lua:737
-msgid "Pinch"
-msgstr "Pinçar"
-
-#: frontend/apps/reader/modules/readergesture.lua:848
-msgid "%1 (default)"
-msgstr "%1 (predefinição)"
-
-#: frontend/apps/reader/modules/readergesture.lua:928
-msgid "Remove custom multiswipe %1?"
-msgstr "Remover multideslizamento personalizado %1?"
-
-#: frontend/apps/reader/modules/readergesture.lua:1320
-msgid "You have just performed your first multiswipe gesture."
-msgstr ""
-
-#: frontend/apps/reader/modules/readergesture.lua:1321
-#: frontend/ui/network/manager.lua:117 frontend/ui/network/manager.lua:470
-msgid "Turn on"
-msgstr "Ligar"
-
-#: frontend/apps/reader/modules/readergesture.lua:1326
-#: frontend/ui/network/manager.lua:129 frontend/ui/network/manager.lua:502
-msgid "Turn off"
-msgstr "Desligar"
 
 #: frontend/apps/reader/modules/readergoto.lua:11
 msgid "Skim document"
@@ -3316,6 +2686,10 @@ msgstr "O histórico de localizações está vazio."
 msgid "Exclude this book's cover from screensaver"
 msgstr "Excluir a capa deste livro do protetor de ecrã"
 
+#: frontend/apps/reader/modules/readermenu.lua:225 frontend/dispatcher.lua:49
+msgid "Open previous document"
+msgstr "Abrir o documento anterior"
+
 #: frontend/apps/reader/modules/readermenu.lua:228
 msgid "Previous: %1"
 msgstr "Anterior: %1"
@@ -3608,9 +2982,20 @@ msgstr ""
 msgid "Upgrading and reloading book…"
 msgstr ""
 
+#: frontend/apps/reader/modules/readersearch.lua:24 frontend/dispatcher.lua:53
+#: frontend/ui/elements/common_settings_menu_table.lua:636
+msgid "Fulltext search"
+msgstr "Pesquisa de texto completa"
+
 #: frontend/apps/reader/modules/readersearch.lua:38
 msgid "Enter text to search for"
 msgstr "Digite o texto para procurar"
+
+#: frontend/apps/reader/modules/readerstatus.lua:36
+#: frontend/apps/reader/modules/readerstatus.lua:80 frontend/dispatcher.lua:95
+#: frontend/ui/elements/common_settings_menu_table.lua:509
+msgid "Book status"
+msgstr "Estado do livro"
 
 #: frontend/apps/reader/modules/readerstatus.lua:69
 #: plugins/coverbrowser.koplugin/covermenu.lua:270
@@ -3637,6 +3022,11 @@ msgstr "Abrir o próximo ficheiro"
 #: plugins/texteditor.koplugin/main.lua:546
 msgid "Delete file"
 msgstr "Apagar ficheiro"
+
+#: frontend/apps/reader/modules/readerstatus.lua:114 frontend/dispatcher.lua:50
+#: frontend/dispatcher.lua:493
+msgid "File browser"
+msgstr "Navegador de ficheiros"
 
 #: frontend/apps/reader/modules/readerstatus.lua:131
 msgid ""
@@ -3770,6 +3160,15 @@ msgstr ""
 msgid "Condense"
 msgstr ""
 
+#: frontend/apps/reader/modules/readerstyletweak.lua:642
+#: frontend/apps/reader/modules/readerwikipedia.lua:157
+#: frontend/apps/reader/readerui.lua:669 frontend/ui/widget/inputdialog.lua:622
+#: frontend/ui/widget/inputdialog.lua:665
+#: plugins/gestures.koplugin/main.lua:328 plugins/profiles.koplugin/main.lua:66
+#: plugins/SSH.koplugin/main.lua:118
+msgid "Save"
+msgstr "Guardar"
+
 #: frontend/apps/reader/modules/readerstyletweak.lua:646
 msgid "Book tweak not modified."
 msgstr ""
@@ -3806,6 +3205,10 @@ msgstr ""
 msgid "Book tweak saved (not enabled)."
 msgstr ""
 
+#: frontend/apps/reader/modules/readertoc.lua:25 frontend/dispatcher.lua:92
+msgid "Table of contents"
+msgstr "Tabela de conteúdos"
+
 #: frontend/apps/reader/modules/readertoc.lua:26
 msgid "Table of contents *"
 msgstr "Índice *"
@@ -3836,7 +3239,6 @@ msgid "Style"
 msgstr "Estilo"
 
 #: frontend/apps/reader/modules/readertypeset.lua:200
-#: frontend/dispatcher.lua:454
 msgid "None"
 msgstr ""
 
@@ -4394,6 +3796,12 @@ msgstr "Digite as palavras para pesquisar na Wikipédia"
 msgid "Search Wikipedia"
 msgstr "Pesquisar na Wikipédia"
 
+#: frontend/apps/reader/modules/readerwikipedia.lua:68
+#: frontend/apps/reader/modules/readerwikipedia.lua:417
+#: frontend/dispatcher.lua:52
+msgid "Wikipedia lookup"
+msgstr "Pesquisa da Wikipédia"
+
 #: frontend/apps/reader/modules/readerwikipedia.lua:72
 #: frontend/apps/reader/modules/readerwikipedia.lua:106
 msgid "Wikipedia history"
@@ -4594,19 +4002,47 @@ msgstr ""
 msgid "Switch zoom mode"
 msgstr "Mudar a ampliação"
 
+#: frontend/apps/reader/modules/readerzooming.lua:386
+msgid "Zoom to fit content width"
+msgstr "Ampliação para ajustar largura do conteúdo"
+
+#: frontend/apps/reader/modules/readerzooming.lua:387
+msgid "Zoom to fit content height"
+msgstr "Ampliação para ajustar altura do conteúdo"
+
+#: frontend/apps/reader/modules/readerzooming.lua:388
+msgid "Zoom to fit page width"
+msgstr "Ampliação para ajustar na largura da página"
+
+#: frontend/apps/reader/modules/readerzooming.lua:389
+msgid "Zoom to fit page height"
+msgstr "Ampliação para ajustar altura da página"
+
+#: frontend/apps/reader/modules/readerzooming.lua:390
+msgid "Zoom to fit column"
+msgstr "Ampliação para ajustar a coluna"
+
+#: frontend/apps/reader/modules/readerzooming.lua:391
+msgid "Zoom to fit content"
+msgstr "Ampliação para ajustar o conteúdo"
+
+#: frontend/apps/reader/modules/readerzooming.lua:392
+msgid "Zoom to fit page"
+msgstr "Ampliação para caber na página"
+
 #: frontend/apps/reader/modules/readerzooming.lua:401
 msgid "Set default zoom mode to %1?"
 msgstr "Definir modo de ampliação predefinida para %1?"
 
-#: frontend/apps/reader/readerui.lua:483
+#: frontend/apps/reader/readerui.lua:474
 msgid "File '%1' does not exist."
 msgstr "O ficheiro '%1' não existe."
 
-#: frontend/apps/reader/readerui.lua:490
+#: frontend/apps/reader/readerui.lua:481
 msgid "File '%1' is not supported."
 msgstr "O ficheiro '%1' não é suportado."
 
-#: frontend/apps/reader/readerui.lua:505
+#: frontend/apps/reader/readerui.lua:496
 msgid ""
 "The document '%1' with bookmarks or highlights was previously opened with a "
 "different engine. To prevent issues, bookmarks need to be deleted before "
@@ -4616,31 +4052,31 @@ msgstr ""
 "mecanismo diferente. Para evitar problemas, os marcadores precisam ser "
 "apagados antes de continuar."
 
-#: frontend/apps/reader/readerui.lua:523 frontend/device/android/device.lua:167
+#: frontend/apps/reader/readerui.lua:514 frontend/device/android/device.lua:167
 msgid "Opening file '%1'."
 msgstr "A abrir o ficheiro '%1'."
 
-#: frontend/apps/reader/readerui.lua:538 frontend/apps/reader/readerui.lua:555
+#: frontend/apps/reader/readerui.lua:529 frontend/apps/reader/readerui.lua:546
 msgid "No reader engine for this file or invalid file."
 msgstr "Nenhum mecanismo de leitura para este ficheiro ou ficheiro inválido."
 
-#: frontend/apps/reader/readerui.lua:603
+#: frontend/apps/reader/readerui.lua:594
 msgid "Password is incorrect, try again?"
 msgstr "A senha está incorreta, tentar novamente?"
 
-#: frontend/apps/reader/readerui.lua:604
+#: frontend/apps/reader/readerui.lua:595
 msgid "Input document password"
 msgstr "Digite a palavra-passe do documento"
 
-#: frontend/apps/reader/readerui.lua:677
+#: frontend/apps/reader/readerui.lua:668
 msgid "Do you want to save this document?"
 msgstr "Deseja gravar este documento?"
 
-#: frontend/apps/reader/readerui.lua:679
+#: frontend/apps/reader/readerui.lua:670
 msgid "Don't save"
 msgstr "Não gravar"
 
-#: frontend/apps/reader/readerui.lua:731
+#: frontend/apps/reader/readerui.lua:722
 msgid ""
 "Failed recognizing or parsing this file: unsupported or invalid document.\n"
 "KOReader will exit now."
@@ -4648,6 +4084,10 @@ msgstr ""
 "Falha ao reconhecer ou analisar este ficheiro: documento não suportado ou "
 "inválido.\n"
 "KOReader irá sair agora."
+
+#: frontend/apps/reader/skimtowidget.lua:65 frontend/dispatcher.lua:85
+msgid "Skim"
+msgstr "Folhear"
 
 #: frontend/device/android/device.lua:291
 msgid "Not connected"
@@ -4770,6 +4210,11 @@ msgstr "Reiniciar"
 msgid "Are you sure you want to power off the device?"
 msgstr "Tem certeza de que deseja desligar o aparelho?"
 
+#: frontend/device/devicelistener.lua:308 frontend/dispatcher.lua:62
+#: frontend/ui/elements/common_info_menu_table.lua:84
+msgid "Power off"
+msgstr "Desligar"
+
 #: frontend/device/input.lua:336
 msgid "Touchscreen disabled"
 msgstr "Ecrã de toque desativado"
@@ -4778,18 +4223,78 @@ msgstr "Ecrã de toque desativado"
 msgid "Touchscreen enabled"
 msgstr "Ecrã de toque ativado"
 
+#: frontend/device/sdl/device.lua:300 frontend/dispatcher.lua:58
+msgid "Suspend"
+msgstr "Suspender"
+
 #: frontend/device/sdl/device.lua:309
 msgid "Resume"
 msgstr "Retomar"
+
+#: frontend/dispatcher.lua:34
+msgid "Show frontlight dialog"
+msgstr "Mostrar janela de iluminação de frente"
+
+#: frontend/dispatcher.lua:35
+msgid "Toggle frontlight"
+msgstr "Alternar iluminação de frente"
 
 #: frontend/dispatcher.lua:36
 msgid "Set frontlight brightness"
 msgstr "Aumentar a luminosidade da iluminação de frente"
 
+#: frontend/dispatcher.lua:37
+msgid "Increase frontlight brightness"
+msgstr "Aumentar a luminosidade da iluminação de frente"
+
+#: frontend/dispatcher.lua:38
+msgid "Decrease frontlight brightness"
+msgstr "Diminuir o brilho da iluminação de frente"
+
 #: frontend/dispatcher.lua:39
 #, fuzzy
 msgid "Set frontlight warmth"
 msgstr "Aumentar o calor da iluminação de frente"
+
+#: frontend/dispatcher.lua:40
+msgid "Increase frontlight warmth"
+msgstr "Aumentar o calor da iluminação de frente"
+
+#: frontend/dispatcher.lua:41
+msgid "Decrease frontlight warmth"
+msgstr "Diminuir o calor da iluminação de frente"
+
+#: frontend/dispatcher.lua:42
+msgid "Toggle accelerometer"
+msgstr "Alternar acelerómetro"
+
+#: frontend/dispatcher.lua:43
+msgid "Turn on Wi-Fi"
+msgstr ""
+
+#: frontend/dispatcher.lua:44
+msgid "Turn off Wi-Fi"
+msgstr ""
+
+#: frontend/dispatcher.lua:45
+msgid "Toggle Wi-Fi"
+msgstr "Alternar Wi-Fi"
+
+#: frontend/dispatcher.lua:46 plugins/statistics.koplugin/main.lua:813
+msgid "Reading progress"
+msgstr "Progresso de leitura"
+
+#: frontend/dispatcher.lua:47
+msgid "Statistics calendar view"
+msgstr ""
+
+#: frontend/dispatcher.lua:54
+msgid "File search"
+msgstr "Pesquisa de ficheiros"
+
+#: frontend/dispatcher.lua:55
+msgid "Full screen refresh"
+msgstr "Atualizar ecrã cheio"
 
 #: frontend/dispatcher.lua:56
 msgid "Toggle night mode"
@@ -4807,10 +4312,159 @@ msgstr "Ligado"
 msgid "Off"
 msgstr "Desligado"
 
+#: frontend/dispatcher.lua:59
+msgid "Exit KOReader"
+msgstr "Sair do KOReader"
+
+#: frontend/dispatcher.lua:61
+#: frontend/ui/elements/common_info_menu_table.lua:75
+msgid "Reboot the device"
+msgstr "Reinicie o aparelho"
+
+#: frontend/dispatcher.lua:63
+msgid "Show menu"
+msgstr "Mostrar menu"
+
+#: frontend/dispatcher.lua:64
+msgid "Toggle hold corners"
+msgstr "Alternar pressionamento longo dos cantos"
+
+#: frontend/dispatcher.lua:65
+msgid "Toggle rotation"
+msgstr "Alternar rotação"
+
+#: frontend/dispatcher.lua:66
+msgid "Wallabag retrieval"
+msgstr "Recuperação de Wallabag"
+
+#: frontend/dispatcher.lua:67
+msgid "Search in calibre metadata"
+msgstr ""
+
+#: frontend/dispatcher.lua:68
+msgid "Browse all calibre tags"
+msgstr "Explorar todas as etiquetas do calibre"
+
+#: frontend/dispatcher.lua:69
+msgid "Browse all calibre series"
+msgstr "Explorar todas as séries de calibre"
+
+#: frontend/dispatcher.lua:73
+msgid "Folder up"
+msgstr "Pasta acima"
+
+#: frontend/dispatcher.lua:74
+msgid "Show plus menu"
+msgstr "Mostrar menu adicional"
+
+#: frontend/dispatcher.lua:78
+msgid "Previous chapter"
+msgstr "Capítulo anterior"
+
+#: frontend/dispatcher.lua:79
+msgid "Next chapter"
+msgstr "Próximo capítulo"
+
+#: frontend/dispatcher.lua:80
+msgid "First page"
+msgstr "Primeira pada"
+
+#: frontend/dispatcher.lua:81
+msgid "Last page"
+msgstr "Última página"
+
+#: frontend/dispatcher.lua:82
+msgid "Previous bookmark"
+msgstr "Marcador anterior"
+
+#: frontend/dispatcher.lua:83
+msgid "Next bookmark"
+msgstr "Marcador seguinte"
+
+#: frontend/dispatcher.lua:86
+msgid "Back"
+msgstr "Voltar"
+
+#: frontend/dispatcher.lua:87
+msgid "Back to previous location"
+msgstr "Voltar ao local anterior"
+
+#: frontend/dispatcher.lua:88
+msgid "Go to latest bookmark"
+msgstr "Ir para o marcador mais recente"
+
+#: frontend/dispatcher.lua:89
+msgid "Follow nearest link"
+msgstr "Siga a ligação mais próxima"
+
+#: frontend/dispatcher.lua:90
+msgid "Follow nearest internal link"
+msgstr "Siga a ligação interna mais próxima"
+
+#: frontend/dispatcher.lua:91
+msgid "Clear location history"
+msgstr "Limpar histórico de localização"
+
+#: frontend/dispatcher.lua:94
+msgid "Book statistics"
+msgstr "Estatísticas do livro"
+
+#: frontend/dispatcher.lua:97
+msgid "Book description"
+msgstr "Descrição do livro"
+
+#: frontend/dispatcher.lua:98
+msgid "Book cover"
+msgstr "Capa do livro"
+
+#: frontend/dispatcher.lua:99
+msgid "Show bottom menu"
+msgstr "Mostrar menu inferior"
+
+#: frontend/dispatcher.lua:100
+msgid "Toggle bookmark"
+msgstr "Alternar marcador"
+
+#: frontend/dispatcher.lua:101
+msgid "Toggle page turn direction"
+msgstr "Alternar sentido de voltar da página"
+
+#: frontend/dispatcher.lua:102
+msgid "Cycle highlight action"
+msgstr "Ação de destaque do ciclo"
+
+#: frontend/dispatcher.lua:103
+msgid "Cycle highlight style"
+msgstr "Estilo de destaque do ciclo"
+
+#: frontend/dispatcher.lua:104 plugins/kosync.koplugin/main.lua:245
+msgid "Push progress from this device"
+msgstr "Forçar progresso para este aparelho"
+
+#: frontend/dispatcher.lua:105 plugins/kosync.koplugin/main.lua:254
+msgid "Pull progress from other devices"
+msgstr "Puxando o progresso de outros aparelhos"
+
 #: frontend/dispatcher.lua:106
 #, fuzzy
-msgid "Go X pages"
+msgid "Go %1 pages"
 msgstr "Cada 6 páginas"
+
+#: frontend/dispatcher.lua:109
+msgid "Increase font size"
+msgstr "Aumentar o tamanho da fonte"
+
+#: frontend/dispatcher.lua:110
+msgid "Decrease font size"
+msgstr "Diminuir tamanho da fonte"
+
+#: frontend/dispatcher.lua:113
+msgid "Toggle page flipping"
+msgstr "Alternar voltar páginas"
+
+#: frontend/dispatcher.lua:114
+msgid "Toggle reflow"
+msgstr "Alternar refluxo"
 
 #: frontend/dispatcher.lua:115
 msgid "Zoom to"
@@ -4822,20 +4476,24 @@ msgstr ""
 msgid "Font Size"
 msgstr "Tamanho da Letra"
 
-#: frontend/dispatcher.lua:386
+#: frontend/dispatcher.lua:404
 msgid "If called by a gesture the amount of the gesture will be used"
 msgstr ""
 
-#: frontend/dispatcher.lua:465
+#: frontend/dispatcher.lua:481 plugins/gestures.koplugin/main.lua:183
+msgid "Nothing"
+msgstr "Nada"
+
+#: frontend/dispatcher.lua:492
 #: frontend/ui/elements/common_info_menu_table.lua:33
 msgid "Device"
 msgstr "Dispositivo"
 
-#: frontend/dispatcher.lua:467
+#: frontend/dispatcher.lua:494
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr ""
 
-#: frontend/dispatcher.lua:468
+#: frontend/dispatcher.lua:495
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr ""
 
@@ -6593,6 +6251,10 @@ msgstr "Ignorar todos os eventos de capa de hibernação"
 msgid "Ignore sleepcover wakeup events"
 msgstr "Ignorar eventos de ativação de capa de hibernação"
 
+#: frontend/ui/elements/common_settings_menu_table.lua:165
+msgid "Night mode"
+msgstr "Modo noturno"
+
 #: frontend/ui/elements/common_settings_menu_table.lua:172
 msgid "Network"
 msgstr "Rede"
@@ -7181,9 +6843,19 @@ msgstr ""
 msgid "Do you want to turn on Wi-Fi?"
 msgstr "Deseja ativar Wi-Fi?"
 
+#: frontend/ui/network/manager.lua:117 frontend/ui/network/manager.lua:470
+#: plugins/gestures.koplugin/main.lua:1001
+msgid "Turn on"
+msgstr "Ligar"
+
 #: frontend/ui/network/manager.lua:128
 msgid "Do you want to turn off Wi-Fi?"
 msgstr "Deseja desligar o Wi-Fi?"
+
+#: frontend/ui/network/manager.lua:129 frontend/ui/network/manager.lua:502
+#: plugins/gestures.koplugin/main.lua:1006
+msgid "Turn off"
+msgstr "Desligar"
 
 #: frontend/ui/network/manager.lua:139
 msgid "Connecting to Wi-Fi…"
@@ -9891,6 +9563,289 @@ msgstr "<Uma imagem>"
 msgid "Exports highlights and notes to the Evernote cloud."
 msgstr "Exporta destaques e notas para a nuvem do Evernote."
 
+#: plugins/gestures.koplugin/main.lua:34 plugins/gestures.koplugin/main.lua:38
+#: plugins/gestures.koplugin/main.lua:52 plugins/gestures.koplugin/main.lua:56
+msgid "Top left"
+msgstr "Superior esquerdo"
+
+#: plugins/gestures.koplugin/main.lua:35 plugins/gestures.koplugin/main.lua:39
+#: plugins/gestures.koplugin/main.lua:53 plugins/gestures.koplugin/main.lua:57
+msgid "Top right"
+msgstr "Superior direito"
+
+#: plugins/gestures.koplugin/main.lua:36 plugins/gestures.koplugin/main.lua:40
+#: plugins/gestures.koplugin/main.lua:54 plugins/gestures.koplugin/main.lua:58
+msgid "Bottom left"
+msgstr "Inferior esquerdo"
+
+#: plugins/gestures.koplugin/main.lua:37 plugins/gestures.koplugin/main.lua:41
+#: plugins/gestures.koplugin/main.lua:55 plugins/gestures.koplugin/main.lua:59
+msgid "Bottom right"
+msgstr "Inferior direito"
+
+#: plugins/gestures.koplugin/main.lua:42
+msgid "Left edge down"
+msgstr "Margem esquerda para baixo"
+
+#: plugins/gestures.koplugin/main.lua:43
+msgid "Left edge up"
+msgstr "Margem esquerda para cima"
+
+#: plugins/gestures.koplugin/main.lua:44
+msgid "Right edge down"
+msgstr "Margem direita para baixo"
+
+#: plugins/gestures.koplugin/main.lua:45
+msgid "Right edge up"
+msgstr "Margem direita para cima"
+
+#: plugins/gestures.koplugin/main.lua:46
+msgid "Top edge right"
+msgstr "Margem superior para a direita"
+
+#: plugins/gestures.koplugin/main.lua:47
+msgid "Top edge left"
+msgstr "Margem superior para a esquerda"
+
+#: plugins/gestures.koplugin/main.lua:48
+msgid "Bottom edge right"
+msgstr "Margem inferior para a direita"
+
+#: plugins/gestures.koplugin/main.lua:49
+msgid "Bottom edge left"
+msgstr "Margem inferior para a esquerda"
+
+#: plugins/gestures.koplugin/main.lua:50
+msgid "Left side"
+msgstr ""
+
+#: plugins/gestures.koplugin/main.lua:51
+msgid "Right side"
+msgstr "Lado direito"
+
+#: plugins/gestures.koplugin/main.lua:60 plugins/gestures.koplugin/main.lua:602
+msgid "Short diagonal swipe"
+msgstr "Deslize diagonal curto"
+
+#: plugins/gestures.koplugin/main.lua:69
+msgid "Spread"
+msgstr "Estender"
+
+#: plugins/gestures.koplugin/main.lua:70
+msgid "Pinch"
+msgstr "Pinçar"
+
+#: plugins/gestures.koplugin/main.lua:109
+msgid ""
+"Multiswipes allow you to perform complex gestures built up out of multiple "
+"swipe directions, never losing touch with the screen.\n"
+"\n"
+"These advanced gestures consist of either straight swipes or diagonal "
+"swipes. To ensure accuracy, they can't be mixed."
+msgstr ""
+"Os deslizamentos múltiplos permitem que execute gestos complexos criados a "
+"partir de várias direções de deslizamento, sem perder o toque no ecrã.\n"
+"\n"
+"Esses gestos avançados consistem em deslizamentos retos ou na diagonal. Para "
+"garantir a precisão, eles não podem ser misturados."
+
+#: plugins/gestures.koplugin/main.lua:180
+#: plugins/gestures.koplugin/main.lua:213
+msgid "Pass through"
+msgstr "Passar"
+
+#: plugins/gestures.koplugin/main.lua:186
+msgid "Many"
+msgstr ""
+
+#: plugins/gestures.koplugin/main.lua:194
+msgid "%1   (%2)"
+msgstr "%1   (%2)"
+
+#: plugins/gestures.koplugin/main.lua:201
+msgid "%1 (default)"
+msgstr "%1 (predefinição)"
+
+#: plugins/gestures.koplugin/main.lua:317
+#: plugins/gestures.koplugin/main.lua:387
+msgid "Multiswipe recorder"
+msgstr "Gravador multideslizamentos"
+
+#: plugins/gestures.koplugin/main.lua:318
+msgid "Make a multiswipe gesture"
+msgstr "Faça um gesto de multideslizamento"
+
+#: plugins/gestures.koplugin/main.lua:337
+msgid "Recorded multiswipe already exists."
+msgstr "O multideslizamento gravado já existe."
+
+#: plugins/gestures.koplugin/main.lua:392
+msgid ""
+"The number of possible multiswipe gestures is theoretically infinite. With "
+"the multiswipe recorder you can easily record your own."
+msgstr ""
+"A quantidade de gestos multideslizamento possíveis é teoricamente infinito. "
+"Com o gravador multideslizamento, pode facilmente gravar o seu."
+
+#: plugins/gestures.koplugin/main.lua:398
+msgid "Remove custom multiswipe %1?"
+msgstr "Remover multideslizamento personalizado %1?"
+
+#: plugins/gestures.koplugin/main.lua:428
+msgid "Gesture intervals"
+msgstr "Intervalos de gestos"
+
+#: plugins/gestures.koplugin/main.lua:431
+#: plugins/gestures.koplugin/main.lua:447
+msgid "Double tap interval"
+msgstr "Intervalo de toque duplo"
+
+#: plugins/gestures.koplugin/main.lua:436
+msgid ""
+"Set double tap interval in milliseconds.\n"
+"The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
+"Default value: %1"
+msgstr ""
+"Definir intervalo de toque duplo em milissegundos.\n"
+"O valor do intervalo pode variar de 100 (0,1 segundo) a 2000 (2 segundos).\n"
+"Valor predefinido: %1"
+
+#: plugins/gestures.koplugin/main.lua:446
+#: plugins/gestures.koplugin/main.lua:500
+#: plugins/gestures.koplugin/main.lua:527
+#: plugins/gestures.koplugin/main.lua:554
+msgid "Set interval"
+msgstr "Definir intervalo"
+
+#: plugins/gestures.koplugin/main.lua:458
+#: plugins/gestures.koplugin/main.lua:474
+msgid "Two finger tap duration"
+msgstr "Duração do toque de dois dedos"
+
+#: plugins/gestures.koplugin/main.lua:463
+msgid ""
+"Set two finger tap duration in milliseconds.\n"
+"The duration value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
+"Default value: %1"
+msgstr ""
+"Define a duração de dois toques em milissegundos.\n"
+"O valor da duração pode variar de 100 (0,1 segundo) a 2000 (2 segundos).\n"
+"Valor predefinido: %1"
+
+#: plugins/gestures.koplugin/main.lua:473
+msgid "Set duration"
+msgstr "Definir duração"
+
+#: plugins/gestures.koplugin/main.lua:485
+#: plugins/gestures.koplugin/main.lua:501
+msgid "Hold interval"
+msgstr "Intervalo de espera"
+
+#: plugins/gestures.koplugin/main.lua:490
+msgid ""
+"Set hold interval in milliseconds.\n"
+"The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
+"Default value: %1"
+msgstr ""
+"Defina o intervalo de espera em milissegundos.\n"
+"O valor do intervalo pode variar de 100 (0,1 segundo) a 2000 (2 segundos).\n"
+"Valor predefinido: %1"
+
+#: plugins/gestures.koplugin/main.lua:512
+#: plugins/gestures.koplugin/main.lua:528
+msgid "Pan delay interval"
+msgstr "Intervalo de atraso de girar"
+
+#: plugins/gestures.koplugin/main.lua:517
+msgid ""
+"Set pan delay interval in milliseconds.\n"
+"The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
+"Default value: %1"
+msgstr ""
+"Defina o intervalo de atraso de girar em milissegundos.\n"
+"O valor do intervalo pode variar de 100 (0,1 segundo) a 2000 (2 segundos).\n"
+"Valor predefinido: %1"
+
+#: plugins/gestures.koplugin/main.lua:539
+#: plugins/gestures.koplugin/main.lua:555
+msgid "Swipe interval"
+msgstr "Intervalo de deslizamento"
+
+#: plugins/gestures.koplugin/main.lua:544
+msgid ""
+"Set swipe interval in milliseconds.\n"
+"The interval value can range from 100 (0.1 seconds) to 2000 (2 seconds).\n"
+"Default value: %1"
+msgstr ""
+"Defina o intervalo de deslizamento em milissegundos.\n"
+"O valor do intervalo pode variar de 100 (0,1 segundo) a 2000 (2 segundos).\n"
+"Valor predefinido: %1"
+
+#: plugins/gestures.koplugin/main.lua:571
+msgid "Gesture manager"
+msgstr "Gestor de gestos"
+
+#: plugins/gestures.koplugin/main.lua:574
+msgid "Turn on multiswipes"
+msgstr ""
+
+#: plugins/gestures.koplugin/main.lua:583
+#, fuzzy
+msgid "Multiswipes"
+msgstr "Deslizamento múltiplo"
+
+#: plugins/gestures.koplugin/main.lua:588
+#, fuzzy
+msgid "Custom multiswipes"
+msgstr "Remover multideslizamento personalizado %1?"
+
+#: plugins/gestures.koplugin/main.lua:594
+msgid "Tap corner"
+msgstr "Toque no canto"
+
+#: plugins/gestures.koplugin/main.lua:598
+msgid "Hold corner"
+msgstr "Segure no canto"
+
+#: plugins/gestures.koplugin/main.lua:606
+msgid "One-finger swipe"
+msgstr "Deslizar com um dedo"
+
+#: plugins/gestures.koplugin/main.lua:610
+msgid "Double tap"
+msgstr ""
+
+#: plugins/gestures.koplugin/main.lua:621
+msgid "Two-finger tap corner"
+msgstr "Toque no canto com dois dedos"
+
+#: plugins/gestures.koplugin/main.lua:625
+msgid "Two-finger swipe"
+msgstr "Deslizar com dois dedos"
+
+#: plugins/gestures.koplugin/main.lua:629
+msgid "Spread and pinch"
+msgstr "Estender e pinçar"
+
+#: plugins/gestures.koplugin/main.lua:981
+msgid ""
+"Gestures have been upgraded. You may now set more than one action per "
+"gesture."
+msgstr ""
+
+#: plugins/gestures.koplugin/main.lua:1000
+msgid "You have just performed your first multiswipe gesture."
+msgstr ""
+
+#: plugins/gestures.koplugin/_meta.lua:4
+#, fuzzy
+msgid "Gestures"
+msgstr "Intervalos de gestos"
+
+#: plugins/gestures.koplugin/_meta.lua:5
+msgid "This plugin provides gesture support."
+msgstr ""
+
 #: plugins/goodreads.koplugin/doublekeyvaluepage.lua:151
 #: plugins/goodreads.koplugin/doublekeyvaluepage.lua:401
 #: plugins/goodreads.koplugin/main.lua:213
@@ -12008,6 +11963,21 @@ msgstr "Toque no canto inferior direito"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Toque no canto superior direito"
+
+#~ msgid "Back 10 pages"
+#~ msgstr "Voltar 10 páginas"
+
+#~ msgid "Previous page"
+#~ msgstr "Página anterior"
+
+#~ msgid "Forward 10 pages"
+#~ msgstr "10 páginas à frente"
+
+#~ msgid "Next page"
+#~ msgstr "Próxima página"
+
+#~ msgid "Available"
+#~ msgstr "Disponível"
 
 #, fuzzy
 #~ msgid "Filemanager"
