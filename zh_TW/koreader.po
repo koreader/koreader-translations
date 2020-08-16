@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-15 19:46+0000\n"
-"PO-Revision-Date: 2020-06-27 07:16+0000\n"
+"PO-Revision-Date: 2020-08-16 12:22+0000\n"
 "Last-Translator: Hsiu-Ming Chang <cges30901@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "koreader/koreader/zh_Hant/>\n"
@@ -73,7 +73,7 @@ msgid ""
 "Do you want to retry?"
 msgstr ""
 "無法開啟最後開啟的檔案。\n"
-"這可能是因為它已被移除或外部存取設備仍處於掛載中的狀態。\n"
+"這可能是因為它已被移除或外部儲存空間仍在掛載。\n"
 "您想要重試嗎？"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:21
@@ -428,6 +428,11 @@ msgid ""
 "ftp://10.10.10.1\n"
 "Username and password are optional."
 msgstr ""
+"FTP 位址必須為以下格式：\n"
+"ftp://example.domain.com\n"
+"也支援 IP 位址，例如：\n"
+"ftp://10.10.10.1\n"
+"使用者名稱和密碼是選擇性的。"
 
 #: frontend/apps/cloudstorage/ftp.lua:61
 msgid "Your FTP name"
@@ -938,12 +943,11 @@ msgstr "照檔名排序"
 
 #: frontend/apps/filemanager/filemanager.lua:949
 msgid "numeric"
-msgstr ""
+msgstr "數字"
 
 #: frontend/apps/filemanager/filemanager.lua:949
-#, fuzzy
 msgid "Sort by filename (natural sorting)"
-msgstr "照檔名排序"
+msgstr "照檔名排序（自然排序）"
 
 #: frontend/apps/filemanager/filemanager.lua:950
 msgid "name mixed"
@@ -1391,7 +1395,7 @@ msgstr "重新命名書籤"
 #. @translators In which chapter title (%1) a note is found.
 #: frontend/apps/reader/modules/readerbookmark.lua:576
 msgid "in %1"
-msgstr ""
+msgstr "在 %1"
 
 #: frontend/apps/reader/modules/readerdevicestatus.lua:25
 msgid ""
@@ -1733,6 +1737,13 @@ msgid ""
 "it will be used before these.\n"
 "If that font happens to be part of this list already, it will be used first."
 msgstr ""
+"啟用額外的後備字型，以得到最完整的字母和語言覆蓋。\n"
+"會以這個順序使用這些字型：\n"
+"\n"
+"%1\n"
+"\n"
+"您可以在字型名稱上長按來設定偏好的後備字型，它就會在這些字型之前使用。\n"
+"如果這個字型已經在這個清單中，會先使用它。"
 
 #: frontend/apps/reader/modules/readerfont.lua:386
 msgid "Generate font test document"
@@ -1941,32 +1952,28 @@ msgid "Use bold font"
 msgstr "使用粗體字型"
 
 #: frontend/apps/reader/modules/readerfooter.lua:948
-#, fuzzy
 msgid "Container height (%1)"
-msgstr "字型和行高"
+msgstr "容器高度 (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:959
 msgid "Set height"
 msgstr "設定高度"
 
 #: frontend/apps/reader/modules/readerfooter.lua:960
-#, fuzzy
 msgid "Container height"
-msgstr "字型和行高"
+msgstr "容器高度"
 
 #: frontend/apps/reader/modules/readerfooter.lua:975
-#, fuzzy
 msgid "Container bottom margin (%1)"
-msgstr "與書籍邊距相同 (%1)"
+msgstr "容器下邊距 (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:986
 msgid "Set margin"
 msgstr "設定邊距"
 
 #: frontend/apps/reader/modules/readerfooter.lua:987
-#, fuzzy
 msgid "Container bottom margin"
-msgstr "下邊距"
+msgstr "容器下邊距"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1001
 msgid "Maximum width of items"
@@ -2315,7 +2322,6 @@ msgid "Share text"
 msgstr "分享文字"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:789
-#, fuzzy
 msgid ""
 "No OCR results or no language data.\n"
 "\n"
@@ -2331,15 +2337,13 @@ msgid ""
 msgstr ""
 "沒有光學文字識別 (OCR) 結果或沒有語言資料。\n"
 "\n"
-"KOReader 具有內建的光學文字識別引擎來識別透過掃描產生的 PDF 和 DjVu 文件中的"
-"文字。當在這些頁面上使用光學文字識別功能時，您需要針對您文件的語言安裝對應的 "
-"tesseract 的訓練資料。\n"
+"KOReader 具有內建的光學文字識別引擎來識別透過掃描產生的 PDF 和 DjVu 文件中的文字。當在這些頁面上使用光學文字識別功能時，"
+"您需要針對您文件的語言安裝對應的 tesseract 的訓練資料。\n"
 "\n"
-"您可以從這裡下載版本 3.04 的語言資料檔案：https://github.com/tesseract-ocr/"
-"tesseract/wiki/Data-Files\n"
+"您可以從這裡下載版本 3.04 的語言資料檔案：hhttps://tesseract-ocr.github.io/tessdoc/Data-Files\n"
 "\n"
-"複製 Tesseract 3.04 的語言資料檔案（例如 eng.traineddata 對應英文而 spa."
-"traineddata 對應西班牙文）到 koreader/data/tessdata"
+"複製 Tesseract 3.04 的語言資料檔案（例如 eng.traineddata 對應英文而 spa.traineddata 對應西班牙文）到 "
+"koreader/data/tessdata"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:865
 msgid "View %1"
@@ -3156,7 +3160,7 @@ msgstr "樣式表調整"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:607
 msgid "You can add CSS snippets which will be applied only to this book."
-msgstr ""
+msgstr "您可以加入只會套用到本書的 CSS 程式碼片段。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:614
 msgid "Use sample"
@@ -3164,7 +3168,7 @@ msgstr "使用範例"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:616
 msgid "Condense"
-msgstr ""
+msgstr "緊縮"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:642
 #: frontend/apps/reader/modules/readerwikipedia.lua:157
@@ -3509,7 +3513,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readertypography.lua:176
 msgid "About typography rules"
-msgstr ""
+msgstr "關於排版規則"
 
 #: frontend/apps/reader/modules/readertypography.lua:189
 msgid "Current main language tag:"
@@ -3525,10 +3529,9 @@ msgstr "自啟動以來使用的語言標籤（和斷字字典）"
 
 #: frontend/apps/reader/modules/readertypography.lua:270
 msgid "Changed language for typography rules to %1."
-msgstr ""
+msgstr "將排版規則使用的語言變更為 %1。"
 
 #: frontend/apps/reader/modules/readertypography.lua:283
-#, fuzzy
 msgid ""
 "Would you like %1 to be used as the default (★) or fallback (�) language for "
 "typography rules?\n"
@@ -3536,7 +3539,7 @@ msgid ""
 "Default will always take precedence while fallback will only be used if the "
 "language of the book can't be automatically determined."
 msgstr ""
-"您想要將預設 (★) 或後備 (�) 的斷字模式設定為 %1 嗎？\n"
+"您要將 %1 用於預設 (★) 或後備 (�) 的排版規則語言嗎？\n"
 "\n"
 "預設模式會被優先使用，只有當無法自動判斷書籍語言時，才會使用後備模式。"
 
@@ -3548,7 +3551,7 @@ msgstr "後備"
 #: frontend/apps/reader/modules/readertypography.lua:308
 #: frontend/apps/reader/modules/readertypography.lua:607
 msgid "Typography rules: %1"
-msgstr ""
+msgstr "排版規則：%1"
 
 #: frontend/apps/reader/modules/readertypography.lua:314
 msgid "Respect embedded lang tags"
@@ -3563,6 +3566,11 @@ msgid ""
 "\n"
 "The current default (★) is to respect them."
 msgstr ""
+"您要預設遵守或忽略嵌入的語言標籤？\n"
+"\n"
+"如果遵守它們，會使用相關的排版規則來呈現內容，而忽略它們，就會總是使用主要語言排版規則。\n"
+"\n"
+"目前的預設值 (★) 是遵守它們。"
 
 #: frontend/apps/reader/modules/readertypography.lua:324
 msgid ""
@@ -3573,6 +3581,11 @@ msgid ""
 "\n"
 "The current default (★) is to ignore them."
 msgstr ""
+"您要預設遵守或忽略嵌入的語言標籤？\n"
+"\n"
+"如果遵守它們，會使用相關的排版規則來呈現內容，而忽略它們，就會總是使用主要語言排版規則。\n"
+"\n"
+"目前的預設值 (★) 是忽略它們。"
 
 #: frontend/apps/reader/modules/readertypography.lua:326
 msgid "Ignore (★)"
@@ -3667,27 +3680,25 @@ msgstr "斷字字典：%1"
 
 #: frontend/apps/reader/modules/readertypography.lua:496
 msgid "Algorithmic hyphenation"
-msgstr ""
+msgstr "演算法斷字"
 
 #: frontend/apps/reader/modules/readertypography.lua:507
-#, fuzzy
 msgid ""
 "Would you like to enable or disable algorithmic hyphenation by default?\n"
 "\n"
 "The current default (★) is enabled."
 msgstr ""
-"您要預設啟用或停用溢出標點符號嗎？\n"
+"您要預設啟用或停用演算法斷字嗎？\n"
 "\n"
 "目前的預設值 (★) 是啟用。"
 
 #: frontend/apps/reader/modules/readertypography.lua:508
-#, fuzzy
 msgid ""
 "Would you like to enable or disable algorithmic hyphenation by default?\n"
 "\n"
 "The current default (★) is disabled."
 msgstr ""
-"您要預設啟用或停用溢出標點符號嗎？\n"
+"您要預設啟用或停用演算法斷字嗎？\n"
 "\n"
 "目前的預設值 (★) 是停用。"
 
@@ -3729,7 +3740,7 @@ msgstr "只有軟體斷字"
 
 #: frontend/apps/reader/modules/readertypography.lua:578
 msgid "algorithmic"
-msgstr ""
+msgstr "演算法"
 
 #: frontend/apps/reader/modules/readertypography.lua:582
 msgid "Hyphenation: %1"
@@ -3771,7 +3782,7 @@ msgstr "n/a"
 
 #: frontend/apps/reader/modules/readertypography.lua:819
 msgid "Changed language for typography rules to book language: %1."
-msgstr ""
+msgstr "已變更排版規則使用的語言為書籍語言：%1。"
 
 #: frontend/apps/reader/modules/readerview.lua:712
 msgid ""
@@ -4158,39 +4169,32 @@ msgstr ""
 "Build flavor: %4\n"
 
 #: frontend/device/android/device.lua:336
-#, fuzzy
 msgid "Device type: %1"
-msgstr "字典：%1"
+msgstr "裝置類型：%1"
 
 #: frontend/device/android/device.lua:341
-#, fuzzy
 msgid ""
 "E-ink display supported.\n"
 "Platform: %1"
 msgstr ""
-"\n"
 "支援 E-ink 顯示。\n"
-"平台：%1\n"
+"平台：%1"
 
 #: frontend/device/android/device.lua:346
-#, fuzzy
 msgid ""
 "This device needs CPU, screen and touchscreen always on.\n"
 "Screen timeout will be ignored while the app is in the foreground!"
 msgstr ""
-"\n"
 "這個裝置需要 CPU、螢幕和觸控螢幕總是開啟。\n"
-"當這個應用程式在前景時，螢幕逾時會被忽略！\n"
+"當這個應用程式在前景時，螢幕逾時會被忽略！"
 
 #: frontend/device/android/device.lua:370
-#, fuzzy
 msgid "Frontlight settings"
-msgstr "字型設定"
+msgstr "前光設定"
 
 #: frontend/device/android/device.lua:370
-#, fuzzy
 msgid "Light settings"
-msgstr "字型設定"
+msgstr "光線設定"
 
 #: frontend/device/android/device.lua:371
 #: frontend/ui/widget/frontlightwidget.lua:163
@@ -4272,9 +4276,8 @@ msgid "Toggle frontlight"
 msgstr "切換前光"
 
 #: frontend/dispatcher.lua:36
-#, fuzzy
 msgid "Set frontlight brightness"
-msgstr "增加前光亮度"
+msgstr "設定前光亮度"
 
 #: frontend/dispatcher.lua:37
 msgid "Increase frontlight brightness"
@@ -4285,9 +4288,8 @@ msgid "Decrease frontlight brightness"
 msgstr "降低前光亮度"
 
 #: frontend/dispatcher.lua:39
-#, fuzzy
 msgid "Set frontlight warmth"
-msgstr "增加前光暖度"
+msgstr "設定前光暖度"
 
 #: frontend/dispatcher.lua:40
 msgid "Increase frontlight warmth"
@@ -4330,22 +4332,18 @@ msgid "Full screen refresh"
 msgstr "全螢幕重新整理"
 
 #: frontend/dispatcher.lua:56
-#, fuzzy
 msgid "Toggle night mode"
-msgstr "切換模式"
+msgstr "切換夜間模式"
 
 #: frontend/dispatcher.lua:57
-#, fuzzy
 msgid "Set night mode"
-msgstr "夜間模式"
+msgstr "設定夜間模式"
 
 #: frontend/dispatcher.lua:57
-#, fuzzy
 msgid "On"
 msgstr "開啟"
 
 #: frontend/dispatcher.lua:57
-#, fuzzy
 msgid "Off"
 msgstr "關閉"
 
@@ -4504,9 +4502,8 @@ msgid "Toggle reflow"
 msgstr "切換頁面重排"
 
 #: frontend/dispatcher.lua:115
-#, fuzzy
 msgid "Zoom to"
-msgstr "適應頁面縮放"
+msgstr "縮放到"
 
 #: frontend/dispatcher.lua:129 frontend/ui/data/creoptions.lua:315
 #: frontend/ui/data/creoptions.lua:325 frontend/ui/data/koptoptions.lua:192
@@ -4529,11 +4526,11 @@ msgstr "裝置"
 
 #: frontend/dispatcher.lua:503
 msgid "Reflowable documents (epub, fb2, txt…)"
-msgstr ""
+msgstr "可重排文件 (epub, fb2, txt…)"
 
 #: frontend/dispatcher.lua:504
 msgid "Fixed layout documents (pdf, djvu, pics…)"
-msgstr ""
+msgstr "固定排版文件 (pdf, djvu, pics…)"
 
 #: frontend/ui/cloudmgr.lua:20 frontend/ui/widget/pathchooser.lua:33
 msgid "Long-press to select directory"
@@ -4584,6 +4581,8 @@ msgid ""
 "- 'continuous' mode allows you to scroll the text like you would in a web "
 "browser (the 'Page Overlap' setting is only available in this mode)."
 msgstr ""
+"- 「頁面」模式將文字於適當的位置切分為多頁（具體頁碼與頁數可能會因為字型、邊距、樣式等原因而改變）。\n"
+"- 「連續」模式允許您像網頁瀏覽器一樣捲動文字（「頁面重疊」設定只有在這個模式下有效）。"
 
 #: frontend/ui/data/creoptions.lua:209
 msgid ""
@@ -6072,7 +6071,7 @@ msgstr "連續"
 
 #: frontend/ui/data/strings.lua:88
 msgid "page"
-msgstr "頁"
+msgstr "頁面"
 
 #. @translators TBRTL is top-to-bottom-right-to-left, which is a traditional Chinese/Japanese writing direction.
 #: frontend/ui/data/strings.lua:94
