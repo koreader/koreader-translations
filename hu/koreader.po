@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-01 21:32+0000\n"
+"POT-Creation-Date: 2020-09-02 14:13+0000\n"
 "PO-Revision-Date: 2020-09-01 15:56+0000\n"
 "Last-Translator: Sari Gabor <sari.gabor@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
@@ -194,7 +194,10 @@ msgstr ""
 #: plugins/perceptionexpander.koplugin/main.lua:138
 #: plugins/profiles.koplugin/main.lua:62 plugins/SSH.koplugin/main.lua:112
 #: plugins/statistics.koplugin/main.lua:1753
-#: plugins/terminal.koplugin/main.lua:35
+#: plugins/terminal.koplugin/main.lua:229
+#: plugins/terminal.koplugin/main.lua:265
+#: plugins/terminal.koplugin/main.lua:320
+#: plugins/terminal.koplugin/main.lua:355
 #: plugins/texteditor.koplugin/main.lua:286
 #: plugins/wallabag.koplugin/main.lua:830
 #: plugins/wallabag.koplugin/main.lua:861
@@ -235,6 +238,7 @@ msgstr "Szerkesztés"
 #: frontend/apps/reader/modules/readerhighlight.lua:377
 #: frontend/apps/reader/modules/readerstatus.lua:204
 #: frontend/apps/reader/readerui.lua:506 frontend/ui/widget/opdsbrowser.lua:843
+#: plugins/terminal.koplugin/main.lua:185
 msgid "Delete"
 msgstr "Törlés"
 
@@ -308,7 +312,7 @@ msgstr "Válasszon helyi mappát"
 #: frontend/ui/widget/screenshoter.lua:81 frontend/ui/widget/spinwidget.lua:38
 #: frontend/ui/widget/textviewer.lua:145 plugins/keepalive.koplugin/main.lua:18
 #: plugins/statistics.koplugin/main.lua:239
-#: plugins/terminal.koplugin/main.lua:88
+#: plugins/terminal.koplugin/main.lua:430
 msgid "Close"
 msgstr "Bezárás"
 
@@ -3116,7 +3120,10 @@ msgstr "Sűrített"
 #: frontend/apps/reader/readerui.lua:678 frontend/ui/widget/inputdialog.lua:622
 #: frontend/ui/widget/inputdialog.lua:665
 #: plugins/gestures.koplugin/main.lua:333 plugins/profiles.koplugin/main.lua:68
-#: plugins/SSH.koplugin/main.lua:118
+#: plugins/SSH.koplugin/main.lua:118 plugins/terminal.koplugin/main.lua:236
+#: plugins/terminal.koplugin/main.lua:272
+#: plugins/terminal.koplugin/main.lua:331
+#: plugins/terminal.koplugin/main.lua:361
 msgid "Save"
 msgstr "Mentés"
 
@@ -4337,6 +4344,11 @@ msgstr "Calibre címkék böngészése"
 msgid "Browse all calibre series"
 msgstr "Calibre sorozatok böngészése"
 
+#: frontend/dispatcher.lua:80
+#, fuzzy
+msgid "Texteditor: open last file"
+msgstr "Szövegszerkesztő beállítások"
+
 #: frontend/dispatcher.lua:84
 msgid "Folder up"
 msgstr "Egy mappaszinttel fejlebb"
@@ -4369,7 +4381,7 @@ msgstr "Előző könyvjelző"
 msgid "Next bookmark"
 msgstr "Következő könyvjelző"
 
-#: frontend/dispatcher.lua:97 plugins/terminal.koplugin/main.lua:81
+#: frontend/dispatcher.lua:97 plugins/terminal.koplugin/main.lua:419
 msgid "Back"
 msgstr "Vissza"
 
@@ -11277,37 +11289,95 @@ msgstr "Rendszer statisztika"
 msgid "Shows system statistics."
 msgstr "Rendszer statisztika megjelenítése."
 
-#: plugins/terminal.koplugin/main.lua:26
+#: plugins/terminal.koplugin/main.lua:41
+#, fuzzy
+msgid "Shortcuts saved"
+msgstr "Alapértelmezések elmentve"
+
+#: plugins/terminal.koplugin/main.lua:117
+#, fuzzy
+msgid "Terminal shortcut"
+msgstr "Mappahivatkozások"
+
+#: plugins/terminal.koplugin/main.lua:117
+#, fuzzy
+msgid "Terminal shortcuts"
+msgstr "Mappahivatkozások"
+
+#: plugins/terminal.koplugin/main.lua:124
+#, fuzzy
+msgid "to terminal…"
+msgstr "Terminál"
+
+#: plugins/terminal.koplugin/main.lua:132
+#, fuzzy
+msgid "close…"
+msgstr "Bezárás"
+
+#: plugins/terminal.koplugin/main.lua:147
+#: plugins/terminal.koplugin/main.lua:256
+#, fuzzy
+msgid "Edit name"
+msgstr "Rövid név szerkesztése"
+
+#: plugins/terminal.koplugin/main.lua:159
+msgid "Edit commands"
+msgstr ""
+
+#: plugins/terminal.koplugin/main.lua:173
+#, fuzzy
+msgid "Copy"
+msgstr "Másolás"
+
+#: plugins/terminal.koplugin/main.lua:210
+msgid "Shortcut copied"
+msgstr ""
+
+#: plugins/terminal.koplugin/main.lua:220
+msgid "Edit commands for \"%1\""
+msgstr ""
+
+#: plugins/terminal.koplugin/main.lua:312
 msgid "Enter a command and press \"Execute\""
 msgstr "Írjon be egy parancsot, majd \"Futtassa\" azt"
 
-#: plugins/terminal.koplugin/main.lua:40
+#: plugins/terminal.koplugin/main.lua:325
+#: plugins/terminal.koplugin/main.lua:440
+#, fuzzy
+msgid "Shortcuts"
+msgstr "Mappahivatkozások"
+
+#: plugins/terminal.koplugin/main.lua:347
+msgid "Name"
+msgstr ""
+
+#: plugins/terminal.koplugin/main.lua:375
 msgid "Execute"
 msgstr "Futtatás"
 
-#: plugins/terminal.koplugin/main.lua:56
+#: plugins/terminal.koplugin/main.lua:401
 msgid "Executing…"
 msgstr "Végrehajtás…"
 
-#: plugins/terminal.koplugin/main.lua:65
+#: plugins/terminal.koplugin/main.lua:410
 msgid "Output was also written to"
 msgstr ""
 
-#: plugins/terminal.koplugin/main.lua:68
+#: plugins/terminal.koplugin/main.lua:413
 msgid "Execution canceled."
 msgstr "Végrehajtás megszakítva."
 
-#: plugins/terminal.koplugin/main.lua:73
+#: plugins/terminal.koplugin/main.lua:455 plugins/terminal.koplugin/_meta.lua:4
+msgid "Terminal"
+msgstr "Terminál"
+
+#: plugins/terminal.koplugin/main.lua:467
 msgid "Command output"
 msgstr "Parancskimenet"
 
-#: plugins/terminal.koplugin/main.lua:112
+#: plugins/terminal.koplugin/main.lua:489
 msgid "Terminal emulator"
 msgstr "Terminál emulátor"
-
-#: plugins/terminal.koplugin/_meta.lua:4
-msgid "Terminal"
-msgstr "Terminál"
 
 #: plugins/terminal.koplugin/_meta.lua:5
 msgid "Executes simple commands and shows their output."
