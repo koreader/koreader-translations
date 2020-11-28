@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-26 19:56+0000\n"
+"POT-Creation-Date: 2020-11-28 13:13+0000\n"
 "PO-Revision-Date: 2020-11-28 13:13+0000\n"
 "Last-Translator: Eric <spice2wolf@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -195,8 +195,8 @@ msgstr ""
 #: plugins/calibre.koplugin/search.lua:217
 #: plugins/calibre.koplugin/wireless.lua:393
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:700
-#: plugins/coverimage.koplugin/main.lua:174
-#: plugins/coverimage.koplugin/main.lua:328
+#: plugins/coverimage.koplugin/main.lua:185
+#: plugins/coverimage.koplugin/main.lua:389
 #: plugins/evernote.koplugin/main.lua:162
 #: plugins/evernote.koplugin/main.lua:207
 #: plugins/evernote.koplugin/main.lua:359
@@ -3289,8 +3289,8 @@ msgstr "简缩"
 #: frontend/apps/reader/modules/readerwikipedia.lua:157
 #: frontend/apps/reader/readerui.lua:682 frontend/ui/widget/inputdialog.lua:622
 #: frontend/ui/widget/inputdialog.lua:665
-#: plugins/coverimage.koplugin/main.lua:180
-#: plugins/coverimage.koplugin/main.lua:334
+#: plugins/coverimage.koplugin/main.lua:191
+#: plugins/coverimage.koplugin/main.lua:395
 #: plugins/gestures.koplugin/main.lua:334 plugins/profiles.koplugin/main.lua:69
 #: plugins/SSH.koplugin/main.lua:118 plugins/terminal.koplugin/main.lua:243
 #: plugins/terminal.koplugin/main.lua:279
@@ -9692,7 +9692,7 @@ msgstr "请在路径的末尾输入一个文件名。"
 msgid "The path \"%1\" must point to a file, but it points to a directory."
 msgstr "路径 \"%1\" 必须指向一个文件, 但它指向一个目录."
 
-#: plugins/coverimage.koplugin/main.lua:64
+#: plugins/coverimage.koplugin/main.lua:71
 msgid ""
 "\"%1\" \n"
 "is not a valid image file!\n"
@@ -9702,7 +9702,7 @@ msgstr ""
 "不是一个有效的图片文件!\n"
 "封面图片需要一张有效的后备图片。"
 
-#: plugins/coverimage.koplugin/main.lua:125
+#: plugins/coverimage.koplugin/main.lua:136
 msgid ""
 "This plugin saves the current book cover to a file. That file can be used as "
 "a screensaver on certain Android devices, such as Tolinos.\n"
@@ -9729,71 +9729,90 @@ msgstr ""
 "\n"
 "如果后备图片没有被激活，屏幕保护图片在合上一本书后将保持不变。"
 
-#: plugins/coverimage.koplugin/main.lua:139
+#: plugins/coverimage.koplugin/main.lua:150
 msgid "Save cover image"
 msgstr "保存封面图片"
 
-#: plugins/coverimage.koplugin/main.lua:146
+#: plugins/coverimage.koplugin/main.lua:157
 msgid "About cover image"
 msgstr "关于封面图片"
 
-#: plugins/coverimage.koplugin/main.lua:157
+#: plugins/coverimage.koplugin/main.lua:168
 msgid "Set system screensaver image"
 msgstr "设置系统屏保图片"
 
-#: plugins/coverimage.koplugin/main.lua:161
+#: plugins/coverimage.koplugin/main.lua:172
 msgid "The cover of the current book will be stored in this file."
 msgstr "当前图书的封面将被存储在这个文件中。"
 
-#: plugins/coverimage.koplugin/main.lua:167
+#: plugins/coverimage.koplugin/main.lua:178
 msgid "Screensaver image filename"
 msgstr "屏幕保护图片文件名"
 
-#: plugins/coverimage.koplugin/main.lua:170
+#: plugins/coverimage.koplugin/main.lua:181
 msgid "You can enter the filename of the cover image here."
 msgstr "你可以在这里输入封面图像的文件名。"
 
-#: plugins/coverimage.koplugin/main.lua:212
+#: plugins/coverimage.koplugin/main.lua:224
 msgid "Save book cover"
 msgstr "保存书籍封面"
 
-#: plugins/coverimage.koplugin/main.lua:233
-msgid "Size and background"
+#: plugins/coverimage.koplugin/main.lua:245
+#, fuzzy
+msgid "Size, background and format"
 msgstr "尺寸和背景"
 
-#: plugins/coverimage.koplugin/main.lua:239
+#: plugins/coverimage.koplugin/main.lua:251
 msgid "Scale, black background"
 msgstr "缩放，黑色背景"
 
-#: plugins/coverimage.koplugin/main.lua:252
+#: plugins/coverimage.koplugin/main.lua:265
 msgid "Scale, white background"
 msgstr "缩放，白色背景"
 
-#: plugins/coverimage.koplugin/main.lua:265
+#: plugins/coverimage.koplugin/main.lua:279
 msgid "Scale, gray background"
 msgstr "缩放，灰色背景"
 
-#: plugins/coverimage.koplugin/main.lua:278
+#: plugins/coverimage.koplugin/main.lua:293
 msgid "Original image"
 msgstr "原始图片"
 
-#: plugins/coverimage.koplugin/main.lua:294
+#: plugins/coverimage.koplugin/main.lua:309
+msgid "File format derived from filename"
+msgstr ""
+
+#: plugins/coverimage.koplugin/main.lua:310
+msgid "If the file format is not supported, then PNG will be used."
+msgstr ""
+
+#: plugins/coverimage.koplugin/main.lua:324
+#, fuzzy
+msgid "PNG file format"
+msgstr "时间格式"
+
+#: plugins/coverimage.koplugin/main.lua:338
+#, fuzzy
+msgid "BMP file format"
+msgstr "时间格式"
+
+#: plugins/coverimage.koplugin/main.lua:355
 msgid "Exclude this book cover"
 msgstr "将本书封面排除在外"
 
-#: plugins/coverimage.koplugin/main.lua:312
+#: plugins/coverimage.koplugin/main.lua:373
 msgid "Set fallback image"
 msgstr "设置后备图片"
 
-#: plugins/coverimage.koplugin/main.lua:321
+#: plugins/coverimage.koplugin/main.lua:382
 msgid "Fallback image filename"
 msgstr "后备图片文件名"
 
-#: plugins/coverimage.koplugin/main.lua:324
+#: plugins/coverimage.koplugin/main.lua:385
 msgid "Leave this empty to remove the cover when the document is closed."
 msgstr "要在关闭文档时移除这个封面, 请留空."
 
-#: plugins/coverimage.koplugin/main.lua:342
+#: plugins/coverimage.koplugin/main.lua:403
 msgid ""
 "\"%1\" \n"
 "is not a valid image file!\n"
@@ -9803,7 +9822,7 @@ msgstr ""
 "不是一个有效的图片文件!\n"
 "封面图片需要一张有效的后备图片"
 
-#: plugins/coverimage.koplugin/main.lua:361
+#: plugins/coverimage.koplugin/main.lua:422
 msgid "Turn on fallback image"
 msgstr "打开后备图片"
 
