@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-03 20:25+0000\n"
+"POT-Creation-Date: 2020-12-05 23:37+0000\n"
 "PO-Revision-Date: 2020-12-05 23:37+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -186,8 +186,8 @@ msgstr ""
 #: plugins/calibre.koplugin/search.lua:217
 #: plugins/calibre.koplugin/wireless.lua:393
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:700
-#: plugins/coverimage.koplugin/main.lua:185
-#: plugins/coverimage.koplugin/main.lua:389
+#: plugins/coverimage.koplugin/main.lua:196
+#: plugins/coverimage.koplugin/main.lua:414
 #: plugins/evernote.koplugin/main.lua:162
 #: plugins/evernote.koplugin/main.lua:207
 #: plugins/evernote.koplugin/main.lua:359
@@ -3384,8 +3384,8 @@ msgstr "Comprimeren"
 #: frontend/apps/reader/modules/readerwikipedia.lua:157
 #: frontend/apps/reader/readerui.lua:682 frontend/ui/widget/inputdialog.lua:622
 #: frontend/ui/widget/inputdialog.lua:665
-#: plugins/coverimage.koplugin/main.lua:191
-#: plugins/coverimage.koplugin/main.lua:395
+#: plugins/coverimage.koplugin/main.lua:202
+#: plugins/coverimage.koplugin/main.lua:420
 #: plugins/gestures.koplugin/main.lua:334 plugins/profiles.koplugin/main.lua:69
 #: plugins/SSH.koplugin/main.lua:118 plugins/terminal.koplugin/main.lua:243
 #: plugins/terminal.koplugin/main.lua:279
@@ -10084,7 +10084,7 @@ msgstr ""
 "Het pad \"%1\" moet naar een bestand verwijzen, maar het verwijst naar een "
 "map."
 
-#: plugins/coverimage.koplugin/main.lua:71
+#: plugins/coverimage.koplugin/main.lua:72
 msgid ""
 "\"%1\" \n"
 "is not a valid image file!\n"
@@ -10094,7 +10094,12 @@ msgstr ""
 "is geen geldige afbeelding!\n"
 "Een geldige terugvalafbeelding is vereist in Cover-Image."
 
-#: plugins/coverimage.koplugin/main.lua:136
+#: plugins/coverimage.koplugin/main.lua:94
+#: plugins/coverimage.koplugin/main.lua:124
+msgid "Error writing file\n"
+msgstr ""
+
+#: plugins/coverimage.koplugin/main.lua:147
 msgid ""
 "This plugin saves the current book cover to a file. That file can be used as "
 "a screensaver on certain Android devices, such as Tolinos.\n"
@@ -10127,90 +10132,95 @@ msgstr ""
 "Als het terugvalbeeld niet wordt geactiveerd, blijft het "
 "schermbeveiligingsbeeld op zijn plaats na het sluiten van een boek."
 
-#: plugins/coverimage.koplugin/main.lua:150
+#: plugins/coverimage.koplugin/main.lua:161
 msgid "Save cover image"
 msgstr "Omslagafbeelding opslaan"
 
-#: plugins/coverimage.koplugin/main.lua:157
+#: plugins/coverimage.koplugin/main.lua:168
 msgid "About cover image"
 msgstr "Over omslagafbeelding"
 
-#: plugins/coverimage.koplugin/main.lua:168
+#: plugins/coverimage.koplugin/main.lua:179
 msgid "Set system screensaver image"
 msgstr "Systeem-schermbeveiligingsafbeelding instellen"
 
-#: plugins/coverimage.koplugin/main.lua:172
+#: plugins/coverimage.koplugin/main.lua:183
 msgid "The cover of the current book will be stored in this file."
 msgstr "De omslag van het huidige boek zal in dit bestand worden opgeslagen."
 
-#: plugins/coverimage.koplugin/main.lua:178
+#: plugins/coverimage.koplugin/main.lua:189
 msgid "Screensaver image filename"
 msgstr "Bestandsnaam van de schermbeveiligingsafbeelding"
 
-#: plugins/coverimage.koplugin/main.lua:181
+#: plugins/coverimage.koplugin/main.lua:192
 msgid "You can enter the filename of the cover image here."
 msgstr "De bestandsnaam van de omslagafbeelding kan hier worden ingevoerd."
 
-#: plugins/coverimage.koplugin/main.lua:224
+#: plugins/coverimage.koplugin/main.lua:235
 msgid "Save book cover"
 msgstr "Boekomslag opslaan"
 
-#: plugins/coverimage.koplugin/main.lua:245
+#: plugins/coverimage.koplugin/main.lua:256
 msgid "Size, background and format"
 msgstr "Grootte, achtergrond en formaat"
 
-#: plugins/coverimage.koplugin/main.lua:251
+#: plugins/coverimage.koplugin/main.lua:262
 msgid "Scale, black background"
 msgstr "Schalen, zwarte achtergrond"
 
-#: plugins/coverimage.koplugin/main.lua:265
+#: plugins/coverimage.koplugin/main.lua:276
 msgid "Scale, white background"
 msgstr "Schalen, witte achtergrond"
 
-#: plugins/coverimage.koplugin/main.lua:279
+#: plugins/coverimage.koplugin/main.lua:290
 msgid "Scale, gray background"
 msgstr "Schalen, grijze achtergrond"
 
-#: plugins/coverimage.koplugin/main.lua:293
+#: plugins/coverimage.koplugin/main.lua:304
 msgid "Original image"
 msgstr "Originele afbeelding"
 
-#: plugins/coverimage.koplugin/main.lua:309
+#: plugins/coverimage.koplugin/main.lua:320
 msgid "File format derived from filename"
 msgstr "Bestandsformaat van bestandsnaam afgeleid"
 
-#: plugins/coverimage.koplugin/main.lua:310
+#: plugins/coverimage.koplugin/main.lua:321
 msgid "If the file format is not supported, then PNG will be used."
 msgstr ""
 "Als het bestandsformaat niet wordt ondersteund, zal PNG worden gebruikt."
 
-#: plugins/coverimage.koplugin/main.lua:324
+#: plugins/coverimage.koplugin/main.lua:335
+#, fuzzy
+msgid "JPG file format"
+msgstr "PNG-bestandsformaat"
+
+#: plugins/coverimage.koplugin/main.lua:349
 msgid "PNG file format"
 msgstr "PNG-bestandsformaat"
 
-#: plugins/coverimage.koplugin/main.lua:338
+#: plugins/coverimage.koplugin/main.lua:363
 msgid "BMP file format"
 msgstr "BMP-bestandsformaat"
 
-#: plugins/coverimage.koplugin/main.lua:355
+#: plugins/coverimage.koplugin/main.lua:380
 msgid "Exclude this book cover"
 msgstr "Deze boekomslag niet gebruiken"
 
-#: plugins/coverimage.koplugin/main.lua:373
+#: plugins/coverimage.koplugin/main.lua:398
 msgid "Set fallback image"
 msgstr "Reserve-afbeelding instellen"
 
-#: plugins/coverimage.koplugin/main.lua:382
+#: plugins/coverimage.koplugin/main.lua:407
 msgid "Fallback image filename"
 msgstr "Bestandsnaam reserveafbeelding"
 
-#: plugins/coverimage.koplugin/main.lua:385
+#: plugins/coverimage.koplugin/main.lua:410
 msgid "Leave this empty to remove the cover when the document is closed."
 msgstr ""
 "Laat dit veld leeg om de omslag te verwijderen wanneer het document wordt "
 "gesloten."
 
-#: plugins/coverimage.koplugin/main.lua:403
+#: plugins/coverimage.koplugin/main.lua:428
 msgid ""
 "\"%1\" \n"
 "is not a valid image file!\n"
@@ -10220,7 +10230,7 @@ msgstr ""
 "is geen geldig beeldbestand!\n"
 "Een geldig reservebeeld is vereist in Cover-Image"
 
-#: plugins/coverimage.koplugin/main.lua:422
+#: plugins/coverimage.koplugin/main.lua:447
 msgid "Turn on fallback image"
 msgstr "Reserveafbeelding inschakelen"
 
