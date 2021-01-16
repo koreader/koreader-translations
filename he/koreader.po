@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-16 14:34+0000\n"
+"POT-Creation-Date: 2021-01-16 20:42+0000\n"
 "PO-Revision-Date: 2021-01-16 20:42+0000\n"
 "Last-Translator: Enrico Segre <enricoalbertoernestosegre@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -161,7 +161,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerwikipedia.lua:153
 #: frontend/apps/reader/readerui.lua:614 frontend/device/android/device.lua:411
 #: frontend/ui/elements/common_settings_menu_table.lua:285
-#: frontend/ui/elements/screen_android.lua:59 frontend/ui/screensaver.lua:207
+#: frontend/ui/elements/screen_android.lua:60 frontend/ui/screensaver.lua:207
 #: frontend/ui/widget/bookstatuswidget.lua:623
 #: frontend/ui/widget/confirmbox.lua:47
 #: frontend/ui/widget/container/inputcontainer.lua:281
@@ -193,8 +193,8 @@ msgstr ""
 #: plugins/goodreads.koplugin/main.lua:201 plugins/kosync.koplugin/main.lua:338
 #: plugins/perceptionexpander.koplugin/main.lua:138
 #: plugins/profiles.koplugin/main.lua:63 plugins/SSH.koplugin/main.lua:112
-#: plugins/statistics.koplugin/main.lua:1978
-#: plugins/statistics.koplugin/main.lua:2024
+#: plugins/statistics.koplugin/main.lua:1979
+#: plugins/statistics.koplugin/main.lua:2025
 #: plugins/terminal.koplugin/main.lua:236
 #: plugins/terminal.koplugin/main.lua:272
 #: plugins/terminal.koplugin/main.lua:327
@@ -409,11 +409,12 @@ msgid "Please fill in all fields."
 msgstr "אנא מלא את כל השדות."
 
 #: frontend/apps/cloudstorage/dropbox.lua:145
+#, fuzzy
 msgid ""
 "Type: %1\n"
 "Name: %2\n"
 "Email: %3\n"
-"County: %4"
+"Country: %4"
 msgstr ""
 "סוג: %1 \n"
 "שם: %2 \n"
@@ -609,7 +610,7 @@ msgid "Cover image:"
 msgstr "תמונת שער:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:232
-#: plugins/statistics.koplugin/main.lua:1409
+#: plugins/statistics.koplugin/main.lua:1410
 msgid "Tap to display"
 msgstr "הקש כדי להציג"
 
@@ -1202,7 +1203,7 @@ msgstr "השבת עומק פיקסל מאולץ של 8 סיביות"
 #: frontend/ui/elements/menu_activate.lua:23
 #: frontend/ui/elements/menu_activate.lua:39
 #: frontend/ui/elements/menu_activate.lua:55
-#: frontend/ui/elements/screen_android.lua:72
+#: frontend/ui/elements/screen_android.lua:73
 #: frontend/ui/elements/screen_disable_double_tap_table.lua:14
 #: frontend/ui/elements/waveform_level.lua:26
 #: frontend/ui/network/manager.lua:431 plugins/calibre.koplugin/main.lua:171
@@ -1441,7 +1442,7 @@ msgstr "הסר סימניה זו?"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:334
 #: plugins/gestures.koplugin/main.lua:407
-#: plugins/statistics.koplugin/main.lua:2072
+#: plugins/statistics.koplugin/main.lua:2073
 msgid "Remove"
 msgstr "הסר"
 
@@ -5535,10 +5536,11 @@ msgid "Justify all elements"
 msgstr "הצדק את כל האלמנטים"
 
 #: frontend/ui/data/css_tweaks.lua:167
+#, fuzzy
 msgid ""
 "Text justification is the default, but it may be overridden by publisher "
-"styles. This will re-enable it for all elements, which may lose centering in "
-"some of them."
+"styles. This will force justification on all elements, some of which may not "
+"be centered as expected."
 msgstr ""
 "הצדקת הטקסט היא ברירת המחדל, אך סגנונות המוציא לאור יכולות לעקוף אותה. זה "
 "יאפשר מחדש את ההצדקה עבור כל רכיבי הטקסט, כאשר חלק מאיתם עלולים לאבד את "
@@ -7162,15 +7164,27 @@ msgstr "כל פרק"
 msgid "except on the second page of a new chapter"
 msgstr "למעט בעמוד השני של פרק חדש"
 
-#: frontend/ui/elements/screen_android.lua:29
-msgid "%1 minutes"
-msgstr "%1 דקות"
+#: frontend/ui/elements/screen_android.lua:30
+#: plugins/readtimer.koplugin/main.lua:101
+#: plugins/readtimer.koplugin/main.lua:158
+msgid "1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "דקה"
+msgstr[1] "שתי דקות"
+msgstr[2] "%1 דקות"
+msgstr[3] "%1 דקות"
 
-#: frontend/ui/elements/screen_android.lua:31
-msgid "%1 seconds"
-msgstr "%1 שניות"
+#: frontend/ui/elements/screen_android.lua:32
+#: frontend/ui/elements/screensaver_menu.lua:227
+#, fuzzy
+msgid "1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "שנייה"
+msgstr[1] "שנייה"
+msgstr[2] "שנייה"
+msgstr[3] "שנייה"
 
-#: frontend/ui/elements/screen_android.lua:54
+#: frontend/ui/elements/screen_android.lua:55
 msgid ""
 "Allow KOReader to modify system settings?\n"
 "\n"
@@ -7182,23 +7196,23 @@ msgstr ""
 "תתבקש בידי מסך ניהול הרשאות. יהיה עליך להעניק ל-KOReader הרשאת ולאחר מכן "
 "להפעיל אותה מחדש."
 
-#: frontend/ui/elements/screen_android.lua:59
+#: frontend/ui/elements/screen_android.lua:60
 msgid "Allow"
 msgstr "אפשר"
 
-#: frontend/ui/elements/screen_android.lua:116
+#: frontend/ui/elements/screen_android.lua:117
 msgid "Use system settings"
 msgstr "השתמש בהגדרות המכשיר"
 
-#: frontend/ui/elements/screen_android.lua:164
+#: frontend/ui/elements/screen_android.lua:165
 msgid "Keep screen on"
 msgstr "השאר מסך דלוק"
 
-#: frontend/ui/elements/screen_android.lua:173
+#: frontend/ui/elements/screen_android.lua:174
 msgid "Allow system settings override"
 msgstr "אפשר עקיפה של הגדרות מערכת"
 
-#: frontend/ui/elements/screen_android.lua:182
+#: frontend/ui/elements/screen_android.lua:183
 msgid "Screen Timeout"
 msgstr "תפוגת זמן מסך"
 
@@ -7412,10 +7426,6 @@ msgstr "אמצע"
 #: frontend/ui/elements/screensaver_menu.lua:211
 msgid "Delay when exit from screensaver"
 msgstr "השהיה בעת יציאה משומר המסך"
-
-#: frontend/ui/elements/screensaver_menu.lua:227
-msgid "1 second"
-msgstr "שנייה"
 
 #: frontend/ui/elements/screensaver_menu.lua:240
 msgid "3 seconds"
@@ -7875,8 +7885,8 @@ msgstr ""
 "\n"
 "## וויקי <a id=\"wiki\"></a>\n"
 "\n"
-"אנא עיין בוויקי בכתובת <a href=\"https://github.com/koreader/koreader/wiki\""
-">https://github.com/koreader/koreader/wiki </a> לקבלת תיעוד נוסף.\n"
+"אנא עיין בוויקי בכתובת <a href=\"https://github.com/koreader/koreader/wiki"
+"\">https://github.com/koreader/koreader/wiki </a> לקבלת תיעוד נוסף.\n"
 "\n"
 "-------------\n"
 "נוצר על ידי KOReader %1‏‬‪.‪\n"
@@ -8546,8 +8556,8 @@ msgid "Not editable"
 msgstr "לא ניתן לעריכה"
 
 #: frontend/ui/widget/inputdialog.lua:595
-#: plugins/statistics.koplugin/main.lua:1982
-#: plugins/statistics.koplugin/main.lua:2028
+#: plugins/statistics.koplugin/main.lua:1983
+#: plugins/statistics.koplugin/main.lua:2029
 msgid "Reset"
 msgstr "בטל שינויים"
 
@@ -9120,8 +9130,8 @@ msgstr "‎%1 MB"
 
 #. @translators This is an abbreviation for the kilobyte, a unit of computer memory or data storage capacity.
 #: frontend/util.lua:891
-msgid "%1 KB"
-msgstr "‎%1 kB"
+msgid "%1 kB"
+msgstr ""
 
 #. @translators This is an abbreviation for the byte, a unit of computer memory or data storage capacity.
 #: frontend/util.lua:894
@@ -9816,12 +9826,22 @@ msgid "Extract and cache book information"
 msgstr "חלץ מידע מהספרים בתיקיה זו"
 
 #: plugins/coverbrowser.koplugin/listmenu.lua:414
-msgid "Finished - %1 pages"
-msgstr "%1 עמודים נקראו"
+#, fuzzy
+msgid "Finished – 1 page"
+msgid_plural "Finished – %1 pages"
+msgstr[0] "%1 עמודים נקראו"
+msgstr[1] "%1 עמודים נקראו"
+msgstr[2] "%1 עמודים נקראו"
+msgstr[3] "%1 עמודים נקראו"
 
 #: plugins/coverbrowser.koplugin/listmenu.lua:416
-msgid "On hold - %1 pages"
-msgstr "בהמתנה - %1 עמודים"
+#, fuzzy
+msgid "On hold – 1 page"
+msgid_plural "On hold – %1 pages"
+msgstr[0] "בהמתנה - %1 עמודים"
+msgstr[1] "בהמתנה - %1 עמודים"
+msgstr[2] "בהמתנה - %1 עמודים"
+msgstr[3] "בהמתנה - %1 עמודים"
 
 #: plugins/coverbrowser.koplugin/listmenu.lua:426
 msgid "%1 % of %2 pages"
@@ -10957,7 +10977,7 @@ msgid "Search for book by title in Goodreads"
 msgstr "חפש ספר לפי כותרת ב- Goodreads"
 
 #: plugins/goodreads.koplugin/main.lua:190
-#: plugins/statistics.koplugin/main.lua:1394
+#: plugins/statistics.koplugin/main.lua:1395
 msgid "Title"
 msgstr "כותרת"
 
@@ -11518,15 +11538,6 @@ msgstr[1] "שעתיים"
 msgstr[2] "%1 שעות"
 msgstr[3] "%1 שעות"
 
-#: plugins/readtimer.koplugin/main.lua:101
-#: plugins/readtimer.koplugin/main.lua:158
-msgid "1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "דקה"
-msgstr[1] "שתי דקות"
-msgstr[2] "%1 דקות"
-msgstr[3] "%1 דקות"
-
 #: plugins/readtimer.koplugin/main.lua:107
 msgid ""
 "Timer set to: %1:%2.\n"
@@ -11915,137 +11926,138 @@ msgid "Current book"
 msgstr "ספר נוכחי"
 
 #: plugins/statistics.koplugin/main.lua:1002
-#: plugins/statistics.koplugin/main.lua:2418
+#: plugins/statistics.koplugin/main.lua:2419
 msgid "Current statistics"
 msgstr "סטטיסטיקה נוכחית"
 
 #: plugins/statistics.koplugin/main.lua:1026
+#, fuzzy
 msgid ""
-"Reading progress unavailable.\n"
-"No data from last %1 days."
+"Reading progress is not available.\n"
+"There is no data for the last week."
 msgstr ""
 "התקדמות הקריאה אינה זמינה.\n"
 "אין נתונים מה-%1 הימים האחרונים."
 
-#: plugins/statistics.koplugin/main.lua:1031
+#: plugins/statistics.koplugin/main.lua:1032
 msgid "Time range"
 msgstr "טווח זמן"
 
-#: plugins/statistics.koplugin/main.lua:1038
+#: plugins/statistics.koplugin/main.lua:1039
 msgid "Calendar view"
 msgstr "תצוגת לוח שנה"
 
-#: plugins/statistics.koplugin/main.lua:1050
+#: plugins/statistics.koplugin/main.lua:1051
 msgid "Time range statistics"
 msgstr "סטטיסטיקה של טווח זמן"
 
-#: plugins/statistics.koplugin/main.lua:1053
+#: plugins/statistics.koplugin/main.lua:1054
 msgid "All books"
 msgstr "כל הספרים"
 
-#: plugins/statistics.koplugin/main.lua:1070
-#: plugins/statistics.koplugin/main.lua:1075
+#: plugins/statistics.koplugin/main.lua:1071
+#: plugins/statistics.koplugin/main.lua:1076
 msgid "Books by week"
 msgstr "ספרים לפי שבוע"
 
-#: plugins/statistics.koplugin/main.lua:1086
-#: plugins/statistics.koplugin/main.lua:1091
+#: plugins/statistics.koplugin/main.lua:1087
+#: plugins/statistics.koplugin/main.lua:1092
 msgid "Books by month"
 msgstr "ספרים לפי חודש"
 
-#: plugins/statistics.koplugin/main.lua:1103
-#: plugins/statistics.koplugin/main.lua:1108
+#: plugins/statistics.koplugin/main.lua:1104
+#: plugins/statistics.koplugin/main.lua:1109
 #: plugins/statistics.koplugin/readerprogress.lua:107
 msgid "Last week"
 msgstr "שבוע שעבר"
 
-#: plugins/statistics.koplugin/main.lua:1119
-#: plugins/statistics.koplugin/main.lua:1124
+#: plugins/statistics.koplugin/main.lua:1120
+#: plugins/statistics.koplugin/main.lua:1125
 msgid "Last month by day"
 msgstr "חודש אחרון לפי יום"
 
-#: plugins/statistics.koplugin/main.lua:1135
-#: plugins/statistics.koplugin/main.lua:1140
+#: plugins/statistics.koplugin/main.lua:1136
+#: plugins/statistics.koplugin/main.lua:1141
 msgid "Last year by day"
 msgstr "שנה שעברה לפי יום"
 
-#: plugins/statistics.koplugin/main.lua:1151
-#: plugins/statistics.koplugin/main.lua:1156
+#: plugins/statistics.koplugin/main.lua:1152
+#: plugins/statistics.koplugin/main.lua:1157
 msgid "Last year by week"
 msgstr "שנה שעברה לפי שבוע"
 
-#: plugins/statistics.koplugin/main.lua:1167
-#: plugins/statistics.koplugin/main.lua:1172
+#: plugins/statistics.koplugin/main.lua:1168
+#: plugins/statistics.koplugin/main.lua:1173
 msgid "All stats by month"
 msgstr "כל הנתונים הסטטיסטיים לפי חודש"
 
-#: plugins/statistics.koplugin/main.lua:1301
+#: plugins/statistics.koplugin/main.lua:1302
 msgid "Time spent reading this session"
 msgstr "זמן שהוקדש לקריאה במושב הזה"
 
-#: plugins/statistics.koplugin/main.lua:1302
+#: plugins/statistics.koplugin/main.lua:1303
 msgid "Pages read this session"
 msgstr "עמודים קוראים במושב הזה"
 
-#: plugins/statistics.koplugin/main.lua:1304
+#: plugins/statistics.koplugin/main.lua:1305
 msgid "Time spent reading today"
 msgstr "הזמן שהושקע בקריאה היום"
 
-#: plugins/statistics.koplugin/main.lua:1305
+#: plugins/statistics.koplugin/main.lua:1306
 msgid "Pages read today"
 msgstr "עמודים שנקראו היום"
 
-#: plugins/statistics.koplugin/main.lua:1309
-#: plugins/statistics.koplugin/main.lua:1399
+#: plugins/statistics.koplugin/main.lua:1310
+#: plugins/statistics.koplugin/main.lua:1400
 msgid "Total time spent on this book"
 msgstr "סה\"כ הזמן שהושקע בספר זה"
 
-#: plugins/statistics.koplugin/main.lua:1311
-#: plugins/statistics.koplugin/main.lua:1400
+#: plugins/statistics.koplugin/main.lua:1312
+#: plugins/statistics.koplugin/main.lua:1401
 msgid "Time spent reading this book"
 msgstr "זמן שהוקדש לקריאת הספר הזה"
 
-#: plugins/statistics.koplugin/main.lua:1313
-#: plugins/statistics.koplugin/main.lua:1396
+#: plugins/statistics.koplugin/main.lua:1314
+#: plugins/statistics.koplugin/main.lua:1397
 msgid "Reading started"
 msgstr "הקריאה התחילה"
 
-#: plugins/statistics.koplugin/main.lua:1314
-#: plugins/statistics.koplugin/main.lua:1398
+#: plugins/statistics.koplugin/main.lua:1315
+#: plugins/statistics.koplugin/main.lua:1399
 msgid "Days reading this book"
 msgstr "ימים של קריאת ספר זה"
 
-#: plugins/statistics.koplugin/main.lua:1315
-#: plugins/statistics.koplugin/main.lua:1401
+#: plugins/statistics.koplugin/main.lua:1316
+#: plugins/statistics.koplugin/main.lua:1402
 msgid "Average time per day"
 msgstr "זמן ממוצע ליום"
 
-#: plugins/statistics.koplugin/main.lua:1317
+#: plugins/statistics.koplugin/main.lua:1318
 msgid "Pages read"
 msgstr "עמודים שנקראו"
 
-#: plugins/statistics.koplugin/main.lua:1318
-#: plugins/statistics.koplugin/main.lua:1402
+#: plugins/statistics.koplugin/main.lua:1319
+#: plugins/statistics.koplugin/main.lua:1403
 msgid "Average time per page"
 msgstr "זמן ממוצע לעמוד"
 
-#: plugins/statistics.koplugin/main.lua:1320
+#: plugins/statistics.koplugin/main.lua:1321
 msgid "Current page/Total pages"
 msgstr "עמוד נוכחי/עמודים בסך הכל"
 
-#: plugins/statistics.koplugin/main.lua:1321
+#: plugins/statistics.koplugin/main.lua:1322
 msgid "Percentage completed"
 msgstr "אחוז שהושלם"
 
-#: plugins/statistics.koplugin/main.lua:1322
+#: plugins/statistics.koplugin/main.lua:1323
 msgid "Estimated time to read"
 msgstr "זמן קריאה משוער"
 
-#: plugins/statistics.koplugin/main.lua:1323
+#: plugins/statistics.koplugin/main.lua:1324
 msgid "Estimated reading finished"
 msgstr "הקריאה המשוערת הסתיימה"
 
-#: plugins/statistics.koplugin/main.lua:1324
+#: plugins/statistics.koplugin/main.lua:1325
 msgid "%1 (1 day)"
 msgid_plural "%1 (%2 days)"
 msgstr[0] "%1 (יום אחד)"
@@ -12053,74 +12065,74 @@ msgstr[1] "%1 (יומיים)"
 msgstr[2] "%1 (%2 ימים)"
 msgstr[3] "%1 (%2 ימים)"
 
-#: plugins/statistics.koplugin/main.lua:1326
-#: plugins/statistics.koplugin/main.lua:1406
+#: plugins/statistics.koplugin/main.lua:1327
+#: plugins/statistics.koplugin/main.lua:1407
 msgid "Highlights"
 msgstr "הבלטות"
 
-#: plugins/statistics.koplugin/main.lua:1395
+#: plugins/statistics.koplugin/main.lua:1396
 msgid "Authors"
 msgstr "מחברים"
 
-#: plugins/statistics.koplugin/main.lua:1397
+#: plugins/statistics.koplugin/main.lua:1398
 msgid "Last read"
 msgstr "קריאה אחרונה"
 
-#: plugins/statistics.koplugin/main.lua:1404
+#: plugins/statistics.koplugin/main.lua:1405
 msgid "Read pages/Total pages"
 msgstr "עמודים שנקראו/סה\"כ עמודים"
 
-#: plugins/statistics.koplugin/main.lua:1405
+#: plugins/statistics.koplugin/main.lua:1406
 msgid "Percentage read"
 msgstr "אחוז שנקרא"
 
-#: plugins/statistics.koplugin/main.lua:1409
+#: plugins/statistics.koplugin/main.lua:1410
 msgid "Show days"
 msgstr "הצג ימים"
 
-#: plugins/statistics.koplugin/main.lua:1414
-#: plugins/statistics.koplugin/main.lua:1734
+#: plugins/statistics.koplugin/main.lua:1415
+#: plugins/statistics.koplugin/main.lua:1735
 msgid "Days reading %1"
 msgstr "ימי קריאה %1"
 
-#: plugins/statistics.koplugin/main.lua:1493
-#: plugins/statistics.koplugin/main.lua:1520
+#: plugins/statistics.koplugin/main.lua:1494
+#: plugins/statistics.koplugin/main.lua:1521
 msgid "Books read in %1"
 msgstr "ספרים שנקראו ב-%1"
 
-#: plugins/statistics.koplugin/main.lua:1599
+#: plugins/statistics.koplugin/main.lua:1600
 msgid "%1 Week %2"
 msgstr "%1 שבוע %2"
 
-#: plugins/statistics.koplugin/main.lua:1621
-#: plugins/statistics.koplugin/main.lua:1635
-#: plugins/statistics.koplugin/main.lua:1646
-#: plugins/statistics.koplugin/main.lua:1686
-#: plugins/statistics.koplugin/main.lua:1824
+#: plugins/statistics.koplugin/main.lua:1622
+#: plugins/statistics.koplugin/main.lua:1636
+#: plugins/statistics.koplugin/main.lua:1647
+#: plugins/statistics.koplugin/main.lua:1687
+#: plugins/statistics.koplugin/main.lua:1825
 msgid "Pages: (%1) Time: %2"
 msgstr "עמודים: (%1) זמן: %2"
 
-#: plugins/statistics.koplugin/main.lua:1691
+#: plugins/statistics.koplugin/main.lua:1692
 msgid "Books read %1"
 msgstr "ספרים שנקראו %1"
 
-#: plugins/statistics.koplugin/main.lua:1728
+#: plugins/statistics.koplugin/main.lua:1729
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugins/statistics.koplugin/main.lua:1894
+#: plugins/statistics.koplugin/main.lua:1895
 msgid "Total time spent reading: %1"
 msgstr "זמן הקריאה הכולל: %1"
 
-#: plugins/statistics.koplugin/main.lua:1900
+#: plugins/statistics.koplugin/main.lua:1901
 msgid "Reset statistics for the current book"
 msgstr "אפס סטטיסטיקה עבור הספר הנוכחי"
 
-#: plugins/statistics.koplugin/main.lua:1909
+#: plugins/statistics.koplugin/main.lua:1910
 msgid "Reset statistics per book"
 msgstr "איפוס סטטיסטיקה לפי ספר"
 
-#: plugins/statistics.koplugin/main.lua:1918
+#: plugins/statistics.koplugin/main.lua:1919
 msgid "Reset stats for books read for < 1 m"
 msgid_plural "Reset stats for books read for < %1 m"
 msgstr[0] "אפס נתונים סטטיסטיים עבור ספרים שנקראו פחות מדקה"
@@ -12128,8 +12140,8 @@ msgstr[1] "אפס נתונים סטטיסטיים עבור ספרים שנקרא
 msgstr[2] "אפס נתונים סטטיסטיים עבור ספרים שנקראו < %1 ד'"
 msgstr[3] "אפס נתונים סטטיסטיים עבור ספרים שנקראו < %1 ד'"
 
-#: plugins/statistics.koplugin/main.lua:1977
-#: plugins/statistics.koplugin/main.lua:2023
+#: plugins/statistics.koplugin/main.lua:1978
+#: plugins/statistics.koplugin/main.lua:2024
 msgid ""
 "Do you want to reset statistics for book:\n"
 "%1"
@@ -12137,11 +12149,11 @@ msgstr ""
 "האם ברצונך לאפס נתונים סטטיסטיים עבור ספר:\n"
 "%1"
 
-#: plugins/statistics.koplugin/main.lua:2002
+#: plugins/statistics.koplugin/main.lua:2003
 msgid "Reset book statistics"
 msgstr "איפוס סטטיסטיקת ספרים"
 
-#: plugins/statistics.koplugin/main.lua:2069
+#: plugins/statistics.koplugin/main.lua:2070
 msgid "Permanently remove statistics for books read for less than 1 minute?"
 msgid_plural ""
 "Permanently remove statistics for books read for less than %1 minutes?"
@@ -12150,7 +12162,7 @@ msgstr[1] "להסיר לצמיתות נתונים סטטיסטיים של ספר
 msgstr[2] "להסיר לצמיתות נתונים סטטיסטיים של ספרים שנקראו פחות מ-%1 דקות?"
 msgstr[3] "להסיר לצמיתות נתונים סטטיסטיים של ספרים שנקראו פחות מ-%1 דקות?"
 
-#: plugins/statistics.koplugin/main.lua:2109
+#: plugins/statistics.koplugin/main.lua:2110
 msgid "Statistics for 1 book removed."
 msgid_plural "Statistics for %1 books removed."
 msgstr[0] "סטטיסטיקה עבור ספר אחד הוסרה."
@@ -12158,7 +12170,7 @@ msgstr[1] "סטטיסטיקה עבור שני ספרים הוסרה."
 msgstr[2] "סטטיסטיקה עבור %1 ספרים הוסרה."
 msgstr[3] "סטטיסטיקה עבור %1 ספרים הוסרה."
 
-#: plugins/statistics.koplugin/main.lua:2112
+#: plugins/statistics.koplugin/main.lua:2113
 msgid "No statistics removed."
 msgstr "לא הוסרו נתונים סטטיסטיים."
 
@@ -13067,6 +13079,15 @@ msgstr "הקש על הפינה הימנית התחתונה"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "הקש על הפינה השמאלית העליונה"
+
+#~ msgid "%1 minutes"
+#~ msgstr "%1 דקות"
+
+#~ msgid "%1 seconds"
+#~ msgstr "%1 שניות"
+
+#~ msgid "%1 KB"
+#~ msgstr "‎%1 kB"
 
 #~ msgid "Clock"
 #~ msgstr "שעון"
