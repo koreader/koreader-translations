@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-24 12:50+0000\n"
-"PO-Revision-Date: 2020-12-30 21:32+0000\n"
+"PO-Revision-Date: 2021-01-25 03:48+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Moldavian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ro_MD/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % "
 "100 >= 1 && n % 100 <= 19) ? 1 : 2);\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: reader.lua:218
 msgid ""
@@ -1468,6 +1468,13 @@ msgid ""
 "\n"
 "The alternative status bar can be configured here."
 msgstr ""
+"În documente CRE, o bară de stare alternativă poate fi afișată în partea de "
+"sus a ecranului împreună cu, sau fără bara de stare din partea de jos.\n"
+"\n"
+"Activarea aceastei bare de stare alternativă, per document sau ca implicit, "
+"se poate face din meniul de jos.\n"
+"\n"
+"Bara de stare alternativă poate fi configurată aici."
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:66
 #, fuzzy
@@ -1511,9 +1518,8 @@ msgid "Battery status"
 msgstr "Stare baterie (%1)"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:140
-#, fuzzy
 msgid "Battery percentage"
-msgstr "    Procent folosit"
+msgstr "Procentaj baterie"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:153
 #, fuzzy
@@ -1978,17 +1984,15 @@ msgstr "W:"
 
 #. @translators This is the footer compact item prefix for the number of bookmarks (bookmark count).
 #: frontend/apps/reader/modules/readerfooter.lua:86
-#, fuzzy
 msgctxt "FooterCompactItemsPrefix"
 msgid "BM"
-msgstr "SC:"
+msgstr "SC"
 
 #. @translators This is the footer compact item prefix for memory usage.
 #: frontend/apps/reader/modules/readerfooter.lua:92
-#, fuzzy
 msgctxt "FooterCompactItemsPrefix"
 msgid "M"
-msgstr "M:"
+msgstr "M"
 
 #: frontend/apps/reader/modules/readerfooter.lua:141
 #: frontend/apps/reader/modules/readerfooter.lua:327
@@ -3589,7 +3593,6 @@ msgid "Set default style to %1?"
 msgstr "Setezi stilul implicit la %1?"
 
 #: frontend/apps/reader/modules/readertypeset.lua:510
-#, fuzzy
 msgid ""
 "Margins set to:\n"
 "\n"
@@ -3602,9 +3605,10 @@ msgid ""
 msgstr ""
 "Marginile sînt setate la:\n"
 "\n"
-"  orizonal: %1 (%2px)\n"
-"  sus: %3 (%4px)\n"
-"  jos: %5 (%6px)\n"
+"  stînga: %1 (%2px)\n"
+"  dreapta: %3 (%4px)\n"
+"  sus: %5 (%6px)\n"
+"  jos: %7 (%8px)\n"
 "\n"
 "Atinge pentru a închide."
 
@@ -7335,12 +7339,11 @@ msgstr[2] "%1 de minute"
 
 #: frontend/ui/elements/screen_android.lua:32
 #: frontend/ui/elements/screensaver_menu.lua:227
-#, fuzzy
 msgid "1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "1 secundă"
-msgstr[1] "1 secundă"
-msgstr[2] "1 secundă"
+msgstr[1] "%1 secunde"
+msgstr[2] "%1 de secunde"
 
 #: frontend/ui/elements/screen_android.lua:55
 msgid ""
@@ -8124,7 +8127,6 @@ msgstr ""
 "%1"
 
 #: frontend/ui/screensaver.lua:202
-#, fuzzy
 msgid ""
 "Enter the message to be displayed by the screensaver. The following escape "
 "sequences can be used:\n"
@@ -8135,12 +8137,14 @@ msgid ""
 "  %A authors\n"
 "  %S series"
 msgstr ""
-"Întrodu mesajul afișat de economizorul de ecran. Următoarele secvențe escape "
-"pot fi folosite:\n"
-"  %p procent citit\n"
+"Întrodu mesajul care va fi afișat de economizorul de ecran. Următoarele "
+"secvențe escape pot fi folosite:\n"
+"  %p procentaj citit\n"
 "  %c numărul paginii curente\n"
 "  %t numărul total de pagini\n"
-"  %T titlu"
+"  %T titlu\n"
+"  %A autori\n"
+"  %S nume serie"
 
 #: frontend/ui/screensaver.lua:213
 msgid "Set message"
@@ -8953,6 +8957,16 @@ msgid ""
 "Please inform the server administrator that many clients disallow this "
 "because it could be a downgrade attack."
 msgstr ""
+"Retrogradare nesecurizată HTTPS → HTTP încercată ca redirectare de la:\n"
+"\n"
+"'%1'\n"
+"\n"
+"to\n"
+"\n"
+"'%2'.\n"
+"\n"
+"Te rog informează administratorul serverului că mulți clienți nu permit "
+"acest lucru deoarece poate fi considerat un atac de tip retrogradare."
 
 #: frontend/ui/widget/opdsbrowser.lua:332
 msgid ""
@@ -9293,7 +9307,7 @@ msgstr "%1 MO"
 #. @translators This is an abbreviation for the kilobyte, a unit of computer memory or data storage capacity.
 #: frontend/util.lua:891
 msgid "%1 kB"
-msgstr ""
+msgstr "%1 kO"
 
 #. @translators This is an abbreviation for the byte, a unit of computer memory or data storage capacity.
 #: frontend/util.lua:894
@@ -10007,20 +10021,18 @@ msgid "Extract and cache book information"
 msgstr "Extrage și adaugă în cache informațiile cărții"
 
 #: plugins/coverbrowser.koplugin/listmenu.lua:414
-#, fuzzy
 msgid "Finished – 1 page"
 msgid_plural "Finished – %1 pages"
-msgstr[0] "Finalizat - %1 pagini"
-msgstr[1] "Finalizat - %1 pagini"
-msgstr[2] "Finalizat - %1 pagini"
+msgstr[0] "Finalizat – 1 pagină"
+msgstr[1] "Finalizat – %1 pagini"
+msgstr[2] "Finalizat – %1 de pagini"
 
 #: plugins/coverbrowser.koplugin/listmenu.lua:416
-#, fuzzy
 msgid "On hold – 1 page"
 msgid_plural "On hold – %1 pages"
-msgstr[0] "Suspendat - %1 pagini"
-msgstr[1] "Suspendat - %1 pagini"
-msgstr[2] "Suspendat - %1 pagini"
+msgstr[0] "Suspendat – 1 pagină"
+msgstr[1] "Suspendat – %1 pagini"
+msgstr[2] "Suspendat – %1 de pagini"
 
 #: plugins/coverbrowser.koplugin/listmenu.lua:426
 msgid "%1 % of %2 pages"
