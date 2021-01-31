@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-31 01:54+0000\n"
+"POT-Creation-Date: 2021-01-31 20:38+0000\n"
 "PO-Revision-Date: 2021-01-31 20:38+0000\n"
 "Last-Translator: hombretranquilo <hombretranquilo.mbp@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/koreader/"
@@ -187,8 +187,8 @@ msgstr ""
 #: plugins/calibre.koplugin/search.lua:207
 #: plugins/calibre.koplugin/wireless.lua:404
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:780
-#: plugins/coverimage.koplugin/main.lua:196
-#: plugins/coverimage.koplugin/main.lua:414
+#: plugins/coverimage.koplugin/main.lua:210
+#: plugins/coverimage.koplugin/main.lua:462
 #: plugins/evernote.koplugin/main.lua:162
 #: plugins/evernote.koplugin/main.lua:207
 #: plugins/evernote.koplugin/main.lua:359
@@ -3207,6 +3207,7 @@ msgstr "Nombre de línies: %1"
 
 #: frontend/apps/reader/modules/readerrolling.lua:445
 #: frontend/apps/reader/modules/readerzooming.lua:574
+#: plugins/coverimage.koplugin/main.lua:293
 #: plugins/kosync.koplugin/main.lua:292
 #: plugins/statistics.koplugin/main.lua:960
 msgid "Set"
@@ -3507,8 +3508,8 @@ msgstr "Condensar"
 #: frontend/apps/reader/modules/readerwikipedia.lua:159
 #: frontend/apps/reader/readerui.lua:684 frontend/ui/widget/inputdialog.lua:621
 #: frontend/ui/widget/inputdialog.lua:662
-#: plugins/coverimage.koplugin/main.lua:202
-#: plugins/coverimage.koplugin/main.lua:420
+#: plugins/coverimage.koplugin/main.lua:216
+#: plugins/coverimage.koplugin/main.lua:468
 #: plugins/gestures.koplugin/main.lua:335 plugins/profiles.koplugin/main.lua:69
 #: plugins/SSH.koplugin/main.lua:118 plugins/terminal.koplugin/main.lua:243
 #: plugins/terminal.koplugin/main.lua:279
@@ -10356,7 +10357,7 @@ msgstr "És necessari escriure el nom de l'arxiu al final de la ruta."
 msgid "The path \"%1\" must point to a file, but it points to a directory."
 msgstr "La ruta \"% 1\" ha de remetre a un arxiu, però remet a un directori."
 
-#: plugins/coverimage.koplugin/main.lua:72
+#: plugins/coverimage.koplugin/main.lua:73
 msgid ""
 "\"%1\" \n"
 "is not a valid image file!\n"
@@ -10366,12 +10367,12 @@ msgstr ""
 "no és un arxiu d'imatge vàlid!\n"
 "Es necessita una imatge alternativa vàlida en Cover-Image."
 
-#: plugins/coverimage.koplugin/main.lua:94
-#: plugins/coverimage.koplugin/main.lua:124
+#: plugins/coverimage.koplugin/main.lua:95
+#: plugins/coverimage.koplugin/main.lua:138
 msgid "Error writing file"
 msgstr "Error en escriure arxiu"
 
-#: plugins/coverimage.koplugin/main.lua:147
+#: plugins/coverimage.koplugin/main.lua:161
 msgid ""
 "This plugin saves the current book cover to a file. That file can be used as "
 "a screensaver on certain Android devices, such as Tolinos.\n"
@@ -10402,92 +10403,111 @@ msgstr ""
 "Si l'opció d'imatge alternativa no està habilitada, la imatge del protector "
 "de pantalla es conservarà tal qual després de tancar un llibre."
 
-#: plugins/coverimage.koplugin/main.lua:161
+#: plugins/coverimage.koplugin/main.lua:175
 msgid "Save cover image"
 msgstr "Guardar imatge de portada"
 
-#: plugins/coverimage.koplugin/main.lua:168
+#: plugins/coverimage.koplugin/main.lua:182
 msgid "About cover image"
 msgstr "Sobre imatge de portada"
 
-#: plugins/coverimage.koplugin/main.lua:179
+#: plugins/coverimage.koplugin/main.lua:193
 msgid "Set system screensaver image"
 msgstr "Establir la imatge de l'estalvis de pantalla del sistema"
 
-#: plugins/coverimage.koplugin/main.lua:183
+#: plugins/coverimage.koplugin/main.lua:197
 msgid "The cover of the current book will be stored in this file."
 msgstr "La portada del llibre actual es guardarà en aquest arxiu."
 
-#: plugins/coverimage.koplugin/main.lua:189
+#: plugins/coverimage.koplugin/main.lua:203
 msgid "Screensaver image filename"
 msgstr "Nom de l'arxiu d'imatge del salvapantalles"
 
-#: plugins/coverimage.koplugin/main.lua:192
+#: plugins/coverimage.koplugin/main.lua:206
 msgid "You can enter the filename of the cover image here."
 msgstr "Introduir el nom d'arxiu de la imatge de la portada."
 
-#: plugins/coverimage.koplugin/main.lua:235
+#: plugins/coverimage.koplugin/main.lua:249
 msgid "Save book cover"
 msgstr "Guardar la portada del llibre"
 
-#: plugins/coverimage.koplugin/main.lua:256
+#: plugins/coverimage.koplugin/main.lua:270
 msgid "Size, background and format"
 msgstr "Grandària, fons i format"
 
-#: plugins/coverimage.koplugin/main.lua:262
-msgid "Scale, black background"
+#: plugins/coverimage.koplugin/main.lua:277
+msgid "Aspect ratio stretch threshold (%1%)"
+msgstr ""
+
+#: plugins/coverimage.koplugin/main.lua:280
+msgid ""
+"If the image and the screen have a similar aspect ratio (±%1%), stretch the "
+"image instead of keeping its aspect ratio."
+msgstr ""
+
+#: plugins/coverimage.koplugin/main.lua:292
+#, fuzzy
+msgid "Set stretch threshold"
+msgstr "Límit de bateria baixa"
+
+#: plugins/coverimage.koplugin/main.lua:310
+#, fuzzy
+msgid "Fit to screen, black background"
 msgstr "Escalar, fons negre"
 
-#: plugins/coverimage.koplugin/main.lua:276
-msgid "Scale, white background"
+#: plugins/coverimage.koplugin/main.lua:324
+#, fuzzy
+msgid "Fit to screen, white background"
 msgstr "Escalar imatge, fons blanc"
 
-#: plugins/coverimage.koplugin/main.lua:290
-msgid "Scale, gray background"
+#: plugins/coverimage.koplugin/main.lua:338
+#, fuzzy
+msgid "Fit to screen, gray background"
 msgstr "Escalar imatge, fons gris"
 
-#: plugins/coverimage.koplugin/main.lua:304
+#: plugins/coverimage.koplugin/main.lua:352
 msgid "Original image"
 msgstr "Imatge original"
 
-#: plugins/coverimage.koplugin/main.lua:320
+#: plugins/coverimage.koplugin/main.lua:368
 msgid "File format derived from filename"
 msgstr "Format d'arxiu obtingut del nom d'arxiu"
 
-#: plugins/coverimage.koplugin/main.lua:321
-msgid "If the file format is not supported, then PNG will be used."
+#: plugins/coverimage.koplugin/main.lua:369
+#, fuzzy
+msgid "If the file format is not supported, then JPG will be used."
 msgstr "Si el format d'arxiu no és compatible, s'usarà el format PNG."
 
-#: plugins/coverimage.koplugin/main.lua:335
+#: plugins/coverimage.koplugin/main.lua:383
 msgid "JPG file format"
 msgstr "Format d'arxiu JPG"
 
-#: plugins/coverimage.koplugin/main.lua:349
+#: plugins/coverimage.koplugin/main.lua:397
 msgid "PNG file format"
 msgstr "Format d'arxiu PNG"
 
-#: plugins/coverimage.koplugin/main.lua:363
+#: plugins/coverimage.koplugin/main.lua:411
 msgid "BMP file format"
 msgstr "Format d'arxiu BMP"
 
-#: plugins/coverimage.koplugin/main.lua:380
+#: plugins/coverimage.koplugin/main.lua:428
 msgid "Exclude this book cover"
 msgstr "Excloure la portada d'aquest llibre"
 
-#: plugins/coverimage.koplugin/main.lua:398
+#: plugins/coverimage.koplugin/main.lua:446
 msgid "Set fallback image"
 msgstr "Establir imatge alternativa"
 
-#: plugins/coverimage.koplugin/main.lua:407
+#: plugins/coverimage.koplugin/main.lua:455
 msgid "Fallback image filename"
 msgstr "Nom d'arxiu de la imatge alternativa"
 
-#: plugins/coverimage.koplugin/main.lua:410
+#: plugins/coverimage.koplugin/main.lua:458
 msgid "Leave this empty to remove the cover when the document is closed."
 msgstr ""
 "Deixar aquest espai buit per a llevar la coberta quan es tanca el document."
 
-#: plugins/coverimage.koplugin/main.lua:428
+#: plugins/coverimage.koplugin/main.lua:476
 msgid ""
 "\"%1\" \n"
 "is not a valid image file!\n"
@@ -10497,7 +10517,7 @@ msgstr ""
 "no és un arxiu d'imatge vàlid!\n"
 "Es necessita una imatge alternativa vàlida en Cover-Image"
 
-#: plugins/coverimage.koplugin/main.lua:447
+#: plugins/coverimage.koplugin/main.lua:495
 msgid "Turn on fallback image"
 msgstr "Habilitar imatge alternativa"
 
