@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-20 17:45+0000\n"
+"POT-Creation-Date: 2021-02-20 19:32+0000\n"
 "PO-Revision-Date: 2021-02-16 16:09+0000\n"
 "Last-Translator: 張修銘 <cges30901@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -159,7 +159,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:635
 #: frontend/apps/reader/modules/readercropping.lua:61
 #: frontend/apps/reader/modules/readerdictionary.lua:696
-#: frontend/apps/reader/modules/readergoto.lua:74
+#: frontend/apps/reader/modules/readergoto.lua:61
 #: frontend/apps/reader/modules/readerlink.lua:638
 #: frontend/apps/reader/modules/readersearch.lua:43
 #: frontend/apps/reader/modules/readerstatus.lua:123
@@ -1107,7 +1107,7 @@ msgstr "無法開啟最後使用的文件"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:146
 #: frontend/apps/reader/modules/readerfooter.lua:961
-#: frontend/apps/reader/modules/readertoc.lua:818
+#: frontend/apps/reader/modules/readertoc.lua:854
 #: frontend/ui/elements/screensaver_menu.lua:124 frontend/ui/otamanager.lua:474
 #: plugins/goodreads.koplugin/main.lua:31
 #: plugins/newsdownloader.koplugin/main.lua:110
@@ -2417,40 +2417,30 @@ msgstr "最小寬度"
 msgid "Minimal progress bar width in percentage of screen width"
 msgstr "最小進度列寬度，以螢幕寬度百分比為單位"
 
-#: frontend/apps/reader/modules/readergoto.lua:10 frontend/dispatcher.lua:102
-msgid "Go to"
-msgstr "前往"
+#: frontend/apps/reader/modules/readergoto.lua:10
+#: frontend/apps/reader/modules/readergoto.lua:50
+#: frontend/ui/widget/menu.lua:725
+msgid "Go to page"
+msgstr "前往頁面"
 
 #: frontend/apps/reader/modules/readergoto.lua:11
 msgid "Skim document"
 msgstr "快覽文件"
 
-#: frontend/apps/reader/modules/readergoto.lua:37
-msgid "Go to Page"
-msgstr "前往頁面"
-
-#: frontend/apps/reader/modules/readergoto.lua:40
-msgid "Page"
-msgstr "頁面"
-
-#: frontend/apps/reader/modules/readergoto.lua:45
-msgid "Go to Location"
-msgstr "前往特定位置"
-
-#: frontend/apps/reader/modules/readergoto.lua:48
-msgid "Location"
-msgstr "定位"
-
-#: frontend/apps/reader/modules/readergoto.lua:66
+#: frontend/apps/reader/modules/readergoto.lua:53
 msgid ""
 "x for an absolute page number\n"
 "[x] for a page number in the main (linear) flow\n"
 "[x]y for a page number in the non-linear fragment y"
 msgstr ""
 
-#: frontend/apps/reader/modules/readergoto.lua:81
+#: frontend/apps/reader/modules/readergoto.lua:68
 msgid "Skim mode"
 msgstr "快覽模式"
+
+#: frontend/apps/reader/modules/readergoto.lua:85
+msgid "Page"
+msgstr "頁面"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:52
 #: frontend/ui/elements/common_settings_menu_table.lua:667
@@ -3483,23 +3473,23 @@ msgstr "書籍調整已更新，正在套用…"
 msgid "Book tweak saved (not enabled)."
 msgstr "書籍調整已儲存（未啟用）。"
 
-#: frontend/apps/reader/modules/readertoc.lua:29 frontend/dispatcher.lua:110
+#: frontend/apps/reader/modules/readertoc.lua:30 frontend/dispatcher.lua:110
 msgid "Table of contents"
 msgstr "書籍目錄"
 
-#: frontend/apps/reader/modules/readertoc.lua:30
+#: frontend/apps/reader/modules/readertoc.lua:31
 msgid "Table of contents *"
 msgstr "書籍目錄 *"
 
-#: frontend/apps/reader/modules/readertoc.lua:646
+#: frontend/apps/reader/modules/readertoc.lua:682
 msgid "Table of Contents"
 msgstr "書籍目錄"
 
-#: frontend/apps/reader/modules/readertoc.lua:823
+#: frontend/apps/reader/modules/readertoc.lua:859
 msgid "Alternative table of contents"
 msgstr "替代目錄"
 
-#: frontend/apps/reader/modules/readertoc.lua:824
+#: frontend/apps/reader/modules/readertoc.lua:860
 #, fuzzy
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
@@ -3525,7 +3515,7 @@ msgstr ""
 "在套用這些調整之後，需要長按「書籍目錄」兩次來建立替代書目：第一次長按是要恢"
 "復原本的目錄，第二次長按是重新建立替代目錄。"
 
-#: frontend/apps/reader/modules/readertoc.lua:836
+#: frontend/apps/reader/modules/readertoc.lua:872
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -3535,35 +3525,60 @@ msgstr ""
 "目前的書籍目錄是由文件標題生成的替代品。\n"
 "您想要恢復到原本的目錄嗎？（這本書會被重新載入。）"
 
-#: frontend/apps/reader/modules/readertoc.lua:851
+#: frontend/apps/reader/modules/readertoc.lua:887
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
 msgstr "您想要使用由標題生成的替代性目錄嗎？"
 
-#: frontend/apps/reader/modules/readertoc.lua:877
+#: frontend/apps/reader/modules/readertoc.lua:913
 msgid "%1 entries at ToC depth %2"
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:900
+#: frontend/apps/reader/modules/readertoc.lua:936
 #, fuzzy
 msgid "Progress bars: %1 ticks"
 msgstr "進度列大小"
 
-#: frontend/apps/reader/modules/readertoc.lua:902
+#: frontend/apps/reader/modules/readertoc.lua:938
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
 "tick marks."
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:922
-#: frontend/apps/reader/modules/readertoc.lua:933
+#: frontend/apps/reader/modules/readertoc.lua:956
+msgid "Bind chapter navigation to ticks"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertoc.lua:957
+msgid ""
+"Entries from ToC levels that are ignored in the progress bars will still be "
+"used for chapter navigation and 'page/time left until next chapter' in the "
+"footer.\n"
+"Enabling this option will restrict chapter nativation to progress bar ticks."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertoc.lua:972
+msgid "Chapter titles from ticks only"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertoc.lua:973
+msgid ""
+"Entries from ToC levels that are ignored in the progress bars will still be "
+"used for displaying the title of the current chapter in the footer and in "
+"bookmarks.\n"
+"Enabling this option will restrict display to the chapter titles of progress "
+"bar ticks."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertoc.lua:990
+#: frontend/apps/reader/modules/readertoc.lua:1001
 msgid "ToC entries per page"
 msgstr "每頁的目錄項目數"
 
-#: frontend/apps/reader/modules/readertoc.lua:946
-#: frontend/apps/reader/modules/readertoc.lua:959
+#: frontend/apps/reader/modules/readertoc.lua:1014
+#: frontend/apps/reader/modules/readertoc.lua:1027
 msgid "ToC entry font size"
 msgstr "目錄項目字型大小"
 
@@ -4538,10 +4553,6 @@ msgstr ""
 "指定檔案的辨識或解析失敗了：這是個不被支援或有問題的文件。\n"
 "KOReader 將立刻離開。"
 
-#: frontend/apps/reader/skimtowidget.lua:65 frontend/dispatcher.lua:103
-msgid "Skim"
-msgstr "快覽"
-
 #: frontend/device/android/device.lua:294
 msgid "Not connected"
 msgstr "未連線"
@@ -4879,6 +4890,14 @@ msgstr "上一個書籤"
 #: frontend/dispatcher.lua:101
 msgid "Next bookmark"
 msgstr "下一個書籤"
+
+#: frontend/dispatcher.lua:102
+msgid "Go to"
+msgstr "前往"
+
+#: frontend/dispatcher.lua:103
+msgid "Skim"
+msgstr "快覽"
 
 #: frontend/dispatcher.lua:104 plugins/terminal.koplugin/main.lua:426
 msgid "Back"
@@ -8626,10 +8645,6 @@ msgstr "輸入頁碼"
 #: plugins/goodreads.koplugin/doublekeyvaluepage.lua:386
 msgid "Page %1 of %2"
 msgstr "第 %1 頁，共 %2 頁"
-
-#: frontend/ui/widget/menu.lua:725
-msgid "Go to page"
-msgstr "前往頁面"
 
 #: frontend/ui/widget/menu.lua:739
 msgid "Enter page number or letter"
@@ -12970,6 +12985,15 @@ msgstr "點擊右下角"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "點擊右上角"
+
+#~ msgid "Go to Page"
+#~ msgstr "前往頁面"
+
+#~ msgid "Go to Location"
+#~ msgstr "前往特定位置"
+
+#~ msgid "Location"
+#~ msgstr "定位"
 
 #~ msgid "Items"
 #~ msgstr "項目"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-20 17:45+0000\n"
+"POT-Creation-Date: 2021-02-20 19:32+0000\n"
 "PO-Revision-Date: 2021-01-18 15:56+0000\n"
 "Last-Translator: Mircea Nistor <mirceanis@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/koreader/"
@@ -155,7 +155,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:635
 #: frontend/apps/reader/modules/readercropping.lua:61
 #: frontend/apps/reader/modules/readerdictionary.lua:696
-#: frontend/apps/reader/modules/readergoto.lua:74
+#: frontend/apps/reader/modules/readergoto.lua:61
 #: frontend/apps/reader/modules/readerlink.lua:638
 #: frontend/apps/reader/modules/readersearch.lua:43
 #: frontend/apps/reader/modules/readerstatus.lua:123
@@ -1104,7 +1104,7 @@ msgstr "Nu se poate deschide ultimul document"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:146
 #: frontend/apps/reader/modules/readerfooter.lua:961
-#: frontend/apps/reader/modules/readertoc.lua:818
+#: frontend/apps/reader/modules/readertoc.lua:854
 #: frontend/ui/elements/screensaver_menu.lua:124 frontend/ui/otamanager.lua:474
 #: plugins/goodreads.koplugin/main.lua:31
 #: plugins/newsdownloader.koplugin/main.lua:110
@@ -2446,31 +2446,17 @@ msgstr "Lățime minimă"
 msgid "Minimal progress bar width in percentage of screen width"
 msgstr "Procent lățime minimă bară progres din lățimea ecranului"
 
-#: frontend/apps/reader/modules/readergoto.lua:10 frontend/dispatcher.lua:102
-msgid "Go to"
-msgstr "Mergi la"
+#: frontend/apps/reader/modules/readergoto.lua:10
+#: frontend/apps/reader/modules/readergoto.lua:50
+#: frontend/ui/widget/menu.lua:725
+msgid "Go to page"
+msgstr "Mergi la pagina"
 
 #: frontend/apps/reader/modules/readergoto.lua:11
 msgid "Skim document"
 msgstr "Frunzărește documentul"
 
-#: frontend/apps/reader/modules/readergoto.lua:37
-msgid "Go to Page"
-msgstr "Mergi la pagina"
-
-#: frontend/apps/reader/modules/readergoto.lua:40
-msgid "Page"
-msgstr "Pagina"
-
-#: frontend/apps/reader/modules/readergoto.lua:45
-msgid "Go to Location"
-msgstr "Mergi la locația"
-
-#: frontend/apps/reader/modules/readergoto.lua:48
-msgid "Location"
-msgstr "Locația"
-
-#: frontend/apps/reader/modules/readergoto.lua:66
+#: frontend/apps/reader/modules/readergoto.lua:53
 msgid ""
 "x for an absolute page number\n"
 "[x] for a page number in the main (linear) flow\n"
@@ -2480,9 +2466,13 @@ msgstr ""
 "[x] pentru un număr de pagină din fluxul principal (liniar)\n"
 "[x]y pentru un număr de pagină din fragmentul neliniar y"
 
-#: frontend/apps/reader/modules/readergoto.lua:81
+#: frontend/apps/reader/modules/readergoto.lua:68
 msgid "Skim mode"
 msgstr "Frunzărește"
+
+#: frontend/apps/reader/modules/readergoto.lua:85
+msgid "Page"
+msgstr "Pagina"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:52
 #: frontend/ui/elements/common_settings_menu_table.lua:667
@@ -3575,24 +3565,24 @@ msgstr "Ajustare actualizată, se aplică…"
 msgid "Book tweak saved (not enabled)."
 msgstr "Ajustare salvată (inactivă)."
 
-#: frontend/apps/reader/modules/readertoc.lua:29 frontend/dispatcher.lua:110
+#: frontend/apps/reader/modules/readertoc.lua:30 frontend/dispatcher.lua:110
 msgid "Table of contents"
 msgstr "Cuprins"
 
-#: frontend/apps/reader/modules/readertoc.lua:30
+#: frontend/apps/reader/modules/readertoc.lua:31
 msgid "Table of contents *"
 msgstr "Cuprins *"
 
-#: frontend/apps/reader/modules/readertoc.lua:646
+#: frontend/apps/reader/modules/readertoc.lua:682
 msgid "Table of Contents"
 msgstr "Cuprins"
 
-#: frontend/apps/reader/modules/readertoc.lua:823
+#: frontend/apps/reader/modules/readertoc.lua:859
 #, fuzzy
 msgid "Alternative table of contents"
 msgstr "Cuprins"
 
-#: frontend/apps/reader/modules/readertoc.lua:824
+#: frontend/apps/reader/modules/readertoc.lua:860
 #, fuzzy
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
@@ -3623,7 +3613,7 @@ msgstr ""
 "apăsat pe „Cuprins” de două ori: prima dată pentru a restura tabla "
 "originală, iar a doua oară pentru a reconstrui tabla alternativă."
 
-#: frontend/apps/reader/modules/readertoc.lua:836
+#: frontend/apps/reader/modules/readertoc.lua:872
 #, fuzzy
 msgid ""
 "The table of contents for this book is currently an alternative one built "
@@ -3635,7 +3625,7 @@ msgstr ""
 "capitol ale documentului.\n"
 "Dorești să revii la cuprinsul original? (Cartea va fi reîncărcată.)"
 
-#: frontend/apps/reader/modules/readertoc.lua:851
+#: frontend/apps/reader/modules/readertoc.lua:887
 #, fuzzy
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
@@ -3644,30 +3634,55 @@ msgstr ""
 "Dorești să folosești un cuprins alternativ construit din titlurile "
 "capitolelor din document?"
 
-#: frontend/apps/reader/modules/readertoc.lua:877
+#: frontend/apps/reader/modules/readertoc.lua:913
 msgid "%1 entries at ToC depth %2"
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:900
+#: frontend/apps/reader/modules/readertoc.lua:936
 #, fuzzy
 msgid "Progress bars: %1 ticks"
 msgstr "Dimensiune bară progres"
 
-#: frontend/apps/reader/modules/readertoc.lua:902
+#: frontend/apps/reader/modules/readertoc.lua:938
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
 "tick marks."
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:922
-#: frontend/apps/reader/modules/readertoc.lua:933
+#: frontend/apps/reader/modules/readertoc.lua:956
+msgid "Bind chapter navigation to ticks"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertoc.lua:957
+msgid ""
+"Entries from ToC levels that are ignored in the progress bars will still be "
+"used for chapter navigation and 'page/time left until next chapter' in the "
+"footer.\n"
+"Enabling this option will restrict chapter nativation to progress bar ticks."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertoc.lua:972
+msgid "Chapter titles from ticks only"
+msgstr ""
+
+#: frontend/apps/reader/modules/readertoc.lua:973
+msgid ""
+"Entries from ToC levels that are ignored in the progress bars will still be "
+"used for displaying the title of the current chapter in the footer and in "
+"bookmarks.\n"
+"Enabling this option will restrict display to the chapter titles of progress "
+"bar ticks."
+msgstr ""
+
+#: frontend/apps/reader/modules/readertoc.lua:990
+#: frontend/apps/reader/modules/readertoc.lua:1001
 #, fuzzy
 msgid "ToC entries per page"
 msgstr "Fișiere per pagină"
 
-#: frontend/apps/reader/modules/readertoc.lua:946
-#: frontend/apps/reader/modules/readertoc.lua:959
+#: frontend/apps/reader/modules/readertoc.lua:1014
+#: frontend/apps/reader/modules/readertoc.lua:1027
 #, fuzzy
 msgid "ToC entry font size"
 msgstr "Setează"
@@ -4674,10 +4689,6 @@ msgstr ""
 "nesuportat.\n"
 "KOReader va ieși acum."
 
-#: frontend/apps/reader/skimtowidget.lua:65 frontend/dispatcher.lua:103
-msgid "Skim"
-msgstr "Frunzărește"
-
 #: frontend/device/android/device.lua:294
 msgid "Not connected"
 msgstr "Nu e conectat"
@@ -5036,6 +5047,14 @@ msgstr "Semn de carte precedent"
 #: frontend/dispatcher.lua:101
 msgid "Next bookmark"
 msgstr "Semn de carte următor"
+
+#: frontend/dispatcher.lua:102
+msgid "Go to"
+msgstr "Mergi la"
+
+#: frontend/dispatcher.lua:103
+msgid "Skim"
+msgstr "Frunzărește"
 
 #: frontend/dispatcher.lua:104 plugins/terminal.koplugin/main.lua:426
 msgid "Back"
@@ -8936,10 +8955,6 @@ msgstr "Întrodu numărul de pagină"
 #: plugins/goodreads.koplugin/doublekeyvaluepage.lua:386
 msgid "Page %1 of %2"
 msgstr "Pagina %1 din %2"
-
-#: frontend/ui/widget/menu.lua:725
-msgid "Go to page"
-msgstr "Mergi la pagina"
 
 #: frontend/ui/widget/menu.lua:739
 msgid "Enter page number or letter"
@@ -13476,6 +13491,15 @@ msgstr "Atinge colțul din dreapta jos"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Atinge colțul din dreapta sus"
+
+#~ msgid "Go to Page"
+#~ msgstr "Mergi la pagina"
+
+#~ msgid "Go to Location"
+#~ msgstr "Mergi la locația"
+
+#~ msgid "Location"
+#~ msgstr "Locația"
 
 #~ msgid "Items"
 #~ msgstr "Elemente"
