@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-01 04:19+0000\n"
+"POT-Creation-Date: 2021-04-01 11:13+0000\n"
 "PO-Revision-Date: 2021-03-15 00:42+0000\n"
 "Last-Translator: Osakana Taro <osakanataro@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
@@ -203,7 +203,7 @@ msgstr ""
 #: plugins/terminal.koplugin/main.lua:271
 #: plugins/terminal.koplugin/main.lua:325
 #: plugins/terminal.koplugin/main.lua:360
-#: plugins/texteditor.koplugin/main.lua:307
+#: plugins/texteditor.koplugin/main.lua:320
 #: plugins/wallabag.koplugin/main.lua:849
 #: plugins/wallabag.koplugin/main.lua:880
 #: plugins/wallabag.koplugin/main.lua:947
@@ -230,7 +230,7 @@ msgstr "情報"
 #: frontend/apps/filemanager/filemanagershortcuts.lua:141
 #: frontend/apps/reader/modules/readerhighlight.lua:568
 #: plugins/opds.koplugin/opdsbrowser.lua:845
-#: plugins/texteditor.koplugin/main.lua:313
+#: plugins/texteditor.koplugin/main.lua:326
 msgid "Edit"
 msgstr "編集"
 
@@ -798,7 +798,7 @@ msgid "Open with…"
 msgstr "開く…"
 
 #: frontend/apps/filemanager/filemanager.lua:381
-#: plugins/texteditor.koplugin/main.lua:87
+#: plugins/texteditor.koplugin/main.lua:90
 #: plugins/texteditor.koplugin/_meta.lua:4
 msgid "Text editor"
 msgstr "テキストエディタ"
@@ -1122,6 +1122,7 @@ msgstr "最後に開いた文書を開くことができません"
 #: plugins/perceptionexpander.koplugin/main.lua:177
 #: plugins/send2ebook.koplugin/main.lua:91
 #: plugins/statistics.koplugin/main.lua:873
+#: plugins/texteditor.koplugin/main.lua:102
 #: plugins/wallabag.koplugin/main.lua:150
 msgid "Settings"
 msgstr "設定"
@@ -2780,7 +2781,6 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerlink.lua:286
 #: frontend/apps/reader/modules/readerlink.lua:308
-#: plugins/texteditor.koplugin/main.lua:112
 msgid "Set font size"
 msgstr "フォントサイズを設定"
 
@@ -3267,7 +3267,7 @@ msgstr "次のファイルを開く"
 
 #: frontend/apps/reader/modules/readerstatus.lua:107
 #: frontend/ui/elements/common_settings_menu_table.lua:585
-#: plugins/texteditor.koplugin/main.lua:580
+#: plugins/texteditor.koplugin/main.lua:594
 msgid "Delete file"
 msgstr "ファイル削除"
 
@@ -8395,20 +8395,20 @@ msgstr ""
 #: frontend/ui/widget/imageviewer.lua:787
 #: frontend/ui/widget/screenshoter.lua:47
 #: plugins/profiles.koplugin/main.lua:101
-#: plugins/texteditor.koplugin/main.lua:217
-#: plugins/texteditor.koplugin/main.lua:292
-#: plugins/texteditor.koplugin/main.lua:358
-#: plugins/texteditor.koplugin/main.lua:394
+#: plugins/texteditor.koplugin/main.lua:230
+#: plugins/texteditor.koplugin/main.lua:305
+#: plugins/texteditor.koplugin/main.lua:371
+#: plugins/texteditor.koplugin/main.lua:407
 msgid "Yes"
 msgstr "はい"
 
 #: frontend/ui/widget/imageviewer.lua:795
 #: frontend/ui/widget/screenshoter.lua:52
 #: plugins/profiles.koplugin/main.lua:102
-#: plugins/texteditor.koplugin/main.lua:218
-#: plugins/texteditor.koplugin/main.lua:293
-#: plugins/texteditor.koplugin/main.lua:359
-#: plugins/texteditor.koplugin/main.lua:395
+#: plugins/texteditor.koplugin/main.lua:231
+#: plugins/texteditor.koplugin/main.lua:306
+#: plugins/texteditor.koplugin/main.lua:372
+#: plugins/texteditor.koplugin/main.lua:408
 msgid "No"
 msgstr "いいえ"
 
@@ -12133,32 +12133,26 @@ msgstr "端末エミュレーター"
 msgid "Executes simple commands and shows their output."
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:35
+#: plugins/texteditor.koplugin/main.lua:36
 #, fuzzy
 msgid "Texteditor: open last file"
 msgstr "テキストエディタの設定"
 
-#: plugins/texteditor.koplugin/main.lua:99
-msgid "Text editor settings"
-msgstr "テキストエディタの設定"
+#: plugins/texteditor.koplugin/main.lua:105
+#: plugins/texteditor.koplugin/main.lua:116
+#, fuzzy
+msgid "Text font size"
+msgstr "フォントサイズを設定"
 
-#: plugins/texteditor.koplugin/main.lua:102
-msgid "Set text font size"
-msgstr "フォントの大きさを設定"
-
-#: plugins/texteditor.koplugin/main.lua:113
-msgid "Select font size"
-msgstr "フォントサイズの選択"
-
-#: plugins/texteditor.koplugin/main.lua:121
+#: plugins/texteditor.koplugin/main.lua:124
 msgid "Use monospace font"
 msgstr "等幅フォントを使用"
 
-#: plugins/texteditor.koplugin/main.lua:135
+#: plugins/texteditor.koplugin/main.lua:138
 msgid "Auto paragraph direction"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:136
+#: plugins/texteditor.koplugin/main.lua:139
 msgid ""
 "Detect the direction of each paragraph in the text: align to the right "
 "paragraphs in languages such as Arabic and Hebrew…, while keeping other "
@@ -12167,33 +12161,39 @@ msgid ""
 "direction."
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:147
+#: plugins/texteditor.koplugin/main.lua:150
 msgid "Force paragraph direction LTR"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:148
+#: plugins/texteditor.koplugin/main.lua:151
 msgid ""
 "Force all text to be displayed Left-To-Right (LTR) and aligned to the left.\n"
 "Enable this if you are mostly editing code, HTML, CSS…"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:160
+#: plugins/texteditor.koplugin/main.lua:164
+msgid "Show keyboard on start"
+msgstr ""
+
+#: plugins/texteditor.koplugin/main.lua:173
 msgid "Enable QR code export"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:161
+#: plugins/texteditor.koplugin/main.lua:174
 msgid "Export text to QR code, that can be scanned, for example, by a phone."
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:174
-msgid "Select a file to open"
-msgstr "編集したいファイルを選択"
+#: plugins/texteditor.koplugin/main.lua:187
+#, fuzzy
+msgid "New file"
+msgstr "新しいフォルダー"
 
-#: plugins/texteditor.koplugin/main.lua:182
-msgid "Edit a new empty file"
-msgstr "新規ファイルを作成して編集"
+#: plugins/texteditor.koplugin/main.lua:195
+#, fuzzy
+msgid "Open file"
+msgstr "次のファイルを開く"
 
-#: plugins/texteditor.koplugin/main.lua:209
+#: plugins/texteditor.koplugin/main.lua:222
 msgid ""
 "File path:\n"
 "%1\n"
@@ -12211,7 +12211,7 @@ msgstr ""
 "\n"
 "テキストエディタの履歴からこのファイルを削除してもいいですか？"
 
-#: plugins/texteditor.koplugin/main.lua:212
+#: plugins/texteditor.koplugin/main.lua:225
 msgid ""
 "File path:\n"
 "%1\n"
@@ -12227,7 +12227,7 @@ msgstr ""
 "\n"
 "テキストエディタの履歴から削除してもいいですか？"
 
-#: plugins/texteditor.koplugin/main.lua:285
+#: plugins/texteditor.koplugin/main.lua:298
 msgid ""
 "To start editing a new file, you will have to:\n"
 "\n"
@@ -12238,11 +12238,11 @@ msgid ""
 "Do you want to proceed?"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:303
+#: plugins/texteditor.koplugin/main.lua:316
 msgid "Enter filename"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:357
+#: plugins/texteditor.koplugin/main.lua:370
 msgid ""
 "This file does not exist anymore:\n"
 "\n"
@@ -12256,7 +12256,7 @@ msgstr ""
 "\n"
 "新しく作成しますか？"
 
-#: plugins/texteditor.koplugin/main.lua:375
+#: plugins/texteditor.koplugin/main.lua:388
 msgid ""
 "This file is not a regular file:\n"
 "\n"
@@ -12266,7 +12266,7 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:392
+#: plugins/texteditor.koplugin/main.lua:405
 msgid ""
 "This file is %2:\n"
 "\n"
@@ -12284,7 +12284,7 @@ msgstr ""
 "\n"
 "サイズが大きいので時間がかかるでしょう。"
 
-#: plugins/texteditor.koplugin/main.lua:414
+#: plugins/texteditor.koplugin/main.lua:427
 msgid ""
 "This file can not be created:\n"
 "\n"
@@ -12298,51 +12298,51 @@ msgstr ""
 "\n"
 "理由: %2"
 
-#: plugins/texteditor.koplugin/main.lua:468
-msgid "Check Lua"
+#: plugins/texteditor.koplugin/main.lua:481
+msgid "Lua check"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:473
+#: plugins/texteditor.koplugin/main.lua:486
 msgid ""
 "Lua syntax check failed:\n"
 "\n"
 "%1"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:477
+#: plugins/texteditor.koplugin/main.lua:490
 msgid "Lua syntax OK"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:485
+#: plugins/texteditor.koplugin/main.lua:498
 msgid "QR"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:525
+#: plugins/texteditor.koplugin/main.lua:539
 msgid "Text reset to last saved content"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:535
+#: plugins/texteditor.koplugin/main.lua:549
 msgid "File is read only"
 msgstr "ファイルは読み込み専用です"
 
-#: plugins/texteditor.koplugin/main.lua:541
-#: plugins/texteditor.koplugin/main.lua:568
-#: plugins/texteditor.koplugin/main.lua:592
+#: plugins/texteditor.koplugin/main.lua:555
+#: plugins/texteditor.koplugin/main.lua:582
+#: plugins/texteditor.koplugin/main.lua:606
 msgid "File saved"
 msgstr "ファイルを保存しました"
 
-#: plugins/texteditor.koplugin/main.lua:543
-#: plugins/texteditor.koplugin/main.lua:552
-#: plugins/texteditor.koplugin/main.lua:570
-#: plugins/texteditor.koplugin/main.lua:594
+#: plugins/texteditor.koplugin/main.lua:557
+#: plugins/texteditor.koplugin/main.lua:566
+#: plugins/texteditor.koplugin/main.lua:584
+#: plugins/texteditor.koplugin/main.lua:608
 msgid "Failed saving file: %1"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:550
+#: plugins/texteditor.koplugin/main.lua:564
 msgid "Lua syntax OK, file saved"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:555
+#: plugins/texteditor.koplugin/main.lua:569
 msgid ""
 "Lua syntax check failed:\n"
 "\n"
@@ -12354,15 +12354,15 @@ msgid ""
 "%2"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:563
+#: plugins/texteditor.koplugin/main.lua:577
 msgid "Do not save"
 msgstr "保存しない"
 
-#: plugins/texteditor.koplugin/main.lua:563
+#: plugins/texteditor.koplugin/main.lua:577
 msgid "Save anyway"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:576
+#: plugins/texteditor.koplugin/main.lua:590
 msgid ""
 "Text content is empty.\n"
 "Do you want to keep this file as empty, or do you prefer to delete it?\n"
@@ -12370,15 +12370,15 @@ msgid ""
 "%1"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:580
+#: plugins/texteditor.koplugin/main.lua:594
 msgid "Keep empty file"
 msgstr "空ファイルを保存"
 
-#: plugins/texteditor.koplugin/main.lua:585
+#: plugins/texteditor.koplugin/main.lua:599
 msgid "File deleted"
 msgstr "ファイルを削除しました"
 
-#: plugins/texteditor.koplugin/main.lua:587
+#: plugins/texteditor.koplugin/main.lua:601
 msgid "Failed deleting file: %1"
 msgstr ""
 
@@ -12753,6 +12753,21 @@ msgstr "右下角をタップ"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "右上角をタップ"
+
+#~ msgid "Text editor settings"
+#~ msgstr "テキストエディタの設定"
+
+#~ msgid "Set text font size"
+#~ msgstr "フォントの大きさを設定"
+
+#~ msgid "Select font size"
+#~ msgstr "フォントサイズの選択"
+
+#~ msgid "Select a file to open"
+#~ msgstr "編集したいファイルを選択"
+
+#~ msgid "Edit a new empty file"
+#~ msgstr "新規ファイルを作成して編集"
 
 #~ msgid "The directory %1 already exists. Do you want to overwrite it?"
 #~ msgstr "ディレクトリー %1 はすでに存在します。上書きしてもよろしいですか?"

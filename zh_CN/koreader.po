@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-01 04:19+0000\n"
+"POT-Creation-Date: 2021-04-01 11:13+0000\n"
 "PO-Revision-Date: 2021-04-01 02:16+0000\n"
 "Last-Translator: Eric <spice2wolf@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -211,7 +211,7 @@ msgstr ""
 #: plugins/terminal.koplugin/main.lua:271
 #: plugins/terminal.koplugin/main.lua:325
 #: plugins/terminal.koplugin/main.lua:360
-#: plugins/texteditor.koplugin/main.lua:307
+#: plugins/texteditor.koplugin/main.lua:320
 #: plugins/wallabag.koplugin/main.lua:849
 #: plugins/wallabag.koplugin/main.lua:880
 #: plugins/wallabag.koplugin/main.lua:947
@@ -238,7 +238,7 @@ msgstr "信息"
 #: frontend/apps/filemanager/filemanagershortcuts.lua:141
 #: frontend/apps/reader/modules/readerhighlight.lua:568
 #: plugins/opds.koplugin/opdsbrowser.lua:845
-#: plugins/texteditor.koplugin/main.lua:313
+#: plugins/texteditor.koplugin/main.lua:326
 msgid "Edit"
 msgstr "编辑"
 
@@ -811,7 +811,7 @@ msgid "Open with…"
 msgstr "打开方式…"
 
 #: frontend/apps/filemanager/filemanager.lua:381
-#: plugins/texteditor.koplugin/main.lua:87
+#: plugins/texteditor.koplugin/main.lua:90
 #: plugins/texteditor.koplugin/_meta.lua:4
 msgid "Text editor"
 msgstr "文本编辑器"
@@ -1127,6 +1127,7 @@ msgstr "无法打开最近的文档"
 #: plugins/perceptionexpander.koplugin/main.lua:177
 #: plugins/send2ebook.koplugin/main.lua:91
 #: plugins/statistics.koplugin/main.lua:873
+#: plugins/texteditor.koplugin/main.lua:102
 #: plugins/wallabag.koplugin/main.lua:150
 msgid "Settings"
 msgstr "设置"
@@ -2840,7 +2841,6 @@ msgstr "设置脚注弹窗字体大小"
 
 #: frontend/apps/reader/modules/readerlink.lua:286
 #: frontend/apps/reader/modules/readerlink.lua:308
-#: plugins/texteditor.koplugin/main.lua:112
 msgid "Set font size"
 msgstr "设置字号"
 
@@ -3367,7 +3367,7 @@ msgstr "打开下一个文件"
 
 #: frontend/apps/reader/modules/readerstatus.lua:107
 #: frontend/ui/elements/common_settings_menu_table.lua:585
-#: plugins/texteditor.koplugin/main.lua:580
+#: plugins/texteditor.koplugin/main.lua:594
 msgid "Delete file"
 msgstr "删除文件"
 
@@ -8686,20 +8686,20 @@ msgstr ""
 #: frontend/ui/widget/imageviewer.lua:787
 #: frontend/ui/widget/screenshoter.lua:47
 #: plugins/profiles.koplugin/main.lua:101
-#: plugins/texteditor.koplugin/main.lua:217
-#: plugins/texteditor.koplugin/main.lua:292
-#: plugins/texteditor.koplugin/main.lua:358
-#: plugins/texteditor.koplugin/main.lua:394
+#: plugins/texteditor.koplugin/main.lua:230
+#: plugins/texteditor.koplugin/main.lua:305
+#: plugins/texteditor.koplugin/main.lua:371
+#: plugins/texteditor.koplugin/main.lua:407
 msgid "Yes"
 msgstr "是"
 
 #: frontend/ui/widget/imageviewer.lua:795
 #: frontend/ui/widget/screenshoter.lua:52
 #: plugins/profiles.koplugin/main.lua:102
-#: plugins/texteditor.koplugin/main.lua:218
-#: plugins/texteditor.koplugin/main.lua:293
-#: plugins/texteditor.koplugin/main.lua:359
-#: plugins/texteditor.koplugin/main.lua:395
+#: plugins/texteditor.koplugin/main.lua:231
+#: plugins/texteditor.koplugin/main.lua:306
+#: plugins/texteditor.koplugin/main.lua:372
+#: plugins/texteditor.koplugin/main.lua:408
 msgid "No"
 msgstr "否"
 
@@ -12479,31 +12479,25 @@ msgstr "终端模拟器"
 msgid "Executes simple commands and shows their output."
 msgstr "执行简单的命令并显示输出。"
 
-#: plugins/texteditor.koplugin/main.lua:35
+#: plugins/texteditor.koplugin/main.lua:36
 msgid "Texteditor: open last file"
 msgstr "文本编辑器：打开上次的文件"
 
-#: plugins/texteditor.koplugin/main.lua:99
-msgid "Text editor settings"
-msgstr "文本编辑器设置"
+#: plugins/texteditor.koplugin/main.lua:105
+#: plugins/texteditor.koplugin/main.lua:116
+#, fuzzy
+msgid "Text font size"
+msgstr "设置字号"
 
-#: plugins/texteditor.koplugin/main.lua:102
-msgid "Set text font size"
-msgstr "设置文字字体大小"
-
-#: plugins/texteditor.koplugin/main.lua:113
-msgid "Select font size"
-msgstr "选择字号"
-
-#: plugins/texteditor.koplugin/main.lua:121
+#: plugins/texteditor.koplugin/main.lua:124
 msgid "Use monospace font"
 msgstr "使用等宽字体"
 
-#: plugins/texteditor.koplugin/main.lua:135
+#: plugins/texteditor.koplugin/main.lua:138
 msgid "Auto paragraph direction"
 msgstr "自动检测段落方向"
 
-#: plugins/texteditor.koplugin/main.lua:136
+#: plugins/texteditor.koplugin/main.lua:139
 msgid ""
 "Detect the direction of each paragraph in the text: align to the right "
 "paragraphs in languages such as Arabic and Hebrew…, while keeping other "
@@ -12515,11 +12509,11 @@ msgstr ""
 "保持其余段落左对齐。\n"
 "如果关闭，段落的对齐方向会与KOReader的当前语言的默认方向一致。"
 
-#: plugins/texteditor.koplugin/main.lua:147
+#: plugins/texteditor.koplugin/main.lua:150
 msgid "Force paragraph direction LTR"
 msgstr "强制从左向右的段落方向"
 
-#: plugins/texteditor.koplugin/main.lua:148
+#: plugins/texteditor.koplugin/main.lua:151
 msgid ""
 "Force all text to be displayed Left-To-Right (LTR) and aligned to the left.\n"
 "Enable this if you are mostly editing code, HTML, CSS…"
@@ -12527,23 +12521,30 @@ msgstr ""
 "强制所有文字从左到右显示(LTR)并向左对齐。\n"
 "如果你常常编辑代码，如HTML或CSS，则可以开启这个选项。"
 
-#: plugins/texteditor.koplugin/main.lua:160
+#: plugins/texteditor.koplugin/main.lua:164
+#, fuzzy
+msgid "Show keyboard on start"
+msgstr "为所有表格显示边框"
+
+#: plugins/texteditor.koplugin/main.lua:173
 msgid "Enable QR code export"
 msgstr "启用二维码导出"
 
-#: plugins/texteditor.koplugin/main.lua:161
+#: plugins/texteditor.koplugin/main.lua:174
 msgid "Export text to QR code, that can be scanned, for example, by a phone."
 msgstr "输出文本到可以被手机等设备扫描二维码。"
 
-#: plugins/texteditor.koplugin/main.lua:174
-msgid "Select a file to open"
-msgstr "选择要打开的文件"
+#: plugins/texteditor.koplugin/main.lua:187
+#, fuzzy
+msgid "New file"
+msgstr "新文件夹"
 
-#: plugins/texteditor.koplugin/main.lua:182
-msgid "Edit a new empty file"
-msgstr "编辑一个新的空文件"
+#: plugins/texteditor.koplugin/main.lua:195
+#, fuzzy
+msgid "Open file"
+msgstr "打开下一个文件"
 
-#: plugins/texteditor.koplugin/main.lua:209
+#: plugins/texteditor.koplugin/main.lua:222
 msgid ""
 "File path:\n"
 "%1\n"
@@ -12561,7 +12562,7 @@ msgstr ""
 "\n"
 "从历史记录中删除此文本吗？"
 
-#: plugins/texteditor.koplugin/main.lua:212
+#: plugins/texteditor.koplugin/main.lua:225
 msgid ""
 "File path:\n"
 "%1\n"
@@ -12577,7 +12578,7 @@ msgstr ""
 "\n"
 "从历史记录中删除吗？"
 
-#: plugins/texteditor.koplugin/main.lua:285
+#: plugins/texteditor.koplugin/main.lua:298
 msgid ""
 "To start editing a new file, you will have to:\n"
 "\n"
@@ -12595,11 +12596,11 @@ msgstr ""
 "\n"
 "你想要继续吗？"
 
-#: plugins/texteditor.koplugin/main.lua:303
+#: plugins/texteditor.koplugin/main.lua:316
 msgid "Enter filename"
 msgstr "输入文件名"
 
-#: plugins/texteditor.koplugin/main.lua:357
+#: plugins/texteditor.koplugin/main.lua:370
 msgid ""
 "This file does not exist anymore:\n"
 "\n"
@@ -12613,7 +12614,7 @@ msgstr ""
 "\n"
 "你想要新建并继续编辑吗？"
 
-#: plugins/texteditor.koplugin/main.lua:375
+#: plugins/texteditor.koplugin/main.lua:388
 msgid ""
 "This file is not a regular file:\n"
 "\n"
@@ -12623,7 +12624,7 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:392
+#: plugins/texteditor.koplugin/main.lua:405
 msgid ""
 "This file is %2:\n"
 "\n"
@@ -12641,7 +12642,7 @@ msgstr ""
 "\n"
 "打开一个大文件可能需要花费很长时间。"
 
-#: plugins/texteditor.koplugin/main.lua:414
+#: plugins/texteditor.koplugin/main.lua:427
 msgid ""
 "This file can not be created:\n"
 "\n"
@@ -12655,11 +12656,11 @@ msgstr ""
 "\n"
 "原因：%2"
 
-#: plugins/texteditor.koplugin/main.lua:468
-msgid "Check Lua"
-msgstr "检查Lua"
+#: plugins/texteditor.koplugin/main.lua:481
+msgid "Lua check"
+msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:473
+#: plugins/texteditor.koplugin/main.lua:486
 msgid ""
 "Lua syntax check failed:\n"
 "\n"
@@ -12669,40 +12670,40 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:477
+#: plugins/texteditor.koplugin/main.lua:490
 msgid "Lua syntax OK"
 msgstr "Lua 语法检测通过"
 
-#: plugins/texteditor.koplugin/main.lua:485
+#: plugins/texteditor.koplugin/main.lua:498
 msgid "QR"
 msgstr "二维码"
 
-#: plugins/texteditor.koplugin/main.lua:525
+#: plugins/texteditor.koplugin/main.lua:539
 msgid "Text reset to last saved content"
 msgstr "将文本重置为上次保存状态"
 
-#: plugins/texteditor.koplugin/main.lua:535
+#: plugins/texteditor.koplugin/main.lua:549
 msgid "File is read only"
 msgstr "只读文件"
 
-#: plugins/texteditor.koplugin/main.lua:541
-#: plugins/texteditor.koplugin/main.lua:568
-#: plugins/texteditor.koplugin/main.lua:592
+#: plugins/texteditor.koplugin/main.lua:555
+#: plugins/texteditor.koplugin/main.lua:582
+#: plugins/texteditor.koplugin/main.lua:606
 msgid "File saved"
 msgstr "已保存"
 
-#: plugins/texteditor.koplugin/main.lua:543
-#: plugins/texteditor.koplugin/main.lua:552
-#: plugins/texteditor.koplugin/main.lua:570
-#: plugins/texteditor.koplugin/main.lua:594
+#: plugins/texteditor.koplugin/main.lua:557
+#: plugins/texteditor.koplugin/main.lua:566
+#: plugins/texteditor.koplugin/main.lua:584
+#: plugins/texteditor.koplugin/main.lua:608
 msgid "Failed saving file: %1"
 msgstr "保存文件失败：%1"
 
-#: plugins/texteditor.koplugin/main.lua:550
+#: plugins/texteditor.koplugin/main.lua:564
 msgid "Lua syntax OK, file saved"
 msgstr "Lua 语法检测通过，文件已保存"
 
-#: plugins/texteditor.koplugin/main.lua:555
+#: plugins/texteditor.koplugin/main.lua:569
 msgid ""
 "Lua syntax check failed:\n"
 "\n"
@@ -12722,15 +12723,15 @@ msgstr ""
 "\n"
 "%2"
 
-#: plugins/texteditor.koplugin/main.lua:563
+#: plugins/texteditor.koplugin/main.lua:577
 msgid "Do not save"
 msgstr "不要保存"
 
-#: plugins/texteditor.koplugin/main.lua:563
+#: plugins/texteditor.koplugin/main.lua:577
 msgid "Save anyway"
 msgstr "仍然保存"
 
-#: plugins/texteditor.koplugin/main.lua:576
+#: plugins/texteditor.koplugin/main.lua:590
 msgid ""
 "Text content is empty.\n"
 "Do you want to keep this file as empty, or do you prefer to delete it?\n"
@@ -12742,15 +12743,15 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:580
+#: plugins/texteditor.koplugin/main.lua:594
 msgid "Keep empty file"
 msgstr "保留空文件"
 
-#: plugins/texteditor.koplugin/main.lua:585
+#: plugins/texteditor.koplugin/main.lua:599
 msgid "File deleted"
 msgstr "文件已删除"
 
-#: plugins/texteditor.koplugin/main.lua:587
+#: plugins/texteditor.koplugin/main.lua:601
 msgid "Failed deleting file: %1"
 msgstr "删除文件失败: %1"
 
@@ -13129,6 +13130,24 @@ msgstr "点击屏幕右下角"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "点击屏幕右上角"
+
+#~ msgid "Text editor settings"
+#~ msgstr "文本编辑器设置"
+
+#~ msgid "Set text font size"
+#~ msgstr "设置文字字体大小"
+
+#~ msgid "Select font size"
+#~ msgstr "选择字号"
+
+#~ msgid "Select a file to open"
+#~ msgstr "选择要打开的文件"
+
+#~ msgid "Edit a new empty file"
+#~ msgstr "编辑一个新的空文件"
+
+#~ msgid "Check Lua"
+#~ msgstr "检查Lua"
 
 #~ msgid "The directory %1 already exists. Do you want to overwrite it?"
 #~ msgstr "目录 %1 已存在。您要覆盖它吗？"
