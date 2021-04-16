@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-13 22:58+0000\n"
-"PO-Revision-Date: 2021-04-04 01:31+0000\n"
+"PO-Revision-Date: 2021-04-16 20:28+0000\n"
 "Last-Translator: 張修銘 <cges30901@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "koreader/koreader/zh_Hant/>\n"
@@ -707,9 +707,8 @@ msgid "Overwrite"
 msgstr "複寫"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:81
-#, fuzzy
 msgid "No results for '%1'."
-msgstr "「%1」沒有結果"
+msgstr "「%1」沒有結果。"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:90
 msgid "Enter filename to search for"
@@ -1252,17 +1251,15 @@ msgstr "開發者選項"
 #: frontend/apps/filemanager/filemanagermenu.lua:381
 #, fuzzy
 msgid "Clear caches"
-msgstr "清除閱讀器的快取"
+msgstr "清除快取"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:384
-#, fuzzy
 msgid "Clear the cache folder?"
-msgstr "建立新資料夾"
+msgstr "要清除快取資料夾嗎？"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:397
-#, fuzzy
 msgid "Caches cleared. Please restart KOReader."
-msgstr "快取已被清除。請重新啟動 KOReader。"
+msgstr "快取已清除。請重新啟動 KOReader。"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:404
 msgid "Enable debug logging"
@@ -1359,6 +1356,12 @@ msgid ""
 "\n"
 "Tap a book in the search results to open it."
 msgstr ""
+"在目前資料夾或家資料夾及子資料夾用檔案名稱搜尋書籍。\n"
+"\n"
+"搜尋「*」會顯示所有檔案。\n"
+"搜尋字串支援 Lua patterns。\n"
+"\n"
+"在搜尋結果中點選書籍可開啟它。"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:659
 msgid "Open last document"
@@ -3590,7 +3593,6 @@ msgid "Alternative table of contents"
 msgstr "替代目錄"
 
 #: frontend/apps/reader/modules/readertoc.lua:876
-#, fuzzy
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -3602,18 +3604,11 @@ msgid ""
 "heading elements in a user style tweak, so they can be used as ToC items.\n"
 "See Style tweaks → Miscellaneous → Alternative ToC hints."
 msgstr ""
-"長按選單裡的「書籍目錄」可以建立一個替代的書籍目錄。\n"
+"替代目錄可由文件裡的標題 <H1> 至 <H6>產生。\n"
+"如果文件中沒有標題，或是標題全數被忽略， 那麼替代目錄將從文件片段產生，並會指向 EPUB 裡每一個 HTML 檔案的開頭。\n"
 "\n"
-"替代目錄將由文件裡的標題 <H1> 至 <H6>產生， 您可以用這裡提供的調整工具忽略某"
-"些標題。\n"
-"如果文件中沒有標題，或是標題全數被忽略， 那麼替代目錄將從文件片段產生，並會指"
-"向 EPUB 裡每一個 HTML 檔案的開頭。\n"
-"\n"
-"透過使用者樣式調整方式，可設定以非標題性元素做為目錄提示，如此它們就可用來產"
-"生書籍目錄。由於這個方式會因書而異，請參考最末一個調整的範例。\n"
-"\n"
-"在套用這些調整之後，需要長按「書籍目錄」兩次來建立替代書目：第一次長按是要恢"
-"復原本的目錄，第二次長按是重新建立替代目錄。"
+"有些標題可以被忽略，透過使用者樣式調整方式，可設定以非標題性元素做為目錄提示，如此它們就可用來產生書籍目錄。\n"
+"請參閱「樣式表調整」 → 「雜項」 → 「替代性目錄提示」。"
 
 #: frontend/apps/reader/modules/readertoc.lua:888
 msgid ""
@@ -5500,7 +5495,6 @@ msgid "Alt Status Bar"
 msgstr "替代狀態列"
 
 #: frontend/ui/data/creoptions.lua:579
-#, fuzzy
 msgid ""
 "Enable or disable the rendering engine alternative status bar at the top of "
 "the screen. The items displayed can be customized via the main menu.\n"
@@ -5508,10 +5502,9 @@ msgid ""
 "Whether enabled or disabled, KOReader's own status bar at the bottom of the "
 "screen can be toggled by tapping."
 msgstr ""
-"啟用或停用螢幕頂部繪製引擎替代狀態列（此狀態列無法自訂）。\n"
+"啟用或停用螢幕頂部繪製引擎替代狀態列，顯示的項目可在主選單自訂。\n"
 "\n"
-"無論是否啟用，KOReader 在底部的狀態列依然可以通過按一下來切換顯示狀態。底部狀"
-"態欄顯示的項目可以在主選單中自訂。"
+"無論是否啟用，KOReader 在底部的狀態列依然可以通過按一下來切換顯示狀態。"
 
 #: frontend/ui/data/creoptions.lua:585
 msgid "Embedded Style"
@@ -6435,11 +6428,11 @@ msgstr "高度"
 
 #: frontend/ui/data/koptoptions.lua:178
 msgid "Set how the page should be resized to fit the screen."
-msgstr ""
+msgstr "設定頁面要如何調整大小來符合螢幕。"
 
 #: frontend/ui/data/koptoptions.lua:184
 msgid "Rows"
-msgstr ""
+msgstr "列"
 
 #: frontend/ui/data/koptoptions.lua:185
 msgid "Columns"
@@ -6463,17 +6456,15 @@ msgstr "縮放到"
 
 #: frontend/ui/data/koptoptions.lua:263
 msgid "content"
-msgstr ""
+msgstr "內容"
 
 #: frontend/ui/data/koptoptions.lua:263
-#, fuzzy
 msgid "columns"
-msgstr "欄數"
+msgstr "欄"
 
 #: frontend/ui/data/koptoptions.lua:263
-#, fuzzy
 msgid "rows"
-msgstr "瀏覽"
+msgstr "列"
 
 #: frontend/ui/data/koptoptions.lua:271
 msgid "Direction"
@@ -6481,35 +6472,35 @@ msgstr "方向"
 
 #: frontend/ui/data/koptoptions.lua:288
 msgid "Left to Right, Top to Bottom"
-msgstr ""
+msgstr "從左到右，從上到下"
 
 #: frontend/ui/data/koptoptions.lua:289
 msgid "Top to Bottom, Left to Right"
-msgstr ""
+msgstr "從上到下，從左到右"
 
 #: frontend/ui/data/koptoptions.lua:290
 msgid "Left to Right, Bottom to Top"
-msgstr ""
+msgstr "從左到右，從下到上"
 
 #: frontend/ui/data/koptoptions.lua:291
 msgid "Bottom to Top, Left to Right"
-msgstr ""
+msgstr "從下到上，從左到右"
 
 #: frontend/ui/data/koptoptions.lua:292
 msgid "Bottom to Top, Right to Left"
-msgstr ""
+msgstr "從下到上，從右到左"
 
 #: frontend/ui/data/koptoptions.lua:293
 msgid "Right to Left, Bottom to Top"
-msgstr ""
+msgstr "從右到左，從下到上"
 
 #: frontend/ui/data/koptoptions.lua:294
 msgid "Top to Bottom, Right to Left"
-msgstr ""
+msgstr "從上到下，從右到左"
 
 #: frontend/ui/data/koptoptions.lua:295
 msgid "Right to Left, Top to Bottom"
-msgstr ""
+msgstr "從右到左，從上到下"
 
 #: frontend/ui/data/koptoptions.lua:302
 msgid ""
@@ -6836,7 +6827,6 @@ msgid "About"
 msgstr "關於"
 
 #: frontend/ui/elements/common_info_menu_table.lua:48
-#, fuzzy
 msgid ""
 "KOReader %1\n"
 "\n"
@@ -6852,7 +6842,7 @@ msgstr ""
 "\n"
 "以 Affero GPL v3 授權釋出，由自由軟體驅動。\n"
 "\n"
-"http://koreader.rocks/"
+"http://koreader.rocks"
 
 #: frontend/ui/elements/common_info_menu_table.lua:54
 msgid "Report a bug"
@@ -7182,9 +7172,8 @@ msgid "Ask with popup dialog"
 msgstr "開啟對話視窗提問"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:717
-#, fuzzy
 msgid "Screenshot folder"
-msgstr "螢幕保護圖片資料夾"
+msgstr "螢幕擷圖資料夾"
 
 #: frontend/ui/elements/file_ext_assoc.lua:40
 msgid "Enable all"
@@ -7545,14 +7534,12 @@ msgid "Screensaver message"
 msgstr "螢幕保護的文字訊息"
 
 #: frontend/ui/elements/screensaver_menu.lua:126
-#, fuzzy
 msgid "Covers and images settings"
-msgstr "拉伸封面與圖片來匹配螢幕"
+msgstr "封面與圖片設定"
 
 #: frontend/ui/elements/screensaver_menu.lua:129
-#, fuzzy
 msgid "Black background behind covers and images"
-msgstr "將圖片與文字訊息的背景設為空白"
+msgstr "將封面與圖片的背景設為黑色"
 
 #: frontend/ui/elements/screensaver_menu.lua:138
 #, fuzzy
