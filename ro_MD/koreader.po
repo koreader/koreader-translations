@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-27 19:00+0000\n"
+"POT-Creation-Date: 2021-04-30 04:05+0000\n"
 "PO-Revision-Date: 2021-04-22 14:38+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Moldavian <https://hosted.weblate.org/projects/koreader/"
@@ -146,8 +146,8 @@ msgstr ""
 #: frontend/apps/cloudstorage/ftp.lua:122
 #: frontend/apps/cloudstorage/webdav.lua:107
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:96
-#: frontend/apps/filemanager/filemanager.lua:312
-#: frontend/apps/filemanager/filemanager.lua:594
+#: frontend/apps/filemanager/filemanager.lua:321
+#: frontend/apps/filemanager/filemanager.lua:605
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:112
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
@@ -234,8 +234,8 @@ msgstr "Editează"
 #: frontend/apps/cloudstorage/cloudstorage.lua:395
 #: frontend/apps/filemanager/filemanagerhistory.lua:79
 #: frontend/apps/filemanager/filemanagerhistory.lua:85
-#: frontend/apps/filemanager/filemanager.lua:287
-#: frontend/apps/filemanager/filemanager.lua:292
+#: frontend/apps/filemanager/filemanager.lua:295
+#: frontend/apps/filemanager/filemanager.lua:302
 #: frontend/apps/filemanager/filemanagershortcuts.lua:149
 #: frontend/apps/reader/modules/readerhighlight.lua:590
 #: frontend/apps/reader/modules/readerstatus.lua:205
@@ -531,7 +531,7 @@ msgstr "Adaugă cont WebDAV"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:97
-#: frontend/apps/filemanager/filemanager.lua:400 frontend/dispatcher.lua:115
+#: frontend/apps/filemanager/filemanager.lua:411 frontend/dispatcher.lua:115
 msgid "Book information"
 msgstr "Informații carte"
 
@@ -657,23 +657,23 @@ msgstr "Elimină din colecție"
 
 #. @translators This is the script's programming language (e.g., shell or python)
 #: frontend/apps/filemanager/filemanagercollection.lua:101
-#: frontend/apps/filemanager/filemanager.lua:344
+#: frontend/apps/filemanager/filemanager.lua:355
 msgid "Execute %1 script"
 msgstr "Execută script %1"
 
 #. @translators %1 is the script's programming language (e.g., shell or python), %2 is the filename
 #: frontend/apps/filemanager/filemanagercollection.lua:107
-#: frontend/apps/filemanager/filemanager.lua:350
+#: frontend/apps/filemanager/filemanager.lua:361
 msgid "Running %1 script %2…"
 msgstr "Se rulează scriptul %1 %2…"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:115
-#: frontend/apps/filemanager/filemanager.lua:365
+#: frontend/apps/filemanager/filemanager.lua:376
 msgid "The script exited successfully."
 msgstr "Scriptul s-a terminat cu succes."
 
 #: frontend/apps/filemanager/filemanagercollection.lua:119
-#: frontend/apps/filemanager/filemanager.lua:370
+#: frontend/apps/filemanager/filemanager.lua:381
 msgid "The script returned a non-zero status code: %1!"
 msgstr "Scriptul a returnat un cod diferit de zero: %1!"
 
@@ -695,7 +695,7 @@ msgid "Overwrite existing HTML file?"
 msgstr "Suprascrii fișierul HTML existent?"
 
 #: frontend/apps/filemanager/filemanagerconverter.lua:90
-#: frontend/apps/filemanager/filemanager.lua:910
+#: frontend/apps/filemanager/filemanager.lua:923
 #: frontend/apps/reader/modules/readerdictionary.lua:956
 #: plugins/opds.koplugin/opdsbrowser.lua:611
 msgid "Overwrite"
@@ -728,12 +728,12 @@ msgid "History"
 msgstr "Istoric"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:52
-#: frontend/apps/filemanager/filemanager.lua:261
+#: frontend/apps/filemanager/filemanager.lua:265
 msgid "Purge .sdr"
 msgstr "Curăță .sdr"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:57
-#: frontend/apps/filemanager/filemanager.lua:265
+#: frontend/apps/filemanager/filemanager.lua:269
 msgid ""
 "Purge .sdr to reset settings for this document?\n"
 "\n"
@@ -744,7 +744,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:58
-#: frontend/apps/filemanager/filemanager.lua:266
+#: frontend/apps/filemanager/filemanager.lua:270
 #: plugins/coverbrowser.koplugin/main.lua:440
 msgid "Purge"
 msgstr "Curăță"
@@ -754,12 +754,10 @@ msgid "Remove from history"
 msgstr "Șterge din istoric"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:84
-#: frontend/apps/filemanager/filemanager.lua:291
 msgid "Are you sure that you want to delete this file?\n"
 msgstr "Ești sigur că dorești să ștergi acest fișier?\n"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:84
-#: frontend/apps/filemanager/filemanager.lua:291
 msgid "If you delete a file, it is permanently lost."
 msgstr "Dacă ștergi un fișier, va fi pierdut definitiv."
 
@@ -780,58 +778,93 @@ msgctxt "File"
 msgid "Copy"
 msgstr "Copiază"
 
-#: frontend/apps/filemanager/filemanager.lua:253
+#: frontend/apps/filemanager/filemanager.lua:251
+#, fuzzy
+msgid ""
+"Copied to clipboard:\n"
+"%1"
+msgstr "Text CSS copiat în clipboard"
+
+#: frontend/apps/filemanager/filemanager.lua:257
 msgctxt "File"
 msgid "Paste"
 msgstr "Lipește"
 
-#: frontend/apps/filemanager/filemanager.lua:279
+#: frontend/apps/filemanager/filemanager.lua:283
 msgid "Cut"
 msgstr "Decupează"
 
-#: frontend/apps/filemanager/filemanager.lua:303
-#: frontend/apps/filemanager/filemanager.lua:319
+#: frontend/apps/filemanager/filemanager.lua:289
+#, fuzzy
+msgid ""
+"Cut to clipboard:\n"
+"%1"
+msgstr "QR din clipboard"
+
+#: frontend/apps/filemanager/filemanager.lua:300
+#, fuzzy
+msgid ""
+"Delete file?\n"
+"%1\n"
+"If you delete a file, it is permanently lost."
+msgstr "Dacă ștergi un fișier, va fi pierdut definitiv."
+
+#: frontend/apps/filemanager/filemanager.lua:301
+#, fuzzy
+msgid ""
+"Delete folder?\n"
+"%1\n"
+"If you delete a folder, its content is permanently lost."
+msgstr "Dacă ștergi un fișier, va fi pierdut definitiv."
+
+#: frontend/apps/filemanager/filemanager.lua:312
+#: frontend/apps/filemanager/filemanager.lua:328
 #: frontend/apps/reader/modules/readerbookmark.lua:647
 msgid "Rename"
 msgstr "Redenumește"
 
-#: frontend/apps/filemanager/filemanager.lua:308
+#: frontend/apps/filemanager/filemanager.lua:317
 msgid "Rename file"
 msgstr "Redenumește fișier"
 
-#: frontend/apps/filemanager/filemanager.lua:383
+#: frontend/apps/filemanager/filemanager.lua:317
+#, fuzzy
+msgid "Rename folder"
+msgstr "Redenumește fișier"
+
+#: frontend/apps/filemanager/filemanager.lua:394
 msgid "Open with…"
 msgstr "Deschide cu…"
 
-#: frontend/apps/filemanager/filemanager.lua:390
+#: frontend/apps/filemanager/filemanager.lua:401
 #: plugins/texteditor.koplugin/main.lua:90
 #: plugins/texteditor.koplugin/_meta.lua:4
 msgid "Text editor"
 msgstr "Editor text"
 
-#: frontend/apps/filemanager/filemanager.lua:412
+#: frontend/apps/filemanager/filemanager.lua:423
 msgid "Remove from favorites"
 msgstr "Elimină din favorite"
 
-#: frontend/apps/filemanager/filemanager.lua:414
+#: frontend/apps/filemanager/filemanager.lua:425
 msgid "Add to favorites"
 msgstr "Adaugă la favorite"
 
-#: frontend/apps/filemanager/filemanager.lua:431
+#: frontend/apps/filemanager/filemanager.lua:442
 msgid "Convert"
 msgstr "Convertește"
 
-#: frontend/apps/filemanager/filemanager.lua:445
-#: frontend/apps/filemanager/filemanager.lua:630
+#: frontend/apps/filemanager/filemanager.lua:456
+#: frontend/apps/filemanager/filemanager.lua:641
 msgid "Set as HOME folder"
 msgstr "Setează ca dosar „Acasă”"
 
-#: frontend/apps/filemanager/filemanager.lua:551
+#: frontend/apps/filemanager/filemanager.lua:562
 #: frontend/apps/reader/modules/readerback.lua:182
 msgid "Exit KOReader?"
 msgstr "Ieși din KOReader?"
 
-#: frontend/apps/filemanager/filemanager.lua:552
+#: frontend/apps/filemanager/filemanager.lua:563
 #: frontend/apps/filemanager/filemanagermenu.lua:682
 #: frontend/apps/filemanager/filemanagermenu.lua:688
 #: frontend/apps/reader/modules/readerback.lua:183
@@ -840,270 +873,339 @@ msgstr "Ieși din KOReader?"
 msgid "Exit"
 msgstr "Ieșire"
 
-#: frontend/apps/filemanager/filemanager.lua:585
+#: frontend/apps/filemanager/filemanager.lua:596
+#: frontend/apps/filemanager/filemanager.lua:600
 msgid "New folder"
 msgstr "Dosar nou"
 
-#: frontend/apps/filemanager/filemanager.lua:589
-msgid "Create new folder"
-msgstr "Crează un dosar nou"
-
-#: frontend/apps/filemanager/filemanager.lua:600 frontend/ui/wikipedia.lua:1334
+#: frontend/apps/filemanager/filemanager.lua:611 frontend/ui/wikipedia.lua:1334
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 #: plugins/statistics.koplugin/main.lua:293
 msgid "Create"
 msgstr "Crează"
 
-#: frontend/apps/filemanager/filemanager.lua:619
+#: frontend/apps/filemanager/filemanager.lua:630
 msgid "Paste"
 msgstr "Lipește"
 
-#: frontend/apps/filemanager/filemanager.lua:639
+#: frontend/apps/filemanager/filemanager.lua:650
 msgid "Go to HOME folder"
 msgstr "Mergi la dosarul „ACASĂ”"
 
-#: frontend/apps/filemanager/filemanager.lua:648
+#: frontend/apps/filemanager/filemanager.lua:659
 msgid "Open random document"
 msgstr "Deschide un document aleator"
 
-#: frontend/apps/filemanager/filemanager.lua:657
+#: frontend/apps/filemanager/filemanager.lua:668
 #: frontend/apps/filemanager/filemanagershortcuts.lua:234
 #: frontend/dispatcher.lua:93
 msgid "Folder shortcuts"
 msgstr "Scurtături dosare"
 
-#: frontend/apps/filemanager/filemanager.lua:669
+#: frontend/apps/filemanager/filemanager.lua:680
 msgid "Import files here"
 msgstr "Importă fișierele aici"
 
-#: frontend/apps/filemanager/filemanager.lua:685
+#: frontend/apps/filemanager/filemanager.lua:696
 msgid "Switch to SDCard"
 msgstr "Treci la Card SD"
 
-#: frontend/apps/filemanager/filemanager.lua:687
+#: frontend/apps/filemanager/filemanager.lua:698
 msgid "Switch to internal storage"
 msgstr "Treci la stocare internă"
 
-#: frontend/apps/filemanager/filemanager.lua:801
+#: frontend/apps/filemanager/filemanager.lua:813
 msgid "Set '%1' as HOME folder?"
 msgstr "Setezi '%1' ca dosar „ACASĂ”?"
 
-#: frontend/apps/filemanager/filemanager.lua:802
+#: frontend/apps/filemanager/filemanager.lua:814
 msgid "Set as HOME"
 msgstr "Setare ca „Acasă”"
 
-#: frontend/apps/filemanager/filemanager.lua:814
+#: frontend/apps/filemanager/filemanager.lua:826
 msgid "Do you want to open %1?"
 msgstr "Dorești să deschizi %1?"
 
-#: frontend/apps/filemanager/filemanager.lua:815
+#: frontend/apps/filemanager/filemanager.lua:827
 #: frontend/ui/widget/filechooser.lua:524
 msgid "Open"
 msgstr "Deschide"
 
 #. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:822
+#: frontend/apps/filemanager/filemanager.lua:834
 msgid "Another"
 msgstr "Altul"
 
-#: frontend/apps/filemanager/filemanager.lua:830
+#: frontend/apps/filemanager/filemanager.lua:842
 msgid "File not found"
 msgstr "Fișierul nu a fost găsit"
 
-#: frontend/apps/filemanager/filemanager.lua:859
-msgid "Copied to: %1"
+#: frontend/apps/filemanager/filemanager.lua:872
+#, fuzzy
+msgid ""
+"Copied:\n"
+"%1\n"
+"to:\n"
+"%2"
 msgstr "Copiat în: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:864
-msgid "An error occurred while trying to copy %1"
-msgstr "A apărut o eroare în încercarea de a copia %1"
+#: frontend/apps/filemanager/filemanager.lua:877
+#, fuzzy
+msgid ""
+"Failed to copy:\n"
+"%1\n"
+"to:\n"
+"%2"
+msgstr "Nu s-a putut redenumi %1 în %2"
 
-#: frontend/apps/filemanager/filemanager.lua:881
-msgid "Moved to: %1"
+#: frontend/apps/filemanager/filemanager.lua:894
+#, fuzzy
+msgid ""
+"Moved:\n"
+"%1\n"
+"to:\n"
+"%2"
 msgstr "Mutat în: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:886
-msgid "An error occurred while trying to move %1"
-msgstr "A apărut o eroare în încercarea de a muta %1"
+#: frontend/apps/filemanager/filemanager.lua:899
+#, fuzzy
+msgid ""
+"Failed to move:\n"
+"%1\n"
+"to:\n"
+"%2"
+msgstr "Nu s-a putut redenumi %1 în %2"
 
-#: frontend/apps/filemanager/filemanager.lua:903
-#: plugins/opds.koplugin/opdsbrowser.lua:610
-msgid "The file %1 already exists. Do you want to overwrite it?"
-msgstr "Fișierul %1 există deja. Dorești să-l suprascrii?"
+#: frontend/apps/filemanager/filemanager.lua:916
+#, fuzzy
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Overwrite file?"
+msgstr "Fișierul deja există. Suprascrieți?"
 
-#: frontend/apps/filemanager/filemanager.lua:905
-msgid "The folder %1 already exists. Overwrite folder?"
+#: frontend/apps/filemanager/filemanager.lua:918
+#, fuzzy
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"Overwrite folder?"
 msgstr "Dosarul %1 există deja. Suprascri dosarul?"
 
-#: frontend/apps/filemanager/filemanager.lua:931
+#: frontend/apps/filemanager/filemanager.lua:944
+#, fuzzy
 msgid ""
-"Folder created:\n"
+"Created folder:\n"
+"%1"
+msgstr "Crează un dosar nou"
+
+#: frontend/apps/filemanager/filemanager.lua:949
+#, fuzzy
+msgid ""
+"Failed to create folder:\n"
 "%1"
 msgstr ""
-"Dosarul a fost creat:\n"
+"Titlu pentru dosarul selectat:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:933
-msgid "The folder has not been created."
-msgstr "Dosarul nu a fost creat."
+#: frontend/apps/filemanager/filemanager.lua:960
+#, fuzzy
+msgid ""
+"File not found:\n"
+"%1"
+msgstr "Fișierul nu a fost găsit"
 
-#: frontend/apps/filemanager/filemanager.lua:946
-msgid "File %1 not found"
-msgstr "Fișierul %1 nu a fost găsit"
+#: frontend/apps/filemanager/filemanager.lua:985
+#, fuzzy
+msgid ""
+"Deleted folder:\n"
+"%1"
+msgstr "Fișier șters: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:970
-msgid "Deleted %1"
-msgstr "Șters %1"
+#: frontend/apps/filemanager/filemanager.lua:986
+#, fuzzy
+msgid ""
+"Deleted file:\n"
+"%1"
+msgstr "Fișier șters: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:975
-msgid "An error occurred while trying to delete %1"
-msgstr "A apărut o eroare în încercarea de a șterge %1"
+#: frontend/apps/filemanager/filemanager.lua:991
+#, fuzzy
+msgid ""
+"Failed to delete:\n"
+"%1"
+msgstr "A eșuat ștergerea fișierului %1"
 
-#: frontend/apps/filemanager/filemanager.lua:999
-msgid "Renamed from %1 to %2"
+#: frontend/apps/filemanager/filemanager.lua:1016
+#, fuzzy
+msgid ""
+"Renamed file:\n"
+"%1\n"
+"to:\n"
+"%2"
 msgstr "S-a redenumit %1 în %2"
 
-#: frontend/apps/filemanager/filemanager.lua:1005
+#: frontend/apps/filemanager/filemanager.lua:1021
+#, fuzzy
 msgid ""
-"Failed to move history data of %1 to %2.\n"
+"Renamed file:\n"
+"%1\n"
+"to:\n"
+"%2\n"
+"\n"
+"Failed to move history data.\n"
 "The reading history may be lost."
 msgstr ""
 "Nu s-a putut muta istoricul %1 în %2.\n"
 "Istoricul de citire ar putea fi pierdut."
 
-#: frontend/apps/filemanager/filemanager.lua:1013
-msgid "Failed to rename from %1 to %2"
+#: frontend/apps/filemanager/filemanager.lua:1028
+#, fuzzy
+msgid ""
+"Renamed folder:\n"
+"%1\n"
+"to:\n"
+"%2"
+msgstr "S-a redenumit %1 în %2"
+
+#: frontend/apps/filemanager/filemanager.lua:1034
+#, fuzzy
+msgid ""
+"Failed to rename:\n"
+"%1\n"
+"to:\n"
+"%2"
 msgstr "Nu s-a putut redenumi %1 în %2"
 
-#: frontend/apps/filemanager/filemanager.lua:1022
+#: frontend/apps/filemanager/filemanager.lua:1044
 msgid "filename"
 msgstr "nume fișier"
 
-#: frontend/apps/filemanager/filemanager.lua:1022
+#: frontend/apps/filemanager/filemanager.lua:1044
 msgid "Sort by filename"
 msgstr "Ordonează după nume fișier"
 
-#: frontend/apps/filemanager/filemanager.lua:1023
+#: frontend/apps/filemanager/filemanager.lua:1045
 msgid "numeric"
 msgstr "numeric"
 
-#: frontend/apps/filemanager/filemanager.lua:1023
+#: frontend/apps/filemanager/filemanager.lua:1045
 msgid "Sort by filename (natural sorting)"
 msgstr "Ordonează după nume fișier (ordonare naturală)"
 
-#: frontend/apps/filemanager/filemanager.lua:1024
+#: frontend/apps/filemanager/filemanager.lua:1046
 msgid "name mixed"
 msgstr "nume combinat"
 
-#: frontend/apps/filemanager/filemanager.lua:1024
+#: frontend/apps/filemanager/filemanager.lua:1046
 msgid "Sort by name – mixed files and folders"
 msgstr "Ordonează după nume – fișiere și directoare"
 
-#: frontend/apps/filemanager/filemanager.lua:1025
+#: frontend/apps/filemanager/filemanager.lua:1047
 msgid "date read"
 msgstr "data citirii"
 
-#: frontend/apps/filemanager/filemanager.lua:1025
+#: frontend/apps/filemanager/filemanager.lua:1047
 msgid "Sort by last read date"
 msgstr "Ordonează după data citirii"
 
-#: frontend/apps/filemanager/filemanager.lua:1026
+#: frontend/apps/filemanager/filemanager.lua:1048
 msgid "date added"
 msgstr "data adăugării"
 
-#: frontend/apps/filemanager/filemanager.lua:1026
+#: frontend/apps/filemanager/filemanager.lua:1048
 msgid "Sort by date added"
 msgstr "Ordonează după data adăugării"
 
-#: frontend/apps/filemanager/filemanager.lua:1027
+#: frontend/apps/filemanager/filemanager.lua:1049
 msgid "date modified"
 msgstr "data modificării"
 
-#: frontend/apps/filemanager/filemanager.lua:1027
+#: frontend/apps/filemanager/filemanager.lua:1049
 msgid "Sort by date modified"
 msgstr "Ordonează după data modificării"
 
-#: frontend/apps/filemanager/filemanager.lua:1028
+#: frontend/apps/filemanager/filemanager.lua:1050
 msgid "size"
 msgstr "dimensiune"
 
-#: frontend/apps/filemanager/filemanager.lua:1028
+#: frontend/apps/filemanager/filemanager.lua:1050
 msgid "Sort by size"
 msgstr "Ordonează după dimensiune"
 
-#: frontend/apps/filemanager/filemanager.lua:1029
+#: frontend/apps/filemanager/filemanager.lua:1051
 msgid "type"
 msgstr "tip"
 
-#: frontend/apps/filemanager/filemanager.lua:1029
+#: frontend/apps/filemanager/filemanager.lua:1051
 msgid "Sort by type"
 msgstr "Ordonează după tip"
 
-#: frontend/apps/filemanager/filemanager.lua:1030
+#: frontend/apps/filemanager/filemanager.lua:1052
 msgid "percent – unopened first"
 msgstr "procent – nedeschise primele"
 
-#: frontend/apps/filemanager/filemanager.lua:1030
+#: frontend/apps/filemanager/filemanager.lua:1052
 msgid "Sort by percent – unopened first"
 msgstr "Ordonează după procent – nedeschise primele"
 
-#: frontend/apps/filemanager/filemanager.lua:1031
+#: frontend/apps/filemanager/filemanager.lua:1053
 msgid "percent – unopened last"
 msgstr "procent – nedeschise ultimele"
 
-#: frontend/apps/filemanager/filemanager.lua:1031
+#: frontend/apps/filemanager/filemanager.lua:1053
 msgid "Sort by percent – unopened last"
 msgstr "Ordonează după procent – nedeschise ultimele"
 
-#: frontend/apps/filemanager/filemanager.lua:1047
+#: frontend/apps/filemanager/filemanager.lua:1069
 msgid "Sort by percent"
 msgstr "Ordonează după procent"
 
-#: frontend/apps/filemanager/filemanager.lua:1053
+#: frontend/apps/filemanager/filemanager.lua:1075
 msgid "Sort by: %1"
 msgstr "Ordonează după: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:1084
+#: frontend/apps/filemanager/filemanager.lua:1106
 msgid "file browser"
 msgstr "navigator fișiere"
 
-#: frontend/apps/filemanager/filemanager.lua:1084
+#: frontend/apps/filemanager/filemanager.lua:1106
 msgid "Start with file browser"
 msgstr "Pornește cu navigatorul de fișiere"
 
-#: frontend/apps/filemanager/filemanager.lua:1085
+#: frontend/apps/filemanager/filemanager.lua:1107
 msgid "history"
 msgstr "istoric"
 
-#: frontend/apps/filemanager/filemanager.lua:1085
+#: frontend/apps/filemanager/filemanager.lua:1107
 msgid "Start with history"
 msgstr "Pornește cu istoric"
 
-#: frontend/apps/filemanager/filemanager.lua:1086
+#: frontend/apps/filemanager/filemanager.lua:1108
 msgid "favorites"
 msgstr "favorite"
 
-#: frontend/apps/filemanager/filemanager.lua:1086
+#: frontend/apps/filemanager/filemanager.lua:1108
 msgid "Start with favorites"
 msgstr "Pornește cu favoritele"
 
-#: frontend/apps/filemanager/filemanager.lua:1087
+#: frontend/apps/filemanager/filemanager.lua:1109
 msgid "folder shortcuts"
 msgstr "scurtături dosare"
 
-#: frontend/apps/filemanager/filemanager.lua:1087
+#: frontend/apps/filemanager/filemanager.lua:1109
 msgid "Start with folder shortcuts"
 msgstr "Pornește cu scurtături dosare"
 
-#: frontend/apps/filemanager/filemanager.lua:1088
+#: frontend/apps/filemanager/filemanager.lua:1110
 msgid "last file"
 msgstr "ultimul fișier"
 
-#: frontend/apps/filemanager/filemanager.lua:1088
+#: frontend/apps/filemanager/filemanager.lua:1110
 msgid "Start with last file"
 msgstr "Pornește cu ultimul fișier"
 
-#: frontend/apps/filemanager/filemanager.lua:1105
+#: frontend/apps/filemanager/filemanager.lua:1127
 msgid "Start with: %1"
 msgstr "Pornește cu: %1"
 
@@ -1292,7 +1394,7 @@ msgstr "Dezactivează forțarea adîncimii pixelilor de 8 biți"
 #: frontend/apps/filemanager/filemanagermenu.lua:566
 #: frontend/apps/filemanager/filemanagermenu.lua:582
 #: frontend/apps/filemanager/filemanagermenu.lua:595
-#: frontend/pluginloader.lua:180
+#: frontend/pluginloader.lua:185
 #: frontend/ui/elements/common_settings_menu_table.lua:163
 #: frontend/ui/elements/common_settings_menu_table.lua:177
 #: frontend/ui/elements/font_settings.lua:82
@@ -1639,11 +1741,11 @@ msgid "Chapter marks"
 msgstr "Marcatori capitol"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:258
-#: frontend/ui/data/creoptions.lua:73 frontend/ui/data/creoptions.lua:149
-#: frontend/ui/data/creoptions.lua:305 frontend/ui/data/creoptions.lua:534
-#: frontend/ui/data/creoptions.lua:549 frontend/ui/data/creoptions.lua:572
-#: frontend/ui/data/creoptions.lua:586 frontend/ui/data/creoptions.lua:599
-#: frontend/ui/data/creoptions.lua:628 frontend/ui/data/koptoptions.lua:339
+#: frontend/ui/data/creoptions.lua:104 frontend/ui/data/creoptions.lua:180
+#: frontend/ui/data/creoptions.lua:336 frontend/ui/data/creoptions.lua:588
+#: frontend/ui/data/creoptions.lua:603 frontend/ui/data/creoptions.lua:626
+#: frontend/ui/data/creoptions.lua:640 frontend/ui/data/creoptions.lua:653
+#: frontend/ui/data/creoptions.lua:682 frontend/ui/data/koptoptions.lua:339
 #: frontend/ui/data/koptoptions.lua:448 frontend/ui/data/koptoptions.lua:489
 #: frontend/ui/data/koptoptions.lua:499 frontend/ui/data/koptoptions.lua:540
 #: frontend/ui/data/koptoptions.lua:595
@@ -1802,7 +1904,7 @@ msgid "Use external dictionary"
 msgstr "Folosește un dicționar extern"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:380
-#: frontend/ui/data/creoptions.lua:470 frontend/ui/data/koptoptions.lua:87
+#: frontend/ui/data/creoptions.lua:501 frontend/ui/data/koptoptions.lua:87
 #: frontend/ui/data/koptoptions.lua:325
 msgid "none"
 msgstr "fără"
@@ -2463,7 +2565,7 @@ msgid "thin"
 msgstr "subțiri"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1592
-#: frontend/ui/data/creoptions.lua:436 frontend/ui/data/koptoptions.lua:107
+#: frontend/ui/data/creoptions.lua:467 frontend/ui/data/koptoptions.lua:107
 #: frontend/ui/data/koptoptions.lua:325 frontend/ui/data/koptoptions.lua:350
 #: frontend/ui/data/koptoptions.lua:570
 msgid "medium"
@@ -4781,7 +4883,7 @@ msgstr "Dorești să salvezi acest document?"
 msgid "Don't save"
 msgstr "Nu salva"
 
-#: frontend/apps/reader/readerui.lua:738
+#: frontend/apps/reader/readerui.lua:739
 msgid ""
 "Failed recognizing or parsing this file: unsupported or invalid document.\n"
 "KOReader will exit now."
@@ -5264,49 +5366,104 @@ msgstr "învechit"
 msgid "Long-press to select folder"
 msgstr "Apasă lung pentru a selecta dosarul"
 
-#: frontend/ui/data/creoptions.lua:24 frontend/ui/data/koptoptions.lua:31
+#: frontend/ui/data/creoptions.lua:21
+#, fuzzy
+msgctxt "Font weight class"
+msgid "Thin"
+msgstr "Subțire"
+
+#: frontend/ui/data/creoptions.lua:22
+#, fuzzy
+msgctxt "Font weight class"
+msgid "Extra-light"
+msgstr "dreapta"
+
+#: frontend/ui/data/creoptions.lua:23
+#, fuzzy
+msgctxt "Font weight class"
+msgid "Light"
+msgstr "Luminează"
+
+#: frontend/ui/data/creoptions.lua:24
+#, fuzzy
+msgctxt "Font weight class"
+msgid "Regular"
+msgstr "Normale"
+
+#: frontend/ui/data/creoptions.lua:25
+#, fuzzy
+msgctxt "Font weight class"
+msgid "Medium"
+msgstr "Mediu"
+
+#: frontend/ui/data/creoptions.lua:26
+#, fuzzy
+msgctxt "Font weight class"
+msgid "Semi-bold"
+msgstr "aldine"
+
+#: frontend/ui/data/creoptions.lua:27
+msgctxt "Font weight class"
+msgid "Bold"
+msgstr ""
+
+#: frontend/ui/data/creoptions.lua:28
+msgctxt "Font weight class"
+msgid "Extra-bold"
+msgstr ""
+
+#: frontend/ui/data/creoptions.lua:29
+msgctxt "Font weight class"
+msgid "Black"
+msgstr ""
+
+#: frontend/ui/data/creoptions.lua:34 plugins/statistics.koplugin/main.lua:1746
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: frontend/ui/data/creoptions.lua:55 frontend/ui/data/koptoptions.lua:31
 #: frontend/ui/elements/screen_rotation_menu_table.lua:10
 msgid "Rotation"
 msgstr "Rotație"
 
-#: frontend/ui/data/creoptions.lua:61 frontend/ui/data/koptoptions.lua:68
+#: frontend/ui/data/creoptions.lua:92 frontend/ui/data/koptoptions.lua:68
 #: frontend/ui/elements/screen_rotation_menu_table.lua:66
 msgctxt "Rotation"
 msgid "⤹ 90°"
 msgstr "⤹ 90°"
 
-#: frontend/ui/data/creoptions.lua:61 frontend/ui/data/koptoptions.lua:68
+#: frontend/ui/data/creoptions.lua:92 frontend/ui/data/koptoptions.lua:68
 #: frontend/ui/elements/screen_rotation_menu_table.lua:86
 msgctxt "Rotation"
 msgid "↑ 0°"
 msgstr "↑ 0°"
 
-#: frontend/ui/data/creoptions.lua:61 frontend/ui/data/koptoptions.lua:68
+#: frontend/ui/data/creoptions.lua:92 frontend/ui/data/koptoptions.lua:68
 #: frontend/ui/elements/screen_rotation_menu_table.lua:106
 msgctxt "Rotation"
 msgid "⤸ 90°"
 msgstr "⤸ 90°"
 
-#: frontend/ui/data/creoptions.lua:61 frontend/ui/data/koptoptions.lua:68
+#: frontend/ui/data/creoptions.lua:92 frontend/ui/data/koptoptions.lua:68
 #: frontend/ui/elements/screen_rotation_menu_table.lua:126
 msgctxt "Rotation"
 msgid "↓ 180°"
 msgstr "↓ 180°"
 
-#: frontend/ui/data/creoptions.lua:72
+#: frontend/ui/data/creoptions.lua:103
 msgid "Two Columns"
 msgstr "Două Coloane"
 
-#: frontend/ui/data/creoptions.lua:73 frontend/ui/data/creoptions.lua:149
-#: frontend/ui/data/creoptions.lua:572 frontend/ui/data/creoptions.lua:586
-#: frontend/ui/data/creoptions.lua:599 frontend/ui/data/creoptions.lua:628
+#: frontend/ui/data/creoptions.lua:104 frontend/ui/data/creoptions.lua:180
+#: frontend/ui/data/creoptions.lua:626 frontend/ui/data/creoptions.lua:640
+#: frontend/ui/data/creoptions.lua:653 frontend/ui/data/creoptions.lua:682
 #: frontend/ui/data/koptoptions.lua:339 frontend/ui/data/koptoptions.lua:448
 #: frontend/ui/data/koptoptions.lua:489 frontend/ui/data/koptoptions.lua:499
 #: frontend/ui/data/koptoptions.lua:540 frontend/ui/data/koptoptions.lua:595
 msgid "on"
 msgstr "activat"
 
-#: frontend/ui/data/creoptions.lua:94
+#: frontend/ui/data/creoptions.lua:125
 msgid ""
 "Render the document on half the screen width and display two pages at once "
 "with a single page number. This makes it look like two columns.\n"
@@ -5319,19 +5476,19 @@ msgstr ""
 "Acest lucru este dezactivat în modul derulare. Comutarea din modul pagină cu "
 "două coloane în modul derulare va randa din nou documentul."
 
-#: frontend/ui/data/creoptions.lua:104
+#: frontend/ui/data/creoptions.lua:135
 msgid "L/R Margins"
 msgstr "Margini st/dr"
 
-#: frontend/ui/data/creoptions.lua:135
+#: frontend/ui/data/creoptions.lua:166
 msgid "Left/Right Margins"
 msgstr "Margini st/dr"
 
-#: frontend/ui/data/creoptions.lua:148
+#: frontend/ui/data/creoptions.lua:179
 msgid "Sync T/B Margins"
 msgstr "Marg. s/j la fel"
 
-#: frontend/ui/data/creoptions.lua:157
+#: frontend/ui/data/creoptions.lua:188
 msgid ""
 "Keep top and bottom margins synchronized.\n"
 "- 'off' allows different top and bottom margins.\n"
@@ -5348,29 +5505,29 @@ msgstr ""
 "În meniul de sus → Setări → Bara de stare, poți alege dacă marginea de jos "
 "ține cont de bara de stare sau de marginea fizică a ecranului."
 
-#: frontend/ui/data/creoptions.lua:165
+#: frontend/ui/data/creoptions.lua:196
 msgid "Top Margin"
 msgstr "Margine sus"
 
-#: frontend/ui/data/creoptions.lua:199 frontend/ui/data/creoptions.lua:249
+#: frontend/ui/data/creoptions.lua:230 frontend/ui/data/creoptions.lua:280
 msgid "Top/Bottom Margins"
 msgstr "Margini sus/jos"
 
-#: frontend/ui/data/creoptions.lua:202 frontend/ui/data/creoptions.lua:252
+#: frontend/ui/data/creoptions.lua:233 frontend/ui/data/creoptions.lua:283
 #: frontend/ui/elements/screensaver_menu.lua:210
 msgid "Top"
 msgstr "Sus"
 
-#: frontend/ui/data/creoptions.lua:207 frontend/ui/data/creoptions.lua:257
+#: frontend/ui/data/creoptions.lua:238 frontend/ui/data/creoptions.lua:288
 #: frontend/ui/elements/screensaver_menu.lua:228
 msgid "Bottom"
 msgstr "Jos"
 
-#: frontend/ui/data/creoptions.lua:216
+#: frontend/ui/data/creoptions.lua:247
 msgid "Bottom Margin"
 msgstr "Margine jos"
 
-#: frontend/ui/data/creoptions.lua:245
+#: frontend/ui/data/creoptions.lua:276
 msgid ""
 "In the top menu → Settings → Status bar, you can choose whether the bottom "
 "margin applies from the bottom of the screen, or from above the status bar."
@@ -5378,20 +5535,20 @@ msgstr ""
 "În meniul de sus → Seări → Bara de stare, poți alege dacă marginea de jos se "
 "aplică de la marginea de jos a ecranului sau de deasupra barei de stare."
 
-#: frontend/ui/data/creoptions.lua:271 frontend/ui/data/koptoptions.lua:312
+#: frontend/ui/data/creoptions.lua:302 frontend/ui/data/koptoptions.lua:312
 msgid "View Mode"
 msgstr "Vedere"
 
-#: frontend/ui/data/creoptions.lua:272 frontend/ui/data/koptoptions.lua:263
+#: frontend/ui/data/creoptions.lua:303 frontend/ui/data/koptoptions.lua:263
 #: frontend/ui/data/koptoptions.lua:313
 msgid "page"
 msgstr "pagină"
 
-#: frontend/ui/data/creoptions.lua:272 frontend/ui/data/koptoptions.lua:313
+#: frontend/ui/data/creoptions.lua:303 frontend/ui/data/koptoptions.lua:313
 msgid "continuous"
 msgstr "continuă"
 
-#: frontend/ui/data/creoptions.lua:279
+#: frontend/ui/data/creoptions.lua:310
 msgid ""
 "- 'page' mode splits the text into pages, at the most acceptable places "
 "(page numbers and the number of pages may change when you change fonts, "
@@ -5405,27 +5562,27 @@ msgstr ""
 "- modul „continuu” permite derularea textului ca într-un navigator web "
 "(setarea „Suprapunere pagini” este disponibilă doar în acest mod)."
 
-#: frontend/ui/data/creoptions.lua:284
+#: frontend/ui/data/creoptions.lua:315
 msgid "Render Mode"
 msgstr "Mod redare"
 
-#: frontend/ui/data/creoptions.lua:285
+#: frontend/ui/data/creoptions.lua:316
 msgid "legacy"
 msgstr "învechit"
 
-#: frontend/ui/data/creoptions.lua:285
+#: frontend/ui/data/creoptions.lua:316
 msgid "flat"
 msgstr "plat"
 
-#: frontend/ui/data/creoptions.lua:285
+#: frontend/ui/data/creoptions.lua:316
 msgid "book"
 msgstr "carte"
 
-#: frontend/ui/data/creoptions.lua:285
+#: frontend/ui/data/creoptions.lua:316
 msgid "web"
 msgstr "web"
 
-#: frontend/ui/data/creoptions.lua:292
+#: frontend/ui/data/creoptions.lua:323
 msgid ""
 "- 'legacy' uses original CR3 block rendering code.\n"
 "- 'flat' ensures flat rendering with collapsing margins and accurate page "
@@ -5442,11 +5599,11 @@ msgstr ""
 "- „web” redă exact ca un navigator web, permițînd margini negative și pagini "
 "debordante."
 
-#: frontend/ui/data/creoptions.lua:300
+#: frontend/ui/data/creoptions.lua:331
 msgid "Zoom (dpi)"
 msgstr "Ecran (PPI)"
 
-#: frontend/ui/data/creoptions.lua:311
+#: frontend/ui/data/creoptions.lua:342
 msgid ""
 "Sets the DPI used to scale absolute CSS units and images:\n"
 "- off: ignore absolute units (old engine behavior).\n"
@@ -5469,39 +5626,39 @@ msgstr ""
 "1cm din CSS va fi exact 1cm pe ecran.\n"
 "N.B.: Dimensiunea fontului ales nu este afectată de setarea de PPI."
 
-#: frontend/ui/data/creoptions.lua:320 frontend/ui/data/koptoptions.lua:349
+#: frontend/ui/data/creoptions.lua:351 frontend/ui/data/koptoptions.lua:349
 msgid "Line Spacing"
 msgstr "Spațiere linii"
 
-#: frontend/ui/data/creoptions.lua:376
+#: frontend/ui/data/creoptions.lua:407
 msgid "Font size"
 msgstr "Dimensiune font"
 
-#: frontend/ui/data/creoptions.lua:388 frontend/ui/data/creoptions.lua:399
-#: frontend/ui/data/creoptions.lua:409 frontend/ui/data/koptoptions.lua:411
+#: frontend/ui/data/creoptions.lua:419 frontend/ui/data/creoptions.lua:430
+#: frontend/ui/data/creoptions.lua:440 frontend/ui/data/koptoptions.lua:411
 #: frontend/ui/data/koptoptions.lua:426 frontend/ui/widget/toggleswitch.lua:236
 msgid "Font Size"
 msgstr "Dimensiune font"
 
-#: frontend/ui/data/creoptions.lua:389 frontend/ui/data/creoptions.lua:390
+#: frontend/ui/data/creoptions.lua:420 frontend/ui/data/creoptions.lua:421
 #: frontend/ui/data/koptoptions.lua:412 frontend/ui/data/koptoptions.lua:413
 msgid "decrease"
 msgstr "micșorează"
 
-#: frontend/ui/data/creoptions.lua:389 frontend/ui/data/creoptions.lua:390
+#: frontend/ui/data/creoptions.lua:420 frontend/ui/data/creoptions.lua:421
 #: frontend/ui/data/koptoptions.lua:412 frontend/ui/data/koptoptions.lua:413
 msgid "increase"
 msgstr "mărește"
 
-#: frontend/ui/data/creoptions.lua:416
+#: frontend/ui/data/creoptions.lua:447
 msgid "Word Spacing"
 msgstr "Spațiere cuvinte"
 
-#: frontend/ui/data/creoptions.lua:420
+#: frontend/ui/data/creoptions.lua:451
 msgid "Word spacing"
 msgstr "Spațiere cuvinte"
 
-#: frontend/ui/data/creoptions.lua:421
+#: frontend/ui/data/creoptions.lua:452
 msgid ""
 "Set word spacing percentages:\n"
 "- how much to scale the width of each space character from its regular "
@@ -5515,27 +5672,27 @@ msgstr ""
 "- cu cît de mult îl poate micșora pentru a face să încapă mai multe cuvinte "
 "pe o singură linie."
 
-#: frontend/ui/data/creoptions.lua:424
+#: frontend/ui/data/creoptions.lua:455
 msgid "Scaling %"
 msgstr "Scalare %"
 
-#: frontend/ui/data/creoptions.lua:429
+#: frontend/ui/data/creoptions.lua:460
 msgid "Reduction %"
 msgstr "Reducere %"
 
-#: frontend/ui/data/creoptions.lua:436 frontend/ui/data/koptoptions.lua:107
+#: frontend/ui/data/creoptions.lua:467 frontend/ui/data/koptoptions.lua:107
 #: frontend/ui/data/koptoptions.lua:325 frontend/ui/data/koptoptions.lua:350
 #: frontend/ui/data/koptoptions.lua:435 frontend/ui/data/koptoptions.lua:570
 msgid "small"
 msgstr "mică"
 
-#: frontend/ui/data/creoptions.lua:436 frontend/ui/data/koptoptions.lua:107
+#: frontend/ui/data/creoptions.lua:467 frontend/ui/data/koptoptions.lua:107
 #: frontend/ui/data/koptoptions.lua:325 frontend/ui/data/koptoptions.lua:350
 #: frontend/ui/data/koptoptions.lua:435 frontend/ui/data/koptoptions.lua:570
 msgid "large"
 msgstr "mare"
 
-#: frontend/ui/data/creoptions.lua:449
+#: frontend/ui/data/creoptions.lua:480
 msgid ""
 "Tells the rendering engine by how much to scale the width of each 'space' "
 "character in the text from its regular width, and by how much it can "
@@ -5547,28 +5704,28 @@ msgstr ""
 "micșora pentru a face să încapă mai multe cuvinte pe o singură linie (100% "
 "înseamnă fără reducere)."
 
-#: frontend/ui/data/creoptions.lua:458
+#: frontend/ui/data/creoptions.lua:489
 msgid "Word Expansion"
 msgstr "Expansiune cuvînt"
 
-#: frontend/ui/data/creoptions.lua:466
+#: frontend/ui/data/creoptions.lua:497
 msgid "Max word expansion"
 msgstr "Expansiunea maximă a cuvîntului"
 
-#: frontend/ui/data/creoptions.lua:467
+#: frontend/ui/data/creoptions.lua:498
 msgid "Set max word expansion as a % of the font size."
 msgstr ""
 "Setează expansiunea maximă a cuvîntului ca un procent din mărimea fontului."
 
-#: frontend/ui/data/creoptions.lua:470
+#: frontend/ui/data/creoptions.lua:501
 msgid "some"
 msgstr "cîteva"
 
-#: frontend/ui/data/creoptions.lua:470
+#: frontend/ui/data/creoptions.lua:501
 msgid "more"
 msgstr "mai multe"
 
-#: frontend/ui/data/creoptions.lua:483
+#: frontend/ui/data/creoptions.lua:514
 msgid ""
 "On justified lines having too wide spaces, allow distributing the excessive "
 "space into words by expanding them with letter spacing. This sets the max "
@@ -5578,36 +5735,48 @@ msgstr ""
 "justificate care au spații prea mari. Aceasta setează spațierea maximă "
 "permisă a literelor ca procent din mărimea fontului."
 
-#: frontend/ui/data/creoptions.lua:497
-msgid "Font Weight"
-msgstr "Tip litere"
-
-#: frontend/ui/data/creoptions.lua:498
-msgid "regular"
-msgstr "normale"
-
-#: frontend/ui/data/creoptions.lua:498
-msgid "bold"
-msgstr "aldine"
-
-#: frontend/ui/data/creoptions.lua:507 frontend/ui/data/koptoptions.lua:473
+#: frontend/ui/data/creoptions.lua:528 frontend/ui/data/koptoptions.lua:473
 msgid "Contrast"
 msgstr "Contrast"
 
-#: frontend/ui/data/creoptions.lua:533
+#: frontend/ui/data/creoptions.lua:554
+msgid "Font Weight"
+msgstr "Tip litere"
+
+#: frontend/ui/data/creoptions.lua:568
+msgid ""
+"Set the font weight delta from \"regular\" to apply to all fonts.\n"
+"\n"
+"- 0 will use the \"Regular (400)\" variation of a font.\n"
+"- +1 will use the \"Medium (500)\" variation of a font if available.\n"
+"- +3 will use the \"Bold (700)\" variation of a font if available.\n"
+"If a font variation is not available, as well as for fractional adjustments, "
+"it will be synthesized from the nearest available weight."
+msgstr ""
+
+#: frontend/ui/data/creoptions.lua:577
+msgid "The default font '%1' provides the following weight classes: %2."
+msgstr ""
+
+#: frontend/ui/data/creoptions.lua:577
+msgctxt "List separator"
+msgid ", "
+msgstr ""
+
+#: frontend/ui/data/creoptions.lua:587
 msgid "Font Hinting"
 msgstr "Încadrare font"
 
-#: frontend/ui/data/creoptions.lua:534
+#: frontend/ui/data/creoptions.lua:588
 msgid "native"
 msgstr "nativ"
 
-#: frontend/ui/data/creoptions.lua:534 frontend/ui/data/koptoptions.lua:87
+#: frontend/ui/data/creoptions.lua:588 frontend/ui/data/koptoptions.lua:87
 #: frontend/ui/data/koptoptions.lua:435
 msgid "auto"
 msgstr "automat"
 
-#: frontend/ui/data/creoptions.lua:540
+#: frontend/ui/data/creoptions.lua:594
 msgid ""
 "Font hinting is the process by which fonts are adjusted for maximum "
 "readability on the screen's pixel grid.\n"
@@ -5623,23 +5792,23 @@ msgstr ""
 "- „nativă” folosește indicațiile interne ale fontului.\n"
 "- „automată” folosește algoritmul FreeType, ignorînd indicațiile interne."
 
-#: frontend/ui/data/creoptions.lua:548
+#: frontend/ui/data/creoptions.lua:602
 msgid "Font Kerning"
 msgstr "Spațiere litere"
 
-#: frontend/ui/data/creoptions.lua:549 frontend/ui/data/creoptions.lua:615
+#: frontend/ui/data/creoptions.lua:603 frontend/ui/data/creoptions.lua:669
 msgid "fast"
 msgstr "rapidă"
 
-#: frontend/ui/data/creoptions.lua:549
+#: frontend/ui/data/creoptions.lua:603
 msgid "good"
 msgstr "normală"
 
-#: frontend/ui/data/creoptions.lua:549 frontend/ui/data/creoptions.lua:615
+#: frontend/ui/data/creoptions.lua:603 frontend/ui/data/creoptions.lua:669
 msgid "best"
 msgstr "calitativă"
 
-#: frontend/ui/data/creoptions.lua:555
+#: frontend/ui/data/creoptions.lua:609
 msgid ""
 "Font kerning is the process of adjusting the spacing between individual "
 "letter forms, to achieve a visually pleasing result.\n"
@@ -5668,11 +5837,11 @@ msgstr ""
 "(Încadrarea literelor ar trebui ajustată pentru aplicarea algoritmilor de "
 "spațiere.)"
 
-#: frontend/ui/data/creoptions.lua:571
+#: frontend/ui/data/creoptions.lua:625
 msgid "Alt Status Bar"
 msgstr "Bară de stare alt."
 
-#: frontend/ui/data/creoptions.lua:579
+#: frontend/ui/data/creoptions.lua:633
 msgid ""
 "Enable or disable the rendering engine alternative status bar at the top of "
 "the screen. The items displayed can be customized via the main menu.\n"
@@ -5688,11 +5857,11 @@ msgstr ""
 "KOReader din partea de jos a ecranului poate fi ascunsă sau afișată prin "
 "atingere."
 
-#: frontend/ui/data/creoptions.lua:585
+#: frontend/ui/data/creoptions.lua:639
 msgid "Embedded Style"
 msgstr "Stil inclus"
 
-#: frontend/ui/data/creoptions.lua:593
+#: frontend/ui/data/creoptions.lua:647
 msgid ""
 "Enable or disable publisher stylesheets embedded in the book.\n"
 "(Note that less radical changes can be achieved via Style Tweaks in the main "
@@ -5702,11 +5871,11 @@ msgstr ""
 "(Reține că modificările mai puțin radicale pot fi obținute prin Reglaje de "
 "stil din meniul principal.)"
 
-#: frontend/ui/data/creoptions.lua:598
+#: frontend/ui/data/creoptions.lua:652
 msgid "Embedded Fonts"
 msgstr "Font inclus"
 
-#: frontend/ui/data/creoptions.lua:609
+#: frontend/ui/data/creoptions.lua:663
 msgid ""
 "Enable or disable the use of the fonts embedded in the book.\n"
 "(Disabling the fonts specified in the publisher stylesheets can also be "
@@ -5716,11 +5885,11 @@ msgstr ""
 "(Dezactivarea fonturilor specificate în stiluri poate fi făcută și prin "
 "Reglaje de stiluri din meniul principal.)"
 
-#: frontend/ui/data/creoptions.lua:614
+#: frontend/ui/data/creoptions.lua:668
 msgid "Image Scaling"
 msgstr "Scalare imag."
 
-#: frontend/ui/data/creoptions.lua:622
+#: frontend/ui/data/creoptions.lua:676
 msgid ""
 "- 'fast' uses a fast but inaccurate scaling algorithm when scaling images.\n"
 "- 'best' switches to a more costly but vastly more pleasing and accurate "
@@ -5731,11 +5900,11 @@ msgstr ""
 "- „bun” folosește un algorigm mai bun cu rezultate mai plăcute, dar este mai "
 "costisitor."
 
-#: frontend/ui/data/creoptions.lua:627
+#: frontend/ui/data/creoptions.lua:681
 msgid "Invert Images"
 msgstr "Inversează imaginile"
 
-#: frontend/ui/data/creoptions.lua:636
+#: frontend/ui/data/creoptions.lua:690
 msgid ""
 "Disable the automagic inversion of images when nightmode is enabled. Useful "
 "if your book contains mainly inlined mathematical content or scene break art."
@@ -6994,7 +7163,7 @@ msgstr "particularizat"
 msgid "not set"
 msgstr "nesetat"
 
-#: frontend/ui/data/optionsutil.lua:107
+#: frontend/ui/data/optionsutil.lua:111
 msgid ""
 "%1\n"
 "%2\n"
@@ -7006,7 +7175,7 @@ msgstr ""
 "Valoarea curentă: %3 (%4)\n"
 "Valoarea implicită: %5 (%6)"
 
-#: frontend/ui/data/optionsutil.lua:110
+#: frontend/ui/data/optionsutil.lua:114
 msgid ""
 "%1\n"
 "%2\n"
@@ -7018,7 +7187,7 @@ msgstr ""
 "Valoarea curentă: %3 (%4)\n"
 "Valoarea implicită: %5"
 
-#: frontend/ui/data/optionsutil.lua:114
+#: frontend/ui/data/optionsutil.lua:118
 msgid ""
 "%1\n"
 "%2\n"
@@ -7030,7 +7199,7 @@ msgstr ""
 "Valoarea curentă: %3\n"
 "Valoarea implicită: %4"
 
-#: frontend/ui/data/optionsutil.lua:124
+#: frontend/ui/data/optionsutil.lua:128
 msgid ""
 "Current margins:\n"
 "  left:  %1\n"
@@ -7042,7 +7211,7 @@ msgstr ""
 "  dreapta: %2\n"
 "Margini implicite: nesetate"
 
-#: frontend/ui/data/optionsutil.lua:133
+#: frontend/ui/data/optionsutil.lua:137
 msgid ""
 "Current margins:\n"
 "  left:  %1\n"
@@ -9552,33 +9721,33 @@ msgstr "Suspendare automată"
 msgid "Put into standby on no input, wake up from standby on UI input"
 msgstr "Pune în suspendare dacă nu există atingeri, trezește la atingere"
 
-#: plugins/autosuspend.koplugin/main.lua:162
+#: plugins/autosuspend.koplugin/main.lua:163
 msgid "Autosuspend timeout"
 msgstr "Timp suspendare automată"
 
-#: plugins/autosuspend.koplugin/main.lua:173
-#: plugins/autosuspend.koplugin/main.lua:209
+#: plugins/autosuspend.koplugin/main.lua:174
+#: plugins/autosuspend.koplugin/main.lua:210
 #: plugins/autoturn.koplugin/main.lua:140
 msgid "Set timeout"
 msgstr "Setează"
 
-#: plugins/autosuspend.koplugin/main.lua:174
+#: plugins/autosuspend.koplugin/main.lua:175
 msgid "Timeout in minutes"
 msgstr "Timp în minute"
 
-#: plugins/autosuspend.koplugin/main.lua:179
+#: plugins/autosuspend.koplugin/main.lua:180
 msgid "The system will automatically suspend after %1 minutes of inactivity."
 msgstr "Sistemul va fi suspendat automat după %1 minute de inactivitate."
 
-#: plugins/autosuspend.koplugin/main.lua:193
+#: plugins/autosuspend.koplugin/main.lua:194
 msgid "Autoshutdown timeout"
 msgstr "Timp oprire automată"
 
-#: plugins/autosuspend.koplugin/main.lua:210
+#: plugins/autosuspend.koplugin/main.lua:211
 msgid "Timeout in hours"
 msgstr "Timp în ore"
 
-#: plugins/autosuspend.koplugin/main.lua:215
+#: plugins/autosuspend.koplugin/main.lua:216
 msgid "The system will automatically shut down after %1 hours of inactivity."
 msgstr "Sistemul va fi oprit automat după %1 ore de inactivitate."
 
@@ -11982,6 +12151,10 @@ msgstr ""
 "Protocol invalid:\n"
 "%1"
 
+#: plugins/opds.koplugin/opdsbrowser.lua:610
+msgid "The file %1 already exists. Do you want to overwrite it?"
+msgstr "Fișierul %1 există deja. Dorești să-l suprascrii?"
+
 #: plugins/opds.koplugin/opdsbrowser.lua:623
 msgid ""
 "Download folder:\n"
@@ -12709,10 +12882,6 @@ msgstr "Pagini: (%1) Timp: %2"
 #: plugins/statistics.koplugin/main.lua:1709
 msgid "Books read %1"
 msgstr "Cărți citite %1"
-
-#: plugins/statistics.koplugin/main.lua:1746
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: plugins/statistics.koplugin/main.lua:1912
 msgid "Total time spent reading: %1"
@@ -13675,6 +13844,34 @@ msgstr "Atinge colțul din dreapta jos"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Atinge colțul din dreapta sus"
+
+#~ msgid "An error occurred while trying to copy %1"
+#~ msgstr "A apărut o eroare în încercarea de a copia %1"
+
+#~ msgid "An error occurred while trying to move %1"
+#~ msgstr "A apărut o eroare în încercarea de a muta %1"
+
+#~ msgid ""
+#~ "Folder created:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Dosarul a fost creat:\n"
+#~ "%1"
+
+#~ msgid "The folder has not been created."
+#~ msgstr "Dosarul nu a fost creat."
+
+#~ msgid "File %1 not found"
+#~ msgstr "Fișierul %1 nu a fost găsit"
+
+#~ msgid "Deleted %1"
+#~ msgstr "Șters %1"
+
+#~ msgid "An error occurred while trying to delete %1"
+#~ msgstr "A apărut o eroare în încercarea de a șterge %1"
+
+#~ msgid "regular"
+#~ msgstr "normale"
 
 #~ msgid "Fit to screen, "
 #~ msgstr "Potrivește pe ecran, "
