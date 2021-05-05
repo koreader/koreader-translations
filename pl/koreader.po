@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-05 19:41+0000\n"
+"POT-Creation-Date: 2021-05-05 19:53+0000\n"
 "PO-Revision-Date: 2021-04-30 22:57+0000\n"
 "Last-Translator: Becky <becky@fr.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -154,8 +154,8 @@ msgstr ""
 #: frontend/apps/cloudstorage/ftp.lua:128
 #: frontend/apps/cloudstorage/webdav.lua:113
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:110
-#: frontend/apps/filemanager/filemanager.lua:320
-#: frontend/apps/filemanager/filemanager.lua:605
+#: frontend/apps/filemanager/filemanager.lua:313
+#: frontend/apps/filemanager/filemanager.lua:598
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:112
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
@@ -169,7 +169,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerstatus.lua:123
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:155
-#: frontend/apps/reader/readerui.lua:639 frontend/device/android/device.lua:421
+#: frontend/apps/reader/readerui.lua:639 frontend/device/android/device.lua:427
 #: frontend/ui/elements/common_settings_menu_table.lua:287
 #: frontend/ui/elements/screen_android.lua:60 frontend/ui/screensaver.lua:336
 #: frontend/ui/widget/bookstatuswidget.lua:623
@@ -242,8 +242,8 @@ msgstr "Edycja"
 #: frontend/apps/cloudstorage/cloudstorage.lua:395
 #: frontend/apps/filemanager/filemanagerhistory.lua:79
 #: frontend/apps/filemanager/filemanagerhistory.lua:85
+#: frontend/apps/filemanager/filemanager.lua:287
 #: frontend/apps/filemanager/filemanager.lua:294
-#: frontend/apps/filemanager/filemanager.lua:301
 #: frontend/apps/filemanager/filemanagershortcuts.lua:149
 #: frontend/apps/reader/modules/readerhighlight.lua:590
 #: frontend/apps/reader/modules/readerstatus.lua:205
@@ -539,7 +539,7 @@ msgstr "Dodaj konto WebDAV"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:97
-#: frontend/apps/filemanager/filemanager.lua:410 frontend/dispatcher.lua:115
+#: frontend/apps/filemanager/filemanager.lua:403 frontend/dispatcher.lua:116
 msgid "Book information"
 msgstr "Informacje o książce"
 
@@ -665,23 +665,23 @@ msgstr "Usuń z kolekcji"
 
 #. @translators This is the script's programming language (e.g., shell or python)
 #: frontend/apps/filemanager/filemanagercollection.lua:101
-#: frontend/apps/filemanager/filemanager.lua:354
+#: frontend/apps/filemanager/filemanager.lua:347
 msgid "Execute %1 script"
 msgstr "Wykonaj skrypt %1"
 
 #. @translators %1 is the script's programming language (e.g., shell or python), %2 is the filename
 #: frontend/apps/filemanager/filemanagercollection.lua:107
-#: frontend/apps/filemanager/filemanager.lua:360
+#: frontend/apps/filemanager/filemanager.lua:353
 msgid "Running %1 script %2…"
 msgstr "Wykonywanie skryptu %1 %2…"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:115
-#: frontend/apps/filemanager/filemanager.lua:375
+#: frontend/apps/filemanager/filemanager.lua:368
 msgid "The script exited successfully."
 msgstr "Skrypt zakończył się pomyślnie."
 
 #: frontend/apps/filemanager/filemanagercollection.lua:119
-#: frontend/apps/filemanager/filemanager.lua:380
+#: frontend/apps/filemanager/filemanager.lua:373
 msgid "The script returned a non-zero status code: %1!"
 msgstr "Skrypt zwrócił niezerowy kod statusu: %1!"
 
@@ -703,7 +703,7 @@ msgid "Overwrite existing HTML file?"
 msgstr "Nadpisać istniejący plik HTML?"
 
 #: frontend/apps/filemanager/filemanagerconverter.lua:90
-#: frontend/apps/filemanager/filemanager.lua:936
+#: frontend/apps/filemanager/filemanager.lua:929
 #: frontend/apps/reader/modules/readerdictionary.lua:956
 #: plugins/opds.koplugin/opdsbrowser.lua:610
 msgid "Overwrite"
@@ -736,12 +736,12 @@ msgid "History"
 msgstr "Historia"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:52
-#: frontend/apps/filemanager/filemanager.lua:264
+#: frontend/apps/filemanager/filemanager.lua:257
 msgid "Purge .sdr"
 msgstr "Wyczyść .sdr"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:57
-#: frontend/apps/filemanager/filemanager.lua:268
+#: frontend/apps/filemanager/filemanager.lua:261
 msgid ""
 "Purge .sdr to reset settings for this document?\n"
 "\n"
@@ -752,7 +752,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:58
-#: frontend/apps/filemanager/filemanager.lua:269
+#: frontend/apps/filemanager/filemanager.lua:262
 #: plugins/coverbrowser.koplugin/main.lua:440
 msgid "Purge"
 msgstr "Czyszczenie"
@@ -777,16 +777,12 @@ msgstr "Wyczyść historię z usuniętych plików"
 msgid "KOReader"
 msgstr "KOReader"
 
-#: frontend/apps/filemanager/filemanager.lua:137
-msgid "Content refreshed."
-msgstr "Zawartość odświeżona."
-
-#: frontend/apps/filemanager/filemanager.lua:244
+#: frontend/apps/filemanager/filemanager.lua:237
 msgctxt "File"
 msgid "Copy"
 msgstr "Kopiuj"
 
-#: frontend/apps/filemanager/filemanager.lua:250
+#: frontend/apps/filemanager/filemanager.lua:243
 msgid ""
 "Copied to clipboard:\n"
 "%1"
@@ -794,16 +790,16 @@ msgstr ""
 "Skopiowano do schowka:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:256
+#: frontend/apps/filemanager/filemanager.lua:249
 msgctxt "File"
 msgid "Paste"
 msgstr "Wklej"
 
-#: frontend/apps/filemanager/filemanager.lua:282
+#: frontend/apps/filemanager/filemanager.lua:275
 msgid "Cut"
 msgstr "Wytnij"
 
-#: frontend/apps/filemanager/filemanager.lua:288
+#: frontend/apps/filemanager/filemanager.lua:281
 msgid ""
 "Cut to clipboard:\n"
 "%1"
@@ -811,7 +807,7 @@ msgstr ""
 "Wycięto do schowka:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:299
+#: frontend/apps/filemanager/filemanager.lua:292
 msgid ""
 "Delete file?\n"
 "%1\n"
@@ -821,7 +817,7 @@ msgstr ""
 "%1\n"
 "Jeżeli usuniesz plik, zostanie on bezpowrotnie utracony."
 
-#: frontend/apps/filemanager/filemanager.lua:300
+#: frontend/apps/filemanager/filemanager.lua:293
 msgid ""
 "Delete folder?\n"
 "%1\n"
@@ -831,53 +827,53 @@ msgstr ""
 "%1\n"
 "Jeśli usuniesz folder, jego zawartość zostanie bezpowrotnie utracona."
 
-#: frontend/apps/filemanager/filemanager.lua:311
-#: frontend/apps/filemanager/filemanager.lua:327
+#: frontend/apps/filemanager/filemanager.lua:304
+#: frontend/apps/filemanager/filemanager.lua:320
 #: frontend/apps/reader/modules/readerbookmark.lua:647
 msgid "Rename"
 msgstr "Zmień nazwę"
 
-#: frontend/apps/filemanager/filemanager.lua:316
+#: frontend/apps/filemanager/filemanager.lua:309
 msgid "Rename file"
 msgstr "Zmień nazwę pliku"
 
-#: frontend/apps/filemanager/filemanager.lua:316
+#: frontend/apps/filemanager/filemanager.lua:309
 msgid "Rename folder"
 msgstr "Zmień nazwę folderu"
 
-#: frontend/apps/filemanager/filemanager.lua:393
+#: frontend/apps/filemanager/filemanager.lua:386
 msgid "Open with…"
 msgstr "Otwórz z…"
 
-#: frontend/apps/filemanager/filemanager.lua:400
+#: frontend/apps/filemanager/filemanager.lua:393
 #: plugins/texteditor.koplugin/main.lua:90
 #: plugins/texteditor.koplugin/_meta.lua:4
 msgid "Text editor"
 msgstr "Edytor tekstowy"
 
-#: frontend/apps/filemanager/filemanager.lua:422
+#: frontend/apps/filemanager/filemanager.lua:415
 msgid "Remove from favorites"
 msgstr "Usuń z ulubionych"
 
-#: frontend/apps/filemanager/filemanager.lua:424
+#: frontend/apps/filemanager/filemanager.lua:417
 msgid "Add to favorites"
 msgstr "Dodaj do ulubionych"
 
-#: frontend/apps/filemanager/filemanager.lua:441
+#: frontend/apps/filemanager/filemanager.lua:434
 msgid "Convert"
 msgstr "Konwertuj"
 
-#: frontend/apps/filemanager/filemanager.lua:455
-#: frontend/apps/filemanager/filemanager.lua:641
+#: frontend/apps/filemanager/filemanager.lua:448
+#: frontend/apps/filemanager/filemanager.lua:634
 msgid "Set as HOME folder"
 msgstr "Ustaw jako folder domowy"
 
-#: frontend/apps/filemanager/filemanager.lua:562
+#: frontend/apps/filemanager/filemanager.lua:555
 #: frontend/apps/reader/modules/readerback.lua:182
 msgid "Exit KOReader?"
 msgstr "Czy chcesz wyjść z KOReader?"
 
-#: frontend/apps/filemanager/filemanager.lua:563
+#: frontend/apps/filemanager/filemanager.lua:556
 #: frontend/apps/filemanager/filemanagermenu.lua:686
 #: frontend/apps/filemanager/filemanagermenu.lua:692
 #: frontend/apps/reader/modules/readerback.lua:183
@@ -886,74 +882,74 @@ msgstr "Czy chcesz wyjść z KOReader?"
 msgid "Exit"
 msgstr "Wyjdź"
 
-#: frontend/apps/filemanager/filemanager.lua:596
-#: frontend/apps/filemanager/filemanager.lua:600
+#: frontend/apps/filemanager/filemanager.lua:589
+#: frontend/apps/filemanager/filemanager.lua:593
 msgid "New folder"
 msgstr "Nowy folder"
 
-#: frontend/apps/filemanager/filemanager.lua:611 frontend/ui/wikipedia.lua:1334
+#: frontend/apps/filemanager/filemanager.lua:604 frontend/ui/wikipedia.lua:1334
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 #: plugins/statistics.koplugin/main.lua:293
 msgid "Create"
 msgstr "Utwórz"
 
-#: frontend/apps/filemanager/filemanager.lua:630
+#: frontend/apps/filemanager/filemanager.lua:623
 msgid "Paste"
 msgstr "Wklej"
 
-#: frontend/apps/filemanager/filemanager.lua:650
+#: frontend/apps/filemanager/filemanager.lua:643
 msgid "Go to HOME folder"
 msgstr "Przejdź do folderu domowego"
 
-#: frontend/apps/filemanager/filemanager.lua:659
+#: frontend/apps/filemanager/filemanager.lua:652
 msgid "Open random document"
 msgstr "Otwórz losowy dokument"
 
-#: frontend/apps/filemanager/filemanager.lua:668
+#: frontend/apps/filemanager/filemanager.lua:661
 #: frontend/apps/filemanager/filemanagershortcuts.lua:234
-#: frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:94
 msgid "Folder shortcuts"
 msgstr "Skróty do folderów"
 
-#: frontend/apps/filemanager/filemanager.lua:680
+#: frontend/apps/filemanager/filemanager.lua:673
 msgid "Import files here"
 msgstr "Importuj pliki tutaj"
 
-#: frontend/apps/filemanager/filemanager.lua:696
+#: frontend/apps/filemanager/filemanager.lua:689
 msgid "Switch to SDCard"
 msgstr "Przełącz na kartę SD"
 
-#: frontend/apps/filemanager/filemanager.lua:698
+#: frontend/apps/filemanager/filemanager.lua:691
 msgid "Switch to internal storage"
 msgstr "Przełącz na pamięć wewnętrzną"
 
-#: frontend/apps/filemanager/filemanager.lua:828
+#: frontend/apps/filemanager/filemanager.lua:821
 msgid "Set '%1' as HOME folder?"
 msgstr "Ustawić '%1' jako folder domowy?"
 
-#: frontend/apps/filemanager/filemanager.lua:829
+#: frontend/apps/filemanager/filemanager.lua:822
 msgid "Set as HOME"
 msgstr "Ustaw folder domowy"
 
-#: frontend/apps/filemanager/filemanager.lua:841
+#: frontend/apps/filemanager/filemanager.lua:834
 msgid "Do you want to open %1?"
 msgstr "Czy chcesz otworzyć %1?"
 
-#: frontend/apps/filemanager/filemanager.lua:842
+#: frontend/apps/filemanager/filemanager.lua:835
 #: frontend/ui/widget/filechooser.lua:524
 msgid "Open"
 msgstr "Otwórz"
 
 #. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:847
+#: frontend/apps/filemanager/filemanager.lua:840
 msgid "Another"
 msgstr "Inny"
 
-#: frontend/apps/filemanager/filemanager.lua:855
+#: frontend/apps/filemanager/filemanager.lua:848
 msgid "File not found"
 msgstr "Nie znaleziono pliku"
 
-#: frontend/apps/filemanager/filemanager.lua:885
+#: frontend/apps/filemanager/filemanager.lua:878
 msgid ""
 "Copied:\n"
 "%1\n"
@@ -965,7 +961,7 @@ msgstr ""
 "do:\n"
 "%2"
 
-#: frontend/apps/filemanager/filemanager.lua:890
+#: frontend/apps/filemanager/filemanager.lua:883
 msgid ""
 "Failed to copy:\n"
 "%1\n"
@@ -977,7 +973,7 @@ msgstr ""
 "do:\n"
 "%2"
 
-#: frontend/apps/filemanager/filemanager.lua:907
+#: frontend/apps/filemanager/filemanager.lua:900
 msgid ""
 "Moved:\n"
 "%1\n"
@@ -989,7 +985,7 @@ msgstr ""
 "do:\n"
 "%2"
 
-#: frontend/apps/filemanager/filemanager.lua:912
+#: frontend/apps/filemanager/filemanager.lua:905
 msgid ""
 "Failed to move:\n"
 "%1\n"
@@ -1001,7 +997,7 @@ msgstr ""
 "do:\n"
 "%2"
 
-#: frontend/apps/filemanager/filemanager.lua:929
+#: frontend/apps/filemanager/filemanager.lua:922
 msgid ""
 "File already exists:\n"
 "%1\n"
@@ -1011,7 +1007,7 @@ msgstr ""
 "%1\n"
 "Nadpisać plik?"
 
-#: frontend/apps/filemanager/filemanager.lua:931
+#: frontend/apps/filemanager/filemanager.lua:924
 msgid ""
 "Folder already exists:\n"
 "%1\n"
@@ -1021,7 +1017,7 @@ msgstr ""
 "%1\n"
 "Nadpisać folder?"
 
-#: frontend/apps/filemanager/filemanager.lua:957
+#: frontend/apps/filemanager/filemanager.lua:950
 msgid ""
 "Created folder:\n"
 "%1"
@@ -1029,7 +1025,7 @@ msgstr ""
 "Utworzono folder:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:962
+#: frontend/apps/filemanager/filemanager.lua:955
 msgid ""
 "Failed to create folder:\n"
 "%1"
@@ -1037,7 +1033,7 @@ msgstr ""
 "Nie udało się utworzyć folderu:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:973
+#: frontend/apps/filemanager/filemanager.lua:966
 msgid ""
 "File not found:\n"
 "%1"
@@ -1045,7 +1041,7 @@ msgstr ""
 "Nie znaleziono pliku:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:998
+#: frontend/apps/filemanager/filemanager.lua:991
 msgid ""
 "Deleted folder:\n"
 "%1"
@@ -1053,7 +1049,7 @@ msgstr ""
 "Usunięto folder:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:999
+#: frontend/apps/filemanager/filemanager.lua:992
 msgid ""
 "Deleted file:\n"
 "%1"
@@ -1061,7 +1057,7 @@ msgstr ""
 "Usunięto plik:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:1004
+#: frontend/apps/filemanager/filemanager.lua:997
 msgid ""
 "Failed to delete:\n"
 "%1"
@@ -1069,7 +1065,7 @@ msgstr ""
 "Nie udało się usunąć:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:1029
+#: frontend/apps/filemanager/filemanager.lua:1022
 msgid ""
 "Renamed file:\n"
 "%1\n"
@@ -1081,7 +1077,7 @@ msgstr ""
 "na:\n"
 "%2"
 
-#: frontend/apps/filemanager/filemanager.lua:1034
+#: frontend/apps/filemanager/filemanager.lua:1027
 msgid ""
 "Renamed file:\n"
 "%1\n"
@@ -1099,7 +1095,7 @@ msgstr ""
 "Nie udało się przenieść danych historii.\n"
 "Historia czytania mogła zostać utracona."
 
-#: frontend/apps/filemanager/filemanager.lua:1041
+#: frontend/apps/filemanager/filemanager.lua:1034
 msgid ""
 "Renamed folder:\n"
 "%1\n"
@@ -1111,7 +1107,7 @@ msgstr ""
 "na:\n"
 "%2"
 
-#: frontend/apps/filemanager/filemanager.lua:1047
+#: frontend/apps/filemanager/filemanager.lua:1040
 msgid ""
 "Failed to rename:\n"
 "%1\n"
@@ -1123,137 +1119,141 @@ msgstr ""
 "na:\n"
 "%2"
 
-#: frontend/apps/filemanager/filemanager.lua:1057
+#: frontend/apps/filemanager/filemanager.lua:1050
 msgid "filename"
 msgstr "nazwa pliku"
 
-#: frontend/apps/filemanager/filemanager.lua:1057
+#: frontend/apps/filemanager/filemanager.lua:1050
 msgid "Sort by filename"
 msgstr "Sortuj po nazwie pliku"
 
-#: frontend/apps/filemanager/filemanager.lua:1058
+#: frontend/apps/filemanager/filemanager.lua:1051
 msgid "numeric"
 msgstr "uwzględniaj liczby"
 
-#: frontend/apps/filemanager/filemanager.lua:1058
+#: frontend/apps/filemanager/filemanager.lua:1051
 msgid "Sort by filename (natural sorting)"
 msgstr "Sortuj po nazwie pliku (uwzględniaj liczby)"
 
-#: frontend/apps/filemanager/filemanager.lua:1059
+#: frontend/apps/filemanager/filemanager.lua:1052
 msgid "name mixed"
 msgstr "wymieszane pliki i foldery"
 
-#: frontend/apps/filemanager/filemanager.lua:1059
+#: frontend/apps/filemanager/filemanager.lua:1052
 msgid "Sort by name – mixed files and folders"
 msgstr "Sortuj po nazwie – wymieszane pliki i foldery"
 
-#: frontend/apps/filemanager/filemanager.lua:1060
+#: frontend/apps/filemanager/filemanager.lua:1053
 msgid "date read"
 msgstr "data czytania"
 
-#: frontend/apps/filemanager/filemanager.lua:1060
+#: frontend/apps/filemanager/filemanager.lua:1053
 msgid "Sort by last read date"
 msgstr "Sortuj po dacie ostatniego otwarcia"
 
-#: frontend/apps/filemanager/filemanager.lua:1061
+#: frontend/apps/filemanager/filemanager.lua:1054
 msgid "date added"
 msgstr "data dodania"
 
-#: frontend/apps/filemanager/filemanager.lua:1061
+#: frontend/apps/filemanager/filemanager.lua:1054
 msgid "Sort by date added"
 msgstr "Sortuj po dacie dodania"
 
-#: frontend/apps/filemanager/filemanager.lua:1062
+#: frontend/apps/filemanager/filemanager.lua:1055
 msgid "date modified"
 msgstr "data modyfikacji"
 
-#: frontend/apps/filemanager/filemanager.lua:1062
+#: frontend/apps/filemanager/filemanager.lua:1055
 msgid "Sort by date modified"
 msgstr "Sortuj po dacie modyfikacji"
 
-#: frontend/apps/filemanager/filemanager.lua:1063
+#: frontend/apps/filemanager/filemanager.lua:1056
 msgid "size"
 msgstr "rozmiar"
 
-#: frontend/apps/filemanager/filemanager.lua:1063
+#: frontend/apps/filemanager/filemanager.lua:1056
 msgid "Sort by size"
 msgstr "Sortuj po rozmiarze"
 
-#: frontend/apps/filemanager/filemanager.lua:1064
+#: frontend/apps/filemanager/filemanager.lua:1057
 msgid "type"
 msgstr "typ"
 
-#: frontend/apps/filemanager/filemanager.lua:1064
+#: frontend/apps/filemanager/filemanager.lua:1057
 msgid "Sort by type"
 msgstr "Sortuj po typie"
 
-#: frontend/apps/filemanager/filemanager.lua:1065
+#: frontend/apps/filemanager/filemanager.lua:1058
 msgid "percent – unopened first"
 msgstr "procentowo – nieotwarte na początku"
 
-#: frontend/apps/filemanager/filemanager.lua:1065
+#: frontend/apps/filemanager/filemanager.lua:1058
 msgid "Sort by percent – unopened first"
 msgstr "Sortuj po procencie – nieotwarte na początku"
 
-#: frontend/apps/filemanager/filemanager.lua:1066
+#: frontend/apps/filemanager/filemanager.lua:1059
 msgid "percent – unopened last"
 msgstr "procentowo – nieotwarte na końcu"
 
-#: frontend/apps/filemanager/filemanager.lua:1066
+#: frontend/apps/filemanager/filemanager.lua:1059
 msgid "Sort by percent – unopened last"
 msgstr "Sortuj po procencie – nieotwarte na końcu"
 
-#: frontend/apps/filemanager/filemanager.lua:1082
+#: frontend/apps/filemanager/filemanager.lua:1075
 msgid "Sort by percent"
 msgstr "Sortuj po procencie"
 
-#: frontend/apps/filemanager/filemanager.lua:1088
+#: frontend/apps/filemanager/filemanager.lua:1081
 msgid "Sort by: %1"
 msgstr "Sortuj po: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:1119
+#: frontend/apps/filemanager/filemanager.lua:1112
 msgid "file browser"
 msgstr "przeglądarka plików"
 
-#: frontend/apps/filemanager/filemanager.lua:1119
+#: frontend/apps/filemanager/filemanager.lua:1112
 msgid "Start with file browser"
 msgstr "Uruchom z przeglądarką plików"
 
-#: frontend/apps/filemanager/filemanager.lua:1120
+#: frontend/apps/filemanager/filemanager.lua:1113
 msgid "history"
 msgstr "historia"
 
-#: frontend/apps/filemanager/filemanager.lua:1120
+#: frontend/apps/filemanager/filemanager.lua:1113
 msgid "Start with history"
 msgstr "Uruchom z historią"
 
-#: frontend/apps/filemanager/filemanager.lua:1121
+#: frontend/apps/filemanager/filemanager.lua:1114
 msgid "favorites"
 msgstr "ulubione"
 
-#: frontend/apps/filemanager/filemanager.lua:1121
+#: frontend/apps/filemanager/filemanager.lua:1114
 msgid "Start with favorites"
 msgstr "Uruchom z ulubionymi"
 
-#: frontend/apps/filemanager/filemanager.lua:1122
+#: frontend/apps/filemanager/filemanager.lua:1115
 msgid "folder shortcuts"
 msgstr "skróty do folderów"
 
-#: frontend/apps/filemanager/filemanager.lua:1122
+#: frontend/apps/filemanager/filemanager.lua:1115
 msgid "Start with folder shortcuts"
 msgstr "Uruchom ze skrótami do folderów"
 
-#: frontend/apps/filemanager/filemanager.lua:1123
+#: frontend/apps/filemanager/filemanager.lua:1116
 msgid "last file"
 msgstr "ostatni plik"
 
-#: frontend/apps/filemanager/filemanager.lua:1123
+#: frontend/apps/filemanager/filemanager.lua:1116
 msgid "Start with last file"
 msgstr "Uruchom z ostatnim otwartym plikiem"
 
-#: frontend/apps/filemanager/filemanager.lua:1140
+#: frontend/apps/filemanager/filemanager.lua:1133
 msgid "Start with: %1"
 msgstr "Uruchom z: %1"
+
+#: frontend/apps/filemanager/filemanager.lua:1193
+msgid "Content refreshed."
+msgstr "Zawartość odświeżona."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:121
 msgid "Cannot open last document"
@@ -1541,7 +1541,7 @@ msgstr "Czy chciałbyś otworzyć ostatni dokument: %1?"
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:188
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:231
 #: frontend/apps/reader/modules/readermenu.lua:277
-#: frontend/apps/reader/readerui.lua:647 frontend/device/android/device.lua:421
+#: frontend/apps/reader/readerui.lua:647 frontend/device/android/device.lua:427
 #: frontend/ui/elements/common_settings_menu_table.lua:287
 #: frontend/ui/widget/confirmbox.lua:46
 #: frontend/ui/widget/container/inputcontainer.lua:287
@@ -1662,7 +1662,7 @@ msgstr "Historia lokalizacji jest pusta."
 
 #: frontend/apps/reader/modules/readerbookmark.lua:20
 #: frontend/apps/reader/modules/readerbookmark.lua:347
-#: frontend/dispatcher.lua:112
+#: frontend/dispatcher.lua:113
 msgid "Bookmarks"
 msgstr "Zakładki"
 
@@ -2694,7 +2694,7 @@ msgstr ""
 "[x] dla numeru strony w głównym (liniowym) przepływie\n"
 "[x]y dla numeru strony w nieliniowym fragmencie y"
 
-#: frontend/apps/reader/modules/readergoto.lua:68 frontend/dispatcher.lua:104
+#: frontend/apps/reader/modules/readergoto.lua:68 frontend/dispatcher.lua:105
 msgid "Skim"
 msgstr "Tryb przewijania"
 
@@ -3598,7 +3598,7 @@ msgid "No results on following pages"
 msgstr "Brak wyników na kolejnych stronach"
 
 #: frontend/apps/reader/modules/readerstatus.lua:36
-#: frontend/apps/reader/modules/readerstatus.lua:80 frontend/dispatcher.lua:114
+#: frontend/apps/reader/modules/readerstatus.lua:80 frontend/dispatcher.lua:115
 #: frontend/ui/elements/common_settings_menu_table.lua:577
 msgid "Book status"
 msgstr "Status książki"
@@ -3630,7 +3630,7 @@ msgid "Delete file"
 msgstr "Usuń plik"
 
 #: frontend/apps/reader/modules/readerstatus.lua:114 frontend/dispatcher.lua:62
-#: frontend/dispatcher.lua:563
+#: frontend/dispatcher.lua:565
 msgid "File browser"
 msgstr "Przeglądarka plików"
 
@@ -3817,7 +3817,7 @@ msgstr "Ulepszenia dla książki zaktualizowane, trwa aktualizacja…"
 msgid "Book tweak saved (not enabled)."
 msgstr "Ulepszenia dla książki zapisane (nie włączone)."
 
-#: frontend/apps/reader/modules/readertoc.lua:32 frontend/dispatcher.lua:111
+#: frontend/apps/reader/modules/readertoc.lua:32 frontend/dispatcher.lua:112
 msgid "Table of contents"
 msgstr "Spis treści"
 
@@ -4890,7 +4890,7 @@ msgstr ""
 "pomocy innego silnika. Aby zapobiec możliwym błędom, zakładki muszą zostać "
 "usunięte przed kontynuacją."
 
-#: frontend/apps/reader/readerui.lua:548 frontend/device/android/device.lua:183
+#: frontend/apps/reader/readerui.lua:548 frontend/device/android/device.lua:186
 msgid "Opening file '%1'."
 msgstr "Otwieranie pliku '%1'."
 
@@ -4924,35 +4924,35 @@ msgstr ""
 "lub nieprawidłowy dokument.\n"
 "KOReader zostanie zamknięty."
 
-#: frontend/device/android/device.lua:306
+#: frontend/device/android/device.lua:312
 msgid "Not connected"
 msgstr "Nie połączony"
 
-#: frontend/device/android/device.lua:309
+#: frontend/device/android/device.lua:315
 msgid "Connected to Wi-Fi"
 msgstr "Połączony z Wi-Fi"
 
-#: frontend/device/android/device.lua:311
+#: frontend/device/android/device.lua:317
 msgid "Connected to mobile data network"
 msgstr "Połączony z mobilną siecią danych"
 
-#: frontend/device/android/device.lua:313
+#: frontend/device/android/device.lua:319
 msgid "Connected to Ethernet"
 msgstr "Połączono z siecią lokalną"
 
-#: frontend/device/android/device.lua:315
+#: frontend/device/android/device.lua:321
 msgid "Connected to Bluetooth"
 msgstr "Połączony z Bluetooth"
 
-#: frontend/device/android/device.lua:317
+#: frontend/device/android/device.lua:323
 msgid "Connected to VPN"
 msgstr "Połączony z VPN"
 
-#: frontend/device/android/device.lua:319
+#: frontend/device/android/device.lua:325
 msgid "Unknown connection"
 msgstr "Nieznane połączenie"
 
-#: frontend/device/android/device.lua:357
+#: frontend/device/android/device.lua:363
 msgid ""
 "%1\n"
 "\n"
@@ -4964,11 +4964,11 @@ msgstr ""
 "OS: Android %2, api %3\n"
 "Wersja: %4\n"
 
-#: frontend/device/android/device.lua:362
+#: frontend/device/android/device.lua:368
 msgid "Device type: %1"
 msgstr "Typ urządzenia: %1"
 
-#: frontend/device/android/device.lua:367
+#: frontend/device/android/device.lua:373
 msgid ""
 "E-ink display supported.\n"
 "Platform: %1"
@@ -4976,7 +4976,7 @@ msgstr ""
 "Wyświetlacz e-ink jest wspierany.\n"
 "Platforma: %1"
 
-#: frontend/device/android/device.lua:372
+#: frontend/device/android/device.lua:378
 msgid ""
 "This device needs CPU, screen and touchscreen always on.\n"
 "Screen timeout will be ignored while the app is in the foreground!"
@@ -4985,20 +4985,20 @@ msgstr ""
 "dotykowego.\n"
 "Czas wyłączenia ekranu będzie ignorowany, dopóki aplikacja będzie włączona!"
 
-#: frontend/device/android/device.lua:420
+#: frontend/device/android/device.lua:426
 msgid "Frontlight settings"
 msgstr "Ustawienia oświetlenia"
 
-#: frontend/device/android/device.lua:420
+#: frontend/device/android/device.lua:426
 msgid "Light settings"
 msgstr "Ustawienia oświetlenia"
 
-#: frontend/device/android/device.lua:421
+#: frontend/device/android/device.lua:427
 #: frontend/ui/widget/frontlightwidget.lua:164
 msgid "Brightness"
 msgstr "Jasność"
 
-#: frontend/device/android/device.lua:421
+#: frontend/device/android/device.lua:427
 #: frontend/ui/widget/frontlightwidget.lua:336
 msgid "Warmth"
 msgstr "Barwa światła"
@@ -5235,157 +5235,162 @@ msgstr "Folder nadrzędny"
 msgid "Show plus menu"
 msgstr "Pokaż plus menu"
 
-#: frontend/dispatcher.lua:96
+#: frontend/dispatcher.lua:93
+#, fuzzy
+msgid "Refresh content"
+msgstr "zawartość"
+
+#: frontend/dispatcher.lua:97
 msgid "Toggle status bar"
 msgstr "Przełącz pasek stanu"
 
-#: frontend/dispatcher.lua:97
+#: frontend/dispatcher.lua:98
 msgid "Previous chapter"
 msgstr "Poprzedni rozdział"
 
-#: frontend/dispatcher.lua:98
+#: frontend/dispatcher.lua:99
 msgid "Next chapter"
 msgstr "Następny rozdział"
 
-#: frontend/dispatcher.lua:99
+#: frontend/dispatcher.lua:100
 msgid "First page"
 msgstr "Pierwsza strona"
 
-#: frontend/dispatcher.lua:100
+#: frontend/dispatcher.lua:101
 msgid "Last page"
 msgstr "Ostatnia strona"
 
-#: frontend/dispatcher.lua:101
+#: frontend/dispatcher.lua:102
 msgid "Previous bookmark"
 msgstr "Poprzednia zakładka"
 
-#: frontend/dispatcher.lua:102
+#: frontend/dispatcher.lua:103
 msgid "Next bookmark"
 msgstr "Następna zakładka"
 
-#: frontend/dispatcher.lua:103
+#: frontend/dispatcher.lua:104
 msgid "Go to"
 msgstr "Przejdź do"
 
-#: frontend/dispatcher.lua:105 plugins/terminal.koplugin/main.lua:425
+#: frontend/dispatcher.lua:106 plugins/terminal.koplugin/main.lua:425
 msgid "Back"
 msgstr "Powrót"
 
-#: frontend/dispatcher.lua:106
+#: frontend/dispatcher.lua:107
 msgid "Back to previous location"
 msgstr "Powrót do poprzedniej lokalizacji"
 
-#: frontend/dispatcher.lua:107
+#: frontend/dispatcher.lua:108
 msgid "Go to latest bookmark"
 msgstr "Przejdź do ostatniej zakładki"
 
-#: frontend/dispatcher.lua:108
+#: frontend/dispatcher.lua:109
 msgid "Follow nearest link"
 msgstr "Idź za najbliższym linkiem"
 
-#: frontend/dispatcher.lua:109
+#: frontend/dispatcher.lua:110
 msgid "Follow nearest internal link"
 msgstr "Idź za najbliższym wewnętrznym odnośnikiem"
 
-#: frontend/dispatcher.lua:110
+#: frontend/dispatcher.lua:111
 msgid "Clear location history"
 msgstr "Wyczyść historię lokalizacji"
 
-#: frontend/dispatcher.lua:113
+#: frontend/dispatcher.lua:114
 msgid "Book statistics"
 msgstr "Statystyki książki"
 
-#: frontend/dispatcher.lua:116
+#: frontend/dispatcher.lua:117
 msgid "Book description"
 msgstr "Opis książki"
 
-#: frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:118
 msgid "Book cover"
 msgstr "Okładka książki"
 
-#: frontend/dispatcher.lua:118
+#: frontend/dispatcher.lua:119
 msgid "Show bottom menu"
 msgstr "Pokaż dolne menu"
 
-#: frontend/dispatcher.lua:119
+#: frontend/dispatcher.lua:120
 msgid "Toggle bookmark"
 msgstr "Przełącz zakładkę"
 
-#: frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:121
 msgid "Toggle page turn direction"
 msgstr "Przełącz kierunek przewracania strony"
 
-#: frontend/dispatcher.lua:121
+#: frontend/dispatcher.lua:122
 msgid "Cycle highlight action"
 msgstr "Cykliczna akcja zaznaczenia"
 
-#: frontend/dispatcher.lua:122
+#: frontend/dispatcher.lua:123
 msgid "Cycle highlight style"
 msgstr "Cykliczny styl zaznaczenia"
 
-#: frontend/dispatcher.lua:123
+#: frontend/dispatcher.lua:124
 msgid "Go %1 pages"
 msgstr "Przejdź %1 stron"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Toggle panel zoom"
 msgstr "Przełącz powiększenie panelu"
 
-#: frontend/dispatcher.lua:127
+#: frontend/dispatcher.lua:128
 msgid "Increase font size by %1"
 msgstr "Zwiększ rozmiar czcionki o %1"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Decrease font size by %1"
 msgstr "Zmniejsz rozmiar czcionki o %1"
 
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Toggle page flipping"
 msgstr "Przełącz odwracanie strony"
 
-#: frontend/dispatcher.lua:132
+#: frontend/dispatcher.lua:133
 msgid "Toggle reflow"
 msgstr "Przełącz reflow"
 
-#: frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:134
 msgid "Zoom mode"
 msgstr "Tryb powiększenia"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Change zoom factor"
 msgstr "Zmień współczynnik powiększenia"
 
-#: frontend/dispatcher.lua:148
+#: frontend/dispatcher.lua:149
 msgid "Set font size to %1"
 msgstr "Ustaw rozmiar czcionki do: %1"
 
-#: frontend/dispatcher.lua:368
+#: frontend/dispatcher.lua:370
 msgid "Unknown item"
 msgstr "Nieznany element"
 
-#: frontend/dispatcher.lua:377
+#: frontend/dispatcher.lua:379
 msgctxt "Number placeholder"
 msgid "#"
 msgstr "#"
 
-#: frontend/dispatcher.lua:468
+#: frontend/dispatcher.lua:470
 msgid "If called by a gesture the amount of the gesture will be used"
 msgstr "W przypadku wywołania przez gest, zostanie wykorzystana wartość gestu"
 
-#: frontend/dispatcher.lua:550 plugins/gestures.koplugin/main.lua:187
+#: frontend/dispatcher.lua:552 plugins/gestures.koplugin/main.lua:187
 msgid "Nothing"
 msgstr "Bez działania"
 
-#: frontend/dispatcher.lua:562
+#: frontend/dispatcher.lua:564
 #: frontend/ui/elements/common_info_menu_table.lua:33
 msgid "Device"
 msgstr "Urządzenie"
 
-#: frontend/dispatcher.lua:564
+#: frontend/dispatcher.lua:566
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "Dokumenty o zmiennym układzie (epub, fb2, txt…)"
 
-#: frontend/dispatcher.lua:565
+#: frontend/dispatcher.lua:567
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Dokumenty o stałym układzie (pdf, djvu, obrazy…)"
 

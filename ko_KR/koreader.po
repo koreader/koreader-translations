@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-05 19:41+0000\n"
+"POT-Creation-Date: 2021-05-05 19:53+0000\n"
 "PO-Revision-Date: 2021-05-04 15:32+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -152,8 +152,8 @@ msgstr ""
 #: frontend/apps/cloudstorage/ftp.lua:128
 #: frontend/apps/cloudstorage/webdav.lua:113
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:110
-#: frontend/apps/filemanager/filemanager.lua:320
-#: frontend/apps/filemanager/filemanager.lua:605
+#: frontend/apps/filemanager/filemanager.lua:313
+#: frontend/apps/filemanager/filemanager.lua:598
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:112
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
@@ -167,7 +167,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerstatus.lua:123
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:155
-#: frontend/apps/reader/readerui.lua:639 frontend/device/android/device.lua:421
+#: frontend/apps/reader/readerui.lua:639 frontend/device/android/device.lua:427
 #: frontend/ui/elements/common_settings_menu_table.lua:287
 #: frontend/ui/elements/screen_android.lua:60 frontend/ui/screensaver.lua:336
 #: frontend/ui/widget/bookstatuswidget.lua:623
@@ -240,8 +240,8 @@ msgstr "수정"
 #: frontend/apps/cloudstorage/cloudstorage.lua:395
 #: frontend/apps/filemanager/filemanagerhistory.lua:79
 #: frontend/apps/filemanager/filemanagerhistory.lua:85
+#: frontend/apps/filemanager/filemanager.lua:287
 #: frontend/apps/filemanager/filemanager.lua:294
-#: frontend/apps/filemanager/filemanager.lua:301
 #: frontend/apps/filemanager/filemanagershortcuts.lua:149
 #: frontend/apps/reader/modules/readerhighlight.lua:590
 #: frontend/apps/reader/modules/readerstatus.lua:205
@@ -537,7 +537,7 @@ msgstr "WebDAV 계정 추가"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:97
-#: frontend/apps/filemanager/filemanager.lua:410 frontend/dispatcher.lua:115
+#: frontend/apps/filemanager/filemanager.lua:403 frontend/dispatcher.lua:116
 msgid "Book information"
 msgstr "책 정보"
 
@@ -663,23 +663,23 @@ msgstr "모아두기에서 제거"
 
 #. @translators This is the script's programming language (e.g., shell or python)
 #: frontend/apps/filemanager/filemanagercollection.lua:101
-#: frontend/apps/filemanager/filemanager.lua:354
+#: frontend/apps/filemanager/filemanager.lua:347
 msgid "Execute %1 script"
 msgstr "%1 스크립트 실행"
 
 #. @translators %1 is the script's programming language (e.g., shell or python), %2 is the filename
 #: frontend/apps/filemanager/filemanagercollection.lua:107
-#: frontend/apps/filemanager/filemanager.lua:360
+#: frontend/apps/filemanager/filemanager.lua:353
 msgid "Running %1 script %2…"
 msgstr "%1 스크립트 실행 중 %2…"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:115
-#: frontend/apps/filemanager/filemanager.lua:375
+#: frontend/apps/filemanager/filemanager.lua:368
 msgid "The script exited successfully."
 msgstr "스크립트가 성공적으로 수행되었습니다."
 
 #: frontend/apps/filemanager/filemanagercollection.lua:119
-#: frontend/apps/filemanager/filemanager.lua:380
+#: frontend/apps/filemanager/filemanager.lua:373
 msgid "The script returned a non-zero status code: %1!"
 msgstr "스크립트가 0이 아닌 상태 코드를 보내왔습니다: %1!"
 
@@ -701,7 +701,7 @@ msgid "Overwrite existing HTML file?"
 msgstr "기존의 HTML 파일에 덮어쓸까요?"
 
 #: frontend/apps/filemanager/filemanagerconverter.lua:90
-#: frontend/apps/filemanager/filemanager.lua:936
+#: frontend/apps/filemanager/filemanager.lua:929
 #: frontend/apps/reader/modules/readerdictionary.lua:956
 #: plugins/opds.koplugin/opdsbrowser.lua:610
 msgid "Overwrite"
@@ -734,12 +734,12 @@ msgid "History"
 msgstr "최근 내역"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:52
-#: frontend/apps/filemanager/filemanager.lua:264
+#: frontend/apps/filemanager/filemanager.lua:257
 msgid "Purge .sdr"
 msgstr ".sdr 제거"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:57
-#: frontend/apps/filemanager/filemanager.lua:268
+#: frontend/apps/filemanager/filemanager.lua:261
 msgid ""
 "Purge .sdr to reset settings for this document?\n"
 "\n"
@@ -750,7 +750,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:58
-#: frontend/apps/filemanager/filemanager.lua:269
+#: frontend/apps/filemanager/filemanager.lua:262
 #: plugins/coverbrowser.koplugin/main.lua:440
 msgid "Purge"
 msgstr "완전 삭제"
@@ -775,16 +775,12 @@ msgstr "지운 파일 내역 지우기"
 msgid "KOReader"
 msgstr "KOReader"
 
-#: frontend/apps/filemanager/filemanager.lua:137
-msgid "Content refreshed."
-msgstr "내용이 갱신됨."
-
-#: frontend/apps/filemanager/filemanager.lua:244
+#: frontend/apps/filemanager/filemanager.lua:237
 msgctxt "File"
 msgid "Copy"
 msgstr "복사"
 
-#: frontend/apps/filemanager/filemanager.lua:250
+#: frontend/apps/filemanager/filemanager.lua:243
 msgid ""
 "Copied to clipboard:\n"
 "%1"
@@ -792,16 +788,16 @@ msgstr ""
 "클립보드에 복사됨 :\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:256
+#: frontend/apps/filemanager/filemanager.lua:249
 msgctxt "File"
 msgid "Paste"
 msgstr "붙여넣기"
 
-#: frontend/apps/filemanager/filemanager.lua:282
+#: frontend/apps/filemanager/filemanager.lua:275
 msgid "Cut"
 msgstr "잘라내기"
 
-#: frontend/apps/filemanager/filemanager.lua:288
+#: frontend/apps/filemanager/filemanager.lua:281
 msgid ""
 "Cut to clipboard:\n"
 "%1"
@@ -809,7 +805,7 @@ msgstr ""
 "클립보드로 잘라내기 :\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:299
+#: frontend/apps/filemanager/filemanager.lua:292
 msgid ""
 "Delete file?\n"
 "%1\n"
@@ -819,7 +815,7 @@ msgstr ""
 "%1\n"
 "파일을 삭제하면 영구적으로 손실됩니다."
 
-#: frontend/apps/filemanager/filemanager.lua:300
+#: frontend/apps/filemanager/filemanager.lua:293
 msgid ""
 "Delete folder?\n"
 "%1\n"
@@ -829,53 +825,53 @@ msgstr ""
 "%1\n"
 "폴더를 삭제하면 해당 내용이 영구적으로 손실됩니다."
 
-#: frontend/apps/filemanager/filemanager.lua:311
-#: frontend/apps/filemanager/filemanager.lua:327
+#: frontend/apps/filemanager/filemanager.lua:304
+#: frontend/apps/filemanager/filemanager.lua:320
 #: frontend/apps/reader/modules/readerbookmark.lua:647
 msgid "Rename"
 msgstr "이름바꾸기"
 
-#: frontend/apps/filemanager/filemanager.lua:316
+#: frontend/apps/filemanager/filemanager.lua:309
 msgid "Rename file"
 msgstr "파일 이름바꾸기"
 
-#: frontend/apps/filemanager/filemanager.lua:316
+#: frontend/apps/filemanager/filemanager.lua:309
 msgid "Rename folder"
 msgstr "폴더 이름 바꾸기"
 
-#: frontend/apps/filemanager/filemanager.lua:393
+#: frontend/apps/filemanager/filemanager.lua:386
 msgid "Open with…"
 msgstr "다음으로 열기…"
 
-#: frontend/apps/filemanager/filemanager.lua:400
+#: frontend/apps/filemanager/filemanager.lua:393
 #: plugins/texteditor.koplugin/main.lua:90
 #: plugins/texteditor.koplugin/_meta.lua:4
 msgid "Text editor"
 msgstr "텍스트 편집기"
 
-#: frontend/apps/filemanager/filemanager.lua:422
+#: frontend/apps/filemanager/filemanager.lua:415
 msgid "Remove from favorites"
 msgstr "즐겨찾기에서 제거"
 
-#: frontend/apps/filemanager/filemanager.lua:424
+#: frontend/apps/filemanager/filemanager.lua:417
 msgid "Add to favorites"
 msgstr "즐겨찾기에 추가"
 
-#: frontend/apps/filemanager/filemanager.lua:441
+#: frontend/apps/filemanager/filemanager.lua:434
 msgid "Convert"
 msgstr "변환"
 
-#: frontend/apps/filemanager/filemanager.lua:455
-#: frontend/apps/filemanager/filemanager.lua:641
+#: frontend/apps/filemanager/filemanager.lua:448
+#: frontend/apps/filemanager/filemanager.lua:634
 msgid "Set as HOME folder"
 msgstr "홈 폴더로 설정"
 
-#: frontend/apps/filemanager/filemanager.lua:562
+#: frontend/apps/filemanager/filemanager.lua:555
 #: frontend/apps/reader/modules/readerback.lua:182
 msgid "Exit KOReader?"
 msgstr "KOReader를 끝낼까요?"
 
-#: frontend/apps/filemanager/filemanager.lua:563
+#: frontend/apps/filemanager/filemanager.lua:556
 #: frontend/apps/filemanager/filemanagermenu.lua:686
 #: frontend/apps/filemanager/filemanagermenu.lua:692
 #: frontend/apps/reader/modules/readerback.lua:183
@@ -884,74 +880,74 @@ msgstr "KOReader를 끝낼까요?"
 msgid "Exit"
 msgstr "끝내기"
 
-#: frontend/apps/filemanager/filemanager.lua:596
-#: frontend/apps/filemanager/filemanager.lua:600
+#: frontend/apps/filemanager/filemanager.lua:589
+#: frontend/apps/filemanager/filemanager.lua:593
 msgid "New folder"
 msgstr "새 폴더"
 
-#: frontend/apps/filemanager/filemanager.lua:611 frontend/ui/wikipedia.lua:1334
+#: frontend/apps/filemanager/filemanager.lua:604 frontend/ui/wikipedia.lua:1334
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 #: plugins/statistics.koplugin/main.lua:293
 msgid "Create"
 msgstr "만들기"
 
-#: frontend/apps/filemanager/filemanager.lua:630
+#: frontend/apps/filemanager/filemanager.lua:623
 msgid "Paste"
 msgstr "붙여넣기"
 
-#: frontend/apps/filemanager/filemanager.lua:650
+#: frontend/apps/filemanager/filemanager.lua:643
 msgid "Go to HOME folder"
 msgstr "홈 폴더로 이동"
 
-#: frontend/apps/filemanager/filemanager.lua:659
+#: frontend/apps/filemanager/filemanager.lua:652
 msgid "Open random document"
 msgstr "무작위 문서 열기"
 
-#: frontend/apps/filemanager/filemanager.lua:668
+#: frontend/apps/filemanager/filemanager.lua:661
 #: frontend/apps/filemanager/filemanagershortcuts.lua:234
-#: frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:94
 msgid "Folder shortcuts"
 msgstr "폴더 바로가기"
 
-#: frontend/apps/filemanager/filemanager.lua:680
+#: frontend/apps/filemanager/filemanager.lua:673
 msgid "Import files here"
 msgstr "여기에 파일 가져오기"
 
-#: frontend/apps/filemanager/filemanager.lua:696
+#: frontend/apps/filemanager/filemanager.lua:689
 msgid "Switch to SDCard"
 msgstr "SDCard로 전환"
 
-#: frontend/apps/filemanager/filemanager.lua:698
+#: frontend/apps/filemanager/filemanager.lua:691
 msgid "Switch to internal storage"
 msgstr "내부 저장소로 전환"
 
-#: frontend/apps/filemanager/filemanager.lua:828
+#: frontend/apps/filemanager/filemanager.lua:821
 msgid "Set '%1' as HOME folder?"
 msgstr "'%1'를 홈 폴더로 설정할까요?"
 
-#: frontend/apps/filemanager/filemanager.lua:829
+#: frontend/apps/filemanager/filemanager.lua:822
 msgid "Set as HOME"
 msgstr "홈으로 설정"
 
-#: frontend/apps/filemanager/filemanager.lua:841
+#: frontend/apps/filemanager/filemanager.lua:834
 msgid "Do you want to open %1?"
 msgstr "%1을 열까요?"
 
-#: frontend/apps/filemanager/filemanager.lua:842
+#: frontend/apps/filemanager/filemanager.lua:835
 #: frontend/ui/widget/filechooser.lua:524
 msgid "Open"
 msgstr "열기"
 
 #. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:847
+#: frontend/apps/filemanager/filemanager.lua:840
 msgid "Another"
 msgstr "또 다른"
 
-#: frontend/apps/filemanager/filemanager.lua:855
+#: frontend/apps/filemanager/filemanager.lua:848
 msgid "File not found"
 msgstr "파일을 찾을 수 없음"
 
-#: frontend/apps/filemanager/filemanager.lua:885
+#: frontend/apps/filemanager/filemanager.lua:878
 msgid ""
 "Copied:\n"
 "%1\n"
@@ -963,7 +959,7 @@ msgstr ""
 "%2\n"
 "로 복사됨"
 
-#: frontend/apps/filemanager/filemanager.lua:890
+#: frontend/apps/filemanager/filemanager.lua:883
 msgid ""
 "Failed to copy:\n"
 "%1\n"
@@ -975,7 +971,7 @@ msgstr ""
 "%2\n"
 "로 복사 실패"
 
-#: frontend/apps/filemanager/filemanager.lua:907
+#: frontend/apps/filemanager/filemanager.lua:900
 msgid ""
 "Moved:\n"
 "%1\n"
@@ -987,7 +983,7 @@ msgstr ""
 "%2\n"
 "로 이동됨"
 
-#: frontend/apps/filemanager/filemanager.lua:912
+#: frontend/apps/filemanager/filemanager.lua:905
 msgid ""
 "Failed to move:\n"
 "%1\n"
@@ -999,7 +995,7 @@ msgstr ""
 "%2\n"
 "로 이동 실패"
 
-#: frontend/apps/filemanager/filemanager.lua:929
+#: frontend/apps/filemanager/filemanager.lua:922
 msgid ""
 "File already exists:\n"
 "%1\n"
@@ -1009,7 +1005,7 @@ msgstr ""
 "%1\n"
 "파일을 덮어쓸까요?"
 
-#: frontend/apps/filemanager/filemanager.lua:931
+#: frontend/apps/filemanager/filemanager.lua:924
 msgid ""
 "Folder already exists:\n"
 "%1\n"
@@ -1019,7 +1015,7 @@ msgstr ""
 "%1\n"
 "폴더를 덮어쓸까요?"
 
-#: frontend/apps/filemanager/filemanager.lua:957
+#: frontend/apps/filemanager/filemanager.lua:950
 msgid ""
 "Created folder:\n"
 "%1"
@@ -1027,7 +1023,7 @@ msgstr ""
 "새로 만든 폴더 :\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:962
+#: frontend/apps/filemanager/filemanager.lua:955
 msgid ""
 "Failed to create folder:\n"
 "%1"
@@ -1035,7 +1031,7 @@ msgstr ""
 "폴더 생성 실패:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:973
+#: frontend/apps/filemanager/filemanager.lua:966
 msgid ""
 "File not found:\n"
 "%1"
@@ -1043,7 +1039,7 @@ msgstr ""
 "파일을 찾을 수 없음:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:998
+#: frontend/apps/filemanager/filemanager.lua:991
 msgid ""
 "Deleted folder:\n"
 "%1"
@@ -1051,7 +1047,7 @@ msgstr ""
 "삭제된 폴더:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:999
+#: frontend/apps/filemanager/filemanager.lua:992
 msgid ""
 "Deleted file:\n"
 "%1"
@@ -1059,7 +1055,7 @@ msgstr ""
 "삭제된 파일:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:1004
+#: frontend/apps/filemanager/filemanager.lua:997
 msgid ""
 "Failed to delete:\n"
 "%1"
@@ -1067,7 +1063,7 @@ msgstr ""
 "삭제 실패:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:1029
+#: frontend/apps/filemanager/filemanager.lua:1022
 msgid ""
 "Renamed file:\n"
 "%1\n"
@@ -1079,7 +1075,7 @@ msgstr ""
 "%2\n"
 "로 파일이름이 바뀜"
 
-#: frontend/apps/filemanager/filemanager.lua:1034
+#: frontend/apps/filemanager/filemanager.lua:1027
 msgid ""
 "Renamed file:\n"
 "%1\n"
@@ -1097,7 +1093,7 @@ msgstr ""
 "기록 데이터를 이동하지 못했습니다.\n"
 "읽기 기록이 손실 될 수 있습니다."
 
-#: frontend/apps/filemanager/filemanager.lua:1041
+#: frontend/apps/filemanager/filemanager.lua:1034
 msgid ""
 "Renamed folder:\n"
 "%1\n"
@@ -1109,7 +1105,7 @@ msgstr ""
 "%2\n"
 "로 폴더 이름이 바뀜"
 
-#: frontend/apps/filemanager/filemanager.lua:1047
+#: frontend/apps/filemanager/filemanager.lua:1040
 msgid ""
 "Failed to rename:\n"
 "%1\n"
@@ -1121,137 +1117,141 @@ msgstr ""
 "%2\n"
 "로 이름 변경 실패"
 
-#: frontend/apps/filemanager/filemanager.lua:1057
+#: frontend/apps/filemanager/filemanager.lua:1050
 msgid "filename"
 msgstr "파일이름"
 
-#: frontend/apps/filemanager/filemanager.lua:1057
+#: frontend/apps/filemanager/filemanager.lua:1050
 msgid "Sort by filename"
 msgstr "파일이름으로 정렬"
 
-#: frontend/apps/filemanager/filemanager.lua:1058
+#: frontend/apps/filemanager/filemanager.lua:1051
 msgid "numeric"
 msgstr "숫자"
 
-#: frontend/apps/filemanager/filemanager.lua:1058
+#: frontend/apps/filemanager/filemanager.lua:1051
 msgid "Sort by filename (natural sorting)"
 msgstr "파일이름으로 정렬 (자연스러운 정렬)"
 
-#: frontend/apps/filemanager/filemanager.lua:1059
+#: frontend/apps/filemanager/filemanager.lua:1052
 msgid "name mixed"
 msgstr "이름 혼합형"
 
-#: frontend/apps/filemanager/filemanager.lua:1059
+#: frontend/apps/filemanager/filemanager.lua:1052
 msgid "Sort by name – mixed files and folders"
 msgstr "이름으로 정렬 - 파일과 폴더 혼합"
 
-#: frontend/apps/filemanager/filemanager.lua:1060
+#: frontend/apps/filemanager/filemanager.lua:1053
 msgid "date read"
 msgstr "읽은 시각"
 
-#: frontend/apps/filemanager/filemanager.lua:1060
+#: frontend/apps/filemanager/filemanager.lua:1053
 msgid "Sort by last read date"
 msgstr "읽은 날짜로 정렬"
 
-#: frontend/apps/filemanager/filemanager.lua:1061
+#: frontend/apps/filemanager/filemanager.lua:1054
 msgid "date added"
 msgstr "날짜가 추가됨"
 
-#: frontend/apps/filemanager/filemanager.lua:1061
+#: frontend/apps/filemanager/filemanager.lua:1054
 msgid "Sort by date added"
 msgstr "추가된 날짜로 정렬"
 
-#: frontend/apps/filemanager/filemanager.lua:1062
+#: frontend/apps/filemanager/filemanager.lua:1055
 msgid "date modified"
 msgstr "날짜 바뀜"
 
-#: frontend/apps/filemanager/filemanager.lua:1062
+#: frontend/apps/filemanager/filemanager.lua:1055
 msgid "Sort by date modified"
 msgstr "수정된 날짜로 정렬"
 
-#: frontend/apps/filemanager/filemanager.lua:1063
+#: frontend/apps/filemanager/filemanager.lua:1056
 msgid "size"
 msgstr "크기"
 
-#: frontend/apps/filemanager/filemanager.lua:1063
+#: frontend/apps/filemanager/filemanager.lua:1056
 msgid "Sort by size"
 msgstr "크기로 정렬"
 
-#: frontend/apps/filemanager/filemanager.lua:1064
+#: frontend/apps/filemanager/filemanager.lua:1057
 msgid "type"
 msgstr "확장자"
 
-#: frontend/apps/filemanager/filemanager.lua:1064
+#: frontend/apps/filemanager/filemanager.lua:1057
 msgid "Sort by type"
 msgstr "확장자로 정렬"
 
-#: frontend/apps/filemanager/filemanager.lua:1065
+#: frontend/apps/filemanager/filemanager.lua:1058
 msgid "percent – unopened first"
 msgstr "비율 – 열지 않은 우선"
 
-#: frontend/apps/filemanager/filemanager.lua:1065
+#: frontend/apps/filemanager/filemanager.lua:1058
 msgid "Sort by percent – unopened first"
 msgstr "비율로 정렬 – 열지 않은 우선"
 
-#: frontend/apps/filemanager/filemanager.lua:1066
+#: frontend/apps/filemanager/filemanager.lua:1059
 msgid "percent – unopened last"
 msgstr "비율 – 열지 않은 후순위"
 
-#: frontend/apps/filemanager/filemanager.lua:1066
+#: frontend/apps/filemanager/filemanager.lua:1059
 msgid "Sort by percent – unopened last"
 msgstr "비율로 정렬 – 열지 않은 후순위"
 
-#: frontend/apps/filemanager/filemanager.lua:1082
+#: frontend/apps/filemanager/filemanager.lua:1075
 msgid "Sort by percent"
 msgstr "비율로 정렬"
 
-#: frontend/apps/filemanager/filemanager.lua:1088
+#: frontend/apps/filemanager/filemanager.lua:1081
 msgid "Sort by: %1"
 msgstr "정렬 기준: %1"
 
-#: frontend/apps/filemanager/filemanager.lua:1119
+#: frontend/apps/filemanager/filemanager.lua:1112
 msgid "file browser"
 msgstr "파일 탐색기"
 
-#: frontend/apps/filemanager/filemanager.lua:1119
+#: frontend/apps/filemanager/filemanager.lua:1112
 msgid "Start with file browser"
 msgstr "파일 탐색기로 시작하기"
 
-#: frontend/apps/filemanager/filemanager.lua:1120
+#: frontend/apps/filemanager/filemanager.lua:1113
 msgid "history"
 msgstr "최근 내역"
 
-#: frontend/apps/filemanager/filemanager.lua:1120
+#: frontend/apps/filemanager/filemanager.lua:1113
 msgid "Start with history"
 msgstr "최근 내역으로 시작하기"
 
-#: frontend/apps/filemanager/filemanager.lua:1121
+#: frontend/apps/filemanager/filemanager.lua:1114
 msgid "favorites"
 msgstr "즐겨찾기"
 
-#: frontend/apps/filemanager/filemanager.lua:1121
+#: frontend/apps/filemanager/filemanager.lua:1114
 msgid "Start with favorites"
 msgstr "즐겨찾기에서 시작"
 
-#: frontend/apps/filemanager/filemanager.lua:1122
+#: frontend/apps/filemanager/filemanager.lua:1115
 msgid "folder shortcuts"
 msgstr "폴더 바로가기"
 
-#: frontend/apps/filemanager/filemanager.lua:1122
+#: frontend/apps/filemanager/filemanager.lua:1115
 msgid "Start with folder shortcuts"
 msgstr "폴더 바로가기로 시작하기"
 
-#: frontend/apps/filemanager/filemanager.lua:1123
+#: frontend/apps/filemanager/filemanager.lua:1116
 msgid "last file"
 msgstr "최근 파일"
 
-#: frontend/apps/filemanager/filemanager.lua:1123
+#: frontend/apps/filemanager/filemanager.lua:1116
 msgid "Start with last file"
 msgstr "최근 파일로 시작하기"
 
-#: frontend/apps/filemanager/filemanager.lua:1140
+#: frontend/apps/filemanager/filemanager.lua:1133
 msgid "Start with: %1"
 msgstr "첫 화면: %1"
+
+#: frontend/apps/filemanager/filemanager.lua:1193
+msgid "Content refreshed."
+msgstr "내용이 갱신됨."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:121
 msgid "Cannot open last document"
@@ -1536,7 +1536,7 @@ msgstr "마지막 문서를 열까요: %1?"
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:188
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:231
 #: frontend/apps/reader/modules/readermenu.lua:277
-#: frontend/apps/reader/readerui.lua:647 frontend/device/android/device.lua:421
+#: frontend/apps/reader/readerui.lua:647 frontend/device/android/device.lua:427
 #: frontend/ui/elements/common_settings_menu_table.lua:287
 #: frontend/ui/widget/confirmbox.lua:46
 #: frontend/ui/widget/container/inputcontainer.lua:287
@@ -1654,7 +1654,7 @@ msgstr "위치 내역이 비어 있습니다."
 
 #: frontend/apps/reader/modules/readerbookmark.lua:20
 #: frontend/apps/reader/modules/readerbookmark.lua:347
-#: frontend/dispatcher.lua:112
+#: frontend/dispatcher.lua:113
 msgid "Bookmarks"
 msgstr "책갈피 목록"
 
@@ -2680,7 +2680,7 @@ msgstr ""
 "기본 (선형) 흐름의 페이지 번호에 대한 [x] \n"
 "비선형 조각 y의 페이지 번호에 대한 [x]"
 
-#: frontend/apps/reader/modules/readergoto.lua:68 frontend/dispatcher.lua:104
+#: frontend/apps/reader/modules/readergoto.lua:68 frontend/dispatcher.lua:105
 msgid "Skim"
 msgstr "구간 이동"
 
@@ -3553,7 +3553,7 @@ msgid "No results on following pages"
 msgstr "다음 페이지에 결과가 없음"
 
 #: frontend/apps/reader/modules/readerstatus.lua:36
-#: frontend/apps/reader/modules/readerstatus.lua:80 frontend/dispatcher.lua:114
+#: frontend/apps/reader/modules/readerstatus.lua:80 frontend/dispatcher.lua:115
 #: frontend/ui/elements/common_settings_menu_table.lua:577
 msgid "Book status"
 msgstr "책 상태"
@@ -3585,7 +3585,7 @@ msgid "Delete file"
 msgstr "파일 삭제"
 
 #: frontend/apps/reader/modules/readerstatus.lua:114 frontend/dispatcher.lua:62
-#: frontend/dispatcher.lua:563
+#: frontend/dispatcher.lua:565
 msgid "File browser"
 msgstr "파일 탐색기"
 
@@ -3770,7 +3770,7 @@ msgstr "책 덧꾸밈 업데이트되고, 적용 중…"
 msgid "Book tweak saved (not enabled)."
 msgstr "책 덧꾸밈이 저장되었습니다(활성화되지 않음)."
 
-#: frontend/apps/reader/modules/readertoc.lua:32 frontend/dispatcher.lua:111
+#: frontend/apps/reader/modules/readertoc.lua:32 frontend/dispatcher.lua:112
 msgid "Table of contents"
 msgstr "차례"
 
@@ -4815,7 +4815,7 @@ msgstr ""
 "책갈피나 하이라이트가 있는 '%1' 문서가 이전에 다른 엔진으로 열렸습니다. 문제"
 "를 방지하려면 계속하기 전에 책갈피를 삭제해야 합니다."
 
-#: frontend/apps/reader/readerui.lua:548 frontend/device/android/device.lua:183
+#: frontend/apps/reader/readerui.lua:548 frontend/device/android/device.lua:186
 msgid "Opening file '%1'."
 msgstr "'%1' 파일을 엽니다."
 
@@ -4848,35 +4848,35 @@ msgstr ""
 "서.\n"
 "지금 KOReader를 끝냅니다."
 
-#: frontend/device/android/device.lua:306
+#: frontend/device/android/device.lua:312
 msgid "Not connected"
 msgstr "연결되지 않음"
 
-#: frontend/device/android/device.lua:309
+#: frontend/device/android/device.lua:315
 msgid "Connected to Wi-Fi"
 msgstr "Wi-Fi에 연결됨"
 
-#: frontend/device/android/device.lua:311
+#: frontend/device/android/device.lua:317
 msgid "Connected to mobile data network"
 msgstr "모바일 데이터 네트워크에 연결됨"
 
-#: frontend/device/android/device.lua:313
+#: frontend/device/android/device.lua:319
 msgid "Connected to Ethernet"
 msgstr "이더넷에 연결됨"
 
-#: frontend/device/android/device.lua:315
+#: frontend/device/android/device.lua:321
 msgid "Connected to Bluetooth"
 msgstr "블루투스에 연결됨"
 
-#: frontend/device/android/device.lua:317
+#: frontend/device/android/device.lua:323
 msgid "Connected to VPN"
 msgstr "VPN에 연결됨"
 
-#: frontend/device/android/device.lua:319
+#: frontend/device/android/device.lua:325
 msgid "Unknown connection"
 msgstr "알 수 없는 연결"
 
-#: frontend/device/android/device.lua:357
+#: frontend/device/android/device.lua:363
 msgid ""
 "%1\n"
 "\n"
@@ -4888,11 +4888,11 @@ msgstr ""
 "OS: 안드로이드 %2, api %3\n"
 "빌드 flavor: %4\n"
 
-#: frontend/device/android/device.lua:362
+#: frontend/device/android/device.lua:368
 msgid "Device type: %1"
 msgstr "장치 유형: %1"
 
-#: frontend/device/android/device.lua:367
+#: frontend/device/android/device.lua:373
 msgid ""
 "E-ink display supported.\n"
 "Platform: %1"
@@ -4900,7 +4900,7 @@ msgstr ""
 "전자 잉크 화면 지원.\n"
 "플랫폼: %1"
 
-#: frontend/device/android/device.lua:372
+#: frontend/device/android/device.lua:378
 msgid ""
 "This device needs CPU, screen and touchscreen always on.\n"
 "Screen timeout will be ignored while the app is in the foreground!"
@@ -4908,20 +4908,20 @@ msgstr ""
 "이 장치에는 CPU와 화면, 터치스크린이 항상 켜져 있어야 합니다.\n"
 "앱이 포그라운드에 있는 동안은 시간 초과로 화면 잠자기가 무시됩니다!"
 
-#: frontend/device/android/device.lua:420
+#: frontend/device/android/device.lua:426
 msgid "Frontlight settings"
 msgstr "프론트라이트 설정"
 
-#: frontend/device/android/device.lua:420
+#: frontend/device/android/device.lua:426
 msgid "Light settings"
 msgstr "조명 설정"
 
-#: frontend/device/android/device.lua:421
+#: frontend/device/android/device.lua:427
 #: frontend/ui/widget/frontlightwidget.lua:164
 msgid "Brightness"
 msgstr "밝기"
 
-#: frontend/device/android/device.lua:421
+#: frontend/device/android/device.lua:427
 #: frontend/ui/widget/frontlightwidget.lua:336
 msgid "Warmth"
 msgstr "색온도"
@@ -5158,157 +5158,162 @@ msgstr "폴더 위로"
 msgid "Show plus menu"
 msgstr "추가 메뉴 표시"
 
-#: frontend/dispatcher.lua:96
+#: frontend/dispatcher.lua:93
+#, fuzzy
+msgid "Refresh content"
+msgstr "내용"
+
+#: frontend/dispatcher.lua:97
 msgid "Toggle status bar"
 msgstr "상태 표시 줄 토글"
 
-#: frontend/dispatcher.lua:97
+#: frontend/dispatcher.lua:98
 msgid "Previous chapter"
 msgstr "이전 챕터"
 
-#: frontend/dispatcher.lua:98
+#: frontend/dispatcher.lua:99
 msgid "Next chapter"
 msgstr "다음 챕터"
 
-#: frontend/dispatcher.lua:99
+#: frontend/dispatcher.lua:100
 msgid "First page"
 msgstr "첫 페이지"
 
-#: frontend/dispatcher.lua:100
+#: frontend/dispatcher.lua:101
 msgid "Last page"
 msgstr "끝 페이지"
 
-#: frontend/dispatcher.lua:101
+#: frontend/dispatcher.lua:102
 msgid "Previous bookmark"
 msgstr "이전 책갈피"
 
-#: frontend/dispatcher.lua:102
+#: frontend/dispatcher.lua:103
 msgid "Next bookmark"
 msgstr "다음 책갈피"
 
-#: frontend/dispatcher.lua:103
+#: frontend/dispatcher.lua:104
 msgid "Go to"
 msgstr "이동"
 
-#: frontend/dispatcher.lua:105 plugins/terminal.koplugin/main.lua:425
+#: frontend/dispatcher.lua:106 plugins/terminal.koplugin/main.lua:425
 msgid "Back"
 msgstr "뒤로"
 
-#: frontend/dispatcher.lua:106
+#: frontend/dispatcher.lua:107
 msgid "Back to previous location"
 msgstr "직전 위치로 돌아가기"
 
-#: frontend/dispatcher.lua:107
+#: frontend/dispatcher.lua:108
 msgid "Go to latest bookmark"
 msgstr "최근 책갈피로 이동"
 
-#: frontend/dispatcher.lua:108
+#: frontend/dispatcher.lua:109
 msgid "Follow nearest link"
 msgstr "가까운 링크로 이동"
 
-#: frontend/dispatcher.lua:109
+#: frontend/dispatcher.lua:110
 msgid "Follow nearest internal link"
 msgstr "가까운 내부 링크로 이동"
 
-#: frontend/dispatcher.lua:110
+#: frontend/dispatcher.lua:111
 msgid "Clear location history"
 msgstr "위치 내역 지우기"
 
-#: frontend/dispatcher.lua:113
+#: frontend/dispatcher.lua:114
 msgid "Book statistics"
 msgstr "책 통계"
 
-#: frontend/dispatcher.lua:116
+#: frontend/dispatcher.lua:117
 msgid "Book description"
 msgstr "책 설명"
 
-#: frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:118
 msgid "Book cover"
 msgstr "책 표지"
 
-#: frontend/dispatcher.lua:118
+#: frontend/dispatcher.lua:119
 msgid "Show bottom menu"
 msgstr "하단 메뉴 표시"
 
-#: frontend/dispatcher.lua:119
+#: frontend/dispatcher.lua:120
 msgid "Toggle bookmark"
 msgstr "책갈피 켜거나 끄기"
 
-#: frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:121
 msgid "Toggle page turn direction"
 msgstr "페이지 넘김 방향 토글"
 
-#: frontend/dispatcher.lua:121
+#: frontend/dispatcher.lua:122
 msgid "Cycle highlight action"
 msgstr "강조 동작 순환하기"
 
-#: frontend/dispatcher.lua:122
+#: frontend/dispatcher.lua:123
 msgid "Cycle highlight style"
 msgstr "강조 모양 순환하기"
 
-#: frontend/dispatcher.lua:123
+#: frontend/dispatcher.lua:124
 msgid "Go %1 pages"
 msgstr "%1 페이지로 이동"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Toggle panel zoom"
 msgstr "패널 줌 토글"
 
-#: frontend/dispatcher.lua:127
+#: frontend/dispatcher.lua:128
 msgid "Increase font size by %1"
 msgstr "글씨 크기를 %1 늘이기"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Decrease font size by %1"
 msgstr "글씨 크기를 %1 줄이기"
 
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Toggle page flipping"
 msgstr "페이지 플립 켜거나 끄기"
 
-#: frontend/dispatcher.lua:132
+#: frontend/dispatcher.lua:133
 msgid "Toggle reflow"
 msgstr "리플로 켜거나 끄기"
 
-#: frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:134
 msgid "Zoom mode"
 msgstr "확대/축소 모드"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Change zoom factor"
 msgstr "확대/축소 비율 변경"
 
-#: frontend/dispatcher.lua:148
+#: frontend/dispatcher.lua:149
 msgid "Set font size to %1"
 msgstr "글씨 크기를 %1로 설정"
 
-#: frontend/dispatcher.lua:368
+#: frontend/dispatcher.lua:370
 msgid "Unknown item"
 msgstr "알 수없는 항목"
 
-#: frontend/dispatcher.lua:377
+#: frontend/dispatcher.lua:379
 msgctxt "Number placeholder"
 msgid "#"
 msgstr "#"
 
-#: frontend/dispatcher.lua:468
+#: frontend/dispatcher.lua:470
 msgid "If called by a gesture the amount of the gesture will be used"
 msgstr "제스처로 호출되면 제스처의 양이 사용됩니다"
 
-#: frontend/dispatcher.lua:550 plugins/gestures.koplugin/main.lua:187
+#: frontend/dispatcher.lua:552 plugins/gestures.koplugin/main.lua:187
 msgid "Nothing"
 msgstr "없음"
 
-#: frontend/dispatcher.lua:562
+#: frontend/dispatcher.lua:564
 #: frontend/ui/elements/common_info_menu_table.lua:33
 msgid "Device"
 msgstr "기기"
 
-#: frontend/dispatcher.lua:564
+#: frontend/dispatcher.lua:566
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "리플로우 가능 문서 (epub, fb2, txt…)"
 
-#: frontend/dispatcher.lua:565
+#: frontend/dispatcher.lua:567
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "고정 레이아웃 문서 (pdf, djvu, pics…)"
 
