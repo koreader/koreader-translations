@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-13 14:27+0000\n"
+"POT-Creation-Date: 2021-05-16 10:48+0000\n"
 "PO-Revision-Date: 2021-04-10 18:13+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/koreader/"
@@ -175,11 +175,12 @@ msgstr ""
 #: frontend/ui/elements/screen_android.lua:60 frontend/ui/screensaver.lua:336
 #: frontend/ui/widget/bookstatuswidget.lua:623
 #: frontend/ui/widget/confirmbox.lua:47
-#: frontend/ui/widget/container/inputcontainer.lua:281
+#: frontend/ui/widget/container/inputcontainer.lua:284
 #: frontend/ui/widget/datewidget.lua:32
 #: frontend/ui/widget/dictquicklookup.lua:1241
 #: frontend/ui/widget/filechooser.lua:520
-#: frontend/ui/widget/inputdialog.lua:654
+#: frontend/ui/widget/inputdialog.lua:655
+#: frontend/ui/widget/inputdialog.lua:743
 #: frontend/ui/widget/keyboardlayoutdialog.lua:71
 #: frontend/ui/widget/menu.lua:797 frontend/ui/widget/multiconfirmbox.lua:49
 #: frontend/ui/widget/networksetting.lua:295
@@ -320,7 +321,7 @@ msgstr "Yerel klasörü seçin"
 #: frontend/ui/widget/dictquicklookup.lua:522
 #: frontend/ui/widget/doublespinwidget.lua:42
 #: frontend/ui/widget/imageviewer.lua:195
-#: frontend/ui/widget/inputdialog.lua:648
+#: frontend/ui/widget/inputdialog.lua:649
 #: frontend/ui/widget/screenshoter.lua:81 frontend/ui/widget/spinwidget.lua:38
 #: frontend/ui/widget/textviewer.lua:146 plugins/keepalive.koplugin/main.lua:19
 #: plugins/statistics.koplugin/main.lua:289
@@ -1508,7 +1509,7 @@ msgstr "Son belgeyi açmak ister misiniz: %1?"
 #: frontend/apps/reader/readerui.lua:657 frontend/device/android/device.lua:437
 #: frontend/ui/elements/common_settings_menu_table.lua:287
 #: frontend/ui/widget/confirmbox.lua:46
-#: frontend/ui/widget/container/inputcontainer.lua:287
+#: frontend/ui/widget/container/inputcontainer.lua:290
 #: frontend/ui/widget/datewidget.lua:31
 #: frontend/ui/widget/numberpickerwidget.lua:140
 #: frontend/ui/widget/timewidget.lua:31 plugins/calibre.koplugin/main.lua:313
@@ -3719,8 +3720,8 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:641
 #: frontend/apps/reader/modules/readerwikipedia.lua:161
-#: frontend/apps/reader/readerui.lua:719 frontend/ui/widget/inputdialog.lua:622
-#: frontend/ui/widget/inputdialog.lua:663
+#: frontend/apps/reader/readerui.lua:719 frontend/ui/widget/inputdialog.lua:623
+#: frontend/ui/widget/inputdialog.lua:664
 #: plugins/coverimage.koplugin/main.lua:353
 #: plugins/gestures.koplugin/main.lua:335 plugins/profiles.koplugin/main.lua:69
 #: plugins/SSH.koplugin/main.lua:118 plugins/terminal.koplugin/main.lua:243
@@ -9206,49 +9207,69 @@ msgstr "Evet"
 msgid "No"
 msgstr "Hayır"
 
-#: frontend/ui/widget/inputdialog.lua:411
+#: frontend/ui/widget/inputdialog.lua:412
 msgid "Read only"
 msgstr "Salt okunur"
 
-#: frontend/ui/widget/inputdialog.lua:413
+#: frontend/ui/widget/inputdialog.lua:414
 msgid "Not editable"
 msgstr "Düzenlenemez"
 
-#: frontend/ui/widget/inputdialog.lua:596
+#: frontend/ui/widget/inputdialog.lua:597
 #: plugins/statistics.koplugin/main.lua:2000
 #: plugins/statistics.koplugin/main.lua:2046
 msgid "Reset"
 msgstr "Sıfırla"
 
-#: frontend/ui/widget/inputdialog.lua:608
+#: frontend/ui/widget/inputdialog.lua:609
 msgid "Text reset"
 msgstr "Metni sıfırla"
 
-#: frontend/ui/widget/inputdialog.lua:613
+#: frontend/ui/widget/inputdialog.lua:614
 msgid "Resetting failed."
 msgstr "Sıfırlanamadı."
 
-#: frontend/ui/widget/inputdialog.lua:634
-#: frontend/ui/widget/inputdialog.lua:672
+#: frontend/ui/widget/inputdialog.lua:635
+#: frontend/ui/widget/inputdialog.lua:673
 msgid "Saving failed."
 msgstr "Kaydedilemedi."
 
-#: frontend/ui/widget/inputdialog.lua:640
-#: frontend/ui/widget/inputdialog.lua:679
+#: frontend/ui/widget/inputdialog.lua:641
+#: frontend/ui/widget/inputdialog.lua:680
 msgid "Saved"
 msgstr "Kaydedildi"
 
-#: frontend/ui/widget/inputdialog.lua:653
+#: frontend/ui/widget/inputdialog.lua:654
 msgid "You have unsaved changes."
 msgstr "Kaydedilmemiş değişiklikleriniz var."
 
-#: frontend/ui/widget/inputdialog.lua:655
+#: frontend/ui/widget/inputdialog.lua:656
 msgid "Discard"
 msgstr "Yok say"
 
-#: frontend/ui/widget/inputdialog.lua:660
+#: frontend/ui/widget/inputdialog.lua:661
 msgid "Changes discarded"
 msgstr "Değişiklikler yok sayıldı"
+
+#: frontend/ui/widget/inputdialog.lua:730
+msgid "Go"
+msgstr ""
+
+#: frontend/ui/widget/inputdialog.lua:735
+#, fuzzy
+msgid "Enter line number"
+msgstr "Numarayı yazın"
+
+#. @translators %1 is the current line number, %2 is the last line number
+#: frontend/ui/widget/inputdialog.lua:737
+#, fuzzy
+msgid "%1 (1 - %2)"
+msgstr "%1 (%2)"
+
+#: frontend/ui/widget/inputdialog.lua:749
+#, fuzzy
+msgid "Go to line"
+msgstr "Mektuba git"
 
 #: frontend/ui/widget/inputtext.lua:209
 msgid "Text may be binary content, and is not editable"
