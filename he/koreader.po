@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-16 10:53+0000\n"
+"POT-Creation-Date: 2021-05-16 14:58+0000\n"
 "PO-Revision-Date: 2021-05-16 10:48+0000\n"
 "Last-Translator: Enrico Segre <enricoalbertoernestosegre@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -1255,7 +1255,7 @@ msgstr "לא ניתן לפתוח את המסמך האחרון"
 #: frontend/apps/filemanager/filemanagermenu.lua:148
 #: frontend/apps/reader/modules/readerfooter.lua:959
 #: frontend/apps/reader/modules/readertoc.lua:882
-#: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:478
+#: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:473
 #: plugins/goodreads.koplugin/main.lua:31
 #: plugins/newsdownloader.koplugin/main.lua:108
 #: plugins/perceptionexpander.koplugin/main.lua:177
@@ -2008,6 +2008,7 @@ msgid "Dictionary filesize is %1 (%2 bytes). Continue with download?"
 msgstr "גודל הקובץ של המילון הוא %1 (%2 בתים). להמשיך עם ההורדה?"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:992
+#: frontend/ui/otamanager.lua:242
 msgid "Download"
 msgstr "הורד"
 
@@ -4923,12 +4924,24 @@ msgstr "בהירות"
 msgid "Warmth"
 msgstr "חום"
 
-#: frontend/device/android/device.lua:468
+#: frontend/device/android/device.lua:479
+msgid ""
+"Your device seems to be unable to download packages.\n"
+"Retry using the browser?"
+msgstr ""
+"נראה כי המכשיר שלך אינו מסוגל להוריד חבילות.\n"
+"לנסות שוב באמצעות הדפדפן?"
+
+#: frontend/device/android/device.lua:480 frontend/ui/otamanager.lua:292
+msgid "Retry"
+msgstr "נסה שוב"
+
+#: frontend/device/android/device.lua:490
 #: frontend/device/generic/device.lua:365
 msgid "Update is ready. Install it now?"
 msgstr "העדכון מוכן. להתקין אותו עכשיו?"
 
-#: frontend/device/android/device.lua:469
+#: frontend/device/android/device.lua:491
 #: frontend/device/generic/device.lua:366
 msgid "Install"
 msgstr "התקן"
@@ -8221,11 +8234,26 @@ msgstr ""
 "גרסה מותקנת: %1\n"
 "גרסה זמינה: %2"
 
-#: frontend/ui/otamanager.lua:233 frontend/ui/otamanager.lua:460
+#: frontend/ui/otamanager.lua:233 frontend/ui/otamanager.lua:455
 msgid "Update"
 msgstr "עדכון מערכת"
 
-#: frontend/ui/otamanager.lua:235
+#: frontend/ui/otamanager.lua:239
+#, fuzzy
+msgid ""
+"The currently installed version is newer than the available version.\n"
+"You'll need to uninstall the app before installing a previous version.\n"
+"Download anyway?\n"
+"\n"
+"Installed version: %1\n"
+"Available version: %2"
+msgstr ""
+"הגרסה המותקנת כעת חדשה יותר מהגרסה הזמינה.\n"
+"האם אתה עדיין רוצה להמשיך ולדרוג לאחור?\n"
+"גרסה מותקנת: %1\n"
+"גרסה זמינה: %2"
+
+#: frontend/ui/otamanager.lua:249
 msgid ""
 "The currently installed version is newer than the available version.\n"
 "Would you still like to continue and downgrade?\n"
@@ -8237,28 +8265,16 @@ msgstr ""
 "גרסה מותקנת: %1\n"
 "גרסה זמינה: %2"
 
-#: frontend/ui/otamanager.lua:238
+#: frontend/ui/otamanager.lua:252
 msgid "Downgrade"
 msgstr "שדרוג לאחור"
 
-#: frontend/ui/otamanager.lua:241 frontend/ui/otamanager.lua:300
+#: frontend/ui/otamanager.lua:255 frontend/ui/otamanager.lua:295
 #: plugins/opds.koplugin/opdsbrowser.lua:594
 msgid "Downloading may take several minutes…"
 msgstr "ההורדה עשויה לארוך מספר דקות …"
 
-#: frontend/ui/otamanager.lua:264
-msgid ""
-"Your device seems to be unable to download packages.\n"
-"Retry using the browser?"
-msgstr ""
-"נראה כי המכשיר שלך אינו מסוגל להוריד חבילות.\n"
-"לנסות שוב באמצעות הדפדפן?"
-
-#: frontend/ui/otamanager.lua:265 frontend/ui/otamanager.lua:297
-msgid "Retry"
-msgstr "נסה שוב"
-
-#: frontend/ui/otamanager.lua:296
+#: frontend/ui/otamanager.lua:291
 msgid ""
 "Failed to update KOReader.\n"
 "\n"
@@ -8274,24 +8290,24 @@ msgstr ""
 "לנסות שוב את תהליך העדכון עם הורדה מלאה.\n"
 "לבטל ולנקות את כל הקבצים הזמניים."
 
-#: frontend/ui/otamanager.lua:322
+#: frontend/ui/otamanager.lua:317
 msgid "Error updating KOReader. Would you like to delete temporary files?"
 msgstr "שגיאה בעדכון KOReader. האם ברצונך למחוק קבצים זמניים?"
 
-#: frontend/ui/otamanager.lua:330 frontend/ui/trapper.lua:161
+#: frontend/ui/otamanager.lua:325 frontend/ui/trapper.lua:161
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:806
 msgid "Abort"
 msgstr "הפסק"
 
-#: frontend/ui/otamanager.lua:469
+#: frontend/ui/otamanager.lua:464
 msgid "Check for update"
 msgstr "בדוק אם ישנם עדכונים"
 
-#: frontend/ui/otamanager.lua:481
+#: frontend/ui/otamanager.lua:476
 msgid "Update server"
 msgstr "שרת עידוכן"
 
-#: frontend/ui/otamanager.lua:485
+#: frontend/ui/otamanager.lua:480
 msgid "Update channel"
 msgstr "ערוץ עידכון"
 

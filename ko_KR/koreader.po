@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-16 10:53+0000\n"
+"POT-Creation-Date: 2021-05-16 14:58+0000\n"
 "PO-Revision-Date: 2021-05-13 08:20+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -1263,7 +1263,7 @@ msgstr "마지막 문서를 열 수 없습니다"
 #: frontend/apps/filemanager/filemanagermenu.lua:148
 #: frontend/apps/reader/modules/readerfooter.lua:959
 #: frontend/apps/reader/modules/readertoc.lua:882
-#: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:478
+#: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:473
 #: plugins/goodreads.koplugin/main.lua:31
 #: plugins/newsdownloader.koplugin/main.lua:108
 #: plugins/perceptionexpander.koplugin/main.lua:177
@@ -2015,6 +2015,7 @@ msgid "Dictionary filesize is %1 (%2 bytes). Continue with download?"
 msgstr "사전 파일 크기는 %1 (%2 바이트)입니다. 다운로드를 계속할까요?"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:992
+#: frontend/ui/otamanager.lua:242
 msgid "Download"
 msgstr "다운로드"
 
@@ -4933,12 +4934,24 @@ msgstr "밝기"
 msgid "Warmth"
 msgstr "색온도"
 
-#: frontend/device/android/device.lua:468
+#: frontend/device/android/device.lua:479
+msgid ""
+"Your device seems to be unable to download packages.\n"
+"Retry using the browser?"
+msgstr ""
+"사용자의 기기에서 패키지를 다운로드 할 수 없는 것 같습니다.\n"
+"브라우저를 사용하여 재시도할까요?"
+
+#: frontend/device/android/device.lua:480 frontend/ui/otamanager.lua:292
+msgid "Retry"
+msgstr "재시도"
+
+#: frontend/device/android/device.lua:490
 #: frontend/device/generic/device.lua:365
 msgid "Update is ready. Install it now?"
 msgstr "업데이트가 준비되었습니다. 지금 설치할까요?"
 
-#: frontend/device/android/device.lua:469
+#: frontend/device/android/device.lua:491
 #: frontend/device/generic/device.lua:366
 msgid "Install"
 msgstr "설치"
@@ -8223,11 +8236,26 @@ msgstr ""
 "설치된 버전: %1\n"
 "설치할 버전: %2"
 
-#: frontend/ui/otamanager.lua:233 frontend/ui/otamanager.lua:460
+#: frontend/ui/otamanager.lua:233 frontend/ui/otamanager.lua:455
 msgid "Update"
 msgstr "업데이트"
 
-#: frontend/ui/otamanager.lua:235
+#: frontend/ui/otamanager.lua:239
+#, fuzzy
+msgid ""
+"The currently installed version is newer than the available version.\n"
+"You'll need to uninstall the app before installing a previous version.\n"
+"Download anyway?\n"
+"\n"
+"Installed version: %1\n"
+"Available version: %2"
+msgstr ""
+"현재 설치된 버전이 설치할 수 있는 버전보다 최신 버전입니다.\n"
+"계속 진행해서 다운그레이드를 할까요?\n"
+"설치된 버전: %1\n"
+"설치할 버전: %2"
+
+#: frontend/ui/otamanager.lua:249
 msgid ""
 "The currently installed version is newer than the available version.\n"
 "Would you still like to continue and downgrade?\n"
@@ -8239,28 +8267,16 @@ msgstr ""
 "설치된 버전: %1\n"
 "설치할 버전: %2"
 
-#: frontend/ui/otamanager.lua:238
+#: frontend/ui/otamanager.lua:252
 msgid "Downgrade"
 msgstr "다운그레이드"
 
-#: frontend/ui/otamanager.lua:241 frontend/ui/otamanager.lua:300
+#: frontend/ui/otamanager.lua:255 frontend/ui/otamanager.lua:295
 #: plugins/opds.koplugin/opdsbrowser.lua:594
 msgid "Downloading may take several minutes…"
 msgstr "다운로드에 몇 분 정도 걸릴 수 있습니다…"
 
-#: frontend/ui/otamanager.lua:264
-msgid ""
-"Your device seems to be unable to download packages.\n"
-"Retry using the browser?"
-msgstr ""
-"사용자의 기기에서 패키지를 다운로드 할 수 없는 것 같습니다.\n"
-"브라우저를 사용하여 재시도할까요?"
-
-#: frontend/ui/otamanager.lua:265 frontend/ui/otamanager.lua:297
-msgid "Retry"
-msgstr "재시도"
-
-#: frontend/ui/otamanager.lua:296
+#: frontend/ui/otamanager.lua:291
 msgid ""
 "Failed to update KOReader.\n"
 "\n"
@@ -8276,24 +8292,24 @@ msgstr ""
 "전체 다운로드 업데이트 과정을 재시도하기.\n"
 "모든 임시 파일을 지우고 중단하기."
 
-#: frontend/ui/otamanager.lua:322
+#: frontend/ui/otamanager.lua:317
 msgid "Error updating KOReader. Would you like to delete temporary files?"
 msgstr "KOReader 업데이트 도중에 오류가 발생했습니다. 임시 파일을 지울까요?"
 
-#: frontend/ui/otamanager.lua:330 frontend/ui/trapper.lua:161
+#: frontend/ui/otamanager.lua:325 frontend/ui/trapper.lua:161
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:806
 msgid "Abort"
 msgstr "중단"
 
-#: frontend/ui/otamanager.lua:469
+#: frontend/ui/otamanager.lua:464
 msgid "Check for update"
 msgstr "업데이트 확인"
 
-#: frontend/ui/otamanager.lua:481
+#: frontend/ui/otamanager.lua:476
 msgid "Update server"
 msgstr "업데이트 서버"
 
-#: frontend/ui/otamanager.lua:485
+#: frontend/ui/otamanager.lua:480
 msgid "Update channel"
 msgstr "업데이트 채널"
 
