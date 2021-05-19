@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-18 09:57+0000\n"
-"PO-Revision-Date: 2021-05-18 09:58+0000\n"
+"PO-Revision-Date: 2021-05-19 16:08+0000\n"
 "Last-Translator: Ichnilatis <z8g1r3d2u5d0u3b5@simon13.slack.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
 "el/>\n"
@@ -2489,7 +2489,7 @@ msgstr "Εικονίδια (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1273
 msgid "Compact Items (%1)"
-msgstr "Βραχυγραφίες (%1)"
+msgstr "Συνεπτυγμένα στοιχεία (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1289
 msgid "Letters (%1)"
@@ -5513,7 +5513,7 @@ msgstr "Αριστερό/Δεξί Περιθώριο"
 
 #: frontend/ui/data/creoptions.lua:179
 msgid "Sync T/B Margins"
-msgstr "Ίδια Επάνω/Κάτω περιθώρια"
+msgstr "Ίδια Επάνω/Κάτω Περιθώρια"
 
 #: frontend/ui/data/creoptions.lua:188
 msgid ""
@@ -6805,6 +6805,21 @@ msgid ""
 "odd page number, and once on an even page number (these areas will then be "
 "used for all odd, or even, page numbers)."
 msgstr ""
+"Επιτρέπει την περικοπή κενών περιθωρίων στις σελίδες του αρχικού εγγράφου.\n"
+"Αυτό μπορεί να χρειαστεί σε σαρωμένα έγγραφα, που ενδέχεται να έχουν "
+"στίγματα ή δακτυλικά αποτυπώματα στο περιθώριο, ώστε να μπορείτε να "
+"χρησιμοποιήσετε την μεγέθυνση για να ταιριάζει στο πλάτος του περιεχομένου.\n"
+"- Η επιλογή «κανένα» δεν κόβει τα αρχικά περιθώρια εγγράφου.\n"
+"- Η επιλογή «αυτόματα» βρίσκει αυτόματα την περιοχή περιεχομένου. \n"
+"- Η επιλογή «ημιαυτόματο» βρίσκει αυτόματα την περιοχή περιεχομένου, μέσα σε "
+"κάποια μεγαλύτερη περιοχή που ορίζεται χειροκίνητα. \n"
+"- Η επιλογή «χειροκίνητο» χρησιμοποιεί την περιοχή που ορίζεται χειροκίνητα "
+"ως έχει. \n"
+"\n"
+"Στις επιλογές «ημιαυτόματο» και «χειροκίνητο», ίσως χρειαστεί να ορίσετε "
+"περιοχές μία φορά σε μία μονή σελίδα και μία φορά σε μία ζυγή σελίδα (αυτές "
+"οι περιοχές θα χρησιμοποιηθούν στη συνέχεια για όλες τις μονές ή ζυγές "
+"σελίδες)."
 
 #: frontend/ui/data/koptoptions.lua:106
 msgid "Margin"
@@ -6813,6 +6828,8 @@ msgstr "Περιθώριο"
 #: frontend/ui/data/koptoptions.lua:112
 msgid "Set margins to be applied after page-crop and zoom modes are applied."
 msgstr ""
+"Ορίζει τα περιθώρια που θα εφαρμοστούν μετά την εφαρμογή της λειτουργίας «"
+"Ξάκρισμα Σελίδας» και «Μεγέθυνση»."
 
 #: frontend/ui/data/koptoptions.lua:121
 msgid "Horizontal overlap"
@@ -7148,6 +7165,11 @@ msgid ""
 "You might need to set it to 1 column if, in a full width document, text is "
 "incorrectly detected as multiple columns because of unlucky word spacing."
 msgstr ""
+"Στη λειτουργία αναδιάταξης κειμένου, ορίζει τον μέγιστο αριθμό στηλών που θα "
+"ανιχνευθούν στο αρχικό έγγραφο.\n"
+"Ίσως χρειαστεί να το ορίσετε σε 1 στήλη εάν, σε ένα έγγραφο πλήρους πλάτους, "
+"το κείμενο εντοπίζεται εσφαλμένα ως πολλές στήλες λόγω κακής ρύθμισης των "
+"διαστημάτων μεταξύ των λέξεων."
 
 #: frontend/ui/data/optionsutil.lua:34 frontend/ui/data/optionsutil.lua:44
 msgid "custom"
@@ -8969,9 +8991,8 @@ msgid "Save as EPUB"
 msgstr "Αποθήκευση ως EPUB"
 
 #: frontend/ui/widget/dictquicklookup.lua:372
-#, fuzzy
 msgid "No folder to save article to could be found."
-msgstr "Δεν βρέθηκε κατάλογος για αποθήκευση άρθρου."
+msgstr "Δεν βρέθηκε φάκελος για αποθήκευση άρθρου."
 
 #: frontend/ui/widget/dictquicklookup.lua:382
 msgid "Save as %1?"
@@ -9346,21 +9367,17 @@ msgid "Choose screenshot folder"
 msgstr "Επιλέξτε φάκελο στιγμιοτύπων οθόνης"
 
 #: frontend/ui/widget/screenshoter.lua:71
-#, fuzzy
 msgid ""
 "Screenshot folder set to:\n"
 "%1"
-msgstr ""
-"Φάκελος προφύλαξης οθόνης ορίστηκε σε:\n"
-"%1"
+msgstr "%1: ορίστηκε ως φάκελος στιγμιοτύπων οθόνης"
 
 #: frontend/ui/widget/screenshoter.lua:89
-#, fuzzy
 msgid ""
 "Current screenshot folder:\n"
 "%1"
 msgstr ""
-"Τρέχων φάκελος:\n"
+"Τρέχων φάκελος στιγμιοτύπων οθόνης:\n"
 "%1"
 
 #: frontend/ui/widget/spinwidget.lua:46
@@ -9763,11 +9780,11 @@ msgstr "Στατιστικά μπαταρίας"
 
 #: plugins/batterystat.koplugin/main.lua:251
 msgid "Awake since last charge"
-msgstr ""
+msgstr "Σε λειτουργία από την τελευταία φόρτιση"
 
 #: plugins/batterystat.koplugin/main.lua:254
 msgid "Sleeping since last charge"
-msgstr ""
+msgstr "Σε νάρκη από την τελευταία φόρτιση"
 
 #: plugins/batterystat.koplugin/main.lua:257
 msgid "During last charge"
@@ -11563,9 +11580,8 @@ msgid "Cannot login: %1"
 msgstr "Δεν είναι δυνατή η σύνδεση: %1"
 
 #: plugins/kosync.koplugin/main.lua:377
-#, fuzzy
 msgid "Cannot register: %1"
-msgstr "Περιθώρια: %1"
+msgstr "Δεν είναι δυνατή η εγγραφή: %1"
 
 #: plugins/kosync.koplugin/main.lua:387
 msgid "Registering. Please wait…"
@@ -12022,26 +12038,23 @@ msgstr ""
 
 #: plugins/profiles.koplugin/main.lua:43 plugins/profiles.koplugin/_meta.lua:4
 msgid "Profiles"
-msgstr ""
+msgstr "Προφίλ"
 
 #: plugins/profiles.koplugin/main.lua:54
-#, fuzzy
 msgid "New"
-msgstr "Δίκτυο"
+msgstr "Νέο"
 
 #: plugins/profiles.koplugin/main.lua:59
-#, fuzzy
 msgid "Enter profile name"
-msgstr "Εισαγωγή ονόματος αρχείου"
+msgstr "Εισαγωγή ονόματος προφίλ"
 
 #: plugins/profiles.koplugin/main.lua:74
 msgid "There is already a profile called: %1"
-msgstr ""
+msgstr "Υπάρχει ήδη ένα προφίλ που ονομάζεται: %1"
 
 #: plugins/profiles.koplugin/main.lua:95
-#, fuzzy
 msgid "Delete profile"
-msgstr "Διαγραφή αρχείου"
+msgstr "Διαγραφή του προφίλ"
 
 #: plugins/profiles.koplugin/main.lua:100
 msgid "Do you want to delete this profile?"
