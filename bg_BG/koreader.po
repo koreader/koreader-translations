@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-04 16:52+0000\n"
+"POT-Creation-Date: 2021-06-04 22:58+0000\n"
 "PO-Revision-Date: 2021-04-26 02:32+0000\n"
 "Last-Translator: trifa <tanu78@yahoo.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/koreader/"
@@ -611,6 +611,10 @@ msgid "Keywords:"
 msgstr "Ключови думи:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:204
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:272
+#: plugins/coverbrowser.koplugin/covermenu.lua:348
+#: plugins/coverbrowser.koplugin/covermenu.lua:481
+#: plugins/coverbrowser.koplugin/covermenu.lua:603
 msgid "Description:"
 msgstr "Описание:"
 
@@ -627,10 +631,6 @@ msgstr "Изображение за корица:"
 #: plugins/statistics.koplugin/main.lua:1428
 msgid "Tap to display"
 msgstr "Натисни, за да се покаже"
-
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:272
-msgid "Book description:"
-msgstr "Описание на книгата:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:277
 msgid "No book description available."
@@ -1224,7 +1224,7 @@ msgstr "Не може да се отвори последния документ
 
 #: frontend/apps/filemanager/filemanagermenu.lua:148
 #: frontend/apps/reader/modules/readerfooter.lua:947
-#: frontend/apps/reader/modules/readertoc.lua:882
+#: frontend/apps/reader/modules/readertoc.lua:883
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:473
 #: plugins/goodreads.koplugin/main.lua:31
 #: plugins/newsdownloader.koplugin/main.lua:108
@@ -3692,11 +3692,11 @@ msgstr "Съдържание *"
 msgid "Table of Contents"
 msgstr "Съдържание"
 
-#: frontend/apps/reader/modules/readertoc.lua:887
+#: frontend/apps/reader/modules/readertoc.lua:888
 msgid "Alternative table of contents"
 msgstr "Алтернативно съдържание"
 
-#: frontend/apps/reader/modules/readertoc.lua:888
+#: frontend/apps/reader/modules/readertoc.lua:889
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -3709,7 +3709,7 @@ msgid ""
 "See Style tweaks → Miscellaneous → Alternative ToC hints."
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:900
+#: frontend/apps/reader/modules/readertoc.lua:901
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -3717,32 +3717,32 @@ msgid ""
 "reloaded.)"
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:915
+#: frontend/apps/reader/modules/readertoc.lua:916
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:942
+#: frontend/apps/reader/modules/readertoc.lua:943
 msgid "%1 entries at ToC depth %2"
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:964
+#: frontend/apps/reader/modules/readertoc.lua:965
 msgid "Progress bars: %1 ticks"
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:966
+#: frontend/apps/reader/modules/readertoc.lua:967
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
 "tick marks."
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:987
+#: frontend/apps/reader/modules/readertoc.lua:988
 msgid "Bind chapter navigation to ticks"
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:988
+#: frontend/apps/reader/modules/readertoc.lua:989
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for chapter navigation and 'page/time left until next chapter' in the "
@@ -3750,11 +3750,11 @@ msgid ""
 "Enabling this option will restrict chapter navigation to progress bar ticks."
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:1003
+#: frontend/apps/reader/modules/readertoc.lua:1004
 msgid "Chapter titles from ticks only"
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:1004
+#: frontend/apps/reader/modules/readertoc.lua:1005
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for displaying the title of the current chapter in the footer and in "
@@ -3763,17 +3763,17 @@ msgid ""
 "bar ticks."
 msgstr ""
 
-#: frontend/apps/reader/modules/readertoc.lua:1021
-#: frontend/apps/reader/modules/readertoc.lua:1032
+#: frontend/apps/reader/modules/readertoc.lua:1022
+#: frontend/apps/reader/modules/readertoc.lua:1033
 msgid "ToC entries per page"
 msgstr "Брой елементи от съдържанието на страница"
 
-#: frontend/apps/reader/modules/readertoc.lua:1045
-#: frontend/apps/reader/modules/readertoc.lua:1058
+#: frontend/apps/reader/modules/readertoc.lua:1046
+#: frontend/apps/reader/modules/readertoc.lua:1059
 msgid "ToC entry font size"
 msgstr "Задай размер на шрифт за елемнти от съдържанието"
 
-#: frontend/apps/reader/modules/readertoc.lua:1067
+#: frontend/apps/reader/modules/readertoc.lua:1068
 msgid "With dots"
 msgstr ""
 
@@ -5114,7 +5114,9 @@ msgstr ""
 msgid "Book statistics"
 msgstr ""
 
-#: frontend/dispatcher.lua:119
+#: frontend/dispatcher.lua:119 plugins/coverbrowser.koplugin/covermenu.lua:343
+#: plugins/coverbrowser.koplugin/covermenu.lua:476
+#: plugins/coverbrowser.koplugin/covermenu.lua:598
 msgid "Book description"
 msgstr "Описание на книгата"
 
@@ -9776,20 +9778,6 @@ msgstr ""
 msgid "View full size cover"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/covermenu.lua:343
-#: plugins/coverbrowser.koplugin/covermenu.lua:476
-#: plugins/coverbrowser.koplugin/covermenu.lua:598
-#, fuzzy
-msgid "View book description"
-msgstr "Описание на книгата"
-
-#: plugins/coverbrowser.koplugin/covermenu.lua:343
-#: plugins/coverbrowser.koplugin/covermenu.lua:476
-#: plugins/coverbrowser.koplugin/covermenu.lua:598
-#, fuzzy
-msgid "No book description"
-msgstr "Описание на книгата"
-
 #: plugins/coverbrowser.koplugin/covermenu.lua:358
 #: plugins/coverbrowser.koplugin/covermenu.lua:491
 #: plugins/coverbrowser.koplugin/covermenu.lua:613
@@ -12923,6 +12911,17 @@ msgstr ""
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr ""
+
+#~ msgid "Book description:"
+#~ msgstr "Описание на книгата:"
+
+#, fuzzy
+#~ msgid "View book description"
+#~ msgstr "Описание на книгата"
+
+#, fuzzy
+#~ msgid "No book description"
+#~ msgstr "Описание на книгата"
 
 #~ msgid "Set default zoom mode to %1?"
 #~ msgstr "Задай режим на увеличение по подразбиране на %1?"
