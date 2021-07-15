@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 09:54+0000\n"
+"POT-Creation-Date: 2021-07-15 11:15+0000\n"
 "PO-Revision-Date: 2021-07-15 09:54+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -151,7 +151,7 @@ msgstr ""
 #: frontend/apps/cloudstorage/dropbox.lua:104
 #: frontend/apps/cloudstorage/ftp.lua:128
 #: frontend/apps/cloudstorage/webdav.lua:113
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:110
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:130
 #: frontend/apps/filemanager/filemanager.lua:312
 #: frontend/apps/filemanager/filemanager.lua:605
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:112
@@ -165,7 +165,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerlink.lua:645
 #: frontend/apps/reader/modules/readersearch.lua:116
 #: frontend/apps/reader/modules/readerstatus.lua:123
-#: frontend/apps/reader/modules/readeruserhyph.lua:187
+#: frontend/apps/reader/modules/readeruserhyph.lua:190
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:155
 #: frontend/apps/reader/readerui.lua:667 frontend/device/android/device.lua:436
@@ -708,23 +708,28 @@ msgstr "기존의 HTML 파일에 덮어쓸까요?"
 msgid "Overwrite"
 msgstr "덮어쓰기"
 
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:95
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:115
 msgid "No results for '%1'."
 msgstr "'%1'에 대한 결과가 없습니다."
 
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:104
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:124
 msgid "Enter filename to search for"
 msgstr "검색 할 파일이름을 입력하세요"
 
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:118
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:138
 msgid "Home folder"
 msgstr "홈 폴더"
 
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:128
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:148
 msgid "Current folder"
 msgstr "현재 폴더"
 
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:162
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:163
+#: frontend/apps/reader/modules/readersearch.lua:140
+msgid "Case sensitive"
+msgstr "대소문자 구분"
+
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:211
 #: plugins/calibre.koplugin/search.lua:447
 msgid "Search results"
 msgstr "검색 결과"
@@ -1550,11 +1555,12 @@ msgid "File search"
 msgstr "파일 검색"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:663
+#, fuzzy
 msgid ""
 "Search a book by filename in the current or home folder and its subfolders.\n"
 "\n"
+"Wildcards for one '?' or more '*' characters can be used.\n"
 "A search for '*' will show all files.\n"
-"Search string supports Lua patterns.\n"
 "\n"
 "Tap a book in the search results to open it."
 msgstr ""
@@ -1752,7 +1758,7 @@ msgid "Remove this bookmark?"
 msgstr "이 책갈피를 제거할까요?"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:408
-#: frontend/apps/reader/modules/readeruserhyph.lua:193
+#: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:407
 #: plugins/statistics.koplugin/main.lua:2113
 #: plugins/texteditor.koplugin/main.lua:265
@@ -3826,10 +3832,6 @@ msgstr "잘못된 정규 표현식"
 msgid "Enter text to search for"
 msgstr "검색할 내용 입력"
 
-#: frontend/apps/reader/modules/readersearch.lua:140
-msgid "Case sensitive"
-msgstr "대소문자 구분"
-
 #: frontend/apps/reader/modules/readersearch.lua:152
 msgid "Regular expression (hold for help)"
 msgstr "정규 표현식 (도움이 필요하면 길게 누르세요)"
@@ -4020,7 +4022,7 @@ msgid "Condense"
 msgstr "축소"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:641
-#: frontend/apps/reader/modules/readeruserhyph.lua:200
+#: frontend/apps/reader/modules/readeruserhyph.lua:203
 #: frontend/apps/reader/modules/readerwikipedia.lua:161
 #: frontend/apps/reader/readerui.lua:737 frontend/ui/widget/inputdialog.lua:643
 #: frontend/ui/widget/inputdialog.lua:684
@@ -4823,7 +4825,7 @@ msgstr "책 언어: %1"
 msgid "Changed language for typography rules to book language: %1."
 msgstr "타이포그래피 규칙의 언어를 책 언어로 변경했습니다: %1."
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:37
+#: frontend/apps/reader/modules/readeruserhyph.lua:39
 msgid ""
 "The user dictionary\n"
 "%1\n"
@@ -4837,7 +4839,7 @@ msgstr ""
 "\n"
 "비활성화되었습니다."
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:43
+#: frontend/apps/reader/modules/readeruserhyph.lua:45
 msgid ""
 "The user dictionary\n"
 "%1\n"
@@ -4851,11 +4853,11 @@ msgstr ""
 "\n"
 "유효한 항목만 사용됩니다."
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:78
+#: frontend/apps/reader/modules/readeruserhyph.lua:81
 msgid "Custom hyphenation rules"
 msgstr "사용자 지정 하이픈 규칙"
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:79
+#: frontend/apps/reader/modules/readeruserhyph.lua:82
 msgid ""
 "The hyphenation of a word can be changed from its default by long pressing "
 "for 3 seconds and selecting 'Hyphenate'."
@@ -4863,15 +4865,15 @@ msgstr ""
 "단어의 하이픈 넣기는 3초 동안 길게 눌러 '하이픈 넣기'를 선택하면 기본값에서 "
 "변경할 수 있습니다."
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:179
+#: frontend/apps/reader/modules/readeruserhyph.lua:182
 msgid "Hyphenate: %1"
 msgstr "하이픈 넣기: %1"
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:180
+#: frontend/apps/reader/modules/readeruserhyph.lua:183
 msgid "Add hyphenation positions with hyphens ('-') or spaces (' ')."
 msgstr "하이픈('-') 또는 빈칸(' ')을 사용하여 하이픈 위치를 추가합니다."
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:216
+#: frontend/apps/reader/modules/readeruserhyph.lua:219
 msgid "Invalid hyphenation!"
 msgstr "잘못된 하이픈!"
 
