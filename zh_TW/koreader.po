@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 07:05+0000\n"
+"POT-Creation-Date: 2021-07-23 13:58+0000\n"
 "PO-Revision-Date: 2021-07-21 17:24+0000\n"
 "Last-Translator: John Smith <a@shatin.ml>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -86,7 +86,7 @@ msgid "Choose cloud type"
 msgstr "選擇雲端類型"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:32
-#: frontend/apps/filemanager/filemanagermenu.lua:648
+#: frontend/apps/filemanager/filemanagermenu.lua:710
 msgid "Cloud storage"
 msgstr "雲端儲存"
 
@@ -174,7 +174,7 @@ msgstr ""
 #: frontend/ui/widget/container/inputcontainer.lua:284
 #: frontend/ui/widget/datewidget.lua:32
 #: frontend/ui/widget/dictquicklookup.lua:1241
-#: frontend/ui/widget/filechooser.lua:526
+#: frontend/ui/widget/filechooser.lua:532
 #: frontend/ui/widget/inputdialog.lua:678
 #: frontend/ui/widget/inputdialog.lua:764
 #: frontend/ui/widget/inputdialog.lua:863 frontend/ui/widget/inputtext.lua:216
@@ -324,7 +324,7 @@ msgid "Close"
 msgstr "關閉"
 
 #: frontend/apps/cloudstorage/dropboxapi.lua:142
-#: frontend/ui/widget/filechooser.lua:284
+#: frontend/ui/widget/filechooser.lua:287
 msgid "Long-press to select current folder"
 msgstr "用長按來選擇目前的資料夾"
 
@@ -756,7 +756,7 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:58
 #: frontend/apps/filemanager/filemanager.lua:261
-#: plugins/coverbrowser.koplugin/main.lua:440
+#: plugins/coverbrowser.koplugin/main.lua:442
 msgid "Purge"
 msgstr "清除"
 
@@ -773,6 +773,7 @@ msgid "If you delete a file, it is permanently lost."
 msgstr "如果您刪除一個檔案，它將永久性地消失。"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:108
+#: frontend/apps/filemanager/filemanagermenu.lua:262
 msgid "Clear history of deleted files"
 msgstr "清除已刪除檔案的歷史"
 
@@ -877,8 +878,8 @@ msgid "Exit KOReader?"
 msgstr "離開 KOReader 嗎？"
 
 #: frontend/apps/filemanager/filemanager.lua:563
-#: frontend/apps/filemanager/filemanagermenu.lua:708
-#: frontend/apps/filemanager/filemanagermenu.lua:714
+#: frontend/apps/filemanager/filemanagermenu.lua:770
+#: frontend/apps/filemanager/filemanagermenu.lua:776
 #: frontend/apps/reader/modules/readerback.lua:174
 #: frontend/apps/reader/modules/readerdevicestatus.lua:82
 #: frontend/apps/reader/modules/readermenu.lua:235
@@ -942,7 +943,7 @@ msgid "Do you want to open %1?"
 msgstr "您想要開啟 %1 嗎？"
 
 #: frontend/apps/filemanager/filemanager.lua:848
-#: frontend/ui/widget/filechooser.lua:532
+#: frontend/ui/widget/filechooser.lua:538
 #: plugins/texteditor.koplugin/main.lua:440
 msgid "Open"
 msgstr "開啟"
@@ -1302,7 +1303,7 @@ msgstr "內容已重新整理。"
 msgid "Cannot open last document"
 msgstr "無法開啟最後使用的文件"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:148
+#: frontend/apps/filemanager/filemanagermenu.lua:142
 #: frontend/apps/reader/modules/readerfooter.lua:972
 #: frontend/apps/reader/modules/readertoc.lua:915
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:473
@@ -1315,25 +1316,33 @@ msgstr "無法開啟最後使用的文件"
 msgid "Settings"
 msgstr "設定"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:151
+#: frontend/apps/filemanager/filemanagermenu.lua:145
 msgid "Show hidden files"
 msgstr "顯示隱藏檔案"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:156
+#: frontend/apps/filemanager/filemanagermenu.lua:150
 msgid "Show unsupported files"
 msgstr "顯示不支援的檔案"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:162
-#: frontend/apps/filemanager/filemanagermenu.lua:180
+#: frontend/apps/filemanager/filemanagermenu.lua:156
+#, fuzzy
+msgid "Classic mode settings"
+msgstr "快取設定"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:159
+#: frontend/apps/filemanager/filemanagermenu.lua:176
+#: plugins/coverbrowser.koplugin/main.lua:242
+#: plugins/coverbrowser.koplugin/main.lua:258
 msgid "Items per page"
 msgstr "每頁包含的項目個數"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:163
+#: frontend/apps/filemanager/filemanagermenu.lua:160
+#, fuzzy
 msgid ""
 "This sets the number of items per page in:\n"
 "- File browser, history and favorites in 'classic' display mode\n"
 "- Search results and folder shortcuts\n"
-"- File and directory selection\n"
+"- File and folder selection\n"
 "- Calibre and OPDS browsers/search results"
 msgstr ""
 "這會於以下這些場合，設定每頁的項目數：\n"
@@ -1342,45 +1351,82 @@ msgstr ""
 "- 選擇檔案與資料夾時\n"
 "- Calibre 和 OPDS 瀏覽器/搜尋結果"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:191
-#: frontend/apps/filemanager/filemanagermenu.lua:206
+#: frontend/apps/filemanager/filemanagermenu.lua:187
+#: frontend/apps/filemanager/filemanagermenu.lua:201
 msgid "Item font size"
 msgstr "項目字型大小"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:223
+#: frontend/apps/filemanager/filemanagermenu.lua:218
 msgid "Shrink item font size to fit more text"
 msgstr "減少項目字型大小以顯示更多文字"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:235
-msgid "Show new files in bold"
-msgstr "新檔案用粗體顯示"
-
-#: frontend/apps/filemanager/filemanagermenu.lua:237
-#: frontend/apps/filemanager/filemanagermenu.lua:256
+#: frontend/apps/filemanager/filemanagermenu.lua:229
 msgid "Show opened files in bold"
 msgstr "開啟過的檔案用粗體顯示"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:239
-msgid "Show files in bold"
-msgstr "將檔名顯示為粗體"
-
-#: frontend/apps/filemanager/filemanagermenu.lua:242
-msgid "(Classic file browser) %1"
-msgstr "（傳統檔案瀏覽器） %1"
-
-#: frontend/apps/filemanager/filemanagermenu.lua:248
-msgid "Don't show files in bold"
-msgstr "不要用粗體顯示檔案"
-
-#: frontend/apps/filemanager/filemanagermenu.lua:264
+#: frontend/apps/filemanager/filemanagermenu.lua:243
 msgid "Show new (not yet opened) files in bold"
 msgstr "新的（還未打開過的）檔案用粗體顯示"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:277
+#: frontend/apps/filemanager/filemanagermenu.lua:259
+#, fuzzy
+msgid "History settings"
+msgstr "字典設定"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:265
+#, fuzzy
+msgid "Clear history of deleted files?"
+msgstr "清除已刪除檔案的歷史"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:266
+#: frontend/apps/reader/modules/readerlink.lua:352
+#: plugins/batterystat.koplugin/main.lua:192
+#: plugins/coverimage.koplugin/main.lua:508
+msgid "Clear"
+msgstr "清除"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:274
+msgid "Auto-remove deleted or purged items from history"
+msgstr "自動從閱讀歷史記錄中移除不存在的項目"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:284
+msgid "Show filename in Open last/previous menu items"
+msgstr "在「打開最後 / 先前閱讀的文件」選項中顯示檔名"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:295
+#, fuzzy
+msgid "Home folder settings"
+msgstr "家資料夾"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:298
+#, fuzzy
+msgid "Set home folder"
+msgstr "簡寫家資料夾"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:303
+#, fuzzy
+msgid ""
+"Home folder is set to:\n"
+"%1"
+msgstr ""
+"螢幕擷圖資料夾已設定為：\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:305
+#, fuzzy
+msgid "Home folder is not set."
+msgstr "資料夾未被創建。"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:310
+#, fuzzy
+msgid "Choose folder"
+msgstr "選擇本機資料夾"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:326
 msgid "Shorten home folder"
 msgstr "簡寫家資料夾"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:286
+#: frontend/apps/filemanager/filemanagermenu.lua:335
 msgid ""
 "\"Shorten home folder\" will display the home folder itself as \"Home\" "
 "instead of its full path.\n"
@@ -1401,20 +1447,17 @@ msgstr ""
 "縮短為：\n"
 "`Manga/Cells at Work`。"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:297
-msgid "Show filename in Open last/previous menu items"
-msgstr "在「打開最後 / 先前閱讀的文件」選項中顯示檔名"
+#: frontend/apps/filemanager/filemanagermenu.lua:346
+#, fuzzy
+msgid "Lock home folder"
+msgstr "簡寫家資料夾"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:302
-msgid "Auto-remove deleted or purged items from history"
-msgstr "自動從閱讀歷史記錄中移除不存在的項目"
-
-#: frontend/apps/filemanager/filemanagermenu.lua:308
-#: frontend/apps/filemanager/filemanagermenu.lua:326
+#: frontend/apps/filemanager/filemanagermenu.lua:362
+#: frontend/apps/filemanager/filemanagermenu.lua:380
 msgid "Info lists items per page"
 msgstr "每頁包含的資訊清單項目數"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:309
+#: frontend/apps/filemanager/filemanagermenu.lua:363
 msgid ""
 "This sets the number of items per page in:\n"
 "- Book information\n"
@@ -1428,59 +1471,59 @@ msgstr ""
 "- 閱讀統計詳細資料\n"
 "- 一些其他插件"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:345
+#: frontend/apps/filemanager/filemanagermenu.lua:407
 msgid "Reverse sorting"
 msgstr "反向排序"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:352
+#: frontend/apps/filemanager/filemanagermenu.lua:414
 #: frontend/apps/reader/modules/readermenu.lua:218
 msgid "Screensaver"
 msgstr "螢幕保護"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:363
+#: frontend/apps/filemanager/filemanagermenu.lua:425
 msgid "Advanced settings"
 msgstr "進階設定"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:372
+#: frontend/apps/filemanager/filemanagermenu.lua:434
 #: frontend/apps/reader/modules/readermenu.lua:225
 msgid "Plugin management"
 msgstr "插件管理"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:377
+#: frontend/apps/filemanager/filemanagermenu.lua:439
 msgid "Developer options"
 msgstr "開發者選項"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:380
+#: frontend/apps/filemanager/filemanagermenu.lua:442
 msgid "Clear caches"
 msgstr "清除快取"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:383
+#: frontend/apps/filemanager/filemanagermenu.lua:445
 msgid "Clear the cache folder?"
 msgstr "要清除快取資料夾嗎？"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:396
+#: frontend/apps/filemanager/filemanagermenu.lua:458
 msgid "Caches cleared. Please restart KOReader."
 msgstr "快取已清除。請重新啟動 KOReader。"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:403
+#: frontend/apps/filemanager/filemanagermenu.lua:465
 msgid "Enable debug logging"
 msgstr "啟用除錯記錄"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:419
+#: frontend/apps/filemanager/filemanagermenu.lua:481
 msgid "Enable verbose debug logging"
 msgstr "啟用詳細除錯記錄"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:439
+#: frontend/apps/filemanager/filemanagermenu.lua:501
 msgid "Disable forced 8-bit pixel depth"
 msgstr "停用強制的 8 位元像素深度"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:447
-#: frontend/apps/filemanager/filemanagermenu.lua:463
-#: frontend/apps/filemanager/filemanagermenu.lua:547
-#: frontend/apps/filemanager/filemanagermenu.lua:567
-#: frontend/apps/filemanager/filemanagermenu.lua:590
-#: frontend/apps/filemanager/filemanagermenu.lua:606
-#: frontend/apps/filemanager/filemanagermenu.lua:619
+#: frontend/apps/filemanager/filemanagermenu.lua:509
+#: frontend/apps/filemanager/filemanagermenu.lua:525
+#: frontend/apps/filemanager/filemanagermenu.lua:609
+#: frontend/apps/filemanager/filemanagermenu.lua:629
+#: frontend/apps/filemanager/filemanagermenu.lua:652
+#: frontend/apps/filemanager/filemanagermenu.lua:668
+#: frontend/apps/filemanager/filemanagermenu.lua:681
 #: frontend/pluginloader.lua:186
 #: frontend/ui/elements/common_settings_menu_table.lua:199
 #: frontend/ui/elements/common_settings_menu_table.lua:213
@@ -1495,67 +1538,67 @@ msgstr "停用強制的 8 位元像素深度"
 msgid "This will take effect on next restart."
 msgstr "這將在下次重新啟動後生效。"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:455
+#: frontend/apps/filemanager/filemanagermenu.lua:517
 msgid "Always abort on crash"
 msgstr "當機時總是退出"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:471
+#: frontend/apps/filemanager/filemanagermenu.lua:533
 msgid "Disable C blitter"
 msgstr "停用 C blitter"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:486
+#: frontend/apps/filemanager/filemanagermenu.lua:548
 msgid "Disable HW dithering"
 msgstr "停用硬體遞色"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:504
+#: frontend/apps/filemanager/filemanagermenu.lua:566
 msgid "Disable SW dithering"
 msgstr "停用軟體遞色"
 
 #. @translators Highly technical (ioctl is a Linux API call, the uppercase stuff is a constant). What's translatable is essentially only the action ("bypass") and the article.
-#: frontend/apps/filemanager/filemanagermenu.lua:527
+#: frontend/apps/filemanager/filemanagermenu.lua:589
 #, fuzzy
 msgid "Bypass the WAIT_FOR ioctls"
 msgstr "略過 MXCFB_WAIT_FOR_* ioctls"
 
 #. @translators B288 is the codename of the CPU/chipset (SoC stands for 'System on Chip').
-#: frontend/apps/filemanager/filemanagermenu.lua:556
+#: frontend/apps/filemanager/filemanagermenu.lua:618
 msgid "Ignore feature bans on B288 SoCs"
 msgstr "忽略 B288 SoC 的功能禁令"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:574
+#: frontend/apps/filemanager/filemanagermenu.lua:636
 msgid "Start E-ink test"
 msgstr "開始 E-ink 測試"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:582
+#: frontend/apps/filemanager/filemanagermenu.lua:644
 msgid "Disable enhanced UI text shaping (xtext)"
 msgstr "停用增強的使用者介面 text shaping (xtext)"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:595
+#: frontend/apps/filemanager/filemanagermenu.lua:657
 msgid "UI layout mirroring and text direction"
 msgstr "使用者介面版面配置鏡像與文字方向"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:598
+#: frontend/apps/filemanager/filemanagermenu.lua:660
 msgid "Reverse UI layout mirroring"
 msgstr "反向 UI 配置鏡像"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:611
+#: frontend/apps/filemanager/filemanagermenu.lua:673
 msgid "Reverse UI text direction"
 msgstr "反向 UI 文字方向"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:629
+#: frontend/apps/filemanager/filemanagermenu.lua:691
 msgid "Enable CRE call cache (with stats)"
 msgstr "啟用 CRE 呼叫快取（帶有統計資料）"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:631
+#: frontend/apps/filemanager/filemanagermenu.lua:693
 msgid "Enable CRE call cache"
 msgstr "啟用 CRE 呼叫快取"
 
 #. @translators Search for files by name.
-#: frontend/apps/filemanager/filemanagermenu.lua:662 frontend/dispatcher.lua:68
+#: frontend/apps/filemanager/filemanagermenu.lua:724 frontend/dispatcher.lua:68
 msgid "File search"
 msgstr "檔案搜尋"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:663
+#: frontend/apps/filemanager/filemanagermenu.lua:725
 #, fuzzy
 msgid ""
 "Search a book by filename in the current or home folder and its subfolders.\n"
@@ -1574,19 +1617,19 @@ msgstr ""
 "\n"
 "在搜尋結果中點選書籍可開啟它。"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:680
+#: frontend/apps/filemanager/filemanagermenu.lua:742
 msgid "Open last document"
 msgstr "打開最近閱讀的文件"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:684
+#: frontend/apps/filemanager/filemanagermenu.lua:746
 msgid "Last: %1"
 msgstr "最近閱讀： %1"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:695
+#: frontend/apps/filemanager/filemanagermenu.lua:757
 msgid "Would you like to open the last document: %1?"
 msgstr "您想要開啟上次的文件 %1 嗎?"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:696
+#: frontend/apps/filemanager/filemanagermenu.lua:758
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:188
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:231
 #: frontend/apps/reader/modules/readermenu.lua:277
@@ -1602,24 +1645,24 @@ msgstr "您想要開啟上次的文件 %1 嗎?"
 msgid "OK"
 msgstr "確定"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:720
+#: frontend/apps/filemanager/filemanagermenu.lua:782
 #: frontend/apps/reader/modules/readermenu.lua:247 frontend/dispatcher.lua:74
 msgid "Restart KOReader"
 msgstr "重新啟動 KOReader"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:765
+#: frontend/apps/filemanager/filemanagermenu.lua:827
 #: frontend/apps/reader/modules/readermenu.lua:305
 msgid ""
 "KOReader's startup script has been updated. You'll need to completely exit "
 "KOReader to finalize the update."
 msgstr "KOReader 的啟動腳本已更新。您需要完全退出 KOReader 才能完成更新。"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:766
+#: frontend/apps/filemanager/filemanagermenu.lua:828
 #: frontend/apps/reader/modules/readermenu.lua:306
 msgid "Restart anyway"
 msgstr "仍要重新啟動"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:806
+#: frontend/apps/filemanager/filemanagermenu.lua:868
 msgid "File manager menu"
 msgstr "檔案管理器選單"
 
@@ -3246,12 +3289,6 @@ msgstr "返回跳轉前的位置"
 #: frontend/apps/reader/modules/readerlink.lua:351
 msgid "Clear location history?"
 msgstr "要清除位置歷史記錄嗎？"
-
-#: frontend/apps/reader/modules/readerlink.lua:352
-#: plugins/batterystat.koplugin/main.lua:192
-#: plugins/coverimage.koplugin/main.lua:508
-msgid "Clear"
-msgstr "清除"
 
 #: frontend/apps/reader/modules/readerlink.lua:517
 msgid "Location history cleared."
@@ -7705,8 +7742,8 @@ msgstr "提示"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:345
 #: frontend/ui/elements/common_settings_menu_table.lua:569
-#: frontend/ui/widget/filechooser.lua:547
-#: frontend/ui/widget/filechooser.lua:560
+#: frontend/ui/widget/filechooser.lua:553
+#: frontend/ui/widget/filechooser.lua:566
 msgid "Always"
 msgstr "總是"
 
@@ -9429,33 +9466,33 @@ msgstr "（查詢： %1）"
 msgid "Use defaults"
 msgstr "使用預設值"
 
-#: frontend/ui/widget/filechooser.lua:278
+#: frontend/ui/widget/filechooser.lua:281
 msgid "1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 項"
 
-#: frontend/ui/widget/filechooser.lua:286
+#: frontend/ui/widget/filechooser.lua:289
 msgid "Current folder not readable. Some content may not be shown."
 msgstr "無法讀取目前的資料夾。一些內容可能沒有顯示。"
 
 #. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
-#: frontend/ui/widget/filechooser.lua:506
+#: frontend/ui/widget/filechooser.lua:512
 msgid "%1 ~Unsupported"
 msgstr "%1 ~不支援"
 
-#: frontend/ui/widget/filechooser.lua:545
+#: frontend/ui/widget/filechooser.lua:551
 msgid "Always open '%2' with %1?"
 msgstr "總是用 %1 來開啟「%2」嗎？"
 
-#: frontend/ui/widget/filechooser.lua:558
+#: frontend/ui/widget/filechooser.lua:564
 msgid "Always open %2 files with %1?"
 msgstr "總是用 %1 來開啟 %2 檔案嗎？"
 
-#: frontend/ui/widget/filechooser.lua:580
+#: frontend/ui/widget/filechooser.lua:586
 msgid "Reset default"
 msgstr "重設預設值"
 
-#: frontend/ui/widget/filechooser.lua:591
+#: frontend/ui/widget/filechooser.lua:597
 msgid "Open %1 with:"
 msgstr "開啟 %1 使用："
 
@@ -10623,7 +10660,7 @@ msgid "Don't abort"
 msgstr "不要放棄"
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:816
-#: plugins/coverbrowser.koplugin/main.lua:399
+#: plugins/coverbrowser.koplugin/main.lua:401
 msgid "Pruning cache of removed books…"
 msgstr "正在清除已移除書籍佔用的快取……"
 
@@ -10764,37 +10801,37 @@ msgstr "顯示模式"
 
 #: plugins/coverbrowser.koplugin/main.lua:93
 #: plugins/coverbrowser.koplugin/main.lua:141
-#: plugins/coverbrowser.koplugin/main.lua:189
+#: plugins/coverbrowser.koplugin/main.lua:188
 msgid "Classic (filename only)"
 msgstr "傳統模式（只有檔名）"
 
 #: plugins/coverbrowser.koplugin/main.lua:100
 #: plugins/coverbrowser.koplugin/main.lua:148
-#: plugins/coverbrowser.koplugin/main.lua:196
+#: plugins/coverbrowser.koplugin/main.lua:195
 msgid "Mosaic with cover images"
 msgstr "用圖片封面拼貼"
 
 #: plugins/coverbrowser.koplugin/main.lua:107
 #: plugins/coverbrowser.koplugin/main.lua:155
-#: plugins/coverbrowser.koplugin/main.lua:203
+#: plugins/coverbrowser.koplugin/main.lua:202
 msgid "Mosaic with text covers"
 msgstr "用文字封面拼貼"
 
 #: plugins/coverbrowser.koplugin/main.lua:114
 #: plugins/coverbrowser.koplugin/main.lua:162
-#: plugins/coverbrowser.koplugin/main.lua:210
+#: plugins/coverbrowser.koplugin/main.lua:209
 msgid "Detailed list with cover images and metadata"
 msgstr "有封面圖片與詮釋資料的詳細清單"
 
 #: plugins/coverbrowser.koplugin/main.lua:121
 #: plugins/coverbrowser.koplugin/main.lua:169
-#: plugins/coverbrowser.koplugin/main.lua:217
+#: plugins/coverbrowser.koplugin/main.lua:216
 msgid "Detailed list with metadata, no images"
 msgstr "只有詮釋資料的詳細清單，無圖片"
 
 #: plugins/coverbrowser.koplugin/main.lua:128
 #: plugins/coverbrowser.koplugin/main.lua:176
-#: plugins/coverbrowser.koplugin/main.lua:224
+#: plugins/coverbrowser.koplugin/main.lua:223
 msgid "Detailed list with cover images and filenames"
 msgstr "有封面圖片與檔名的詳細清單"
 
@@ -10802,81 +10839,74 @@ msgstr "有封面圖片與檔名的詳細清單"
 msgid "History display mode"
 msgstr "閱讀歷史顯示模式"
 
-#: plugins/coverbrowser.koplugin/main.lua:186
+#: plugins/coverbrowser.koplugin/main.lua:185
 msgid "Favorites display mode"
 msgstr "最愛顯示模式"
 
-#: plugins/coverbrowser.koplugin/main.lua:236
+#: plugins/coverbrowser.koplugin/main.lua:238
 msgid "Mosaic and detailed list settings"
 msgstr "馬賽克和詳細的清單設定"
 
-#: plugins/coverbrowser.koplugin/main.lua:239
+#: plugins/coverbrowser.koplugin/main.lua:243
+#, fuzzy
+msgid ""
+"This sets the number of files and folders per page in display modes other "
+"than classic."
+msgstr "這會在非「傳統」顯示模式中設定每頁檔案和資料夾數量。"
+
+#: plugins/coverbrowser.koplugin/main.lua:268
 msgid "Display hints"
 msgstr "顯示小記號"
 
-#: plugins/coverbrowser.koplugin/main.lua:242
+#: plugins/coverbrowser.koplugin/main.lua:271
 msgid "Show hint for books with description"
 msgstr "給有描述的書籍標上小記號"
 
-#: plugins/coverbrowser.koplugin/main.lua:254
+#: plugins/coverbrowser.koplugin/main.lua:283
 msgid "Show hint for opened books in history"
 msgstr "閱讀歷史清單中，替開啟過的書籍標上小記號"
 
-#: plugins/coverbrowser.koplugin/main.lua:266
+#: plugins/coverbrowser.koplugin/main.lua:295
 msgid "Show hint for opened books in favorites"
 msgstr "替在最愛中開啟的書籍標上小記號"
 
-#: plugins/coverbrowser.koplugin/main.lua:280
+#: plugins/coverbrowser.koplugin/main.lua:309
 msgid "Series"
 msgstr "系列"
 
-#: plugins/coverbrowser.koplugin/main.lua:283
+#: plugins/coverbrowser.koplugin/main.lua:312
 msgid "Append series metadata to authors"
 msgstr "加入系列書籍資訊到作者後面"
 
-#: plugins/coverbrowser.koplugin/main.lua:296
+#: plugins/coverbrowser.koplugin/main.lua:325
 msgid "Append series metadata to title"
 msgstr "加入系列書籍資訊到標題後面"
 
-#: plugins/coverbrowser.koplugin/main.lua:309
+#: plugins/coverbrowser.koplugin/main.lua:338
 msgid "Show series metadata in separate line"
 msgstr "單獨一列顯示系列詮釋資料"
 
-#: plugins/coverbrowser.koplugin/main.lua:325
-msgid "(Detailed list) Files per page"
-msgstr "（詳細清單）每頁的檔案數"
-
-#: plugins/coverbrowser.koplugin/main.lua:326
-msgid ""
-"This sets the number of files and directories per page in non-'classic' "
-"display modes."
-msgstr "這會在非「傳統」顯示模式中設定每頁檔案和資料夾數量。"
-
-#: plugins/coverbrowser.koplugin/main.lua:340
-msgid "Files per page"
-msgstr "每頁的檔案數"
-
-#: plugins/coverbrowser.koplugin/main.lua:350
+#: plugins/coverbrowser.koplugin/main.lua:354
 msgid "Show number of pages read instead of progress %"
 msgstr "顯示已讀頁數而非進度 %"
 
-#: plugins/coverbrowser.koplugin/main.lua:362
+#: plugins/coverbrowser.koplugin/main.lua:366
 msgid "Show number of pages left to read"
 msgstr "顯示尚有多少頁數未讀"
 
-#: plugins/coverbrowser.koplugin/main.lua:377
+#: plugins/coverbrowser.koplugin/main.lua:379
 msgid "Book info cache management"
 msgstr "書籍資料快取管理"
 
-#: plugins/coverbrowser.koplugin/main.lua:382
+#: plugins/coverbrowser.koplugin/main.lua:384
 msgid "Current cache size: "
 msgstr "當前的快取大小："
 
-#: plugins/coverbrowser.koplugin/main.lua:388
+#: plugins/coverbrowser.koplugin/main.lua:390
 msgid "Prune cache of removed books"
 msgstr "清理被已移除書籍所佔用的快取"
 
-#: plugins/coverbrowser.koplugin/main.lua:395
+#: plugins/coverbrowser.koplugin/main.lua:397
 msgid ""
 "Are you sure that you want to prune cache of removed books?\n"
 "(This may take a while.)"
@@ -10884,15 +10914,15 @@ msgstr ""
 "您確定要清理已被移除書籍的快取嗎？\n"
 "（這會花一些時間。）"
 
-#: plugins/coverbrowser.koplugin/main.lua:396
+#: plugins/coverbrowser.koplugin/main.lua:398
 msgid "Prune cache"
 msgstr "清理快取"
 
-#: plugins/coverbrowser.koplugin/main.lua:411
+#: plugins/coverbrowser.koplugin/main.lua:413
 msgid "Compact cache database"
 msgstr "壓縮快取資料庫"
 
-#: plugins/coverbrowser.koplugin/main.lua:417
+#: plugins/coverbrowser.koplugin/main.lua:419
 msgid ""
 "Are you sure that you want to compact cache database?\n"
 "(This may take a while.)"
@@ -10900,19 +10930,19 @@ msgstr ""
 "確定要壓縮快取資料庫嗎？\n"
 "（這會花一些時間。）"
 
-#: plugins/coverbrowser.koplugin/main.lua:418
+#: plugins/coverbrowser.koplugin/main.lua:420
 msgid "Compact database"
 msgstr "壓縮資料庫"
 
-#: plugins/coverbrowser.koplugin/main.lua:421
+#: plugins/coverbrowser.koplugin/main.lua:423
 msgid "Compacting cache database…"
 msgstr "正在壓縮快取資料庫……"
 
-#: plugins/coverbrowser.koplugin/main.lua:433
+#: plugins/coverbrowser.koplugin/main.lua:435
 msgid "Delete cache database"
 msgstr "刪除快取資料庫"
 
-#: plugins/coverbrowser.koplugin/main.lua:439
+#: plugins/coverbrowser.koplugin/main.lua:441
 msgid ""
 "Are you sure that you want to delete cover and metadata cache?\n"
 "(This will also reset your display mode settings.)"
@@ -13915,6 +13945,24 @@ msgstr "點擊右下角"
 msgid "Tap the upper right corner"
 msgstr "點擊右上角"
 
+#~ msgid "Show new files in bold"
+#~ msgstr "新檔案用粗體顯示"
+
+#~ msgid "Show files in bold"
+#~ msgstr "將檔名顯示為粗體"
+
+#~ msgid "(Classic file browser) %1"
+#~ msgstr "（傳統檔案瀏覽器） %1"
+
+#~ msgid "Don't show files in bold"
+#~ msgstr "不要用粗體顯示檔案"
+
+#~ msgid "(Detailed list) Files per page"
+#~ msgstr "（詳細清單）每頁的檔案數"
+
+#~ msgid "Files per page"
+#~ msgstr "每頁的檔案數"
+
 #~ msgid "ZSync"
 #~ msgstr "ZSync"
 
@@ -14291,9 +14339,6 @@ msgstr "點擊右上角"
 #~ msgstr ""
 #~ "資料夾已被建立：\n"
 #~ "%1"
-
-#~ msgid "The folder has not been created."
-#~ msgstr "資料夾未被創建。"
 
 #~ msgid "File %1 not found"
 #~ msgstr "找不到 %1 檔案"

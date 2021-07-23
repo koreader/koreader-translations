@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 07:05+0000\n"
+"POT-Creation-Date: 2021-07-23 13:58+0000\n"
 "PO-Revision-Date: 2021-07-15 09:54+0000\n"
 "Last-Translator: Stefan Stefanov <stefan.stefanov@abv.bg>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/koreader/"
@@ -83,7 +83,7 @@ msgid "Choose cloud type"
 msgstr "Вид на облак"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:32
-#: frontend/apps/filemanager/filemanagermenu.lua:648
+#: frontend/apps/filemanager/filemanagermenu.lua:710
 msgid "Cloud storage"
 msgstr "Облачно хранилище"
 
@@ -171,7 +171,7 @@ msgstr ""
 #: frontend/ui/widget/container/inputcontainer.lua:284
 #: frontend/ui/widget/datewidget.lua:32
 #: frontend/ui/widget/dictquicklookup.lua:1241
-#: frontend/ui/widget/filechooser.lua:526
+#: frontend/ui/widget/filechooser.lua:532
 #: frontend/ui/widget/inputdialog.lua:678
 #: frontend/ui/widget/inputdialog.lua:764
 #: frontend/ui/widget/inputdialog.lua:863 frontend/ui/widget/inputtext.lua:216
@@ -321,7 +321,7 @@ msgid "Close"
 msgstr "Затваряне"
 
 #: frontend/apps/cloudstorage/dropboxapi.lua:142
-#: frontend/ui/widget/filechooser.lua:284
+#: frontend/ui/widget/filechooser.lua:287
 msgid "Long-press to select current folder"
 msgstr "Дълго натискане за избор на текущата папка"
 
@@ -754,7 +754,7 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:58
 #: frontend/apps/filemanager/filemanager.lua:261
-#: plugins/coverbrowser.koplugin/main.lua:440
+#: plugins/coverbrowser.koplugin/main.lua:442
 msgid "Purge"
 msgstr "Изчистване"
 
@@ -771,6 +771,7 @@ msgid "If you delete a file, it is permanently lost."
 msgstr "Ако изтриете файл, той ще бъде безвъзвратно загубен."
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:108
+#: frontend/apps/filemanager/filemanagermenu.lua:262
 msgid "Clear history of deleted files"
 msgstr "Изчисти историята от изтритите файлове"
 
@@ -875,8 +876,8 @@ msgid "Exit KOReader?"
 msgstr "Изход от KOReader?"
 
 #: frontend/apps/filemanager/filemanager.lua:563
-#: frontend/apps/filemanager/filemanagermenu.lua:708
-#: frontend/apps/filemanager/filemanagermenu.lua:714
+#: frontend/apps/filemanager/filemanagermenu.lua:770
+#: frontend/apps/filemanager/filemanagermenu.lua:776
 #: frontend/apps/reader/modules/readerback.lua:174
 #: frontend/apps/reader/modules/readerdevicestatus.lua:82
 #: frontend/apps/reader/modules/readermenu.lua:235
@@ -940,7 +941,7 @@ msgid "Do you want to open %1?"
 msgstr "Искате ли да отворите %1?"
 
 #: frontend/apps/filemanager/filemanager.lua:848
-#: frontend/ui/widget/filechooser.lua:532
+#: frontend/ui/widget/filechooser.lua:538
 #: plugins/texteditor.koplugin/main.lua:440
 msgid "Open"
 msgstr "Отворяне"
@@ -1295,7 +1296,7 @@ msgstr "Съдържанието е обновено."
 msgid "Cannot open last document"
 msgstr "Не може да се отвори последния документ"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:148
+#: frontend/apps/filemanager/filemanagermenu.lua:142
 #: frontend/apps/reader/modules/readerfooter.lua:972
 #: frontend/apps/reader/modules/readertoc.lua:915
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:473
@@ -1308,25 +1309,33 @@ msgstr "Не може да се отвори последния документ
 msgid "Settings"
 msgstr "Настройки"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:151
+#: frontend/apps/filemanager/filemanagermenu.lua:145
 msgid "Show hidden files"
 msgstr "Покажи скритите файлове"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:156
+#: frontend/apps/filemanager/filemanagermenu.lua:150
 msgid "Show unsupported files"
 msgstr "Покажи неподдържаните файлове"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:162
-#: frontend/apps/filemanager/filemanagermenu.lua:180
+#: frontend/apps/filemanager/filemanagermenu.lua:156
+#, fuzzy
+msgid "Classic mode settings"
+msgstr "Настройки на кеша"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:159
+#: frontend/apps/filemanager/filemanagermenu.lua:176
+#: plugins/coverbrowser.koplugin/main.lua:242
+#: plugins/coverbrowser.koplugin/main.lua:258
 msgid "Items per page"
 msgstr "Елементи на страница"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:163
+#: frontend/apps/filemanager/filemanagermenu.lua:160
+#, fuzzy
 msgid ""
 "This sets the number of items per page in:\n"
 "- File browser, history and favorites in 'classic' display mode\n"
 "- Search results and folder shortcuts\n"
-"- File and directory selection\n"
+"- File and folder selection\n"
 "- Calibre and OPDS browsers/search results"
 msgstr ""
 "Задава броя елементи на страница в:\n"
@@ -1336,45 +1345,82 @@ msgstr ""
 "- Избора на файлове и папки\n"
 "- Calibre и OPDS броузери/резултати от търсене"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:191
-#: frontend/apps/filemanager/filemanagermenu.lua:206
+#: frontend/apps/filemanager/filemanagermenu.lua:187
+#: frontend/apps/filemanager/filemanagermenu.lua:201
 msgid "Item font size"
 msgstr "Размер на шрифта на елемент"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:223
+#: frontend/apps/filemanager/filemanagermenu.lua:218
 msgid "Shrink item font size to fit more text"
 msgstr "Намали размера на шрифта, за да се побира повече текст"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:235
-msgid "Show new files in bold"
-msgstr "Показване на нови файлове в удебелен шрифт"
-
-#: frontend/apps/filemanager/filemanagermenu.lua:237
-#: frontend/apps/filemanager/filemanagermenu.lua:256
+#: frontend/apps/filemanager/filemanagermenu.lua:229
 msgid "Show opened files in bold"
 msgstr "Показване на отворените файлове с удебелен шрифт"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:239
-msgid "Show files in bold"
-msgstr "Показване на файлове в удебелен шрифт"
-
-#: frontend/apps/filemanager/filemanagermenu.lua:242
-msgid "(Classic file browser) %1"
-msgstr "(Класически файлов браузър) %1"
-
-#: frontend/apps/filemanager/filemanagermenu.lua:248
-msgid "Don't show files in bold"
-msgstr "Не показвайте файлове в удебелен шрифт"
-
-#: frontend/apps/filemanager/filemanagermenu.lua:264
+#: frontend/apps/filemanager/filemanagermenu.lua:243
 msgid "Show new (not yet opened) files in bold"
 msgstr "Показване на нови (все още неотворени) файлове в удебелен шрифт"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:277
+#: frontend/apps/filemanager/filemanagermenu.lua:259
+#, fuzzy
+msgid "History settings"
+msgstr "Настройки на речника"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:265
+#, fuzzy
+msgid "Clear history of deleted files?"
+msgstr "Изчисти историята от изтритите файлове"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:266
+#: frontend/apps/reader/modules/readerlink.lua:352
+#: plugins/batterystat.koplugin/main.lua:192
+#: plugins/coverimage.koplugin/main.lua:508
+msgid "Clear"
+msgstr "Изчисти"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:274
+msgid "Auto-remove deleted or purged items from history"
+msgstr "Автоматично премахване на изтрити или изчистени елементи от историята"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:284
+msgid "Show filename in Open last/previous menu items"
+msgstr "Показване на името на файла в менюто Отвори последния/предходния"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:295
+#, fuzzy
+msgid "Home folder settings"
+msgstr "Начална папка"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:298
+#, fuzzy
+msgid "Set home folder"
+msgstr "Скъсяване на основната папка"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:303
+#, fuzzy
+msgid ""
+"Home folder is set to:\n"
+"%1"
+msgstr ""
+"Скрийвър папката е зададена на:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:305
+#, fuzzy
+msgid "Home folder is not set."
+msgstr "Папката не беше създадена."
+
+#: frontend/apps/filemanager/filemanagermenu.lua:310
+#, fuzzy
+msgid "Choose folder"
+msgstr "Местна папка"
+
+#: frontend/apps/filemanager/filemanagermenu.lua:326
 msgid "Shorten home folder"
 msgstr "Скъсяване на основната папка"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:286
+#: frontend/apps/filemanager/filemanagermenu.lua:335
 msgid ""
 "\"Shorten home folder\" will display the home folder itself as \"Home\" "
 "instead of its full path.\n"
@@ -1396,20 +1442,17 @@ msgstr ""
 "До:\n"
 "`Manga/Cells at Work`."
 
-#: frontend/apps/filemanager/filemanagermenu.lua:297
-msgid "Show filename in Open last/previous menu items"
-msgstr "Показване на името на файла в менюто Отвори последния/предходния"
+#: frontend/apps/filemanager/filemanagermenu.lua:346
+#, fuzzy
+msgid "Lock home folder"
+msgstr "Скъсяване на основната папка"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:302
-msgid "Auto-remove deleted or purged items from history"
-msgstr "Автоматично премахване на изтрити или изчистени елементи от историята"
-
-#: frontend/apps/filemanager/filemanagermenu.lua:308
-#: frontend/apps/filemanager/filemanagermenu.lua:326
+#: frontend/apps/filemanager/filemanagermenu.lua:362
+#: frontend/apps/filemanager/filemanagermenu.lua:380
 msgid "Info lists items per page"
 msgstr "Информация за елементите на страница"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:309
+#: frontend/apps/filemanager/filemanagermenu.lua:363
 msgid ""
 "This sets the number of items per page in:\n"
 "- Book information\n"
@@ -1423,59 +1466,59 @@ msgstr ""
 "- Подробности за статистиката на четенето\n"
 "- Няколко други приставки"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:345
+#: frontend/apps/filemanager/filemanagermenu.lua:407
 msgid "Reverse sorting"
 msgstr "Обратно подреждане"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:352
+#: frontend/apps/filemanager/filemanagermenu.lua:414
 #: frontend/apps/reader/modules/readermenu.lua:218
 msgid "Screensaver"
 msgstr "Скрийнсейвър"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:363
+#: frontend/apps/filemanager/filemanagermenu.lua:425
 msgid "Advanced settings"
 msgstr "Разширени настройки"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:372
+#: frontend/apps/filemanager/filemanagermenu.lua:434
 #: frontend/apps/reader/modules/readermenu.lua:225
 msgid "Plugin management"
 msgstr "Управление на добавки"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:377
+#: frontend/apps/filemanager/filemanagermenu.lua:439
 msgid "Developer options"
 msgstr "Настройки за разработчици"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:380
+#: frontend/apps/filemanager/filemanagermenu.lua:442
 msgid "Clear caches"
 msgstr "Изчистване на кешове"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:383
+#: frontend/apps/filemanager/filemanagermenu.lua:445
 msgid "Clear the cache folder?"
 msgstr "Да се изтрие кеш папката?"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:396
+#: frontend/apps/filemanager/filemanagermenu.lua:458
 msgid "Caches cleared. Please restart KOReader."
 msgstr "Кешовете са изчистени. Моля, рестартирайте KOReader."
 
-#: frontend/apps/filemanager/filemanagermenu.lua:403
+#: frontend/apps/filemanager/filemanagermenu.lua:465
 msgid "Enable debug logging"
 msgstr "Разрешаване на регистрирането на грешки"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:419
+#: frontend/apps/filemanager/filemanagermenu.lua:481
 msgid "Enable verbose debug logging"
 msgstr "Активиране на подробно регистриране на грешки"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:439
+#: frontend/apps/filemanager/filemanagermenu.lua:501
 msgid "Disable forced 8-bit pixel depth"
 msgstr "Деактивиране на принудителната 8-битова дълбочина на пикселите"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:447
-#: frontend/apps/filemanager/filemanagermenu.lua:463
-#: frontend/apps/filemanager/filemanagermenu.lua:547
-#: frontend/apps/filemanager/filemanagermenu.lua:567
-#: frontend/apps/filemanager/filemanagermenu.lua:590
-#: frontend/apps/filemanager/filemanagermenu.lua:606
-#: frontend/apps/filemanager/filemanagermenu.lua:619
+#: frontend/apps/filemanager/filemanagermenu.lua:509
+#: frontend/apps/filemanager/filemanagermenu.lua:525
+#: frontend/apps/filemanager/filemanagermenu.lua:609
+#: frontend/apps/filemanager/filemanagermenu.lua:629
+#: frontend/apps/filemanager/filemanagermenu.lua:652
+#: frontend/apps/filemanager/filemanagermenu.lua:668
+#: frontend/apps/filemanager/filemanagermenu.lua:681
 #: frontend/pluginloader.lua:186
 #: frontend/ui/elements/common_settings_menu_table.lua:199
 #: frontend/ui/elements/common_settings_menu_table.lua:213
@@ -1490,68 +1533,68 @@ msgstr "Деактивиране на принудителната 8-битов�
 msgid "This will take effect on next restart."
 msgstr "Това ще влезе в действие при следващото рестартиране."
 
-#: frontend/apps/filemanager/filemanagermenu.lua:455
+#: frontend/apps/filemanager/filemanagermenu.lua:517
 msgid "Always abort on crash"
 msgstr "Винаги прекъсване при срив"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:471
+#: frontend/apps/filemanager/filemanagermenu.lua:533
 msgid "Disable C blitter"
 msgstr "Изключване на C blitter"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:486
+#: frontend/apps/filemanager/filemanagermenu.lua:548
 msgid "Disable HW dithering"
 msgstr "Забраняване на HW замъгляване"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:504
+#: frontend/apps/filemanager/filemanagermenu.lua:566
 msgid "Disable SW dithering"
 msgstr "Забраняване на SW замъгляване"
 
 #. @translators Highly technical (ioctl is a Linux API call, the uppercase stuff is a constant). What's translatable is essentially only the action ("bypass") and the article.
-#: frontend/apps/filemanager/filemanagermenu.lua:527
+#: frontend/apps/filemanager/filemanagermenu.lua:589
 #, fuzzy
 msgid "Bypass the WAIT_FOR ioctls"
 msgstr "Заобикаляне на MXCFB_WAIT_FOR_* ioctls"
 
 #. @translators B288 is the codename of the CPU/chipset (SoC stands for 'System on Chip').
-#: frontend/apps/filemanager/filemanagermenu.lua:556
+#: frontend/apps/filemanager/filemanagermenu.lua:618
 msgid "Ignore feature bans on B288 SoCs"
 msgstr "Игнориране на забраните за функции в SoC B288"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:574
+#: frontend/apps/filemanager/filemanagermenu.lua:636
 msgid "Start E-ink test"
 msgstr "Начало на E-ink тест"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:582
+#: frontend/apps/filemanager/filemanagermenu.lua:644
 msgid "Disable enhanced UI text shaping (xtext)"
 msgstr "Деактивирайте подобреното оформяне на UI текст (xtext)"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:595
+#: frontend/apps/filemanager/filemanagermenu.lua:657
 msgid "UI layout mirroring and text direction"
 msgstr ""
 "Дублиране на оформлението на потребителския интерфейс и посока на текста"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:598
+#: frontend/apps/filemanager/filemanagermenu.lua:660
 msgid "Reverse UI layout mirroring"
 msgstr "Обратно огледално оформление на потребителския интерфейс"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:611
+#: frontend/apps/filemanager/filemanagermenu.lua:673
 msgid "Reverse UI text direction"
 msgstr "Обратна посока на текста на потребителския интерфейс"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:629
+#: frontend/apps/filemanager/filemanagermenu.lua:691
 msgid "Enable CRE call cache (with stats)"
 msgstr "Активиране на кеша за повиквания на CRE (със статистика)"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:631
+#: frontend/apps/filemanager/filemanagermenu.lua:693
 msgid "Enable CRE call cache"
 msgstr "Активиране на кеша за повиквания CRE"
 
 #. @translators Search for files by name.
-#: frontend/apps/filemanager/filemanagermenu.lua:662 frontend/dispatcher.lua:68
+#: frontend/apps/filemanager/filemanagermenu.lua:724 frontend/dispatcher.lua:68
 msgid "File search"
 msgstr "Търсене на файл"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:663
+#: frontend/apps/filemanager/filemanagermenu.lua:725
 #, fuzzy
 msgid ""
 "Search a book by filename in the current or home folder and its subfolders.\n"
@@ -1571,19 +1614,19 @@ msgstr ""
 "\n"
 "Докоснете книга в резултатите от търсенето, за да я отворите."
 
-#: frontend/apps/filemanager/filemanagermenu.lua:680
+#: frontend/apps/filemanager/filemanagermenu.lua:742
 msgid "Open last document"
 msgstr "Отвори последния документ"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:684
+#: frontend/apps/filemanager/filemanagermenu.lua:746
 msgid "Last: %1"
 msgstr "Последен: %1"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:695
+#: frontend/apps/filemanager/filemanagermenu.lua:757
 msgid "Would you like to open the last document: %1?"
 msgstr "Искате ли да отворите последния документ: %1?"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:696
+#: frontend/apps/filemanager/filemanagermenu.lua:758
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:188
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:231
 #: frontend/apps/reader/modules/readermenu.lua:277
@@ -1599,12 +1642,12 @@ msgstr "Искате ли да отворите последния докуме�
 msgid "OK"
 msgstr "Добре"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:720
+#: frontend/apps/filemanager/filemanagermenu.lua:782
 #: frontend/apps/reader/modules/readermenu.lua:247 frontend/dispatcher.lua:74
 msgid "Restart KOReader"
 msgstr "Рестарт на KOReader"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:765
+#: frontend/apps/filemanager/filemanagermenu.lua:827
 #: frontend/apps/reader/modules/readermenu.lua:305
 msgid ""
 "KOReader's startup script has been updated. You'll need to completely exit "
@@ -1613,12 +1656,12 @@ msgstr ""
 "Скриптът за стартиране на KOReader е актуализиран. Ще трябва да излезете "
 "напълно от KOReader, за да завършите актуализацията."
 
-#: frontend/apps/filemanager/filemanagermenu.lua:766
+#: frontend/apps/filemanager/filemanagermenu.lua:828
 #: frontend/apps/reader/modules/readermenu.lua:306
 msgid "Restart anyway"
 msgstr "Рестарт въпреки това"
 
-#: frontend/apps/filemanager/filemanagermenu.lua:806
+#: frontend/apps/filemanager/filemanagermenu.lua:868
 msgid "File manager menu"
 msgstr "Управление на файлове"
 
@@ -3306,12 +3349,6 @@ msgstr "Към предишно местоположение"
 #: frontend/apps/reader/modules/readerlink.lua:351
 msgid "Clear location history?"
 msgstr "Изчистване на историята на местоположението?"
-
-#: frontend/apps/reader/modules/readerlink.lua:352
-#: plugins/batterystat.koplugin/main.lua:192
-#: plugins/coverimage.koplugin/main.lua:508
-msgid "Clear"
-msgstr "Изчисти"
 
 #: frontend/apps/reader/modules/readerlink.lua:517
 msgid "Location history cleared."
@@ -7920,8 +7957,8 @@ msgstr ""
 
 #: frontend/ui/elements/common_settings_menu_table.lua:345
 #: frontend/ui/elements/common_settings_menu_table.lua:569
-#: frontend/ui/widget/filechooser.lua:547
-#: frontend/ui/widget/filechooser.lua:560
+#: frontend/ui/widget/filechooser.lua:553
+#: frontend/ui/widget/filechooser.lua:566
 msgid "Always"
 msgstr "Винаги"
 
@@ -9576,34 +9613,34 @@ msgstr ""
 msgid "Use defaults"
 msgstr "Вземане на подразбираните"
 
-#: frontend/ui/widget/filechooser.lua:278
+#: frontend/ui/widget/filechooser.lua:281
 msgid "1 item"
 msgid_plural "%1 items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: frontend/ui/widget/filechooser.lua:286
+#: frontend/ui/widget/filechooser.lua:289
 msgid "Current folder not readable. Some content may not be shown."
 msgstr ""
 
 #. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
-#: frontend/ui/widget/filechooser.lua:506
+#: frontend/ui/widget/filechooser.lua:512
 msgid "%1 ~Unsupported"
 msgstr ""
 
-#: frontend/ui/widget/filechooser.lua:545
+#: frontend/ui/widget/filechooser.lua:551
 msgid "Always open '%2' with %1?"
 msgstr ""
 
-#: frontend/ui/widget/filechooser.lua:558
+#: frontend/ui/widget/filechooser.lua:564
 msgid "Always open %2 files with %1?"
 msgstr ""
 
-#: frontend/ui/widget/filechooser.lua:580
+#: frontend/ui/widget/filechooser.lua:586
 msgid "Reset default"
 msgstr ""
 
-#: frontend/ui/widget/filechooser.lua:591
+#: frontend/ui/widget/filechooser.lua:597
 msgid "Open %1 with:"
 msgstr ""
 
@@ -10737,7 +10774,7 @@ msgid "Don't abort"
 msgstr ""
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:816
-#: plugins/coverbrowser.koplugin/main.lua:399
+#: plugins/coverbrowser.koplugin/main.lua:401
 msgid "Pruning cache of removed books…"
 msgstr ""
 
@@ -10876,37 +10913,37 @@ msgstr ""
 
 #: plugins/coverbrowser.koplugin/main.lua:93
 #: plugins/coverbrowser.koplugin/main.lua:141
-#: plugins/coverbrowser.koplugin/main.lua:189
+#: plugins/coverbrowser.koplugin/main.lua:188
 msgid "Classic (filename only)"
 msgstr ""
 
 #: plugins/coverbrowser.koplugin/main.lua:100
 #: plugins/coverbrowser.koplugin/main.lua:148
-#: plugins/coverbrowser.koplugin/main.lua:196
+#: plugins/coverbrowser.koplugin/main.lua:195
 msgid "Mosaic with cover images"
 msgstr ""
 
 #: plugins/coverbrowser.koplugin/main.lua:107
 #: plugins/coverbrowser.koplugin/main.lua:155
-#: plugins/coverbrowser.koplugin/main.lua:203
+#: plugins/coverbrowser.koplugin/main.lua:202
 msgid "Mosaic with text covers"
 msgstr ""
 
 #: plugins/coverbrowser.koplugin/main.lua:114
 #: plugins/coverbrowser.koplugin/main.lua:162
-#: plugins/coverbrowser.koplugin/main.lua:210
+#: plugins/coverbrowser.koplugin/main.lua:209
 msgid "Detailed list with cover images and metadata"
 msgstr ""
 
 #: plugins/coverbrowser.koplugin/main.lua:121
 #: plugins/coverbrowser.koplugin/main.lua:169
-#: plugins/coverbrowser.koplugin/main.lua:217
+#: plugins/coverbrowser.koplugin/main.lua:216
 msgid "Detailed list with metadata, no images"
 msgstr ""
 
 #: plugins/coverbrowser.koplugin/main.lua:128
 #: plugins/coverbrowser.koplugin/main.lua:176
-#: plugins/coverbrowser.koplugin/main.lua:224
+#: plugins/coverbrowser.koplugin/main.lua:223
 msgid "Detailed list with cover images and filenames"
 msgstr ""
 
@@ -10914,113 +10951,105 @@ msgstr ""
 msgid "History display mode"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:186
+#: plugins/coverbrowser.koplugin/main.lua:185
 msgid "Favorites display mode"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:236
+#: plugins/coverbrowser.koplugin/main.lua:238
 msgid "Mosaic and detailed list settings"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:239
+#: plugins/coverbrowser.koplugin/main.lua:243
+msgid ""
+"This sets the number of files and folders per page in display modes other "
+"than classic."
+msgstr ""
+
+#: plugins/coverbrowser.koplugin/main.lua:268
 msgid "Display hints"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:242
+#: plugins/coverbrowser.koplugin/main.lua:271
 msgid "Show hint for books with description"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:254
+#: plugins/coverbrowser.koplugin/main.lua:283
 msgid "Show hint for opened books in history"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:266
+#: plugins/coverbrowser.koplugin/main.lua:295
 msgid "Show hint for opened books in favorites"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:280
+#: plugins/coverbrowser.koplugin/main.lua:309
 msgid "Series"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:283
+#: plugins/coverbrowser.koplugin/main.lua:312
 msgid "Append series metadata to authors"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:296
+#: plugins/coverbrowser.koplugin/main.lua:325
 msgid "Append series metadata to title"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:309
+#: plugins/coverbrowser.koplugin/main.lua:338
 msgid "Show series metadata in separate line"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:325
-msgid "(Detailed list) Files per page"
-msgstr ""
-
-#: plugins/coverbrowser.koplugin/main.lua:326
-msgid ""
-"This sets the number of files and directories per page in non-'classic' "
-"display modes."
-msgstr ""
-
-#: plugins/coverbrowser.koplugin/main.lua:340
-msgid "Files per page"
-msgstr ""
-
-#: plugins/coverbrowser.koplugin/main.lua:350
+#: plugins/coverbrowser.koplugin/main.lua:354
 msgid "Show number of pages read instead of progress %"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:362
+#: plugins/coverbrowser.koplugin/main.lua:366
 msgid "Show number of pages left to read"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:377
+#: plugins/coverbrowser.koplugin/main.lua:379
 msgid "Book info cache management"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:382
+#: plugins/coverbrowser.koplugin/main.lua:384
 msgid "Current cache size: "
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:388
+#: plugins/coverbrowser.koplugin/main.lua:390
 msgid "Prune cache of removed books"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:395
+#: plugins/coverbrowser.koplugin/main.lua:397
 msgid ""
 "Are you sure that you want to prune cache of removed books?\n"
 "(This may take a while.)"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:396
+#: plugins/coverbrowser.koplugin/main.lua:398
 msgid "Prune cache"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:411
+#: plugins/coverbrowser.koplugin/main.lua:413
 msgid "Compact cache database"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:417
+#: plugins/coverbrowser.koplugin/main.lua:419
 msgid ""
 "Are you sure that you want to compact cache database?\n"
 "(This may take a while.)"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:418
+#: plugins/coverbrowser.koplugin/main.lua:420
 msgid "Compact database"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:421
+#: plugins/coverbrowser.koplugin/main.lua:423
 msgid "Compacting cache database…"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:433
+#: plugins/coverbrowser.koplugin/main.lua:435
 msgid "Delete cache database"
 msgstr ""
 
-#: plugins/coverbrowser.koplugin/main.lua:439
+#: plugins/coverbrowser.koplugin/main.lua:441
 msgid ""
 "Are you sure that you want to delete cover and metadata cache?\n"
 "(This will also reset your display mode settings.)"
@@ -13786,6 +13815,18 @@ msgstr ""
 msgid "Tap the upper right corner"
 msgstr "Докоснете горния десен ъгъл"
 
+#~ msgid "Show new files in bold"
+#~ msgstr "Показване на нови файлове в удебелен шрифт"
+
+#~ msgid "Show files in bold"
+#~ msgstr "Показване на файлове в удебелен шрифт"
+
+#~ msgid "(Classic file browser) %1"
+#~ msgstr "(Класически файлов браузър) %1"
+
+#~ msgid "Don't show files in bold"
+#~ msgstr "Не показвайте файлове в удебелен шрифт"
+
 #~ msgid "Share this document"
 #~ msgstr "Сподели този документ"
 
@@ -13903,9 +13944,6 @@ msgstr "Докоснете горния десен ъгъл"
 #~ msgstr ""
 #~ "Създадена е папка:\n"
 #~ "%1"
-
-#~ msgid "The folder has not been created."
-#~ msgstr "Папката не беше създадена."
 
 #~ msgid "File %1 not found"
 #~ msgstr "Файлът %1 не е намерен"
