@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-13 22:51+0000\n"
+"POT-Creation-Date: 2021-08-14 15:55+0000\n"
 "PO-Revision-Date: 2021-08-14 10:16+0000\n"
 "Last-Translator: Matthaiks <kitynska@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -247,7 +247,7 @@ msgstr "Edycja"
 #: frontend/apps/filemanager/filemanagershortcuts.lua:149
 #: frontend/apps/reader/modules/readerhighlight.lua:610
 #: frontend/apps/reader/modules/readerstatus.lua:217
-#: frontend/apps/reader/readerui.lua:558
+#: frontend/apps/reader/readerui.lua:558 frontend/ui/widget/screenshoter.lua:61
 #: plugins/opds.koplugin/opdsbrowser.lua:856
 #: plugins/terminal.koplugin/main.lua:192
 msgid "Delete"
@@ -318,9 +318,9 @@ msgstr "Wybierz folder lokalny"
 #: frontend/ui/widget/dictquicklookup.lua:423
 #: frontend/ui/widget/dictquicklookup.lua:523
 #: frontend/ui/widget/doublespinwidget.lua:42
-#: frontend/ui/widget/imageviewer.lua:195
+#: frontend/ui/widget/imageviewer.lua:194
 #: frontend/ui/widget/inputdialog.lua:674
-#: frontend/ui/widget/screenshoter.lua:81 frontend/ui/widget/spinwidget.lua:38
+#: frontend/ui/widget/screenshoter.lua:47 frontend/ui/widget/spinwidget.lua:38
 #: frontend/ui/widget/textviewer.lua:146 plugins/keepalive.koplugin/main.lua:19
 #: plugins/statistics.koplugin/main.lua:305
 #: plugins/terminal.koplugin/main.lua:436
@@ -580,7 +580,7 @@ msgstr "Folder:"
 #: frontend/ui/widget/bookstatuswidget.lua:141
 #: frontend/ui/widget/bookstatuswidget.lua:150
 #: frontend/ui/widget/bookstatuswidget.lua:158
-#: frontend/ui/widget/imageviewer.lua:288
+#: frontend/ui/widget/imageviewer.lua:287
 #: plugins/batterystat.koplugin/main.lua:78
 #: plugins/statistics.koplugin/main.lua:1337
 #: plugins/statistics.koplugin/main.lua:1340
@@ -1416,6 +1416,7 @@ msgid "Home folder is not set."
 msgstr "Folder domowy nie jest ustawiony."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:310
+#: frontend/ui/widget/screenshoter.lua:92
 msgid "Choose folder"
 msgstr "Wybierz folder"
 
@@ -9976,52 +9977,29 @@ msgstr "Konfiguruj"
 msgid "Max. at:"
 msgstr "Maks. w:"
 
-#: frontend/ui/widget/imageviewer.lua:56
+#: frontend/ui/widget/imageviewer.lua:55
 msgid "Viewing image"
 msgstr "Podgląd obrazka"
 
-#: frontend/ui/widget/imageviewer.lua:175
-#: frontend/ui/widget/imageviewer.lua:467
+#: frontend/ui/widget/imageviewer.lua:174
+#: frontend/ui/widget/imageviewer.lua:466
 msgid "Original size"
 msgstr "Rozmiar oryginalny"
 
-#: frontend/ui/widget/imageviewer.lua:175
-#: frontend/ui/widget/imageviewer.lua:467
+#: frontend/ui/widget/imageviewer.lua:174
+#: frontend/ui/widget/imageviewer.lua:466
 msgid "Scale"
 msgstr "Skalowanie"
 
-#: frontend/ui/widget/imageviewer.lua:187
-#: frontend/ui/widget/imageviewer.lua:469
+#: frontend/ui/widget/imageviewer.lua:186
+#: frontend/ui/widget/imageviewer.lua:468
 msgid "No rotation"
 msgstr "Obrót zablokowany"
 
-#: frontend/ui/widget/imageviewer.lua:187
-#: frontend/ui/widget/imageviewer.lua:469
+#: frontend/ui/widget/imageviewer.lua:186
+#: frontend/ui/widget/imageviewer.lua:468
 msgid "Rotate"
 msgstr "Obrót"
-
-#: frontend/ui/widget/imageviewer.lua:786
-#: frontend/ui/widget/screenshoter.lua:46
-msgid ""
-"Saved screenshot to %1.\n"
-"Would you like to set it as screensaver?"
-msgstr ""
-"Zapisano rzut ekranu do %1.\n"
-"Czy chcesz ustawić go jako wygaszacz ekranu?"
-
-#: frontend/ui/widget/imageviewer.lua:787
-#: frontend/ui/widget/screenshoter.lua:47
-#: plugins/profiles.koplugin/main.lua:101
-#: plugins/texteditor.koplugin/main.lua:339
-msgid "Yes"
-msgstr "Tak"
-
-#: frontend/ui/widget/imageviewer.lua:795
-#: frontend/ui/widget/screenshoter.lua:52
-#: plugins/profiles.koplugin/main.lua:102
-#: plugins/texteditor.koplugin/main.lua:340
-msgid "No"
-msgstr "Nie"
 
 #: frontend/ui/widget/inputdialog.lua:417
 msgid "Read only"
@@ -10322,25 +10300,32 @@ msgstr ""
 msgid "... (truncated...)"
 msgstr "... (obcięte...)"
 
-#: frontend/ui/widget/screenshoter.lua:64
-msgid "Choose screenshot folder"
-msgstr "Wybierz folder zrzutów ekranowych"
-
-#: frontend/ui/widget/screenshoter.lua:71
+#: frontend/ui/widget/screenshoter.lua:45
+#, fuzzy
 msgid ""
-"Screenshot folder set to:\n"
+"Screenshot saved to:\n"
 "%1"
 msgstr ""
 "Folder zrzutów ekranowych ustawiony na:\n"
 "%1"
 
-#: frontend/ui/widget/screenshoter.lua:89
+#: frontend/ui/widget/screenshoter.lua:51
+#, fuzzy
+msgid "Set as screensaver"
+msgstr "Użyj obrazu jako wygaszacza"
+
+#: frontend/ui/widget/screenshoter.lua:69
+#, fuzzy
+msgid "View"
+msgstr "Widok %1"
+
+#: frontend/ui/widget/screenshoter.lua:91
 msgid ""
-"Current screenshot folder:\n"
-"%1"
+"Screenshot folder is set to:\n"
+"%1\n"
+"\n"
+"Choose a new folder for screenshots?"
 msgstr ""
-"Obecny folder zrzutów ekranowych:\n"
-"%1"
 
 #: frontend/ui/widget/spinwidget.lua:46
 #: plugins/statistics.koplugin/main.lua:981
@@ -12993,6 +12978,16 @@ msgstr "Usuń profil"
 msgid "Do you want to delete this profile?"
 msgstr "Chcesz usunąć ten profil?"
 
+#: plugins/profiles.koplugin/main.lua:101
+#: plugins/texteditor.koplugin/main.lua:339
+msgid "Yes"
+msgstr "Tak"
+
+#: plugins/profiles.koplugin/main.lua:102
+#: plugins/texteditor.koplugin/main.lua:340
+msgid "No"
+msgstr "Nie"
+
 #: plugins/profiles.koplugin/_meta.lua:5
 msgid ""
 "This plugin allows combining multiple settings to make switchable 'profiles'."
@@ -14579,6 +14574,23 @@ msgstr "Stuknij prawy dolny róg"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Stuknij prawy górny róg"
+
+#~ msgid ""
+#~ "Saved screenshot to %1.\n"
+#~ "Would you like to set it as screensaver?"
+#~ msgstr ""
+#~ "Zapisano rzut ekranu do %1.\n"
+#~ "Czy chcesz ustawić go jako wygaszacz ekranu?"
+
+#~ msgid "Choose screenshot folder"
+#~ msgstr "Wybierz folder zrzutów ekranowych"
+
+#~ msgid ""
+#~ "Current screenshot folder:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Obecny folder zrzutów ekranowych:\n"
+#~ "%1"
 
 #~ msgid "Tap"
 #~ msgstr "Stuknij"

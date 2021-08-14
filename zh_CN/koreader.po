@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-13 22:51+0000\n"
+"POT-Creation-Date: 2021-08-14 15:55+0000\n"
 "PO-Revision-Date: 2021-08-14 05:24+0000\n"
 "Last-Translator: Eric <spice2wolf@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -249,7 +249,7 @@ msgstr "编辑"
 #: frontend/apps/filemanager/filemanagershortcuts.lua:149
 #: frontend/apps/reader/modules/readerhighlight.lua:610
 #: frontend/apps/reader/modules/readerstatus.lua:217
-#: frontend/apps/reader/readerui.lua:558
+#: frontend/apps/reader/readerui.lua:558 frontend/ui/widget/screenshoter.lua:61
 #: plugins/opds.koplugin/opdsbrowser.lua:856
 #: plugins/terminal.koplugin/main.lua:192
 msgid "Delete"
@@ -320,9 +320,9 @@ msgstr "选择本地目录"
 #: frontend/ui/widget/dictquicklookup.lua:423
 #: frontend/ui/widget/dictquicklookup.lua:523
 #: frontend/ui/widget/doublespinwidget.lua:42
-#: frontend/ui/widget/imageviewer.lua:195
+#: frontend/ui/widget/imageviewer.lua:194
 #: frontend/ui/widget/inputdialog.lua:674
-#: frontend/ui/widget/screenshoter.lua:81 frontend/ui/widget/spinwidget.lua:38
+#: frontend/ui/widget/screenshoter.lua:47 frontend/ui/widget/spinwidget.lua:38
 #: frontend/ui/widget/textviewer.lua:146 plugins/keepalive.koplugin/main.lua:19
 #: plugins/statistics.koplugin/main.lua:305
 #: plugins/terminal.koplugin/main.lua:436
@@ -582,7 +582,7 @@ msgstr "目录："
 #: frontend/ui/widget/bookstatuswidget.lua:141
 #: frontend/ui/widget/bookstatuswidget.lua:150
 #: frontend/ui/widget/bookstatuswidget.lua:158
-#: frontend/ui/widget/imageviewer.lua:288
+#: frontend/ui/widget/imageviewer.lua:287
 #: plugins/batterystat.koplugin/main.lua:78
 #: plugins/statistics.koplugin/main.lua:1337
 #: plugins/statistics.koplugin/main.lua:1340
@@ -1417,6 +1417,7 @@ msgid "Home folder is not set."
 msgstr "还未设置主文件夹。"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:310
+#: frontend/ui/widget/screenshoter.lua:92
 msgid "Choose folder"
 msgstr "选择目录"
 
@@ -9670,52 +9671,29 @@ msgstr "配置"
 msgid "Max. at:"
 msgstr "最大值："
 
-#: frontend/ui/widget/imageviewer.lua:56
+#: frontend/ui/widget/imageviewer.lua:55
 msgid "Viewing image"
 msgstr "观赏图片"
 
-#: frontend/ui/widget/imageviewer.lua:175
-#: frontend/ui/widget/imageviewer.lua:467
+#: frontend/ui/widget/imageviewer.lua:174
+#: frontend/ui/widget/imageviewer.lua:466
 msgid "Original size"
 msgstr "原尺寸"
 
-#: frontend/ui/widget/imageviewer.lua:175
-#: frontend/ui/widget/imageviewer.lua:467
+#: frontend/ui/widget/imageviewer.lua:174
+#: frontend/ui/widget/imageviewer.lua:466
 msgid "Scale"
 msgstr "缩放比例"
 
-#: frontend/ui/widget/imageviewer.lua:187
-#: frontend/ui/widget/imageviewer.lua:469
+#: frontend/ui/widget/imageviewer.lua:186
+#: frontend/ui/widget/imageviewer.lua:468
 msgid "No rotation"
 msgstr "不旋转"
 
-#: frontend/ui/widget/imageviewer.lua:187
-#: frontend/ui/widget/imageviewer.lua:469
+#: frontend/ui/widget/imageviewer.lua:186
+#: frontend/ui/widget/imageviewer.lua:468
 msgid "Rotate"
 msgstr "旋转"
-
-#: frontend/ui/widget/imageviewer.lua:786
-#: frontend/ui/widget/screenshoter.lua:46
-msgid ""
-"Saved screenshot to %1.\n"
-"Would you like to set it as screensaver?"
-msgstr ""
-"截图保存至 %1.\n"
-"你想要设置为屏保吗？"
-
-#: frontend/ui/widget/imageviewer.lua:787
-#: frontend/ui/widget/screenshoter.lua:47
-#: plugins/profiles.koplugin/main.lua:101
-#: plugins/texteditor.koplugin/main.lua:339
-msgid "Yes"
-msgstr "是"
-
-#: frontend/ui/widget/imageviewer.lua:795
-#: frontend/ui/widget/screenshoter.lua:52
-#: plugins/profiles.koplugin/main.lua:102
-#: plugins/texteditor.koplugin/main.lua:340
-msgid "No"
-msgstr "否"
 
 #: frontend/ui/widget/inputdialog.lua:417
 msgid "Read only"
@@ -10016,25 +9994,32 @@ msgstr ""
 msgid "... (truncated...)"
 msgstr "... (截短...)"
 
-#: frontend/ui/widget/screenshoter.lua:64
-msgid "Choose screenshot folder"
-msgstr "选择截屏文件夹"
-
-#: frontend/ui/widget/screenshoter.lua:71
+#: frontend/ui/widget/screenshoter.lua:45
+#, fuzzy
 msgid ""
-"Screenshot folder set to:\n"
+"Screenshot saved to:\n"
 "%1"
 msgstr ""
 "截屏保存文件夹已设为：\n"
 "%1"
 
-#: frontend/ui/widget/screenshoter.lua:89
+#: frontend/ui/widget/screenshoter.lua:51
+#, fuzzy
+msgid "Set as screensaver"
+msgstr "使用图片作为屏保"
+
+#: frontend/ui/widget/screenshoter.lua:69
+#, fuzzy
+msgid "View"
+msgstr "查看 %1"
+
+#: frontend/ui/widget/screenshoter.lua:91
 msgid ""
-"Current screenshot folder:\n"
-"%1"
+"Screenshot folder is set to:\n"
+"%1\n"
+"\n"
+"Choose a new folder for screenshots?"
 msgstr ""
-"当前截屏保存文件夹：\n"
-"%1"
 
 #: frontend/ui/widget/spinwidget.lua:46
 #: plugins/statistics.koplugin/main.lua:981
@@ -12582,6 +12567,16 @@ msgstr "删除配置文件"
 msgid "Do you want to delete this profile?"
 msgstr "你要删除这个配置吗？"
 
+#: plugins/profiles.koplugin/main.lua:101
+#: plugins/texteditor.koplugin/main.lua:339
+msgid "Yes"
+msgstr "是"
+
+#: plugins/profiles.koplugin/main.lua:102
+#: plugins/texteditor.koplugin/main.lua:340
+msgid "No"
+msgstr "否"
+
 #: plugins/profiles.koplugin/_meta.lua:5
 msgid ""
 "This plugin allows combining multiple settings to make switchable 'profiles'."
@@ -14113,6 +14108,23 @@ msgstr "点击屏幕右下角"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "点击屏幕右上角"
+
+#~ msgid ""
+#~ "Saved screenshot to %1.\n"
+#~ "Would you like to set it as screensaver?"
+#~ msgstr ""
+#~ "截图保存至 %1.\n"
+#~ "你想要设置为屏保吗？"
+
+#~ msgid "Choose screenshot folder"
+#~ msgstr "选择截屏文件夹"
+
+#~ msgid ""
+#~ "Current screenshot folder:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "当前截屏保存文件夹：\n"
+#~ "%1"
 
 #~ msgid "Tap"
 #~ msgstr "轻按"
