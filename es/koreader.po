@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-17 22:44+0000\n"
-"PO-Revision-Date: 2021-08-16 23:27+0000\n"
+"PO-Revision-Date: 2021-08-18 04:28+0000\n"
 "Last-Translator: hombretranquilo <hombretranquilo.mbp@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/koreader/"
 "koreader/es/>\n"
@@ -2560,7 +2560,7 @@ msgstr "Página actual en el capítulo (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:864
 msgid "Pages left in chapter (%1)"
-msgstr "Páginas sin leer del capítulo (%1)"
+msgstr "Páginas restantes del capítulo (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:867
 msgid "Progress percentage (%1)"
@@ -2763,7 +2763,7 @@ msgstr "2 dígitos después del punto decimal (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1401
 msgid "Include current page in pages left"
-msgstr ""
+msgstr "Incluir la página actual en páginas restantes"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1402
 msgid ""
@@ -2773,6 +2773,11 @@ msgid ""
 "With this enabled, the current page is included, so the count goes from n to "
 "1 instead."
 msgstr ""
+"Normalmente, la página actual no se cuenta como restante, por lo que las "
+"\"páginas restantes\" (en un libro o capítulo con n páginas) irán de n-1 a 0 "
+"en la última página.\n"
+"Con esta opción activada, la página actual se incluye en el cómputo, de "
+"manera que el recuento va de n a 1."
 
 #: frontend/apps/reader/modules/readerfooter.lua:1421
 msgid "Hide battery status if level higher than (%1%)"
@@ -9841,6 +9846,8 @@ msgid ""
 "This setting is best suited for foreign text found in books written in your "
 "native language."
 msgstr ""
+"Esta configuración es la más adecuada para los fragmentos de texto en "
+"idiomas diferentes al seleccionado como principal."
 
 #: frontend/ui/translator.lua:237
 msgid "Translate from: %1"
@@ -9851,11 +9858,12 @@ msgid ""
 "If a specific source language is manually selected, it will be used "
 "everywhere, in all your books."
 msgstr ""
+"Si se selecciona manualmente un idioma de origen específico, se utilizará en "
+"todas partes, en todos los libros."
 
 #: frontend/ui/translator.lua:250
-#, fuzzy
 msgid "Translate from book language: %1"
-msgstr "Traducir del: %1"
+msgstr "Traducir del idioma del libro: %1"
 
 #: frontend/ui/translator.lua:252
 msgid ""
@@ -9868,6 +9876,15 @@ msgid ""
 "- For books in familiar languages, to get definitions for words from the "
 "translation service."
 msgstr ""
+"Al habilitar esta opción, en los libros que especifican su idioma principal "
+"en los metadatos (la mayoría de los EPUB y FB2), este será considerado el "
+"idioma de origen. En caso contrario, se utilizará la detección automática o "
+"el idioma seleccionado.\n"
+"Esto es útil:\n"
+"- En los libros en idiomas extranjeros en los que se necesita una traducción "
+"consistente y son poco frecuentes las palabras en otros idiomas.\n"
+"- En los libros en idiomas conocidos, para obtener definiciones de palabras "
+"del servicio de traducción."
 
 #: frontend/ui/translator.lua:271
 msgid "Translate to: %1"
@@ -10228,9 +10245,8 @@ msgid "Clipboard"
 msgstr "Portapapeles"
 
 #: frontend/ui/widget/inputtext.lua:179
-#, fuzzy
 msgid "(empty)"
-msgstr "vacío"
+msgstr "(vacío)"
 
 #: frontend/ui/widget/inputtext.lua:188
 msgid "Copy all"
