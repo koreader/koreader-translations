@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-29 10:35+0000\n"
+"POT-Creation-Date: 2021-08-30 07:45+0000\n"
 "PO-Revision-Date: 2021-08-30 07:45+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -192,9 +192,8 @@ msgstr ""
 #: plugins/calibre.koplugin/wireless.lua:422
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:780
 #: plugins/coverimage.koplugin/main.lua:349
-#: plugins/evernote.koplugin/main.lua:162
-#: plugins/evernote.koplugin/main.lua:207
-#: plugins/evernote.koplugin/main.lua:359
+#: plugins/exporter.koplugin/main.lua:132
+#: plugins/exporter.koplugin/main.lua:177
 #: plugins/gestures.koplugin/main.lua:329 plugins/kosync.koplugin/main.lua:374
 #: plugins/opds.koplugin/opdsbrowser.lua:142
 #: plugins/opds.koplugin/opdsbrowser.lua:191
@@ -1528,7 +1527,7 @@ msgstr "강제 8비트 픽셀 심도를 끕니다"
 #: frontend/apps/filemanager/filemanagermenu.lua:652
 #: frontend/apps/filemanager/filemanagermenu.lua:668
 #: frontend/apps/filemanager/filemanagermenu.lua:681
-#: frontend/pluginloader.lua:186
+#: frontend/pluginloader.lua:187
 #: frontend/ui/elements/common_settings_menu_table.lua:199
 #: frontend/ui/elements/common_settings_menu_table.lua:213
 #: frontend/ui/elements/font_settings.lua:82
@@ -1644,7 +1643,7 @@ msgstr "마지막 문서를 열까요: %1?"
 #: frontend/ui/widget/datewidget.lua:31
 #: frontend/ui/widget/numberpickerwidget.lua:143
 #: frontend/ui/widget/timewidget.lua:31 plugins/calibre.koplugin/main.lua:313
-#: plugins/evernote.koplugin/main.lua:168
+#: plugins/exporter.koplugin/main.lua:138
 #: plugins/wallabag.koplugin/main.lua:856
 msgid "OK"
 msgstr "확인"
@@ -5759,7 +5758,7 @@ msgstr "리플로우 가능 문서 (epub, fb2, txt…)"
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "고정 레이아웃 문서 (pdf, djvu, pics…)"
 
-#: frontend/pluginloader.lua:19
+#: frontend/pluginloader.lua:20
 msgid "outdated"
 msgstr "구식의"
 
@@ -6216,13 +6215,16 @@ msgid ""
 "(Font Hinting may need to be adjusted for the best result with either "
 "kerning implementation.)"
 msgstr ""
-"글꼴 커닝은 시각적으로 만족스러운 결과를 얻기 위해 개별 문자 모양새 사이의 간격을 조정하는 프로세스입니다.\n"
+"글꼴 커닝은 시각적으로 만족스러운 결과를 얻기 위해 개별 문자 모양새 사이의 간"
+"격을 조정하는 프로세스입니다.\n"
 "\n"
 "- 꺼짐: 커닝 없음.\n"
 "- 빠름: FreeType의 커닝 구현을 사용합니다(합자 없음).\n"
-"- 좋음: HarfBuzz의 가벼운 커닝 구현 사용(최고보다 빠르지만 합자가 없고 비 서양 스크립트에 대한 제한된 지원)\n"
-"- 최상: HarfBuzz의 전체 커닝 구현을 사용합니다(느리지만 일부 글꼴의 합자를 지원할 수 있음, 결합된 아랍어 글리프나 기타 "
-"스크립트를 올바르게 표시하는 데도 필요함).\n"
+"- 좋음: HarfBuzz의 가벼운 커닝 구현 사용(최고보다 빠르지만 합자가 없고 비 서"
+"양 스크립트에 대한 제한된 지원)\n"
+"- 최상: HarfBuzz의 전체 커닝 구현을 사용합니다(느리지만 일부 글꼴의 합자를 지"
+"원할 수 있음, 결합된 아랍어 글리프나 기타 스크립트를 올바르게 표시하는 데도 "
+"필요함).\n"
 "\n"
 "(커닝 구현에서 최상의 결과를 얻으려면 글꼴 힌트를 조정해야 할 수도 있습니다.)"
 
@@ -7593,7 +7595,7 @@ msgid "Version: %1"
 msgstr "버전: %1"
 
 #: frontend/ui/elements/common_info_menu_table.lua:26
-#: plugins/evernote.koplugin/main.lua:242
+#: plugins/exporter.koplugin/main.lua:212
 #: plugins/newsdownloader.koplugin/main.lua:123
 #: plugins/send2ebook.koplugin/main.lua:96
 #: plugins/wallabag.koplugin/main.lua:286
@@ -11577,61 +11579,48 @@ msgstr ""
 "이 플러그인을 사용하면 외부 요인에 따라 문서를 열기 전에 문서 설정을 덧꾸밀 "
 "수 있습니다."
 
-#: plugins/evernote.koplugin/main.lua:23
-msgid "Login to Evernote"
-msgstr "에버노트에 로그인"
-
-#: plugins/evernote.koplugin/main.lua:24
+#: plugins/exporter.koplugin/main.lua:35
 msgid "KOReader Notes"
 msgstr "KOReader 노트"
 
-#: plugins/evernote.koplugin/main.lua:26
+#: plugins/exporter.koplugin/main.lua:36
 msgid "Note: "
 msgstr "노트: "
 
-#: plugins/evernote.koplugin/main.lua:98 plugins/evernote.koplugin/_meta.lua:4
-msgid "Evernote"
-msgstr "에버노트"
+#: plugins/exporter.koplugin/main.lua:104 plugins/exporter.koplugin/_meta.lua:4
+#, fuzzy
+msgid "Export highlights"
+msgstr "전체 강조"
 
-#: plugins/evernote.koplugin/main.lua:110 plugins/kosync.koplugin/main.lua:143
-msgid "Logout"
-msgstr "로그아웃"
-
-#: plugins/evernote.koplugin/main.lua:111
-#: plugins/evernote.koplugin/main.lua:366 plugins/kosync.koplugin/main.lua:144
-#: plugins/kosync.koplugin/main.lua:381
-msgid "Login"
-msgstr "로그인"
-
-#: plugins/evernote.koplugin/main.lua:137
+#: plugins/exporter.koplugin/main.lua:107
 msgid "Joplin"
 msgstr "조플린"
 
-#: plugins/evernote.koplugin/main.lua:142
+#: plugins/exporter.koplugin/main.lua:112
 msgid "Set Joplin IP and Port"
 msgstr "조플린 IP와 포트 설정"
 
-#: plugins/evernote.koplugin/main.lua:148
+#: plugins/exporter.koplugin/main.lua:118
 msgid "Set Joplin IP and port number"
 msgstr "조플린 IP와 포트 번호 설정"
 
-#: plugins/evernote.koplugin/main.lua:191
+#: plugins/exporter.koplugin/main.lua:161
 msgid "Set authorization token"
 msgstr "인증 토큰 설정"
 
-#: plugins/evernote.koplugin/main.lua:197
+#: plugins/exporter.koplugin/main.lua:167
 msgid "Set authorization token for Joplin"
 msgstr "조플린의 인증 토큰 설정"
 
-#: plugins/evernote.koplugin/main.lua:213
+#: plugins/exporter.koplugin/main.lua:183
 msgid "Set token"
 msgstr "토큰 설정"
 
-#: plugins/evernote.koplugin/main.lua:229
+#: plugins/exporter.koplugin/main.lua:199
 msgid "Export to Joplin"
 msgstr "조플린으로 내보내기"
 
-#: plugins/evernote.koplugin/main.lua:246
+#: plugins/exporter.koplugin/main.lua:216
 msgid ""
 "You can enter your auth token on your computer by saving an empty token. "
 "Then quit KOReader, edit the evernote.joplin_token field in %1/settings."
@@ -11665,39 +11654,39 @@ msgstr ""
 "더 자세한 내용은, https://github.com/koreader/koreader/wiki/Evernote-export "
 "페이지를 방문하세요."
 
-#: plugins/evernote.koplugin/main.lua:262
+#: plugins/exporter.koplugin/main.lua:232
 msgid "Export all notes in this book"
 msgstr "이 책의 모든 노트 내보내기"
 
-#: plugins/evernote.koplugin/main.lua:272
+#: plugins/exporter.koplugin/main.lua:242
 msgid "Exporting may take several seconds…"
 msgstr "내보내기에 몇 초쯤 걸릴 수 있습니다…"
 
-#: plugins/evernote.koplugin/main.lua:278
+#: plugins/exporter.koplugin/main.lua:248
 msgid "Export all notes in your library"
 msgstr "라이브러리의 모든 노트 내보내기"
 
-#: plugins/evernote.koplugin/main.lua:288
+#: plugins/exporter.koplugin/main.lua:258
 msgid "Exporting may take several minutes…"
 msgstr "내보내기에 몇 분쯤 걸릴 수 있습니다…"
 
-#: plugins/evernote.koplugin/main.lua:295
+#: plugins/exporter.koplugin/main.lua:265
 msgid "Export to local JSON files"
 msgstr "로컬 JSON 파일로 내보내기"
 
-#: plugins/evernote.koplugin/main.lua:308
+#: plugins/exporter.koplugin/main.lua:278
 msgid "Export to local HTML files"
 msgstr "기기에 HTML 파일로 내보내기"
 
-#: plugins/evernote.koplugin/main.lua:321
+#: plugins/exporter.koplugin/main.lua:291
 msgid "Export to local clipping text file"
 msgstr "외부 문서 파일로 내보내기"
 
-#: plugins/evernote.koplugin/main.lua:335
+#: plugins/exporter.koplugin/main.lua:305
 msgid "Purge history records"
 msgstr "열람 기록 완전 삭제"
 
-#: plugins/evernote.koplugin/main.lua:339
+#: plugins/exporter.koplugin/main.lua:309
 msgid ""
 "History records have been purged.\n"
 "All notes will be exported again next time.\n"
@@ -11705,20 +11694,7 @@ msgstr ""
 "기록된 내역이 제거되었습니다.\n"
 "다음 번부터 모든 노트가 내보내집니다.\n"
 
-#: plugins/evernote.koplugin/main.lua:376 plugins/kosync.koplugin/main.lua:398
-msgid "Logging in. Please wait…"
-msgstr "로그인 중. 잠시 기다려 주세요…"
-
-#: plugins/evernote.koplugin/main.lua:415
-#: plugins/evernote.koplugin/main.lua:432 plugins/kosync.koplugin/main.lua:496
-msgid "An error occurred while logging in:"
-msgstr "로그인 중에 오류가 생겼습니다:"
-
-#: plugins/evernote.koplugin/main.lua:438
-msgid "Logged in to Evernote."
-msgstr "에버노트에 로그인됨."
-
-#: plugins/evernote.koplugin/main.lua:628
+#: plugins/exporter.koplugin/main.lua:482
 msgid ""
 "Exported notes from the book:\n"
 "%1"
@@ -11731,7 +11707,7 @@ msgstr[0] ""
 "%1\n"
 "그리고 %2 등."
 
-#: plugins/evernote.koplugin/main.lua:636
+#: plugins/exporter.koplugin/main.lua:490
 msgid ""
 "An error occurred while trying to export notes from the book:\n"
 "%1"
@@ -11744,7 +11720,7 @@ msgstr[0] ""
 "%1\n"
 "그리고 %2 등."
 
-#: plugins/evernote.koplugin/main.lua:644
+#: plugins/exporter.koplugin/main.lua:498
 msgid ""
 "\n"
 "Notes can be found in %1/."
@@ -11752,16 +11728,17 @@ msgstr ""
 "\n"
 "노트는 %1에서 보실 수 있습니다."
 
-#: plugins/evernote.koplugin/main.lua:709
+#: plugins/exporter.koplugin/main.lua:537
 msgid "-- Page: %1, added on %2\n"
 msgstr "-- 페이지: %1, %2에 추가됨\n"
 
-#: plugins/evernote.koplugin/main.lua:715
+#: plugins/exporter.koplugin/main.lua:543
 msgid "<An image>"
 msgstr "<그림>"
 
-#: plugins/evernote.koplugin/_meta.lua:5
-msgid "Exports highlights and notes to the Evernote cloud."
+#: plugins/exporter.koplugin/_meta.lua:5
+#, fuzzy
+msgid "Exports highlights and notes."
 msgstr "하이라이트와 노트를 Evernote 클라우드로 내보냅니다."
 
 #: plugins/gestures.koplugin/main.lua:36 plugins/gestures.koplugin/main.lua:40
@@ -12212,9 +12189,17 @@ msgstr "다른 기기에서 최근 읽은 위치 가져오기"
 msgid "Progress sync"
 msgstr "읽은 과정 동기화"
 
+#: plugins/kosync.koplugin/main.lua:143
+msgid "Logout"
+msgstr "로그아웃"
+
 #: plugins/kosync.koplugin/main.lua:144 plugins/kosync.koplugin/main.lua:405
 msgid "Register"
 msgstr "가입"
+
+#: plugins/kosync.koplugin/main.lua:144 plugins/kosync.koplugin/main.lua:381
+msgid "Login"
+msgstr "로그인"
 
 #: plugins/kosync.koplugin/main.lua:162
 msgid "Auto sync now and future"
@@ -12273,6 +12258,10 @@ msgstr "파일이름. 이름이 같은 파일은 진행 상황을 동기화합�
 msgid "Cannot login: %1"
 msgstr "로그인할 수 없습니다: %1"
 
+#: plugins/kosync.koplugin/main.lua:398
+msgid "Logging in. Please wait…"
+msgstr "로그인 중. 잠시 기다려 주세요…"
+
 #: plugins/kosync.koplugin/main.lua:412
 msgid "Cannot register: %1"
 msgstr "등록할 수 없습니다: %1"
@@ -12296,6 +12285,10 @@ msgstr "KOReader 서버에 가입됨."
 #: plugins/kosync.koplugin/main.lua:477 plugins/kosync.koplugin/main.lua:515
 msgid "Unknown server error"
 msgstr "알 수 없는 서버 오류"
+
+#: plugins/kosync.koplugin/main.lua:496
+msgid "An error occurred while logging in:"
+msgstr "로그인 중에 오류가 생겼습니다:"
 
 #: plugins/kosync.koplugin/main.lua:501
 msgid "An unknown error occurred while logging in."
@@ -14350,6 +14343,15 @@ msgstr "하단 오른쪽 모서리 탭"
 msgid "Tap the upper right corner"
 msgstr "상단 오른쪽 모서리 탭"
 
+#~ msgid "Login to Evernote"
+#~ msgstr "에버노트에 로그인"
+
+#~ msgid "Evernote"
+#~ msgstr "에버노트"
+
+#~ msgid "Logged in to Evernote."
+#~ msgstr "에버노트에 로그인됨."
+
 #~ msgid "Select another folder"
 #~ msgstr "다른 폴더 선택"
 
@@ -15358,9 +15360,6 @@ msgstr "상단 오른쪽 모서리 탭"
 
 #~ msgid "Time to read"
 #~ msgstr "예상 완독 시간"
-
-#~ msgid "Total highlights"
-#~ msgstr "전체 강조"
 
 #~ msgid "Total notes"
 #~ msgstr "전체 노트"
