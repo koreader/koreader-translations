@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-16 07:15+0000\n"
-"PO-Revision-Date: 2021-09-16 07:16+0000\n"
+"PO-Revision-Date: 2021-09-17 17:43+0000\n"
 "Last-Translator: Eric <spice2wolf@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "koreader/koreader/zh_Hans/>\n"
@@ -3773,6 +3773,26 @@ msgid ""
 "Complex expressions may lead to an extremely long search time, in which case "
 "not all matches will be shown.\n"
 msgstr ""
+"正则表达式允许您在文本中搜索匹配的模式。最简单的模式是一个简单的字符串序列，比如 `James Bond`。有许多不同的正则表达式，我们支持的是 "
+"ECMAScript 语法。下面将解释基础知识。\n"
+"\n"
+"如果你想查找 'Mister Moore'， 'Sir Moore' 或 'Alfons Moore' 出现的所有地方，但不搜索 'Lady "
+"Moore'。\n"
+"输入 'Mister Moore|Sir Moore|Alfons Moore'。\n"
+"\n"
+"如果搜索包含 ^$.*+?()[]{}|\\/ 中的特殊字符，你必须在字符串前面放上一个 \\ 符号。\n"
+"\n"
+"示例：\n"
+"包含 'os' 的单词 -> '[^ ]+os[^ ]+'\n"
+"任意单一字符 '.' -> 'r.nge'\n"
+"任意字符 '.*' -> 'J.*s'\n"
+"数字 -> '[0-9]+'\n"
+"字符范围 -> '[a-f]'\n"
+"非空格 -> '[^ ]'\n"
+"一个单词 -> '[^ ]*[^ ]'\n"
+"一句话中的最后一个单词 -> '[^ ]*\\.'\n"
+"\n"
+"复杂的表达式可能会导致非常长的搜索时间，这种情况下，不会显示所有匹配。\n"
 
 #: frontend/apps/reader/modules/readersearch.lua:60
 msgid "Wrong escape '\\'"
@@ -5707,9 +5727,8 @@ msgid "Device"
 msgstr "设备"
 
 #: frontend/dispatcher.lua:668
-#, fuzzy
 msgid "Screen and lights"
-msgstr "屏幕和亮度"
+msgstr "屏幕和灯光"
 
 #: frontend/dispatcher.lua:670
 msgid "Reader"
@@ -6392,7 +6411,6 @@ msgid "About text direction"
 msgstr "关于文本方向"
 
 #: frontend/ui/data/css_tweaks.lua:182
-#, fuzzy
 msgid ""
 "Languages like Arabic or Hebrew use right-to-left writing systems (Right-To-"
 "Left or RTL). This doesn't only affect text layout, but also list item "
@@ -6409,16 +6427,13 @@ msgid ""
 "You may also want to enable, in the top menu → Gear → Taps and gestures → "
 "Page turns → Invert page turn taps and swipes."
 msgstr ""
-"阿拉伯语和希伯来语等语言使用的是从右至左的书写系统（RTL）。这种书写系统不仅要"
-"求文本布局从右至左，而且要求列表和表格也是从右向左布局的。\n"
+"阿拉伯语和希伯来语等语言使用的是从右至左的书写系统（RTL）。这种书写系统不仅影响文本布局，还会影响列表项符号，使得它们都必须被置于页面右侧，以及表格，使"
+"得单元格从右到左排列。\n"
 "\n"
-"通常来说，出版商会设置一个特定的标志用于启用RTL显示。但如果没有设置这个标签的"
-"话，你可以手工启用从右到左的显示。\n"
-"需要注意的是，如果标签不存在，则KOReader会尝试检测每一段的语言，用于设置正确"
-"的显示方向。\n"
+"通常来说，出版商已经设置了适当得标签用于启用 RTL 显示。但如果没有这些标签，或者你在阅读纯文本文档，您也可以通过下列调整手动启用 RTL。\n"
+"需要注意的是，在没有这样的规范的情况下，KOReader 将尝试检测每个段落的语言，来为每个段落设置适当的呈现方式。\n"
 "\n"
-"若在RTL模式下觉得翻页别扭，可以在 顶部菜单 → 齿轮图标 → 导航 中设置 反转翻页"
-"手势。"
+"你可能还想启用，在顶部菜单→齿轮→轻按和手势→翻页→颠倒翻页轻按和滑动。"
 
 #: frontend/ui/data/css_tweaks.lua:193
 msgid "Document direction RTL"
@@ -12394,42 +12409,36 @@ msgstr ""
 "正在打包 EPUB…"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:73
-#, fuzzy
 msgid "URL"
-msgstr "右至左"
+msgstr "URL"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:84
 msgid "Limit"
-msgstr ""
+msgstr "限制"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:95
-#, fuzzy
 msgid "Download full article"
-msgstr "下载文件"
+msgstr "下载完整文章"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
-#, fuzzy
 msgid "Include images"
-msgstr "包含"
+msgstr "包含图片"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:117
-#, fuzzy
 msgid "Enable filter"
-msgstr "启用Wifi"
+msgstr "启用筛选器"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:129
 msgid "Filter element"
-msgstr ""
+msgstr "过滤元素"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:151
-#, fuzzy
 msgid "Delete feed"
-msgstr "删除文件"
+msgstr "删除订阅源"
 
 #: plugins/newsdownloader.koplugin/main.lua:87
-#, fuzzy
 msgid "News downloader (RSS/Atom)"
-msgstr "新闻下载器"
+msgstr "新闻下载器 （RSS/Atom）"
 
 #: plugins/newsdownloader.koplugin/main.lua:99
 msgid "Go to news folder"
@@ -12437,34 +12446,29 @@ msgstr "转到新闻文件夹"
 
 #: plugins/newsdownloader.koplugin/main.lua:105
 msgid "Sync news feeds"
-msgstr ""
+msgstr "同步新闻源"
 
 #: plugins/newsdownloader.koplugin/main.lua:112
-#, fuzzy
 msgid "Edit news feeds"
-msgstr "编辑一个新的空文件"
+msgstr "编辑新闻订阅源"
 
 #: plugins/newsdownloader.koplugin/main.lua:126
-#, fuzzy
 msgid "Set download folder"
-msgstr "前往下载文件夹"
+msgstr "设置下载文件夹"
 
 #: plugins/newsdownloader.koplugin/main.lua:131
 msgid "Never download images"
 msgstr "不要下载图像"
 
 #: plugins/newsdownloader.koplugin/main.lua:142
-#, fuzzy
 msgid "Delete all downloaded items"
-msgstr "不要下载图像"
+msgstr "删除所有已下载项目"
 
 #: plugins/newsdownloader.koplugin/main.lua:148
-#, fuzzy
 msgid "Are you sure you want to delete all downloaded items?"
-msgstr "确定删除以下文件吗？\n"
+msgstr "确定删除所有已下载项目吗？"
 
 #: plugins/newsdownloader.koplugin/main.lua:168
-#, fuzzy
 msgid ""
 "News downloader retrieves RSS and Atom news entries and stores them to:\n"
 "%1\n"
@@ -12473,11 +12477,11 @@ msgid ""
 "Feeds can be configured with download limits and other customization through "
 "the Edit Feeds menu item."
 msgstr ""
-"新闻下载器获取 RSS 和 Atom 并把它们储存到：\n"
+"新闻下载器获取 RSS 和 Atom 新闻条目并把它们储存到：\n"
 "%1\n"
 "\n"
-"每个条目都是一个独立的 HTML 文件，可以被 KOReader 文件管理器看到。\n"
-"项目下载限制可以在设置中管理。"
+"每个条目都是一个独立的 EPUB 文件，可以用 KOReader 浏览。\n"
+"可以通过”编辑订阅源“菜单项的下载限制和其他定制选项配置订阅源。"
 
 #: plugins/newsdownloader.koplugin/main.lua:215
 #: plugins/newsdownloader.koplugin/main.lua:814
@@ -12493,11 +12497,11 @@ msgstr ""
 msgid ""
 "Feed list is empty. If you want to download news, you'll have to add a feed "
 "first."
-msgstr ""
+msgstr "源列表为空。如果你想下载新闻，你必须先添加一个源。"
 
 #: plugins/newsdownloader.koplugin/main.lua:224
 msgid "Edit feed list"
-msgstr ""
+msgstr "编辑源列表"
 
 #: plugins/newsdownloader.koplugin/main.lua:257
 msgid ""
@@ -12508,13 +12512,12 @@ msgstr ""
 "%3"
 
 #: plugins/newsdownloader.koplugin/main.lua:276
-#, fuzzy
 msgid "Downloading news finished. "
-msgstr "下载新闻"
+msgstr "下载新闻已毕。 "
 
 #: plugins/newsdownloader.koplugin/main.lua:290
 msgid "Downloading news finished with errors. "
-msgstr ""
+msgstr "新闻下载完毕，但有错误。 "
 
 #: plugins/newsdownloader.koplugin/main.lua:294
 msgid ""
@@ -12522,33 +12525,34 @@ msgid ""
 "Unsupported format in: %1. Please\n"
 "review your feed configuration file."
 msgstr ""
+"无法处理某些源。\n"
+"下列项中的格式不受支持: %1。请\n"
+"审阅你的源配置文件。"
 
 #: plugins/newsdownloader.koplugin/main.lua:311
-#, fuzzy
 msgid "Go to downloaders folder?"
-msgstr "前往下载文件夹"
+msgstr "前往下载文件夹吗？"
 
 #: plugins/newsdownloader.koplugin/main.lua:315
-#, fuzzy
 msgid "Go to downloads"
 msgstr "前往下载文件夹"
 
 #: plugins/newsdownloader.koplugin/main.lua:354
 #: plugins/newsdownloader.koplugin/main.lua:415
 msgid "(Reason: Failed to download content)"
-msgstr ""
+msgstr "(原因:下载内容失败)"
 
 #: plugins/newsdownloader.koplugin/main.lua:356
 msgid "(Reason: Error during feed deserialization)"
-msgstr ""
+msgstr "(原因：源反序列化时出错)"
 
 #: plugins/newsdownloader.koplugin/main.lua:417
 msgid "(Reason: Couldn't process RSS)"
-msgstr ""
+msgstr "(原因：不会处理 RSS)"
 
 #: plugins/newsdownloader.koplugin/main.lua:419
 msgid "(Reason: Couldn't process Atom)"
-msgstr ""
+msgstr "(原因：无法处理 Atom)"
 
 #: plugins/newsdownloader.koplugin/main.lua:482
 msgid ""
@@ -12580,71 +12584,63 @@ msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:594
 msgid "All downloaded news feed items deleted."
-msgstr ""
+msgstr "已删除所有下载的新闻源条目。"
 
 #: plugins/newsdownloader.koplugin/main.lua:616
-#, fuzzy
 msgid "Loading news feed list…"
-msgstr "正在登录，请稍等……"
+msgstr "正在加载新闻源列表…"
 
 #: plugins/newsdownloader.koplugin/main.lua:621
 msgid "Could not open feed list. Feeds configuration file is invalid. "
-msgstr ""
+msgstr "打不开源列表。源配置文件无效。 "
 
 #: plugins/newsdownloader.koplugin/main.lua:623
-#, fuzzy
 msgid "View file"
-msgstr "新文件"
+msgstr "查看文件"
 
 #: plugins/newsdownloader.koplugin/main.lua:658
-#, fuzzy
 msgid "Add new feed"
-msgstr "已移除全部新闻。"
+msgstr "添加新源"
 
 #: plugins/newsdownloader.koplugin/main.lua:680
 msgid "RSS/Atom Feeds List"
-msgstr ""
+msgstr "RSS/Atom 源列表"
 
 #: plugins/newsdownloader.koplugin/main.lua:695
-#, fuzzy
 msgid "Edit Feed"
-msgstr "编辑名称"
+msgstr "编辑源"
 
 #: plugins/newsdownloader.koplugin/main.lua:719
 msgid "Edit feed URL"
-msgstr ""
+msgstr "编辑源 URL"
 
 #: plugins/newsdownloader.koplugin/main.lua:722
-#, fuzzy
 msgid "Edit feed limit"
-msgstr "编辑显示名称"
+msgstr "编辑源限制"
 
 #: plugins/newsdownloader.koplugin/main.lua:723
 msgid "Set to 0 for no limit to how many items are downloaded"
-msgstr ""
+msgstr "设置为0，则不限制下载项目的数量"
 
 #: plugins/newsdownloader.koplugin/main.lua:726
 msgid "Edit filter element."
-msgstr ""
+msgstr "编辑元素筛选器。"
 
 #: plugins/newsdownloader.koplugin/main.lua:727
 msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
-msgstr ""
+msgstr "基于给定 CSS 选择器的过滤器。如，name_of_css.element.class"
 
 #: plugins/newsdownloader.koplugin/main.lua:765
-#, fuzzy
 msgid "Download full article?"
-msgstr "下载文件"
+msgstr "下载全文吗？"
 
 #: plugins/newsdownloader.koplugin/main.lua:767
-#, fuzzy
 msgid "Include images?"
-msgstr "图像反色"
+msgstr "包含图片？"
 
 #: plugins/newsdownloader.koplugin/main.lua:769
-#, fuzzy
 msgid "Enable CSS filter?"
-msgstr "禁用C blitter"
+msgstr "启用 CSS 筛选器？"
 
 #: plugins/newsdownloader.koplugin/main.lua:775
 #: plugins/profiles.koplugin/main.lua:104
@@ -12660,17 +12656,15 @@ msgstr "否"
 
 #: plugins/newsdownloader.koplugin/main.lua:975
 msgid "Saving news feed list..."
-msgstr ""
+msgstr "保存新闻源列表中…"
 
 #: plugins/newsdownloader.koplugin/main.lua:981
-#, fuzzy
 msgid "Could not save news feed config."
-msgstr "无法保存文件到：\n"
+msgstr "无法保存新闻源配置。"
 
 #: plugins/newsdownloader.koplugin/main.lua:983
-#, fuzzy
 msgid "News feed config updated successfully."
-msgstr "%1 已成功提取。"
+msgstr "已成功更新新闻源配置。"
 
 #: plugins/newsdownloader.koplugin/main.lua:995
 msgid "Config: %1"
