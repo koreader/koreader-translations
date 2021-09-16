@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-13 17:35+0000\n"
+"POT-Creation-Date: 2021-09-16 07:15+0000\n"
 "PO-Revision-Date: 2021-04-10 18:13+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/koreader/"
@@ -196,6 +196,8 @@ msgstr ""
 #: plugins/exporter.koplugin/main.lua:132
 #: plugins/exporter.koplugin/main.lua:177
 #: plugins/gestures.koplugin/main.lua:329 plugins/kosync.koplugin/main.lua:374
+#: plugins/newsdownloader.koplugin/main.lua:149
+#: plugins/newsdownloader.koplugin/main.lua:742
 #: plugins/opds.koplugin/opdsbrowser.lua:148
 #: plugins/opds.koplugin/opdsbrowser.lua:200
 #: plugins/opds.koplugin/opdsbrowser.lua:783
@@ -249,6 +251,7 @@ msgstr "Düzenle"
 #: frontend/apps/reader/modules/readerstatus.lua:217
 #: frontend/apps/reader/readerui.lua:558 frontend/ui/widget/screenshoter.lua:61
 #: plugins/bookshortcuts.koplugin/main.lua:86
+#: plugins/newsdownloader.koplugin/main.lua:150
 #: plugins/opds.koplugin/opdsbrowser.lua:929
 #: plugins/terminal.koplugin/main.lua:192
 msgid "Delete"
@@ -326,6 +329,9 @@ msgstr "Yerel klasörü seçin"
 #: frontend/ui/widget/screenshoter.lua:47 frontend/ui/widget/spinwidget.lua:38
 #: frontend/ui/widget/textviewer.lua:147 frontend/ui/widget/timewidget.lua:30
 #: plugins/keepalive.koplugin/main.lua:19
+#: plugins/newsdownloader.koplugin/main.lua:223
+#: plugins/newsdownloader.koplugin/main.lua:314
+#: plugins/newsdownloader.koplugin/main.lua:622
 #: plugins/statistics.koplugin/main.lua:312
 #: plugins/terminal.koplugin/main.lua:436
 msgid "Close"
@@ -1298,7 +1304,7 @@ msgstr "Son görüntülenen belge açılamadı"
 #: frontend/apps/reader/modules/readerfooter.lua:1004
 #: frontend/apps/reader/modules/readertoc.lua:916
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:473
-#: plugins/newsdownloader.koplugin/main.lua:108
+#: plugins/newsdownloader.koplugin/main.lua:123
 #: plugins/perceptionexpander.koplugin/main.lua:177
 #: plugins/send2ebook.koplugin/main.lua:91
 #: plugins/statistics.koplugin/main.lua:893
@@ -3758,6 +3764,34 @@ msgstr "Tarihi ayarla"
 msgid "Allow inertial scrolling"
 msgstr "En yakın iç bağlantıyı izle"
 
+#: frontend/apps/reader/modules/readersearch.lua:39
+msgid ""
+"Regular expressions allow you to search for a matching pattern in a text. "
+"The simplest pattern is a simple sequence of characters, such as `James "
+"Bond`. There are many different varieties of regular expressions, but we "
+"support the ECMAScript syntax. The basics will be explained below.\n"
+"\n"
+"If you want to search for all occurrences of 'Mister Moore', 'Sir Moore' or "
+"'Alfons Moore' but not for 'Lady Moore'.\n"
+"Enter 'Mister Moore|Sir Moore|Alfons Moore'.\n"
+"\n"
+"If your search contains a special character from ^$.*+?()[]{}|\\/ you have "
+"to put a \\ before that character.\n"
+"\n"
+"Examples:\n"
+"Words containing 'os' -> '[^ ]+os[^ ]+'\n"
+"Any single character '.' -> 'r.nge'\n"
+"Any characters '.*' -> 'J.*s'\n"
+"Numbers -> '[0-9]+'\n"
+"Character range -> '[a-f]'\n"
+"Not a space -> '[^ ]'\n"
+"A word -> '[^ ]*[^ ]'\n"
+"Last word in a sentence -> '[^ ]*\\.'\n"
+"\n"
+"Complex expressions may lead to an extremely long search time, in which case "
+"not all matches will be shown.\n"
+msgstr ""
+
 #: frontend/apps/reader/modules/readersearch.lua:60
 msgid "Wrong escape '\\'"
 msgstr ""
@@ -4016,8 +4050,10 @@ msgstr ""
 #: frontend/apps/reader/readerui.lua:737 frontend/ui/widget/inputdialog.lua:691
 #: frontend/ui/widget/inputdialog.lua:732
 #: plugins/coverimage.koplugin/main.lua:355
-#: plugins/gestures.koplugin/main.lua:335 plugins/profiles.koplugin/main.lua:72
-#: plugins/SSH.koplugin/main.lua:132 plugins/terminal.koplugin/main.lua:243
+#: plugins/gestures.koplugin/main.lua:335
+#: plugins/newsdownloader.koplugin/main.lua:749
+#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
+#: plugins/terminal.koplugin/main.lua:243
 #: plugins/terminal.koplugin/main.lua:279
 #: plugins/terminal.koplugin/main.lua:337
 #: plugins/terminal.koplugin/main.lua:367
@@ -5786,7 +5822,7 @@ msgstr "Aygıt"
 
 #: frontend/dispatcher.lua:668
 #, fuzzy
-msgid "Screen & Lights"
+msgid "Screen and lights"
 msgstr "Ekran"
 
 #: frontend/dispatcher.lua:670
@@ -6511,6 +6547,7 @@ msgid "About text direction"
 msgstr "Metin yönü hakkında"
 
 #: frontend/ui/data/css_tweaks.lua:182
+#, fuzzy
 msgid ""
 "Languages like Arabic or Hebrew use right-to-left writing systems (Right-To-"
 "Left or RTL). This doesn't only affect text layout, but also list item "
@@ -6524,8 +6561,8 @@ msgid ""
 "the language of each paragraph to set the appropriate rendering per "
 "paragraph.\n"
 "\n"
-"You may also want to enable, in the top menu → Gear → Navigation →, Invert "
-"page turn taps and swipes."
+"You may also want to enable, in the top menu → Gear → Taps and gestures → "
+"Page turns → Invert page turn taps and swipes."
 msgstr ""
 "Arapça ya da İbranice gibi diller sağdan sola yazılır (Right-To-Left ya da "
 "RTL). Bu durum metin düzenini değil, sayfanın sağına konulması gereken madde "
@@ -7728,7 +7765,6 @@ msgstr "Sürüm"
 
 #: frontend/ui/elements/common_info_menu_table.lua:26
 #: plugins/exporter.koplugin/main.lua:212
-#: plugins/newsdownloader.koplugin/main.lua:123
 #: plugins/send2ebook.koplugin/main.lua:96
 #: plugins/wallabag.koplugin/main.lua:286
 msgid "Help"
@@ -7744,6 +7780,7 @@ msgid "Quickstart guide"
 msgstr "Hızlı Başlangıç Kılavuzu"
 
 #: frontend/ui/elements/common_info_menu_table.lua:44
+#: plugins/newsdownloader.koplugin/main.lua:164
 #: plugins/perceptionexpander.koplugin/main.lua:184
 msgid "About"
 msgstr "Hakkında"
@@ -9668,6 +9705,7 @@ msgstr "Duraklatıldı"
 #: plugins/calibre.koplugin/wireless.lua:218
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:780
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
+#: plugins/newsdownloader.koplugin/main.lua:299
 msgid "Continue"
 msgstr "Devam"
 
@@ -12549,45 +12587,86 @@ msgstr ""
 "\n"
 "EPUB paketleniyor…"
 
-#: plugins/newsdownloader.koplugin/main.lua:68
-msgid "News (RSS/Atom) downloader"
-msgstr "Haber (RSS/Atom) indirici"
+#: plugins/newsdownloader.koplugin/feed_view.lua:73
+#, fuzzy
+msgid "URL"
+msgstr "Sağdan sola"
 
-#: plugins/newsdownloader.koplugin/main.lua:71
-msgid "Download news"
-msgstr "Haberleri indir"
+#: plugins/newsdownloader.koplugin/feed_view.lua:84
+msgid "Limit"
+msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:78
+#: plugins/newsdownloader.koplugin/feed_view.lua:95
+#, fuzzy
+msgid "Download full article"
+msgstr "Dosyayı indir"
+
+#: plugins/newsdownloader.koplugin/feed_view.lua:106
+#, fuzzy
+msgid "Include images"
+msgstr "Katılsın"
+
+#: plugins/newsdownloader.koplugin/feed_view.lua:117
+#, fuzzy
+msgid "Enable filter"
+msgstr "Wi-Fi bağlantısını aç"
+
+#: plugins/newsdownloader.koplugin/feed_view.lua:129
+msgid "Filter element"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/feed_view.lua:151
+#, fuzzy
+msgid "Delete feed"
+msgstr "Dosyayı sil"
+
+#: plugins/newsdownloader.koplugin/main.lua:87
+#, fuzzy
+msgid "News downloader (RSS/Atom)"
+msgstr "Haber indirici"
+
+#: plugins/newsdownloader.koplugin/main.lua:99
 msgid "Go to news folder"
 msgstr "Haberler klasörüne git"
 
-#: plugins/newsdownloader.koplugin/main.lua:92
-msgid "Remove news"
-msgstr "Haberleri sil"
+#: plugins/newsdownloader.koplugin/main.lua:105
+msgid "Sync news feeds"
+msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:97
+#: plugins/newsdownloader.koplugin/main.lua:112
+#, fuzzy
+msgid "Edit news feeds"
+msgstr "Yeni boş bir dosyayı düzenle"
+
+#: plugins/newsdownloader.koplugin/main.lua:126
+#, fuzzy
+msgid "Set download folder"
+msgstr "İndirme klasörüne git"
+
+#: plugins/newsdownloader.koplugin/main.lua:131
 #, fuzzy
 msgid "Never download images"
 msgstr "Haber indirici"
 
-#: plugins/newsdownloader.koplugin/main.lua:111
-msgid "Change feeds configuration"
-msgstr "Akış yapılandırmasını değiştir"
-
-#: plugins/newsdownloader.koplugin/main.lua:116
-#: plugins/send2ebook.koplugin/main.lua:86
+#: plugins/newsdownloader.koplugin/main.lua:142
 #, fuzzy
-msgid "Set custom download folder"
-msgstr "Özel indirme klasörünü ayarlayın"
+msgid "Delete all downloaded items"
+msgstr "Haber indirici"
 
-#: plugins/newsdownloader.koplugin/main.lua:127
+#: plugins/newsdownloader.koplugin/main.lua:148
+#, fuzzy
+msgid "Are you sure you want to delete all downloaded items?"
+msgstr "Bu dosyayı silmek istediğinize emin misiniz?\n"
+
+#: plugins/newsdownloader.koplugin/main.lua:168
+#, fuzzy
 msgid ""
 "News downloader retrieves RSS and Atom news entries and stores them to:\n"
 "%1\n"
 "\n"
-"Each entry is a separate html file, that can be browsed by KOReader file "
-"manager.\n"
-"Items download limit can be configured in Settings."
+"Each entry is a separate EPUB file that can be browsed by KOReader.\n"
+"Feeds can be configured with download limits and other customization through "
+"the Edit Feeds menu item."
 msgstr ""
 "Haber indirici RSS ve Atom akışı haberlerini alarak şurada saklar:\n"
 "%1\n"
@@ -12596,7 +12675,9 @@ msgstr ""
 "html dosyasıdır.\n"
 "Öge indirme sınırı Ayarlar bölümünden belirlenebilir."
 
-#: plugins/newsdownloader.koplugin/main.lua:168
+#: plugins/newsdownloader.koplugin/main.lua:215
+#: plugins/newsdownloader.koplugin/main.lua:814
+#: plugins/newsdownloader.koplugin/main.lua:946
 msgid ""
 "Invalid configuration file. Detailed error message:\n"
 "%1"
@@ -12604,7 +12685,17 @@ msgstr ""
 "Yapılandırma dosyası geçersiz. Ayrıntılı hata iletisi:\n"
 "%1"
 
-#: plugins/newsdownloader.koplugin/main.lua:190
+#: plugins/newsdownloader.koplugin/main.lua:222
+msgid ""
+"Feed list is empty. If you want to download news, you'll have to add a feed "
+"first."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:224
+msgid "Edit feed list"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:257
 msgid ""
 "Processing %1/%2:\n"
 "%3"
@@ -12612,16 +12703,50 @@ msgstr ""
 "İşleniyor %1/%2:\n"
 "%3"
 
-#: plugins/newsdownloader.koplugin/main.lua:208
-msgid ""
-"Downloading news finished. Could not process some feeds. Unsupported format "
-"in: %1"
-msgstr ""
-"Haberlerin indirilmesi tamamlandı. Bazı akışlar işlenemedi. %1 içindeki "
-"biçim desteklenmiyor"
+#: plugins/newsdownloader.koplugin/main.lua:276
+#, fuzzy
+msgid "Downloading news finished. "
+msgstr "Haberleri indir"
 
-#: plugins/newsdownloader.koplugin/main.lua:282
-#: plugins/newsdownloader.koplugin/main.lua:302
+#: plugins/newsdownloader.koplugin/main.lua:290
+msgid "Downloading news finished with errors. "
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:294
+msgid ""
+"Could not process some feeds.\n"
+"Unsupported format in: %1. Please\n"
+"review your feed configuration file."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:311
+#, fuzzy
+msgid "Go to downloaders folder?"
+msgstr "İndirme klasörüne git"
+
+#: plugins/newsdownloader.koplugin/main.lua:315
+#, fuzzy
+msgid "Go to downloads"
+msgstr "İndirme klasörüne git"
+
+#: plugins/newsdownloader.koplugin/main.lua:354
+#: plugins/newsdownloader.koplugin/main.lua:415
+msgid "(Reason: Failed to download content)"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:356
+msgid "(Reason: Error during feed deserialization)"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:417
+msgid "(Reason: Couldn't process RSS)"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:419
+msgid "(Reason: Couldn't process Atom)"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:482
 msgid ""
 "%1\n"
 "\n"
@@ -12631,8 +12756,8 @@ msgstr ""
 "\n"
 "Makale alınıyor %2/%3:"
 
-#: plugins/newsdownloader.koplugin/main.lua:342
-#: plugins/newsdownloader.koplugin/main.lua:359
+#: plugins/newsdownloader.koplugin/main.lua:548
+#: plugins/newsdownloader.koplugin/main.lua:565
 msgid ""
 "%1\n"
 "%2"
@@ -12640,7 +12765,7 @@ msgstr ""
 "%1\n"
 "%2"
 
-#: plugins/newsdownloader.koplugin/main.lua:360
+#: plugins/newsdownloader.koplugin/main.lua:566
 msgid ""
 "This is just a description of the feed. To download the full article "
 "instead, go to the News Downloader settings and change "
@@ -12650,24 +12775,114 @@ msgstr ""
 "ayarlarına giderek 'download_full_article' seçeneğini 'true' olarak "
 "değiştirin."
 
-#: plugins/newsdownloader.koplugin/main.lua:388
-msgid "All news removed."
+#: plugins/newsdownloader.koplugin/main.lua:594
+msgid "All downloaded news feed items deleted."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:616
+#, fuzzy
+msgid "Loading news feed list…"
+msgstr "Oturum açılırken lütfen bekleyin…"
+
+#: plugins/newsdownloader.koplugin/main.lua:621
+msgid "Could not open feed list. Feeds configuration file is invalid. "
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:623
+#, fuzzy
+msgid "View file"
+msgstr "Yeni klasör"
+
+#: plugins/newsdownloader.koplugin/main.lua:658
+#, fuzzy
+msgid "Add new feed"
 msgstr "Tüm haberler silindi."
 
-#: plugins/newsdownloader.koplugin/main.lua:414
+#: plugins/newsdownloader.koplugin/main.lua:680
+msgid "RSS/Atom Feeds List"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:695
+#, fuzzy
+msgid "Edit Feed"
+msgstr "Kolay adı düzenle"
+
+#: plugins/newsdownloader.koplugin/main.lua:719
+msgid "Edit feed URL"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:722
+#, fuzzy
+msgid "Edit feed limit"
+msgstr "Kolay adı düzenle"
+
+#: plugins/newsdownloader.koplugin/main.lua:723
+msgid "Set to 0 for no limit to how many items are downloaded"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:726
+msgid "Edit filter element."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:727
+msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:765
+#, fuzzy
+msgid "Download full article?"
+msgstr "Dosyayı indir"
+
+#: plugins/newsdownloader.koplugin/main.lua:767
+#, fuzzy
+msgid "Include images?"
+msgstr "Görsel Renkleri Tersine Çevrilsin"
+
+#: plugins/newsdownloader.koplugin/main.lua:769
+#, fuzzy
+msgid "Enable CSS filter?"
+msgstr "C blitter devresi devre dışı bırakılsın"
+
+#: plugins/newsdownloader.koplugin/main.lua:775
+#: plugins/profiles.koplugin/main.lua:104
+#: plugins/texteditor.koplugin/main.lua:339
+msgid "Yes"
+msgstr "Evet"
+
+#: plugins/newsdownloader.koplugin/main.lua:780
+#: plugins/profiles.koplugin/main.lua:105
+#: plugins/texteditor.koplugin/main.lua:340
+msgid "No"
+msgstr "Hayır"
+
+#: plugins/newsdownloader.koplugin/main.lua:975
+msgid "Saving news feed list..."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:981
+#, fuzzy
+msgid "Could not save news feed config."
+msgstr "Dosya şuraya kaydedilemedi:\n"
+
+#: plugins/newsdownloader.koplugin/main.lua:983
+#, fuzzy
+msgid "News feed config updated successfully."
+msgstr "Biri başarıyla çıkarıldı."
+
+#: plugins/newsdownloader.koplugin/main.lua:995
 msgid "Config: %1"
 msgstr "Yapılandırma: %1"
 
-#: plugins/newsdownloader.koplugin/main.lua:435
+#: plugins/newsdownloader.koplugin/main.lua:1016
 msgid "Configuration saved"
 msgstr "Yapılandırma kaydedildi"
 
-#: plugins/newsdownloader.koplugin/main.lua:437
-#: plugins/newsdownloader.koplugin/main.lua:440
+#: plugins/newsdownloader.koplugin/main.lua:1018
+#: plugins/newsdownloader.koplugin/main.lua:1021
 msgid "Configuration invalid: %1"
 msgstr "Yapılandırma geçersiz: %1"
 
-#: plugins/newsdownloader.koplugin/main.lua:443
+#: plugins/newsdownloader.koplugin/main.lua:1024
 msgid "Configuration empty"
 msgstr "Yapılandırma boş"
 
@@ -12920,16 +13135,6 @@ msgstr "Dosyayı sil"
 msgid "Do you want to delete this profile?"
 msgstr "Bu profili silmek istiyor musunuz?"
 
-#: plugins/profiles.koplugin/main.lua:104
-#: plugins/texteditor.koplugin/main.lua:339
-msgid "Yes"
-msgstr "Evet"
-
-#: plugins/profiles.koplugin/main.lua:105
-#: plugins/texteditor.koplugin/main.lua:340
-msgid "No"
-msgstr "Hayır"
-
 #: plugins/profiles.koplugin/main.lua:113
 #, fuzzy
 msgid "Autostart"
@@ -13037,6 +13242,11 @@ msgstr "İndirme klasörüne git"
 #: plugins/send2ebook.koplugin/main.lua:81
 msgid "Remove read (opened) articles"
 msgstr "Okunmuş (açılmış) makaleler silinsin"
+
+#: plugins/send2ebook.koplugin/main.lua:86
+#, fuzzy
+msgid "Set custom download folder"
+msgstr "Özel indirme klasörünü ayarlayın"
 
 #: plugins/send2ebook.koplugin/main.lua:100
 msgid ""
@@ -14545,6 +14755,22 @@ msgstr "Sağ alt köşeye dokunun"
 msgid "Tap the upper right corner"
 msgstr "Sağ üst köşeye dokunun"
 
+#~ msgid "News (RSS/Atom) downloader"
+#~ msgstr "Haber (RSS/Atom) indirici"
+
+#~ msgid "Remove news"
+#~ msgstr "Haberleri sil"
+
+#~ msgid "Change feeds configuration"
+#~ msgstr "Akış yapılandırmasını değiştir"
+
+#~ msgid ""
+#~ "Downloading news finished. Could not process some feeds. Unsupported "
+#~ "format in: %1"
+#~ msgstr ""
+#~ "Haberlerin indirilmesi tamamlandı. Bazı akışlar işlenemedi. %1 içindeki "
+#~ "biçim desteklenmiyor"
+
 #~ msgid "Highlighting"
 #~ msgstr "Vurgulama"
 
@@ -15148,9 +15374,6 @@ msgstr "Sağ üst köşeye dokunun"
 #~ msgid "Select a file to open"
 #~ msgstr "Açılacak dosyayı seçin"
 
-#~ msgid "Edit a new empty file"
-#~ msgstr "Yeni boş bir dosyayı düzenle"
-
 #~ msgid "Check Lua"
 #~ msgstr "LUA denetimi"
 
@@ -15593,9 +15816,6 @@ msgstr "Sağ üst köşeye dokunun"
 
 #~ msgid "Max seconds, default is %1"
 #~ msgstr "En fazla saniye, varsayılan değer: %1"
-
-#~ msgid "Enable wifi"
-#~ msgstr "Wi-Fi bağlantısını aç"
 
 #~ msgid "Wifi disabled."
 #~ msgstr "Wi-Fi devre dışı."
