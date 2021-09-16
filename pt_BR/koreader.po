@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-16 07:15+0000\n"
-"PO-Revision-Date: 2021-09-16 07:16+0000\n"
-"Last-Translator: gutierri <me@gutierri.me>\n"
+"PO-Revision-Date: 2021-09-17 17:43+0000\n"
+"Last-Translator: pedrogmattos <pedrogrimattos@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "koreader/koreader/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -137,7 +137,7 @@ msgstr "Baixar arquivo"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:307
 msgid "Choose download folder"
-msgstr "Escolha a pasta de baixados"
+msgstr "Escolha a pasta para baixar"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:347
 #: frontend/ui/widget/pathchooser.lua:113
@@ -3845,6 +3845,30 @@ msgid ""
 "Complex expressions may lead to an extremely long search time, in which case "
 "not all matches will be shown.\n"
 msgstr ""
+"Expressões regulares permitem que você busque um padrão em um texto. O "
+"padrão mais simples é uma sequência de caracteres, como `Mônica`. Existem "
+"muitas variedades de expressões regulares diferentes, mas nós damos suporte "
+"à sintaxe ECMAScript. O básico vai ser explicado abaixo.\n"
+"\n"
+"Se você quer buscar todas ocorrências de 'Senhor Almeida', 'Seu Almeida' ou "
+"'Alfonso Almeida', mas não 'Senhora Almeida'.\n"
+"Digite 'Senhor Almeida|Seu Almeida|Alfonso Almeida'.\n"
+"\n"
+"Se sua busca contém algum caractere especial dentre ^$.*+?()[]{}|\\/ você "
+"tem que colocar uma barra invertida \\ antes do caractere.\n"
+"\n"
+"Exemplos:\n"
+"Palavras contendo 'os' -> '[^ ]+os[^ ]+'\n"
+"Qualquer único caractere '.' -> 'f.ixa'\n"
+"Quaisquer caracteres '.*' -> 'M.*a'\n"
+"Números -> '[0-9]+'\n"
+"Faixa de caracteres -> '[a-f]'\n"
+"Não é um espaço -> '[^ ]'\n"
+"Uma palavra -> '[^ ]*[^ ]'\n"
+"Última palavra em uma sentença -> '[^ ]*\\.'\n"
+"\n"
+"Expressões complexas podem levar a um tempo de busca extremamente longo, e "
+"nesse caso nem todos resultados vai ser exibidos.\n"
 
 #: frontend/apps/reader/modules/readersearch.lua:60
 msgid "Wrong escape '\\'"
@@ -5829,9 +5853,8 @@ msgid "Device"
 msgstr "Dispositivo"
 
 #: frontend/dispatcher.lua:668
-#, fuzzy
 msgid "Screen and lights"
-msgstr "Tela e Iluminação"
+msgstr "Tela e iluminação"
 
 #: frontend/dispatcher.lua:670
 msgid "Reader"
@@ -5839,11 +5862,11 @@ msgstr "Leitor"
 
 #: frontend/dispatcher.lua:671
 msgid "Reflowable documents (epub, fb2, txt…)"
-msgstr "Documentos reformatáveis (epub, fb2, txt...)"
+msgstr "Documentos reformatáveis (epub, fb2, txt…)"
 
 #: frontend/dispatcher.lua:672
 msgid "Fixed layout documents (pdf, djvu, pics…)"
-msgstr "Documentos de disposição fixa (pdf, djvu, pics...)"
+msgstr "Documentos de disposição fixa (pdf, djvu, pics…)"
 
 #: frontend/pluginloader.lua:21
 msgid "outdated"
@@ -6552,7 +6575,6 @@ msgid "About text direction"
 msgstr "Sobre a direção do texto"
 
 #: frontend/ui/data/css_tweaks.lua:182
-#, fuzzy
 msgid ""
 "Languages like Arabic or Hebrew use right-to-left writing systems (Right-To-"
 "Left or RTL). This doesn't only affect text layout, but also list item "
@@ -6571,20 +6593,20 @@ msgid ""
 msgstr ""
 "Idiomas como árabe ou hebraico usam sistemas de escrita da direita para a "
 "esquerda (da Direita Para a Esquerda ou DPE). Isso não afeta apenas a "
-"disposição do texto, mas também lista de marcadores e números de itens, que "
-"precisam ser colocados no lado direito da página, bem como tabelas, onde as "
-"células são dispostas da direita para a esquerda.\n"
+"disposição do texto, mas também pontos e números de listas de itens, que "
+"precisam ser colocados no lado direito da página, bem como tabelas,nas quais "
+"as células são dispostas da direita para a esquerda.\n"
 "\n"
 "Normalmente, a editora terá definido as etiquetas apropriadas para permitir "
 "a renderização DPE. Mas se estes estão faltando, ou se você está lendo "
 "documentos de texto simples, você pode querer ativar manualmente DPE com "
 "esses ajustes.\n"
-"Observe que, na ausência de tais especificações, KOReader vai tentar "
-"detectar a linguagem de cada parágrafo para definir a prestação adequada por "
+"Observe que, na ausência de tais especificações, o KOReader vai tentar "
+"detectar o idioma de cada parágrafo para definir a aprestação adequada por "
 "parágrafo.\n"
 "\n"
-"Você também pode querer ativar, no menu superior → Engrenagem → Navegação → "
-"Inverter deslizes e toques de virar página."
+"Você também pode querer ativar, no menu superior → Engrenagem → Toques e "
+"gestos → Virar página → Inverter deslizes e toques de virar página."
 
 #: frontend/ui/data/css_tweaks.lua:193
 msgid "Document direction RTL"
@@ -10477,7 +10499,7 @@ msgstr ""
 
 #: frontend/ui/widget/qrwidget.lua:20
 msgid "... (truncated...)"
-msgstr "... (truncado...)"
+msgstr "… (truncado…)"
 
 #: frontend/ui/widget/screenshoter.lua:45
 msgid ""
@@ -10514,7 +10536,7 @@ msgstr "Usar padrão"
 
 #: frontend/ui/wikipedia.lua:385
 msgid "Loading high-res image… (tap to cancel)"
-msgstr "Carregando imagem de alta resolução... (toque para cancelar)"
+msgstr "Carregando imagem de alta resolução… (toque para cancelar)"
 
 #: frontend/ui/wikipedia.lua:654
 msgid "Retrieving Wikipedia article…"
@@ -12796,42 +12818,36 @@ msgstr ""
 "Empacotando EPUB…"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:73
-#, fuzzy
 msgid "URL"
-msgstr "DPE"
+msgstr "Endereço URL"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:84
 msgid "Limit"
-msgstr ""
+msgstr "Limite"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:95
-#, fuzzy
 msgid "Download full article"
-msgstr "Baixar arquivo"
+msgstr "Baixar artigo completo"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
-#, fuzzy
 msgid "Include images"
-msgstr "Incluir"
+msgstr "Incluir imagens"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:117
-#, fuzzy
 msgid "Enable filter"
-msgstr "Ativar wifi"
+msgstr "Ativar filtro"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:129
 msgid "Filter element"
-msgstr ""
+msgstr "Filtrar elemento"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:151
-#, fuzzy
 msgid "Delete feed"
-msgstr "Excluir arquivo"
+msgstr "Excluir canal"
 
 #: plugins/newsdownloader.koplugin/main.lua:87
-#, fuzzy
 msgid "News downloader (RSS/Atom)"
-msgstr "Baixador de notícias"
+msgstr "Baixador de notícias (RSS/Atom)"
 
 #: plugins/newsdownloader.koplugin/main.lua:99
 msgid "Go to news folder"
@@ -12839,34 +12855,29 @@ msgstr "Ir para a pasta de notícias"
 
 #: plugins/newsdownloader.koplugin/main.lua:105
 msgid "Sync news feeds"
-msgstr ""
+msgstr "Sincronizar canais de notícias"
 
 #: plugins/newsdownloader.koplugin/main.lua:112
-#, fuzzy
 msgid "Edit news feeds"
-msgstr "Editar um novo arquivo vazio"
+msgstr "Editar canais de notícias"
 
 #: plugins/newsdownloader.koplugin/main.lua:126
-#, fuzzy
 msgid "Set download folder"
-msgstr "Ir para a pasta de baixados"
+msgstr "Definir pasta para baixar"
 
 #: plugins/newsdownloader.koplugin/main.lua:131
 msgid "Never download images"
 msgstr "Nunca baixar imagens"
 
 #: plugins/newsdownloader.koplugin/main.lua:142
-#, fuzzy
 msgid "Delete all downloaded items"
-msgstr "Nunca baixar imagens"
+msgstr "Excluir todos itens baixados"
 
 #: plugins/newsdownloader.koplugin/main.lua:148
-#, fuzzy
 msgid "Are you sure you want to delete all downloaded items?"
-msgstr "Você tem certeza de que deseja apagar este arquivo?\n"
+msgstr "Você tem certeza de que deseja excluir todos itens baixados?"
 
 #: plugins/newsdownloader.koplugin/main.lua:168
-#, fuzzy
 msgid ""
 "News downloader retrieves RSS and Atom news entries and stores them to:\n"
 "%1\n"
@@ -12876,12 +12887,13 @@ msgid ""
 "the Edit Feeds menu item."
 msgstr ""
 "O Transferidor de Notícias recupera entradas de notícias RSS e Atom e as "
-"armazena para:\n"
+"armazena em:\n"
 "%1\n"
 "\n"
-"Cada entrada é um arquivo html separado, que pode ser navegado pelo "
-"gerenciador de arquivos KOReader.\n"
-"O limite de download de itens pode ser configurado em Configurações."
+"Cada entrada é um arquivo EPUB separado que pode ser navegado pelo KOReader."
+"\n"
+"Os canais podem ser configurados com limites de baixamento e outras "
+"personalizações através do item de menu Editar canais de notícias."
 
 #: plugins/newsdownloader.koplugin/main.lua:215
 #: plugins/newsdownloader.koplugin/main.lua:814
@@ -12898,10 +12910,12 @@ msgid ""
 "Feed list is empty. If you want to download news, you'll have to add a feed "
 "first."
 msgstr ""
+"A lista de canais está vazia. Se você quer baixar notícias, você vai ter que "
+"adicionar um canal antes."
 
 #: plugins/newsdownloader.koplugin/main.lua:224
 msgid "Edit feed list"
-msgstr ""
+msgstr "Editar lista de canais"
 
 #: plugins/newsdownloader.koplugin/main.lua:257
 msgid ""
@@ -12912,13 +12926,12 @@ msgstr ""
 "%3"
 
 #: plugins/newsdownloader.koplugin/main.lua:276
-#, fuzzy
 msgid "Downloading news finished. "
-msgstr "Baixar notícias"
+msgstr "Notícias baixadas. "
 
 #: plugins/newsdownloader.koplugin/main.lua:290
 msgid "Downloading news finished with errors. "
-msgstr ""
+msgstr "Erro ao baixar notícias . "
 
 #: plugins/newsdownloader.koplugin/main.lua:294
 msgid ""
@@ -12926,33 +12939,34 @@ msgid ""
 "Unsupported format in: %1. Please\n"
 "review your feed configuration file."
 msgstr ""
+"Não foi possível processar alguns canais.\n"
+"Formato não suportado em: %1. Por favor\n"
+"reveja seu arquivo de configuração de canais."
 
 #: plugins/newsdownloader.koplugin/main.lua:311
-#, fuzzy
 msgid "Go to downloaders folder?"
-msgstr "Ir para a pasta de baixados"
+msgstr "Ir para a pasta de baixadores?"
 
 #: plugins/newsdownloader.koplugin/main.lua:315
-#, fuzzy
 msgid "Go to downloads"
-msgstr "Ir para a pasta de baixados"
+msgstr "Ir para baixados"
 
 #: plugins/newsdownloader.koplugin/main.lua:354
 #: plugins/newsdownloader.koplugin/main.lua:415
 msgid "(Reason: Failed to download content)"
-msgstr ""
+msgstr "(Razão: falha ao baixar conteúdo)"
 
 #: plugins/newsdownloader.koplugin/main.lua:356
 msgid "(Reason: Error during feed deserialization)"
-msgstr ""
+msgstr "(Razão: erro durante desserialização do canal)"
 
 #: plugins/newsdownloader.koplugin/main.lua:417
 msgid "(Reason: Couldn't process RSS)"
-msgstr ""
+msgstr "(Razão: não foi possível processar o canal RSS)"
 
 #: plugins/newsdownloader.koplugin/main.lua:419
 msgid "(Reason: Couldn't process Atom)"
-msgstr ""
+msgstr "(Razão: não foi possível processar o canal Atom)"
 
 #: plugins/newsdownloader.koplugin/main.lua:482
 msgid ""
@@ -12985,71 +12999,65 @@ msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:594
 msgid "All downloaded news feed items deleted."
-msgstr ""
+msgstr "Todas as notícias baixadas foram excluídas."
 
 #: plugins/newsdownloader.koplugin/main.lua:616
-#, fuzzy
 msgid "Loading news feed list…"
-msgstr "Conectando. Por favor, aguarde…"
+msgstr "Carregando lista de canais de notícias…"
 
 #: plugins/newsdownloader.koplugin/main.lua:621
 msgid "Could not open feed list. Feeds configuration file is invalid. "
 msgstr ""
+"Não foi possível abrir a lista de canais. O arquivo de configuração de "
+"canais é inválido. "
 
 #: plugins/newsdownloader.koplugin/main.lua:623
-#, fuzzy
 msgid "View file"
-msgstr "Novo arquivo"
+msgstr "Ver arquivo"
 
 #: plugins/newsdownloader.koplugin/main.lua:658
-#, fuzzy
 msgid "Add new feed"
-msgstr "Todas as notícias foram removidas."
+msgstr "Adicionar novo canal"
 
 #: plugins/newsdownloader.koplugin/main.lua:680
 msgid "RSS/Atom Feeds List"
-msgstr ""
+msgstr "Lista de canais RSS/Atom"
 
 #: plugins/newsdownloader.koplugin/main.lua:695
-#, fuzzy
 msgid "Edit Feed"
-msgstr "Editar nome"
+msgstr "Editar canais"
 
 #: plugins/newsdownloader.koplugin/main.lua:719
 msgid "Edit feed URL"
-msgstr ""
+msgstr "Editar endereço URL do canal"
 
 #: plugins/newsdownloader.koplugin/main.lua:722
-#, fuzzy
 msgid "Edit feed limit"
-msgstr "Editar nome amigável"
+msgstr "Editar limite do canal"
 
 #: plugins/newsdownloader.koplugin/main.lua:723
 msgid "Set to 0 for no limit to how many items are downloaded"
-msgstr ""
+msgstr "Definir como 0 para não limitar quantos itens são baixados"
 
 #: plugins/newsdownloader.koplugin/main.lua:726
 msgid "Edit filter element."
-msgstr ""
+msgstr "Editar elemento de filtro."
 
 #: plugins/newsdownloader.koplugin/main.lua:727
 msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
-msgstr ""
+msgstr "Filtro baseado no seletor de CSS dado. Ex: nome_do_css.element.class"
 
 #: plugins/newsdownloader.koplugin/main.lua:765
-#, fuzzy
 msgid "Download full article?"
-msgstr "Baixar arquivo"
+msgstr "Baixar artigo completo?"
 
 #: plugins/newsdownloader.koplugin/main.lua:767
-#, fuzzy
 msgid "Include images?"
-msgstr "Inverter Imagens"
+msgstr "Incluir Imagens?"
 
 #: plugins/newsdownloader.koplugin/main.lua:769
-#, fuzzy
 msgid "Enable CSS filter?"
-msgstr "Desativar C blitter"
+msgstr "Ativar filtro CSS?"
 
 #: plugins/newsdownloader.koplugin/main.lua:775
 #: plugins/profiles.koplugin/main.lua:104
@@ -13065,17 +13073,15 @@ msgstr "Não"
 
 #: plugins/newsdownloader.koplugin/main.lua:975
 msgid "Saving news feed list..."
-msgstr ""
+msgstr "Salvando lista de canais de notícias…"
 
 #: plugins/newsdownloader.koplugin/main.lua:981
-#, fuzzy
 msgid "Could not save news feed config."
-msgstr "Não foi possível salvar arquivo em:\n"
+msgstr "Não foi possível salvar a configuração do canal de notícias."
 
 #: plugins/newsdownloader.koplugin/main.lua:983
-#, fuzzy
 msgid "News feed config updated successfully."
-msgstr "Um extraído com sucesso."
+msgstr "Configuração do canal de notícias atualizada com sucesso."
 
 #: plugins/newsdownloader.koplugin/main.lua:995
 msgid "Config: %1"
@@ -13250,7 +13256,7 @@ msgid ""
 "\n"
 "Download file type:"
 msgstr ""
-"Pasta de baixados:\n"
+"Pasta para baixar:\n"
 "%1\n"
 "\n"
 "Tipo do arquivo:"
@@ -13453,7 +13459,7 @@ msgstr "Baixe e remova do servidor"
 #: plugins/send2ebook.koplugin/main.lua:67
 #: plugins/wallabag.koplugin/main.lua:137
 msgid "Go to download folder"
-msgstr "Ir para a pasta de baixados"
+msgstr "Ir para a pasta para baixar"
 
 #: plugins/send2ebook.koplugin/main.lua:81
 msgid "Remove read (opened) articles"
@@ -13461,7 +13467,7 @@ msgstr "Remova os artigos de leitura (abertos)"
 
 #: plugins/send2ebook.koplugin/main.lua:86
 msgid "Set custom download folder"
-msgstr "Definir pasta de baixados personalizada"
+msgstr "Definir pasta para baixar personalizada"
 
 #: plugins/send2ebook.koplugin/main.lua:100
 msgid ""
@@ -14666,7 +14672,7 @@ msgstr "Não definido"
 
 #: plugins/wallabag.koplugin/main.lua:178
 msgid "Set download directory (%1)"
-msgstr "Definir pasta de baixados (%1)"
+msgstr "Definir pasta para baixar (%1)"
 
 #: plugins/wallabag.koplugin/main.lua:190
 msgid "All articles"
@@ -14728,7 +14734,7 @@ msgid ""
 "The 'Synchronize remotely deleted files' option will remove local files that "
 "no longer exist on the server."
 msgstr ""
-"Pasta de baixados: use uma pasta que seja usado exclusivamente usada pelo "
+"Pasta para baixar: use uma pasta que seja usado exclusivamente usada pelo "
 "plugin do Wallabag. Os arquivos existentes nesta pasta correm o risco de "
 "serem excluídos.\n"
 "\n"
@@ -14758,7 +14764,7 @@ msgstr ""
 
 #: plugins/wallabag.koplugin/main.lua:328
 msgid "Please configure the server settings and set a download folder."
-msgstr "Por favor, configure o servidor e defina uma pasta de baixados."
+msgstr "Por favor, configure o servidor e defina uma pasta para baixar."
 
 #: plugins/wallabag.koplugin/main.lua:331
 msgid "Server (★)"
@@ -14781,8 +14787,8 @@ msgid ""
 "The download directory is not valid.\n"
 "Please configure it in the settings."
 msgstr ""
-"A pasta de baixados não é válida.\n"
-"Por favor, configure-a nas configurações."
+"A pasta para baixar não é válida.\n"
+"Por favor, defina-a nas configurações."
 
 #: plugins/wallabag.koplugin/main.lua:392
 msgid "Could not login to Wallabag server."
