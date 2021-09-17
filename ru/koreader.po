@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-16 07:15+0000\n"
-"PO-Revision-Date: 2021-09-16 07:16+0000\n"
+"PO-Revision-Date: 2021-09-17 17:43+0000\n"
 "Last-Translator: MegANDREtH 73 <megandreth73@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ru/>\n"
@@ -48,7 +48,7 @@ msgid ""
 "sub-menu for reduced memory usage."
 msgstr ""
 "Документы на этом устройстве будут отображаться в цвете. \n"
-"Если ваше устройство чёрно-белое, вы можете отключить отображение в цвете в "
+"Если Ваше устройство чёрно-белое, Вы можете отключить отображение в цвете в "
 "подменю экрана чтобы уменьшить использование памяти."
 
 #: reader.lua:223
@@ -56,7 +56,7 @@ msgid ""
 "Color rendering is mistakenly enabled on your grayscale device.\n"
 "This will subtly break some features, and adversely affect performance."
 msgstr ""
-"На вашем чёрно-белом устройстве по ошибке включено отображение в цвете.\n"
+"На Вашем чёрно-белом устройстве по ошибке включено отображение в цвете.\n"
 "Это вызовет некоторые проблемы и ухудшит производительность."
 
 #: reader.lua:224 frontend/apps/reader/modules/readertypography.lua:295
@@ -3848,6 +3848,30 @@ msgid ""
 "Complex expressions may lead to an extremely long search time, in which case "
 "not all matches will be shown.\n"
 msgstr ""
+"Регулярные выражения позволяют искать соответствующий шаблон в тексте. Самый "
+"простой пример - это простая последовательность символов, например `Джеймс "
+"Бонд`. Существует множество различных разновидностей регулярных выражений, "
+"но мы поддерживаем синтаксис ECMAScript. Основы будут объяснены ниже.\n"
+"\n"
+"Если Вы хотите найти все вхождения `Мистер Мур`, `Сэр Мур` или `Альфонс Мур`"
+", но не `Леди Мур`.\n"
+"Введите `Мистер Мур | Сэр Мур | Альфонс Мур`.\n"
+"\n"
+"Если Ваш поиск содержит специальный символ из ^ $. * +? () [] {} | \\ /, Вы "
+"должны поставить \\ перед этим символом.\n"
+"\n"
+"Примеры:\n"
+"Слова, содержащие 'os' -> '[^]+os[^]+'\n"
+"Любой одиночный символ '.' -> 'r.nge'\n"
+"Любые символы '. *' -> 'J.*s'\n"
+"Цифры -> '[0-9]+'\n"
+"Диапазон символов -> '[a-f]'\n"
+"Не пробел -> '[^]'\n"
+"Слово -> '[^]*[^]'\n"
+"Последнее слово в предложении -> '[^]*\\.'\n"
+"\n"
+"Сложные выражения могут привести к очень долгому поиску, и в этом случае "
+"будут показаны не все совпадения.\n"
 
 #: frontend/apps/reader/modules/readersearch.lua:60
 msgid "Wrong escape '\\'"
@@ -5838,7 +5862,6 @@ msgid "Device"
 msgstr "Устройство"
 
 #: frontend/dispatcher.lua:668
-#, fuzzy
 msgid "Screen and lights"
 msgstr "Экран и подсветка"
 
@@ -6344,12 +6367,11 @@ msgid ""
 "Whether enabled or disabled, KOReader's own status bar at the bottom of the "
 "screen can be toggled by tapping."
 msgstr ""
-"Включение или отключение альтернативной строки состояния в верхней части "
-"экрана (его нельзя изменить).\n"
+"Включение или отключение движка отрисовки альтернативной строки состояния в "
+"верхней части экрана. Отображаемые элементы можно настроить в главном меню.\n"
 "\n"
-"Независимо от состояния этой опции строка состояния самого KOReader можно "
-"включить или выключить касанием в нижней части экрана. Элементы, "
-"показываемые в этой строке, можно изменить посредством главного меню."
+"Независимо от того, включена она или отключена, собственную строку состояния "
+"KOReader в нижней части экрана можно переключать касанием."
 
 #: frontend/ui/data/creoptions.lua:639
 msgid "Embedded Style"
@@ -6564,7 +6586,6 @@ msgid "About text direction"
 msgstr "О направлении текста"
 
 #: frontend/ui/data/css_tweaks.lua:182
-#, fuzzy
 msgid ""
 "Languages like Arabic or Hebrew use right-to-left writing systems (Right-To-"
 "Left or RTL). This doesn't only affect text layout, but also list item "
@@ -6587,13 +6608,13 @@ msgstr ""
 "части страницы, а также на таблицы, где ячейки расположены справа налево.\n"
 "\n"
 "Обычно издатель устанавливает соответствующие теги для включения ПНЛ-"
-"отрисовки, но если они отсутствуют или вы читаете простые текстовые "
+"отрисовки, но если они отсутствуют или Вы читаете простые текстовые "
 "документы, Вы можете вручную включить ПНЛ с этими настройками.\n"
-"Обратите внимание, что в отсутствие таких спецификаций, KOReader попытается "
+"Обратите внимание, что при отсутствии таких спецификаций KOReader попытается "
 "определить язык каждого абзаца, чтобы установить соответствующую отрисовку "
 "для каждого абзаца.\n"
 "\n"
-"Вы также можете включить в верхнем меню → Шестерёнка → Навигация → "
+"Вы также можете включить в верхнем меню → Шестерёнка → Касания и жесты → "
 "Инвертировать перелистывание страницы касанием и свайпом."
 
 #: frontend/ui/data/css_tweaks.lua:193
@@ -11759,7 +11780,7 @@ msgstr "Настройки кэша"
 #: plugins/coverimage.koplugin/main.lua:463
 #: plugins/coverimage.koplugin/main.lua:483
 msgid "unlimited"
-msgstr "неограничено"
+msgstr "неограниченно"
 
 #: plugins/coverimage.koplugin/main.lua:467
 msgid "Maximum number of cached covers (%1)"
@@ -11786,7 +11807,7 @@ msgid ""
 "If set to zero the cache size is unlimited.\n"
 "If set to -1 the cache is disabled."
 msgstr ""
-"При установке нуля размер кэша неограничен.\n"
+"При установке нуля размер кэша неограниченный.\n"
 "Если установлено -1, кэш отключается."
 
 #: plugins/coverimage.koplugin/main.lua:494
@@ -12846,42 +12867,36 @@ msgstr ""
 "Упаковка EPUB…"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:73
-#, fuzzy
 msgid "URL"
-msgstr "ПНЛ"
+msgstr "URL"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:84
 msgid "Limit"
-msgstr ""
+msgstr "Предел"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:95
-#, fuzzy
 msgid "Download full article"
-msgstr "Загрузить файл"
+msgstr "Загрузить статью полностью"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
-#, fuzzy
 msgid "Include images"
-msgstr "Включить"
+msgstr "Включить изображения"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:117
-#, fuzzy
 msgid "Enable filter"
-msgstr "Включить беспроводное соединение"
+msgstr "Включить фильтр"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:129
 msgid "Filter element"
-msgstr ""
+msgstr "Элемент фильтра"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:151
-#, fuzzy
 msgid "Delete feed"
-msgstr "Удалить файл"
+msgstr "Удалить ленту"
 
 #: plugins/newsdownloader.koplugin/main.lua:87
-#, fuzzy
 msgid "News downloader (RSS/Atom)"
-msgstr "Загрузчик новостей"
+msgstr "Загрузчик новостей (RSS/Atom)"
 
 #: plugins/newsdownloader.koplugin/main.lua:99
 msgid "Go to news folder"
@@ -12889,34 +12904,29 @@ msgstr "Перейти в папку новостей"
 
 #: plugins/newsdownloader.koplugin/main.lua:105
 msgid "Sync news feeds"
-msgstr ""
+msgstr "Синхронизировать ленты новостей"
 
 #: plugins/newsdownloader.koplugin/main.lua:112
-#, fuzzy
 msgid "Edit news feeds"
-msgstr "Редактировать новый пустой файл"
+msgstr "Редактировать ленты новостей"
 
 #: plugins/newsdownloader.koplugin/main.lua:126
-#, fuzzy
 msgid "Set download folder"
-msgstr "Перейти в папку загрузки"
+msgstr "Установить папку для загрузки"
 
 #: plugins/newsdownloader.koplugin/main.lua:131
 msgid "Never download images"
 msgstr "Никогда не загружать изображения"
 
 #: plugins/newsdownloader.koplugin/main.lua:142
-#, fuzzy
 msgid "Delete all downloaded items"
-msgstr "Никогда не загружать изображения"
+msgstr "Удалить все загруженные элементы"
 
 #: plugins/newsdownloader.koplugin/main.lua:148
-#, fuzzy
 msgid "Are you sure you want to delete all downloaded items?"
-msgstr "Вы уверены, что хотите удалить этот файл?\n"
+msgstr "Вы уверены, что хотите удалить все загруженные элементы?"
 
 #: plugins/newsdownloader.koplugin/main.lua:168
-#, fuzzy
 msgid ""
 "News downloader retrieves RSS and Atom news entries and stores them to:\n"
 "%1\n"
@@ -12925,12 +12935,13 @@ msgid ""
 "Feeds can be configured with download limits and other customization through "
 "the Edit Feeds menu item."
 msgstr ""
-"Загрузчик новостей считывает новостные записи RSS и Atom и сохраняет их в:\n"
+"Загрузчик новостей извлекает записи новостей RSS и Atom и сохраняет их в:\n"
 "%1\n"
 "\n"
-"Каждая запись — отдельный файл HTML, их можно смотреть в файловом менеджере "
-"KOReader.\n"
-"Ограничение на загрузку элементов можно установить в настройках."
+"Каждая запись представляет собой отдельный файл EPUB, который можно "
+"просматривать в KOReader.\n"
+"Ленты можно настроить с ограничениями загрузки и другими настройками с "
+"помощью пункта меню Редактировать ленты."
 
 #: plugins/newsdownloader.koplugin/main.lua:215
 #: plugins/newsdownloader.koplugin/main.lua:814
@@ -12947,10 +12958,12 @@ msgid ""
 "Feed list is empty. If you want to download news, you'll have to add a feed "
 "first."
 msgstr ""
+"Список лент пуст. Если Вы хотите загружать новости, Вам нужно сначала "
+"добавить ленту."
 
 #: plugins/newsdownloader.koplugin/main.lua:224
 msgid "Edit feed list"
-msgstr ""
+msgstr "Редактировать список ленты"
 
 #: plugins/newsdownloader.koplugin/main.lua:257
 msgid ""
@@ -12961,13 +12974,12 @@ msgstr ""
 "%3"
 
 #: plugins/newsdownloader.koplugin/main.lua:276
-#, fuzzy
 msgid "Downloading news finished. "
-msgstr "Загрузить новости"
+msgstr "Загрузка новостей завершена. "
 
 #: plugins/newsdownloader.koplugin/main.lua:290
 msgid "Downloading news finished with errors. "
-msgstr ""
+msgstr "Загрузка новостей завершилась с ошибками. "
 
 #: plugins/newsdownloader.koplugin/main.lua:294
 msgid ""
@@ -12975,33 +12987,34 @@ msgid ""
 "Unsupported format in: %1. Please\n"
 "review your feed configuration file."
 msgstr ""
+"Не удалось обработать некоторые ленты.\n"
+"Неподдерживаемый формат в: %1. Пожалуйста,\n"
+"просмотрите файл конфигурации ленты."
 
 #: plugins/newsdownloader.koplugin/main.lua:311
-#, fuzzy
 msgid "Go to downloaders folder?"
-msgstr "Перейти в папку загрузки"
+msgstr "Перейти в папку загрузок?"
 
 #: plugins/newsdownloader.koplugin/main.lua:315
-#, fuzzy
 msgid "Go to downloads"
-msgstr "Перейти в папку загрузки"
+msgstr "Перейти в загрузки"
 
 #: plugins/newsdownloader.koplugin/main.lua:354
 #: plugins/newsdownloader.koplugin/main.lua:415
 msgid "(Reason: Failed to download content)"
-msgstr ""
+msgstr "(Причина: не удалось загрузить содержимое)"
 
 #: plugins/newsdownloader.koplugin/main.lua:356
 msgid "(Reason: Error during feed deserialization)"
-msgstr ""
+msgstr "(Причина: ошибка при десериализации фида)"
 
 #: plugins/newsdownloader.koplugin/main.lua:417
 msgid "(Reason: Couldn't process RSS)"
-msgstr ""
+msgstr "(Причина: не удалось обработать RSS)"
 
 #: plugins/newsdownloader.koplugin/main.lua:419
 msgid "(Reason: Couldn't process Atom)"
-msgstr ""
+msgstr "(Причина: не удалось обработать Atom)"
 
 #: plugins/newsdownloader.koplugin/main.lua:482
 msgid ""
@@ -13033,71 +13046,65 @@ msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:594
 msgid "All downloaded news feed items deleted."
-msgstr ""
+msgstr "Все загруженные элементы ленты новостей удалены."
 
 #: plugins/newsdownloader.koplugin/main.lua:616
-#, fuzzy
 msgid "Loading news feed list…"
-msgstr "Вход. Пожалуйста, подождите…"
+msgstr "Загрузка списка лент новостей…"
 
 #: plugins/newsdownloader.koplugin/main.lua:621
 msgid "Could not open feed list. Feeds configuration file is invalid. "
-msgstr ""
+msgstr "Не удалось открыть список лент. Файл конфигурации лент недействителен. "
 
 #: plugins/newsdownloader.koplugin/main.lua:623
-#, fuzzy
 msgid "View file"
-msgstr "Новый файл"
+msgstr "Просмотреть файл"
 
 #: plugins/newsdownloader.koplugin/main.lua:658
-#, fuzzy
 msgid "Add new feed"
-msgstr "Все новости удалены."
+msgstr "Добавить новую ленту"
 
 #: plugins/newsdownloader.koplugin/main.lua:680
 msgid "RSS/Atom Feeds List"
-msgstr ""
+msgstr "Список лент RSS/Atom"
 
 #: plugins/newsdownloader.koplugin/main.lua:695
-#, fuzzy
 msgid "Edit Feed"
-msgstr "Редактировать имя"
+msgstr "Редактировать ленту"
 
 #: plugins/newsdownloader.koplugin/main.lua:719
 msgid "Edit feed URL"
-msgstr ""
+msgstr "Редактировать URL ленты"
 
 #: plugins/newsdownloader.koplugin/main.lua:722
-#, fuzzy
 msgid "Edit feed limit"
-msgstr "Изменить дружественное имя"
+msgstr "Изменить пределы ленты"
 
 #: plugins/newsdownloader.koplugin/main.lua:723
 msgid "Set to 0 for no limit to how many items are downloaded"
 msgstr ""
+"Установите значение 0, чтобы не ограничивать количество загружаемых элементов"
 
 #: plugins/newsdownloader.koplugin/main.lua:726
 msgid "Edit filter element."
-msgstr ""
+msgstr "Изменить элемент фильтра."
 
 #: plugins/newsdownloader.koplugin/main.lua:727
 msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
 msgstr ""
+"Фильтр на основе заданного селектора CSS. Например: name_of_css.element.class"
 
 #: plugins/newsdownloader.koplugin/main.lua:765
-#, fuzzy
 msgid "Download full article?"
-msgstr "Загрузить файл"
+msgstr "Загрузить статью полностью?"
 
 #: plugins/newsdownloader.koplugin/main.lua:767
-#, fuzzy
 msgid "Include images?"
-msgstr "Инвертировать изображения"
+msgstr "Включить изображения?"
 
 #: plugins/newsdownloader.koplugin/main.lua:769
-#, fuzzy
 msgid "Enable CSS filter?"
-msgstr "Отключить C-блиттер"
+msgstr "Включить фильтр CSS?"
 
 #: plugins/newsdownloader.koplugin/main.lua:775
 #: plugins/profiles.koplugin/main.lua:104
@@ -13113,17 +13120,15 @@ msgstr "Нет"
 
 #: plugins/newsdownloader.koplugin/main.lua:975
 msgid "Saving news feed list..."
-msgstr ""
+msgstr "Сохранение списка лент новостей ..."
 
 #: plugins/newsdownloader.koplugin/main.lua:981
-#, fuzzy
 msgid "Could not save news feed config."
-msgstr "Не удалось сохранить файл в:\n"
+msgstr "Не удалось сохранить конфигурацию ленты новостей."
 
 #: plugins/newsdownloader.koplugin/main.lua:983
-#, fuzzy
 msgid "News feed config updated successfully."
-msgstr "Одна успешно извлечена."
+msgstr "Конфигурация ленты новостей успешно обновлена."
 
 #: plugins/newsdownloader.koplugin/main.lua:995
 msgid "Config: %1"
