@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:42+0000\n"
-"PO-Revision-Date: 2021-09-16 07:16+0000\n"
+"PO-Revision-Date: 2021-09-25 02:22+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
 "ko/>\n"
@@ -3794,6 +3794,26 @@ msgid ""
 "Complex expressions may lead to an extremely long search time, in which case "
 "not all matches will be shown.\n"
 msgstr ""
+"정규 표현식을 사용하면 텍스트에서 일치하는 패턴을 검색할 수 있습니다. 가장 단순한 패턴은 '제임스 본드'와 같은 단순한 문자 "
+"연결입니다. 다양한 정규 표현식이 있지만 ECMAScript 구문을 지원합니다. 기본 사항은 아래에서 설명합니다.\n"
+"\n"
+"'Mister Moore'나 'Sir Moore', 'Alfons Moore'의 모든 항목을 검색하지만 'Lady Moore'는 검색하지 "
+"않으려는 경우.\n"
+"'Mister Moore|Sir Moore|Alfons Moore'를 입력하세요.\n"
+"\n"
+"검색에 ^$.*+?()[]{}|\\/의 특수 문자가 포함되어 있으면 해당 문자 앞에 \\를 넣어야 합니다.\n"
+"\n"
+"예:\n"
+"'os'를 포함하는 단어 -> '[^ ]+os[^ ]+'\n"
+"모든 단일 문자 '.' -> 'r.nge'\n"
+"모든 문자 '.*' -> 'J.*s'\n"
+"숫자 -> '[0-9]+'\n"
+"문자 영역 -> '[a-f]'\n"
+"공백이 아님 -> '[^ ]'\n"
+"한 낱말 -> '[^ ]*[^ ]'\n"
+"문장의 마지막 낱말 -> '[^ ]*\\.'\n"
+"\n"
+"복잡한 표현식은 검색 시간이 매우 길어질 수 있으며, 이 경우 모든 일치 항목이 표시되지 않습니다.\n"
 
 #: frontend/apps/reader/modules/readersearch.lua:60
 msgid "Wrong escape '\\'"
@@ -5739,7 +5759,6 @@ msgid "Device"
 msgstr "기기"
 
 #: frontend/dispatcher.lua:668
-#, fuzzy
 msgid "Screen and lights"
 msgstr "화면과 조명"
 
@@ -6444,7 +6463,6 @@ msgid "About text direction"
 msgstr "텍스트 방향에 대하여"
 
 #: frontend/ui/data/css_tweaks.lua:182
-#, fuzzy
 msgid ""
 "Languages like Arabic or Hebrew use right-to-left writing systems (Right-To-"
 "Left or RTL). This doesn't only affect text layout, but also list item "
@@ -6461,19 +6479,15 @@ msgid ""
 "You may also want to enable, in the top menu → Gear → Taps and gestures → "
 "Page turns → Invert page turn taps and swipes."
 msgstr ""
-"아랍어나 히브리어 글자는 오른쪽에서 왼쪽으로 쓰는 시스템(오른쪽에서 왼쪽 또"
-"는 RTL)을 사용합니다. 이것은 텍스트 모양새에만 영향을 줄뿐만 아니라, 숫자나 "
-"점으로 된 목록이 페이지의 오른쪽에 놓이고, 표의 셀도 오른쪽에서 왼쪽으로 배치"
-"됩니다.\n"
+"아랍어나 히브리어와 같은 언어는 오른쪽에서 왼쪽으로 쓰는 시스템(오른쪽에서 왼쪽 또는 RTL)을 사용합니다. 이것은 텍스트 모양새에만 "
+"영향을 미칠 뿐 아니라, 숫자나 점으로 된 목록이 페이지의 오른쪽에 놓이게 하고, 셀이 오른쪽에서 왼쪽으로 배치되는 테이블에도 영향을 "
+"미칩니다.\n"
 "\n"
-"일반적으로 발행인은 RTL 렌더링을 사용하도록 알맞은 태그를 설정합니다. 그러나 "
-"이러한 것들이 없거나 일반 텍스트 문서를 읽는 경우 이러한 트윅으로 RTL을 수동"
-"으로 활성화할 수 있습니다.\n"
-"이러한 규약이 없으면 KOReader는 각 문단의 언어를 감지하여 문단마다 알맞은 렌"
-"더링을 설정합니다.\n"
+"일반적으로 발행인은 RTL 렌더링을 활성화하기 위해 알맞은 태그를 설정합니다. 그러나 이러한 항목이 없거나 일반 텍스트 문서를 읽는 경우 "
+"이러한 덧꾸밈으로 RTL을 수동으로 활성화할 수 있습니다.\n"
+"이러한 규약이 없으면, KOReader는 각 문단의 언어를 감지하여 문단별로 적절한 렌더링을 설정합니다.\n"
 "\n"
-"또한 상단 메뉴 → 톱니바퀴 → 탐색 → 페이지 넘기는 탭과 밀기 방향 반대로 메뉴"
-"를 활성화할 수도 있습니다."
+"또한 상단 메뉴 → 톱니바퀴 → 탭 및 제스처 → 페이지 넘김 → 탭 및 스와이프를 반대로 페이지 넘김에서 활성화할 수도 있습니다."
 
 #: frontend/ui/data/css_tweaks.lua:193
 msgid "Document direction RTL"
@@ -12527,42 +12541,36 @@ msgstr ""
 "EPUB 묶는 중…"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:73
-#, fuzzy
 msgid "URL"
-msgstr "좌←우"
+msgstr "URL"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:84
 msgid "Limit"
-msgstr ""
+msgstr "한계"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:95
-#, fuzzy
 msgid "Download full article"
-msgstr "파일 다운로드"
+msgstr "전체 글감 다운로드"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
-#, fuzzy
 msgid "Include images"
-msgstr "포함"
+msgstr "이미지 포함"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:117
-#, fuzzy
 msgid "Enable filter"
-msgstr "와이파이 활성"
+msgstr "필터 사용"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:129
 msgid "Filter element"
-msgstr ""
+msgstr "필터 요소"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:151
-#, fuzzy
 msgid "Delete feed"
-msgstr "파일 삭제"
+msgstr "피드 삭제"
 
 #: plugins/newsdownloader.koplugin/main.lua:87
-#, fuzzy
 msgid "News downloader (RSS/Atom)"
-msgstr "뉴스 다운로더"
+msgstr "뉴스 다운로더 (RSS/Atom)"
 
 #: plugins/newsdownloader.koplugin/main.lua:99
 msgid "Go to news folder"
@@ -12570,34 +12578,29 @@ msgstr "뉴스 폴더 가기"
 
 #: plugins/newsdownloader.koplugin/main.lua:105
 msgid "Sync news feeds"
-msgstr ""
+msgstr "뉴스 피드 동기화"
 
 #: plugins/newsdownloader.koplugin/main.lua:112
-#, fuzzy
 msgid "Edit news feeds"
-msgstr "새로 빈 파일 수정"
+msgstr "뉴스 피드 편집"
 
 #: plugins/newsdownloader.koplugin/main.lua:126
-#, fuzzy
 msgid "Set download folder"
-msgstr "다운로드 폴더로 이동"
+msgstr "다운로드 폴더 설정"
 
 #: plugins/newsdownloader.koplugin/main.lua:131
 msgid "Never download images"
 msgstr "이미지를 다운로드하지 않기"
 
 #: plugins/newsdownloader.koplugin/main.lua:142
-#, fuzzy
 msgid "Delete all downloaded items"
-msgstr "이미지를 다운로드하지 않기"
+msgstr "다운로드한 모든 항목 삭제"
 
 #: plugins/newsdownloader.koplugin/main.lua:148
-#, fuzzy
 msgid "Are you sure you want to delete all downloaded items?"
-msgstr "이 파일을 정말로 삭제할까요?\n"
+msgstr "다운로드한 모든 항목을 삭제할까요?"
 
 #: plugins/newsdownloader.koplugin/main.lua:168
-#, fuzzy
 msgid ""
 "News downloader retrieves RSS and Atom news entries and stores them to:\n"
 "%1\n"
@@ -12606,12 +12609,11 @@ msgid ""
 "Feeds can be configured with download limits and other customization through "
 "the Edit Feeds menu item."
 msgstr ""
-"뉴스 다운로더가 RSS와 Atom 뉴스를 가져와서 저장할 경로:\n"
+"뉴스 다운로더는 RSS나 Atom 뉴스 항목을 검색하여 다음 위치에 저장합니다:\n"
 "%1\n"
 "\n"
-"각 항목은 별도의 html 파일이며, KOReader 파일 탐색기에서 살펴볼 수 있습니"
-"다.\n"
-"설정에서 다운로드 개수 제한을 조절할 수 있습니다."
+"각 항목은 KOReader에서 검색할 수 있는 별도의 EPUB 파일입니다.\n"
+"피드 편집 메뉴 항목을 통해 다운로드 제한과 기타 사용자 정의로 피드를 구성할 수 있습니다."
 
 #: plugins/newsdownloader.koplugin/main.lua:215
 #: plugins/newsdownloader.koplugin/main.lua:814
@@ -12627,11 +12629,11 @@ msgstr ""
 msgid ""
 "Feed list is empty. If you want to download news, you'll have to add a feed "
 "first."
-msgstr ""
+msgstr "피드 목록이 비어 있습니다. 뉴스를 다운로드하려면 먼저 피드를 추가해야 합니다."
 
 #: plugins/newsdownloader.koplugin/main.lua:224
 msgid "Edit feed list"
-msgstr ""
+msgstr "피드 목록 편집"
 
 #: plugins/newsdownloader.koplugin/main.lua:257
 msgid ""
@@ -12642,13 +12644,12 @@ msgstr ""
 "%3"
 
 #: plugins/newsdownloader.koplugin/main.lua:276
-#, fuzzy
 msgid "Downloading news finished. "
-msgstr "뉴스 다운로드"
+msgstr "뉴스 다운로드가 완료되었습니다. "
 
 #: plugins/newsdownloader.koplugin/main.lua:290
 msgid "Downloading news finished with errors. "
-msgstr ""
+msgstr "뉴스 다운로드가 오류와 함께 완료되었습니다. "
 
 #: plugins/newsdownloader.koplugin/main.lua:294
 msgid ""
@@ -12656,33 +12657,34 @@ msgid ""
 "Unsupported format in: %1. Please\n"
 "review your feed configuration file."
 msgstr ""
+"일부 피드를 처리할 수 없습니다.\n"
+"지원되지 않는 형식: %1. \n"
+"피드 구성 파일을 검토하세요."
 
 #: plugins/newsdownloader.koplugin/main.lua:311
-#, fuzzy
 msgid "Go to downloaders folder?"
-msgstr "다운로드 폴더로 이동"
+msgstr "다운로더 폴더로 이동할까요?"
 
 #: plugins/newsdownloader.koplugin/main.lua:315
-#, fuzzy
 msgid "Go to downloads"
-msgstr "다운로드 폴더로 이동"
+msgstr "다운로드로 이동"
 
 #: plugins/newsdownloader.koplugin/main.lua:354
 #: plugins/newsdownloader.koplugin/main.lua:415
 msgid "(Reason: Failed to download content)"
-msgstr ""
+msgstr "(이유: 콘텐츠 다운로드 실패)"
 
 #: plugins/newsdownloader.koplugin/main.lua:356
 msgid "(Reason: Error during feed deserialization)"
-msgstr ""
+msgstr "(이유: 피드 역직렬화 중 오류)"
 
 #: plugins/newsdownloader.koplugin/main.lua:417
 msgid "(Reason: Couldn't process RSS)"
-msgstr ""
+msgstr "(이유: RSS를 처리할 수 없음)"
 
 #: plugins/newsdownloader.koplugin/main.lua:419
 msgid "(Reason: Couldn't process Atom)"
-msgstr ""
+msgstr "(이유: Atom을 처리할 수 없음)"
 
 #: plugins/newsdownloader.koplugin/main.lua:482
 msgid ""
@@ -12714,71 +12716,63 @@ msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:594
 msgid "All downloaded news feed items deleted."
-msgstr ""
+msgstr "다운로드한 모든 뉴스 피드 항목이 삭제되었습니다."
 
 #: plugins/newsdownloader.koplugin/main.lua:616
-#, fuzzy
 msgid "Loading news feed list…"
-msgstr "로그인 중. 잠시 기다려 주세요…"
+msgstr "뉴스 피드 목록 읽는 중…"
 
 #: plugins/newsdownloader.koplugin/main.lua:621
 msgid "Could not open feed list. Feeds configuration file is invalid. "
-msgstr ""
+msgstr "피드 목록을 열 수 없습니다. 피드 구성 파일이 잘못되었습니다. "
 
 #: plugins/newsdownloader.koplugin/main.lua:623
-#, fuzzy
 msgid "View file"
-msgstr "새 파일"
+msgstr "파일 보기"
 
 #: plugins/newsdownloader.koplugin/main.lua:658
-#, fuzzy
 msgid "Add new feed"
-msgstr "모든 뉴스가 삭제되었습니다."
+msgstr "새 피드 추가"
 
 #: plugins/newsdownloader.koplugin/main.lua:680
 msgid "RSS/Atom Feeds List"
-msgstr ""
+msgstr "RSS/Atom 피드 목록"
 
 #: plugins/newsdownloader.koplugin/main.lua:695
-#, fuzzy
 msgid "Edit Feed"
-msgstr "이름 수정"
+msgstr "피드 편집"
 
 #: plugins/newsdownloader.koplugin/main.lua:719
 msgid "Edit feed URL"
-msgstr ""
+msgstr "피드 URL 편집"
 
 #: plugins/newsdownloader.koplugin/main.lua:722
-#, fuzzy
 msgid "Edit feed limit"
-msgstr "친숙한 이름 수정"
+msgstr "피드 제한 편집"
 
 #: plugins/newsdownloader.koplugin/main.lua:723
 msgid "Set to 0 for no limit to how many items are downloaded"
-msgstr ""
+msgstr "다운로드되는 항목 수에 제한이 없는 경우 0으로 설정하세요"
 
 #: plugins/newsdownloader.koplugin/main.lua:726
 msgid "Edit filter element."
-msgstr ""
+msgstr "필터 요소를 편집합니다."
 
 #: plugins/newsdownloader.koplugin/main.lua:727
 msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
-msgstr ""
+msgstr "주어진 CSS 선택기를 기반으로 필터링합니다. 예: name_of_css.element.class"
 
 #: plugins/newsdownloader.koplugin/main.lua:765
-#, fuzzy
 msgid "Download full article?"
-msgstr "파일 다운로드"
+msgstr "전체 기사를 다운로드할까요?"
 
 #: plugins/newsdownloader.koplugin/main.lua:767
-#, fuzzy
 msgid "Include images?"
-msgstr "그림 반전"
+msgstr "이미지를 포함할까요?"
 
 #: plugins/newsdownloader.koplugin/main.lua:769
-#, fuzzy
 msgid "Enable CSS filter?"
-msgstr "C 블리터 비활성"
+msgstr "CSS 필터를 활성화할까요?"
 
 #: plugins/newsdownloader.koplugin/main.lua:775
 #: plugins/profiles.koplugin/main.lua:104
@@ -12794,17 +12788,15 @@ msgstr "아니요"
 
 #: plugins/newsdownloader.koplugin/main.lua:975
 msgid "Saving news feed list..."
-msgstr ""
+msgstr "뉴스 피드 목록 저장 중..."
 
 #: plugins/newsdownloader.koplugin/main.lua:981
-#, fuzzy
 msgid "Could not save news feed config."
-msgstr "파일을 저장할 수 없습니다:\n"
+msgstr "뉴스 피드 구성을 저장할 수 없습니다."
 
 #: plugins/newsdownloader.koplugin/main.lua:983
-#, fuzzy
 msgid "News feed config updated successfully."
-msgstr "%1가 성공적으로 추출됨."
+msgstr "뉴스 피드 구성이 업데이트되었습니다."
 
 #: plugins/newsdownloader.koplugin/main.lua:995
 msgid "Config: %1"
