@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-01 18:38+0000\n"
-"PO-Revision-Date: 2021-10-01 05:46+0000\n"
+"PO-Revision-Date: 2021-10-03 08:34+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Moldavian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ro_MD/>\n"
@@ -2915,9 +2915,8 @@ msgid "Static margins (%1)"
 msgstr "Margini statice (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1761
-#, fuzzy
 msgid "Minimal width: %1%"
-msgstr "Lățime minimă (%1%)"
+msgstr "Lățime minimă: %1%"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1775
 msgid "Minimal width"
@@ -3845,6 +3844,30 @@ msgid ""
 "Complex expressions may lead to an extremely long search time, in which case "
 "not all matches will be shown.\n"
 msgstr ""
+"Expresiile regulate îți permit să cauți după un anumit tipar într-un text. "
+"Cel mai simplu tipar este o secvență de caractere precum „James Bond”. "
+"Există multe varietăți diferite de expresii regulate, dar noi suportăm "
+"sintaxa ECMAScript. Lucrurile de bază for fi explicate mai jos.\n"
+"\n"
+"Dacă dorești să cauți toate aparițiile ale lui „Mister Moore”, „Sir Moore” "
+"sau „Alfons Moore”, dar nu „Lady Moore”, întrodu: „Mister Moore|Sir Moore|"
+"Alfons Moore”\n"
+"\n"
+"Dacă tiparul de căutare conține un caracter special dintre următoarele: "
+"„^$.*+?()[]{}|\\/”, va trebui să pui un „\\” înaintea acestuia.\n"
+"\n"
+"Exemple:\n"
+"Cuvinte care conțin „os” -> „[^ ]+os[^ ]+”\n"
+"Orice caracter „.” -> „r.nge”\n"
+"Orice caractere „.*” -> „J.*s”\n"
+"Numere -> „[0-9]+”\n"
+"Interval de caractere -> „[a-f]”\n"
+"Fără spații -> „[^ ]”\n"
+"Orice cuvînt -> „[^ ]*[^ ]”\n"
+"Ultimul cuvînt din propoziție -> „[^ ]*\\.”\n"
+"\n"
+"Expresiile complexe pot duce la un timp foarte mare de căutare, caz în care "
+"nu se vor afișa toate potrivirile.\n"
 
 #: frontend/apps/reader/modules/readersearch.lua:60
 msgid "Wrong escape '\\'"
@@ -9321,6 +9344,18 @@ msgid ""
 "5. News downloader\n"
 "6. Wallabag\n"
 msgstr ""
+"## Transferul fișierelor <a id=\"tfiles\"></a>\n"
+"\n"
+"Pe lîngă transferul fișierelor clasic al fișierelor așa cum se poate face și "
+"cu aplicația implicită a cititorului, mai există și alte opțiuni de "
+"transfer, disponibile în funcție de dispozitivul pe care îl folosești:\n"
+"\n"
+"1. Mod stocare în masă USB din KOReader\n"
+"2. Stocare în Cloud (Dropbox/FTP/Webdav)\n"
+"3. Acces SSH/SFTP\n"
+"4. Transfer Calibre\n"
+"5. Descărcătorul de știri\n"
+"6. Wallabag\n"
 
 #: frontend/ui/quickstart.lua:128
 msgid ""
@@ -9333,6 +9368,14 @@ msgid ""
 "> **TOP MENU ➔ ![Settings](resources/icons/mdlight/appbar.settings.svg) ➔ "
 "Frontlight**\n"
 msgstr ""
+"## Iluminare ecran <a id=\"flight\"></a>\n"
+"\n"
+"Poți controla iluminarea ecranului din acest meniu. Dacă ai iluminare caldă "
+"(LED-uri normale albe + LED-uri portocalii) poți controla nuanța separat din "
+"dialogul următor:\n"
+"\n"
+"> **MENIUL DE SUS ➔ ![Setări](resources/icons/mdlight/appbar.settings.svg) ➔ "
+"Iluminare ecran**\n"
 
 #: frontend/ui/quickstart.lua:135
 msgid ""
@@ -9373,6 +9416,44 @@ msgid ""
 "\n"
 "</div></div>\n"
 msgstr ""
+"## În timpul lecturii <a id=\"reading\"></a>\n"
+"\n"
+"<div class=\"table\"><div>\n"
+"\n"
+"Poți schimba fontul\n"
+"\n"
+"**MENIUL DE SUS ➔ ![Setări text](resources/icons/mdlight/appbar.typeset.svg) "
+"➔ Font**\n"
+"\n"
+"</div><div>\n"
+"\n"
+"Crește dimensiunea fontului\n"
+"\n"
+"**MENIUL DE JOS ➔ ![Mărime text](resources/icons/mdlight/appbar.textsize."
+"svg)**\n"
+"\n"
+"</div><div>\n"
+"\n"
+"Utilizează litere mai contrastante\n"
+"\n"
+"**MENIUL DE JOS ➔ ![Contrast](resources/icons/mdlight/appbar.contrast.svg)**"
+"\n"
+"\n"
+"</div><div>\n"
+"\n"
+"Inversează culorile (text alb pe fundal negru)\n"
+"\n"
+"**MENIUL DE SUS ➔ ![Setări](resources/icons/mdlight/appbar.settings.svg) ➔ "
+"Mod de noapte**\n"
+"\n"
+"</div><div>\n"
+"\n"
+"Schimbă multe alte setări de formatare\n"
+"\n"
+"**MENIUL DE SUS ➔ ![Setări fonturi](resources/icons/mdlight/appbar.typeset."
+"svg) ➔ Ajustări de stiluri**\n"
+"\n"
+"</div></div>\n"
 
 #: frontend/ui/quickstart.lua:170
 msgid ""
@@ -10770,56 +10851,52 @@ msgstr ""
 "Ține apăsat pentru a seta distanța de derulare."
 
 #: plugins/autowarmth.koplugin/main.lua:76
-#, fuzzy
 msgid "Show ephemeris"
-msgstr "Arată marcatori capitol"
+msgstr "Arată efemerida"
 
 #: plugins/autowarmth.koplugin/main.lua:78
 msgid "Auto warmth off"
-msgstr ""
+msgstr "Nuanță automată oprită"
 
 #: plugins/autowarmth.koplugin/main.lua:80
 msgid "Auto warmth cycle through modes"
-msgstr ""
+msgstr "Ciclare automată printre modurile de nuanță"
 
 #: plugins/autowarmth.koplugin/main.lua:84
 #: plugins/autowarmth.koplugin/main.lua:367
-#, fuzzy
 msgid "Information about the sun in"
-msgstr "Informații importante despre acestă opțiune de salvare automată"
+msgstr "Informații despre Soare în"
 
 #: plugins/autowarmth.koplugin/main.lua:90
 #: plugins/autowarmth.koplugin/main.lua:102
 msgid "Auto warmth turned off"
-msgstr ""
+msgstr "Nuanță automată oprită"
 
 #: plugins/autowarmth.koplugin/main.lua:104
 msgid "Auto warmth use sun position"
-msgstr ""
+msgstr "Nuanța automată folosește poziția Soarelui"
 
 #: plugins/autowarmth.koplugin/main.lua:106
 msgid "Auto warmth use schedule"
-msgstr ""
+msgstr "Nuanța automată folosește program"
 
 #: plugins/autowarmth.koplugin/main.lua:108
 msgid "Auto warmth use whatever is closer to midnight"
-msgstr ""
+msgstr "Nuanța automată folosește orice este mai apropiat de miezul nopții"
 
 #: plugins/autowarmth.koplugin/main.lua:110
 msgid "Auto warmth use whatever is closer to noon"
-msgstr ""
+msgstr "Nuanța automată folosește orice este mai apropiat de miezul zilei"
 
 #: plugins/autowarmth.koplugin/main.lua:280
 #: plugins/autowarmth.koplugin/_meta.lua:4
-#, fuzzy
 msgid "Auto warmth and night mode"
-msgstr "Setează modul de noapte"
+msgstr "Nuanță și mod de noapte automat"
 
 #: plugins/autowarmth.koplugin/main.lua:281
 #: plugins/autowarmth.koplugin/_meta.lua:4
-#, fuzzy
 msgid "Auto night mode"
-msgstr "Setează modul de noapte"
+msgstr "Mod de noapte automat"
 
 #: plugins/autowarmth.koplugin/main.lua:302
 msgid ""
@@ -10842,61 +10919,55 @@ msgstr ""
 
 #: plugins/autowarmth.koplugin/main.lua:317
 msgid "About auto warmth and night mode"
-msgstr ""
+msgstr "Despre nuanța automată și modul de noapte"
 
 #: plugins/autowarmth.koplugin/main.lua:318
-#, fuzzy
 msgid "About auto night mode"
-msgstr "Setează modul de noapte"
+msgstr "Despre modul de noapte automat"
 
 #: plugins/autowarmth.koplugin/main.lua:329
 msgid "Expert mode"
-msgstr ""
+msgstr "Mod expert"
 
 #: plugins/autowarmth.koplugin/main.lua:333
 msgid ""
 "In the expert mode, different types of twilight can be used in addition to "
 "civil twilight."
 msgstr ""
+"În modul expert pot fi utilizate diferite definiții ale amurgului în afară "
+"de amurgul civil (6°)."
 
 #: plugins/autowarmth.koplugin/main.lua:344
-#, fuzzy
 msgid "Activate"
-msgstr "Activează meniu"
+msgstr "Activează"
 
 #: plugins/autowarmth.koplugin/main.lua:351
-#, fuzzy
 msgid "Location settings"
-msgstr "Setări dicționar"
+msgstr "Setări locație"
 
 #: plugins/autowarmth.koplugin/main.lua:356
-#, fuzzy
 msgid "Schedule settings"
-msgstr "Setări cache"
+msgstr "Setări program"
 
 #: plugins/autowarmth.koplugin/main.lua:361
-#, fuzzy
 msgid "Warmth and night mode settings"
-msgstr "Setări coperți și imagini"
+msgstr "Setări nuanță și mod de noapte"
 
 #: plugins/autowarmth.koplugin/main.lua:362
-#, fuzzy
 msgid "Night mode settings"
-msgstr "Setări lumină"
+msgstr "Setări mod de noapte"
 
 #: plugins/autowarmth.koplugin/main.lua:366
-#, fuzzy
 msgid "Active parameters"
-msgstr "Activează meniu"
+msgstr "Parametri activi"
 
 #: plugins/autowarmth.koplugin/main.lua:368
 msgid "Information about the schedule"
-msgstr ""
+msgstr "Informații despre program"
 
 #: plugins/autowarmth.koplugin/main.lua:390
-#, fuzzy
 msgid "Sun position"
-msgstr "Poziție mesaj"
+msgstr "Poziție Soare"
 
 #: plugins/autowarmth.koplugin/main.lua:391
 msgid "Time schedule"
@@ -10904,11 +10975,11 @@ msgstr "Orar"
 
 #: plugins/autowarmth.koplugin/main.lua:392
 msgid "Whatever is closer to noon"
-msgstr ""
+msgstr "Orice este mai apropiat de miezul zilei"
 
 #: plugins/autowarmth.koplugin/main.lua:393
 msgid "Whatever is closer to midnight"
-msgstr ""
+msgstr "Orice este mai apropiat de miezul nopții"
 
 #: plugins/autowarmth.koplugin/main.lua:401
 msgid "Location: %1"
@@ -10919,142 +10990,140 @@ msgid "Location"
 msgstr "Locația"
 
 #: plugins/autowarmth.koplugin/main.lua:409
-#, fuzzy
 msgid "Location name"
-msgstr "Locația"
+msgstr "Nume locație"
 
 #: plugins/autowarmth.koplugin/main.lua:438
 msgid "Coordinates: (%1, %2)"
-msgstr ""
+msgstr "Coordonate: (%1, %2)"
 
 #: plugins/autowarmth.koplugin/main.lua:442
-#, fuzzy
 msgid "Set location"
-msgstr "Setează durată"
+msgstr "Setează locație"
 
 #: plugins/autowarmth.koplugin/main.lua:443
 msgid "Enter decimal degrees, northern hemisphere and eastern length are '+'."
 msgstr ""
+"Întrodu grade zecimale (emisfera nordică și direcția estică utilizează "
+"valori pozitive)."
 
 #: plugins/autowarmth.koplugin/main.lua:444
-#, fuzzy
 msgid "Latitude"
-msgstr "Latină"
+msgstr "Latitudine"
 
 #: plugins/autowarmth.koplugin/main.lua:452
 msgid "Longitude"
-msgstr ""
+msgstr "Longitudine"
 
 #: plugins/autowarmth.koplugin/main.lua:476
-#, fuzzy
 msgid "Altitude: %1m"
-msgstr "Titlu: %1"
+msgstr "Altitudine: %1m"
 
 #: plugins/autowarmth.koplugin/main.lua:480
 msgid "Altitude"
-msgstr ""
+msgstr "Altitudine"
 
 #: plugins/autowarmth.koplugin/main.lua:530
 msgid "%1: %2"
-msgstr ""
+msgstr "%1: %2"
 
 #: plugins/autowarmth.koplugin/main.lua:545
 msgid "HH"
-msgstr ""
+msgstr "HH"
 
 #: plugins/autowarmth.koplugin/main.lua:553
-#, fuzzy
 msgid "MM"
-msgstr "M"
+msgstr "MM"
 
 #: plugins/autowarmth.koplugin/main.lua:573
 msgid ""
 "This time is before the previous time.\n"
 "Adjust the previous time?"
 msgstr ""
+"Acest timp este anterior precedentului.\n"
+"Ajustezi timpul precedent?"
 
 #: plugins/autowarmth.koplugin/main.lua:589
 msgid ""
 "This time is after the subsequent time.\n"
 "Adjust the subsequent time?"
 msgstr ""
+"Acest timp este viitor următorului.\n"
+"Ajustezi timpul următor?"
 
 #: plugins/autowarmth.koplugin/main.lua:607
-#, fuzzy
 msgid "Invalidate"
-msgstr "Parolă invalidă"
+msgstr "Invalidează"
 
 #: plugins/autowarmth.koplugin/main.lua:618
 #: plugins/autowarmth.koplugin/main.lua:726
 msgid "Solar midnight"
-msgstr ""
+msgstr "Miezul nopții solar"
 
 #: plugins/autowarmth.koplugin/main.lua:619
 msgid "Astronomical dawn"
-msgstr ""
+msgstr "Zori de zi astronomic"
 
 #: plugins/autowarmth.koplugin/main.lua:620
 msgid "Nautical dawn"
-msgstr ""
+msgstr "Zori de zi nautic"
 
 #: plugins/autowarmth.koplugin/main.lua:621
 msgid "Civil dawn"
-msgstr ""
+msgstr "Zori de zi civil"
 
 #: plugins/autowarmth.koplugin/main.lua:622
 msgid "Sunrise"
-msgstr ""
+msgstr "Răsărit"
 
 #: plugins/autowarmth.koplugin/main.lua:623
 #: plugins/autowarmth.koplugin/main.lua:721
 msgid "Solar noon"
-msgstr ""
+msgstr "Miez de zi solar"
 
 #: plugins/autowarmth.koplugin/main.lua:624
 msgid "Sunset"
-msgstr ""
+msgstr "Apus"
 
 #: plugins/autowarmth.koplugin/main.lua:625
 msgid "Civil dusk"
-msgstr ""
+msgstr "Amurg civil"
 
 #: plugins/autowarmth.koplugin/main.lua:626
 msgid "Nautical dusk"
-msgstr ""
+msgstr "Amurg nautic"
 
 #: plugins/autowarmth.koplugin/main.lua:627
 msgid "Astronomical dusk"
-msgstr ""
+msgstr "Amurg astronomic"
 
 #: plugins/autowarmth.koplugin/main.lua:643
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: plugins/autowarmth.koplugin/main.lua:645
 msgid "%1: 100% + ☾"
-msgstr ""
+msgstr "%1: 100% + ☾"
 
 #: plugins/autowarmth.koplugin/main.lua:649
 msgid "%1: ☼"
-msgstr ""
+msgstr "%1: ☼"
 
 #: plugins/autowarmth.koplugin/main.lua:651
 msgid "%1: ☾"
-msgstr ""
+msgstr "%1: ☾"
 
 #: plugins/autowarmth.koplugin/main.lua:673
-#, fuzzy
 msgid "Use night mode"
-msgstr "Setează modul de noapte"
+msgstr "Folosește modul de noapte"
 
 #: plugins/autowarmth.koplugin/main.lua:684
-#, fuzzy
 msgid "Nightmode"
-msgstr "Mod noapte"
+msgstr "Mod de noapte"
 
 #: plugins/autowarmth.koplugin/main.lua:693
 msgid "Unset"
-msgstr ""
+msgstr "Anulează"
 
 #: plugins/autowarmth.koplugin/main.lua:717
 msgid "Set warmth and night mode for:"
@@ -11066,19 +11135,19 @@ msgstr "Setează mod de noapte pentru:"
 
 #: plugins/autowarmth.koplugin/main.lua:722
 msgid "Daytime"
-msgstr ""
+msgstr "Timp de zi"
 
 #: plugins/autowarmth.koplugin/main.lua:723
 msgid "Darkest time of civil twilight"
-msgstr ""
+msgstr "Cel mai întunecat timp al amurgului civil"
 
 #: plugins/autowarmth.koplugin/main.lua:724
 msgid "Darkest time of nautical twilight"
-msgstr ""
+msgstr "Cel mai întunecat timp al amurgului nautic"
 
 #: plugins/autowarmth.koplugin/main.lua:725
 msgid "Darkest time of astronomical twilight"
-msgstr ""
+msgstr "Cel mai întunecat timp al amurgului astronimic"
 
 #: plugins/autowarmth.koplugin/main.lua:801
 #: plugins/autowarmth.koplugin/main.lua:819
@@ -11088,17 +11157,17 @@ msgstr "Miez de noapte solar:"
 #: plugins/autowarmth.koplugin/main.lua:802
 #: plugins/autowarmth.koplugin/main.lua:807
 msgid "Dawn"
-msgstr ""
+msgstr "Amurg"
 
 #: plugins/autowarmth.koplugin/main.lua:803
 #: plugins/autowarmth.koplugin/main.lua:817
 msgid "Astronomic:"
-msgstr ""
+msgstr "Astronomic:"
 
 #: plugins/autowarmth.koplugin/main.lua:804
 #: plugins/autowarmth.koplugin/main.lua:816
 msgid "Nautical:"
-msgstr ""
+msgstr "Nautic:"
 
 #: plugins/autowarmth.koplugin/main.lua:806
 #: plugins/autowarmth.koplugin/main.lua:815
@@ -11108,28 +11177,28 @@ msgstr "Asfințit:"
 #: plugins/autowarmth.koplugin/main.lua:806
 #: plugins/autowarmth.koplugin/main.lua:815
 msgid "Civil:"
-msgstr ""
+msgstr "Civil:"
 
 #: plugins/autowarmth.koplugin/main.lua:808
 msgid "Sunrise:"
-msgstr ""
+msgstr "Răsărit:"
 
 #: plugins/autowarmth.koplugin/main.lua:810
 msgid "Solar noon:"
-msgstr ""
+msgstr "Miez de zi solar:"
 
 #: plugins/autowarmth.koplugin/main.lua:812
 msgid "Sunset:"
-msgstr ""
+msgstr "Apus:"
 
 #: plugins/autowarmth.koplugin/main.lua:813
 #: plugins/autowarmth.koplugin/main.lua:818
 msgid "Dusk"
-msgstr ""
+msgstr "Amurg"
 
 #: plugins/autowarmth.koplugin/_meta.lua:5
 msgid "This plugin allows set the frontlight warmth automagically."
-msgstr ""
+msgstr "Acest plugin permite setarea nuanței iluminării de funal automat."
 
 #: plugins/backgroundrunner.koplugin/_meta.lua:4
 msgid "Background runner"
@@ -13281,9 +13350,8 @@ msgid "Add new feed"
 msgstr "Adaugă un flux nou"
 
 #: plugins/newsdownloader.koplugin/main.lua:680
-#, fuzzy
 msgid "RSS/Atom feeds"
-msgstr "Lista de fluxuri RSS/Atom"
+msgstr "Fluxuri RSS/Atom"
 
 #: plugins/newsdownloader.koplugin/main.lua:695
 msgid "Edit Feed"
@@ -13334,9 +13402,8 @@ msgid "No"
 msgstr "Nu"
 
 #: plugins/newsdownloader.koplugin/main.lua:975
-#, fuzzy
 msgid "Saving news feed list…"
-msgstr "Se încarcă lista de fluxuri de știri…"
+msgstr "Se salvează lista de fluxuri de știri…"
 
 #: plugins/newsdownloader.koplugin/main.lua:981
 msgid "Could not save news feed config."
@@ -13666,14 +13733,12 @@ msgid "Read timer"
 msgstr "Temporizator citire"
 
 #: plugins/readtimer.koplugin/main.lua:93
-#, fuzzy
 msgid "Set alarm"
-msgstr "Setează întîrziere"
+msgstr "Setează alarmă"
 
 #: plugins/readtimer.koplugin/main.lua:94
-#, fuzzy
 msgid "New alarm"
-msgstr "Dosar nou"
+msgstr "Alarmă nouă"
 
 #: plugins/readtimer.koplugin/main.lua:95
 #: plugins/readtimer.koplugin/main.lua:145
@@ -14587,9 +14652,8 @@ msgid "Text editor: open last file"
 msgstr "Editor text: deschide ultimul fișier"
 
 #: plugins/texteditor.koplugin/main.lua:113
-#, fuzzy
 msgid "Text font size: %1"
-msgstr "Mărime font text (%1)"
+msgstr "Mărime font text: %1"
 
 #: plugins/texteditor.koplugin/main.lua:124
 msgid "Text font size"
