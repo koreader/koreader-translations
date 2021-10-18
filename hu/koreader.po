@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-18 06:55+0000\n"
+"POT-Creation-Date: 2021-10-18 16:13+0000\n"
 "PO-Revision-Date: 2021-10-08 20:05+0000\n"
 "Last-Translator: Sari Gabor <sari.gabor@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
@@ -153,8 +153,8 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:402
-#: frontend/apps/reader/modules/readerbookmark.lua:638
+#: frontend/apps/reader/modules/readerbookmark.lua:431
+#: frontend/apps/reader/modules/readerbookmark.lua:657
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:689
 #: frontend/apps/reader/modules/readergoto.lua:58
@@ -308,7 +308,7 @@ msgid "Choose local folder"
 msgstr "Válasszon helyi mappát"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:418
+#: frontend/apps/reader/modules/readerbookmark.lua:454
 #: frontend/apps/reader/modules/readerhighlight.lua:1133
 #: frontend/apps/reader/modules/readerhighlight.lua:1169
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -867,7 +867,7 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanager.lua:303
 #: frontend/apps/filemanager/filemanager.lua:319
-#: frontend/apps/reader/modules/readerbookmark.lua:645
+#: frontend/apps/reader/modules/readerbookmark.lua:663
 msgid "Rename"
 msgstr "Átnevezés"
 
@@ -1765,61 +1765,73 @@ msgstr "Kezdőmappa"
 msgid "Location history is empty."
 msgstr "Nincsenek helyelőzmények."
 
-#: frontend/apps/reader/modules/readerbookmark.lua:20
-#: frontend/apps/reader/modules/readerbookmark.lua:345
+#: frontend/apps/reader/modules/readerbookmark.lua:22
+#: frontend/apps/reader/modules/readerbookmark.lua:81
+#: frontend/apps/reader/modules/readerbookmark.lua:375
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:21
+#: frontend/apps/reader/modules/readerbookmark.lua:23
 msgid "Bookmark browsing mode"
 msgstr "Könyvjelző böngészési mód"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:62
+#: frontend/apps/reader/modules/readerbookmark.lua:64
 msgid "Remove bookmark for current page"
 msgstr "Könyvjelző eltávolítása az oldalról"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:62
+#: frontend/apps/reader/modules/readerbookmark.lua:64
 msgid "Bookmark current page"
 msgstr "Könyvjelző az oldalra"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:79
-#: frontend/apps/reader/modules/readerbookmark.lua:89
+#: frontend/apps/reader/modules/readerbookmark.lua:86
+#, fuzzy
+msgid "Bookmarks per page: %1"
+msgstr "Könyvjelzők száma oldalanként"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:97
 msgid "Bookmarks per page"
 msgstr "Könyvjelzők száma oldalanként"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:98
-#: frontend/apps/reader/modules/readerbookmark.lua:110
+#: frontend/apps/reader/modules/readerbookmark.lua:111
+#, fuzzy
+msgid "Bookmark font size: %1"
+msgstr "Lábjegyzet betűmérete"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:124
 msgid "Bookmark font size"
 msgstr "Lábjegyzet betűmérete"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:119
+#: frontend/apps/reader/modules/readerbookmark.lua:134
 msgid "Shrink bookmark font size to fit more text"
 msgstr "Könyvjelző betűméret csökkentése, hogy több szöveg jelenjen meg"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:336
-#: frontend/apps/reader/modules/readerbookmark.lua:585
-#: frontend/apps/reader/modules/readerbookmark.lua:617
-msgid "Page %1 %2 @ %3"
-msgstr "%1. oldal %2 || %3"
+#: frontend/apps/reader/modules/readerbookmark.lua:143
+msgid "Add page number / timestamp to bookmark"
+msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:384
+#: frontend/apps/reader/modules/readerbookmark.lua:152
+#, fuzzy
+msgid "Sort by largest page number"
+msgstr "Rendezés legutóbbi olvasás dátuma szerint"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:413
 msgid "Bookmark details"
 msgstr "Könyvjelző részletei"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:391
+#: frontend/apps/reader/modules/readerbookmark.lua:420
 msgid "Rename this bookmark"
 msgstr "Könyvjelző átnevezése"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:398
+#: frontend/apps/reader/modules/readerbookmark.lua:427
 msgid "Remove this bookmark"
 msgstr "Könyvjelző törlése"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:401
+#: frontend/apps/reader/modules/readerbookmark.lua:430
 msgid "Remove this bookmark?"
 msgstr "Törli ezt a könyvjelzőt?"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:406
+#: frontend/apps/reader/modules/readerbookmark.lua:435
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:407
 #: plugins/statistics.koplugin/main.lua:2118
@@ -1827,14 +1839,28 @@ msgstr "Törli ezt a könyvjelzőt?"
 msgid "Remove"
 msgstr "Törlés"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:629
+#: frontend/apps/reader/modules/readerbookmark.lua:648
 msgid "Rename bookmark"
 msgstr "Könyvjelző átnevezése"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:649
+#, fuzzy
+msgid "Page: %1"
+msgstr "Oldalszám: %1"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:649
+#, fuzzy
+msgid "Time: %2"
+msgstr "Idő"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:688
+#: frontend/apps/reader/modules/readerbookmark.lua:712
 msgid "in %1"
 msgstr "| Fejezet: %1"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:862
+msgid "Page %1 %2 @ %3"
+msgstr "%1. oldal %2 || %3"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:171
 msgid ""
@@ -15671,9 +15697,6 @@ msgstr "Jobb felső sarok érintése"
 
 #~ msgid "Rating: %1"
 #~ msgstr "Értékelés: %1"
-
-#~ msgid "Pages: %1"
-#~ msgstr "Oldalszám: %1"
 
 #~ msgid "Release date: %1"
 #~ msgstr "Kiadás dátuma: %1"
