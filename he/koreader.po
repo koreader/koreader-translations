@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 13:34+0000\n"
+"POT-Creation-Date: 2021-10-25 18:24+0000\n"
 "PO-Revision-Date: 2021-10-25 14:43+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -149,8 +149,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:431
-#: frontend/apps/reader/modules/readerbookmark.lua:657
+#: frontend/apps/reader/modules/readerbookmark.lua:875
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readergoto.lua:58
@@ -303,7 +302,8 @@ msgid "Choose local folder"
 msgstr "בחר תיקיה במכשיר"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:454
+#: frontend/apps/reader/modules/readerbookmark.lua:591
+#: frontend/apps/reader/modules/readerbookmark.lua:671
 #: frontend/apps/reader/modules/readerhighlight.lua:1173
 #: frontend/apps/reader/modules/readerhighlight.lua:1209
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -396,6 +396,7 @@ msgstr "ערוך את חשבון ה- Dropbox"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
+#: frontend/apps/reader/modules/readerbookmark.lua:597
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:43
 #: frontend/ui/widget/datetimewidget.lua:35
@@ -867,7 +868,6 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanager.lua:296
 #: frontend/apps/filemanager/filemanager.lua:312
-#: frontend/apps/reader/modules/readerbookmark.lua:663
 msgid "Rename"
 msgstr "שינוי שם"
 
@@ -1682,70 +1682,75 @@ msgstr "בית"
 msgid "Location history is empty."
 msgstr "היסטוריית המיקומים ריקה."
 
-#: frontend/apps/reader/modules/readerbookmark.lua:22
-#: frontend/apps/reader/modules/readerbookmark.lua:81
-#: frontend/apps/reader/modules/readerbookmark.lua:375
+#: frontend/apps/reader/modules/readerbookmark.lua:63
+#: frontend/apps/reader/modules/readerbookmark.lua:87
+#: frontend/apps/reader/modules/readerbookmark.lua:403
+#: frontend/apps/reader/modules/readerbookmark.lua:470
+#: frontend/apps/reader/modules/readerbookmark.lua:505
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "סימניות"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:23
-msgid "Bookmark browsing mode"
-msgstr "מצב דפדוף בסימניות"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:64
+#: frontend/apps/reader/modules/readerbookmark.lua:70
 msgid "Remove bookmark for current page"
 msgstr "הסר את הסימניה לדף הנוכחי"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:64
+#: frontend/apps/reader/modules/readerbookmark.lua:70
 msgid "Bookmark current page"
 msgstr "הוסף סימניה לדף הנוכחי"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:86
+#: frontend/apps/reader/modules/readerbookmark.lua:78
+msgid "Bookmark browsing mode"
+msgstr "מצב דפדוף בסימניות"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:92
 msgid "Bookmarks per page: %1"
 msgstr "סימניות לעמוד: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:97
+#: frontend/apps/reader/modules/readerbookmark.lua:103
 msgid "Bookmarks per page"
 msgstr "סימניות לעמוד"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:111
+#: frontend/apps/reader/modules/readerbookmark.lua:117
 msgid "Bookmark font size: %1"
 msgstr "גודל גופן לסימניות: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:124
+#: frontend/apps/reader/modules/readerbookmark.lua:130
 msgid "Bookmark font size"
 msgstr "גודל גופן לסימניות"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:134
+#: frontend/apps/reader/modules/readerbookmark.lua:140
 msgid "Shrink bookmark font size to fit more text"
 msgstr "הקטן את גודל גופן הסימניות כדי להציג טקסט נוסף"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:143
-msgid "Add page number / timestamp to bookmark"
-msgstr "הוספת מספר עמוד / חותמת זמן לסימניה"
+#: frontend/apps/reader/modules/readerbookmark.lua:149
+#, fuzzy
+msgid "Show separator between items"
+msgstr "הוסף מפריד בין ערכי תוכן העניינים"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:152
+#: frontend/apps/reader/modules/readerbookmark.lua:158
 msgid "Sort by largest page number"
 msgstr "מיון לפי גודל מס׳ העמוד"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:413
-msgid "Bookmark details"
-msgstr "פרטי סימניה"
+#: frontend/apps/reader/modules/readerbookmark.lua:167
+msgid "Add page number / timestamp to bookmark"
+msgstr "הוספת מספר עמוד / חותמת זמן לסימניה"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:420
-msgid "Rename this bookmark"
-msgstr "שנה את השם של סימניה זו"
+#: frontend/apps/reader/modules/readerbookmark.lua:455
+msgid "No bookmarks selected"
+msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-msgid "Remove this bookmark"
-msgstr "הסר סימניה זו"
+#: frontend/apps/reader/modules/readerbookmark.lua:457
+#, fuzzy
+msgid "Remove selected bookmark?"
+msgid_plural "Remove %1 selected bookmarks?"
+msgstr[0] "הסר סימניה זו?"
+msgstr[1] "הסר סימניה זו?"
+msgstr[2] "הסר סימניה זו?"
+msgstr[3] "הסר סימניה זו?"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:430
-msgid "Remove this bookmark?"
-msgstr "הסר סימניה זו?"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:435
+#: frontend/apps/reader/modules/readerbookmark.lua:461
+#: frontend/apps/reader/modules/readerbookmark.lua:545
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:407
 #: plugins/statistics.koplugin/main.lua:2118
@@ -1753,24 +1758,126 @@ msgstr "הסר סימניה זו?"
 msgid "Remove"
 msgstr "הסר"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:648
-msgid "Rename bookmark"
-msgstr "שנה שם סימניה"
+#: frontend/apps/reader/modules/readerbookmark.lua:470
+#: frontend/apps/reader/modules/readerbookmark.lua:505
+#: frontend/apps/reader/modules/readerbookmark.lua:626
+#, fuzzy
+msgid "Bookmarks (filtered)"
+msgstr "סימניות לעמוד"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:649
+#: frontend/apps/reader/modules/readerbookmark.lua:475
+#, fuzzy
+msgid "Deselect all"
+msgstr "השבת הכל"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:487
+#, fuzzy
+msgid "Select all"
+msgstr "בחר"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:497
+#, fuzzy
+msgid "Exit select mode"
+msgstr "מצב מומחה"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:509
+#, fuzzy
+msgid "Select page"
+msgstr "בחר"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:525
+#: frontend/apps/reader/modules/readerbookmark.lua:867
 msgid "Page: %1"
 msgstr "עמוד: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:649
-msgid "Time: %2"
+#: frontend/apps/reader/modules/readerbookmark.lua:525
+#: frontend/apps/reader/modules/readerbookmark.lua:867
+#, fuzzy
+msgid "Time: %1"
 msgstr "זמן: %2"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:535
+msgid "Bookmark details"
+msgstr "פרטי סימניה"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:541
+#, fuzzy
+msgid "Remove bookmark"
+msgstr "שנה שם סימניה"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:544
+#, fuzzy
+msgid "Remove bookmark?"
+msgstr "הסר סימניה זו?"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:562
+#: frontend/apps/reader/modules/readerhighlight.lua:659
+msgid "Add note"
+msgstr "הוספת הערה"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:562
+#: frontend/apps/reader/modules/readerbookmark.lua:866
+#: frontend/apps/reader/modules/readerhighlight.lua:659
+msgid "Edit note"
+msgstr "עריכת הערה"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:572
+msgid "Bulk remove"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:577
+#, fuzzy
+msgid "Bookmarks (select mode)"
+msgstr "מצב דפדוף בסימניות"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:581
+#: frontend/apps/reader/modules/readerbookmark.lua:586
+#, fuzzy
+msgid "Filter bookmarks"
+msgstr "החלף מצב סימניה"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:587
+msgid "(containing text)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:635
+#, fuzzy
+msgid "highlights"
+msgstr "הבלטות"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:645
+#, fuzzy
+msgid "notes"
+msgstr "הוספת הערה"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:655
+#, fuzzy
+msgid "page bookmarks"
+msgstr "שנה שם סימניה"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:881
+#: frontend/apps/reader/modules/readerstyletweak.lua:641
+#: frontend/apps/reader/modules/readeruserhyph.lua:203
+#: frontend/apps/reader/modules/readerwikipedia.lua:161
+#: frontend/apps/reader/readerui.lua:742 frontend/ui/widget/inputdialog.lua:694
+#: frontend/ui/widget/inputdialog.lua:735
+#: plugins/coverimage.koplugin/main.lua:355
+#: plugins/gestures.koplugin/main.lua:335
+#: plugins/newsdownloader.koplugin/main.lua:749
+#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
+#: plugins/terminal.koplugin/main.lua:242
+#: plugins/terminal.koplugin/main.lua:277
+#: plugins/terminal.koplugin/main.lua:335
+#: plugins/terminal.koplugin/main.lua:365
+msgid "Save"
+msgstr "שמור"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:712
+#: frontend/apps/reader/modules/readerbookmark.lua:935
 msgid "in %1"
 msgstr "ב- %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:862
+#: frontend/apps/reader/modules/readerbookmark.lua:1085
 msgid "Page %1 %2 @ %3"
 msgstr "עמוד %1 %2 @ %3"
 
@@ -3014,14 +3121,6 @@ msgstr "חזור כברירת מחדל לבחירת הטקסט"
 msgid "Style"
 msgstr "סגנון"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:659
-msgid "Add note"
-msgstr "הוספת הערה"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:659
-msgid "Edit note"
-msgstr "עריכת הערה"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:667
 msgid "…"
 msgstr "…"
@@ -4022,22 +4121,6 @@ msgstr "השתמש במדגם"
 #: frontend/apps/reader/modules/readerstyletweak.lua:615
 msgid "Condense"
 msgstr "דחוס"
-
-#: frontend/apps/reader/modules/readerstyletweak.lua:641
-#: frontend/apps/reader/modules/readeruserhyph.lua:203
-#: frontend/apps/reader/modules/readerwikipedia.lua:161
-#: frontend/apps/reader/readerui.lua:742 frontend/ui/widget/inputdialog.lua:694
-#: frontend/ui/widget/inputdialog.lua:735
-#: plugins/coverimage.koplugin/main.lua:355
-#: plugins/gestures.koplugin/main.lua:335
-#: plugins/newsdownloader.koplugin/main.lua:749
-#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
-#: plugins/terminal.koplugin/main.lua:242
-#: plugins/terminal.koplugin/main.lua:277
-#: plugins/terminal.koplugin/main.lua:335
-#: plugins/terminal.koplugin/main.lua:365
-msgid "Save"
-msgstr "שמור"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:645
 msgid "Book tweak not modified."
@@ -12669,7 +12752,8 @@ msgstr "קאנה בחצי רוחב לרוחב מלא"
 msgid ""
 "Convert half-width katakana to full-width katakana (for instance, ｶﾀｶﾅ will "
 "be converted to カタカナ)."
-msgstr "המרת קאטאקאנה בחצי רוחב לקאטאקאנה ברוחב מלא (לדוגמה, ｶﾀｶﾅ יומר ל־カタカナ)."
+msgstr ""
+"המרת קאטאקאנה בחצי רוחב לקאטאקאנה ברוחב מלא (לדוגמה, ｶﾀｶﾅ יומר ל־カタカナ)."
 
 #: plugins/japanese.koplugin/deinflector.lua:283
 msgid "Hiragana to katakana"
@@ -12704,8 +12788,8 @@ msgid ""
 "speech (for instance, すっっごーーい will be converted to both すっごーい "
 "and すごい)."
 msgstr ""
-"כיווץ כל רצף תווים שהוא המשמש לעתים כדגש בדיבור (לדוגמה: すっっごーーい יומר גם ל־"
-"すっごーい וגם ל־すごい)."
+"כיווץ כל רצף תווים שהוא המשמש לעתים כדגש בדיבור (לדוגמה: すっっごーーい יומר "
+"גם ל־すっごーい וגם ל־すごい)."
 
 #: plugins/japanese.koplugin/deinflector.lua:398
 msgid "Text conversions: none enabled"
@@ -15247,6 +15331,12 @@ msgstr "הקש על הפינה הימנית התחתונה"
 msgid "Tap the upper right corner"
 msgstr "הקש על הפינה השמאלית העליונה"
 
+#~ msgid "Rename this bookmark"
+#~ msgstr "שנה את השם של סימניה זו"
+
+#~ msgid "Remove this bookmark"
+#~ msgstr "הסר סימניה זו"
+
 #~ msgid "Purge .sdr"
 #~ msgstr "מחיקת ‎.sdr"
 
@@ -15875,9 +15965,6 @@ msgstr "הקש על הפינה השמאלית העליונה"
 #~ "ערך המרווח הוא באלפיות השנייה והוא יכול לנוע בין 100 (0.1 שניות) ל-2000 "
 #~ "(2 שניות).\n"
 #~ "ערך ברירת מחדל: %1"
-
-#~ msgid "Add a separator between ToC entries"
-#~ msgstr "הוסף מפריד בין ערכי תוכן העניינים"
 
 #~ msgid "Go to"
 #~ msgstr "עבור ל-"

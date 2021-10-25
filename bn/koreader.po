@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 13:34+0000\n"
+"POT-Creation-Date: 2021-10-25 18:24+0000\n"
 "PO-Revision-Date: 2021-07-31 03:52+0000\n"
 "Last-Translator: Tushar Bakshi <tusharbakshi6@gmail.com>\n"
 "Language-Team: Bengali <https://hosted.weblate.org/projects/koreader/"
@@ -150,8 +150,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:431
-#: frontend/apps/reader/modules/readerbookmark.lua:657
+#: frontend/apps/reader/modules/readerbookmark.lua:875
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readergoto.lua:58
@@ -305,7 +304,8 @@ msgid "Choose local folder"
 msgstr "স্থানীয় ফোল্ডার চয়ন করুন"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:454
+#: frontend/apps/reader/modules/readerbookmark.lua:591
+#: frontend/apps/reader/modules/readerbookmark.lua:671
 #: frontend/apps/reader/modules/readerhighlight.lua:1173
 #: frontend/apps/reader/modules/readerhighlight.lua:1209
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -399,6 +399,7 @@ msgstr "ড্রপবক্স একাউন্ট সম্পাদনা 
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
+#: frontend/apps/reader/modules/readerbookmark.lua:597
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:43
 #: frontend/ui/widget/datetimewidget.lua:35
@@ -864,7 +865,6 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanager.lua:296
 #: frontend/apps/filemanager/filemanager.lua:312
-#: frontend/apps/reader/modules/readerbookmark.lua:663
 msgid "Rename"
 msgstr "নতুন নামকরণ করুন"
 
@@ -1682,73 +1682,76 @@ msgstr "মূলপাতা"
 msgid "Location history is empty."
 msgstr "অবস্থানের ইতিহাস নেই।"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:22
-#: frontend/apps/reader/modules/readerbookmark.lua:81
-#: frontend/apps/reader/modules/readerbookmark.lua:375
+#: frontend/apps/reader/modules/readerbookmark.lua:63
+#: frontend/apps/reader/modules/readerbookmark.lua:87
+#: frontend/apps/reader/modules/readerbookmark.lua:403
+#: frontend/apps/reader/modules/readerbookmark.lua:470
+#: frontend/apps/reader/modules/readerbookmark.lua:505
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "বই নিশানি"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:23
-msgid "Bookmark browsing mode"
-msgstr "বুকমার্ক ব্রাউজিং মোড"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:64
+#: frontend/apps/reader/modules/readerbookmark.lua:70
 msgid "Remove bookmark for current page"
 msgstr "বর্তমান পৃষ্ঠা থেকে নিশানি সরান"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:64
+#: frontend/apps/reader/modules/readerbookmark.lua:70
 msgid "Bookmark current page"
 msgstr "বর্তমান পৃষ্ঠায় নিশানি দিন"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:86
+#: frontend/apps/reader/modules/readerbookmark.lua:78
+msgid "Bookmark browsing mode"
+msgstr "বুকমার্ক ব্রাউজিং মোড"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:92
 #, fuzzy
 msgid "Bookmarks per page: %1"
 msgstr "প্রতি পাতায় নিশানি"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:97
+#: frontend/apps/reader/modules/readerbookmark.lua:103
 msgid "Bookmarks per page"
 msgstr "প্রতি পাতায় নিশানি"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:111
+#: frontend/apps/reader/modules/readerbookmark.lua:117
 #, fuzzy
 msgid "Bookmark font size: %1"
 msgstr "নিশানির অক্ষরের আকার"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:124
+#: frontend/apps/reader/modules/readerbookmark.lua:130
 msgid "Bookmark font size"
 msgstr "নিশানির অক্ষরের আকার"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:134
+#: frontend/apps/reader/modules/readerbookmark.lua:140
 msgid "Shrink bookmark font size to fit more text"
 msgstr "নিশানির অক্ষরের আকার ছোট করুন তাতে আরও বেশি লেখা ধরে"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:143
-msgid "Add page number / timestamp to bookmark"
-msgstr ""
+#: frontend/apps/reader/modules/readerbookmark.lua:149
+#, fuzzy
+msgid "Show separator between items"
+msgstr "অসমর্থিত ফাইলগুলি দেখান"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:152
+#: frontend/apps/reader/modules/readerbookmark.lua:158
 #, fuzzy
 msgid "Sort by largest page number"
 msgstr "শেষ পড়ার তারিখ অনুসারে সাজান"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:413
-msgid "Bookmark details"
-msgstr "নিশানির বিশদ বিবরণ"
+#: frontend/apps/reader/modules/readerbookmark.lua:167
+msgid "Add page number / timestamp to bookmark"
+msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:420
-msgid "Rename this bookmark"
-msgstr "নিশানির নাম পরিবর্তন করুন"
+#: frontend/apps/reader/modules/readerbookmark.lua:455
+msgid "No bookmarks selected"
+msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-msgid "Remove this bookmark"
-msgstr "নিশানিটি মুছুন"
+#: frontend/apps/reader/modules/readerbookmark.lua:457
+#, fuzzy
+msgid "Remove selected bookmark?"
+msgid_plural "Remove %1 selected bookmarks?"
+msgstr[0] "এই নিশানিটি মুছুবেন?"
+msgstr[1] "এই নিশানিটি মুছুবেন?"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:430
-msgid "Remove this bookmark?"
-msgstr "এই নিশানিটি মুছুবেন?"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:435
+#: frontend/apps/reader/modules/readerbookmark.lua:461
+#: frontend/apps/reader/modules/readerbookmark.lua:545
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:407
 #: plugins/statistics.koplugin/main.lua:2118
@@ -1756,25 +1759,127 @@ msgstr "এই নিশানিটি মুছুবেন?"
 msgid "Remove"
 msgstr "অপসারণ করুন"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:648
-msgid "Rename bookmark"
-msgstr "নিশানির নাম পরিবর্তন করুন"
+#: frontend/apps/reader/modules/readerbookmark.lua:470
+#: frontend/apps/reader/modules/readerbookmark.lua:505
+#: frontend/apps/reader/modules/readerbookmark.lua:626
+#, fuzzy
+msgid "Bookmarks (filtered)"
+msgstr "প্রতি পাতায় নিশানি"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:649
+#: frontend/apps/reader/modules/readerbookmark.lua:475
+msgid "Deselect all"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:487
+#, fuzzy
+msgid "Select all"
+msgstr "নির্বাচন করুন"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:497
+msgid "Exit select mode"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:509
+#, fuzzy
+msgid "Select page"
+msgstr "নির্বাচন করুন"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:525
+#: frontend/apps/reader/modules/readerbookmark.lua:867
 #, fuzzy
 msgid "Page: %1"
 msgstr "পৃষ্ঠা:"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:649
-msgid "Time: %2"
+#: frontend/apps/reader/modules/readerbookmark.lua:525
+#: frontend/apps/reader/modules/readerbookmark.lua:867
+#, fuzzy
+msgid "Time: %1"
+msgstr "পৃষ্ঠা:"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:535
+msgid "Bookmark details"
+msgstr "নিশানির বিশদ বিবরণ"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:541
+#, fuzzy
+msgid "Remove bookmark"
+msgstr "নিশানির নাম পরিবর্তন করুন"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:544
+#, fuzzy
+msgid "Remove bookmark?"
+msgstr "এই নিশানিটি মুছুবেন?"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:562
+#: frontend/apps/reader/modules/readerhighlight.lua:659
+#, fuzzy
+msgid "Add note"
+msgstr "টীকা যোগ করুন"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:562
+#: frontend/apps/reader/modules/readerbookmark.lua:866
+#: frontend/apps/reader/modules/readerhighlight.lua:659
+#, fuzzy
+msgid "Edit note"
+msgstr "সম্পাদনা করুন"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:572
+msgid "Bulk remove"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:577
+#, fuzzy
+msgid "Bookmarks (select mode)"
+msgstr "বুকমার্ক ব্রাউজিং মোড"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:581
+#: frontend/apps/reader/modules/readerbookmark.lua:586
+#, fuzzy
+msgid "Filter bookmarks"
+msgstr "নিশানির নাম পরিবর্তন করুন"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:587
+msgid "(containing text)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:635
+#, fuzzy
+msgid "highlights"
+msgstr "লক্ষণীয় করুন"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:645
+#, fuzzy
+msgid "notes"
+msgstr "টীকা যোগ করুন"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:655
+#, fuzzy
+msgid "page bookmarks"
+msgstr "নিশানির নাম পরিবর্তন করুন"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:881
+#: frontend/apps/reader/modules/readerstyletweak.lua:641
+#: frontend/apps/reader/modules/readeruserhyph.lua:203
+#: frontend/apps/reader/modules/readerwikipedia.lua:161
+#: frontend/apps/reader/readerui.lua:742 frontend/ui/widget/inputdialog.lua:694
+#: frontend/ui/widget/inputdialog.lua:735
+#: plugins/coverimage.koplugin/main.lua:355
+#: plugins/gestures.koplugin/main.lua:335
+#: plugins/newsdownloader.koplugin/main.lua:749
+#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
+#: plugins/terminal.koplugin/main.lua:242
+#: plugins/terminal.koplugin/main.lua:277
+#: plugins/terminal.koplugin/main.lua:335
+#: plugins/terminal.koplugin/main.lua:365
+msgid "Save"
 msgstr ""
 
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:712
+#: frontend/apps/reader/modules/readerbookmark.lua:935
 msgid "in %1"
 msgstr "%1 এ"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:862
+#: frontend/apps/reader/modules/readerbookmark.lua:1085
 msgid "Page %1 %2 @ %3"
 msgstr "পৃষ্ঠা %1 %2 @ %3"
 
@@ -3034,16 +3139,6 @@ msgstr "পাঠ্য নির্বাচনে ফিরে যান"
 msgid "Style"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:659
-#, fuzzy
-msgid "Add note"
-msgstr "টীকা যোগ করুন"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:659
-#, fuzzy
-msgid "Edit note"
-msgstr "সম্পাদনা করুন"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:667
 msgid "…"
 msgstr "…"
@@ -3973,22 +4068,6 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:615
 msgid "Condense"
-msgstr ""
-
-#: frontend/apps/reader/modules/readerstyletweak.lua:641
-#: frontend/apps/reader/modules/readeruserhyph.lua:203
-#: frontend/apps/reader/modules/readerwikipedia.lua:161
-#: frontend/apps/reader/readerui.lua:742 frontend/ui/widget/inputdialog.lua:694
-#: frontend/ui/widget/inputdialog.lua:735
-#: plugins/coverimage.koplugin/main.lua:355
-#: plugins/gestures.koplugin/main.lua:335
-#: plugins/newsdownloader.koplugin/main.lua:749
-#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
-#: plugins/terminal.koplugin/main.lua:242
-#: plugins/terminal.koplugin/main.lua:277
-#: plugins/terminal.koplugin/main.lua:335
-#: plugins/terminal.koplugin/main.lua:365
-msgid "Save"
 msgstr ""
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:645
@@ -14074,6 +14153,12 @@ msgstr ""
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "উপরের ডান দিকের কোনায় টোকা দিন"
+
+#~ msgid "Rename this bookmark"
+#~ msgstr "নিশানির নাম পরিবর্তন করুন"
+
+#~ msgid "Remove this bookmark"
+#~ msgstr "নিশানিটি মুছুন"
 
 #~ msgid "Purge .sdr"
 #~ msgstr ".sdr পরিষ্কার করুন"

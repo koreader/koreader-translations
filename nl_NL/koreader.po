@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 13:34+0000\n"
+"POT-Creation-Date: 2021-10-25 18:24+0000\n"
 "PO-Revision-Date: 2021-10-25 14:43+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -152,8 +152,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:431
-#: frontend/apps/reader/modules/readerbookmark.lua:657
+#: frontend/apps/reader/modules/readerbookmark.lua:875
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readergoto.lua:58
@@ -306,7 +305,8 @@ msgid "Choose local folder"
 msgstr "Lokale map kiezen"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:454
+#: frontend/apps/reader/modules/readerbookmark.lua:591
+#: frontend/apps/reader/modules/readerbookmark.lua:671
 #: frontend/apps/reader/modules/readerhighlight.lua:1173
 #: frontend/apps/reader/modules/readerhighlight.lua:1209
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -399,6 +399,7 @@ msgstr "Dropbox-account bewerken"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
+#: frontend/apps/reader/modules/readerbookmark.lua:597
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:43
 #: frontend/ui/widget/datetimewidget.lua:35
@@ -870,7 +871,6 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanager.lua:296
 #: frontend/apps/filemanager/filemanager.lua:312
-#: frontend/apps/reader/modules/readerbookmark.lua:663
 msgid "Rename"
 msgstr "Naam wijzigen"
 
@@ -1693,70 +1693,73 @@ msgstr "Thuis"
 msgid "Location history is empty."
 msgstr "Locatiegeschiedenis is leeg."
 
-#: frontend/apps/reader/modules/readerbookmark.lua:22
-#: frontend/apps/reader/modules/readerbookmark.lua:81
-#: frontend/apps/reader/modules/readerbookmark.lua:375
+#: frontend/apps/reader/modules/readerbookmark.lua:63
+#: frontend/apps/reader/modules/readerbookmark.lua:87
+#: frontend/apps/reader/modules/readerbookmark.lua:403
+#: frontend/apps/reader/modules/readerbookmark.lua:470
+#: frontend/apps/reader/modules/readerbookmark.lua:505
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:23
-msgid "Bookmark browsing mode"
-msgstr "Bladwijzerbladeren"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:64
+#: frontend/apps/reader/modules/readerbookmark.lua:70
 msgid "Remove bookmark for current page"
 msgstr "Bladwijzer voor deze pagina verwijderen"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:64
+#: frontend/apps/reader/modules/readerbookmark.lua:70
 msgid "Bookmark current page"
 msgstr "Bladwijzer op deze pagina"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:86
+#: frontend/apps/reader/modules/readerbookmark.lua:78
+msgid "Bookmark browsing mode"
+msgstr "Bladwijzerbladeren"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:92
 msgid "Bookmarks per page: %1"
 msgstr "Bladwijzers per pagina: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:97
+#: frontend/apps/reader/modules/readerbookmark.lua:103
 msgid "Bookmarks per page"
 msgstr "Bladwijzers per pagina"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:111
+#: frontend/apps/reader/modules/readerbookmark.lua:117
 msgid "Bookmark font size: %1"
 msgstr "Bladwijzer-lettergrootte: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:124
+#: frontend/apps/reader/modules/readerbookmark.lua:130
 msgid "Bookmark font size"
 msgstr "Bladwijzer-lettergrootte"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:134
+#: frontend/apps/reader/modules/readerbookmark.lua:140
 msgid "Shrink bookmark font size to fit more text"
 msgstr "Bladwijzerlettertype kleiner maken voor meer tekst"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:143
-msgid "Add page number / timestamp to bookmark"
-msgstr "Paginanummer / tijdsaanduiding toevoegen aan bladwijzer"
+#: frontend/apps/reader/modules/readerbookmark.lua:149
+#, fuzzy
+msgid "Show separator between items"
+msgstr "Scheiding tussen inhoudsopgave-vermeldingen toevoegen"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:152
+#: frontend/apps/reader/modules/readerbookmark.lua:158
 msgid "Sort by largest page number"
 msgstr "Sorteren op hoogste paginanummer"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:413
-msgid "Bookmark details"
-msgstr "Bladwijzerdetails"
+#: frontend/apps/reader/modules/readerbookmark.lua:167
+msgid "Add page number / timestamp to bookmark"
+msgstr "Paginanummer / tijdsaanduiding toevoegen aan bladwijzer"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:420
-msgid "Rename this bookmark"
-msgstr "Deze bladwijzer hernoemen"
+#: frontend/apps/reader/modules/readerbookmark.lua:455
+msgid "No bookmarks selected"
+msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-msgid "Remove this bookmark"
-msgstr "Bladwijzer verwijderen"
+#: frontend/apps/reader/modules/readerbookmark.lua:457
+#, fuzzy
+msgid "Remove selected bookmark?"
+msgid_plural "Remove %1 selected bookmarks?"
+msgstr[0] "Deze bladwijzer verwijderen?"
+msgstr[1] "Deze bladwijzer verwijderen?"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:430
-msgid "Remove this bookmark?"
-msgstr "Deze bladwijzer verwijderen?"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:435
+#: frontend/apps/reader/modules/readerbookmark.lua:461
+#: frontend/apps/reader/modules/readerbookmark.lua:545
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:407
 #: plugins/statistics.koplugin/main.lua:2118
@@ -1764,24 +1767,126 @@ msgstr "Deze bladwijzer verwijderen?"
 msgid "Remove"
 msgstr "Verwijderen"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:648
-msgid "Rename bookmark"
-msgstr "Bladwijzer hernoemen"
+#: frontend/apps/reader/modules/readerbookmark.lua:470
+#: frontend/apps/reader/modules/readerbookmark.lua:505
+#: frontend/apps/reader/modules/readerbookmark.lua:626
+#, fuzzy
+msgid "Bookmarks (filtered)"
+msgstr "Bladwijzers per pagina"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:649
+#: frontend/apps/reader/modules/readerbookmark.lua:475
+#, fuzzy
+msgid "Deselect all"
+msgstr "Allemaal uitschakelen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:487
+#, fuzzy
+msgid "Select all"
+msgstr "Selecteren"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:497
+#, fuzzy
+msgid "Exit select mode"
+msgstr "Expertmodus"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:509
+#, fuzzy
+msgid "Select page"
+msgstr "Selecteren"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:525
+#: frontend/apps/reader/modules/readerbookmark.lua:867
 msgid "Page: %1"
 msgstr "Pagina: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:649
-msgid "Time: %2"
+#: frontend/apps/reader/modules/readerbookmark.lua:525
+#: frontend/apps/reader/modules/readerbookmark.lua:867
+#, fuzzy
+msgid "Time: %1"
 msgstr "Tijd: %2"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:535
+msgid "Bookmark details"
+msgstr "Bladwijzerdetails"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:541
+#, fuzzy
+msgid "Remove bookmark"
+msgstr "Bladwijzer hernoemen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:544
+#, fuzzy
+msgid "Remove bookmark?"
+msgstr "Deze bladwijzer verwijderen?"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:562
+#: frontend/apps/reader/modules/readerhighlight.lua:659
+msgid "Add note"
+msgstr "Notitie toevoegen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:562
+#: frontend/apps/reader/modules/readerbookmark.lua:866
+#: frontend/apps/reader/modules/readerhighlight.lua:659
+msgid "Edit note"
+msgstr "Notitie bewerken"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:572
+msgid "Bulk remove"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:577
+#, fuzzy
+msgid "Bookmarks (select mode)"
+msgstr "Bladwijzerbladeren"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:581
+#: frontend/apps/reader/modules/readerbookmark.lua:586
+#, fuzzy
+msgid "Filter bookmarks"
+msgstr "Bladwijzer schakelen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:587
+msgid "(containing text)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:635
+#, fuzzy
+msgid "highlights"
+msgstr "Markeringen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:645
+#, fuzzy
+msgid "notes"
+msgstr "Totaal aantal aantekeningen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:655
+#, fuzzy
+msgid "page bookmarks"
+msgstr "Bladwijzer hernoemen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:881
+#: frontend/apps/reader/modules/readerstyletweak.lua:641
+#: frontend/apps/reader/modules/readeruserhyph.lua:203
+#: frontend/apps/reader/modules/readerwikipedia.lua:161
+#: frontend/apps/reader/readerui.lua:742 frontend/ui/widget/inputdialog.lua:694
+#: frontend/ui/widget/inputdialog.lua:735
+#: plugins/coverimage.koplugin/main.lua:355
+#: plugins/gestures.koplugin/main.lua:335
+#: plugins/newsdownloader.koplugin/main.lua:749
+#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
+#: plugins/terminal.koplugin/main.lua:242
+#: plugins/terminal.koplugin/main.lua:277
+#: plugins/terminal.koplugin/main.lua:335
+#: plugins/terminal.koplugin/main.lua:365
+msgid "Save"
+msgstr "Opslaan"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:712
+#: frontend/apps/reader/modules/readerbookmark.lua:935
 msgid "in %1"
 msgstr "in %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:862
+#: frontend/apps/reader/modules/readerbookmark.lua:1085
 msgid "Page %1 %2 @ %3"
 msgstr "Pagina %1 %2 @ %3"
 
@@ -3040,14 +3145,6 @@ msgstr "Terugvallen op tekstselectie"
 msgid "Style"
 msgstr "Stijl"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:659
-msgid "Add note"
-msgstr "Notitie toevoegen"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:659
-msgid "Edit note"
-msgstr "Notitie bewerken"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:667
 msgid "…"
 msgstr "…"
@@ -4091,22 +4188,6 @@ msgstr "Voorbeeld gebruiken"
 #: frontend/apps/reader/modules/readerstyletweak.lua:615
 msgid "Condense"
 msgstr "Comprimeren"
-
-#: frontend/apps/reader/modules/readerstyletweak.lua:641
-#: frontend/apps/reader/modules/readeruserhyph.lua:203
-#: frontend/apps/reader/modules/readerwikipedia.lua:161
-#: frontend/apps/reader/readerui.lua:742 frontend/ui/widget/inputdialog.lua:694
-#: frontend/ui/widget/inputdialog.lua:735
-#: plugins/coverimage.koplugin/main.lua:355
-#: plugins/gestures.koplugin/main.lua:335
-#: plugins/newsdownloader.koplugin/main.lua:749
-#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
-#: plugins/terminal.koplugin/main.lua:242
-#: plugins/terminal.koplugin/main.lua:277
-#: plugins/terminal.koplugin/main.lua:335
-#: plugins/terminal.koplugin/main.lua:365
-msgid "Save"
-msgstr "Opslaan"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:645
 msgid "Book tweak not modified."
@@ -12897,8 +12978,8 @@ msgid ""
 "Convert half-width katakana to full-width katakana (for instance, ｶﾀｶﾅ will "
 "be converted to カタカナ)."
 msgstr ""
-"Zet katakana op halve breedte om in katakana op hele breedte (bijvoorbeeld, "
-"ｶﾀｶﾅ zal worden omgezet in カタカナ)."
+"Zet katakana op halve breedte om in katakana op hele breedte (bijvoorbeeld, ｶ"
+"ﾀｶﾅ zal worden omgezet in カタカナ)."
 
 #: plugins/japanese.koplugin/deinflector.lua:283
 msgid "Hiragana to katakana"
@@ -12910,7 +12991,8 @@ msgid ""
 "Convert hiragana to katakana (for instance, ひらがな will be converted to ヒ"
 "ラガナ)."
 msgstr ""
-"Zet hiragana om in katakana (bijvoorbeeld, ひらがな zal worden omgezet in ヒラガナ)."
+"Zet hiragana om in katakana (bijvoorbeeld, ひらがな zal worden omgezet in ヒ"
+"ラガナ)."
 
 #: plugins/japanese.koplugin/deinflector.lua:290
 msgid "Katakana to hiragana"
@@ -12922,7 +13004,8 @@ msgid ""
 "Convert katakana to hiragana (for instance, カタカナ will be converted to か"
 "たかな)."
 msgstr ""
-"Zet katakana om in hiragana (bijvoorbeeld, カタカナ zal worden omgezet in かたかな)."
+"Zet katakana om in hiragana (bijvoorbeeld, カタカナ zal worden omgezet in か"
+"たかな)."
 
 #: plugins/japanese.koplugin/deinflector.lua:297
 msgid "Collapse emphatic sequences"
@@ -12935,8 +13018,8 @@ msgid ""
 "speech (for instance, すっっごーーい will be converted to both すっごーい "
 "and すごい)."
 msgstr ""
-"Tekens die soms als nadruk in spraak worden gebruikt, worden samengevouwen ("
-"すっっごーーい wordt bijvoorbeeld omgezet in zowel すっごーい als すごい)."
+"Tekens die soms als nadruk in spraak worden gebruikt, worden samengevouwen "
+"(すっっごーーい wordt bijvoorbeeld omgezet in zowel すっごーい als すごい)."
 
 #: plugins/japanese.koplugin/deinflector.lua:398
 msgid "Text conversions: none enabled"
@@ -13048,8 +13131,8 @@ msgid ""
 "You must have at least one Japanese dictionary installed in order for this "
 "plugin to work smoothly with Japanese text."
 msgstr ""
-"Ondersteuning voor de Japanse taal voor KOReader, gemodelleerd naar Yomichan."
-"\n"
+"Ondersteuning voor de Japanse taal voor KOReader, gemodelleerd naar "
+"Yomichan.\n"
 "\n"
 "Deze plugin breidt het ingebouwde woordenboek- en selectiesysteem van "
 "KOReader uit met ondersteuning voor Yomichan-achtige ontleding en "
@@ -15504,6 +15587,12 @@ msgstr "Tik op de rechteronderhoek"
 msgid "Tap the upper right corner"
 msgstr "Tik op de rechterbovenhoek"
 
+#~ msgid "Rename this bookmark"
+#~ msgstr "Deze bladwijzer hernoemen"
+
+#~ msgid "Remove this bookmark"
+#~ msgstr "Bladwijzer verwijderen"
+
 #~ msgid "Purge .sdr"
 #~ msgstr "Verwijder .sdr"
 
@@ -16176,9 +16265,6 @@ msgstr "Tik op de rechterbovenhoek"
 #~ "seconden) tot 2000 (2 seconden).\n"
 #~ "Standaardwaarde: %1"
 
-#~ msgid "Add a separator between ToC entries"
-#~ msgstr "Scheiding tussen inhoudsopgave-vermeldingen toevoegen"
-
 #~ msgid "Go to"
 #~ msgstr "Ga naar"
 
@@ -16722,9 +16808,6 @@ msgstr "Tik op de rechterbovenhoek"
 
 #~ msgid "Time to read"
 #~ msgstr "Tijd om te lezen"
-
-#~ msgid "Total notes"
-#~ msgstr "Totaal aantal aantekeningen"
 
 #~ msgid "Total days"
 #~ msgstr "Totaal aantal dagen"

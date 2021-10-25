@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 13:34+0000\n"
+"POT-Creation-Date: 2021-10-25 18:24+0000\n"
 "PO-Revision-Date: 2021-10-25 14:42+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -157,8 +157,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:431
-#: frontend/apps/reader/modules/readerbookmark.lua:657
+#: frontend/apps/reader/modules/readerbookmark.lua:875
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readergoto.lua:58
@@ -311,7 +310,8 @@ msgid "Choose local folder"
 msgstr "내 기기의 폴더를 선택하세요"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:454
+#: frontend/apps/reader/modules/readerbookmark.lua:591
+#: frontend/apps/reader/modules/readerbookmark.lua:671
 #: frontend/apps/reader/modules/readerhighlight.lua:1173
 #: frontend/apps/reader/modules/readerhighlight.lua:1209
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -404,6 +404,7 @@ msgstr "드롭박스 계정 설정"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
+#: frontend/apps/reader/modules/readerbookmark.lua:597
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:43
 #: frontend/ui/widget/datetimewidget.lua:35
@@ -875,7 +876,6 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanager.lua:296
 #: frontend/apps/filemanager/filemanager.lua:312
-#: frontend/apps/reader/modules/readerbookmark.lua:663
 msgid "Rename"
 msgstr "이름바꾸기"
 
@@ -1689,70 +1689,72 @@ msgstr "홈"
 msgid "Location history is empty."
 msgstr "위치 내역이 비어 있습니다."
 
-#: frontend/apps/reader/modules/readerbookmark.lua:22
-#: frontend/apps/reader/modules/readerbookmark.lua:81
-#: frontend/apps/reader/modules/readerbookmark.lua:375
+#: frontend/apps/reader/modules/readerbookmark.lua:63
+#: frontend/apps/reader/modules/readerbookmark.lua:87
+#: frontend/apps/reader/modules/readerbookmark.lua:403
+#: frontend/apps/reader/modules/readerbookmark.lua:470
+#: frontend/apps/reader/modules/readerbookmark.lua:505
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "책갈피 목록"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:23
-msgid "Bookmark browsing mode"
-msgstr "책갈피 검색 모드"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:64
+#: frontend/apps/reader/modules/readerbookmark.lua:70
 msgid "Remove bookmark for current page"
 msgstr "현재 페이지에서 책갈피 제거"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:64
+#: frontend/apps/reader/modules/readerbookmark.lua:70
 msgid "Bookmark current page"
 msgstr "이 페이지에 책갈피 지정"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:86
+#: frontend/apps/reader/modules/readerbookmark.lua:78
+msgid "Bookmark browsing mode"
+msgstr "책갈피 검색 모드"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:92
 msgid "Bookmarks per page: %1"
 msgstr "페이지 당 책갈피: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:97
+#: frontend/apps/reader/modules/readerbookmark.lua:103
 msgid "Bookmarks per page"
 msgstr "페이지 당 책갈피"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:111
+#: frontend/apps/reader/modules/readerbookmark.lua:117
 msgid "Bookmark font size: %1"
 msgstr "책갈피 글씨 크기: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:124
+#: frontend/apps/reader/modules/readerbookmark.lua:130
 msgid "Bookmark font size"
 msgstr "책갈피 글씨 크기"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:134
+#: frontend/apps/reader/modules/readerbookmark.lua:140
 msgid "Shrink bookmark font size to fit more text"
 msgstr "더 많은 내용에 맞게 글꼴 크기 축소"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:143
-msgid "Add page number / timestamp to bookmark"
-msgstr "페이지 번호/타임스탬프를 책갈피에 추가"
+#: frontend/apps/reader/modules/readerbookmark.lua:149
+#, fuzzy
+msgid "Show separator between items"
+msgstr "차례 항목 사이에 구분선 추가"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:152
+#: frontend/apps/reader/modules/readerbookmark.lua:158
 msgid "Sort by largest page number"
 msgstr "페이지 번호가 큰 순서로 정렬"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:413
-msgid "Bookmark details"
-msgstr "책갈피 상세정보"
+#: frontend/apps/reader/modules/readerbookmark.lua:167
+msgid "Add page number / timestamp to bookmark"
+msgstr "페이지 번호/타임스탬프를 책갈피에 추가"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:420
-msgid "Rename this bookmark"
-msgstr "이 책갈피 이름바꾸기"
+#: frontend/apps/reader/modules/readerbookmark.lua:455
+msgid "No bookmarks selected"
+msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-msgid "Remove this bookmark"
-msgstr "책갈피 제거"
+#: frontend/apps/reader/modules/readerbookmark.lua:457
+#, fuzzy
+msgid "Remove selected bookmark?"
+msgid_plural "Remove %1 selected bookmarks?"
+msgstr[0] "이 책갈피를 제거할까요?"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:430
-msgid "Remove this bookmark?"
-msgstr "이 책갈피를 제거할까요?"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:435
+#: frontend/apps/reader/modules/readerbookmark.lua:461
+#: frontend/apps/reader/modules/readerbookmark.lua:545
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:407
 #: plugins/statistics.koplugin/main.lua:2118
@@ -1760,24 +1762,126 @@ msgstr "이 책갈피를 제거할까요?"
 msgid "Remove"
 msgstr "제거"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:648
-msgid "Rename bookmark"
-msgstr "책갈피 이름바꾸기"
+#: frontend/apps/reader/modules/readerbookmark.lua:470
+#: frontend/apps/reader/modules/readerbookmark.lua:505
+#: frontend/apps/reader/modules/readerbookmark.lua:626
+#, fuzzy
+msgid "Bookmarks (filtered)"
+msgstr "페이지 당 책갈피"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:649
+#: frontend/apps/reader/modules/readerbookmark.lua:475
+#, fuzzy
+msgid "Deselect all"
+msgstr "모두 비활성화"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:487
+#, fuzzy
+msgid "Select all"
+msgstr "선택"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:497
+#, fuzzy
+msgid "Exit select mode"
+msgstr "전문가 모드"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:509
+#, fuzzy
+msgid "Select page"
+msgstr "선택"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:525
+#: frontend/apps/reader/modules/readerbookmark.lua:867
 msgid "Page: %1"
 msgstr "페이지: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:649
-msgid "Time: %2"
+#: frontend/apps/reader/modules/readerbookmark.lua:525
+#: frontend/apps/reader/modules/readerbookmark.lua:867
+#, fuzzy
+msgid "Time: %1"
 msgstr "시간: %2"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:535
+msgid "Bookmark details"
+msgstr "책갈피 상세정보"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:541
+#, fuzzy
+msgid "Remove bookmark"
+msgstr "책갈피 이름바꾸기"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:544
+#, fuzzy
+msgid "Remove bookmark?"
+msgstr "이 책갈피를 제거할까요?"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:562
+#: frontend/apps/reader/modules/readerhighlight.lua:659
+msgid "Add note"
+msgstr "메모 추가"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:562
+#: frontend/apps/reader/modules/readerbookmark.lua:866
+#: frontend/apps/reader/modules/readerhighlight.lua:659
+msgid "Edit note"
+msgstr "메모 편집"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:572
+msgid "Bulk remove"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:577
+#, fuzzy
+msgid "Bookmarks (select mode)"
+msgstr "책갈피 검색 모드"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:581
+#: frontend/apps/reader/modules/readerbookmark.lua:586
+#, fuzzy
+msgid "Filter bookmarks"
+msgstr "책갈피 켜거나 끄기"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:587
+msgid "(containing text)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:635
+#, fuzzy
+msgid "highlights"
+msgstr "하이라이트"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:645
+#, fuzzy
+msgid "notes"
+msgstr "전체 노트"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:655
+#, fuzzy
+msgid "page bookmarks"
+msgstr "책갈피 이름바꾸기"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:881
+#: frontend/apps/reader/modules/readerstyletweak.lua:641
+#: frontend/apps/reader/modules/readeruserhyph.lua:203
+#: frontend/apps/reader/modules/readerwikipedia.lua:161
+#: frontend/apps/reader/readerui.lua:742 frontend/ui/widget/inputdialog.lua:694
+#: frontend/ui/widget/inputdialog.lua:735
+#: plugins/coverimage.koplugin/main.lua:355
+#: plugins/gestures.koplugin/main.lua:335
+#: plugins/newsdownloader.koplugin/main.lua:749
+#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
+#: plugins/terminal.koplugin/main.lua:242
+#: plugins/terminal.koplugin/main.lua:277
+#: plugins/terminal.koplugin/main.lua:335
+#: plugins/terminal.koplugin/main.lua:365
+msgid "Save"
+msgstr "저장"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:712
+#: frontend/apps/reader/modules/readerbookmark.lua:935
 msgid "in %1"
 msgstr "%1 안에"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:862
+#: frontend/apps/reader/modules/readerbookmark.lua:1085
 msgid "Page %1 %2 @ %3"
 msgstr "%1쪽 @%3 %2"
 
@@ -3021,14 +3125,6 @@ msgstr "내용 선택한 곳으로 돌아가기"
 msgid "Style"
 msgstr "스타일"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:659
-msgid "Add note"
-msgstr "메모 추가"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:659
-msgid "Edit note"
-msgstr "메모 편집"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:667
 msgid "…"
 msgstr "…"
@@ -3765,14 +3861,16 @@ msgid ""
 "Complex expressions may lead to an extremely long search time, in which case "
 "not all matches will be shown."
 msgstr ""
-"정규 표현식을 사용하면 텍스트에서 일치하는 패턴을 검색할 수 있습니다. 가장 단순한 패턴은 '제임스 본드'와 같은 단순한 문자 "
-"연결입니다. 다양한 정규 표현식이 있지만 ECMAScript 구문을 지원합니다. 기본 사항은 아래에서 설명합니다.\n"
+"정규 표현식을 사용하면 텍스트에서 일치하는 패턴을 검색할 수 있습니다. 가장 단"
+"순한 패턴은 '제임스 본드'와 같은 단순한 문자 연결입니다. 다양한 정규 표현식"
+"이 있지만 ECMAScript 구문을 지원합니다. 기본 사항은 아래에서 설명합니다.\n"
 "\n"
-"'Mister Moore'나 'Sir Moore', 'Alfons Moore'의 모든 항목을 검색하지만 'Lady Moore'는 검색하지 "
-"않으려는 경우.\n"
+"'Mister Moore'나 'Sir Moore', 'Alfons Moore'의 모든 항목을 검색하지만 'Lady "
+"Moore'는 검색하지 않으려는 경우.\n"
 "'Mister Moore|Sir Moore|Alfons Moore'를 입력하세요.\n"
 "\n"
-"검색에 ^$.*+?()[]{}|\\/의 특수 문자가 포함되어 있으면 해당 문자 앞에 \\를 넣어야 합니다.\n"
+"검색에 ^$.*+?()[]{}|\\/의 특수 문자가 포함되어 있으면 해당 문자 앞에 \\를 넣"
+"어야 합니다.\n"
 "\n"
 "예:\n"
 "'os'를 포함하는 단어 -> '[^ ]+os[^ ]+'\n"
@@ -3784,7 +3882,8 @@ msgstr ""
 "한 낱말 -> '[^ ]*[^ ]'\n"
 "문장의 마지막 낱말 -> '[^ ]*\\.'\n"
 "\n"
-"복잡한 표현식은 검색 시간이 매우 길어질 수 있으며, 이 경우 모든 일치 항목이 표시되지 않습니다."
+"복잡한 표현식은 검색 시간이 매우 길어질 수 있으며, 이 경우 모든 일치 항목이 "
+"표시되지 않습니다."
 
 #: frontend/apps/reader/modules/readersearch.lua:60
 msgid "Wrong escape '\\'"
@@ -4031,22 +4130,6 @@ msgstr "샘플 사용"
 #: frontend/apps/reader/modules/readerstyletweak.lua:615
 msgid "Condense"
 msgstr "축소"
-
-#: frontend/apps/reader/modules/readerstyletweak.lua:641
-#: frontend/apps/reader/modules/readeruserhyph.lua:203
-#: frontend/apps/reader/modules/readerwikipedia.lua:161
-#: frontend/apps/reader/readerui.lua:742 frontend/ui/widget/inputdialog.lua:694
-#: frontend/ui/widget/inputdialog.lua:735
-#: plugins/coverimage.koplugin/main.lua:355
-#: plugins/gestures.koplugin/main.lua:335
-#: plugins/newsdownloader.koplugin/main.lua:749
-#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
-#: plugins/terminal.koplugin/main.lua:242
-#: plugins/terminal.koplugin/main.lua:277
-#: plugins/terminal.koplugin/main.lua:335
-#: plugins/terminal.koplugin/main.lua:365
-msgid "Save"
-msgstr "저장"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:645
 msgid "Book tweak not modified."
@@ -5755,10 +5838,11 @@ msgid ""
 "In order to disable a language plugin, you need to disable it from the "
 "Plugin Management menu."
 msgstr ""
-"이 메뉴를 사용하여 KOReader의 언어 지원 플러그인과 관련 설정을 관리할 수 있습니다.\n"
+"이 메뉴를 사용하여 KOReader의 언어 지원 플러그인과 관련 설정을 관리할 수 있습"
+"니다.\n"
 "\n"
-"이 플러그인은 KOReader에 언어별 도우미를 제공하여 대부분의 유럽 언어와 비교할 때 추가 처리가 필요한 언어의 읽기 경험을 "
-"향상시킵니다.\n"
+"이 플러그인은 KOReader에 언어별 도우미를 제공하여 대부분의 유럽 언어와 비교"
+"할 때 추가 처리가 필요한 언어의 읽기 경험을 향상시킵니다.\n"
 "\n"
 "언어 플러그인을 비활성화하려면 플러그인 관리 메뉴에서 비활성화해야 합니다."
 
@@ -12628,7 +12712,8 @@ msgstr "반각을 전각 가나로"
 msgid ""
 "Convert half-width katakana to full-width katakana (for instance, ｶﾀｶﾅ will "
 "be converted to カタカナ)."
-msgstr "반각 가타카나를 전자 가타카나로 변환합니다(예: ｶﾀｶﾅ는 カタカナ로 변환됨)."
+msgstr ""
+"반각 가타카나를 전자 가타카나로 변환합니다(예: ｶﾀｶﾅ는 カタカナ로 변환됨)."
 
 #: plugins/japanese.koplugin/deinflector.lua:283
 msgid "Hiragana to katakana"
@@ -12662,7 +12747,9 @@ msgid ""
 "Collapse any character sequences which are sometimes used as emphasis in "
 "speech (for instance, すっっごーーい will be converted to both すっごーい "
 "and すごい)."
-msgstr "때때로 연설에서 강조로 사용되는 모든 문자 열결을 축소합니다(예: すっご-い는 すっご-い 및 すごい로 변환됨)."
+msgstr ""
+"때때로 연설에서 강조로 사용되는 모든 문자 열결을 축소합니다(예: すっご-い는 "
+"すっご-い 및 すごい로 변환됨)."
 
 #: plugins/japanese.koplugin/deinflector.lua:398
 msgid "Text conversions: none enabled"
@@ -12685,11 +12772,13 @@ msgid ""
 "the chance of at least one conversion matching the form used in the "
 "dictionary."
 msgstr ""
-"일본어 텍스트를 deinflect하려고 할 때 적용할 텍스트 변환을 구성합니다. 여기에는 설치된 사전에 다른 가나를 사용하여 작성된 "
-"단어를 계속 조회할 수 있도록 하기 위해 주로 다른 종류의 가나 간의 변환이 포함됩니다.\n"
+"일본어 텍스트를 deinflect하려고 할 때 적용할 텍스트 변환을 구성합니다. 여기에"
+"는 설치된 사전에 다른 가나를 사용하여 작성된 단어를 계속 조회할 수 있도록 하"
+"기 위해 주로 다른 종류의 가나 간의 변환이 포함됩니다.\n"
 "\n"
-"모든 전환이 한 번에 적용되는 것은 아닙니다. 대신 사전에 사용된 형식과 일치하는 하나 이상의 변환 가능성을 최대화하기 위해 활성화된 "
-"변환의 가능한 모든 조합이 시도됩니다."
+"모든 전환이 한 번에 적용되는 것은 아닙니다. 대신 사전에 사용된 형식과 일치하"
+"는 하나 이상의 변환 가능성을 최대화하기 위해 활성화된 변환의 가능한 모든 조합"
+"이 시도됩니다."
 
 #. @translators A deinflector is a program which converts a word into its dictionary form, similar to deconjugation in European languages. See <https://en.wikipedia.org/wiki/Japanese_verb_conjugation> for more detail.
 #: plugins/japanese.koplugin/deinflector.lua:411
@@ -12720,7 +12809,8 @@ msgstr[0] "텍스트 스캔 길이: %1 문자"
 msgid ""
 "Number of characters to look ahead when trying to expand tap-and-hold word "
 "selection in documents."
-msgstr "문서에서 길게 탭하여 선택된 낱말을 확장하려고 할 때 미리 볼 글자 수입니다."
+msgstr ""
+"문서에서 길게 탭하여 선택된 낱말을 확장하려고 할 때 미리 볼 글자 수입니다."
 
 #: plugins/japanese.koplugin/main.lua:214
 msgid "Text scan length"
@@ -12735,8 +12825,10 @@ msgid ""
 "\n"
 "Default value: %1"
 msgstr ""
-"문서에서 선택된 낱말을 길게 눌러 확장하려고 할 때 미리 볼 수 있는 최대 글자 수입니다.\n"
-"값이 클수록 더 긴 문구를 자동으로 선택할 수 있지만 선택이 느려질 수 있는 단점이 있습니다.\n"
+"문서에서 선택된 낱말을 길게 눌러 확장하려고 할 때 미리 볼 수 있는 최대 글자 "
+"수입니다.\n"
+"값이 클수록 더 긴 문구를 자동으로 선택할 수 있지만 선택이 느려질 수 있는 단점"
+"이 있습니다.\n"
 "\n"
 "기본값: %1"
 
@@ -12763,11 +12855,13 @@ msgid ""
 msgstr ""
 "요미칸을 모델로 한 KOReader의 일본어 지원.\n"
 "\n"
-"이 플러그인은 KOReader의 내장 사전과 선택 시스템을 확장하여 요미칸 스타일의 deinflection 변형 및 텍스트 스캔을 "
-"지원하여 deinflected 동사와 여러 문자 단어 및 구를 한 번의 탭으로 검색할 수 있습니다. 따라서 이 플러그인은 "
-"StarDict으로 변환된 일본어 사전에 대한 동의어 기반 변형 규칙의 필요성을 제거합니다.\n"
+"이 플러그인은 KOReader의 내장 사전과 선택 시스템을 확장하여 요미칸 스타일의 "
+"deinflection 변형 및 텍스트 스캔을 지원하여 deinflected 동사와 여러 문자 단"
+"어 및 구를 한 번의 탭으로 검색할 수 있습니다. 따라서 이 플러그인은 StarDict으"
+"로 변환된 일본어 사전에 대한 동의어 기반 변형 규칙의 필요성을 제거합니다.\n"
 "\n"
-"이 플러그인이 일본어 텍스트와 원활하게 작동하려면 적어도 하나의 일본어 사전이 설치되어 있어야 합니다."
+"이 플러그인이 일본어 텍스트와 원활하게 작동하려면 적어도 하나의 일본어 사전"
+"이 설치되어 있어야 합니다."
 
 #: plugins/keepalive.koplugin/main.lua:9 plugins/keepalive.koplugin/_meta.lua:4
 msgid "Keep alive"
@@ -15172,6 +15266,12 @@ msgstr "하단 오른쪽 모서리 탭"
 msgid "Tap the upper right corner"
 msgstr "상단 오른쪽 모서리 탭"
 
+#~ msgid "Rename this bookmark"
+#~ msgstr "이 책갈피 이름바꾸기"
+
+#~ msgid "Remove this bookmark"
+#~ msgstr "책갈피 제거"
+
 #~ msgid "Purge .sdr"
 #~ msgstr ".sdr 제거"
 
@@ -15801,9 +15901,6 @@ msgstr "상단 오른쪽 모서리 탭"
 #~ "간격 값은 밀리 초이며 범위는 100(0.1 초)에서 2000(2 초)까지입니다.\n"
 #~ "기본값 : %1"
 
-#~ msgid "Add a separator between ToC entries"
-#~ msgstr "차례 항목 사이에 구분선 추가"
-
 #~ msgid "Go to"
 #~ msgstr "이동"
 
@@ -16369,9 +16466,6 @@ msgstr "상단 오른쪽 모서리 탭"
 
 #~ msgid "Time to read"
 #~ msgstr "예상 완독 시간"
-
-#~ msgid "Total notes"
-#~ msgstr "전체 노트"
 
 #~ msgid "Total days"
 #~ msgstr "전체 날짜"

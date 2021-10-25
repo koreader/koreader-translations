@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 13:34+0000\n"
+"POT-Creation-Date: 2021-10-25 18:24+0000\n"
 "PO-Revision-Date: 2021-10-25 14:42+0000\n"
 "Last-Translator: zwim <martin.zwicknagl@kirchbichl.net>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -164,8 +164,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:431
-#: frontend/apps/reader/modules/readerbookmark.lua:657
+#: frontend/apps/reader/modules/readerbookmark.lua:875
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readergoto.lua:58
@@ -321,7 +320,8 @@ msgid "Choose local folder"
 msgstr "Wähle lokalen Ordner"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:454
+#: frontend/apps/reader/modules/readerbookmark.lua:591
+#: frontend/apps/reader/modules/readerbookmark.lua:671
 #: frontend/apps/reader/modules/readerhighlight.lua:1173
 #: frontend/apps/reader/modules/readerhighlight.lua:1209
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -414,6 +414,7 @@ msgstr "Dropbox Account bearbeiten"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
+#: frontend/apps/reader/modules/readerbookmark.lua:597
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:43
 #: frontend/ui/widget/datetimewidget.lua:35
@@ -885,7 +886,6 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanager.lua:296
 #: frontend/apps/filemanager/filemanager.lua:312
-#: frontend/apps/reader/modules/readerbookmark.lua:663
 msgid "Rename"
 msgstr "Umbenennen"
 
@@ -1706,70 +1706,73 @@ msgstr "Home"
 msgid "Location history is empty."
 msgstr "Positionsverlauf ist leer."
 
-#: frontend/apps/reader/modules/readerbookmark.lua:22
-#: frontend/apps/reader/modules/readerbookmark.lua:81
-#: frontend/apps/reader/modules/readerbookmark.lua:375
+#: frontend/apps/reader/modules/readerbookmark.lua:63
+#: frontend/apps/reader/modules/readerbookmark.lua:87
+#: frontend/apps/reader/modules/readerbookmark.lua:403
+#: frontend/apps/reader/modules/readerbookmark.lua:470
+#: frontend/apps/reader/modules/readerbookmark.lua:505
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "Lesezeichen"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:23
-msgid "Bookmark browsing mode"
-msgstr "Lesezeichen Bättern-Modus"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:64
+#: frontend/apps/reader/modules/readerbookmark.lua:70
 msgid "Remove bookmark for current page"
 msgstr "Entferne Lesezeichen auf aktueller Seite"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:64
+#: frontend/apps/reader/modules/readerbookmark.lua:70
 msgid "Bookmark current page"
 msgstr "Lesezeichen auf aktueller Seite"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:86
+#: frontend/apps/reader/modules/readerbookmark.lua:78
+msgid "Bookmark browsing mode"
+msgstr "Lesezeichen Bättern-Modus"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:92
 msgid "Bookmarks per page: %1"
 msgstr "Lesezeichen pro Seite: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:97
+#: frontend/apps/reader/modules/readerbookmark.lua:103
 msgid "Bookmarks per page"
 msgstr "Lesezeichen pro Seite"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:111
+#: frontend/apps/reader/modules/readerbookmark.lua:117
 msgid "Bookmark font size: %1"
 msgstr "Lesezeichen-Schriftgröße: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:124
+#: frontend/apps/reader/modules/readerbookmark.lua:130
 msgid "Bookmark font size"
 msgstr "Lesezeichen-Schriftgröße"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:134
+#: frontend/apps/reader/modules/readerbookmark.lua:140
 msgid "Shrink bookmark font size to fit more text"
 msgstr "Schriftgröße des Lesezeichens verkleinern, um mehr Text anzuzeigen"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:143
-msgid "Add page number / timestamp to bookmark"
-msgstr "Seitennummer / Zeitstempel zum Lesezeichen hinzufügen"
+#: frontend/apps/reader/modules/readerbookmark.lua:149
+#, fuzzy
+msgid "Show separator between items"
+msgstr "Trennzeichen zwischen Inhaltsverzeichnis-Einträgen hinzufügen"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:152
+#: frontend/apps/reader/modules/readerbookmark.lua:158
 msgid "Sort by largest page number"
 msgstr "Sortieren nach größter Seitenzahl"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:413
-msgid "Bookmark details"
-msgstr "Lesezeichen Details"
+#: frontend/apps/reader/modules/readerbookmark.lua:167
+msgid "Add page number / timestamp to bookmark"
+msgstr "Seitennummer / Zeitstempel zum Lesezeichen hinzufügen"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:420
-msgid "Rename this bookmark"
-msgstr "Dieses Lesezeichen umbenennen"
+#: frontend/apps/reader/modules/readerbookmark.lua:455
+msgid "No bookmarks selected"
+msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-msgid "Remove this bookmark"
-msgstr "Lösche dieses Lesezeichen"
+#: frontend/apps/reader/modules/readerbookmark.lua:457
+#, fuzzy
+msgid "Remove selected bookmark?"
+msgid_plural "Remove %1 selected bookmarks?"
+msgstr[0] "Dieses Lesezeichen entfernen?"
+msgstr[1] "Dieses Lesezeichen entfernen?"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:430
-msgid "Remove this bookmark?"
-msgstr "Dieses Lesezeichen entfernen?"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:435
+#: frontend/apps/reader/modules/readerbookmark.lua:461
+#: frontend/apps/reader/modules/readerbookmark.lua:545
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:407
 #: plugins/statistics.koplugin/main.lua:2118
@@ -1777,24 +1780,126 @@ msgstr "Dieses Lesezeichen entfernen?"
 msgid "Remove"
 msgstr "Entfernen"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:648
-msgid "Rename bookmark"
-msgstr "Lesezeichen umbenennen"
+#: frontend/apps/reader/modules/readerbookmark.lua:470
+#: frontend/apps/reader/modules/readerbookmark.lua:505
+#: frontend/apps/reader/modules/readerbookmark.lua:626
+#, fuzzy
+msgid "Bookmarks (filtered)"
+msgstr "Lesezeichen pro Seite"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:649
+#: frontend/apps/reader/modules/readerbookmark.lua:475
+#, fuzzy
+msgid "Deselect all"
+msgstr "Alle deaktivieren"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:487
+#, fuzzy
+msgid "Select all"
+msgstr "Auswählen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:497
+#, fuzzy
+msgid "Exit select mode"
+msgstr "Experten-Modus"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:509
+#, fuzzy
+msgid "Select page"
+msgstr "Auswählen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:525
+#: frontend/apps/reader/modules/readerbookmark.lua:867
 msgid "Page: %1"
 msgstr "Seite: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:649
-msgid "Time: %2"
+#: frontend/apps/reader/modules/readerbookmark.lua:525
+#: frontend/apps/reader/modules/readerbookmark.lua:867
+#, fuzzy
+msgid "Time: %1"
 msgstr "Zeit: %2"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:535
+msgid "Bookmark details"
+msgstr "Lesezeichen Details"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:541
+#, fuzzy
+msgid "Remove bookmark"
+msgstr "Lesezeichen umbenennen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:544
+#, fuzzy
+msgid "Remove bookmark?"
+msgstr "Dieses Lesezeichen entfernen?"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:562
+#: frontend/apps/reader/modules/readerhighlight.lua:659
+msgid "Add note"
+msgstr "Notiz ergänzen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:562
+#: frontend/apps/reader/modules/readerbookmark.lua:866
+#: frontend/apps/reader/modules/readerhighlight.lua:659
+msgid "Edit note"
+msgstr "Notiz ändern"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:572
+msgid "Bulk remove"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:577
+#, fuzzy
+msgid "Bookmarks (select mode)"
+msgstr "Lesezeichen Bättern-Modus"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:581
+#: frontend/apps/reader/modules/readerbookmark.lua:586
+#, fuzzy
+msgid "Filter bookmarks"
+msgstr "Lesezeichen umschalten"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:587
+msgid "(containing text)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerbookmark.lua:635
+#, fuzzy
+msgid "highlights"
+msgstr "Höhepunkte"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:645
+#, fuzzy
+msgid "notes"
+msgstr "Anzahl Notizen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:655
+#, fuzzy
+msgid "page bookmarks"
+msgstr "Lesezeichen umbenennen"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:881
+#: frontend/apps/reader/modules/readerstyletweak.lua:641
+#: frontend/apps/reader/modules/readeruserhyph.lua:203
+#: frontend/apps/reader/modules/readerwikipedia.lua:161
+#: frontend/apps/reader/readerui.lua:742 frontend/ui/widget/inputdialog.lua:694
+#: frontend/ui/widget/inputdialog.lua:735
+#: plugins/coverimage.koplugin/main.lua:355
+#: plugins/gestures.koplugin/main.lua:335
+#: plugins/newsdownloader.koplugin/main.lua:749
+#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
+#: plugins/terminal.koplugin/main.lua:242
+#: plugins/terminal.koplugin/main.lua:277
+#: plugins/terminal.koplugin/main.lua:335
+#: plugins/terminal.koplugin/main.lua:365
+msgid "Save"
+msgstr "Speichern"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:712
+#: frontend/apps/reader/modules/readerbookmark.lua:935
 msgid "in %1"
 msgstr "in %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:862
+#: frontend/apps/reader/modules/readerbookmark.lua:1085
 msgid "Page %1 %2 @ %3"
 msgstr "Seite %1 %2 @ %3"
 
@@ -3056,14 +3161,6 @@ msgstr "Greifen Sie auf die Textauswahl zurück"
 msgid "Style"
 msgstr "Stil"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:659
-msgid "Add note"
-msgstr "Notiz ergänzen"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:659
-msgid "Edit note"
-msgstr "Notiz ändern"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:667
 msgid "…"
 msgstr "…"
@@ -4112,22 +4209,6 @@ msgstr "Beispiel verwenden"
 #: frontend/apps/reader/modules/readerstyletweak.lua:615
 msgid "Condense"
 msgstr "Zusammenfassen"
-
-#: frontend/apps/reader/modules/readerstyletweak.lua:641
-#: frontend/apps/reader/modules/readeruserhyph.lua:203
-#: frontend/apps/reader/modules/readerwikipedia.lua:161
-#: frontend/apps/reader/readerui.lua:742 frontend/ui/widget/inputdialog.lua:694
-#: frontend/ui/widget/inputdialog.lua:735
-#: plugins/coverimage.koplugin/main.lua:355
-#: plugins/gestures.koplugin/main.lua:335
-#: plugins/newsdownloader.koplugin/main.lua:749
-#: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
-#: plugins/terminal.koplugin/main.lua:242
-#: plugins/terminal.koplugin/main.lua:277
-#: plugins/terminal.koplugin/main.lua:335
-#: plugins/terminal.koplugin/main.lua:365
-msgid "Save"
-msgstr "Speichern"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:645
 msgid "Book tweak not modified."
@@ -15589,6 +15670,12 @@ msgstr "Die untere rechte Ecke tippen"
 msgid "Tap the upper right corner"
 msgstr "Die obere rechte Ecke tippen"
 
+#~ msgid "Rename this bookmark"
+#~ msgstr "Dieses Lesezeichen umbenennen"
+
+#~ msgid "Remove this bookmark"
+#~ msgstr "Lösche dieses Lesezeichen"
+
 #~ msgid "Purge .sdr"
 #~ msgstr ".sdr säubern"
 
@@ -16273,9 +16360,6 @@ msgstr "Die obere rechte Ecke tippen"
 #~ "Sekunden) bis 2000 (2 Sekunden) reichen.\n"
 #~ "Standardwert: %1"
 
-#~ msgid "Add a separator between ToC entries"
-#~ msgstr "Trennzeichen zwischen Inhaltsverzeichnis-Einträgen hinzufügen"
-
 #~ msgid "Go to"
 #~ msgstr "Gehe zu"
 
@@ -16853,9 +16937,6 @@ msgstr "Die obere rechte Ecke tippen"
 
 #~ msgid "Time to read"
 #~ msgstr "Zeit zu lesen"
-
-#~ msgid "Total notes"
-#~ msgstr "Anzahl Notizen"
 
 #~ msgid "Total days"
 #~ msgstr "Anzahl Tage"
