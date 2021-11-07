@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-06 07:14+0000\n"
+"POT-Creation-Date: 2021-11-07 18:26+0000\n"
 "PO-Revision-Date: 2021-11-01 22:56+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -327,7 +327,7 @@ msgstr "Choisir le dossier local"
 #: frontend/apps/reader/modules/readerhighlight.lua:1189
 #: frontend/apps/reader/modules/readerhighlight.lua:1225
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
-#: frontend/ui/elements/menu_keyboard_layout.lua:37
+#: frontend/ui/elements/menu_keyboard_layout.lua:38
 #: frontend/ui/screensaver.lua:255 frontend/ui/screensaver.lua:315
 #: frontend/ui/widget/datetimewidget.lua:36
 #: frontend/ui/widget/dictquicklookup.lua:422
@@ -418,7 +418,7 @@ msgstr "Modifier le compte Dropbox"
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
 #: frontend/apps/reader/modules/readerbookmark.lua:597
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
-#: frontend/ui/elements/menu_keyboard_layout.lua:43
+#: frontend/ui/elements/menu_keyboard_layout.lua:44
 #: frontend/ui/widget/datetimewidget.lua:35
 #: frontend/ui/widget/doublespinwidget.lua:42
 #: frontend/ui/widget/radiobuttonwidget.lua:32
@@ -7498,6 +7498,55 @@ msgstr "CC BY-SA 2.5"
 msgid "GNU/FDL"
 msgstr "GNU/FDL"
 
+#. @translators Keitai input is a kind of Japanese keyboard input mode (similar to T9 keypad input). See <https://en.wikipedia.org/wiki/Japanese_input_method#Mobile_phones> for more information.
+#: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:130
+#, fuzzy
+msgid "Keitai tap interval: %1 second"
+msgid_plural "Keitai tap interval: %1 seconds"
+msgstr[0] "Fréquence de vérification (%1 min)"
+msgstr[1] "Fréquence de vérification (%1 min)"
+
+#. @translators Flick and keitai are kinds of Japanese keyboard input modes. See <https://en.wikipedia.org/wiki/Japanese_input_method#Mobile_phones> for more information.
+#: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:133
+msgid "Keitai input: disabled (flick-only input)"
+msgstr ""
+
+#: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:136
+msgid ""
+"How long to wait for the next tap when in keitai input mode before "
+"committing to the current character. During this window, tapping a single "
+"key will loop through candidates for the current character being input. Any "
+"other input will cause you to leave keitai mode."
+msgstr ""
+
+#: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:143
+#, fuzzy
+msgid "Keitai tap interval"
+msgstr "Intervalle des touchers doubles"
+
+#: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:144
+msgid ""
+"How long to wait (in seconds) for the next tap when in keitai input mode "
+"before committing to the current character. During this window, tapping a "
+"single key will loop through candidates for the current character being "
+"input. Any other input will cause you to leave keitai mode.\n"
+"\n"
+"If set to 0, keitai input is disabled entirely and only flick input can be "
+"used.\n"
+"\n"
+"Default value: %1"
+msgstr ""
+
+#: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:155
+#: plugins/gestures.koplugin/main.lua:491
+#: plugins/gestures.koplugin/main.lua:519
+#: plugins/gestures.koplugin/main.lua:547
+#: plugins/gestures.koplugin/main.lua:605
+#: plugins/gestures.koplugin/main.lua:634
+#: plugins/readtimer.koplugin/main.lua:126
+msgid "Set interval"
+msgstr "Définir l’intervalle"
+
 #: frontend/ui/data/koptoptions.lua:83
 msgid "Page Crop"
 msgstr "Recadrage"
@@ -8463,33 +8512,37 @@ msgstr "Avec un balayage"
 msgid "Auto-show bottom menu"
 msgstr "Affichage automatique du menu du bas"
 
-#: frontend/ui/elements/menu_keyboard_layout.lua:13
+#: frontend/ui/elements/menu_keyboard_layout.lua:14
 #: frontend/ui/widget/keyboardlayoutdialog.lua:29
 msgid "Keyboard layout"
 msgstr "Disposition du clavier"
 
-#: frontend/ui/elements/menu_keyboard_layout.lua:17
+#: frontend/ui/elements/menu_keyboard_layout.lua:18
 msgid "Remember last layout"
 msgstr "Se souvenir de la dernière disposition"
 
-#: frontend/ui/elements/menu_keyboard_layout.lua:27
-#: frontend/ui/elements/menu_keyboard_layout.lua:31
+#: frontend/ui/elements/menu_keyboard_layout.lua:28
+#: frontend/ui/elements/menu_keyboard_layout.lua:32
 msgid "Keyboard font size"
 msgstr "Taille de la police du clavier"
 
-#: frontend/ui/elements/menu_keyboard_layout.lua:63
+#: frontend/ui/elements/menu_keyboard_layout.lua:64
 msgid "in bold"
 msgstr "en gras"
 
-#: frontend/ui/elements/menu_keyboard_layout.lua:73
+#: frontend/ui/elements/menu_keyboard_layout.lua:74
 msgid "with border"
 msgstr "avec bordure"
 
-#: frontend/ui/elements/menu_keyboard_layout.lua:83
+#: frontend/ui/elements/menu_keyboard_layout.lua:84
 msgid "compact"
 msgstr "compact"
 
-#: frontend/ui/elements/menu_keyboard_layout.lua:122
+#: frontend/ui/elements/menu_keyboard_layout.lua:99
+msgid "Layout-specific keyboard settings"
+msgstr ""
+
+#: frontend/ui/elements/menu_keyboard_layout.lua:127
 msgid "Up to four layouts can be enabled."
 msgstr "Il est possible d’activer jusqu’à quatre dispositions."
 
@@ -12904,15 +12957,6 @@ msgstr ""
 "La valeur de l’intervalle peut aller de 100 (0,1 seconde) à 2000 (2 "
 "secondes).\n"
 "Valeur par défaut : %1"
-
-#: plugins/gestures.koplugin/main.lua:491
-#: plugins/gestures.koplugin/main.lua:519
-#: plugins/gestures.koplugin/main.lua:547
-#: plugins/gestures.koplugin/main.lua:605
-#: plugins/gestures.koplugin/main.lua:634
-#: plugins/readtimer.koplugin/main.lua:126
-msgid "Set interval"
-msgstr "Définir l’intervalle"
 
 #: plugins/gestures.koplugin/main.lua:502
 #: plugins/gestures.koplugin/main.lua:507
