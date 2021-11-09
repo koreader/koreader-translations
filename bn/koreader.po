@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-07 18:32+0000\n"
+"POT-Creation-Date: 2021-11-09 17:08+0000\n"
 "PO-Revision-Date: 2021-07-31 03:52+0000\n"
 "Last-Translator: Tushar Bakshi <tusharbakshi6@gmail.com>\n"
 "Language-Team: Bengali <https://hosted.weblate.org/projects/koreader/"
@@ -153,6 +153,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:875
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
+#: frontend/apps/reader/modules/readerfooter.lua:647
 #: frontend/apps/reader/modules/readergoto.lua:83
 #: frontend/apps/reader/modules/readerlink.lua:645
 #: frontend/apps/reader/modules/readersearch.lua:115
@@ -578,7 +579,7 @@ msgstr "ফোল্ডার:"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:176
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:181
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:195
-#: frontend/apps/reader/modules/readerfooter.lua:1914
+#: frontend/apps/reader/modules/readerfooter.lua:2019
 #: frontend/apps/reader/modules/readertypography.lua:778
 #: frontend/ui/screensaver.lua:102 frontend/ui/screensaver.lua:135
 #: frontend/ui/screensaver.lua:136 frontend/ui/screensaver.lua:137
@@ -1253,7 +1254,7 @@ msgid "Cannot open last document"
 msgstr "শেষ নথিটি খুলতে পারেনি"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:142
-#: frontend/apps/reader/modules/readerfooter.lua:1005
+#: frontend/apps/reader/modules/readerfooter.lua:1097
 #: frontend/apps/reader/modules/readertoc.lua:916
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:473
 #: plugins/newsdownloader.koplugin/main.lua:123
@@ -1910,7 +1911,7 @@ msgid "About alternate status bar"
 msgstr "বিকল্প স্থিতি দণ্ড সম্পর্কে"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:194
-#: frontend/apps/reader/modules/readerfooter.lua:1050
+#: frontend/apps/reader/modules/readerfooter.lua:1142
 msgid "Auto refresh"
 msgstr "স্বয়ংক্রিয় সতেজ"
 
@@ -1919,7 +1920,7 @@ msgid "Book author and title"
 msgstr "বইয়ের লেখক ও শিরোনাম"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:216
-#: frontend/apps/reader/modules/readerfooter.lua:884
+#: frontend/apps/reader/modules/readerfooter.lua:967
 msgid "Current time"
 msgstr "বর্তমান সময়"
 
@@ -1932,7 +1933,7 @@ msgid "Total pages"
 msgstr "মোট পৃষ্ঠা"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:246
-#: frontend/apps/reader/modules/readerfooter.lua:889
+#: frontend/apps/reader/modules/readerfooter.lua:972
 msgid "Progress percentage"
 msgstr "অগ্রগতির শতাংশ"
 
@@ -1964,7 +1965,7 @@ msgid "icon"
 msgstr "আইকন"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:275
-#: frontend/apps/reader/modules/readerfooter.lua:887
+#: frontend/apps/reader/modules/readerfooter.lua:970
 msgid "Battery status (%1)"
 msgstr "ব্যাটারির স্থিতি (%1)"
 
@@ -1986,8 +1987,8 @@ msgid "Size of top status bar"
 msgstr "শীর্ষ স্থিতি দণ্ডের আকার"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:334
-#: frontend/apps/reader/modules/readerfooter.lua:1102
-#: frontend/apps/reader/modules/readerfooter.lua:1580
+#: frontend/apps/reader/modules/readerfooter.lua:1194
+#: frontend/apps/reader/modules/readerfooter.lua:1672
 msgid "Set size"
 msgstr "আকার সেট করুন"
 
@@ -2367,7 +2368,7 @@ msgid "Enable (★)"
 msgstr "সক্ষম করুন (★)"
 
 #: frontend/apps/reader/modules/readerfont.lua:24
-#: frontend/apps/reader/modules/readerfooter.lua:1088
+#: frontend/apps/reader/modules/readerfooter.lua:1180
 msgid "Font"
 msgstr "হরফ"
 
@@ -2510,325 +2511,385 @@ msgstr ""
 "আপনি কি এখন এটি পড়তে চান?"
 
 #. @translators This is the footer letter prefix for battery % remaining.
-#: frontend/apps/reader/modules/readerfooter.lua:55
+#: frontend/apps/reader/modules/readerfooter.lua:57
 msgctxt "FooterLetterPrefix"
 msgid "B:"
 msgstr "বি:"
 
 #. @translators This is the footer letter prefix for the number of bookmarks (bookmark count).
-#: frontend/apps/reader/modules/readerfooter.lua:57
+#: frontend/apps/reader/modules/readerfooter.lua:59
 msgctxt "FooterLetterPrefix"
 msgid "BM:"
 msgstr "বিএম:"
 
 #. @translators This is the footer letter prefix for percentage read.
 #. @translators This is the footer letter prefix for frontlight warmth (redshift).
-#: frontend/apps/reader/modules/readerfooter.lua:59
-#: frontend/apps/reader/modules/readerfooter.lua:67
+#: frontend/apps/reader/modules/readerfooter.lua:61
+#: frontend/apps/reader/modules/readerfooter.lua:69
 msgctxt "FooterLetterPrefix"
 msgid "R:"
 msgstr "আর:"
 
 #. @translators This is the footer letter prefix for book time to read.
-#: frontend/apps/reader/modules/readerfooter.lua:61
+#: frontend/apps/reader/modules/readerfooter.lua:63
 msgctxt "FooterLetterPrefix"
 msgid "TB:"
 msgstr "টিবি:"
 
 #. @translators This is the footer letter prefix for chapter time to read.
-#: frontend/apps/reader/modules/readerfooter.lua:63
+#: frontend/apps/reader/modules/readerfooter.lua:65
 msgctxt "FooterLetterPrefix"
 msgid "TC:"
 msgstr "টিসি:"
 
 #. @translators This is the footer letter prefix for frontlight level.
-#: frontend/apps/reader/modules/readerfooter.lua:65
+#: frontend/apps/reader/modules/readerfooter.lua:67
 msgctxt "FooterLetterPrefix"
 msgid "L:"
 msgstr "এল:"
 
 #. @translators This is the footer letter prefix for memory usage.
-#: frontend/apps/reader/modules/readerfooter.lua:69
+#: frontend/apps/reader/modules/readerfooter.lua:71
 msgctxt "FooterLetterPrefix"
 msgid "M:"
 msgstr "এম:"
 
 #. @translators This is the footer letter prefix for Wi-Fi status.
-#: frontend/apps/reader/modules/readerfooter.lua:71
+#: frontend/apps/reader/modules/readerfooter.lua:73
 msgctxt "FooterLetterPrefix"
 msgid "W:"
 msgstr "ডাব্লু:"
 
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: frontend/apps/reader/modules/readerfooter.lua:75
+#, fuzzy
+msgctxt "FooterLetterPrefix"
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-07 18:32+0000\n"
+"PO-Revision-Date: 2021-07-31 03:52+0000\n"
+"Last-Translator: Tushar Bakshi <tusharbakshi6@gmail.com>\n"
+"Language-Team: Bengali <https://hosted.weblate.org/projects/koreader/"
+"koreader/bn/>\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.7.2-dev\n"
+
 #. @translators This is the footer compact item prefix for the number of bookmarks (bookmark count).
-#: frontend/apps/reader/modules/readerfooter.lua:94
+#: frontend/apps/reader/modules/readerfooter.lua:99
 msgctxt "FooterCompactItemsPrefix"
 msgid "BM"
 msgstr "বিএম"
 
 #. @translators This is the footer compact item prefix for memory usage.
-#: frontend/apps/reader/modules/readerfooter.lua:101
+#: frontend/apps/reader/modules/readerfooter.lua:106
 msgctxt "FooterCompactItemsPrefix"
 msgid "M"
 msgstr "এম"
 
-#: frontend/apps/reader/modules/readerfooter.lua:148
-#: frontend/apps/reader/modules/readerfooter.lua:165
-#: frontend/apps/reader/modules/readerfooter.lua:377
+#: frontend/apps/reader/modules/readerfooter.lua:154
+#: frontend/apps/reader/modules/readerfooter.lua:171
+#: frontend/apps/reader/modules/readerfooter.lua:383
 msgid "%1 Off"
 msgstr "%1 বন্ধ"
 
-#: frontend/apps/reader/modules/readerfooter.lua:372
+#: frontend/apps/reader/modules/readerfooter.lua:378
 msgid "%1 On"
 msgstr "%1 চালু"
 
-#: frontend/apps/reader/modules/readerfooter.lua:878
+#: frontend/apps/reader/modules/readerfooter.lua:635
+msgid "Custom string:"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:640
+msgid "Number of repetitions:"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:653
+#: frontend/apps/reader/modules/readerzooming.lua:690
+#: plugins/autowarmth.koplugin/main.lua:525
+#: plugins/autowarmth.koplugin/main.lua:703
+#: plugins/autowarmth.koplugin/main.lua:723
+#: plugins/coverimage.koplugin/main.lua:407
+#: plugins/kosync.koplugin/main.lua:299
+#: plugins/statistics.koplugin/main.lua:979
+msgid "Set"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:688
+msgid "Can be configured to include or exclude the current page."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:689
+msgid "Progress percentage can be shown with zero, one or two decimal places."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:690
+#, fuzzy
+msgid "Show memory usage in MiB."
+msgstr "উচ্চ স্মৃতি ব্যবহার"
+
+#: frontend/apps/reader/modules/readerfooter.lua:961
 msgid "Show all at once"
 msgstr "সব একবারে দেখান"
 
-#: frontend/apps/reader/modules/readerfooter.lua:879
+#: frontend/apps/reader/modules/readerfooter.lua:962
 msgid "Reclaim bar height from bottom margin"
 msgstr "নীচের মার্জিন থেকে বার উচ্চতা পুনরুদ্ধার করুন"
 
-#: frontend/apps/reader/modules/readerfooter.lua:880
+#: frontend/apps/reader/modules/readerfooter.lua:963
 msgid "Bookmark count (%1)"
 msgstr "বুকমার্ক গণনা (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:881
+#: frontend/apps/reader/modules/readerfooter.lua:964
 msgid "Current page (%1)"
 msgstr "বর্তমান পৃষ্ঠা (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:882
+#: frontend/apps/reader/modules/readerfooter.lua:965
 msgid "Pages left in book (%1)"
 msgstr "বইতে অবশিষ্ট পৃষ্ঠাগুলি (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:884
+#: frontend/apps/reader/modules/readerfooter.lua:967
 msgid "Current time (%1)"
 msgstr "এখন সময় (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:885
+#: frontend/apps/reader/modules/readerfooter.lua:968
 msgid "Current page in chapter (%1)"
 msgstr "অধ্যায়ের বর্তমান পৃষ্ঠা (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:886
+#: frontend/apps/reader/modules/readerfooter.lua:969
 msgid "Pages left in chapter (%1)"
 msgstr "অধ্যায়ে অবশিষ্ট পৃষ্ঠা (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:889
+#: frontend/apps/reader/modules/readerfooter.lua:972
 msgid "Progress percentage (%1)"
 msgstr "অগ্রগতি শতাংশ (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:891
+#: frontend/apps/reader/modules/readerfooter.lua:974
 msgid "Book time to read (%1)"
 msgstr "পড়ার জন্য বইয়ের সময় (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:891
+#: frontend/apps/reader/modules/readerfooter.lua:974
 msgid "Book time to read"
 msgstr "বই পড়ার সময়"
 
-#: frontend/apps/reader/modules/readerfooter.lua:892
+#: frontend/apps/reader/modules/readerfooter.lua:975
 msgid "Chapter time to read (%1)"
 msgstr "অধ্যায়ের পড়ার সময় (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:893
+#: frontend/apps/reader/modules/readerfooter.lua:976
 msgid "Frontlight level (%1)"
 msgstr "ফ্রন্টলাইট স্তর (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:894
+#: frontend/apps/reader/modules/readerfooter.lua:977
 #, fuzzy
 msgid "Frontlight warmth (%1)"
 msgstr "ফ্রন্টলাইট স্তর (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:895
+#: frontend/apps/reader/modules/readerfooter.lua:978
 msgid "KOReader memory usage (%1)"
 msgstr "কেওরিডার মেমরি ব্যবহার (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:896
+#: frontend/apps/reader/modules/readerfooter.lua:979
 msgid "Wi-Fi status (%1)"
 msgstr "ওয়াই-ফাই স্ট্যাটাস (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:897
+#: frontend/apps/reader/modules/readerfooter.lua:980
 msgid "Book title"
 msgstr "বইয়ের শিরোনাম"
 
-#: frontend/apps/reader/modules/readerfooter.lua:898
+#: frontend/apps/reader/modules/readerfooter.lua:981
 msgid "Current chapter"
 msgstr "বর্তমান অধ্যায়"
 
-#: frontend/apps/reader/modules/readerfooter.lua:906
+#: frontend/apps/reader/modules/readerfooter.lua:982
+msgid "Custom text: '%1'%2"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:992
 msgid "Status bar"
 msgstr "স্থিতি বার"
 
-#: frontend/apps/reader/modules/readerfooter.lua:919
+#: frontend/apps/reader/modules/readerfooter.lua:1005
 msgid "Toggle mode"
 msgstr "টগল মোড"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1008
+#: frontend/apps/reader/modules/readerfooter.lua:1100
 msgid "Sort items"
 msgstr "আইটেম বাছাই করুন"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1018
+#: frontend/apps/reader/modules/readerfooter.lua:1110
 msgid "Sort footer items"
 msgstr "পাদলেখ আইটেম বাছাই করুন"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1035
+#: frontend/apps/reader/modules/readerfooter.lua:1127
 msgid "Hide empty items"
 msgstr "খালি আইটেমগুলি লুকান"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1036
+#: frontend/apps/reader/modules/readerfooter.lua:1128
 msgid "This will hide values like 0 or off."
 msgstr "এটি 0 বা বন্ধের মতো মানগুলি আড়াল করবে।"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1060
+#: frontend/apps/reader/modules/readerfooter.lua:1152
 msgid "Show footer separator"
 msgstr "পাদলেখ বিভাজক দেখান"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1070
+#: frontend/apps/reader/modules/readerfooter.lua:1162
 msgid "Lock status bar"
 msgstr "লক স্থিতি দণ্ড"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1079
+#: frontend/apps/reader/modules/readerfooter.lua:1171
 msgid "Hold footer to skim"
 msgstr "স্কিম করতে ফুটার ধরুন"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1092
+#: frontend/apps/reader/modules/readerfooter.lua:1184
 #, fuzzy
 msgid "Font size: %1"
 msgstr "হরফের আকার (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1103
+#: frontend/apps/reader/modules/readerfooter.lua:1195
 msgid "Footer font size"
 msgstr "পাদলেখ হরফের আকার"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1123
+#: frontend/apps/reader/modules/readerfooter.lua:1215
 msgid "Use bold font"
 msgstr "মোটা হরফ ব্যবহার করুন"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1145
+#: frontend/apps/reader/modules/readerfooter.lua:1237
 #, fuzzy
 msgid "Container height: %1"
 msgstr "ধারক উচ্চতা (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1155
+#: frontend/apps/reader/modules/readerfooter.lua:1247
 msgid "Set height"
 msgstr "উচ্চতা সেট করুন"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1156
+#: frontend/apps/reader/modules/readerfooter.lua:1248
 msgid "Container height"
 msgstr "ধারক উচ্চতা"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1171
+#: frontend/apps/reader/modules/readerfooter.lua:1263
 #, fuzzy
 msgid "Container bottom margin: %1"
 msgstr "ধারক নীচের মার্জিন (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1181
+#: frontend/apps/reader/modules/readerfooter.lua:1273
 msgid "Set margin"
 msgstr "মার্জিন সেট করুন"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1182
+#: frontend/apps/reader/modules/readerfooter.lua:1274
 msgid "Container bottom margin"
 msgstr "ধারক নীচের মার্জিন"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1196
+#: frontend/apps/reader/modules/readerfooter.lua:1288
 msgid "Maximum width of items"
 msgstr "আইটেম সর্বাধিক প্রস্থ"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1200
+#: frontend/apps/reader/modules/readerfooter.lua:1292
 #, fuzzy
 msgid "Book title: %1%"
 msgstr "বইয়ের শিরোনাম (%1%)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1210
-#: frontend/apps/reader/modules/readerfooter.lua:1235
+#: frontend/apps/reader/modules/readerfooter.lua:1302
+#: frontend/apps/reader/modules/readerfooter.lua:1327
 msgid "Maximum width"
 msgstr "সর্বাধিক প্রস্থ"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1211
+#: frontend/apps/reader/modules/readerfooter.lua:1303
 msgid "Maximum book title width in percentage of screen width"
 msgstr "পর্দার প্রস্থের শতাংশে সর্বাধিক বইয়ের শিরোনাম প্রস্থ"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1225
+#: frontend/apps/reader/modules/readerfooter.lua:1317
 #, fuzzy
 msgid "Current chapter: %1%"
 msgstr "চলতি অধ্যায় (%1%)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1236
+#: frontend/apps/reader/modules/readerfooter.lua:1328
 msgid "Maximum chapter width in percentage of screen width"
 msgstr "পর্দার প্রস্থের শতাংশে সর্বোচ্চ অধ্যায় প্রস্থ"
 
 #. @translators Text alignment. Options given as icons: left, right, center, justify.
-#: frontend/apps/reader/modules/readerfooter.lua:1251
+#: frontend/apps/reader/modules/readerfooter.lua:1343
 #: frontend/ui/data/koptoptions.lua:376
 msgid "Alignment"
 msgstr "পংক্তিবিন্যাস"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1258
+#: frontend/apps/reader/modules/readerfooter.lua:1350
 msgid "Center"
 msgstr "মাঝে"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1268
+#: frontend/apps/reader/modules/readerfooter.lua:1360
 #: frontend/ui/widget/doublespinwidget.lua:35
 msgid "Left"
 msgstr "বা-দিকে"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1278
+#: frontend/apps/reader/modules/readerfooter.lua:1370
 #: frontend/ui/widget/doublespinwidget.lua:40
 msgid "Right"
 msgstr "ডান দিকে"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1290
+#: frontend/apps/reader/modules/readerfooter.lua:1382
 msgid "Prefix"
 msgstr "অগ্রে উপস্থিত"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1298
+#: frontend/apps/reader/modules/readerfooter.lua:1390
 msgid "Icons (%1)"
 msgstr "আইকন (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1314
+#: frontend/apps/reader/modules/readerfooter.lua:1406
 msgid "Compact Items (%1)"
 msgstr "সংক্ষিপ্ত বস্তু (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1330
+#: frontend/apps/reader/modules/readerfooter.lua:1422
 msgid "Letters (%1)"
 msgstr "অক্ষরগুলি (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1343
+#: frontend/apps/reader/modules/readerfooter.lua:1435
 msgid "Item separator"
 msgstr "বস্তু বিভাজক"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1346
+#: frontend/apps/reader/modules/readerfooter.lua:1438
 msgid "Vertical line (|)"
 msgstr "উল্লম্ব রেখা (|)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1356
+#: frontend/apps/reader/modules/readerfooter.lua:1448
 msgid "Bullet (•)"
 msgstr "গোলা (•)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1366
+#: frontend/apps/reader/modules/readerfooter.lua:1458
 msgid "No separator"
 msgstr "কোনও বিভাজক নেই"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1378
+#: frontend/apps/reader/modules/readerfooter.lua:1470
 msgid "Progress percentage format"
 msgstr "অগ্রগতি র শতাংশ বিন্যাস"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1382
+#: frontend/apps/reader/modules/readerfooter.lua:1474
 msgid "No decimal point (%1)"
 msgstr "দশমিক বিন্দু নেই (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1394
+#: frontend/apps/reader/modules/readerfooter.lua:1486
 msgid "1 digit after decimal point (%1)"
 msgstr "দশমিক বিন্দুর পরে 1 অঙ্ক (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1406
+#: frontend/apps/reader/modules/readerfooter.lua:1498
 msgid "2 digits after decimal point (%1)"
 msgstr "দশমিক বিন্দুর পরে ২ অঙ্ক (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1419
+#: frontend/apps/reader/modules/readerfooter.lua:1511
 msgid "Include current page in pages left"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerfooter.lua:1420
+#: frontend/apps/reader/modules/readerfooter.lua:1512
 msgid ""
 "Normally, the current page is not counted as remaining, so \"pages left"
 "\" (in a book or chapter with n pages) will run from n-1 to 0 on the last "
@@ -2837,146 +2898,146 @@ msgid ""
 "1 instead."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerfooter.lua:1439
+#: frontend/apps/reader/modules/readerfooter.lua:1531
 #, fuzzy
 msgid "Hide battery status if level higher than: %1%"
 msgstr "ব্যাটারির স্থিতি লুকান যদি স্তর (%1%) এর চেয়ে বেশি হয়"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1453
+#: frontend/apps/reader/modules/readerfooter.lua:1545
 msgid "Hide battery threshold"
 msgstr "ব্যাটারি থ্রেশহোল্ড লুকান"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1466
+#: frontend/apps/reader/modules/readerfooter.lua:1558
 msgid "Progress bar"
 msgstr "প্রগতি দণ্ড"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1470
+#: frontend/apps/reader/modules/readerfooter.lua:1562
 msgid "Show progress bar"
 msgstr "প্রগতি দণ্ড দেখান"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1490
+#: frontend/apps/reader/modules/readerfooter.lua:1582
 msgid "alongside items"
 msgstr "বস্তুর পাশাপাশি"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1492
+#: frontend/apps/reader/modules/readerfooter.lua:1584
 msgid "above items"
 msgstr "বস্তুর উপর"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1494
+#: frontend/apps/reader/modules/readerfooter.lua:1586
 msgid "below items"
 msgstr "বস্তুর নীচে"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1496
+#: frontend/apps/reader/modules/readerfooter.lua:1588
 msgid "Position: %1"
 msgstr "অবস্থান: %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1503
+#: frontend/apps/reader/modules/readerfooter.lua:1595
 msgid "Above items"
 msgstr "বস্তুর উপর"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1513
+#: frontend/apps/reader/modules/readerfooter.lua:1605
 msgid "Below items"
 msgstr "বস্তুর নীচে"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1523
+#: frontend/apps/reader/modules/readerfooter.lua:1615
 msgid "Alongside items"
 msgstr "বস্তুর পাশাপাশি"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1545
+#: frontend/apps/reader/modules/readerfooter.lua:1637
 msgid "Style: thin"
 msgstr "শৈলী: পাতলা"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1547
+#: frontend/apps/reader/modules/readerfooter.lua:1639
 msgid "Style: thick"
 msgstr "শৈলী: পুরু"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1555
-#: frontend/apps/reader/modules/readerfooter.lua:1669
+#: frontend/apps/reader/modules/readerfooter.lua:1647
+#: frontend/apps/reader/modules/readerfooter.lua:1761
 msgid "Thick"
 msgstr "পুরু"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1568
-#: frontend/apps/reader/modules/readerfooter.lua:1647
+#: frontend/apps/reader/modules/readerfooter.lua:1660
+#: frontend/apps/reader/modules/readerfooter.lua:1739
 msgid "Thin"
 msgstr "পাতলা"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1602
+#: frontend/apps/reader/modules/readerfooter.lua:1694
 msgid "Progress bar size"
 msgstr "অগ্রগতি দণ্ডের আকার"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1619
+#: frontend/apps/reader/modules/readerfooter.lua:1711
 msgid "Show chapter markers"
 msgstr "অধ্যায় চিহ্নগুলো দেখান"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1634
+#: frontend/apps/reader/modules/readerfooter.lua:1726
 msgid "thick"
 msgstr "পুরু"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1636
+#: frontend/apps/reader/modules/readerfooter.lua:1728
 msgid "thin"
 msgstr "পাতলা"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1638
+#: frontend/apps/reader/modules/readerfooter.lua:1730
 #: frontend/ui/data/creoptions.lua:470 frontend/ui/data/koptoptions.lua:106
 #: frontend/ui/data/koptoptions.lua:337 frontend/ui/data/koptoptions.lua:362
 #: frontend/ui/data/koptoptions.lua:572
 msgid "medium"
 msgstr "মাঝারি"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1640
+#: frontend/apps/reader/modules/readerfooter.lua:1732
 msgid "Chapter marker width (%1)"
 msgstr "অধ্যায় চিহ্নর প্রস্থ (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1658
+#: frontend/apps/reader/modules/readerfooter.lua:1750
 msgid "Medium"
 msgstr "মাঝারি"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1685
+#: frontend/apps/reader/modules/readerfooter.lua:1777
 msgid "static margins (10)"
 msgstr "স্থিতিশীল মার্জিন (10)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1688
+#: frontend/apps/reader/modules/readerfooter.lua:1780
 msgid "no margins (0)"
 msgstr "কোন মার্জিন নেই (0)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1690
+#: frontend/apps/reader/modules/readerfooter.lua:1782
 msgid "static margins (%1)"
 msgstr "স্থির মার্জিন (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1693
+#: frontend/apps/reader/modules/readerfooter.lua:1785
 msgid "same as book margins (%1)"
 msgstr "বইয়ের মার্জিনের সমান (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1695
+#: frontend/apps/reader/modules/readerfooter.lua:1787
 msgid "Margins: %1"
 msgstr "মার্জিন: %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1703
+#: frontend/apps/reader/modules/readerfooter.lua:1795
 msgid "No margins (0)"
 msgstr "মার্জিন নেই (0)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1717
+#: frontend/apps/reader/modules/readerfooter.lua:1809
 msgid "Same as book margins"
 msgstr "বইয়ের মার্জিনের সমান"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1719
+#: frontend/apps/reader/modules/readerfooter.lua:1811
 msgid "Same as book margins (%1)"
 msgstr "বইয়ের মার্জিনের সমান (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1736
+#: frontend/apps/reader/modules/readerfooter.lua:1828
 msgid "Static margins (%1)"
 msgstr "স্থির মার্জিন (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1762
+#: frontend/apps/reader/modules/readerfooter.lua:1854
 #, fuzzy
 msgid "Minimal width: %1%"
 msgstr "ন্যূনতম প্রস্থ (%1%)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1776
+#: frontend/apps/reader/modules/readerfooter.lua:1868
 msgid "Minimal width"
 msgstr "ন্যূনতম প্রস্থ"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1777
+#: frontend/apps/reader/modules/readerfooter.lua:1869
 msgid "Minimal progress bar width in percentage of screen width"
 msgstr "পর্দার প্রস্থের শতাংশে প্রগতি দণ্ডের নুন্যতম প্রস্থ"
 
@@ -5081,16 +5142,6 @@ msgid ""
 "Manual zoom works best with page view.\n"
 "\n"
 "Please enable page view instead of continuous view (scroll mode)."
-msgstr ""
-
-#: frontend/apps/reader/modules/readerzooming.lua:690
-#: plugins/autowarmth.koplugin/main.lua:525
-#: plugins/autowarmth.koplugin/main.lua:703
-#: plugins/autowarmth.koplugin/main.lua:723
-#: plugins/coverimage.koplugin/main.lua:407
-#: plugins/kosync.koplugin/main.lua:299
-#: plugins/statistics.koplugin/main.lua:979
-msgid "Set"
 msgstr ""
 
 #: frontend/apps/reader/modules/readerzooming.lua:699

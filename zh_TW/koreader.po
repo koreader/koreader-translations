@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-07 18:32+0000\n"
+"POT-Creation-Date: 2021-11-09 17:08+0000\n"
 "PO-Revision-Date: 2021-07-21 17:24+0000\n"
 "Last-Translator: John Smith <a@shatin.ml>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -159,6 +159,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:875
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
+#: frontend/apps/reader/modules/readerfooter.lua:647
 #: frontend/apps/reader/modules/readergoto.lua:83
 #: frontend/apps/reader/modules/readerlink.lua:645
 #: frontend/apps/reader/modules/readersearch.lua:115
@@ -584,7 +585,7 @@ msgstr "資料夾："
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:176
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:181
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:195
-#: frontend/apps/reader/modules/readerfooter.lua:1914
+#: frontend/apps/reader/modules/readerfooter.lua:2019
 #: frontend/apps/reader/modules/readertypography.lua:778
 #: frontend/ui/screensaver.lua:102 frontend/ui/screensaver.lua:135
 #: frontend/ui/screensaver.lua:136 frontend/ui/screensaver.lua:137
@@ -1261,7 +1262,7 @@ msgid "Cannot open last document"
 msgstr "無法開啟最後使用的文件"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:142
-#: frontend/apps/reader/modules/readerfooter.lua:1005
+#: frontend/apps/reader/modules/readerfooter.lua:1097
 #: frontend/apps/reader/modules/readertoc.lua:916
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:473
 #: plugins/newsdownloader.koplugin/main.lua:123
@@ -1921,7 +1922,7 @@ msgid "About alternate status bar"
 msgstr "關於替代狀態列"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:194
-#: frontend/apps/reader/modules/readerfooter.lua:1050
+#: frontend/apps/reader/modules/readerfooter.lua:1142
 msgid "Auto refresh"
 msgstr "自動重新整理"
 
@@ -1930,7 +1931,7 @@ msgid "Book author and title"
 msgstr "書籍作者和書名"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:216
-#: frontend/apps/reader/modules/readerfooter.lua:884
+#: frontend/apps/reader/modules/readerfooter.lua:967
 msgid "Current time"
 msgstr "當前時間"
 
@@ -1943,7 +1944,7 @@ msgid "Total pages"
 msgstr "總頁數"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:246
-#: frontend/apps/reader/modules/readerfooter.lua:889
+#: frontend/apps/reader/modules/readerfooter.lua:972
 msgid "Progress percentage"
 msgstr "進度百分比"
 
@@ -1975,7 +1976,7 @@ msgid "icon"
 msgstr "圖示"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:275
-#: frontend/apps/reader/modules/readerfooter.lua:887
+#: frontend/apps/reader/modules/readerfooter.lua:970
 msgid "Battery status (%1)"
 msgstr "電池狀態 (%1)"
 
@@ -1997,8 +1998,8 @@ msgid "Size of top status bar"
 msgstr "頂部狀態列的大小"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:334
-#: frontend/apps/reader/modules/readerfooter.lua:1102
-#: frontend/apps/reader/modules/readerfooter.lua:1580
+#: frontend/apps/reader/modules/readerfooter.lua:1194
+#: frontend/apps/reader/modules/readerfooter.lua:1672
 msgid "Set size"
 msgstr "設定大小"
 
@@ -2380,7 +2381,7 @@ msgid "Enable (★)"
 msgstr "啟用 (★)"
 
 #: frontend/apps/reader/modules/readerfont.lua:24
-#: frontend/apps/reader/modules/readerfooter.lua:1088
+#: frontend/apps/reader/modules/readerfooter.lua:1180
 msgid "Font"
 msgstr "字型"
 
@@ -2520,326 +2521,396 @@ msgstr ""
 "您想要立刻閱讀它嗎？"
 
 #. @translators This is the footer letter prefix for battery % remaining.
-#: frontend/apps/reader/modules/readerfooter.lua:55
+#: frontend/apps/reader/modules/readerfooter.lua:57
 msgctxt "FooterLetterPrefix"
 msgid "B:"
 msgstr "B:"
 
 #. @translators This is the footer letter prefix for the number of bookmarks (bookmark count).
-#: frontend/apps/reader/modules/readerfooter.lua:57
+#: frontend/apps/reader/modules/readerfooter.lua:59
 msgctxt "FooterLetterPrefix"
 msgid "BM:"
 msgstr "BM:"
 
 #. @translators This is the footer letter prefix for percentage read.
 #. @translators This is the footer letter prefix for frontlight warmth (redshift).
-#: frontend/apps/reader/modules/readerfooter.lua:59
-#: frontend/apps/reader/modules/readerfooter.lua:67
+#: frontend/apps/reader/modules/readerfooter.lua:61
+#: frontend/apps/reader/modules/readerfooter.lua:69
 msgctxt "FooterLetterPrefix"
 msgid "R:"
 msgstr "R:"
 
 #. @translators This is the footer letter prefix for book time to read.
-#: frontend/apps/reader/modules/readerfooter.lua:61
+#: frontend/apps/reader/modules/readerfooter.lua:63
 msgctxt "FooterLetterPrefix"
 msgid "TB:"
 msgstr "TB:"
 
 #. @translators This is the footer letter prefix for chapter time to read.
-#: frontend/apps/reader/modules/readerfooter.lua:63
+#: frontend/apps/reader/modules/readerfooter.lua:65
 msgctxt "FooterLetterPrefix"
 msgid "TC:"
 msgstr "TC:"
 
 #. @translators This is the footer letter prefix for frontlight level.
-#: frontend/apps/reader/modules/readerfooter.lua:65
+#: frontend/apps/reader/modules/readerfooter.lua:67
 msgctxt "FooterLetterPrefix"
 msgid "L:"
 msgstr "L:"
 
 #. @translators This is the footer letter prefix for memory usage.
-#: frontend/apps/reader/modules/readerfooter.lua:69
+#: frontend/apps/reader/modules/readerfooter.lua:71
 msgctxt "FooterLetterPrefix"
 msgid "M:"
 msgstr "M:"
 
 #. @translators This is the footer letter prefix for Wi-Fi status.
-#: frontend/apps/reader/modules/readerfooter.lua:71
+#: frontend/apps/reader/modules/readerfooter.lua:73
 msgctxt "FooterLetterPrefix"
 msgid "W:"
 msgstr "W:"
 
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# civa <visig@protonmail.ch>, 2017-2018
+# civa <visig@protonmail.ch>, 2018
+# Hsiu-Ming Chang <cges30901@gmail.com>, 2019
+# Pat Yu <patpc.yu@gmail.com>, 2018-2019
+# taichunmin <taichunmin@gmail.com>, 2018
+# taichunmin <taichunmin@gmail.com>, 2018
+# civa <visig@protonmail.ch>, 2018
+# Yao-Hao Wang <acdsee400@gmail.com>, 2015-2016
+#: frontend/apps/reader/modules/readerfooter.lua:75
+#, fuzzy
+msgctxt "FooterLetterPrefix"
+msgid ""
+msgstr ""
+"Project-Id-Version: KOReader\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-07 18:32+0000\n"
+"PO-Revision-Date: 2021-07-21 17:24+0000\n"
+"Last-Translator: John Smith <a@shatin.ml>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"koreader/koreader/zh_Hant/>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.7.2-dev\n"
+
 #. @translators This is the footer compact item prefix for the number of bookmarks (bookmark count).
-#: frontend/apps/reader/modules/readerfooter.lua:94
+#: frontend/apps/reader/modules/readerfooter.lua:99
 msgctxt "FooterCompactItemsPrefix"
 msgid "BM"
 msgstr "BM"
 
 #. @translators This is the footer compact item prefix for memory usage.
-#: frontend/apps/reader/modules/readerfooter.lua:101
+#: frontend/apps/reader/modules/readerfooter.lua:106
 msgctxt "FooterCompactItemsPrefix"
 msgid "M"
 msgstr "M"
 
-#: frontend/apps/reader/modules/readerfooter.lua:148
-#: frontend/apps/reader/modules/readerfooter.lua:165
-#: frontend/apps/reader/modules/readerfooter.lua:377
+#: frontend/apps/reader/modules/readerfooter.lua:154
+#: frontend/apps/reader/modules/readerfooter.lua:171
+#: frontend/apps/reader/modules/readerfooter.lua:383
 msgid "%1 Off"
 msgstr "%1 關閉"
 
-#: frontend/apps/reader/modules/readerfooter.lua:372
+#: frontend/apps/reader/modules/readerfooter.lua:378
 msgid "%1 On"
 msgstr "%1 開啟"
 
-#: frontend/apps/reader/modules/readerfooter.lua:878
+#: frontend/apps/reader/modules/readerfooter.lua:635
+msgid "Custom string:"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:640
+#, fuzzy
+msgid "Number of repetitions:"
+msgstr "文章數量"
+
+#: frontend/apps/reader/modules/readerfooter.lua:653
+#: frontend/apps/reader/modules/readerzooming.lua:690
+#: plugins/autowarmth.koplugin/main.lua:525
+#: plugins/autowarmth.koplugin/main.lua:703
+#: plugins/autowarmth.koplugin/main.lua:723
+#: plugins/coverimage.koplugin/main.lua:407
+#: plugins/kosync.koplugin/main.lua:299
+#: plugins/statistics.koplugin/main.lua:979
+msgid "Set"
+msgstr "設定"
+
+#: frontend/apps/reader/modules/readerfooter.lua:688
+msgid "Can be configured to include or exclude the current page."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:689
+msgid "Progress percentage can be shown with zero, one or two decimal places."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:690
+#, fuzzy
+msgid "Show memory usage in MiB."
+msgstr "KOReader 記憶體使用 (%1)"
+
+#: frontend/apps/reader/modules/readerfooter.lua:961
 msgid "Show all at once"
 msgstr "顯示全部"
 
-#: frontend/apps/reader/modules/readerfooter.lua:879
+#: frontend/apps/reader/modules/readerfooter.lua:962
 msgid "Reclaim bar height from bottom margin"
 msgstr "從下邊距回收列高"
 
-#: frontend/apps/reader/modules/readerfooter.lua:880
+#: frontend/apps/reader/modules/readerfooter.lua:963
 msgid "Bookmark count (%1)"
 msgstr "書籤計數 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:881
+#: frontend/apps/reader/modules/readerfooter.lua:964
 msgid "Current page (%1)"
 msgstr "目前頁數 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:882
+#: frontend/apps/reader/modules/readerfooter.lua:965
 msgid "Pages left in book (%1)"
 msgstr "書籍剩餘頁數 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:884
+#: frontend/apps/reader/modules/readerfooter.lua:967
 msgid "Current time (%1)"
 msgstr "目前時間 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:885
+#: frontend/apps/reader/modules/readerfooter.lua:968
 #, fuzzy
 msgid "Current page in chapter (%1)"
 msgstr "目前章節 (%1%)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:886
+#: frontend/apps/reader/modules/readerfooter.lua:969
 msgid "Pages left in chapter (%1)"
 msgstr "章節剩餘頁數 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:889
+#: frontend/apps/reader/modules/readerfooter.lua:972
 msgid "Progress percentage (%1)"
 msgstr "進度百分比 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:891
+#: frontend/apps/reader/modules/readerfooter.lua:974
 msgid "Book time to read (%1)"
 msgstr "書籍剩餘閱讀時數 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:891
+#: frontend/apps/reader/modules/readerfooter.lua:974
 msgid "Book time to read"
 msgstr "書籍剩餘閱讀時數"
 
-#: frontend/apps/reader/modules/readerfooter.lua:892
+#: frontend/apps/reader/modules/readerfooter.lua:975
 msgid "Chapter time to read (%1)"
 msgstr "章節剩餘閱讀時數 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:893
+#: frontend/apps/reader/modules/readerfooter.lua:976
 msgid "Frontlight level (%1)"
 msgstr "前光等級 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:894
+#: frontend/apps/reader/modules/readerfooter.lua:977
 #, fuzzy
 msgid "Frontlight warmth (%1)"
 msgstr "設定前光暖度為 %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:895
+#: frontend/apps/reader/modules/readerfooter.lua:978
 msgid "KOReader memory usage (%1)"
 msgstr "KOReader 記憶體使用 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:896
+#: frontend/apps/reader/modules/readerfooter.lua:979
 msgid "Wi-Fi status (%1)"
 msgstr "Wi-Fi 狀態 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:897
+#: frontend/apps/reader/modules/readerfooter.lua:980
 msgid "Book title"
 msgstr "書名"
 
-#: frontend/apps/reader/modules/readerfooter.lua:898
+#: frontend/apps/reader/modules/readerfooter.lua:981
 msgid "Current chapter"
 msgstr "目前章節"
 
-#: frontend/apps/reader/modules/readerfooter.lua:906
+#: frontend/apps/reader/modules/readerfooter.lua:982
+#, fuzzy
+msgid "Custom text: '%1'%2"
+msgstr "自訂 1：%1:%2 頁"
+
+#: frontend/apps/reader/modules/readerfooter.lua:992
 msgid "Status bar"
 msgstr "狀態列"
 
-#: frontend/apps/reader/modules/readerfooter.lua:919
+#: frontend/apps/reader/modules/readerfooter.lua:1005
 msgid "Toggle mode"
 msgstr "切換模式"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1008
+#: frontend/apps/reader/modules/readerfooter.lua:1100
 msgid "Sort items"
 msgstr "排序項目"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1018
+#: frontend/apps/reader/modules/readerfooter.lua:1110
 msgid "Sort footer items"
 msgstr "排序頁尾項目"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1035
+#: frontend/apps/reader/modules/readerfooter.lua:1127
 msgid "Hide empty items"
 msgstr "隱藏空的項目"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1036
+#: frontend/apps/reader/modules/readerfooter.lua:1128
 msgid "This will hide values like 0 or off."
 msgstr "這會隱藏 0 或關閉之類的值。"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1060
+#: frontend/apps/reader/modules/readerfooter.lua:1152
 msgid "Show footer separator"
 msgstr "顯示頁尾分隔符號"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1070
+#: frontend/apps/reader/modules/readerfooter.lua:1162
 msgid "Lock status bar"
 msgstr "鎖定狀態列"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1079
+#: frontend/apps/reader/modules/readerfooter.lua:1171
 msgid "Hold footer to skim"
 msgstr "按住頁尾以快覽"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1092
+#: frontend/apps/reader/modules/readerfooter.lua:1184
 #, fuzzy
 msgid "Font size: %1"
 msgstr "字型大小 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1103
+#: frontend/apps/reader/modules/readerfooter.lua:1195
 msgid "Footer font size"
 msgstr "頁尾字型大小"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1123
+#: frontend/apps/reader/modules/readerfooter.lua:1215
 msgid "Use bold font"
 msgstr "使用粗體字型"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1145
+#: frontend/apps/reader/modules/readerfooter.lua:1237
 #, fuzzy
 msgid "Container height: %1"
 msgstr "容器高度 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1155
+#: frontend/apps/reader/modules/readerfooter.lua:1247
 msgid "Set height"
 msgstr "設定高度"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1156
+#: frontend/apps/reader/modules/readerfooter.lua:1248
 msgid "Container height"
 msgstr "容器高度"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1171
+#: frontend/apps/reader/modules/readerfooter.lua:1263
 #, fuzzy
 msgid "Container bottom margin: %1"
 msgstr "容器下邊距 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1181
+#: frontend/apps/reader/modules/readerfooter.lua:1273
 msgid "Set margin"
 msgstr "設定邊距"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1182
+#: frontend/apps/reader/modules/readerfooter.lua:1274
 msgid "Container bottom margin"
 msgstr "容器下邊距"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1196
+#: frontend/apps/reader/modules/readerfooter.lua:1288
 msgid "Maximum width of items"
 msgstr "項目最大寬度"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1200
+#: frontend/apps/reader/modules/readerfooter.lua:1292
 #, fuzzy
 msgid "Book title: %1%"
 msgstr "書名 (%1%)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1210
-#: frontend/apps/reader/modules/readerfooter.lua:1235
+#: frontend/apps/reader/modules/readerfooter.lua:1302
+#: frontend/apps/reader/modules/readerfooter.lua:1327
 msgid "Maximum width"
 msgstr "最大寬度"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1211
+#: frontend/apps/reader/modules/readerfooter.lua:1303
 msgid "Maximum book title width in percentage of screen width"
 msgstr "最大書名寬度，以螢幕寬度百分比為單位"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1225
+#: frontend/apps/reader/modules/readerfooter.lua:1317
 #, fuzzy
 msgid "Current chapter: %1%"
 msgstr "目前章節 (%1%)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1236
+#: frontend/apps/reader/modules/readerfooter.lua:1328
 msgid "Maximum chapter width in percentage of screen width"
 msgstr "最大章節寬度，以螢幕寬度百分比為單位"
 
 #. @translators Text alignment. Options given as icons: left, right, center, justify.
-#: frontend/apps/reader/modules/readerfooter.lua:1251
+#: frontend/apps/reader/modules/readerfooter.lua:1343
 #: frontend/ui/data/koptoptions.lua:376
 msgid "Alignment"
 msgstr "對齊"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1258
+#: frontend/apps/reader/modules/readerfooter.lua:1350
 msgid "Center"
 msgstr "置中"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1268
+#: frontend/apps/reader/modules/readerfooter.lua:1360
 #: frontend/ui/widget/doublespinwidget.lua:35
 msgid "Left"
 msgstr "左"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1278
+#: frontend/apps/reader/modules/readerfooter.lua:1370
 #: frontend/ui/widget/doublespinwidget.lua:40
 msgid "Right"
 msgstr "右"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1290
+#: frontend/apps/reader/modules/readerfooter.lua:1382
 msgid "Prefix"
 msgstr "前綴"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1298
+#: frontend/apps/reader/modules/readerfooter.lua:1390
 msgid "Icons (%1)"
 msgstr "圖示 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1314
+#: frontend/apps/reader/modules/readerfooter.lua:1406
 msgid "Compact Items (%1)"
 msgstr "緊湊型項目 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1330
+#: frontend/apps/reader/modules/readerfooter.lua:1422
 msgid "Letters (%1)"
 msgstr "字母 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1343
+#: frontend/apps/reader/modules/readerfooter.lua:1435
 msgid "Item separator"
 msgstr "項目分隔符號"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1346
+#: frontend/apps/reader/modules/readerfooter.lua:1438
 msgid "Vertical line (|)"
 msgstr "垂直線 (|)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1356
+#: frontend/apps/reader/modules/readerfooter.lua:1448
 msgid "Bullet (•)"
 msgstr "項目符號 (•)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1366
+#: frontend/apps/reader/modules/readerfooter.lua:1458
 msgid "No separator"
 msgstr "沒有分隔符號"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1378
+#: frontend/apps/reader/modules/readerfooter.lua:1470
 msgid "Progress percentage format"
 msgstr "進度百分比格式"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1382
+#: frontend/apps/reader/modules/readerfooter.lua:1474
 msgid "No decimal point (%1)"
 msgstr "沒有小數點 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1394
+#: frontend/apps/reader/modules/readerfooter.lua:1486
 msgid "1 digit after decimal point (%1)"
 msgstr "小數點後 1 位 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1406
+#: frontend/apps/reader/modules/readerfooter.lua:1498
 msgid "2 digits after decimal point (%1)"
 msgstr "小數點後 2 位 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1419
+#: frontend/apps/reader/modules/readerfooter.lua:1511
 msgid "Include current page in pages left"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerfooter.lua:1420
+#: frontend/apps/reader/modules/readerfooter.lua:1512
 msgid ""
 "Normally, the current page is not counted as remaining, so \"pages left"
 "\" (in a book or chapter with n pages) will run from n-1 to 0 on the last "
@@ -2848,146 +2919,146 @@ msgid ""
 "1 instead."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerfooter.lua:1439
+#: frontend/apps/reader/modules/readerfooter.lua:1531
 msgid "Hide battery status if level higher than: %1%"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerfooter.lua:1453
+#: frontend/apps/reader/modules/readerfooter.lua:1545
 #, fuzzy
 msgid "Hide battery threshold"
 msgstr "低電量閾值"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1466
+#: frontend/apps/reader/modules/readerfooter.lua:1558
 msgid "Progress bar"
 msgstr "進度列"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1470
+#: frontend/apps/reader/modules/readerfooter.lua:1562
 msgid "Show progress bar"
 msgstr "顯示進度列"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1490
+#: frontend/apps/reader/modules/readerfooter.lua:1582
 msgid "alongside items"
 msgstr "在項目旁邊"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1492
+#: frontend/apps/reader/modules/readerfooter.lua:1584
 msgid "above items"
 msgstr "在項目上面"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1494
+#: frontend/apps/reader/modules/readerfooter.lua:1586
 msgid "below items"
 msgstr "在項目下面"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1496
+#: frontend/apps/reader/modules/readerfooter.lua:1588
 msgid "Position: %1"
 msgstr "位置：%1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1503
+#: frontend/apps/reader/modules/readerfooter.lua:1595
 msgid "Above items"
 msgstr "在項目上面"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1513
+#: frontend/apps/reader/modules/readerfooter.lua:1605
 msgid "Below items"
 msgstr "在項目下面"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1523
+#: frontend/apps/reader/modules/readerfooter.lua:1615
 msgid "Alongside items"
 msgstr "在項目旁邊"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1545
+#: frontend/apps/reader/modules/readerfooter.lua:1637
 msgid "Style: thin"
 msgstr "樣式：細"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1547
+#: frontend/apps/reader/modules/readerfooter.lua:1639
 msgid "Style: thick"
 msgstr "樣式：粗"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1555
-#: frontend/apps/reader/modules/readerfooter.lua:1669
+#: frontend/apps/reader/modules/readerfooter.lua:1647
+#: frontend/apps/reader/modules/readerfooter.lua:1761
 msgid "Thick"
 msgstr "粗"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1568
-#: frontend/apps/reader/modules/readerfooter.lua:1647
+#: frontend/apps/reader/modules/readerfooter.lua:1660
+#: frontend/apps/reader/modules/readerfooter.lua:1739
 msgid "Thin"
 msgstr "細"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1602
+#: frontend/apps/reader/modules/readerfooter.lua:1694
 msgid "Progress bar size"
 msgstr "進度列大小"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1619
+#: frontend/apps/reader/modules/readerfooter.lua:1711
 msgid "Show chapter markers"
 msgstr "顯示章節標記"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1634
+#: frontend/apps/reader/modules/readerfooter.lua:1726
 msgid "thick"
 msgstr "粗"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1636
+#: frontend/apps/reader/modules/readerfooter.lua:1728
 msgid "thin"
 msgstr "細"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1638
+#: frontend/apps/reader/modules/readerfooter.lua:1730
 #: frontend/ui/data/creoptions.lua:470 frontend/ui/data/koptoptions.lua:106
 #: frontend/ui/data/koptoptions.lua:337 frontend/ui/data/koptoptions.lua:362
 #: frontend/ui/data/koptoptions.lua:572
 msgid "medium"
 msgstr "中等"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1640
+#: frontend/apps/reader/modules/readerfooter.lua:1732
 msgid "Chapter marker width (%1)"
 msgstr "章節標記寬度 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1658
+#: frontend/apps/reader/modules/readerfooter.lua:1750
 msgid "Medium"
 msgstr "中等"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1685
+#: frontend/apps/reader/modules/readerfooter.lua:1777
 msgid "static margins (10)"
 msgstr "靜態邊距 (10)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1688
+#: frontend/apps/reader/modules/readerfooter.lua:1780
 msgid "no margins (0)"
 msgstr "沒有邊距 (0)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1690
+#: frontend/apps/reader/modules/readerfooter.lua:1782
 msgid "static margins (%1)"
 msgstr "靜態邊距 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1693
+#: frontend/apps/reader/modules/readerfooter.lua:1785
 msgid "same as book margins (%1)"
 msgstr "與書籍邊距相同 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1695
+#: frontend/apps/reader/modules/readerfooter.lua:1787
 msgid "Margins: %1"
 msgstr "邊距：%1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1703
+#: frontend/apps/reader/modules/readerfooter.lua:1795
 msgid "No margins (0)"
 msgstr "沒有邊距 (0)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1717
+#: frontend/apps/reader/modules/readerfooter.lua:1809
 msgid "Same as book margins"
 msgstr "與書籍邊距相同"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1719
+#: frontend/apps/reader/modules/readerfooter.lua:1811
 msgid "Same as book margins (%1)"
 msgstr "與書籍邊距相同 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1736
+#: frontend/apps/reader/modules/readerfooter.lua:1828
 msgid "Static margins (%1)"
 msgstr "靜態邊距 (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1762
+#: frontend/apps/reader/modules/readerfooter.lua:1854
 #, fuzzy
 msgid "Minimal width: %1%"
 msgstr "最小寬度 (%1%)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1776
+#: frontend/apps/reader/modules/readerfooter.lua:1868
 msgid "Minimal width"
 msgstr "最小寬度"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1777
+#: frontend/apps/reader/modules/readerfooter.lua:1869
 msgid "Minimal progress bar width in percentage of screen width"
 msgstr "最小進度列寬度，以螢幕寬度百分比為單位"
 
@@ -5257,16 +5328,6 @@ msgstr ""
 "手動縮放最適合頁面檢視。\n"
 "\n"
 "請啟用頁面檢視而不是連續檢視（捲動模式）。"
-
-#: frontend/apps/reader/modules/readerzooming.lua:690
-#: plugins/autowarmth.koplugin/main.lua:525
-#: plugins/autowarmth.koplugin/main.lua:703
-#: plugins/autowarmth.koplugin/main.lua:723
-#: plugins/coverimage.koplugin/main.lua:407
-#: plugins/kosync.koplugin/main.lua:299
-#: plugins/statistics.koplugin/main.lua:979
-msgid "Set"
-msgstr "設定"
 
 #: frontend/apps/reader/modules/readerzooming.lua:699
 msgid "Set Zoom factor"
