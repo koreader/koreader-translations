@@ -27,8 +27,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-21 21:47+0000\n"
-"PO-Revision-Date: 2021-11-14 05:51+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2021-11-23 16:42+0000\n"
+"Last-Translator: Maxime Leroy <lisacintosh@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/koreader/koreader/"
 "fr/>\n"
 "Language: fr\n"
@@ -36,7 +36,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9.1-dev\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #: reader.lua:215
 msgid ""
@@ -1827,9 +1827,8 @@ msgid "Remove bookmark"
 msgstr "Supprimer ce marque-page"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:560
-#, fuzzy
 msgid "Remove this bookmark?"
-msgstr "Supprimer ce marque-page"
+msgstr "Supprimer ce marque-page ?"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:578
 #: frontend/apps/reader/modules/readerhighlight.lua:674
@@ -1978,9 +1977,8 @@ msgid "icon"
 msgstr "icône"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:277
-#, fuzzy
 msgid "Battery status: %1"
-msgstr "État de charge de la batterie (%1)"
+msgstr "État de charge de la batterie : %1"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:281
 msgid "Battery icon"
@@ -2840,7 +2838,6 @@ msgid "Icons"
 msgstr "Icônes"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1403
-#, fuzzy
 msgid "Compact items"
 msgstr "Éléments compacts"
 
@@ -3182,9 +3179,8 @@ msgid "Do nothing"
 msgstr "Ne rien faire"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:287
-#, fuzzy
 msgid "Select and highlight"
-msgstr "Écran et éclairage"
+msgstr "Sélection et mise en valeur"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:291
 #: frontend/apps/reader/modules/readersearch.lua:73 frontend/dispatcher.lua:91
@@ -3304,7 +3300,7 @@ msgstr "Échec de l’obtention du code HTML de la sélection"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:1296
 msgid "Fragments must be within one page"
-msgstr ""
+msgstr "Les fragments doivent être dans une seule page"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:1373
 msgid "Default highlight action changed to '%1'."
@@ -3331,9 +3327,8 @@ msgstr ""
 "déplacer le d’abord dans un répertoire où il est possible d’écrire."
 
 #: frontend/apps/reader/modules/readerhighlight.lua:1682
-#, fuzzy
 msgid "Select ending fragment"
-msgstr "Choisir un répertoire"
+msgstr "Sélectionner un fragment de fin"
 
 #: frontend/apps/reader/modules/readerlink.lua:155
 #: frontend/ui/data/css_tweaks.lua:555
@@ -4006,7 +4001,6 @@ msgid "Allow inertial scrolling"
 msgstr "Autoriser le défilement avec inertie"
 
 #: frontend/apps/reader/modules/readersearch.lua:39
-#, fuzzy
 msgid ""
 "Regular expressions allow you to search for a matching pattern in a text. "
 "The simplest pattern is a simple sequence of characters, such as `James "
@@ -4035,30 +4029,31 @@ msgid ""
 msgstr ""
 "Les expressions régulières vous permettent de rechercher un modèle "
 "correspondant dans un texte. Le motif le plus simple est une simple séquence "
-"de caractères, comme « Arsène Lupin ». Il existe de nombreuses variétés "
-"d’expressions régulières, mais nous utilisons la syntaxe ECMAScript. Les "
+"de caractères, comme `Arsène Lupin`. Il existe de nombreuses variétés d’"
+"expressions régulières, mais nous utilisons la syntaxe ECMAScript. Les "
 "principes de base sont expliqués ci-dessous.\n"
 "\n"
-"Si vous voulez rechercher toutes les occurrences de « Monsieur Moore », « "
-"Sir Moore » ou « Alfons Moore » mais pas celles de « Madame Moore ».\n"
-"Entrez 'Monsieur Moore|Sir Moore|Alfons Moore'.\n"
+"Si vous voulez rechercher toutes les occurrences de 'Marcel Proust', 'Marcel "
+"Pagnol' ou 'Marcel Aymé' mais pas celles de 'Marcel Gotlib'.\n"
+"Entrez 'Marcel (Proust|Pagnol|Aymé)'.\n"
 "\n"
-"Si votre recherche contient un caractère spécial de ^$.*+ ?()[]{}|\\/ vous "
-"devez mettre un \\ avant ce caractère.\n"
+"Si votre recherche contient un ces caractères spéciaux : ^$.*+ ?()[]{}|\\/ "
+"vous devrez mettre un \"\\\" avant ce caractère.\n"
 "\n"
 "Exemples :\n"
-"Les mots contenant 'os' -> '[^ ]+os[^ ]+'.\n"
-"Tout caractère unique \".\" -> \"r.nge\".\n"
-"Tout caractère '.*' -> 'J.*s'.\n"
-"Chiffres -> \" [0-9]+ \".\n"
-"Plage de caractères -> '[a-f]'.\n"
-"Pas un espace -> \"[^ ]\n"
-"Un mot -> \" [^ ]*[^ ] \".\n"
-"Dernier mot d'une phrase -> \"[^ ]*\\\".\n"
+"Les mots contenant 'la' -> \"[^ ]+la[^ ]+\" (malade, pelage)\n"
+"N'importe quel caractère \".\" -> \"li.re\" (livre, libre, li-re)\n"
+"Aucun, un ou plusieurs caractères \".*\" -> \".*aine\" (aine, laine, "
+"fontaine)\n"
+"Un nombre entier -> \"[0-9]+\" (1, 99)\n"
+"Une plage de caractères -> \"[a-f]\" (abc, fade)\n"
+"Un caractère sauf un espace -> \"[^ ]\"\n"
+"Un mot (avec les espaces autour) -> \" [^ ]*[^ ] \"\n"
+"Le dernier mot d'une phrase (avant le point) -> \"[^ ]*\\.\"\n"
 "\n"
 "Les expressions complexes peuvent entraîner un temps de recherche "
-"extrêmement long, auquel cas toutes les correspondances ne seront pas "
-"affichées.\n"
+"particulièrement long, auquel cas toutes les correspondances ne seront pas "
+"affichées."
 
 #: frontend/apps/reader/modules/readersearch.lua:60
 msgid "Wrong escape '\\'"
@@ -8395,25 +8390,21 @@ msgid "disable"
 msgstr "désactiver"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:363
-#, fuzzy
 msgid "Back to exit: %1"
-msgstr "Retour pour quitter (%1)"
+msgstr "Retour pour quitter : %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:376
 #: frontend/ui/elements/common_settings_menu_table.lua:404
-#, fuzzy
 msgid "back to exit"
-msgstr "Retour pour quitter (%1)"
+msgstr "Retour pour quitter"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:378
-#, fuzzy
 msgid "parent folder"
-msgstr "Dossier actuel"
+msgstr "Dossier parent"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:380
-#, fuzzy
 msgid "Back in file browser: %1"
-msgstr "Retour dans le navigateur de fichiers"
+msgstr "Retour dans le navigateur de fichiers : %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:386
 #: frontend/ui/elements/common_settings_menu_table.lua:418
@@ -8425,19 +8416,16 @@ msgid "Go to parent folder"
 msgstr "Aller au dossier parent"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:408
-#, fuzzy
 msgid "previous location"
-msgstr "Aller à l’emplacement précédent"
+msgstr "Emplacement précédent"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:410
-#, fuzzy
 msgid "previous read page"
-msgstr "Aller à la page de lecture précédente"
+msgstr "page de lecture précédente"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:412
-#, fuzzy
 msgid "Back in reader: %1"
-msgstr "Retour dans le lecteur"
+msgstr "Retour dans le lecteur : %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:427
 msgid "Go to file browser"
@@ -11712,18 +11700,16 @@ msgid "Book shortcuts"
 msgstr "Raccourcis de livre"
 
 #: plugins/bookshortcuts.koplugin/main.lua:76
-#, fuzzy
 msgid "last book"
-msgstr "Choisir un livre"
+msgstr "dernier livre"
 
 #: plugins/bookshortcuts.koplugin/main.lua:80
 msgid "New shortcut"
 msgstr "Nouveau raccourci"
 
 #: plugins/bookshortcuts.koplugin/main.lua:99
-#, fuzzy
 msgid "Directory action: %1"
-msgstr "Valeurs par défaut pour ce répertoire : %1"
+msgstr "Action du dossier : %1"
 
 #: plugins/bookshortcuts.koplugin/main.lua:122
 msgid "Do you want to delete this shortcut?"
