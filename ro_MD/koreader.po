@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-27 17:39+0000\n"
+"POT-Creation-Date: 2021-11-28 21:22+0000\n"
 "PO-Revision-Date: 2021-11-21 17:43+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Moldavian <https://hosted.weblate.org/projects/koreader/"
@@ -54,6 +54,7 @@ msgstr "Ignoră"
 #: frontend/ui/elements/screensaver_menu.lua:244
 #: frontend/ui/plugin/switch_plugin.lua:64
 #: plugins/autofrontlight.koplugin/main.lua:120
+#: plugins/autosuspend.koplugin/main.lua:223
 #: plugins/autoturn.koplugin/main.lua:135 plugins/kosync.koplugin/main.lua:55
 #: plugins/kosync.koplugin/main.lua:207 plugins/kosync.koplugin/main.lua:241
 msgid "Disable"
@@ -312,7 +313,7 @@ msgstr "Alege dosar local"
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
 #: frontend/ui/elements/menu_keyboard_layout.lua:91
 #: frontend/ui/screensaver.lua:255 frontend/ui/screensaver.lua:315
-#: frontend/ui/widget/datetimewidget.lua:36
+#: frontend/ui/widget/datetimewidget.lua:37
 #: frontend/ui/widget/dictquicklookup.lua:422
 #: frontend/ui/widget/dictquicklookup.lua:522
 #: frontend/ui/widget/doublespinwidget.lua:41
@@ -402,7 +403,7 @@ msgstr "Editează cont Dropbox"
 #: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:97
-#: frontend/ui/widget/datetimewidget.lua:35
+#: frontend/ui/widget/datetimewidget.lua:36
 #: frontend/ui/widget/doublespinwidget.lua:42
 #: frontend/ui/widget/radiobuttonwidget.lua:32
 #: frontend/ui/widget/spinwidget.lua:41
@@ -10347,6 +10348,12 @@ msgstr ""
 msgid "no text"
 msgstr "fără text"
 
+#: frontend/ui/widget/datetimewidget.lua:156
+#: frontend/ui/widget/spinwidget.lua:125
+#, fuzzy
+msgid "Default value: %1"
+msgstr "Setări implicite invalide: %1"
+
 #: frontend/ui/widget/dictquicklookup.lua:63
 msgid "Unhighlight"
 msgstr "De-evidențiază"
@@ -10811,11 +10818,6 @@ msgstr ""
 msgid "Use default"
 msgstr "Folosește valoarea implicită"
 
-#: frontend/ui/widget/spinwidget.lua:125
-#, fuzzy
-msgid "Default value: %1"
-msgstr "Setări implicite invalide: %1"
-
 #: frontend/ui/wikipedia.lua:385
 msgid "Loading high-res image… (tap to cancel)"
 msgstr "Se încarcă imagine la rezoluție mare… (apasă pentru a anula)"
@@ -10914,104 +10916,103 @@ msgid "Packing EPUB…"
 msgstr "Se împachetează EPUB…"
 
 #. @translators This is the 'm' for minute, like in 30m30s. This is a duration.
-#: frontend/util.lua:157 frontend/util.lua:172 frontend/util.lua:179
+#: frontend/util.lua:165 frontend/util.lua:180 frontend/util.lua:187
 msgid "%1m"
 msgstr "%1m"
 
-#: frontend/util.lua:163
+#: frontend/util.lua:171
 #, lua-format
 msgid "%1s"
 msgstr "%1s"
 
 #. @translators This is the 'm' for minute and 's' for seconds, like in 30m30s. This is a duration.
-#: frontend/util.lua:186
+#: frontend/util.lua:194
 msgid "%1m%2s"
 msgstr "%1m%2s"
 
 #. @translators This is the 'h' for hour, like in 1h30m30s. This is a duration.
-#. @translators This is the 's' for second, like in 1h30m30s. This is a duration.
-#. @translators This is the 'h' for hour, like in 1h30m30s. This is a duration.
-#: frontend/util.lua:198 frontend/util.lua:202 frontend/util.lua:207
-#: frontend/util.lua:209
+#: frontend/util.lua:206 frontend/util.lua:209 frontend/util.lua:215
+#: frontend/util.lua:217
 msgid "h"
 msgstr ""
 
 #. @translators This is the 'm' for minute, like in 1h30m30s. This is a duration.
-#: frontend/util.lua:200
+#: frontend/util.lua:208
 msgid "m"
 msgstr ""
 
-#: frontend/util.lua:204
+#. @translators This is the 's' for second, like in 1h30m30s. This is a duration.
+#: frontend/util.lua:212
 msgid "s"
 msgstr ""
 
 #. @translators This is the time in the morning using a 12-hour clock (%I is the hour, %M the minute).
-#: frontend/util.lua:244
+#: frontend/util.lua:253
 msgid "%I:%M AM"
 msgstr "%I:%M am"
 
 #. @translators This is the time in the afternoon using a 12-hour clock (%I is the hour, %M the minute).
-#: frontend/util.lua:247
+#: frontend/util.lua:256
 msgid "%I:%M PM"
 msgstr "%I:%M pm"
 
 #. @translators This is the time using a 24-hour clock (%H is the hour, %M the minute).
-#: frontend/util.lua:251
+#: frontend/util.lua:260
 msgid "%H:%M"
 msgstr "%H:%M"
 
 #. @translators This is the time in the morning using a 12-hour clock (%_I is the hour, %M the minute).
-#: frontend/util.lua:260
+#: frontend/util.lua:269
 msgid "%_I:%M AM"
 msgstr "%_I:%M am"
 
 #. @translators This is the time in the morning using a 12-hour clock (%-I is the hour, %M the minute).
-#: frontend/util.lua:263
+#: frontend/util.lua:272
 msgid "%-I:%M AM"
 msgstr "%-I:%M AM"
 
 #. @translators This is the time in the afternoon using a 12-hour clock (%_I is the hour, %M the minute).
-#: frontend/util.lua:268
+#: frontend/util.lua:277
 msgid "%_I:%M PM"
 msgstr "%_I:%M pm"
 
 #. @translators This is the time in the afternoon using a 12-hour clock (%-I is the hour, %M the minute).
-#: frontend/util.lua:271
+#: frontend/util.lua:280
 msgid "%-I:%M PM"
 msgstr "%-I:%M PM"
 
 #. @translators This is the time using a 24-hour clock (%_H is the hour, %M the minute).
-#: frontend/util.lua:277
+#: frontend/util.lua:286
 msgid "%_H:%M"
 msgstr "%_H:%M"
 
 #. @translators This is the time using a 24-hour clock (%-H is the hour, %M the minute).
-#: frontend/util.lua:280
+#: frontend/util.lua:289
 msgid "%-H:%M"
 msgstr "%-H:%M"
 
 #. @translators This is the date (%Y is the year, %m the month, %d the day)
-#: frontend/util.lua:295
+#: frontend/util.lua:304
 msgid "%Y-%m-%d"
 msgstr "%Y.%m.%d"
 
 #. @translators This is an abbreviation for the gigabyte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:987
+#: frontend/util.lua:996
 msgid "%1 GB"
 msgstr "%1 GO"
 
 #. @translators This is an abbreviation for the megabyte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:991
+#: frontend/util.lua:1000
 msgid "%1 MB"
 msgstr "%1 MO"
 
 #. @translators This is an abbreviation for the kilobyte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:995
+#: frontend/util.lua:1004
 msgid "%1 kB"
 msgstr "%1 kO"
 
 #. @translators This is an abbreviation for the byte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:998
+#: frontend/util.lua:1007
 msgid "%1 B"
 msgstr "%1 O"
 
@@ -11078,45 +11079,57 @@ msgstr "Suspendare automată"
 msgid "Put into standby on no input, wake up from standby on UI input"
 msgstr "Pune în suspendare dacă nu există atingeri, trezește la atingere"
 
-#: plugins/autosuspend.koplugin/main.lua:178
-#, fuzzy
-msgid "Autosuspend timeout: %1"
-msgstr "Timp suspendare automată"
-
-#: plugins/autosuspend.koplugin/main.lua:181
-msgid "Autosuspend timeout"
-msgstr "Timp suspendare automată"
-
-#: plugins/autosuspend.koplugin/main.lua:193
-#: plugins/autosuspend.koplugin/main.lua:237
+#: plugins/autosuspend.koplugin/main.lua:197
 #: plugins/autoturn.koplugin/main.lua:134
 msgid "Set timeout"
 msgstr "Setează"
 
-#: plugins/autosuspend.koplugin/main.lua:194
-msgid "Timeout in minutes"
-msgstr "Timp în minute"
+#: plugins/autosuspend.koplugin/main.lua:211
+#: plugins/autowarmth.koplugin/main.lua:568
+msgid "%1: %2"
+msgstr "%1: %2"
 
-#: plugins/autosuspend.koplugin/main.lua:199
-msgid "The system will automatically suspend after %1 minutes of inactivity."
-msgstr "Sistemul va fi suspendat automat după %1 minute de inactivitate."
+#: plugins/autosuspend.koplugin/main.lua:229
+#, fuzzy
+msgid "%1: disabled"
+msgstr "dezactivată"
 
-#: plugins/autosuspend.koplugin/main.lua:217
+#: plugins/autosuspend.koplugin/main.lua:249
+#, fuzzy
+msgid "Autosuspend timeout: %1"
+msgstr "Timp suspendare automată"
+
+#: plugins/autosuspend.koplugin/main.lua:251
+msgid "Autosuspend timeout"
+msgstr "Timp suspendare automată"
+
+#: plugins/autosuspend.koplugin/main.lua:260
+#, fuzzy
+msgid "Timeout for autosuspend"
+msgstr "Interval în secunde"
+
+#: plugins/autosuspend.koplugin/main.lua:260
+#, fuzzy
+msgid "Enter time in hours and minutes."
+msgstr "Întrodu un timp în ore și minute."
+
+#: plugins/autosuspend.koplugin/main.lua:275
 #, fuzzy
 msgid "Autoshutdown timeout: %1"
 msgstr "Timp oprire automată"
 
-#: plugins/autosuspend.koplugin/main.lua:220
+#: plugins/autosuspend.koplugin/main.lua:277
 msgid "Autoshutdown timeout"
 msgstr "Timp oprire automată"
 
-#: plugins/autosuspend.koplugin/main.lua:238
-msgid "Timeout in hours"
-msgstr "Timp în ore"
+#: plugins/autosuspend.koplugin/main.lua:287
+msgid "Timeout for autoshutdown"
+msgstr ""
 
-#: plugins/autosuspend.koplugin/main.lua:243
-msgid "The system will automatically shut down after %1 hours of inactivity."
-msgstr "Sistemul va fi oprit automat după %1 ore de inactivitate."
+#: plugins/autosuspend.koplugin/main.lua:287
+#, fuzzy
+msgid "Enter time in days and hours."
+msgstr "Întrodu un timp în ore și minute."
 
 #: plugins/autosuspend.koplugin/_meta.lua:4
 msgid "Auto suspend"
@@ -11393,10 +11406,6 @@ msgstr "Altitudine: %1m"
 #: plugins/autowarmth.koplugin/main.lua:518
 msgid "Altitude"
 msgstr "Altitudine"
-
-#: plugins/autowarmth.koplugin/main.lua:568
-msgid "%1: %2"
-msgstr "%1: %2"
 
 #: plugins/autowarmth.koplugin/main.lua:583
 msgid "HH"
@@ -15806,6 +15815,20 @@ msgstr "Atinge colțul din dreapta jos"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Atinge colțul din dreapta sus"
+
+#~ msgid "Timeout in minutes"
+#~ msgstr "Timp în minute"
+
+#~ msgid ""
+#~ "The system will automatically suspend after %1 minutes of inactivity."
+#~ msgstr "Sistemul va fi suspendat automat după %1 minute de inactivitate."
+
+#~ msgid "Timeout in hours"
+#~ msgstr "Timp în ore"
+
+#~ msgid ""
+#~ "The system will automatically shut down after %1 hours of inactivity."
+#~ msgstr "Sistemul va fi oprit automat după %1 ore de inactivitate."
 
 #~ msgid "%1h%2"
 #~ msgstr "%1h%2"

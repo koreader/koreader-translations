@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-27 17:39+0000\n"
+"POT-Creation-Date: 2021-11-28 21:22+0000\n"
 "PO-Revision-Date: 2021-11-28 21:22+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -60,6 +60,7 @@ msgstr "무시"
 #: frontend/ui/elements/screensaver_menu.lua:244
 #: frontend/ui/plugin/switch_plugin.lua:64
 #: plugins/autofrontlight.koplugin/main.lua:120
+#: plugins/autosuspend.koplugin/main.lua:223
 #: plugins/autoturn.koplugin/main.lua:135 plugins/kosync.koplugin/main.lua:55
 #: plugins/kosync.koplugin/main.lua:207 plugins/kosync.koplugin/main.lua:241
 msgid "Disable"
@@ -318,7 +319,7 @@ msgstr "내 기기의 폴더를 선택하세요"
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
 #: frontend/ui/elements/menu_keyboard_layout.lua:91
 #: frontend/ui/screensaver.lua:255 frontend/ui/screensaver.lua:315
-#: frontend/ui/widget/datetimewidget.lua:36
+#: frontend/ui/widget/datetimewidget.lua:37
 #: frontend/ui/widget/dictquicklookup.lua:422
 #: frontend/ui/widget/dictquicklookup.lua:522
 #: frontend/ui/widget/doublespinwidget.lua:41
@@ -408,7 +409,7 @@ msgstr "드롭박스 계정 설정"
 #: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:97
-#: frontend/ui/widget/datetimewidget.lua:35
+#: frontend/ui/widget/datetimewidget.lua:36
 #: frontend/ui/widget/doublespinwidget.lua:42
 #: frontend/ui/widget/radiobuttonwidget.lua:32
 #: frontend/ui/widget/spinwidget.lua:41
@@ -10121,6 +10122,11 @@ msgstr ""
 msgid "no text"
 msgstr "내용 없음"
 
+#: frontend/ui/widget/datetimewidget.lua:156
+#: frontend/ui/widget/spinwidget.lua:125
+msgid "Default value: %1"
+msgstr "기본값: %1"
+
 #: frontend/ui/widget/dictquicklookup.lua:63
 msgid "Unhighlight"
 msgstr "강조 풀기"
@@ -10582,10 +10588,6 @@ msgstr ""
 msgid "Use default"
 msgstr "기본값 사용"
 
-#: frontend/ui/widget/spinwidget.lua:125
-msgid "Default value: %1"
-msgstr "기본값: %1"
-
 #: frontend/ui/wikipedia.lua:385
 msgid "Loading high-res image… (tap to cancel)"
 msgstr "고해상도 이미지 로딩 중... (취소하려면 탭하세요)"
@@ -10682,104 +10684,103 @@ msgid "Packing EPUB…"
 msgstr "EPUB 만드는 중…"
 
 #. @translators This is the 'm' for minute, like in 30m30s. This is a duration.
-#: frontend/util.lua:157 frontend/util.lua:172 frontend/util.lua:179
+#: frontend/util.lua:165 frontend/util.lua:180 frontend/util.lua:187
 msgid "%1m"
 msgstr "%1m"
 
-#: frontend/util.lua:163
+#: frontend/util.lua:171
 #, lua-format
 msgid "%1s"
 msgstr "%1s"
 
 #. @translators This is the 'm' for minute and 's' for seconds, like in 30m30s. This is a duration.
-#: frontend/util.lua:186
+#: frontend/util.lua:194
 msgid "%1m%2s"
 msgstr "%1m%2s"
 
 #. @translators This is the 'h' for hour, like in 1h30m30s. This is a duration.
-#. @translators This is the 's' for second, like in 1h30m30s. This is a duration.
-#. @translators This is the 'h' for hour, like in 1h30m30s. This is a duration.
-#: frontend/util.lua:198 frontend/util.lua:202 frontend/util.lua:207
-#: frontend/util.lua:209
+#: frontend/util.lua:206 frontend/util.lua:209 frontend/util.lua:215
+#: frontend/util.lua:217
 msgid "h"
 msgstr "시"
 
 #. @translators This is the 'm' for minute, like in 1h30m30s. This is a duration.
-#: frontend/util.lua:200
+#: frontend/util.lua:208
 msgid "m"
 msgstr "분"
 
-#: frontend/util.lua:204
+#. @translators This is the 's' for second, like in 1h30m30s. This is a duration.
+#: frontend/util.lua:212
 msgid "s"
 msgstr "초"
 
 #. @translators This is the time in the morning using a 12-hour clock (%I is the hour, %M the minute).
-#: frontend/util.lua:244
+#: frontend/util.lua:253
 msgid "%I:%M AM"
 msgstr "오전 %I:%M"
 
 #. @translators This is the time in the afternoon using a 12-hour clock (%I is the hour, %M the minute).
-#: frontend/util.lua:247
+#: frontend/util.lua:256
 msgid "%I:%M PM"
 msgstr "오후 %I:%M"
 
 #. @translators This is the time using a 24-hour clock (%H is the hour, %M the minute).
-#: frontend/util.lua:251
+#: frontend/util.lua:260
 msgid "%H:%M"
 msgstr "%H:%M"
 
 #. @translators This is the time in the morning using a 12-hour clock (%_I is the hour, %M the minute).
-#: frontend/util.lua:260
+#: frontend/util.lua:269
 msgid "%_I:%M AM"
 msgstr "오전 %_I:%M"
 
 #. @translators This is the time in the morning using a 12-hour clock (%-I is the hour, %M the minute).
-#: frontend/util.lua:263
+#: frontend/util.lua:272
 msgid "%-I:%M AM"
 msgstr "오전 %-I:%M분"
 
 #. @translators This is the time in the afternoon using a 12-hour clock (%_I is the hour, %M the minute).
-#: frontend/util.lua:268
+#: frontend/util.lua:277
 msgid "%_I:%M PM"
 msgstr "오후 %_I:%M"
 
 #. @translators This is the time in the afternoon using a 12-hour clock (%-I is the hour, %M the minute).
-#: frontend/util.lua:271
+#: frontend/util.lua:280
 msgid "%-I:%M PM"
 msgstr "오후 %-I:%M분"
 
 #. @translators This is the time using a 24-hour clock (%_H is the hour, %M the minute).
-#: frontend/util.lua:277
+#: frontend/util.lua:286
 msgid "%_H:%M"
 msgstr "%_H:%M"
 
 #. @translators This is the time using a 24-hour clock (%-H is the hour, %M the minute).
-#: frontend/util.lua:280
+#: frontend/util.lua:289
 msgid "%-H:%M"
 msgstr "%-H시:%M분"
 
 #. @translators This is the date (%Y is the year, %m the month, %d the day)
-#: frontend/util.lua:295
+#: frontend/util.lua:304
 msgid "%Y-%m-%d"
 msgstr "%Y-%m-%d"
 
 #. @translators This is an abbreviation for the gigabyte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:987
+#: frontend/util.lua:996
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #. @translators This is an abbreviation for the megabyte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:991
+#: frontend/util.lua:1000
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #. @translators This is an abbreviation for the kilobyte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:995
+#: frontend/util.lua:1004
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #. @translators This is an abbreviation for the byte, a unit of computer memory or data storage capacity.
-#: frontend/util.lua:998
+#: frontend/util.lua:1007
 msgid "%1 B"
 msgstr "%1 B"
 
@@ -10843,43 +10844,55 @@ msgstr "자동 대기 상태"
 msgid "Put into standby on no input, wake up from standby on UI input"
 msgstr "입력이 없으면 대기 모드로 전환하고, UI 입력되면 대기 모드에서 깨우기"
 
-#: plugins/autosuspend.koplugin/main.lua:178
-msgid "Autosuspend timeout: %1"
-msgstr "자동 정지 시간 초과: %1"
-
-#: plugins/autosuspend.koplugin/main.lua:181
-msgid "Autosuspend timeout"
-msgstr "자동 정지 시간 초과"
-
-#: plugins/autosuspend.koplugin/main.lua:193
-#: plugins/autosuspend.koplugin/main.lua:237
+#: plugins/autosuspend.koplugin/main.lua:197
 #: plugins/autoturn.koplugin/main.lua:134
 msgid "Set timeout"
 msgstr "시간 간격 초과 설정"
 
-#: plugins/autosuspend.koplugin/main.lua:194
-msgid "Timeout in minutes"
-msgstr "분 단위의 시간 초과"
+#: plugins/autosuspend.koplugin/main.lua:211
+#: plugins/autowarmth.koplugin/main.lua:568
+msgid "%1: %2"
+msgstr "%1: %2"
 
-#: plugins/autosuspend.koplugin/main.lua:199
-msgid "The system will automatically suspend after %1 minutes of inactivity."
-msgstr "%1 분 동안 활동이 없으면 시스템이 자동으로 잠자기에 들어갑니다."
+#: plugins/autosuspend.koplugin/main.lua:229
+#, fuzzy
+msgid "%1: disabled"
+msgstr "비활성화"
 
-#: plugins/autosuspend.koplugin/main.lua:217
+#: plugins/autosuspend.koplugin/main.lua:249
+msgid "Autosuspend timeout: %1"
+msgstr "자동 정지 시간 초과: %1"
+
+#: plugins/autosuspend.koplugin/main.lua:251
+msgid "Autosuspend timeout"
+msgstr "자동 정지 시간 초과"
+
+#: plugins/autosuspend.koplugin/main.lua:260
+#, fuzzy
+msgid "Timeout for autosuspend"
+msgstr "초 단위의 시간 초과"
+
+#: plugins/autosuspend.koplugin/main.lua:260
+#, fuzzy
+msgid "Enter time in hours and minutes."
+msgstr "시간과 분으로 시간을 입력합니다."
+
+#: plugins/autosuspend.koplugin/main.lua:275
 msgid "Autoshutdown timeout: %1"
 msgstr "자동 끝내기 시간 초과: %1"
 
-#: plugins/autosuspend.koplugin/main.lua:220
+#: plugins/autosuspend.koplugin/main.lua:277
 msgid "Autoshutdown timeout"
 msgstr "자동 끝내기 시간 초과"
 
-#: plugins/autosuspend.koplugin/main.lua:238
-msgid "Timeout in hours"
-msgstr "시간 간격 초과"
+#: plugins/autosuspend.koplugin/main.lua:287
+msgid "Timeout for autoshutdown"
+msgstr ""
 
-#: plugins/autosuspend.koplugin/main.lua:243
-msgid "The system will automatically shut down after %1 hours of inactivity."
-msgstr "%1 시간 동안 활동이 없으면 시스템이 자동으로 종료됩니다."
+#: plugins/autosuspend.koplugin/main.lua:287
+#, fuzzy
+msgid "Enter time in days and hours."
+msgstr "시간과 분으로 시간을 입력합니다."
 
 #: plugins/autosuspend.koplugin/_meta.lua:4
 msgid "Auto suspend"
@@ -11136,10 +11149,6 @@ msgstr "고도: %1m"
 #: plugins/autowarmth.koplugin/main.lua:518
 msgid "Altitude"
 msgstr "고도"
-
-#: plugins/autowarmth.koplugin/main.lua:568
-msgid "%1: %2"
-msgstr "%1: %2"
 
 #: plugins/autowarmth.koplugin/main.lua:583
 msgid "HH"
@@ -15459,6 +15468,20 @@ msgstr "하단 오른쪽 모서리 탭"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "상단 오른쪽 모서리 탭"
+
+#~ msgid "Timeout in minutes"
+#~ msgstr "분 단위의 시간 초과"
+
+#~ msgid ""
+#~ "The system will automatically suspend after %1 minutes of inactivity."
+#~ msgstr "%1 분 동안 활동이 없으면 시스템이 자동으로 잠자기에 들어갑니다."
+
+#~ msgid "Timeout in hours"
+#~ msgstr "시간 간격 초과"
+
+#~ msgid ""
+#~ "The system will automatically shut down after %1 hours of inactivity."
+#~ msgstr "%1 시간 동안 활동이 없으면 시스템이 자동으로 종료됩니다."
 
 #~ msgid "%1h%2"
 #~ msgstr "%1h%2"
