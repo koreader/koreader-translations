@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-04 11:55+0000\n"
+"POT-Creation-Date: 2021-12-04 17:39+0000\n"
 "PO-Revision-Date: 2020-12-03 14:29+0000\n"
 "Last-Translator: Axel Åkerblom <axel.erik.akerblom@gmail.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/koreader/"
@@ -162,7 +162,8 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:901
+#: frontend/apps/reader/modules/readerbookmark.lua:827
+#: frontend/apps/reader/modules/readerbookmark.lua:878
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readerfooter.lua:647
@@ -311,8 +312,7 @@ msgid "Choose local folder"
 msgstr ""
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:617
-#: frontend/apps/reader/modules/readerbookmark.lua:697
+#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerhighlight.lua:1202
 #: frontend/apps/reader/modules/readerhighlight.lua:1238
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -402,7 +402,6 @@ msgstr "Redigera Dropbox-konto"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
-#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:97
 #: frontend/ui/widget/datetimewidget.lua:73
@@ -546,7 +545,7 @@ msgstr "Lägg till WebDAV-konto"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:97
-#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:122
+#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:123
 #: plugins/opds.koplugin/opdsbrowser.lua:743
 msgid "Book information"
 msgstr "Bokinformation"
@@ -742,6 +741,7 @@ msgid "Current folder"
 msgstr "Aktuell mapp"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:916
 #: frontend/apps/reader/modules/readersearch.lua:139
 #: frontend/ui/widget/inputdialog.lua:867
 msgid "Case sensitive"
@@ -1660,78 +1660,92 @@ msgstr ""
 msgid "Location history is empty."
 msgstr "Platshistoriken är tom."
 
-#: frontend/apps/reader/modules/readerbookmark.lua:63
-#: frontend/apps/reader/modules/readerbookmark.lua:87
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
+#: frontend/apps/reader/modules/readerbookmark.lua:65
+#: frontend/apps/reader/modules/readerbookmark.lua:89
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "Bokmärken"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Remove bookmark for current page"
 msgstr "Ta bort bokmärke för aktuell sida"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Bookmark current page"
 msgstr "Bokmärk aktuell sida"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:78
+#: frontend/apps/reader/modules/readerbookmark.lua:80
 msgid "Bookmark browsing mode"
 msgstr "Bläddringsläge för bokmärke"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:92
+#: frontend/apps/reader/modules/readerbookmark.lua:94
 #, fuzzy
 msgid "Bookmarks per page: %1"
 msgstr "Bokmärk aktuell sida"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:103
+#: frontend/apps/reader/modules/readerbookmark.lua:105
 #, fuzzy
 msgid "Bookmarks per page"
 msgstr "Bokmärk aktuell sida"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:117
+#: frontend/apps/reader/modules/readerbookmark.lua:119
 #, fuzzy
 msgid "Bookmark font size: %1"
 msgstr "Ställ in teckenstorlek"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:130
+#: frontend/apps/reader/modules/readerbookmark.lua:132
 #, fuzzy
 msgid "Bookmark font size"
 msgstr "Ställ in teckenstorlek"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:140
+#: frontend/apps/reader/modules/readerbookmark.lua:142
 msgid "Shrink bookmark font size to fit more text"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:149
+#: frontend/apps/reader/modules/readerbookmark.lua:151
 #, fuzzy
 msgid "Show separator between items"
 msgstr "Visa filer som inte stöds"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:160
 #, fuzzy
 msgid "Sort by largest page number"
 msgstr "Sortera efter sista läsningsdatum"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:167
+#: frontend/apps/reader/modules/readerbookmark.lua:169
 msgid "Add page number / timestamp to bookmark"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:479
+#: frontend/apps/reader/modules/readerbookmark.lua:180
+#: frontend/dispatcher.lua:121
+#, fuzzy
+msgid "Bookmark search"
+msgstr "Bokmärken"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
+#: frontend/apps/reader/modules/readerbookmark.lua:905
+#, fuzzy
+msgid "Bookmarks (search results)"
+msgstr "Bläddringsläge för bokmärke"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:486
 msgid "No bookmarks selected"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:481
+#: frontend/apps/reader/modules/readerbookmark.lua:488
 #, fuzzy
 msgid "Remove selected bookmark?"
 msgid_plural "Remove %1 selected bookmarks?"
 msgstr[0] "Ta bort detta bokmärke"
 msgstr[1] "Ta bort detta bokmärke"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:485
-#: frontend/apps/reader/modules/readerbookmark.lua:570
+#: frontend/apps/reader/modules/readerbookmark.lua:492
+#: frontend/apps/reader/modules/readerbookmark.lua:577
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:410
 #: plugins/statistics.koplugin/main.lua:2116
@@ -1739,107 +1753,81 @@ msgstr[1] "Ta bort detta bokmärke"
 msgid "Remove"
 msgstr "Ta bort"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
-#: frontend/apps/reader/modules/readerbookmark.lua:652
-#, fuzzy
-msgid "Bookmarks (filtered)"
-msgstr "Bokmärk aktuell sida"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:499
+#: frontend/apps/reader/modules/readerbookmark.lua:506
 #, fuzzy
 msgid "Deselect all"
 msgstr "Inaktivera"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:511
+#: frontend/apps/reader/modules/readerbookmark.lua:518
 #, fuzzy
 msgid "Select all"
 msgstr "Välj"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:521
+#: frontend/apps/reader/modules/readerbookmark.lua:528
 #, fuzzy
 msgid "Exit select mode"
 msgstr "Textriktning"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:533
+#: frontend/apps/reader/modules/readerbookmark.lua:540
 #, fuzzy
 msgid "Select page"
 msgstr "Välj"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 #, fuzzy
 msgid "Page: %1"
 msgstr "Sidor: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 #, fuzzy
 msgid "Time: %1"
 msgstr "Tid"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:559
+#: frontend/apps/reader/modules/readerbookmark.lua:566
 msgid "Bookmark details"
 msgstr "Bokmärke detaljer"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:565
+#: frontend/apps/reader/modules/readerbookmark.lua:572
 #, fuzzy
 msgid "Remove bookmark"
 msgstr "Byt namn på bokmärke"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:569
+#: frontend/apps/reader/modules/readerbookmark.lua:576
 #, fuzzy
 msgid "Remove this bookmark?"
 msgstr "Ta bort detta bokmärke"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:594
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 #, fuzzy
 msgid "Add note"
 msgstr "Lägg till anteckning"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:892
+#: frontend/apps/reader/modules/readerbookmark.lua:594
+#: frontend/apps/reader/modules/readerbookmark.lua:818
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 #, fuzzy
 msgid "Edit note"
 msgstr "Redigera vänligt namn"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:597
+#: frontend/apps/reader/modules/readerbookmark.lua:604
 msgid "Bulk remove"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:603
+#: frontend/apps/reader/modules/readerbookmark.lua:610
 #, fuzzy
 msgid "Bookmarks (select mode)"
 msgstr "Bläddringsläge för bokmärke"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:607
-#: frontend/apps/reader/modules/readerbookmark.lua:612
+#: frontend/apps/reader/modules/readerbookmark.lua:614
+#: frontend/apps/reader/modules/readerbookmark.lua:874
 #, fuzzy
-msgid "Filter bookmarks"
-msgstr "Växla bokmärke"
+msgid "Search bookmarks"
+msgstr "Sök böcker"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:613
-msgid "(containing text)"
-msgstr ""
-
-#: frontend/apps/reader/modules/readerbookmark.lua:661
-#, fuzzy
-msgid "highlights"
-msgstr "Markera"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:671
-#, fuzzy
-msgid "notes"
-msgstr "Totalt antal anteckningar"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:681
-#, fuzzy
-msgid "page bookmarks"
-msgstr "Byt namn på bokmärke"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:907
+#: frontend/apps/reader/modules/readerbookmark.lua:833
 #: frontend/apps/reader/modules/readerstyletweak.lua:641
 #: frontend/apps/reader/modules/readeruserhyph.lua:203
 #: frontend/apps/reader/modules/readerwikipedia.lua:161
@@ -1856,12 +1844,34 @@ msgstr "Byt namn på bokmärke"
 msgid "Save"
 msgstr "Spara"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:884
+#: frontend/apps/reader/modules/readerhighlight.lua:137
+#: frontend/ui/widget/dictquicklookup.lua:507
+#: plugins/opds.koplugin/opdsbrowser.lua:790
+msgid "Search"
+msgstr "Sök"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:940
+#, fuzzy
+msgid "highlights"
+msgstr "Markera"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:950
+#, fuzzy
+msgid "notes"
+msgstr "Totalt antal anteckningar"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:960
+#, fuzzy
+msgid "page bookmarks"
+msgstr "Byt namn på bokmärke"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:961
+#: frontend/apps/reader/modules/readerbookmark.lua:1001
 msgid "in %1"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:1111
+#: frontend/apps/reader/modules/readerbookmark.lua:1163
 msgid "Page %1 %2 @ %3"
 msgstr "Sida %1 %2 @ %3"
 
@@ -3105,12 +3115,6 @@ msgstr "Ordbok"
 msgid "Translate"
 msgstr "Översätt"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:137
-#: frontend/ui/widget/dictquicklookup.lua:507
-#: plugins/opds.koplugin/opdsbrowser.lua:790
-msgid "Search"
-msgstr "Sök"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:152
 #, fuzzy
 msgid "Share Text"
@@ -4030,7 +4034,7 @@ msgid "Too many hits"
 msgstr ""
 
 #: frontend/apps/reader/modules/readerstatus.lua:37
-#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:121
+#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:122
 #: frontend/ui/elements/common_settings_menu_table.lua:542
 msgid "Book status"
 msgstr "Bokstatus"
@@ -4062,7 +4066,7 @@ msgid "Delete file"
 msgstr "Ta bort fil"
 
 #: frontend/apps/reader/modules/readerstatus.lua:115 frontend/dispatcher.lua:88
-#: frontend/dispatcher.lua:666
+#: frontend/dispatcher.lua:668
 msgid "File browser"
 msgstr "Filhanteraren"
 
@@ -5786,126 +5790,126 @@ msgstr "Följ närmaste interna länk"
 msgid "Clear location history"
 msgstr "Rensa platshistoriken"
 
-#: frontend/dispatcher.lua:123 plugins/coverbrowser.koplugin/covermenu.lua:343
+#: frontend/dispatcher.lua:124 plugins/coverbrowser.koplugin/covermenu.lua:343
 #: plugins/coverbrowser.koplugin/covermenu.lua:476
 #: plugins/coverbrowser.koplugin/covermenu.lua:598
 msgid "Book description"
 msgstr "Bokbeskrivning"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Book cover"
 msgstr "Bokomslag"
 
-#: frontend/dispatcher.lua:125
+#: frontend/dispatcher.lua:126
 msgid "Show bottom menu"
 msgstr "Visa nedre menyn"
 
-#: frontend/dispatcher.lua:126
+#: frontend/dispatcher.lua:127
 msgid "Toggle bookmark"
 msgstr "Växla bokmärke"
 
-#: frontend/dispatcher.lua:127
+#: frontend/dispatcher.lua:128
 msgid "Toggle page turn direction"
 msgstr ""
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Cycle highlight action"
 msgstr "Cykla genom markeringsåtgärd"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 msgid "Cycle highlight style"
 msgstr "Cykla genom markeringsstil"
 
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 #, fuzzy
 msgid "Go %1 pages"
 msgstr "Gå till sida"
 
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 #, fuzzy
 msgid "Toggle panel zoom"
 msgstr "Växla återflöde"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Increase font size by %1"
 msgstr "Öka teckenstorleken med %1"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Decrease font size by %1"
 msgstr "Minska teckenstorleken med %1"
 
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 msgid "Toggle page flipping"
 msgstr "Växla sidbläddring"
 
-#: frontend/dispatcher.lua:139
+#: frontend/dispatcher.lua:140
 msgid "Toggle reflow"
 msgstr "Växla återflöde"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 #, fuzzy
 msgid "Zoom mode"
 msgstr "Zooma för att passa sidan"
 
-#: frontend/dispatcher.lua:141
+#: frontend/dispatcher.lua:142
 #, fuzzy
 msgid "Change zoom factor"
 msgstr "Ändra SSH-port"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 #, fuzzy
 msgid "Set font size to %1"
 msgstr "Ställ in teckenstorlek"
 
-#: frontend/dispatcher.lua:181 frontend/ui/data/creoptions.lua:410
+#: frontend/dispatcher.lua:182 frontend/ui/data/creoptions.lua:410
 #: frontend/ui/data/creoptions.lua:422 frontend/ui/data/creoptions.lua:433
 #: frontend/ui/data/creoptions.lua:443 frontend/ui/data/koptoptions.lua:423
 #: frontend/ui/data/koptoptions.lua:438 frontend/ui/widget/toggleswitch.lua:244
 msgid "Font Size"
 msgstr "Teckenstorlek"
 
-#: frontend/dispatcher.lua:460
+#: frontend/dispatcher.lua:462
 #, fuzzy
 msgid "Unknown item"
 msgstr "Wi-Fi-anslutning"
 
-#: frontend/dispatcher.lua:469
+#: frontend/dispatcher.lua:471
 msgctxt "Number placeholder"
 msgid "#"
 msgstr ""
 
-#: frontend/dispatcher.lua:568
+#: frontend/dispatcher.lua:570
 msgid "If called by a gesture the amount of the gesture will be used"
 msgstr ""
 
-#: frontend/dispatcher.lua:651 plugins/gestures.koplugin/main.lua:189
+#: frontend/dispatcher.lua:653 plugins/gestures.koplugin/main.lua:189
 msgid "Nothing"
 msgstr "Ingenting"
 
-#: frontend/dispatcher.lua:663
+#: frontend/dispatcher.lua:665
 msgid "General"
 msgstr ""
 
-#: frontend/dispatcher.lua:664
+#: frontend/dispatcher.lua:666
 #: frontend/ui/elements/common_info_menu_table.lua:32
 msgid "Device"
 msgstr "Enhet"
 
-#: frontend/dispatcher.lua:665
+#: frontend/dispatcher.lua:667
 #, fuzzy
 msgid "Screen and lights"
 msgstr "Skärm"
 
-#: frontend/dispatcher.lua:667
+#: frontend/dispatcher.lua:669
 #, fuzzy
 msgid "Reader"
 msgstr "Läsa senare"
 
-#: frontend/dispatcher.lua:668
+#: frontend/dispatcher.lua:670
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr ""
 
-#: frontend/dispatcher.lua:669
+#: frontend/dispatcher.lua:671
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr ""
 
@@ -15526,6 +15530,14 @@ msgstr "Tryck på nedre högra hörnet"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Tryck på övre högra hörnet"
+
+#, fuzzy
+#~ msgid "Bookmarks (filtered)"
+#~ msgstr "Bokmärk aktuell sida"
+
+#, fuzzy
+#~ msgid "Filter bookmarks"
+#~ msgstr "Växla bokmärke"
 
 #~ msgid "If you would like to reset the data,"
 #~ msgstr "Om du vill återställa data,"

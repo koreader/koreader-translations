@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-04 11:55+0000\n"
+"POT-Creation-Date: 2021-12-04 17:39+0000\n"
 "PO-Revision-Date: 2021-12-04 11:55+0000\n"
 "Last-Translator: anenasa <anenasaa@yahoo.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -156,7 +156,8 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:901
+#: frontend/apps/reader/modules/readerbookmark.lua:827
+#: frontend/apps/reader/modules/readerbookmark.lua:878
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readerfooter.lua:647
@@ -310,8 +311,7 @@ msgid "Choose local folder"
 msgstr "選擇本機資料夾"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:617
-#: frontend/apps/reader/modules/readerbookmark.lua:697
+#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerhighlight.lua:1202
 #: frontend/apps/reader/modules/readerhighlight.lua:1238
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -404,7 +404,6 @@ msgstr "編輯 Dropbox 帳號"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
-#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:97
 #: frontend/ui/widget/datetimewidget.lua:73
@@ -550,7 +549,7 @@ msgstr "加入 WebDAV 帳號"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:97
-#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:122
+#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:123
 #: plugins/opds.koplugin/opdsbrowser.lua:743
 msgid "Book information"
 msgstr "書籍資訊"
@@ -738,6 +737,7 @@ msgid "Current folder"
 msgstr "當前資料夾"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:916
 #: frontend/apps/reader/modules/readersearch.lua:139
 #: frontend/ui/widget/inputdialog.lua:867
 msgid "Case sensitive"
@@ -1683,70 +1683,84 @@ msgstr "家資料夾"
 msgid "Location history is empty."
 msgstr "沒有定位記錄。"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:63
-#: frontend/apps/reader/modules/readerbookmark.lua:87
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
+#: frontend/apps/reader/modules/readerbookmark.lua:65
+#: frontend/apps/reader/modules/readerbookmark.lua:89
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "書籤"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Remove bookmark for current page"
 msgstr "刪除當前頁面的書籤"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Bookmark current page"
 msgstr "在當前頁面加入書籤"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:78
+#: frontend/apps/reader/modules/readerbookmark.lua:80
 msgid "Bookmark browsing mode"
 msgstr "書籤瀏覽模式"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:92
+#: frontend/apps/reader/modules/readerbookmark.lua:94
 msgid "Bookmarks per page: %1"
 msgstr "每頁書籤數：%1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:103
+#: frontend/apps/reader/modules/readerbookmark.lua:105
 msgid "Bookmarks per page"
 msgstr "每頁書籤數"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:117
+#: frontend/apps/reader/modules/readerbookmark.lua:119
 msgid "Bookmark font size: %1"
 msgstr "書籤字型大小：%1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:130
+#: frontend/apps/reader/modules/readerbookmark.lua:132
 msgid "Bookmark font size"
 msgstr "書籤字型大小"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:140
+#: frontend/apps/reader/modules/readerbookmark.lua:142
 msgid "Shrink bookmark font size to fit more text"
 msgstr "減少書籤字型大小以顯示更多文字"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:149
+#: frontend/apps/reader/modules/readerbookmark.lua:151
 msgid "Show separator between items"
 msgstr "在項目之間顯示分隔符號"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:160
 msgid "Sort by largest page number"
 msgstr "照最大頁碼排序"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:167
+#: frontend/apps/reader/modules/readerbookmark.lua:169
 msgid "Add page number / timestamp to bookmark"
 msgstr "將頁碼/時間戳記加到書籤"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:479
+#: frontend/apps/reader/modules/readerbookmark.lua:180
+#: frontend/dispatcher.lua:121
+#, fuzzy
+msgid "Bookmark search"
+msgstr "書籤"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
+#: frontend/apps/reader/modules/readerbookmark.lua:905
+#, fuzzy
+msgid "Bookmarks (search results)"
+msgstr "書籤（選擇模式）"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:486
 msgid "No bookmarks selected"
 msgstr "未選取書籤"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:481
+#: frontend/apps/reader/modules/readerbookmark.lua:488
 msgid "Remove selected bookmark?"
 msgid_plural "Remove %1 selected bookmarks?"
 msgstr[0] "要移除選取的 %1 個書籤嗎？"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:485
-#: frontend/apps/reader/modules/readerbookmark.lua:570
+#: frontend/apps/reader/modules/readerbookmark.lua:492
+#: frontend/apps/reader/modules/readerbookmark.lua:577
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:410
 #: plugins/statistics.koplugin/main.lua:2116
@@ -1754,91 +1768,70 @@ msgstr[0] "要移除選取的 %1 個書籤嗎？"
 msgid "Remove"
 msgstr "移除"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
-#: frontend/apps/reader/modules/readerbookmark.lua:652
-msgid "Bookmarks (filtered)"
-msgstr "書籤（已過濾）"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:499
+#: frontend/apps/reader/modules/readerbookmark.lua:506
 msgid "Deselect all"
 msgstr "取消全選"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:511
+#: frontend/apps/reader/modules/readerbookmark.lua:518
 msgid "Select all"
 msgstr "全選"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:521
+#: frontend/apps/reader/modules/readerbookmark.lua:528
 msgid "Exit select mode"
 msgstr "退出選擇模式"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:533
+#: frontend/apps/reader/modules/readerbookmark.lua:540
 msgid "Select page"
 msgstr "選擇頁面"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 msgid "Page: %1"
 msgstr "頁碼：%1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 msgid "Time: %1"
 msgstr "時間：%1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:559
+#: frontend/apps/reader/modules/readerbookmark.lua:566
 msgid "Bookmark details"
 msgstr "書籤詳情"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:565
+#: frontend/apps/reader/modules/readerbookmark.lua:572
 msgid "Remove bookmark"
 msgstr "移除書籤"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:569
+#: frontend/apps/reader/modules/readerbookmark.lua:576
 msgid "Remove this bookmark?"
 msgstr "要移除此書籤嗎？"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:594
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 msgid "Add note"
 msgstr "加入筆記"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:892
+#: frontend/apps/reader/modules/readerbookmark.lua:594
+#: frontend/apps/reader/modules/readerbookmark.lua:818
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 msgid "Edit note"
 msgstr "編輯筆記"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:597
+#: frontend/apps/reader/modules/readerbookmark.lua:604
 msgid "Bulk remove"
 msgstr "大量移除"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:603
+#: frontend/apps/reader/modules/readerbookmark.lua:610
 msgid "Bookmarks (select mode)"
 msgstr "書籤（選擇模式）"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:607
-#: frontend/apps/reader/modules/readerbookmark.lua:612
-msgid "Filter bookmarks"
-msgstr "過濾書籤"
+#: frontend/apps/reader/modules/readerbookmark.lua:614
+#: frontend/apps/reader/modules/readerbookmark.lua:874
+#, fuzzy
+msgid "Search bookmarks"
+msgstr "搜尋書籍"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:613
-msgid "(containing text)"
-msgstr "（包含文字）"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:661
-msgid "highlights"
-msgstr "標注"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:671
-msgid "notes"
-msgstr "筆記"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:681
-msgid "page bookmarks"
-msgstr "頁面書籤"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:907
+#: frontend/apps/reader/modules/readerbookmark.lua:833
 #: frontend/apps/reader/modules/readerstyletweak.lua:641
 #: frontend/apps/reader/modules/readeruserhyph.lua:203
 #: frontend/apps/reader/modules/readerwikipedia.lua:161
@@ -1855,12 +1848,31 @@ msgstr "頁面書籤"
 msgid "Save"
 msgstr "儲存"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:884
+#: frontend/apps/reader/modules/readerhighlight.lua:137
+#: frontend/ui/widget/dictquicklookup.lua:507
+#: plugins/opds.koplugin/opdsbrowser.lua:790
+msgid "Search"
+msgstr "搜尋"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:940
+msgid "highlights"
+msgstr "標注"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:950
+msgid "notes"
+msgstr "筆記"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:960
+msgid "page bookmarks"
+msgstr "頁面書籤"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:961
+#: frontend/apps/reader/modules/readerbookmark.lua:1001
 msgid "in %1"
 msgstr "在 %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:1111
+#: frontend/apps/reader/modules/readerbookmark.lua:1163
 msgid "Page %1 %2 @ %3"
 msgstr "第 %1 頁 %2 @ %3"
 
@@ -3067,12 +3079,6 @@ msgstr "字典"
 msgid "Translate"
 msgstr "翻譯"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:137
-#: frontend/ui/widget/dictquicklookup.lua:507
-#: plugins/opds.koplugin/opdsbrowser.lua:790
-msgid "Search"
-msgstr "搜尋"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:152
 msgid "Share Text"
 msgstr "分享文字"
@@ -3972,7 +3978,7 @@ msgid "Too many hits"
 msgstr ""
 
 #: frontend/apps/reader/modules/readerstatus.lua:37
-#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:121
+#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:122
 #: frontend/ui/elements/common_settings_menu_table.lua:542
 msgid "Book status"
 msgstr "書籍閱讀狀態"
@@ -4004,7 +4010,7 @@ msgid "Delete file"
 msgstr "刪除檔案"
 
 #: frontend/apps/reader/modules/readerstatus.lua:115 frontend/dispatcher.lua:88
-#: frontend/dispatcher.lua:666
+#: frontend/dispatcher.lua:668
 msgid "File browser"
 msgstr "檔案瀏覽器"
 
@@ -5699,118 +5705,118 @@ msgstr "追蹤最臨近的內部連結"
 msgid "Clear location history"
 msgstr "清除定位記錄"
 
-#: frontend/dispatcher.lua:123 plugins/coverbrowser.koplugin/covermenu.lua:343
+#: frontend/dispatcher.lua:124 plugins/coverbrowser.koplugin/covermenu.lua:343
 #: plugins/coverbrowser.koplugin/covermenu.lua:476
 #: plugins/coverbrowser.koplugin/covermenu.lua:598
 msgid "Book description"
 msgstr "書籍內容介紹"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Book cover"
 msgstr "書籍封面"
 
-#: frontend/dispatcher.lua:125
+#: frontend/dispatcher.lua:126
 msgid "Show bottom menu"
 msgstr "顯示頁底選單"
 
-#: frontend/dispatcher.lua:126
+#: frontend/dispatcher.lua:127
 msgid "Toggle bookmark"
 msgstr "切換書籤"
 
-#: frontend/dispatcher.lua:127
+#: frontend/dispatcher.lua:128
 msgid "Toggle page turn direction"
 msgstr "切換翻頁方向"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Cycle highlight action"
 msgstr "循環標注動作"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 msgid "Cycle highlight style"
 msgstr "循環標注樣式"
 
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 msgid "Go %1 pages"
 msgstr "前往 %1 頁"
 
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Toggle panel zoom"
 msgstr "切換格子縮放"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Increase font size by %1"
 msgstr "增加字型大小 %1"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Decrease font size by %1"
 msgstr "縮小字型大小 %1"
 
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 msgid "Toggle page flipping"
 msgstr "切換頁面翻轉"
 
-#: frontend/dispatcher.lua:139
+#: frontend/dispatcher.lua:140
 msgid "Toggle reflow"
 msgstr "切換頁面重排"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Zoom mode"
 msgstr "縮放模式"
 
-#: frontend/dispatcher.lua:141
+#: frontend/dispatcher.lua:142
 msgid "Change zoom factor"
 msgstr "變更縮放係數"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 msgid "Set font size to %1"
 msgstr "設定字型大小為 %1"
 
-#: frontend/dispatcher.lua:181 frontend/ui/data/creoptions.lua:410
+#: frontend/dispatcher.lua:182 frontend/ui/data/creoptions.lua:410
 #: frontend/ui/data/creoptions.lua:422 frontend/ui/data/creoptions.lua:433
 #: frontend/ui/data/creoptions.lua:443 frontend/ui/data/koptoptions.lua:423
 #: frontend/ui/data/koptoptions.lua:438 frontend/ui/widget/toggleswitch.lua:244
 msgid "Font Size"
 msgstr "字型大小"
 
-#: frontend/dispatcher.lua:460
+#: frontend/dispatcher.lua:462
 msgid "Unknown item"
 msgstr "未知項目"
 
-#: frontend/dispatcher.lua:469
+#: frontend/dispatcher.lua:471
 msgctxt "Number placeholder"
 msgid "#"
 msgstr "#"
 
-#: frontend/dispatcher.lua:568
+#: frontend/dispatcher.lua:570
 msgid "If called by a gesture the amount of the gesture will be used"
 msgstr "如果被手勢呼叫，使用該手勢的數量"
 
-#: frontend/dispatcher.lua:651 plugins/gestures.koplugin/main.lua:189
+#: frontend/dispatcher.lua:653 plugins/gestures.koplugin/main.lua:189
 msgid "Nothing"
 msgstr "沒有"
 
-#: frontend/dispatcher.lua:663
+#: frontend/dispatcher.lua:665
 msgid "General"
 msgstr ""
 
-#: frontend/dispatcher.lua:664
+#: frontend/dispatcher.lua:666
 #: frontend/ui/elements/common_info_menu_table.lua:32
 msgid "Device"
 msgstr "裝置"
 
-#: frontend/dispatcher.lua:665
+#: frontend/dispatcher.lua:667
 msgid "Screen and lights"
 msgstr "螢幕和燈光"
 
-#: frontend/dispatcher.lua:667
+#: frontend/dispatcher.lua:669
 msgid "Reader"
 msgstr "閱讀器"
 
-#: frontend/dispatcher.lua:668
+#: frontend/dispatcher.lua:670
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "可重排文件 (epub, fb2, txt…)"
 
-#: frontend/dispatcher.lua:669
+#: frontend/dispatcher.lua:671
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "固定排版文件 (pdf, djvu, 圖片…)"
 
@@ -15126,6 +15132,15 @@ msgstr "點擊右下角"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "點擊右上角"
+
+#~ msgid "Bookmarks (filtered)"
+#~ msgstr "書籤（已過濾）"
+
+#~ msgid "Filter bookmarks"
+#~ msgstr "過濾書籤"
+
+#~ msgid "(containing text)"
+#~ msgstr "（包含文字）"
 
 #~ msgid "Use defaults"
 #~ msgstr "使用預設值"

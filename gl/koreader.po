@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-04 11:55+0000\n"
+"POT-Creation-Date: 2021-12-04 17:39+0000\n"
 "PO-Revision-Date: 2021-12-01 11:42+0000\n"
 "Last-Translator: Juan Comesaña Fernández <xan.comesana@gmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/koreader/"
@@ -157,7 +157,8 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:901
+#: frontend/apps/reader/modules/readerbookmark.lua:827
+#: frontend/apps/reader/modules/readerbookmark.lua:878
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readerfooter.lua:647
@@ -314,8 +315,7 @@ msgid "Choose local folder"
 msgstr "Escoller directorio local"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:617
-#: frontend/apps/reader/modules/readerbookmark.lua:697
+#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerhighlight.lua:1202
 #: frontend/apps/reader/modules/readerhighlight.lua:1238
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -408,7 +408,6 @@ msgstr "Editar conta de Dropbox"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
-#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:97
 #: frontend/ui/widget/datetimewidget.lua:73
@@ -554,7 +553,7 @@ msgstr "Engadir conta WebDAV"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:97
-#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:122
+#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:123
 #: plugins/opds.koplugin/opdsbrowser.lua:743
 msgid "Book information"
 msgstr "Datos do libro"
@@ -742,6 +741,7 @@ msgid "Current folder"
 msgstr "Directorio actual"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:916
 #: frontend/apps/reader/modules/readersearch.lua:139
 #: frontend/ui/widget/inputdialog.lua:867
 msgid "Case sensitive"
@@ -1693,71 +1693,85 @@ msgstr "Inicio"
 msgid "Location history is empty."
 msgstr "O historial de posicións está baleiro."
 
-#: frontend/apps/reader/modules/readerbookmark.lua:63
-#: frontend/apps/reader/modules/readerbookmark.lua:87
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
+#: frontend/apps/reader/modules/readerbookmark.lua:65
+#: frontend/apps/reader/modules/readerbookmark.lua:89
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Remove bookmark for current page"
 msgstr "Quitar marcador da páxina actual"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Bookmark current page"
 msgstr "Marcar páxina actual"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:78
+#: frontend/apps/reader/modules/readerbookmark.lua:80
 msgid "Bookmark browsing mode"
 msgstr "Modo de navegación de marcadores"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:92
+#: frontend/apps/reader/modules/readerbookmark.lua:94
 msgid "Bookmarks per page: %1"
 msgstr "Marcadores por páxina: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:103
+#: frontend/apps/reader/modules/readerbookmark.lua:105
 msgid "Bookmarks per page"
 msgstr "Marcadores por páxina"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:117
+#: frontend/apps/reader/modules/readerbookmark.lua:119
 msgid "Bookmark font size: %1"
 msgstr "Tamaño da fonte dos marcadores: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:130
+#: frontend/apps/reader/modules/readerbookmark.lua:132
 msgid "Bookmark font size"
 msgstr "Tamaño da fonte dos marcadores"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:140
+#: frontend/apps/reader/modules/readerbookmark.lua:142
 msgid "Shrink bookmark font size to fit more text"
 msgstr "Diminuír o tamaño da fonte dos marcadores para amosar máis texto"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:149
+#: frontend/apps/reader/modules/readerbookmark.lua:151
 msgid "Show separator between items"
 msgstr "Mostrar separador entre elementos"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:160
 msgid "Sort by largest page number"
 msgstr "Ordenar por número de páxina máis alto"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:167
+#: frontend/apps/reader/modules/readerbookmark.lua:169
 msgid "Add page number / timestamp to bookmark"
 msgstr "Engadir número de páxina / marca de tempo ao marcador"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:479
+#: frontend/apps/reader/modules/readerbookmark.lua:180
+#: frontend/dispatcher.lua:121
+#, fuzzy
+msgid "Bookmark search"
+msgstr "Marcadores"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
+#: frontend/apps/reader/modules/readerbookmark.lua:905
+#, fuzzy
+msgid "Bookmarks (search results)"
+msgstr "Marcadores (modo de selección)"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:486
 msgid "No bookmarks selected"
 msgstr "Non hai marcadores seleccionados"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:481
+#: frontend/apps/reader/modules/readerbookmark.lua:488
 msgid "Remove selected bookmark?"
 msgid_plural "Remove %1 selected bookmarks?"
 msgstr[0] "Borrar o marcador seleccionado?"
 msgstr[1] "Borrar os %1 marcadores seleccionados?"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:485
-#: frontend/apps/reader/modules/readerbookmark.lua:570
+#: frontend/apps/reader/modules/readerbookmark.lua:492
+#: frontend/apps/reader/modules/readerbookmark.lua:577
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:410
 #: plugins/statistics.koplugin/main.lua:2116
@@ -1765,91 +1779,70 @@ msgstr[1] "Borrar os %1 marcadores seleccionados?"
 msgid "Remove"
 msgstr "Borrar"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
-#: frontend/apps/reader/modules/readerbookmark.lua:652
-msgid "Bookmarks (filtered)"
-msgstr "Marcadores (filtrados)"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:499
+#: frontend/apps/reader/modules/readerbookmark.lua:506
 msgid "Deselect all"
 msgstr "Non seleccionar nada"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:511
+#: frontend/apps/reader/modules/readerbookmark.lua:518
 msgid "Select all"
 msgstr "Seleccionar todo"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:521
+#: frontend/apps/reader/modules/readerbookmark.lua:528
 msgid "Exit select mode"
 msgstr "Saír do modo de selección"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:533
+#: frontend/apps/reader/modules/readerbookmark.lua:540
 msgid "Select page"
 msgstr "Seleccionar páxina"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 msgid "Page: %1"
 msgstr "Páxina: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 msgid "Time: %1"
 msgstr "Hora: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:559
+#: frontend/apps/reader/modules/readerbookmark.lua:566
 msgid "Bookmark details"
 msgstr "Detalles do marcador"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:565
+#: frontend/apps/reader/modules/readerbookmark.lua:572
 msgid "Remove bookmark"
 msgstr "Borrar marcador"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:569
+#: frontend/apps/reader/modules/readerbookmark.lua:576
 msgid "Remove this bookmark?"
 msgstr "Borrar este marcador?"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:594
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 msgid "Add note"
 msgstr "Engadir nota"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:892
+#: frontend/apps/reader/modules/readerbookmark.lua:594
+#: frontend/apps/reader/modules/readerbookmark.lua:818
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 msgid "Edit note"
 msgstr "Editar nota"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:597
+#: frontend/apps/reader/modules/readerbookmark.lua:604
 msgid "Bulk remove"
 msgstr "Borrado en lote"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:603
+#: frontend/apps/reader/modules/readerbookmark.lua:610
 msgid "Bookmarks (select mode)"
 msgstr "Marcadores (modo de selección)"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:607
-#: frontend/apps/reader/modules/readerbookmark.lua:612
-msgid "Filter bookmarks"
-msgstr "Filtrar marcadores"
+#: frontend/apps/reader/modules/readerbookmark.lua:614
+#: frontend/apps/reader/modules/readerbookmark.lua:874
+#, fuzzy
+msgid "Search bookmarks"
+msgstr "Buscar libros"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:613
-msgid "(containing text)"
-msgstr "(con texto)"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:661
-msgid "highlights"
-msgstr "textos destacados"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:671
-msgid "notes"
-msgstr "notas"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:681
-msgid "page bookmarks"
-msgstr "marcadores de páxina"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:907
+#: frontend/apps/reader/modules/readerbookmark.lua:833
 #: frontend/apps/reader/modules/readerstyletweak.lua:641
 #: frontend/apps/reader/modules/readeruserhyph.lua:203
 #: frontend/apps/reader/modules/readerwikipedia.lua:161
@@ -1866,12 +1859,31 @@ msgstr "marcadores de páxina"
 msgid "Save"
 msgstr "Gardar"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:884
+#: frontend/apps/reader/modules/readerhighlight.lua:137
+#: frontend/ui/widget/dictquicklookup.lua:507
+#: plugins/opds.koplugin/opdsbrowser.lua:790
+msgid "Search"
+msgstr "Buscar"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:940
+msgid "highlights"
+msgstr "textos destacados"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:950
+msgid "notes"
+msgstr "notas"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:960
+msgid "page bookmarks"
+msgstr "marcadores de páxina"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:961
+#: frontend/apps/reader/modules/readerbookmark.lua:1001
 msgid "in %1"
 msgstr "en %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:1111
+#: frontend/apps/reader/modules/readerbookmark.lua:1163
 msgid "Page %1 %2 @ %3"
 msgstr "Páxina %1 %2 @ %3"
 
@@ -3101,12 +3113,6 @@ msgstr "Dicionario"
 msgid "Translate"
 msgstr "Traducir"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:137
-#: frontend/ui/widget/dictquicklookup.lua:507
-#: plugins/opds.koplugin/opdsbrowser.lua:790
-msgid "Search"
-msgstr "Buscar"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:152
 msgid "Share Text"
 msgstr "Compartir texto"
@@ -4081,7 +4087,7 @@ msgid "Too many hits"
 msgstr "Demasiadas coincidencias"
 
 #: frontend/apps/reader/modules/readerstatus.lua:37
-#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:121
+#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:122
 #: frontend/ui/elements/common_settings_menu_table.lua:542
 msgid "Book status"
 msgstr "Estado do libro"
@@ -4113,7 +4119,7 @@ msgid "Delete file"
 msgstr "Borrar ficheiro"
 
 #: frontend/apps/reader/modules/readerstatus.lua:115 frontend/dispatcher.lua:88
-#: frontend/dispatcher.lua:666
+#: frontend/dispatcher.lua:668
 msgid "File browser"
 msgstr "Explorador de ficheiros"
 
@@ -5866,119 +5872,119 @@ msgstr "Seguir ligazón interna máis próxima"
 msgid "Clear location history"
 msgstr "Borrar historial de posicións"
 
-#: frontend/dispatcher.lua:123 plugins/coverbrowser.koplugin/covermenu.lua:343
+#: frontend/dispatcher.lua:124 plugins/coverbrowser.koplugin/covermenu.lua:343
 #: plugins/coverbrowser.koplugin/covermenu.lua:476
 #: plugins/coverbrowser.koplugin/covermenu.lua:598
 msgid "Book description"
 msgstr "Descrición do libro"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Book cover"
 msgstr "Portada do libro"
 
-#: frontend/dispatcher.lua:125
+#: frontend/dispatcher.lua:126
 msgid "Show bottom menu"
 msgstr "Mostrar o menú inferior"
 
-#: frontend/dispatcher.lua:126
+#: frontend/dispatcher.lua:127
 msgid "Toggle bookmark"
 msgstr "Conmutar marcador"
 
-#: frontend/dispatcher.lua:127
+#: frontend/dispatcher.lua:128
 msgid "Toggle page turn direction"
 msgstr "Conmutar dirección de pasar páxina"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Cycle highlight action"
 msgstr "Circular acción de destaque"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 msgid "Cycle highlight style"
 msgstr "Circular entre estilos de destaque"
 
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 msgid "Go %1 pages"
 msgstr "Avanzar %1 páxinas"
 
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Toggle panel zoom"
 msgstr "Conmutar zoom de viñeta"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Increase font size by %1"
 msgstr "Aumentar o tamaño da fonte en %1"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Decrease font size by %1"
 msgstr "Reducir o tamaño da fonte en %1"
 
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 msgid "Toggle page flipping"
 msgstr "Conmutar pasar páxina"
 
-#: frontend/dispatcher.lua:139
+#: frontend/dispatcher.lua:140
 msgid "Toggle reflow"
 msgstr "Conmutar redistribución de texto"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Zoom mode"
 msgstr "Modo de zoom"
 
-#: frontend/dispatcher.lua:141
+#: frontend/dispatcher.lua:142
 msgid "Change zoom factor"
 msgstr "Cambiar o factor de zoom"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 msgid "Set font size to %1"
 msgstr "Axustar tamaño da fonte a %1"
 
-#: frontend/dispatcher.lua:181 frontend/ui/data/creoptions.lua:410
+#: frontend/dispatcher.lua:182 frontend/ui/data/creoptions.lua:410
 #: frontend/ui/data/creoptions.lua:422 frontend/ui/data/creoptions.lua:433
 #: frontend/ui/data/creoptions.lua:443 frontend/ui/data/koptoptions.lua:423
 #: frontend/ui/data/koptoptions.lua:438 frontend/ui/widget/toggleswitch.lua:244
 msgid "Font Size"
 msgstr "Tamaño da Fonte"
 
-#: frontend/dispatcher.lua:460
+#: frontend/dispatcher.lua:462
 msgid "Unknown item"
 msgstr "Elemento descoñecido"
 
-#: frontend/dispatcher.lua:469
+#: frontend/dispatcher.lua:471
 msgctxt "Number placeholder"
 msgid "#"
 msgstr "#"
 
-#: frontend/dispatcher.lua:568
+#: frontend/dispatcher.lua:570
 msgid "If called by a gesture the amount of the gesture will be used"
 msgstr "Cando se invoca cun aceno, usarase a cantidade do aceno"
 
-#: frontend/dispatcher.lua:651 plugins/gestures.koplugin/main.lua:189
+#: frontend/dispatcher.lua:653 plugins/gestures.koplugin/main.lua:189
 msgid "Nothing"
 msgstr "Nada"
 
-#: frontend/dispatcher.lua:663
+#: frontend/dispatcher.lua:665
 msgid "General"
 msgstr "Xeral"
 
-#: frontend/dispatcher.lua:664
+#: frontend/dispatcher.lua:666
 #: frontend/ui/elements/common_info_menu_table.lua:32
 msgid "Device"
 msgstr "Dispositivo"
 
-#: frontend/dispatcher.lua:665
+#: frontend/dispatcher.lua:667
 msgid "Screen and lights"
 msgstr "Pantalla e iluminación"
 
-#: frontend/dispatcher.lua:667
+#: frontend/dispatcher.lua:669
 msgid "Reader"
 msgstr "Lector"
 
-#: frontend/dispatcher.lua:668
+#: frontend/dispatcher.lua:670
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr ""
 "Documentos con elementos que se poden redistribuír (epub, fb2, txt, ...)"
 
-#: frontend/dispatcher.lua:669
+#: frontend/dispatcher.lua:671
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Documentos con composición fixa (pdf, djvu, imaxes, ...)"
 
@@ -15866,6 +15872,15 @@ msgstr "Preme a esquina inferior dereita"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Preme a esquina superior dereita"
+
+#~ msgid "Bookmarks (filtered)"
+#~ msgstr "Marcadores (filtrados)"
+
+#~ msgid "Filter bookmarks"
+#~ msgstr "Filtrar marcadores"
+
+#~ msgid "(containing text)"
+#~ msgstr "(con texto)"
 
 #~ msgid "Use defaults"
 #~ msgstr "Usar valores predeterminados"

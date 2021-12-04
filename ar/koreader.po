@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-04 11:55+0000\n"
+"POT-Creation-Date: 2021-12-04 17:39+0000\n"
 "PO-Revision-Date: 2021-09-06 15:11+0000\n"
 "Last-Translator: Zeyad A.s. <zeyad239410@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -153,7 +153,8 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:901
+#: frontend/apps/reader/modules/readerbookmark.lua:827
+#: frontend/apps/reader/modules/readerbookmark.lua:878
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readerfooter.lua:647
@@ -308,8 +309,7 @@ msgid "Choose local folder"
 msgstr "اختر مجلدًا على الجهاز"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:617
-#: frontend/apps/reader/modules/readerbookmark.lua:697
+#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerhighlight.lua:1202
 #: frontend/apps/reader/modules/readerhighlight.lua:1238
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -403,7 +403,6 @@ msgstr "تحيري حساب Dropbox"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
-#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:97
 #: frontend/ui/widget/datetimewidget.lua:73
@@ -551,7 +550,7 @@ msgstr "إضافة حساب WebDAV"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:97
-#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:122
+#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:123
 #: plugins/opds.koplugin/opdsbrowser.lua:743
 msgid "Book information"
 msgstr "معلومات الكتاب"
@@ -743,6 +742,7 @@ msgid "Current folder"
 msgstr "المجلد الحالي"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:916
 #: frontend/apps/reader/modules/readersearch.lua:139
 #: frontend/ui/widget/inputdialog.lua:867
 msgid "Case sensitive"
@@ -1659,71 +1659,85 @@ msgstr "الصفحة الرئيسة"
 msgid "Location history is empty."
 msgstr "سجل تأريخ المواقع فارغ."
 
-#: frontend/apps/reader/modules/readerbookmark.lua:63
-#: frontend/apps/reader/modules/readerbookmark.lua:87
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
+#: frontend/apps/reader/modules/readerbookmark.lua:65
+#: frontend/apps/reader/modules/readerbookmark.lua:89
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "العلامات المرجعية"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Remove bookmark for current page"
 msgstr "إزالة العلامة المرجعية من الصفحة الحالية"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Bookmark current page"
 msgstr "وصع علامة مرجعية للصفحة الحالية"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:78
+#: frontend/apps/reader/modules/readerbookmark.lua:80
 msgid "Bookmark browsing mode"
 msgstr "وضع تصفح العلامات المرجعية"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:92
+#: frontend/apps/reader/modules/readerbookmark.lua:94
 #, fuzzy
 msgid "Bookmarks per page: %1"
 msgstr "وصع علامة مرجعية للصفحة الحالية"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:103
+#: frontend/apps/reader/modules/readerbookmark.lua:105
 #, fuzzy
 msgid "Bookmarks per page"
 msgstr "وصع علامة مرجعية للصفحة الحالية"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:117
+#: frontend/apps/reader/modules/readerbookmark.lua:119
 #, fuzzy
 msgid "Bookmark font size: %1"
 msgstr "حجم خط الهامش السفليّ"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:130
+#: frontend/apps/reader/modules/readerbookmark.lua:132
 #, fuzzy
 msgid "Bookmark font size"
 msgstr "حجم خط الهامش السفليّ"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:140
+#: frontend/apps/reader/modules/readerbookmark.lua:142
 #, fuzzy
 msgid "Shrink bookmark font size to fit more text"
 msgstr "تقليص خحم الخط لعرض مزيدٍ من النصّ"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:149
+#: frontend/apps/reader/modules/readerbookmark.lua:151
 #, fuzzy
 msgid "Show separator between items"
 msgstr "اعرض الملفات التي لا يدعمها هذا البرنامج"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:160
 #, fuzzy
 msgid "Sort by largest page number"
 msgstr "افرز وفق تاريخ آخر قراءة"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:167
+#: frontend/apps/reader/modules/readerbookmark.lua:169
 msgid "Add page number / timestamp to bookmark"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:479
+#: frontend/apps/reader/modules/readerbookmark.lua:180
+#: frontend/dispatcher.lua:121
+#, fuzzy
+msgid "Bookmark search"
+msgstr "العلامات المرجعية"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
+#: frontend/apps/reader/modules/readerbookmark.lua:905
+#, fuzzy
+msgid "Bookmarks (search results)"
+msgstr "وضع تصفح العلامات المرجعية"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:486
 msgid "No bookmarks selected"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:481
+#: frontend/apps/reader/modules/readerbookmark.lua:488
 #, fuzzy
 msgid "Remove selected bookmark?"
 msgid_plural "Remove %1 selected bookmarks?"
@@ -1734,8 +1748,8 @@ msgstr[3] "إزالة هذه العلامة المرجعية"
 msgstr[4] "إزالة هذه العلامة المرجعية"
 msgstr[5] "إزالة هذه العلامة المرجعية"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:485
-#: frontend/apps/reader/modules/readerbookmark.lua:570
+#: frontend/apps/reader/modules/readerbookmark.lua:492
+#: frontend/apps/reader/modules/readerbookmark.lua:577
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:410
 #: plugins/statistics.koplugin/main.lua:2116
@@ -1743,107 +1757,81 @@ msgstr[5] "إزالة هذه العلامة المرجعية"
 msgid "Remove"
 msgstr "إزالة"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
-#: frontend/apps/reader/modules/readerbookmark.lua:652
-#, fuzzy
-msgid "Bookmarks (filtered)"
-msgstr "وصع علامة مرجعية للصفحة الحالية"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:499
+#: frontend/apps/reader/modules/readerbookmark.lua:506
 #, fuzzy
 msgid "Deselect all"
 msgstr "تعطيل"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:511
+#: frontend/apps/reader/modules/readerbookmark.lua:518
 #, fuzzy
 msgid "Select all"
 msgstr "اختيار"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:521
+#: frontend/apps/reader/modules/readerbookmark.lua:528
 #, fuzzy
 msgid "Exit select mode"
 msgstr "اتجاه النص"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:533
+#: frontend/apps/reader/modules/readerbookmark.lua:540
 #, fuzzy
 msgid "Select page"
 msgstr "اختيار"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 #, fuzzy
 msgid "Page: %1"
 msgstr "الصفحات: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 #, fuzzy
 msgid "Time: %1"
 msgstr "الزمن"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:559
+#: frontend/apps/reader/modules/readerbookmark.lua:566
 msgid "Bookmark details"
 msgstr "تفاصيل العلامة المرجعية"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:565
+#: frontend/apps/reader/modules/readerbookmark.lua:572
 #, fuzzy
 msgid "Remove bookmark"
 msgstr "إعادة تسمية علامة مرجيعة"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:569
+#: frontend/apps/reader/modules/readerbookmark.lua:576
 #, fuzzy
 msgid "Remove this bookmark?"
 msgstr "إزالة هذه العلامة المرجعية"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:594
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 #, fuzzy
 msgid "Add note"
 msgstr "إضافة ملاحظة"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:892
+#: frontend/apps/reader/modules/readerbookmark.lua:594
+#: frontend/apps/reader/modules/readerbookmark.lua:818
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 #, fuzzy
 msgid "Edit note"
 msgstr "عدّل الاسم الشّائع"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:597
+#: frontend/apps/reader/modules/readerbookmark.lua:604
 msgid "Bulk remove"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:603
+#: frontend/apps/reader/modules/readerbookmark.lua:610
 #, fuzzy
 msgid "Bookmarks (select mode)"
 msgstr "وضع تصفح العلامات المرجعية"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:607
-#: frontend/apps/reader/modules/readerbookmark.lua:612
+#: frontend/apps/reader/modules/readerbookmark.lua:614
+#: frontend/apps/reader/modules/readerbookmark.lua:874
 #, fuzzy
-msgid "Filter bookmarks"
-msgstr "تبديل العلامة المرجعية"
+msgid "Search bookmarks"
+msgstr "ابحث في الكتب"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:613
-msgid "(containing text)"
-msgstr ""
-
-#: frontend/apps/reader/modules/readerbookmark.lua:661
-#, fuzzy
-msgid "highlights"
-msgstr "تَحديد"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:671
-#, fuzzy
-msgid "notes"
-msgstr "إجمالي الملاحظات"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:681
-#, fuzzy
-msgid "page bookmarks"
-msgstr "إعادة تسمية علامة مرجيعة"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:907
+#: frontend/apps/reader/modules/readerbookmark.lua:833
 #: frontend/apps/reader/modules/readerstyletweak.lua:641
 #: frontend/apps/reader/modules/readeruserhyph.lua:203
 #: frontend/apps/reader/modules/readerwikipedia.lua:161
@@ -1860,12 +1848,34 @@ msgstr "إعادة تسمية علامة مرجيعة"
 msgid "Save"
 msgstr "حفظ"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:884
+#: frontend/apps/reader/modules/readerhighlight.lua:137
+#: frontend/ui/widget/dictquicklookup.lua:507
+#: plugins/opds.koplugin/opdsbrowser.lua:790
+msgid "Search"
+msgstr "بحث"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:940
+#, fuzzy
+msgid "highlights"
+msgstr "تَحديد"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:950
+#, fuzzy
+msgid "notes"
+msgstr "إجمالي الملاحظات"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:960
+#, fuzzy
+msgid "page bookmarks"
+msgstr "إعادة تسمية علامة مرجيعة"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:961
+#: frontend/apps/reader/modules/readerbookmark.lua:1001
 msgid "in %1"
 msgstr "في %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:1111
+#: frontend/apps/reader/modules/readerbookmark.lua:1163
 msgid "Page %1 %2 @ %3"
 msgstr "الصفحة %1 %2 @ %3"
 
@@ -3103,12 +3113,6 @@ msgstr "القاموس"
 msgid "Translate"
 msgstr "تَرجمة"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:137
-#: frontend/ui/widget/dictquicklookup.lua:507
-#: plugins/opds.koplugin/opdsbrowser.lua:790
-msgid "Search"
-msgstr "بحث"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:152
 #, fuzzy
 msgid "Share Text"
@@ -3996,7 +4000,7 @@ msgid "Too many hits"
 msgstr ""
 
 #: frontend/apps/reader/modules/readerstatus.lua:37
-#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:121
+#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:122
 #: frontend/ui/elements/common_settings_menu_table.lua:542
 msgid "Book status"
 msgstr "حالة الكتاب"
@@ -4028,7 +4032,7 @@ msgid "Delete file"
 msgstr "حَدّفُ ملف"
 
 #: frontend/apps/reader/modules/readerstatus.lua:115 frontend/dispatcher.lua:88
-#: frontend/dispatcher.lua:666
+#: frontend/dispatcher.lua:668
 msgid "File browser"
 msgstr ""
 
@@ -5722,128 +5726,128 @@ msgstr ""
 msgid "Clear location history"
 msgstr "إزالة سجل الأماكن"
 
-#: frontend/dispatcher.lua:123 plugins/coverbrowser.koplugin/covermenu.lua:343
+#: frontend/dispatcher.lua:124 plugins/coverbrowser.koplugin/covermenu.lua:343
 #: plugins/coverbrowser.koplugin/covermenu.lua:476
 #: plugins/coverbrowser.koplugin/covermenu.lua:598
 msgid "Book description"
 msgstr "وصف الكتاب"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Book cover"
 msgstr "غلاف الكتاب"
 
-#: frontend/dispatcher.lua:125
+#: frontend/dispatcher.lua:126
 msgid "Show bottom menu"
 msgstr "أظهر القائمة السفليّة"
 
-#: frontend/dispatcher.lua:126
+#: frontend/dispatcher.lua:127
 msgid "Toggle bookmark"
 msgstr "تبديل العلامة المرجعية"
 
-#: frontend/dispatcher.lua:127
+#: frontend/dispatcher.lua:128
 msgid "Toggle page turn direction"
 msgstr "بدّل اتجاه قلب الصفحة"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Cycle highlight action"
 msgstr ""
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 msgid "Cycle highlight style"
 msgstr ""
 
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 #, fuzzy
 msgid "Go %1 pages"
 msgstr "تقدّم 10 صفحاتٍ إلى الأمام"
 
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 #, fuzzy
 msgid "Toggle panel zoom"
 msgstr "تبديل وضع إعادة التدفّق"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 #, fuzzy
 msgid "Increase font size by %1"
 msgstr "قلّص حجم الخط"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 #, fuzzy
 msgid "Decrease font size by %1"
 msgstr "قلّص حجم الخط"
 
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 msgid "Toggle page flipping"
 msgstr "بدّل قلب الصفحة"
 
-#: frontend/dispatcher.lua:139
+#: frontend/dispatcher.lua:140
 msgid "Toggle reflow"
 msgstr "تبديل وضع إعادة التدفّق"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 #, fuzzy
 msgid "Zoom mode"
 msgstr "التكبير حسب الصفحة"
 
-#: frontend/dispatcher.lua:141
+#: frontend/dispatcher.lua:142
 #, fuzzy
 msgid "Change zoom factor"
 msgstr "غيّر منفذ الطرفيّة الآمنة"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 #, fuzzy
 msgid "Set font size to %1"
 msgstr "تحديد حجم الخط"
 
-#: frontend/dispatcher.lua:181 frontend/ui/data/creoptions.lua:410
+#: frontend/dispatcher.lua:182 frontend/ui/data/creoptions.lua:410
 #: frontend/ui/data/creoptions.lua:422 frontend/ui/data/creoptions.lua:433
 #: frontend/ui/data/creoptions.lua:443 frontend/ui/data/koptoptions.lua:423
 #: frontend/ui/data/koptoptions.lua:438 frontend/ui/widget/toggleswitch.lua:244
 msgid "Font Size"
 msgstr ""
 
-#: frontend/dispatcher.lua:460
+#: frontend/dispatcher.lua:462
 #, fuzzy
 msgid "Unknown item"
 msgstr "اتصالٌ غير معروف"
 
-#: frontend/dispatcher.lua:469
+#: frontend/dispatcher.lua:471
 msgctxt "Number placeholder"
 msgid "#"
 msgstr ""
 
-#: frontend/dispatcher.lua:568
+#: frontend/dispatcher.lua:570
 msgid "If called by a gesture the amount of the gesture will be used"
 msgstr ""
 
-#: frontend/dispatcher.lua:651 plugins/gestures.koplugin/main.lua:189
+#: frontend/dispatcher.lua:653 plugins/gestures.koplugin/main.lua:189
 msgid "Nothing"
 msgstr "لاشيء"
 
-#: frontend/dispatcher.lua:663
+#: frontend/dispatcher.lua:665
 msgid "General"
 msgstr ""
 
-#: frontend/dispatcher.lua:664
+#: frontend/dispatcher.lua:666
 #: frontend/ui/elements/common_info_menu_table.lua:32
 msgid "Device"
 msgstr "الجهاز"
 
-#: frontend/dispatcher.lua:665
+#: frontend/dispatcher.lua:667
 #, fuzzy
 msgid "Screen and lights"
 msgstr "الشَّاشة"
 
-#: frontend/dispatcher.lua:667
+#: frontend/dispatcher.lua:669
 #, fuzzy
 msgid "Reader"
 msgstr "KOReader"
 
-#: frontend/dispatcher.lua:668
+#: frontend/dispatcher.lua:670
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr ""
 
-#: frontend/dispatcher.lua:669
+#: frontend/dispatcher.lua:671
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr ""
 
@@ -15323,6 +15327,14 @@ msgstr "المس الزاوية اليمنى السفلى"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "المس الزاوية اليمنى العليا"
+
+#, fuzzy
+#~ msgid "Bookmarks (filtered)"
+#~ msgstr "وصع علامة مرجعية للصفحة الحالية"
+
+#, fuzzy
+#~ msgid "Filter bookmarks"
+#~ msgstr "تبديل العلامة المرجعية"
 
 #~ msgid "If you would like to reset the data,"
 #~ msgstr "إن أردت تصفير البيانات,"

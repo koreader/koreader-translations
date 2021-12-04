@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-04 11:55+0000\n"
+"POT-Creation-Date: 2021-12-04 17:39+0000\n"
 "PO-Revision-Date: 2021-12-04 17:40+0000\n"
 "Last-Translator: Ichnilatis <z8g1r3d2u5d0u3b5@simon13.slack.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -160,7 +160,8 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:901
+#: frontend/apps/reader/modules/readerbookmark.lua:827
+#: frontend/apps/reader/modules/readerbookmark.lua:878
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readerfooter.lua:647
@@ -314,8 +315,7 @@ msgid "Choose local folder"
 msgstr "Επιλογή τοπικού φακέλου"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:617
-#: frontend/apps/reader/modules/readerbookmark.lua:697
+#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerhighlight.lua:1202
 #: frontend/apps/reader/modules/readerhighlight.lua:1238
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -408,7 +408,6 @@ msgstr "Επεξεργασία λογαριασμού Dropbox"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
-#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:97
 #: frontend/ui/widget/datetimewidget.lua:73
@@ -555,7 +554,7 @@ msgstr "Προσθήκη λογαριασμού WebDAV"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:97
-#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:122
+#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:123
 #: plugins/opds.koplugin/opdsbrowser.lua:743
 msgid "Book information"
 msgstr "Πληροφορίες βιβλίου"
@@ -743,6 +742,7 @@ msgid "Current folder"
 msgstr "Τρέχων φάκελος"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:916
 #: frontend/apps/reader/modules/readersearch.lua:139
 #: frontend/ui/widget/inputdialog.lua:867
 msgid "Case sensitive"
@@ -1702,72 +1702,86 @@ msgstr "Αρχικός Φάκελος"
 msgid "Location history is empty."
 msgstr "Το ιστορικό των τοποθεσιών είναι κενό."
 
-#: frontend/apps/reader/modules/readerbookmark.lua:63
-#: frontend/apps/reader/modules/readerbookmark.lua:87
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
+#: frontend/apps/reader/modules/readerbookmark.lua:65
+#: frontend/apps/reader/modules/readerbookmark.lua:89
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "Επισημειώσεις"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Remove bookmark for current page"
 msgstr "Διαγραφή σελιδοδείκτη της τρέχουσας σελίδας"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Bookmark current page"
 msgstr "Σελιδοδείκτη στην τρέχουσα σελίδα"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:78
+#: frontend/apps/reader/modules/readerbookmark.lua:80
 msgid "Bookmark browsing mode"
 msgstr "Λειτουργία περιήγησης σελιδοδεικτών"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:92
+#: frontend/apps/reader/modules/readerbookmark.lua:94
 msgid "Bookmarks per page: %1"
 msgstr "Επισημειώσεις ανά σελίδα: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:103
+#: frontend/apps/reader/modules/readerbookmark.lua:105
 msgid "Bookmarks per page"
 msgstr "Επισημειώσεις ανά σελίδα"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:117
+#: frontend/apps/reader/modules/readerbookmark.lua:119
 msgid "Bookmark font size: %1"
 msgstr "Μέγεθος γραμματοσειράς επισημειώσεων: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:130
+#: frontend/apps/reader/modules/readerbookmark.lua:132
 msgid "Bookmark font size"
 msgstr "Μέγεθος γραμματοσειράς επισημειώσεων"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:140
+#: frontend/apps/reader/modules/readerbookmark.lua:142
 msgid "Shrink bookmark font size to fit more text"
 msgstr ""
 "Μείωση μεγέθους γραμμάτων των επισημειώσεων για προβολή περισσότερου κειμένου"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:149
+#: frontend/apps/reader/modules/readerbookmark.lua:151
 msgid "Show separator between items"
 msgstr "Εμφάνιση διαχωριστικού μεταξύ των στοιχείων"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:160
 msgid "Sort by largest page number"
 msgstr "Ταξινόμηση κατά μεγαλύτερο αριθμό σελίδας"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:167
+#: frontend/apps/reader/modules/readerbookmark.lua:169
 msgid "Add page number / timestamp to bookmark"
 msgstr "Προσθήκη αριθμού σελίδας / χρονοσήμανσης στην επισημείωση"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:479
+#: frontend/apps/reader/modules/readerbookmark.lua:180
+#: frontend/dispatcher.lua:121
+#, fuzzy
+msgid "Bookmark search"
+msgstr "Επισημειώσεις"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
+#: frontend/apps/reader/modules/readerbookmark.lua:905
+#, fuzzy
+msgid "Bookmarks (search results)"
+msgstr "Επισημειώσεις (λειτουργία επιλογής)"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:486
 msgid "No bookmarks selected"
 msgstr "Δεν έχουν επιλεγεί επισημειώσεις"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:481
+#: frontend/apps/reader/modules/readerbookmark.lua:488
 msgid "Remove selected bookmark?"
 msgid_plural "Remove %1 selected bookmarks?"
 msgstr[0] "Διαγραφή επιλεγμένης επισημείωσης;"
 msgstr[1] "Διαγραφή %1 επιλεγμένων επισημειώσεων;"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:485
-#: frontend/apps/reader/modules/readerbookmark.lua:570
+#: frontend/apps/reader/modules/readerbookmark.lua:492
+#: frontend/apps/reader/modules/readerbookmark.lua:577
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:410
 #: plugins/statistics.koplugin/main.lua:2116
@@ -1775,91 +1789,70 @@ msgstr[1] "Διαγραφή %1 επιλεγμένων επισημειώσεων
 msgid "Remove"
 msgstr "Διαγραφή"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
-#: frontend/apps/reader/modules/readerbookmark.lua:652
-msgid "Bookmarks (filtered)"
-msgstr "Επισημειώσεις (φιλτραρισμένες)"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:499
+#: frontend/apps/reader/modules/readerbookmark.lua:506
 msgid "Deselect all"
 msgstr "Αποεπιλογή όλων"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:511
+#: frontend/apps/reader/modules/readerbookmark.lua:518
 msgid "Select all"
 msgstr "Επιλογή όλων"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:521
+#: frontend/apps/reader/modules/readerbookmark.lua:528
 msgid "Exit select mode"
 msgstr "Έξοδος από τη λειτουργία επιλογής"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:533
+#: frontend/apps/reader/modules/readerbookmark.lua:540
 msgid "Select page"
 msgstr "Επιλογή σελίδας"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 msgid "Page: %1"
 msgstr "Σελίδα: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 msgid "Time: %1"
 msgstr "Χρόνος: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:559
+#: frontend/apps/reader/modules/readerbookmark.lua:566
 msgid "Bookmark details"
 msgstr "Λεπτομέρειες επισημείωσης"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:565
+#: frontend/apps/reader/modules/readerbookmark.lua:572
 msgid "Remove bookmark"
 msgstr "Διαγραφή"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:569
+#: frontend/apps/reader/modules/readerbookmark.lua:576
 msgid "Remove this bookmark?"
 msgstr "Να διαγραφεί αυτός ο σελιδοδείκτης;"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:594
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 msgid "Add note"
 msgstr "Προσθήκη σημείωσης"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:892
+#: frontend/apps/reader/modules/readerbookmark.lua:594
+#: frontend/apps/reader/modules/readerbookmark.lua:818
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 msgid "Edit note"
 msgstr "Επεξεργασία σημείωσης"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:597
+#: frontend/apps/reader/modules/readerbookmark.lua:604
 msgid "Bulk remove"
 msgstr "Μαζική διαγραφή"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:603
+#: frontend/apps/reader/modules/readerbookmark.lua:610
 msgid "Bookmarks (select mode)"
 msgstr "Επισημειώσεις (λειτουργία επιλογής)"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:607
-#: frontend/apps/reader/modules/readerbookmark.lua:612
-msgid "Filter bookmarks"
-msgstr "Φίλτρο επισημειώσεων"
+#: frontend/apps/reader/modules/readerbookmark.lua:614
+#: frontend/apps/reader/modules/readerbookmark.lua:874
+#, fuzzy
+msgid "Search bookmarks"
+msgstr "Αναζήτηση βιβλίων"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:613
-msgid "(containing text)"
-msgstr "(με κείμενο)"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:661
-msgid "highlights"
-msgstr "επισημάνσεις"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:671
-msgid "notes"
-msgstr "σημειώσεις"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:681
-msgid "page bookmarks"
-msgstr "σελιδοδείκτες"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:907
+#: frontend/apps/reader/modules/readerbookmark.lua:833
 #: frontend/apps/reader/modules/readerstyletweak.lua:641
 #: frontend/apps/reader/modules/readeruserhyph.lua:203
 #: frontend/apps/reader/modules/readerwikipedia.lua:161
@@ -1876,12 +1869,31 @@ msgstr "σελιδοδείκτες"
 msgid "Save"
 msgstr "Αποθήκευση"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:884
+#: frontend/apps/reader/modules/readerhighlight.lua:137
+#: frontend/ui/widget/dictquicklookup.lua:507
+#: plugins/opds.koplugin/opdsbrowser.lua:790
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:940
+msgid "highlights"
+msgstr "επισημάνσεις"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:950
+msgid "notes"
+msgstr "σημειώσεις"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:960
+msgid "page bookmarks"
+msgstr "σελιδοδείκτες"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:961
+#: frontend/apps/reader/modules/readerbookmark.lua:1001
 msgid "in %1"
 msgstr "στο: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:1111
+#: frontend/apps/reader/modules/readerbookmark.lua:1163
 msgid "Page %1 %2 @ %3"
 msgstr "Σελίδα %1 %2 @ %3"
 
@@ -3116,12 +3128,6 @@ msgstr "Λεξικό"
 msgid "Translate"
 msgstr "Μετάφραση"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:137
-#: frontend/ui/widget/dictquicklookup.lua:507
-#: plugins/opds.koplugin/opdsbrowser.lua:790
-msgid "Search"
-msgstr "Αναζήτηση"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:152
 msgid "Share Text"
 msgstr "Κοινή χρήση κειμένου"
@@ -4113,7 +4119,7 @@ msgid "Too many hits"
 msgstr "Πάρα πολλά αποτελέσματα"
 
 #: frontend/apps/reader/modules/readerstatus.lua:37
-#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:121
+#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:122
 #: frontend/ui/elements/common_settings_menu_table.lua:542
 msgid "Book status"
 msgstr "Κατάσταση βιβλίου"
@@ -4145,7 +4151,7 @@ msgid "Delete file"
 msgstr "Διαγραφή αρχείου"
 
 #: frontend/apps/reader/modules/readerstatus.lua:115 frontend/dispatcher.lua:88
-#: frontend/dispatcher.lua:666
+#: frontend/dispatcher.lua:668
 msgid "File browser"
 msgstr "Περιήγηση αρχείων"
 
@@ -5922,119 +5928,119 @@ msgstr "Παρακολούθηση πλησιέστερου εσωτερικού
 msgid "Clear location history"
 msgstr "Καθαρισμός ιστορικού τοποθεσιών"
 
-#: frontend/dispatcher.lua:123 plugins/coverbrowser.koplugin/covermenu.lua:343
+#: frontend/dispatcher.lua:124 plugins/coverbrowser.koplugin/covermenu.lua:343
 #: plugins/coverbrowser.koplugin/covermenu.lua:476
 #: plugins/coverbrowser.koplugin/covermenu.lua:598
 msgid "Book description"
 msgstr "Περιγραφή βιβλίου"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Book cover"
 msgstr "Εξώφυλλο βιβλίου"
 
-#: frontend/dispatcher.lua:125
+#: frontend/dispatcher.lua:126
 msgid "Show bottom menu"
 msgstr "Εμφάνιση κάτω μενού"
 
-#: frontend/dispatcher.lua:126
+#: frontend/dispatcher.lua:127
 msgid "Toggle bookmark"
 msgstr "Εναλλαγή σελιδοδείκτη"
 
-#: frontend/dispatcher.lua:127
+#: frontend/dispatcher.lua:128
 msgid "Toggle page turn direction"
 msgstr "Εναλλαγή της κατεύθυνσης αλλαγής της σελίδας"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Cycle highlight action"
 msgstr "Ανακύκληση ενέργειας επισήμανσης"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 msgid "Cycle highlight style"
 msgstr "Ανακύκληση τρόπου επισήμανσης"
 
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 msgid "Go %1 pages"
 msgstr "Μετάβαση %1 σελίδες"
 
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Toggle panel zoom"
 msgstr "Ενεργοποίηση / απενεργοποίηση μεγέθυνσης πάνελ"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Increase font size by %1"
 msgstr "Αύξηση μεγέθους γραμμάτων κατά %1"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Decrease font size by %1"
 msgstr "Μείωση μεγέθους γραμμάτων κατά %1"
 
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 msgid "Toggle page flipping"
 msgstr "Ενεργοποίηση / απενεργοποίηση αναστροφής σελίδας"
 
-#: frontend/dispatcher.lua:139
+#: frontend/dispatcher.lua:140
 msgid "Toggle reflow"
 msgstr "Ενεργοποίηση / απενεργοποίηση αναδιάταξης κειμένου"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Zoom mode"
 msgstr "Λειτουργία μεγέθυνσης"
 
-#: frontend/dispatcher.lua:141
+#: frontend/dispatcher.lua:142
 msgid "Change zoom factor"
 msgstr "Αλλαγή συντελεστή μεγέθυνσης"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 msgid "Set font size to %1"
 msgstr "Ορισμός μεγέθους γραμματοσειράς στο %1"
 
-#: frontend/dispatcher.lua:181 frontend/ui/data/creoptions.lua:410
+#: frontend/dispatcher.lua:182 frontend/ui/data/creoptions.lua:410
 #: frontend/ui/data/creoptions.lua:422 frontend/ui/data/creoptions.lua:433
 #: frontend/ui/data/creoptions.lua:443 frontend/ui/data/koptoptions.lua:423
 #: frontend/ui/data/koptoptions.lua:438 frontend/ui/widget/toggleswitch.lua:244
 msgid "Font Size"
 msgstr "Μέγεθος γραμματοσειράς"
 
-#: frontend/dispatcher.lua:460
+#: frontend/dispatcher.lua:462
 msgid "Unknown item"
 msgstr "Άγνωστο στοιχείο"
 
-#: frontend/dispatcher.lua:469
+#: frontend/dispatcher.lua:471
 msgctxt "Number placeholder"
 msgid "#"
 msgstr "#"
 
-#: frontend/dispatcher.lua:568
+#: frontend/dispatcher.lua:570
 msgid "If called by a gesture the amount of the gesture will be used"
 msgstr ""
 "Αν πραγματοποιηθεί με χειρονομία, θα βασιστεί στο μήκος της χειρονομίας"
 
-#: frontend/dispatcher.lua:651 plugins/gestures.koplugin/main.lua:189
+#: frontend/dispatcher.lua:653 plugins/gestures.koplugin/main.lua:189
 msgid "Nothing"
 msgstr "Τίποτα"
 
-#: frontend/dispatcher.lua:663
+#: frontend/dispatcher.lua:665
 msgid "General"
 msgstr "Γενικά"
 
-#: frontend/dispatcher.lua:664
+#: frontend/dispatcher.lua:666
 #: frontend/ui/elements/common_info_menu_table.lua:32
 msgid "Device"
 msgstr "Συσκευή"
 
-#: frontend/dispatcher.lua:665
+#: frontend/dispatcher.lua:667
 msgid "Screen and lights"
 msgstr "Οθόνη & φωτισμός"
 
-#: frontend/dispatcher.lua:667
+#: frontend/dispatcher.lua:669
 msgid "Reader"
 msgstr "Αναγνώστης"
 
-#: frontend/dispatcher.lua:668
+#: frontend/dispatcher.lua:670
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "Έγγραφα μεταβλητής διάταξης (epub, fb2, txt ...)"
 
-#: frontend/dispatcher.lua:669
+#: frontend/dispatcher.lua:671
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Έγγραφα σταθερής διάταξης (pdf, djvu, φωτογραφίες…)"
 
@@ -15831,6 +15837,15 @@ msgstr "Πατήστε στην κάτω δεξιά γωνία"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Πατήστε την επάνω δεξιά γωνία"
+
+#~ msgid "Bookmarks (filtered)"
+#~ msgstr "Επισημειώσεις (φιλτραρισμένες)"
+
+#~ msgid "Filter bookmarks"
+#~ msgstr "Φίλτρο επισημειώσεων"
+
+#~ msgid "(containing text)"
+#~ msgstr "(με κείμενο)"
 
 #~ msgid "Use defaults"
 #~ msgstr "Χρήση προεπιλογών"

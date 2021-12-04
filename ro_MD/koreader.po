@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-04 11:55+0000\n"
+"POT-Creation-Date: 2021-12-04 17:39+0000\n"
 "PO-Revision-Date: 2021-11-21 17:43+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Moldavian <https://hosted.weblate.org/projects/koreader/"
@@ -152,7 +152,8 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:116
 #: frontend/apps/filemanager/filemanagershortcuts.lua:87
 #: frontend/apps/filemanager/filemanagershortcuts.lua:174
-#: frontend/apps/reader/modules/readerbookmark.lua:901
+#: frontend/apps/reader/modules/readerbookmark.lua:827
+#: frontend/apps/reader/modules/readerbookmark.lua:878
 #: frontend/apps/reader/modules/readercropping.lua:63
 #: frontend/apps/reader/modules/readerdictionary.lua:691
 #: frontend/apps/reader/modules/readerfooter.lua:647
@@ -306,8 +307,7 @@ msgid "Choose local folder"
 msgstr "Alege dosar local"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
-#: frontend/apps/reader/modules/readerbookmark.lua:617
-#: frontend/apps/reader/modules/readerbookmark.lua:697
+#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerhighlight.lua:1202
 #: frontend/apps/reader/modules/readerhighlight.lua:1238
 #: frontend/apps/reader/modules/readerstyletweak.lua:129
@@ -400,7 +400,6 @@ msgstr "Editează cont Dropbox"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:70
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
-#: frontend/apps/reader/modules/readerbookmark.lua:623
 #: frontend/apps/reader/modules/readerstyletweak.lua:639
 #: frontend/ui/elements/menu_keyboard_layout.lua:97
 #: frontend/ui/widget/datetimewidget.lua:73
@@ -546,7 +545,7 @@ msgstr "Adaugă cont WebDAV"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:97
-#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:122
+#: frontend/apps/filemanager/filemanager.lua:394 frontend/dispatcher.lua:123
 #: plugins/opds.koplugin/opdsbrowser.lua:743
 msgid "Book information"
 msgstr "Informații carte"
@@ -734,6 +733,7 @@ msgid "Current folder"
 msgstr "Aici"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:916
 #: frontend/apps/reader/modules/readersearch.lua:139
 #: frontend/ui/widget/inputdialog.lua:867
 msgid "Case sensitive"
@@ -1686,73 +1686,87 @@ msgstr "Acasă"
 msgid "Location history is empty."
 msgstr "Istoricul locațiilor este gol."
 
-#: frontend/apps/reader/modules/readerbookmark.lua:63
-#: frontend/apps/reader/modules/readerbookmark.lua:87
-#: frontend/apps/reader/modules/readerbookmark.lua:427
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
+#: frontend/apps/reader/modules/readerbookmark.lua:65
+#: frontend/apps/reader/modules/readerbookmark.lua:89
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
 #: frontend/dispatcher.lua:120
 msgid "Bookmarks"
 msgstr "Semne de carte și note"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Remove bookmark for current page"
 msgstr "Elimină semnul de carte pentru pagina curentă"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:70
+#: frontend/apps/reader/modules/readerbookmark.lua:72
 msgid "Bookmark current page"
 msgstr "Adaugă semn de carte pe pagina curentă"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:78
+#: frontend/apps/reader/modules/readerbookmark.lua:80
 msgid "Bookmark browsing mode"
 msgstr "Mod de navigare semne de carte"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:92
+#: frontend/apps/reader/modules/readerbookmark.lua:94
 msgid "Bookmarks per page: %1"
 msgstr "Semne de carte per pagină: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:103
+#: frontend/apps/reader/modules/readerbookmark.lua:105
 msgid "Bookmarks per page"
 msgstr "Semne de carte per pagină"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:117
+#: frontend/apps/reader/modules/readerbookmark.lua:119
 msgid "Bookmark font size: %1"
 msgstr "Dimensiune font semn de carte: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:130
+#: frontend/apps/reader/modules/readerbookmark.lua:132
 msgid "Bookmark font size"
 msgstr "Dimensiune font semn de carte"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:140
+#: frontend/apps/reader/modules/readerbookmark.lua:142
 msgid "Shrink bookmark font size to fit more text"
 msgstr "Micșorează fontul semnului de carte pentru"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:149
+#: frontend/apps/reader/modules/readerbookmark.lua:151
 #, fuzzy
 msgid "Show separator between items"
 msgstr "Adaugă un separator între întrările din Cuprins"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:158
+#: frontend/apps/reader/modules/readerbookmark.lua:160
 msgid "Sort by largest page number"
 msgstr "Ordonează după cel mai mare număr de pagină"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:167
+#: frontend/apps/reader/modules/readerbookmark.lua:169
 msgid "Add page number / timestamp to bookmark"
 msgstr "Adaugă număr de pagină / dată la semn de carte"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:479
+#: frontend/apps/reader/modules/readerbookmark.lua:180
+#: frontend/dispatcher.lua:121
+#, fuzzy
+msgid "Bookmark search"
+msgstr "Semne de carte și note"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:434
+#: frontend/apps/reader/modules/readerbookmark.lua:501
+#: frontend/apps/reader/modules/readerbookmark.lua:536
+#: frontend/apps/reader/modules/readerbookmark.lua:905
+#, fuzzy
+msgid "Bookmarks (search results)"
+msgstr "Mod de navigare semne de carte"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:486
 msgid "No bookmarks selected"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:481
+#: frontend/apps/reader/modules/readerbookmark.lua:488
 msgid "Remove selected bookmark?"
 msgid_plural "Remove %1 selected bookmarks?"
 msgstr[0] "Ștergi semnul de carte selectat?"
 msgstr[1] "Ștergi %d semne de carte selectate?"
 msgstr[2] "Ștergi %d de semne de carte selectate?"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:485
-#: frontend/apps/reader/modules/readerbookmark.lua:570
+#: frontend/apps/reader/modules/readerbookmark.lua:492
+#: frontend/apps/reader/modules/readerbookmark.lua:577
 #: frontend/apps/reader/modules/readeruserhyph.lua:196
 #: plugins/gestures.koplugin/main.lua:410
 #: plugins/statistics.koplugin/main.lua:2116
@@ -1760,103 +1774,77 @@ msgstr[2] "Ștergi %d de semne de carte selectate?"
 msgid "Remove"
 msgstr "Șterge"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:494
-#: frontend/apps/reader/modules/readerbookmark.lua:529
-#: frontend/apps/reader/modules/readerbookmark.lua:652
-#, fuzzy
-msgid "Bookmarks (filtered)"
-msgstr "Semne de carte per pagină"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:499
+#: frontend/apps/reader/modules/readerbookmark.lua:506
 #, fuzzy
 msgid "Deselect all"
 msgstr "Dezactivează tot"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:511
+#: frontend/apps/reader/modules/readerbookmark.lua:518
 #, fuzzy
 msgid "Select all"
 msgstr "Selectează"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:521
+#: frontend/apps/reader/modules/readerbookmark.lua:528
 #, fuzzy
 msgid "Exit select mode"
 msgstr "Mod expert"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:533
+#: frontend/apps/reader/modules/readerbookmark.lua:540
 #, fuzzy
 msgid "Select page"
 msgstr "Selectează"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 msgid "Page: %1"
 msgstr "Pagină: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:549
-#: frontend/apps/reader/modules/readerbookmark.lua:893
+#: frontend/apps/reader/modules/readerbookmark.lua:556
+#: frontend/apps/reader/modules/readerbookmark.lua:819
 msgid "Time: %1"
 msgstr "Timp: %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:559
+#: frontend/apps/reader/modules/readerbookmark.lua:566
 msgid "Bookmark details"
 msgstr "Detalii semn de carte"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:565
+#: frontend/apps/reader/modules/readerbookmark.lua:572
 #, fuzzy
 msgid "Remove bookmark"
 msgstr "Numește"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:569
+#: frontend/apps/reader/modules/readerbookmark.lua:576
 #, fuzzy
 msgid "Remove this bookmark?"
 msgstr "Șterge nota"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:594
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 msgid "Add note"
 msgstr "Adaugă notă"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:892
+#: frontend/apps/reader/modules/readerbookmark.lua:594
+#: frontend/apps/reader/modules/readerbookmark.lua:818
 #: frontend/apps/reader/modules/readerhighlight.lua:674
 msgid "Edit note"
 msgstr "Editează notă"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:597
+#: frontend/apps/reader/modules/readerbookmark.lua:604
 msgid "Bulk remove"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerbookmark.lua:603
+#: frontend/apps/reader/modules/readerbookmark.lua:610
 #, fuzzy
 msgid "Bookmarks (select mode)"
 msgstr "Mod de navigare semne de carte"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:607
-#: frontend/apps/reader/modules/readerbookmark.lua:612
+#: frontend/apps/reader/modules/readerbookmark.lua:614
+#: frontend/apps/reader/modules/readerbookmark.lua:874
 #, fuzzy
-msgid "Filter bookmarks"
-msgstr "Comută semn de carte"
+msgid "Search bookmarks"
+msgstr "Caută cărți"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:613
-msgid "(containing text)"
-msgstr ""
-
-#: frontend/apps/reader/modules/readerbookmark.lua:661
-#, fuzzy
-msgid "highlights"
-msgstr "Evidențieri"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:671
-#, fuzzy
-msgid "notes"
-msgstr "Total note"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:681
-#, fuzzy
-msgid "page bookmarks"
-msgstr "Numește"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:907
+#: frontend/apps/reader/modules/readerbookmark.lua:833
 #: frontend/apps/reader/modules/readerstyletweak.lua:641
 #: frontend/apps/reader/modules/readeruserhyph.lua:203
 #: frontend/apps/reader/modules/readerwikipedia.lua:161
@@ -1873,12 +1861,34 @@ msgstr "Numește"
 msgid "Save"
 msgstr "Salvează"
 
+#: frontend/apps/reader/modules/readerbookmark.lua:884
+#: frontend/apps/reader/modules/readerhighlight.lua:137
+#: frontend/ui/widget/dictquicklookup.lua:507
+#: plugins/opds.koplugin/opdsbrowser.lua:790
+msgid "Search"
+msgstr "Caută"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:940
+#, fuzzy
+msgid "highlights"
+msgstr "Evidențieri"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:950
+#, fuzzy
+msgid "notes"
+msgstr "Total note"
+
+#: frontend/apps/reader/modules/readerbookmark.lua:960
+#, fuzzy
+msgid "page bookmarks"
+msgstr "Numește"
+
 #. @translators In which chapter title (%1) a note is found.
-#: frontend/apps/reader/modules/readerbookmark.lua:961
+#: frontend/apps/reader/modules/readerbookmark.lua:1001
 msgid "in %1"
 msgstr "în %1"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:1111
+#: frontend/apps/reader/modules/readerbookmark.lua:1163
 msgid "Page %1 %2 @ %3"
 msgstr "Pagina %1 %2 la %3"
 
@@ -3118,12 +3128,6 @@ msgstr "Dicționar"
 msgid "Translate"
 msgstr "Tradu"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:137
-#: frontend/ui/widget/dictquicklookup.lua:507
-#: plugins/opds.koplugin/opdsbrowser.lua:790
-msgid "Search"
-msgstr "Caută"
-
 #: frontend/apps/reader/modules/readerhighlight.lua:152
 msgid "Share Text"
 msgstr "Partajează text"
@@ -4099,7 +4103,7 @@ msgid "Too many hits"
 msgstr "Prea multe portriviri"
 
 #: frontend/apps/reader/modules/readerstatus.lua:37
-#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:121
+#: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:122
 #: frontend/ui/elements/common_settings_menu_table.lua:542
 msgid "Book status"
 msgstr "Stare carte"
@@ -4131,7 +4135,7 @@ msgid "Delete file"
 msgstr "Șterge fișier"
 
 #: frontend/apps/reader/modules/readerstatus.lua:115 frontend/dispatcher.lua:88
-#: frontend/dispatcher.lua:666
+#: frontend/dispatcher.lua:668
 msgid "File browser"
 msgstr "Navigator fișiere"
 
@@ -5889,118 +5893,118 @@ msgstr "Urmează cea mai apropiată legătură internă"
 msgid "Clear location history"
 msgstr "Șterge istoricul locațiilor"
 
-#: frontend/dispatcher.lua:123 plugins/coverbrowser.koplugin/covermenu.lua:343
+#: frontend/dispatcher.lua:124 plugins/coverbrowser.koplugin/covermenu.lua:343
 #: plugins/coverbrowser.koplugin/covermenu.lua:476
 #: plugins/coverbrowser.koplugin/covermenu.lua:598
 msgid "Book description"
 msgstr "Descriere carte"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Book cover"
 msgstr "Copertă carte"
 
-#: frontend/dispatcher.lua:125
+#: frontend/dispatcher.lua:126
 msgid "Show bottom menu"
 msgstr "Arată meniul de jos"
 
-#: frontend/dispatcher.lua:126
+#: frontend/dispatcher.lua:127
 msgid "Toggle bookmark"
 msgstr "Comută semn de carte"
 
-#: frontend/dispatcher.lua:127
+#: frontend/dispatcher.lua:128
 msgid "Toggle page turn direction"
 msgstr "Comută direcția de întoarcere a paginii"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Cycle highlight action"
 msgstr "Ciclează acțiunea de evidențiere"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 msgid "Cycle highlight style"
 msgstr "Ciclează stilul de evidențiere"
 
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 msgid "Go %1 pages"
 msgstr "Mergi %1 pagini"
 
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Toggle panel zoom"
 msgstr "Comută mărire panou"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Increase font size by %1"
 msgstr "Mărește dimensiunea fontului cu %1"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Decrease font size by %1"
 msgstr "Micșorează dimensiunea fontului cu %1"
 
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 msgid "Toggle page flipping"
 msgstr "Comută schimb de pagină"
 
-#: frontend/dispatcher.lua:139
+#: frontend/dispatcher.lua:140
 msgid "Toggle reflow"
 msgstr "Comută aranjare cursivă text"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Zoom mode"
 msgstr "Mod mărire"
 
-#: frontend/dispatcher.lua:141
+#: frontend/dispatcher.lua:142
 msgid "Change zoom factor"
 msgstr "Schimbă mod mărire"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 msgid "Set font size to %1"
 msgstr "Setează mărimea fontului la %1"
 
-#: frontend/dispatcher.lua:181 frontend/ui/data/creoptions.lua:410
+#: frontend/dispatcher.lua:182 frontend/ui/data/creoptions.lua:410
 #: frontend/ui/data/creoptions.lua:422 frontend/ui/data/creoptions.lua:433
 #: frontend/ui/data/creoptions.lua:443 frontend/ui/data/koptoptions.lua:423
 #: frontend/ui/data/koptoptions.lua:438 frontend/ui/widget/toggleswitch.lua:244
 msgid "Font Size"
 msgstr "Dimensiune font"
 
-#: frontend/dispatcher.lua:460
+#: frontend/dispatcher.lua:462
 msgid "Unknown item"
 msgstr "Element necunoscut"
 
-#: frontend/dispatcher.lua:469
+#: frontend/dispatcher.lua:471
 msgctxt "Number placeholder"
 msgid "#"
 msgstr "№"
 
-#: frontend/dispatcher.lua:568
+#: frontend/dispatcher.lua:570
 msgid "If called by a gesture the amount of the gesture will be used"
 msgstr "Dacă este apelat de un gest, lungimea gestului va fi folosită"
 
-#: frontend/dispatcher.lua:651 plugins/gestures.koplugin/main.lua:189
+#: frontend/dispatcher.lua:653 plugins/gestures.koplugin/main.lua:189
 msgid "Nothing"
 msgstr "Nimic"
 
-#: frontend/dispatcher.lua:663
+#: frontend/dispatcher.lua:665
 msgid "General"
 msgstr "General"
 
-#: frontend/dispatcher.lua:664
+#: frontend/dispatcher.lua:666
 #: frontend/ui/elements/common_info_menu_table.lua:32
 msgid "Device"
 msgstr "Dispozitiv"
 
-#: frontend/dispatcher.lua:665
+#: frontend/dispatcher.lua:667
 msgid "Screen and lights"
 msgstr "Ecran și iluminare"
 
-#: frontend/dispatcher.lua:667
+#: frontend/dispatcher.lua:669
 msgid "Reader"
 msgstr "Cititor"
 
-#: frontend/dispatcher.lua:668
+#: frontend/dispatcher.lua:670
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "Documente reîncadrabile (epub, fb2, txt...)"
 
-#: frontend/dispatcher.lua:669
+#: frontend/dispatcher.lua:671
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Documente cu dispunere fixă (pdf, djvu, imagini...)"
 
@@ -15936,6 +15940,14 @@ msgstr "Atinge colțul din dreapta jos"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Atinge colțul din dreapta sus"
+
+#, fuzzy
+#~ msgid "Bookmarks (filtered)"
+#~ msgstr "Semne de carte per pagină"
+
+#, fuzzy
+#~ msgid "Filter bookmarks"
+#~ msgstr "Comută semn de carte"
 
 #~ msgid "Use defaults"
 #~ msgstr "Folosește valorile implicite"
