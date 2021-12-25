@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-24 11:25+0000\n"
+"POT-Creation-Date: 2021-12-25 09:28+0000\n"
 "PO-Revision-Date: 2021-12-21 07:11+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/koreader/"
@@ -197,8 +197,9 @@ msgstr ""
 #: plugins/calibre.koplugin/wireless.lua:424
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:792
 #: plugins/coverimage.koplugin/main.lua:351
-#: plugins/exporter.koplugin/main.lua:132
-#: plugins/exporter.koplugin/main.lua:177
+#: plugins/exporter.koplugin/main.lua:139
+#: plugins/exporter.koplugin/main.lua:178
+#: plugins/exporter.koplugin/main.lua:248
 #: plugins/gestures.koplugin/main.lua:332 plugins/kosync.koplugin/main.lua:373
 #: plugins/newsdownloader.koplugin/main.lua:149
 #: plugins/newsdownloader.koplugin/main.lua:742
@@ -1649,7 +1650,7 @@ msgstr "Son belgeyi açmak ister misiniz: %1?"
 #: frontend/ui/widget/container/inputcontainer.lua:290
 #: frontend/ui/widget/numberpickerwidget.lua:141
 #: plugins/autowarmth.koplugin/main.lua:459
-#: plugins/calibre.koplugin/main.lua:315 plugins/exporter.koplugin/main.lua:138
+#: plugins/calibre.koplugin/main.lua:315 plugins/exporter.koplugin/main.lua:145
 #: plugins/wallabag.koplugin/main.lua:855
 msgid "OK"
 msgstr "Tamam"
@@ -1937,6 +1938,7 @@ msgid "in %1"
 msgstr "%1 içinde"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1147
+#: plugins/exporter.koplugin/clip.lua:245
 msgid "Page %1 %2 @ %3"
 msgstr "Sayfa %1 %2 @ %3"
 
@@ -8207,7 +8209,8 @@ msgid "Version: %1"
 msgstr "Sürüm: %1"
 
 #: frontend/ui/elements/common_info_menu_table.lua:25
-#: plugins/exporter.koplugin/main.lua:212
+#: plugins/exporter.koplugin/main.lua:213
+#: plugins/exporter.koplugin/main.lua:283
 #: plugins/send2ebook.koplugin/main.lua:96
 #: plugins/wallabag.koplugin/main.lua:285
 msgid "Help"
@@ -12788,39 +12791,41 @@ msgstr ""
 "Bu uygulama eki belge dış faktörlere göre yüklenmeden önce belge ince "
 "ayarlarının değiştirilmesini sağlar."
 
-#: plugins/exporter.koplugin/main.lua:35
+#: plugins/exporter.koplugin/main.lua:37
 msgid "KOReader Notes"
 msgstr "KOReader Notları"
 
-#: plugins/exporter.koplugin/main.lua:36
+#: plugins/exporter.koplugin/main.lua:38
 msgid "Note: "
 msgstr "Not: "
 
-#: plugins/exporter.koplugin/main.lua:104 plugins/exporter.koplugin/_meta.lua:4
+#: plugins/exporter.koplugin/main.lua:112 plugins/exporter.koplugin/_meta.lua:4
 msgid "Export highlights"
 msgstr "Vurguları dışa aktar"
 
-#: plugins/exporter.koplugin/main.lua:107
+#: plugins/exporter.koplugin/main.lua:115
 msgid "Joplin"
 msgstr "Joplin"
 
-#: plugins/exporter.koplugin/main.lua:112
+#: plugins/exporter.koplugin/main.lua:119
 msgid "Set Joplin IP and Port"
 msgstr "Joplin IP adresi ve kapı numarasını ayarla"
 
-#: plugins/exporter.koplugin/main.lua:118
+#: plugins/exporter.koplugin/main.lua:125
 msgid "Set Joplin IP and port number"
 msgstr "Joplin IP adresi ve kapı numarasını ayarla"
 
-#: plugins/exporter.koplugin/main.lua:161
+#: plugins/exporter.koplugin/main.lua:168
+#: plugins/exporter.koplugin/main.lua:238
 msgid "Set authorization token"
 msgstr "Kimlik doğrulama kodunu ayarla"
 
-#: plugins/exporter.koplugin/main.lua:167
+#: plugins/exporter.koplugin/main.lua:173
 msgid "Set authorization token for Joplin"
 msgstr "Joplin kimlik doğrulama kodunu ayarla"
 
-#: plugins/exporter.koplugin/main.lua:183
+#: plugins/exporter.koplugin/main.lua:184
+#: plugins/exporter.koplugin/main.lua:254
 msgid "Set token"
 msgstr "Kodu ayarla"
 
@@ -12828,10 +12833,11 @@ msgstr "Kodu ayarla"
 msgid "Export to Joplin"
 msgstr "Joplin Uygulamasına Aktar"
 
-#: plugins/exporter.koplugin/main.lua:216
+#: plugins/exporter.koplugin/main.lua:217
+#, fuzzy
 msgid ""
 "You can enter your auth token on your computer by saving an empty token. "
-"Then quit KOReader, edit the evernote.joplin_token field in %1/settings."
+"Then quit KOReader, edit the exporter.joplin_token field in %1/settings."
 "reader.lua after creating a backup, and restart KOReader once you're done.\n"
 "\n"
 "To export to Joplin, you must forward the IP and port used by this plugin to "
@@ -12844,7 +12850,7 @@ msgid ""
 "For Linux: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
 "\n"
 "For more information, please visit https://github.com/koreader/koreader/wiki/"
-"Evernote-export."
+"Highlight-export."
 msgstr ""
 "Boş bir kod kaydederek kimlik doğrulama kodunuzu bilgisayarınıza "
 "yazabilirsiniz. Ardından KOReader uygulamasını kapatın, yedek alın, %1/"
@@ -12864,39 +12870,64 @@ msgstr ""
 "Ayrıntılı bilgi almak için https://github.com/koreader/koreader/wiki/"
 "Evernote-export adresine bakabilirsiniz."
 
-#: plugins/exporter.koplugin/main.lua:232
+#: plugins/exporter.koplugin/main.lua:233
+#, fuzzy
+msgid "Readwise"
+msgstr "Okuyucu"
+
+#: plugins/exporter.koplugin/main.lua:243
+#, fuzzy
+msgid "Set authorization token for Readwise"
+msgstr "Joplin kimlik doğrulama kodunu ayarla"
+
+#: plugins/exporter.koplugin/main.lua:269
+#, fuzzy
+msgid "Export to Readwise"
+msgstr "Joplin Uygulamasına Aktar"
+
+#: plugins/exporter.koplugin/main.lua:287
+msgid ""
+"You can enter your auth token on your computer by saving an empty token. "
+"Then quit KOReader, edit the exporter.readwise_token field in %1/settings."
+"reader.lua after creating a backup, and restart KOReader once you're done.\n"
+"\n"
+"For more information, please visit https://github.com/koreader/koreader/wiki/"
+"Highlight-export."
+msgstr ""
+
+#: plugins/exporter.koplugin/main.lua:297
 msgid "Export all notes in this book"
 msgstr "Bu kitaptaki tüm notları ver"
 
-#: plugins/exporter.koplugin/main.lua:242
+#: plugins/exporter.koplugin/main.lua:307
 msgid "Exporting may take several seconds…"
 msgstr "Verme işlemi birkaç saniye sürebilir…"
 
-#: plugins/exporter.koplugin/main.lua:248
+#: plugins/exporter.koplugin/main.lua:313
 msgid "Export all notes in your library"
 msgstr "Kitaplığınızdaki tüm notları verin"
 
-#: plugins/exporter.koplugin/main.lua:258
+#: plugins/exporter.koplugin/main.lua:323
 msgid "Exporting may take several minutes…"
 msgstr "Verme işlemi birkaç dakika sürebilir…"
 
-#: plugins/exporter.koplugin/main.lua:265
+#: plugins/exporter.koplugin/main.lua:330
 msgid "Export to local JSON files"
 msgstr "Yerel JSON dosyalarına dışa aktarın"
 
-#: plugins/exporter.koplugin/main.lua:278
+#: plugins/exporter.koplugin/main.lua:344
 msgid "Export to local HTML files"
 msgstr "Yerel HTML dosyalarına verin"
 
-#: plugins/exporter.koplugin/main.lua:291
+#: plugins/exporter.koplugin/main.lua:358
 msgid "Export to local clipping text file"
 msgstr "Yerel kırpma metin dosyasına ver"
 
-#: plugins/exporter.koplugin/main.lua:305
+#: plugins/exporter.koplugin/main.lua:373
 msgid "Purge history records"
 msgstr "Geçmiş kayıtlarını sil"
 
-#: plugins/exporter.koplugin/main.lua:309
+#: plugins/exporter.koplugin/main.lua:377
 msgid ""
 "History records have been purged.\n"
 "All notes will be exported again next time.\n"
@@ -12904,7 +12935,7 @@ msgstr ""
 "Geçmiş kayıtları temizlendi.\n"
 "Bir dahaki sefere tüm notlar yeniden dışa aktarılacak.\n"
 
-#: plugins/exporter.koplugin/main.lua:482
+#: plugins/exporter.koplugin/main.lua:560
 msgid ""
 "Exported notes from the book:\n"
 "%1"
@@ -12920,7 +12951,7 @@ msgstr[1] ""
 "%1\n"
 "ve %2 diğer."
 
-#: plugins/exporter.koplugin/main.lua:490
+#: plugins/exporter.koplugin/main.lua:568
 msgid ""
 "An error occurred while trying to export notes from the book:\n"
 "%1"
@@ -12936,7 +12967,7 @@ msgstr[1] ""
 "%1\n"
 "ve %2 diğer."
 
-#: plugins/exporter.koplugin/main.lua:498
+#: plugins/exporter.koplugin/main.lua:576
 msgid ""
 "\n"
 "Notes can be found in %1/."
@@ -12944,11 +12975,11 @@ msgstr ""
 "\n"
 "Notlar %1/ içinde bulunabilir."
 
-#: plugins/exporter.koplugin/main.lua:537
+#: plugins/exporter.koplugin/main.lua:615
 msgid "-- Page: %1, added on %2\n"
 msgstr "-- Sayfa: %1, %2 üzerine eklendi\n"
 
-#: plugins/exporter.koplugin/main.lua:543
+#: plugins/exporter.koplugin/main.lua:624
 msgid "<An image>"
 msgstr "<Bir görsel>"
 

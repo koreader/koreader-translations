@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-24 11:25+0000\n"
+"POT-Creation-Date: 2021-12-25 09:28+0000\n"
 "PO-Revision-Date: 2021-12-21 11:08+0000\n"
 "Last-Translator: Eric <spice2wolf@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -198,8 +198,9 @@ msgstr ""
 #: plugins/calibre.koplugin/wireless.lua:424
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:792
 #: plugins/coverimage.koplugin/main.lua:351
-#: plugins/exporter.koplugin/main.lua:132
-#: plugins/exporter.koplugin/main.lua:177
+#: plugins/exporter.koplugin/main.lua:139
+#: plugins/exporter.koplugin/main.lua:178
+#: plugins/exporter.koplugin/main.lua:248
 #: plugins/gestures.koplugin/main.lua:332 plugins/kosync.koplugin/main.lua:373
 #: plugins/newsdownloader.koplugin/main.lua:149
 #: plugins/newsdownloader.koplugin/main.lua:742
@@ -1643,7 +1644,7 @@ msgstr "你想要打开上一个文档 %1 吗？"
 #: frontend/ui/widget/container/inputcontainer.lua:290
 #: frontend/ui/widget/numberpickerwidget.lua:141
 #: plugins/autowarmth.koplugin/main.lua:459
-#: plugins/calibre.koplugin/main.lua:315 plugins/exporter.koplugin/main.lua:138
+#: plugins/calibre.koplugin/main.lua:315 plugins/exporter.koplugin/main.lua:145
 #: plugins/wallabag.koplugin/main.lua:855
 msgid "OK"
 msgstr "确认"
@@ -1923,6 +1924,7 @@ msgid "in %1"
 msgstr "在 %1章节中"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1147
+#: plugins/exporter.koplugin/clip.lua:245
 msgid "Page %1 %2 @ %3"
 msgstr "页码 %1 %2 @ %3"
 
@@ -7943,7 +7945,8 @@ msgid "Version: %1"
 msgstr "版本: %1"
 
 #: frontend/ui/elements/common_info_menu_table.lua:25
-#: plugins/exporter.koplugin/main.lua:212
+#: plugins/exporter.koplugin/main.lua:213
+#: plugins/exporter.koplugin/main.lua:283
 #: plugins/send2ebook.koplugin/main.lua:96
 #: plugins/wallabag.koplugin/main.lua:285
 msgid "Help"
@@ -12414,39 +12417,41 @@ msgid ""
 "loaded based on external factors."
 msgstr "此插件可以在不打开文档的情况下根据外部因素调整文档设置。"
 
-#: plugins/exporter.koplugin/main.lua:35
+#: plugins/exporter.koplugin/main.lua:37
 msgid "KOReader Notes"
 msgstr "KOReader 笔记"
 
-#: plugins/exporter.koplugin/main.lua:36
+#: plugins/exporter.koplugin/main.lua:38
 msgid "Note: "
 msgstr "笔记: "
 
-#: plugins/exporter.koplugin/main.lua:104 plugins/exporter.koplugin/_meta.lua:4
+#: plugins/exporter.koplugin/main.lua:112 plugins/exporter.koplugin/_meta.lua:4
 msgid "Export highlights"
 msgstr "导出高亮"
 
-#: plugins/exporter.koplugin/main.lua:107
+#: plugins/exporter.koplugin/main.lua:115
 msgid "Joplin"
 msgstr "Joplin"
 
-#: plugins/exporter.koplugin/main.lua:112
+#: plugins/exporter.koplugin/main.lua:119
 msgid "Set Joplin IP and Port"
 msgstr "设置Joplin的IP和端口"
 
-#: plugins/exporter.koplugin/main.lua:118
+#: plugins/exporter.koplugin/main.lua:125
 msgid "Set Joplin IP and port number"
 msgstr "设置Joplin的IP和端口号"
 
-#: plugins/exporter.koplugin/main.lua:161
+#: plugins/exporter.koplugin/main.lua:168
+#: plugins/exporter.koplugin/main.lua:238
 msgid "Set authorization token"
 msgstr "设置认证信息"
 
-#: plugins/exporter.koplugin/main.lua:167
+#: plugins/exporter.koplugin/main.lua:173
 msgid "Set authorization token for Joplin"
 msgstr "为Joplin设置认证信息"
 
-#: plugins/exporter.koplugin/main.lua:183
+#: plugins/exporter.koplugin/main.lua:184
+#: plugins/exporter.koplugin/main.lua:254
 msgid "Set token"
 msgstr "设置口令"
 
@@ -12454,10 +12459,11 @@ msgstr "设置口令"
 msgid "Export to Joplin"
 msgstr "导出至Joplin"
 
-#: plugins/exporter.koplugin/main.lua:216
+#: plugins/exporter.koplugin/main.lua:217
+#, fuzzy
 msgid ""
 "You can enter your auth token on your computer by saving an empty token. "
-"Then quit KOReader, edit the evernote.joplin_token field in %1/settings."
+"Then quit KOReader, edit the exporter.joplin_token field in %1/settings."
 "reader.lua after creating a backup, and restart KOReader once you're done.\n"
 "\n"
 "To export to Joplin, you must forward the IP and port used by this plugin to "
@@ -12470,7 +12476,7 @@ msgid ""
 "For Linux: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
 "\n"
 "For more information, please visit https://github.com/koreader/koreader/wiki/"
-"Evernote-export."
+"Highlight-export."
 msgstr ""
 "你可以通过以下方法使用电脑编辑此口令：先在此填写空白的口令，然后退出"
 "KOReader，备份并编辑位于 %1/settings.reader.lua 文件内的 evernote."
@@ -12487,39 +12493,64 @@ msgstr ""
 "请访问 https://github.com/koreader/koreader/wiki/Evernote-export 了解更多详细"
 "信息。"
 
-#: plugins/exporter.koplugin/main.lua:232
+#: plugins/exporter.koplugin/main.lua:233
+#, fuzzy
+msgid "Readwise"
+msgstr "阅读器"
+
+#: plugins/exporter.koplugin/main.lua:243
+#, fuzzy
+msgid "Set authorization token for Readwise"
+msgstr "为Joplin设置认证信息"
+
+#: plugins/exporter.koplugin/main.lua:269
+#, fuzzy
+msgid "Export to Readwise"
+msgstr "导出至Joplin"
+
+#: plugins/exporter.koplugin/main.lua:287
+msgid ""
+"You can enter your auth token on your computer by saving an empty token. "
+"Then quit KOReader, edit the exporter.readwise_token field in %1/settings."
+"reader.lua after creating a backup, and restart KOReader once you're done.\n"
+"\n"
+"For more information, please visit https://github.com/koreader/koreader/wiki/"
+"Highlight-export."
+msgstr ""
+
+#: plugins/exporter.koplugin/main.lua:297
 msgid "Export all notes in this book"
 msgstr "导出本书笔记"
 
-#: plugins/exporter.koplugin/main.lua:242
+#: plugins/exporter.koplugin/main.lua:307
 msgid "Exporting may take several seconds…"
 msgstr "导出大约需要几秒钟……"
 
-#: plugins/exporter.koplugin/main.lua:248
+#: plugins/exporter.koplugin/main.lua:313
 msgid "Export all notes in your library"
 msgstr "导出所有笔记"
 
-#: plugins/exporter.koplugin/main.lua:258
+#: plugins/exporter.koplugin/main.lua:323
 msgid "Exporting may take several minutes…"
 msgstr "导出大约需要几分钟……"
 
-#: plugins/exporter.koplugin/main.lua:265
+#: plugins/exporter.koplugin/main.lua:330
 msgid "Export to local JSON files"
 msgstr "导出到本地 JSON文件"
 
-#: plugins/exporter.koplugin/main.lua:278
+#: plugins/exporter.koplugin/main.lua:344
 msgid "Export to local HTML files"
 msgstr "导出到本地 HTML 文件"
 
-#: plugins/exporter.koplugin/main.lua:291
+#: plugins/exporter.koplugin/main.lua:358
 msgid "Export to local clipping text file"
 msgstr "导出到本地“剪辑”文本文件"
 
-#: plugins/exporter.koplugin/main.lua:305
+#: plugins/exporter.koplugin/main.lua:373
 msgid "Purge history records"
 msgstr "清除历史记录"
 
-#: plugins/exporter.koplugin/main.lua:309
+#: plugins/exporter.koplugin/main.lua:377
 msgid ""
 "History records have been purged.\n"
 "All notes will be exported again next time.\n"
@@ -12527,7 +12558,7 @@ msgstr ""
 "历史记录已被清除。\n"
 "下次导出时将会导出所有的笔记。\n"
 
-#: plugins/exporter.koplugin/main.lua:482
+#: plugins/exporter.koplugin/main.lua:560
 msgid ""
 "Exported notes from the book:\n"
 "%1"
@@ -12540,7 +12571,7 @@ msgstr[0] ""
 "%1\n"
 "以及其他 %2。"
 
-#: plugins/exporter.koplugin/main.lua:490
+#: plugins/exporter.koplugin/main.lua:568
 msgid ""
 "An error occurred while trying to export notes from the book:\n"
 "%1"
@@ -12553,7 +12584,7 @@ msgstr[0] ""
 "%1\n"
 "和其他 %2。"
 
-#: plugins/exporter.koplugin/main.lua:498
+#: plugins/exporter.koplugin/main.lua:576
 msgid ""
 "\n"
 "Notes can be found in %1/."
@@ -12561,11 +12592,11 @@ msgstr ""
 "\n"
 "可在 %1/ 找到笔记。"
 
-#: plugins/exporter.koplugin/main.lua:537
+#: plugins/exporter.koplugin/main.lua:615
 msgid "-- Page: %1, added on %2\n"
 msgstr "——页码：%1，添加于 %2\n"
 
-#: plugins/exporter.koplugin/main.lua:543
+#: plugins/exporter.koplugin/main.lua:624
 msgid "<An image>"
 msgstr "<图片>"
 
