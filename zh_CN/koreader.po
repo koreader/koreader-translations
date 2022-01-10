@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 17:13+0000\n"
+"POT-Creation-Date: 2022-01-10 19:15+0000\n"
 "PO-Revision-Date: 2022-01-06 20:11+0000\n"
 "Last-Translator: Eric <alchemillatruth@purelymail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -250,7 +250,7 @@ msgstr "编辑"
 #: frontend/apps/filemanager/filemanagershortcuts.lua:149
 #: frontend/apps/reader/modules/readerhighlight.lua:698
 #: frontend/apps/reader/modules/readerstatus.lua:217
-#: frontend/ui/widget/screenshoter.lua:62
+#: frontend/ui/widget/screenshoter.lua:63
 #: plugins/bookshortcuts.koplugin/main.lua:123
 #: plugins/newsdownloader.koplugin/main.lua:150
 #: plugins/opds.koplugin/opdsbrowser.lua:964
@@ -326,10 +326,10 @@ msgstr "选择本地文件夹"
 #: frontend/ui/widget/dictquicklookup.lua:387
 #: frontend/ui/widget/dictquicklookup.lua:487
 #: frontend/ui/widget/doublespinwidget.lua:46
-#: frontend/ui/widget/imageviewer.lua:194
+#: frontend/ui/widget/imageviewer.lua:182
 #: frontend/ui/widget/inputdialog.lua:724
 #: frontend/ui/widget/radiobuttonwidget.lua:31
-#: frontend/ui/widget/screenshoter.lua:48 frontend/ui/widget/spinwidget.lua:40
+#: frontend/ui/widget/screenshoter.lua:49 frontend/ui/widget/spinwidget.lua:40
 #: frontend/ui/widget/textviewer.lua:119 plugins/keepalive.koplugin/main.lua:19
 #: plugins/newsdownloader.koplugin/main.lua:223
 #: plugins/newsdownloader.koplugin/main.lua:314
@@ -657,7 +657,6 @@ msgstr "文件夹："
 #: frontend/ui/translator.lua:250 frontend/ui/widget/bookstatuswidget.lua:141
 #: frontend/ui/widget/bookstatuswidget.lua:150
 #: frontend/ui/widget/bookstatuswidget.lua:158
-#: frontend/ui/widget/imageviewer.lua:287
 #: plugins/batterystat.koplugin/main.lua:71
 #: plugins/statistics.koplugin/main.lua:1344
 #: plugins/statistics.koplugin/main.lua:1347
@@ -1470,7 +1469,7 @@ msgstr "还未设置主目录。"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:308
 #: frontend/apps/reader/modules/readerwikipedia.lua:268
-#: frontend/ui/widget/screenshoter.lua:98
+#: frontend/ui/widget/screenshoter.lua:99
 #: plugins/opds.koplugin/opdsbrowser.lua:722
 msgid "Choose folder"
 msgstr "选择文件夹"
@@ -3127,8 +3126,8 @@ msgstr "进度条的最小宽度（相对于屏幕宽度的百分比）"
 
 #: frontend/apps/reader/modules/readergoto.lua:18
 #: frontend/apps/reader/modules/readergoto.lua:89 frontend/dispatcher.lua:112
-#: frontend/ui/widget/keyvaluepage.lua:378 frontend/ui/widget/menu.lua:766
-#: frontend/ui/widget/sortwidget.lua:234
+#: frontend/ui/widget/keyvaluepage.lua:380 frontend/ui/widget/menu.lua:766
+#: frontend/ui/widget/sortwidget.lua:241
 msgid "Go to page"
 msgstr "前往页码"
 
@@ -3403,7 +3402,7 @@ msgid "Clear location history?"
 msgstr "清除位置历史记录？"
 
 #: frontend/apps/reader/modules/readerlink.lua:174
-#: frontend/ui/data/css_tweaks.lua:568
+#: frontend/ui/data/css_tweaks.lua:576
 msgid "Links"
 msgstr "链接"
 
@@ -6836,24 +6835,38 @@ msgid ""
 msgstr "在除标题外的所有文字上允许断字，以防出版者禁用了断字功能。"
 
 #: frontend/ui/data/css_tweaks.lua:309
+#, fuzzy
+msgid "Ignore publisher line-break restrictions"
+msgstr "忽略出版者行高"
+
+#: frontend/ui/data/css_tweaks.lua:310
+msgid ""
+"A publisher might use non-breaking spaces and hyphens to avoid line breaking "
+"between some words, which is not always necessary and may have been added to "
+"make reading easier. This can cause large word spacing on some lines.\n"
+"Ignoring them will only use KOReader's own typography rules for line "
+"breaking."
+msgstr ""
+
+#: frontend/ui/data/css_tweaks.lua:317
 msgid "Disable common ligatures"
 msgstr "禁用通用/标准合字"
 
-#: frontend/ui/data/css_tweaks.lua:310
+#: frontend/ui/data/css_tweaks.lua:318
 msgid ""
 "Disable common ligatures, which are enabled by default in 'best' kerning "
 "mode."
 msgstr "禁用标准合字，它们默认在“最佳”字距调整模式下启用。"
 
-#: frontend/ui/data/css_tweaks.lua:319
+#: frontend/ui/data/css_tweaks.lua:327
 msgid "Ruby"
 msgstr "注音"
 
-#: frontend/ui/data/css_tweaks.lua:321
+#: frontend/ui/data/css_tweaks.lua:329
 msgid "About ruby"
 msgstr "关于注音"
 
-#: frontend/ui/data/css_tweaks.lua:322
+#: frontend/ui/data/css_tweaks.lua:330
 msgid ""
 "Ruby characters are small glosses on writing in Asian languages (Hanzi, "
 "Kanji, Hanja, etc.) to show the pronunciation of the logographs.\n"
@@ -6863,11 +6876,11 @@ msgstr ""
 "号的发音。\n"
 "你可以在此菜单下关闭或调整注音字符的显示方式。"
 
-#: frontend/ui/data/css_tweaks.lua:329
+#: frontend/ui/data/css_tweaks.lua:337
 msgid "Sans-serif font for ruby"
 msgstr "注音使用无衬线字体"
 
-#: frontend/ui/data/css_tweaks.lua:330
+#: frontend/ui/data/css_tweaks.lua:338
 msgid ""
 "Use a sans serif font to display all ruby text for a more 'book-like' "
 "feeling.\n"
@@ -6876,19 +6889,19 @@ msgstr ""
 "使用无衬线字体来显示所有的 注音文本，这样更有“读书”的感觉。\n"
 "此选项会强制注音文本使用常规粗细的字体，而不是选择的粗体或细体。"
 
-#: frontend/ui/data/css_tweaks.lua:342
+#: frontend/ui/data/css_tweaks.lua:350
 msgid "Larger ruby text size"
 msgstr "增大注音字体尺寸"
 
-#: frontend/ui/data/css_tweaks.lua:343
+#: frontend/ui/data/css_tweaks.lua:351
 msgid "Increase ruby text size."
 msgstr "增大注音字体尺寸。"
 
-#: frontend/ui/data/css_tweaks.lua:349
+#: frontend/ui/data/css_tweaks.lua:357
 msgid "Larger spacing between ruby lines"
 msgstr "增大注音行之间的间距"
 
-#: frontend/ui/data/css_tweaks.lua:350
+#: frontend/ui/data/css_tweaks.lua:358
 msgid ""
 "Increase line spacing of most text, so that lines keep an even spacing "
 "whether or not they include ruby.\n"
@@ -6897,71 +6910,71 @@ msgstr ""
 "增加大多数文本的行间距，保证有注音的行间距与无注音的行间距相同。\n"
 "进一步的调整可以通过底部菜单中的“行间距”来完成。"
 
-#: frontend/ui/data/css_tweaks.lua:358
+#: frontend/ui/data/css_tweaks.lua:366
 msgid "Render ruby content inline"
 msgstr "行内渲染注音内容"
 
-#: frontend/ui/data/css_tweaks.lua:359
+#: frontend/ui/data/css_tweaks.lua:367
 msgid "Disable handling of <ruby> tags and render them inline."
 msgstr "禁用对 <ruby> 标签的处理并在行内渲染对应内容。"
 
-#: frontend/ui/data/css_tweaks.lua:366
+#: frontend/ui/data/css_tweaks.lua:374
 msgid "Fonts and line heights"
 msgstr "字体和行高"
 
-#: frontend/ui/data/css_tweaks.lua:369
+#: frontend/ui/data/css_tweaks.lua:377
 msgid "Ignore publisher font families"
 msgstr "忽略出版者字体类型"
 
-#: frontend/ui/data/css_tweaks.lua:370
+#: frontend/ui/data/css_tweaks.lua:378
 msgid "Disable font-family specified in embedded styles."
 msgstr "禁用嵌入样式中指定的字体类型。"
 
-#: frontend/ui/data/css_tweaks.lua:375
+#: frontend/ui/data/css_tweaks.lua:383
 msgid "Ignore publisher font sizes"
 msgstr "忽略出版者字体大小"
 
-#: frontend/ui/data/css_tweaks.lua:376
+#: frontend/ui/data/css_tweaks.lua:384
 msgid "Disable font-size specified in embedded styles."
 msgstr "禁用嵌入样式中指定的字体大小。"
 
-#: frontend/ui/data/css_tweaks.lua:382
+#: frontend/ui/data/css_tweaks.lua:390
 msgid "Ignore publisher line heights"
 msgstr "忽略出版者行高"
 
-#: frontend/ui/data/css_tweaks.lua:383
+#: frontend/ui/data/css_tweaks.lua:391
 msgid ""
 "Disable line-height specified in embedded styles, and may allow KOReader's "
 "line spacing settings to work on books where they would not."
 msgstr "禁用嵌入样式中行高的设置，可能能解决部分文档无法被设置行间距的问题。"
 
-#: frontend/ui/data/css_tweaks.lua:388
+#: frontend/ui/data/css_tweaks.lua:396
 msgid "Enforce steady line heights"
 msgstr "强制统一行高"
 
-#: frontend/ui/data/css_tweaks.lua:389
+#: frontend/ui/data/css_tweaks.lua:397
 msgid ""
 "Prevent inline content like sub- and superscript from changing their "
 "paragraph line height."
 msgstr "防止内联内容（如上标或下标）影响行高。"
 
-#: frontend/ui/data/css_tweaks.lua:396
+#: frontend/ui/data/css_tweaks.lua:404
 msgid "Smaller sub- and superscript"
 msgstr "小字号上下标"
 
-#: frontend/ui/data/css_tweaks.lua:397
+#: frontend/ui/data/css_tweaks.lua:405
 msgid "Prevent sub- and superscript from affecting line-height."
 msgstr "防止上下标影响行高。"
 
-#: frontend/ui/data/css_tweaks.lua:409
+#: frontend/ui/data/css_tweaks.lua:417
 msgid "Paragraphs"
 msgstr "段落"
 
-#: frontend/ui/data/css_tweaks.lua:412
+#: frontend/ui/data/css_tweaks.lua:420
 msgid "Generic web browser paragraph style"
 msgstr "浏览器的段落样式"
 
-#: frontend/ui/data/css_tweaks.lua:413
+#: frontend/ui/data/css_tweaks.lua:421
 msgid ""
 "Display paragraphs as browsers do, in full-block style without indentation "
 "or justification, discarding KOReader's book paragraph style.\n"
@@ -6971,23 +6984,23 @@ msgstr ""
 "以浏览器的不带缩进与对齐的全块样式显示段落，忽略KOReader的书籍段落样式。\n"
 "某些文档可能需要将此样式作为默认样式，且仅在需要偏离此默认值时才使用CSS。"
 
-#: frontend/ui/data/css_tweaks.lua:428
+#: frontend/ui/data/css_tweaks.lua:436
 msgid "Paragraph first-line indentation"
 msgstr "段落首行缩进"
 
-#: frontend/ui/data/css_tweaks.lua:431
+#: frontend/ui/data/css_tweaks.lua:439
 msgid "No indentation on first paragraph line"
 msgstr "段落首行不缩进"
 
-#: frontend/ui/data/css_tweaks.lua:432
+#: frontend/ui/data/css_tweaks.lua:440
 msgid "Do not indent the first line of paragraphs."
 msgstr "段首行不缩进。"
 
-#: frontend/ui/data/css_tweaks.lua:438
+#: frontend/ui/data/css_tweaks.lua:446
 msgid "Indentation on first paragraph line"
 msgstr "段落首行缩进"
 
-#: frontend/ui/data/css_tweaks.lua:439
+#: frontend/ui/data/css_tweaks.lua:447
 msgid ""
 "Indentation on the first line of a paragraph is the default, but it may be "
 "overridden by publisher styles. This will force KOReader's defaults on "
@@ -6996,11 +7009,11 @@ msgstr ""
 "通常情况下，段落首行会缩进，但有可能被出版者的样式覆盖。这个选项让 KOReader "
 "强制段落首行缩进。"
 
-#: frontend/ui/data/css_tweaks.lua:447
+#: frontend/ui/data/css_tweaks.lua:455
 msgid "No indentation on first paragraph"
 msgstr "首段不缩进"
 
-#: frontend/ui/data/css_tweaks.lua:448
+#: frontend/ui/data/css_tweaks.lua:456
 msgid ""
 "Do not indent the first line of the first paragraph of its container. This "
 "might be needed to correctly display drop caps, while still having "
@@ -7009,37 +7022,37 @@ msgstr ""
 "容器中的第一段设置为不缩进。这可能可以在不改变剩余段落缩进设置的情况下，解决"
 "首段下坠大写字母显示不正确的问题。"
 
-#: frontend/ui/data/css_tweaks.lua:454
+#: frontend/ui/data/css_tweaks.lua:462
 msgid "No indentation on following paragraphs"
 msgstr "非首段不缩进"
 
-#: frontend/ui/data/css_tweaks.lua:455
+#: frontend/ui/data/css_tweaks.lua:463
 msgid ""
 "Do not indent the first line of following paragraphs, but leave the first "
 "paragraph of its container untouched."
 msgstr "保持容器中的第一段缩进设置不变，取消剩下所有段落的缩进。"
 
-#: frontend/ui/data/css_tweaks.lua:461 frontend/ui/data/css_tweaks.lua:464
+#: frontend/ui/data/css_tweaks.lua:469 frontend/ui/data/css_tweaks.lua:472
 msgid "Spacing between paragraphs"
 msgstr "段间距"
 
-#: frontend/ui/data/css_tweaks.lua:465
+#: frontend/ui/data/css_tweaks.lua:473
 msgid "Add a line of whitespace between paragraphs."
 msgstr "在段落间添加一行空行。"
 
-#: frontend/ui/data/css_tweaks.lua:471
+#: frontend/ui/data/css_tweaks.lua:479
 msgid "Spacing between paragraphs (half)"
 msgstr "段间距（一半）"
 
-#: frontend/ui/data/css_tweaks.lua:472
+#: frontend/ui/data/css_tweaks.lua:480
 msgid "Add half a line of whitespace between paragraphs."
 msgstr "在段落间添加半行空行。"
 
-#: frontend/ui/data/css_tweaks.lua:478
+#: frontend/ui/data/css_tweaks.lua:486
 msgid "No spacing between paragraphs"
 msgstr "段落间无空行"
 
-#: frontend/ui/data/css_tweaks.lua:479
+#: frontend/ui/data/css_tweaks.lua:487
 msgid ""
 "No whitespace between paragraphs is the default, but it may be overridden by "
 "publisher styles. This will re-enable it for paragraphs and list items."
@@ -7047,142 +7060,142 @@ msgstr ""
 "段落间默认是无空行的，但有可能被出版者样式所覆盖。这个选项将重新启用段落和列"
 "表间的无空行设定。"
 
-#: frontend/ui/data/css_tweaks.lua:486
+#: frontend/ui/data/css_tweaks.lua:494
 msgid "Ignore vertical paragraph padding"
 msgstr "忽略垂直段间距"
 
-#: frontend/ui/data/css_tweaks.lua:492
+#: frontend/ui/data/css_tweaks.lua:500
 msgid "Horizontal paragraph margins"
 msgstr "水平外边距"
 
-#: frontend/ui/data/css_tweaks.lua:495
+#: frontend/ui/data/css_tweaks.lua:503
 msgid "Ignore horizontal paragraph margins"
 msgstr "忽略垂直段边距"
 
-#: frontend/ui/data/css_tweaks.lua:501
+#: frontend/ui/data/css_tweaks.lua:509
 msgid "Ignore horizontal paragraph padding"
 msgstr "忽略垂直段边距"
 
-#: frontend/ui/data/css_tweaks.lua:508
+#: frontend/ui/data/css_tweaks.lua:516
 msgid "List items"
 msgstr "列表项目"
 
-#: frontend/ui/data/css_tweaks.lua:511
+#: frontend/ui/data/css_tweaks.lua:519
 msgid "Force bullets with unordered lists"
 msgstr "强制为无序列表使用小原点"
 
-#: frontend/ui/data/css_tweaks.lua:516
+#: frontend/ui/data/css_tweaks.lua:524
 msgid "Force decimal numbers with ordered lists"
 msgstr "强制为有序列表使用数字序号"
 
-#: frontend/ui/data/css_tweaks.lua:522
+#: frontend/ui/data/css_tweaks.lua:530
 msgid "Tables"
 msgstr "表格"
 
-#: frontend/ui/data/css_tweaks.lua:525
+#: frontend/ui/data/css_tweaks.lua:533
 msgid "Full-width tables"
 msgstr "全宽表格"
 
-#: frontend/ui/data/css_tweaks.lua:526
+#: frontend/ui/data/css_tweaks.lua:534
 msgid ""
 "Make table expand to the full width of the page. (Tables with small content "
 "now use only the width needed to display that content. This restores the "
 "previous behavior.)"
 msgstr "让表格扩展至页面宽度。（内容较少的表格将保持其原有的宽度。）"
 
-#: frontend/ui/data/css_tweaks.lua:532
+#: frontend/ui/data/css_tweaks.lua:540
 msgid "Ignore publisher table and cell widths"
 msgstr "忽略出版者表格宽度"
 
-#: frontend/ui/data/css_tweaks.lua:533
+#: frontend/ui/data/css_tweaks.lua:541
 msgid ""
 "Ignore table and cells widths specified by the publisher, and let the engine "
 "decide the most appropriate widths."
 msgstr "忽略出版者设置的表格宽度，让排版引擎设置最佳的宽度。"
 
-#: frontend/ui/data/css_tweaks.lua:538
+#: frontend/ui/data/css_tweaks.lua:546
 msgid "Center small tables"
 msgstr "居中小表格"
 
-#: frontend/ui/data/css_tweaks.lua:539
+#: frontend/ui/data/css_tweaks.lua:547
 msgid "Horizontally center tables that do not use the full page width."
 msgstr "将比页面宽度小的表格水平居中。"
 
-#: frontend/ui/data/css_tweaks.lua:546
+#: frontend/ui/data/css_tweaks.lua:554
 msgid "Ignore publisher vertical alignment in tables"
 msgstr "忽略出版者设置的表格垂直对齐"
 
-#: frontend/ui/data/css_tweaks.lua:553
+#: frontend/ui/data/css_tweaks.lua:561
 msgid "Alternate background color of table rows"
 msgstr "替换表格行的背景颜色"
 
-#: frontend/ui/data/css_tweaks.lua:561
+#: frontend/ui/data/css_tweaks.lua:569
 msgid "Show borders on all tables"
 msgstr "为所有表格显示边框"
 
-#: frontend/ui/data/css_tweaks.lua:571
+#: frontend/ui/data/css_tweaks.lua:579
 msgid "Links always black"
 msgstr "链接总是黑色"
 
-#: frontend/ui/data/css_tweaks.lua:576
+#: frontend/ui/data/css_tweaks.lua:584
 msgid "Links always blue"
 msgstr "链接总是蓝色"
 
-#: frontend/ui/data/css_tweaks.lua:582
+#: frontend/ui/data/css_tweaks.lua:590
 msgid "Links always bold"
 msgstr "链接总是加粗"
 
-#: frontend/ui/data/css_tweaks.lua:587
+#: frontend/ui/data/css_tweaks.lua:595
 msgid "Links never bold"
 msgstr "链接不加粗"
 
-#: frontend/ui/data/css_tweaks.lua:593
+#: frontend/ui/data/css_tweaks.lua:601
 msgid "Links always italic"
 msgstr "链接总是斜体"
 
-#: frontend/ui/data/css_tweaks.lua:598
+#: frontend/ui/data/css_tweaks.lua:606
 msgid "Links never italic"
 msgstr "链接永远不是斜体"
 
-#: frontend/ui/data/css_tweaks.lua:604
+#: frontend/ui/data/css_tweaks.lua:612
 msgid "Links always underlined"
 msgstr "链接总是显示下划线"
 
-#: frontend/ui/data/css_tweaks.lua:610
+#: frontend/ui/data/css_tweaks.lua:618
 msgid "Links never underlined"
 msgstr "链接不显示下划线"
 
-#: frontend/ui/data/css_tweaks.lua:615
+#: frontend/ui/data/css_tweaks.lua:623
 msgid "Images"
 msgstr "图像"
 
-#: frontend/ui/data/css_tweaks.lua:618
+#: frontend/ui/data/css_tweaks.lua:626
 msgid "Full-width images"
 msgstr "全宽图像"
 
-#: frontend/ui/data/css_tweaks.lua:619
+#: frontend/ui/data/css_tweaks.lua:627
 msgid ""
 "Useful for books containing only images, when they are smaller than your "
 "screen. May stretch images in some cases."
 msgstr "当书籍中只有一些小图像时有用，可能会裁剪掉部分图像。"
 
-#: frontend/ui/data/css_tweaks.lua:633
+#: frontend/ui/data/css_tweaks.lua:641
 msgid "Vertically center-align images relative to text"
 msgstr "将图像垂直对齐至文本"
 
-#: frontend/ui/data/css_tweaks.lua:638
+#: frontend/ui/data/css_tweaks.lua:646
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: frontend/ui/data/css_tweaks.lua:640
+#: frontend/ui/data/css_tweaks.lua:648
 msgid "Alternative ToC hints"
 msgstr "替代目录提示"
 
-#: frontend/ui/data/css_tweaks.lua:642
+#: frontend/ui/data/css_tweaks.lua:650
 msgid "About alternative ToC"
 msgstr "关于替代目录"
 
-#: frontend/ui/data/css_tweaks.lua:643
+#: frontend/ui/data/css_tweaks.lua:651
 msgid ""
 "An alternative table of contents can be built via a dedicated option in the "
 "\"Settings\" menu below the \"Table of contents\" menu entry.\n"
@@ -7213,39 +7226,39 @@ msgstr ""
 "应用这些调整之后，需要通过在菜单中切换两次来重建备选目录：一次是恢复原始目"
 "录，一次是再次构建替代目录。"
 
-#: frontend/ui/data/css_tweaks.lua:656
+#: frontend/ui/data/css_tweaks.lua:664
 msgid "Ignore all <H1> to <H6>"
 msgstr "忽略从 <H1> 到 <H6> 的所有标签"
 
-#: frontend/ui/data/css_tweaks.lua:661
+#: frontend/ui/data/css_tweaks.lua:669
 msgid "Ignore <H1>"
 msgstr "忽略 <H1> 标签"
 
-#: frontend/ui/data/css_tweaks.lua:666
+#: frontend/ui/data/css_tweaks.lua:674
 msgid "Ignore <H2>"
 msgstr "忽略 <H2> 标签"
 
-#: frontend/ui/data/css_tweaks.lua:671
+#: frontend/ui/data/css_tweaks.lua:679
 msgid "Ignore <H3>"
 msgstr "忽略 <H3> 标签"
 
-#: frontend/ui/data/css_tweaks.lua:676
+#: frontend/ui/data/css_tweaks.lua:684
 msgid "Ignore <H4>"
 msgstr "忽略 <H4> 标签"
 
-#: frontend/ui/data/css_tweaks.lua:681
+#: frontend/ui/data/css_tweaks.lua:689
 msgid "Ignore <H5>"
 msgstr "忽略 <H5> 标签"
 
-#: frontend/ui/data/css_tweaks.lua:686
+#: frontend/ui/data/css_tweaks.lua:694
 msgid "Ignore <H6>"
 msgstr "忽略 <H6> 标签"
 
-#: frontend/ui/data/css_tweaks.lua:692
+#: frontend/ui/data/css_tweaks.lua:700
 msgid "Example of book specific ToC hints"
 msgstr "特定书籍目录提示样例"
 
-#: frontend/ui/data/css_tweaks.lua:693
+#: frontend/ui/data/css_tweaks.lua:701
 msgid ""
 "If headings or document fragments do not result in a usable ToC, you can "
 "inspect the HTML and look for elements that contain chapter titles. Then you "
@@ -7257,33 +7270,33 @@ msgstr ""
 "章节标题的元素，然后将提示设置为它们的类名。\n"
 "这只是一个示例，你需要自行进行样式微调。"
 
-#: frontend/ui/data/css_tweaks.lua:705
+#: frontend/ui/data/css_tweaks.lua:713
 msgid "In-page footnotes"
 msgstr "页面内脚注"
 
-#: frontend/ui/data/css_tweaks.lua:707 frontend/ui/data/css_tweaks.lua:710
+#: frontend/ui/data/css_tweaks.lua:715 frontend/ui/data/css_tweaks.lua:718
 msgid "In-page FB2 footnotes"
 msgstr "页面内 FB2 脚注"
 
-#: frontend/ui/data/css_tweaks.lua:711
+#: frontend/ui/data/css_tweaks.lua:719
 msgid ""
 "Show FB2 footnote text at the bottom of pages that contain links to them."
 msgstr "在页面底部显示一个 FB2 脚注，并显示一个链接。"
 
-#: frontend/ui/data/css_tweaks.lua:736
+#: frontend/ui/data/css_tweaks.lua:744
 msgid "In-page FB2 endnotes"
 msgstr "页面内 FB2 尾注"
 
-#: frontend/ui/data/css_tweaks.lua:737
+#: frontend/ui/data/css_tweaks.lua:745
 msgid ""
 "Show FB2 endnote text at the bottom of pages that contain links to them."
 msgstr "在页面底部显示一个 FB2 尾注，并显示一个链接。"
 
-#: frontend/ui/data/css_tweaks.lua:759
+#: frontend/ui/data/css_tweaks.lua:767
 msgid "Keep regular font size"
 msgstr "使用正常字体大小"
 
-#: frontend/ui/data/css_tweaks.lua:760
+#: frontend/ui/data/css_tweaks.lua:768
 msgid ""
 "FB2 footnotes and endnotes get a smaller font size when displayed in-page. "
 "This allows them to be shown with the normal font size."
@@ -7291,11 +7304,11 @@ msgstr ""
 "FB2 脚注和尾注通常使用较小的字号在页内显示。此选项可以将它们设置为以正常字号"
 "显示。"
 
-#: frontend/ui/data/css_tweaks.lua:775
+#: frontend/ui/data/css_tweaks.lua:783
 msgid "In-page EPUB footnotes"
 msgstr "页面内 EPUB 脚注"
 
-#: frontend/ui/data/css_tweaks.lua:776 frontend/ui/data/css_tweaks.lua:799
+#: frontend/ui/data/css_tweaks.lua:784 frontend/ui/data/css_tweaks.lua:807
 msgid ""
 "Show EPUB footnote text at the bottom of pages that contain links to them.\n"
 "This only works with footnotes that have specific attributes set by the "
@@ -7304,27 +7317,27 @@ msgstr ""
 "在页面底部显示脚注，并显示一个链接。\n"
 "仅在出版者为脚注设置了特定的属性时可用。"
 
-#: frontend/ui/data/css_tweaks.lua:798
+#: frontend/ui/data/css_tweaks.lua:806
 msgid "In-page EPUB footnotes (smaller)"
 msgstr "页面内 EPUB 脚注（更小）"
 
-#: frontend/ui/data/css_tweaks.lua:824
+#: frontend/ui/data/css_tweaks.lua:832
 msgid "In-page Wikipedia footnotes"
 msgstr "页面内维基百科脚注"
 
-#: frontend/ui/data/css_tweaks.lua:825 frontend/ui/data/css_tweaks.lua:839
+#: frontend/ui/data/css_tweaks.lua:833 frontend/ui/data/css_tweaks.lua:847
 msgid "Show footnotes at the bottom of pages in Wikipedia EPUBs."
 msgstr "在维基百科EPUB文档的底部显示脚注。"
 
-#: frontend/ui/data/css_tweaks.lua:838
+#: frontend/ui/data/css_tweaks.lua:846
 msgid "In-page Wikipedia footnotes (smaller)"
 msgstr "页面内维基百科脚注（更小）"
 
-#: frontend/ui/data/css_tweaks.lua:857
+#: frontend/ui/data/css_tweaks.lua:865
 msgid "In-page classic classname footnotes"
 msgstr "页面内传统类名脚注"
 
-#: frontend/ui/data/css_tweaks.lua:858 frontend/ui/data/css_tweaks.lua:876
+#: frontend/ui/data/css_tweaks.lua:866 frontend/ui/data/css_tweaks.lua:884
 msgid ""
 "Show footnotes with classic classnames at the bottom of pages.\n"
 "This tweak can be duplicated as a user style tweak when books contain "
@@ -7333,15 +7346,15 @@ msgstr ""
 "在页面底部显示带有经典类名的脚注。\n"
 "当书籍包含用其他类名嵌套的脚注时，可以将此调整复制为一个用户样式调整。"
 
-#: frontend/ui/data/css_tweaks.lua:875
+#: frontend/ui/data/css_tweaks.lua:883
 msgid "In-page classic classname footnotes (smaller)"
 msgstr "页面内传统类名脚注（更小）"
 
-#: frontend/ui/data/css_tweaks.lua:895
+#: frontend/ui/data/css_tweaks.lua:903
 msgid "Disable before/after pseudo elements"
 msgstr "禁用before/after伪元素"
 
-#: frontend/ui/data/css_tweaks.lua:896
+#: frontend/ui/data/css_tweaks.lua:904
 msgid ""
 "Disable generated text from ::before and ::after pseudo elements, usually "
 "used to add cosmetic text around some content."
@@ -7349,11 +7362,11 @@ msgstr ""
 "从:: before和:: after伪元素禁用生成的文本，它们通常用于在某些内容周围添加修饰"
 "文字。"
 
-#: frontend/ui/data/css_tweaks.lua:904
+#: frontend/ui/data/css_tweaks.lua:912
 msgid "Pure black and white"
 msgstr "纯黑白"
 
-#: frontend/ui/data/css_tweaks.lua:905
+#: frontend/ui/data/css_tweaks.lua:913
 msgid "Enforce black text and borders, and remove backgrounds."
 msgstr "强制使文本和边框变为黑色，并移除背景。"
 
@@ -10173,6 +10186,35 @@ msgstr "已关机"
 msgid "Rebooting…"
 msgstr "正在重启……"
 
+#: frontend/ui/widget/bookmapwidget.lua:1006
+msgid ""
+"Book map displays an overview of the book content.\n"
+"\n"
+"If statistics are enabled, black bars are shown for already read pages (gray "
+"for pages read in the current reading session). Their heights vary with the "
+"time spent reading the page.\n"
+"Chapters are shown above their pages.\n"
+"Under the pages can be found some indicators:\n"
+"▲ current page\n"
+"❶ ❷ … previous locations\n"
+"▒ highlighted text\n"
+" highlighted text with notes\n"
+" bookmarked page\n"
+"▢ focused page when coming from Pages browser\n"
+"\n"
+"Tap on a location in the book to browse thumbnails of the pages there.\n"
+"Swipe along the left screen edge to change the level of chapters to include "
+"in the book map, and the type of book map (grid or flat) when crossing the "
+"level 0.\n"
+"Swipe along the bottom screen edge to change the width of page slots.\n"
+"Swipe or pan vertically on content to scroll.\n"
+"Any multiswipe will close the book map.\n"
+"\n"
+"On a newly opened book, the book map will start in grid mode showing all "
+"chapter levels, fitting on a single screen, to give the best initial "
+"overview of the book's content."
+msgstr ""
+
 #: frontend/ui/widget/bookstatuswidget.lua:164
 msgid "Book Status"
 msgstr "阅读统计"
@@ -10368,27 +10410,27 @@ msgstr "开关"
 msgid "Configure"
 msgstr "配置"
 
-#: frontend/ui/widget/imageviewer.lua:55
+#: frontend/ui/widget/imageviewer.lua:50
 msgid "Viewing image"
 msgstr "观赏图片"
 
-#: frontend/ui/widget/imageviewer.lua:174
-#: frontend/ui/widget/imageviewer.lua:466
+#: frontend/ui/widget/imageviewer.lua:162
+#: frontend/ui/widget/imageviewer.lua:341
 msgid "Original size"
 msgstr "原尺寸"
 
-#: frontend/ui/widget/imageviewer.lua:174
-#: frontend/ui/widget/imageviewer.lua:466
+#: frontend/ui/widget/imageviewer.lua:162
+#: frontend/ui/widget/imageviewer.lua:341
 msgid "Scale"
 msgstr "缩放比例"
 
-#: frontend/ui/widget/imageviewer.lua:186
-#: frontend/ui/widget/imageviewer.lua:468
+#: frontend/ui/widget/imageviewer.lua:174
+#: frontend/ui/widget/imageviewer.lua:343
 msgid "No rotation"
 msgstr "不旋转"
 
-#: frontend/ui/widget/imageviewer.lua:186
-#: frontend/ui/widget/imageviewer.lua:468
+#: frontend/ui/widget/imageviewer.lua:174
+#: frontend/ui/widget/imageviewer.lua:343
 msgid "Rotate"
 msgstr "旋转"
 
@@ -10525,19 +10567,19 @@ msgstr "键盘布局"
 msgid "Switch to layout"
 msgstr "切换到布局"
 
-#: frontend/ui/widget/keyvaluepage.lua:366 frontend/ui/widget/menu.lua:814
-#: frontend/ui/widget/sortwidget.lua:222
+#: frontend/ui/widget/keyvaluepage.lua:368 frontend/ui/widget/menu.lua:814
+#: frontend/ui/widget/sortwidget.lua:229
 msgid "Enter page number"
 msgstr "输入页码"
 
 #. @translators %1 is the current page. %2 is the total number of pages. In some languages a good translation might need to reverse this order, for instance: "Total %2, page %1".
-#: frontend/ui/widget/keyvaluepage.lua:577 frontend/ui/widget/menu.lua:1061
-#: frontend/ui/widget/sortwidget.lua:385 frontend/ui/widget/touchmenu.lua:679
+#: frontend/ui/widget/keyvaluepage.lua:574 frontend/ui/widget/menu.lua:1061
+#: frontend/ui/widget/sortwidget.lua:392 frontend/ui/widget/touchmenu.lua:679
 #: plugins/coverbrowser.koplugin/listmenu.lua:430
 msgid "Page %1 of %2"
 msgstr "第 %1 页，共 %2 页"
 
-#: frontend/ui/widget/keyvaluepage.lua:593 frontend/ui/widget/menu.lua:1079
+#: frontend/ui/widget/keyvaluepage.lua:590 frontend/ui/widget/menu.lua:1079
 msgid "No items"
 msgstr "无项目"
 
@@ -10651,6 +10693,22 @@ msgstr "始终对此文件使用该引擎"
 msgid "Always use this engine for file type"
 msgstr "始终对此文件类型使用该引擎"
 
+#: frontend/ui/widget/pagebrowserwidget.lua:603
+msgid ""
+"Page browser shows thumbnails of pages.\n"
+"\n"
+"The bottom ribbon displays an extract of the book map around the shown "
+"pages: see the book map help for details.\n"
+"\n"
+"Swipe along the top or left screen edge to change the number of columns or "
+"rows of thumbnails.\n"
+"Swipe vertically to move one row, horizontally to move one page.\n"
+"Swipe horizontally in the bottom ribbon to move by the full stripe.\n"
+"Tap in the bottom ribbon on a page to focus thumbnails on this page.\n"
+"Tap on a thumbnail to go read this page.\n"
+"Any multiswipe will close the page browser."
+msgstr ""
+
 #: frontend/ui/widget/pathchooser.lua:35
 msgid "Long-press to choose a file"
 msgstr "长按选择文件"
@@ -10707,15 +10765,15 @@ msgstr ""
 "截屏已保存至：\n"
 "%1"
 
-#: frontend/ui/widget/screenshoter.lua:52
+#: frontend/ui/widget/screenshoter.lua:53
 msgid "Set as screensaver"
 msgstr "设为屏保"
 
-#: frontend/ui/widget/screenshoter.lua:70
+#: frontend/ui/widget/screenshoter.lua:71
 msgid "View"
 msgstr "查看"
 
-#: frontend/ui/widget/screenshoter.lua:93
+#: frontend/ui/widget/screenshoter.lua:94
 msgid ""
 "Screenshot folder is set to:\n"
 "%1\n"
@@ -10727,7 +10785,7 @@ msgstr ""
 "\n"
 "选择一个新的截屏文件夹？"
 
-#: frontend/ui/widget/screenshoter.lua:94
+#: frontend/ui/widget/screenshoter.lua:95
 #: plugins/statistics.koplugin/main.lua:988
 msgid "Use default"
 msgstr "使用默认值"
