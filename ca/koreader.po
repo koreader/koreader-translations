@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-21 17:45+0000\n"
+"POT-Creation-Date: 2022-01-21 18:39+0000\n"
 "PO-Revision-Date: 2022-01-18 08:53+0000\n"
 "Last-Translator: hombretranquilo <hombretranquilo.mbp@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/koreader/"
@@ -187,8 +187,10 @@ msgstr ""
 #: plugins/exporter.koplugin/main.lua:178
 #: plugins/exporter.koplugin/main.lua:248
 #: plugins/gestures.koplugin/main.lua:332 plugins/kosync.koplugin/main.lua:373
-#: plugins/newsdownloader.koplugin/main.lua:149
-#: plugins/newsdownloader.koplugin/main.lua:742
+#: plugins/newsdownloader.koplugin/main.lua:134
+#: plugins/newsdownloader.koplugin/main.lua:493
+#: plugins/newsdownloader.koplugin/main.lua:599
+#: plugins/newsdownloader.koplugin/main.lua:752
 #: plugins/opds.koplugin/opdsbrowser.lua:156
 #: plugins/opds.koplugin/opdsbrowser.lua:206
 #: plugins/opds.koplugin/opdsbrowser.lua:747
@@ -244,7 +246,7 @@ msgstr "Editar"
 #: frontend/apps/reader/modules/readerstatus.lua:217
 #: frontend/ui/widget/screenshoter.lua:63
 #: plugins/bookshortcuts.koplugin/main.lua:123
-#: plugins/newsdownloader.koplugin/main.lua:150
+#: plugins/newsdownloader.koplugin/main.lua:135
 #: plugins/opds.koplugin/opdsbrowser.lua:964
 #: plugins/terminal.koplugin/main.lua:192
 msgid "Delete"
@@ -323,9 +325,9 @@ msgstr "Seleccionar carpeta local"
 #: frontend/ui/widget/radiobuttonwidget.lua:27
 #: frontend/ui/widget/screenshoter.lua:49 frontend/ui/widget/spinwidget.lua:36
 #: frontend/ui/widget/textviewer.lua:119 plugins/keepalive.koplugin/main.lua:19
-#: plugins/newsdownloader.koplugin/main.lua:223
-#: plugins/newsdownloader.koplugin/main.lua:314
-#: plugins/newsdownloader.koplugin/main.lua:622
+#: plugins/newsdownloader.koplugin/main.lua:88
+#: plugins/newsdownloader.koplugin/main.lua:214
+#: plugins/newsdownloader.koplugin/main.lua:466
 #: plugins/statistics.koplugin/main.lua:315
 #: plugins/terminal.koplugin/main.lua:434
 msgid "Close"
@@ -357,9 +359,7 @@ msgstr "Pujant…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:651
 #: frontend/apps/filemanager/filemanager.lua:1017
-#: frontend/ui/wikipedia.lua:1334
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
-#: plugins/statistics.koplugin/main.lua:319
+#: frontend/ui/wikipedia.lua:1334 plugins/statistics.koplugin/main.lua:319
 #: plugins/texteditor.koplugin/main.lua:402
 msgid "Create"
 msgstr "Crear"
@@ -848,6 +848,8 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:679
 #: frontend/apps/reader/modules/readermenu.lua:185
 #: frontend/ui/widget/inputdialog.lua:630
+#: plugins/newsdownloader.koplugin/main.lua:494
+#: plugins/newsdownloader.koplugin/main.lua:753
 #: plugins/statistics.koplugin/main.lua:2030
 #: plugins/statistics.koplugin/main.lua:2076
 msgid "Reset"
@@ -1369,7 +1371,7 @@ msgstr "No es pot obrir el darrer document"
 #: frontend/apps/reader/modules/readerfooter.lua:1097
 #: frontend/apps/reader/modules/readertoc.lua:928
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:474
-#: plugins/newsdownloader.koplugin/main.lua:123
+#: plugins/newsdownloader.koplugin/main.lua:119
 #: plugins/perceptionexpander.koplugin/main.lua:175
 #: plugins/send2ebook.koplugin/main.lua:91
 #: plugins/statistics.koplugin/main.lua:896
@@ -1970,7 +1972,7 @@ msgstr "Mostrar els marcadors de la pàgina actual"
 #: frontend/ui/widget/inputdialog.lua:697
 #: plugins/coverimage.koplugin/main.lua:358
 #: plugins/gestures.koplugin/main.lua:338
-#: plugins/newsdownloader.koplugin/main.lua:749
+#: plugins/newsdownloader.koplugin/main.lua:606
 #: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
 #: plugins/terminal.koplugin/main.lua:242
 #: plugins/terminal.koplugin/main.lua:277
@@ -8374,7 +8376,7 @@ msgid "Quickstart guide"
 msgstr "Guia d'inici ràpid"
 
 #: frontend/ui/elements/common_info_menu_table.lua:43
-#: plugins/newsdownloader.koplugin/main.lua:164
+#: plugins/newsdownloader.koplugin/main.lua:152
 #: plugins/perceptionexpander.koplugin/main.lua:182
 msgid "About"
 msgstr "Sobre"
@@ -10593,8 +10595,7 @@ msgstr "En pausa"
 #: frontend/ui/trapper.lua:160 frontend/ui/wikipedia.lua:1323
 #: plugins/calibre.koplugin/wireless.lua:218
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
-#: plugins/newsdownloader.koplugin/main.lua:299
+#: plugins/newsdownloader.koplugin/main.lua:411
 msgid "Continue"
 msgstr "Continuar"
 
@@ -11321,17 +11322,14 @@ msgid "Retrieving image %1 / %2 …"
 msgstr "Recuperant imatge %1 / %2 …"
 
 #: frontend/ui/wikipedia.lua:1323
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
 msgid "Downloading image %1 failed. Continue anyway?"
 msgstr "Error en descarregar la imatge %1, continuar de totes maneres?"
 
 #: frontend/ui/wikipedia.lua:1323
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
 msgid "Stop"
 msgstr "Atura"
 
 #: frontend/ui/wikipedia.lua:1334
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 msgid ""
 "Download did not complete.\n"
 "Do you want to create an EPUB with the already downloaded images?"
@@ -11340,12 +11338,10 @@ msgstr ""
 "Vol crear un EPUB amb les imatges descarregades?"
 
 #: frontend/ui/wikipedia.lua:1334
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 msgid "Don't create"
 msgstr "No crear"
 
 #: frontend/ui/wikipedia.lua:1339
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:506
 msgid "Canceled. Cleaning up…"
 msgstr "Cancel·lat. Netejant …"
 
@@ -14101,97 +14097,174 @@ msgstr ""
 msgid "Moves/copies current book to archive folder"
 msgstr "Mou/copia el llibre actual a la carpeta d’arxiu"
 
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:313
-msgid ""
-"%1\n"
-"\n"
-"Building EPUB…"
+#: plugins/newsdownloader.koplugin/feed_source.lua:32
+msgid "Setting up feed %1 of %2."
 msgstr ""
-"%1\n"
-"\n"
-"Generant EPUB…"
 
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:463
+#: plugins/newsdownloader.koplugin/feed_source.lua:70
+#, fuzzy
 msgid ""
-"%1\n"
+"Could not initialize a feed:\n"
 "\n"
-"Retrieving image %2 / %3 …"
-msgstr ""
-"%1\n"
+"%2\n"
 "\n"
-"Recuperant imatge %2 / %3 …"
+"Please review your feed configuration."
+msgid_plural ""
+"Could not initialize %1 feeds:\n"
+"\n"
+"%2\n"
+"\n"
+"Please review your feed configurations."
+msgstr[0] ""
+"No s'han pogut processar alguns canals.\n"
+"Format no suportat en: %1.\n"
+"És necessari revisar el seu arxiu de configuració de canals."
+msgstr[1] ""
+"No s'han pogut processar alguns canals.\n"
+"Format no suportat en: %1.\n"
+"És necessari revisar el seu arxiu de configuració de canals."
 
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:508
+#: plugins/newsdownloader.koplugin/feed_source.lua:140
+#, fuzzy
+msgid "Could not initialize feed document"
+msgstr "No s'ha pogut guardar la configuració del canal de notícies."
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:158
+#, fuzzy
 msgid ""
-"%1\n"
-"\n"
-"Packing EPUB…"
-msgstr ""
-"%1\n"
-"\n"
-"Empaquetant EPUB…"
+"%3\n"
+" Downloading item %1 of %2"
+msgstr "Descarregant %1"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:73
+#: plugins/newsdownloader.koplugin/feed_source.lua:187
+#, fuzzy
+msgid "Could not get content for: %1"
+msgstr ""
+"No s'ha pogut crear la carpeta:\n"
+"%1"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:246
+msgid "(Reason: Couldn't process RSS)"
+msgstr "(Motiu: No s'ha pogut processar el canal RSS)"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:248
+msgid "(Reason: Couldn't process Atom)"
+msgstr "(Motiu: No s'ha pogut processar el canal Atom)"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:261
+msgid ""
+"This is just a description of the feed. To download the full article "
+"instead, go to the News Downloader settings and change "
+"'download_full_article' to 'true'."
+msgstr ""
+"Això és només una descripció del canal. Per a descarregar l'article complet, "
+"cal anar a la configuració del Descarregador de notícies i canviar el valor "
+"de 'download_*full_*article' a 'true'."
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:303
+msgid "Error: chapters contains 0 items"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:319
+#, fuzzy
+msgid "Building EPUB %1"
+msgstr "Construint EPUB…"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:324
+#: plugins/newsdownloader.koplugin/feed_source.lua:327
+#: plugins/newsdownloader.koplugin/feed_source.lua:330
+#, fuzzy
+msgid "Building EPUB %1: %2"
+msgstr "Construint EPUB…"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:324
+#, fuzzy
+msgid "Adding contents"
+msgstr "contingut"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:327
+#, fuzzy
+msgid "Adding images"
+msgstr "<An image>"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:330
+msgid "Writing EPUB to disk"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/feed_view.lua:77
 msgid "URL"
 msgstr "Adreça URL"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:84
+#: plugins/newsdownloader.koplugin/feed_view.lua:88
 msgid "Limit"
 msgstr "Límit"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:95
+#: plugins/newsdownloader.koplugin/feed_view.lua:99
 msgid "Download full article"
 msgstr "Descarregar l'article complet"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:106
+#: plugins/newsdownloader.koplugin/feed_view.lua:110
 msgid "Include images"
 msgstr "Incloure imatges"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:117
+#: plugins/newsdownloader.koplugin/feed_view.lua:121
 msgid "Enable filter"
 msgstr "Activar filtre"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:129
+#: plugins/newsdownloader.koplugin/feed_view.lua:133
 msgid "Filter element"
 msgstr "Filtrar element"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:151
+#: plugins/newsdownloader.koplugin/feed_view.lua:144
+msgid "Volumize feed"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/feed_view.lua:166
 msgid "Delete feed"
 msgstr "Esborrar canal"
 
-#: plugins/newsdownloader.koplugin/main.lua:87
+#: plugins/newsdownloader.koplugin/feed_view.lua:179
+#, fuzzy
+msgid "Reset feed history"
+msgstr "Eliminar de l'Historial"
+
+#: plugins/newsdownloader.koplugin/main.lua:51
 msgid "News downloader (RSS/Atom)"
 msgstr "Descarregador de notícies (RSS / Atom)"
 
-#: plugins/newsdownloader.koplugin/main.lua:99
+#: plugins/newsdownloader.koplugin/main.lua:63
 msgid "Go to news folder"
 msgstr "Anar a la carpeta de notícies"
 
-#: plugins/newsdownloader.koplugin/main.lua:105
+#: plugins/newsdownloader.koplugin/main.lua:69
 msgid "Sync news feeds"
 msgstr "Sincronitzar canals de notícies"
 
-#: plugins/newsdownloader.koplugin/main.lua:112
+#: plugins/newsdownloader.koplugin/main.lua:85
+msgid "Go to downloaders folder?"
+msgstr "Anar a la carpeta de descàrregues?"
+
+#: plugins/newsdownloader.koplugin/main.lua:89
+msgid "Go to downloads"
+msgstr "Anar a descàrregues"
+
+#: plugins/newsdownloader.koplugin/main.lua:108
 msgid "Edit news feeds"
 msgstr "Editar canals de notícies"
 
-#: plugins/newsdownloader.koplugin/main.lua:126
+#: plugins/newsdownloader.koplugin/main.lua:122
 msgid "Set download folder"
 msgstr "Establir la carpeta de descàrrega"
 
-#: plugins/newsdownloader.koplugin/main.lua:131
-msgid "Never download images"
-msgstr "No descarregar mai les imatges"
-
-#: plugins/newsdownloader.koplugin/main.lua:142
+#: plugins/newsdownloader.koplugin/main.lua:127
 msgid "Delete all downloaded items"
 msgstr "Eliminar tots els elements descarregats"
 
-#: plugins/newsdownloader.koplugin/main.lua:148
+#: plugins/newsdownloader.koplugin/main.lua:133
 msgid "Are you sure you want to delete all downloaded items?"
 msgstr "Eliminar tots els elements descarregats?"
 
-#: plugins/newsdownloader.koplugin/main.lua:168
+#: plugins/newsdownloader.koplugin/main.lua:156
 msgid ""
 "News downloader retrieves RSS and Atom news entries and stores them to:\n"
 "%1\n"
@@ -14208,9 +14281,9 @@ msgstr ""
 "Els canals poden configurar-se amb límits de descàrrega i altres "
 "personalitzacions a través de l'element de menú Editar canals de notícies."
 
-#: plugins/newsdownloader.koplugin/main.lua:215
-#: plugins/newsdownloader.koplugin/main.lua:814
-#: plugins/newsdownloader.koplugin/main.lua:946
+#: plugins/newsdownloader.koplugin/main.lua:206
+#: plugins/newsdownloader.koplugin/main.lua:674
+#: plugins/newsdownloader.koplugin/main.lua:777
 msgid ""
 "Invalid configuration file. Detailed error message:\n"
 "%1"
@@ -14218,7 +14291,7 @@ msgstr ""
 "Arxiu de configuració no vàlid. Missatge detallat d'error:\n"
 "%1"
 
-#: plugins/newsdownloader.koplugin/main.lua:222
+#: plugins/newsdownloader.koplugin/main.lua:213
 msgid ""
 "Feed list is empty. If you want to download news, you'll have to add a feed "
 "first."
@@ -14226,192 +14299,139 @@ msgstr ""
 "La llista de canals està buida. Per a descarregar notícies abans cal afegir "
 "algun canal."
 
-#: plugins/newsdownloader.koplugin/main.lua:224
+#: plugins/newsdownloader.koplugin/main.lua:215
 msgid "Edit feed list"
 msgstr "Editar la llista de canals"
 
-#: plugins/newsdownloader.koplugin/main.lua:257
-msgid ""
-"Processing %1/%2:\n"
-"%3"
-msgstr ""
-"Processant %1/%2:\n"
-"%3"
+#: plugins/newsdownloader.koplugin/main.lua:295
+#, fuzzy
+msgid "Skipping downloaded item"
+msgstr "Eliminar tots els elements descarregats"
 
-#: plugins/newsdownloader.koplugin/main.lua:276
-msgid "Downloading news finished."
-msgstr "Descàrrega de notícies finalitzada."
-
-#: plugins/newsdownloader.koplugin/main.lua:290
-msgid "Downloading news finished with errors."
-msgstr "La descàrrega de notícies ha finalitzat amb errors."
-
-#: plugins/newsdownloader.koplugin/main.lua:294
-msgid ""
-"Could not process some feeds.\n"
-"Unsupported format in: %1. Please\n"
-"review your feed configuration file."
-msgstr ""
-"No s'han pogut processar alguns canals.\n"
-"Format no suportat en: %1.\n"
-"És necessari revisar el seu arxiu de configuració de canals."
-
-#: plugins/newsdownloader.koplugin/main.lua:311
-msgid "Go to download folder?"
-msgstr "Anar a la carpeta de descàrregues?"
-
-#: plugins/newsdownloader.koplugin/main.lua:315
-msgid "Go to downloads"
-msgstr "Anar a descàrregues"
-
-#: plugins/newsdownloader.koplugin/main.lua:354
-#: plugins/newsdownloader.koplugin/main.lua:415
-msgid "(Reason: Failed to download content)"
-msgstr "(Motiu: No s'ha pogut descarregar el contingut)"
-
-#: plugins/newsdownloader.koplugin/main.lua:356
-msgid "(Reason: Error during feed deserialization)"
-msgstr "(Motiu: Error durant la deserialización del canal)"
+#: plugins/newsdownloader.koplugin/main.lua:396
+#, fuzzy
+msgid "Error building EPUB %1"
+msgstr "Construint EPUB…"
 
 #: plugins/newsdownloader.koplugin/main.lua:417
-msgid "(Reason: Couldn't process RSS)"
-msgstr "(Motiu: No s'ha pogut processar el canal RSS)"
-
-#: plugins/newsdownloader.koplugin/main.lua:419
-msgid "(Reason: Couldn't process Atom)"
-msgstr "(Motiu: No s'ha pogut processar el canal Atom)"
-
-#: plugins/newsdownloader.koplugin/main.lua:482
-msgid ""
-"%1\n"
-"\n"
-"Fetching article %2/%3:"
+msgid "Sync complete. No new EPUBs created."
 msgstr ""
-"%1\n"
-"\n"
-"Buscant article %2/%3:"
 
-#: plugins/newsdownloader.koplugin/main.lua:548
-#: plugins/newsdownloader.koplugin/main.lua:565
-msgid ""
-"%1\n"
-"%2"
+#: plugins/newsdownloader.koplugin/main.lua:418
+msgid "Sync complete. EPUBs created: %1"
 msgstr ""
-"%1\n"
-"%2"
 
-#: plugins/newsdownloader.koplugin/main.lua:566
+#: plugins/newsdownloader.koplugin/main.lua:439
 msgid ""
-"This is just a description of the feed. To download the full article "
-"instead, go to the News Downloader settings and change "
-"'download_full_article' to 'true'."
+"All downloaded news feed items deleted. To download these again in the "
+"future, reset the feed history."
 msgstr ""
-"Això és només una descripció del canal. Per a descarregar l'article complet, "
-"cal anar a la configuració del Descarregador de notícies i canviar el valor "
-"de 'download_*full_*article' a 'true'."
 
-#: plugins/newsdownloader.koplugin/main.lua:594
-msgid "All downloaded news feed items deleted."
-msgstr "Totes les notícies descarregades han estat eliminades."
-
-#: plugins/newsdownloader.koplugin/main.lua:616
-msgid "Loading news feed list…"
-msgstr "Carregant la llista de canals de notícies…"
-
-#: plugins/newsdownloader.koplugin/main.lua:621
+#: plugins/newsdownloader.koplugin/main.lua:465
 msgid "Could not open feed list. Feeds configuration file is invalid."
 msgstr ""
 "No s'ha pogut obrir la llista de canals. L'arxiu de configuració de canals "
 "no és vàlid."
 
-#: plugins/newsdownloader.koplugin/main.lua:623
+#: plugins/newsdownloader.koplugin/main.lua:467
 msgid "View file"
 msgstr "Veure arxiu"
 
-#: plugins/newsdownloader.koplugin/main.lua:658
+#: plugins/newsdownloader.koplugin/main.lua:492
+#: plugins/newsdownloader.koplugin/main.lua:751
+msgid ""
+"Are you sure you want to reset the feed history? Proceeding will cause items "
+"to be re-downloaded next time you sync."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:510
 msgid "Add new feed"
 msgstr "Afegir canal nou"
 
-#: plugins/newsdownloader.koplugin/main.lua:680
+#: plugins/newsdownloader.koplugin/main.lua:532
 msgid "RSS/Atom feeds"
 msgstr "Llista de canals RSS/Atom"
 
-#: plugins/newsdownloader.koplugin/main.lua:695
+#: plugins/newsdownloader.koplugin/main.lua:547
 msgid "Edit Feed"
 msgstr "Editar Canales"
 
-#: plugins/newsdownloader.koplugin/main.lua:719
+#: plugins/newsdownloader.koplugin/main.lua:576
 msgid "Edit feed URL"
 msgstr "Editar direcció URL del canal"
 
-#: plugins/newsdownloader.koplugin/main.lua:722
+#: plugins/newsdownloader.koplugin/main.lua:579
 msgid "Edit feed limit"
 msgstr "Editar límit del canal"
 
-#: plugins/newsdownloader.koplugin/main.lua:723
+#: plugins/newsdownloader.koplugin/main.lua:580
 msgid "Set to 0 for no limit to how many items are downloaded"
 msgstr ""
 "Establir en 0 per a no limitar el nombre d'elements que es descarreguen"
 
-#: plugins/newsdownloader.koplugin/main.lua:726
+#: plugins/newsdownloader.koplugin/main.lua:583
 msgid "Edit filter element."
 msgstr "Editar l'element de filtre."
 
-#: plugins/newsdownloader.koplugin/main.lua:727
+#: plugins/newsdownloader.koplugin/main.lua:584
 msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
 msgstr ""
 "Filtre basat en el selector CSS donat. Per exemple: nom_de_css.element.class"
 
-#: plugins/newsdownloader.koplugin/main.lua:765
+#: plugins/newsdownloader.koplugin/main.lua:622
 msgid "Download full article?"
 msgstr "Descarregar l'article complet?"
 
-#: plugins/newsdownloader.koplugin/main.lua:767
+#: plugins/newsdownloader.koplugin/main.lua:624
 msgid "Include images?"
 msgstr "Incloure imatges?"
 
-#: plugins/newsdownloader.koplugin/main.lua:769
+#: plugins/newsdownloader.koplugin/main.lua:626
 msgid "Enable CSS filter?"
 msgstr "Activar el filtre CSS?"
 
-#: plugins/newsdownloader.koplugin/main.lua:775
+#: plugins/newsdownloader.koplugin/main.lua:628
+msgid "Volumize feed?"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:634
 #: plugins/profiles.koplugin/main.lua:104
 #: plugins/texteditor.koplugin/main.lua:338
 msgid "Yes"
 msgstr "Si"
 
-#: plugins/newsdownloader.koplugin/main.lua:780
+#: plugins/newsdownloader.koplugin/main.lua:639
 #: plugins/profiles.koplugin/main.lua:105
 #: plugins/texteditor.koplugin/main.lua:339
 msgid "No"
 msgstr "No"
 
-#: plugins/newsdownloader.koplugin/main.lua:975
+#: plugins/newsdownloader.koplugin/main.lua:816
 msgid "Saving news feed list…"
 msgstr "Guardant la llista de canals de notícies…"
 
-#: plugins/newsdownloader.koplugin/main.lua:981
+#: plugins/newsdownloader.koplugin/main.lua:822
 msgid "Could not save news feed config."
 msgstr "No s'ha pogut guardar la configuració del canal de notícies."
 
-#: plugins/newsdownloader.koplugin/main.lua:983
+#: plugins/newsdownloader.koplugin/main.lua:824
 msgid "News feed config updated successfully."
 msgstr "S'ha actualitzat la configuració del canal de notícies."
 
-#: plugins/newsdownloader.koplugin/main.lua:995
+#: plugins/newsdownloader.koplugin/main.lua:839
 msgid "Config: %1"
 msgstr "Config.: %1"
 
-#: plugins/newsdownloader.koplugin/main.lua:1016
+#: plugins/newsdownloader.koplugin/main.lua:860
 msgid "Configuration saved"
 msgstr "Configuració guardada"
 
-#: plugins/newsdownloader.koplugin/main.lua:1018
-#: plugins/newsdownloader.koplugin/main.lua:1021
+#: plugins/newsdownloader.koplugin/main.lua:862
+#: plugins/newsdownloader.koplugin/main.lua:865
 msgid "Configuration invalid: %1"
 msgstr "Configuració no vàlida: %1"
 
-#: plugins/newsdownloader.koplugin/main.lua:1024
+#: plugins/newsdownloader.koplugin/main.lua:868
 msgid "Configuration empty"
 msgstr "Configuració buida"
 
@@ -16297,6 +16317,80 @@ msgstr "Prémer al cantó inferior dret"
 msgid "Tap the upper right corner"
 msgstr "Prémer al cantó superior esquerre"
 
+#~ msgid ""
+#~ "%1\n"
+#~ "\n"
+#~ "Building EPUB…"
+#~ msgstr ""
+#~ "%1\n"
+#~ "\n"
+#~ "Generant EPUB…"
+
+#~ msgid ""
+#~ "%1\n"
+#~ "\n"
+#~ "Retrieving image %2 / %3 …"
+#~ msgstr ""
+#~ "%1\n"
+#~ "\n"
+#~ "Recuperant imatge %2 / %3 …"
+
+#~ msgid ""
+#~ "%1\n"
+#~ "\n"
+#~ "Packing EPUB…"
+#~ msgstr ""
+#~ "%1\n"
+#~ "\n"
+#~ "Empaquetant EPUB…"
+
+#~ msgid "Never download images"
+#~ msgstr "No descarregar mai les imatges"
+
+#~ msgid ""
+#~ "Processing %1/%2:\n"
+#~ "%3"
+#~ msgstr ""
+#~ "Processant %1/%2:\n"
+#~ "%3"
+
+#~ msgid "Downloading news finished."
+#~ msgstr "Descàrrega de notícies finalitzada."
+
+#~ msgid "Downloading news finished with errors."
+#~ msgstr "La descàrrega de notícies ha finalitzat amb errors."
+
+#~ msgid "Go to download folder?"
+#~ msgstr "Anar a la carpeta de descàrregues?"
+
+#~ msgid "(Reason: Failed to download content)"
+#~ msgstr "(Motiu: No s'ha pogut descarregar el contingut)"
+
+#~ msgid "(Reason: Error during feed deserialization)"
+#~ msgstr "(Motiu: Error durant la deserialización del canal)"
+
+#~ msgid ""
+#~ "%1\n"
+#~ "\n"
+#~ "Fetching article %2/%3:"
+#~ msgstr ""
+#~ "%1\n"
+#~ "\n"
+#~ "Buscant article %2/%3:"
+
+#~ msgid ""
+#~ "%1\n"
+#~ "%2"
+#~ msgstr ""
+#~ "%1\n"
+#~ "%2"
+
+#~ msgid "All downloaded news feed items deleted."
+#~ msgstr "Totes les notícies descarregades han estat eliminades."
+
+#~ msgid "Loading news feed list…"
+#~ msgstr "Carregant la llista de canals de notícies…"
+
 #~ msgid "Add new OPDS catalog"
 #~ msgstr "Afegir nou catàleg OPDS"
 
@@ -16570,9 +16664,6 @@ msgstr "Prémer al cantó superior esquerre"
 
 #~ msgid "10 deg"
 #~ msgstr "10 graus"
-
-#~ msgid "Go to downloaders folder?"
-#~ msgstr "Anar a la carpeta de descàrregues?"
 
 #~ msgid "Saving news feed list..."
 #~ msgstr "Guardant la llista de canals de notícies..."
@@ -17130,9 +17221,6 @@ msgstr "Prémer al cantó superior esquerre"
 
 #~ msgid "The file %1 already exists."
 #~ msgstr "L'arxiu %1 ja existeix."
-
-#~ msgid "Downloading %1"
-#~ msgstr "Descarregant %1"
 
 #~ msgid "Redrawing with font %1."
 #~ msgstr "Canviant font a %1."

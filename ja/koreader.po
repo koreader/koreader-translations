@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-21 17:45+0000\n"
+"POT-Creation-Date: 2022-01-21 18:39+0000\n"
 "PO-Revision-Date: 2021-10-24 13:34+0000\n"
 "Last-Translator: Aleksa Sarai <cyphar@cyphar.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
@@ -188,8 +188,10 @@ msgstr ""
 #: plugins/exporter.koplugin/main.lua:178
 #: plugins/exporter.koplugin/main.lua:248
 #: plugins/gestures.koplugin/main.lua:332 plugins/kosync.koplugin/main.lua:373
-#: plugins/newsdownloader.koplugin/main.lua:149
-#: plugins/newsdownloader.koplugin/main.lua:742
+#: plugins/newsdownloader.koplugin/main.lua:134
+#: plugins/newsdownloader.koplugin/main.lua:493
+#: plugins/newsdownloader.koplugin/main.lua:599
+#: plugins/newsdownloader.koplugin/main.lua:752
 #: plugins/opds.koplugin/opdsbrowser.lua:156
 #: plugins/opds.koplugin/opdsbrowser.lua:206
 #: plugins/opds.koplugin/opdsbrowser.lua:747
@@ -245,7 +247,7 @@ msgstr "編集"
 #: frontend/apps/reader/modules/readerstatus.lua:217
 #: frontend/ui/widget/screenshoter.lua:63
 #: plugins/bookshortcuts.koplugin/main.lua:123
-#: plugins/newsdownloader.koplugin/main.lua:150
+#: plugins/newsdownloader.koplugin/main.lua:135
 #: plugins/opds.koplugin/opdsbrowser.lua:964
 #: plugins/terminal.koplugin/main.lua:192
 msgid "Delete"
@@ -325,9 +327,9 @@ msgstr "ローカルフォルダを選択"
 #: frontend/ui/widget/radiobuttonwidget.lua:27
 #: frontend/ui/widget/screenshoter.lua:49 frontend/ui/widget/spinwidget.lua:36
 #: frontend/ui/widget/textviewer.lua:119 plugins/keepalive.koplugin/main.lua:19
-#: plugins/newsdownloader.koplugin/main.lua:223
-#: plugins/newsdownloader.koplugin/main.lua:314
-#: plugins/newsdownloader.koplugin/main.lua:622
+#: plugins/newsdownloader.koplugin/main.lua:88
+#: plugins/newsdownloader.koplugin/main.lua:214
+#: plugins/newsdownloader.koplugin/main.lua:466
 #: plugins/statistics.koplugin/main.lua:315
 #: plugins/terminal.koplugin/main.lua:434
 msgid "Close"
@@ -362,9 +364,7 @@ msgstr "ダウンロード中…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:651
 #: frontend/apps/filemanager/filemanager.lua:1017
-#: frontend/ui/wikipedia.lua:1334
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
-#: plugins/statistics.koplugin/main.lua:319
+#: frontend/ui/wikipedia.lua:1334 plugins/statistics.koplugin/main.lua:319
 #: plugins/texteditor.koplugin/main.lua:402
 msgid "Create"
 msgstr "作成"
@@ -850,6 +850,8 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:679
 #: frontend/apps/reader/modules/readermenu.lua:185
 #: frontend/ui/widget/inputdialog.lua:630
+#: plugins/newsdownloader.koplugin/main.lua:494
+#: plugins/newsdownloader.koplugin/main.lua:753
 #: plugins/statistics.koplugin/main.lua:2030
 #: plugins/statistics.koplugin/main.lua:2076
 msgid "Reset"
@@ -1349,7 +1351,7 @@ msgstr "最後に開いた文書を開くことができません"
 #: frontend/apps/reader/modules/readerfooter.lua:1097
 #: frontend/apps/reader/modules/readertoc.lua:928
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:474
-#: plugins/newsdownloader.koplugin/main.lua:123
+#: plugins/newsdownloader.koplugin/main.lua:119
 #: plugins/perceptionexpander.koplugin/main.lua:175
 #: plugins/send2ebook.koplugin/main.lua:91
 #: plugins/statistics.koplugin/main.lua:896
@@ -1946,7 +1948,7 @@ msgstr "ブックマークの名前を変更"
 #: frontend/ui/widget/inputdialog.lua:697
 #: plugins/coverimage.koplugin/main.lua:358
 #: plugins/gestures.koplugin/main.lua:338
-#: plugins/newsdownloader.koplugin/main.lua:749
+#: plugins/newsdownloader.koplugin/main.lua:606
 #: plugins/profiles.koplugin/main.lua:72 plugins/SSH.koplugin/main.lua:132
 #: plugins/terminal.koplugin/main.lua:242
 #: plugins/terminal.koplugin/main.lua:277
@@ -7800,7 +7802,7 @@ msgid "Quickstart guide"
 msgstr "クイックスタートガイド"
 
 #: frontend/ui/elements/common_info_menu_table.lua:43
-#: plugins/newsdownloader.koplugin/main.lua:164
+#: plugins/newsdownloader.koplugin/main.lua:152
 #: plugins/perceptionexpander.koplugin/main.lua:182
 msgid "About"
 msgstr "アプリについて"
@@ -9787,8 +9789,7 @@ msgstr "一時停止"
 #: frontend/ui/trapper.lua:160 frontend/ui/wikipedia.lua:1323
 #: plugins/calibre.koplugin/wireless.lua:218
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
-#: plugins/newsdownloader.koplugin/main.lua:299
+#: plugins/newsdownloader.koplugin/main.lua:411
 msgid "Continue"
 msgstr "続行"
 
@@ -10478,17 +10479,14 @@ msgid "Retrieving image %1 / %2 …"
 msgstr "画像の取得中 %1 / %2 …"
 
 #: frontend/ui/wikipedia.lua:1323
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
 msgid "Downloading image %1 failed. Continue anyway?"
 msgstr "画像 %1 のダウンロードに失敗しました。とにかく続行しますか?"
 
 #: frontend/ui/wikipedia.lua:1323
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
 msgid "Stop"
 msgstr "停止"
 
 #: frontend/ui/wikipedia.lua:1334
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 msgid ""
 "Download did not complete.\n"
 "Do you want to create an EPUB with the already downloaded images?"
@@ -10497,12 +10495,10 @@ msgstr ""
 "すでにダウンロードした画像から EPUB を作成しますか?"
 
 #: frontend/ui/wikipedia.lua:1334
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 msgid "Don't create"
 msgstr "作成しない"
 
 #: frontend/ui/wikipedia.lua:1339
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:506
 msgid "Canceled. Cleaning up…"
 msgstr "キャンセルしました。クリーンアップ中…"
 
@@ -13102,96 +13098,172 @@ msgstr "ディレクトリー %1 はすでに存在します。上書きして�
 msgid "Moves/copies current book to archive folder"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:313
-msgid ""
-"%1\n"
-"\n"
-"Building EPUB…"
+#: plugins/newsdownloader.koplugin/feed_source.lua:32
+msgid "Setting up feed %1 of %2."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:463
+#: plugins/newsdownloader.koplugin/feed_source.lua:70
 msgid ""
-"%1\n"
+"Could not initialize a feed:\n"
 "\n"
-"Retrieving image %2 / %3 …"
+"%2\n"
+"\n"
+"Please review your feed configuration."
+msgid_plural ""
+"Could not initialize %1 feeds:\n"
+"\n"
+"%2\n"
+"\n"
+"Please review your feed configurations."
+msgstr[0] ""
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:140
+#, fuzzy
+msgid "Could not initialize feed document"
+msgstr "ファイルを保存できません:\n"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:158
+#, fuzzy
+msgid ""
+"%3\n"
+" Downloading item %1 of %2"
+msgstr "ダウンロード中 %1"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:187
+#, fuzzy
+msgid "Could not get content for: %1"
+msgstr ""
+"フォルダーを作成しました:\n"
+"%1"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:246
+msgid "(Reason: Couldn't process RSS)"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:508
-msgid ""
-"%1\n"
-"\n"
-"Packing EPUB…"
+#: plugins/newsdownloader.koplugin/feed_source.lua:248
+msgid "(Reason: Couldn't process Atom)"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:73
+#: plugins/newsdownloader.koplugin/feed_source.lua:261
+msgid ""
+"This is just a description of the feed. To download the full article "
+"instead, go to the News Downloader settings and change "
+"'download_full_article' to 'true'."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:303
+msgid "Error: chapters contains 0 items"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:319
+#, fuzzy
+msgid "Building EPUB %1"
+msgstr "EPUB の作成中…"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:324
+#: plugins/newsdownloader.koplugin/feed_source.lua:327
+#: plugins/newsdownloader.koplugin/feed_source.lua:330
+#, fuzzy
+msgid "Building EPUB %1: %2"
+msgstr "EPUB の作成中…"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:324
+msgid "Adding contents"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:327
+#, fuzzy
+msgid "Adding images"
+msgstr "<An image>"
+
+#: plugins/newsdownloader.koplugin/feed_source.lua:330
+msgid "Writing EPUB to disk"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/feed_view.lua:77
 #, fuzzy
 msgid "URL"
 msgstr "RTL"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:84
+#: plugins/newsdownloader.koplugin/feed_view.lua:88
 msgid "Limit"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:95
+#: plugins/newsdownloader.koplugin/feed_view.lua:99
 #, fuzzy
 msgid "Download full article"
 msgstr "ファイルをダウンロード"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:106
+#: plugins/newsdownloader.koplugin/feed_view.lua:110
 #, fuzzy
 msgid "Include images"
 msgstr "含む"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:117
+#: plugins/newsdownloader.koplugin/feed_view.lua:121
 #, fuzzy
 msgid "Enable filter"
 msgstr "WiFi 有効"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:129
+#: plugins/newsdownloader.koplugin/feed_view.lua:133
 msgid "Filter element"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:151
+#: plugins/newsdownloader.koplugin/feed_view.lua:144
+msgid "Volumize feed"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/feed_view.lua:166
 #, fuzzy
 msgid "Delete feed"
 msgstr "ファイル削除"
 
-#: plugins/newsdownloader.koplugin/main.lua:87
+#: plugins/newsdownloader.koplugin/feed_view.lua:179
+#, fuzzy
+msgid "Reset feed history"
+msgstr "履歴から削除"
+
+#: plugins/newsdownloader.koplugin/main.lua:51
 msgid "News downloader (RSS/Atom)"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:99
+#: plugins/newsdownloader.koplugin/main.lua:63
 msgid "Go to news folder"
 msgstr "ニュースフォルダーに移動"
 
-#: plugins/newsdownloader.koplugin/main.lua:105
+#: plugins/newsdownloader.koplugin/main.lua:69
 msgid "Sync news feeds"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:112
+#: plugins/newsdownloader.koplugin/main.lua:85
+#, fuzzy
+msgid "Go to downloaders folder?"
+msgstr "ダウンロードフォルダーに移動"
+
+#: plugins/newsdownloader.koplugin/main.lua:89
+#, fuzzy
+msgid "Go to downloads"
+msgstr "ダウンロードフォルダーに移動"
+
+#: plugins/newsdownloader.koplugin/main.lua:108
 #, fuzzy
 msgid "Edit news feeds"
 msgstr "新規ファイルを作成して編集"
 
-#: plugins/newsdownloader.koplugin/main.lua:126
+#: plugins/newsdownloader.koplugin/main.lua:122
 #, fuzzy
 msgid "Set download folder"
 msgstr "ダウンロードフォルダーに移動"
 
-#: plugins/newsdownloader.koplugin/main.lua:131
-msgid "Never download images"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:142
+#: plugins/newsdownloader.koplugin/main.lua:127
 msgid "Delete all downloaded items"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:148
+#: plugins/newsdownloader.koplugin/main.lua:133
 #, fuzzy
 msgid "Are you sure you want to delete all downloaded items?"
 msgstr "このファイルを削除してもよろしいですか?\n"
 
-#: plugins/newsdownloader.koplugin/main.lua:168
+#: plugins/newsdownloader.koplugin/main.lua:156
 #, fuzzy
 msgid ""
 "News downloader retrieves RSS and Atom news entries and stores them to:\n"
@@ -13209,9 +13281,9 @@ msgstr ""
 "ことができます。\n"
 "アイテムのダウンロード制限は設定で設定できます。"
 
-#: plugins/newsdownloader.koplugin/main.lua:215
-#: plugins/newsdownloader.koplugin/main.lua:814
-#: plugins/newsdownloader.koplugin/main.lua:946
+#: plugins/newsdownloader.koplugin/main.lua:206
+#: plugins/newsdownloader.koplugin/main.lua:674
+#: plugins/newsdownloader.koplugin/main.lua:777
 msgid ""
 "Invalid configuration file. Detailed error message:\n"
 "%1"
@@ -13219,199 +13291,148 @@ msgstr ""
 "設定ファイルが正しくありません。詳細なエラーメッセージ:\n"
 "%1"
 
-#: plugins/newsdownloader.koplugin/main.lua:222
+#: plugins/newsdownloader.koplugin/main.lua:213
 msgid ""
 "Feed list is empty. If you want to download news, you'll have to add a feed "
 "first."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:224
+#: plugins/newsdownloader.koplugin/main.lua:215
 msgid "Edit feed list"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:257
-msgid ""
-"Processing %1/%2:\n"
-"%3"
-msgstr ""
-"処理中 %1/%2:\n"
-"%3"
-
-#: plugins/newsdownloader.koplugin/main.lua:276
-#, fuzzy
-msgid "Downloading news finished."
-msgstr "ニュースをダウンロード"
-
-#: plugins/newsdownloader.koplugin/main.lua:290
-#, fuzzy
-msgid "Downloading news finished with errors."
-msgstr "ニュースをダウンロード"
-
-#: plugins/newsdownloader.koplugin/main.lua:294
-msgid ""
-"Could not process some feeds.\n"
-"Unsupported format in: %1. Please\n"
-"review your feed configuration file."
+#: plugins/newsdownloader.koplugin/main.lua:295
+msgid "Skipping downloaded item"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:311
+#: plugins/newsdownloader.koplugin/main.lua:396
 #, fuzzy
-msgid "Go to download folder?"
-msgstr "ダウンロードフォルダーに移動"
-
-#: plugins/newsdownloader.koplugin/main.lua:315
-#, fuzzy
-msgid "Go to downloads"
-msgstr "ダウンロードフォルダーに移動"
-
-#: plugins/newsdownloader.koplugin/main.lua:354
-#: plugins/newsdownloader.koplugin/main.lua:415
-msgid "(Reason: Failed to download content)"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:356
-msgid "(Reason: Error during feed deserialization)"
-msgstr ""
+msgid "Error building EPUB %1"
+msgstr "EPUB の作成中…"
 
 #: plugins/newsdownloader.koplugin/main.lua:417
-msgid "(Reason: Couldn't process RSS)"
+msgid "Sync complete. No new EPUBs created."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:419
-msgid "(Reason: Couldn't process Atom)"
+#: plugins/newsdownloader.koplugin/main.lua:418
+msgid "Sync complete. EPUBs created: %1"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:482
+#: plugins/newsdownloader.koplugin/main.lua:439
 msgid ""
-"%1\n"
-"\n"
-"Fetching article %2/%3:"
-msgstr ""
-"%1\n"
-"\n"
-"記事の取得中 %2/%3:"
-
-#: plugins/newsdownloader.koplugin/main.lua:548
-#: plugins/newsdownloader.koplugin/main.lua:565
-msgid ""
-"%1\n"
-"%2"
+"All downloaded news feed items deleted. To download these again in the "
+"future, reset the feed history."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:566
-msgid ""
-"This is just a description of the feed. To download the full article "
-"instead, go to the News Downloader settings and change "
-"'download_full_article' to 'true'."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:594
-msgid "All downloaded news feed items deleted."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:616
-#, fuzzy
-msgid "Loading news feed list…"
-msgstr "ログイン中。しばらくお待ちください…"
-
-#: plugins/newsdownloader.koplugin/main.lua:621
+#: plugins/newsdownloader.koplugin/main.lua:465
 msgid "Could not open feed list. Feeds configuration file is invalid."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:623
+#: plugins/newsdownloader.koplugin/main.lua:467
 #, fuzzy
 msgid "View file"
 msgstr "新しいフォルダー"
 
-#: plugins/newsdownloader.koplugin/main.lua:658
+#: plugins/newsdownloader.koplugin/main.lua:492
+#: plugins/newsdownloader.koplugin/main.lua:751
+msgid ""
+"Are you sure you want to reset the feed history? Proceeding will cause items "
+"to be re-downloaded next time you sync."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:510
 #, fuzzy
 msgid "Add new feed"
 msgstr "すべてのニュースを削除しました。"
 
-#: plugins/newsdownloader.koplugin/main.lua:680
+#: plugins/newsdownloader.koplugin/main.lua:532
 msgid "RSS/Atom feeds"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:695
+#: plugins/newsdownloader.koplugin/main.lua:547
 #, fuzzy
 msgid "Edit Feed"
 msgstr "Vietnamese"
 
-#: plugins/newsdownloader.koplugin/main.lua:719
+#: plugins/newsdownloader.koplugin/main.lua:576
 msgid "Edit feed URL"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:722
+#: plugins/newsdownloader.koplugin/main.lua:579
 msgid "Edit feed limit"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:723
+#: plugins/newsdownloader.koplugin/main.lua:580
 msgid "Set to 0 for no limit to how many items are downloaded"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:726
+#: plugins/newsdownloader.koplugin/main.lua:583
 msgid "Edit filter element."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:727
+#: plugins/newsdownloader.koplugin/main.lua:584
 msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:765
+#: plugins/newsdownloader.koplugin/main.lua:622
 #, fuzzy
 msgid "Download full article?"
 msgstr "ファイルをダウンロード"
 
-#: plugins/newsdownloader.koplugin/main.lua:767
+#: plugins/newsdownloader.koplugin/main.lua:624
 #, fuzzy
 msgid "Include images?"
 msgstr "含む"
 
-#: plugins/newsdownloader.koplugin/main.lua:769
+#: plugins/newsdownloader.koplugin/main.lua:626
 #, fuzzy
 msgid "Enable CSS filter?"
 msgstr "WiFi 有効"
 
-#: plugins/newsdownloader.koplugin/main.lua:775
+#: plugins/newsdownloader.koplugin/main.lua:628
+msgid "Volumize feed?"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:634
 #: plugins/profiles.koplugin/main.lua:104
 #: plugins/texteditor.koplugin/main.lua:338
 msgid "Yes"
 msgstr "はい"
 
-#: plugins/newsdownloader.koplugin/main.lua:780
+#: plugins/newsdownloader.koplugin/main.lua:639
 #: plugins/profiles.koplugin/main.lua:105
 #: plugins/texteditor.koplugin/main.lua:339
 msgid "No"
 msgstr "いいえ"
 
-#: plugins/newsdownloader.koplugin/main.lua:975
+#: plugins/newsdownloader.koplugin/main.lua:816
 #, fuzzy
 msgid "Saving news feed list…"
 msgstr "ログイン中。しばらくお待ちください…"
 
-#: plugins/newsdownloader.koplugin/main.lua:981
+#: plugins/newsdownloader.koplugin/main.lua:822
 #, fuzzy
 msgid "Could not save news feed config."
 msgstr "ファイルを保存できません:\n"
 
-#: plugins/newsdownloader.koplugin/main.lua:983
+#: plugins/newsdownloader.koplugin/main.lua:824
 msgid "News feed config updated successfully."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:995
+#: plugins/newsdownloader.koplugin/main.lua:839
 msgid "Config: %1"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:1016
+#: plugins/newsdownloader.koplugin/main.lua:860
 msgid "Configuration saved"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:1018
-#: plugins/newsdownloader.koplugin/main.lua:1021
+#: plugins/newsdownloader.koplugin/main.lua:862
+#: plugins/newsdownloader.koplugin/main.lua:865
 msgid "Configuration invalid: %1"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:1024
+#: plugins/newsdownloader.koplugin/main.lua:868
 msgid "Configuration empty"
 msgstr ""
 
@@ -15236,6 +15257,38 @@ msgstr "右下角をタップ"
 msgid "Tap the upper right corner"
 msgstr "右上角をタップ"
 
+#~ msgid ""
+#~ "Processing %1/%2:\n"
+#~ "%3"
+#~ msgstr ""
+#~ "処理中 %1/%2:\n"
+#~ "%3"
+
+#, fuzzy
+#~ msgid "Downloading news finished."
+#~ msgstr "ニュースをダウンロード"
+
+#, fuzzy
+#~ msgid "Downloading news finished with errors."
+#~ msgstr "ニュースをダウンロード"
+
+#, fuzzy
+#~ msgid "Go to download folder?"
+#~ msgstr "ダウンロードフォルダーに移動"
+
+#~ msgid ""
+#~ "%1\n"
+#~ "\n"
+#~ "Fetching article %2/%3:"
+#~ msgstr ""
+#~ "%1\n"
+#~ "\n"
+#~ "記事の取得中 %2/%3:"
+
+#, fuzzy
+#~ msgid "Loading news feed list…"
+#~ msgstr "ログイン中。しばらくお待ちください…"
+
 #~ msgid "Add new OPDS catalog"
 #~ msgstr "新しい OPDS カタログを追加"
 
@@ -15442,10 +15495,6 @@ msgstr "右上角をタップ"
 
 #~ msgid "10 deg"
 #~ msgstr "10 度"
-
-#, fuzzy
-#~ msgid "Go to downloaders folder?"
-#~ msgstr "ダウンロードフォルダーに移動"
 
 #~ msgid "Warmth is handled automatically."
 #~ msgstr "暖かさは自動的に処理されます。"
@@ -15809,9 +15858,6 @@ msgstr "右上角をタップ"
 
 #~ msgid "The file %1 already exists."
 #~ msgstr "ファイル %1 は既にあります。"
-
-#~ msgid "Downloading %1"
-#~ msgstr "ダウンロード中 %1"
 
 #~ msgid "Redrawing with font %1."
 #~ msgstr "フォント %1 で再描画中。"
