@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-02 16:23+0000\n"
-"PO-Revision-Date: 2022-02-02 16:23+0000\n"
+"PO-Revision-Date: 2022-02-05 01:03+0000\n"
 "Last-Translator: Ichnilatis <z8g1r3d2u5d0u3b5@simon13.slack.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
 "el/>\n"
@@ -1544,7 +1544,7 @@ msgstr "Ρυθμίσεις για προχωρημένους"
 #: frontend/apps/filemanager/filemanagermenu.lua:431
 #: frontend/apps/reader/modules/readermenu.lua:252
 msgid "Plugin management"
-msgstr "Διαχείριση πρόσθετων"
+msgstr "Διαχείριση προσθέτων"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:436
 msgid "Developer options"
@@ -3198,8 +3198,8 @@ msgid ""
 "[x]y for a page number in the non-linear fragment y"
 msgstr ""
 "x για έναν απόλυτο αριθμό σελίδας\n"
-"[x] για έναν αριθμό σελίδας στην κύρια (γραμμική) ροή\n"
-"[x]y για έναν αριθμό σελίδας στο μη γραμμικό τμήμα y"
+"[x] για έναν αριθμό σελίδας στην κύρια (γραμμική) ροή κειμένου\n"
+"[x]y για έναν αριθμό σελίδας στο τμήμα y, εκτός της κύριας ροής κειμένου"
 
 #: frontend/apps/reader/modules/readergoto.lua:59
 msgid "Skim"
@@ -3948,19 +3948,19 @@ msgid ""
 "accessible through links, the table of contents and the 'Go to' dialog. This "
 "only works in single-page mode."
 msgstr ""
-"Όταν η επιλογή απόκρυψη μη γραμμικών τμημάτων είναι ενεργοποιημένη, όλα τα "
-"μη γραμμικά τμήματα θα αποκρύπτονται από την κανονική ροή της σελίδας. "
-"Τέτοια τμήματα θα παραμένουν πάντα προσβάσιμα μέσω των συνδέσμων, του πίνακα "
-"περιεχομένων και του διαλόγου \"Μετάβαση σε\". Αυτό λειτουργεί μόνο σε τύπο "
-"προβολής μίας σελίδας."
+"Όταν η επιλογή «Απόκρυψη \"μη γραμμικών\" τμημάτων» είναι ενεργοποιημένη, "
+"όλα τα τμήματα εκτός του κύριου κειμένου θα αποκρύπτονται από την κανονική "
+"ροή του κειμένου της σελίδας. Τέτοια τμήματα θα παραμένουν πάντα προσβάσιμα "
+"μέσω των συνδέσμων, του πίνακα περιεχομένων και του διαλόγου «Μετάβαση σε». "
+"Αυτό λειτουργεί μόνο σε τύπο προβολής μίας σελίδας."
 
 #: frontend/apps/reader/modules/readerrolling.lua:372
 msgid "Hide non-linear fragments"
-msgstr "Απόκρυψη μη γραμμικών τμημάτων"
+msgstr "Απόκρυψη \"μη γραμμικών\" τμημάτων"
 
 #: frontend/apps/reader/modules/readerrolling.lua:383
 msgid "Set default hide non-linear fragments to %1?"
-msgstr "%1: Να οριστεί ως προεπιλογή για «Απόκρυψη μη γραμμικών τμημάτων»;"
+msgstr "%1: Να οριστεί ως προεπιλογή για «Απόκρυψη \"μη γραμμικών\" τμημάτων»;"
 
 #: frontend/apps/reader/modules/readerrolling.lua:384
 msgid "enabled"
@@ -6213,7 +6213,7 @@ msgstr ""
 "γλώσσες.\n"
 "\n"
 "Για να απενεργοποιήσετε ένα πρόσθετο γλώσσας, πρέπει να το απενεργοποιήσετε "
-"από το μενού Διαχείριση πρόσθετων."
+"από το μενού «Διαχείριση προσθέτων»."
 
 #: frontend/pluginloader.lua:22
 msgid "outdated"
@@ -14833,6 +14833,8 @@ msgstr ""
 msgid ""
 "This plugin allows combining multiple settings to make switchable 'profiles'."
 msgstr ""
+"Αυτό το πρόσθετο επιτρέπει τον συνδυασμό πολλαπλών ρυθμίσεων για να κάνετε "
+"εναλλασσόμενα «προφίλ»."
 
 #: plugins/qrclipboard.koplugin/main.lua:24
 #: plugins/qrclipboard.koplugin/_meta.lua:4
@@ -14919,10 +14921,14 @@ msgid ""
 "SSH port: %1\n"
 "%2"
 msgstr ""
+"Ο διακομιστής SSH ξεκίνησε.\n"
+"\n"
+"Θύρα SSH: %1\n"
+"%2"
 
 #: plugins/SSH.koplugin/main.lua:81
 msgid "Failed to start SSH server."
-msgstr ""
+msgstr "Απέτυχε η εκκίνηση του διακομιστή SSH."
 
 #: plugins/SSH.koplugin/main.lua:94
 msgid "SSH server stopped."
@@ -14949,10 +14955,12 @@ msgid ""
 "Put your public SSH keys in\n"
 "%1"
 msgstr ""
+"Εισαγάγετε τα δημόσια SSH κλειδιά σας στο\n"
+"%1"
 
 #: plugins/SSH.koplugin/main.lua:190
 msgid "Login without password (DANGEROUS)"
-msgstr ""
+msgstr "Σύνδεση χωρίς κωδικό πρόσβασης (ΕΠΙΚΙΝΔΥΝΟ)"
 
 #: plugins/SSH.koplugin/main.lua:203
 msgid "Toggle SSH server"
@@ -14960,7 +14968,7 @@ msgstr "Εναλλαγή διακομιστή SSH"
 
 #: plugins/SSH.koplugin/_meta.lua:4
 msgid "SSH"
-msgstr ""
+msgstr "SSH"
 
 #: plugins/SSH.koplugin/_meta.lua:5
 msgid "Connect and transfer files to the device using SSH."
@@ -15996,10 +16004,18 @@ msgid ""
 "\n"
 "%2"
 msgstr ""
+"Ο έλεγχος σύνταξης Lua απέτυχε:\n"
+"\n"
+"%1\n"
+"\n"
+"Το KOReader μπορεί να καταρρεύσει αν αυτό αποθηκευτεί.\n"
+"Θέλετε πραγματικά να αποθηκεύσετε σε αυτό το αρχείο;\n"
+"\n"
+"%2"
 
 #: plugins/texteditor.koplugin/main.lua:606
 msgid "Do not save"
-msgstr ""
+msgstr "Να μην αποθηκευτεί"
 
 #: plugins/texteditor.koplugin/main.lua:606
 msgid "Save anyway"
@@ -16019,7 +16035,7 @@ msgstr ""
 
 #: plugins/texteditor.koplugin/main.lua:623
 msgid "Keep empty file"
-msgstr ""
+msgstr "Διατήρηση κενού αρχείου"
 
 #: plugins/texteditor.koplugin/main.lua:628
 msgid "File deleted"
@@ -16032,6 +16048,8 @@ msgstr "Αποτυχία διαγραφής αρχείου: %1"
 #: plugins/texteditor.koplugin/_meta.lua:5
 msgid "A basic text editor for making small changes to plain text files."
 msgstr ""
+"Ένας βασικός επεξεργαστής κειμένου για την πραγματοποίηση μικρών αλλαγών σε "
+"αρχεία απλού κειμένου."
 
 #: plugins/timesync.koplugin/main.lua:30
 msgid "New time is %1."
@@ -16049,6 +16067,8 @@ msgstr "Συγχρονισμός ώρας. Μπορεί να διαρκέσει 
 msgid ""
 "Failed to retrieve time from server. Please check your network configuration."
 msgstr ""
+"Απέτυχε η ανάκτηση της ώρας από τον διακομιστή. Ελέγξτε τη ρύθμιση "
+"παραμέτρων του δικτύου σας."
 
 #: plugins/timesync.koplugin/main.lua:57
 msgid "Synchronize time"
@@ -16056,11 +16076,11 @@ msgstr "Συγχρονισμός ώρας"
 
 #: plugins/timesync.koplugin/_meta.lua:4
 msgid "Time sync"
-msgstr ""
+msgstr "Συγχρονισμός ώρας"
 
 #: plugins/timesync.koplugin/_meta.lua:5
 msgid "Synchronizes the device time with NTP servers."
-msgstr ""
+msgstr "Συγχρονίζει την ώρα της συσκευής με διακομιστές NTP."
 
 #: plugins/wallabag.koplugin/main.lua:44
 msgid "Wallabag retrieval"
@@ -16197,6 +16217,12 @@ msgid ""
 "\n"
 "Downloads to directory: %1"
 msgstr ""
+"Το Wallabag είναι μια υπηρεσία ανοικτού κώδικα για ανάγνωση αργότερα. Αυτό "
+"το πρόσθετο συγχρονίζεται με έναν διακομιστή Wallabag.\n"
+"\n"
+"Περισσότερες λεπτομέρειες: https://wallabag.org\n"
+"\n"
+"Λήψεις στον φάκελο: %1"
 
 #: plugins/wallabag.koplugin/main.lua:343
 msgid "Please configure the server settings and set a download folder."
@@ -16359,7 +16385,7 @@ msgstr ""
 
 #: plugins/wallabag.koplugin/_meta.lua:5
 msgid "Synchronises articles with a Wallabag server."
-msgstr ""
+msgstr "Συγχρονίζει τα άρθρα με έναν διακομιστή Wallabag."
 
 #: tools/kobo_touch_probe.lua:60
 msgid "Tap the lower right corner"
