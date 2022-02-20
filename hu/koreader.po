@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-20 15:23+0000\n"
-"PO-Revision-Date: 2022-02-20 08:33+0000\n"
+"PO-Revision-Date: 2022-02-20 15:49+0000\n"
 "Last-Translator: Sari Gabor <sari.gabor@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
 "koreader/hu/>\n"
@@ -7735,7 +7735,7 @@ msgstr[1] "Keitai érintés időtartam: %1 mp"
 #. @translators Flick and keitai are kinds of Japanese keyboard input modes. See <https://en.wikipedia.org/wiki/Japanese_input_method#Mobile_phones> for more information.
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:133
 msgid "Keitai input: disabled (flick-only input)"
-msgstr ""
+msgstr "Keitai input: letiltva (csak flick-input)"
 
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:136
 msgid ""
@@ -7744,6 +7744,11 @@ msgid ""
 "key will loop through candidates for the current character being input. Any "
 "other input will cause you to leave keitai mode."
 msgstr ""
+"Mennyi ideig várakozzon a következő koppintásra, amikor keitai input módban "
+"van, mielőtt az aktuális karaktert rögzítené. Ebben az ablakban egyetlen "
+"billentyű megérintésével az aktuális karakter bevitelére jelölt karakterek "
+"körbejárása történik. Minden más input a keitai módból való kilépést "
+"eredményezi."
 
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:143
 msgid "Keitai tap interval"
@@ -7759,6 +7764,14 @@ msgid ""
 "If set to 0, keitai input is disabled entirely and only flick input can be "
 "used."
 msgstr ""
+"Mennyi ideig várakozzon (másodpercben) a következő koppintásra, amikor "
+"keitai input módban van, mielőtt az aktuális karaktert rögzíti. Ebben az "
+"ablakban egyetlen billentyű megérintésével az aktuális karakter bevitelére "
+"jelölt karakterek körbejárása történik. Minden más input a keitai módból "
+"való kilépést eredményezi.\n"
+"\n"
+"Ha 0-ra van állítva, a keitai-input teljesen le van tiltva, és csak a flick-"
+"input használható."
 
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:153
 #: plugins/gestures.koplugin/main.lua:485
@@ -8816,6 +8829,8 @@ msgid ""
 "The number of allowed additional fallback fonts is limited to %1.\n"
 "Uncheck some of them if you want to add this one."
 msgstr ""
+"A megengedett tartalék betűtípusok száma %1-re korlátozott.\n"
+"Töröljön néhányat, ha ezt hozzá szeretné adni."
 
 #: frontend/ui/elements/font_ui_fallbacks.lua:158
 msgid "Additional UI fallback fonts"
@@ -13187,6 +13202,13 @@ msgid ""
 "For more information, please visit https://github.com/koreader/koreader/wiki/"
 "Highlight-export."
 msgstr ""
+"Az auth tokent a számítógépén egy üres token mentésével adhatja meg. Ezután "
+"lépjen ki a KOReaderből, szerkessze meg az exporter.readwise_token mezőt a %"
+"1/settings.reader.lua fájlban (miután létrehozott egy biztonsági másolatot), "
+"és indítsa újra a KOReader-t.\n"
+"\n"
+"További információkért látogasson el a https://github.com/koreader/koreader/"
+"wiki/Highlight-export weboldalra."
 
 #: plugins/exporter.koplugin/main.lua:297
 msgid "Export all notes in this book"
@@ -13624,7 +13646,7 @@ msgstr "Ez egy hibakereső bővítmény."
 
 #: plugins/japanese.koplugin/deinflector.lua:276
 msgid "Halfwidth to fullwidth kana"
-msgstr ""
+msgstr "Félszélességűből teljes szélességű kana"
 
 #. @translators If possible, keep the example Japanese text.
 #: plugins/japanese.koplugin/deinflector.lua:278
@@ -13632,6 +13654,8 @@ msgid ""
 "Convert half-width katakana to full-width katakana (for instance, ｶﾀｶﾅ will "
 "be converted to カタカナ)."
 msgstr ""
+"Félszélességű katakana átalakítása teljes szélességű katakanává (például a "
+"ｶﾀｶﾅ át lesz alakítva カタカナ-ra)."
 
 #: plugins/japanese.koplugin/deinflector.lua:283
 msgid "Hiragana to katakana"
@@ -13643,6 +13667,7 @@ msgid ""
 "Convert hiragana to katakana (for instance, ひらがな will be converted to ヒ"
 "ラガナ)."
 msgstr ""
+"Hiragana átalakítása katakanává (például a ひらがな át lesz alakítva ヒラガナ-ra)."
 
 #: plugins/japanese.koplugin/deinflector.lua:290
 msgid "Katakana to hiragana"
@@ -13654,6 +13679,7 @@ msgid ""
 "Convert katakana to hiragana (for instance, カタカナ will be converted to か"
 "たかな)."
 msgstr ""
+"A katakana hiraganává alakítása (például a カタカナ át lesz alakítva かたかな-ra)."
 
 #: plugins/japanese.koplugin/deinflector.lua:297
 msgid "Collapse emphatic sequences"
@@ -13666,6 +13692,9 @@ msgid ""
 "speech (for instance, すっっごーーい will be converted to both すっごーい "
 "and すごい)."
 msgstr ""
+"Zárjon ki minden olyan karaktersorozatot, amelyet beszéd közben néha "
+"hangsúlyozásra használnak (például a すっっごーーい karaktert すっごーい és すごい "
+"karakterré is átalakítja)."
 
 #: plugins/japanese.koplugin/deinflector.lua:398
 msgid "Text conversions: none enabled"
@@ -13689,6 +13718,15 @@ msgid ""
 "the chance of at least one conversion matching the form used in the "
 "dictionary."
 msgstr ""
+"Annak beállítása, hogy milyen szövegkonverziókat alkalmazzon, amikor japán "
+"szöveget próbál deinflektálni. Ezek közé tartoznak elsősorban a különböző "
+"kana-típusok közötti konverziók, hogy a telepített szótárakhoz képest eltérő "
+"kana-val írt szavakat továbbra is meg lehessen keresni.\n"
+"\n"
+"Nem minden konverzió lesz egyszerre alkalmazva. Ehelyett az engedélyezett "
+"átalakítások minden lehetséges kombinációját megkísérli, hogy maximalizálja "
+"annak esélyét, hogy legalább egy átalakítás megfeleljen a szótárban használt "
+"formának."
 
 #. @translators A deinflector is a program which converts a word into its dictionary form, similar to deconjugation in European languages. See <https://en.wikipedia.org/wiki/Japanese_verb_conjugation> for more detail.
 #: plugins/japanese.koplugin/deinflector.lua:411
@@ -13723,6 +13761,8 @@ msgid ""
 "Number of characters to look ahead when trying to expand tap-and-hold word "
 "selection in documents."
 msgstr ""
+"Az előre áttekintendő karakterek száma, amikor megpróbálja kibővíteni a "
+"koppintással és nyomva tartással történő szóválasztást a dokumentumokban."
 
 #: plugins/japanese.koplugin/main.lua:214
 msgid "Text scan length"
@@ -13737,6 +13777,12 @@ msgid ""
 "\n"
 "Default value: %1"
 msgstr ""
+"A maximális karakterszám, amelyet előre kell nézni, amikor a dokumentumokban "
+"a koppintás és nyomva tartás szóválasztást próbáljuk kibővíteni.\n"
+"A nagyobb értékek lehetővé teszik a hosszabb kifejezések automatikus "
+"kiválasztását, de ennek az a hátránya, hogy a kiválasztás lassabbá válhat.\n"
+"\n"
+"Alapértelmezett érték: %1"
 
 #: plugins/japanese.koplugin/main.lua:226
 msgid "Set scan length"
