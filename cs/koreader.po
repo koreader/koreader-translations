@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 10:40+0000\n"
+"POT-Creation-Date: 2022-03-12 10:41+0000\n"
 "PO-Revision-Date: 2022-02-27 21:43+0000\n"
 "Last-Translator: leschek <leschekleschek@post.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -274,8 +274,8 @@ msgid "Edit"
 msgstr "Upravit"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:390
-#: frontend/apps/filemanager/filemanagerhistory.lua:80
-#: frontend/apps/filemanager/filemanagerhistory.lua:85
+#: frontend/apps/filemanager/filemanagerhistory.lua:104
+#: frontend/apps/filemanager/filemanagerhistory.lua:110
 #: frontend/apps/filemanager/filemanager.lua:231
 #: frontend/apps/filemanager/filemanager.lua:238
 #: frontend/apps/filemanager/filemanager.lua:641
@@ -649,7 +649,7 @@ msgstr "Přidat WebDAV účet"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:19
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
-#: frontend/apps/filemanager/filemanagerhistory.lua:97
+#: frontend/apps/filemanager/filemanagerhistory.lua:122
 #: frontend/apps/filemanager/filemanager.lua:353 frontend/dispatcher.lua:126
 #: plugins/opds.koplugin/opdsbrowser.lua:778
 msgid "Book information"
@@ -727,8 +727,8 @@ msgstr "Klíčová slova:"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:204
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:272
 #: plugins/coverbrowser.koplugin/covermenu.lua:349
-#: plugins/coverbrowser.koplugin/covermenu.lua:482
-#: plugins/coverbrowser.koplugin/covermenu.lua:604
+#: plugins/coverbrowser.koplugin/covermenu.lua:478
+#: plugins/coverbrowser.koplugin/covermenu.lua:597
 msgid "Description:"
 msgstr "Popis:"
 
@@ -752,8 +752,8 @@ msgstr "Není tu žádný popis knihy."
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:293
 #: plugins/coverbrowser.koplugin/covermenu.lua:335
-#: plugins/coverbrowser.koplugin/covermenu.lua:468
-#: plugins/coverbrowser.koplugin/covermenu.lua:590
+#: plugins/coverbrowser.koplugin/covermenu.lua:464
+#: plugins/coverbrowser.koplugin/covermenu.lua:583
 msgid "No cover image available."
 msgstr "Není tu žádný obrázek obálky."
 
@@ -871,12 +871,43 @@ msgstr "Otevřít"
 msgid "History"
 msgstr "Historie"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:54
+#: frontend/apps/filemanager/filemanagerhistory.lua:20
+msgid "All"
+msgstr "Vše"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:21
+#: frontend/ui/widget/bookstatuswidget.lua:543
+msgid "Reading"
+msgstr "Čtení"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:22
+#: frontend/ui/widget/bookstatuswidget.lua:543
+#: plugins/coverbrowser.koplugin/listmenu.lua:423
+msgid "On hold"
+msgstr "Odloženo"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:23
+#: frontend/ui/widget/bookstatuswidget.lua:543
+#: plugins/coverbrowser.koplugin/listmenu.lua:423
+msgid "Finished"
+msgstr "Dočteno"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:24
+#, fuzzy
+msgid "Deleted"
+msgstr "Smazat"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:25
+#: plugins/profiles.koplugin/main.lua:57
+msgid "New"
+msgstr "Nový"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:77
 #: frontend/apps/filemanager/filemanager.lua:205
 msgid "Reset settings"
 msgstr "Resetovat nastavení"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:58
+#: frontend/apps/filemanager/filemanagerhistory.lua:81
 #: frontend/apps/filemanager/filemanager.lua:209
 msgid ""
 "Reset settings for this document?\n"
@@ -891,7 +922,7 @@ msgstr ""
 "\n"
 "Všechny záložky a zvýraznění budou natrvalo ztraceny."
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:59
+#: frontend/apps/filemanager/filemanagerhistory.lua:83
 #: frontend/apps/filemanager/filemanager.lua:210
 #: frontend/apps/reader/modules/readerbookmark.lua:683
 #: frontend/apps/reader/modules/readerbookmark.lua:689
@@ -905,11 +936,11 @@ msgstr ""
 msgid "Reset"
 msgstr "Resetovat"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:70
+#: frontend/apps/filemanager/filemanagerhistory.lua:94
 msgid "Remove from history"
 msgstr "Odstranit z Historie"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:84
+#: frontend/apps/filemanager/filemanagerhistory.lua:108
 msgid ""
 "Are you sure that you want to delete this document?\n"
 "\n"
@@ -923,23 +954,33 @@ msgstr ""
 "\n"
 "Pokud soubor smažete, bude natrvalo ztracen."
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:108
+#: frontend/apps/filemanager/filemanagerhistory.lua:211
+#: frontend/ui/data/creoptions.lua:34 plugins/statistics.koplugin/main.lua:1826
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:235
 #: frontend/apps/filemanager/filemanagermenu.lua:260
 msgid "Clear history of deleted files"
 msgstr "Odstranit z historie smazané soubory"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:111
+#: frontend/apps/filemanager/filemanagerhistory.lua:238
 #: frontend/apps/filemanager/filemanagermenu.lua:263
 msgid "Clear history of deleted files?"
 msgstr "Chcete odstranit z historie smazané soubory?"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:112
+#: frontend/apps/filemanager/filemanagerhistory.lua:239
 #: frontend/apps/filemanager/filemanagermenu.lua:264
 #: frontend/apps/reader/modules/readerlink.lua:161
 #: plugins/batterystat.koplugin/main.lua:195
 #: plugins/coverimage.koplugin/main.lua:510
 msgid "Clear"
 msgstr "Pročistit"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:251
+#, fuzzy
+msgid "Filter by book status"
+msgstr "Filtrování záložek"
 
 #: frontend/apps/filemanager/filemanager.lua:46
 msgid "KOReader"
@@ -6079,8 +6120,8 @@ msgid "Clear location history"
 msgstr "Pročistit historii míst v knize"
 
 #: frontend/dispatcher.lua:127 plugins/coverbrowser.koplugin/covermenu.lua:344
-#: plugins/coverbrowser.koplugin/covermenu.lua:477
-#: plugins/coverbrowser.koplugin/covermenu.lua:599
+#: plugins/coverbrowser.koplugin/covermenu.lua:473
+#: plugins/coverbrowser.koplugin/covermenu.lua:592
 msgid "Book description"
 msgstr "Popis knihy"
 
@@ -6273,10 +6314,6 @@ msgstr "Extra tučné"
 msgctxt "Font weight class"
 msgid "Black"
 msgstr "Černé"
-
-#: frontend/ui/data/creoptions.lua:34 plugins/statistics.koplugin/main.lua:1826
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: frontend/ui/data/creoptions.lua:55 frontend/ui/data/koptoptions.lua:30
 #: frontend/ui/elements/screen_rotation_menu_table.lua:10
@@ -10759,20 +10796,6 @@ msgstr "Přečtené stránky"
 msgid "A few words about the book"
 msgstr "Pár slov o knize"
 
-#: frontend/ui/widget/bookstatuswidget.lua:543
-#: plugins/coverbrowser.koplugin/listmenu.lua:423
-msgid "Finished"
-msgstr "Dočteno"
-
-#: frontend/ui/widget/bookstatuswidget.lua:543
-msgid "Reading"
-msgstr "Čtení"
-
-#: frontend/ui/widget/bookstatuswidget.lua:543
-#: plugins/coverbrowser.koplugin/listmenu.lua:423
-msgid "On hold"
-msgstr "Odloženo"
-
 #: frontend/ui/widget/bookstatuswidget.lua:641
 msgid "Save review"
 msgstr "Uložit recenzi"
@@ -12591,42 +12614,42 @@ msgstr ""
 "Prosím, restartujte KOReader, nebo vaše zařízení."
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:317
-#: plugins/coverbrowser.koplugin/covermenu.lua:450
-#: plugins/coverbrowser.koplugin/covermenu.lua:572
+#: plugins/coverbrowser.koplugin/covermenu.lua:446
+#: plugins/coverbrowser.koplugin/covermenu.lua:565
 msgid "View full size cover"
 msgstr "Zobrazit obálku v plné velikosti"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:359
-#: plugins/coverbrowser.koplugin/covermenu.lua:492
-#: plugins/coverbrowser.koplugin/covermenu.lua:614
+#: plugins/coverbrowser.koplugin/covermenu.lua:488
+#: plugins/coverbrowser.koplugin/covermenu.lua:607
 msgid "Unignore cover"
 msgstr "Neignorovat obálku"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:359
-#: plugins/coverbrowser.koplugin/covermenu.lua:492
-#: plugins/coverbrowser.koplugin/covermenu.lua:614
+#: plugins/coverbrowser.koplugin/covermenu.lua:488
+#: plugins/coverbrowser.koplugin/covermenu.lua:607
 msgid "Ignore cover"
 msgstr "Ignorovat obálku"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:370
-#: plugins/coverbrowser.koplugin/covermenu.lua:503
-#: plugins/coverbrowser.koplugin/covermenu.lua:625
+#: plugins/coverbrowser.koplugin/covermenu.lua:499
+#: plugins/coverbrowser.koplugin/covermenu.lua:618
 msgid "Unignore metadata"
 msgstr "Neignorovat metadata"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:370
-#: plugins/coverbrowser.koplugin/covermenu.lua:503
-#: plugins/coverbrowser.koplugin/covermenu.lua:625
+#: plugins/coverbrowser.koplugin/covermenu.lua:499
+#: plugins/coverbrowser.koplugin/covermenu.lua:618
 msgid "Ignore metadata"
 msgstr "Ignorovat metadata"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:383
-#: plugins/coverbrowser.koplugin/covermenu.lua:516
-#: plugins/coverbrowser.koplugin/covermenu.lua:638
+#: plugins/coverbrowser.koplugin/covermenu.lua:512
+#: plugins/coverbrowser.koplugin/covermenu.lua:631
 msgid "Refresh cached book information"
 msgstr "Obnovit informace o knize v mezipaměti"
 
-#: plugins/coverbrowser.koplugin/covermenu.lua:717
+#: plugins/coverbrowser.koplugin/covermenu.lua:710
 msgid "Extract and cache book information"
 msgstr "Extrahovat informace o knize do mezipaměti"
 
@@ -14688,10 +14711,6 @@ msgstr "Pomáhá zvýšit rychlost čtení pomocí dvou svislých čar na textu.
 msgid "Profiles"
 msgstr "Profily"
 
-#: plugins/profiles.koplugin/main.lua:57
-msgid "New"
-msgstr "Nový"
-
 #: plugins/profiles.koplugin/main.lua:62
 msgid "Enter profile name"
 msgstr "Vložte název profilu"
@@ -16536,9 +16555,6 @@ msgstr "Ťukněte na pravý horní roh"
 #~ msgid "Bookmarks (filtered)"
 #~ msgstr "Záložky (vyfiltrované)"
 
-#~ msgid "Filter bookmarks"
-#~ msgstr "Filtrování záložek"
-
 #~ msgid "(containing text)"
 #~ msgstr "(obsažený text)"
 
@@ -17185,9 +17201,6 @@ msgstr "Ťukněte na pravý horní roh"
 
 #~ msgid "Set threshold"
 #~ msgstr "Nastavit práh"
-
-#~ msgid "All"
-#~ msgstr "Vše"
 
 #~ msgid "Line"
 #~ msgstr "Řádek"

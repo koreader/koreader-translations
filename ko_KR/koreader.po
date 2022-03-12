@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-12 10:40+0000\n"
+"POT-Creation-Date: 2022-03-12 10:41+0000\n"
 "PO-Revision-Date: 2022-03-01 22:16+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -282,8 +282,8 @@ msgid "Edit"
 msgstr "수정"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:390
-#: frontend/apps/filemanager/filemanagerhistory.lua:80
-#: frontend/apps/filemanager/filemanagerhistory.lua:85
+#: frontend/apps/filemanager/filemanagerhistory.lua:104
+#: frontend/apps/filemanager/filemanagerhistory.lua:110
 #: frontend/apps/filemanager/filemanager.lua:231
 #: frontend/apps/filemanager/filemanager.lua:238
 #: frontend/apps/filemanager/filemanager.lua:641
@@ -652,7 +652,7 @@ msgstr "WebDAV 계정 추가"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:19
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:241
 #: frontend/apps/filemanager/filemanagercollection.lua:87
-#: frontend/apps/filemanager/filemanagerhistory.lua:97
+#: frontend/apps/filemanager/filemanagerhistory.lua:122
 #: frontend/apps/filemanager/filemanager.lua:353 frontend/dispatcher.lua:126
 #: plugins/opds.koplugin/opdsbrowser.lua:778
 msgid "Book information"
@@ -730,8 +730,8 @@ msgstr "키워드:"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:204
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:272
 #: plugins/coverbrowser.koplugin/covermenu.lua:349
-#: plugins/coverbrowser.koplugin/covermenu.lua:482
-#: plugins/coverbrowser.koplugin/covermenu.lua:604
+#: plugins/coverbrowser.koplugin/covermenu.lua:478
+#: plugins/coverbrowser.koplugin/covermenu.lua:597
 msgid "Description:"
 msgstr "설명:"
 
@@ -755,8 +755,8 @@ msgstr "쓸 수 있는 책 설명이 없음."
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:293
 #: plugins/coverbrowser.koplugin/covermenu.lua:335
-#: plugins/coverbrowser.koplugin/covermenu.lua:468
-#: plugins/coverbrowser.koplugin/covermenu.lua:590
+#: plugins/coverbrowser.koplugin/covermenu.lua:464
+#: plugins/coverbrowser.koplugin/covermenu.lua:583
 msgid "No cover image available."
 msgstr "쓸 수 있는 표지 그림이 없습니다."
 
@@ -874,12 +874,43 @@ msgstr "열기"
 msgid "History"
 msgstr "최근 내역"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:54
+#: frontend/apps/filemanager/filemanagerhistory.lua:20
+msgid "All"
+msgstr "모두"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:21
+#: frontend/ui/widget/bookstatuswidget.lua:543
+msgid "Reading"
+msgstr "읽는 중"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:22
+#: frontend/ui/widget/bookstatuswidget.lua:543
+#: plugins/coverbrowser.koplugin/listmenu.lua:423
+msgid "On hold"
+msgstr "보류 중"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:23
+#: frontend/ui/widget/bookstatuswidget.lua:543
+#: plugins/coverbrowser.koplugin/listmenu.lua:423
+msgid "Finished"
+msgstr "끝냄"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:24
+#, fuzzy
+msgid "Deleted"
+msgstr "삭제"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:25
+#: plugins/profiles.koplugin/main.lua:57
+msgid "New"
+msgstr "새로"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:77
 #: frontend/apps/filemanager/filemanager.lua:205
 msgid "Reset settings"
 msgstr "설정 초기화"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:58
+#: frontend/apps/filemanager/filemanagerhistory.lua:81
 #: frontend/apps/filemanager/filemanager.lua:209
 msgid ""
 "Reset settings for this document?\n"
@@ -894,7 +925,7 @@ msgstr ""
 "\n"
 "하이라이트나 책갈피가 영구적으로 손실됩니다."
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:59
+#: frontend/apps/filemanager/filemanagerhistory.lua:83
 #: frontend/apps/filemanager/filemanager.lua:210
 #: frontend/apps/reader/modules/readerbookmark.lua:683
 #: frontend/apps/reader/modules/readerbookmark.lua:689
@@ -908,11 +939,11 @@ msgstr ""
 msgid "Reset"
 msgstr "재설정"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:70
+#: frontend/apps/filemanager/filemanagerhistory.lua:94
 msgid "Remove from history"
 msgstr "최근 내역에서 제거"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:84
+#: frontend/apps/filemanager/filemanagerhistory.lua:108
 msgid ""
 "Are you sure that you want to delete this document?\n"
 "\n"
@@ -926,23 +957,33 @@ msgstr ""
 "\n"
 "파일을 삭제하면 영구적으로 손실됩니다."
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:108
+#: frontend/apps/filemanager/filemanagerhistory.lua:211
+#: frontend/ui/data/creoptions.lua:34 plugins/statistics.koplugin/main.lua:1826
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:235
 #: frontend/apps/filemanager/filemanagermenu.lua:260
 msgid "Clear history of deleted files"
 msgstr "지운 파일 내역 지우기"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:111
+#: frontend/apps/filemanager/filemanagerhistory.lua:238
 #: frontend/apps/filemanager/filemanagermenu.lua:263
 msgid "Clear history of deleted files?"
 msgstr "삭제된 파일의 기록을 지울까요?"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:112
+#: frontend/apps/filemanager/filemanagerhistory.lua:239
 #: frontend/apps/filemanager/filemanagermenu.lua:264
 #: frontend/apps/reader/modules/readerlink.lua:161
 #: plugins/batterystat.koplugin/main.lua:195
 #: plugins/coverimage.koplugin/main.lua:510
 msgid "Clear"
 msgstr "지우기"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:251
+#, fuzzy
+msgid "Filter by book status"
+msgstr "책갈피 필터"
 
 #: frontend/apps/filemanager/filemanager.lua:46
 msgid "KOReader"
@@ -5986,8 +6027,8 @@ msgid "Clear location history"
 msgstr "위치 내역 지우기"
 
 #: frontend/dispatcher.lua:127 plugins/coverbrowser.koplugin/covermenu.lua:344
-#: plugins/coverbrowser.koplugin/covermenu.lua:477
-#: plugins/coverbrowser.koplugin/covermenu.lua:599
+#: plugins/coverbrowser.koplugin/covermenu.lua:473
+#: plugins/coverbrowser.koplugin/covermenu.lua:592
 msgid "Book description"
 msgstr "책 설명"
 
@@ -6180,10 +6221,6 @@ msgstr "매우 굵게"
 msgctxt "Font weight class"
 msgid "Black"
 msgstr "검정"
-
-#: frontend/ui/data/creoptions.lua:34 plugins/statistics.koplugin/main.lua:1826
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: frontend/ui/data/creoptions.lua:55 frontend/ui/data/koptoptions.lua:30
 #: frontend/ui/elements/screen_rotation_menu_table.lua:10
@@ -10552,20 +10589,6 @@ msgstr "현재 쪽"
 msgid "A few words about the book"
 msgstr "이 책에 대한 몇 마디"
 
-#: frontend/ui/widget/bookstatuswidget.lua:543
-#: plugins/coverbrowser.koplugin/listmenu.lua:423
-msgid "Finished"
-msgstr "끝냄"
-
-#: frontend/ui/widget/bookstatuswidget.lua:543
-msgid "Reading"
-msgstr "읽는 중"
-
-#: frontend/ui/widget/bookstatuswidget.lua:543
-#: plugins/coverbrowser.koplugin/listmenu.lua:423
-msgid "On hold"
-msgstr "보류 중"
-
 #: frontend/ui/widget/bookstatuswidget.lua:641
 msgid "Save review"
 msgstr "서평 저장"
@@ -12361,42 +12384,42 @@ msgstr ""
 "KOReader 또는 기기를 재시작하세요."
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:317
-#: plugins/coverbrowser.koplugin/covermenu.lua:450
-#: plugins/coverbrowser.koplugin/covermenu.lua:572
+#: plugins/coverbrowser.koplugin/covermenu.lua:446
+#: plugins/coverbrowser.koplugin/covermenu.lua:565
 msgid "View full size cover"
 msgstr "표지 전체 보기"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:359
-#: plugins/coverbrowser.koplugin/covermenu.lua:492
-#: plugins/coverbrowser.koplugin/covermenu.lua:614
+#: plugins/coverbrowser.koplugin/covermenu.lua:488
+#: plugins/coverbrowser.koplugin/covermenu.lua:607
 msgid "Unignore cover"
 msgstr "표지 무시 안하기"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:359
-#: plugins/coverbrowser.koplugin/covermenu.lua:492
-#: plugins/coverbrowser.koplugin/covermenu.lua:614
+#: plugins/coverbrowser.koplugin/covermenu.lua:488
+#: plugins/coverbrowser.koplugin/covermenu.lua:607
 msgid "Ignore cover"
 msgstr "책 표지 무시하기"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:370
-#: plugins/coverbrowser.koplugin/covermenu.lua:503
-#: plugins/coverbrowser.koplugin/covermenu.lua:625
+#: plugins/coverbrowser.koplugin/covermenu.lua:499
+#: plugins/coverbrowser.koplugin/covermenu.lua:618
 msgid "Unignore metadata"
 msgstr "메타데이터 무시 안하기"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:370
-#: plugins/coverbrowser.koplugin/covermenu.lua:503
-#: plugins/coverbrowser.koplugin/covermenu.lua:625
+#: plugins/coverbrowser.koplugin/covermenu.lua:499
+#: plugins/coverbrowser.koplugin/covermenu.lua:618
 msgid "Ignore metadata"
 msgstr "메타데이터 무시하기"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:383
-#: plugins/coverbrowser.koplugin/covermenu.lua:516
-#: plugins/coverbrowser.koplugin/covermenu.lua:638
+#: plugins/coverbrowser.koplugin/covermenu.lua:512
+#: plugins/coverbrowser.koplugin/covermenu.lua:631
 msgid "Refresh cached book information"
 msgstr "책 정보 캐시 갱신"
 
-#: plugins/coverbrowser.koplugin/covermenu.lua:717
+#: plugins/coverbrowser.koplugin/covermenu.lua:710
 msgid "Extract and cache book information"
 msgstr "책 정보 추출과 캐시"
 
@@ -14406,10 +14429,6 @@ msgstr "텍스트 위에 두 개의 수직선을 사용하여 읽기 속도를 �
 msgid "Profiles"
 msgstr "프로필"
 
-#: plugins/profiles.koplugin/main.lua:57
-msgid "New"
-msgstr "새로"
-
 #: plugins/profiles.koplugin/main.lua:62
 msgid "Enter profile name"
 msgstr "프로필 이름을 입력하세요"
@@ -16222,9 +16241,6 @@ msgstr "상단 오른쪽 모서리 탭"
 #~ msgid "Bookmarks (filtered)"
 #~ msgstr "책갈피(필터링됨)"
 
-#~ msgid "Filter bookmarks"
-#~ msgstr "책갈피 필터"
-
 #~ msgid "(containing text)"
 #~ msgstr "(텍스트 포함)"
 
@@ -16842,9 +16858,6 @@ msgstr "상단 오른쪽 모서리 탭"
 
 #~ msgid "Set threshold"
 #~ msgstr "한계점 설정"
-
-#~ msgid "All"
-#~ msgstr "모두"
 
 #~ msgid "Line"
 #~ msgstr "행"
