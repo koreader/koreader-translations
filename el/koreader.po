@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-16 15:37+0000\n"
+"POT-Creation-Date: 2022-03-16 21:01+0000\n"
 "PO-Revision-Date: 2022-03-16 15:37+0000\n"
 "Last-Translator: Ichnilatis <z8g1r3d2u5d0u3b5@simon13.slack.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -180,7 +180,7 @@ msgstr "Εισαγάγετε το όνομα του αρχείου"
 #: frontend/apps/reader/modules/readerlink.lua:664
 #: frontend/apps/reader/modules/readersearch.lua:116
 #: frontend/apps/reader/modules/readerstatus.lua:124
-#: frontend/apps/reader/modules/readeruserhyph.lua:190
+#: frontend/apps/reader/modules/readeruserhyph.lua:284
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:156
 #: frontend/apps/reader/readerui.lua:664 frontend/device/android/device.lua:434
@@ -203,7 +203,7 @@ msgstr "Εισαγάγετε το όνομα του αρχείου"
 #: plugins/autowarmth.koplugin/main.lua:453
 #: plugins/autowarmth.koplugin/main.lua:733
 #: plugins/calibre.koplugin/main.lua:310
-#: plugins/calibre.koplugin/search.lua:209
+#: plugins/calibre.koplugin/search.lua:207
 #: plugins/calibre.koplugin/wireless.lua:424
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
 #: plugins/coverimage.koplugin/main.lua:352
@@ -674,7 +674,7 @@ msgid "Format:"
 msgstr "Μορφή:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:65
-#: plugins/calibre.koplugin/search.lua:145
+#: plugins/calibre.koplugin/search.lua:143
 msgid "Size:"
 msgstr "Μέγεθος:"
 
@@ -709,7 +709,7 @@ msgid "N/A"
 msgstr "Δ/Υ"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:140
-#: plugins/calibre.koplugin/search.lua:143
+#: plugins/calibre.koplugin/search.lua:141
 msgid "Title:"
 msgstr "Τίτλος:"
 
@@ -718,7 +718,7 @@ msgid "Authors:"
 msgstr "Συγγραφείς:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:169
-#: plugins/calibre.koplugin/search.lua:152
+#: plugins/calibre.koplugin/search.lua:150
 msgid "Series:"
 msgstr "Σειρές:"
 
@@ -2006,7 +2006,7 @@ msgstr "Να διαγραφεί αυτή η επισημείωση;"
 #: frontend/apps/reader/modules/readerbookmark.lua:559
 #: frontend/apps/reader/modules/readerbookmark.lua:713
 #: frontend/apps/reader/modules/readerbookmark.lua:718
-#: frontend/apps/reader/modules/readeruserhyph.lua:197
+#: frontend/apps/reader/modules/readeruserhyph.lua:291
 #: plugins/gestures.koplugin/main.lua:410
 #: plugins/statistics.koplugin/main.lua:2224
 #: plugins/texteditor.koplugin/main.lua:264
@@ -2092,7 +2092,7 @@ msgstr "Αναζήτηση επισημειώσεων"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1078
 #: frontend/apps/reader/modules/readerstyletweak.lua:641
-#: frontend/apps/reader/modules/readeruserhyph.lua:204
+#: frontend/apps/reader/modules/readeruserhyph.lua:298
 #: frontend/apps/reader/modules/readerwikipedia.lua:163
 #: frontend/apps/reader/readerui.lua:735 frontend/ui/widget/inputdialog.lua:673
 #: frontend/ui/widget/inputdialog.lua:714
@@ -5407,13 +5407,14 @@ msgstr "Γλώσσα βιβλίου: %1"
 msgid "Changed language for typography rules to book language: %1."
 msgstr "Η γλώσσα για τους τυπογραφικούς κανόνες άλλαξε σε γλώσσα βιβλίου: %1."
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:39
+#: frontend/apps/reader/modules/readeruserhyph.lua:45
+#, fuzzy
 msgid ""
 "The user dictionary\n"
 "%1\n"
 "is not alphabetically sorted.\n"
 "\n"
-"It has been disabled."
+"It will be disabled now."
 msgstr ""
 "Το λεξικό του χρήστη\n"
 "%1\n"
@@ -5421,7 +5422,7 @@ msgstr ""
 "\n"
 "Έχει απενεργοποιηθεί."
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:45
+#: frontend/apps/reader/modules/readeruserhyph.lua:55
 msgid ""
 "The user dictionary\n"
 "%1\n"
@@ -5435,11 +5436,11 @@ msgstr ""
 "\n"
 "Θα χρησιμοποιηθούν μόνο έγκυρες καταχωρήσεις."
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:81
+#: frontend/apps/reader/modules/readeruserhyph.lua:91
 msgid "Custom hyphenation rules"
 msgstr "Προσαρμοσμένοι κανόνες συλλαβισμού"
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:82
+#: frontend/apps/reader/modules/readeruserhyph.lua:92
 msgid ""
 "The hyphenation of a word can be changed from its default by long pressing "
 "for 3 seconds and selecting 'Hyphenate'."
@@ -5447,15 +5448,15 @@ msgstr ""
 "Ο συλλαβισμός μιας λέξης μπορεί να αλλάξει από την προεπιλογή του πατώντας "
 "παρατεταμένα για 3 δευτερόλεπτα και επιλέγοντας «Συλλαβισμός»."
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:182
+#: frontend/apps/reader/modules/readeruserhyph.lua:276
 msgid "Hyphenate: %1"
 msgstr "Συλλαβισμός: %1"
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:183
+#: frontend/apps/reader/modules/readeruserhyph.lua:277
 msgid "Add hyphenation positions with hyphens ('-') or spaces (' ')."
 msgstr "Προσθέστε θέσεις συλλαβισμού με ενωτικά (\"-\") ή κενά (\" \")."
 
-#: frontend/apps/reader/modules/readeruserhyph.lua:220
+#: frontend/apps/reader/modules/readeruserhyph.lua:314
 msgid "Invalid hyphenation!"
 msgstr "Μη έγκυρος συλλαβισμός!"
 
@@ -12388,7 +12389,7 @@ msgstr ""
 "χειρονομία."
 
 #: plugins/calibre.koplugin/main.lua:64 plugins/calibre.koplugin/main.lua:114
-#: plugins/calibre.koplugin/search.lua:184
+#: plugins/calibre.koplugin/search.lua:182
 msgid "Calibre metadata search"
 msgstr "Αναζήτηση μεταδεδομένων Calibre"
 
@@ -12421,7 +12422,7 @@ msgid "Manage libraries"
 msgstr "Διαχείριση βιβλιοθηκών"
 
 #: plugins/calibre.koplugin/main.lua:150
-#: plugins/calibre.koplugin/search.lua:312
+#: plugins/calibre.koplugin/search.lua:310
 msgid "No calibre libraries"
 msgstr "Δεν υπάρχουν βιβλιοθήκες Calibre"
 
@@ -12526,67 +12527,72 @@ msgstr ""
 "Ενσωμάτωση με calibre. Αποστολή εγγράφων από τη βιβλιοθήκη calibre μέσω Wi-"
 "Fi και αναζήτηση μεταδεδομένων calibre."
 
-#: plugins/calibre.koplugin/search.lua:144
+#: plugins/calibre.koplugin/search.lua:142
 msgid "Author(s):"
 msgstr "Συγγραφέας(εις):"
 
-#: plugins/calibre.koplugin/search.lua:145
+#: plugins/calibre.koplugin/search.lua:143
 msgid "Unknown"
 msgstr "Άγνωστo"
 
-#: plugins/calibre.koplugin/search.lua:148
+#: plugins/calibre.koplugin/search.lua:146
 msgid "Tags:"
 msgstr "Ετικέτες:"
 
-#: plugins/calibre.koplugin/search.lua:189
+#: plugins/calibre.koplugin/search.lua:187
 msgid "Browse series"
 msgstr "Εξερεύνηση για σειρά"
 
-#: plugins/calibre.koplugin/search.lua:198
+#: plugins/calibre.koplugin/search.lua:196
 msgid "Browse tags"
 msgstr "Εξερεύνηση ετικετών"
 
 #. @translators Search for books in calibre Library, via on-device metadata (as setup by Calibre's 'Send To Device').
-#: plugins/calibre.koplugin/search.lua:219
+#: plugins/calibre.koplugin/search.lua:217
 msgid "Search books"
 msgstr "Αναζήτηση βιβλίων"
 
-#: plugins/calibre.koplugin/search.lua:325
+#: plugins/calibre.koplugin/search.lua:323
 msgid "No results in metadata"
 msgstr "Δεν υπάρχουν αποτελέσματα στα μεταδεδομένα"
 
-#: plugins/calibre.koplugin/search.lua:409
+#: plugins/calibre.koplugin/search.lua:387
+#, fuzzy
+msgid "Books"
+msgstr "Επισημειώσεις"
+
+#: plugins/calibre.koplugin/search.lua:392
 msgid "Browse by tags"
 msgstr "Περιήγηση ανά ετικέτες"
 
-#: plugins/calibre.koplugin/search.lua:412
+#: plugins/calibre.koplugin/search.lua:395
 msgid "Browse by series"
 msgstr "Περιήγηση ανά σειρές"
 
-#: plugins/calibre.koplugin/search.lua:444
+#: plugins/calibre.koplugin/search.lua:447
 msgid "Search results"
 msgstr "Αποτελέσματα αναζήτησης"
 
-#: plugins/calibre.koplugin/search.lua:469
+#: plugins/calibre.koplugin/search.lua:463
 msgid ""
 "Scanning libraries can take time. All storage media under %1 will be analyzed"
 msgstr ""
 "Η σάρωση βιβλιοθηκών μπορεί να πάρει χρόνο. Όλα τα αποθηκευτικά μέσα κάτω "
 "από %1 θα αναλυθούν"
 
-#: plugins/calibre.koplugin/search.lua:475
+#: plugins/calibre.koplugin/search.lua:469
 msgid "Scan"
 msgstr "Σάρωση"
 
-#: plugins/calibre.koplugin/search.lua:496
+#: plugins/calibre.koplugin/search.lua:490
 msgid "SD card"
 msgstr "κάρτα SD"
 
-#: plugins/calibre.koplugin/search.lua:505
+#: plugins/calibre.koplugin/search.lua:499
 msgid "No calibre libraries were found"
 msgstr "Δεν βρέθηκαν βιβλιοθήκες calibre"
 
-#: plugins/calibre.koplugin/search.lua:507
+#: plugins/calibre.koplugin/search.lua:501
 msgid "Found %1 calibre libraries with %2 books:%3"
 msgstr "Βρέθηκαν %1 βιβλιοθήκες calibre με %2 βιβλία:%3"
 
