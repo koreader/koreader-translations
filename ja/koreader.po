@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-19 10:30+0000\n"
-"PO-Revision-Date: 2022-03-19 09:14+0000\n"
+"PO-Revision-Date: 2022-03-19 22:02+0000\n"
 "Last-Translator: Octavianx.weblate <reinhard.news@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
 "koreader/ja/>\n"
@@ -611,6 +611,9 @@ msgid ""
 "This can point to a sub-directory of the WebDAV server.\n"
 "The start folder is appended to the server path."
 msgstr ""
+"サーバーアドレスの形式は、 http(s):// domain.name/path\n"
+"WebDAV サーバーのサブディレクトリを指すことができます。\n"
+"スタートフォルダがサーバーのアドレスをベースにする。"
 
 #: frontend/apps/cloudstorage/webdav.lua:56
 msgid "Server display name"
@@ -790,7 +793,7 @@ msgstr "スクリプトの実行に成功しました。"
 #: frontend/apps/filemanager/filemanagercollection.lua:119
 #: frontend/apps/filemanager/filemanager.lua:317
 msgid "The script returned a non-zero status code: %1!"
-msgstr "スクリプトがnon-zero 状態コード: %1 を戻りました。"
+msgstr "スクリプトがnon-zero 状態コード: %1 を戻りました!"
 
 #. @translators See <https://en.wikipedia.org/wiki/Markdown>. In languages written in the Latin alphabet this is unlikely to change.
 #: frontend/apps/filemanager/filemanagerconverter.lua:18
@@ -942,6 +945,7 @@ msgid ""
 "If you delete a file, it is permanently lost."
 msgstr ""
 "この文書を削除しますか？\n"
+"\n"
 "%1\n"
 "\n"
 "削除されたファイルを回復できません。"
@@ -959,7 +963,7 @@ msgstr "削除したファイルの履歴を消去"
 #: frontend/apps/filemanager/filemanagerhistory.lua:239
 #: frontend/apps/filemanager/filemanagermenu.lua:263
 msgid "Clear history of deleted files?"
-msgstr "削除したファイルの履歴を消去"
+msgstr "削除したファイルの履歴を消去しますか？"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:240
 #: frontend/apps/filemanager/filemanagermenu.lua:264
@@ -1191,7 +1195,11 @@ msgid ""
 "%1\n"
 "to:\n"
 "%2"
-msgstr "%1 を %2 へのコピーに失敗しました"
+msgstr ""
+"ファイルのコピーに失敗しました：\n"
+"%1\n"
+"から\n"
+"%2 へ"
 
 #: frontend/apps/filemanager/filemanager.lua:972
 msgid ""
@@ -1199,7 +1207,11 @@ msgid ""
 "%1\n"
 "to:\n"
 "%2"
-msgstr "%1 から %2 への移動に失敗しました"
+msgstr ""
+"移動に失敗しました：\n"
+"%1\n"
+"から\n"
+"%2 へ"
 
 #: frontend/apps/filemanager/filemanager.lua:989
 #: frontend/apps/filemanager/filemanager.lua:1147
@@ -1207,14 +1219,20 @@ msgid ""
 "File already exists:\n"
 "%1\n"
 "Overwrite file?"
-msgstr "ファイル %1 はすでに存在します。上書きしますか?"
+msgstr ""
+"ファイル はすでに存在します：\n"
+"%1\n"
+"上書きしますか?"
 
 #: frontend/apps/filemanager/filemanager.lua:991
 msgid ""
 "Folder already exists:\n"
 "%1\n"
 "Overwrite folder?"
-msgstr "フォルダー %1 はすでに存在します。上書きしますか?"
+msgstr ""
+"フォルダー はすでに存在します：\n"
+"%1\n"
+"上書きしますか?"
 
 #: frontend/apps/filemanager/filemanager.lua:1040
 msgid ""
@@ -1251,9 +1269,11 @@ msgid ""
 "The reading history may be lost."
 msgstr ""
 "ファイル名変更：\n"
-"%1 から\n"
-"%2 へ\n"
-"履歴データを %1 から %2 へに移動に失敗しました。\n"
+"%1\n"
+"から\n"
+"%2 \n"
+"へ\n"
+"履歴データ移動に失敗しました。\n"
 "閲覧履歴が失われる可能性があります。"
 
 #: frontend/apps/filemanager/filemanager.lua:1125
@@ -1264,8 +1284,9 @@ msgid ""
 "%2"
 msgstr ""
 "ファイル名の変更に失敗しました:\n"
-"%1 から\n"
-"%2 へ\n"
+"%1 \n"
+"から\n"
+"%2 へ"
 
 #: frontend/apps/filemanager/filemanager.lua:1137
 msgid ""
@@ -1273,9 +1294,9 @@ msgid ""
 "%1\n"
 "File cannot be renamed."
 msgstr ""
-"フォルダー はすでに存在します。\n"
+"フォルダー はすでに存在します：\n"
 "%1 \n"
-"上書きしますか?"
+"名前変更ができません。"
 
 #: frontend/apps/filemanager/filemanager.lua:1139
 msgid ""
@@ -1315,7 +1336,7 @@ msgstr "ファイル名(文字列順)並び替え"
 
 #: frontend/apps/filemanager/filemanager.lua:1174
 msgid "name mixed"
-msgstr ""
+msgstr "混在名称"
 
 #: frontend/apps/filemanager/filemanager.lua:1174
 msgid "Sort by name – mixed files and folders"
@@ -1493,6 +1514,12 @@ msgid ""
 "- File and folder selection\n"
 "- Calibre and OPDS browsers/search results"
 msgstr ""
+"これより、下記の状況にって、ページあたりのアイテム数が次のように設定されます"
+"：\n"
+"- ファイルブラウザ、履歴、お気に入りを「クラシック」表示モードの場合\n"
+"- 検索結果とフォルダショートカット\n"
+"- ファイルとフォルダを選択する場合\n"
+"- Caliber および OPDS ブラウザ / 検索結果"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:186
 #: frontend/apps/filemanager/filemanagermenu.lua:199
@@ -1521,7 +1548,7 @@ msgstr "履歴から削除された項目を自動的に消去しました"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:282
 msgid "Show filename in Open last/previous menu items"
-msgstr ""
+msgstr "前回開いだ内容のファイル名を表示する"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:293
 msgid "Home folder settings"
@@ -1559,6 +1586,15 @@ msgid ""
 "To:\n"
 "`Manga/Cells at Work`."
 msgstr ""
+"「ホームフォルダを短縮」を設定すると、ホームフォルダ自体がのフルパスではなく"
+"「ホーム」として表示されます。\n"
+"\n"
+"例えば、ホームフォルダが次のような場合：\n"
+"` /mnt/onboard/.books`\n"
+"配下のサブフォルダは次のように短縮されます：\n"
+"` /mnt/onboard/.books/Manga/Cells at Work `\n"
+"がら：\n"
+"` Manga/Cells at Work `となります。"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:344
 msgid "Lock home folder"
@@ -1577,6 +1613,11 @@ msgid ""
 "- Reading statistics details\n"
 "- A few other plugins"
 msgstr ""
+"これにより、下記の画面にって、ページあたりのアイテム数を設定する：\n"
+"- 書籍情報\n"
+"- 辞書と Wikipedia の検索履歴\n"
+"- 閲覧統計情報の詳細\n"
+"- いくつかのプラグイン画面"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:404
 msgid "Reverse sorting"
@@ -1648,19 +1689,19 @@ msgstr "これは、再起動後に有効になります。"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:514
 msgid "Always abort on crash"
-msgstr ""
+msgstr "クラッシュ時は必ず中断する"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:530
 msgid "Disable C blitter"
-msgstr ""
+msgstr "C blitterを禁止する"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:545
 msgid "Disable HW dithering"
-msgstr ""
+msgstr "ハードウェアディザリングを無効にする"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:563
 msgid "Disable SW dithering"
-msgstr ""
+msgstr "ソフトウェアディザリングを無効にします"
 
 #. @translators Highly technical (ioctl is a Linux API call, the uppercase stuff is a constant). What's translatable is essentially only the action ("bypass") and the article.
 #: frontend/apps/filemanager/filemanagermenu.lua:586
@@ -1680,15 +1721,15 @@ msgstr "互換性テストを開始"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:641
 msgid "Disable enhanced UI text shaping (xtext)"
-msgstr ""
+msgstr "拡張 UI テキスト整形(xtext)を無効にする"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:654
 msgid "UI layout mirroring and text direction"
-msgstr ""
+msgstr "UIレイアウトのミラーリングとテキストの方向"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:657
 msgid "Reverse UI layout mirroring"
-msgstr ""
+msgstr "UIレイアウトのミラーリング反転"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:670
 msgid "Reverse UI text direction"
@@ -1696,11 +1737,11 @@ msgstr "UI テキストの方向を反転"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:688
 msgid "Enable CRE call cache (with stats)"
-msgstr ""
+msgstr "CRE call cache (with stats)を有効する"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:690
 msgid "Enable CRE call cache"
-msgstr ""
+msgstr "CRE call cache有効にする"
 
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagermenu.lua:721 frontend/dispatcher.lua:92
@@ -1719,6 +1760,15 @@ msgid ""
 "\n"
 "Tap a book in the search results to open it."
 msgstr ""
+"現在のフォルダまたはホームフォルダとそのサブフォルダ内のファイル名で書籍を検"
+"索する。\n"
+"\n"
+"1 つの「 ? 」 または複数の「 * 」文字をワイルドカードとして使用できます。\n"
+"単なる「 * 」を検索すると、すべてのファイルが表示されます。\n"
+"\n"
+"並べ替え順序は、 filemanager の設定と同じです。\n"
+"\n"
+"検索結果をタップして開けます。"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:739
 msgid "Open last document"
@@ -1878,7 +1928,7 @@ msgstr "ページごとのブックマーク数"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:120
 msgid "Bookmark font size: %1"
-msgstr "ブックマークのフォントサイズ"
+msgstr "ブックマークのフォントサイズ：%1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:132
 msgid "Bookmark font size"
@@ -1992,7 +2042,7 @@ msgstr "ハイライト"
 #: frontend/apps/reader/modules/readerbookmark.lua:767
 #: frontend/apps/reader/modules/readerbookmark.lua:1195
 msgid "page bookmarks"
-msgstr ""
+msgstr "ページ内ブックマーク"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:777
 #: frontend/apps/reader/modules/readerbookmark.lua:1189
@@ -2099,9 +2149,8 @@ msgid "Progress percentage"
 msgstr "閲覧進捗"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:258
-#, fuzzy
 msgid "Chapter marks"
-msgstr "章マーカーを表示"
+msgstr "チャプターマーク"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:269
 #: frontend/ui/data/creoptions.lua:104 frontend/ui/data/creoptions.lua:181
@@ -2119,9 +2168,8 @@ msgid "off"
 msgstr "オフ"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:272
-#, fuzzy
 msgid "percentage"
-msgstr "パーセント完了"
+msgstr "パーセント"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:274
 msgid "icon"
@@ -2166,6 +2214,9 @@ msgid ""
 "\n"
 "Dismiss battery level alert?"
 msgstr ""
+"バッテリーレベルが高いです： %1 %\n"
+"\n"
+"バッテリー残量警告を消去しますか？"
 
 #: frontend/apps/reader/modules/readerdevicestatus.lua:38
 msgid ""
@@ -2235,7 +2286,7 @@ msgstr "バッテリー検査間隔"
 
 #: frontend/apps/reader/modules/readerdevicestatus.lua:166
 msgid "Thresholds: %1% – %2%"
-msgstr ""
+msgstr "しきい値： %1% ～ %2%"
 
 #: frontend/apps/reader/modules/readerdevicestatus.lua:176
 msgid "Battery level alert thresholds"
@@ -2475,6 +2526,14 @@ msgid ""
 "\n"
 "The current default (★) is enabled."
 msgstr ""
+"デフォルトであいまい検索をどうのように設定しますか？\n"
+"\n"
+"ファジー検索では、辞書にエントリがある場合でも、 epuisante, épuisante 、"
+"および épuisantes 、 épuisant に一致させることができます。 パフォーマンスを向"
+"上させるために無効にすることもできますが、あいまい検索を無効にする前に、不要"
+"な辞書を無効にすることを検討することをお勧めします。\n"
+"\n"
+"現在のデフォルト（★）は有効になっています。"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1191
 #: frontend/apps/reader/modules/readertypography.lua:328
@@ -2528,19 +2587,19 @@ msgstr "フォントの太さを %1 に設定しました。"
 
 #: frontend/apps/reader/modules/readerfont.lua:236
 msgid "Font hinting set to: %1"
-msgstr "フォントヒンティングを %1 に設定しました。"
+msgstr "フォントヒンティングを %1 に設定しました"
 
 #: frontend/apps/reader/modules/readerfont.lua:244
 msgid "Font kerning set to: %1"
-msgstr "フォントのカーニングを %1 に設定しました。"
+msgstr "フォントのカーニングを %1 に設定しました"
 
 #: frontend/apps/reader/modules/readerfont.lua:252
 msgid "Word spacing set to: %1%, %2%"
-msgstr "字間を %1% に設定しました。"
+msgstr "字間を %1%, %2% に設定しました"
 
 #: frontend/apps/reader/modules/readerfont.lua:260
 msgid "Word expansion set to: %1%."
-msgstr ""
+msgstr "字間設定:%1%。"
 
 #: frontend/apps/reader/modules/readerfont.lua:269
 #: frontend/apps/reader/modules/readerview.lua:916
@@ -2555,7 +2614,8 @@ msgid ""
 "Characters not found in the active font are shown in the fallback font "
 "instead."
 msgstr ""
-" %1 を既定のフォント(★)、あるいは代替フォント(�)に設定しますか？\n"
+"%1 を既定のフォント(★)、あるいは代替フォント(�)に設定しますか？\n"
+"\n"
 "指定されたフォント中含まれていない文字が、代替フォントで表示されます。"
 
 #: frontend/apps/reader/modules/readerfont.lua:299
@@ -2608,6 +2668,15 @@ msgid ""
 "it will be used before these.\n"
 "If that font happens to be part of this list already, it will be used first."
 msgstr ""
+"スクリプトと言語対応範囲を最大限に広げるために、拡張代替フォントを有効にする"
+"。\n"
+"これらのフォントは次の順序で使用されます：\n"
+"\n"
+"%1\n"
+"\n"
+"フォント名を長押しして優先代替フォントを設定することができます。このフォント"
+"は、優先的に使用されます。\n"
+"このフォントが既にこのリストに含まれている場合は、最初に使用されます。"
 
 #: frontend/apps/reader/modules/readerfont.lua:397
 msgid "Generate font test document"
@@ -2650,7 +2719,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerfooter.lua:59
 msgctxt "FooterLetterPrefix"
 msgid "BM:"
-msgstr ""
+msgstr "BM:"
 
 #. @translators This is the footer letter prefix for percentage read.
 #. @translators This is the footer letter prefix for frontlight warmth (redshift).
@@ -2658,49 +2727,49 @@ msgstr ""
 #: frontend/apps/reader/modules/readerfooter.lua:69
 msgctxt "FooterLetterPrefix"
 msgid "R:"
-msgstr ""
+msgstr "R:"
 
 #. @translators This is the footer letter prefix for book time to read.
 #: frontend/apps/reader/modules/readerfooter.lua:63
 msgctxt "FooterLetterPrefix"
 msgid "TB:"
-msgstr ""
+msgstr "TB:"
 
 #. @translators This is the footer letter prefix for chapter time to read.
 #: frontend/apps/reader/modules/readerfooter.lua:65
 msgctxt "FooterLetterPrefix"
 msgid "TC:"
-msgstr ""
+msgstr "TC:"
 
 #. @translators This is the footer letter prefix for frontlight level.
 #: frontend/apps/reader/modules/readerfooter.lua:67
 msgctxt "FooterLetterPrefix"
 msgid "L:"
-msgstr ""
+msgstr "L:"
 
 #. @translators This is the footer letter prefix for memory usage.
 #: frontend/apps/reader/modules/readerfooter.lua:71
 msgctxt "FooterLetterPrefix"
 msgid "M:"
-msgstr ""
+msgstr "M:"
 
 #. @translators This is the footer letter prefix for Wi-Fi status.
 #: frontend/apps/reader/modules/readerfooter.lua:73
 msgctxt "FooterLetterPrefix"
 msgid "W:"
-msgstr ""
+msgstr "W:"
 
 #. @translators This is the footer compact item prefix for the number of bookmarks (bookmark count).
 #: frontend/apps/reader/modules/readerfooter.lua:99
 msgctxt "FooterCompactItemsPrefix"
 msgid "BM"
-msgstr ""
+msgstr "BM"
 
 #. @translators This is the footer compact item prefix for memory usage.
 #: frontend/apps/reader/modules/readerfooter.lua:106
 msgctxt "FooterCompactItemsPrefix"
 msgid "M"
-msgstr ""
+msgstr "M"
 
 #: frontend/apps/reader/modules/readerfooter.lua:154
 #: frontend/apps/reader/modules/readerfooter.lua:171
@@ -2714,7 +2783,7 @@ msgstr "%1 有効"
 
 #: frontend/apps/reader/modules/readerfooter.lua:632
 msgid "Custom string:"
-msgstr ""
+msgstr "カスタムテキスト："
 
 #: frontend/apps/reader/modules/readerfooter.lua:637
 msgid "Number of repetitions:"
@@ -2729,7 +2798,7 @@ msgstr "重複数："
 #: plugins/kosync.koplugin/main.lua:299
 #: plugins/statistics.koplugin/main.lua:1018
 msgid "Set"
-msgstr ""
+msgstr "設定"
 
 #: frontend/apps/reader/modules/readerfooter.lua:686
 msgid "Can be configured to include or exclude the current page."
@@ -2741,7 +2810,7 @@ msgstr "進捗率は、数字で 0 、 1 桁、または 2 桁で表示できま
 
 #: frontend/apps/reader/modules/readerfooter.lua:688
 msgid "Show memory usage in MiB."
-msgstr "メモリ使用量をMiB単位で表示"
+msgstr "メモリ使用量をMiB単位で表示。"
 
 #: frontend/apps/reader/modules/readerfooter.lua:959
 msgid "Show all at once"
@@ -2749,7 +2818,7 @@ msgstr "全ての内容を一緒に表示"
 
 #: frontend/apps/reader/modules/readerfooter.lua:960
 msgid "Reclaim bar height from bottom margin"
-msgstr ""
+msgstr "下余白からバーの高さを回収します"
 
 #: frontend/apps/reader/modules/readerfooter.lua:961
 msgid "Bookmark count (%1)"
@@ -2820,9 +2889,8 @@ msgid "Current chapter"
 msgstr "現在の章"
 
 #: frontend/apps/reader/modules/readerfooter.lua:980
-#, fuzzy
 msgid "Custom text: '%1'%2"
-msgstr "カスタムテキスト  '%1'%2"
+msgstr "カスタムテキスト ：'%1'%2"
 
 #: frontend/apps/reader/modules/readerfooter.lua:990
 msgid "Status bar"
@@ -2838,7 +2906,7 @@ msgstr "アイテムを並べ替え"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1108
 msgid "Sort footer items"
-msgstr ""
+msgstr "フッター項目を並べ替え"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1125
 msgid "Hide empty items"
@@ -2846,11 +2914,11 @@ msgstr "空のアイテムを非表示"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1126
 msgid "This will hide values like 0 or off."
-msgstr ""
+msgstr "これにより、 0 や OFF などの値が非表示になります。"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1150
 msgid "Show footer separator"
-msgstr ""
+msgstr "フーター区切り文字を表示"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1160
 msgid "Lock status bar"
@@ -2858,7 +2926,7 @@ msgstr "ステータスバーを固定"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1169
 msgid "Hold footer to skim"
-msgstr ""
+msgstr "フッターを押さえて、快速閲覧になります"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1181
 msgid "bold"
@@ -2905,9 +2973,8 @@ msgid "Maximum width of items"
 msgstr "アイテムの最大幅"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1296
-#, fuzzy
 msgid "Book title: %1%"
-msgstr "本のタイトル %1%"
+msgstr "書名： %1%"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1306
 #: frontend/apps/reader/modules/readerfooter.lua:1331
@@ -2949,7 +3016,7 @@ msgstr "揃え設定: %1"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1399
 msgid "Icons"
-msgstr ""
+msgstr "アイコン"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1401
 msgid "Compact items"
@@ -2965,11 +3032,11 @@ msgstr "プレフィックス: %1"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1414
 msgid "Icons (%1)"
-msgstr ""
+msgstr "アイコン（%1）"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1430
 msgid "Compact Items (%1)"
-msgstr ""
+msgstr "コンパクトアイテム(%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1446
 msgid "Letters (%1)"
@@ -2977,11 +3044,11 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerfooter.lua:1462
 msgid "Item separator: %1"
-msgstr "項目の区切り文字：  %1"
+msgstr "項目の区切り文字： %1"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1466
 msgid "Vertical line (|)"
-msgstr ""
+msgstr "縦線(|)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1476
 msgid "Bullet (•)"
@@ -2993,7 +3060,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerfooter.lua:1496
 msgid "No separator"
-msgstr ""
+msgstr "区切り文字なし"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1509
 msgid "Progress percentage format: %1"
@@ -3001,19 +3068,19 @@ msgstr "進捗比率の書式：%1"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1515
 msgid "No decimal point (%1)"
-msgstr ""
+msgstr "小数点なし (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1527
 msgid "1 digit after decimal point (%1)"
-msgstr ""
+msgstr "小数点の後に 1 桁の数字 (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1539
 msgid "2 digits after decimal point (%1)"
-msgstr ""
+msgstr "小数点の後に 2 桁の数字(%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1552
 msgid "Include current page in pages left"
-msgstr ""
+msgstr "残りページに現在のページを含め"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1553
 msgid ""
@@ -3026,7 +3093,8 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerfooter.lua:1572
 msgid "Hide battery status if level higher than: %1%"
-msgstr ""
+msgstr "バッテリー残量が次の値以上の場合は、バッテリーステータスを非表示にします： "
+"%1%"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1586
 msgid "Hide battery threshold"
@@ -3054,7 +3122,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerfooter.lua:1629
 msgid "Position: %1"
-msgstr ""
+msgstr "位置：%1"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1636
 msgid "Above items"
@@ -3088,7 +3156,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerfooter.lua:1735
 msgid "Progress bar size"
-msgstr ""
+msgstr "進捗バーのサイズ"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1752
 msgid "Show chapter markers"
@@ -3117,11 +3185,11 @@ msgstr "中"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1818
 msgid "static margins (10)"
-msgstr ""
+msgstr "固定余白（10）"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1821
 msgid "no margins (0)"
-msgstr ""
+msgstr "余白なし(0)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1823
 msgid "static margins (%1)"
@@ -3144,12 +3212,10 @@ msgid "Same as book margins"
 msgstr "書籍の余白に一致する"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1852
-#, fuzzy
 msgid "Same as book margins (%1)"
 msgstr "書籍の余白に一致する (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1869
-#, fuzzy
 msgid "Static margins (%1)"
 msgstr "固定余白 (%1)"
 
@@ -3159,11 +3225,11 @@ msgstr "幅の最小値: %1%"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1909
 msgid "Minimal width"
-msgstr ""
+msgstr "最小幅"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1910
 msgid "Minimal progress bar width in percentage of screen width"
-msgstr ""
+msgstr "画面幅に対する進捗バーの幅を最小値"
 
 #: frontend/apps/reader/modules/readergoto.lua:18
 #: frontend/apps/reader/modules/readergoto.lua:90 frontend/dispatcher.lua:112
@@ -3274,7 +3340,7 @@ msgstr "反転"
 #: frontend/apps/reader/modules/readerhighlight.lua:309
 #: frontend/ui/elements/common_settings_menu_table.lua:559
 msgid "Ask with popup dialog"
-msgstr ""
+msgstr "ポップアップダイアログで確認"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:310
 #: frontend/ui/elements/common_settings_menu_table.lua:560
@@ -3291,44 +3357,38 @@ msgid "Fulltext search"
 msgstr "全文検索"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:323
-#, fuzzy
 msgid "Start content selection"
-msgstr "前の場所に移動"
+msgstr "コンテンツの選択を開始します"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:330
 #: frontend/apps/reader/modules/readerhighlight.lua:1749
-#, fuzzy
 msgid "Highlight style"
-msgstr "ハイライト"
+msgstr "ハイライトスタイル"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:358
-#, fuzzy
 msgid "Highlight opacity: %1"
-msgstr "ハイライト"
+msgstr "ハイライト不透明度：%1"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:375
-#, fuzzy
 msgid "Highlight opacity"
-msgstr "ハイライト"
+msgstr "ハイライト不透明度"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:376
 msgid "The higher the value, the darker the highlight."
-msgstr ""
+msgstr "値が大きいほど、ハイライトは暗くなります。"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:389
 msgid "Panel zoom (manga/comic)"
-msgstr ""
+msgstr "パネルズーム（マンガ／コミック）"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:396
-#, fuzzy
 msgid "Long-press on text"
-msgstr "長押しすると現在のディレクトリを選択する"
+msgstr "文字を長押しする"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:399
 #: frontend/apps/reader/modules/readerhighlight.lua:404
-#, fuzzy
 msgid "Highlight long-press interval"
-msgstr "長押しすると現在のディレクトリを選択する"
+msgstr "ハイライト長押し間隔"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:405
 msgid ""
@@ -3337,6 +3397,10 @@ msgid ""
 "\n"
 "The interval value is in seconds and can range from 3 to 20 seconds."
 msgstr ""
+"この時間内にタッチが解除されない場合は、長押しと見なされます。 "
+"ドキュメントテキストでは、単一の単語の選択と認識されません。\n"
+"\n"
+"間隔の値は秒単位で、 3 ～ 20 秒の範囲で指定できます。"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:415
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:153
@@ -3347,38 +3411,33 @@ msgstr ""
 #: plugins/gestures.koplugin/main.lua:615
 #: plugins/readtimer.koplugin/main.lua:126
 msgid "Set interval"
-msgstr ""
+msgstr "間隔設定"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:425
 msgid "Dictionary on single word selection"
-msgstr ""
+msgstr "1 つの単語を選択する場合辞書を表示"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:456
-#, fuzzy
 msgid "Select on text"
-msgstr "フォントサイズの選択"
+msgstr "テキストを選択"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:463
 msgid "Allow panel zoom"
-msgstr ""
+msgstr "パネルのズームを許可"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:478
-#, fuzzy
 msgid "Fall back to text selection"
-msgstr "前の場所に移動"
+msgstr "テキストの選択に戻ります"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:726
-#, fuzzy
 msgid "Note"
-msgstr "メモ: "
+msgstr "メモ"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:740
-#, fuzzy
 msgid "Edit highlight"
-msgstr "合計ハイライト"
+msgstr "ハイライト編集"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:769
-#, fuzzy
 msgctxt "Highlight"
 msgid "Style"
 msgstr "スタイル"
@@ -3401,6 +3460,19 @@ msgid ""
 "Copy the language data files for Tesseract 3.04 (e.g., eng.traineddata for "
 "English and spa.traineddata for Spanish) into koreader/data/tessdata"
 msgstr ""
+"OCR の結果がないか、言語に当たるトレーニングデータがありません。\n"
+"\n"
+"KOReader には、画像構成されたPDF および DjVu 文書の中の文字を識別するための "
+"OCR エンジンが内蔵されています。 スキャンしたページで OCR を使用するには、"
+"ドキュメント言語に当たるの tesseract "
+"トレーニングデータをインストールする必要があります。\n"
+"\n"
+"v3.04 の言語トレーニングデータファイルは、 https://tesseract-ocr.github.io/"
+"tessdoc/Data-Files からダウンロードできます\n"
+"\n"
+"Tesseract v3.04 の言語データファイル（英語の場合は eng.traineddata 、"
+"スペイン語の場合は spa.traineddata など）を koreader/data/tessdata "
+"にコピーします"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:1278
 msgid "View %1"
@@ -3408,7 +3480,7 @@ msgstr "%1 を閲覧"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:1284
 msgid "Failed getting CSS content"
-msgstr ""
+msgstr "CSS コンテンツの取得に失敗しました"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:1291
 #: frontend/apps/reader/modules/readerstyletweak.lua:614
@@ -4034,9 +4106,8 @@ msgid "Wrong escape '\\'"
 msgstr ""
 
 #: frontend/apps/reader/modules/readersearch.lua:61
-#, fuzzy
 msgid "Back reference does not exist."
-msgstr "ファイル '%1' が存在しません。"
+msgstr "後方参照が存在しません。"
 
 #: frontend/apps/reader/modules/readersearch.lua:62
 msgid "Mismatching brackets '[]'"
@@ -4420,39 +4491,32 @@ msgid "Style"
 msgstr "スタイル"
 
 #: frontend/apps/reader/modules/readertypeset.lua:144
-#, fuzzy
 msgid "Enabled embedded styles."
-msgstr "埋込スタイル"
+msgstr "埋込スタイルを有効にする。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:146
-#, fuzzy
 msgid "Disabled embedded styles."
-msgstr "埋込スタイル"
+msgstr "埋込スタイルを無効にする。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:154
-#, fuzzy
 msgid "Enabled embedded fonts."
-msgstr "埋込フォント"
+msgstr "埋込フォントを有効にする。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:156
-#, fuzzy
 msgid "Disabled embedded fonts."
-msgstr "埋込フォント"
+msgstr "埋込フォントを無効にする。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:163
-#, fuzzy
 msgid "Image scaling set to: %1"
-msgstr "行間隔を %1% に設定しました。"
+msgstr ""
 
 #: frontend/apps/reader/modules/readertypeset.lua:174
-#, fuzzy
 msgid "Render mode set to: %1"
-msgstr "フォントサイズを %1 に設定しました。"
+msgstr "レンダリングモード: %1"
 
 #: frontend/apps/reader/modules/readertypeset.lua:196
-#, fuzzy
 msgid "Zoom set to: %1"
-msgstr "フォントガンマを %1 に設定しました。"
+msgstr "ズームを %1 に設定しました"
 
 #: frontend/apps/reader/modules/readertypeset.lua:225
 msgid "None"
@@ -4916,11 +4980,8 @@ msgid ""
 msgstr ""
 
 #: frontend/apps/reader/modules/readertypography.lua:438
-#, fuzzy
 msgid "Hyphenation dictionary: %1"
-msgstr ""
-"辞書を検索中:\n"
-"%1"
+msgstr "ハイフネーション辞書: %1"
 
 #: frontend/apps/reader/modules/readertypography.lua:457
 msgid "Algorithmic hyphenation"
@@ -4969,9 +5030,8 @@ msgid "algorithmic"
 msgstr ""
 
 #: frontend/apps/reader/modules/readertypography.lua:543
-#, fuzzy
 msgid "Hyphenation: %1"
-msgstr "ハイフネーション"
+msgstr "ハイフネーション：%1"
 
 #. @translators See https://en.wikipedia.org/wiki/Hanging_punctuation
 #: frontend/apps/reader/modules/readertypography.lua:550
@@ -5031,23 +5091,20 @@ msgid ""
 msgstr ""
 
 #: frontend/apps/reader/modules/readeruserhyph.lua:276
-#, fuzzy
 msgid "Hyphenate: %1"
-msgstr "ハイフネーション"
+msgstr "ハイフネーション：%1"
 
 #: frontend/apps/reader/modules/readeruserhyph.lua:277
 msgid "Add hyphenation positions with hyphens ('-') or spaces (' ')."
 msgstr ""
 
 #: frontend/apps/reader/modules/readeruserhyph.lua:314
-#, fuzzy
 msgid "Invalid hyphenation!"
-msgstr "ハイフネーション"
+msgstr "ハイフネーションが無効!"
 
 #: frontend/apps/reader/modules/readerview.lua:741
-#, fuzzy
 msgid "Rotation mode set to: %1"
-msgstr "フォントサイズを %1 に設定しました。"
+msgstr "回転モードを %1 に設定しました"
 
 #: frontend/apps/reader/modules/readerview.lua:769
 msgid ""
@@ -5074,9 +5131,8 @@ msgid "Font zoom set to: %1."
 msgstr "フォントサイズを %1 に設定しました。"
 
 #: frontend/apps/reader/modules/readerview.lua:968
-#, fuzzy
 msgid "View mode set to: %1"
-msgstr "フォントサイズを %1 に設定しました。"
+msgstr "閲覧モードを %1 に設定しました"
 
 #: frontend/apps/reader/modules/readerview.lua:977
 #, fuzzy
@@ -5301,9 +5357,8 @@ msgid "Zoom to fit content works best with page view."
 msgstr ""
 
 #: frontend/apps/reader/modules/readerzooming.lua:79
-#, fuzzy
 msgid "Zoom to fit columns works best with page view."
-msgstr "コンテンツの幅に合わせてズーム"
+msgstr "コンテンツの幅に合わせてズーム。"
 
 #: frontend/apps/reader/modules/readerzooming.lua:343
 msgid "Set horizontal overlap"
@@ -5431,29 +5486,24 @@ msgid "Device type: %1"
 msgstr ""
 
 #: frontend/device/android/device.lua:380
-#, fuzzy
 msgid ""
 "E-ink display supported.\n"
 "Platform: %1"
 msgstr ""
-"\n"
-"E-inkディスプレイ対応.\n"
-"プラットフォーム: %1\n"
+"E-inkディスプレイ対応。\n"
+"プラットフォーム: %1"
 
 #: frontend/device/android/device.lua:385
-#, fuzzy
 msgid ""
 "This device needs CPU, screen and touchscreen always on.\n"
 "Screen timeout will be ignored while the app is in the foreground!"
 msgstr ""
-"\n"
 "このデバイスはCPU,画面表示,タッチパネルが常に使われ続けます。\n"
-"またこのアプリが表示されている間、画面の自動オフ設定は無視されます。\n"
+"またこのアプリが表示されている間、画面の自動オフ設定は無視されます！"
 
 #: frontend/device/android/device.lua:433
-#, fuzzy
 msgid "Frontlight settings"
-msgstr "前面ライト点灯。"
+msgstr "前面ライト設定"
 
 #: frontend/device/android/device.lua:433
 #, fuzzy
@@ -5573,34 +5623,28 @@ msgid "Toggle frontlight"
 msgstr ""
 
 #: frontend/dispatcher.lua:52
-#, fuzzy
 msgid "Set frontlight brightness to %1"
-msgstr "自動前面ライト"
+msgstr "フロントライトの明るさを %1 に設定します"
 
 #: frontend/dispatcher.lua:53
-#, fuzzy
 msgid "Increase frontlight brightness by %1"
-msgstr "自動前面ライト"
+msgstr "フロントライトの明るさを %1 増加します"
 
 #: frontend/dispatcher.lua:54
-#, fuzzy
 msgid "Decrease frontlight brightness by %1"
-msgstr "自動前面ライト"
+msgstr "フロントライトの明るさを %1 下げます"
 
 #: frontend/dispatcher.lua:55
-#, fuzzy
 msgid "Set frontlight warmth to %1"
-msgstr "自動前面ライト"
+msgstr "フロントライトの暖かさを %1 に設定します"
 
 #: frontend/dispatcher.lua:56
-#, fuzzy
 msgid "Increase frontlight warmth by %1"
-msgstr "自動前面ライト"
+msgstr "フロントライトの保温性を %1 向上させます"
 
 #: frontend/dispatcher.lua:57
-#, fuzzy
 msgid "Decrease frontlight warmth by %1"
-msgstr "自動前面ライト"
+msgstr "フロントライトの暖かさを %1 下げます"
 
 #: frontend/dispatcher.lua:58
 msgid "Full screen refresh"
@@ -5825,9 +5869,8 @@ msgid "Cycle highlight style"
 msgstr ""
 
 #: frontend/dispatcher.lua:134
-#, fuzzy
 msgid "Go %1 pages"
-msgstr "ページに移動"
+msgstr "ページ%1に移動"
 
 #: frontend/dispatcher.lua:135
 #, fuzzy
@@ -5840,14 +5883,12 @@ msgid "Set font"
 msgstr "フォントサイズを設定"
 
 #: frontend/dispatcher.lua:139
-#, fuzzy
 msgid "Increase font size by %1"
-msgstr "フォントサイズを大きくします…"
+msgstr "フォントサイズ%1を大きくします"
 
 #: frontend/dispatcher.lua:140
-#, fuzzy
 msgid "Decrease font size by %1"
-msgstr "フォントサイズを小さくします…"
+msgstr "フォントサイズを %1 縮小します"
 
 #: frontend/dispatcher.lua:143
 msgid "Toggle page flipping"
@@ -5868,9 +5909,8 @@ msgid "Change zoom factor"
 msgstr "SSHポートを変更"
 
 #: frontend/dispatcher.lua:160
-#, fuzzy
 msgid "Set font size to %1"
-msgstr "フォントサイズを設定"
+msgstr "フォントサイズ%1を設定"
 
 #: frontend/dispatcher.lua:186 frontend/ui/data/creoptions.lua:410
 #: frontend/ui/data/creoptions.lua:422 frontend/ui/data/creoptions.lua:433
@@ -6379,7 +6419,6 @@ msgid "Alt Status Bar"
 msgstr "ステータスバー"
 
 #: frontend/ui/data/creoptions.lua:636
-#, fuzzy
 msgid ""
 "Enable or disable the rendering engine alternative status bar at the top of "
 "the screen. The items displayed can be customized via the main menu.\n"
@@ -6389,6 +6428,7 @@ msgid ""
 msgstr ""
 "・「フル」はステータスバーを画面の上部に表示する（ステータスバーの設定が不可"
 "能）\n"
+"\n"
 "・「ミニ」はステータスバーを画面の下部に表示する。タップをして表示・非表示を"
 "切り替える。表示アイテムはマインメニューから設定する。"
 
@@ -6419,13 +6459,14 @@ msgid "Image Scaling"
 msgstr "画像表示処理"
 
 #: frontend/ui/data/creoptions.lua:679
+#, fuzzy
 msgid ""
 "- 'fast' uses a fast but inaccurate scaling algorithm when scaling images.\n"
 "- 'best' switches to a more costly but vastly more pleasing and accurate "
 "algorithm."
 msgstr ""
-"- 'fast'は処理速度優先で綺麗さは無視\n"
-"- 'best'は綺麗に表示するため遅い"
+"- 'fast'は処理速度優先で綺麗さは無視。\n"
+"- 'best'は綺麗に表示するため遅い。"
 
 #: frontend/ui/data/creoptions.lua:684
 msgid "Invert Images"
@@ -6685,24 +6726,19 @@ msgid "Disable orphan and widow rules specified in embedded styles."
 msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:297
-#, fuzzy
 msgid "Hyphenation, ligatures, ruby"
-msgstr ""
-"辞書を検索中:\n"
-"%1"
+msgstr "ハイフネーション、合字、ルビー"
 
 #: frontend/ui/data/css_tweaks.lua:300
 msgid "Allow hyphenation on all text"
 msgstr "全ての文章にハイフン処理を有効"
 
 #: frontend/ui/data/css_tweaks.lua:301
-#, fuzzy
 msgid ""
 "Allow hyphenation on all text (except headings), in case the publisher has "
 "disabled it."
-msgstr ""
-"出版社に無効された場合、（ヘッダを除いて）全ての文章にハイフン処理を有効にす"
-"る"
+msgstr "出版社に無効された場合、（ヘッダを除いて）全ての文章にハイフン処理を有効にす"
+"る。"
 
 #: frontend/ui/data/css_tweaks.lua:309
 #, fuzzy
@@ -6760,9 +6796,8 @@ msgid "Larger ruby text size"
 msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:351
-#, fuzzy
 msgid "Increase ruby text size."
-msgstr "フォントサイズを大きくします…"
+msgstr "ルビのサイズを大きくします。"
 
 #: frontend/ui/data/css_tweaks.lua:357
 msgid "Larger spacing between ruby lines"
@@ -7679,9 +7714,8 @@ msgid "Enable hardware dithering."
 msgstr ""
 
 #: frontend/ui/data/koptoptions.lua:522
-#, fuzzy
 msgid "Enable software dithering."
-msgstr "WiFi 有効"
+msgstr ""
 
 #: frontend/ui/data/koptoptions.lua:526
 #, fuzzy
@@ -7857,9 +7891,8 @@ msgid "Sleep"
 msgstr "スリープ"
 
 #: frontend/ui/elements/common_info_menu_table.lua:16
-#, fuzzy
 msgid "Version: %1"
-msgstr "バージョン"
+msgstr "バージョン：%1"
 
 #: frontend/ui/elements/common_info_menu_table.lua:25
 #: plugins/exporter.koplugin/main.lua:215
@@ -8129,9 +8162,8 @@ msgid "parent folder"
 msgstr "現在のフォルダー"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:386
-#, fuzzy
 msgid "Back in file browser: %1"
-msgstr "ファイルブラウザに戻る"
+msgstr "ファイルブラウザに戻ります： %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:392
 #: frontend/ui/elements/common_settings_menu_table.lua:424
@@ -8153,9 +8185,8 @@ msgid "previous read page"
 msgstr "前のページ"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:418
-#, fuzzy
 msgid "Back in reader: %1"
-msgstr "ファイルブラウザに戻る"
+msgstr "リーダーに戻ります :%1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:433
 #, fuzzy
@@ -8339,9 +8370,8 @@ msgid "Start USB storage"
 msgstr "USBストレージを開始"
 
 #: frontend/ui/elements/mass_storage.lua:59
-#, fuzzy
 msgid "Share storage via USB?"
-msgstr "USB経由でストーレジを共有?\n"
+msgstr "USB経由でストーレジを共有?"
 
 #: frontend/ui/elements/mass_storage.lua:60
 msgid "Share"
@@ -8366,14 +8396,12 @@ msgid "Auto-show bottom menu"
 msgstr "下部のメニューを自動表示"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:50
-#, fuzzy
 msgid "Keyboard layouts: %1"
-msgstr "フッターのフォントサイズ"
+msgstr "キーボード配列： %1"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:63
-#, fuzzy
 msgid "Keyboard layouts (%1)"
-msgstr "フッターのフォントサイズ"
+msgstr "キーボード配列(%1)"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:71
 msgid "Remember last layout"
@@ -8457,9 +8485,8 @@ msgid "Top/bottom"
 msgstr "下方のマージン"
 
 #: frontend/ui/elements/page_turns.lua:32
-#, fuzzy
 msgid "Forward tap zone size: %1%"
-msgstr "フッターのフォントサイズ"
+msgstr ""
 
 #: frontend/ui/elements/page_turns.lua:42
 msgid "Forward tap zone width"
@@ -8579,19 +8606,16 @@ msgid "Every 6 pages"
 msgstr "6 ページごと"
 
 #: frontend/ui/elements/refresh_menu_table.lua:74
-#, fuzzy
 msgid "Custom 1: %1:%2 pages"
-msgstr "カスタム 1: %1 ページ"
+msgstr "カスタム 1: %1 %2ページ"
 
 #: frontend/ui/elements/refresh_menu_table.lua:84
-#, fuzzy
 msgid "Custom 2: %1:%2 pages"
-msgstr "カスタム 2: %1 ページ"
+msgstr "カスタム 2: %1 %2ページ"
 
 #: frontend/ui/elements/refresh_menu_table.lua:94
-#, fuzzy
 msgid "Custom 3: %1:%2 pages"
-msgstr "カスタム 3: %1 ページ"
+msgstr "カスタム 3: %1 %2ページ"
 
 #: frontend/ui/elements/refresh_menu_table.lua:103
 msgid "Every chapter"
@@ -9011,9 +9035,8 @@ msgid "Connect"
 msgstr "接続"
 
 #: frontend/ui/network/manager.lua:163
-#, fuzzy
 msgid "Connecting to Wi-Fi…"
-msgstr "WiFiに接続"
+msgstr "WiFiに接続…"
 
 #: frontend/ui/network/manager.lua:347
 #, fuzzy
@@ -9111,9 +9134,8 @@ msgid "Scanning for networks…"
 msgstr ""
 
 #: frontend/ui/network/manager.lua:634
-#, fuzzy
 msgid "Connection failed"
-msgstr "翻訳失敗。"
+msgstr "接続失敗"
 
 #: frontend/ui/network/manager.lua:655
 #: frontend/ui/widget/networksetting.lua:493
@@ -9150,9 +9172,8 @@ msgid "Authenticating…"
 msgstr "認証中…"
 
 #: frontend/ui/network/wpa_supplicant.lua:110
-#, fuzzy
 msgid "Authenticated"
-msgstr "認証中…"
+msgstr "認証済み"
 
 #: frontend/ui/network/wpa_supplicant.lua:150
 msgid "Failed to authenticate"
@@ -9499,11 +9520,12 @@ msgstr ""
 "%1"
 
 #: frontend/ui/screensaver.lua:265
-#, fuzzy
 msgid ""
 "Current screensaver image folder:\n"
 "%1"
-msgstr "スクリーンセイバーの画像"
+msgstr ""
+"スクリーンセイバー画像の場所：\n"
+"%1"
 
 #: frontend/ui/screensaver.lua:272
 msgid "Choose document cover"
@@ -9750,7 +9772,7 @@ msgstr "Scots Gaelic"
 
 #: frontend/ui/translator.lua:109
 msgid "Sesotho"
-msgstr "Sesotho"
+msgstr ""
 
 #: frontend/ui/translator.lua:110
 msgid "Shona"
@@ -9916,9 +9938,8 @@ msgid "Powered off"
 msgstr "電源をオフにしました"
 
 #: frontend/ui/uimanager.lua:92
-#, fuzzy
 msgid "Rebooting…"
-msgstr "再起動中..."
+msgstr "再起動中…"
 
 #: frontend/ui/widget/bookmapwidget.lua:1011
 msgid ""
@@ -10053,9 +10074,8 @@ msgstr "テキストなし"
 
 #: frontend/ui/widget/datetimewidget.lua:172
 #: frontend/ui/widget/spinwidget.lua:124
-#, fuzzy
 msgid "Default value: %1"
-msgstr "ファイル削除"
+msgstr "デフォルト値： %1"
 
 #: frontend/ui/widget/dictquicklookup.lua:62
 msgid "Unhighlight"
@@ -10102,9 +10122,8 @@ msgid "(query : %1)"
 msgstr "(検索ワード : %1)"
 
 #: frontend/ui/widget/doublespinwidget.lua:170
-#, fuzzy
 msgid "Apply default values: %1 / %2"
-msgstr "ファイル削除"
+msgstr "デフォルト値 %1/%2 を適用します"
 
 #: frontend/ui/widget/filechooser.lua:285
 msgid "Current folder not readable. Some content may not be shown."
@@ -10272,9 +10291,8 @@ msgid "(empty)"
 msgstr ""
 
 #: frontend/ui/widget/inputtext.lua:196
-#, fuzzy
 msgid "All text copied to clipboard."
-msgstr "コピーしました: %1"
+msgstr "すべてのテキストがクリップボードにコピーされました。"
 
 #: frontend/ui/widget/inputtext.lua:201
 #, fuzzy
@@ -10282,9 +10300,8 @@ msgid "Copy line"
 msgstr "文字に移動"
 
 #: frontend/ui/widget/inputtext.lua:207
-#, fuzzy
 msgid "Line copied to clipboard."
-msgstr "コピーしました: %1"
+msgstr ""
 
 #: frontend/ui/widget/inputtext.lua:212
 #, fuzzy
@@ -10292,9 +10309,8 @@ msgid "Copy word"
 msgstr "コピー"
 
 #: frontend/ui/widget/inputtext.lua:218
-#, fuzzy
 msgid "Word copied to clipboard."
-msgstr "コピーしました: %1"
+msgstr ""
 
 #: frontend/ui/widget/inputtext.lua:235
 msgid "Set cursor to start of selection, then hold."
@@ -10520,9 +10536,8 @@ msgid "Set as screensaver"
 msgstr "一枚の画像をスクリーンセイバーとして使用する"
 
 #: frontend/ui/widget/screenshoter.lua:71
-#, fuzzy
 msgid "View"
-msgstr "%1 を閲覧"
+msgstr "閲覧"
 
 #: frontend/ui/widget/screenshoter.lua:94
 msgid ""
@@ -10801,14 +10816,12 @@ msgid "%1: %2"
 msgstr ""
 
 #: plugins/autosuspend.koplugin/main.lua:230
-#, fuzzy
 msgid "%1: disabled"
-msgstr "無効"
+msgstr "%1：無効"
 
 #: plugins/autosuspend.koplugin/main.lua:250
-#, fuzzy
 msgid "Autosuspend timeout: %1"
-msgstr "自動一時停止"
+msgstr "自動サスペンドタイムアウト :%1"
 
 #: plugins/autosuspend.koplugin/main.lua:252
 msgid "Autosuspend timeout"
@@ -10821,9 +10834,8 @@ msgstr "自動一時停止"
 
 #: plugins/autosuspend.koplugin/main.lua:261
 #: plugins/autowarmth.koplugin/main.lua:585
-#, fuzzy
 msgid "Enter time in hours and minutes."
-msgstr "読書タイマーを指定時間経過後に鳴らす (時間:分)"
+msgstr "時と分で時間を入力する 。"
 
 #: plugins/autosuspend.koplugin/main.lua:276
 msgid "Autoshutdown timeout: %1"
@@ -10838,9 +10850,8 @@ msgid "Timeout for autoshutdown"
 msgstr ""
 
 #: plugins/autosuspend.koplugin/main.lua:288
-#, fuzzy
 msgid "Enter time in days and hours."
-msgstr "読書タイマーを指定時間経過後に鳴らす (時間:分)"
+msgstr "日と時で時間を入力する 。"
 
 #: plugins/autosuspend.koplugin/_meta.lua:4
 msgid "Auto suspend"
@@ -11052,9 +11063,8 @@ msgid ""
 msgstr ""
 
 #: plugins/autowarmth.koplugin/main.lua:440
-#, fuzzy
 msgid "Location: %1"
-msgstr "場所"
+msgstr "場所：%1"
 
 #: plugins/autowarmth.koplugin/main.lua:442
 msgid "Location"
@@ -11176,9 +11186,8 @@ msgid "%1: ☾"
 msgstr ""
 
 #: plugins/autowarmth.koplugin/main.lua:688
-#, fuzzy
 msgid "Enter percentage of warmth."
-msgstr "    使用パーセント"
+msgstr "温かさの割合を入力してください。"
 
 #: plugins/autowarmth.koplugin/main.lua:703
 #, fuzzy
@@ -11195,14 +11204,12 @@ msgid "Unset"
 msgstr ""
 
 #: plugins/autowarmth.koplugin/main.lua:747
-#, fuzzy
 msgid "Set warmth and night mode for:"
-msgstr "夜間モード"
+msgstr ""
 
 #: plugins/autowarmth.koplugin/main.lua:748
-#, fuzzy
 msgid "Set night mode for:"
-msgstr "夜間モード"
+msgstr "夜間モード設定する："
 
 #: plugins/autowarmth.koplugin/main.lua:752
 msgid "Sunset and sunrise"
@@ -11222,9 +11229,8 @@ msgstr ""
 
 #: plugins/autowarmth.koplugin/main.lua:852
 #: plugins/autowarmth.koplugin/main.lua:870
-#, fuzzy
 msgid "Solar midnight:"
-msgstr "右"
+msgstr ""
 
 #: plugins/autowarmth.koplugin/main.lua:853
 #: plugins/autowarmth.koplugin/main.lua:858
@@ -11243,9 +11249,8 @@ msgstr ""
 
 #: plugins/autowarmth.koplugin/main.lua:857
 #: plugins/autowarmth.koplugin/main.lua:866
-#, fuzzy
 msgid "Twilight:"
-msgstr "ハイライト"
+msgstr "ハイライト："
 
 #: plugins/autowarmth.koplugin/main.lua:857
 #: plugins/autowarmth.koplugin/main.lua:866
@@ -11287,32 +11292,28 @@ msgid "Consumed:"
 msgstr ""
 
 #: plugins/batterystat.koplugin/main.lua:87
-#, fuzzy
 msgid "Total time:"
-msgstr "合計時間"
+msgstr "合計時間："
 
 #: plugins/batterystat.koplugin/main.lua:89
-#, fuzzy
 msgid "Change per hour:"
-msgstr "SSHポートを変更"
+msgstr ""
 
 #: plugins/batterystat.koplugin/main.lua:93
 msgid "Estimated remaining time:"
 msgstr ""
 
 #: plugins/batterystat.koplugin/main.lua:97
-#, fuzzy
 msgid "Estimated time for charging:"
-msgstr "読む時間"
+msgstr "予想充電時間："
 
 #: plugins/batterystat.koplugin/main.lua:194
 msgid "Are you sure that you want to clear battery statistics?"
 msgstr ""
 
 #: plugins/batterystat.koplugin/main.lua:206
-#, fuzzy
 msgid "Tap to reset the data."
-msgstr "認証に失敗しました"
+msgstr "タップしてデータをリセットします。"
 
 #: plugins/batterystat.koplugin/main.lua:214
 #: plugins/batterystat.koplugin/main.lua:270
@@ -11334,9 +11335,8 @@ msgid "During last charge"
 msgstr "最後の充電中"
 
 #: plugins/batterystat.koplugin/main.lua:255
-#, fuzzy
 msgid "Charged:"
-msgstr "大"
+msgstr "充電："
 
 #: plugins/batterystat.koplugin/main.lua:257
 msgid "Since last charge"
@@ -11365,12 +11365,11 @@ msgstr "フォルダーのショートカット"
 #: plugins/bookshortcuts.koplugin/main.lua:110
 #, fuzzy
 msgid "Folder action: %1"
-msgstr "ディレクトリ:"
+msgstr "ディレクトリ:%1"
 
 #: plugins/bookshortcuts.koplugin/main.lua:133
-#, fuzzy
 msgid "Do you want to delete this shortcut?"
-msgstr "このファイルを削除してもよろしいですか?\n"
+msgstr "このショートカットを削除してもよろしいですか?"
 
 #: plugins/bookshortcuts.koplugin/_meta.lua:5
 msgid "This plugin allows adding a book shortcut to a gesture."
@@ -11593,9 +11592,8 @@ msgid "SD card"
 msgstr ""
 
 #: plugins/calibre.koplugin/search.lua:499
-#, fuzzy
 msgid "No calibre libraries were found"
-msgstr "本は見つかりませんでした。"
+msgstr "calibre ライブラリが見つかりませんでした"
 
 #: plugins/calibre.koplugin/search.lua:501
 msgid "Found %1 calibre libraries with %2 books:%3"
@@ -11607,14 +11605,12 @@ msgid "Invalid password"
 msgstr "FTP パスワード"
 
 #: plugins/calibre.koplugin/wireless.lua:149
-#, fuzzy
 msgid "Disconnected by calibre"
-msgstr "Calibre サーバーに接続できません。"
+msgstr "Calibre サーバーから接続解除しました"
 
 #: plugins/calibre.koplugin/wireless.lua:152
-#, fuzzy
 msgid "Connected to calibre server at %1"
-msgstr "Calibre サーバーに接続できません。"
+msgstr "Calibre サーバーに接続できました：%1"
 
 #: plugins/calibre.koplugin/wireless.lua:212
 msgid ""
@@ -11642,9 +11638,8 @@ msgid ""
 msgstr ""
 
 #: plugins/calibre.koplugin/wireless.lua:574
-#, fuzzy
 msgid "Received file %1/%2: %3"
-msgstr "受信したファイル:"
+msgstr "受信したファイル%1%2：%3"
 
 #: plugins/calibre.koplugin/wireless.lua:601
 msgid ""
@@ -11660,9 +11655,8 @@ msgid "Reconnect"
 msgstr "接続"
 
 #: plugins/calibre.koplugin/wireless.lua:638
-#, fuzzy
 msgid "Deleted file: %1"
-msgstr "ファイル削除"
+msgstr "削除されたファイル：%1"
 
 #: plugins/calibre.koplugin/wireless.lua:640
 msgid ""
@@ -11679,9 +11673,8 @@ msgid "too many interruptions or crashes"
 msgstr "あまりにも多くの中断やクラッシュ"
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:194
-#, fuzzy
 msgid "Book info cache database updated."
-msgstr "本情報キャッシュマネジメント"
+msgstr "書籍情報キャッシュデータが更新されました。"
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:244
 msgid "Failed compacting database: %1"
@@ -11808,9 +11801,8 @@ msgstr ""
 "%3"
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:1001
-#, fuzzy
 msgid "Processed %1 / %2 books."
-msgstr "処理中 %1/%2"
+msgstr "書籍処理しました %1/%2。"
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:1001
 msgid "One extracted successfully."
@@ -12163,9 +12155,8 @@ msgid ""
 msgstr ""
 
 #: plugins/coverimage.koplugin/main.lua:494
-#, fuzzy
 msgid "Cache size"
-msgstr "現在のキャッシュサイズ: "
+msgstr "キャッシュサイズ"
 
 #: plugins/coverimage.koplugin/main.lua:497
 #, fuzzy
@@ -12173,11 +12164,12 @@ msgid "Cover cache folder"
 msgstr "新しいフォルダーを作成"
 
 #: plugins/coverimage.koplugin/main.lua:497
-#, fuzzy
 msgid ""
 "Current cache path:\n"
 "%1"
-msgstr "現在のキャッシュサイズ: "
+msgstr ""
+"現在のキャッシュパス:\n"
+"%1"
 
 #: plugins/coverimage.koplugin/main.lua:501
 #, fuzzy
@@ -12189,9 +12181,8 @@ msgid "The cache contains %1 files and uses %2."
 msgstr ""
 
 #: plugins/coverimage.koplugin/main.lua:509
-#, fuzzy
 msgid "Clear the cover image cache?"
-msgstr "表紙画像:"
+msgstr "表紙画像キャッシュをクリアしますか？"
 
 #: plugins/coverimage.koplugin/main.lua:594
 msgid "Fit to screen, %1 background"
@@ -12202,9 +12193,8 @@ msgid "Size, background and format"
 msgstr ""
 
 #: plugins/coverimage.koplugin/main.lua:619
-#, fuzzy
 msgid "Aspect ratio stretch threshold: %1"
-msgstr "低バッテリー警報の閾値"
+msgstr "縦横比の伸縮しきい値：%1"
 
 #: plugins/coverimage.koplugin/main.lua:624
 msgid ""
@@ -12276,11 +12266,12 @@ msgid "Set image path"
 msgstr "メッセージを設定"
 
 #: plugins/coverimage.koplugin/main.lua:696
-#, fuzzy
 msgid ""
 "Current Cover image path:\n"
 "%1"
-msgstr "スクリーンセイバーの画像"
+msgstr ""
+"現在スクリーンセイバーの画像パス：\n"
+"%1"
 
 #: plugins/coverimage.koplugin/main.lua:700
 #, fuzzy
@@ -12312,9 +12303,8 @@ msgid "Turn on fallback image"
 msgstr ""
 
 #: plugins/coverimage.koplugin/_meta.lua:5
-#, fuzzy
 msgid "Stores cover image to a file."
-msgstr "表紙画像はありません"
+msgstr "表紙画像を保存する。"
 
 #: plugins/docsettingtweak.koplugin/main.lua:47
 #: plugins/docsettingtweak.koplugin/_meta.lua:4
@@ -12494,13 +12484,11 @@ msgid ""
 "Notes can be found in %1/."
 msgstr ""
 "\n"
-"メモが %1/. に見つかりました"
+"メモが %1/. に見つかりました。"
 
 #: plugins/exporter.koplugin/main.lua:670
 msgid "-- Page: %1, added on %2\n"
-msgstr ""
-"-- ページ: %1、%2 に追加\n"
-"\n"
+msgstr "-- ページ: %1、%2 に追加\n"
 
 #: plugins/exporter.koplugin/main.lua:679
 msgid "<An image>"
@@ -12804,7 +12792,7 @@ msgstr ""
 #: plugins/hello.koplugin/main.lua:24 plugins/hello.koplugin/main.lua:34
 #: plugins/hello.koplugin/main.lua:48
 msgid "Hello World"
-msgstr "Hello World"
+msgstr "初めまして"
 
 #: plugins/hello.koplugin/main.lua:40
 msgid "Hello, plugin world"
@@ -13228,11 +13216,12 @@ msgid ""
 msgstr ""
 
 #: plugins/movetoarchive.koplugin/main.lua:137
-#, fuzzy
 msgid ""
 "No archive directory.\n"
 "Do you want to set it now?"
-msgstr "ディレクトリー %1 はすでに存在します。上書きしてもよろしいですか?"
+msgstr ""
+"アーカイブディレクトリがありません。\n"
+"今すぐ設定しますか？"
 
 #: plugins/movetoarchive.koplugin/_meta.lua:5
 msgid "Moves/copies current book to archive folder"
@@ -13258,23 +13247,20 @@ msgid_plural ""
 msgstr[0] ""
 
 #: plugins/newsdownloader.koplugin/feed_source.lua:146
-#, fuzzy
 msgid "Could not initialize feed document"
-msgstr "ファイルを保存できません:\n"
+msgstr "フィードドキュメントを初期化できませんでした"
 
 #: plugins/newsdownloader.koplugin/feed_source.lua:164
-#, fuzzy
 msgid ""
 "%3\n"
 " Downloading item %1 of %2"
-msgstr "ダウンロード中 %1"
+msgstr ""
+"%3\n"
+"ダウンロード中 %2 うちの %1"
 
 #: plugins/newsdownloader.koplugin/feed_source.lua:193
-#, fuzzy
 msgid "Could not get content for: %1"
-msgstr ""
-"フォルダーを作成しました:\n"
-"%1"
+msgstr "コンテンツを取得できませんでした: %1"
 
 #: plugins/newsdownloader.koplugin/feed_source.lua:257
 msgid "(Reason: Couldn't process RSS)"
@@ -13296,16 +13282,14 @@ msgid "Error: chapters contains 0 items"
 msgstr ""
 
 #: plugins/newsdownloader.koplugin/feed_source.lua:330
-#, fuzzy
 msgid "Building EPUB %1"
-msgstr "EPUB の作成中…"
+msgstr "EPUB の作成中%1"
 
 #: plugins/newsdownloader.koplugin/feed_source.lua:335
 #: plugins/newsdownloader.koplugin/feed_source.lua:338
 #: plugins/newsdownloader.koplugin/feed_source.lua:341
-#, fuzzy
 msgid "Building EPUB %1: %2"
-msgstr "EPUB の作成中…"
+msgstr "EPUB の作成中%1：%2"
 
 #: plugins/newsdownloader.koplugin/feed_source.lua:335
 msgid "Adding contents"
@@ -13375,9 +13359,8 @@ msgid "Sync news feeds"
 msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:85
-#, fuzzy
 msgid "Go to downloaders folder?"
-msgstr "ダウンロードフォルダーに移動"
+msgstr "ダウンロードフォルダーに移動しますか？"
 
 #: plugins/newsdownloader.koplugin/main.lua:89
 #, fuzzy
@@ -13399,9 +13382,8 @@ msgid "Delete all downloaded items"
 msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:133
-#, fuzzy
 msgid "Are you sure you want to delete all downloaded items?"
-msgstr "このファイルを削除してもよろしいですか?\n"
+msgstr "ダウンロードしたすべての項目を削除してもよろしいですか？"
 
 #: plugins/newsdownloader.koplugin/main.lua:156
 #, fuzzy
@@ -13446,9 +13428,8 @@ msgid "Skipping downloaded item"
 msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:396
-#, fuzzy
 msgid "Error building EPUB %1"
-msgstr "EPUB の作成中…"
+msgstr "EPUB %1 作成にエラー発生"
 
 #: plugins/newsdownloader.koplugin/main.lua:417
 msgid "Sync complete. No new EPUBs created."
@@ -13481,9 +13462,8 @@ msgid ""
 msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:510
-#, fuzzy
 msgid "Add new feed"
-msgstr "すべてのニュースを削除しました。"
+msgstr "新規フィード"
 
 #: plugins/newsdownloader.koplugin/main.lua:532
 msgid "RSS/Atom feeds"
@@ -13515,19 +13495,16 @@ msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
 msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:623
-#, fuzzy
 msgid "Download full article?"
-msgstr "ファイルをダウンロード"
+msgstr "全文をダウンロードしますか？"
 
 #: plugins/newsdownloader.koplugin/main.lua:625
-#, fuzzy
 msgid "Include images?"
-msgstr "含む"
+msgstr "画像が含まれますか？"
 
 #: plugins/newsdownloader.koplugin/main.lua:627
-#, fuzzy
 msgid "Enable CSS filter?"
-msgstr "WiFi 有効"
+msgstr "CSS filterを有効にしますか？"
 
 #: plugins/newsdownloader.koplugin/main.lua:629
 msgid "Volumize feed?"
@@ -13551,9 +13528,8 @@ msgid "Saving news feed list…"
 msgstr "ログイン中。しばらくお待ちください…"
 
 #: plugins/newsdownloader.koplugin/main.lua:823
-#, fuzzy
 msgid "Could not save news feed config."
-msgstr "ファイルを保存できません:\n"
+msgstr "フィード設定を保存できません。"
 
 #: plugins/newsdownloader.koplugin/main.lua:825
 msgid "News feed config updated successfully."
@@ -13690,9 +13666,8 @@ msgid "Cannot get catalog info from %1"
 msgstr "%1 からカタログ情報を取得できません"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:477
-#, fuzzy
 msgid "Failed to parse the catalog."
-msgstr "認証に失敗しました"
+msgstr "カタログの解析に失敗しました。"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:642
 #: plugins/opds.koplugin/opdsbrowser.lua:716
@@ -13708,7 +13683,6 @@ msgid "The file %1 already exists. Do you want to overwrite it?"
 msgstr "ファイル %1 はすでに存在します。上書きしてもよろしいですか?"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:752
-#, fuzzy
 msgid ""
 "Download folder:\n"
 "%1\n"
@@ -13720,6 +13694,9 @@ msgid ""
 msgstr ""
 "ダウンロード ディレクトリー:\n"
 "%1\n"
+"\n"
+"ダウンロード　ファイル名：\n"
+"%2\n"
 "\n"
 "ダウンロード ファイル種類:"
 
@@ -13772,11 +13749,12 @@ msgid "Line color intensity (1-10). Current value: %1"
 msgstr "線の色の濃さ (1-10)。 現在の値: %1"
 
 #: plugins/perceptionexpander.koplugin/main.lua:131
-#, fuzzy
 msgid ""
 "Increase margin after pages. Current value: %1\n"
 "Set to 0 to disable."
-msgstr "ページの後のマージンを増やします。 現在の値: %1"
+msgstr ""
+"ページ後の余白を増やします。 現在の値: %1\n"
+"「0」にしたら無効にする。"
 
 #: plugins/perceptionexpander.koplugin/main.lua:163
 msgid "Speed reading module - perception expander"
@@ -13821,9 +13799,8 @@ msgid "Delete profile"
 msgstr "ファイル削除"
 
 #: plugins/profiles.koplugin/main.lua:104
-#, fuzzy
 msgid "Do you want to delete this profile?"
-msgstr "このファイルを削除してもよろしいですか?\n"
+msgstr "このプロファイルを削除しますか？"
 
 #: plugins/profiles.koplugin/main.lua:114
 #, fuzzy
@@ -13880,9 +13857,8 @@ msgstr "新しいフォルダー"
 
 #: plugins/readtimer.koplugin/main.lua:95
 #: plugins/readtimer.koplugin/main.lua:145
-#, fuzzy
 msgid "Enter a time in hours and minutes."
-msgstr "読書タイマーを指定時間経過後に鳴らす (時間:分)"
+msgstr "時間を時間と分で入力します。"
 
 #. @translators %1:%2 is a clock time (HH:MM), %3 is a duration
 #: plugins/readtimer.koplugin/main.lua:109
@@ -13893,9 +13869,8 @@ msgid ""
 msgstr ""
 
 #: plugins/readtimer.koplugin/main.lua:116
-#, fuzzy
 msgid "Timer could not be set. The selected time is in the past."
-msgstr "タイマーを設定できませんでした。 現在または過去の時間を指定しています"
+msgstr "タイマーを設定できませんでした。 過去の時間を指定しています。"
 
 #: plugins/readtimer.koplugin/main.lua:143
 msgid "Set timer"
@@ -13928,14 +13903,12 @@ msgid ""
 msgstr ""
 
 #: plugins/SSH.koplugin/main.lua:81
-#, fuzzy
 msgid "Failed to start SSH server."
-msgstr "SSHサーバーを起動"
+msgstr "SSHサーバーの起動に失敗しました。"
 
 #: plugins/SSH.koplugin/main.lua:94
-#, fuzzy
 msgid "SSH server stopped."
-msgstr "SSHサーバー"
+msgstr "SSHサーバーが停止しました。"
 
 #: plugins/SSH.koplugin/main.lua:119
 msgid "Choose SSH port"
@@ -13946,20 +13919,20 @@ msgid "SSH server"
 msgstr "SSHサーバー"
 
 #: plugins/SSH.koplugin/main.lua:170
-#, fuzzy
 msgid "SSH port (%1)"
-msgstr "SSHポート:"
+msgstr "SSHポート(%1)"
 
 #: plugins/SSH.koplugin/main.lua:179
 msgid "SSH public key"
 msgstr "SSH公開鍵"
 
 #: plugins/SSH.koplugin/main.lua:185
-#, fuzzy
 msgid ""
 "Put your public SSH keys in\n"
 "%1"
-msgstr "SSH公開鍵は %1 に追記してください"
+msgstr ""
+"公開 SSH キーを下記に配置します\n"
+"%1"
 
 #: plugins/SSH.koplugin/main.lua:191
 msgid "Login without password (DANGEROUS)"
@@ -14119,9 +14092,8 @@ msgid "A new empty database has been created."
 msgstr "新しい空のデータベースが作成されました。"
 
 #: plugins/statistics.koplugin/main.lua:388
-#, fuzzy
 msgid "Statistics database updated."
-msgstr "標準表示に切り替え"
+msgstr "統計情報が更新されました。"
 
 #: plugins/statistics.koplugin/main.lua:417
 msgid ""
@@ -14213,13 +14185,12 @@ msgid "Current statistics"
 msgstr "本の統計情報をリセット"
 
 #: plugins/statistics.koplugin/main.lua:1085
-#, fuzzy
 msgid ""
 "Reading progress is not available.\n"
 "There is no data for the last week."
 msgstr ""
 "読書の進行状況が利用できません。\n"
-"最新 %1 日のデータがありません。"
+"先週のデータがありません。"
 
 #: plugins/statistics.koplugin/main.lua:1091
 msgid "Time range"
@@ -14361,9 +14332,8 @@ msgstr "日数を表示"
 #: plugins/statistics.koplugin/main.lua:1400
 #: plugins/statistics.koplugin/main.lua:1502
 #: plugins/statistics.koplugin/main.lua:1832
-#, fuzzy
 msgid "Days reading %1"
-msgstr "読書中に設定"
+msgstr "閲覧%1日"
 
 #: plugins/statistics.koplugin/main.lua:1484
 msgid "Title"
@@ -14409,9 +14379,7 @@ msgstr "%1 の本"
 #: plugins/statistics.koplugin/main.lua:1948
 #, fuzzy
 msgid "Do you want to reset statistics for day %1 for this book?"
-msgstr ""
-"本の統計情報をリセットしますか:\n"
-"%1"
+msgstr "Day %1 本の統計情報をリセットしますか?"
 
 #: plugins/statistics.koplugin/main.lua:1960
 #, fuzzy
@@ -14637,9 +14605,8 @@ msgid "Create a new alias"
 msgstr ""
 
 #: plugins/terminal.koplugin/aliases.lua:71
-#, fuzzy
 msgid "Terminal emulator: error saving: %1"
-msgstr "端末エミュレーター"
+msgstr "端末エミュレーター:保存失敗%1"
 
 #: plugins/terminal.koplugin/aliases.lua:86
 #, fuzzy
@@ -14770,9 +14737,8 @@ msgid "Text editor: open last file"
 msgstr "テキストエディタの設定"
 
 #: plugins/texteditor.koplugin/main.lua:113
-#, fuzzy
 msgid "Text font size: %1"
-msgstr "フォントサイズを設定"
+msgstr "フォントサイズ：%1"
 
 #: plugins/texteditor.koplugin/main.lua:124
 #, fuzzy
@@ -15261,9 +15227,8 @@ msgstr ""
 "削除: %2"
 
 #: plugins/wallabag.koplugin/main.lua:711
-#, fuzzy
 msgid "Synchronizing remote deletions…"
-msgstr "同期設定"
+msgstr "リモート削除を同期しています …"
 
 #: plugins/wallabag.koplugin/main.lua:744
 msgid "Processing local files…"
