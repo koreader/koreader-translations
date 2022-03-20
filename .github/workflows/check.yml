@@ -17,6 +17,6 @@ jobs:
       run: |
         SHELLSCRIPT_ERROR=0
         for file in $(git ls-files '*.po'); do
-          msgfmt $file || SHELLSCRIPT_ERROR=1
+          msgfmt "${file}" || SHELLSCRIPT_ERROR=1
         done
         exit "${SHELLSCRIPT_ERROR}"
