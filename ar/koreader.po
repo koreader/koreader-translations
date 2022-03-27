@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-25 03:05+0000\n"
+"POT-Creation-Date: 2022-03-27 15:02+0000\n"
 "PO-Revision-Date: 2021-12-23 13:02+0000\n"
 "Last-Translator: HASAN ALHASAN <hasan7105@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -195,10 +195,8 @@ msgstr "أدخل اسم ملف"
 #: plugins/exporter.koplugin/main.lua:179
 #: plugins/exporter.koplugin/main.lua:250
 #: plugins/gestures.koplugin/main.lua:331 plugins/kosync.koplugin/main.lua:373
-#: plugins/newsdownloader.koplugin/main.lua:134
-#: plugins/newsdownloader.koplugin/main.lua:493
-#: plugins/newsdownloader.koplugin/main.lua:599
-#: plugins/newsdownloader.koplugin/main.lua:753
+#: plugins/newsdownloader.koplugin/main.lua:149
+#: plugins/newsdownloader.koplugin/main.lua:742
 #: plugins/opds.koplugin/opdsbrowser.lua:159
 #: plugins/opds.koplugin/opdsbrowser.lua:210
 #: plugins/opds.koplugin/opdsbrowser.lua:825
@@ -279,7 +277,7 @@ msgstr "تحرير"
 #: frontend/apps/reader/modules/readerstatus.lua:217
 #: frontend/ui/widget/screenshoter.lua:63
 #: plugins/bookshortcuts.koplugin/main.lua:141
-#: plugins/newsdownloader.koplugin/main.lua:135
+#: plugins/newsdownloader.koplugin/main.lua:150
 #: plugins/opds.koplugin/opdsbrowser.lua:1050
 #: plugins/terminal.koplugin/aliases.lua:106
 msgid "Delete"
@@ -368,9 +366,9 @@ msgstr "اختر مجلدًا على الجهاز"
 #: frontend/ui/widget/radiobuttonwidget.lua:27
 #: frontend/ui/widget/screenshoter.lua:49 frontend/ui/widget/spinwidget.lua:36
 #: frontend/ui/widget/textviewer.lua:119 plugins/keepalive.koplugin/main.lua:19
-#: plugins/newsdownloader.koplugin/main.lua:88
-#: plugins/newsdownloader.koplugin/main.lua:214
-#: plugins/newsdownloader.koplugin/main.lua:466
+#: plugins/newsdownloader.koplugin/main.lua:223
+#: plugins/newsdownloader.koplugin/main.lua:314
+#: plugins/newsdownloader.koplugin/main.lua:622
 #: plugins/statistics.koplugin/main.lua:340
 #: plugins/terminal.koplugin/main.lua:377
 msgid "Close"
@@ -405,7 +403,9 @@ msgstr "جارٍ التحميل…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:650
 #: frontend/apps/filemanager/filemanager.lua:1025
-#: frontend/ui/wikipedia.lua:1337 plugins/statistics.koplugin/main.lua:344
+#: frontend/ui/wikipedia.lua:1337
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
+#: plugins/statistics.koplugin/main.lua:344
 #: plugins/texteditor.koplugin/main.lua:403
 msgid "Create"
 msgstr "أنشئ"
@@ -940,8 +940,6 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:689
 #: frontend/apps/reader/modules/readermenu.lua:185
 #: frontend/ui/widget/inputdialog.lua:647
-#: plugins/newsdownloader.koplugin/main.lua:494
-#: plugins/newsdownloader.koplugin/main.lua:754
 #: plugins/statistics.koplugin/main.lua:1969
 #: plugins/statistics.koplugin/main.lua:2142
 #: plugins/statistics.koplugin/main.lua:2181
@@ -1495,7 +1493,7 @@ msgstr "لم يتسنَّ فتحُ آخر ملف"
 #: frontend/apps/reader/modules/readerfooter.lua:1095
 #: frontend/apps/reader/modules/readertoc.lua:947
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:474
-#: plugins/newsdownloader.koplugin/main.lua:119
+#: plugins/newsdownloader.koplugin/main.lua:123
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:934
 #: plugins/texteditor.koplugin/main.lua:109
@@ -2104,7 +2102,7 @@ msgstr "البحث عن الإشارات المرجعية"
 #: frontend/ui/widget/inputdialog.lua:714
 #: plugins/coverimage.koplugin/main.lua:359
 #: plugins/gestures.koplugin/main.lua:338
-#: plugins/newsdownloader.koplugin/main.lua:607
+#: plugins/newsdownloader.koplugin/main.lua:750
 #: plugins/profiles.koplugin/main.lua:73 plugins/SSH.koplugin/main.lua:133
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:576
@@ -8395,7 +8393,7 @@ msgid "Quickstart guide"
 msgstr "دَلِيلُ إرشاداتٍ سريع"
 
 #: frontend/ui/elements/common_info_menu_table.lua:43
-#: plugins/newsdownloader.koplugin/main.lua:152
+#: plugins/newsdownloader.koplugin/main.lua:164
 #: plugins/perceptionexpander.koplugin/main.lua:183
 msgid "About"
 msgstr "عن هذا البرنامج"
@@ -10650,7 +10648,8 @@ msgstr "إيقاف مؤقت"
 #: frontend/ui/trapper.lua:160 frontend/ui/wikipedia.lua:1326
 #: plugins/calibre.koplugin/wireless.lua:218
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
-#: plugins/newsdownloader.koplugin/main.lua:411
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
+#: plugins/newsdownloader.koplugin/main.lua:299
 msgid "Continue"
 msgstr "استمر"
 
@@ -11328,14 +11327,17 @@ msgid "Retrieving image %1 / %2 …"
 msgstr "جارٍ جلب الصورة رقم %1 من أصل %2 …"
 
 #: frontend/ui/wikipedia.lua:1326
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
 msgid "Downloading image %1 failed. Continue anyway?"
 msgstr "فشلت عملية تحميل الصورة رقم %1. هل تريد الاستمرار؟"
 
 #: frontend/ui/wikipedia.lua:1326
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
 msgid "Stop"
 msgstr "أوقف"
 
 #: frontend/ui/wikipedia.lua:1337
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 msgid ""
 "Download did not complete.\n"
 "Do you want to create an EPUB with the already downloaded images?"
@@ -11344,10 +11346,12 @@ msgstr ""
 "هل تريد إنشاء ملف EPUB بالصور التي تم تحميلها؟"
 
 #: frontend/ui/wikipedia.lua:1337
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 msgid "Don't create"
 msgstr "لا تنشئ"
 
 #: frontend/ui/wikipedia.lua:1342
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:506
 msgid "Canceled. Cleaning up…"
 msgstr "اُُلغيت المهمّة. جارٍ التنظيف …"
 
@@ -13964,169 +13968,94 @@ msgstr ""
 msgid "Moves/copies current book to archive folder"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:32
-msgid "Setting up feed %1 of %2."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:70
-msgid ""
-"Could not initialize a feed:\n"
-"\n"
-"%2\n"
-"\n"
-"Please review your feed configuration."
-msgid_plural ""
-"Could not initialize %1 feeds:\n"
-"\n"
-"%2\n"
-"\n"
-"Please review your feed configurations."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:146
-#, fuzzy
-msgid "Could not initialize feed document"
-msgstr "تعذر حفظ تكوين موجز الأخبار."
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:164
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:313
 #, fuzzy
 msgid ""
-"%3\n"
-" Downloading item %1 of %2"
-msgstr "جاري التنزيل %1"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:193
-#, fuzzy
-msgid "Could not get content for: %1"
-msgstr ""
-"فشل إنشاء المجلد:\n"
-"%1"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:257
-msgid "(Reason: Couldn't process RSS)"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:259
-msgid "(Reason: Couldn't process Atom)"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:272
-msgid ""
-"This is just a description of the feed. To download the full article "
-"instead, go to the News Downloader settings and change "
-"'download_full_article' to 'true'."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:314
-msgid "Error: chapters contains 0 items"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:330
-#, fuzzy
-msgid "Building EPUB %1"
+"%1\n"
+"\n"
+"Building EPUB…"
 msgstr "ُجارٍ بناء EPUB…"
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:335
-#: plugins/newsdownloader.koplugin/feed_source.lua:338
-#: plugins/newsdownloader.koplugin/feed_source.lua:341
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:463
 #, fuzzy
-msgid "Building EPUB %1: %2"
-msgstr "ُجارٍ بناء EPUB…"
+msgid ""
+"%1\n"
+"\n"
+"Retrieving image %2 / %3 …"
+msgstr "جارٍ جلب الصورة رقم %1 من أصل %2 …"
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:335
-#, fuzzy
-msgid "Adding contents"
-msgstr "المحتوى"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:338
-#, fuzzy
-msgid "Adding images"
-msgstr "<صورة>"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:341
-msgid "Writing EPUB to disk"
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:508
+msgid ""
+"%1\n"
+"\n"
+"Packing EPUB…"
 msgstr ""
+"%1\n"
+"\n"
+"حَزْمٌ ملفِّ EPUB…"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:77
+#: plugins/newsdownloader.koplugin/feed_view.lua:73
 msgid "URL"
 msgstr "عنوان URL"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:88
+#: plugins/newsdownloader.koplugin/feed_view.lua:84
 msgid "Limit"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:99
+#: plugins/newsdownloader.koplugin/feed_view.lua:95
 msgid "Download full article"
 msgstr "تحميل المقال كاملا"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:110
+#: plugins/newsdownloader.koplugin/feed_view.lua:106
 msgid "Include images"
 msgstr "تضمين الصور"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:121
+#: plugins/newsdownloader.koplugin/feed_view.lua:117
 msgid "Enable filter"
 msgstr "تمكين عامل التصفية"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:133
+#: plugins/newsdownloader.koplugin/feed_view.lua:129
 msgid "Filter element"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:144
-msgid "Volumize feed"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_view.lua:166
+#: plugins/newsdownloader.koplugin/feed_view.lua:151
 msgid "Delete feed"
 msgstr "حذف الخلاصة"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:179
-#, fuzzy
-msgid "Reset feed history"
-msgstr "إزالة من سجلّ التأريخ"
-
-#: plugins/newsdownloader.koplugin/main.lua:51
+#: plugins/newsdownloader.koplugin/main.lua:87
 msgid "News downloader (RSS/Atom)"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:63
+#: plugins/newsdownloader.koplugin/main.lua:99
 msgid "Go to news folder"
 msgstr "إذهب إلى مجلد الأخبار"
 
-#: plugins/newsdownloader.koplugin/main.lua:69
+#: plugins/newsdownloader.koplugin/main.lua:105
 msgid "Sync news feeds"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:85
-#, fuzzy
-msgid "Go to downloaders folder?"
-msgstr "إذهب إلى مجلّد التنزيلات"
-
-#: plugins/newsdownloader.koplugin/main.lua:89
-msgid "Go to downloads"
-msgstr "انتقل إلى التنزيلات"
-
-#: plugins/newsdownloader.koplugin/main.lua:108
+#: plugins/newsdownloader.koplugin/main.lua:112
 msgid "Edit news feeds"
 msgstr "تحرير موجز الأخبار"
 
-#: plugins/newsdownloader.koplugin/main.lua:122
+#: plugins/newsdownloader.koplugin/main.lua:126
 msgid "Set download folder"
 msgstr "تعيين مجلد التنزيل"
 
-#: plugins/newsdownloader.koplugin/main.lua:127
+#: plugins/newsdownloader.koplugin/main.lua:131
+#, fuzzy
+msgid "Never download images"
+msgstr "تعيين مجلد التنزيل"
+
+#: plugins/newsdownloader.koplugin/main.lua:142
 msgid "Delete all downloaded items"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:133
+#: plugins/newsdownloader.koplugin/main.lua:148
 msgid "Are you sure you want to delete all downloaded items?"
 msgstr "هل تريد بالتأكيد حذف جميع العناصر التي تم تنزيلها؟"
 
-#: plugins/newsdownloader.koplugin/main.lua:156
+#: plugins/newsdownloader.koplugin/main.lua:168
 msgid ""
 "News downloader retrieves RSS and Atom news entries and stores them to:\n"
 "%1\n"
@@ -14136,9 +14065,9 @@ msgid ""
 "the Edit Feeds menu item."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:206
-#: plugins/newsdownloader.koplugin/main.lua:675
-#: plugins/newsdownloader.koplugin/main.lua:778
+#: plugins/newsdownloader.koplugin/main.lua:215
+#: plugins/newsdownloader.koplugin/main.lua:815
+#: plugins/newsdownloader.koplugin/main.lua:947
 msgid ""
 "Invalid configuration file. Detailed error message:\n"
 "%1"
@@ -14146,140 +14075,186 @@ msgstr ""
 "ملفُّ الإعدادات غير صالح. رسالة الخطأ التفصيليّة:\n"
 "%1"
 
-#: plugins/newsdownloader.koplugin/main.lua:213
+#: plugins/newsdownloader.koplugin/main.lua:222
 msgid ""
 "Feed list is empty. If you want to download news, you'll have to add a feed "
 "first."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:215
+#: plugins/newsdownloader.koplugin/main.lua:224
 msgid "Edit feed list"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:295
-msgid "Skipping downloaded item"
+#: plugins/newsdownloader.koplugin/main.lua:257
+msgid ""
+"Processing %1/%2:\n"
+"%3"
+msgstr ""
+"تتم الآن معالجة: %1/%2: \n"
+"%3"
+
+#: plugins/newsdownloader.koplugin/main.lua:276
+msgid "Downloading news finished."
+msgstr "تم الانتهاء من تنزيل الأخبار."
+
+#: plugins/newsdownloader.koplugin/main.lua:290
+msgid "Downloading news finished with errors."
+msgstr "انتهى تنزيل الأخبار مع وجود أخطاء."
+
+#: plugins/newsdownloader.koplugin/main.lua:294
+msgid ""
+"Could not process some feeds.\n"
+"Unsupported format in: %1. Please\n"
+"review your feed configuration file."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:396
+#: plugins/newsdownloader.koplugin/main.lua:311
+msgid "Go to download folder?"
+msgstr "إذهب إلى مجلّد التنزيلات؟"
+
+#: plugins/newsdownloader.koplugin/main.lua:315
+msgid "Go to downloads"
+msgstr "انتقل إلى التنزيلات"
+
+#: plugins/newsdownloader.koplugin/main.lua:354
+#: plugins/newsdownloader.koplugin/main.lua:415
 #, fuzzy
-msgid "Error building EPUB %1"
-msgstr "ُجارٍ بناء EPUB…"
+msgid "(Reason: Failed to download content)"
+msgstr "إذهب إلى مجلّد التنزيلات"
+
+#: plugins/newsdownloader.koplugin/main.lua:356
+msgid "(Reason: Error during feed deserialization)"
+msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:417
-msgid "Sync complete. No new EPUBs created."
+msgid "(Reason: Couldn't process RSS)"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:418
-msgid "Sync complete. EPUBs created: %1"
+#: plugins/newsdownloader.koplugin/main.lua:419
+msgid "(Reason: Couldn't process Atom)"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:439
+#: plugins/newsdownloader.koplugin/main.lua:482
 msgid ""
-"All downloaded news feed items deleted. To download these again in the "
-"future, reset the feed history."
+"%1\n"
+"\n"
+"Fetching article %2/%3:"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:465
+#: plugins/newsdownloader.koplugin/main.lua:548
+#: plugins/newsdownloader.koplugin/main.lua:565
+msgid ""
+"%1\n"
+"%2"
+msgstr ""
+"%1\n"
+"%2"
+
+#: plugins/newsdownloader.koplugin/main.lua:566
+msgid ""
+"This is just a description of the feed. To download the full article "
+"instead, go to the News Downloader settings and change "
+"'download_full_article' to 'true'."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:594
+msgid "All downloaded news feed items deleted."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:616
+msgid "Loading news feed list…"
+msgstr "جارٍ تحميل قائمة موجز الأخبار …"
+
+#: plugins/newsdownloader.koplugin/main.lua:621
 msgid "Could not open feed list. Feeds configuration file is invalid."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:467
+#: plugins/newsdownloader.koplugin/main.lua:623
 msgid "View file"
 msgstr "عرض الملف"
 
-#: plugins/newsdownloader.koplugin/main.lua:492
-#: plugins/newsdownloader.koplugin/main.lua:752
-msgid ""
-"Are you sure you want to reset the feed history? Proceeding will cause items "
-"to be re-downloaded next time you sync."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:510
+#: plugins/newsdownloader.koplugin/main.lua:658
 msgid "Add new feed"
 msgstr "إضافة خلاصة جديدة"
 
-#: plugins/newsdownloader.koplugin/main.lua:532
+#: plugins/newsdownloader.koplugin/main.lua:680
 msgid "RSS/Atom feeds"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:547
+#: plugins/newsdownloader.koplugin/main.lua:695
 msgid "Edit Feed"
 msgstr "تحرير الخلاصة"
 
-#: plugins/newsdownloader.koplugin/main.lua:576
+#: plugins/newsdownloader.koplugin/main.lua:719
 msgid "Edit feed URL"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:579
+#: plugins/newsdownloader.koplugin/main.lua:722
 msgid "Edit feed limit"
 msgstr "تحرير حد الخلاصة"
 
-#: plugins/newsdownloader.koplugin/main.lua:580
+#: plugins/newsdownloader.koplugin/main.lua:723
 msgid "Set to 0 for no limit to how many items are downloaded"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:583
+#: plugins/newsdownloader.koplugin/main.lua:726
 msgid "Edit filter element."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:584
+#: plugins/newsdownloader.koplugin/main.lua:727
 msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:623
+#: plugins/newsdownloader.koplugin/main.lua:766
 msgid "Download full article?"
 msgstr "تحميل المقال كاملا؟"
 
-#: plugins/newsdownloader.koplugin/main.lua:625
+#: plugins/newsdownloader.koplugin/main.lua:768
 msgid "Include images?"
 msgstr "تضمين الصور؟"
 
-#: plugins/newsdownloader.koplugin/main.lua:627
+#: plugins/newsdownloader.koplugin/main.lua:770
 msgid "Enable CSS filter?"
 msgstr "تمكين عامل تصفية CSS؟"
 
-#: plugins/newsdownloader.koplugin/main.lua:629
-msgid "Volumize feed?"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:635
+#: plugins/newsdownloader.koplugin/main.lua:776
 #: plugins/profiles.koplugin/main.lua:105
 #: plugins/texteditor.koplugin/main.lua:338
 msgid "Yes"
 msgstr "نعم"
 
-#: plugins/newsdownloader.koplugin/main.lua:640
+#: plugins/newsdownloader.koplugin/main.lua:781
 #: plugins/profiles.koplugin/main.lua:106
 #: plugins/texteditor.koplugin/main.lua:339
 msgid "No"
 msgstr "لا"
 
-#: plugins/newsdownloader.koplugin/main.lua:817
+#: plugins/newsdownloader.koplugin/main.lua:976
 msgid "Saving news feed list…"
 msgstr "جارٍ حفظ قائمة موجز الأخبار …"
 
-#: plugins/newsdownloader.koplugin/main.lua:823
+#: plugins/newsdownloader.koplugin/main.lua:982
 msgid "Could not save news feed config."
 msgstr "تعذر حفظ تكوين موجز الأخبار."
 
-#: plugins/newsdownloader.koplugin/main.lua:825
+#: plugins/newsdownloader.koplugin/main.lua:984
 msgid "News feed config updated successfully."
 msgstr "تم تحديث تكوين موجز الأخبار بنجاح."
 
-#: plugins/newsdownloader.koplugin/main.lua:840
+#: plugins/newsdownloader.koplugin/main.lua:996
 msgid "Config: %1"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:861
+#: plugins/newsdownloader.koplugin/main.lua:1017
 msgid "Configuration saved"
 msgstr "تم حفظ الإعدادات"
 
-#: plugins/newsdownloader.koplugin/main.lua:863
-#: plugins/newsdownloader.koplugin/main.lua:866
+#: plugins/newsdownloader.koplugin/main.lua:1019
+#: plugins/newsdownloader.koplugin/main.lua:1022
 msgid "Configuration invalid: %1"
 msgstr "الإعداد غير صحيح: %1"
 
-#: plugins/newsdownloader.koplugin/main.lua:869
+#: plugins/newsdownloader.koplugin/main.lua:1025
 msgid "Configuration empty"
 msgstr "التكوين فارغ"
 
@@ -16032,6 +16007,50 @@ msgstr "المس الزاوية اليمنى السفلى"
 msgid "Tap the upper right corner"
 msgstr "المس الزاوية اليمنى العليا"
 
+#, fuzzy
+#~ msgid "Could not initialize feed document"
+#~ msgstr "تعذر حفظ تكوين موجز الأخبار."
+
+#, fuzzy
+#~ msgid ""
+#~ "%3\n"
+#~ " Downloading item %1 of %2"
+#~ msgstr "جاري التنزيل %1"
+
+#, fuzzy
+#~ msgid "Could not get content for: %1"
+#~ msgstr ""
+#~ "فشل إنشاء المجلد:\n"
+#~ "%1"
+
+#, fuzzy
+#~ msgid "Building EPUB %1"
+#~ msgstr "ُجارٍ بناء EPUB…"
+
+#, fuzzy
+#~ msgid "Building EPUB %1: %2"
+#~ msgstr "ُجارٍ بناء EPUB…"
+
+#, fuzzy
+#~ msgid "Adding contents"
+#~ msgstr "المحتوى"
+
+#, fuzzy
+#~ msgid "Adding images"
+#~ msgstr "<صورة>"
+
+#, fuzzy
+#~ msgid "Reset feed history"
+#~ msgstr "إزالة من سجلّ التأريخ"
+
+#, fuzzy
+#~ msgid "Go to downloaders folder?"
+#~ msgstr "إذهب إلى مجلّد التنزيلات"
+
+#, fuzzy
+#~ msgid "Error building EPUB %1"
+#~ msgstr "ُجارٍ بناء EPUB…"
+
 #~ msgid "Download file"
 #~ msgstr "تحميل الملف"
 
@@ -16127,41 +16146,6 @@ msgstr "المس الزاوية اليمنى العليا"
 #~ msgstr ""
 #~ "تمّ تحميل ملفّاتٍ عددها %1 من Dropbox إلى ذاكرة الجهاز بنجاح. \n"
 #~ "فشلت محاولة تحميل ملفّاتٍ عددها %2."
-
-#~ msgid ""
-#~ "%1\n"
-#~ "\n"
-#~ "Packing EPUB…"
-#~ msgstr ""
-#~ "%1\n"
-#~ "\n"
-#~ "حَزْمٌ ملفِّ EPUB…"
-
-#~ msgid ""
-#~ "Processing %1/%2:\n"
-#~ "%3"
-#~ msgstr ""
-#~ "تتم الآن معالجة: %1/%2: \n"
-#~ "%3"
-
-#~ msgid "Downloading news finished."
-#~ msgstr "تم الانتهاء من تنزيل الأخبار."
-
-#~ msgid "Downloading news finished with errors."
-#~ msgstr "انتهى تنزيل الأخبار مع وجود أخطاء."
-
-#~ msgid "Go to download folder?"
-#~ msgstr "إذهب إلى مجلّد التنزيلات؟"
-
-#~ msgid ""
-#~ "%1\n"
-#~ "%2"
-#~ msgstr ""
-#~ "%1\n"
-#~ "%2"
-
-#~ msgid "Loading news feed list…"
-#~ msgstr "جارٍ تحميل قائمة موجز الأخبار …"
 
 #~ msgid "Add new OPDS catalog"
 #~ msgstr "إضافة دليل OPDS جدبد"
