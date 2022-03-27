@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-25 03:05+0000\n"
-"PO-Revision-Date: 2022-03-26 17:44+0800\n"
+"POT-Creation-Date: 2022-03-27 15:02+0000\n"
+"PO-Revision-Date: 2022-03-27 04:33+0800\n"
 "Last-Translator: Octavianx.weblate <reinhard.news@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
 "koreader/ja/>\n"
@@ -205,10 +205,8 @@ msgstr "ファイル名を入力"
 #: plugins/exporter.koplugin/main.lua:179
 #: plugins/exporter.koplugin/main.lua:250
 #: plugins/gestures.koplugin/main.lua:331 plugins/kosync.koplugin/main.lua:373
-#: plugins/newsdownloader.koplugin/main.lua:134
-#: plugins/newsdownloader.koplugin/main.lua:493
-#: plugins/newsdownloader.koplugin/main.lua:599
-#: plugins/newsdownloader.koplugin/main.lua:753
+#: plugins/newsdownloader.koplugin/main.lua:149
+#: plugins/newsdownloader.koplugin/main.lua:742
 #: plugins/opds.koplugin/opdsbrowser.lua:159
 #: plugins/opds.koplugin/opdsbrowser.lua:210
 #: plugins/opds.koplugin/opdsbrowser.lua:825
@@ -289,7 +287,7 @@ msgstr "編集"
 #: frontend/apps/reader/modules/readerstatus.lua:217
 #: frontend/ui/widget/screenshoter.lua:63
 #: plugins/bookshortcuts.koplugin/main.lua:141
-#: plugins/newsdownloader.koplugin/main.lua:135
+#: plugins/newsdownloader.koplugin/main.lua:150
 #: plugins/opds.koplugin/opdsbrowser.lua:1050
 #: plugins/terminal.koplugin/aliases.lua:106
 msgid "Delete"
@@ -367,9 +365,9 @@ msgstr "ローカルフォルダーを選択"
 #: frontend/ui/widget/radiobuttonwidget.lua:27
 #: frontend/ui/widget/screenshoter.lua:49 frontend/ui/widget/spinwidget.lua:36
 #: frontend/ui/widget/textviewer.lua:119 plugins/keepalive.koplugin/main.lua:19
-#: plugins/newsdownloader.koplugin/main.lua:88
-#: plugins/newsdownloader.koplugin/main.lua:214
-#: plugins/newsdownloader.koplugin/main.lua:466
+#: plugins/newsdownloader.koplugin/main.lua:223
+#: plugins/newsdownloader.koplugin/main.lua:314
+#: plugins/newsdownloader.koplugin/main.lua:622
 #: plugins/statistics.koplugin/main.lua:340
 #: plugins/terminal.koplugin/main.lua:377
 msgid "Close"
@@ -401,7 +399,9 @@ msgstr "アップロード中…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:650
 #: frontend/apps/filemanager/filemanager.lua:1025
-#: frontend/ui/wikipedia.lua:1337 plugins/statistics.koplugin/main.lua:344
+#: frontend/ui/wikipedia.lua:1337
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
+#: plugins/statistics.koplugin/main.lua:344
 #: plugins/texteditor.koplugin/main.lua:403
 msgid "Create"
 msgstr "作成"
@@ -924,8 +924,6 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:689
 #: frontend/apps/reader/modules/readermenu.lua:185
 #: frontend/ui/widget/inputdialog.lua:647
-#: plugins/newsdownloader.koplugin/main.lua:494
-#: plugins/newsdownloader.koplugin/main.lua:754
 #: plugins/statistics.koplugin/main.lua:1969
 #: plugins/statistics.koplugin/main.lua:2142
 #: plugins/statistics.koplugin/main.lua:2181
@@ -1479,7 +1477,7 @@ msgstr "最後に開いた文書を開くことができません"
 #: frontend/apps/reader/modules/readerfooter.lua:1095
 #: frontend/apps/reader/modules/readertoc.lua:947
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:474
-#: plugins/newsdownloader.koplugin/main.lua:119
+#: plugins/newsdownloader.koplugin/main.lua:123
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:934
 #: plugins/texteditor.koplugin/main.lua:109
@@ -2078,7 +2076,7 @@ msgstr "ブックマークを検索"
 #: frontend/ui/widget/inputdialog.lua:714
 #: plugins/coverimage.koplugin/main.lua:359
 #: plugins/gestures.koplugin/main.lua:338
-#: plugins/newsdownloader.koplugin/main.lua:607
+#: plugins/newsdownloader.koplugin/main.lua:750
 #: plugins/profiles.koplugin/main.lua:73 plugins/SSH.koplugin/main.lua:133
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:576
@@ -3862,9 +3860,8 @@ msgid ""
 msgstr ""
 
 #: frontend/apps/reader/modules/readerpagemap.lua:355
-#, fuzzy
 msgid "Renderer"
-msgstr "描画モード"
+msgstr "レンダラ"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:355
 msgid "Renderer (★)"
@@ -4168,20 +4165,19 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readersearch.lua:254
 msgid "No results on preceding pages"
-msgstr ""
+msgstr "前のページには結果がありません"
 
 #: frontend/apps/reader/modules/readersearch.lua:256
-#, fuzzy
 msgid "No results on following pages"
-msgstr "続く段落の最初の文字を字下げしない"
+msgstr "以降のページには結果がありません"
 
 #: frontend/apps/reader/modules/readersearch.lua:372
 msgid "Unspecified error"
-msgstr ""
+msgstr "不明なエラー"
 
 #: frontend/apps/reader/modules/readersearch.lua:380
 msgid "Too many hits"
-msgstr ""
+msgstr "当たる数が多すぎます"
 
 #: frontend/apps/reader/modules/readerstatus.lua:37
 #: frontend/apps/reader/modules/readerstatus.lua:81 frontend/dispatcher.lua:125
@@ -4202,7 +4198,7 @@ msgstr "読了に設定"
 #: frontend/apps/reader/modules/readerstatus.lua:91
 #: frontend/ui/elements/common_settings_menu_table.lua:576
 msgid "Go to beginning"
-msgstr ""
+msgstr "先頭へ移動"
 
 #: frontend/apps/reader/modules/readerstatus.lua:98
 #: frontend/ui/elements/common_settings_menu_table.lua:564
@@ -5748,18 +5744,16 @@ msgid "Toggle hold corners"
 msgstr ""
 
 #: frontend/dispatcher.lua:80
-#, fuzzy
 msgid "Toggle orientation"
-msgstr "画面の向き"
+msgstr "方向を切り替え"
 
 #: frontend/dispatcher.lua:81
-#, fuzzy
 msgid "Invert rotation"
-msgstr "回転しない"
+msgstr "回転を反転する"
 
 #: frontend/dispatcher.lua:82
 msgid "Rotate by 90° CW"
-msgstr ""
+msgstr "時計回りに90°回します"
 
 #: frontend/dispatcher.lua:85 plugins/statistics.koplugin/main.lua:1069
 msgid "Reading progress"
@@ -5767,12 +5761,11 @@ msgstr "読書進行状況"
 
 #: frontend/dispatcher.lua:93
 msgid "Show menu"
-msgstr ""
+msgstr "メニュー項目を表示"
 
 #: frontend/dispatcher.lua:95
-#, fuzzy
 msgid "Screenshot"
-msgstr "スクリーン"
+msgstr "スクリーンショット"
 
 #: frontend/dispatcher.lua:98
 msgid "Folder up"
@@ -5783,19 +5776,16 @@ msgid "Show plus menu"
 msgstr ""
 
 #: frontend/dispatcher.lua:100
-#, fuzzy
 msgid "Toggle select mode"
-msgstr "モードの切り替え"
+msgstr "選択モードの切り替え"
 
 #: frontend/dispatcher.lua:101
-#, fuzzy
 msgid "Refresh content"
-msgstr "更新"
+msgstr "コンテンツを更新"
 
 #: frontend/dispatcher.lua:105
-#, fuzzy
 msgid "Toggle status bar"
-msgstr "ステータスバー"
+msgstr "ステータスバーの切り替え"
 
 #: frontend/dispatcher.lua:106
 msgid "Previous chapter"
@@ -5806,14 +5796,12 @@ msgid "Next chapter"
 msgstr "次の章"
 
 #: frontend/dispatcher.lua:108
-#, fuzzy
 msgid "First page"
-msgstr "最初に開いた"
+msgstr "最初のページ"
 
 #: frontend/dispatcher.lua:109
-#, fuzzy
 msgid "Last page"
-msgstr "最後に開いた"
+msgstr "最後のページ"
 
 #: frontend/dispatcher.lua:110
 msgid "Previous bookmark"
@@ -5907,9 +5895,8 @@ msgid "Toggle reflow"
 msgstr ""
 
 #: frontend/dispatcher.lua:145
-#, fuzzy
 msgid "Zoom mode"
-msgstr "ページに合わせてズーム"
+msgstr "ズームモード"
 
 #: frontend/dispatcher.lua:146
 msgid "Change zoom factor"
@@ -5927,14 +5914,13 @@ msgid "Font Size"
 msgstr "フォントサイズ"
 
 #: frontend/dispatcher.lua:472
-#, fuzzy
 msgid "Unknown item"
-msgstr "不明な接続"
+msgstr "不明な項目"
 
 #: frontend/dispatcher.lua:481
 msgctxt "Number placeholder"
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #: frontend/dispatcher.lua:581
 msgid "If called by a gesture the amount of the gesture will be used"
@@ -6349,19 +6335,16 @@ msgid "Font Hinting"
 msgstr "フォントヒンティング"
 
 #: frontend/ui/data/creoptions.lua:591
-#, fuzzy
 msgctxt "Font hinting"
 msgid "off"
 msgstr "オフ"
 
 #: frontend/ui/data/creoptions.lua:591
-#, fuzzy
 msgctxt "Font hinting"
 msgid "native"
 msgstr "ネイティブ"
 
 #: frontend/ui/data/creoptions.lua:591
-#, fuzzy
 msgctxt "Font hinting"
 msgid "auto"
 msgstr "自動"
@@ -6601,18 +6584,18 @@ msgid "Justify all elements"
 msgstr "全ての対象を両端揃え"
 
 #: frontend/ui/data/css_tweaks.lua:174
-#, fuzzy
 msgid ""
 "Text justification is the default, but it may be overridden by publisher "
 "styles. This will force justification on all elements, some of which may not "
 "be centered as expected."
 msgstr ""
-"標準は段落の最初の行の字下げをしますが、書籍により設定が上書きされます。これ"
-"はKOReaderの標準設定に反映されます。"
+"テキストの両端揃えはデフォルトですが、原稿のスタイルによって上書きされる場合"
+"があります。 これにより、全ての対象に両端揃えを適用する。一部のは、予想どおり"
+"にセンタリングされていない可能性があります。"
 
 #: frontend/ui/data/css_tweaks.lua:186
 msgid "Center headings"
-msgstr ""
+msgstr "見出し中央配置"
 
 #: frontend/ui/data/css_tweaks.lua:192
 msgid "Text direction"
@@ -6866,7 +6849,7 @@ msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:417
 msgid "Paragraphs"
-msgstr ""
+msgstr "段落"
 
 #: frontend/ui/data/css_tweaks.lua:420
 msgid "Generic web browser paragraph style"
@@ -6975,17 +6958,16 @@ msgid "Ignore horizontal paragraph padding"
 msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:516
-#, fuzzy
 msgid "List items"
-msgstr "アイテム数を設定"
+msgstr "リスト項目"
 
 #: frontend/ui/data/css_tweaks.lua:519
 msgid "Force bullets with unordered lists"
-msgstr ""
+msgstr "順序なしリストに強制的にブレットを付ける"
 
 #: frontend/ui/data/css_tweaks.lua:524
 msgid "Force decimal numbers with ordered lists"
-msgstr ""
+msgstr "順序付きリストに強制的に番号を付ける"
 
 #: frontend/ui/data/css_tweaks.lua:530
 msgid "Tables"
@@ -7422,9 +7404,8 @@ msgid "Set vertical zoom overlap (between lines)."
 msgstr ""
 
 #: frontend/ui/data/koptoptions.lua:177
-#, fuzzy
 msgid "Fit"
-msgstr "金"
+msgstr "合わせ"
 
 #: frontend/ui/data/koptoptions.lua:182
 msgid "full"
@@ -7432,12 +7413,11 @@ msgstr "フル"
 
 #: frontend/ui/data/koptoptions.lua:182
 msgid "width"
-msgstr ""
+msgstr "幅"
 
 #: frontend/ui/data/koptoptions.lua:182
-#, fuzzy
 msgid "height"
-msgstr "フォントウェイト"
+msgstr "高さ"
 
 #: frontend/ui/data/koptoptions.lua:190
 msgid "Set how the page should be resized to fit the screen."
@@ -7452,9 +7432,8 @@ msgid "Columns"
 msgstr "カラム"
 
 #: frontend/ui/data/koptoptions.lua:200
-#, fuzzy
 msgid "Number"
-msgstr "11月"
+msgstr "番号"
 
 #: frontend/ui/data/koptoptions.lua:227
 msgid "Set the number of columns or rows into which to split the page."
@@ -7475,14 +7454,12 @@ msgid "content"
 msgstr ""
 
 #: frontend/ui/data/koptoptions.lua:275
-#, fuzzy
 msgid "columns"
-msgstr "カラム"
+msgstr "列"
 
 #: frontend/ui/data/koptoptions.lua:275
-#, fuzzy
 msgid "rows"
-msgstr "参照"
+msgstr "行"
 
 #: frontend/ui/data/koptoptions.lua:275
 msgid "manual"
@@ -7881,7 +7858,7 @@ msgid "Quickstart guide"
 msgstr "クイックスタートガイド"
 
 #: frontend/ui/elements/common_info_menu_table.lua:43
-#: plugins/newsdownloader.koplugin/main.lua:152
+#: plugins/newsdownloader.koplugin/main.lua:164
 #: plugins/perceptionexpander.koplugin/main.lua:183
 msgid "About"
 msgstr "説明"
@@ -8113,9 +8090,8 @@ msgid "disable"
 msgstr "無効"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:369
-#, fuzzy
 msgid "Back to exit: %1"
-msgstr "本のタイトル (%1%)"
+msgstr "「戻り」をすると終了：%1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:382
 #: frontend/ui/elements/common_settings_menu_table.lua:410
@@ -8425,51 +8401,44 @@ msgid "Gray out"
 msgstr "グレーアウト"
 
 #: frontend/ui/elements/page_turns.lua:11
-#, fuzzy
 msgid "Left/right"
-msgstr "右"
+msgstr "左右"
 
 #: frontend/ui/elements/page_turns.lua:12
-#, fuzzy
 msgid "Top/bottom"
-msgstr "下方のマージン"
+msgstr "天地"
 
 #: frontend/ui/elements/page_turns.lua:32
 msgid "Forward tap zone size: %1%"
-msgstr ""
+msgstr "タップ領域寸法を転送"
 
 #: frontend/ui/elements/page_turns.lua:42
 msgid "Forward tap zone width"
-msgstr ""
+msgstr "タップ領域の幅を転送"
 
 #: frontend/ui/elements/page_turns.lua:42
-#, fuzzy
 msgid "Forward tap zone height"
-msgstr "フォントと行の高さ"
+msgstr "タップ領域の高さを転送"
 
 #: frontend/ui/elements/page_turns.lua:43
-#, fuzzy
 msgid "Percentage of screen width"
-msgstr "パーセント完了"
+msgstr "画面幅の比率"
 
 #: frontend/ui/elements/page_turns.lua:43
-#, fuzzy
 msgid "Percentage of screen height"
-msgstr "パーセント完了"
+msgstr "画面高さの比率"
 
 #: frontend/ui/elements/page_turns.lua:58
-#, fuzzy
 msgid "Page turns"
-msgstr "ページのトリミング"
+msgstr "ページめぐり"
 
 #: frontend/ui/elements/page_turns.lua:61
 msgid "With taps"
-msgstr ""
+msgstr "タプで"
 
 #: frontend/ui/elements/page_turns.lua:70
-#, fuzzy
 msgid "With swipes"
-msgstr "WiFi 無効"
+msgstr "スワイプで"
 
 #: frontend/ui/elements/page_turns.lua:81
 msgid "Tap zones: %1"
@@ -9051,9 +9020,8 @@ msgid "turn off"
 msgstr "オフ"
 
 #: frontend/ui/network/manager.lua:550
-#, fuzzy
 msgid "Action when done with Wi-Fi: %1"
-msgstr "Wi-Fi がオフの時のアクション: %1"
+msgstr "Wi-Fi が完了の時のアクション: %1"
 
 #: frontend/ui/network/manager.lua:564
 msgid "Dismiss Wi-Fi scan popup after connection"
@@ -9828,18 +9796,16 @@ msgid "Copy main translation"
 msgstr ""
 
 #: frontend/ui/translator.lua:602 frontend/ui/widget/inputtext.lua:191
-#, fuzzy
 msgid "Copy all"
-msgstr "コピー"
+msgstr "全てのコピー"
 
 #: frontend/ui/translator.lua:615
 msgid "Save main translation to note"
 msgstr ""
 
 #: frontend/ui/translator.lua:627
-#, fuzzy
 msgid "Save all to note"
-msgstr "一度にすべてを表示"
+msgstr "全てをメモに保存"
 
 #: frontend/ui/translator.lua:642
 msgid "Translation from %1"
@@ -9852,7 +9818,8 @@ msgstr "一時停止"
 #: frontend/ui/trapper.lua:160 frontend/ui/wikipedia.lua:1326
 #: plugins/calibre.koplugin/wireless.lua:218
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
-#: plugins/newsdownloader.koplugin/main.lua:411
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
+#: plugins/newsdownloader.koplugin/main.lua:299
 msgid "Continue"
 msgstr "続行"
 
@@ -10051,7 +10018,7 @@ msgstr ""
 #. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
 #: frontend/ui/widget/filechooser.lua:550
 msgid "%1 ~Unsupported"
-msgstr ""
+msgstr "%1 ~未対応"
 
 #: frontend/ui/widget/filechooser.lua:589
 msgid "Always open '%2' with %1?"
@@ -10063,7 +10030,7 @@ msgstr "常に %2 のファイルを %1 で開きますか?"
 
 #: frontend/ui/widget/filechooser.lua:624
 msgid "Reset default"
-msgstr ""
+msgstr "デフォルトにリセット"
 
 #: frontend/ui/widget/filechooser.lua:635
 msgid "Open %1 with:"
@@ -10115,11 +10082,11 @@ msgstr "回転"
 
 #: frontend/ui/widget/inputdialog.lua:385
 msgid "Read only"
-msgstr ""
+msgstr "読取専用"
 
 #: frontend/ui/widget/inputdialog.lua:387
 msgid "Not editable"
-msgstr ""
+msgstr "編集不可能"
 
 #: frontend/ui/widget/inputdialog.lua:659
 msgid "Text reset"
@@ -10145,26 +10112,24 @@ msgstr "保存していない変更があります。"
 
 #: frontend/ui/widget/inputdialog.lua:706
 msgid "Discard"
-msgstr ""
+msgstr "破棄"
 
 #: frontend/ui/widget/inputdialog.lua:711
 msgid "Changes discarded"
-msgstr ""
+msgstr "変更は破棄されました"
 
 #: frontend/ui/widget/inputdialog.lua:773
 msgid "Find"
 msgstr "検索"
 
 #: frontend/ui/widget/inputdialog.lua:794
-#, fuzzy
 msgid "Find first"
-msgstr "ファイルを検索"
+msgstr "最初に検索"
 
 #: frontend/ui/widget/inputdialog.lua:805
 #: frontend/ui/widget/inputdialog.lua:828
-#, fuzzy
 msgid "Found in line %1."
-msgstr "'%1' に一致するファイルが見つかりません。"
+msgstr "Line '%1' に一致する結果が見つかりました。"
 
 #: frontend/ui/widget/inputdialog.lua:807
 #: frontend/ui/widget/inputdialog.lua:830
@@ -10198,7 +10163,7 @@ msgstr ""
 
 #: frontend/ui/widget/inputtext.lua:181
 msgid "Clipboard"
-msgstr ""
+msgstr "クリップボード"
 
 #: frontend/ui/widget/inputtext.lua:182
 msgid "(empty)"
@@ -10217,13 +10182,12 @@ msgid "Line copied to clipboard."
 msgstr ""
 
 #: frontend/ui/widget/inputtext.lua:212
-#, fuzzy
 msgid "Copy word"
-msgstr "コピー"
+msgstr "単語をコピー"
 
 #: frontend/ui/widget/inputtext.lua:218
 msgid "Word copied to clipboard."
-msgstr ""
+msgstr "単語がクリップボードにコピーされました。"
 
 #: frontend/ui/widget/inputtext.lua:235
 msgid "Set cursor to start of selection, then hold."
@@ -10258,9 +10222,8 @@ msgid "Page %1 of %2"
 msgstr "ページ %1 / %2"
 
 #: frontend/ui/widget/keyvaluepage.lua:614 frontend/ui/widget/menu.lua:1014
-#, fuzzy
 msgid "No items"
-msgstr "アイテム数を設定"
+msgstr "アイテムがない"
 
 #: frontend/ui/widget/menu.lua:752
 msgid "Enter letter or page number"
@@ -10521,14 +10484,17 @@ msgid "Retrieving image %1 / %2 …"
 msgstr "画像の取得中 %1 / %2 …"
 
 #: frontend/ui/wikipedia.lua:1326
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
 msgid "Downloading image %1 failed. Continue anyway?"
 msgstr "画像 %1 のダウンロードに失敗しました。とにかく続行しますか?"
 
 #: frontend/ui/wikipedia.lua:1326
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
 msgid "Stop"
 msgstr "停止"
 
 #: frontend/ui/wikipedia.lua:1337
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 msgid ""
 "Download did not complete.\n"
 "Do you want to create an EPUB with the already downloaded images?"
@@ -10537,10 +10503,12 @@ msgstr ""
 "すでにダウンロードした画像から EPUB を作成しますか?"
 
 #: frontend/ui/wikipedia.lua:1337
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 msgid "Don't create"
 msgstr "作成しない"
 
 #: frontend/ui/wikipedia.lua:1342
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:506
 msgid "Canceled. Cleaning up…"
 msgstr "キャンセルしました。クリーンアップ中…"
 
@@ -13055,155 +13023,92 @@ msgstr ""
 msgid "Moves/copies current book to archive folder"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:32
-msgid "Setting up feed %1 of %2."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:70
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:313
+#, fuzzy
 msgid ""
-"Could not initialize a feed:\n"
+"%1\n"
 "\n"
-"%2\n"
-"\n"
-"Please review your feed configuration."
-msgid_plural ""
-"Could not initialize %1 feeds:\n"
-"\n"
-"%2\n"
-"\n"
-"Please review your feed configurations."
-msgstr[0] ""
+"Building EPUB…"
+msgstr "EPUB の作成中…"
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:146
-msgid "Could not initialize feed document"
-msgstr "フィードドキュメントを初期化できませんでした"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:164
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:463
+#, fuzzy
 msgid ""
-"%3\n"
-" Downloading item %1 of %2"
-msgstr ""
-"%3\n"
-"ダウンロード中 %2 うちの %1"
+"%1\n"
+"\n"
+"Retrieving image %2 / %3 …"
+msgstr "画像の取得中 %1 / %2 …"
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:193
-msgid "Could not get content for: %1"
-msgstr "コンテンツを取得できませんでした: %1"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:257
-msgid "(Reason: Couldn't process RSS)"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:259
-msgid "(Reason: Couldn't process Atom)"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:272
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:508
+#, fuzzy
 msgid ""
-"This is just a description of the feed. To download the full article "
-"instead, go to the News Downloader settings and change "
-"'download_full_article' to 'true'."
-msgstr ""
+"%1\n"
+"\n"
+"Packing EPUB…"
+msgstr "EPUB の作成中…"
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:314
-msgid "Error: chapters contains 0 items"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:330
-msgid "Building EPUB %1"
-msgstr "EPUB の作成中%1"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:335
-#: plugins/newsdownloader.koplugin/feed_source.lua:338
-#: plugins/newsdownloader.koplugin/feed_source.lua:341
-msgid "Building EPUB %1: %2"
-msgstr "EPUB の作成中%1：%2"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:335
-msgid "Adding contents"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:338
-msgid "Adding images"
-msgstr "画像を追加"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:341
-msgid "Writing EPUB to disk"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_view.lua:77
+#: plugins/newsdownloader.koplugin/feed_view.lua:73
 msgid "URL"
 msgstr "URL"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:88
+#: plugins/newsdownloader.koplugin/feed_view.lua:84
 msgid "Limit"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:99
+#: plugins/newsdownloader.koplugin/feed_view.lua:95
 msgid "Download full article"
 msgstr "全文をダウンロード"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:110
+#: plugins/newsdownloader.koplugin/feed_view.lua:106
 msgid "Include images"
 msgstr "画像を含め"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:121
+#: plugins/newsdownloader.koplugin/feed_view.lua:117
 msgid "Enable filter"
 msgstr "フィルターを有効"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:133
+#: plugins/newsdownloader.koplugin/feed_view.lua:129
 msgid "Filter element"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:144
-msgid "Volumize feed"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_view.lua:166
+#: plugins/newsdownloader.koplugin/feed_view.lua:151
 msgid "Delete feed"
 msgstr "フィードを削除"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:179
-msgid "Reset feed history"
-msgstr "フィード履歴から削除"
-
-#: plugins/newsdownloader.koplugin/main.lua:51
+#: plugins/newsdownloader.koplugin/main.lua:87
 msgid "News downloader (RSS/Atom)"
 msgstr "RSSビューアー (RSS/Atom)"
 
-#: plugins/newsdownloader.koplugin/main.lua:63
+#: plugins/newsdownloader.koplugin/main.lua:99
 msgid "Go to news folder"
 msgstr "ニュースフォルダーに移動"
 
-#: plugins/newsdownloader.koplugin/main.lua:69
+#: plugins/newsdownloader.koplugin/main.lua:105
 msgid "Sync news feeds"
 msgstr "ニュースフィードを同期する"
 
-#: plugins/newsdownloader.koplugin/main.lua:85
-msgid "Go to downloaders folder?"
-msgstr "ダウンロードフォルダーに移動しますか？"
-
-#: plugins/newsdownloader.koplugin/main.lua:89
-msgid "Go to downloads"
-msgstr "ダウンロードフォルダーに移動"
-
-#: plugins/newsdownloader.koplugin/main.lua:108
+#: plugins/newsdownloader.koplugin/main.lua:112
 msgid "Edit news feeds"
 msgstr "フィードを編集"
 
-#: plugins/newsdownloader.koplugin/main.lua:122
+#: plugins/newsdownloader.koplugin/main.lua:126
 msgid "Set download folder"
 msgstr "ダウンロードフォルダーを設定"
 
-#: plugins/newsdownloader.koplugin/main.lua:127
+#: plugins/newsdownloader.koplugin/main.lua:131
+#, fuzzy
+msgid "Never download images"
+msgstr "ダウンロードしたすべての項目を削除"
+
+#: plugins/newsdownloader.koplugin/main.lua:142
 msgid "Delete all downloaded items"
 msgstr "ダウンロードしたすべての項目を削除"
 
-#: plugins/newsdownloader.koplugin/main.lua:133
+#: plugins/newsdownloader.koplugin/main.lua:148
 msgid "Are you sure you want to delete all downloaded items?"
 msgstr "ダウンロードしたすべての項目を削除してもよろしいですか？"
 
-#: plugins/newsdownloader.koplugin/main.lua:156
+#: plugins/newsdownloader.koplugin/main.lua:168
 msgid ""
 "News downloader retrieves RSS and Atom news entries and stores them to:\n"
 "%1\n"
@@ -13220,9 +13125,9 @@ msgstr ""
 "ことができます。\n"
 "アイテムのダウンロード制限は設定で設定できます。"
 
-#: plugins/newsdownloader.koplugin/main.lua:206
-#: plugins/newsdownloader.koplugin/main.lua:675
-#: plugins/newsdownloader.koplugin/main.lua:778
+#: plugins/newsdownloader.koplugin/main.lua:215
+#: plugins/newsdownloader.koplugin/main.lua:815
+#: plugins/newsdownloader.koplugin/main.lua:947
 msgid ""
 "Invalid configuration file. Detailed error message:\n"
 "%1"
@@ -13230,141 +13135,191 @@ msgstr ""
 "設定ファイルが正しくありません。詳細なエラーメッセージ:\n"
 "%1"
 
-#: plugins/newsdownloader.koplugin/main.lua:213
+#: plugins/newsdownloader.koplugin/main.lua:222
 msgid ""
 "Feed list is empty. If you want to download news, you'll have to add a feed "
 "first."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:215
+#: plugins/newsdownloader.koplugin/main.lua:224
 msgid "Edit feed list"
 msgstr "フィードリストを編集"
 
-#: plugins/newsdownloader.koplugin/main.lua:295
-msgid "Skipping downloaded item"
-msgstr "ダウンロードした項目をスキップしています"
+#: plugins/newsdownloader.koplugin/main.lua:257
+msgid ""
+"Processing %1/%2:\n"
+"%3"
+msgstr ""
+"処理中 %1/%2:\n"
+"%3"
 
-#: plugins/newsdownloader.koplugin/main.lua:396
-msgid "Error building EPUB %1"
-msgstr "EPUB %1 作成にエラー発生"
+#: plugins/newsdownloader.koplugin/main.lua:276
+#, fuzzy
+msgid "Downloading news finished."
+msgstr "ニュースをダウンロード"
+
+#: plugins/newsdownloader.koplugin/main.lua:290
+#, fuzzy
+msgid "Downloading news finished with errors."
+msgstr "ニュースをダウンロード"
+
+#: plugins/newsdownloader.koplugin/main.lua:294
+msgid ""
+"Could not process some feeds.\n"
+"Unsupported format in: %1. Please\n"
+"review your feed configuration file."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:311
+#, fuzzy
+msgid "Go to download folder?"
+msgstr "ダウンロードフォルダーに移動"
+
+#: plugins/newsdownloader.koplugin/main.lua:315
+msgid "Go to downloads"
+msgstr "ダウンロードフォルダーに移動"
+
+#: plugins/newsdownloader.koplugin/main.lua:354
+#: plugins/newsdownloader.koplugin/main.lua:415
+#, fuzzy
+msgid "(Reason: Failed to download content)"
+msgstr "%1 コのファイルのダウンロードに失敗しました。"
+
+#: plugins/newsdownloader.koplugin/main.lua:356
+msgid "(Reason: Error during feed deserialization)"
+msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:417
-msgid "Sync complete. No new EPUBs created."
-msgstr "同期が完了しました。 新規EPUBは作成されませんでした。"
-
-#: plugins/newsdownloader.koplugin/main.lua:418
-msgid "Sync complete. EPUBs created: %1"
-msgstr "同期が完了しました。 EPUBが作成されました:%1"
-
-#: plugins/newsdownloader.koplugin/main.lua:439
-msgid ""
-"All downloaded news feed items deleted. To download these again in the "
-"future, reset the feed history."
+msgid "(Reason: Couldn't process RSS)"
 msgstr ""
-"ダウンロードされたニュースフィードアイテムはすべて削除されました。 後でこれら"
-"を再度ダウンロードするために、フィード履歴をリセットしてください。"
 
-#: plugins/newsdownloader.koplugin/main.lua:465
+#: plugins/newsdownloader.koplugin/main.lua:419
+msgid "(Reason: Couldn't process Atom)"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:482
+msgid ""
+"%1\n"
+"\n"
+"Fetching article %2/%3:"
+msgstr ""
+"%1\n"
+"\n"
+"記事の取得中 %2/%3:"
+
+#: plugins/newsdownloader.koplugin/main.lua:548
+#: plugins/newsdownloader.koplugin/main.lua:565
+msgid ""
+"%1\n"
+"%2"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:566
+msgid ""
+"This is just a description of the feed. To download the full article "
+"instead, go to the News Downloader settings and change "
+"'download_full_article' to 'true'."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:594
+msgid "All downloaded news feed items deleted."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:616
+#, fuzzy
+msgid "Loading news feed list…"
+msgstr "ログイン中。しばらくお待ちください…"
+
+#: plugins/newsdownloader.koplugin/main.lua:621
 msgid "Could not open feed list. Feeds configuration file is invalid."
 msgstr "フィードリストを開けませんでした。 フィード構成ファイルが無効です。"
 
-#: plugins/newsdownloader.koplugin/main.lua:467
+#: plugins/newsdownloader.koplugin/main.lua:623
 msgid "View file"
 msgstr "ファイル閲覧"
 
-#: plugins/newsdownloader.koplugin/main.lua:492
-#: plugins/newsdownloader.koplugin/main.lua:752
-msgid ""
-"Are you sure you want to reset the feed history? Proceeding will cause items "
-"to be re-downloaded next time you sync."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:510
+#: plugins/newsdownloader.koplugin/main.lua:658
 msgid "Add new feed"
 msgstr "新規フィード"
 
-#: plugins/newsdownloader.koplugin/main.lua:532
+#: plugins/newsdownloader.koplugin/main.lua:680
 msgid "RSS/Atom feeds"
 msgstr "RSS/Atomフィード"
 
-#: plugins/newsdownloader.koplugin/main.lua:547
+#: plugins/newsdownloader.koplugin/main.lua:695
 msgid "Edit Feed"
 msgstr "フィードを編集"
 
-#: plugins/newsdownloader.koplugin/main.lua:576
+#: plugins/newsdownloader.koplugin/main.lua:719
 msgid "Edit feed URL"
 msgstr "フィードURLを編集"
 
-#: plugins/newsdownloader.koplugin/main.lua:579
+#: plugins/newsdownloader.koplugin/main.lua:722
 msgid "Edit feed limit"
 msgstr "フィード制限を編集"
 
-#: plugins/newsdownloader.koplugin/main.lua:580
+#: plugins/newsdownloader.koplugin/main.lua:723
 msgid "Set to 0 for no limit to how many items are downloaded"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:583
+#: plugins/newsdownloader.koplugin/main.lua:726
 msgid "Edit filter element."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:584
+#: plugins/newsdownloader.koplugin/main.lua:727
 msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:623
+#: plugins/newsdownloader.koplugin/main.lua:766
 msgid "Download full article?"
 msgstr "全文をダウンロードしますか？"
 
-#: plugins/newsdownloader.koplugin/main.lua:625
+#: plugins/newsdownloader.koplugin/main.lua:768
 msgid "Include images?"
 msgstr "画像が含まれますか？"
 
-#: plugins/newsdownloader.koplugin/main.lua:627
+#: plugins/newsdownloader.koplugin/main.lua:770
 msgid "Enable CSS filter?"
 msgstr "CSS filterを有効にしますか？"
 
-#: plugins/newsdownloader.koplugin/main.lua:629
-msgid "Volumize feed?"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:635
+#: plugins/newsdownloader.koplugin/main.lua:776
 #: plugins/profiles.koplugin/main.lua:105
 #: plugins/texteditor.koplugin/main.lua:338
 msgid "Yes"
 msgstr "はい"
 
-#: plugins/newsdownloader.koplugin/main.lua:640
+#: plugins/newsdownloader.koplugin/main.lua:781
 #: plugins/profiles.koplugin/main.lua:106
 #: plugins/texteditor.koplugin/main.lua:339
 msgid "No"
 msgstr "いいえ"
 
-#: plugins/newsdownloader.koplugin/main.lua:817
+#: plugins/newsdownloader.koplugin/main.lua:976
 msgid "Saving news feed list…"
 msgstr "フィードリストを保存中…"
 
-#: plugins/newsdownloader.koplugin/main.lua:823
+#: plugins/newsdownloader.koplugin/main.lua:982
 msgid "Could not save news feed config."
 msgstr "フィード設定を保存できません。"
 
-#: plugins/newsdownloader.koplugin/main.lua:825
+#: plugins/newsdownloader.koplugin/main.lua:984
 msgid "News feed config updated successfully."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:840
+#: plugins/newsdownloader.koplugin/main.lua:996
 msgid "Config: %1"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:861
+#: plugins/newsdownloader.koplugin/main.lua:1017
 msgid "Configuration saved"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:863
-#: plugins/newsdownloader.koplugin/main.lua:866
+#: plugins/newsdownloader.koplugin/main.lua:1019
+#: plugins/newsdownloader.koplugin/main.lua:1022
 msgid "Configuration invalid: %1"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:869
+#: plugins/newsdownloader.koplugin/main.lua:1025
 msgid "Configuration empty"
 msgstr ""
 
@@ -14077,9 +14032,8 @@ msgstr "この本の読み時間"
 
 #: plugins/statistics.koplugin/main.lua:1380
 #: plugins/statistics.koplugin/main.lua:1487
-#, fuzzy
 msgid "Reading started"
-msgstr "読書状況"
+msgstr "閲覧開始した"
 
 #: plugins/statistics.koplugin/main.lua:1381
 #: plugins/statistics.koplugin/main.lua:1489
@@ -15131,6 +15085,53 @@ msgstr "右下角をタップ"
 msgid "Tap the upper right corner"
 msgstr "右上角をタップ"
 
+#~ msgid "Could not initialize feed document"
+#~ msgstr "フィードドキュメントを初期化できませんでした"
+
+#~ msgid ""
+#~ "%3\n"
+#~ " Downloading item %1 of %2"
+#~ msgstr ""
+#~ "%3\n"
+#~ "ダウンロード中 %2 うちの %1"
+
+#~ msgid "Could not get content for: %1"
+#~ msgstr "コンテンツを取得できませんでした: %1"
+
+#~ msgid "Building EPUB %1"
+#~ msgstr "EPUB の作成中%1"
+
+#~ msgid "Building EPUB %1: %2"
+#~ msgstr "EPUB の作成中%1：%2"
+
+#~ msgid "Adding images"
+#~ msgstr "画像を追加"
+
+#~ msgid "Reset feed history"
+#~ msgstr "フィード履歴から削除"
+
+#~ msgid "Go to downloaders folder?"
+#~ msgstr "ダウンロードフォルダーに移動しますか？"
+
+#~ msgid "Skipping downloaded item"
+#~ msgstr "ダウンロードした項目をスキップしています"
+
+#~ msgid "Error building EPUB %1"
+#~ msgstr "EPUB %1 作成にエラー発生"
+
+#~ msgid "Sync complete. No new EPUBs created."
+#~ msgstr "同期が完了しました。 新規EPUBは作成されませんでした。"
+
+#~ msgid "Sync complete. EPUBs created: %1"
+#~ msgstr "同期が完了しました。 EPUBが作成されました:%1"
+
+#~ msgid ""
+#~ "All downloaded news feed items deleted. To download these again in the "
+#~ "future, reset the feed history."
+#~ msgstr ""
+#~ "ダウンロードされたニュースフィードアイテムはすべて削除されました。 後でこ"
+#~ "れらを再度ダウンロードするために、フィード履歴をリセットしてください。"
+
 #~ msgid "Download file"
 #~ msgstr "ファイルをダウンロード"
 
@@ -15235,38 +15236,6 @@ msgstr "右上角をタップ"
 #~ msgstr ""
 #~ "Dropboxからローカルストレージに %1 個のファイルをダウンロードしました。\n"
 #~ "%2 個のファイルは失敗しました。"
-
-#~ msgid ""
-#~ "Processing %1/%2:\n"
-#~ "%3"
-#~ msgstr ""
-#~ "処理中 %1/%2:\n"
-#~ "%3"
-
-#, fuzzy
-#~ msgid "Downloading news finished."
-#~ msgstr "ニュースをダウンロード"
-
-#, fuzzy
-#~ msgid "Downloading news finished with errors."
-#~ msgstr "ニュースをダウンロード"
-
-#, fuzzy
-#~ msgid "Go to download folder?"
-#~ msgstr "ダウンロードフォルダーに移動"
-
-#~ msgid ""
-#~ "%1\n"
-#~ "\n"
-#~ "Fetching article %2/%3:"
-#~ msgstr ""
-#~ "%1\n"
-#~ "\n"
-#~ "記事の取得中 %2/%3:"
-
-#, fuzzy
-#~ msgid "Loading news feed list…"
-#~ msgstr "ログイン中。しばらくお待ちください…"
 
 #~ msgid "Add new OPDS catalog"
 #~ msgstr "新しい OPDS カタログを追加"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-25 03:05+0000\n"
+"POT-Creation-Date: 2022-03-27 15:02+0000\n"
 "PO-Revision-Date: 2021-05-19 16:09+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/koreader/"
@@ -202,10 +202,8 @@ msgstr "Întrodu nume fișier"
 #: plugins/exporter.koplugin/main.lua:179
 #: plugins/exporter.koplugin/main.lua:250
 #: plugins/gestures.koplugin/main.lua:331 plugins/kosync.koplugin/main.lua:373
-#: plugins/newsdownloader.koplugin/main.lua:134
-#: plugins/newsdownloader.koplugin/main.lua:493
-#: plugins/newsdownloader.koplugin/main.lua:599
-#: plugins/newsdownloader.koplugin/main.lua:753
+#: plugins/newsdownloader.koplugin/main.lua:149
+#: plugins/newsdownloader.koplugin/main.lua:742
 #: plugins/opds.koplugin/opdsbrowser.lua:159
 #: plugins/opds.koplugin/opdsbrowser.lua:210
 #: plugins/opds.koplugin/opdsbrowser.lua:825
@@ -289,7 +287,7 @@ msgstr "Editează"
 #: frontend/apps/reader/modules/readerstatus.lua:217
 #: frontend/ui/widget/screenshoter.lua:63
 #: plugins/bookshortcuts.koplugin/main.lua:141
-#: plugins/newsdownloader.koplugin/main.lua:135
+#: plugins/newsdownloader.koplugin/main.lua:150
 #: plugins/opds.koplugin/opdsbrowser.lua:1050
 #: plugins/terminal.koplugin/aliases.lua:106
 msgid "Delete"
@@ -372,9 +370,9 @@ msgstr "Alege dosar local"
 #: frontend/ui/widget/radiobuttonwidget.lua:27
 #: frontend/ui/widget/screenshoter.lua:49 frontend/ui/widget/spinwidget.lua:36
 #: frontend/ui/widget/textviewer.lua:119 plugins/keepalive.koplugin/main.lua:19
-#: plugins/newsdownloader.koplugin/main.lua:88
-#: plugins/newsdownloader.koplugin/main.lua:214
-#: plugins/newsdownloader.koplugin/main.lua:466
+#: plugins/newsdownloader.koplugin/main.lua:223
+#: plugins/newsdownloader.koplugin/main.lua:314
+#: plugins/newsdownloader.koplugin/main.lua:622
 #: plugins/statistics.koplugin/main.lua:340
 #: plugins/terminal.koplugin/main.lua:377
 msgid "Close"
@@ -409,7 +407,9 @@ msgstr "Se descarcă…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:650
 #: frontend/apps/filemanager/filemanager.lua:1025
-#: frontend/ui/wikipedia.lua:1337 plugins/statistics.koplugin/main.lua:344
+#: frontend/ui/wikipedia.lua:1337
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
+#: plugins/statistics.koplugin/main.lua:344
 #: plugins/texteditor.koplugin/main.lua:403
 msgid "Create"
 msgstr "Crează"
@@ -943,8 +943,6 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:689
 #: frontend/apps/reader/modules/readermenu.lua:185
 #: frontend/ui/widget/inputdialog.lua:647
-#: plugins/newsdownloader.koplugin/main.lua:494
-#: plugins/newsdownloader.koplugin/main.lua:754
 #: plugins/statistics.koplugin/main.lua:1969
 #: plugins/statistics.koplugin/main.lua:2142
 #: plugins/statistics.koplugin/main.lua:2181
@@ -1513,7 +1511,7 @@ msgstr "Nu se poate deschide ultimul document"
 #: frontend/apps/reader/modules/readerfooter.lua:1095
 #: frontend/apps/reader/modules/readertoc.lua:947
 #: frontend/ui/elements/screensaver_menu.lua:95 frontend/ui/otamanager.lua:474
-#: plugins/newsdownloader.koplugin/main.lua:119
+#: plugins/newsdownloader.koplugin/main.lua:123
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:934
 #: plugins/texteditor.koplugin/main.lua:109
@@ -2150,7 +2148,7 @@ msgstr "Caută cărți"
 #: frontend/ui/widget/inputdialog.lua:714
 #: plugins/coverimage.koplugin/main.lua:359
 #: plugins/gestures.koplugin/main.lua:338
-#: plugins/newsdownloader.koplugin/main.lua:607
+#: plugins/newsdownloader.koplugin/main.lua:750
 #: plugins/profiles.koplugin/main.lua:73 plugins/SSH.koplugin/main.lua:133
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:576
@@ -8545,7 +8543,7 @@ msgid "Quickstart guide"
 msgstr "Ghid de pornire rapidă"
 
 #: frontend/ui/elements/common_info_menu_table.lua:43
-#: plugins/newsdownloader.koplugin/main.lua:152
+#: plugins/newsdownloader.koplugin/main.lua:164
 #: plugins/perceptionexpander.koplugin/main.lua:183
 msgid "About"
 msgstr "Despre"
@@ -10648,7 +10646,8 @@ msgstr "Întrerupt"
 #: frontend/ui/trapper.lua:160 frontend/ui/wikipedia.lua:1326
 #: plugins/calibre.koplugin/wireless.lua:218
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
-#: plugins/newsdownloader.koplugin/main.lua:411
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
+#: plugins/newsdownloader.koplugin/main.lua:299
 msgid "Continue"
 msgstr "Continuă"
 
@@ -11349,14 +11348,17 @@ msgid "Retrieving image %1 / %2 …"
 msgstr "Se preia imaginea %1 / %2 …"
 
 #: frontend/ui/wikipedia.lua:1326
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
 msgid "Downloading image %1 failed. Continue anyway?"
 msgstr "Descărcarea imaginii %1 a eșuat. Continui oricum?"
 
 #: frontend/ui/wikipedia.lua:1326
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:490
 msgid "Stop"
 msgstr "Stop"
 
 #: frontend/ui/wikipedia.lua:1337
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 msgid ""
 "Download did not complete.\n"
 "Do you want to create an EPUB with the already downloaded images?"
@@ -11365,10 +11367,12 @@ msgstr ""
 "Dorești să creezi un fișier EPUB cu imaginile deja descărcate?"
 
 #: frontend/ui/wikipedia.lua:1337
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:501
 msgid "Don't create"
 msgstr "Nu crea"
 
 #: frontend/ui/wikipedia.lua:1342
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:506
 msgid "Canceled. Cleaning up…"
 msgstr "Anulat. Se face curat…"
 
@@ -14155,180 +14159,107 @@ msgstr ""
 msgid "Moves/copies current book to archive folder"
 msgstr "Mută/copiază cartea curentă în dosarul de arhive"
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:32
-msgid "Setting up feed %1 of %2."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:70
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:313
 msgid ""
-"Could not initialize a feed:\n"
+"%1\n"
 "\n"
-"%2\n"
+"Building EPUB…"
+msgstr ""
+"%1\n"
 "\n"
-"Please review your feed configuration."
-msgid_plural ""
-"Could not initialize %1 feeds:\n"
-"\n"
-"%2\n"
-"\n"
-"Please review your feed configurations."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+"Se construiește EPUB…"
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:146
-#, fuzzy
-msgid "Could not initialize feed document"
-msgstr "Nu s-a putut salva fișierul în:\n"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:164
-#, fuzzy
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:463
 msgid ""
-"%3\n"
-" Downloading item %1 of %2"
-msgstr "Se descarcă %1"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:193
-#, fuzzy
-msgid "Could not get content for: %1"
+"%1\n"
+"\n"
+"Retrieving image %2 / %3 …"
 msgstr ""
-"A eșuat crearea dosarului:\n"
-"%1"
+"%1\n"
+"\n"
+"Se preia imaginea %2 / %3 …"
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:257
-msgid "(Reason: Couldn't process RSS)"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:259
-msgid "(Reason: Couldn't process Atom)"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:272
+#: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:508
 msgid ""
-"This is just a description of the feed. To download the full article "
-"instead, go to the News Downloader settings and change "
-"'download_full_article' to 'true'."
+"%1\n"
+"\n"
+"Packing EPUB…"
 msgstr ""
-"Aceasta nu este decît o descriere a sursei. Pentru a descărca articolul "
-"întreg, mergi la „Setări Descărcător Știri” și schimbă "
-"„download_full_article” în „true”."
+"%1\n"
+"\n"
+"Se împachetează EPUB…"
 
-#: plugins/newsdownloader.koplugin/feed_source.lua:314
-msgid "Error: chapters contains 0 items"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:330
-#, fuzzy
-msgid "Building EPUB %1"
-msgstr "Se construiește EPUB…"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:335
-#: plugins/newsdownloader.koplugin/feed_source.lua:338
-#: plugins/newsdownloader.koplugin/feed_source.lua:341
-#, fuzzy
-msgid "Building EPUB %1: %2"
-msgstr "Se construiește EPUB…"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:335
-#, fuzzy
-msgid "Adding contents"
-msgstr "conținut"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:338
-#, fuzzy
-msgid "Adding images"
-msgstr "<An image>"
-
-#: plugins/newsdownloader.koplugin/feed_source.lua:341
-msgid "Writing EPUB to disk"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_view.lua:77
+#: plugins/newsdownloader.koplugin/feed_view.lua:73
 #, fuzzy
 msgid "URL"
 msgstr "RTL"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:88
+#: plugins/newsdownloader.koplugin/feed_view.lua:84
 msgid "Limit"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:99
+#: plugins/newsdownloader.koplugin/feed_view.lua:95
 #, fuzzy
 msgid "Download full article"
 msgstr "Descarcă fișier"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:110
+#: plugins/newsdownloader.koplugin/feed_view.lua:106
 #, fuzzy
 msgid "Include images"
 msgstr "Include"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:121
+#: plugins/newsdownloader.koplugin/feed_view.lua:117
 #, fuzzy
 msgid "Enable filter"
 msgstr "Activează Wi-Fi"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:133
+#: plugins/newsdownloader.koplugin/feed_view.lua:129
 msgid "Filter element"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:144
-msgid "Volumize feed"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/feed_view.lua:166
+#: plugins/newsdownloader.koplugin/feed_view.lua:151
 #, fuzzy
 msgid "Delete feed"
 msgstr "Șterge fișier"
 
-#: plugins/newsdownloader.koplugin/feed_view.lua:179
-#, fuzzy
-msgid "Reset feed history"
-msgstr "Șterge din istoric"
-
-#: plugins/newsdownloader.koplugin/main.lua:51
+#: plugins/newsdownloader.koplugin/main.lua:87
 #, fuzzy
 msgid "News downloader (RSS/Atom)"
 msgstr "Descărcător știri"
 
-#: plugins/newsdownloader.koplugin/main.lua:63
+#: plugins/newsdownloader.koplugin/main.lua:99
 msgid "Go to news folder"
 msgstr "Mergi la dosarul de știri"
 
-#: plugins/newsdownloader.koplugin/main.lua:69
+#: plugins/newsdownloader.koplugin/main.lua:105
 msgid "Sync news feeds"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:85
-#, fuzzy
-msgid "Go to downloaders folder?"
-msgstr "Mergi la dosarul de descărcări"
-
-#: plugins/newsdownloader.koplugin/main.lua:89
-#, fuzzy
-msgid "Go to downloads"
-msgstr "Mergi la dosarul de descărcări"
-
-#: plugins/newsdownloader.koplugin/main.lua:108
+#: plugins/newsdownloader.koplugin/main.lua:112
 #, fuzzy
 msgid "Edit news feeds"
 msgstr "Editează un fișier nou"
 
-#: plugins/newsdownloader.koplugin/main.lua:122
+#: plugins/newsdownloader.koplugin/main.lua:126
 #, fuzzy
 msgid "Set download folder"
 msgstr "Mergi la dosarul de descărcări"
 
-#: plugins/newsdownloader.koplugin/main.lua:127
+#: plugins/newsdownloader.koplugin/main.lua:131
+msgid "Never download images"
+msgstr "Nu descărca imaginile niciodată"
+
+#: plugins/newsdownloader.koplugin/main.lua:142
 #, fuzzy
 msgid "Delete all downloaded items"
 msgstr "Nu descărca imaginile niciodată"
 
-#: plugins/newsdownloader.koplugin/main.lua:133
+#: plugins/newsdownloader.koplugin/main.lua:148
 #, fuzzy
 msgid "Are you sure you want to delete all downloaded items?"
 msgstr "Ești sigur că dorești să ștergi acest fișier?\n"
 
-#: plugins/newsdownloader.koplugin/main.lua:156
+#: plugins/newsdownloader.koplugin/main.lua:168
 #, fuzzy
 msgid ""
 "News downloader retrieves RSS and Atom news entries and stores them to:\n"
@@ -14345,9 +14276,9 @@ msgstr ""
 "navigatorul de fișiere KOReader.\n"
 "Numărul maxim de fișiere de descărcat poate fi configurat în Setări."
 
-#: plugins/newsdownloader.koplugin/main.lua:206
-#: plugins/newsdownloader.koplugin/main.lua:675
-#: plugins/newsdownloader.koplugin/main.lua:778
+#: plugins/newsdownloader.koplugin/main.lua:215
+#: plugins/newsdownloader.koplugin/main.lua:815
+#: plugins/newsdownloader.koplugin/main.lua:947
 msgid ""
 "Invalid configuration file. Detailed error message:\n"
 "%1"
@@ -14355,151 +14286,207 @@ msgstr ""
 "Fișier de configurare invalid. Mesaj de eroare detaliat:\n"
 "%1"
 
-#: plugins/newsdownloader.koplugin/main.lua:213
+#: plugins/newsdownloader.koplugin/main.lua:222
 msgid ""
 "Feed list is empty. If you want to download news, you'll have to add a feed "
 "first."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:215
+#: plugins/newsdownloader.koplugin/main.lua:224
 msgid "Edit feed list"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:295
-#, fuzzy
-msgid "Skipping downloaded item"
-msgstr "Nu descărca imaginile niciodată"
+#: plugins/newsdownloader.koplugin/main.lua:257
+msgid ""
+"Processing %1/%2:\n"
+"%3"
+msgstr ""
+"Se procesează %1/%2:\n"
+"%3"
 
-#: plugins/newsdownloader.koplugin/main.lua:396
+#: plugins/newsdownloader.koplugin/main.lua:276
 #, fuzzy
-msgid "Error building EPUB %1"
-msgstr "Se construiește EPUB…"
+msgid "Downloading news finished."
+msgstr "Descarcă știri"
+
+#: plugins/newsdownloader.koplugin/main.lua:290
+#, fuzzy
+msgid "Downloading news finished with errors."
+msgstr "Descarcă știri"
+
+#: plugins/newsdownloader.koplugin/main.lua:294
+msgid ""
+"Could not process some feeds.\n"
+"Unsupported format in: %1. Please\n"
+"review your feed configuration file."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:311
+#, fuzzy
+msgid "Go to download folder?"
+msgstr "Mergi la dosarul de descărcări"
+
+#: plugins/newsdownloader.koplugin/main.lua:315
+#, fuzzy
+msgid "Go to downloads"
+msgstr "Mergi la dosarul de descărcări"
+
+#: plugins/newsdownloader.koplugin/main.lua:354
+#: plugins/newsdownloader.koplugin/main.lua:415
+#, fuzzy
+msgid "(Reason: Failed to download content)"
+msgstr "Mergi la dosarul de descărcări"
+
+#: plugins/newsdownloader.koplugin/main.lua:356
+msgid "(Reason: Error during feed deserialization)"
+msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:417
-msgid "Sync complete. No new EPUBs created."
+msgid "(Reason: Couldn't process RSS)"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:418
-msgid "Sync complete. EPUBs created: %1"
+#: plugins/newsdownloader.koplugin/main.lua:419
+msgid "(Reason: Couldn't process Atom)"
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:439
+#: plugins/newsdownloader.koplugin/main.lua:482
 msgid ""
-"All downloaded news feed items deleted. To download these again in the "
-"future, reset the feed history."
+"%1\n"
+"\n"
+"Fetching article %2/%3:"
+msgstr ""
+"%1\n"
+"\n"
+"Se preia articolul %2/%3:"
+
+#: plugins/newsdownloader.koplugin/main.lua:548
+#: plugins/newsdownloader.koplugin/main.lua:565
+msgid ""
+"%1\n"
+"%2"
+msgstr ""
+"%1\n"
+"%2"
+
+#: plugins/newsdownloader.koplugin/main.lua:566
+msgid ""
+"This is just a description of the feed. To download the full article "
+"instead, go to the News Downloader settings and change "
+"'download_full_article' to 'true'."
+msgstr ""
+"Aceasta nu este decît o descriere a sursei. Pentru a descărca articolul "
+"întreg, mergi la „Setări Descărcător Știri” și schimbă "
+"„download_full_article” în „true”."
+
+#: plugins/newsdownloader.koplugin/main.lua:594
+msgid "All downloaded news feed items deleted."
 msgstr ""
 
-#: plugins/newsdownloader.koplugin/main.lua:465
+#: plugins/newsdownloader.koplugin/main.lua:616
+#, fuzzy
+msgid "Loading news feed list…"
+msgstr "Se autentifică. Te rog așteaptă…"
+
+#: plugins/newsdownloader.koplugin/main.lua:621
 msgid "Could not open feed list. Feeds configuration file is invalid."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:467
-#, fuzzy
-msgid "View file"
-msgstr "Fișier nou"
-
-#: plugins/newsdownloader.koplugin/main.lua:492
-#: plugins/newsdownloader.koplugin/main.lua:752
-msgid ""
-"Are you sure you want to reset the feed history? Proceeding will cause items "
-"to be re-downloaded next time you sync."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:510
-#, fuzzy
-msgid "Add new feed"
-msgstr "Toate știrile au fost eliminate."
-
-#: plugins/newsdownloader.koplugin/main.lua:532
-msgid "RSS/Atom feeds"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:547
-#, fuzzy
-msgid "Edit Feed"
-msgstr "Editează nume"
-
-#: plugins/newsdownloader.koplugin/main.lua:576
-msgid "Edit feed URL"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:579
-#, fuzzy
-msgid "Edit feed limit"
-msgstr "Editează nume prietenos"
-
-#: plugins/newsdownloader.koplugin/main.lua:580
-msgid "Set to 0 for no limit to how many items are downloaded"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:583
-msgid "Edit filter element."
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:584
-msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
 msgstr ""
 
 #: plugins/newsdownloader.koplugin/main.lua:623
 #, fuzzy
+msgid "View file"
+msgstr "Fișier nou"
+
+#: plugins/newsdownloader.koplugin/main.lua:658
+#, fuzzy
+msgid "Add new feed"
+msgstr "Toate știrile au fost eliminate."
+
+#: plugins/newsdownloader.koplugin/main.lua:680
+msgid "RSS/Atom feeds"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:695
+#, fuzzy
+msgid "Edit Feed"
+msgstr "Editează nume"
+
+#: plugins/newsdownloader.koplugin/main.lua:719
+msgid "Edit feed URL"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:722
+#, fuzzy
+msgid "Edit feed limit"
+msgstr "Editează nume prietenos"
+
+#: plugins/newsdownloader.koplugin/main.lua:723
+msgid "Set to 0 for no limit to how many items are downloaded"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:726
+msgid "Edit filter element."
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:727
+msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
+msgstr ""
+
+#: plugins/newsdownloader.koplugin/main.lua:766
+#, fuzzy
 msgid "Download full article?"
 msgstr "Descarcă fișier"
 
-#: plugins/newsdownloader.koplugin/main.lua:625
+#: plugins/newsdownloader.koplugin/main.lua:768
 #, fuzzy
 msgid "Include images?"
 msgstr "Inversează imaginile"
 
-#: plugins/newsdownloader.koplugin/main.lua:627
+#: plugins/newsdownloader.koplugin/main.lua:770
 #, fuzzy
 msgid "Enable CSS filter?"
 msgstr "Dezactivează blitter C"
 
-#: plugins/newsdownloader.koplugin/main.lua:629
-msgid "Volumize feed?"
-msgstr ""
-
-#: plugins/newsdownloader.koplugin/main.lua:635
+#: plugins/newsdownloader.koplugin/main.lua:776
 #: plugins/profiles.koplugin/main.lua:105
 #: plugins/texteditor.koplugin/main.lua:338
 msgid "Yes"
 msgstr "Da"
 
-#: plugins/newsdownloader.koplugin/main.lua:640
+#: plugins/newsdownloader.koplugin/main.lua:781
 #: plugins/profiles.koplugin/main.lua:106
 #: plugins/texteditor.koplugin/main.lua:339
 msgid "No"
 msgstr "Nu"
 
-#: plugins/newsdownloader.koplugin/main.lua:817
+#: plugins/newsdownloader.koplugin/main.lua:976
 #, fuzzy
 msgid "Saving news feed list…"
 msgstr "Se autentifică. Te rog așteaptă…"
 
-#: plugins/newsdownloader.koplugin/main.lua:823
+#: plugins/newsdownloader.koplugin/main.lua:982
 #, fuzzy
 msgid "Could not save news feed config."
 msgstr "Nu s-a putut salva fișierul în:\n"
 
-#: plugins/newsdownloader.koplugin/main.lua:825
+#: plugins/newsdownloader.koplugin/main.lua:984
 #, fuzzy
 msgid "News feed config updated successfully."
 msgstr "Una a fost extrasă cu succes."
 
-#: plugins/newsdownloader.koplugin/main.lua:840
+#: plugins/newsdownloader.koplugin/main.lua:996
 msgid "Config: %1"
 msgstr "Config: %1"
 
-#: plugins/newsdownloader.koplugin/main.lua:861
+#: plugins/newsdownloader.koplugin/main.lua:1017
 msgid "Configuration saved"
 msgstr "Configurare salvată"
 
-#: plugins/newsdownloader.koplugin/main.lua:863
-#: plugins/newsdownloader.koplugin/main.lua:866
+#: plugins/newsdownloader.koplugin/main.lua:1019
+#: plugins/newsdownloader.koplugin/main.lua:1022
 msgid "Configuration invalid: %1"
 msgstr "Configurare invalidă: %1"
 
-#: plugins/newsdownloader.koplugin/main.lua:869
+#: plugins/newsdownloader.koplugin/main.lua:1025
 msgid "Configuration empty"
 msgstr "Configurări goale"
 
@@ -16357,6 +16344,54 @@ msgstr "Atinge colțul din dreapta jos"
 msgid "Tap the upper right corner"
 msgstr "Atinge colțul din dreapta sus"
 
+#, fuzzy
+#~ msgid "Could not initialize feed document"
+#~ msgstr "Nu s-a putut salva fișierul în:\n"
+
+#, fuzzy
+#~ msgid ""
+#~ "%3\n"
+#~ " Downloading item %1 of %2"
+#~ msgstr "Se descarcă %1"
+
+#, fuzzy
+#~ msgid "Could not get content for: %1"
+#~ msgstr ""
+#~ "A eșuat crearea dosarului:\n"
+#~ "%1"
+
+#, fuzzy
+#~ msgid "Building EPUB %1"
+#~ msgstr "Se construiește EPUB…"
+
+#, fuzzy
+#~ msgid "Building EPUB %1: %2"
+#~ msgstr "Se construiește EPUB…"
+
+#, fuzzy
+#~ msgid "Adding contents"
+#~ msgstr "conținut"
+
+#, fuzzy
+#~ msgid "Adding images"
+#~ msgstr "<An image>"
+
+#, fuzzy
+#~ msgid "Reset feed history"
+#~ msgstr "Șterge din istoric"
+
+#, fuzzy
+#~ msgid "Go to downloaders folder?"
+#~ msgstr "Mergi la dosarul de descărcări"
+
+#, fuzzy
+#~ msgid "Skipping downloaded item"
+#~ msgstr "Nu descărca imaginile niciodată"
+
+#, fuzzy
+#~ msgid "Error building EPUB %1"
+#~ msgstr "Se construiește EPUB…"
+
 #~ msgid "Download file"
 #~ msgstr "Descarcă fișier"
 
@@ -16478,75 +16513,6 @@ msgstr "Atinge colțul din dreapta sus"
 #~ msgstr ""
 #~ "S-au descărcat cu succes %1 fișiere de pe Dropbox pe mediul local.\n"
 #~ "Nu s-au putut descărca %2 fișiere."
-
-#~ msgid ""
-#~ "%1\n"
-#~ "\n"
-#~ "Building EPUB…"
-#~ msgstr ""
-#~ "%1\n"
-#~ "\n"
-#~ "Se construiește EPUB…"
-
-#~ msgid ""
-#~ "%1\n"
-#~ "\n"
-#~ "Retrieving image %2 / %3 …"
-#~ msgstr ""
-#~ "%1\n"
-#~ "\n"
-#~ "Se preia imaginea %2 / %3 …"
-
-#~ msgid ""
-#~ "%1\n"
-#~ "\n"
-#~ "Packing EPUB…"
-#~ msgstr ""
-#~ "%1\n"
-#~ "\n"
-#~ "Se împachetează EPUB…"
-
-#~ msgid "Never download images"
-#~ msgstr "Nu descărca imaginile niciodată"
-
-#~ msgid ""
-#~ "Processing %1/%2:\n"
-#~ "%3"
-#~ msgstr ""
-#~ "Se procesează %1/%2:\n"
-#~ "%3"
-
-#, fuzzy
-#~ msgid "Downloading news finished."
-#~ msgstr "Descarcă știri"
-
-#, fuzzy
-#~ msgid "Downloading news finished with errors."
-#~ msgstr "Descarcă știri"
-
-#, fuzzy
-#~ msgid "Go to download folder?"
-#~ msgstr "Mergi la dosarul de descărcări"
-
-#~ msgid ""
-#~ "%1\n"
-#~ "\n"
-#~ "Fetching article %2/%3:"
-#~ msgstr ""
-#~ "%1\n"
-#~ "\n"
-#~ "Se preia articolul %2/%3:"
-
-#~ msgid ""
-#~ "%1\n"
-#~ "%2"
-#~ msgstr ""
-#~ "%1\n"
-#~ "%2"
-
-#, fuzzy
-#~ msgid "Loading news feed list…"
-#~ msgstr "Se autentifică. Te rog așteaptă…"
 
 #~ msgid "Add new OPDS catalog"
 #~ msgstr "Adaugă un catalog nou OPDS"
