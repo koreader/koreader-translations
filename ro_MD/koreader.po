@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-06 17:36+0000\n"
+"POT-Creation-Date: 2022-05-06 21:01+0000\n"
 "PO-Revision-Date: 2022-04-22 17:17+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Moldavian <https://hosted.weblate.org/projects/koreader/"
@@ -200,9 +200,9 @@ msgstr "Întrodu nume fișier"
 #: plugins/calibre.koplugin/wireless.lua:424
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
 #: plugins/coverimage.koplugin/main.lua:352
-#: plugins/exporter.koplugin/main.lua:139
-#: plugins/exporter.koplugin/main.lua:179
-#: plugins/exporter.koplugin/main.lua:250
+#: plugins/exporter.koplugin/target/joplin.lua:239
+#: plugins/exporter.koplugin/target/joplin.lua:278
+#: plugins/exporter.koplugin/target/readwise.lua:66
 #: plugins/gestures.koplugin/main.lua:332 plugins/kosync.koplugin/main.lua:373
 #: plugins/newsdownloader.koplugin/main.lua:149
 #: plugins/newsdownloader.koplugin/main.lua:742
@@ -1794,7 +1794,8 @@ msgstr "Dorești să deschizi ultimul document: %1?"
 #: frontend/ui/widget/container/inputcontainer.lua:291
 #: frontend/ui/widget/numberpickerwidget.lua:145
 #: plugins/autowarmth.koplugin/main.lua:468
-#: plugins/calibre.koplugin/main.lua:317 plugins/exporter.koplugin/main.lua:146
+#: plugins/calibre.koplugin/main.lua:317
+#: plugins/exporter.koplugin/target/joplin.lua:245
 #: plugins/wallabag.koplugin/main.lua:952
 msgid "OK"
 msgstr "OK"
@@ -2102,7 +2103,7 @@ msgid "in %1"
 msgstr "în %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1416
-#: plugins/exporter.koplugin/clip.lua:247
+#: plugins/exporter.koplugin/clip.lua:246
 msgid "Page %1 %2 @ %3"
 msgstr "Pagina %1 %2 la %3"
 
@@ -8445,8 +8446,7 @@ msgid "Version: %1"
 msgstr "Versiune: %1"
 
 #: frontend/ui/elements/common_info_menu_table.lua:25
-#: plugins/exporter.koplugin/main.lua:215
-#: plugins/exporter.koplugin/main.lua:286
+#: plugins/exporter.koplugin/target/joplin.lua:304
 #: plugins/wallabag.koplugin/main.lua:331
 msgid "Help"
 msgstr "Ajutor"
@@ -13305,49 +13305,66 @@ msgstr ""
 "Această extensie vă permite să reglați setările documentului înainte ca "
 "documentul să fie încărcat pe baza unor factori externi."
 
-#: plugins/exporter.koplugin/main.lua:37
-msgid "KOReader Notes"
-msgstr "Note KOReader"
+#: plugins/exporter.koplugin/main.lua:182
+msgid "Exporting may take several seconds…"
+msgstr "Exportarea poate dura cîteva secunde…"
 
-#: plugins/exporter.koplugin/main.lua:38
-msgid "Note: "
-msgstr "Notă: "
-
-#: plugins/exporter.koplugin/main.lua:112 plugins/exporter.koplugin/_meta.lua:4
+#: plugins/exporter.koplugin/main.lua:203 plugins/exporter.koplugin/_meta.lua:4
 msgid "Export highlights"
 msgstr "Exportă evidențieri"
 
-#: plugins/exporter.koplugin/main.lua:115
+#: plugins/exporter.koplugin/main.lua:206
+msgid "Export all notes in this book"
+msgstr "Exportă toate notele din această carte"
+
+#: plugins/exporter.koplugin/main.lua:215
+msgid "Export all notes in your library"
+msgstr "Exportă toate notele din toată bibliotecă"
+
+#: plugins/exporter.koplugin/main.lua:225
+#, fuzzy
+msgid "Choose formats and services"
+msgstr "Alege dosar"
+
+#: plugins/exporter.koplugin/_meta.lua:5
+msgid "Exports highlights and notes."
+msgstr "Exportă evidențierile și notele."
+
+#: plugins/exporter.koplugin/target/joplin.lua:17
+msgid "KOReader Notes"
+msgstr "Note KOReader"
+
+#: plugins/exporter.koplugin/target/joplin.lua:215
 msgid "Joplin"
 msgstr "Joplin"
 
-#: plugins/exporter.koplugin/main.lua:119
+#: plugins/exporter.koplugin/target/joplin.lua:219
 msgid "Set Joplin IP and Port"
 msgstr "Setează IP și port pentru Joplin"
 
-#: plugins/exporter.koplugin/main.lua:125
+#: plugins/exporter.koplugin/target/joplin.lua:225
 msgid "Set Joplin IP and port number"
 msgstr "Setează IP și număr de port pentru Joplin"
 
-#: plugins/exporter.koplugin/main.lua:169
-#: plugins/exporter.koplugin/main.lua:240
+#: plugins/exporter.koplugin/target/joplin.lua:268
+#: plugins/exporter.koplugin/target/readwise.lua:56
 msgid "Set authorization token"
 msgstr "Setează jeton de autorizare"
 
-#: plugins/exporter.koplugin/main.lua:174
+#: plugins/exporter.koplugin/target/joplin.lua:273
 msgid "Set authorization token for Joplin"
 msgstr "Setează jeton de autorizare pentru Joplin"
 
-#: plugins/exporter.koplugin/main.lua:186
-#: plugins/exporter.koplugin/main.lua:257
+#: plugins/exporter.koplugin/target/joplin.lua:284
+#: plugins/exporter.koplugin/target/readwise.lua:72
 msgid "Set token"
 msgstr "Setează jeton"
 
-#: plugins/exporter.koplugin/main.lua:201
+#: plugins/exporter.koplugin/target/joplin.lua:299
 msgid "Export to Joplin"
 msgstr "Exportă în Joplin"
 
-#: plugins/exporter.koplugin/main.lua:219
+#: plugins/exporter.koplugin/target/joplin.lua:308
 msgid ""
 "You can enter your auth token on your computer by saving an empty token. "
 "Then quit KOReader, edit the exporter.joplin_token field in %1/settings."
@@ -13382,136 +13399,25 @@ msgstr ""
 "Pentru mai multe informații vizitează https://github.com/koreader/koreader/"
 "wiki/Highlight-export."
 
-#: plugins/exporter.koplugin/main.lua:235
+#: plugins/exporter.koplugin/target/readwise.lua:52
 msgid "Readwise"
 msgstr "Readwise"
 
-#: plugins/exporter.koplugin/main.lua:245
+#: plugins/exporter.koplugin/target/readwise.lua:61
 msgid "Set authorization token for Readwise"
 msgstr "Setează jeton de autorizare pentru Readwise"
 
-#: plugins/exporter.koplugin/main.lua:272
+#: plugins/exporter.koplugin/target/readwise.lua:87
 msgid "Export to Readwise"
 msgstr "Exportă în Readwise"
 
-#: plugins/exporter.koplugin/main.lua:290
-msgid ""
-"You can enter your auth token on your computer by saving an empty token. "
-"Then quit KOReader, edit the exporter.readwise_token field in %1/settings."
-"reader.lua after creating a backup, and restart KOReader once you're done.\n"
-"\n"
-"For more information, please visit https://github.com/koreader/koreader/wiki/"
-"Highlight-export."
-msgstr ""
-"Poți întroduce token-ul tău de autentificare salvînd un token gol. Apoi "
-"închide KOReader, editează cîmpul exporter.readwise_token din %1/settings."
-"reader.lua după ce creezi o copie de siguranță, apoi repornește KOReader "
-"după ce ai terminat.\n"
-"\n"
-"Pentru mai multe informații vizitează https://github.com/koreader/koreader/"
-"wiki/Highlight-export."
-
-#: plugins/exporter.koplugin/main.lua:300
-msgid "Export all notes in this book"
-msgstr "Exportă toate notele din această carte"
-
-#: plugins/exporter.koplugin/main.lua:311
-msgid "Exporting may take several seconds…"
-msgstr "Exportarea poate dura cîteva secunde…"
-
-#: plugins/exporter.koplugin/main.lua:323
-msgid "Export all notes in your library"
-msgstr "Exportă toate notele din toată bibliotecă"
-
-#: plugins/exporter.koplugin/main.lua:334
-msgid "Exporting may take several minutes…"
-msgstr "Exportarea poate dura cîteva minute…"
-
-#: plugins/exporter.koplugin/main.lua:348
-msgid "Export to local JSON files"
-msgstr "Exportă în fișiere JSON locale"
-
-#: plugins/exporter.koplugin/main.lua:362
-msgid "Export to local HTML files"
-msgstr "Exportă în fișiere HTML locale"
-
-#: plugins/exporter.koplugin/main.lua:376
-msgid "Export to local clipping text file"
-msgstr "Exportă în fișier local de însemnări"
-
-#: plugins/exporter.koplugin/main.lua:391
-msgid "Purge history records"
-msgstr "Curăță întrările din istoric"
-
-#: plugins/exporter.koplugin/main.lua:395
-msgid ""
-"History records have been purged.\n"
-"All notes will be exported again next time.\n"
-msgstr ""
-"Întrările din istoric au fost șterse.\n"
-"Toate notele vor fi exportate din nou data viitoare.\n"
-
-#: plugins/exporter.koplugin/main.lua:578
-msgid ""
-"Exported notes from the book:\n"
-"%1"
-msgid_plural ""
-"Exported notes from the book:\n"
-"%1\n"
-"and %2 others."
-msgstr[0] ""
-"Notițe exportate din carte:\n"
-"%1"
-msgstr[1] ""
-"Notițe exportate din carte:\n"
-"%1\n"
-"și alte %2."
-msgstr[2] ""
-"Notițe exportate din carte:\n"
-"%1\n"
-"și alte %2."
-
-#: plugins/exporter.koplugin/main.lua:586
-msgid ""
-"An error occurred while trying to export notes from the book:\n"
-"%1"
-msgid_plural ""
-"Multiple errors occurred while trying to export notes from the book:\n"
-"%1\n"
-"and %2 others."
-msgstr[0] ""
-"O eroare a fost întîmpinată în încercarea de a exporta notele din carte:\n"
-"%1"
-msgstr[1] ""
-"Multiple erori au fost întîmpinate în încercarea de a exporta notele din "
-"carte:\n"
-"%1\n"
-"și alte %2."
-msgstr[2] ""
-"Multiple erori au fost întîmpinate în încercarea de a exporta notele din "
-"carte:\n"
-"%1\n"
-"și alte %2."
-
-#: plugins/exporter.koplugin/main.lua:594
-msgid ""
-"\n"
-"Notes can be found in %1/."
-msgstr ""
-"\n"
-"Notele pot fi găsite în %1/."
-
-#: plugins/exporter.koplugin/main.lua:670
+#: plugins/exporter.koplugin/target/text.lua:26
 msgid "-- Page: %1, added on %2\n"
 msgstr "-- Pagina: %1, adăugată pe %2\n"
 
-#: plugins/exporter.koplugin/main.lua:679
+#: plugins/exporter.koplugin/target/text.lua:35
 msgid "<An image>"
 msgstr "<An image>"
-
-#: plugins/exporter.koplugin/_meta.lua:5
-msgid "Exports highlights and notes."
-msgstr "Exportă evidențierile și notele."
 
 #: plugins/gestures.koplugin/main.lua:39 plugins/gestures.koplugin/main.lua:43
 #: plugins/gestures.koplugin/main.lua:57 plugins/gestures.koplugin/main.lua:61
@@ -16509,6 +16415,95 @@ msgstr "Atinge colțul din dreapta jos"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Atinge colțul din dreapta sus"
+
+#~ msgid "Note: "
+#~ msgstr "Notă: "
+
+#~ msgid ""
+#~ "You can enter your auth token on your computer by saving an empty token. "
+#~ "Then quit KOReader, edit the exporter.readwise_token field in %1/settings."
+#~ "reader.lua after creating a backup, and restart KOReader once you're "
+#~ "done.\n"
+#~ "\n"
+#~ "For more information, please visit https://github.com/koreader/koreader/"
+#~ "wiki/Highlight-export."
+#~ msgstr ""
+#~ "Poți întroduce token-ul tău de autentificare salvînd un token gol. Apoi "
+#~ "închide KOReader, editează cîmpul exporter.readwise_token din %1/settings."
+#~ "reader.lua după ce creezi o copie de siguranță, apoi repornește KOReader "
+#~ "după ce ai terminat.\n"
+#~ "\n"
+#~ "Pentru mai multe informații vizitează https://github.com/koreader/"
+#~ "koreader/wiki/Highlight-export."
+
+#~ msgid "Exporting may take several minutes…"
+#~ msgstr "Exportarea poate dura cîteva minute…"
+
+#~ msgid "Export to local JSON files"
+#~ msgstr "Exportă în fișiere JSON locale"
+
+#~ msgid "Export to local HTML files"
+#~ msgstr "Exportă în fișiere HTML locale"
+
+#~ msgid "Export to local clipping text file"
+#~ msgstr "Exportă în fișier local de însemnări"
+
+#~ msgid "Purge history records"
+#~ msgstr "Curăță întrările din istoric"
+
+#~ msgid ""
+#~ "History records have been purged.\n"
+#~ "All notes will be exported again next time.\n"
+#~ msgstr ""
+#~ "Întrările din istoric au fost șterse.\n"
+#~ "Toate notele vor fi exportate din nou data viitoare.\n"
+
+#~ msgid ""
+#~ "Exported notes from the book:\n"
+#~ "%1"
+#~ msgid_plural ""
+#~ "Exported notes from the book:\n"
+#~ "%1\n"
+#~ "and %2 others."
+#~ msgstr[0] ""
+#~ "Notițe exportate din carte:\n"
+#~ "%1"
+#~ msgstr[1] ""
+#~ "Notițe exportate din carte:\n"
+#~ "%1\n"
+#~ "și alte %2."
+#~ msgstr[2] ""
+#~ "Notițe exportate din carte:\n"
+#~ "%1\n"
+#~ "și alte %2."
+
+#~ msgid ""
+#~ "An error occurred while trying to export notes from the book:\n"
+#~ "%1"
+#~ msgid_plural ""
+#~ "Multiple errors occurred while trying to export notes from the book:\n"
+#~ "%1\n"
+#~ "and %2 others."
+#~ msgstr[0] ""
+#~ "O eroare a fost întîmpinată în încercarea de a exporta notele din carte:\n"
+#~ "%1"
+#~ msgstr[1] ""
+#~ "Multiple erori au fost întîmpinate în încercarea de a exporta notele din "
+#~ "carte:\n"
+#~ "%1\n"
+#~ "și alte %2."
+#~ msgstr[2] ""
+#~ "Multiple erori au fost întîmpinate în încercarea de a exporta notele din "
+#~ "carte:\n"
+#~ "%1\n"
+#~ "și alte %2."
+
+#~ msgid ""
+#~ "\n"
+#~ "Notes can be found in %1/."
+#~ msgstr ""
+#~ "\n"
+#~ "Notele pot fi găsite în %1/."
 
 #~ msgid "Auto suspend"
 #~ msgstr "Suspendare automată"

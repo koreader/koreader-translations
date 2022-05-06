@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-06 17:36+0000\n"
+"POT-Creation-Date: 2022-05-06 21:01+0000\n"
 "PO-Revision-Date: 2022-04-26 20:13+0000\n"
 "Last-Translator: leschek <leschekleschek@post.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -198,9 +198,9 @@ msgstr "Zadejte název souboru"
 #: plugins/calibre.koplugin/wireless.lua:424
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
 #: plugins/coverimage.koplugin/main.lua:352
-#: plugins/exporter.koplugin/main.lua:139
-#: plugins/exporter.koplugin/main.lua:179
-#: plugins/exporter.koplugin/main.lua:250
+#: plugins/exporter.koplugin/target/joplin.lua:239
+#: plugins/exporter.koplugin/target/joplin.lua:278
+#: plugins/exporter.koplugin/target/readwise.lua:66
 #: plugins/gestures.koplugin/main.lua:332 plugins/kosync.koplugin/main.lua:373
 #: plugins/newsdownloader.koplugin/main.lua:149
 #: plugins/newsdownloader.koplugin/main.lua:742
@@ -1793,7 +1793,8 @@ msgstr "Chcete otevřít poslední dokument: %1?"
 #: frontend/ui/widget/container/inputcontainer.lua:291
 #: frontend/ui/widget/numberpickerwidget.lua:145
 #: plugins/autowarmth.koplugin/main.lua:468
-#: plugins/calibre.koplugin/main.lua:317 plugins/exporter.koplugin/main.lua:146
+#: plugins/calibre.koplugin/main.lua:317
+#: plugins/exporter.koplugin/target/joplin.lua:245
 #: plugins/wallabag.koplugin/main.lua:952
 msgid "OK"
 msgstr "OK"
@@ -2101,7 +2102,7 @@ msgid "in %1"
 msgstr "v kapitole %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1416
-#: plugins/exporter.koplugin/clip.lua:247
+#: plugins/exporter.koplugin/clip.lua:246
 msgid "Page %1 %2 @ %3"
 msgstr "Strana %1 %2 ze %3"
 
@@ -8453,8 +8454,7 @@ msgid "Version: %1"
 msgstr "Verze: %1"
 
 #: frontend/ui/elements/common_info_menu_table.lua:25
-#: plugins/exporter.koplugin/main.lua:215
-#: plugins/exporter.koplugin/main.lua:286
+#: plugins/exporter.koplugin/target/joplin.lua:304
 #: plugins/wallabag.koplugin/main.lua:331
 msgid "Help"
 msgstr "Nápověda"
@@ -13298,49 +13298,66 @@ msgstr ""
 "Tento doplněk vám umožňuje upravit nastavení dokumentu, předtím než je "
 "dokument načten, na základě vnějších faktorů."
 
-#: plugins/exporter.koplugin/main.lua:37
-msgid "KOReader Notes"
-msgstr "Poznámky KOReaderu"
+#: plugins/exporter.koplugin/main.lua:182
+msgid "Exporting may take several seconds…"
+msgstr "Export může trvat několik sekund…"
 
-#: plugins/exporter.koplugin/main.lua:38
-msgid "Note: "
-msgstr "Poznámka: "
-
-#: plugins/exporter.koplugin/main.lua:112 plugins/exporter.koplugin/_meta.lua:4
+#: plugins/exporter.koplugin/main.lua:203 plugins/exporter.koplugin/_meta.lua:4
 msgid "Export highlights"
 msgstr "Exportovat zvýraznění"
 
-#: plugins/exporter.koplugin/main.lua:115
+#: plugins/exporter.koplugin/main.lua:206
+msgid "Export all notes in this book"
+msgstr "Exportovat všechny poznámky v této knize"
+
+#: plugins/exporter.koplugin/main.lua:215
+msgid "Export all notes in your library"
+msgstr "Exportovat všechny poznámky ve vaší knihovně"
+
+#: plugins/exporter.koplugin/main.lua:225
+#, fuzzy
+msgid "Choose formats and services"
+msgstr "Vyberte složku"
+
+#: plugins/exporter.koplugin/_meta.lua:5
+msgid "Exports highlights and notes."
+msgstr "Exportuje zvýraznění a poznámky."
+
+#: plugins/exporter.koplugin/target/joplin.lua:17
+msgid "KOReader Notes"
+msgstr "Poznámky KOReaderu"
+
+#: plugins/exporter.koplugin/target/joplin.lua:215
 msgid "Joplin"
 msgstr "Joplin"
 
-#: plugins/exporter.koplugin/main.lua:119
+#: plugins/exporter.koplugin/target/joplin.lua:219
 msgid "Set Joplin IP and Port"
 msgstr "Nastavit IP adresu a port Joplinu"
 
-#: plugins/exporter.koplugin/main.lua:125
+#: plugins/exporter.koplugin/target/joplin.lua:225
 msgid "Set Joplin IP and port number"
 msgstr "Nastavit IP adresu a číslo portu Joplinu"
 
-#: plugins/exporter.koplugin/main.lua:169
-#: plugins/exporter.koplugin/main.lua:240
+#: plugins/exporter.koplugin/target/joplin.lua:268
+#: plugins/exporter.koplugin/target/readwise.lua:56
 msgid "Set authorization token"
 msgstr "Nastavit autorizační token"
 
-#: plugins/exporter.koplugin/main.lua:174
+#: plugins/exporter.koplugin/target/joplin.lua:273
 msgid "Set authorization token for Joplin"
 msgstr "Nastavit autorizační token pro Joplin"
 
-#: plugins/exporter.koplugin/main.lua:186
-#: plugins/exporter.koplugin/main.lua:257
+#: plugins/exporter.koplugin/target/joplin.lua:284
+#: plugins/exporter.koplugin/target/readwise.lua:72
 msgid "Set token"
 msgstr "Nastavit token"
 
-#: plugins/exporter.koplugin/main.lua:201
+#: plugins/exporter.koplugin/target/joplin.lua:299
 msgid "Export to Joplin"
 msgstr "Exportovat do Joplinu"
 
-#: plugins/exporter.koplugin/main.lua:219
+#: plugins/exporter.koplugin/target/joplin.lua:308
 msgid ""
 "You can enter your auth token on your computer by saving an empty token. "
 "Then quit KOReader, edit the exporter.joplin_token field in %1/settings."
@@ -13375,134 +13392,25 @@ msgstr ""
 "Pro další informace se podívejte na stránku: https://github.com/koreader/"
 "koreader/wiki/Highlight-export."
 
-#: plugins/exporter.koplugin/main.lua:235
+#: plugins/exporter.koplugin/target/readwise.lua:52
 msgid "Readwise"
 msgstr "Readwise"
 
-#: plugins/exporter.koplugin/main.lua:245
+#: plugins/exporter.koplugin/target/readwise.lua:61
 msgid "Set authorization token for Readwise"
 msgstr "Nastavit autorizační token pro Readwise"
 
-#: plugins/exporter.koplugin/main.lua:272
+#: plugins/exporter.koplugin/target/readwise.lua:87
 msgid "Export to Readwise"
 msgstr "Exportovat do Readwise"
 
-#: plugins/exporter.koplugin/main.lua:290
-msgid ""
-"You can enter your auth token on your computer by saving an empty token. "
-"Then quit KOReader, edit the exporter.readwise_token field in %1/settings."
-"reader.lua after creating a backup, and restart KOReader once you're done.\n"
-"\n"
-"For more information, please visit https://github.com/koreader/koreader/wiki/"
-"Highlight-export."
-msgstr ""
-"Na vašem počítači můžete vložit váš autorizační token tak, že uložíte "
-"prázdný token. Pak zavřete KOReader a po vytvoření zálohy upravte v souboru "
-"%1/settings.reader.lua pole exporter.readwise_token. Jakmile máte hotovo "
-"restartujte KOReader.\n"
-"\n"
-"Pro další informace se podívejte na stránku https://github.com/koreader/"
-"koreader/wiki/Highlight-export."
-
-#: plugins/exporter.koplugin/main.lua:300
-msgid "Export all notes in this book"
-msgstr "Exportovat všechny poznámky v této knize"
-
-#: plugins/exporter.koplugin/main.lua:311
-msgid "Exporting may take several seconds…"
-msgstr "Export může trvat několik sekund…"
-
-#: plugins/exporter.koplugin/main.lua:323
-msgid "Export all notes in your library"
-msgstr "Exportovat všechny poznámky ve vaší knihovně"
-
-#: plugins/exporter.koplugin/main.lua:334
-msgid "Exporting may take several minutes…"
-msgstr "Export může trvat několik minut…"
-
-#: plugins/exporter.koplugin/main.lua:348
-msgid "Export to local JSON files"
-msgstr "Exportovat do lokálních JSON souborů"
-
-#: plugins/exporter.koplugin/main.lua:362
-msgid "Export to local HTML files"
-msgstr "Exportovat do lokálních HTML souborů"
-
-#: plugins/exporter.koplugin/main.lua:376
-msgid "Export to local clipping text file"
-msgstr "Exportovat do lokálního textového souboru pro výstřižky"
-
-#: plugins/exporter.koplugin/main.lua:391
-msgid "Purge history records"
-msgstr "Pročistit data Historie"
-
-#: plugins/exporter.koplugin/main.lua:395
-msgid ""
-"History records have been purged.\n"
-"All notes will be exported again next time.\n"
-msgstr ""
-"Historie byla pročištěna.\n"
-"Všechny poznámky budou příště znovu exportovány.\n"
-
-#: plugins/exporter.koplugin/main.lua:578
-msgid ""
-"Exported notes from the book:\n"
-"%1"
-msgid_plural ""
-"Exported notes from the book:\n"
-"%1\n"
-"and %2 others."
-msgstr[0] ""
-"Poznámka exportovaná z knihy:\n"
-"%1"
-msgstr[1] ""
-"Poznámky exportované z knihy:\n"
-"%1\n"
-"a %2 dalších."
-msgstr[2] ""
-"Poznámky exportované z knihy:\n"
-"%1\n"
-"a %2 dalších."
-
-#: plugins/exporter.koplugin/main.lua:586
-msgid ""
-"An error occurred while trying to export notes from the book:\n"
-"%1"
-msgid_plural ""
-"Multiple errors occurred while trying to export notes from the book:\n"
-"%1\n"
-"and %2 others."
-msgstr[0] ""
-"Nastala chyba při exportu poznámek z knihy:\n"
-"%1"
-msgstr[1] ""
-"Nastaly chyby při exportu poznámek z knihy:\n"
-"%1\n"
-"a %2 dalších."
-msgstr[2] ""
-"Nastaly chyby při exportu poznámek z knihy:\n"
-"%1\n"
-"a %2 dalších."
-
-#: plugins/exporter.koplugin/main.lua:594
-msgid ""
-"\n"
-"Notes can be found in %1/."
-msgstr ""
-"\n"
-"Poznámky lze nalézt v %1/."
-
-#: plugins/exporter.koplugin/main.lua:670
+#: plugins/exporter.koplugin/target/text.lua:26
 msgid "-- Page: %1, added on %2\n"
 msgstr "-- Stránka: %1, přidáno %2\n"
 
-#: plugins/exporter.koplugin/main.lua:679
+#: plugins/exporter.koplugin/target/text.lua:35
 msgid "<An image>"
 msgstr "<Obrázek>"
-
-#: plugins/exporter.koplugin/_meta.lua:5
-msgid "Exports highlights and notes."
-msgstr "Exportuje zvýraznění a poznámky."
 
 #: plugins/gestures.koplugin/main.lua:39 plugins/gestures.koplugin/main.lua:43
 #: plugins/gestures.koplugin/main.lua:57 plugins/gestures.koplugin/main.lua:61
@@ -16476,6 +16384,93 @@ msgstr "Ťukněte na pravý dolní roh"
 #: tools/kobo_touch_probe.lua:67
 msgid "Tap the upper right corner"
 msgstr "Ťukněte na pravý horní roh"
+
+#~ msgid "Note: "
+#~ msgstr "Poznámka: "
+
+#~ msgid ""
+#~ "You can enter your auth token on your computer by saving an empty token. "
+#~ "Then quit KOReader, edit the exporter.readwise_token field in %1/settings."
+#~ "reader.lua after creating a backup, and restart KOReader once you're "
+#~ "done.\n"
+#~ "\n"
+#~ "For more information, please visit https://github.com/koreader/koreader/"
+#~ "wiki/Highlight-export."
+#~ msgstr ""
+#~ "Na vašem počítači můžete vložit váš autorizační token tak, že uložíte "
+#~ "prázdný token. Pak zavřete KOReader a po vytvoření zálohy upravte v "
+#~ "souboru %1/settings.reader.lua pole exporter.readwise_token. Jakmile máte "
+#~ "hotovo restartujte KOReader.\n"
+#~ "\n"
+#~ "Pro další informace se podívejte na stránku https://github.com/koreader/"
+#~ "koreader/wiki/Highlight-export."
+
+#~ msgid "Exporting may take several minutes…"
+#~ msgstr "Export může trvat několik minut…"
+
+#~ msgid "Export to local JSON files"
+#~ msgstr "Exportovat do lokálních JSON souborů"
+
+#~ msgid "Export to local HTML files"
+#~ msgstr "Exportovat do lokálních HTML souborů"
+
+#~ msgid "Export to local clipping text file"
+#~ msgstr "Exportovat do lokálního textového souboru pro výstřižky"
+
+#~ msgid "Purge history records"
+#~ msgstr "Pročistit data Historie"
+
+#~ msgid ""
+#~ "History records have been purged.\n"
+#~ "All notes will be exported again next time.\n"
+#~ msgstr ""
+#~ "Historie byla pročištěna.\n"
+#~ "Všechny poznámky budou příště znovu exportovány.\n"
+
+#~ msgid ""
+#~ "Exported notes from the book:\n"
+#~ "%1"
+#~ msgid_plural ""
+#~ "Exported notes from the book:\n"
+#~ "%1\n"
+#~ "and %2 others."
+#~ msgstr[0] ""
+#~ "Poznámka exportovaná z knihy:\n"
+#~ "%1"
+#~ msgstr[1] ""
+#~ "Poznámky exportované z knihy:\n"
+#~ "%1\n"
+#~ "a %2 dalších."
+#~ msgstr[2] ""
+#~ "Poznámky exportované z knihy:\n"
+#~ "%1\n"
+#~ "a %2 dalších."
+
+#~ msgid ""
+#~ "An error occurred while trying to export notes from the book:\n"
+#~ "%1"
+#~ msgid_plural ""
+#~ "Multiple errors occurred while trying to export notes from the book:\n"
+#~ "%1\n"
+#~ "and %2 others."
+#~ msgstr[0] ""
+#~ "Nastala chyba při exportu poznámek z knihy:\n"
+#~ "%1"
+#~ msgstr[1] ""
+#~ "Nastaly chyby při exportu poznámek z knihy:\n"
+#~ "%1\n"
+#~ "a %2 dalších."
+#~ msgstr[2] ""
+#~ "Nastaly chyby při exportu poznámek z knihy:\n"
+#~ "%1\n"
+#~ "a %2 dalších."
+
+#~ msgid ""
+#~ "\n"
+#~ "Notes can be found in %1/."
+#~ msgstr ""
+#~ "\n"
+#~ "Poznámky lze nalézt v %1/."
 
 #~ msgid "Auto suspend"
 #~ msgstr "Automatický režim spánku"
