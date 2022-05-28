@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-28 07:08+0000\n"
+"POT-Creation-Date: 2022-05-28 09:11+0000\n"
 "PO-Revision-Date: 2022-01-12 12:48+0000\n"
 "Last-Translator: tamama9527 <jack85072@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -202,8 +202,8 @@ msgstr "輸入檔名"
 #: plugins/calibre.koplugin/wireless.lua:424
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
 #: plugins/coverimage.koplugin/main.lua:352
-#: plugins/exporter.koplugin/target/joplin.lua:239
-#: plugins/exporter.koplugin/target/joplin.lua:278
+#: plugins/exporter.koplugin/target/joplin.lua:222
+#: plugins/exporter.koplugin/target/joplin.lua:261
 #: plugins/exporter.koplugin/target/readwise.lua:66
 #: plugins/gestures.koplugin/main.lua:333 plugins/kosync.koplugin/main.lua:373
 #: plugins/newsdownloader.koplugin/main.lua:149
@@ -802,6 +802,7 @@ msgstr "腳本傳回非零狀態代碼：%1！"
 
 #. @translators See <https://en.wikipedia.org/wiki/Markdown>. In languages written in the Latin alphabet this is unlikely to change.
 #: frontend/apps/filemanager/filemanagerconverter.lua:18
+#: plugins/exporter.koplugin/target/markdown.lua:87
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -1805,7 +1806,7 @@ msgstr "您想要開啟上次的文件 %1 嗎?"
 #: frontend/ui/widget/numberpickerwidget.lua:146
 #: plugins/autowarmth.koplugin/main.lua:469
 #: plugins/calibre.koplugin/main.lua:317
-#: plugins/exporter.koplugin/target/joplin.lua:245
+#: plugins/exporter.koplugin/target/joplin.lua:228
 #: plugins/wallabag.koplugin/main.lua:952
 msgid "OK"
 msgstr "確定"
@@ -3369,19 +3370,23 @@ msgid "Follow Link"
 msgstr "前往連結"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:303
+#: plugins/exporter.koplugin/target/markdown.lua:79
 msgid "Lighten"
 msgstr "加亮"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:304
+#: plugins/exporter.koplugin/target/markdown.lua:80
 msgid "Underline"
 msgstr "下劃線"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:305
+#: plugins/exporter.koplugin/target/markdown.lua:81
 #, fuzzy
 msgid "Strikeout"
 msgstr "設定逾時"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:306
+#: plugins/exporter.koplugin/target/markdown.lua:82
 msgid "Invert"
 msgstr "反轉"
 
@@ -4681,6 +4686,8 @@ msgid "Zoom set to: %1"
 msgstr "縮放已設為：%1"
 
 #: frontend/apps/reader/modules/readertypeset.lua:225
+#: plugins/exporter.koplugin/target/markdown.lua:27
+#: plugins/exporter.koplugin/template/md.lua:6
 msgid "None"
 msgstr "無"
 
@@ -8240,7 +8247,7 @@ msgid "Version: %1"
 msgstr "版本：%1"
 
 #: frontend/ui/elements/common_info_menu_table.lua:25
-#: plugins/exporter.koplugin/target/joplin.lua:304
+#: plugins/exporter.koplugin/target/joplin.lua:287
 #: plugins/wallabag.koplugin/main.lua:331
 msgid "Help"
 msgstr "幫助"
@@ -12779,23 +12786,23 @@ msgid ""
 "loaded based on external factors."
 msgstr "這個插件讓您可以在載入文件之前，基於外部因素調整文件設定。"
 
-#: plugins/exporter.koplugin/main.lua:182
+#: plugins/exporter.koplugin/main.lua:183
 msgid "Exporting may take several seconds…"
 msgstr "會出可能會花上幾秒鐘……"
 
-#: plugins/exporter.koplugin/main.lua:203 plugins/exporter.koplugin/_meta.lua:4
+#: plugins/exporter.koplugin/main.lua:204 plugins/exporter.koplugin/_meta.lua:4
 msgid "Export highlights"
 msgstr "匯出標注"
 
-#: plugins/exporter.koplugin/main.lua:206
+#: plugins/exporter.koplugin/main.lua:207
 msgid "Export all notes in this book"
 msgstr "匯出此書中的全部筆記"
 
-#: plugins/exporter.koplugin/main.lua:215
+#: plugins/exporter.koplugin/main.lua:216
 msgid "Export all notes in your library"
 msgstr "匯出您書庫中的全部筆記"
 
-#: plugins/exporter.koplugin/main.lua:225
+#: plugins/exporter.koplugin/main.lua:226
 #, fuzzy
 msgid "Choose formats and services"
 msgstr "選擇資料夾"
@@ -12808,69 +12815,92 @@ msgstr "匯出標注與筆記。"
 msgid "KOReader Notes"
 msgstr "KOReader 筆記"
 
-#: plugins/exporter.koplugin/target/joplin.lua:215
+#: plugins/exporter.koplugin/target/joplin.lua:198
 msgid "Joplin"
 msgstr "Joplin"
 
-#: plugins/exporter.koplugin/target/joplin.lua:219
+#: plugins/exporter.koplugin/target/joplin.lua:202
 msgid "Set Joplin IP and Port"
 msgstr "設定 Joplin IP 和連接埠"
 
-#: plugins/exporter.koplugin/target/joplin.lua:225
+#: plugins/exporter.koplugin/target/joplin.lua:208
 msgid "Set Joplin IP and port number"
 msgstr "設定 Joplin IP 和連接埠號碼"
 
-#: plugins/exporter.koplugin/target/joplin.lua:268
+#: plugins/exporter.koplugin/target/joplin.lua:251
 #: plugins/exporter.koplugin/target/readwise.lua:56
 msgid "Set authorization token"
 msgstr "設定授權 token"
 
-#: plugins/exporter.koplugin/target/joplin.lua:273
+#: plugins/exporter.koplugin/target/joplin.lua:256
 msgid "Set authorization token for Joplin"
 msgstr "設定 Joplin 的授權 token"
 
-#: plugins/exporter.koplugin/target/joplin.lua:284
+#: plugins/exporter.koplugin/target/joplin.lua:267
 #: plugins/exporter.koplugin/target/readwise.lua:72
 msgid "Set token"
 msgstr "設定 token"
 
-#: plugins/exporter.koplugin/target/joplin.lua:299
+#: plugins/exporter.koplugin/target/joplin.lua:282
 msgid "Export to Joplin"
 msgstr "匯出到 Joplin"
 
-#: plugins/exporter.koplugin/target/joplin.lua:308
-#, fuzzy
+#: plugins/exporter.koplugin/target/joplin.lua:291
 msgid ""
-"You can enter your auth token on your computer by saving an empty token. "
-"Then quit KOReader, edit the exporter.joplin_token field in %1/settings."
-"reader.lua after creating a backup, and restart KOReader once you're done.\n"
+"For Joplin setup instructions, see %1\n"
 "\n"
-"To export to Joplin, you must forward the IP and port used by this plugin to "
-"the localhost:port on which Joplin is listening. This can be done with socat "
-"or a similar program. For example:\n"
-"\n"
-"For Windows: netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
-"listenport=41185 connectaddress=localhost connectport=41184\n"
-"\n"
-"For Linux: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
-"\n"
-"For more information, please visit https://github.com/koreader/koreader/wiki/"
-"Highlight-export."
+"Markdown formatting can be configured in:\n"
+"Export highlights > Choose formats and services > Markdown."
 msgstr ""
-"你可以藉由儲存空的 token 來在電腦上輸入授權 token。然後退出 KOReader，建立備"
-"份後編輯 %1/settings.reader.lua 的 evernote.joplin_token 欄位，完成後重新啟"
-"動 KOReader。\n"
-"\n"
-"要匯出到 Joplin，你必須將此插件使用的 IP 和連接埠轉送到 Joplin 監聽的 "
-"localhost:port 上。這可以使用 socat 或類似的程式做到。例如：\n"
-"\n"
-"在 Windows 上：netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
-"listenport=41185 connectaddress=localhost connectport=41184\n"
-"\n"
-"在 Linux 上：$socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
-"\n"
-"請前往 https://github.com/koreader/koreader/wiki/Evernote-export 以獲得更多資"
-"訊。"
+
+#: plugins/exporter.koplugin/target/markdown.lua:28
+#: plugins/exporter.koplugin/template/md.lua:10
+#, fuzzy
+msgid "Bold"
+msgstr "粗體"
+
+#: plugins/exporter.koplugin/target/markdown.lua:29
+#: plugins/exporter.koplugin/template/md.lua:18
+#, fuzzy
+msgid "Bold italic"
+msgstr "按住間隔"
+
+#: plugins/exporter.koplugin/target/markdown.lua:30
+#: plugins/exporter.koplugin/template/md.lua:14
+#, fuzzy
+msgid "Italic"
+msgstr "義大利語"
+
+#: plugins/exporter.koplugin/target/markdown.lua:31
+#: plugins/exporter.koplugin/template/md.lua:30
+#, fuzzy
+msgid "Strikethrough"
+msgstr "設定逾時"
+
+#: plugins/exporter.koplugin/target/markdown.lua:32
+#: plugins/exporter.koplugin/template/md.lua:22
+msgid "Underline (Markdownit style, with ++)"
+msgstr ""
+
+#: plugins/exporter.koplugin/target/markdown.lua:33
+#: plugins/exporter.koplugin/template/md.lua:26
+msgid "Underline (with <u></u> tags)"
+msgstr ""
+
+#: plugins/exporter.koplugin/target/markdown.lua:48
+#, fuzzy
+msgid "Formatting style for %1"
+msgstr "Font hinting 已設為：%1"
+
+#: plugins/exporter.koplugin/target/markdown.lua:91
+#, fuzzy
+msgid "Export to Markdown"
+msgstr "匯出到 Joplin"
+
+#: plugins/exporter.koplugin/target/markdown.lua:96
+#, fuzzy
+msgid "Format highlights based on style"
+msgstr "匯出標注與筆記。"
 
 #: plugins/exporter.koplugin/target/readwise.lua:52
 #, fuzzy
@@ -15803,6 +15833,40 @@ msgstr "點擊右下角"
 msgid "Tap the upper right corner"
 msgstr "點擊右上角"
 
+#, fuzzy
+#~ msgid ""
+#~ "You can enter your auth token on your computer by saving an empty token. "
+#~ "Then quit KOReader, edit the exporter.joplin_token field in %1/settings."
+#~ "reader.lua after creating a backup, and restart KOReader once you're "
+#~ "done.\n"
+#~ "\n"
+#~ "To export to Joplin, you must forward the IP and port used by this plugin "
+#~ "to the localhost:port on which Joplin is listening. This can be done with "
+#~ "socat or a similar program. For example:\n"
+#~ "\n"
+#~ "For Windows: netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
+#~ "listenport=41185 connectaddress=localhost connectport=41184\n"
+#~ "\n"
+#~ "For Linux: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
+#~ "\n"
+#~ "For more information, please visit https://github.com/koreader/koreader/"
+#~ "wiki/Highlight-export."
+#~ msgstr ""
+#~ "你可以藉由儲存空的 token 來在電腦上輸入授權 token。然後退出 KOReader，建立"
+#~ "備份後編輯 %1/settings.reader.lua 的 evernote.joplin_token 欄位，完成後重"
+#~ "新啟動 KOReader。\n"
+#~ "\n"
+#~ "要匯出到 Joplin，你必須將此插件使用的 IP 和連接埠轉送到 Joplin 監聽的 "
+#~ "localhost:port 上。這可以使用 socat 或類似的程式做到。例如：\n"
+#~ "\n"
+#~ "在 Windows 上：netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
+#~ "listenport=41185 connectaddress=localhost connectport=41184\n"
+#~ "\n"
+#~ "在 Linux 上：$socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
+#~ "\n"
+#~ "請前往 https://github.com/koreader/koreader/wiki/Evernote-export 以獲得更"
+#~ "多資訊。"
+
 #~ msgid "Total"
 #~ msgstr "總計"
 
@@ -16382,9 +16446,6 @@ msgstr "點擊右上角"
 
 #~ msgid "Set default overlap style to %1?"
 #~ msgstr "要將頁面重疊顯示風格的預設值設為 %1 嗎？"
-
-#~ msgid "Hold interval"
-#~ msgstr "按住間隔"
 
 #~ msgid "Hold corner"
 #~ msgstr "按住角落"

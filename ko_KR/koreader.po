@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-28 07:08+0000\n"
+"POT-Creation-Date: 2022-05-28 09:11+0000\n"
 "PO-Revision-Date: 2022-05-07 16:53+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -206,8 +206,8 @@ msgstr "파일이름 입력"
 #: plugins/calibre.koplugin/wireless.lua:424
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
 #: plugins/coverimage.koplugin/main.lua:352
-#: plugins/exporter.koplugin/target/joplin.lua:239
-#: plugins/exporter.koplugin/target/joplin.lua:278
+#: plugins/exporter.koplugin/target/joplin.lua:222
+#: plugins/exporter.koplugin/target/joplin.lua:261
 #: plugins/exporter.koplugin/target/readwise.lua:66
 #: plugins/gestures.koplugin/main.lua:333 plugins/kosync.koplugin/main.lua:373
 #: plugins/newsdownloader.koplugin/main.lua:149
@@ -802,6 +802,7 @@ msgstr "스크립트가 0이 아닌 상태 코드를 보내왔습니다: %1!"
 
 #. @translators See <https://en.wikipedia.org/wiki/Markdown>. In languages written in the Latin alphabet this is unlikely to change.
 #: frontend/apps/filemanager/filemanagerconverter.lua:18
+#: plugins/exporter.koplugin/target/markdown.lua:87
 msgid "Markdown"
 msgstr "마크다운"
 
@@ -1791,7 +1792,7 @@ msgstr "마지막 문서를 열까요: %1?"
 #: frontend/ui/widget/numberpickerwidget.lua:146
 #: plugins/autowarmth.koplugin/main.lua:469
 #: plugins/calibre.koplugin/main.lua:317
-#: plugins/exporter.koplugin/target/joplin.lua:245
+#: plugins/exporter.koplugin/target/joplin.lua:228
 #: plugins/wallabag.koplugin/main.lua:952
 msgid "OK"
 msgstr "확인"
@@ -3353,18 +3354,22 @@ msgid "Follow Link"
 msgstr "링크로 이동"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:303
+#: plugins/exporter.koplugin/target/markdown.lua:79
 msgid "Lighten"
 msgstr "형광펜"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:304
+#: plugins/exporter.koplugin/target/markdown.lua:80
 msgid "Underline"
 msgstr "밑줄"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:305
+#: plugins/exporter.koplugin/target/markdown.lua:81
 msgid "Strikeout"
 msgstr "취소선"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:306
+#: plugins/exporter.koplugin/target/markdown.lua:82
 msgid "Invert"
 msgstr "반전"
 
@@ -4711,6 +4716,8 @@ msgid "Zoom set to: %1"
 msgstr "확대 배율 설정: %1"
 
 #: frontend/apps/reader/modules/readertypeset.lua:225
+#: plugins/exporter.koplugin/target/markdown.lua:27
+#: plugins/exporter.koplugin/template/md.lua:6
 msgid "None"
 msgstr "없음"
 
@@ -8338,7 +8345,7 @@ msgid "Version: %1"
 msgstr "버전: %1"
 
 #: frontend/ui/elements/common_info_menu_table.lua:25
-#: plugins/exporter.koplugin/target/joplin.lua:304
+#: plugins/exporter.koplugin/target/joplin.lua:287
 #: plugins/wallabag.koplugin/main.lua:331
 msgid "Help"
 msgstr "도움말"
@@ -13128,23 +13135,23 @@ msgstr ""
 "이 플러그인을 사용하면 외부 요인에 따라 문서를 열기 전에 문서 설정을 덧꾸밀 "
 "수 있습니다."
 
-#: plugins/exporter.koplugin/main.lua:182
+#: plugins/exporter.koplugin/main.lua:183
 msgid "Exporting may take several seconds…"
 msgstr "내보내기에 몇 초쯤 걸릴 수 있습니다…"
 
-#: plugins/exporter.koplugin/main.lua:203 plugins/exporter.koplugin/_meta.lua:4
+#: plugins/exporter.koplugin/main.lua:204 plugins/exporter.koplugin/_meta.lua:4
 msgid "Export highlights"
 msgstr "하이라이트 내보내기"
 
-#: plugins/exporter.koplugin/main.lua:206
+#: plugins/exporter.koplugin/main.lua:207
 msgid "Export all notes in this book"
 msgstr "이 책의 모든 메모 내보내기"
 
-#: plugins/exporter.koplugin/main.lua:215
+#: plugins/exporter.koplugin/main.lua:216
 msgid "Export all notes in your library"
 msgstr "라이브러리의 모든 노트 내보내기"
 
-#: plugins/exporter.koplugin/main.lua:225
+#: plugins/exporter.koplugin/main.lua:226
 msgid "Choose formats and services"
 msgstr "형식과 서비스 선택"
 
@@ -13156,69 +13163,92 @@ msgstr "하이라이트와 메모를 내보냅니다."
 msgid "KOReader Notes"
 msgstr "KOReader 메모"
 
-#: plugins/exporter.koplugin/target/joplin.lua:215
+#: plugins/exporter.koplugin/target/joplin.lua:198
 msgid "Joplin"
 msgstr "조플린"
 
-#: plugins/exporter.koplugin/target/joplin.lua:219
+#: plugins/exporter.koplugin/target/joplin.lua:202
 msgid "Set Joplin IP and Port"
 msgstr "조플린 IP와 포트 설정"
 
-#: plugins/exporter.koplugin/target/joplin.lua:225
+#: plugins/exporter.koplugin/target/joplin.lua:208
 msgid "Set Joplin IP and port number"
 msgstr "조플린 IP와 포트 번호 설정"
 
-#: plugins/exporter.koplugin/target/joplin.lua:268
+#: plugins/exporter.koplugin/target/joplin.lua:251
 #: plugins/exporter.koplugin/target/readwise.lua:56
 msgid "Set authorization token"
 msgstr "인증 토큰 설정"
 
-#: plugins/exporter.koplugin/target/joplin.lua:273
+#: plugins/exporter.koplugin/target/joplin.lua:256
 msgid "Set authorization token for Joplin"
 msgstr "조플린의 인증 토큰 설정"
 
-#: plugins/exporter.koplugin/target/joplin.lua:284
+#: plugins/exporter.koplugin/target/joplin.lua:267
 #: plugins/exporter.koplugin/target/readwise.lua:72
 msgid "Set token"
 msgstr "토큰 설정"
 
-#: plugins/exporter.koplugin/target/joplin.lua:299
+#: plugins/exporter.koplugin/target/joplin.lua:282
 msgid "Export to Joplin"
 msgstr "조플린으로 내보내기"
 
-#: plugins/exporter.koplugin/target/joplin.lua:308
+#: plugins/exporter.koplugin/target/joplin.lua:291
 msgid ""
-"You can enter your auth token on your computer by saving an empty token. "
-"Then quit KOReader, edit the exporter.joplin_token field in %1/settings."
-"reader.lua after creating a backup, and restart KOReader once you're done.\n"
+"For Joplin setup instructions, see %1\n"
 "\n"
-"To export to Joplin, you must forward the IP and port used by this plugin to "
-"the localhost:port on which Joplin is listening. This can be done with socat "
-"or a similar program. For example:\n"
-"\n"
-"For Windows: netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
-"listenport=41185 connectaddress=localhost connectport=41184\n"
-"\n"
-"For Linux: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
-"\n"
-"For more information, please visit https://github.com/koreader/koreader/wiki/"
-"Highlight-export."
+"Markdown formatting can be configured in:\n"
+"Export highlights > Choose formats and services > Markdown."
 msgstr ""
-"빈 토큰을 저장하여 컴퓨터에 인증 토큰을 입력할 수 있습니다. 그런 다음 "
-"KOReader를 끝내고 백업을 생성한 후 %1/settings.reader.lua의 exporter."
-"joplin_token 필드를 편집하고 완료되면 KOReader를 다시 시작합니다.\n"
-"\n"
-"Joplin으로 내보내려면 이 플러그인에서 사용하는 IP와 포트를 Joplin이 수신 대"
-"기 중인 localhost:port로 전달해야 합니다. 이것은 socat 또는 유사한 프로그램으"
-"로 수행할 수 있습니다. 예를 들어:\n"
-"\n"
-"Windows: netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
-"listenport=41185 connectaddress=localhost connectport=41184\n"
-"\n"
-"Linux의 경우: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
-"\n"
-"자세한 내용은 https://github.com/koreader/koreader/wiki/Highlight-export 를 "
-"방문하세요."
+
+#: plugins/exporter.koplugin/target/markdown.lua:28
+#: plugins/exporter.koplugin/template/md.lua:10
+#, fuzzy
+msgid "Bold"
+msgstr "굵게"
+
+#: plugins/exporter.koplugin/target/markdown.lua:29
+#: plugins/exporter.koplugin/template/md.lua:18
+#, fuzzy
+msgid "Bold italic"
+msgstr "길게 누르기 간격"
+
+#: plugins/exporter.koplugin/target/markdown.lua:30
+#: plugins/exporter.koplugin/template/md.lua:14
+#, fuzzy
+msgid "Italic"
+msgstr "이탈리아어"
+
+#: plugins/exporter.koplugin/target/markdown.lua:31
+#: plugins/exporter.koplugin/template/md.lua:30
+#, fuzzy
+msgid "Strikethrough"
+msgstr "취소선"
+
+#: plugins/exporter.koplugin/target/markdown.lua:32
+#: plugins/exporter.koplugin/template/md.lua:22
+msgid "Underline (Markdownit style, with ++)"
+msgstr ""
+
+#: plugins/exporter.koplugin/target/markdown.lua:33
+#: plugins/exporter.koplugin/template/md.lua:26
+msgid "Underline (with <u></u> tags)"
+msgstr ""
+
+#: plugins/exporter.koplugin/target/markdown.lua:48
+#, fuzzy
+msgid "Formatting style for %1"
+msgstr "글꼴 힌팅 설정: %1"
+
+#: plugins/exporter.koplugin/target/markdown.lua:91
+#, fuzzy
+msgid "Export to Markdown"
+msgstr "리드와이즈로 내보내기"
+
+#: plugins/exporter.koplugin/target/markdown.lua:96
+#, fuzzy
+msgid "Format highlights based on style"
+msgstr "하이라이트와 메모를 내보냅니다."
 
 #: plugins/exporter.koplugin/target/readwise.lua:52
 msgid "Readwise"
@@ -16188,6 +16218,40 @@ msgstr "하단 오른쪽 모서리 탭"
 msgid "Tap the upper right corner"
 msgstr "상단 오른쪽 모서리 탭"
 
+#~ msgid ""
+#~ "You can enter your auth token on your computer by saving an empty token. "
+#~ "Then quit KOReader, edit the exporter.joplin_token field in %1/settings."
+#~ "reader.lua after creating a backup, and restart KOReader once you're "
+#~ "done.\n"
+#~ "\n"
+#~ "To export to Joplin, you must forward the IP and port used by this plugin "
+#~ "to the localhost:port on which Joplin is listening. This can be done with "
+#~ "socat or a similar program. For example:\n"
+#~ "\n"
+#~ "For Windows: netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
+#~ "listenport=41185 connectaddress=localhost connectport=41184\n"
+#~ "\n"
+#~ "For Linux: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
+#~ "\n"
+#~ "For more information, please visit https://github.com/koreader/koreader/"
+#~ "wiki/Highlight-export."
+#~ msgstr ""
+#~ "빈 토큰을 저장하여 컴퓨터에 인증 토큰을 입력할 수 있습니다. 그런 다음 "
+#~ "KOReader를 끝내고 백업을 생성한 후 %1/settings.reader.lua의 exporter."
+#~ "joplin_token 필드를 편집하고 완료되면 KOReader를 다시 시작합니다.\n"
+#~ "\n"
+#~ "Joplin으로 내보내려면 이 플러그인에서 사용하는 IP와 포트를 Joplin이 수신 "
+#~ "대기 중인 localhost:port로 전달해야 합니다. 이것은 socat 또는 유사한 프로"
+#~ "그램으로 수행할 수 있습니다. 예를 들어:\n"
+#~ "\n"
+#~ "Windows: netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
+#~ "listenport=41185 connectaddress=localhost connectport=41184\n"
+#~ "\n"
+#~ "Linux의 경우: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
+#~ "\n"
+#~ "자세한 내용은 https://github.com/koreader/koreader/wiki/Highlight-export "
+#~ "를 방문하세요."
+
 #~ msgid "Total"
 #~ msgstr "전체"
 
@@ -16783,9 +16847,6 @@ msgstr "상단 오른쪽 모서리 탭"
 
 #~ msgid "Set default overlap style to %1?"
 #~ msgstr "겹침 스타일 %1를 기본값으로 지정할까요?"
-
-#~ msgid "Hold interval"
-#~ msgstr "길게 누르기 간격"
 
 #~ msgid "Hold corner"
 #~ msgstr "모서리 길게 누르기"

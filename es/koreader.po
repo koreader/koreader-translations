@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-28 07:08+0000\n"
+"POT-Creation-Date: 2022-05-28 09:11+0000\n"
 "PO-Revision-Date: 2022-05-25 10:19+0000\n"
 "Last-Translator: hombretranquilo <hombretranquilo.mbp@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/koreader/"
@@ -209,8 +209,8 @@ msgstr "Introducir nombre de archivo"
 #: plugins/calibre.koplugin/wireless.lua:424
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:804
 #: plugins/coverimage.koplugin/main.lua:352
-#: plugins/exporter.koplugin/target/joplin.lua:239
-#: plugins/exporter.koplugin/target/joplin.lua:278
+#: plugins/exporter.koplugin/target/joplin.lua:222
+#: plugins/exporter.koplugin/target/joplin.lua:261
 #: plugins/exporter.koplugin/target/readwise.lua:66
 #: plugins/gestures.koplugin/main.lua:333 plugins/kosync.koplugin/main.lua:373
 #: plugins/newsdownloader.koplugin/main.lua:149
@@ -807,6 +807,7 @@ msgstr "El script devolvió un código de estado distinto de cero: %1!"
 
 #. @translators See <https://en.wikipedia.org/wiki/Markdown>. In languages written in the Latin alphabet this is unlikely to change.
 #: frontend/apps/filemanager/filemanagerconverter.lua:18
+#: plugins/exporter.koplugin/target/markdown.lua:87
 msgid "Markdown"
 msgstr "Markdown"
 
@@ -1804,7 +1805,7 @@ msgstr "¿Desea abrir el último documento: %1?"
 #: frontend/ui/widget/numberpickerwidget.lua:146
 #: plugins/autowarmth.koplugin/main.lua:469
 #: plugins/calibre.koplugin/main.lua:317
-#: plugins/exporter.koplugin/target/joplin.lua:245
+#: plugins/exporter.koplugin/target/joplin.lua:228
 #: plugins/wallabag.koplugin/main.lua:952
 msgid "OK"
 msgstr "Aceptar"
@@ -3384,18 +3385,22 @@ msgid "Follow Link"
 msgstr "Seguir enlace"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:303
+#: plugins/exporter.koplugin/target/markdown.lua:79
 msgid "Lighten"
 msgstr "Destacar"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:304
+#: plugins/exporter.koplugin/target/markdown.lua:80
 msgid "Underline"
 msgstr "Subrayar"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:305
+#: plugins/exporter.koplugin/target/markdown.lua:81
 msgid "Strikeout"
 msgstr "Tachado"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:306
+#: plugins/exporter.koplugin/target/markdown.lua:82
 msgid "Invert"
 msgstr "Invertir"
 
@@ -4806,6 +4811,8 @@ msgid "Zoom set to: %1"
 msgstr "Zoom ajustado a: %1"
 
 #: frontend/apps/reader/modules/readertypeset.lua:225
+#: plugins/exporter.koplugin/target/markdown.lua:27
+#: plugins/exporter.koplugin/template/md.lua:6
 msgid "None"
 msgstr "Ninguno"
 
@@ -8583,7 +8590,7 @@ msgid "Version: %1"
 msgstr "Versión: %1"
 
 #: frontend/ui/elements/common_info_menu_table.lua:25
-#: plugins/exporter.koplugin/target/joplin.lua:304
+#: plugins/exporter.koplugin/target/joplin.lua:287
 #: plugins/wallabag.koplugin/main.lua:331
 msgid "Help"
 msgstr "Ayuda"
@@ -13494,23 +13501,23 @@ msgstr ""
 "Este complemento, basándose en factores externos, permite ajustar la "
 "configuración del documento antes de cargarlo."
 
-#: plugins/exporter.koplugin/main.lua:182
+#: plugins/exporter.koplugin/main.lua:183
 msgid "Exporting may take several seconds…"
 msgstr "La exportación puede durar varios segundos…"
 
-#: plugins/exporter.koplugin/main.lua:203 plugins/exporter.koplugin/_meta.lua:4
+#: plugins/exporter.koplugin/main.lua:204 plugins/exporter.koplugin/_meta.lua:4
 msgid "Export highlights"
 msgstr "Exportar subrayados"
 
-#: plugins/exporter.koplugin/main.lua:206
+#: plugins/exporter.koplugin/main.lua:207
 msgid "Export all notes in this book"
 msgstr "Exportar todas las notas de este libro"
 
-#: plugins/exporter.koplugin/main.lua:215
+#: plugins/exporter.koplugin/main.lua:216
 msgid "Export all notes in your library"
 msgstr "Exportar todas las notas de tu biblioteca"
 
-#: plugins/exporter.koplugin/main.lua:225
+#: plugins/exporter.koplugin/main.lua:226
 msgid "Choose formats and services"
 msgstr "Elegir formatos y servicios"
 
@@ -13522,70 +13529,92 @@ msgstr "Exporta subrayados y notas."
 msgid "KOReader Notes"
 msgstr "Notas de KOReader"
 
-#: plugins/exporter.koplugin/target/joplin.lua:215
+#: plugins/exporter.koplugin/target/joplin.lua:198
 msgid "Joplin"
 msgstr "Joplin"
 
-#: plugins/exporter.koplugin/target/joplin.lua:219
+#: plugins/exporter.koplugin/target/joplin.lua:202
 msgid "Set Joplin IP and Port"
 msgstr "Configurar la IP y el puerto de Joplin"
 
-#: plugins/exporter.koplugin/target/joplin.lua:225
+#: plugins/exporter.koplugin/target/joplin.lua:208
 msgid "Set Joplin IP and port number"
 msgstr "Configurar la IP de Joplin y el número de puerto"
 
-#: plugins/exporter.koplugin/target/joplin.lua:268
+#: plugins/exporter.koplugin/target/joplin.lua:251
 #: plugins/exporter.koplugin/target/readwise.lua:56
 msgid "Set authorization token"
 msgstr "Configurar la clave de autenticación"
 
-#: plugins/exporter.koplugin/target/joplin.lua:273
+#: plugins/exporter.koplugin/target/joplin.lua:256
 msgid "Set authorization token for Joplin"
 msgstr "Configurar clave de autenticación de Jolpin"
 
-#: plugins/exporter.koplugin/target/joplin.lua:284
+#: plugins/exporter.koplugin/target/joplin.lua:267
 #: plugins/exporter.koplugin/target/readwise.lua:72
 msgid "Set token"
 msgstr "Configurar clave de autenticación"
 
-#: plugins/exporter.koplugin/target/joplin.lua:299
+#: plugins/exporter.koplugin/target/joplin.lua:282
 msgid "Export to Joplin"
 msgstr "Exportar a Joplin"
 
-#: plugins/exporter.koplugin/target/joplin.lua:308
+#: plugins/exporter.koplugin/target/joplin.lua:291
 msgid ""
-"You can enter your auth token on your computer by saving an empty token. "
-"Then quit KOReader, edit the exporter.joplin_token field in %1/settings."
-"reader.lua after creating a backup, and restart KOReader once you're done.\n"
+"For Joplin setup instructions, see %1\n"
 "\n"
-"To export to Joplin, you must forward the IP and port used by this plugin to "
-"the localhost:port on which Joplin is listening. This can be done with socat "
-"or a similar program. For example:\n"
-"\n"
-"For Windows: netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
-"listenport=41185 connectaddress=localhost connectport=41184\n"
-"\n"
-"For Linux: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
-"\n"
-"For more information, please visit https://github.com/koreader/koreader/wiki/"
-"Highlight-export."
+"Markdown formatting can be configured in:\n"
+"Export highlights > Choose formats and services > Markdown."
 msgstr ""
-"Es posible introducir la clave de autenticación en su ordenador guardando "
-"una clave vacía. Luego hay que salir de KOReader, editar el campo exporter."
-"joplin_token en %1/settings.reader.lua, después de crear una copia de "
-"seguridad, y reiniciar KOReader.\n"
-"\n"
-"Para exportar a Joplin, hay que redirigir la IP y el puerto utilizado por "
-"este complemento al localhost:port en el que Joplin está escuchando. Esto se "
-"puede hacer con socat o programas similares. Por ejemplo:\n"
-"\n"
-"Para Windows: netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
-"listenport=41185 connectaddress=localhost connectport=41184\n"
-"\n"
-"Para Linux: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
-"\n"
-"Para más información: https://github.com/koreader/koreader/wiki/Highlight-"
-"export."
+
+#: plugins/exporter.koplugin/target/markdown.lua:28
+#: plugins/exporter.koplugin/template/md.lua:10
+#, fuzzy
+msgid "Bold"
+msgstr "Negrita"
+
+#: plugins/exporter.koplugin/target/markdown.lua:29
+#: plugins/exporter.koplugin/template/md.lua:18
+#, fuzzy
+msgid "Bold italic"
+msgstr "Intervalo de espera"
+
+#: plugins/exporter.koplugin/target/markdown.lua:30
+#: plugins/exporter.koplugin/template/md.lua:14
+#, fuzzy
+msgid "Italic"
+msgstr "Italiano"
+
+#: plugins/exporter.koplugin/target/markdown.lua:31
+#: plugins/exporter.koplugin/template/md.lua:30
+#, fuzzy
+msgid "Strikethrough"
+msgstr "Tachado"
+
+#: plugins/exporter.koplugin/target/markdown.lua:32
+#: plugins/exporter.koplugin/template/md.lua:22
+msgid "Underline (Markdownit style, with ++)"
+msgstr ""
+
+#: plugins/exporter.koplugin/target/markdown.lua:33
+#: plugins/exporter.koplugin/template/md.lua:26
+msgid "Underline (with <u></u> tags)"
+msgstr ""
+
+#: plugins/exporter.koplugin/target/markdown.lua:48
+#, fuzzy
+msgid "Formatting style for %1"
+msgstr "Optimización de fuentes ajustado a: %1"
+
+#: plugins/exporter.koplugin/target/markdown.lua:91
+#, fuzzy
+msgid "Export to Markdown"
+msgstr "Exportar a Readwise"
+
+#: plugins/exporter.koplugin/target/markdown.lua:96
+#, fuzzy
+msgid "Format highlights based on style"
+msgstr "Exporta subrayados y notas."
 
 #: plugins/exporter.koplugin/target/readwise.lua:52
 msgid "Readwise"
@@ -16657,6 +16686,41 @@ msgstr "Pulse la esquina inferior derecha"
 msgid "Tap the upper right corner"
 msgstr "Pulse la esquina superior derecha"
 
+#~ msgid ""
+#~ "You can enter your auth token on your computer by saving an empty token. "
+#~ "Then quit KOReader, edit the exporter.joplin_token field in %1/settings."
+#~ "reader.lua after creating a backup, and restart KOReader once you're "
+#~ "done.\n"
+#~ "\n"
+#~ "To export to Joplin, you must forward the IP and port used by this plugin "
+#~ "to the localhost:port on which Joplin is listening. This can be done with "
+#~ "socat or a similar program. For example:\n"
+#~ "\n"
+#~ "For Windows: netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
+#~ "listenport=41185 connectaddress=localhost connectport=41184\n"
+#~ "\n"
+#~ "For Linux: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
+#~ "\n"
+#~ "For more information, please visit https://github.com/koreader/koreader/"
+#~ "wiki/Highlight-export."
+#~ msgstr ""
+#~ "Es posible introducir la clave de autenticación en su ordenador guardando "
+#~ "una clave vacía. Luego hay que salir de KOReader, editar el campo "
+#~ "exporter.joplin_token en %1/settings.reader.lua, después de crear una "
+#~ "copia de seguridad, y reiniciar KOReader.\n"
+#~ "\n"
+#~ "Para exportar a Joplin, hay que redirigir la IP y el puerto utilizado por "
+#~ "este complemento al localhost:port en el que Joplin está escuchando. Esto "
+#~ "se puede hacer con socat o programas similares. Por ejemplo:\n"
+#~ "\n"
+#~ "Para Windows: netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 "
+#~ "listenport=41185 connectaddress=localhost connectport=41184\n"
+#~ "\n"
+#~ "Para Linux: $socat tcp-listen:41185,reuseaddr,fork tcp:localhost:41184\n"
+#~ "\n"
+#~ "Para más información: https://github.com/koreader/koreader/wiki/Highlight-"
+#~ "export."
+
 #~ msgid "Total"
 #~ msgstr "Total"
 
@@ -17336,9 +17400,6 @@ msgstr "Pulse la esquina superior derecha"
 
 #~ msgid "Set default overlap style to %1?"
 #~ msgstr "¿Seleccionar %1 como modo de solapamiento de páginas por defecto?"
-
-#~ msgid "Hold interval"
-#~ msgstr "Intervalo de espera"
 
 #~ msgid "Hold corner"
 #~ msgstr "Pulsación larga en las esquinas"
