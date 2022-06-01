@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 22:19+0000\n"
+"POT-Creation-Date: 2022-06-01 14:38+0000\n"
 "PO-Revision-Date: 2022-05-31 20:29+0000\n"
 "Last-Translator: Ichnilatis <z8g1r3d2u5d0u3b5@simon13.slack.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -61,7 +61,7 @@ msgstr "Παράβλεψη"
 #: frontend/ui/elements/common_settings_menu_table.lua:352
 #: frontend/ui/elements/common_settings_menu_table.lua:543
 #: frontend/ui/elements/screensaver_menu.lua:254
-#: frontend/ui/plugin/switch_plugin.lua:64
+#: frontend/ui/plugin/switch_plugin.lua:64 plugins/autodim.koplugin/main.lua:78
 #: plugins/autofrontlight.koplugin/main.lua:120
 #: plugins/autosuspend.koplugin/main.lua:453
 #: plugins/autoturn.koplugin/main.lua:163 plugins/kosync.koplugin/main.lua:55
@@ -2312,6 +2312,7 @@ msgstr "Συχνότητα ελέγχου (%1 λεπτά)"
 
 #: frontend/apps/reader/modules/readerdevicestatus.lua:158
 #: frontend/apps/reader/modules/readerdevicestatus.lua:250
+#: plugins/autodim.koplugin/main.lua:68
 msgctxt "Time"
 msgid "min"
 msgstr "λεπτά"
@@ -2670,7 +2671,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerfont.lua:299
 #: frontend/apps/reader/modules/readertypography.lua:253
 #: frontend/ui/elements/page_turns.lua:10
-#: plugins/autowarmth.koplugin/main.lua:545
+#: plugins/autowarmth.koplugin/main.lua:546
 #: plugins/coverimage.koplugin/main.lua:553
 #: plugins/terminal.koplugin/main.lua:583
 msgid "Default"
@@ -2845,7 +2846,7 @@ msgstr "Αριθμός επαναλήψεων:"
 
 #: frontend/apps/reader/modules/readerfooter.lua:653
 #: frontend/apps/reader/modules/readerzooming.lua:690
-#: frontend/ui/screensaver.lua:397 plugins/autowarmth.koplugin/main.lua:538
+#: frontend/ui/screensaver.lua:397 plugins/autowarmth.koplugin/main.lua:539
 #: plugins/autowarmth.koplugin/main.lua:706
 #: plugins/autowarmth.koplugin/main.lua:726
 #: plugins/coverimage.koplugin/main.lua:410
@@ -3481,6 +3482,7 @@ msgstr ""
 #. @translators This is the time unit for seconds.
 #: frontend/apps/reader/modules/readerhighlight.lua:419
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:154 frontend/util.lua:222
+#: plugins/autodim.koplugin/main.lua:108
 #: plugins/statistics.koplugin/main.lua:963
 #: plugins/vocabbuilder.koplugin/main.lua:621
 msgctxt "Time"
@@ -11830,6 +11832,63 @@ msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 B"
 
+#: plugins/autodim.koplugin/main.lua:48 plugins/autodim.koplugin/_meta.lua:4
+#, fuzzy
+msgid "Automatic dimmer"
+msgstr "Αυτόματη επανεκκίνηση"
+
+#: plugins/autodim.koplugin/main.lua:53
+msgid "Idle time for dimmer"
+msgstr ""
+
+#: plugins/autodim.koplugin/main.lua:54
+#, fuzzy
+msgid "Idle time for dimmer: %1"
+msgstr "Διαγράφηκε το αρχείο: %1"
+
+#: plugins/autodim.koplugin/main.lua:60
+#, fuzzy
+msgid "Automatic dimmer idle time"
+msgstr "Αυτόματη επανεκκίνηση"
+
+#: plugins/autodim.koplugin/main.lua:61
+msgid "Start the dimmer after the designated period of inactivity."
+msgstr ""
+
+#: plugins/autodim.koplugin/main.lua:93
+#, fuzzy
+msgid "Dimmer duration: %1"
+msgstr "Ενέργεια φακέλου: %1"
+
+#: plugins/autodim.koplugin/main.lua:99
+#, fuzzy
+msgid "Automatic dimmer duration"
+msgstr "Αυτόματη επανεκκίνηση"
+
+#: plugins/autodim.koplugin/main.lua:100
+msgid "Delay to reach the lowest brightness."
+msgstr ""
+
+#: plugins/autodim.koplugin/main.lua:124
+msgid "Dim to %1 % of the regular brightness"
+msgstr ""
+
+#: plugins/autodim.koplugin/main.lua:129
+#, fuzzy
+msgid "Dim to percentage"
+msgstr "ποσοστό"
+
+#: plugins/autodim.koplugin/main.lua:130
+msgid "The lowest brightness as a percentage of the regular brightness."
+msgstr ""
+
+#: plugins/autodim.koplugin/_meta.lua:5
+#, fuzzy
+msgid "This plugin allows dimming the frontlight after a period of inactivity."
+msgstr ""
+"Αυτό το πρόσθετο επιτρέπει την αυτόματη ρύθμιση της θερμότητας του "
+"εμπρόσθιου φωτισμού."
+
 #: plugins/autofrontlight.koplugin/main.lua:115
 #: plugins/autofrontlight.koplugin/_meta.lua:4
 msgid "Auto frontlight"
@@ -12235,41 +12294,41 @@ msgstr "Τοποθεσία"
 msgid "Location name"
 msgstr "Όνομα τοποθεσίας"
 
-#: plugins/autowarmth.koplugin/main.lua:487
+#: plugins/autowarmth.koplugin/main.lua:488
 msgid "Coordinates: (%1°, %2°)"
 msgstr "Συντεταγμένες: (%1°, %2°)"
 
-#: plugins/autowarmth.koplugin/main.lua:491
+#: plugins/autowarmth.koplugin/main.lua:492
 msgid "Set location"
 msgstr "Ορισμός τοποθεσίας"
 
-#: plugins/autowarmth.koplugin/main.lua:492
+#: plugins/autowarmth.koplugin/main.lua:493
 msgid "Enter decimal degrees, northern hemisphere and eastern length are '+'."
 msgstr ""
 "Εισαγάγετε δεκαδικές μοίρες, το βόρειο ημισφαίριο και το ανατολικό μήκος "
 "είναι '+'."
 
-#: plugins/autowarmth.koplugin/main.lua:493
+#: plugins/autowarmth.koplugin/main.lua:494
 msgid "Latitude"
 msgstr "Γεωγραφικό πλάτος"
 
-#: plugins/autowarmth.koplugin/main.lua:500
+#: plugins/autowarmth.koplugin/main.lua:501
 msgid "Longitude"
 msgstr "Γεωγραφικό μήκος"
 
-#: plugins/autowarmth.koplugin/main.lua:525
+#: plugins/autowarmth.koplugin/main.lua:526
 msgid "Altitude: %1 m"
 msgstr "Υψόμετρο: %1 μ"
 
-#: plugins/autowarmth.koplugin/main.lua:529
+#: plugins/autowarmth.koplugin/main.lua:530
 msgid "Altitude"
 msgstr "Υψόμετρο"
 
-#: plugins/autowarmth.koplugin/main.lua:530
+#: plugins/autowarmth.koplugin/main.lua:531
 msgid "Enter the altitude in meters above sea level."
 msgstr "Εισαγάγετε το υψόμετρο σε μέτρα πάνω από την επιφάνεια της θάλασσας."
 
-#: plugins/autowarmth.koplugin/main.lua:537
+#: plugins/autowarmth.koplugin/main.lua:538
 msgctxt "Length"
 msgid "m"
 msgstr "μ"
@@ -12295,7 +12354,7 @@ msgid "Invalidate"
 msgstr "Ακύρωση"
 
 #: plugins/autowarmth.koplugin/main.lua:657
-#: plugins/autowarmth.koplugin/main.lua:767
+#: plugins/autowarmth.koplugin/main.lua:766
 msgid "Solar midnight"
 msgstr "Ηλιακά μεσάνυχτα"
 
@@ -12316,7 +12375,7 @@ msgid "Sunrise"
 msgstr "Ανατολή ηλίου"
 
 #: plugins/autowarmth.koplugin/main.lua:662
-#: plugins/autowarmth.koplugin/main.lua:762
+#: plugins/autowarmth.koplugin/main.lua:761
 msgid "Solar noon"
 msgstr "Ηλιακό μεσημέρι"
 
@@ -12368,79 +12427,80 @@ msgstr "Νυχτερινή λειτουργία"
 msgid "Unset"
 msgstr "Ακύρωση"
 
-#: plugins/autowarmth.koplugin/main.lua:758
+#: plugins/autowarmth.koplugin/main.lua:757
 msgid "Set warmth and night mode for:"
 msgstr "Ρύθμιση θερμού φωτισμού και νυχτερινής λειτουργίας για:"
 
-#: plugins/autowarmth.koplugin/main.lua:759
+#: plugins/autowarmth.koplugin/main.lua:758
 msgid "Set night mode for:"
 msgstr "Ρύθμιση νυχτερινής λειτουργίας για:"
 
-#: plugins/autowarmth.koplugin/main.lua:763
+#: plugins/autowarmth.koplugin/main.lua:762
 msgid "Sunset and sunrise"
 msgstr "Δύση και ανατολή ηλίου"
 
-#: plugins/autowarmth.koplugin/main.lua:764
+#: plugins/autowarmth.koplugin/main.lua:763
 msgid "Darkest time of civil twilight"
 msgstr "Την πιο σκοτεινή ώρα του αστικού λυκόφωτος"
 
-#: plugins/autowarmth.koplugin/main.lua:765
+#: plugins/autowarmth.koplugin/main.lua:764
 msgid "Darkest time of nautical twilight"
 msgstr "Την πιο σκοτεινή ώρα του ναυτικού λυκόφωτος"
 
-#: plugins/autowarmth.koplugin/main.lua:766
+#: plugins/autowarmth.koplugin/main.lua:765
 msgid "Darkest time of astronomical twilight"
 msgstr "Την πιο σκοτεινή ώρα του αστρονομικού λυκόφωτος"
 
-#: plugins/autowarmth.koplugin/main.lua:863
-#: plugins/autowarmth.koplugin/main.lua:881
+#: plugins/autowarmth.koplugin/main.lua:862
+#: plugins/autowarmth.koplugin/main.lua:880
 msgid "Solar midnight:"
 msgstr "Ηλιακά μεσάνυχτα:"
 
-#: plugins/autowarmth.koplugin/main.lua:864
-#: plugins/autowarmth.koplugin/main.lua:869
+#: plugins/autowarmth.koplugin/main.lua:863
+#: plugins/autowarmth.koplugin/main.lua:868
 msgid "Dawn"
 msgstr "Λυκαυγές"
 
-#: plugins/autowarmth.koplugin/main.lua:865
-#: plugins/autowarmth.koplugin/main.lua:879
+#: plugins/autowarmth.koplugin/main.lua:864
+#: plugins/autowarmth.koplugin/main.lua:878
 msgid "Astronomic:"
 msgstr "Αστρονομικό:"
 
-#: plugins/autowarmth.koplugin/main.lua:866
-#: plugins/autowarmth.koplugin/main.lua:878
+#: plugins/autowarmth.koplugin/main.lua:865
+#: plugins/autowarmth.koplugin/main.lua:877
 msgid "Nautical:"
 msgstr "Ναυτικό:"
 
-#: plugins/autowarmth.koplugin/main.lua:868
-#: plugins/autowarmth.koplugin/main.lua:877
+#: plugins/autowarmth.koplugin/main.lua:867
+#: plugins/autowarmth.koplugin/main.lua:876
 msgid "Twilight:"
 msgstr "Λυκόφως:"
 
-#: plugins/autowarmth.koplugin/main.lua:868
-#: plugins/autowarmth.koplugin/main.lua:877
+#: plugins/autowarmth.koplugin/main.lua:867
+#: plugins/autowarmth.koplugin/main.lua:876
 msgid "Civil:"
 msgstr "Αστικό:"
 
-#: plugins/autowarmth.koplugin/main.lua:870
+#: plugins/autowarmth.koplugin/main.lua:869
 msgid "Sunrise:"
 msgstr "Ανατολή ηλίου:"
 
-#: plugins/autowarmth.koplugin/main.lua:872
+#: plugins/autowarmth.koplugin/main.lua:871
 msgid "Solar noon:"
 msgstr "Ηλιακό μεσημέρι:"
 
-#: plugins/autowarmth.koplugin/main.lua:874
+#: plugins/autowarmth.koplugin/main.lua:873
 msgid "Sunset:"
 msgstr "Δύση ηλίου:"
 
-#: plugins/autowarmth.koplugin/main.lua:875
-#: plugins/autowarmth.koplugin/main.lua:880
+#: plugins/autowarmth.koplugin/main.lua:874
+#: plugins/autowarmth.koplugin/main.lua:879
 msgid "Dusk"
 msgstr "Λυκόφως"
 
 #: plugins/autowarmth.koplugin/_meta.lua:5
-msgid "This plugin allows set the frontlight warmth automagically."
+#, fuzzy
+msgid "This plugin allows to set the frontlight warmth automagically."
 msgstr ""
 "Αυτό το πρόσθετο επιτρέπει την αυτόματη ρύθμιση της θερμότητας του "
 "εμπρόσθιου φωτισμού."

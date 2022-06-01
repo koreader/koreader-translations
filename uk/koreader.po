@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 22:19+0000\n"
+"POT-Creation-Date: 2022-06-01 14:38+0000\n"
 "PO-Revision-Date: 2022-05-31 22:20+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/koreader/"
@@ -60,7 +60,7 @@ msgstr "Ігнорувати"
 #: frontend/ui/elements/common_settings_menu_table.lua:352
 #: frontend/ui/elements/common_settings_menu_table.lua:543
 #: frontend/ui/elements/screensaver_menu.lua:254
-#: frontend/ui/plugin/switch_plugin.lua:64
+#: frontend/ui/plugin/switch_plugin.lua:64 plugins/autodim.koplugin/main.lua:78
 #: plugins/autofrontlight.koplugin/main.lua:120
 #: plugins/autosuspend.koplugin/main.lua:453
 #: plugins/autoturn.koplugin/main.lua:163 plugins/kosync.koplugin/main.lua:55
@@ -2307,6 +2307,7 @@ msgstr "Інтервал перевірки %1 хв"
 
 #: frontend/apps/reader/modules/readerdevicestatus.lua:158
 #: frontend/apps/reader/modules/readerdevicestatus.lua:250
+#: plugins/autodim.koplugin/main.lua:68
 msgctxt "Time"
 msgid "min"
 msgstr "хв"
@@ -2660,7 +2661,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readerfont.lua:299
 #: frontend/apps/reader/modules/readertypography.lua:253
 #: frontend/ui/elements/page_turns.lua:10
-#: plugins/autowarmth.koplugin/main.lua:545
+#: plugins/autowarmth.koplugin/main.lua:546
 #: plugins/coverimage.koplugin/main.lua:553
 #: plugins/terminal.koplugin/main.lua:583
 msgid "Default"
@@ -2831,7 +2832,7 @@ msgstr "Кількість повторів:"
 
 #: frontend/apps/reader/modules/readerfooter.lua:653
 #: frontend/apps/reader/modules/readerzooming.lua:690
-#: frontend/ui/screensaver.lua:397 plugins/autowarmth.koplugin/main.lua:538
+#: frontend/ui/screensaver.lua:397 plugins/autowarmth.koplugin/main.lua:539
 #: plugins/autowarmth.koplugin/main.lua:706
 #: plugins/autowarmth.koplugin/main.lua:726
 #: plugins/coverimage.koplugin/main.lua:410
@@ -3465,6 +3466,7 @@ msgstr ""
 #. @translators This is the time unit for seconds.
 #: frontend/apps/reader/modules/readerhighlight.lua:419
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:154 frontend/util.lua:222
+#: plugins/autodim.koplugin/main.lua:108
 #: plugins/statistics.koplugin/main.lua:963
 #: plugins/vocabbuilder.koplugin/main.lua:621
 msgctxt "Time"
@@ -11665,6 +11667,61 @@ msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 Б"
 
+#: plugins/autodim.koplugin/main.lua:48 plugins/autodim.koplugin/_meta.lua:4
+#, fuzzy
+msgid "Automatic dimmer"
+msgstr "Автоперезапуск"
+
+#: plugins/autodim.koplugin/main.lua:53
+msgid "Idle time for dimmer"
+msgstr ""
+
+#: plugins/autodim.koplugin/main.lua:54
+#, fuzzy
+msgid "Idle time for dimmer: %1"
+msgstr "Видалений файл: %1"
+
+#: plugins/autodim.koplugin/main.lua:60
+#, fuzzy
+msgid "Automatic dimmer idle time"
+msgstr "Автоперезапуск"
+
+#: plugins/autodim.koplugin/main.lua:61
+msgid "Start the dimmer after the designated period of inactivity."
+msgstr ""
+
+#: plugins/autodim.koplugin/main.lua:93
+#, fuzzy
+msgid "Dimmer duration: %1"
+msgstr "Дія теки: %1"
+
+#: plugins/autodim.koplugin/main.lua:99
+#, fuzzy
+msgid "Automatic dimmer duration"
+msgstr "Автоперезапуск"
+
+#: plugins/autodim.koplugin/main.lua:100
+msgid "Delay to reach the lowest brightness."
+msgstr ""
+
+#: plugins/autodim.koplugin/main.lua:124
+msgid "Dim to %1 % of the regular brightness"
+msgstr ""
+
+#: plugins/autodim.koplugin/main.lua:129
+#, fuzzy
+msgid "Dim to percentage"
+msgstr "відсоток"
+
+#: plugins/autodim.koplugin/main.lua:130
+msgid "The lowest brightness as a percentage of the regular brightness."
+msgstr ""
+
+#: plugins/autodim.koplugin/_meta.lua:5
+#, fuzzy
+msgid "This plugin allows dimming the frontlight after a period of inactivity."
+msgstr "Цей плагін дозволяє автозміну теплоти переднього освітлення."
+
 #: plugins/autofrontlight.koplugin/main.lua:115
 #: plugins/autofrontlight.koplugin/_meta.lua:4
 msgid "Auto frontlight"
@@ -12062,39 +12119,39 @@ msgstr "Розташування"
 msgid "Location name"
 msgstr "Назва розташування"
 
-#: plugins/autowarmth.koplugin/main.lua:487
+#: plugins/autowarmth.koplugin/main.lua:488
 msgid "Coordinates: (%1°, %2°)"
 msgstr "Координати: (%1°, %2°)"
 
-#: plugins/autowarmth.koplugin/main.lua:491
+#: plugins/autowarmth.koplugin/main.lua:492
 msgid "Set location"
 msgstr "Вказати розташування"
 
-#: plugins/autowarmth.koplugin/main.lua:492
+#: plugins/autowarmth.koplugin/main.lua:493
 msgid "Enter decimal degrees, northern hemisphere and eastern length are '+'."
 msgstr "Введіть десяткові градуси, північну широту і східну довготу «+»."
 
-#: plugins/autowarmth.koplugin/main.lua:493
+#: plugins/autowarmth.koplugin/main.lua:494
 msgid "Latitude"
 msgstr "Широта"
 
-#: plugins/autowarmth.koplugin/main.lua:500
+#: plugins/autowarmth.koplugin/main.lua:501
 msgid "Longitude"
 msgstr "Довгота"
 
-#: plugins/autowarmth.koplugin/main.lua:525
+#: plugins/autowarmth.koplugin/main.lua:526
 msgid "Altitude: %1 m"
 msgstr "Висота над рівнем моря: %1 м"
 
-#: plugins/autowarmth.koplugin/main.lua:529
+#: plugins/autowarmth.koplugin/main.lua:530
 msgid "Altitude"
 msgstr "Висота над рівнем моря"
 
-#: plugins/autowarmth.koplugin/main.lua:530
+#: plugins/autowarmth.koplugin/main.lua:531
 msgid "Enter the altitude in meters above sea level."
 msgstr "Введіть висоту в метрах над рівнем моря."
 
-#: plugins/autowarmth.koplugin/main.lua:537
+#: plugins/autowarmth.koplugin/main.lua:538
 msgctxt "Length"
 msgid "m"
 msgstr "м"
@@ -12120,7 +12177,7 @@ msgid "Invalidate"
 msgstr "Знедіяти"
 
 #: plugins/autowarmth.koplugin/main.lua:657
-#: plugins/autowarmth.koplugin/main.lua:767
+#: plugins/autowarmth.koplugin/main.lua:766
 msgid "Solar midnight"
 msgstr "Сонячна північ"
 
@@ -12141,7 +12198,7 @@ msgid "Sunrise"
 msgstr "Світанок"
 
 #: plugins/autowarmth.koplugin/main.lua:662
-#: plugins/autowarmth.koplugin/main.lua:762
+#: plugins/autowarmth.koplugin/main.lua:761
 msgid "Solar noon"
 msgstr "Сонячний полудень"
 
@@ -12193,79 +12250,80 @@ msgstr "Нічний режим"
 msgid "Unset"
 msgstr "Не вказано"
 
-#: plugins/autowarmth.koplugin/main.lua:758
+#: plugins/autowarmth.koplugin/main.lua:757
 msgid "Set warmth and night mode for:"
 msgstr "Установити теплоту барв і нічний режим для:"
 
-#: plugins/autowarmth.koplugin/main.lua:759
+#: plugins/autowarmth.koplugin/main.lua:758
 msgid "Set night mode for:"
 msgstr "Установити нічний режим для:"
 
-#: plugins/autowarmth.koplugin/main.lua:763
+#: plugins/autowarmth.koplugin/main.lua:762
 msgid "Sunset and sunrise"
 msgstr "Захід і схід сонця"
 
-#: plugins/autowarmth.koplugin/main.lua:764
+#: plugins/autowarmth.koplugin/main.lua:763
 msgid "Darkest time of civil twilight"
 msgstr "Найтемніший час цивільних сутінків"
 
-#: plugins/autowarmth.koplugin/main.lua:765
+#: plugins/autowarmth.koplugin/main.lua:764
 msgid "Darkest time of nautical twilight"
 msgstr "Найтемніший час навігаційних сутінків"
 
-#: plugins/autowarmth.koplugin/main.lua:766
+#: plugins/autowarmth.koplugin/main.lua:765
 msgid "Darkest time of astronomical twilight"
 msgstr "Найтемніший час астрономічних сутінків"
 
-#: plugins/autowarmth.koplugin/main.lua:863
-#: plugins/autowarmth.koplugin/main.lua:881
+#: plugins/autowarmth.koplugin/main.lua:862
+#: plugins/autowarmth.koplugin/main.lua:880
 msgid "Solar midnight:"
 msgstr "Сонячна північ:"
 
-#: plugins/autowarmth.koplugin/main.lua:864
-#: plugins/autowarmth.koplugin/main.lua:869
+#: plugins/autowarmth.koplugin/main.lua:863
+#: plugins/autowarmth.koplugin/main.lua:868
 msgid "Dawn"
 msgstr "Світанок"
 
-#: plugins/autowarmth.koplugin/main.lua:865
-#: plugins/autowarmth.koplugin/main.lua:879
+#: plugins/autowarmth.koplugin/main.lua:864
+#: plugins/autowarmth.koplugin/main.lua:878
 msgid "Astronomic:"
 msgstr "Астрономічний:"
 
-#: plugins/autowarmth.koplugin/main.lua:866
-#: plugins/autowarmth.koplugin/main.lua:878
+#: plugins/autowarmth.koplugin/main.lua:865
+#: plugins/autowarmth.koplugin/main.lua:877
 msgid "Nautical:"
 msgstr "Навігаційний:"
 
-#: plugins/autowarmth.koplugin/main.lua:868
-#: plugins/autowarmth.koplugin/main.lua:877
+#: plugins/autowarmth.koplugin/main.lua:867
+#: plugins/autowarmth.koplugin/main.lua:876
 msgid "Twilight:"
 msgstr "Сутінки:"
 
-#: plugins/autowarmth.koplugin/main.lua:868
-#: plugins/autowarmth.koplugin/main.lua:877
+#: plugins/autowarmth.koplugin/main.lua:867
+#: plugins/autowarmth.koplugin/main.lua:876
 msgid "Civil:"
 msgstr "Цивільний:"
 
-#: plugins/autowarmth.koplugin/main.lua:870
+#: plugins/autowarmth.koplugin/main.lua:869
 msgid "Sunrise:"
 msgstr "Світанок:"
 
-#: plugins/autowarmth.koplugin/main.lua:872
+#: plugins/autowarmth.koplugin/main.lua:871
 msgid "Solar noon:"
 msgstr "Сонячний полудень:"
 
-#: plugins/autowarmth.koplugin/main.lua:874
+#: plugins/autowarmth.koplugin/main.lua:873
 msgid "Sunset:"
 msgstr "Захід сонця:"
 
-#: plugins/autowarmth.koplugin/main.lua:875
-#: plugins/autowarmth.koplugin/main.lua:880
+#: plugins/autowarmth.koplugin/main.lua:874
+#: plugins/autowarmth.koplugin/main.lua:879
 msgid "Dusk"
 msgstr "Сутінки"
 
 #: plugins/autowarmth.koplugin/_meta.lua:5
-msgid "This plugin allows set the frontlight warmth automagically."
+#, fuzzy
+msgid "This plugin allows to set the frontlight warmth automagically."
 msgstr "Цей плагін дозволяє автозміну теплоти переднього освітлення."
 
 #: plugins/backgroundrunner.koplugin/_meta.lua:4
