@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-24 22:01+0000\n"
+"POT-Creation-Date: 2022-06-25 18:09+0000\n"
 "PO-Revision-Date: 2022-06-25 18:09+0000\n"
 "Last-Translator: Matthaiks <kitynska@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -178,7 +178,7 @@ msgstr "Wprowadź nazwę pliku"
 #: frontend/apps/reader/modules/readerdictionary.lua:693
 #: frontend/apps/reader/modules/readerfooter.lua:646
 #: frontend/apps/reader/modules/readergoto.lua:83
-#: frontend/apps/reader/modules/readerlink.lua:664
+#: frontend/apps/reader/modules/readerlink.lua:684
 #: frontend/apps/reader/modules/readersearch.lua:116
 #: frontend/apps/reader/modules/readerstatus.lua:124
 #: frontend/apps/reader/modules/readeruserhyph.lua:284
@@ -1112,7 +1112,7 @@ msgstr "Wybierz wszystkie pliki w folderze"
 
 #: frontend/apps/filemanager/filemanager.lua:585
 #: frontend/apps/filemanager/filemanager.lua:590
-#: frontend/apps/reader/modules/readerlink.lua:682
+#: frontend/apps/reader/modules/readerlink.lua:702
 msgid "Copy"
 msgstr "Kopiuj"
 
@@ -1910,8 +1910,8 @@ msgid "Home"
 msgstr "Folder domowy"
 
 #: frontend/apps/reader/modules/readerback.lua:135
-#: frontend/apps/reader/modules/readerlink.lua:802
-#: frontend/apps/reader/modules/readerlink.lua:823
+#: frontend/apps/reader/modules/readerlink.lua:822
+#: frontend/apps/reader/modules/readerlink.lua:843
 msgid "Location history is empty."
 msgstr "Historia lokalizacji jest pusta."
 
@@ -3761,27 +3761,44 @@ msgstr ""
 "Po wyskakującym okienku przypisu możesz przeskoczyć do położenia przypisu w "
 "książce, przesuwając palcem w lewo."
 
-#: frontend/apps/reader/modules/readerlink.lua:279
+#: frontend/apps/reader/modules/readerlink.lua:280
+#, fuzzy
+msgid "Footnote popup settings"
+msgstr "Ustawienia czcionek"
+
+#: frontend/apps/reader/modules/readerlink.lua:285
 msgid "Show more links as footnotes"
 msgstr "Pokaż więcej odnośników jako przypisy"
 
-#: frontend/apps/reader/modules/readerlink.lua:289
+#: frontend/apps/reader/modules/readerlink.lua:295
 msgid "Loosen footnote detection rules to show more links as footnotes."
 msgstr ""
 "Luźniejsze reguły wykrywania przypisów, aby wyświetlić więcej przypisów."
 
-#: frontend/apps/reader/modules/readerlink.lua:292
-#: frontend/apps/reader/modules/readerlink.lua:312
-#: frontend/apps/reader/modules/readerlink.lua:334
+#: frontend/apps/reader/modules/readerlink.lua:299
+#, fuzzy
+msgid "Use book font as popup font"
+msgstr "Rozmiar czcionki w oknie przypisu"
+
+#: frontend/apps/reader/modules/readerlink.lua:310
+msgid ""
+"Display the footnote popup text with the font set as the document font (the "
+"book text may still render with a different font if the book uses embedded "
+"fonts)."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerlink.lua:313
+#: frontend/apps/reader/modules/readerlink.lua:333
+#: frontend/apps/reader/modules/readerlink.lua:355
 msgid "Set footnote popup font size"
 msgstr "Rozmiar czcionki w oknie przypisu"
 
-#: frontend/apps/reader/modules/readerlink.lua:311
-#: frontend/apps/reader/modules/readerlink.lua:333
+#: frontend/apps/reader/modules/readerlink.lua:332
+#: frontend/apps/reader/modules/readerlink.lua:354
 msgid "Set font size"
 msgstr "Ustaw rozmiar"
 
-#: frontend/apps/reader/modules/readerlink.lua:313
+#: frontend/apps/reader/modules/readerlink.lua:334
 msgid ""
 "The footnote popup font can adjust to the font size you've set for the "
 "document, but you can specify here a fixed absolute font size to be used "
@@ -3791,11 +3808,11 @@ msgstr ""
 "ustawionej dla dokumentu, ale możesz tutaj zamiast tego określić stały, "
 "bezwzględny rozmiar czcionki przypisu."
 
-#: frontend/apps/reader/modules/readerlink.lua:319
+#: frontend/apps/reader/modules/readerlink.lua:340
 msgid "Set a relative font size instead"
 msgstr "Zamiast tego ustaw względny rozmiar czcionki"
 
-#: frontend/apps/reader/modules/readerlink.lua:335
+#: frontend/apps/reader/modules/readerlink.lua:356
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -3813,11 +3830,11 @@ msgstr ""
 "będzie większa.\n"
 "Zalecana wartość to -2."
 
-#: frontend/apps/reader/modules/readerlink.lua:344
+#: frontend/apps/reader/modules/readerlink.lua:365
 msgid "Set an absolute font size instead"
 msgstr "Zamiast tego ustaw rozmiar czcionki"
 
-#: frontend/apps/reader/modules/readerlink.lua:358
+#: frontend/apps/reader/modules/readerlink.lua:379
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -3829,11 +3846,11 @@ msgstr ""
 "Pozwala to określić, ile mniejsza lub większa powinna być w stosunku do "
 "rozmiaru czcionki dokumentu."
 
-#: frontend/apps/reader/modules/readerlink.lua:521
+#: frontend/apps/reader/modules/readerlink.lua:541
 msgid "Location history cleared."
 msgstr "Historia lokalizacji wyczyszczona."
 
-#: frontend/apps/reader/modules/readerlink.lua:634
+#: frontend/apps/reader/modules/readerlink.lua:654
 msgid ""
 "Would you like to read this local document?\n"
 "\n"
@@ -3843,7 +3860,7 @@ msgstr ""
 "\n"
 "%1\n"
 
-#: frontend/apps/reader/modules/readerlink.lua:643
+#: frontend/apps/reader/modules/readerlink.lua:663
 msgid ""
 "Link to unsupported local file:\n"
 "%1"
@@ -3851,7 +3868,7 @@ msgstr ""
 "Odnośnik do niespieranego pliku na dysku:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:651
+#: frontend/apps/reader/modules/readerlink.lua:671
 msgid ""
 "Invalid or external link:\n"
 "%1"
@@ -3859,19 +3876,19 @@ msgstr ""
 "Nieprawidłowy lub odnośnik zewnętrzny:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:689
+#: frontend/apps/reader/modules/readerlink.lua:709
 msgid "Show QR code"
 msgstr "Pokaż kod QR"
 
-#: frontend/apps/reader/modules/readerlink.lua:701
+#: frontend/apps/reader/modules/readerlink.lua:721
 msgid "Add to Wallabag"
 msgstr "Dodaj do Wallabag"
 
-#: frontend/apps/reader/modules/readerlink.lua:710
+#: frontend/apps/reader/modules/readerlink.lua:730
 msgid "Open in browser"
 msgstr "Otwórz w przeglądarce"
 
-#: frontend/apps/reader/modules/readerlink.lua:751
+#: frontend/apps/reader/modules/readerlink.lua:771
 msgid ""
 "Would you like to read this Wikipedia %1 article?\n"
 "\n"
@@ -3881,11 +3898,11 @@ msgstr ""
 "\n"
 "%2\n"
 
-#: frontend/apps/reader/modules/readerlink.lua:753
+#: frontend/apps/reader/modules/readerlink.lua:773
 msgid "Read online"
 msgstr "Czytaj online"
 
-#: frontend/apps/reader/modules/readerlink.lua:762
+#: frontend/apps/reader/modules/readerlink.lua:782
 msgid ""
 "This article has previously been saved as EPUB. You may wish to read the "
 "saved EPUB instead."
@@ -3893,11 +3910,11 @@ msgstr ""
 "Artykuł został wcześniej zapisany jako EPUB. Zamiast tego możesz przeczytać "
 "zapisany EPUB."
 
-#: frontend/apps/reader/modules/readerlink.lua:764
+#: frontend/apps/reader/modules/readerlink.lua:784
 msgid "Read EPUB"
 msgstr "Czytaj EPUB"
 
-#: frontend/apps/reader/modules/readerlink.lua:778
+#: frontend/apps/reader/modules/readerlink.lua:798
 msgid ""
 "External link:\n"
 "\n"
@@ -4126,7 +4143,7 @@ msgstr "włączone"
 msgid "disabled"
 msgstr "wyłączone"
 
-#: frontend/apps/reader/modules/readerrolling.lua:1403
+#: frontend/apps/reader/modules/readerrolling.lua:1404
 msgid ""
 "This book was first opened, and has been handled since, by an older version "
 "of the rendering code.\n"
@@ -4145,7 +4162,7 @@ msgstr ""
 "\n"
 "Kontynuować tę aktualizację i przeładować książkę?"
 
-#: frontend/apps/reader/modules/readerrolling.lua:1412
+#: frontend/apps/reader/modules/readerrolling.lua:1413
 msgid ""
 "All your bookmarks and highlights are valid and will be available after the "
 "migration."
@@ -4153,7 +4170,7 @@ msgstr ""
 "Wszystkie twoje zakładki i zaznaczenia są prawidłowe i będą dostępne po "
 "migracji."
 
-#: frontend/apps/reader/modules/readerrolling.lua:1414
+#: frontend/apps/reader/modules/readerrolling.lua:1415
 msgid ""
 "Note that %1 (out of %2) xpaths from your bookmarks and highlights aren't "
 "currently found in the book, and may have been lost. You might want to "
@@ -4165,7 +4182,7 @@ msgstr ""
 "przełączyć tryb renderowania między „wsteczny” i „płaski”, a następnie "
 "ponownie otworzyć tę książkę i sprawdzić, czy zostaną ponownie znalezione."
 
-#: frontend/apps/reader/modules/readerrolling.lua:1419
+#: frontend/apps/reader/modules/readerrolling.lua:1420
 msgid ""
 "Note that %1 (out of %2) xpaths from your bookmarks and highlights have been "
 "normalized, and may not work on previous KOReader versions (if you're "
@@ -4177,19 +4194,19 @@ msgstr ""
 "synchronizujesz postępy czytania między wieloma urządzeniami, musisz "
 "zaktualizować KOReader na wszystkich tych urządzeniach)."
 
-#: frontend/apps/reader/modules/readerrolling.lua:1434
+#: frontend/apps/reader/modules/readerrolling.lua:1435
 msgid "Not now"
 msgstr "Nie teraz"
 
-#: frontend/apps/reader/modules/readerrolling.lua:1437
+#: frontend/apps/reader/modules/readerrolling.lua:1438
 msgid "Not for this book"
 msgstr "Nie dla tej książki"
 
-#: frontend/apps/reader/modules/readerrolling.lua:1441
+#: frontend/apps/reader/modules/readerrolling.lua:1442
 msgid "Upgrade now"
 msgstr "Aktualizuj teraz"
 
-#: frontend/apps/reader/modules/readerrolling.lua:1453
+#: frontend/apps/reader/modules/readerrolling.lua:1454
 msgid "Upgrading and reloading book…"
 msgstr "Aktualizowanie i ponowne ładowanie książki…"
 
