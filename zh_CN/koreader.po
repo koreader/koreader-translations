@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-02 23:38+0000\n"
+"POT-Creation-Date: 2022-10-03 22:12+0000\n"
 "PO-Revision-Date: 2022-10-03 22:13+0000\n"
 "Last-Translator: Eric <hamburger1024@mailbox.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -1828,8 +1828,8 @@ msgstr "文件管理器菜单"
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:80
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:136
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:179
-#: frontend/apps/reader/modules/readerfont.lua:323
-#: frontend/apps/reader/modules/readerfont.lua:342
+#: frontend/apps/reader/modules/readerfont.lua:347
+#: frontend/apps/reader/modules/readerfont.lua:366
 #: frontend/apps/reader/modules/readertypography.lua:257
 #: frontend/ui/elements/page_turns.lua:10
 #: plugins/autowarmth.koplugin/main.lua:658
@@ -2603,63 +2603,73 @@ msgstr "启用"
 msgid "Enable (★)"
 msgstr "启用 (★)"
 
-#: frontend/apps/reader/modules/readerfont.lua:25
+#: frontend/apps/reader/modules/readerfont.lua:26
 msgid "Font"
 msgstr "字体"
 
-#: frontend/apps/reader/modules/readerfont.lua:51
+#: frontend/apps/reader/modules/readerfont.lua:52
 msgid "Font settings"
 msgstr "字体设置"
 
-#: frontend/apps/reader/modules/readerfont.lua:223
+#. @translators 'font-family' is a CSS property name, keep it untranslated
+#: frontend/apps/reader/modules/readerfont.lua:68
+#, fuzzy
+msgid "Font-family fonts (%1)"
+msgstr "字体大小 (%1)"
+
+#: frontend/apps/reader/modules/readerfont.lua:70
+msgid "Font-family fonts"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfont.lua:246
 msgid "Font size set to: %1."
 msgstr "字体大小已设为: %1。"
 
-#: frontend/apps/reader/modules/readerfont.lua:231
+#: frontend/apps/reader/modules/readerfont.lua:254
 msgid "Line spacing set to: %1%."
 msgstr "行间距已设为: %1%。"
 
-#: frontend/apps/reader/modules/readerfont.lua:239
+#: frontend/apps/reader/modules/readerfont.lua:262
 msgid "Font weight set to: %1."
 msgstr "字体粗细已设为: %1。"
 
-#: frontend/apps/reader/modules/readerfont.lua:247
+#: frontend/apps/reader/modules/readerfont.lua:270
 msgid "Font hinting set to: %1"
 msgstr "字体微调设为: %1"
 
-#: frontend/apps/reader/modules/readerfont.lua:255
+#: frontend/apps/reader/modules/readerfont.lua:278
 msgid "Font kerning set to: %1"
 msgstr "字体字距已设为: %1"
 
-#: frontend/apps/reader/modules/readerfont.lua:263
+#: frontend/apps/reader/modules/readerfont.lua:286
 msgid "Word spacing set to: %1%, %2%"
 msgstr "单词间距已设为: %1%, %2%"
 
-#: frontend/apps/reader/modules/readerfont.lua:271
+#: frontend/apps/reader/modules/readerfont.lua:294
 msgid "Word expansion set to: %1%."
 msgstr "字母间距已设为: %1%。"
 
-#: frontend/apps/reader/modules/readerfont.lua:279
+#: frontend/apps/reader/modules/readerfont.lua:302
 msgid "CJK width scaling set to: %1%."
 msgstr "CJK 宽度缩放比已设为: %1%。"
 
-#: frontend/apps/reader/modules/readerfont.lua:288
+#: frontend/apps/reader/modules/readerfont.lua:311
 #: frontend/apps/reader/modules/readerview.lua:964
 msgid "Font gamma set to: %1."
 msgstr "字体伽玛值已设为: %1。"
 
-#: frontend/apps/reader/modules/readerfont.lua:322
+#: frontend/apps/reader/modules/readerfont.lua:346
 msgid ""
 "Would you like %1 to be used as the default font (★), or the monospace "
 "font (u{1F13C})?"
 msgstr "您希望将%1用作默认字体 (★)，还是使用等宽字体 (u{1F13C})?"
 
-#: frontend/apps/reader/modules/readerfont.lua:328
+#: frontend/apps/reader/modules/readerfont.lua:352
 msgctxt "Font"
 msgid "Monospace"
 msgstr "等宽"
 
-#: frontend/apps/reader/modules/readerfont.lua:341
+#: frontend/apps/reader/modules/readerfont.lua:365
 msgid ""
 "Would you like %1 to be used as the default font (★), or the fallback "
 "font (�)?\n"
@@ -2671,36 +2681,144 @@ msgstr ""
 "\n"
 "当前字体中没有指定的字符时，便会使用后备字体。"
 
-#: frontend/apps/reader/modules/readerfont.lua:347
+#: frontend/apps/reader/modules/readerfont.lua:371
 msgctxt "Font"
 msgid "Fallback"
 msgstr "后备字体"
 
-#: frontend/apps/reader/modules/readerfont.lua:365
+#: frontend/apps/reader/modules/readerfont.lua:389
 msgid "Font: %1"
 msgstr "字体：%1"
 
-#: frontend/apps/reader/modules/readerfont.lua:396
+#: frontend/apps/reader/modules/readerfont.lua:420
 msgid "Increasing font size…"
 msgstr "增加字体大小……"
 
-#: frontend/apps/reader/modules/readerfont.lua:403
+#: frontend/apps/reader/modules/readerfont.lua:427
 msgid "Decreasing font size…"
 msgstr "减小字体大小……"
 
-#: frontend/apps/reader/modules/readerfont.lua:419
+#: frontend/apps/reader/modules/readerfont.lua:432
+msgid ""
+"In HTML/CSS based documents like EPUBs, stylesheets can specify to use fonts "
+"by family instead of a specific font name.\n"
+"Except for monospace and math, KOReader uses your default font for any "
+"family name.\n"
+"You can associate a specific font to each family if you care about the "
+"distinction.\n"
+"A long-press on a font name will make the association global (★), so it "
+"applies to all your books. This is the preferred approach.\n"
+"A tap will only affect the current book.\n"
+"If you encounter a book where such families are abused to the point where "
+"your default font is hardly used, you can quickly disable a family font for "
+"this book by unchecking the association."
+msgstr ""
+
+#. @translators These are typography font family names as used in CSS, they can be kept untranslated if they are used more commonly than their translation
+#: frontend/apps/reader/modules/readerfont.lua:443
+#, fuzzy
+msgid "Serif"
+msgstr "丛书"
+
+#: frontend/apps/reader/modules/readerfont.lua:444
+msgid "Sans-serif"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfont.lua:445
+#, fuzzy
+msgid "Monospace"
+msgstr "等宽"
+
+#: frontend/apps/reader/modules/readerfont.lua:447
+msgid "Cursive"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfont.lua:448
+msgid "Fantasy"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfont.lua:449
+msgid "Emoji u{1F60A}"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfont.lua:450
+msgid "Fang Song u{4EFF}u{5B8B}"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfont.lua:451
+msgid "Math"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfont.lua:485
+#, fuzzy
+msgid "About font-family fonts"
+msgstr "关于格式"
+
+#: frontend/apps/reader/modules/readerfont.lua:495
+#, fuzzy
+msgid "Ignore publisher font names when font-family is set"
+msgstr "忽略出版者字体类型"
+
+#: frontend/apps/reader/modules/readerfont.lua:503
+msgid ""
+"In a CSS font-family declaration, publishers may precede a family name with "
+"one or more font names, that are to be used if found among embedded fonts or "
+"your own fonts.\n"
+"Enabling this will ignore such font names and make sure your preferred "
+"family fonts are used."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfont.lua:517
+msgid "(main font)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfont.lua:518
+#, fuzzy
+msgid "Use main font"
+msgstr "使用等宽字体"
+
+#: frontend/apps/reader/modules/readerfont.lua:521
+#, fuzzy
+msgid "(default monospace font)"
+msgstr "使用等宽字体"
+
+#: frontend/apps/reader/modules/readerfont.lua:522
+#, fuzzy
+msgid "Use default monospace font: %1"
+msgstr "使用等宽字体"
+
+#: frontend/apps/reader/modules/readerfont.lua:524
+msgid "(default math font)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfont.lua:525
+#, fuzzy
+msgid "Use default math font"
+msgstr "使用默认值"
+
+#: frontend/apps/reader/modules/readerfont.lua:584
+#, fuzzy
+msgid "Font for %1"
+msgstr "字体：%1"
+
+#: frontend/apps/reader/modules/readerfont.lua:657
+#, fuzzy
+msgid "Font family font set for this book only."
+msgstr "在这本书上总共花费的时间"
+
+#: frontend/apps/reader/modules/readerfont.lua:704
 msgid "Display font names with their own font"
 msgstr "用字体本身展示字体名称"
 
-#: frontend/apps/reader/modules/readerfont.lua:426
+#: frontend/apps/reader/modules/readerfont.lua:711
 msgid "In the font menu, display each font name with its own font face."
 msgstr "在字体菜单中，用每款字体本身的样子展示它们的名称。"
 
-#: frontend/apps/reader/modules/readerfont.lua:431
+#: frontend/apps/reader/modules/readerfont.lua:716
 msgid "Use additional fallback fonts"
 msgstr "使用额外后备字体"
 
-#: frontend/apps/reader/modules/readerfont.lua:440
+#: frontend/apps/reader/modules/readerfont.lua:725
 msgid ""
 "Enable additional fallback fonts, for the most complete script and language "
 "coverage.\n"
@@ -2720,11 +2838,11 @@ msgstr ""
 "您可以长按一个字体的名称来设置首选的后备字体，它将在其他字体之前使用。\n"
 "如果该字体已经存在于此列表中，则将首先使用它。"
 
-#: frontend/apps/reader/modules/readerfont.lua:451
+#: frontend/apps/reader/modules/readerfont.lua:736
 msgid "Adjust fallback font sizes"
 msgstr "调节备选字体大小"
 
-#: frontend/apps/reader/modules/readerfont.lua:460
+#: frontend/apps/reader/modules/readerfont.lua:745
 msgid ""
 "Adjust the size of each fallback font so they all get the same x-height, and "
 "lowercase characters picked in them look similarly sized as those from the "
@@ -2738,15 +2856,15 @@ msgstr ""
 "这可能有助于拉丁文本中的希腊单词(因为拉丁字体通常没有所有的希腊字符)，但从后"
 "备字体中选择汉字或印度字符时，可能会使汉字或印度字符变小。"
 
-#: frontend/apps/reader/modules/readerfont.lua:469
+#: frontend/apps/reader/modules/readerfont.lua:754
 msgid "Monospace fonts scaling: %1 %"
 msgstr "等宽字体缩放：%1 %"
 
-#: frontend/apps/reader/modules/readerfont.lua:480
+#: frontend/apps/reader/modules/readerfont.lua:765
 msgid "Monospace font scaling"
 msgstr "等宽字体缩放"
 
-#: frontend/apps/reader/modules/readerfont.lua:492
+#: frontend/apps/reader/modules/readerfont.lua:777
 msgid ""
 "Monospace fonts may look big when inline with your main font if it has a "
 "small x-height.\n"
@@ -2758,25 +2876,25 @@ msgstr ""
 "该设置允许按此百分比缩放所有等宽字体，以便它们适合您喜欢的字体高度，或者您可"
 "以将它们缩小一点，以便更容易区分它们。"
 
-#: frontend/apps/reader/modules/readerfont.lua:499
+#: frontend/apps/reader/modules/readerfont.lua:784
 msgid "Generate font test document"
 msgstr "生成字体测试文档"
 
-#: frontend/apps/reader/modules/readerfont.lua:502
+#: frontend/apps/reader/modules/readerfont.lua:787
 msgid ""
 "Would you like to generate an HTML document showing some sample text "
 "rendered with each available font?"
 msgstr "你想要生成一个测试HTML文档，用于测试各个字体的显示效果吗？"
 
-#: frontend/apps/reader/modules/readerfont.lua:558
+#: frontend/apps/reader/modules/readerfont.lua:843
 msgid "Available fonts test document"
 msgstr "可用的字体测试文档"
 
-#: frontend/apps/reader/modules/readerfont.lua:558
+#: frontend/apps/reader/modules/readerfont.lua:843
 msgid "AVAILABLE FONTS"
 msgstr "可用字体"
 
-#: frontend/apps/reader/modules/readerfont.lua:576
+#: frontend/apps/reader/modules/readerfont.lua:861
 msgid ""
 "Document created as:\n"
 "%1\n"
@@ -11186,7 +11304,7 @@ msgstr "输入页码"
 
 #. @translators %1 is the current page. %2 is the total number of pages. In some languages a good translation might need to reverse this order, for instance: "Total %2, page %1".
 #: frontend/ui/widget/keyvaluepage.lua:598 frontend/ui/widget/menu.lua:996
-#: frontend/ui/widget/sortwidget.lua:402 frontend/ui/widget/touchmenu.lua:689
+#: frontend/ui/widget/sortwidget.lua:402 frontend/ui/widget/touchmenu.lua:700
 #: plugins/coverbrowser.koplugin/listmenu.lua:428
 #: plugins/vocabbuilder.koplugin/main.lua:1259
 msgid "Page %1 of %2"
@@ -17088,9 +17206,6 @@ msgstr ""
 #~ msgstr ""
 #~ "此文档’%1‘保存了由其他引擎创建的书签或标注信息，需要删除这些信息以避免出现"
 #~ "问题。"
-
-#~ msgid "Font size (%1)"
-#~ msgstr "字体大小 (%1)"
 
 #~ msgid "Remove bookmark?"
 #~ msgstr "删除此书签吗？"
