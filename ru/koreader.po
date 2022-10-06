@@ -28,8 +28,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-06 00:56+0000\n"
-"PO-Revision-Date: 2022-08-10 20:21+0000\n"
-"Last-Translator: Rugry RHRGR <5472_r@mail.ru>\n"
+"PO-Revision-Date: 2022-10-06 17:44+0000\n"
+"Last-Translator: Evgeniy Khramov <thejenjagamertjg@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ru/>\n"
 "Language: ru\n"
@@ -39,7 +39,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: reader.lua:231
 msgid ""
@@ -505,28 +505,36 @@ msgid ""
 "\n"
 "Some of the previously generated long-lived tokens are still valid."
 msgstr ""
+"Токены доступа Dropbox действуют недолго (4 часа).\n"
+"Для генерации нового токена доступа используйте маркер обновления Dropbox и "
+"строку <APP_KEY>:<APP_SECRET> в кодировке Base64.\n"
+"\n"
+"Некоторые из ранее сгенерированных долгоживущих токенов все еще "
+"действительны."
 
 #: frontend/apps/cloudstorage/dropbox.lua:111
-#, fuzzy
 msgid "Dropbox cloud storage"
-msgstr "Облачное хранилище"
+msgstr "Облачное хранилище Dropbox"
 
 #: frontend/apps/cloudstorage/dropbox.lua:115
-#, fuzzy
 msgid "Cloud storage displayed name"
-msgstr "Отображаемое имя сервера"
+msgstr "Отображаемое имя облачного хранилища"
 
 #: frontend/apps/cloudstorage/dropbox.lua:119
 msgid ""
 "Dropbox refresh token\n"
 "or long-lived token (deprecated)"
 msgstr ""
+"Обновляемый токен Dropbox\n"
+"или долгоживущий токен (устаревший)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:123
 msgid ""
 "Dropbox <APP_KEY>:<APP_SECRET>\n"
 "(leave blank for long-lived token)"
 msgstr ""
+"Dropbox <APP_KEY>:<APP_SECRET>\n"
+"(оставьте пустым для долгоживущего токена)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:143
 #: frontend/apps/reader/modules/readerbookmark.lua:1078
@@ -545,7 +553,6 @@ msgid "Save"
 msgstr "Сохранить"
 
 #: frontend/apps/cloudstorage/dropbox.lua:170
-#, fuzzy
 msgid ""
 "Type: %1\n"
 "Name: %2\n"
@@ -555,9 +562,11 @@ msgid ""
 "Space used: %6"
 msgstr ""
 "Тип: %1\n"
-"Название: %2\n"
-"Электронная почта: %3\n"
-"Страна: %4"
+"Имя: %2\n"
+"Эл. почта: %3\n"
+"Страна: %4\n"
+"Пространство всего: %5\n"
+"Использованное пространство: %6"
 
 #: frontend/apps/cloudstorage/ftp.lua:29
 msgid ""
@@ -1800,7 +1809,7 @@ msgstr "Включить вызов кэша CRE"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:702
 msgid "Dump the fontlist cache"
-msgstr ""
+msgstr "Выгрузка кэша списка шрифтов"
 
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagermenu.lua:724 frontend/dispatcher.lua:96
@@ -1889,7 +1898,6 @@ msgid "Default"
 msgstr "По умолчанию"
 
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:218
-#, fuzzy
 msgid "Defaults"
 msgstr "По умолчанию"
 
@@ -2657,13 +2665,12 @@ msgstr "Настройки шрифта"
 
 #. @translators 'font-family' is a CSS property name, keep it untranslated
 #: frontend/apps/reader/modules/readerfont.lua:68
-#, fuzzy
 msgid "Font-family fonts (%1)"
 msgstr "Размер шрифта (%1)"
 
 #: frontend/apps/reader/modules/readerfont.lua:70
 msgid "Font-family fonts"
-msgstr ""
+msgstr "Шрифты семейства шрифтов"
 
 #: frontend/apps/reader/modules/readerfont.lua:246
 msgid "Font size set to: %1."
@@ -2760,49 +2767,59 @@ msgid ""
 "your default font is hardly used, you can quickly disable a family font for "
 "this book by unchecking the association."
 msgstr ""
+"В документах на основе HTML/CSS, таких как EPUB, в таблицах стилей можно "
+"указать использование шрифтов по семействам вместо конкретного названия "
+"шрифта.\n"
+"За исключением моноширинного и математического, KOReader использует шрифт по "
+"умолчанию для любого семейства.\n"
+"Вы можете связать конкретный шрифт с каждым семейством, если вам важны "
+"различия.\n"
+"При длительном нажатии на название шрифта ассоциация становится глобальной "
+"(★), поэтому она применяется ко всем вашим книгам. Это предпочтительный "
+"подход.\n"
+"Нажатие повлияет только на текущую книгу.\n"
+"Если вы встретите книгу, в которой злоупотребляют такими семействами до "
+"такой степени, что шрифт по умолчанию почти не используется, вы можете "
+"быстро отключить шрифт семейства для этой книги, сняв флажок ассоциации."
 
 #. @translators These are typography font family names as used in CSS, they can be kept untranslated if they are used more commonly than their translation
 #: frontend/apps/reader/modules/readerfont.lua:443
-#, fuzzy
 msgid "Serif"
-msgstr "Серии"
+msgstr "Шрифт с засечками"
 
 #: frontend/apps/reader/modules/readerfont.lua:444
 msgid "Sans-serif"
-msgstr ""
+msgstr "Без засечек"
 
 #: frontend/apps/reader/modules/readerfont.lua:445
-#, fuzzy
 msgid "Monospace"
 msgstr "Моноширинный"
 
 #: frontend/apps/reader/modules/readerfont.lua:447
 msgid "Cursive"
-msgstr ""
+msgstr "Курсив"
 
 #: frontend/apps/reader/modules/readerfont.lua:448
 msgid "Fantasy"
-msgstr ""
+msgstr "Фэнтези"
 
 #: frontend/apps/reader/modules/readerfont.lua:449
 msgid "Emoji u{1F60A}"
-msgstr ""
+msgstr "Смайлик u{1F60A}"
 
 #: frontend/apps/reader/modules/readerfont.lua:450
 msgid "Fang Song u{4EFF}u{5B8B}"
-msgstr ""
+msgstr "Fang Song u{4EFF}u{5B8B}"
 
 #: frontend/apps/reader/modules/readerfont.lua:451
 msgid "Math"
-msgstr ""
+msgstr "Математика"
 
 #: frontend/apps/reader/modules/readerfont.lua:485
-#, fuzzy
 msgid "About font-family fonts"
-msgstr "О форматах"
+msgstr "О шрифтах семейства шрифтов"
 
 #: frontend/apps/reader/modules/readerfont.lua:495
-#, fuzzy
 msgid "Ignore publisher font names when font-family is set"
 msgstr "Игнорировать издательские семейства шрифтов"
 
