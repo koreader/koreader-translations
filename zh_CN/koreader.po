@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-12 21:59+0000\n"
-"PO-Revision-Date: 2022-10-13 03:56+0000\n"
+"PO-Revision-Date: 2022-10-14 16:58+0000\n"
 "Last-Translator: weijiuqiao <weijiuqiao@foxmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "koreader/koreader/zh_Hans/>\n"
@@ -275,7 +275,7 @@ msgstr "选择"
 #: plugins/wallabag.koplugin/main.lua:347
 #: plugins/wallabag.koplugin/main.lua:1056
 msgid "Info"
-msgstr "信息"
+msgstr "说明"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:399
 #: frontend/apps/filemanager/filemanagershortcuts.lua:133
@@ -314,7 +314,7 @@ msgstr "同步设置"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:457
 msgid "No files to download from Dropbox."
-msgstr "没有从Dropbox下载的文件。"
+msgstr "没有文件需要从 Dropbox下载。"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:459
 msgid "Successfully downloaded 1 file from Dropbox to local storage."
@@ -331,7 +331,7 @@ msgid ""
 "No files to download from Dropbox.\n"
 "Please check your configuration and connection."
 msgstr ""
-"没有从Dropbox下载的文件。\n"
+"没有要从 Dropbox 下载的文件。\n"
 "请检查你的配置和网络连接。"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:483
@@ -352,7 +352,7 @@ msgstr ""
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:548
 msgid "Choose Dropbox folder"
-msgstr "选择Dropbox文件夹"
+msgstr "选择 Dropbox 文件夹"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:564
 msgid "Choose local folder"
@@ -490,6 +490,11 @@ msgid ""
 "\n"
 "Some of the previously generated long-lived tokens are still valid."
 msgstr ""
+"Dropbox 访问令牌仅短期有效（4 小时）。\n"
+"要生成新的访问令牌，请使用 Dropbox 的刷新令牌和 <APP_KEY>:<APP_SECRET> "
+"格式的 Base64 编码字符串。\n"
+"\n"
+"之前生成的一些长期令牌仍然有效。"
 
 #: frontend/apps/cloudstorage/dropbox.lua:111
 msgid "Dropbox cloud storage"
@@ -504,12 +509,16 @@ msgid ""
 "Dropbox refresh token\n"
 "or long-lived token (deprecated)"
 msgstr ""
+"Dropbox 刷新令牌\n"
+"或长期令牌（不建议）"
 
 #: frontend/apps/cloudstorage/dropbox.lua:123
 msgid ""
 "Dropbox <APP_KEY>:<APP_SECRET>\n"
 "(leave blank for long-lived token)"
 msgstr ""
+"Dropbox <APP_KEY>:<APP_SECRET>\n"
+"(长期令牌请留空)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:143
 #: frontend/apps/reader/modules/readerbookmark.lua:1078
@@ -2726,14 +2735,14 @@ msgid ""
 "your default font is hardly used, you can quickly disable a family font for "
 "this book by unchecking the association."
 msgstr ""
-"在基于 HTML/CSS 的文档（如 epub）中，可以指定样式表按字族而不是特定的字体名使"
-"用字体。\n"
+"在基于 HTML/CSS 的文档（如 "
+"epub）中，可以指定样式表按字族而不是特定的字体名使用字体。\n"
 "除 monospace 和 math 外, KOReader 对任何字族都使用默认字体。\n"
-"如果你关心字族之间的区别，可以将特定字体与每个字族关联起来。\n"
-"长按字体名创建全局性关联(★)，该字体会应用于你所有的书籍。这是首选方法。\n"
+"如果您关心字族之间的区别，可以将特定字体与每个字族关联起来。\n"
+"长按字体名创建全局性关联(★)，该字体会应用于您所有的书籍。这是首选方法。\n"
 "轻按只影响当前书籍。\n"
-"如果你遇到一本书，其中此类字族被滥用到几乎不使用默认字体的程度，你可以取消选"
-"中关联来快速禁用该字族的字体。"
+"如果您遇到一本书，其中此类字族被滥用到默认字体几乎不再出现的程度，您可以取消"
+"选中关联来快速禁用该字族的字体。"
 
 #. @translators These are typography font family names as used in CSS, they can be kept untranslated if they are used more commonly than their translation
 #: frontend/apps/reader/modules/readerfont.lua:443
@@ -2754,7 +2763,7 @@ msgstr "草书"
 
 #: frontend/apps/reader/modules/readerfont.lua:448
 msgid "Fantasy"
-msgstr ""
+msgstr "梦幻"
 
 #: frontend/apps/reader/modules/readerfont.lua:449
 msgid "Emoji u{1F60A}"
@@ -2784,6 +2793,9 @@ msgid ""
 "Enabling this will ignore such font names and make sure your preferred "
 "family fonts are used."
 msgstr ""
+"在 CSS 的 font-family 声明中，出版商可以在字体家族名称之前加上一个或多个字体"
+"名称，如果在嵌入字体或您自己的字体中找到它们的话，便会优先使用这些字体。\n"
+"启用此功能将忽略此类字体名称并确保使用您选定的字体家族。"
 
 #: frontend/apps/reader/modules/readerfont.lua:517
 msgid "(main font)"
@@ -2841,7 +2853,7 @@ msgid ""
 "it will be used before these.\n"
 "If that font happens to be part of this list already, it will be used first."
 msgstr ""
-"启用其他后备字体，以实现最完整的脚本和语言覆盖。\n"
+"启用其他后备字体，以实现最完整的文字和语言覆盖。\n"
 "这些字体将按以下顺序使用：\n"
 "\n"
 "%1\n"
@@ -2862,8 +2874,8 @@ msgid ""
 "have all the Greek characters), but may make Chinese or Indic characters "
 "smaller when picked from fallback fonts."
 msgstr ""
-"调整每个回退字体的大小，使它们都具有相同的x-height，其中选择的小写字符看起来"
-"与默认字体的字符大小相似。\n"
+"调整每个后备字体的大小以使它们具有相同的 "
+"x-height，此时小写字母看起来与默认字体的小写字母大小相似。\n"
 "这可能有助于拉丁文本中的希腊单词(因为拉丁字体通常没有所有的希腊字符)，但从后"
 "备字体中选择汉字或印度字符时，可能会使汉字或印度字符变小。"
 
@@ -2884,8 +2896,8 @@ msgid ""
 "distinguish them more easily."
 msgstr ""
 "如果等宽字体的x高度较小，那么它在与主字体内联时可能看起来较大。\n"
-"该设置允许按此百分比缩放所有等宽字体，以便它们适合您喜欢的字体高度，或者您可"
-"以将它们缩小一点，以便更容易区分它们。"
+"该设置允许按此百分比缩放所有等宽字体，以便它们适合您首选字体的高度，或者您也"
+"可以将它们缩小一点，以便于区分。"
 
 #: frontend/apps/reader/modules/readerfont.lua:784
 msgid "Generate font test document"
@@ -5231,9 +5243,9 @@ msgid ""
 msgstr ""
 "部分语言会使用特殊的排版规则，包括连字规则、换行规则和特定语言下的字型变体规"
 "则等。\n"
-"KOReader 会根据书籍的语言标签自动选择合适的排版规则，你也可以手动选择另一个语"
-"言。\n"
-"您也可以通过长按设置默认语言或备份语言。\n"
+"KOReader "
+"会根据书籍的语言标签自动选择合适的排版规则，你也可以手动选择另一个语言。\n"
+"您也可以通过长按设置默认语言或后备语言。\n"
 "\n"
 "下面的标记指示了各个语言使用的规则：\n"
 "‐ : 语言特定的连字规则词典\n"
@@ -9105,15 +9117,15 @@ msgid ""
 "Only fonts named \"Noto Sans xyz\" or \"Noto Sans xyz UI\" (regular, not "
 "bold nor italic, not Serif) will be available in this menu."
 msgstr ""
-"若部分书籍的标题和词典的条目无法正确显示，且含有诸如￾￾或��的乱码字符，那么你"
-"可能需要额外的字体来显示这些语言。你可以在“额外的 UI 备选字体”菜单项中启"
-"用。\n"
+"若部分书籍的标题和词典的条目无法正确显示，且含有诸如￾￾或��的乱码字符，那么"
+"你可能需要额外的字体来显示这些语言。你可以在“额外的 UI "
+"备选字体”菜单项中启用。\n"
 "大部分语言所需的字体都可以在下面的网址中下载：\n"
 "\n"
 "https://fonts.google.com/noto\n"
 "\n"
-"只有名为\"Noto Sans xxx\" 或 \"Noto Sans xxx UI\"（通常字体，非粗体或斜体，也"
-"不是Serif）的字体才会显示在这个菜单中。"
+"只有名为\"Noto Sans xxx\" 或 \"Noto Sans xxx UI\""
+"（常规体，而非粗体、斜体，也非衬线体）的字体才会显示在这个菜单中。"
 
 #: frontend/ui/elements/font_ui_fallbacks.lua:103
 msgid "About additional UI fallback fonts"
@@ -9179,11 +9191,11 @@ msgstr "自动显示底部菜单"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:71
 msgid "Not implemented"
-msgstr ""
+msgstr "未实现"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:82
 msgid "Not available for any of your active layouts"
-msgstr ""
+msgstr "已启用布局均无此项设置"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:93
 msgid "Keyboard layouts: %1"
@@ -15006,7 +15018,7 @@ msgstr "重命名：%1"
 
 #: plugins/profiles.koplugin/main.lua:139
 msgid "Duplicate"
-msgstr ""
+msgstr "复制"
 
 #: plugins/profiles.koplugin/main.lua:162
 msgid "Do you want to delete this profile?"
@@ -16110,7 +16122,7 @@ msgid ""
 "\n"
 "%1"
 msgstr ""
-"此文件不是一个通常的文件：\n"
+"此文件并非常规文件：\n"
 "\n"
 "%1"
 
@@ -16284,7 +16296,7 @@ msgstr "过滤书籍"
 
 #: plugins/vocabbuilder.koplugin/main.lua:232
 msgid "Reverse order"
-msgstr "逆序"
+msgstr "逆转排序"
 
 #: plugins/vocabbuilder.koplugin/main.lua:232
 msgid "Reverse order and show only reviewable"
