@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-04 08:47+0000\n"
-"PO-Revision-Date: 2022-11-03 05:48+0000\n"
+"PO-Revision-Date: 2022-11-08 14:54+0000\n"
 "Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/koreader/"
 "koreader/tr/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.2-dev\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: reader.lua:227
 msgid ""
@@ -2665,7 +2665,7 @@ msgstr "Ailenin yazı tipleri (%1)"
 
 #: frontend/apps/reader/modules/readerfont.lua:57
 msgid "Font-family fonts"
-msgstr ""
+msgstr "Ailenin yazı tipleri"
 
 #: frontend/apps/reader/modules/readerfont.lua:259
 msgid "Font size set to: %1."
@@ -2761,6 +2761,19 @@ msgid ""
 "your default font is hardly used, you can quickly disable a family font for "
 "this book by unchecking the association."
 msgstr ""
+"EPUB gibi HTML/CSS tabanlı belgelerde, biçem sayfaları belirli bir yazı tipi "
+"adı yerine ailedeki yazı tiplerinin kullanılacağını belirtebilir.\n"
+"Sabit aralıklı ve matematik yazı tipleri dışında, KOReader herhangi bir aile "
+"adı için varsayılan yazı tipinizi kullanır.\n"
+"Ayrımı önemsiyorsanız, her aile ile belirli bir yazı tipini "
+"ilişkilendirebilirsiniz.\n"
+"Bir yazı tipi adına uzun basmak ilişkilendirmeyi genel (★) yapar, böylece "
+"tüm kitaplarınız için geçerli olur. Yeğlenen yaklaşım budur.\n"
+"Bir dokunuş yalnızca geçerli kitabı etkiler.\n"
+"Bu tür ailelerin varsayılan yazı tipinizin neredeyse hiç kullanılmadığı "
+"noktaya kadar zorlandığı bir kitapla karşılaşırsanız, ilişkilendirme "
+"işaretini kaldırarak bu kitap için bir aile yazı tipini hızlı bir şekilde "
+"devre dışı bırakabilirsiniz."
 
 #. @translators These are typography font family names as used in CSS, they can be kept untranslated if they are used more commonly than their translation
 #: frontend/apps/reader/modules/readerfont.lua:456
@@ -2812,6 +2825,11 @@ msgid ""
 "Enabling this will ignore such font names and make sure your preferred "
 "family fonts are used."
 msgstr ""
+"Bir CSS font-family bildiriminde, yayıncılar bir aile adından önce, gömülü "
+"yazı tipleri ya da kendi yazı tipleriniz arasında bulunursa kullanılacak bir "
+"ya da daha fazla yazı tipi adı verebilir.\n"
+"Bunu etkinleştirmek, bu tür yazı tipi adlarını yok sayar ve yeğlediğiniz "
+"aile yazı tiplerinin kullanılmasını sağlar."
 
 #: frontend/apps/reader/modules/readerfont.lua:530
 msgid "(main font)"
@@ -2893,6 +2911,13 @@ msgid ""
 "have all the Greek characters), but may make Chinese or Indic characters "
 "smaller when picked from fallback fonts."
 msgstr ""
+"Her yedek yazı tipinin boyutunu, hepsi aynı x yüksekliğine sahip olacak ve "
+"içlerinden seçilen küçük harf karakterleri varsayılan yazı tipindekiler ile "
+"benzer boyutta görünecek şekilde ayarlayın.\n"
+"Bu seçenek, Latince metinler arasındaki Yunanca sözcüklerde yardımcı "
+"olabilir (Latince yazı tiplerinde genellikle tüm Yunanca karakterler "
+"bulunmadığından), ancak yedek yazı tiplerinden seçildiğinde Çince ya da "
+"Hintçe karakterler daha küçük olabilir."
 
 #: frontend/apps/reader/modules/readerfont.lua:767
 msgid "Monospace fonts scaling: %1 %"
@@ -2910,6 +2935,12 @@ msgid ""
 "can fit your preferred font height, or you can make them be a bit smaller to "
 "distinguish them more easily."
 msgstr ""
+"Sabit aralıklı yazı tipleri, küçük bir x yüksekliğine sahipse ana yazı "
+"tipinizle aynı hizada olduğunda büyük görünebilir.\n"
+"Bu ayar, yeğlediğiniz yazı tipi yüksekliğine sığabilmeleri için tüm sabit "
+"aralıklı yazı tiplerinin bu yüzde oranında ölçeklendirilmesini sağlar ya da "
+"daha kolay ayırt edilebilmeleri için biraz daha küçük olmalarını "
+"sağlayabilirsiniz."
 
 #: frontend/apps/reader/modules/readerfont.lua:797
 msgid "Generate font test document"
@@ -3977,6 +4008,9 @@ msgid ""
 "book text may still render with a different font if the book uses embedded "
 "fonts)."
 msgstr ""
+"Dipnot açılır metnini belge yazı tipi olarak ayarlanmış yazı tipi ile "
+"görüntüler (kitap gömülü yazı tipleri kullanıyorsa kitap metni farklı bir "
+"yazı tipi ile görüntülenebilir)."
 
 #: frontend/apps/reader/modules/readerlink.lua:324
 #: frontend/apps/reader/modules/readerlink.lua:344
@@ -6535,9 +6569,8 @@ msgid "Invert page turn buttons"
 msgstr "sayfa çevirme düğmelerini tersine çevir"
 
 #: frontend/dispatcher.lua:140
-#, fuzzy
 msgid "Set highlight action"
-msgstr "Vurgu işlemini değiştir"
+msgstr "Vurgulama işlemini ayarla"
 
 #: frontend/dispatcher.lua:141
 msgid "Cycle highlight action"
@@ -6612,12 +6645,11 @@ msgid "Nothing"
 msgstr "Hiç bir şey"
 
 #: frontend/dispatcher.lua:576
-#, fuzzy
 msgctxt "Dispatcher"
 msgid "1 action"
 msgid_plural "%1 actions"
-msgstr[0] "Döndürülmesin"
-msgstr[1] "Döndürülmesin"
+msgstr[0] "1 işlem"
+msgstr[1] "%1 işlem"
 
 #: frontend/dispatcher.lua:719
 msgid "If called by a gesture the amount of the gesture will be used"
@@ -6657,6 +6689,8 @@ msgid ""
 "Fontlist data has been dumped in:\n"
 "%1"
 msgstr ""
+"Yazı tipi verileri şuraya indirildi:\n"
+"%1"
 
 #: frontend/languagesupport.lua:297
 msgid "Language support plugins"
@@ -7057,7 +7091,7 @@ msgstr ""
 
 #: frontend/ui/data/creoptions.lua:561
 msgid "CJK width scaling"
-msgstr ""
+msgstr "CJK genişlik ölçeği"
 
 #: frontend/ui/data/creoptions.lua:562
 msgid ""
@@ -7065,6 +7099,9 @@ msgid ""
 "this percentage. This has the effect of adding space between these glyphs, "
 "and might make them easier to distinguish to some readers."
 msgstr ""
+"Tüm CJK (Çince, Japonca, Korece) karakterlerinin genişliğini bu yüzde kadar "
+"artırır. Bu seçenek ile, bu glifler arasına boşluk eklenebilir ve bazı "
+"okuyucularda ayırt edilmeleri kolaylaşır."
 
 #: frontend/ui/data/creoptions.lua:565
 msgid "Word expansion"
@@ -7241,7 +7278,7 @@ msgstr ""
 
 #: frontend/ui/data/creoptions.lua:719
 msgid "Embedded fonts provided by the current book:"
-msgstr ""
+msgstr "Geçerli kitap tarafından sağlanan gömülü yazı tipleri:"
 
 #: frontend/ui/data/creoptions.lua:721
 msgid "not used"
@@ -7276,10 +7313,9 @@ msgstr ""
 "da çizimler varsa kullanışlıdır."
 
 #: frontend/ui/data/css_tweaks.lua:33
-#, fuzzy
 msgctxt "Style tweaks category"
 msgid "Pages and margins"
-msgstr "Kitap kenar boşlukları ile aynı"
+msgstr "Sayfalar ve kenar boşlukları"
 
 #: frontend/ui/data/css_tweaks.lua:36
 msgid "Ignore publisher page margins"
@@ -7294,19 +7330,16 @@ msgstr ""
 "KOReader kenar boşluğu ayarları kullanılsın."
 
 #: frontend/ui/data/css_tweaks.lua:41
-#, fuzzy
 msgid "Horizontal margins"
-msgstr "Yatay kenar boşlukları yok sayılsın"
+msgstr "Yatay kenar boşlukları"
 
 #: frontend/ui/data/css_tweaks.lua:45
-#, fuzzy
 msgid "Ignore all horizontal margins"
-msgstr "Yatay kenar boşlukları yok sayılsın"
+msgstr "Tüm yatay kenar boşlukları yok sayılsın"
 
 #: frontend/ui/data/css_tweaks.lua:51
-#, fuzzy
 msgid "Ignore all horizontal padding"
-msgstr "Yatay pay yok sayılsın"
+msgstr "Tüm yatay paylar yok sayılsın"
 
 #: frontend/ui/data/css_tweaks.lua:58
 msgid "Ignore horizontal paragraph margins"
@@ -7317,24 +7350,20 @@ msgid "Ignore horizontal paragraph padding"
 msgstr "Yatay paragraf payı yok sayılsın"
 
 #: frontend/ui/data/css_tweaks.lua:69
-#, fuzzy
 msgid "Vertical margins"
-msgstr "Dikey kenar boşlukları yok sayılsın"
+msgstr "Dikey kenar boşlukları"
 
 #: frontend/ui/data/css_tweaks.lua:73
-#, fuzzy
 msgid "Ignore all vertical margins"
-msgstr "Dikey kenar boşlukları yok sayılsın"
+msgstr "Tüm dikey kenar boşlukları yok sayılsın"
 
 #: frontend/ui/data/css_tweaks.lua:79
-#, fuzzy
 msgid "Ignore all vertical padding"
-msgstr "Dikey pay yok sayılsın"
+msgstr "Tüm dikey paylar yok sayılsın"
 
 #: frontend/ui/data/css_tweaks.lua:86
-#, fuzzy
 msgid "Ignore vertical paragraph margins"
-msgstr "Dikey paragraf payı yok sayılsın"
+msgstr "Dikey paragraf kenar boşlukları yok sayılsın"
 
 #: frontend/ui/data/css_tweaks.lua:92
 msgid "Ignore vertical paragraph padding"
@@ -7708,9 +7737,8 @@ msgstr ""
 "görüntüler."
 
 #: frontend/ui/data/css_tweaks.lua:421
-#, fuzzy
 msgid "Font size and families"
-msgstr "Yazı tipleri ve satır yükseklikleri"
+msgstr "Yazı boyutu ve aileleri"
 
 #: frontend/ui/data/css_tweaks.lua:424
 msgid "Ignore publisher font families"
@@ -7730,20 +7758,21 @@ msgid "Disable font-size specified in embedded styles."
 msgstr "Gömülmüş biçemlerde belirtilen font-size yazı boyutu kullanılmasın."
 
 #: frontend/ui/data/css_tweaks.lua:440
-#, fuzzy
 msgid "Reset main text font size"
-msgstr "Yazı boyutunu ayarla"
+msgstr "Ana metin yazı boyutunu sıfırla"
 
 #: frontend/ui/data/css_tweaks.lua:441
 msgid ""
 "Disable font-size set on the main text (keeping possibly larger headings "
 "untouched), so that KOReader's font size is used."
 msgstr ""
+"Ana metindeki yazı tipi boyutu ayarını devre dışı bırakır (daha büyük "
+"olabilecek başlıklara dokunmaz). Böylece KOReader yazı tipi boyutu "
+"kullanılır."
 
 #: frontend/ui/data/css_tweaks.lua:447
-#, fuzzy
 msgid "Line heights"
-msgstr "Yüksekliği ayarla"
+msgstr "Satır yüksekliği"
 
 #: frontend/ui/data/css_tweaks.lua:450
 msgid "Ignore publisher line heights"
@@ -7800,7 +7829,7 @@ msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:496
 msgid "Tailor widths and text-indent for CJK"
-msgstr ""
+msgstr "CJK için genişlikler ve metin girintisi uyarlansın"
 
 #: frontend/ui/data/css_tweaks.lua:497
 msgid ""
@@ -7808,6 +7837,9 @@ msgid ""
 "size, so that lines of Chinese and Japanese characters don't need space "
 "added between glyphs for text justification."
 msgstr ""
+"Paragraf genişliğini ve metin girintisini yazı tipi boyutunun tam sayı katı "
+"olacak şekilde ayarlar. Böylece Çince ve Japonca karakter satırlarının metin "
+"hizalaması için glifler arasına boşluk eklenmesine gerek kalmaz."
 
 #: frontend/ui/data/css_tweaks.lua:503
 msgid "Paragraph first-line indentation"
@@ -7892,7 +7924,7 @@ msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:564
 msgid "Tables, links, images"
-msgstr ""
+msgstr "Tablolar, bağlantılar, görseller"
 
 #: frontend/ui/data/css_tweaks.lua:566
 msgid "Tables"
@@ -8211,37 +8243,33 @@ msgid "In-page classic classname footnotes (smaller)"
 msgstr "Sayfa içi klasik sınıf adı dipnotları (daha küçük)"
 
 #: frontend/ui/data/css_tweaks.lua:1011
-#, fuzzy
 msgid "In-page footnote font size"
-msgstr "Sayfa içi dipnotları"
+msgstr "Sayfa içi dipnot yazı boyutu"
 
 #: frontend/ui/data/css_tweaks.lua:1018
 msgid "Footnote font size: %1 %"
 msgstr "Dipnot yazı boyutu: % %1"
 
 #: frontend/ui/data/css_tweaks.lua:1031
-#, fuzzy
 msgid "In-page footnote fix-up"
-msgstr "Sayfa içi dipnotları"
+msgstr "Sayfa içi dipnot düzeltmesi"
 
 #: frontend/ui/data/css_tweaks.lua:1034
-#, fuzzy
 msgid "No footnote indentation"
-msgstr "Paragraf ilk satır girintisi"
+msgstr "Dipnot girintisi olmasın"
 
 #: frontend/ui/data/css_tweaks.lua:1045
-#, fuzzy
 msgid "Justify footnote text"
-msgstr "Çoğu metni iki yana hizala"
+msgstr "Dipnot metni iki yana hizalansın"
 
 #: frontend/ui/data/css_tweaks.lua:1056
-#, fuzzy
 msgid "Remove block margins"
-msgstr "Yer imini sił"
+msgstr "Blok kenar boşlukları silinsin"
 
 #: frontend/ui/data/css_tweaks.lua:1057
 msgid "Remove block margin and padding inside inpage footnotes."
 msgstr ""
+"Sayfa içi dipnotların içindeki blok kenar boşluğunu ve dolguyu kaldırır."
 
 #: frontend/ui/data/css_tweaks.lua:1070
 msgid "Remove cosmetic spacing"
@@ -8250,6 +8278,7 @@ msgstr "Yüzeysel boşluğu kaldır"
 #: frontend/ui/data/css_tweaks.lua:1071
 msgid "Remove inline margin and padding inside inpage footnotes."
 msgstr ""
+"Sayfa içi dipnotların içindeki satır içi kenar boşluğunu ve dolguyu kaldırır."
 
 #: frontend/ui/data/css_tweaks.lua:1084
 msgid "Inline all footnote content"
@@ -8262,10 +8291,15 @@ msgid ""
 "all the footnote content become a single paragraph.\n"
 "This will break any complex footnote containing quotes or lists."
 msgstr ""
+"Dipnot numarası tek bir satırda ve dipnot metni bir sonraki satırdaysa ya da "
+"değişken girinti düzeyleri varsa, bu seçenek tüm dipnot içeriğinin tek bir "
+"paragraf haline gelmesini sağlayabilir.\n"
+"Bu seçenek, tırnak işaretleri ya da listeler bulunan karmaşık dipnotları "
+"bozar."
 
 #: frontend/ui/data/css_tweaks.lua:1106
 msgid "Regularize text size on inline elements"
-msgstr ""
+msgstr "Satır içi ögelerin metin boyutu normalleştirilsin"
 
 #: frontend/ui/data/css_tweaks.lua:1107
 msgid ""
@@ -8273,6 +8307,10 @@ msgid ""
 "vertical alignments, which would make it too irregular, you can reset all of "
 "them to get a leaner text (to the expense of loosing superscripts)."
 msgstr ""
+"Dipnot içinde metni çok düzensiz hale getirecek değişken veya mutlak yazı "
+"tipi boyutları, satır yüksekliği veya dikey hizalamalar kullanılıyorsa, daha "
+"sade bir metin elde etmek için hepsini sıfırlayabilirsiniz (üst karakterleri "
+"kaybetmek pahasına)."
 
 #: frontend/ui/data/dictionaries.lua:10
 msgid "Public Domain"
@@ -8350,9 +8388,8 @@ msgstr ""
 "fiske girişi kullanılabilir."
 
 #: frontend/ui/data/keyboardlayouts/zh_keyboard.lua:65
-#, fuzzy
 msgid "Show character candidates"
-msgstr "Bölüm işaretleyicileri görüntüle"
+msgstr "Karakter önerilerini görüntüle"
 
 #: frontend/ui/data/koptoptions.lua:83
 msgid "Page Crop"
@@ -8857,16 +8894,14 @@ msgid "pt"
 msgstr "pt"
 
 #: frontend/ui/data/optionsutil.lua:44
-#, fuzzy
 msgctxt "Length"
 msgid "mm"
-msgstr "dk"
+msgstr "aa"
 
 #: frontend/ui/data/optionsutil.lua:46
-#, fuzzy
 msgctxt "Length"
 msgid "in"
-msgstr "mini"
+msgstr "şu olarak"
 
 #: frontend/ui/data/optionsutil.lua:75 frontend/ui/data/optionsutil.lua:85
 msgid "custom"
@@ -9093,9 +9128,8 @@ msgid "Set time"
 msgstr "Saati ayarla"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:139
-#, fuzzy
 msgid "Time is in hours and minutes."
-msgstr "Zamanı saat ve dakika olarak yazın."
+msgstr "Zaman saat ve dakika olarak."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:144
 msgid "Current time: %1:%2"
@@ -9113,7 +9147,7 @@ msgstr "Tarihi ayarla"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:171
 msgid "Date is in years, months and days."
-msgstr ""
+msgstr "Yıl, ay, gün olarak tarih."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:177
 msgid "Current date: %1-%2-%3"
@@ -9382,12 +9416,11 @@ msgstr "Ekran görüntüsü klasörü"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:611
 msgid "Units"
-msgstr ""
+msgstr "Birimler"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:614
-#, fuzzy
 msgid "Metric length"
-msgstr "Tarama uzunluğunu ayarla"
+msgstr "Metrik uzunluk"
 
 #: frontend/ui/elements/file_ext_assoc.lua:40
 msgid "Enable all"
@@ -9414,7 +9447,6 @@ msgid "Open fonts folder"
 msgstr "Yazı tipi klasörünü aç"
 
 #: frontend/ui/elements/font_ui_fallbacks.lua:52
-#, fuzzy
 msgid ""
 "If some book titles, dictionary entries and such are not displayed well but "
 "shown as ￾￾ or ��, it may be necessary to download the required fonts for "
@@ -9427,16 +9459,18 @@ msgid ""
 "bold nor italic, not Serif) will be available in this menu. However, bold "
 "fonts will be used if their corresponding regular fonts exist."
 msgstr ""
-"Bazı kitap adları, sözlük kayıtları vb. düzgün görüntülenmiyor ve �� veya �� "
-"şeklinde görüntüleniyorsa, bu diller için gerekli yazı tiplerinin "
-"indirilmesi gerekebilir. Bunlar daha sonra ek kullanıcı arayüzü varsayılan "
-"yazı tipleri olarak etkinleştirilebilir.\n"
+"Bazı kitap adları, sözlük kayıtları gibi bilgiler düzgün görüntülenmiyor ve "
+"￾￾ veya �� şeklinde görüntüleniyorsa, bu diller için gerekli yazı "
+"tiplerinin indirilmesi gerekebilir. Bunlar daha sonra ek kullanıcı arayüzü "
+"varsayılan yazı tipleri olarak etkinleştirilebilir.\n"
 "Birçok dil için yazı tipleri şuradan indirilebilir:\n"
 "\n"
 "https://fonts.google.com/noto\n"
 "\n"
-"Bu menüde yalnızca \"Noto Sans xyz\" veya \"Noto Sans xyz UI\" (normal, koyu "
-"veya yatık değil, Serif değil) yazı tipleri kullanılabilir."
+"Bu menüde yalnızca \"Noto Sans xyz\" ya da \"Noto Sans xyz UI\" (normal, "
+"koyu ya da yatık değil, Serif değil) yazı tipleri kullanılabilir. Bununla "
+"birlikte karşılık gelen yazı tiplerinin normal biçimleri varsa koyu yazı "
+"tipleri kullanılır."
 
 #: frontend/ui/elements/font_ui_fallbacks.lua:103
 msgid "About additional UI fallback fonts"
@@ -9505,11 +9539,11 @@ msgstr "Alt menü otomatik görüntülensin"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:71
 msgid "Not implemented"
-msgstr ""
+msgstr "Henüz uygulanmamış"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:82
 msgid "Not available for any of your active layouts"
-msgstr ""
+msgstr "Etkin görünümlerinizin hiçbiri için kullanılamaz"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:93
 msgid "Keyboard layouts: %1"
@@ -10055,9 +10089,8 @@ msgid "Until a tap"
 msgstr "Dokunulana kadar"
 
 #: frontend/ui/elements/screensaver_menu.lua:299
-#, fuzzy
 msgid "Until 'Exit screensaver' gesture"
-msgstr "Ekran koruyucudan çıkmak için dokunun"
+msgstr "'Ekran koruyucudan çık' hareketine kadar"
 
 #: frontend/ui/elements/timeout_android.lua:25
 msgid "1 minute"
@@ -11538,18 +11571,16 @@ msgstr "%1 şununla açılsın:"
 #: frontend/ui/widget/frontlightwidget.lua:185
 #: frontend/ui/widget/frontlightwidget.lua:314
 #: plugins/statistics.koplugin/main.lua:949
-#, fuzzy
 msgctxt "Extrema"
 msgid "Min"
-msgstr "En Az"
+msgstr "En az"
 
 #: frontend/ui/widget/frontlightwidget.lua:196
 #: frontend/ui/widget/frontlightwidget.lua:325
 #: plugins/statistics.koplugin/main.lua:956
-#, fuzzy
 msgctxt "Extrema"
 msgid "Max"
-msgstr "En Fazla"
+msgstr "En fazla"
 
 #: frontend/ui/widget/frontlightwidget.lua:207
 msgid "Toggle"
@@ -11948,6 +11979,8 @@ msgstr "Ekran koruyucudan çıkmak için özel el hareketi bekleniyor."
 #: frontend/ui/widget/screensaverwidget.lua:105
 msgid "No exit screensaver gesture configured. Tap to exit."
 msgstr ""
+"Ekran koruyucudan çıkmak için bir hareket yapılandırılmamış. Çıkmak için "
+"dokunun."
 
 #: frontend/ui/widget/screenshoter.lua:43
 msgid ""
@@ -11987,9 +12020,8 @@ msgid "Default value: %1%2"
 msgstr "Varsayılan değer: %1%2"
 
 #: frontend/ui/widget/textviewer.lua:408
-#, fuzzy
 msgid "Found, screen line %1."
-msgstr "%1. satırda bulundu."
+msgstr "%1. ekran satırında bulundu."
 
 #: frontend/ui/wikipedia.lua:387
 msgid "Loading high-res image… (tap to cancel)"
@@ -12093,33 +12125,29 @@ msgid "%1m"
 msgstr "%1dk"
 
 #: frontend/util.lua:174 frontend/util.lua:195
-#, fuzzy, lua-format
+#, lua-format
 msgctxt "Time"
 msgid "%1s"
 msgstr "%1sn"
 
 #: frontend/util.lua:182 frontend/util.lua:188
-#, fuzzy
 msgctxt "Time"
 msgid "%1m"
 msgstr "%1dk"
 
 #: frontend/util.lua:197
-#, fuzzy
 msgctxt "Time"
 msgid "%1m%2s"
 msgstr "%1dk%2sn"
 
 #: frontend/util.lua:212 frontend/util.lua:214
 #: plugins/vocabbuilder.koplugin/main.lua:866
-#, fuzzy
 msgctxt "Time"
 msgid "h"
 msgstr "sa"
 
 #: frontend/util.lua:213 frontend/util.lua:215 frontend/util.lua:220
 #: frontend/util.lua:226 plugins/vocabbuilder.koplugin/main.lua:864
-#, fuzzy
 msgctxt "Time"
 msgid "m"
 msgstr "dk"
@@ -12175,84 +12203,74 @@ msgid "%Y-%m-%d"
 msgstr "%Y-%m-%d"
 
 #: frontend/util.lua:1157
-#, fuzzy
 msgctxt "Data storage size"
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #: frontend/util.lua:1160
-#, fuzzy
 msgctxt "Data storage size"
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #: frontend/util.lua:1163
-#, fuzzy
 msgctxt "Data storage size"
 msgid "%1 kB"
 msgstr "%1 kB"
 
 #: frontend/util.lua:1165
-#, fuzzy
 msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 B"
 
 #: plugins/autodim.koplugin/main.lua:54 plugins/autodim.koplugin/_meta.lua:4
-#, fuzzy
 msgid "Automatic dimmer"
-msgstr "Otomatik yeniden başlatma"
+msgstr "Otomatik kısma"
 
 #: plugins/autodim.koplugin/main.lua:59
 msgid "Idle time for dimmer"
-msgstr ""
+msgstr "Kısma için boşta kalma süresi"
 
 #: plugins/autodim.koplugin/main.lua:60
-#, fuzzy
 msgid "Idle time for dimmer: %1"
-msgstr "Dosya silindi: %1"
+msgstr "Kısma boşta bekleme süresi: %1"
 
 #: plugins/autodim.koplugin/main.lua:66
-#, fuzzy
 msgid "Automatic dimmer idle time"
-msgstr "Otomatik yeniden başlatma"
+msgstr "Otomatik kısma boşta bekleme süresi"
 
 #: plugins/autodim.koplugin/main.lua:67
 msgid "Start the dimmer after the designated period of inactivity."
-msgstr ""
+msgstr "Belirltilen boşta bekleme süresinden sonra kısılır."
 
 #: plugins/autodim.koplugin/main.lua:99
-#, fuzzy
 msgid "Dimmer duration: %1"
-msgstr "Klasör işlemi: %1"
+msgstr "Kısma süresi: %1"
 
 #: plugins/autodim.koplugin/main.lua:105
-#, fuzzy
 msgid "Automatic dimmer duration"
-msgstr "Otomatik yeniden başlatma"
+msgstr "Otomatik kısma süresi"
 
 #: plugins/autodim.koplugin/main.lua:106
 msgid "Delay to reach the lowest brightness."
-msgstr ""
+msgstr "En düşük parlaklığa ulaşma gecikmesi."
 
 #: plugins/autodim.koplugin/main.lua:130
 msgid "Dim to %1 % of the regular brightness"
-msgstr ""
+msgstr "Normal parlaklığa göre %%1 oranında kısılsın"
 
 #: plugins/autodim.koplugin/main.lua:135
-#, fuzzy
 msgid "Dim to percentage"
-msgstr "Yüzde"
+msgstr "Kısılacak yüzde"
 
 #: plugins/autodim.koplugin/main.lua:136
 msgid "The lowest brightness as a percentage of the regular brightness."
-msgstr ""
+msgstr "Normal parlaklığa göre yüzde olarak en düşük parlaklık."
 
 #: plugins/autodim.koplugin/_meta.lua:5
-#, fuzzy
 msgid "This plugin allows dimming the frontlight after a period of inactivity."
 msgstr ""
-"Bu eklenti, ön aydınlatma sıcaklığının otomatik olarak ayarlanmasını sağlar."
+"Bu uygulama eki, ön aydınlatmanın bir bekleme süresinden sonra kısılmasını "
+"sağlar."
 
 #: plugins/autofrontlight.koplugin/main.lua:118
 #: plugins/autofrontlight.koplugin/_meta.lua:4
@@ -12310,7 +12328,6 @@ msgid "Always standby if battery below"
 msgstr "Pil şunun altına düştüğünde beklemeye geçilsin"
 
 #: plugins/autostandby.koplugin/main.lua:148
-#, fuzzy
 msgid "Update"
 msgstr "Güncelle"
 
@@ -12397,6 +12414,9 @@ msgid ""
 "power-saving state *may* hang the kernel, resulting in a full device hang or "
 "a device restart."
 msgstr ""
+"Aygıtınızın son derece güvenilmez olduğu biliniyor. Bu nedenle güç "
+"tasarrufuna geçilmemesi *çekirdeği kilitleyebilir*. Bu durum da tam bir "
+"aygıt kilitlenmesine ya da aygıtın yeniden başlatılmasına neden olabilir."
 
 #: plugins/autosuspend.koplugin/main.lua:551
 msgid "Autostandby timeout: %1"
@@ -12428,11 +12448,9 @@ msgstr ""
 "kipine geçirir."
 
 #: plugins/autoturn.koplugin/main.lua:71
-#, fuzzy
 msgid "Autoturn is now active and will automatically turn the page every %1."
 msgstr ""
-"Otomatik sayfa çevirme %1 saniyede bir sayfa çevirecek şekilde "
-"etkinleştirildi."
+"Otomatik sayfa çevirme %1 sürede sayfayı çevirecek şekilde etkinleştirildi."
 
 #: plugins/autoturn.koplugin/main.lua:73
 msgid ""
@@ -12443,18 +12461,16 @@ msgstr ""
 "etkinleştirildi."
 
 #: plugins/autoturn.koplugin/main.lua:145
-#, fuzzy
 msgid "Autoturn: %1"
-msgstr "Otomatik sayfa çevirme: %1 s"
+msgstr "Otomatik sayfa çevirme: %1"
 
 #: plugins/autoturn.koplugin/main.lua:145 plugins/autoturn.koplugin/_meta.lua:4
 msgid "Autoturn"
 msgstr "Otomatik sayfa çevirme"
 
 #: plugins/autoturn.koplugin/main.lua:154
-#, fuzzy
 msgid "Autoturn time"
-msgstr "Otomatik sayfa çevirme"
+msgstr "Otomatik sayfa çevirme süresi"
 
 #: plugins/autoturn.koplugin/main.lua:197
 msgid "Set distance"
@@ -12513,24 +12529,23 @@ msgstr "Otomatik sıcaklık öğlene yakın ne varsa kullanıyor"
 
 #: plugins/autowarmth.koplugin/main.lua:182
 msgid "Show this warning again"
-msgstr ""
+msgstr "Bu uyarı yeniden gösterilsin"
 
 #: plugins/autowarmth.koplugin/main.lua:186
 msgid "Hide the warning until the next book is opened"
-msgstr ""
+msgstr "Bir sonraki kitap açılana kadar uyarı gizlensin"
 
 #: plugins/autowarmth.koplugin/main.lua:192
 msgid "Disable AutoWarmth's nightmode control"
-msgstr ""
+msgstr "AutoWarmth gece kipi denetimi kullanılmasın"
 
 #: plugins/autowarmth.koplugin/main.lua:200
-#, fuzzy
 msgid "Night mode changed"
-msgstr "Gece kipi"
+msgstr "Gece kipi değiştirildi"
 
 #: plugins/autowarmth.koplugin/main.lua:201
 msgid "The AutoWarmth plugin might change it again."
-msgstr ""
+msgstr "AutoWarmth uygulama eki bunu yeniden değiştirebilir."
 
 #: plugins/autowarmth.koplugin/main.lua:491
 #: plugins/autowarmth.koplugin/_meta.lua:4
@@ -12627,6 +12642,10 @@ msgid ""
 "You can override this change by manually turning the front light on/off. At "
 "the next sunrise/sunset, AutoWarmth will toggle again if needed."
 msgstr ""
+"Bu özellik, bu uygulama ekinin \"Geçerli aktif parametrelerine\" göre ön "
+"aydınlatmanızı gün batımında açar ve gün doğumunda kapatır.\n"
+"Ön ışığı el ile açıp kapatarak bu değişikliği geçersiz kılabilirsiniz. "
+"AutoWarmth gerekirse bir sonraki gün doğumu ve batımında yeniden etkili olur."
 
 #: plugins/autowarmth.koplugin/main.lua:613
 msgid "Currently active parameters"
@@ -12690,9 +12709,8 @@ msgid "Location name"
 msgstr "Konum adı"
 
 #: plugins/autowarmth.koplugin/main.lua:693
-#, fuzzy
 msgid "Coordinates: (%1°, %2°)"
-msgstr "Koordinatlar: (%1, %2)"
+msgstr "Koordinatlar: (%1°, %2°)"
 
 #: plugins/autowarmth.koplugin/main.lua:697
 msgid "Set location"
@@ -12711,9 +12729,8 @@ msgid "Longitude"
 msgstr "Boylam"
 
 #: plugins/autowarmth.koplugin/main.lua:731
-#, fuzzy
 msgid "Altitude: %1 m"
-msgstr "Yükseklik: %1"
+msgstr "Yükseklik: %1 m"
 
 #: plugins/autowarmth.koplugin/main.lua:735
 msgid "Altitude"
@@ -12724,7 +12741,6 @@ msgid "Enter the altitude in meters above sea level."
 msgstr "Yüksekliği deniz seviyesinden metre olarak yazın."
 
 #: plugins/autowarmth.koplugin/main.lua:743
-#, fuzzy
 msgctxt "Length"
 msgid "m"
 msgstr "dk"
@@ -12750,9 +12766,8 @@ msgid "Invalidate"
 msgstr "Geçersiz kıl"
 
 #: plugins/autowarmth.koplugin/main.lua:856
-#, fuzzy
 msgid "Solar midnight (previous day)"
-msgstr "Güneş gece yarısı"
+msgstr "Güneş gece yarısı (önceki gün)"
 
 #: plugins/autowarmth.koplugin/main.lua:857
 msgid "Astronomical dawn"
@@ -12797,9 +12812,8 @@ msgid "Solar midnight"
 msgstr "Güneş gece yarısı"
 
 #: plugins/autowarmth.koplugin/main.lua:882
-#, fuzzy
 msgid "%1: %2 %"
-msgstr "%1: %2%"
+msgstr "%1: % %2"
 
 #: plugins/autowarmth.koplugin/main.lua:884
 msgid "%1: 100 % %2"
@@ -12830,24 +12844,20 @@ msgid "Control: %1%2%3"
 msgstr "Denetim: %1%2%3"
 
 #: plugins/autowarmth.koplugin/main.lua:958
-#, fuzzy
 msgid "warmth"
-msgstr "Sıcaklık"
+msgstr "sıcaklık"
 
 #: plugins/autowarmth.koplugin/main.lua:959
-#, fuzzy
 msgid "and"
-msgstr "Kannada"
+msgstr "ve"
 
 #: plugins/autowarmth.koplugin/main.lua:960
-#, fuzzy
 msgid "night mode"
-msgstr "Gece kipi"
+msgstr "gece kipi"
 
 #: plugins/autowarmth.koplugin/main.lua:962
-#, fuzzy
 msgid "Control: night mode"
-msgstr "Otomatik gece kipi"
+msgstr "Denetim: Gece kipi"
 
 #: plugins/autowarmth.koplugin/main.lua:990
 msgid "Set warmth and night mode for:"
@@ -12921,10 +12931,10 @@ msgid "Dusk"
 msgstr "Alacakaranlık"
 
 #: plugins/autowarmth.koplugin/_meta.lua:5
-#, fuzzy
 msgid "This plugin allows to set the frontlight warmth automagically."
 msgstr ""
-"Bu eklenti, ön aydınlatma sıcaklığının otomatik olarak ayarlanmasını sağlar."
+"Bu uygulama eki, ön aydınlatma sıcaklığının otomatik olarak ayarlanmasını "
+"sağlar."
 
 #: plugins/backgroundrunner.koplugin/_meta.lua:4
 msgid "Background runner"
@@ -13508,9 +13518,8 @@ msgid "Ignore metadata"
 msgstr "Üst veri yok sayılsın"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:361
-#, fuzzy
 msgid "Refresh book info"
-msgstr "Ön bellekteki kitap bilgilerini yenile"
+msgstr "Kitap bilgilerini yenile"
 
 #: plugins/coverbrowser.koplugin/covermenu.lua:511
 #: plugins/coverbrowser.koplugin/covermenu.lua:630
@@ -13771,7 +13780,7 @@ msgid ""
 "If fallback is disabled, the screensaver image will stay in place after "
 "closing a book."
 msgstr ""
-"Bu eklenti bir kitap kapağını bir dosyaya kaydeder. Bu dosya daha sonra "
+"Bu uygulama eki bir kitap kapağını bir dosyaya kaydeder. Bu dosya daha sonra "
 "belirli aygıtlarda ekran koruyucu olarak kullanılabilir.\n"
 "\n"
 "Etkinleştirildiğinde, geçerli dosyanın kapak görselini kitap açılışında "
@@ -13865,7 +13874,7 @@ msgstr ""
 
 #: plugins/coverimage.koplugin/main.lua:498
 msgid "Choose a cache folder. The contents of the old folder will be migrated."
-msgstr ""
+msgstr "Bir ön bellek klasörü seçin. Eski klasörün içeriği taşınacak."
 
 #: plugins/coverimage.koplugin/main.lua:501
 msgid "Clear cached covers"
@@ -14006,9 +14015,8 @@ msgid "Directory Defaults: %1"
 msgstr "Klasör Varsayılanları: %1"
 
 #: plugins/docsettingtweak.koplugin/main.lua:82
-#, fuzzy
 msgid "Missing defaults file"
-msgstr "Varsayılanlar kullanılsın"
+msgstr "Varsayılanlar dosyası eksik"
 
 #: plugins/docsettingtweak.koplugin/main.lua:87
 msgid "Defaults saved"
@@ -14032,18 +14040,16 @@ msgstr ""
 "ayarlarının değiştirilmesini sağlar."
 
 #: plugins/exporter.koplugin/main.lua:187
-#, fuzzy
 msgid ": Exported successfully."
-msgstr "Biri başarıyla çıkarıldı."
+msgstr ": Dışa aktarıldı."
 
 #: plugins/exporter.koplugin/main.lua:189
 msgid ": Exported to "
 msgstr ": Şuraya aktarıldı "
 
 #: plugins/exporter.koplugin/main.lua:192
-#, fuzzy
 msgid ": Failed to export."
-msgstr "Komut yürütülemedi."
+msgstr ": Dışa aktarılamadı."
 
 #: plugins/exporter.koplugin/main.lua:204
 msgid "Exporting may take several seconds…"
@@ -14070,9 +14076,8 @@ msgid "Choose formats and services"
 msgstr "Biçimleri ve hizmetleri seçin"
 
 #: plugins/exporter.koplugin/main.lua:272
-#, fuzzy
 msgid "Share all notes in this book"
-msgstr "Bu kitaptaki tüm notları ver"
+msgstr "Bu kitaptaki tüm notları paylaş"
 
 #: plugins/exporter.koplugin/_meta.lua:5
 msgid "Exports highlights and notes."
@@ -14119,63 +14124,60 @@ msgid ""
 "Markdown formatting can be configured in:\n"
 "Export highlights > Choose formats and services > Markdown."
 msgstr ""
+"Joplin kurulum yönergeleri için%1 bölümüne bakabilirsiniz\n"
+"\n"
+"Markdown biçimlendirmesi şuradan yapılandırılabilir:\n"
+"Vurgulamaları dışa aktar > Biçimleri ve hizmetleri seçin > Markdown."
 
 #: plugins/exporter.koplugin/target/json.lua:17
 msgid "Json"
-msgstr ""
+msgstr "JSON"
 
 #: plugins/exporter.koplugin/target/json.lua:21
-#, fuzzy
 msgid "Export to Json"
-msgstr "Joplin Uygulamasına Aktar"
+msgstr "JSON olarak dışa aktar"
 
 #: plugins/exporter.koplugin/target/json.lua:26
 msgid "Include book checksum in export"
-msgstr ""
+msgstr "Dışa aktarmaya kitap sağlaması eklensin"
 
 #: plugins/exporter.koplugin/target/markdown.lua:30
 #: plugins/exporter.koplugin/template/md.lua:10
-#, fuzzy
 msgid "Bold"
 msgstr "Koyu"
 
 #: plugins/exporter.koplugin/target/markdown.lua:31
 #: plugins/exporter.koplugin/template/md.lua:18
-#, fuzzy
 msgid "Bold italic"
-msgstr "Basılı tutma süresi"
+msgstr "Koyu yatık"
 
 #: plugins/exporter.koplugin/target/markdown.lua:32
 #: plugins/exporter.koplugin/template/md.lua:14
-#, fuzzy
 msgid "Italic"
-msgstr "İtalyanca"
+msgstr "Yatık"
 
 #: plugins/exporter.koplugin/target/markdown.lua:33
 #: plugins/exporter.koplugin/template/md.lua:30
-#, fuzzy
 msgid "Strikethrough"
-msgstr "Üzerini çiz"
+msgstr "Üzeri çizili"
 
 #: plugins/exporter.koplugin/target/markdown.lua:34
 #: plugins/exporter.koplugin/template/md.lua:22
 msgid "Underline (Markdownit style, with ++)"
-msgstr ""
+msgstr "Altı çizili (Markdownit biçemi, ++ ile)"
 
 #: plugins/exporter.koplugin/target/markdown.lua:35
 #: plugins/exporter.koplugin/template/md.lua:26
 msgid "Underline (with <u></u> tags)"
-msgstr ""
+msgstr "Altı çizili (<u></u> kod imleri ile)"
 
 #: plugins/exporter.koplugin/target/markdown.lua:50
-#, fuzzy
 msgid "Formatting style for %1"
-msgstr "Yazı tipi düzeltmesi şuna ayarlandı: %1"
+msgstr "Biçem şuna göre biçimlendirildi: %1"
 
 #: plugins/exporter.koplugin/target/markdown.lua:93
-#, fuzzy
 msgid "Export to Markdown"
-msgstr "Readwise uygulamasına aktar"
+msgstr "Markdown olarak aktar"
 
 #: plugins/exporter.koplugin/target/markdown.lua:98
 msgid "Format highlights based on style"
@@ -14208,16 +14210,15 @@ msgstr "Dış klavye"
 
 #: plugins/externalkeyboard.koplugin/main.lua:134
 msgid "Enable OTG mode to connect peripherals"
-msgstr ""
+msgstr "Çevre birimlerini bağlamak için OTG kipi kullanılsın"
 
 #: plugins/externalkeyboard.koplugin/main.lua:145
 msgid "Always enable OTG mode"
-msgstr ""
+msgstr "Her zaman OTG kipi kullanılsın"
 
 #: plugins/externalkeyboard.koplugin/main.lua:263
-#, fuzzy
 msgid "Keyboard disconnected"
-msgstr "Klavye bağlandı"
+msgstr "Klavye bağlantısı kesildi"
 
 #: plugins/externalkeyboard.koplugin/main.lua:352
 msgid "Keyboard connected"
@@ -14228,10 +14229,12 @@ msgid ""
 "Note that in the OTG mode the device would not be recognized as a USB drive "
 "by a computer.\n"
 msgstr ""
+"OTG kipindeyken aygıtın bir bilgisayar tarafından USB sürücü olarak "
+"kullanılamayacağını unutmayın.\n"
 
 #: plugins/externalkeyboard.koplugin/_meta.lua:5
 msgid "Manages USB OTG and configures keyboard."
-msgstr ""
+msgstr "USB OTG kipini yönetir ve klavyeyi yapılandırır."
 
 #: plugins/gestures.koplugin/main.lua:41 plugins/gestures.koplugin/main.lua:45
 #: plugins/gestures.koplugin/main.lua:59 plugins/gestures.koplugin/main.lua:63
@@ -14306,14 +14309,12 @@ msgid "Pinch"
 msgstr "Sıkıştırma"
 
 #: plugins/gestures.koplugin/main.lua:78
-#, fuzzy
 msgid "Rotate ⤸ 90°"
-msgstr "Saat yönünde 90° döndür"
+msgstr "90° ⤸ döndür"
 
 #: plugins/gestures.koplugin/main.lua:79
-#, fuzzy
 msgid "Rotate ⤹ 90°"
-msgstr "Saat yönünde 90° döndür"
+msgstr "90° ⤹ döndür"
 
 #: plugins/gestures.koplugin/main.lua:118
 msgid ""
@@ -14385,7 +14386,7 @@ msgstr ""
 #: plugins/gestures.koplugin/main.lua:448
 msgctxt "Frequency"
 msgid "Hz"
-msgstr ""
+msgstr "Hz"
 
 #: plugins/gestures.koplugin/main.lua:449
 msgid "Set rate"
@@ -14742,14 +14743,14 @@ msgid ""
 msgstr ""
 "Yomichan sonrası örneklenen KOReader için Japonca dil desteği.\n"
 "\n"
-"Bu eklenti, KOReader uygulamasının yerleşik sözlük ve seçim sistemini "
+"Bu uygulama eki, KOReader uygulamasının yerleşik sözlük ve seçim sistemini "
 "Yomichan tarzı sözlük biçimi dönüştürme ve metin taramasını desteklemek için "
 "genişleterek, sözlük biçimine dönüştürülmüş fiillerin ve çok karakterli "
-"sözcük ve cümlelerin tek dokunuşla aranmasını sağlar. Bu nedenle, bu eklenti "
-"StarDict dönüştürülmüş Japonca sözlükler için eşanlamlı tabanlı sözlük "
-"biçimine dönüştürme kuralları gereksinimini ortadan kaldırır.\n"
+"sözcük ve cümlelerin tek dokunuşla aranmasını sağlar. Bu nedenle, bu "
+"uygulama eki StarDict dönüştürülmüş Japonca sözlükler için eşanlamlı tabanlı "
+"sözlük biçimine dönüştürme kuralları gereksinimini ortadan kaldırır.\n"
 "\n"
-"Bu eklentinin Japonca metinle sorunsuz çalışması için en az bir Japonca "
+"Bu uygulama ekinin Japonca metinle sorunsuz çalışması için en az bir Japonca "
 "sözlüğün yüklü olması gerekir."
 
 #: plugins/keepalive.koplugin/main.lua:9 plugins/keepalive.koplugin/_meta.lua:4
@@ -15462,9 +15463,8 @@ msgid "Cannot get catalog. Server refuses to serve uncompressed content."
 msgstr "Katalog alınamadı. Sunucu sıkıştırılmamış içerik sunmayı reddetti."
 
 #: plugins/opds.koplugin/opdsbrowser.lua:308
-#, fuzzy
 msgid "Cannot get catalog. Server response status: %1."
-msgstr "Katalog alınamadı. Sunucu %1 yanıtını verdi."
+msgstr "Katalog alınamadı. Sunucu yanıtı durumu: %1."
 
 #: plugins/opds.koplugin/opdsbrowser.lua:359
 msgid "Cannot get catalog info from %1"
@@ -15511,9 +15511,8 @@ msgid "Page stream"
 msgstr "Sayfa akışı"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:608
-#, fuzzy
 msgid "Stream from page"
-msgstr "bir sayfadaki öge sayısı"
+msgstr "Sayfadan akış"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:767
 #: plugins/opds.koplugin/opdsbrowser.lua:842
@@ -15540,7 +15539,7 @@ msgstr "%1 dosyası zaten var. Üzerine yazılmasını ister misiniz?"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:890
 msgid "Stream"
-msgstr ""
+msgstr "Akış"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:956
 msgid "Delete OPDS catalog?"
@@ -15628,9 +15627,8 @@ msgstr ""
 "yürütün."
 
 #: plugins/profiles.koplugin/main.lua:140
-#, fuzzy
 msgid "Show in action list"
-msgstr "Döndürme"
+msgstr "İşlem listesinde görüntülensin"
 
 #: plugins/profiles.koplugin/main.lua:159
 msgid "Edit actions: (%1)"
@@ -15642,7 +15640,7 @@ msgstr "Yeniden adlandır: %1"
 
 #: plugins/profiles.koplugin/main.lua:184
 msgid "Duplicate"
-msgstr ""
+msgstr "Kopyala"
 
 #: plugins/profiles.koplugin/main.lua:204
 msgid "Do you want to delete this profile?"
@@ -15984,9 +15982,8 @@ msgid "Reading statistics"
 msgstr "Okuma istatistikleri"
 
 #: plugins/statistics.koplugin/main.lua:942
-#, fuzzy
 msgid "Read page duration limits: %1 s – %2 s"
-msgstr "Sayfa okuma süresi sınırları: %1 s / %2 s"
+msgstr "Sayfa okuma süresi sınırları: %1 s - %2 s"
 
 #: plugins/statistics.koplugin/main.lua:966
 msgid "Read page duration limits"
@@ -16362,9 +16359,8 @@ msgid "Up time"
 msgstr "Çalışma süresi"
 
 #: plugins/systemstat.koplugin/main.lua:75
-#, fuzzy
 msgid "Time spent awake"
-msgstr "Bugün okumaya ayrılan zaman"
+msgstr "Uyanık olarak geçirilen zaman"
 
 #: plugins/systemstat.koplugin/main.lua:80
 msgid "Time in suspend"
@@ -16601,7 +16597,7 @@ msgstr "Ara bellek boyutu: %1 kB"
 #: plugins/terminal.koplugin/main.lua:551
 msgctxt "Data storage size"
 msgid "kB"
-msgstr ""
+msgstr "kB"
 
 #: plugins/terminal.koplugin/main.lua:552
 msgid "Terminal emulator buffer size (kB)"
@@ -16928,137 +16924,124 @@ msgstr "Aygıt saatini NTP sunucuları ile eşitler."
 
 #: plugins/vocabbuilder.koplugin/main.lua:73
 msgid "Add to vocabulary builder"
-msgstr ""
+msgstr "Sözcük dağarcığı oluşturucuya ekle"
 
 #: plugins/vocabbuilder.koplugin/main.lua:123
 msgid "Filter words from books"
-msgstr ""
+msgstr "Kitaplardaki sözcükler süzülsün"
 
 #: plugins/vocabbuilder.koplugin/main.lua:178
 #: plugins/vocabbuilder.koplugin/main.lua:308
-#, fuzzy
 msgid "Auto add new words"
-msgstr "Haber akışı ekle"
+msgstr "Yeni sözcükler otomatik olarak eklensin"
 
 #: plugins/vocabbuilder.koplugin/main.lua:182
 #: plugins/vocabbuilder.koplugin/main.lua:321
-#, fuzzy
 msgid "Save context"
-msgstr "Metin üzerinde seçin"
+msgstr "Bağlamı kaydet"
 
 #: plugins/vocabbuilder.koplugin/main.lua:225
-#, fuzzy
 msgid "Filter books"
-msgstr "Kitap durumuna göre süz"
+msgstr "Kitapları süz"
 
 #: plugins/vocabbuilder.koplugin/main.lua:233
-#, fuzzy
 msgid "Reverse order"
-msgstr "Ters Sıralama"
+msgstr "Ters sıralama"
 
 #: plugins/vocabbuilder.koplugin/main.lua:233
 msgid "Reverse order and show only reviewable"
-msgstr ""
+msgstr "Sıra tersine çevrilsin ve yalnızca incelenebilir olanlar görüntülensin"
 
 #: plugins/vocabbuilder.koplugin/main.lua:243
 msgid "Resume"
 msgstr "Sürdür"
 
 #: plugins/vocabbuilder.koplugin/main.lua:243
-#, fuzzy
 msgid "Quick deletion"
-msgstr "Yazı silme"
+msgstr "Hızlı silme"
 
 #: plugins/vocabbuilder.koplugin/main.lua:251
-#, fuzzy
 msgid "Reset all progress"
-msgstr "Haftalık ilerleme"
+msgstr "Tüm ilerlemeyi sıfırla"
 
 #: plugins/vocabbuilder.koplugin/main.lua:254
 msgid "Reset progress of all words?"
-msgstr ""
+msgstr "Tüm sözcüklerin ilerlemesi sıfırlansın mı?"
 
 #: plugins/vocabbuilder.koplugin/main.lua:266
 msgid "Clean all words"
-msgstr ""
+msgstr "Tüm sözcükleri temizle"
 
 #: plugins/vocabbuilder.koplugin/main.lua:269
 msgid "Clean all words including progress?"
-msgstr ""
+msgstr "Tüm sözcükler ilerlemeleri ile birlikte temizlensin mi?"
 
 #: plugins/vocabbuilder.koplugin/main.lua:445
-#, fuzzy
 msgid "Reset progress"
-msgstr "Haftalık ilerleme"
+msgstr "İlerlemeyi sıfırla"
 
 #: plugins/vocabbuilder.koplugin/main.lua:452
-#, fuzzy
 msgid "Remove word"
-msgstr "Haberleri sil"
+msgstr "Sözcüğü sil"
 
 #: plugins/vocabbuilder.koplugin/main.lua:462
-#, fuzzy
 msgid "Undo study status"
-msgstr "Pil durumunu gizle"
+msgstr "Çalışma durumunu geri al"
 
 #: plugins/vocabbuilder.koplugin/main.lua:697
 #: plugins/vocabbuilder.koplugin/main.lua:1164
 #: plugins/vocabbuilder.koplugin/main.lua:1497
-#, fuzzy
 msgid "Forgot"
 msgstr "Unut"
 
 #: plugins/vocabbuilder.koplugin/main.lua:708
 #: plugins/vocabbuilder.koplugin/main.lua:1160
 #: plugins/vocabbuilder.koplugin/main.lua:1483
-#, fuzzy
 msgid "Got it"
-msgstr "Ögeleri sırala"
+msgstr "Anladım"
 
 #: plugins/vocabbuilder.koplugin/main.lua:784
 msgid "From"
-msgstr ""
+msgstr "Başlangıç"
 
 #: plugins/vocabbuilder.koplugin/main.lua:868
 msgctxt "Time"
 msgid "d"
-msgstr ""
+msgstr "g"
 
 #: plugins/vocabbuilder.koplugin/main.lua:916
-#, fuzzy
 msgid "Added on"
-msgstr "Gömülü yazı tipleri"
+msgstr "Eklenme zamanı"
 
 #: plugins/vocabbuilder.koplugin/main.lua:917
-#, fuzzy
 msgid "Review scheduled at"
-msgstr "Zaman planı"
+msgstr "Gözden geçirme zamanlaması"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1284
-#, fuzzy
 msgid "Filter in effect"
-msgstr "Süzgeç bileşeni"
+msgstr "Etkin süzgeç"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1285
-#, fuzzy
 msgid "No reviewable items"
-msgstr "ögelerin üstünde"
+msgstr "Gözden geçirilebilecek bir öge yok"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1453
 #: plugins/vocabbuilder.koplugin/main.lua:1524
 #: plugins/vocabbuilder.koplugin/_meta.lua:4
 msgid "Vocabulary builder"
-msgstr ""
+msgstr "Sözcük dağarcığı oluşturucu"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1535
 msgid "Open vocabulary builder"
-msgstr ""
+msgstr "Sözcük dağarcığı oluşturucuyu aç"
 
 #: plugins/vocabbuilder.koplugin/_meta.lua:5
 msgid ""
 "This plugin processes dictionary word lookups and uses spaced repetition to "
 "help you remember new words."
 msgstr ""
+"Bu uygulama eki sözlük sözcük aramalarını işler ve yeni sözcükleri "
+"hatırlamanıza yardımcı olmak için aralıklı yineleme kullanır."
 
 #: plugins/wallabag.koplugin/main.lua:45
 msgid "Wallabag retrieval"
@@ -17421,6 +17404,7 @@ msgstr "Sağ üst köşeye dokunun"
 msgid ""
 "Ebook reader with support for many formats like PDF, DjVu, EPUB, FB2, CBZ."
 msgstr ""
+"PDF, DjVu, EPUB, FB2, CBZ gibi birçok biçimi destekleyen e-kitap okuyucu."
 
 #: tools/update-metadata.lua:17
 msgid ""
@@ -17451,6 +17435,35 @@ msgid ""
 "your own online OPDS catalogs and RSS feeds, online over-the-air software "
 "updates, an FTP client, an SSH server, …\n"
 msgstr ""
+"* Taşınabilir: Gömülü aygıtlarda (Cervantes, Kindle, Kobo, PocketBook), "
+"Android ve Linux bilgisayarlarda çalışır. Geliştiriciler, Linux ve MacOS "
+"üzerinde bir KOReader öykünücüsü çalıştırabilir.\n"
+"\n"
+"* Çok biçimli belgeler: Sabit sayfa biçimlerini (PDF, DjVu, CBT, CBZ) ve "
+"yeniden düzenlenebilir e-kitap biçimlerini (EPUB, FB2, Mobi, DOC, CHM, TXT) "
+"destekler. Taranan PDF/DjVu belgeleri, yerleşik K2pdfopt kitaplığı ile "
+"yeniden düzenlenebilir.\n"
+"\n"
+"* Tam özellikli okuma: Son derece özelleştirilebilir okuyucu görünümü ve "
+"birçok dizgi seçeneği ile çok dilli kullanıcı arabirimi. İsteğe bağlı sayfa "
+"kenar boşlukları ayarlayabilir, satır aralığını değiştirebilir ve dış yazı "
+"tipleri ile biçemleri seçebilirsiniz. Uygulamada çok dilli tireleme "
+"sözlükleri de bulunur.\n"
+"\n"
+"* Calibre (üst veri arama, kablosuz olarak e-kitap alma, OPDS aracılığıyla "
+"kitaplığa göz atma), Wallabag, Wikipedia, Google Translate ve diğer içerik "
+"sağlayıcılarla bütünleşik.\n"
+"\n"
+"* E-mürekkep aygıtları ile uyumlu hale getirilmiş: Sayfalandırılmış menüler, "
+"ayarlanabilir metin karşıtlığı ve içeriği veya sayfalı ortama sığdırmak için "
+"kolay yakınlaştırma ile canlandırma olmayan özel kullanıcı arayüzü.\n"
+"\n"
+"* Uygulama ekleri ile zenginleştirilebilir\n"
+"\n"
+"* ve pek çok diğer özellik: StarDict sözlükleri / Wikipedia ile sözcük "
+"arama, kendi çevrimiçi OPDS kataloglarınızı ve RSS akışlarınızı ekleyebilme, "
+"çevrimiçi kablosuz yazılım güncellemeleri, bir FTP istemcisi, bir SSH "
+"sunucusu, …\n"
 
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
