@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-08 23:36+0000\n"
+"POT-Creation-Date: 2022-11-11 15:11+0000\n"
 "PO-Revision-Date: 2022-11-11 14:46+0000\n"
 "Last-Translator: Enrico Segre <enricoalbertoernestosegre@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/koreader/"
@@ -96,6 +96,7 @@ msgid "Cloud storage"
 msgstr "Cloud di archiviazione"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:42
+#: frontend/apps/cloudstorage/syncservice.lua:15
 msgid "Dropbox"
 msgstr "Dropbox"
 
@@ -104,6 +105,7 @@ msgid "FTP"
 msgstr "FTP"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:44
+#: frontend/apps/cloudstorage/syncservice.lua:16
 msgid "WebDAV"
 msgstr "WebDAV"
 
@@ -161,10 +163,10 @@ msgstr "Inserisci nome del file"
 #: frontend/apps/cloudstorage/cloudstorage.lua:279
 #: frontend/apps/cloudstorage/cloudstorage.lua:306
 #: frontend/apps/cloudstorage/cloudstorage.lua:367
-#: frontend/apps/cloudstorage/cloudstorage.lua:666
+#: frontend/apps/cloudstorage/cloudstorage.lua:670
 #: frontend/apps/cloudstorage/dropbox.lua:129
 #: frontend/apps/cloudstorage/ftp.lua:127
-#: frontend/apps/cloudstorage/webdav.lua:112
+#: frontend/apps/cloudstorage/webdav.lua:143
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:151
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:236
 #: frontend/apps/filemanager/filemanager.lua:270
@@ -222,9 +224,10 @@ msgstr "Inserisci nome del file"
 #: plugins/opds.koplugin/opdsbrowser.lua:883
 #: plugins/perceptionexpander.koplugin/main.lua:138
 #: plugins/profiles.koplugin/main.lua:245 plugins/SSH.koplugin/main.lua:126
-#: plugins/statistics.koplugin/main.lua:1966
-#: plugins/statistics.koplugin/main.lua:2139
-#: plugins/statistics.koplugin/main.lua:2178
+#: plugins/statistics.koplugin/main.lua:1117
+#: plugins/statistics.koplugin/main.lua:2082
+#: plugins/statistics.koplugin/main.lua:2255
+#: plugins/statistics.koplugin/main.lua:2294
 #: plugins/terminal.koplugin/aliases.lua:100
 #: plugins/terminal.koplugin/main.lua:574
 #: plugins/texteditor.koplugin/main.lua:352
@@ -269,7 +272,7 @@ msgstr "Scegli"
 #: frontend/apps/cloudstorage/cloudstorage.lua:392
 #: frontend/apps/cloudstorage/dropbox.lua:137
 #: frontend/apps/cloudstorage/ftp.lua:135
-#: frontend/apps/cloudstorage/webdav.lua:120
+#: frontend/apps/cloudstorage/webdav.lua:151
 #: plugins/wallabag.koplugin/main.lua:347
 #: plugins/wallabag.koplugin/main.lua:1056
 msgid "Info"
@@ -278,7 +281,9 @@ msgstr "Informazioni"
 #: frontend/apps/cloudstorage/cloudstorage.lua:399
 #: frontend/apps/filemanager/filemanagershortcuts.lua:133
 #: plugins/opds.koplugin/opdsbrowser.lua:945
+#: plugins/statistics.koplugin/main.lua:1130
 #: plugins/texteditor.koplugin/main.lua:359
+#: plugins/vocabbuilder.koplugin/main.lua:311
 msgid "Edit"
 msgstr "Modifica"
 
@@ -299,11 +304,16 @@ msgstr "Modifica"
 #: plugins/opds.koplugin/opdsbrowser.lua:957
 #: plugins/profiles.koplugin/main.lua:199
 #: plugins/profiles.koplugin/main.lua:205
+#: plugins/statistics.koplugin/main.lua:1112
+#: plugins/statistics.koplugin/main.lua:1121
 #: plugins/terminal.koplugin/aliases.lua:106
+#: plugins/vocabbuilder.koplugin/main.lua:304
 msgid "Delete"
 msgstr "Elimina"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:418
+#: plugins/statistics.koplugin/main.lua:1163
+#: plugins/vocabbuilder.koplugin/main.lua:327
 msgid "Synchronize now"
 msgstr "Sincronizza ora"
 
@@ -377,7 +387,8 @@ msgstr "Scegliere cartella locale"
 #: plugins/newsdownloader.koplugin/main.lua:224
 #: plugins/newsdownloader.koplugin/main.lua:315
 #: plugins/newsdownloader.koplugin/main.lua:627
-#: plugins/statistics.koplugin/main.lua:344
+#: plugins/statistics.koplugin/main.lua:345
+#: plugins/statistics.koplugin/main.lua:1137
 #: plugins/terminal.koplugin/main.lua:385
 msgid "Close"
 msgstr "Chiudi"
@@ -387,7 +398,7 @@ msgid "Upload file"
 msgstr "Carica file"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:605
-#: frontend/apps/cloudstorage/cloudstorage.lua:662
+#: frontend/apps/cloudstorage/cloudstorage.lua:666
 #: frontend/apps/filemanager/filemanager.lua:705
 #: frontend/apps/filemanager/filemanager.lua:734
 #: frontend/apps/filemanager/filemanager.lua:1056
@@ -407,28 +418,29 @@ msgstr "La dimensione del file deve essere inferiore a 150 MB."
 msgid "Uploading…"
 msgstr "Caricamento…"
 
-#: frontend/apps/cloudstorage/cloudstorage.lua:673
+#: frontend/apps/cloudstorage/cloudstorage.lua:677
 #: frontend/apps/filemanager/filemanager.lua:1067
 #: frontend/ui/wikipedia.lua:1350
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:502
-#: plugins/statistics.koplugin/main.lua:348
+#: plugins/statistics.koplugin/main.lua:349
 #: plugins/texteditor.koplugin/main.lua:401
 msgid "Create"
 msgstr "Creare"
 
-#: frontend/apps/cloudstorage/cloudstorage.lua:696
+#: frontend/apps/cloudstorage/cloudstorage.lua:704
 #: frontend/apps/filemanager/filemanager.lua:1092
 msgid "Enter folder after creation"
 msgstr "Entra nella cartella dopo la creazione"
 
-#: frontend/apps/cloudstorage/dropboxapi.lua:218
+#: frontend/apps/cloudstorage/dropboxapi.lua:219
+#: frontend/apps/cloudstorage/webdavapi.lua:174
 #: frontend/ui/widget/filechooser.lua:284
 msgid "Long-press to choose current folder"
 msgstr "Premi a lungo per scegliere la directory corrente"
 
 #: frontend/apps/cloudstorage/dropbox.lua:33
 #: frontend/apps/cloudstorage/ftp.lua:38
-#: frontend/apps/cloudstorage/webdav.lua:25
+#: frontend/apps/cloudstorage/webdav.lua:26
 msgid ""
 "File saved to:\n"
 "%1"
@@ -438,7 +450,7 @@ msgstr ""
 
 #: frontend/apps/cloudstorage/dropbox.lua:37
 #: frontend/apps/cloudstorage/ftp.lua:42
-#: frontend/apps/cloudstorage/webdav.lua:29
+#: frontend/apps/cloudstorage/webdav.lua:30
 #: plugins/opds.koplugin/opdscatalog.lua:27
 msgid ""
 "File saved to:\n"
@@ -451,7 +463,7 @@ msgstr ""
 
 #: frontend/apps/cloudstorage/dropbox.lua:53
 #: frontend/apps/cloudstorage/ftp.lua:58
-#: frontend/apps/cloudstorage/webdav.lua:45
+#: frontend/apps/cloudstorage/webdav.lua:46
 msgid ""
 "Could not save file to:\n"
 "%1"
@@ -460,6 +472,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/dropbox.lua:73
+#: frontend/apps/cloudstorage/webdav.lua:58
 msgid ""
 "File uploaded:\n"
 "%1"
@@ -468,6 +481,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/dropbox.lua:80
+#: frontend/apps/cloudstorage/webdav.lua:63
 msgid ""
 "Could not upload file:\n"
 "%1"
@@ -476,6 +490,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/dropbox.lua:93
+#: frontend/apps/cloudstorage/webdav.lua:77
 msgid ""
 "Could not create folder:\n"
 "%1"
@@ -599,7 +614,7 @@ msgid "FTP folder"
 msgstr "Cartella"
 
 #: frontend/apps/cloudstorage/ftp.lua:82
-#: frontend/apps/cloudstorage/webdav.lua:67
+#: frontend/apps/cloudstorage/webdav.lua:98
 #: frontend/apps/filemanager/filemanagershortcuts.lua:85
 msgid "Add"
 msgstr "Aggiungi"
@@ -609,7 +624,7 @@ msgid "Edit FTP account"
 msgstr "Modifica account FTP"
 
 #: frontend/apps/cloudstorage/ftp.lua:85
-#: frontend/apps/cloudstorage/webdav.lua:70
+#: frontend/apps/cloudstorage/webdav.lua:101
 #: frontend/apps/filemanager/filemanagershortcuts.lua:172
 #: frontend/apps/reader/modules/readerstyletweak.lua:737
 #: frontend/ui/elements/menu_keyboard_layout.lua:141
@@ -628,12 +643,12 @@ msgid "Add FTP account"
 msgstr "Aggiungi accesso FTP"
 
 #: frontend/apps/cloudstorage/ftp.lua:156
-#: frontend/apps/cloudstorage/webdav.lua:149
+#: frontend/apps/cloudstorage/webdav.lua:180
 msgid "Please fill in all fields."
 msgstr "Si prega di compilare tutti i campi."
 
 #: frontend/apps/cloudstorage/ftp.lua:170
-#: frontend/apps/cloudstorage/webdav.lua:164
+#: frontend/apps/cloudstorage/webdav.lua:195
 msgid ""
 "Type: %1\n"
 "Name: %2\n"
@@ -643,7 +658,40 @@ msgstr ""
 "Nome: %2\n"
 "Indirizzo: %3"
 
-#: frontend/apps/cloudstorage/webdav.lua:52
+#: frontend/apps/cloudstorage/syncservice.lua:25
+#, fuzzy
+msgid "Cloud sync settings"
+msgstr "Impostazioni carattere"
+
+#: frontend/apps/cloudstorage/syncservice.lua:67
+#, fuzzy
+msgid "Choose cloud service:"
+msgstr "Scegli tipo di cloud"
+
+#: frontend/apps/cloudstorage/syncservice.lua:72
+msgid "Add service"
+msgstr ""
+
+#: frontend/apps/cloudstorage/syncservice.lua:116
+#, fuzzy
+msgid ""
+"Something went wrong when syncing, please check your network connection and "
+"try again later."
+msgstr ""
+"Qualcosa è andato storto in fase di sincronizzazione, controlla la "
+"connessione di rete e riprova più tardi."
+
+#: frontend/apps/cloudstorage/syncservice.lua:125
+#, fuzzy
+msgid "Wrong server type."
+msgstr "Server SSH fermato."
+
+#: frontend/apps/cloudstorage/syncservice.lua:166
+#, fuzzy
+msgid "Successfully synchronized."
+msgstr "Orario sincronizzata."
+
+#: frontend/apps/cloudstorage/webdav.lua:83
 msgid ""
 "Server address must be of the form http(s)://domain.name/path\n"
 "This can point to a sub-directory of the WebDAV server.\n"
@@ -653,33 +701,33 @@ msgstr ""
 "Questo può puntare a una sottocartella del server WebDAV.\n"
 "La cartella di avvio viene aggiunta al percorso del server."
 
-#: frontend/apps/cloudstorage/webdav.lua:56
+#: frontend/apps/cloudstorage/webdav.lua:87
 msgid "Server display name"
 msgstr "Nome visualizzato del server"
 
-#: frontend/apps/cloudstorage/webdav.lua:58
+#: frontend/apps/cloudstorage/webdav.lua:89
 msgid "WebDAV address, for example https://example.com/dav"
 msgstr "Indirizzo WebDAV, ad esempio https://example.com/dav"
 
-#: frontend/apps/cloudstorage/webdav.lua:60
+#: frontend/apps/cloudstorage/webdav.lua:91
 #: plugins/wallabag.koplugin/main.lua:1036
 msgid "Username"
 msgstr "Nome utente"
 
-#: frontend/apps/cloudstorage/webdav.lua:62
+#: frontend/apps/cloudstorage/webdav.lua:93
 #: plugins/wallabag.koplugin/main.lua:1042
 msgid "Password"
 msgstr "Password"
 
-#: frontend/apps/cloudstorage/webdav.lua:64
+#: frontend/apps/cloudstorage/webdav.lua:95
 msgid "Start folder"
 msgstr "Inizia con la cartella"
 
-#: frontend/apps/cloudstorage/webdav.lua:69
+#: frontend/apps/cloudstorage/webdav.lua:100
 msgid "Edit WebDAV account"
 msgstr "Modifica l'account WebDAV"
 
-#: frontend/apps/cloudstorage/webdav.lua:77
+#: frontend/apps/cloudstorage/webdav.lua:108
 msgid "Add WebDAV account"
 msgstr "Aggiungi accesso WebDAV"
 
@@ -732,8 +780,8 @@ msgstr "Cartella:"
 #: frontend/ui/widget/bookstatuswidget.lua:157
 #: frontend/ui/widget/notification.lua:45
 #: plugins/batterystat.koplugin/main.lua:76
-#: plugins/statistics.koplugin/main.lua:1390
-#: plugins/statistics.koplugin/main.lua:1393
+#: plugins/statistics.koplugin/main.lua:1506
+#: plugins/statistics.koplugin/main.lua:1509
 msgid "N/A"
 msgstr "N/A"
 
@@ -780,8 +828,8 @@ msgid "Cover image:"
 msgstr "Immagine di copertina:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:231
-#: plugins/statistics.koplugin/main.lua:1397
-#: plugins/statistics.koplugin/main.lua:1499
+#: plugins/statistics.koplugin/main.lua:1513
+#: plugins/statistics.koplugin/main.lua:1615
 msgid "Tap to display"
 msgstr "Tocca per visualizzare"
 
@@ -966,10 +1014,10 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:695
 #: frontend/apps/reader/modules/readermenu.lua:199
 #: frontend/ui/widget/inputdialog.lua:646
-#: plugins/statistics.koplugin/main.lua:1970
-#: plugins/statistics.koplugin/main.lua:2143
-#: plugins/statistics.koplugin/main.lua:2182
-#: plugins/vocabbuilder.koplugin/main.lua:255
+#: plugins/statistics.koplugin/main.lua:2086
+#: plugins/statistics.koplugin/main.lua:2259
+#: plugins/statistics.koplugin/main.lua:2298
+#: plugins/vocabbuilder.koplugin/main.lua:257
 msgid "Reset"
 msgstr "Ripristina"
 
@@ -992,7 +1040,7 @@ msgstr ""
 "Se cancelli un file, questo viene perso in modo permanente."
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:213
-#: frontend/ui/data/creoptions.lua:35 plugins/statistics.koplugin/main.lua:1828
+#: frontend/ui/data/creoptions.lua:35 plugins/statistics.koplugin/main.lua:1944
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
@@ -1529,7 +1577,7 @@ msgstr "Impossibile aprire l’ultimo documento"
 #: frontend/ui/elements/screensaver_menu.lua:96 frontend/ui/otamanager.lua:485
 #: plugins/newsdownloader.koplugin/main.lua:124
 #: plugins/perceptionexpander.koplugin/main.lua:176
-#: plugins/statistics.koplugin/main.lua:938
+#: plugins/statistics.koplugin/main.lua:978
 #: plugins/texteditor.koplugin/main.lua:110
 #: plugins/wallabag.koplugin/main.lua:158
 msgid "Settings"
@@ -2060,7 +2108,7 @@ msgstr "Rimuovi questo segnalibro?"
 #: frontend/apps/reader/modules/readerbookmark.lua:724
 #: frontend/apps/reader/modules/readeruserhyph.lua:293
 #: plugins/gestures.koplugin/main.lua:423
-#: plugins/statistics.koplugin/main.lua:2226
+#: plugins/statistics.koplugin/main.lua:2342
 #: plugins/texteditor.koplugin/main.lua:265
 msgid "Remove"
 msgstr "Rimuovi"
@@ -2232,8 +2280,8 @@ msgstr "Segni di capitolo"
 #: plugins/coverimage.koplugin/main.lua:465
 #: plugins/coverimage.koplugin/main.lua:485
 #: plugins/coverimage.koplugin/main.lua:620
-#: plugins/vocabbuilder.koplugin/main.lua:197
-#: plugins/vocabbuilder.koplugin/main.lua:214
+#: plugins/vocabbuilder.koplugin/main.lua:199
+#: plugins/vocabbuilder.koplugin/main.lua:216
 msgid "off"
 msgstr "spento"
 
@@ -2421,7 +2469,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:208
 #: frontend/apps/reader/modules/readerdictionary.lua:902
-#: frontend/dispatcher.lua:96 plugins/vocabbuilder.koplugin/main.lua:76
+#: frontend/dispatcher.lua:96 plugins/vocabbuilder.koplugin/main.lua:78
 msgid "Dictionary lookup"
 msgstr "Consulta dizionario"
 
@@ -2461,7 +2509,7 @@ msgstr "Svuotare la cronologia di ricerca nei dizionari?"
 #: frontend/apps/reader/modules/readerdictionary.lua:302
 #: frontend/apps/reader/modules/readerwikipedia.lua:312
 #: plugins/texteditor.koplugin/main.lua:203
-#: plugins/vocabbuilder.koplugin/main.lua:270
+#: plugins/vocabbuilder.koplugin/main.lua:272
 msgid "Clean"
 msgstr "Pulisci"
 
@@ -3063,7 +3111,7 @@ msgstr "Numero di ripetizioni:"
 #: plugins/autowarmth.koplugin/main.lua:926
 #: plugins/coverimage.koplugin/main.lua:410
 #: plugins/kosync.koplugin/main.lua:299
-#: plugins/statistics.koplugin/main.lua:1020
+#: plugins/statistics.koplugin/main.lua:1060
 msgid "Set"
 msgstr "Imposta"
 
@@ -3515,7 +3563,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readergoto.lua:89 frontend/dispatcher.lua:119
 #: frontend/ui/widget/keyvaluepage.lua:413 frontend/ui/widget/menu.lua:735
 #: frontend/ui/widget/sortwidget.lua:246
-#: plugins/vocabbuilder.koplugin/main.lua:1109
+#: plugins/vocabbuilder.koplugin/main.lua:1218
 msgid "Go to page"
 msgstr "Vai alla pagina"
 
@@ -3712,8 +3760,8 @@ msgstr ""
 #: frontend/apps/reader/modules/readerhighlight.lua:475
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:154 frontend/util.lua:224
 #: plugins/autodim.koplugin/main.lua:114
-#: plugins/statistics.koplugin/main.lua:965
-#: plugins/vocabbuilder.koplugin/main.lua:862
+#: plugins/statistics.koplugin/main.lua:1005
+#: plugins/vocabbuilder.koplugin/main.lua:935
 msgctxt "Time"
 msgid "s"
 msgstr "s"
@@ -6486,7 +6534,7 @@ msgstr "Ruota 90° antiorario"
 msgid "Rotate by 90° CCW"
 msgstr "Ruota di 90° antiorari"
 
-#: frontend/dispatcher.lua:92 plugins/statistics.koplugin/main.lua:1070
+#: frontend/dispatcher.lua:92 plugins/statistics.koplugin/main.lua:1186
 msgid "Reading progress"
 msgstr "Andamento lettura"
 
@@ -6836,8 +6884,8 @@ msgstr "Due colonne"
 #: frontend/ui/data/koptoptions.lua:491 frontend/ui/data/koptoptions.lua:501
 #: frontend/ui/data/koptoptions.lua:514 frontend/ui/data/koptoptions.lua:557
 #: frontend/ui/data/koptoptions.lua:600
-#: plugins/vocabbuilder.koplugin/main.lua:197
-#: plugins/vocabbuilder.koplugin/main.lua:214
+#: plugins/vocabbuilder.koplugin/main.lua:199
+#: plugins/vocabbuilder.koplugin/main.lua:216
 msgid "on"
 msgstr "acceso"
 
@@ -11647,14 +11695,14 @@ msgstr "Apri %1 con:"
 
 #: frontend/ui/widget/frontlightwidget.lua:185
 #: frontend/ui/widget/frontlightwidget.lua:314
-#: plugins/statistics.koplugin/main.lua:949
+#: plugins/statistics.koplugin/main.lua:989
 msgctxt "Extrema"
 msgid "Min"
 msgstr "Min"
 
 #: frontend/ui/widget/frontlightwidget.lua:196
 #: frontend/ui/widget/frontlightwidget.lua:325
-#: plugins/statistics.koplugin/main.lua:956
+#: plugins/statistics.koplugin/main.lua:996
 msgctxt "Extrema"
 msgid "Max"
 msgstr "Max"
@@ -11797,7 +11845,7 @@ msgid "Copy word"
 msgstr "Copia parola"
 
 #: frontend/ui/widget/inputtext.lua:223
-#: plugins/vocabbuilder.koplugin/main.lua:481
+#: plugins/vocabbuilder.koplugin/main.lua:554
 msgid "Word copied to clipboard."
 msgstr "Parola copiata negli appunti."
 
@@ -11824,7 +11872,7 @@ msgstr "Passare al layout"
 #: frontend/ui/widget/keyvaluepage.lua:401 frontend/ui/widget/menu.lua:783
 #: frontend/ui/widget/sortwidget.lua:234
 #: plugins/opds.koplugin/opdsbrowser.lua:877
-#: plugins/vocabbuilder.koplugin/main.lua:1097
+#: plugins/vocabbuilder.koplugin/main.lua:1206
 msgid "Enter page number"
 msgstr "Immetti numero di pagina"
 
@@ -11832,12 +11880,12 @@ msgstr "Immetti numero di pagina"
 #: frontend/ui/widget/keyvaluepage.lua:713 frontend/ui/widget/menu.lua:987
 #: frontend/ui/widget/sortwidget.lua:404 frontend/ui/widget/touchmenu.lua:698
 #: plugins/coverbrowser.koplugin/listmenu.lua:426
-#: plugins/vocabbuilder.koplugin/main.lua:1276
+#: plugins/vocabbuilder.koplugin/main.lua:1388
 msgid "Page %1 of %2"
 msgstr "Pagina %1 di %2"
 
 #: frontend/ui/widget/keyvaluepage.lua:729 frontend/ui/widget/menu.lua:1005
-#: plugins/vocabbuilder.koplugin/main.lua:1285
+#: plugins/vocabbuilder.koplugin/main.lua:1397
 msgid "No items"
 msgstr "Nessun elemento"
 
@@ -12089,7 +12137,7 @@ msgstr ""
 "Scegli una nuova cartella per le schermate?"
 
 #: frontend/ui/widget/screenshoter.lua:92
-#: plugins/statistics.koplugin/main.lua:1027
+#: plugins/statistics.koplugin/main.lua:1067
 msgid "Use default"
 msgstr "Usa impostazione predefinita"
 
@@ -12219,13 +12267,13 @@ msgid "%1m%2s"
 msgstr "%1m%2s"
 
 #: frontend/util.lua:212 frontend/util.lua:214
-#: plugins/vocabbuilder.koplugin/main.lua:866
+#: plugins/vocabbuilder.koplugin/main.lua:939
 msgctxt "Time"
 msgid "h"
 msgstr "h"
 
 #: frontend/util.lua:213 frontend/util.lua:215 frontend/util.lua:220
-#: frontend/util.lua:226 plugins/vocabbuilder.koplugin/main.lua:864
+#: frontend/util.lua:226 plugins/vocabbuilder.koplugin/main.lua:937
 msgctxt "Time"
 msgid "m"
 msgstr "m"
@@ -15920,126 +15968,126 @@ msgstr "Inserisci mese"
 msgid "Invalid year-month string (YYYY-MM)"
 msgstr "Stringa anno-mese non valida (AAAA-MM)"
 
-#: plugins/statistics.koplugin/main.lua:80
+#: plugins/statistics.koplugin/main.lua:81
 msgid "Mon"
 msgstr "Lun"
 
-#: plugins/statistics.koplugin/main.lua:81
+#: plugins/statistics.koplugin/main.lua:82
 msgid "Tue"
 msgstr "Mar"
 
-#: plugins/statistics.koplugin/main.lua:82
+#: plugins/statistics.koplugin/main.lua:83
 msgid "Wed"
 msgstr "Mer"
 
-#: plugins/statistics.koplugin/main.lua:83
+#: plugins/statistics.koplugin/main.lua:84
 msgid "Thu"
 msgstr "Gio"
 
-#: plugins/statistics.koplugin/main.lua:84
+#: plugins/statistics.koplugin/main.lua:85
 msgid "Fri"
 msgstr "Ven"
 
-#: plugins/statistics.koplugin/main.lua:85
+#: plugins/statistics.koplugin/main.lua:86
 msgid "Sat"
 msgstr "Sab"
 
-#: plugins/statistics.koplugin/main.lua:86
+#: plugins/statistics.koplugin/main.lua:87
 msgid "Sun"
 msgstr "Dom"
 
-#: plugins/statistics.koplugin/main.lua:90
+#: plugins/statistics.koplugin/main.lua:91
 #: plugins/statistics.koplugin/readerprogress.lua:34
 msgid "Monday"
 msgstr "Lunedì"
 
-#: plugins/statistics.koplugin/main.lua:91
+#: plugins/statistics.koplugin/main.lua:92
 #: plugins/statistics.koplugin/readerprogress.lua:35
 msgid "Tuesday"
 msgstr "Martedì"
 
-#: plugins/statistics.koplugin/main.lua:92
+#: plugins/statistics.koplugin/main.lua:93
 #: plugins/statistics.koplugin/readerprogress.lua:36
 msgid "Wednesday"
 msgstr "Mercoledì"
 
-#: plugins/statistics.koplugin/main.lua:93
+#: plugins/statistics.koplugin/main.lua:94
 #: plugins/statistics.koplugin/readerprogress.lua:37
 msgid "Thursday"
 msgstr "Giovedì"
 
-#: plugins/statistics.koplugin/main.lua:94
+#: plugins/statistics.koplugin/main.lua:95
 #: plugins/statistics.koplugin/readerprogress.lua:38
 msgid "Friday"
 msgstr "Venerdì"
 
-#: plugins/statistics.koplugin/main.lua:95
+#: plugins/statistics.koplugin/main.lua:96
 #: plugins/statistics.koplugin/readerprogress.lua:39
 msgid "Saturday"
 msgstr "Sabato"
 
-#: plugins/statistics.koplugin/main.lua:96
+#: plugins/statistics.koplugin/main.lua:97
 #: plugins/statistics.koplugin/readerprogress.lua:40
 msgid "Sunday"
 msgstr "Domenica"
 
-#: plugins/statistics.koplugin/main.lua:100
+#: plugins/statistics.koplugin/main.lua:101
 msgid "January"
 msgstr "Gennaio"
 
-#: plugins/statistics.koplugin/main.lua:101
+#: plugins/statistics.koplugin/main.lua:102
 msgid "February"
 msgstr "Febbraio"
 
-#: plugins/statistics.koplugin/main.lua:102
+#: plugins/statistics.koplugin/main.lua:103
 msgid "March"
 msgstr "Marzo"
 
-#: plugins/statistics.koplugin/main.lua:103
+#: plugins/statistics.koplugin/main.lua:104
 msgid "April"
 msgstr "Aprile"
 
-#: plugins/statistics.koplugin/main.lua:104
+#: plugins/statistics.koplugin/main.lua:105
 msgid "May"
 msgstr "Maggio"
 
-#: plugins/statistics.koplugin/main.lua:105
+#: plugins/statistics.koplugin/main.lua:106
 msgid "June"
 msgstr "Giugno"
 
-#: plugins/statistics.koplugin/main.lua:106
+#: plugins/statistics.koplugin/main.lua:107
 msgid "July"
 msgstr "Luglio"
 
-#: plugins/statistics.koplugin/main.lua:107
+#: plugins/statistics.koplugin/main.lua:108
 msgid "August"
 msgstr "Agosto"
 
-#: plugins/statistics.koplugin/main.lua:108
+#: plugins/statistics.koplugin/main.lua:109
 msgid "September"
 msgstr "Settembre"
 
-#: plugins/statistics.koplugin/main.lua:109
+#: plugins/statistics.koplugin/main.lua:110
 msgid "October"
 msgstr "Ottobre"
 
-#: plugins/statistics.koplugin/main.lua:110
+#: plugins/statistics.koplugin/main.lua:111
 msgid "November"
 msgstr "Novembre"
 
-#: plugins/statistics.koplugin/main.lua:111
+#: plugins/statistics.koplugin/main.lua:112
 msgid "December"
 msgstr "Dicembre"
 
-#: plugins/statistics.koplugin/main.lua:132
+#: plugins/statistics.koplugin/main.lua:133
 msgid "Statistics calendar view"
 msgstr "Vista del calendario di statistiche"
 
-#: plugins/statistics.koplugin/main.lua:133
+#: plugins/statistics.koplugin/main.lua:134
 msgid "Book statistics"
 msgstr "Statistiche del libro"
 
-#: plugins/statistics.koplugin/main.lua:338
+#: plugins/statistics.koplugin/main.lua:339
 msgid ""
 "Cannot open database in %1.\n"
 "The database may have been moved or deleted.\n"
@@ -16049,15 +16097,15 @@ msgstr ""
 "Il database potrebbe essere stato spostato o cancellato.\n"
 "Vuoi creare un database vuoto?\n"
 
-#: plugins/statistics.koplugin/main.lua:353
+#: plugins/statistics.koplugin/main.lua:354
 msgid "A new empty database has been created."
 msgstr "È stato creato un nuovo database vuoto."
 
-#: plugins/statistics.koplugin/main.lua:392
+#: plugins/statistics.koplugin/main.lua:397
 msgid "Statistics database updated."
 msgstr "Database statistiche aggiornato."
 
-#: plugins/statistics.koplugin/main.lua:421
+#: plugins/statistics.koplugin/main.lua:426
 msgid ""
 "New version of statistics plugin detected.\n"
 "Statistics data needs to be converted into the new database format.\n"
@@ -16069,7 +16117,7 @@ msgstr ""
 "Potrebbe richiedere alcuni minuti.\n"
 "Attendi…\n"
 
-#: plugins/statistics.koplugin/main.lua:433
+#: plugins/statistics.koplugin/main.lua:438
 msgid ""
 "Conversion complete.\n"
 "Imported one book to the database.\n"
@@ -16087,24 +16135,24 @@ msgstr[1] ""
 "%1 libri importati nel database.\n"
 "Tocca per continuare."
 
-#: plugins/statistics.koplugin/main.lua:908
+#: plugins/statistics.koplugin/main.lua:948
 msgid "Enabled"
 msgstr "Abilitato"
 
-#: plugins/statistics.koplugin/main.lua:934
+#: plugins/statistics.koplugin/main.lua:974
 #: plugins/statistics.koplugin/_meta.lua:4
 msgid "Reading statistics"
 msgstr "Lettura statistiche"
 
-#: plugins/statistics.koplugin/main.lua:942
+#: plugins/statistics.koplugin/main.lua:982
 msgid "Read page duration limits: %1 s – %2 s"
 msgstr "Limiti di durata della pagina letta: %1 s – %2 s"
 
-#: plugins/statistics.koplugin/main.lua:966
+#: plugins/statistics.koplugin/main.lua:1006
 msgid "Read page duration limits"
 msgstr "Leggi limiti di durata della pagina"
 
-#: plugins/statistics.koplugin/main.lua:967
+#: plugins/statistics.koplugin/main.lua:1007
 msgid ""
 "Set min and max time spent (in seconds) on a page for it to be counted as "
 "read in statistics.\n"
@@ -16121,45 +16169,67 @@ msgstr ""
 "(perché ti sei addormentato o sei andato via) sarà incluso, ma con una "
 "durata limitata a questo valore massimo specificato."
 
-#: plugins/statistics.koplugin/main.lua:984
+#: plugins/statistics.koplugin/main.lua:1024
 msgid "Calendar weeks start on %1"
 msgstr "Le settimane del iniziano il %1"
 
-#: plugins/statistics.koplugin/main.lua:1012
+#: plugins/statistics.koplugin/main.lua:1052
 msgid "Books per calendar day: %1"
 msgstr "Libri al giorno: %1"
 
-#: plugins/statistics.koplugin/main.lua:1021
+#: plugins/statistics.koplugin/main.lua:1061
 msgid "Books per calendar day"
 msgstr "Libri al giorno"
 
-#: plugins/statistics.koplugin/main.lua:1022
+#: plugins/statistics.koplugin/main.lua:1062
 msgid "Set the max number of book spans to show for a day"
 msgstr ""
 "Imposta numero massimo di intervalli di libri da visualizzare per un giorno"
 
-#: plugins/statistics.koplugin/main.lua:1037
+#: plugins/statistics.koplugin/main.lua:1077
 msgid "Show hourly histogram in calendar days"
 msgstr "Mostra istogramma orario in giorni"
 
-#: plugins/statistics.koplugin/main.lua:1044
+#: plugins/statistics.koplugin/main.lua:1084
 msgid "Allow browsing coming months"
 msgstr "Consenti navigazione dei prossimi mesi"
 
-#: plugins/statistics.koplugin/main.lua:1053
+#: plugins/statistics.koplugin/main.lua:1092
+#: plugins/vocabbuilder.koplugin/main.lua:348
+#, fuzzy
+msgid "Cloud sync"
+msgstr "Cloud di archiviazione"
+
+#: plugins/statistics.koplugin/main.lua:1116
+#, fuzzy
+msgid "Delete server info?"
+msgstr "Elimina fonte"
+
+#: plugins/statistics.koplugin/main.lua:1144
+msgid ""
+"Cloud storage:\n"
+"%1\n"
+"\n"
+"Folder path:\n"
+"%2\n"
+"\n"
+"Set up the same cloud folder on each device to sync across your devices."
+msgstr ""
+
+#: plugins/statistics.koplugin/main.lua:1158
 msgid "Reset statistics"
 msgstr "Ripristina statistiche"
 
-#: plugins/statistics.koplugin/main.lua:1058
+#: plugins/statistics.koplugin/main.lua:1174
 msgid "Current book"
 msgstr "Libro attuale"
 
-#: plugins/statistics.koplugin/main.lua:1062
-#: plugins/statistics.koplugin/main.lua:2596
+#: plugins/statistics.koplugin/main.lua:1178
+#: plugins/statistics.koplugin/main.lua:2712
 msgid "Current statistics"
 msgstr "Statistiche attuali"
 
-#: plugins/statistics.koplugin/main.lua:1087
+#: plugins/statistics.koplugin/main.lua:1203
 msgid ""
 "Reading progress is not available.\n"
 "There is no data for the last week."
@@ -16167,185 +16237,185 @@ msgstr ""
 "Progresso di lettura non disponibile.\n"
 "Nessun dato per l'ultima settimana."
 
-#: plugins/statistics.koplugin/main.lua:1093
+#: plugins/statistics.koplugin/main.lua:1209
 msgid "Time range"
 msgstr "Intervallo di tempo"
 
-#: plugins/statistics.koplugin/main.lua:1100
+#: plugins/statistics.koplugin/main.lua:1216
 msgid "Calendar view"
 msgstr "Vista calendario"
 
-#: plugins/statistics.koplugin/main.lua:1112
+#: plugins/statistics.koplugin/main.lua:1228
 msgid "Time range statistics"
 msgstr "Statistiche dell'intervallo di tempo"
 
-#: plugins/statistics.koplugin/main.lua:1115
+#: plugins/statistics.koplugin/main.lua:1231
 msgid "All books"
 msgstr "Tutti i libri"
 
-#: plugins/statistics.koplugin/main.lua:1133
-#: plugins/statistics.koplugin/main.lua:1138
+#: plugins/statistics.koplugin/main.lua:1249
+#: plugins/statistics.koplugin/main.lua:1254
 msgid "Books by week"
 msgstr "Libri per settimana"
 
-#: plugins/statistics.koplugin/main.lua:1150
-#: plugins/statistics.koplugin/main.lua:1155
+#: plugins/statistics.koplugin/main.lua:1266
+#: plugins/statistics.koplugin/main.lua:1271
 msgid "Books by month"
 msgstr "Libri per mese"
 
-#: plugins/statistics.koplugin/main.lua:1168
-#: plugins/statistics.koplugin/main.lua:1173
+#: plugins/statistics.koplugin/main.lua:1284
+#: plugins/statistics.koplugin/main.lua:1289
 #: plugins/statistics.koplugin/readerprogress.lua:110
 msgid "Last week"
 msgstr "Settimana scorsa"
 
-#: plugins/statistics.koplugin/main.lua:1185
-#: plugins/statistics.koplugin/main.lua:1190
+#: plugins/statistics.koplugin/main.lua:1301
+#: plugins/statistics.koplugin/main.lua:1306
 msgid "Last month by day"
 msgstr "Ultimo mese per giorno"
 
-#: plugins/statistics.koplugin/main.lua:1202
-#: plugins/statistics.koplugin/main.lua:1207
+#: plugins/statistics.koplugin/main.lua:1318
+#: plugins/statistics.koplugin/main.lua:1323
 msgid "Last year by day"
 msgstr "Ultimo anno per giorno"
 
-#: plugins/statistics.koplugin/main.lua:1219
-#: plugins/statistics.koplugin/main.lua:1224
+#: plugins/statistics.koplugin/main.lua:1335
+#: plugins/statistics.koplugin/main.lua:1340
 msgid "Last year by week"
 msgstr "Ultimo anno per settimana"
 
-#: plugins/statistics.koplugin/main.lua:1236
-#: plugins/statistics.koplugin/main.lua:1241
+#: plugins/statistics.koplugin/main.lua:1352
+#: plugins/statistics.koplugin/main.lua:1357
 msgid "All stats by month"
 msgstr "Tutte le statistiche per mese"
 
-#: plugins/statistics.koplugin/main.lua:1370
+#: plugins/statistics.koplugin/main.lua:1486
 msgid "Time spent reading this session"
 msgstr "Tempo trascorso a leggere in questa sessione"
 
-#: plugins/statistics.koplugin/main.lua:1371
+#: plugins/statistics.koplugin/main.lua:1487
 msgid "Pages read this session"
 msgstr "Pagine lette in questa sessione"
 
-#: plugins/statistics.koplugin/main.lua:1373
+#: plugins/statistics.koplugin/main.lua:1489
 msgid "Time spent reading today"
 msgstr "Tempo trascorso a leggere oggi"
 
-#: plugins/statistics.koplugin/main.lua:1374
+#: plugins/statistics.koplugin/main.lua:1490
 msgid "Pages read today"
 msgstr "Pagine lette oggi"
 
-#: plugins/statistics.koplugin/main.lua:1377
-#: plugins/statistics.koplugin/main.lua:1491
+#: plugins/statistics.koplugin/main.lua:1493
+#: plugins/statistics.koplugin/main.lua:1607
 msgid "Total time spent on this book"
 msgstr "Tempo totale trascorso su questo libro"
 
-#: plugins/statistics.koplugin/main.lua:1379
-#: plugins/statistics.koplugin/main.lua:1492
+#: plugins/statistics.koplugin/main.lua:1495
+#: plugins/statistics.koplugin/main.lua:1608
 msgid "Time spent reading this book"
 msgstr "Tempo trascorso a leggere questo libro"
 
-#: plugins/statistics.koplugin/main.lua:1381
-#: plugins/statistics.koplugin/main.lua:1488
+#: plugins/statistics.koplugin/main.lua:1497
+#: plugins/statistics.koplugin/main.lua:1604
 msgid "Reading started"
 msgstr "Lettura iniziata"
 
-#: plugins/statistics.koplugin/main.lua:1382
-#: plugins/statistics.koplugin/main.lua:1490
+#: plugins/statistics.koplugin/main.lua:1498
+#: plugins/statistics.koplugin/main.lua:1606
 msgid "Days reading this book"
 msgstr "Giorni di lettura di questo libro"
 
-#: plugins/statistics.koplugin/main.lua:1383
-#: plugins/statistics.koplugin/main.lua:1493
+#: plugins/statistics.koplugin/main.lua:1499
+#: plugins/statistics.koplugin/main.lua:1609
 msgid "Average time per day"
 msgstr "Tempo medio al giorno"
 
-#: plugins/statistics.koplugin/main.lua:1385
-#: plugins/statistics.koplugin/main.lua:1494
+#: plugins/statistics.koplugin/main.lua:1501
+#: plugins/statistics.koplugin/main.lua:1610
 msgid "Average time per page"
 msgstr "Tempo medio per pagina"
 
-#: plugins/statistics.koplugin/main.lua:1386
-#: plugins/statistics.koplugin/main.lua:1495
+#: plugins/statistics.koplugin/main.lua:1502
+#: plugins/statistics.koplugin/main.lua:1611
 msgid "Pages read"
 msgstr "Pagine lette"
 
-#: plugins/statistics.koplugin/main.lua:1388
+#: plugins/statistics.koplugin/main.lua:1504
 msgid "Current page/Total pages"
 msgstr "Pagina corrente/Pagine totali"
 
-#: plugins/statistics.koplugin/main.lua:1390
+#: plugins/statistics.koplugin/main.lua:1506
 msgid "Estimated time to read"
 msgstr "Tempo stimato per la lettura"
 
-#: plugins/statistics.koplugin/main.lua:1391
+#: plugins/statistics.koplugin/main.lua:1507
 msgid "Estimated reading finished"
 msgstr "Lettura stimata terminata"
 
-#: plugins/statistics.koplugin/main.lua:1392
+#: plugins/statistics.koplugin/main.lua:1508
 msgid "%1 (1 day)"
 msgid_plural "%1 (%2 days)"
 msgstr[0] "%1 (1 giorno)"
 msgstr[1] "%1 (%2 giorni)"
 
-#: plugins/statistics.koplugin/main.lua:1395
-#: plugins/statistics.koplugin/main.lua:1497
+#: plugins/statistics.koplugin/main.lua:1511
+#: plugins/statistics.koplugin/main.lua:1613
 msgid "Highlights"
 msgstr "Evidenziati"
 
-#: plugins/statistics.koplugin/main.lua:1397
-#: plugins/statistics.koplugin/main.lua:1499
+#: plugins/statistics.koplugin/main.lua:1513
+#: plugins/statistics.koplugin/main.lua:1615
 msgid "Show days"
 msgstr "Mostra giorni"
 
-#: plugins/statistics.koplugin/main.lua:1402
-#: plugins/statistics.koplugin/main.lua:1504
-#: plugins/statistics.koplugin/main.lua:1834
+#: plugins/statistics.koplugin/main.lua:1518
+#: plugins/statistics.koplugin/main.lua:1620
+#: plugins/statistics.koplugin/main.lua:1950
 msgid "Days reading %1"
 msgstr "Giorni di lettura %1"
 
-#: plugins/statistics.koplugin/main.lua:1486
+#: plugins/statistics.koplugin/main.lua:1602
 msgid "Title"
 msgstr "Titolo"
 
-#: plugins/statistics.koplugin/main.lua:1487
+#: plugins/statistics.koplugin/main.lua:1603
 msgid "Authors"
 msgstr "Autori"
 
-#: plugins/statistics.koplugin/main.lua:1489
+#: plugins/statistics.koplugin/main.lua:1605
 msgid "Last read"
 msgstr "Ultima lettura"
 
-#: plugins/statistics.koplugin/main.lua:1496
+#: plugins/statistics.koplugin/main.lua:1612
 msgid "Last read page/Total pages"
 msgstr "Ultima pagina letta/Pagine totali"
 
-#: plugins/statistics.koplugin/main.lua:1584
-#: plugins/statistics.koplugin/main.lua:1613
+#: plugins/statistics.koplugin/main.lua:1700
+#: plugins/statistics.koplugin/main.lua:1729
 msgid "Books read in %1"
 msgstr "Libri letti in %1"
 
-#: plugins/statistics.koplugin/main.lua:1696
+#: plugins/statistics.koplugin/main.lua:1812
 msgid "%1 Week %2"
 msgstr "%1 Settimana %2"
 
-#: plugins/statistics.koplugin/main.lua:1718
-#: plugins/statistics.koplugin/main.lua:1732
-#: plugins/statistics.koplugin/main.lua:1743
-#: plugins/statistics.koplugin/main.lua:1784
-#: plugins/statistics.koplugin/main.lua:1934
+#: plugins/statistics.koplugin/main.lua:1834
+#: plugins/statistics.koplugin/main.lua:1848
+#: plugins/statistics.koplugin/main.lua:1859
+#: plugins/statistics.koplugin/main.lua:1900
+#: plugins/statistics.koplugin/main.lua:2050
 msgid "Pages: (%1) Time: %2"
 msgstr "Pagine: (%1) Tempo: %2"
 
-#: plugins/statistics.koplugin/main.lua:1789
+#: plugins/statistics.koplugin/main.lua:1905
 msgid "Books read %1"
 msgstr "Libri letti %1"
 
-#: plugins/statistics.koplugin/main.lua:1950
+#: plugins/statistics.koplugin/main.lua:2066
 msgid "Do you want to reset statistics for day %1 for this book?"
 msgstr "Vuoi resettare le statistiche del giorno %1 per questo libro?"
 
-#: plugins/statistics.koplugin/main.lua:1962
+#: plugins/statistics.koplugin/main.lua:2078
 msgid ""
 "Do you want to reset statistics for this period for book:\n"
 "%1"
@@ -16353,26 +16423,26 @@ msgstr ""
 "Vuoi resettare le statistiche per questo periodo per il libro:\n"
 "%1"
 
-#: plugins/statistics.koplugin/main.lua:2054
+#: plugins/statistics.koplugin/main.lua:2170
 msgid "Total time spent reading: %1"
 msgstr "Tempo totale di lettura: %1"
 
-#: plugins/statistics.koplugin/main.lua:2060
+#: plugins/statistics.koplugin/main.lua:2176
 msgid "Reset statistics for the current book"
 msgstr "Azzera statistiche per il libro corrente"
 
-#: plugins/statistics.koplugin/main.lua:2069
+#: plugins/statistics.koplugin/main.lua:2185
 msgid "Reset statistics per book"
 msgstr "Ripristina le statistiche per libro"
 
-#: plugins/statistics.koplugin/main.lua:2078
+#: plugins/statistics.koplugin/main.lua:2194
 msgid "Reset stats for books read for < 1 m"
 msgid_plural "Reset stats for books read for < %1 m"
 msgstr[0] "Ripristina statistiche per i libri letti per < 1 m"
 msgstr[1] "Ripristina statistiche per i libri letti per < %1 m"
 
-#: plugins/statistics.koplugin/main.lua:2138
-#: plugins/statistics.koplugin/main.lua:2177
+#: plugins/statistics.koplugin/main.lua:2254
+#: plugins/statistics.koplugin/main.lua:2293
 msgid ""
 "Do you want to reset statistics for book:\n"
 "%1"
@@ -16380,11 +16450,11 @@ msgstr ""
 "Vuoi ripristinare le statistiche per il libro:\n"
 "%1"
 
-#: plugins/statistics.koplugin/main.lua:2156
+#: plugins/statistics.koplugin/main.lua:2272
 msgid "Reset book statistics"
 msgstr "Ripristina statistiche libro"
 
-#: plugins/statistics.koplugin/main.lua:2223
+#: plugins/statistics.koplugin/main.lua:2339
 msgid "Permanently remove statistics for books read for less than 1 minute?"
 msgid_plural ""
 "Permanently remove statistics for books read for less than %1 minutes?"
@@ -16395,13 +16465,13 @@ msgstr[1] ""
 "Rimuovere definitivamente le statistiche per i libri letti per meno di %1 "
 "minuti?"
 
-#: plugins/statistics.koplugin/main.lua:2263
+#: plugins/statistics.koplugin/main.lua:2379
 msgid "Statistics for 1 book removed."
 msgid_plural "Statistics for %1 books removed."
 msgstr[0] "Statistiche per 1 libro rimosse."
 msgstr[1] "Statistiche per %1 libri rimosse."
 
-#: plugins/statistics.koplugin/main.lua:2266
+#: plugins/statistics.koplugin/main.lua:2382
 msgid "No statistics removed."
 msgstr "Nessuna statistica eliminata."
 
@@ -17040,116 +17110,127 @@ msgstr "Sincronizzazione orario"
 msgid "Synchronizes the device time with NTP servers."
 msgstr "Sincronizza orario del dispositivo con i server NTP."
 
-#: plugins/vocabbuilder.koplugin/main.lua:73
+#: plugins/vocabbuilder.koplugin/main.lua:75
 msgid "Add to vocabulary builder"
 msgstr "Aggiungi al costruttore di vocabolario"
 
-#: plugins/vocabbuilder.koplugin/main.lua:123
+#: plugins/vocabbuilder.koplugin/main.lua:125
 msgid "Filter words from books"
 msgstr "Filtra le parole dai libri"
 
-#: plugins/vocabbuilder.koplugin/main.lua:178
-#: plugins/vocabbuilder.koplugin/main.lua:308
+#: plugins/vocabbuilder.koplugin/main.lua:180
+#: plugins/vocabbuilder.koplugin/main.lua:381
 msgid "Auto add new words"
 msgstr "Aggiungi automaticamente nuove parole"
 
-#: plugins/vocabbuilder.koplugin/main.lua:182
-#: plugins/vocabbuilder.koplugin/main.lua:321
+#: plugins/vocabbuilder.koplugin/main.lua:184
+#: plugins/vocabbuilder.koplugin/main.lua:394
 msgid "Save context"
 msgstr "Salva il contesto"
 
-#: plugins/vocabbuilder.koplugin/main.lua:225
+#: plugins/vocabbuilder.koplugin/main.lua:227
 msgid "Filter books"
 msgstr "Filtra i libri"
 
-#: plugins/vocabbuilder.koplugin/main.lua:233
+#: plugins/vocabbuilder.koplugin/main.lua:235
 msgid "Reverse order"
 msgstr "Ordine inverso"
 
-#: plugins/vocabbuilder.koplugin/main.lua:233
+#: plugins/vocabbuilder.koplugin/main.lua:235
 msgid "Reverse order and show only reviewable"
 msgstr "Ordine inverso e mostra solo recensibili"
 
-#: plugins/vocabbuilder.koplugin/main.lua:243
+#: plugins/vocabbuilder.koplugin/main.lua:245
 msgid "Resume"
 msgstr "Riprendi"
 
-#: plugins/vocabbuilder.koplugin/main.lua:243
+#: plugins/vocabbuilder.koplugin/main.lua:245
 msgid "Quick deletion"
 msgstr "Eliminazione rapida"
 
-#: plugins/vocabbuilder.koplugin/main.lua:251
+#: plugins/vocabbuilder.koplugin/main.lua:253
 msgid "Reset all progress"
 msgstr "Azzeramento di tutti i progressi"
 
-#: plugins/vocabbuilder.koplugin/main.lua:254
+#: plugins/vocabbuilder.koplugin/main.lua:256
 msgid "Reset progress of all words?"
 msgstr "Azzerare il progresso di tutte le parole?"
 
-#: plugins/vocabbuilder.koplugin/main.lua:266
+#: plugins/vocabbuilder.koplugin/main.lua:268
 msgid "Clean all words"
 msgstr "Pulisci tutte le parole"
 
-#: plugins/vocabbuilder.koplugin/main.lua:269
+#: plugins/vocabbuilder.koplugin/main.lua:271
 msgid "Clean all words including progress?"
 msgstr "Pulire tutte le parole, compreso il progresso?"
 
-#: plugins/vocabbuilder.koplugin/main.lua:445
+#: plugins/vocabbuilder.koplugin/main.lua:340
+msgid ""
+"Cloud storage:\n"
+"%1\n"
+"\n"
+"Folder path:\n"
+"%2\n"
+"\n"
+"Set up the same cloud folder on each device to sync across your devices"
+msgstr ""
+
+#: plugins/vocabbuilder.koplugin/main.lua:518
 msgid "Reset progress"
 msgstr "Azzera i progressi"
 
-#: plugins/vocabbuilder.koplugin/main.lua:452
+#: plugins/vocabbuilder.koplugin/main.lua:525
 msgid "Remove word"
 msgstr "Rimuovi la parola"
 
-#: plugins/vocabbuilder.koplugin/main.lua:462
+#: plugins/vocabbuilder.koplugin/main.lua:535
 msgid "Undo study status"
 msgstr "Annulla stato di studio"
 
-#: plugins/vocabbuilder.koplugin/main.lua:697
-#: plugins/vocabbuilder.koplugin/main.lua:1164
-#: plugins/vocabbuilder.koplugin/main.lua:1497
+#: plugins/vocabbuilder.koplugin/main.lua:770
+#: plugins/vocabbuilder.koplugin/main.lua:1275
+#: plugins/vocabbuilder.koplugin/main.lua:1609
 msgid "Forgot"
 msgstr "Dimenticato"
 
-#: plugins/vocabbuilder.koplugin/main.lua:708
-#: plugins/vocabbuilder.koplugin/main.lua:1160
-#: plugins/vocabbuilder.koplugin/main.lua:1483
+#: plugins/vocabbuilder.koplugin/main.lua:781
+#: plugins/vocabbuilder.koplugin/main.lua:1271
+#: plugins/vocabbuilder.koplugin/main.lua:1595
 msgid "Got it"
 msgstr "Capito"
 
-#: plugins/vocabbuilder.koplugin/main.lua:784
+#: plugins/vocabbuilder.koplugin/main.lua:857
 msgid "From"
 msgstr "Da"
 
-#: plugins/vocabbuilder.koplugin/main.lua:868
+#: plugins/vocabbuilder.koplugin/main.lua:941
 msgctxt "Time"
 msgid "d"
 msgstr "g"
 
-#: plugins/vocabbuilder.koplugin/main.lua:916
+#: plugins/vocabbuilder.koplugin/main.lua:989
 msgid "Added on"
 msgstr "Aggiunto il"
 
-#: plugins/vocabbuilder.koplugin/main.lua:917
+#: plugins/vocabbuilder.koplugin/main.lua:990
 msgid "Review scheduled at"
 msgstr "Revisione prevista a"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1284
+#: plugins/vocabbuilder.koplugin/main.lua:1396
 msgid "Filter in effect"
 msgstr "Filtro attivo"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1285
+#: plugins/vocabbuilder.koplugin/main.lua:1397
 msgid "No reviewable items"
 msgstr "Nessun elemento recensibile"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1453
-#: plugins/vocabbuilder.koplugin/main.lua:1524
+#: plugins/vocabbuilder.koplugin/main.lua:1565
+#: plugins/vocabbuilder.koplugin/main.lua:1636
 #: plugins/vocabbuilder.koplugin/_meta.lua:4
 msgid "Vocabulary builder"
 msgstr "Costruttore di vocabolario"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1535
+#: plugins/vocabbuilder.koplugin/main.lua:1647
 msgid "Open vocabulary builder"
 msgstr "Apri il costruttore di vocabolario"
 

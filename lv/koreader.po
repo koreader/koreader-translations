@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-08 23:36+0000\n"
+"POT-Creation-Date: 2022-11-11 15:11+0000\n"
 "PO-Revision-Date: 2021-02-04 05:34+0000\n"
 "Last-Translator: karlis <karlissergijevskis@gmail.com>\n"
 "Language-Team: Latvian <https://hosted.weblate.org/projects/koreader/"
@@ -87,6 +87,7 @@ msgid "Cloud storage"
 msgstr "Mākoņglabātuve"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:42
+#: frontend/apps/cloudstorage/syncservice.lua:15
 msgid "Dropbox"
 msgstr "Dropbox"
 
@@ -95,6 +96,7 @@ msgid "FTP"
 msgstr "FTP"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:44
+#: frontend/apps/cloudstorage/syncservice.lua:16
 msgid "WebDAV"
 msgstr "WebDAV"
 
@@ -151,10 +153,10 @@ msgstr "Ievadiet faila nosaukumu"
 #: frontend/apps/cloudstorage/cloudstorage.lua:279
 #: frontend/apps/cloudstorage/cloudstorage.lua:306
 #: frontend/apps/cloudstorage/cloudstorage.lua:367
-#: frontend/apps/cloudstorage/cloudstorage.lua:666
+#: frontend/apps/cloudstorage/cloudstorage.lua:670
 #: frontend/apps/cloudstorage/dropbox.lua:129
 #: frontend/apps/cloudstorage/ftp.lua:127
-#: frontend/apps/cloudstorage/webdav.lua:112
+#: frontend/apps/cloudstorage/webdav.lua:143
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:151
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:236
 #: frontend/apps/filemanager/filemanager.lua:270
@@ -212,9 +214,10 @@ msgstr "Ievadiet faila nosaukumu"
 #: plugins/opds.koplugin/opdsbrowser.lua:883
 #: plugins/perceptionexpander.koplugin/main.lua:138
 #: plugins/profiles.koplugin/main.lua:245 plugins/SSH.koplugin/main.lua:126
-#: plugins/statistics.koplugin/main.lua:1966
-#: plugins/statistics.koplugin/main.lua:2139
-#: plugins/statistics.koplugin/main.lua:2178
+#: plugins/statistics.koplugin/main.lua:1117
+#: plugins/statistics.koplugin/main.lua:2082
+#: plugins/statistics.koplugin/main.lua:2255
+#: plugins/statistics.koplugin/main.lua:2294
 #: plugins/terminal.koplugin/aliases.lua:100
 #: plugins/terminal.koplugin/main.lua:574
 #: plugins/texteditor.koplugin/main.lua:352
@@ -262,7 +265,7 @@ msgstr "Izvēlieties ierīces mapi"
 #: frontend/apps/cloudstorage/cloudstorage.lua:392
 #: frontend/apps/cloudstorage/dropbox.lua:137
 #: frontend/apps/cloudstorage/ftp.lua:135
-#: frontend/apps/cloudstorage/webdav.lua:120
+#: frontend/apps/cloudstorage/webdav.lua:151
 #: plugins/wallabag.koplugin/main.lua:347
 #: plugins/wallabag.koplugin/main.lua:1056
 msgid "Info"
@@ -271,7 +274,9 @@ msgstr "Informācija"
 #: frontend/apps/cloudstorage/cloudstorage.lua:399
 #: frontend/apps/filemanager/filemanagershortcuts.lua:133
 #: plugins/opds.koplugin/opdsbrowser.lua:945
+#: plugins/statistics.koplugin/main.lua:1130
 #: plugins/texteditor.koplugin/main.lua:359
+#: plugins/vocabbuilder.koplugin/main.lua:311
 msgid "Edit"
 msgstr "Labot"
 
@@ -292,11 +297,16 @@ msgstr "Labot"
 #: plugins/opds.koplugin/opdsbrowser.lua:957
 #: plugins/profiles.koplugin/main.lua:199
 #: plugins/profiles.koplugin/main.lua:205
+#: plugins/statistics.koplugin/main.lua:1112
+#: plugins/statistics.koplugin/main.lua:1121
 #: plugins/terminal.koplugin/aliases.lua:106
+#: plugins/vocabbuilder.koplugin/main.lua:304
 msgid "Delete"
 msgstr "Izdzēst"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:418
+#: plugins/statistics.koplugin/main.lua:1163
+#: plugins/vocabbuilder.koplugin/main.lua:327
 msgid "Synchronize now"
 msgstr "Sinhronizēt tagad"
 
@@ -374,7 +384,8 @@ msgstr "Izvēlieties ierīces mapi"
 #: plugins/newsdownloader.koplugin/main.lua:224
 #: plugins/newsdownloader.koplugin/main.lua:315
 #: plugins/newsdownloader.koplugin/main.lua:627
-#: plugins/statistics.koplugin/main.lua:344
+#: plugins/statistics.koplugin/main.lua:345
+#: plugins/statistics.koplugin/main.lua:1137
 #: plugins/terminal.koplugin/main.lua:385
 msgid "Close"
 msgstr "Aizvērt"
@@ -385,7 +396,7 @@ msgid "Upload file"
 msgstr "Lejupielādēt failu"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:605
-#: frontend/apps/cloudstorage/cloudstorage.lua:662
+#: frontend/apps/cloudstorage/cloudstorage.lua:666
 #: frontend/apps/filemanager/filemanager.lua:705
 #: frontend/apps/filemanager/filemanager.lua:734
 #: frontend/apps/filemanager/filemanager.lua:1056
@@ -407,21 +418,22 @@ msgstr ""
 msgid "Uploading…"
 msgstr "Lejupielādēju…"
 
-#: frontend/apps/cloudstorage/cloudstorage.lua:673
+#: frontend/apps/cloudstorage/cloudstorage.lua:677
 #: frontend/apps/filemanager/filemanager.lua:1067
 #: frontend/ui/wikipedia.lua:1350
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:502
-#: plugins/statistics.koplugin/main.lua:348
+#: plugins/statistics.koplugin/main.lua:349
 #: plugins/texteditor.koplugin/main.lua:401
 msgid "Create"
 msgstr "Izveidot"
 
-#: frontend/apps/cloudstorage/cloudstorage.lua:696
+#: frontend/apps/cloudstorage/cloudstorage.lua:704
 #: frontend/apps/filemanager/filemanager.lua:1092
 msgid "Enter folder after creation"
 msgstr ""
 
-#: frontend/apps/cloudstorage/dropboxapi.lua:218
+#: frontend/apps/cloudstorage/dropboxapi.lua:219
+#: frontend/apps/cloudstorage/webdavapi.lua:174
 #: frontend/ui/widget/filechooser.lua:284
 #, fuzzy
 msgid "Long-press to choose current folder"
@@ -429,7 +441,7 @@ msgstr "Turiet lai izvēlētos pašreizējo mapi"
 
 #: frontend/apps/cloudstorage/dropbox.lua:33
 #: frontend/apps/cloudstorage/ftp.lua:38
-#: frontend/apps/cloudstorage/webdav.lua:25
+#: frontend/apps/cloudstorage/webdav.lua:26
 msgid ""
 "File saved to:\n"
 "%1"
@@ -439,7 +451,7 @@ msgstr ""
 
 #: frontend/apps/cloudstorage/dropbox.lua:37
 #: frontend/apps/cloudstorage/ftp.lua:42
-#: frontend/apps/cloudstorage/webdav.lua:29
+#: frontend/apps/cloudstorage/webdav.lua:30
 #: plugins/opds.koplugin/opdscatalog.lua:27
 msgid ""
 "File saved to:\n"
@@ -452,7 +464,7 @@ msgstr ""
 
 #: frontend/apps/cloudstorage/dropbox.lua:53
 #: frontend/apps/cloudstorage/ftp.lua:58
-#: frontend/apps/cloudstorage/webdav.lua:45
+#: frontend/apps/cloudstorage/webdav.lua:46
 msgid ""
 "Could not save file to:\n"
 "%1"
@@ -461,6 +473,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/dropbox.lua:73
+#: frontend/apps/cloudstorage/webdav.lua:58
 #, fuzzy
 msgid ""
 "File uploaded:\n"
@@ -470,6 +483,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/dropbox.lua:80
+#: frontend/apps/cloudstorage/webdav.lua:63
 #, fuzzy
 msgid ""
 "Could not upload file:\n"
@@ -479,6 +493,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/dropbox.lua:93
+#: frontend/apps/cloudstorage/webdav.lua:77
 #, fuzzy
 msgid ""
 "Could not create folder:\n"
@@ -595,7 +610,7 @@ msgid "FTP folder"
 msgstr "FTP mape"
 
 #: frontend/apps/cloudstorage/ftp.lua:82
-#: frontend/apps/cloudstorage/webdav.lua:67
+#: frontend/apps/cloudstorage/webdav.lua:98
 #: frontend/apps/filemanager/filemanagershortcuts.lua:85
 msgid "Add"
 msgstr "Pievienot"
@@ -605,7 +620,7 @@ msgid "Edit FTP account"
 msgstr "Labot FTP kontu"
 
 #: frontend/apps/cloudstorage/ftp.lua:85
-#: frontend/apps/cloudstorage/webdav.lua:70
+#: frontend/apps/cloudstorage/webdav.lua:101
 #: frontend/apps/filemanager/filemanagershortcuts.lua:172
 #: frontend/apps/reader/modules/readerstyletweak.lua:737
 #: frontend/ui/elements/menu_keyboard_layout.lua:141
@@ -624,12 +639,12 @@ msgid "Add FTP account"
 msgstr "Pievienot FTP kontu"
 
 #: frontend/apps/cloudstorage/ftp.lua:156
-#: frontend/apps/cloudstorage/webdav.lua:149
+#: frontend/apps/cloudstorage/webdav.lua:180
 msgid "Please fill in all fields."
 msgstr "Lūdzu aizpildiet visus laukus."
 
 #: frontend/apps/cloudstorage/ftp.lua:170
-#: frontend/apps/cloudstorage/webdav.lua:164
+#: frontend/apps/cloudstorage/webdav.lua:195
 msgid ""
 "Type: %1\n"
 "Name: %2\n"
@@ -639,7 +654,40 @@ msgstr ""
 "Vārds: %2\n"
 "Adrese: %3"
 
-#: frontend/apps/cloudstorage/webdav.lua:52
+#: frontend/apps/cloudstorage/syncservice.lua:25
+#, fuzzy
+msgid "Cloud sync settings"
+msgstr "Fonta iestatījumi"
+
+#: frontend/apps/cloudstorage/syncservice.lua:67
+#, fuzzy
+msgid "Choose cloud service:"
+msgstr "Izvēlieties mākoņglabātuves tipu"
+
+#: frontend/apps/cloudstorage/syncservice.lua:72
+msgid "Add service"
+msgstr ""
+
+#: frontend/apps/cloudstorage/syncservice.lua:116
+#, fuzzy
+msgid ""
+"Something went wrong when syncing, please check your network connection and "
+"try again later."
+msgstr ""
+"Kaut kas nogāja greizi kad notika sinhronizācija, pārbaudiet tīkla "
+"savienojumu un mēģiniet vēlreiz."
+
+#: frontend/apps/cloudstorage/syncservice.lua:125
+#, fuzzy
+msgid "Wrong server type."
+msgstr "SSH serveris"
+
+#: frontend/apps/cloudstorage/syncservice.lua:166
+#, fuzzy
+msgid "Successfully synchronized."
+msgstr "Laiks sinhronizēts."
+
+#: frontend/apps/cloudstorage/webdav.lua:83
 msgid ""
 "Server address must be of the form http(s)://domain.name/path\n"
 "This can point to a sub-directory of the WebDAV server.\n"
@@ -649,33 +697,33 @@ msgstr ""
 "Var norādīt apakšmapi WebDAV serverim.\n"
 "Starta mape tiek pievienota servera ceļam."
 
-#: frontend/apps/cloudstorage/webdav.lua:56
+#: frontend/apps/cloudstorage/webdav.lua:87
 msgid "Server display name"
 msgstr "Servera nosaukums"
 
-#: frontend/apps/cloudstorage/webdav.lua:58
+#: frontend/apps/cloudstorage/webdav.lua:89
 msgid "WebDAV address, for example https://example.com/dav"
 msgstr "WebDAV adrese, piemēram https://example.com/dav"
 
-#: frontend/apps/cloudstorage/webdav.lua:60
+#: frontend/apps/cloudstorage/webdav.lua:91
 #: plugins/wallabag.koplugin/main.lua:1036
 msgid "Username"
 msgstr "Lietotājvārds"
 
-#: frontend/apps/cloudstorage/webdav.lua:62
+#: frontend/apps/cloudstorage/webdav.lua:93
 #: plugins/wallabag.koplugin/main.lua:1042
 msgid "Password"
 msgstr "Parole"
 
-#: frontend/apps/cloudstorage/webdav.lua:64
+#: frontend/apps/cloudstorage/webdav.lua:95
 msgid "Start folder"
 msgstr "Sākuma mape"
 
-#: frontend/apps/cloudstorage/webdav.lua:69
+#: frontend/apps/cloudstorage/webdav.lua:100
 msgid "Edit WebDAV account"
 msgstr "Labot WebDAV kontu"
 
-#: frontend/apps/cloudstorage/webdav.lua:77
+#: frontend/apps/cloudstorage/webdav.lua:108
 msgid "Add WebDAV account"
 msgstr "Pievienot WebDAV kontu"
 
@@ -729,8 +777,8 @@ msgstr "Mape"
 #: frontend/ui/widget/bookstatuswidget.lua:157
 #: frontend/ui/widget/notification.lua:45
 #: plugins/batterystat.koplugin/main.lua:76
-#: plugins/statistics.koplugin/main.lua:1390
-#: plugins/statistics.koplugin/main.lua:1393
+#: plugins/statistics.koplugin/main.lua:1506
+#: plugins/statistics.koplugin/main.lua:1509
 msgid "N/A"
 msgstr "N/A"
 
@@ -777,8 +825,8 @@ msgid "Cover image:"
 msgstr "Vāka attēls:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:231
-#: plugins/statistics.koplugin/main.lua:1397
-#: plugins/statistics.koplugin/main.lua:1499
+#: plugins/statistics.koplugin/main.lua:1513
+#: plugins/statistics.koplugin/main.lua:1615
 msgid "Tap to display"
 msgstr "Spied lai attēlotu"
 
@@ -970,10 +1018,10 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:695
 #: frontend/apps/reader/modules/readermenu.lua:199
 #: frontend/ui/widget/inputdialog.lua:646
-#: plugins/statistics.koplugin/main.lua:1970
-#: plugins/statistics.koplugin/main.lua:2143
-#: plugins/statistics.koplugin/main.lua:2182
-#: plugins/vocabbuilder.koplugin/main.lua:255
+#: plugins/statistics.koplugin/main.lua:2086
+#: plugins/statistics.koplugin/main.lua:2259
+#: plugins/statistics.koplugin/main.lua:2298
+#: plugins/vocabbuilder.koplugin/main.lua:257
 msgid "Reset"
 msgstr "Atiestatīt"
 
@@ -995,7 +1043,7 @@ msgstr ""
 "Ja izdzēsīsiet failu - to nevarēs atgūt."
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:213
-#: frontend/ui/data/creoptions.lua:35 plugins/statistics.koplugin/main.lua:1828
+#: frontend/ui/data/creoptions.lua:35 plugins/statistics.koplugin/main.lua:1944
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
@@ -1515,7 +1563,7 @@ msgstr "Nevarēju atvērt pēdējo dokumentu"
 #: frontend/ui/elements/screensaver_menu.lua:96 frontend/ui/otamanager.lua:485
 #: plugins/newsdownloader.koplugin/main.lua:124
 #: plugins/perceptionexpander.koplugin/main.lua:176
-#: plugins/statistics.koplugin/main.lua:938
+#: plugins/statistics.koplugin/main.lua:978
 #: plugins/texteditor.koplugin/main.lua:110
 #: plugins/wallabag.koplugin/main.lua:158
 msgid "Settings"
@@ -2052,7 +2100,7 @@ msgstr "Noņemt grāmatzīmi"
 #: frontend/apps/reader/modules/readerbookmark.lua:724
 #: frontend/apps/reader/modules/readeruserhyph.lua:293
 #: plugins/gestures.koplugin/main.lua:423
-#: plugins/statistics.koplugin/main.lua:2226
+#: plugins/statistics.koplugin/main.lua:2342
 #: plugins/texteditor.koplugin/main.lua:265
 msgid "Remove"
 msgstr "Noņemt"
@@ -2241,8 +2289,8 @@ msgstr "Nodaļas marķieri"
 #: plugins/coverimage.koplugin/main.lua:465
 #: plugins/coverimage.koplugin/main.lua:485
 #: plugins/coverimage.koplugin/main.lua:620
-#: plugins/vocabbuilder.koplugin/main.lua:197
-#: plugins/vocabbuilder.koplugin/main.lua:214
+#: plugins/vocabbuilder.koplugin/main.lua:199
+#: plugins/vocabbuilder.koplugin/main.lua:216
 msgid "off"
 msgstr "izslēgts"
 
@@ -2429,7 +2477,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:208
 #: frontend/apps/reader/modules/readerdictionary.lua:902
-#: frontend/dispatcher.lua:96 plugins/vocabbuilder.koplugin/main.lua:76
+#: frontend/dispatcher.lua:96 plugins/vocabbuilder.koplugin/main.lua:78
 msgid "Dictionary lookup"
 msgstr "Meklēt vārdnīcā"
 
@@ -2470,7 +2518,7 @@ msgstr "Tiešām iztīrīt vārdnīcas meklējumu vēsturi?"
 #: frontend/apps/reader/modules/readerdictionary.lua:302
 #: frontend/apps/reader/modules/readerwikipedia.lua:312
 #: plugins/texteditor.koplugin/main.lua:203
-#: plugins/vocabbuilder.koplugin/main.lua:270
+#: plugins/vocabbuilder.koplugin/main.lua:272
 msgid "Clean"
 msgstr "Iztīrīt"
 
@@ -3057,7 +3105,7 @@ msgstr "Rakstu skaits"
 #: plugins/autowarmth.koplugin/main.lua:926
 #: plugins/coverimage.koplugin/main.lua:410
 #: plugins/kosync.koplugin/main.lua:299
-#: plugins/statistics.koplugin/main.lua:1020
+#: plugins/statistics.koplugin/main.lua:1060
 msgid "Set"
 msgstr "Uzstādīt"
 
@@ -3520,7 +3568,7 @@ msgstr "Minimālais progresa joslas platums (% no ekrāna platuma)"
 #: frontend/apps/reader/modules/readergoto.lua:89 frontend/dispatcher.lua:119
 #: frontend/ui/widget/keyvaluepage.lua:413 frontend/ui/widget/menu.lua:735
 #: frontend/ui/widget/sortwidget.lua:246
-#: plugins/vocabbuilder.koplugin/main.lua:1109
+#: plugins/vocabbuilder.koplugin/main.lua:1218
 msgid "Go to page"
 msgstr "Iet uz lappusi"
 
@@ -3737,8 +3785,8 @@ msgstr ""
 #: frontend/apps/reader/modules/readerhighlight.lua:475
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:154 frontend/util.lua:224
 #: plugins/autodim.koplugin/main.lua:114
-#: plugins/statistics.koplugin/main.lua:965
-#: plugins/vocabbuilder.koplugin/main.lua:862
+#: plugins/statistics.koplugin/main.lua:1005
+#: plugins/vocabbuilder.koplugin/main.lua:935
 msgctxt "Time"
 msgid "s"
 msgstr ""
@@ -6455,7 +6503,7 @@ msgstr "Rotēt par 90° pulksteņrādītāja virzienā"
 msgid "Rotate by 90° CCW"
 msgstr "Rotēt par 90° pulksteņrādītāja virzienā"
 
-#: frontend/dispatcher.lua:92 plugins/statistics.koplugin/main.lua:1070
+#: frontend/dispatcher.lua:92 plugins/statistics.koplugin/main.lua:1186
 msgid "Reading progress"
 msgstr "Lasīšanas progress"
 
@@ -6813,8 +6861,8 @@ msgstr "Slejas"
 #: frontend/ui/data/koptoptions.lua:491 frontend/ui/data/koptoptions.lua:501
 #: frontend/ui/data/koptoptions.lua:514 frontend/ui/data/koptoptions.lua:557
 #: frontend/ui/data/koptoptions.lua:600
-#: plugins/vocabbuilder.koplugin/main.lua:197
-#: plugins/vocabbuilder.koplugin/main.lua:214
+#: plugins/vocabbuilder.koplugin/main.lua:199
+#: plugins/vocabbuilder.koplugin/main.lua:216
 msgid "on"
 msgstr "ieslēgts"
 
@@ -11366,7 +11414,7 @@ msgstr "Atvērt %1 ar:"
 
 #: frontend/ui/widget/frontlightwidget.lua:185
 #: frontend/ui/widget/frontlightwidget.lua:314
-#: plugins/statistics.koplugin/main.lua:949
+#: plugins/statistics.koplugin/main.lua:989
 #, fuzzy
 msgctxt "Extrema"
 msgid "Min"
@@ -11374,7 +11422,7 @@ msgstr "Min"
 
 #: frontend/ui/widget/frontlightwidget.lua:196
 #: frontend/ui/widget/frontlightwidget.lua:325
-#: plugins/statistics.koplugin/main.lua:956
+#: plugins/statistics.koplugin/main.lua:996
 #, fuzzy
 msgctxt "Extrema"
 msgid "Max"
@@ -11530,7 +11578,7 @@ msgid "Copy word"
 msgstr "Kopēt"
 
 #: frontend/ui/widget/inputtext.lua:223
-#: plugins/vocabbuilder.koplugin/main.lua:481
+#: plugins/vocabbuilder.koplugin/main.lua:554
 #, fuzzy
 msgid "Word copied to clipboard."
 msgstr "CSS teksts ievietots starpliktuvē"
@@ -11558,7 +11606,7 @@ msgstr "Pārslēgties uz izkārtojumu"
 #: frontend/ui/widget/keyvaluepage.lua:401 frontend/ui/widget/menu.lua:783
 #: frontend/ui/widget/sortwidget.lua:234
 #: plugins/opds.koplugin/opdsbrowser.lua:877
-#: plugins/vocabbuilder.koplugin/main.lua:1097
+#: plugins/vocabbuilder.koplugin/main.lua:1206
 msgid "Enter page number"
 msgstr "Ievadiet lappuses numuru"
 
@@ -11566,12 +11614,12 @@ msgstr "Ievadiet lappuses numuru"
 #: frontend/ui/widget/keyvaluepage.lua:713 frontend/ui/widget/menu.lua:987
 #: frontend/ui/widget/sortwidget.lua:404 frontend/ui/widget/touchmenu.lua:698
 #: plugins/coverbrowser.koplugin/listmenu.lua:426
-#: plugins/vocabbuilder.koplugin/main.lua:1276
+#: plugins/vocabbuilder.koplugin/main.lua:1388
 msgid "Page %1 of %2"
 msgstr "Lappuse %1 no %2"
 
 #: frontend/ui/widget/keyvaluepage.lua:729 frontend/ui/widget/menu.lua:1005
-#: plugins/vocabbuilder.koplugin/main.lua:1285
+#: plugins/vocabbuilder.koplugin/main.lua:1397
 #, fuzzy
 msgid "No items"
 msgstr "Šķirot"
@@ -11809,7 +11857,7 @@ msgid ""
 msgstr ""
 
 #: frontend/ui/widget/screenshoter.lua:92
-#: plugins/statistics.koplugin/main.lua:1027
+#: plugins/statistics.koplugin/main.lua:1067
 msgid "Use default"
 msgstr "Izmantot noklusējuma"
 
@@ -11944,13 +11992,13 @@ msgid "%1m%2s"
 msgstr "%1m%2s"
 
 #: frontend/util.lua:212 frontend/util.lua:214
-#: plugins/vocabbuilder.koplugin/main.lua:866
+#: plugins/vocabbuilder.koplugin/main.lua:939
 msgctxt "Time"
 msgid "h"
 msgstr ""
 
 #: frontend/util.lua:213 frontend/util.lua:215 frontend/util.lua:220
-#: frontend/util.lua:226 plugins/vocabbuilder.koplugin/main.lua:864
+#: frontend/util.lua:226 plugins/vocabbuilder.koplugin/main.lua:937
 msgctxt "Time"
 msgid "m"
 msgstr ""
@@ -15694,126 +15742,126 @@ msgstr "Ievadi mēnesi"
 msgid "Invalid year-month string (YYYY-MM)"
 msgstr "Nepareizs gads-mēnesis norādīts (GGGG-MM)"
 
-#: plugins/statistics.koplugin/main.lua:80
+#: plugins/statistics.koplugin/main.lua:81
 msgid "Mon"
 msgstr "Pirm."
 
-#: plugins/statistics.koplugin/main.lua:81
+#: plugins/statistics.koplugin/main.lua:82
 msgid "Tue"
 msgstr "Otr."
 
-#: plugins/statistics.koplugin/main.lua:82
+#: plugins/statistics.koplugin/main.lua:83
 msgid "Wed"
 msgstr "Treš."
 
-#: plugins/statistics.koplugin/main.lua:83
+#: plugins/statistics.koplugin/main.lua:84
 msgid "Thu"
 msgstr "Cet."
 
-#: plugins/statistics.koplugin/main.lua:84
+#: plugins/statistics.koplugin/main.lua:85
 msgid "Fri"
 msgstr "Piekt."
 
-#: plugins/statistics.koplugin/main.lua:85
+#: plugins/statistics.koplugin/main.lua:86
 msgid "Sat"
 msgstr "Sest."
 
-#: plugins/statistics.koplugin/main.lua:86
+#: plugins/statistics.koplugin/main.lua:87
 msgid "Sun"
 msgstr "Svētd."
 
-#: plugins/statistics.koplugin/main.lua:90
+#: plugins/statistics.koplugin/main.lua:91
 #: plugins/statistics.koplugin/readerprogress.lua:34
 msgid "Monday"
 msgstr "Pirmdiena"
 
-#: plugins/statistics.koplugin/main.lua:91
+#: plugins/statistics.koplugin/main.lua:92
 #: plugins/statistics.koplugin/readerprogress.lua:35
 msgid "Tuesday"
 msgstr "Otrdiena"
 
-#: plugins/statistics.koplugin/main.lua:92
+#: plugins/statistics.koplugin/main.lua:93
 #: plugins/statistics.koplugin/readerprogress.lua:36
 msgid "Wednesday"
 msgstr "Trešdiena"
 
-#: plugins/statistics.koplugin/main.lua:93
+#: plugins/statistics.koplugin/main.lua:94
 #: plugins/statistics.koplugin/readerprogress.lua:37
 msgid "Thursday"
 msgstr "Ceturtdiena"
 
-#: plugins/statistics.koplugin/main.lua:94
+#: plugins/statistics.koplugin/main.lua:95
 #: plugins/statistics.koplugin/readerprogress.lua:38
 msgid "Friday"
 msgstr "Piektdiena"
 
-#: plugins/statistics.koplugin/main.lua:95
+#: plugins/statistics.koplugin/main.lua:96
 #: plugins/statistics.koplugin/readerprogress.lua:39
 msgid "Saturday"
 msgstr "Sestdiena"
 
-#: plugins/statistics.koplugin/main.lua:96
+#: plugins/statistics.koplugin/main.lua:97
 #: plugins/statistics.koplugin/readerprogress.lua:40
 msgid "Sunday"
 msgstr "Svētdiena"
 
-#: plugins/statistics.koplugin/main.lua:100
+#: plugins/statistics.koplugin/main.lua:101
 msgid "January"
 msgstr "Janvāris"
 
-#: plugins/statistics.koplugin/main.lua:101
+#: plugins/statistics.koplugin/main.lua:102
 msgid "February"
 msgstr "Februāris"
 
-#: plugins/statistics.koplugin/main.lua:102
+#: plugins/statistics.koplugin/main.lua:103
 msgid "March"
 msgstr "Marts"
 
-#: plugins/statistics.koplugin/main.lua:103
+#: plugins/statistics.koplugin/main.lua:104
 msgid "April"
 msgstr "Aprīlis"
 
-#: plugins/statistics.koplugin/main.lua:104
+#: plugins/statistics.koplugin/main.lua:105
 msgid "May"
 msgstr "Maijs"
 
-#: plugins/statistics.koplugin/main.lua:105
+#: plugins/statistics.koplugin/main.lua:106
 msgid "June"
 msgstr "Jūnijs"
 
-#: plugins/statistics.koplugin/main.lua:106
+#: plugins/statistics.koplugin/main.lua:107
 msgid "July"
 msgstr "Jūlijs"
 
-#: plugins/statistics.koplugin/main.lua:107
+#: plugins/statistics.koplugin/main.lua:108
 msgid "August"
 msgstr "Augusts"
 
-#: plugins/statistics.koplugin/main.lua:108
+#: plugins/statistics.koplugin/main.lua:109
 msgid "September"
 msgstr "Septembris"
 
-#: plugins/statistics.koplugin/main.lua:109
+#: plugins/statistics.koplugin/main.lua:110
 msgid "October"
 msgstr "Oktobris"
 
-#: plugins/statistics.koplugin/main.lua:110
+#: plugins/statistics.koplugin/main.lua:111
 msgid "November"
 msgstr "Novembris"
 
-#: plugins/statistics.koplugin/main.lua:111
+#: plugins/statistics.koplugin/main.lua:112
 msgid "December"
 msgstr "Decembris"
 
-#: plugins/statistics.koplugin/main.lua:132
+#: plugins/statistics.koplugin/main.lua:133
 msgid "Statistics calendar view"
 msgstr "Statistikas kalendāra skats"
 
-#: plugins/statistics.koplugin/main.lua:133
+#: plugins/statistics.koplugin/main.lua:134
 msgid "Book statistics"
 msgstr "Grāmatas statistika"
 
-#: plugins/statistics.koplugin/main.lua:338
+#: plugins/statistics.koplugin/main.lua:339
 msgid ""
 "Cannot open database in %1.\n"
 "The database may have been moved or deleted.\n"
@@ -15823,15 +15871,15 @@ msgstr ""
 "Datubāze iespējams ir pārvietota vai dzēsta.\n"
 "Vai Jūs vēlētos izveidot tukšu datubāzi?\n"
 
-#: plugins/statistics.koplugin/main.lua:353
+#: plugins/statistics.koplugin/main.lua:354
 msgid "A new empty database has been created."
 msgstr "Jauna tukša datubāze ir izveidota."
 
-#: plugins/statistics.koplugin/main.lua:392
+#: plugins/statistics.koplugin/main.lua:397
 msgid "Statistics database updated."
 msgstr "Statistikas datubāze atjaunota."
 
-#: plugins/statistics.koplugin/main.lua:421
+#: plugins/statistics.koplugin/main.lua:426
 msgid ""
 "New version of statistics plugin detected.\n"
 "Statistics data needs to be converted into the new database format.\n"
@@ -15843,7 +15891,7 @@ msgstr ""
 "Tas var aizņemt pāris minūtes.\n"
 "Lūdzu uzgaidiet...\n"
 
-#: plugins/statistics.koplugin/main.lua:433
+#: plugins/statistics.koplugin/main.lua:438
 msgid ""
 "Conversion complete.\n"
 "Imported one book to the database.\n"
@@ -15865,25 +15913,25 @@ msgstr[2] ""
 "Importētas vairākas grāmatas datubāzē.\n"
 "Pieskarieties, lai turpinātu."
 
-#: plugins/statistics.koplugin/main.lua:908
+#: plugins/statistics.koplugin/main.lua:948
 msgid "Enabled"
 msgstr "Ieslēgts"
 
-#: plugins/statistics.koplugin/main.lua:934
+#: plugins/statistics.koplugin/main.lua:974
 #: plugins/statistics.koplugin/_meta.lua:4
 msgid "Reading statistics"
 msgstr "Lasīšanas statistika"
 
-#: plugins/statistics.koplugin/main.lua:942
+#: plugins/statistics.koplugin/main.lua:982
 #, fuzzy
 msgid "Read page duration limits: %1 s – %2 s"
 msgstr "Izlasītas lapas laika limits: %1 s / %2 s"
 
-#: plugins/statistics.koplugin/main.lua:966
+#: plugins/statistics.koplugin/main.lua:1006
 msgid "Read page duration limits"
 msgstr "Izlasītas lapas laika limiti"
 
-#: plugins/statistics.koplugin/main.lua:967
+#: plugins/statistics.koplugin/main.lua:1007
 msgid ""
 "Set min and max time spent (in seconds) on a page for it to be counted as "
 "read in statistics.\n"
@@ -15899,46 +15947,68 @@ msgstr ""
 "Maksimālā vērtība nodrošina, ka lapa, kurā Jūs uzturaties ilgāk tiks "
 "iekļauta statistikā, izmantojot laika ierobežojuma nodefinēto vērtību."
 
-#: plugins/statistics.koplugin/main.lua:984
+#: plugins/statistics.koplugin/main.lua:1024
 msgid "Calendar weeks start on %1"
 msgstr "Kalendāra nedēļas sākas ar %1"
 
-#: plugins/statistics.koplugin/main.lua:1012
+#: plugins/statistics.koplugin/main.lua:1052
 msgid "Books per calendar day: %1"
 msgstr "Grāmatas vienas kalendārās dienas laikā: %1"
 
-#: plugins/statistics.koplugin/main.lua:1021
+#: plugins/statistics.koplugin/main.lua:1061
 msgid "Books per calendar day"
 msgstr "Grāmatas vienas kalendārās dienas laikā"
 
-#: plugins/statistics.koplugin/main.lua:1022
+#: plugins/statistics.koplugin/main.lua:1062
 msgid "Set the max number of book spans to show for a day"
 msgstr ""
 "Uzstādīt maksimālo grāmatu skaitu pārklāšanos, lai attēlotu vienas dienas "
 "ietvaros"
 
-#: plugins/statistics.koplugin/main.lua:1037
+#: plugins/statistics.koplugin/main.lua:1077
 msgid "Show hourly histogram in calendar days"
 msgstr "Rādīt histogrammu ar soli (1h) kalendārajās dienās"
 
-#: plugins/statistics.koplugin/main.lua:1044
+#: plugins/statistics.koplugin/main.lua:1084
 msgid "Allow browsing coming months"
 msgstr "Atļaut pārlūkot nākamos mēnešus"
 
-#: plugins/statistics.koplugin/main.lua:1053
+#: plugins/statistics.koplugin/main.lua:1092
+#: plugins/vocabbuilder.koplugin/main.lua:348
+#, fuzzy
+msgid "Cloud sync"
+msgstr "Mākoņglabātuve"
+
+#: plugins/statistics.koplugin/main.lua:1116
+#, fuzzy
+msgid "Delete server info?"
+msgstr "Izdzēst failu"
+
+#: plugins/statistics.koplugin/main.lua:1144
+msgid ""
+"Cloud storage:\n"
+"%1\n"
+"\n"
+"Folder path:\n"
+"%2\n"
+"\n"
+"Set up the same cloud folder on each device to sync across your devices."
+msgstr ""
+
+#: plugins/statistics.koplugin/main.lua:1158
 msgid "Reset statistics"
 msgstr "Notīrīt statistiku"
 
-#: plugins/statistics.koplugin/main.lua:1058
+#: plugins/statistics.koplugin/main.lua:1174
 msgid "Current book"
 msgstr "Esošā grāmata"
 
-#: plugins/statistics.koplugin/main.lua:1062
-#: plugins/statistics.koplugin/main.lua:2596
+#: plugins/statistics.koplugin/main.lua:1178
+#: plugins/statistics.koplugin/main.lua:2712
 msgid "Current statistics"
 msgstr "Esošā statistika"
 
-#: plugins/statistics.koplugin/main.lua:1087
+#: plugins/statistics.koplugin/main.lua:1203
 msgid ""
 "Reading progress is not available.\n"
 "There is no data for the last week."
@@ -15946,190 +16016,190 @@ msgstr ""
 "Lasīšanas progress nav pieejams.\n"
 "Nav datu par pagājušo nedēļu."
 
-#: plugins/statistics.koplugin/main.lua:1093
+#: plugins/statistics.koplugin/main.lua:1209
 msgid "Time range"
 msgstr "Laika diapazons"
 
-#: plugins/statistics.koplugin/main.lua:1100
+#: plugins/statistics.koplugin/main.lua:1216
 msgid "Calendar view"
 msgstr "Kalendāra skats"
 
-#: plugins/statistics.koplugin/main.lua:1112
+#: plugins/statistics.koplugin/main.lua:1228
 msgid "Time range statistics"
 msgstr "Laika diapazona statistika"
 
-#: plugins/statistics.koplugin/main.lua:1115
+#: plugins/statistics.koplugin/main.lua:1231
 msgid "All books"
 msgstr "Visas grāmatas"
 
-#: plugins/statistics.koplugin/main.lua:1133
-#: plugins/statistics.koplugin/main.lua:1138
+#: plugins/statistics.koplugin/main.lua:1249
+#: plugins/statistics.koplugin/main.lua:1254
 msgid "Books by week"
 msgstr "Grāmatas nedēļas šķērsgriezumā"
 
-#: plugins/statistics.koplugin/main.lua:1150
-#: plugins/statistics.koplugin/main.lua:1155
+#: plugins/statistics.koplugin/main.lua:1266
+#: plugins/statistics.koplugin/main.lua:1271
 msgid "Books by month"
 msgstr "Grāmatas mēneša šķērsgriezumā"
 
-#: plugins/statistics.koplugin/main.lua:1168
-#: plugins/statistics.koplugin/main.lua:1173
+#: plugins/statistics.koplugin/main.lua:1284
+#: plugins/statistics.koplugin/main.lua:1289
 #: plugins/statistics.koplugin/readerprogress.lua:110
 msgid "Last week"
 msgstr "Iepriekšējā nedēļa"
 
-#: plugins/statistics.koplugin/main.lua:1185
-#: plugins/statistics.koplugin/main.lua:1190
+#: plugins/statistics.koplugin/main.lua:1301
+#: plugins/statistics.koplugin/main.lua:1306
 msgid "Last month by day"
 msgstr "Pēdējais mēnesis sadalīts pa dienām"
 
-#: plugins/statistics.koplugin/main.lua:1202
-#: plugins/statistics.koplugin/main.lua:1207
+#: plugins/statistics.koplugin/main.lua:1318
+#: plugins/statistics.koplugin/main.lua:1323
 msgid "Last year by day"
 msgstr "Pēdējais gads sadalīts pa dienām"
 
-#: plugins/statistics.koplugin/main.lua:1219
-#: plugins/statistics.koplugin/main.lua:1224
+#: plugins/statistics.koplugin/main.lua:1335
+#: plugins/statistics.koplugin/main.lua:1340
 msgid "Last year by week"
 msgstr "Pēdējais gads sadalīts pa nedēļām"
 
-#: plugins/statistics.koplugin/main.lua:1236
-#: plugins/statistics.koplugin/main.lua:1241
+#: plugins/statistics.koplugin/main.lua:1352
+#: plugins/statistics.koplugin/main.lua:1357
 msgid "All stats by month"
 msgstr "Visa statistika sadalīta pa mēnešiem"
 
-#: plugins/statistics.koplugin/main.lua:1370
+#: plugins/statistics.koplugin/main.lua:1486
 msgid "Time spent reading this session"
 msgstr "Lasīšanā pavadītais laiks šajā sesijā"
 
-#: plugins/statistics.koplugin/main.lua:1371
+#: plugins/statistics.koplugin/main.lua:1487
 msgid "Pages read this session"
 msgstr "Lappuses izlasītas šajā sesijā"
 
-#: plugins/statistics.koplugin/main.lua:1373
+#: plugins/statistics.koplugin/main.lua:1489
 msgid "Time spent reading today"
 msgstr "Šodien pavadītais laiks lasot"
 
-#: plugins/statistics.koplugin/main.lua:1374
+#: plugins/statistics.koplugin/main.lua:1490
 msgid "Pages read today"
 msgstr "Šodien izlasītās lappuses"
 
-#: plugins/statistics.koplugin/main.lua:1377
-#: plugins/statistics.koplugin/main.lua:1491
+#: plugins/statistics.koplugin/main.lua:1493
+#: plugins/statistics.koplugin/main.lua:1607
 msgid "Total time spent on this book"
 msgstr "Kopējais grāmatas lasīšanas laiks"
 
-#: plugins/statistics.koplugin/main.lua:1379
-#: plugins/statistics.koplugin/main.lua:1492
+#: plugins/statistics.koplugin/main.lua:1495
+#: plugins/statistics.koplugin/main.lua:1608
 msgid "Time spent reading this book"
 msgstr "Grāmatas lasīšanas laiks"
 
-#: plugins/statistics.koplugin/main.lua:1381
-#: plugins/statistics.koplugin/main.lua:1488
+#: plugins/statistics.koplugin/main.lua:1497
+#: plugins/statistics.koplugin/main.lua:1604
 msgid "Reading started"
 msgstr "Lasīšana sākta"
 
-#: plugins/statistics.koplugin/main.lua:1382
-#: plugins/statistics.koplugin/main.lua:1490
+#: plugins/statistics.koplugin/main.lua:1498
+#: plugins/statistics.koplugin/main.lua:1606
 msgid "Days reading this book"
 msgstr "Grāmatas lasīšanā pavadītās dienas"
 
-#: plugins/statistics.koplugin/main.lua:1383
-#: plugins/statistics.koplugin/main.lua:1493
+#: plugins/statistics.koplugin/main.lua:1499
+#: plugins/statistics.koplugin/main.lua:1609
 msgid "Average time per day"
 msgstr "Vidējais lasīšanas laiks dienā"
 
-#: plugins/statistics.koplugin/main.lua:1385
-#: plugins/statistics.koplugin/main.lua:1494
+#: plugins/statistics.koplugin/main.lua:1501
+#: plugins/statistics.koplugin/main.lua:1610
 msgid "Average time per page"
 msgstr "Vidējais lappusē pavadītais laiks"
 
-#: plugins/statistics.koplugin/main.lua:1386
-#: plugins/statistics.koplugin/main.lua:1495
+#: plugins/statistics.koplugin/main.lua:1502
+#: plugins/statistics.koplugin/main.lua:1611
 msgid "Pages read"
 msgstr "Izlasītas lappuses"
 
-#: plugins/statistics.koplugin/main.lua:1388
+#: plugins/statistics.koplugin/main.lua:1504
 msgid "Current page/Total pages"
 msgstr "Esošā lappuse/Kopējais lappušu skaits"
 
-#: plugins/statistics.koplugin/main.lua:1390
+#: plugins/statistics.koplugin/main.lua:1506
 msgid "Estimated time to read"
 msgstr "Aptuvenais laiks, lai izlasītu"
 
-#: plugins/statistics.koplugin/main.lua:1391
+#: plugins/statistics.koplugin/main.lua:1507
 msgid "Estimated reading finished"
 msgstr "Aptuvenā lasīšanas pabeigšana"
 
-#: plugins/statistics.koplugin/main.lua:1392
+#: plugins/statistics.koplugin/main.lua:1508
 msgid "%1 (1 day)"
 msgid_plural "%1 (%2 days)"
 msgstr[0] "%1 (neviena diena)"
 msgstr[1] "%1 (viena diena)"
 msgstr[2] "%1 (%2 dienas)"
 
-#: plugins/statistics.koplugin/main.lua:1395
-#: plugins/statistics.koplugin/main.lua:1497
+#: plugins/statistics.koplugin/main.lua:1511
+#: plugins/statistics.koplugin/main.lua:1613
 msgid "Highlights"
 msgstr "Iezīmēti"
 
-#: plugins/statistics.koplugin/main.lua:1397
-#: plugins/statistics.koplugin/main.lua:1499
+#: plugins/statistics.koplugin/main.lua:1513
+#: plugins/statistics.koplugin/main.lua:1615
 msgid "Show days"
 msgstr "Rādīt dienas"
 
-#: plugins/statistics.koplugin/main.lua:1402
-#: plugins/statistics.koplugin/main.lua:1504
-#: plugins/statistics.koplugin/main.lua:1834
+#: plugins/statistics.koplugin/main.lua:1518
+#: plugins/statistics.koplugin/main.lua:1620
+#: plugins/statistics.koplugin/main.lua:1950
 msgid "Days reading %1"
 msgstr "Lasīšanā pavadītās dienas: %1"
 
-#: plugins/statistics.koplugin/main.lua:1486
+#: plugins/statistics.koplugin/main.lua:1602
 msgid "Title"
 msgstr "Nosaukums"
 
-#: plugins/statistics.koplugin/main.lua:1487
+#: plugins/statistics.koplugin/main.lua:1603
 msgid "Authors"
 msgstr "Autori"
 
-#: plugins/statistics.koplugin/main.lua:1489
+#: plugins/statistics.koplugin/main.lua:1605
 msgid "Last read"
 msgstr "Pēdējoreiz lasīts"
 
-#: plugins/statistics.koplugin/main.lua:1496
+#: plugins/statistics.koplugin/main.lua:1612
 #, fuzzy
 msgid "Last read page/Total pages"
 msgstr "Izlasītās lapas/Kopējās lapas"
 
-#: plugins/statistics.koplugin/main.lua:1584
-#: plugins/statistics.koplugin/main.lua:1613
+#: plugins/statistics.koplugin/main.lua:1700
+#: plugins/statistics.koplugin/main.lua:1729
 msgid "Books read in %1"
 msgstr "Izlasītās grāmatas - %1"
 
-#: plugins/statistics.koplugin/main.lua:1696
+#: plugins/statistics.koplugin/main.lua:1812
 msgid "%1 Week %2"
 msgstr "%1 Nedēļa %2"
 
-#: plugins/statistics.koplugin/main.lua:1718
-#: plugins/statistics.koplugin/main.lua:1732
-#: plugins/statistics.koplugin/main.lua:1743
-#: plugins/statistics.koplugin/main.lua:1784
-#: plugins/statistics.koplugin/main.lua:1934
+#: plugins/statistics.koplugin/main.lua:1834
+#: plugins/statistics.koplugin/main.lua:1848
+#: plugins/statistics.koplugin/main.lua:1859
+#: plugins/statistics.koplugin/main.lua:1900
+#: plugins/statistics.koplugin/main.lua:2050
 msgid "Pages: (%1) Time: %2"
 msgstr "Lapas: (%1) Laiks: %2"
 
-#: plugins/statistics.koplugin/main.lua:1789
+#: plugins/statistics.koplugin/main.lua:1905
 msgid "Books read %1"
 msgstr "Grāmatas izlasītas %1"
 
-#: plugins/statistics.koplugin/main.lua:1950
+#: plugins/statistics.koplugin/main.lua:2066
 #, fuzzy
 msgid "Do you want to reset statistics for day %1 for this book?"
 msgstr ""
 "Vai vēlaties notīrīt statistiku par grāmatu:\n"
 "%1"
 
-#: plugins/statistics.koplugin/main.lua:1962
+#: plugins/statistics.koplugin/main.lua:2078
 #, fuzzy
 msgid ""
 "Do you want to reset statistics for this period for book:\n"
@@ -16138,27 +16208,27 @@ msgstr ""
 "Vai vēlaties notīrīt statistiku par grāmatu:\n"
 "%1"
 
-#: plugins/statistics.koplugin/main.lua:2054
+#: plugins/statistics.koplugin/main.lua:2170
 msgid "Total time spent reading: %1"
 msgstr "Kopējais lasīšanā pavadītais laiks: %1"
 
-#: plugins/statistics.koplugin/main.lua:2060
+#: plugins/statistics.koplugin/main.lua:2176
 msgid "Reset statistics for the current book"
 msgstr "Notīrīt statistiku esošajai grāmatai"
 
-#: plugins/statistics.koplugin/main.lua:2069
+#: plugins/statistics.koplugin/main.lua:2185
 msgid "Reset statistics per book"
 msgstr "Notīrīt statistiku grāmatām individuāli"
 
-#: plugins/statistics.koplugin/main.lua:2078
+#: plugins/statistics.koplugin/main.lua:2194
 msgid "Reset stats for books read for < 1 m"
 msgid_plural "Reset stats for books read for < %1 m"
 msgstr[0] "Nodzēst statistiku grāmatām, kuras lasītas < 1 minūti"
 msgstr[1] "Nodzēst statistiku grāmatai, kura lasīta < 1 minūti"
 msgstr[2] "Nodzēst statistiku grāmatām, kuras lasītas < 1 minūti"
 
-#: plugins/statistics.koplugin/main.lua:2138
-#: plugins/statistics.koplugin/main.lua:2177
+#: plugins/statistics.koplugin/main.lua:2254
+#: plugins/statistics.koplugin/main.lua:2293
 msgid ""
 "Do you want to reset statistics for book:\n"
 "%1"
@@ -16166,11 +16236,11 @@ msgstr ""
 "Vai vēlaties notīrīt statistiku par grāmatu:\n"
 "%1"
 
-#: plugins/statistics.koplugin/main.lua:2156
+#: plugins/statistics.koplugin/main.lua:2272
 msgid "Reset book statistics"
 msgstr "Notīrīt grāmatas statistiku"
 
-#: plugins/statistics.koplugin/main.lua:2223
+#: plugins/statistics.koplugin/main.lua:2339
 msgid "Permanently remove statistics for books read for less than 1 minute?"
 msgid_plural ""
 "Permanently remove statistics for books read for less than %1 minutes?"
@@ -16181,14 +16251,14 @@ msgstr[1] ""
 msgstr[2] ""
 "Pavisam iztīrīt statistiku grāmatām, kuras lasītas mazāk nekā %1 minūtes?"
 
-#: plugins/statistics.koplugin/main.lua:2263
+#: plugins/statistics.koplugin/main.lua:2379
 msgid "Statistics for 1 book removed."
 msgid_plural "Statistics for %1 books removed."
 msgstr[0] "Statistika notīrīta 0 grāmatām."
 msgstr[1] "Statistika notīrīta 1 grāmatai."
 msgstr[2] "Statistika notīrīta %1 grāmatām."
 
-#: plugins/statistics.koplugin/main.lua:2266
+#: plugins/statistics.koplugin/main.lua:2382
 msgid "No statistics removed."
 msgstr "Statistika netika notīrīta."
 
@@ -16828,130 +16898,141 @@ msgstr "Laika sinhronizācija"
 msgid "Synchronizes the device time with NTP servers."
 msgstr "Sinhronizēt ierīces laiku ar NTP serveriem."
 
-#: plugins/vocabbuilder.koplugin/main.lua:73
+#: plugins/vocabbuilder.koplugin/main.lua:75
 msgid "Add to vocabulary builder"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:123
+#: plugins/vocabbuilder.koplugin/main.lua:125
 msgid "Filter words from books"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:178
-#: plugins/vocabbuilder.koplugin/main.lua:308
+#: plugins/vocabbuilder.koplugin/main.lua:180
+#: plugins/vocabbuilder.koplugin/main.lua:381
 #, fuzzy
 msgid "Auto add new words"
 msgstr "Visas ziņas izmestas."
 
-#: plugins/vocabbuilder.koplugin/main.lua:182
-#: plugins/vocabbuilder.koplugin/main.lua:321
+#: plugins/vocabbuilder.koplugin/main.lua:184
+#: plugins/vocabbuilder.koplugin/main.lua:394
 #, fuzzy
 msgid "Save context"
 msgstr "Izvēlēties fonta izmēru"
 
-#: plugins/vocabbuilder.koplugin/main.lua:225
+#: plugins/vocabbuilder.koplugin/main.lua:227
 #, fuzzy
 msgid "Filter books"
 msgstr "Pārslēgt grāmatzīmes"
 
-#: plugins/vocabbuilder.koplugin/main.lua:233
+#: plugins/vocabbuilder.koplugin/main.lua:235
 #, fuzzy
 msgid "Reverse order"
 msgstr "Inversā secībā"
 
-#: plugins/vocabbuilder.koplugin/main.lua:233
+#: plugins/vocabbuilder.koplugin/main.lua:235
 msgid "Reverse order and show only reviewable"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:243
+#: plugins/vocabbuilder.koplugin/main.lua:245
 msgid "Resume"
 msgstr "Atsākt"
 
-#: plugins/vocabbuilder.koplugin/main.lua:243
+#: plugins/vocabbuilder.koplugin/main.lua:245
 #, fuzzy
 msgid "Quick deletion"
 msgstr "Raksta dzēšana"
 
-#: plugins/vocabbuilder.koplugin/main.lua:251
+#: plugins/vocabbuilder.koplugin/main.lua:253
 #, fuzzy
 msgid "Reset all progress"
 msgstr "Nedēļas progress"
 
-#: plugins/vocabbuilder.koplugin/main.lua:254
+#: plugins/vocabbuilder.koplugin/main.lua:256
 msgid "Reset progress of all words?"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:266
+#: plugins/vocabbuilder.koplugin/main.lua:268
 msgid "Clean all words"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:269
+#: plugins/vocabbuilder.koplugin/main.lua:271
 msgid "Clean all words including progress?"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:445
+#: plugins/vocabbuilder.koplugin/main.lua:340
+msgid ""
+"Cloud storage:\n"
+"%1\n"
+"\n"
+"Folder path:\n"
+"%2\n"
+"\n"
+"Set up the same cloud folder on each device to sync across your devices"
+msgstr ""
+
+#: plugins/vocabbuilder.koplugin/main.lua:518
 #, fuzzy
 msgid "Reset progress"
 msgstr "Nedēļas progress"
 
-#: plugins/vocabbuilder.koplugin/main.lua:452
+#: plugins/vocabbuilder.koplugin/main.lua:525
 #, fuzzy
 msgid "Remove word"
 msgstr "Izmest ziņas"
 
-#: plugins/vocabbuilder.koplugin/main.lua:462
+#: plugins/vocabbuilder.koplugin/main.lua:535
 #, fuzzy
 msgid "Undo study status"
 msgstr "Baterijas status"
 
-#: plugins/vocabbuilder.koplugin/main.lua:697
-#: plugins/vocabbuilder.koplugin/main.lua:1164
-#: plugins/vocabbuilder.koplugin/main.lua:1497
+#: plugins/vocabbuilder.koplugin/main.lua:770
+#: plugins/vocabbuilder.koplugin/main.lua:1275
+#: plugins/vocabbuilder.koplugin/main.lua:1609
 #, fuzzy
 msgid "Forgot"
 msgstr "Aizmirst"
 
-#: plugins/vocabbuilder.koplugin/main.lua:708
-#: plugins/vocabbuilder.koplugin/main.lua:1160
-#: plugins/vocabbuilder.koplugin/main.lua:1483
+#: plugins/vocabbuilder.koplugin/main.lua:781
+#: plugins/vocabbuilder.koplugin/main.lua:1271
+#: plugins/vocabbuilder.koplugin/main.lua:1595
 #, fuzzy
 msgid "Got it"
 msgstr "Šķirot"
 
-#: plugins/vocabbuilder.koplugin/main.lua:784
+#: plugins/vocabbuilder.koplugin/main.lua:857
 msgid "From"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:868
+#: plugins/vocabbuilder.koplugin/main.lua:941
 msgctxt "Time"
 msgid "d"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:916
+#: plugins/vocabbuilder.koplugin/main.lua:989
 #, fuzzy
 msgid "Added on"
 msgstr "Iegultie fonti"
 
-#: plugins/vocabbuilder.koplugin/main.lua:917
+#: plugins/vocabbuilder.koplugin/main.lua:990
 #, fuzzy
 msgid "Review scheduled at"
 msgstr "Laiks sinhronizēts."
 
-#: plugins/vocabbuilder.koplugin/main.lua:1284
+#: plugins/vocabbuilder.koplugin/main.lua:1396
 msgid "Filter in effect"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:1285
+#: plugins/vocabbuilder.koplugin/main.lua:1397
 #, fuzzy
 msgid "No reviewable items"
 msgstr "priekšmeti, kuri atrodas virs"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1453
-#: plugins/vocabbuilder.koplugin/main.lua:1524
+#: plugins/vocabbuilder.koplugin/main.lua:1565
+#: plugins/vocabbuilder.koplugin/main.lua:1636
 #: plugins/vocabbuilder.koplugin/_meta.lua:4
 msgid "Vocabulary builder"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:1535
+#: plugins/vocabbuilder.koplugin/main.lua:1647
 msgid "Open vocabulary builder"
 msgstr ""
 

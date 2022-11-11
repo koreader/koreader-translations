@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-08 23:36+0000\n"
+"POT-Creation-Date: 2022-11-11 15:11+0000\n"
 "PO-Revision-Date: 2022-11-11 14:46+0000\n"
 "Last-Translator: Sari Gabor <sari.gabor@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
@@ -90,6 +90,7 @@ msgid "Cloud storage"
 msgstr "Felhőtárhely"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:42
+#: frontend/apps/cloudstorage/syncservice.lua:15
 msgid "Dropbox"
 msgstr "Dropbox"
 
@@ -98,6 +99,7 @@ msgid "FTP"
 msgstr "FTP"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:44
+#: frontend/apps/cloudstorage/syncservice.lua:16
 msgid "WebDAV"
 msgstr "WebDaV"
 
@@ -155,10 +157,10 @@ msgstr "Fájlnév"
 #: frontend/apps/cloudstorage/cloudstorage.lua:279
 #: frontend/apps/cloudstorage/cloudstorage.lua:306
 #: frontend/apps/cloudstorage/cloudstorage.lua:367
-#: frontend/apps/cloudstorage/cloudstorage.lua:666
+#: frontend/apps/cloudstorage/cloudstorage.lua:670
 #: frontend/apps/cloudstorage/dropbox.lua:129
 #: frontend/apps/cloudstorage/ftp.lua:127
-#: frontend/apps/cloudstorage/webdav.lua:112
+#: frontend/apps/cloudstorage/webdav.lua:143
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:151
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:236
 #: frontend/apps/filemanager/filemanager.lua:270
@@ -216,9 +218,10 @@ msgstr "Fájlnév"
 #: plugins/opds.koplugin/opdsbrowser.lua:883
 #: plugins/perceptionexpander.koplugin/main.lua:138
 #: plugins/profiles.koplugin/main.lua:245 plugins/SSH.koplugin/main.lua:126
-#: plugins/statistics.koplugin/main.lua:1966
-#: plugins/statistics.koplugin/main.lua:2139
-#: plugins/statistics.koplugin/main.lua:2178
+#: plugins/statistics.koplugin/main.lua:1117
+#: plugins/statistics.koplugin/main.lua:2082
+#: plugins/statistics.koplugin/main.lua:2255
+#: plugins/statistics.koplugin/main.lua:2294
 #: plugins/terminal.koplugin/aliases.lua:100
 #: plugins/terminal.koplugin/main.lua:574
 #: plugins/texteditor.koplugin/main.lua:352
@@ -263,7 +266,7 @@ msgstr "Kiválasztás"
 #: frontend/apps/cloudstorage/cloudstorage.lua:392
 #: frontend/apps/cloudstorage/dropbox.lua:137
 #: frontend/apps/cloudstorage/ftp.lua:135
-#: frontend/apps/cloudstorage/webdav.lua:120
+#: frontend/apps/cloudstorage/webdav.lua:151
 #: plugins/wallabag.koplugin/main.lua:347
 #: plugins/wallabag.koplugin/main.lua:1056
 msgid "Info"
@@ -272,7 +275,9 @@ msgstr "Infó"
 #: frontend/apps/cloudstorage/cloudstorage.lua:399
 #: frontend/apps/filemanager/filemanagershortcuts.lua:133
 #: plugins/opds.koplugin/opdsbrowser.lua:945
+#: plugins/statistics.koplugin/main.lua:1130
 #: plugins/texteditor.koplugin/main.lua:359
+#: plugins/vocabbuilder.koplugin/main.lua:311
 msgid "Edit"
 msgstr "Szerkesztés"
 
@@ -293,11 +298,16 @@ msgstr "Szerkesztés"
 #: plugins/opds.koplugin/opdsbrowser.lua:957
 #: plugins/profiles.koplugin/main.lua:199
 #: plugins/profiles.koplugin/main.lua:205
+#: plugins/statistics.koplugin/main.lua:1112
+#: plugins/statistics.koplugin/main.lua:1121
 #: plugins/terminal.koplugin/aliases.lua:106
+#: plugins/vocabbuilder.koplugin/main.lua:304
 msgid "Delete"
 msgstr "Törlés"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:418
+#: plugins/statistics.koplugin/main.lua:1163
+#: plugins/vocabbuilder.koplugin/main.lua:327
 msgid "Synchronize now"
 msgstr "Szinkronizálás"
 
@@ -371,7 +381,8 @@ msgstr "Válasszon helyi mappát"
 #: plugins/newsdownloader.koplugin/main.lua:224
 #: plugins/newsdownloader.koplugin/main.lua:315
 #: plugins/newsdownloader.koplugin/main.lua:627
-#: plugins/statistics.koplugin/main.lua:344
+#: plugins/statistics.koplugin/main.lua:345
+#: plugins/statistics.koplugin/main.lua:1137
 #: plugins/terminal.koplugin/main.lua:385
 msgid "Close"
 msgstr "Bezárás"
@@ -381,7 +392,7 @@ msgid "Upload file"
 msgstr "Fájl feltöltése"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:605
-#: frontend/apps/cloudstorage/cloudstorage.lua:662
+#: frontend/apps/cloudstorage/cloudstorage.lua:666
 #: frontend/apps/filemanager/filemanager.lua:705
 #: frontend/apps/filemanager/filemanager.lua:734
 #: frontend/apps/filemanager/filemanager.lua:1056
@@ -401,28 +412,29 @@ msgstr "A fájlméret max. 150 MB lehet."
 msgid "Uploading…"
 msgstr "Feltöltés folyamatban…"
 
-#: frontend/apps/cloudstorage/cloudstorage.lua:673
+#: frontend/apps/cloudstorage/cloudstorage.lua:677
 #: frontend/apps/filemanager/filemanager.lua:1067
 #: frontend/ui/wikipedia.lua:1350
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:502
-#: plugins/statistics.koplugin/main.lua:348
+#: plugins/statistics.koplugin/main.lua:349
 #: plugins/texteditor.koplugin/main.lua:401
 msgid "Create"
 msgstr "Létrehozás"
 
-#: frontend/apps/cloudstorage/cloudstorage.lua:696
+#: frontend/apps/cloudstorage/cloudstorage.lua:704
 #: frontend/apps/filemanager/filemanager.lua:1092
 msgid "Enter folder after creation"
 msgstr "Létrehozás után lépjen a mappába"
 
-#: frontend/apps/cloudstorage/dropboxapi.lua:218
+#: frontend/apps/cloudstorage/dropboxapi.lua:219
+#: frontend/apps/cloudstorage/webdavapi.lua:174
 #: frontend/ui/widget/filechooser.lua:284
 msgid "Long-press to choose current folder"
 msgstr "Hosszan nyomva mappa kiválasztása"
 
 #: frontend/apps/cloudstorage/dropbox.lua:33
 #: frontend/apps/cloudstorage/ftp.lua:38
-#: frontend/apps/cloudstorage/webdav.lua:25
+#: frontend/apps/cloudstorage/webdav.lua:26
 msgid ""
 "File saved to:\n"
 "%1"
@@ -432,7 +444,7 @@ msgstr ""
 
 #: frontend/apps/cloudstorage/dropbox.lua:37
 #: frontend/apps/cloudstorage/ftp.lua:42
-#: frontend/apps/cloudstorage/webdav.lua:29
+#: frontend/apps/cloudstorage/webdav.lua:30
 #: plugins/opds.koplugin/opdscatalog.lua:27
 msgid ""
 "File saved to:\n"
@@ -445,7 +457,7 @@ msgstr ""
 
 #: frontend/apps/cloudstorage/dropbox.lua:53
 #: frontend/apps/cloudstorage/ftp.lua:58
-#: frontend/apps/cloudstorage/webdav.lua:45
+#: frontend/apps/cloudstorage/webdav.lua:46
 msgid ""
 "Could not save file to:\n"
 "%1"
@@ -454,6 +466,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/dropbox.lua:73
+#: frontend/apps/cloudstorage/webdav.lua:58
 msgid ""
 "File uploaded:\n"
 "%1"
@@ -462,6 +475,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/dropbox.lua:80
+#: frontend/apps/cloudstorage/webdav.lua:63
 msgid ""
 "Could not upload file:\n"
 "%1"
@@ -470,6 +484,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/dropbox.lua:93
+#: frontend/apps/cloudstorage/webdav.lua:77
 msgid ""
 "Could not create folder:\n"
 "%1"
@@ -593,7 +608,7 @@ msgid "FTP folder"
 msgstr "FTP mappa"
 
 #: frontend/apps/cloudstorage/ftp.lua:82
-#: frontend/apps/cloudstorage/webdav.lua:67
+#: frontend/apps/cloudstorage/webdav.lua:98
 #: frontend/apps/filemanager/filemanagershortcuts.lua:85
 msgid "Add"
 msgstr "Hozzáad"
@@ -603,7 +618,7 @@ msgid "Edit FTP account"
 msgstr "FTP fiók szerkesztése"
 
 #: frontend/apps/cloudstorage/ftp.lua:85
-#: frontend/apps/cloudstorage/webdav.lua:70
+#: frontend/apps/cloudstorage/webdav.lua:101
 #: frontend/apps/filemanager/filemanagershortcuts.lua:172
 #: frontend/apps/reader/modules/readerstyletweak.lua:737
 #: frontend/ui/elements/menu_keyboard_layout.lua:141
@@ -622,12 +637,12 @@ msgid "Add FTP account"
 msgstr "FTP fiók hozzáadása"
 
 #: frontend/apps/cloudstorage/ftp.lua:156
-#: frontend/apps/cloudstorage/webdav.lua:149
+#: frontend/apps/cloudstorage/webdav.lua:180
 msgid "Please fill in all fields."
 msgstr "Töltsön ki minden mezőt."
 
 #: frontend/apps/cloudstorage/ftp.lua:170
-#: frontend/apps/cloudstorage/webdav.lua:164
+#: frontend/apps/cloudstorage/webdav.lua:195
 msgid ""
 "Type: %1\n"
 "Name: %2\n"
@@ -637,7 +652,40 @@ msgstr ""
 "Név: %2\n"
 "Cím: %3"
 
-#: frontend/apps/cloudstorage/webdav.lua:52
+#: frontend/apps/cloudstorage/syncservice.lua:25
+#, fuzzy
+msgid "Cloud sync settings"
+msgstr "Betűtípus beállítások"
+
+#: frontend/apps/cloudstorage/syncservice.lua:67
+#, fuzzy
+msgid "Choose cloud service:"
+msgstr "Felhőtárhely típusa"
+
+#: frontend/apps/cloudstorage/syncservice.lua:72
+msgid "Add service"
+msgstr ""
+
+#: frontend/apps/cloudstorage/syncservice.lua:116
+#, fuzzy
+msgid ""
+"Something went wrong when syncing, please check your network connection and "
+"try again later."
+msgstr ""
+"Valami hiba történt az előrehaladás szinkronizálásakor, ellenőrizze a "
+"hálózati kapcsolatot, és próbálja meg később újra."
+
+#: frontend/apps/cloudstorage/syncservice.lua:125
+#, fuzzy
+msgid "Wrong server type."
+msgstr "SSH szerver leállítva."
+
+#: frontend/apps/cloudstorage/syncservice.lua:166
+#, fuzzy
+msgid "Successfully synchronized."
+msgstr "Idő szinkronizálva."
+
+#: frontend/apps/cloudstorage/webdav.lua:83
 msgid ""
 "Server address must be of the form http(s)://domain.name/path\n"
 "This can point to a sub-directory of the WebDAV server.\n"
@@ -648,33 +696,33 @@ msgstr ""
 "Ez a WebDAV szerver almappájára mutathat.\n"
 "A kezdőmappa a szerver elérési útjához csatolva."
 
-#: frontend/apps/cloudstorage/webdav.lua:56
+#: frontend/apps/cloudstorage/webdav.lua:87
 msgid "Server display name"
 msgstr "Szerver megjelenített neve"
 
-#: frontend/apps/cloudstorage/webdav.lua:58
+#: frontend/apps/cloudstorage/webdav.lua:89
 msgid "WebDAV address, for example https://example.com/dav"
 msgstr "WebDAV cím pl. https://webcim.hu/dav"
 
-#: frontend/apps/cloudstorage/webdav.lua:60
+#: frontend/apps/cloudstorage/webdav.lua:91
 #: plugins/wallabag.koplugin/main.lua:1036
 msgid "Username"
 msgstr "Felhasználónév"
 
-#: frontend/apps/cloudstorage/webdav.lua:62
+#: frontend/apps/cloudstorage/webdav.lua:93
 #: plugins/wallabag.koplugin/main.lua:1042
 msgid "Password"
 msgstr "Jelszó"
 
-#: frontend/apps/cloudstorage/webdav.lua:64
+#: frontend/apps/cloudstorage/webdav.lua:95
 msgid "Start folder"
 msgstr "Start mappa"
 
-#: frontend/apps/cloudstorage/webdav.lua:69
+#: frontend/apps/cloudstorage/webdav.lua:100
 msgid "Edit WebDAV account"
 msgstr "WebDAV fiók szerkesztése"
 
-#: frontend/apps/cloudstorage/webdav.lua:77
+#: frontend/apps/cloudstorage/webdav.lua:108
 msgid "Add WebDAV account"
 msgstr "WebDAV fiók hozzáadása"
 
@@ -727,8 +775,8 @@ msgstr "Tároló mappa:"
 #: frontend/ui/widget/bookstatuswidget.lua:157
 #: frontend/ui/widget/notification.lua:45
 #: plugins/batterystat.koplugin/main.lua:76
-#: plugins/statistics.koplugin/main.lua:1390
-#: plugins/statistics.koplugin/main.lua:1393
+#: plugins/statistics.koplugin/main.lua:1506
+#: plugins/statistics.koplugin/main.lua:1509
 msgid "N/A"
 msgstr "nincs elérhető adat"
 
@@ -775,8 +823,8 @@ msgid "Cover image:"
 msgstr "Borítókép:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:231
-#: plugins/statistics.koplugin/main.lua:1397
-#: plugins/statistics.koplugin/main.lua:1499
+#: plugins/statistics.koplugin/main.lua:1513
+#: plugins/statistics.koplugin/main.lua:1615
 msgid "Tap to display"
 msgstr "Megjelenítés koppintásra"
 
@@ -961,10 +1009,10 @@ msgstr ""
 #: frontend/apps/reader/modules/readerbookmark.lua:695
 #: frontend/apps/reader/modules/readermenu.lua:199
 #: frontend/ui/widget/inputdialog.lua:646
-#: plugins/statistics.koplugin/main.lua:1970
-#: plugins/statistics.koplugin/main.lua:2143
-#: plugins/statistics.koplugin/main.lua:2182
-#: plugins/vocabbuilder.koplugin/main.lua:255
+#: plugins/statistics.koplugin/main.lua:2086
+#: plugins/statistics.koplugin/main.lua:2259
+#: plugins/statistics.koplugin/main.lua:2298
+#: plugins/vocabbuilder.koplugin/main.lua:257
 msgid "Reset"
 msgstr "Törlés"
 
@@ -987,7 +1035,7 @@ msgstr ""
 "Ha törli a fájlt, az véglegesen elveszik."
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:213
-#: frontend/ui/data/creoptions.lua:35 plugins/statistics.koplugin/main.lua:1828
+#: frontend/ui/data/creoptions.lua:35 plugins/statistics.koplugin/main.lua:1944
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
@@ -1524,7 +1572,7 @@ msgstr "A legutóbbi dokumentum nem nyitható meg"
 #: frontend/ui/elements/screensaver_menu.lua:96 frontend/ui/otamanager.lua:485
 #: plugins/newsdownloader.koplugin/main.lua:124
 #: plugins/perceptionexpander.koplugin/main.lua:176
-#: plugins/statistics.koplugin/main.lua:938
+#: plugins/statistics.koplugin/main.lua:978
 #: plugins/texteditor.koplugin/main.lua:110
 #: plugins/wallabag.koplugin/main.lua:158
 msgid "Settings"
@@ -2056,7 +2104,7 @@ msgstr "Törli a könyvjelzőt?"
 #: frontend/apps/reader/modules/readerbookmark.lua:724
 #: frontend/apps/reader/modules/readeruserhyph.lua:293
 #: plugins/gestures.koplugin/main.lua:423
-#: plugins/statistics.koplugin/main.lua:2226
+#: plugins/statistics.koplugin/main.lua:2342
 #: plugins/texteditor.koplugin/main.lua:265
 msgid "Remove"
 msgstr "Törlés"
@@ -2227,8 +2275,8 @@ msgstr "Fejezethatárok"
 #: plugins/coverimage.koplugin/main.lua:465
 #: plugins/coverimage.koplugin/main.lua:485
 #: plugins/coverimage.koplugin/main.lua:620
-#: plugins/vocabbuilder.koplugin/main.lua:197
-#: plugins/vocabbuilder.koplugin/main.lua:214
+#: plugins/vocabbuilder.koplugin/main.lua:199
+#: plugins/vocabbuilder.koplugin/main.lua:216
 msgid "off"
 msgstr "ki"
 
@@ -2416,7 +2464,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:208
 #: frontend/apps/reader/modules/readerdictionary.lua:902
-#: frontend/dispatcher.lua:96 plugins/vocabbuilder.koplugin/main.lua:76
+#: frontend/dispatcher.lua:96 plugins/vocabbuilder.koplugin/main.lua:78
 msgid "Dictionary lookup"
 msgstr "Szótár használata"
 
@@ -2456,7 +2504,7 @@ msgstr "Törli a szótár használati előzményeket?"
 #: frontend/apps/reader/modules/readerdictionary.lua:302
 #: frontend/apps/reader/modules/readerwikipedia.lua:312
 #: plugins/texteditor.koplugin/main.lua:203
-#: plugins/vocabbuilder.koplugin/main.lua:270
+#: plugins/vocabbuilder.koplugin/main.lua:272
 msgid "Clean"
 msgstr "Törlés"
 
@@ -3045,7 +3093,7 @@ msgstr "Ismétlések száma:"
 #: plugins/autowarmth.koplugin/main.lua:926
 #: plugins/coverimage.koplugin/main.lua:410
 #: plugins/kosync.koplugin/main.lua:299
-#: plugins/statistics.koplugin/main.lua:1020
+#: plugins/statistics.koplugin/main.lua:1060
 msgid "Set"
 msgstr "Beállítás"
 
@@ -3496,7 +3544,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readergoto.lua:89 frontend/dispatcher.lua:119
 #: frontend/ui/widget/keyvaluepage.lua:413 frontend/ui/widget/menu.lua:735
 #: frontend/ui/widget/sortwidget.lua:246
-#: plugins/vocabbuilder.koplugin/main.lua:1109
+#: plugins/vocabbuilder.koplugin/main.lua:1218
 msgid "Go to page"
 msgstr "Ugrás megadott oldalra"
 
@@ -3694,8 +3742,8 @@ msgstr ""
 #: frontend/apps/reader/modules/readerhighlight.lua:475
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:154 frontend/util.lua:224
 #: plugins/autodim.koplugin/main.lua:114
-#: plugins/statistics.koplugin/main.lua:965
-#: plugins/vocabbuilder.koplugin/main.lua:862
+#: plugins/statistics.koplugin/main.lua:1005
+#: plugins/vocabbuilder.koplugin/main.lua:935
 msgctxt "Time"
 msgid "s"
 msgstr "mp"
@@ -6441,7 +6489,7 @@ msgstr "Forgatás 90° az óramutató járási irányába"
 msgid "Rotate by 90° CCW"
 msgstr "Forgatás 90° CCW"
 
-#: frontend/dispatcher.lua:92 plugins/statistics.koplugin/main.lua:1070
+#: frontend/dispatcher.lua:92 plugins/statistics.koplugin/main.lua:1186
 msgid "Reading progress"
 msgstr "Olvasási folyamat"
 
@@ -6792,8 +6840,8 @@ msgstr "Két oszlop"
 #: frontend/ui/data/koptoptions.lua:491 frontend/ui/data/koptoptions.lua:501
 #: frontend/ui/data/koptoptions.lua:514 frontend/ui/data/koptoptions.lua:557
 #: frontend/ui/data/koptoptions.lua:600
-#: plugins/vocabbuilder.koplugin/main.lua:197
-#: plugins/vocabbuilder.koplugin/main.lua:214
+#: plugins/vocabbuilder.koplugin/main.lua:199
+#: plugins/vocabbuilder.koplugin/main.lua:216
 msgid "on"
 msgstr "be"
 
@@ -11541,14 +11589,14 @@ msgstr "%1 megnyitása ezzel:"
 
 #: frontend/ui/widget/frontlightwidget.lua:185
 #: frontend/ui/widget/frontlightwidget.lua:314
-#: plugins/statistics.koplugin/main.lua:949
+#: plugins/statistics.koplugin/main.lua:989
 msgctxt "Extrema"
 msgid "Min"
 msgstr "Min"
 
 #: frontend/ui/widget/frontlightwidget.lua:196
 #: frontend/ui/widget/frontlightwidget.lua:325
-#: plugins/statistics.koplugin/main.lua:956
+#: plugins/statistics.koplugin/main.lua:996
 msgctxt "Extrema"
 msgid "Max"
 msgstr "Max"
@@ -11691,7 +11739,7 @@ msgid "Copy word"
 msgstr "Szó másolása"
 
 #: frontend/ui/widget/inputtext.lua:223
-#: plugins/vocabbuilder.koplugin/main.lua:481
+#: plugins/vocabbuilder.koplugin/main.lua:554
 msgid "Word copied to clipboard."
 msgstr "Szó a vágólapra másolva."
 
@@ -11718,7 +11766,7 @@ msgstr "Átkapcsolás"
 #: frontend/ui/widget/keyvaluepage.lua:401 frontend/ui/widget/menu.lua:783
 #: frontend/ui/widget/sortwidget.lua:234
 #: plugins/opds.koplugin/opdsbrowser.lua:877
-#: plugins/vocabbuilder.koplugin/main.lua:1097
+#: plugins/vocabbuilder.koplugin/main.lua:1206
 msgid "Enter page number"
 msgstr "Oldalszám megadása"
 
@@ -11726,12 +11774,12 @@ msgstr "Oldalszám megadása"
 #: frontend/ui/widget/keyvaluepage.lua:713 frontend/ui/widget/menu.lua:987
 #: frontend/ui/widget/sortwidget.lua:404 frontend/ui/widget/touchmenu.lua:698
 #: plugins/coverbrowser.koplugin/listmenu.lua:426
-#: plugins/vocabbuilder.koplugin/main.lua:1276
+#: plugins/vocabbuilder.koplugin/main.lua:1388
 msgid "Page %1 of %2"
 msgstr "Oldalszám: %1 / %2"
 
 #: frontend/ui/widget/keyvaluepage.lua:729 frontend/ui/widget/menu.lua:1005
-#: plugins/vocabbuilder.koplugin/main.lua:1285
+#: plugins/vocabbuilder.koplugin/main.lua:1397
 msgid "No items"
 msgstr "Nincsenek elemek"
 
@@ -11977,7 +12025,7 @@ msgstr ""
 "Választ új mappát?"
 
 #: frontend/ui/widget/screenshoter.lua:92
-#: plugins/statistics.koplugin/main.lua:1027
+#: plugins/statistics.koplugin/main.lua:1067
 msgid "Use default"
 msgstr "Alapértelmezés"
 
@@ -12106,13 +12154,13 @@ msgid "%1m%2s"
 msgstr "%1p%2mp"
 
 #: frontend/util.lua:212 frontend/util.lua:214
-#: plugins/vocabbuilder.koplugin/main.lua:866
+#: plugins/vocabbuilder.koplugin/main.lua:939
 msgctxt "Time"
 msgid "h"
 msgstr "ó"
 
 #: frontend/util.lua:213 frontend/util.lua:215 frontend/util.lua:220
-#: frontend/util.lua:226 plugins/vocabbuilder.koplugin/main.lua:864
+#: frontend/util.lua:226 plugins/vocabbuilder.koplugin/main.lua:937
 msgctxt "Time"
 msgid "m"
 msgstr "p"
@@ -15787,126 +15835,126 @@ msgstr "Adja meg a hónapot"
 msgid "Invalid year-month string (YYYY-MM)"
 msgstr "Hibás év-hónap string (ÉÉÉÉ-HH)"
 
-#: plugins/statistics.koplugin/main.lua:80
+#: plugins/statistics.koplugin/main.lua:81
 msgid "Mon"
 msgstr "Hétfő"
 
-#: plugins/statistics.koplugin/main.lua:81
+#: plugins/statistics.koplugin/main.lua:82
 msgid "Tue"
 msgstr "Kedd"
 
-#: plugins/statistics.koplugin/main.lua:82
+#: plugins/statistics.koplugin/main.lua:83
 msgid "Wed"
 msgstr "Szerda"
 
-#: plugins/statistics.koplugin/main.lua:83
+#: plugins/statistics.koplugin/main.lua:84
 msgid "Thu"
 msgstr "Csütörtök"
 
-#: plugins/statistics.koplugin/main.lua:84
+#: plugins/statistics.koplugin/main.lua:85
 msgid "Fri"
 msgstr "Péntek"
 
-#: plugins/statistics.koplugin/main.lua:85
+#: plugins/statistics.koplugin/main.lua:86
 msgid "Sat"
 msgstr "Szombat"
 
-#: plugins/statistics.koplugin/main.lua:86
+#: plugins/statistics.koplugin/main.lua:87
 msgid "Sun"
 msgstr "Vasárnap"
 
-#: plugins/statistics.koplugin/main.lua:90
+#: plugins/statistics.koplugin/main.lua:91
 #: plugins/statistics.koplugin/readerprogress.lua:34
 msgid "Monday"
 msgstr "Hétfő"
 
-#: plugins/statistics.koplugin/main.lua:91
+#: plugins/statistics.koplugin/main.lua:92
 #: plugins/statistics.koplugin/readerprogress.lua:35
 msgid "Tuesday"
 msgstr "Kedd"
 
-#: plugins/statistics.koplugin/main.lua:92
+#: plugins/statistics.koplugin/main.lua:93
 #: plugins/statistics.koplugin/readerprogress.lua:36
 msgid "Wednesday"
 msgstr "Szerda"
 
-#: plugins/statistics.koplugin/main.lua:93
+#: plugins/statistics.koplugin/main.lua:94
 #: plugins/statistics.koplugin/readerprogress.lua:37
 msgid "Thursday"
 msgstr "Csütörtök"
 
-#: plugins/statistics.koplugin/main.lua:94
+#: plugins/statistics.koplugin/main.lua:95
 #: plugins/statistics.koplugin/readerprogress.lua:38
 msgid "Friday"
 msgstr "Péntek"
 
-#: plugins/statistics.koplugin/main.lua:95
+#: plugins/statistics.koplugin/main.lua:96
 #: plugins/statistics.koplugin/readerprogress.lua:39
 msgid "Saturday"
 msgstr "Szombat"
 
-#: plugins/statistics.koplugin/main.lua:96
+#: plugins/statistics.koplugin/main.lua:97
 #: plugins/statistics.koplugin/readerprogress.lua:40
 msgid "Sunday"
 msgstr "Vasárnap"
 
-#: plugins/statistics.koplugin/main.lua:100
+#: plugins/statistics.koplugin/main.lua:101
 msgid "January"
 msgstr "Január"
 
-#: plugins/statistics.koplugin/main.lua:101
+#: plugins/statistics.koplugin/main.lua:102
 msgid "February"
 msgstr "Február"
 
-#: plugins/statistics.koplugin/main.lua:102
+#: plugins/statistics.koplugin/main.lua:103
 msgid "March"
 msgstr "Március"
 
-#: plugins/statistics.koplugin/main.lua:103
+#: plugins/statistics.koplugin/main.lua:104
 msgid "April"
 msgstr "Április"
 
-#: plugins/statistics.koplugin/main.lua:104
+#: plugins/statistics.koplugin/main.lua:105
 msgid "May"
 msgstr "Május"
 
-#: plugins/statistics.koplugin/main.lua:105
+#: plugins/statistics.koplugin/main.lua:106
 msgid "June"
 msgstr "Június"
 
-#: plugins/statistics.koplugin/main.lua:106
+#: plugins/statistics.koplugin/main.lua:107
 msgid "July"
 msgstr "Július"
 
-#: plugins/statistics.koplugin/main.lua:107
+#: plugins/statistics.koplugin/main.lua:108
 msgid "August"
 msgstr "Augusztus"
 
-#: plugins/statistics.koplugin/main.lua:108
+#: plugins/statistics.koplugin/main.lua:109
 msgid "September"
 msgstr "Szeptember"
 
-#: plugins/statistics.koplugin/main.lua:109
+#: plugins/statistics.koplugin/main.lua:110
 msgid "October"
 msgstr "Október"
 
-#: plugins/statistics.koplugin/main.lua:110
+#: plugins/statistics.koplugin/main.lua:111
 msgid "November"
 msgstr "November"
 
-#: plugins/statistics.koplugin/main.lua:111
+#: plugins/statistics.koplugin/main.lua:112
 msgid "December"
 msgstr "December"
 
-#: plugins/statistics.koplugin/main.lua:132
+#: plugins/statistics.koplugin/main.lua:133
 msgid "Statistics calendar view"
 msgstr "Statisztikai naptár nézet"
 
-#: plugins/statistics.koplugin/main.lua:133
+#: plugins/statistics.koplugin/main.lua:134
 msgid "Book statistics"
 msgstr "Könyvstatisztika"
 
-#: plugins/statistics.koplugin/main.lua:338
+#: plugins/statistics.koplugin/main.lua:339
 msgid ""
 "Cannot open database in %1.\n"
 "The database may have been moved or deleted.\n"
@@ -15916,15 +15964,15 @@ msgstr ""
 "Lehet, hogy az adatbázist áthelyezték vagy törölték.\n"
 "Szeretne egy üres adatbázist létrehozni?\n"
 
-#: plugins/statistics.koplugin/main.lua:353
+#: plugins/statistics.koplugin/main.lua:354
 msgid "A new empty database has been created."
 msgstr "Egy új, üres adatbázis került létrehozásra."
 
-#: plugins/statistics.koplugin/main.lua:392
+#: plugins/statistics.koplugin/main.lua:397
 msgid "Statistics database updated."
 msgstr "Statisztikai adatbázis frissítve."
 
-#: plugins/statistics.koplugin/main.lua:421
+#: plugins/statistics.koplugin/main.lua:426
 msgid ""
 "New version of statistics plugin detected.\n"
 "Statistics data needs to be converted into the new database format.\n"
@@ -15936,7 +15984,7 @@ msgstr ""
 "Ez néhány percet vehet igénybe.\n"
 "Kis türelmet...\n"
 
-#: plugins/statistics.koplugin/main.lua:433
+#: plugins/statistics.koplugin/main.lua:438
 msgid ""
 "Conversion complete.\n"
 "Imported one book to the database.\n"
@@ -15954,24 +16002,24 @@ msgstr[1] ""
 "%1 könyv importálva az adatbázisba.\n"
 "Folytatás érintésre."
 
-#: plugins/statistics.koplugin/main.lua:908
+#: plugins/statistics.koplugin/main.lua:948
 msgid "Enabled"
 msgstr "Engedélyezés"
 
-#: plugins/statistics.koplugin/main.lua:934
+#: plugins/statistics.koplugin/main.lua:974
 #: plugins/statistics.koplugin/_meta.lua:4
 msgid "Reading statistics"
 msgstr "Olvasási statisztikák"
 
-#: plugins/statistics.koplugin/main.lua:942
+#: plugins/statistics.koplugin/main.lua:982
 msgid "Read page duration limits: %1 s – %2 s"
 msgstr "Olvasottnak tekintés időtartama: %1 mp - %2 mp"
 
-#: plugins/statistics.koplugin/main.lua:966
+#: plugins/statistics.koplugin/main.lua:1006
 msgid "Read page duration limits"
 msgstr "Olvasottnak tekintett oldal időtartama"
 
-#: plugins/statistics.koplugin/main.lua:967
+#: plugins/statistics.koplugin/main.lua:1007
 msgid ""
 "Set min and max time spent (in seconds) on a page for it to be counted as "
 "read in statistics.\n"
@@ -15988,44 +16036,66 @@ msgstr ""
 "tartózkodik (mert elaludt vagy elment), belekerüljön, de az időtartam e "
 "megadott maximális értékre korlátozódjon."
 
-#: plugins/statistics.koplugin/main.lua:984
+#: plugins/statistics.koplugin/main.lua:1024
 msgid "Calendar weeks start on %1"
 msgstr "A hét kezdőnapja: %1"
 
-#: plugins/statistics.koplugin/main.lua:1012
+#: plugins/statistics.koplugin/main.lua:1052
 msgid "Books per calendar day: %1"
 msgstr "Megjelenített könyvek száma naponta: %1"
 
-#: plugins/statistics.koplugin/main.lua:1021
+#: plugins/statistics.koplugin/main.lua:1061
 msgid "Books per calendar day"
 msgstr "Könyv naponta"
 
-#: plugins/statistics.koplugin/main.lua:1022
+#: plugins/statistics.koplugin/main.lua:1062
 msgid "Set the max number of book spans to show for a day"
 msgstr "A naponta megjelenített könyvek maximális száma"
 
-#: plugins/statistics.koplugin/main.lua:1037
+#: plugins/statistics.koplugin/main.lua:1077
 msgid "Show hourly histogram in calendar days"
 msgstr "Naponta, óránkénti bontásban"
 
-#: plugins/statistics.koplugin/main.lua:1044
+#: plugins/statistics.koplugin/main.lua:1084
 msgid "Allow browsing coming months"
 msgstr "Következő hónapok engedélyezése"
 
-#: plugins/statistics.koplugin/main.lua:1053
+#: plugins/statistics.koplugin/main.lua:1092
+#: plugins/vocabbuilder.koplugin/main.lua:348
+#, fuzzy
+msgid "Cloud sync"
+msgstr "Felhőtárhely"
+
+#: plugins/statistics.koplugin/main.lua:1116
+#, fuzzy
+msgid "Delete server info?"
+msgstr "Hírcsatorna törlése"
+
+#: plugins/statistics.koplugin/main.lua:1144
+msgid ""
+"Cloud storage:\n"
+"%1\n"
+"\n"
+"Folder path:\n"
+"%2\n"
+"\n"
+"Set up the same cloud folder on each device to sync across your devices."
+msgstr ""
+
+#: plugins/statistics.koplugin/main.lua:1158
 msgid "Reset statistics"
 msgstr "Statisztika törlése"
 
-#: plugins/statistics.koplugin/main.lua:1058
+#: plugins/statistics.koplugin/main.lua:1174
 msgid "Current book"
 msgstr "Aktuális könyv"
 
-#: plugins/statistics.koplugin/main.lua:1062
-#: plugins/statistics.koplugin/main.lua:2596
+#: plugins/statistics.koplugin/main.lua:1178
+#: plugins/statistics.koplugin/main.lua:2712
 msgid "Current statistics"
 msgstr "Statisztika"
 
-#: plugins/statistics.koplugin/main.lua:1087
+#: plugins/statistics.koplugin/main.lua:1203
 msgid ""
 "Reading progress is not available.\n"
 "There is no data for the last week."
@@ -16033,185 +16103,185 @@ msgstr ""
 "Olvasási folyamat nem elérhető.\n"
 "Nincsenek adatok a legutóbbi hétről."
 
-#: plugins/statistics.koplugin/main.lua:1093
+#: plugins/statistics.koplugin/main.lua:1209
 msgid "Time range"
 msgstr "Időtartam"
 
-#: plugins/statistics.koplugin/main.lua:1100
+#: plugins/statistics.koplugin/main.lua:1216
 msgid "Calendar view"
 msgstr "Naptárnézet"
 
-#: plugins/statistics.koplugin/main.lua:1112
+#: plugins/statistics.koplugin/main.lua:1228
 msgid "Time range statistics"
 msgstr "Időtartam statisztika"
 
-#: plugins/statistics.koplugin/main.lua:1115
+#: plugins/statistics.koplugin/main.lua:1231
 msgid "All books"
 msgstr "Összes könyv"
 
-#: plugins/statistics.koplugin/main.lua:1133
-#: plugins/statistics.koplugin/main.lua:1138
+#: plugins/statistics.koplugin/main.lua:1249
+#: plugins/statistics.koplugin/main.lua:1254
 msgid "Books by week"
 msgstr "Könyvek hetente"
 
-#: plugins/statistics.koplugin/main.lua:1150
-#: plugins/statistics.koplugin/main.lua:1155
+#: plugins/statistics.koplugin/main.lua:1266
+#: plugins/statistics.koplugin/main.lua:1271
 msgid "Books by month"
 msgstr "Könyvek havonta"
 
-#: plugins/statistics.koplugin/main.lua:1168
-#: plugins/statistics.koplugin/main.lua:1173
+#: plugins/statistics.koplugin/main.lua:1284
+#: plugins/statistics.koplugin/main.lua:1289
 #: plugins/statistics.koplugin/readerprogress.lua:110
 msgid "Last week"
 msgstr "Legutóbbi hét"
 
-#: plugins/statistics.koplugin/main.lua:1185
-#: plugins/statistics.koplugin/main.lua:1190
+#: plugins/statistics.koplugin/main.lua:1301
+#: plugins/statistics.koplugin/main.lua:1306
 msgid "Last month by day"
 msgstr "Legutóbbi hónap naponta"
 
-#: plugins/statistics.koplugin/main.lua:1202
-#: plugins/statistics.koplugin/main.lua:1207
+#: plugins/statistics.koplugin/main.lua:1318
+#: plugins/statistics.koplugin/main.lua:1323
 msgid "Last year by day"
 msgstr "Legutóbbi év naponta"
 
-#: plugins/statistics.koplugin/main.lua:1219
-#: plugins/statistics.koplugin/main.lua:1224
+#: plugins/statistics.koplugin/main.lua:1335
+#: plugins/statistics.koplugin/main.lua:1340
 msgid "Last year by week"
 msgstr "Legutóbbi év hetente"
 
-#: plugins/statistics.koplugin/main.lua:1236
-#: plugins/statistics.koplugin/main.lua:1241
+#: plugins/statistics.koplugin/main.lua:1352
+#: plugins/statistics.koplugin/main.lua:1357
 msgid "All stats by month"
 msgstr "Teljes statisztika havonta"
 
-#: plugins/statistics.koplugin/main.lua:1370
+#: plugins/statistics.koplugin/main.lua:1486
 msgid "Time spent reading this session"
 msgstr "Olvasással töltött idő ebben a futásban"
 
-#: plugins/statistics.koplugin/main.lua:1371
+#: plugins/statistics.koplugin/main.lua:1487
 msgid "Pages read this session"
 msgstr "Olvasott oldalak ebben a futásban"
 
-#: plugins/statistics.koplugin/main.lua:1373
+#: plugins/statistics.koplugin/main.lua:1489
 msgid "Time spent reading today"
 msgstr "Ma olvasással töltött idő"
 
-#: plugins/statistics.koplugin/main.lua:1374
+#: plugins/statistics.koplugin/main.lua:1490
 msgid "Pages read today"
 msgstr "Ma elolvasott oldal"
 
-#: plugins/statistics.koplugin/main.lua:1377
-#: plugins/statistics.koplugin/main.lua:1491
+#: plugins/statistics.koplugin/main.lua:1493
+#: plugins/statistics.koplugin/main.lua:1607
 msgid "Total time spent on this book"
 msgstr "A könyvre fordított idő"
 
-#: plugins/statistics.koplugin/main.lua:1379
-#: plugins/statistics.koplugin/main.lua:1492
+#: plugins/statistics.koplugin/main.lua:1495
+#: plugins/statistics.koplugin/main.lua:1608
 msgid "Time spent reading this book"
 msgstr "A könyv olvasásával töltött idő"
 
-#: plugins/statistics.koplugin/main.lua:1381
-#: plugins/statistics.koplugin/main.lua:1488
+#: plugins/statistics.koplugin/main.lua:1497
+#: plugins/statistics.koplugin/main.lua:1604
 msgid "Reading started"
 msgstr "Olvasás elkezdve"
 
-#: plugins/statistics.koplugin/main.lua:1382
-#: plugins/statistics.koplugin/main.lua:1490
+#: plugins/statistics.koplugin/main.lua:1498
+#: plugins/statistics.koplugin/main.lua:1606
 msgid "Days reading this book"
 msgstr "A könyv olvasásával töltött napok"
 
-#: plugins/statistics.koplugin/main.lua:1383
-#: plugins/statistics.koplugin/main.lua:1493
+#: plugins/statistics.koplugin/main.lua:1499
+#: plugins/statistics.koplugin/main.lua:1609
 msgid "Average time per day"
 msgstr "Átlagos idő naponta"
 
-#: plugins/statistics.koplugin/main.lua:1385
-#: plugins/statistics.koplugin/main.lua:1494
+#: plugins/statistics.koplugin/main.lua:1501
+#: plugins/statistics.koplugin/main.lua:1610
 msgid "Average time per page"
 msgstr "Átlagos idő oldalanként"
 
-#: plugins/statistics.koplugin/main.lua:1386
-#: plugins/statistics.koplugin/main.lua:1495
+#: plugins/statistics.koplugin/main.lua:1502
+#: plugins/statistics.koplugin/main.lua:1611
 msgid "Pages read"
 msgstr "Elolvasott oldalak"
 
-#: plugins/statistics.koplugin/main.lua:1388
+#: plugins/statistics.koplugin/main.lua:1504
 msgid "Current page/Total pages"
 msgstr "Aktuális oldal/Össz. oldal"
 
-#: plugins/statistics.koplugin/main.lua:1390
+#: plugins/statistics.koplugin/main.lua:1506
 msgid "Estimated time to read"
 msgstr "Kiolvasás becsült ideje"
 
-#: plugins/statistics.koplugin/main.lua:1391
+#: plugins/statistics.koplugin/main.lua:1507
 msgid "Estimated reading finished"
 msgstr "Becsült olvasás befejeződés"
 
-#: plugins/statistics.koplugin/main.lua:1392
+#: plugins/statistics.koplugin/main.lua:1508
 msgid "%1 (1 day)"
 msgid_plural "%1 (%2 days)"
 msgstr[0] "%1 (1 nap)"
 msgstr[1] "%1 (%2 nap)"
 
-#: plugins/statistics.koplugin/main.lua:1395
-#: plugins/statistics.koplugin/main.lua:1497
+#: plugins/statistics.koplugin/main.lua:1511
+#: plugins/statistics.koplugin/main.lua:1613
 msgid "Highlights"
 msgstr "Kijelölések"
 
-#: plugins/statistics.koplugin/main.lua:1397
-#: plugins/statistics.koplugin/main.lua:1499
+#: plugins/statistics.koplugin/main.lua:1513
+#: plugins/statistics.koplugin/main.lua:1615
 msgid "Show days"
 msgstr "Napok megjelenítése"
 
-#: plugins/statistics.koplugin/main.lua:1402
-#: plugins/statistics.koplugin/main.lua:1504
-#: plugins/statistics.koplugin/main.lua:1834
+#: plugins/statistics.koplugin/main.lua:1518
+#: plugins/statistics.koplugin/main.lua:1620
+#: plugins/statistics.koplugin/main.lua:1950
 msgid "Days reading %1"
 msgstr "Olvasással töltött napok - %1"
 
-#: plugins/statistics.koplugin/main.lua:1486
+#: plugins/statistics.koplugin/main.lua:1602
 msgid "Title"
 msgstr "Cím"
 
-#: plugins/statistics.koplugin/main.lua:1487
+#: plugins/statistics.koplugin/main.lua:1603
 msgid "Authors"
 msgstr "Szerzők"
 
-#: plugins/statistics.koplugin/main.lua:1489
+#: plugins/statistics.koplugin/main.lua:1605
 msgid "Last read"
 msgstr "Legutóbb olvasva"
 
-#: plugins/statistics.koplugin/main.lua:1496
+#: plugins/statistics.koplugin/main.lua:1612
 msgid "Last read page/Total pages"
 msgstr "Legutóbb olvasott oldal/Összes oldal"
 
-#: plugins/statistics.koplugin/main.lua:1584
-#: plugins/statistics.koplugin/main.lua:1613
+#: plugins/statistics.koplugin/main.lua:1700
+#: plugins/statistics.koplugin/main.lua:1729
 msgid "Books read in %1"
 msgstr "Olvasott könyvek %1"
 
-#: plugins/statistics.koplugin/main.lua:1696
+#: plugins/statistics.koplugin/main.lua:1812
 msgid "%1 Week %2"
 msgstr "%1 %2 hét"
 
-#: plugins/statistics.koplugin/main.lua:1718
-#: plugins/statistics.koplugin/main.lua:1732
-#: plugins/statistics.koplugin/main.lua:1743
-#: plugins/statistics.koplugin/main.lua:1784
-#: plugins/statistics.koplugin/main.lua:1934
+#: plugins/statistics.koplugin/main.lua:1834
+#: plugins/statistics.koplugin/main.lua:1848
+#: plugins/statistics.koplugin/main.lua:1859
+#: plugins/statistics.koplugin/main.lua:1900
+#: plugins/statistics.koplugin/main.lua:2050
 msgid "Pages: (%1) Time: %2"
 msgstr "Oldal: (%1) Idő: %2"
 
-#: plugins/statistics.koplugin/main.lua:1789
+#: plugins/statistics.koplugin/main.lua:1905
 msgid "Books read %1"
 msgstr "Olvasott könyv %1"
 
-#: plugins/statistics.koplugin/main.lua:1950
+#: plugins/statistics.koplugin/main.lua:2066
 msgid "Do you want to reset statistics for day %1 for this book?"
 msgstr "Visszaállítja e könyv %1 napi statisztikáit?"
 
-#: plugins/statistics.koplugin/main.lua:1962
+#: plugins/statistics.koplugin/main.lua:2078
 msgid ""
 "Do you want to reset statistics for this period for book:\n"
 "%1"
@@ -16219,26 +16289,26 @@ msgstr ""
 "Visszaállítja e könyv statisztikáit erre az időszakra?\n"
 "%1"
 
-#: plugins/statistics.koplugin/main.lua:2054
+#: plugins/statistics.koplugin/main.lua:2170
 msgid "Total time spent reading: %1"
 msgstr "Olvasással töltött összes idő: %1"
 
-#: plugins/statistics.koplugin/main.lua:2060
+#: plugins/statistics.koplugin/main.lua:2176
 msgid "Reset statistics for the current book"
 msgstr "Aktuális könyvstatisztika törlése"
 
-#: plugins/statistics.koplugin/main.lua:2069
+#: plugins/statistics.koplugin/main.lua:2185
 msgid "Reset statistics per book"
 msgstr "Könyvstatisztika törlése"
 
-#: plugins/statistics.koplugin/main.lua:2078
+#: plugins/statistics.koplugin/main.lua:2194
 msgid "Reset stats for books read for < 1 m"
 msgid_plural "Reset stats for books read for < %1 m"
 msgstr[0] "Könyvstatisztika törlése, ha az olvasási idő < 1 perc"
 msgstr[1] "Könyvstatisztika törlése, ha az olvasási idő < %1 perc"
 
-#: plugins/statistics.koplugin/main.lua:2138
-#: plugins/statistics.koplugin/main.lua:2177
+#: plugins/statistics.koplugin/main.lua:2254
+#: plugins/statistics.koplugin/main.lua:2293
 msgid ""
 "Do you want to reset statistics for book:\n"
 "%1"
@@ -16246,11 +16316,11 @@ msgstr ""
 "Törölni szeretné e könyv statisztikáit:\n"
 "%1"
 
-#: plugins/statistics.koplugin/main.lua:2156
+#: plugins/statistics.koplugin/main.lua:2272
 msgid "Reset book statistics"
 msgstr "Könyvstatisztika törlése"
 
-#: plugins/statistics.koplugin/main.lua:2223
+#: plugins/statistics.koplugin/main.lua:2339
 msgid "Permanently remove statistics for books read for less than 1 minute?"
 msgid_plural ""
 "Permanently remove statistics for books read for less than %1 minutes?"
@@ -16261,13 +16331,13 @@ msgstr[1] ""
 "Véglegesen eltávolítja a(z) %1 percnél rövidebb ideig olvasott könyvek "
 "statisztikáját?"
 
-#: plugins/statistics.koplugin/main.lua:2263
+#: plugins/statistics.koplugin/main.lua:2379
 msgid "Statistics for 1 book removed."
 msgid_plural "Statistics for %1 books removed."
 msgstr[0] "Egy könyv statisztikája eltávolítva."
 msgstr[1] "%1 könyv statisztikája eltávolítva."
 
-#: plugins/statistics.koplugin/main.lua:2266
+#: plugins/statistics.koplugin/main.lua:2382
 msgid "No statistics removed."
 msgstr "Nincs eltávolított statisztika."
 
@@ -16902,120 +16972,131 @@ msgstr "Idő szinkronizálása"
 msgid "Synchronizes the device time with NTP servers."
 msgstr "A készülék idejét szinkronizálja NTP-kiszolgálókkal."
 
-#: plugins/vocabbuilder.koplugin/main.lua:73
+#: plugins/vocabbuilder.koplugin/main.lua:75
 msgid "Add to vocabulary builder"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:123
+#: plugins/vocabbuilder.koplugin/main.lua:125
 msgid "Filter words from books"
 msgstr "Szavak szűrése könyvekből"
 
-#: plugins/vocabbuilder.koplugin/main.lua:178
-#: plugins/vocabbuilder.koplugin/main.lua:308
+#: plugins/vocabbuilder.koplugin/main.lua:180
+#: plugins/vocabbuilder.koplugin/main.lua:381
 msgid "Auto add new words"
 msgstr "Új szavak automatikus hozzáadása"
 
-#: plugins/vocabbuilder.koplugin/main.lua:182
-#: plugins/vocabbuilder.koplugin/main.lua:321
+#: plugins/vocabbuilder.koplugin/main.lua:184
+#: plugins/vocabbuilder.koplugin/main.lua:394
 msgid "Save context"
 msgstr "Kontextus mentése"
 
-#: plugins/vocabbuilder.koplugin/main.lua:225
+#: plugins/vocabbuilder.koplugin/main.lua:227
 msgid "Filter books"
 msgstr "Könyvek szűrése"
 
-#: plugins/vocabbuilder.koplugin/main.lua:233
+#: plugins/vocabbuilder.koplugin/main.lua:235
 msgid "Reverse order"
 msgstr "Fordított rendezés"
 
-#: plugins/vocabbuilder.koplugin/main.lua:233
+#: plugins/vocabbuilder.koplugin/main.lua:235
 msgid "Reverse order and show only reviewable"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:243
+#: plugins/vocabbuilder.koplugin/main.lua:245
 msgid "Resume"
 msgstr "Folytatás"
 
-#: plugins/vocabbuilder.koplugin/main.lua:243
+#: plugins/vocabbuilder.koplugin/main.lua:245
 msgid "Quick deletion"
 msgstr "Gyorstörlés"
 
-#: plugins/vocabbuilder.koplugin/main.lua:251
+#: plugins/vocabbuilder.koplugin/main.lua:253
 msgid "Reset all progress"
 msgstr "Az összes folyamat visszaállítása"
 
-#: plugins/vocabbuilder.koplugin/main.lua:254
+#: plugins/vocabbuilder.koplugin/main.lua:256
 msgid "Reset progress of all words?"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:266
+#: plugins/vocabbuilder.koplugin/main.lua:268
 msgid "Clean all words"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:269
+#: plugins/vocabbuilder.koplugin/main.lua:271
 msgid "Clean all words including progress?"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:445
+#: plugins/vocabbuilder.koplugin/main.lua:340
+msgid ""
+"Cloud storage:\n"
+"%1\n"
+"\n"
+"Folder path:\n"
+"%2\n"
+"\n"
+"Set up the same cloud folder on each device to sync across your devices"
+msgstr ""
+
+#: plugins/vocabbuilder.koplugin/main.lua:518
 msgid "Reset progress"
 msgstr "Folyamat visszaállítása"
 
-#: plugins/vocabbuilder.koplugin/main.lua:452
+#: plugins/vocabbuilder.koplugin/main.lua:525
 msgid "Remove word"
 msgstr "Szó eltávolítása"
 
-#: plugins/vocabbuilder.koplugin/main.lua:462
+#: plugins/vocabbuilder.koplugin/main.lua:535
 #, fuzzy
 msgid "Undo study status"
 msgstr "Akku állapot elrejtése"
 
-#: plugins/vocabbuilder.koplugin/main.lua:697
-#: plugins/vocabbuilder.koplugin/main.lua:1164
-#: plugins/vocabbuilder.koplugin/main.lua:1497
+#: plugins/vocabbuilder.koplugin/main.lua:770
+#: plugins/vocabbuilder.koplugin/main.lua:1275
+#: plugins/vocabbuilder.koplugin/main.lua:1609
 msgid "Forgot"
 msgstr "Elfelejt"
 
-#: plugins/vocabbuilder.koplugin/main.lua:708
-#: plugins/vocabbuilder.koplugin/main.lua:1160
-#: plugins/vocabbuilder.koplugin/main.lua:1483
+#: plugins/vocabbuilder.koplugin/main.lua:781
+#: plugins/vocabbuilder.koplugin/main.lua:1271
+#: plugins/vocabbuilder.koplugin/main.lua:1595
 msgid "Got it"
 msgstr "Értem"
 
-#: plugins/vocabbuilder.koplugin/main.lua:784
+#: plugins/vocabbuilder.koplugin/main.lua:857
 msgid "From"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:868
+#: plugins/vocabbuilder.koplugin/main.lua:941
 msgctxt "Time"
 msgid "d"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:916
+#: plugins/vocabbuilder.koplugin/main.lua:989
 #, fuzzy
 msgid "Added on"
 msgstr "Beágy. betűk"
 
-#: plugins/vocabbuilder.koplugin/main.lua:917
+#: plugins/vocabbuilder.koplugin/main.lua:990
 #, fuzzy
 msgid "Review scheduled at"
 msgstr "Ütemterv"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1284
+#: plugins/vocabbuilder.koplugin/main.lua:1396
 #, fuzzy
 msgid "Filter in effect"
 msgstr "Szűrő elem"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1285
+#: plugins/vocabbuilder.koplugin/main.lua:1397
 msgid "No reviewable items"
 msgstr "Nincsenek felülvizsgálandó elemek"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1453
-#: plugins/vocabbuilder.koplugin/main.lua:1524
+#: plugins/vocabbuilder.koplugin/main.lua:1565
+#: plugins/vocabbuilder.koplugin/main.lua:1636
 #: plugins/vocabbuilder.koplugin/_meta.lua:4
 msgid "Vocabulary builder"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:1535
+#: plugins/vocabbuilder.koplugin/main.lua:1647
 msgid "Open vocabulary builder"
 msgstr ""
 
