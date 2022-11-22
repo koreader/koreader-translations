@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 04:49+0000\n"
+"POT-Creation-Date: 2022-11-22 13:03+0000\n"
 "PO-Revision-Date: 2022-11-22 13:03+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
@@ -391,7 +391,7 @@ msgstr "Выбрать локальную папку"
 #: frontend/apps/reader/modules/readerbookmark.lua:592
 #: frontend/apps/reader/modules/readerhighlight.lua:622
 #: frontend/apps/reader/modules/readerhighlight.lua:833
-#: frontend/apps/reader/modules/readerstyletweak.lua:126
+#: frontend/apps/reader/modules/readerstyletweak.lua:137
 #: frontend/ui/elements/menu_keyboard_layout.lua:135
 #: frontend/ui/screensaver.lua:289 frontend/ui/screensaver.lua:347
 #: frontend/ui/widget/datetimewidget.lua:80
@@ -559,7 +559,7 @@ msgstr ""
 #: frontend/apps/cloudstorage/dropbox.lua:143
 #: frontend/apps/reader/modules/readerbookmark.lua:1084
 #: frontend/apps/reader/modules/readermenu.lua:217
-#: frontend/apps/reader/modules/readerstyletweak.lua:739
+#: frontend/apps/reader/modules/readerstyletweak.lua:798
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
 #: frontend/apps/reader/modules/readerwikipedia.lua:164
 #: frontend/apps/reader/readerui.lua:744 frontend/ui/widget/inputdialog.lua:672
@@ -647,7 +647,7 @@ msgstr "Редактировать аккаунт FTP"
 #: frontend/apps/cloudstorage/ftp.lua:85
 #: frontend/apps/cloudstorage/webdav.lua:101
 #: frontend/apps/filemanager/filemanagershortcuts.lua:172
-#: frontend/apps/reader/modules/readerstyletweak.lua:737
+#: frontend/apps/reader/modules/readerstyletweak.lua:796
 #: frontend/ui/elements/menu_keyboard_layout.lua:141
 #: frontend/ui/widget/datetimewidget.lua:79
 #: frontend/ui/widget/doublespinwidget.lua:43
@@ -3862,7 +3862,7 @@ msgid "Failed getting CSS content"
 msgstr "Не удалось получить содержимое CSS"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:1403
-#: frontend/apps/reader/modules/readerstyletweak.lua:712
+#: frontend/apps/reader/modules/readerstyletweak.lua:771
 msgid "Prettify"
 msgstr "Украсить"
 
@@ -4635,13 +4635,13 @@ msgid ""
 "not all matches will be shown."
 msgstr ""
 "Регулярные выражения позволяют искать соответствующий шаблон в тексте. Самый "
-"элементарный пример - это простая последовательность символов, например «"
-"Джеймс Бонд». Существует множество различных разновидностей регулярных "
+"элементарный пример - это простая последовательность символов, например "
+"«Джеймс Бонд». Существует множество различных разновидностей регулярных "
 "выражений, но мы поддерживаем синтаксис ECMAScript. Основы будут объяснены "
 "ниже.\n"
 "\n"
-"Если вы хотите найти все вхождения «Мистер Мур», «Сэр Мур» или «Альфонс Мур»"
-", но не «Леди Мур», введите:\n"
+"Если вы хотите найти все вхождения «Мистер Мур», «Сэр Мур» или «Альфонс "
+"Мур», но не «Леди Мур», введите:\n"
 "«Мистер Мур | Сэр Мур | Альфонс Мур».\n"
 "\n"
 "Если ваш поиск содержит специальный символ из ^ $. * +? () [] {} | \\ /, вы "
@@ -4816,27 +4816,42 @@ msgstr ""
 "%2\n"
 "Если Вы удаляете файл, он навсегда будет потерян."
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:110
+#: frontend/apps/reader/modules/readerstyletweak.lua:111
 msgid "This tweak is applied on all books."
 msgstr "Эта настройка применена для всех книг."
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:132
+#: frontend/apps/reader/modules/readerstyletweak.lua:128
+#, fuzzy
+msgid "Don't show in action list"
+msgstr "Показать в списке действий"
+
+#: frontend/apps/reader/modules/readerstyletweak.lua:128
+#: plugins/profiles.koplugin/main.lua:140
+msgid "Show in action list"
+msgstr "Показать в списке действий"
+
+#: frontend/apps/reader/modules/readerstyletweak.lua:143
 msgid "Don't use on all books"
 msgstr "Не использовать для всех книг"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:132
+#: frontend/apps/reader/modules/readerstyletweak.lua:143
 msgid "Use on all books"
 msgstr "Использовать для всех книг"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:201
+#: frontend/apps/reader/modules/readerstyletweak.lua:213
 msgid "CSS text copied to clipboard"
 msgstr "CSS текст скопирован в буфер обмена"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:443
+#: frontend/apps/reader/modules/readerstyletweak.lua:450
+#, fuzzy
+msgid "Toggle style tweak: %1"
+msgstr "Настройки пользовательского стиля %1"
+
+#: frontend/apps/reader/modules/readerstyletweak.lua:466
 msgid "Enable style tweaks (long-press for help)"
 msgstr "Включить настройки стиля (долгое касание для справки)"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:451
+#: frontend/apps/reader/modules/readerstyletweak.lua:474
 msgid ""
 "Style tweaks allow changing small parts of book styles (including the "
 "publisher/embedded styles) to make visual adjustments or disable unwanted "
@@ -4859,89 +4874,89 @@ msgstr ""
 "просмотреть более подробную информацию о настройке и включить её для всех "
 "книг долгим касанием."
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:581
+#: frontend/apps/reader/modules/readerstyletweak.lua:603
 msgid "This section is empty"
 msgstr "Эта секция пуста"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:596
+#: frontend/apps/reader/modules/readerstyletweak.lua:618
 msgid "User style tweaks"
 msgstr "Пользовательские настройки стиля"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:628
+#: frontend/apps/reader/modules/readerstyletweak.lua:650
 msgid "User style tweak at %1"
 msgstr "Настройки пользовательского стиля %1"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:635
+#: frontend/apps/reader/modules/readerstyletweak.lua:657
 msgid "No CSS tweak found in this directory"
 msgstr "В этом каталоге нет настроек CSS"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:639
+#: frontend/apps/reader/modules/readerstyletweak.lua:661
 msgid "Add your own tweaks in koreader/styletweaks/"
 msgstr "Добавьте свои настройки в koreader/styletweaks/"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:650
+#: frontend/apps/reader/modules/readerstyletweak.lua:672
 msgid "Book-specific tweak (long-press to edit)"
 msgstr "Настройка для конкретной книги (долгое касание для редактирования)"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:652
+#: frontend/apps/reader/modules/readerstyletweak.lua:674
 msgid "Book-specific tweak"
 msgstr "Настройка для конкретной книги"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:681
+#: frontend/apps/reader/modules/readerstyletweak.lua:704
 msgid "Style tweaks (%1)"
 msgstr "Настройки стиля (%1)"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:683
+#: frontend/apps/reader/modules/readerstyletweak.lua:706
 msgid "Style tweaks"
 msgstr "Настройки стиля"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:704
+#: frontend/apps/reader/modules/readerstyletweak.lua:763
 msgid "You can add CSS snippets which will be applied only to this book."
 msgstr ""
 "Вы можете добавить фрагменты CSS, которые будут применяться только к этой "
 "книге."
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:711
+#: frontend/apps/reader/modules/readerstyletweak.lua:770
 msgid "Use sample"
 msgstr "Использовать образец"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:713
+#: frontend/apps/reader/modules/readerstyletweak.lua:772
 msgid "Condense"
 msgstr "Уплотнить"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:743
+#: frontend/apps/reader/modules/readerstyletweak.lua:802
 msgid "Book tweak not modified."
 msgstr "Настройка книги не изменена."
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:745
+#: frontend/apps/reader/modules/readerstyletweak.lua:804
 msgid "Edit book-specific style tweak"
 msgstr "Редактировать настройку стиля для конкретной книги"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:810
+#: frontend/apps/reader/modules/readerstyletweak.lua:869
 msgid "Restore"
 msgstr "Восстановить"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:812
+#: frontend/apps/reader/modules/readerstyletweak.lua:871
 msgid "Book tweak restored"
 msgstr "Настройка книги восстановлена"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:830
+#: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid "Book tweak created, applying…"
 msgstr "Настройка книги создана, применяется…"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:836
+#: frontend/apps/reader/modules/readerstyletweak.lua:895
 msgid "Book tweak removed, rendering…"
 msgstr "Настройка книги удалена, отрисовка…"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:838
+#: frontend/apps/reader/modules/readerstyletweak.lua:897
 msgid "Book tweak emptied and removed."
 msgstr "Настройка книги сброшена и удалена."
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:844
+#: frontend/apps/reader/modules/readerstyletweak.lua:903
 msgid "Book tweak updated, applying…"
 msgstr "Настройка книги обновлена, применяется…"
 
-#: frontend/apps/reader/modules/readerstyletweak.lua:846
+#: frontend/apps/reader/modules/readerstyletweak.lua:905
 msgid "Book tweak saved (not enabled)."
 msgstr "Настройка книги сохранена (не включена)."
 
@@ -7437,8 +7452,8 @@ msgid ""
 "Disable all publisher page breaks, keeping only KOReader's epub.css ones.\n"
 "When combined with the two previous tweaks, all page-breaks are disabled."
 msgstr ""
-"Отключает все издательские разрывы страниц, сохраняя только разрывы из "
-"epub.css KOReader. \n"
+"Отключает все издательские разрывы страниц, сохраняя только разрывы из epub."
+"css KOReader. \n"
 "В сочетании с двумя предыдущими настройками, все разрывы страниц отключены."
 
 #: frontend/ui/data/css_tweaks.lua:127
@@ -9526,8 +9541,8 @@ msgstr ""
 "Шрифты для многих языков можно скачать по адресу:\n"
 "https://fonts.google.com/noto\n"
 "\n"
-"В этом меню будут доступны только шрифты с названием «Noto Sans xyz» или «"
-"Noto Sans xyz UI» (обычный, не полужирный и не курсив, без засечек). Однако "
+"В этом меню будут доступны только шрифты с названием «Noto Sans xyz» или "
+"«Noto Sans xyz UI» (обычный, не полужирный и не курсив, без засечек). Однако "
 "полужирные шрифты также будут использоваться, если имеются соответствующие "
 "им обычные шрифты."
 
@@ -10691,14 +10706,14 @@ msgstr ""
 "по умолчанию обозначаются ЗВЕЗДОЙ в меню или черной рамкой вокруг "
 "индикаторов, как показано ниже:\n"
 "\n"
-"<div class=\"img-block break-before-escape\"> ![Значение по умолчанию 1]("
-"resources/quickstart/defaultsetting1.png)</div>\n"
-"<div class=\"img-block break-before-escape\"> ![Значение по умолчанию 2]("
-"resources/quickstart/defaultsetting2.png)</div>\n"
+"<div class=\"img-block break-before-escape\"> ![Значение по умолчанию 1]"
+"(resources/quickstart/defaultsetting1.png)</div>\n"
+"<div class=\"img-block break-before-escape\"> ![Значение по умолчанию 2]"
+"(resources/quickstart/defaultsetting2.png)</div>\n"
 "\n"
 "- Вы можете увидеть объяснения всех пунктов **НИЖНЕГО МЕНЮ**, коснувшись и "
-"удерживая название параметра. Это также доступно для большинства пунктов **"
-"ВЕРХНЕГО МЕНЮ**.\n"
+"удерживая название параметра. Это также доступно для большинства пунктов "
+"**ВЕРХНЕГО МЕНЮ**.\n"
 "- Вы можете **ЗАКРЫТЬ** полноэкранные диалоги (История, Оглавление, "
 "Закладки, Статистика чтения и т.д.) свайпом вниз.\n"
 "- **СКРИНШОТЫ** можно делать, одновременно касаясь противоположных углов "
@@ -10721,8 +10736,8 @@ msgstr ""
 "найти его в Википедии.\n"
 "- Вы можете выделить разделы, коснувшись и удерживая слово, а затем "
 "перетаскивая пальцем.\n"
-"- Вы можете перемещаться по документу с помощью диалогового окна **"
-"ПРОСМОТРЕТЬ ДОКУМЕНТ**:\n"
+"- Вы можете перемещаться по документу с помощью диалогового окна "
+"**ПРОСМОТРЕТЬ ДОКУМЕНТ**:\n"
 "\n"
 "> **ВЕРХНЕЕ МЕНЮ ➔ ![Навигация](resources/icons/mdlight/appbar.navigation."
 "svg) ➔ Просмотреть документ**\n"
@@ -10933,8 +10948,8 @@ msgstr ""
 "\n"
 "Вы можете найти дополнительную информацию на нашей странице GitHub:\n"
 "\n"
-"[https://github.com/koreader/koreader](https://github.com/koreader/koreader)"
-"\n"
+"[https://github.com/koreader/koreader](https://github.com/koreader/"
+"koreader)\n"
 "\n"
 "Других пользователей KOReader вы можете найти на форумах MobileRead:\n"
 "\n"
@@ -14614,8 +14629,8 @@ msgstr ""
 "Устанавливает максимальную задержку между началом и концом свайпа, чтобы он "
 "считался жестом. Если дольше этого интервала, то считается прокруткой.\n"
 "\n"
-"Значение интервала задаётся в миллисекундах и может варьироваться от 100 ("
-"0.1 секунды) до 2000 (2 секунды)."
+"Значение интервала задаётся в миллисекундах и может варьироваться от 100 "
+"(0.1 секунды) до 2000 (2 секунды)."
 
 #: plugins/gestures.koplugin/main.lua:651
 msgid "Gesture manager"
@@ -15762,10 +15777,6 @@ msgid ""
 msgstr ""
 "Выполнять данный профиль, когда KOReader запущен из «файлового браузера» или "
 "с «последнего файла»."
-
-#: plugins/profiles.koplugin/main.lua:140
-msgid "Show in action list"
-msgstr "Показать в списке действий"
 
 #: plugins/profiles.koplugin/main.lua:159
 msgid "Edit actions: (%1)"
@@ -17666,11 +17677,11 @@ msgstr ""
 "PocketBook, Android и компьютерах с Linux. Разработчики могут использовать "
 "эмулятор KOReader в Linux и в MacOS.\n"
 "\n"
-"* многоформатные документы: поддержка форматов с фиксированной страницей ("
-"PDF, DjVu, CBT, CBZ) и форматов электронных книг с перекомпонуемой страницей "
-"(EPUB, FB2, Mobi, DOC, CHM, TXT). Также доступна перекомпоновка страниц в "
-"отсканированных документах PDF/DjVu с помощью встроенной библиотеки K2pdfopt."
-"\n"
+"* многоформатные документы: поддержка форматов с фиксированной страницей "
+"(PDF, DjVu, CBT, CBZ) и форматов электронных книг с перекомпонуемой "
+"страницей (EPUB, FB2, Mobi, DOC, CHM, TXT). Также доступна перекомпоновка "
+"страниц в отсканированных документах PDF/DjVu с помощью встроенной "
+"библиотеки K2pdfopt.\n"
 "\n"
 "* полнофункциональное чтение: многоязычный пользовательский интерфейс c "
 "широкими возможностями настройки формата окна чтения и рядом опций "
