@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-27 21:10+0000\n"
-"PO-Revision-Date: 2022-12-01 13:20+0000\n"
+"PO-Revision-Date: 2022-12-02 06:13+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ru/>\n"
@@ -1443,7 +1443,7 @@ msgstr "Сортировать по имени файла"
 
 #: frontend/apps/filemanager/filemanager.lua:1215
 msgid "natural"
-msgstr "естественно"
+msgstr "по имени (естественно)"
 
 #: frontend/apps/filemanager/filemanager.lua:1215
 msgid "Sort by filename (natural sorting)"
@@ -2519,7 +2519,7 @@ msgstr "Включить нечёткий поиск"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:284
 msgid "Enable dictionary lookup history"
-msgstr "Включить историю поиска словарей"
+msgstr "Включить историю поиска в словаре"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:294
 msgid "Clean dictionary lookup history"
@@ -4586,11 +4586,11 @@ msgid ""
 "seconds).\n"
 "Default value: %1 ms"
 msgstr ""
-"Задержка поможет избежать прокрутки, в то время как ожидаются обычные или "
+"Задержка поможет избежать прокрутки, когда ожидаются обычные или "
 "множественные свайпы.\n"
 "\n"
 "Значение задержки указывается в миллисекундах и может варьироваться от 0 до "
-"2000 (2 секунды).\n"
+"2000 (0-2 сек).\n"
 "По умолчанию: %1 мс"
 
 #: frontend/apps/reader/modules/readerscrolling.lua:166
@@ -5052,9 +5052,9 @@ msgid ""
 "the table of contents is complex. This allows you to restrict the number of "
 "tick marks."
 msgstr ""
-"Индикаторы прогресса в нижнем колонтитуле и в диалоговом окне беглого "
-"просмотра могут располагаться слишком тесно, если оглавление сложное. Данный "
-"параметр позволяет ограничить количество делений."
+"Индикаторы прогресса в нижнем колонтитуле и в окне беглого просмотра могут "
+"располагаться слишком тесно, если оглавление сложное. Данный параметр "
+"позволяет ограничить количество делений."
 
 #: frontend/apps/reader/modules/readertoc.lua:1062
 msgid "Bind chapter navigation to ticks"
@@ -5919,13 +5919,12 @@ msgid ""
 "\n"
 "Full list at https://en.wikipedia.org/wiki/List_of_Wikipedias"
 msgstr ""
-"Введите один или несколько кодов языков Википедии (2 или 3 буквы перед ."
-"wikipedia.org), в том порядке, в котором вы хотите их видеть, разделив их "
-"пробелом. Например:\n"
+"Введите один или более кодов языков Википедии (2-3 буквы перед .wikipedia."
+"org) в нужном вам порядке, разделяя их пробелом. Например:\n"
 "    en fr zh\n"
 "\n"
-"Полный список смотрите на https://ru.wikipedia.org/wiki/"
-"Языковые_разделы_Википедии"
+"Полный список смотрите по адресу https://en.wikipedia.org/wiki/"
+"List_of_Wikipedias"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:176
 msgid "Set Wikipedia 'Save as EPUB' folder"
@@ -6386,7 +6385,7 @@ msgstr "Выключить устройство"
 
 #: frontend/dispatcher.lua:51
 msgid "Show frontlight dialog"
-msgstr "Показать диалоговое окно подсветки"
+msgstr "Показать окно подсветки"
 
 #: frontend/dispatcher.lua:52
 msgid "Toggle frontlight"
@@ -6972,7 +6971,7 @@ msgstr ""
 "местах (нумерация и количество страниц могут меняться при изменении шрифтов, "
 "полей, стилей и т. д.).\n"
 "- «непрерывный» режим позволяет прокручивать текст, как если бы вы читали в "
-"веб-браузере (настройка «Перекрытие страницы» доступна только в этом режиме)."
+"веб-браузере (настройка «Перекрытие страниц» доступна только в этом режиме)."
 
 #: frontend/ui/data/creoptions.lua:323
 msgid "Render Mode"
@@ -9210,7 +9209,7 @@ msgstr "Установить время"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:139
 msgid "Time is in hours and minutes."
-msgstr "Время указывается в часах и минутах."
+msgstr "Введите время в часах и минутах."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:144
 msgid "Current time: %1:%2"
@@ -9228,7 +9227,7 @@ msgstr "Установить дату"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:171
 msgid "Date is in years, months and days."
-msgstr "Дата указывается в годах, месяцах и днях."
+msgstr "Введите дату в годах, месяцах и днях."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:177
 msgid "Current date: %1-%2-%3"
@@ -9541,15 +9540,15 @@ msgid ""
 "fonts will be used if their corresponding regular fonts exist."
 msgstr ""
 "Если некоторые названия книг, словарные статьи и т. п. отображаются "
-"неправильно (как ￾￾ или ��), то для подобных языков возможно потребуется "
+"неправильно, как ￾￾ или ��, то для подобных языков возможно потребуется "
 "загрузить нужные шрифты. После этого их можно будет назначить "
 "дополнительными резервными шрифтами.\n"
 "\n"
 "Шрифты для многих языков можно скачать по адресу:\n"
 "https://fonts.google.com/noto\n"
 "\n"
-"В данном меню будут доступны только шрифты с названием «Noto Sans xyz» или "
-"«Noto Sans xyz UI» (обычный, не полужирный и не курсив, без засечек). Однако "
+"В данном меню будут доступны только шрифты с названием «Noto Sans xyz» или «"
+"Noto Sans xyz UI» (обычный, не курсив и не полужирный, без засечек). Однако "
 "полужирные шрифты также будут использоваться, если имеются соответствующие "
 "им обычные шрифты."
 
@@ -9652,15 +9651,15 @@ msgstr "Размер шрифта клавиатуры"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:162
 msgid "in bold"
-msgstr "жирный"
+msgstr "жирный шрифт"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:168
 msgid "with border"
-msgstr "с окантовкой"
+msgstr "кнопки с окантовкой"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:174
 msgid "compact"
-msgstr "компактный"
+msgstr "компактный вид"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:185
 msgid "Layout-specific keyboard settings"
@@ -9673,11 +9672,11 @@ msgstr "Можно включить до четырёх раскладок."
 #: frontend/ui/elements/page_overlap.lua:7
 #: frontend/ui/elements/page_overlap.lua:11
 msgid "Page overlap"
-msgstr "Перекрытие страницы"
+msgstr "Перекрытие страниц"
 
 #: frontend/ui/elements/page_overlap.lua:29
 msgid "Page overlap cannot be enabled in the current view mode."
-msgstr "В текущем режиме просмотра нельзя включить перекрытие страницы."
+msgstr "В текущем режиме просмотра нельзя включить перекрытие страниц."
 
 #: frontend/ui/elements/page_overlap.lua:45
 msgid "Number of lines: %1"
@@ -9693,7 +9692,7 @@ msgid ""
 "displayed on the next page.\n"
 "You can set how many lines are shown."
 msgstr ""
-"Когда перекрытие страницы включено, часть строк с предыдущей страницы будет "
+"Когда перекрытие страниц включено, часть строк с предыдущей страницы будет "
 "отображаться на следующей.\n"
 "Вы можете настроить, сколько строк будет выводиться."
 
@@ -9802,9 +9801,8 @@ msgid ""
 "UI direction."
 msgstr ""
 "Если данная функция включена, направление пользовательского интерфейса для "
-"диалоговых окон «Оглавление», «Карта книги» и «Браузер страниц» будет "
-"соответствовать направлению листания страниц, а не направлению для "
-"интерфейса по умолчанию."
+"окон «Оглавление», «Карта книги» и «Браузер страниц» будет соответствовать "
+"направлению листания страниц, а не направлению для интерфейса по умолчанию."
 
 #: frontend/ui/elements/page_turns.lua:176
 msgid "Page turn animations"
@@ -14528,7 +14526,7 @@ msgstr "Интервалы жестов"
 #: plugins/gestures.koplugin/main.lua:456
 #: plugins/gestures.koplugin/main.lua:462
 msgid "Text selection rate"
-msgstr "Скорость обновления при выборе текста"
+msgstr "Скорость выделения текста"
 
 #: plugins/gestures.koplugin/main.lua:463
 msgid ""
@@ -14536,9 +14534,9 @@ msgid ""
 "text.\n"
 "Higher values mean faster screen updates, but also use more CPU."
 msgstr ""
-"Скорость - это частота обновлений экрана в секунду при выделении текста.\n"
-"Более высокие значения означают ускорение обновления экрана, но также и "
-"большее использование процессора."
+"Это частота обновлений экрана в секунду при выделении текста.\n"
+"Более высокие значения ускорят обновления экрана, но также сильнее загрузят "
+"процессор."
 
 #: plugins/gestures.koplugin/main.lua:472
 msgctxt "Frequency"
@@ -14563,11 +14561,11 @@ msgid ""
 "The interval value is in milliseconds and can range from 0 (0 seconds) to "
 "2000 (2 seconds)."
 msgstr ""
-"Любые другие прикосновения к экрану, сделанные после первого касания и в "
-"течение данного интервала, будут считаться случайными и игнорироваться.\n"
+"Любые прикосновения к экрану, сделанные в течение данного интервала после "
+"первого касания, считаются случайными и игнорируются.\n"
 "\n"
 "Значение интервала указывается в миллисекундах и может варьироваться от 0 до "
-"2000 (2 секунды)."
+"2000 (0-2 сек)."
 
 #: plugins/gestures.koplugin/main.lua:512
 #: plugins/gestures.koplugin/main.lua:516
@@ -14587,12 +14585,11 @@ msgid ""
 "The interval value is in milliseconds and can range from 100 (0.1 seconds) "
 "to 2000 (2 seconds)."
 msgstr ""
-"Когда включено двойное касание, данный параметр задаёт время ожидания "
-"второго касания. При этом для обнаружения одиночного касания потребуется как "
-"минимум столько же времени.\n"
+"Время ожидания второго касания при включении двойного касания. При этом для "
+"обнаружения одиночного касания потребуется как минимум столько же времени.\n"
 "\n"
-"Значение интервала указывается в миллисекундах и может варьироваться от 100 ("
-"0.1 секунды) до 2000 (2 секунды)."
+"Значение интервала указывается в миллисекундах и может варьироваться от 100 "
+"до 2000 (0.1-2 сек)."
 
 #: plugins/gestures.koplugin/main.lua:565
 #: plugins/gestures.koplugin/main.lua:569
@@ -14607,12 +14604,11 @@ msgid ""
 "The duration value is in milliseconds and can range from 100 (0.1 seconds) "
 "to 2000 (2 seconds)."
 msgstr ""
-"Данный параметр задаёт допустимую продолжительность касания/отпускания "
-"любого из двух пальцев для комбинированного события, которое будет считаться "
-"касанием двумя пальцами.\n"
+"Задать допустимую продолжительность касания/отпускания любого из двух "
+"пальцев, чтобы комбинированное событие считалось касанием двумя пальцами.\n"
 "\n"
 "Значение продолжительности указывается в миллисекундах и может варьироваться "
-"от 100 (0.1 секунды) до 2000 (2 секунды)."
+"от 100 до 2000 (0.1-2 сек)."
 
 #: plugins/gestures.koplugin/main.lua:581
 msgid "Set duration"
@@ -14631,11 +14627,11 @@ msgid ""
 "The interval value is in milliseconds and can range from 100 (0.1 seconds) "
 "to 2000 (2 seconds)."
 msgstr ""
-"Если палец не отпускается в течение данного интервала, касание считается "
+"Если не отпускать палец в течение данного интервала, такое касание считается "
 "долгим. В тексте документа будет запущено выделение одного слова.\n"
 "\n"
-"Значение интервала указывается в миллисекундах и может варьироваться от 100 ("
-"0.1 секунды) до 2000 (2 секунды)."
+"Значение интервала указывается в миллисекундах и может варьироваться от 100 "
+"до 2000 (0.1-2 сек)."
 
 #: plugins/gestures.koplugin/main.lua:619
 #: plugins/gestures.koplugin/main.lua:623
@@ -14651,11 +14647,10 @@ msgid ""
 "to 2000 (2 seconds)."
 msgstr ""
 "Максимальная задержка между началом и концом свайпа, в пределах которой он "
-"считается жестом. Если задержка продлится дольше данного интервала, то "
-"действие считается прокруткой.\n"
+"считается жестом. При бо́льшей задержке действие считается прокруткой.\n"
 "\n"
-"Значение интервала указывается в миллисекундах и может варьироваться от 100 ("
-"0.1 секунды) до 2000 (2 секунды)."
+"Значение интервала указывается в миллисекундах и может варьироваться от 100 "
+"до 2000 (0.1-2 сек)."
 
 #: plugins/gestures.koplugin/main.lua:651
 msgid "Gesture manager"
@@ -15811,7 +15806,7 @@ msgstr "Переименовать: (%1)"
 
 #: plugins/profiles.koplugin/main.lua:184
 msgid "Duplicate"
-msgstr "Дубликат"
+msgstr "Дублировать"
 
 #: plugins/profiles.koplugin/main.lua:204
 msgid "Do you want to delete this profile?"
@@ -15861,7 +15856,7 @@ msgstr "Таймер чтения"
 
 #: plugins/readtimer.koplugin/main.lua:92
 msgid "Set alarm"
-msgstr "Ввести предупреждение"
+msgstr "Задать предупреждение"
 
 #: plugins/readtimer.koplugin/main.lua:93
 msgid "New alarm"
@@ -16878,7 +16873,7 @@ msgstr ""
 
 #: plugins/texteditor.koplugin/main.lua:160
 msgid "Force paragraph direction LTR"
-msgstr "Направление абзаца всегда слева направо (ЛНП→)"
+msgstr "Направление абзаца всегда слева направо (ЛНП)"
 
 #: plugins/texteditor.koplugin/main.lua:161
 msgid ""
@@ -17399,11 +17394,11 @@ msgstr "Удаление статьи"
 
 #: plugins/wallabag.koplugin/main.lua:253
 msgid "Remotely delete finished articles"
-msgstr "Удалить с сервера прочитанные статьи"
+msgstr "Удалять с сервера прочитанные статьи"
 
 #: plugins/wallabag.koplugin/main.lua:261
 msgid "Remotely delete 100% read articles"
-msgstr "Удалить с сервера статьи, прочитанные на 100%"
+msgstr "Удалять с сервера статьи, прочитанные на 100%"
 
 #: plugins/wallabag.koplugin/main.lua:270
 msgid "Mark as read instead of deleting"
@@ -17419,7 +17414,7 @@ msgstr "Синхронизация удаления файлов с сервер
 
 #: plugins/wallabag.koplugin/main.lua:297
 msgid "Send review as tags"
-msgstr "Отправить обзор в качестве тегов"
+msgstr "Отправлять обзор в качестве тегов"
 
 #: plugins/wallabag.koplugin/main.lua:298
 msgid ""
@@ -17431,11 +17426,11 @@ msgstr ""
 
 #: plugins/wallabag.koplugin/main.lua:309
 msgid "Remove finished articles from history"
-msgstr "Удалить из истории прочитанные статьи"
+msgstr "Удалять прочитанные статьи из истории"
 
 #: plugins/wallabag.koplugin/main.lua:320
 msgid "Remove 100% read articles from history"
-msgstr "Удалить из истории статьи, прочитанные на 100%"
+msgstr "Удалять прочитанные на 100% статьи из истории"
 
 #: plugins/wallabag.koplugin/main.lua:336
 msgid ""
