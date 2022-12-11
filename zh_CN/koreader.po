@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-11 09:30+0000\n"
+"POT-Creation-Date: 2022-12-11 16:07+0000\n"
 "PO-Revision-Date: 2022-12-11 16:07+0000\n"
 "Last-Translator: Eric <hamburger1024@duck.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -178,7 +178,7 @@ msgstr "输入文件名"
 #: frontend/apps/reader/modules/readerdictionary.lua:695
 #: frontend/apps/reader/modules/readerfooter.lua:646
 #: frontend/apps/reader/modules/readergoto.lua:82
-#: frontend/apps/reader/modules/readerlink.lua:695
+#: frontend/apps/reader/modules/readerlink.lua:217
 #: frontend/apps/reader/modules/readersearch.lua:118
 #: frontend/apps/reader/modules/readerstatus.lua:117
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
@@ -233,10 +233,10 @@ msgstr "输入文件名"
 #: plugins/vocabbuilder.koplugin/main.lua:1108
 #: plugins/vocabbuilder.koplugin/main.lua:1455
 #: plugins/vocabbuilder.koplugin/main.lua:1728
-#: plugins/wallabag.koplugin/main.lua:948
-#: plugins/wallabag.koplugin/main.lua:980
-#: plugins/wallabag.koplugin/main.lua:1048
-#: plugins/wallabag.koplugin/main.lua:1097
+#: plugins/wallabag.koplugin/main.lua:960
+#: plugins/wallabag.koplugin/main.lua:992
+#: plugins/wallabag.koplugin/main.lua:1060
+#: plugins/wallabag.koplugin/main.lua:1109
 msgid "Cancel"
 msgstr "取消"
 
@@ -276,8 +276,8 @@ msgstr "选择"
 #: frontend/apps/cloudstorage/ftp.lua:135
 #: frontend/apps/cloudstorage/webdav.lua:151
 #: plugins/vocabbuilder.koplugin/main.lua:1461
-#: plugins/wallabag.koplugin/main.lua:347
-#: plugins/wallabag.koplugin/main.lua:1056
+#: plugins/wallabag.koplugin/main.lua:359
+#: plugins/wallabag.koplugin/main.lua:1068
 msgid "Info"
 msgstr "说明"
 
@@ -640,8 +640,8 @@ msgstr "编辑 FTP 帐号"
 #: frontend/ui/widget/radiobuttonwidget.lua:59
 #: frontend/ui/widget/spinwidget.lua:37
 #: plugins/perceptionexpander.koplugin/main.lua:146
-#: plugins/wallabag.koplugin/main.lua:1062
-#: plugins/wallabag.koplugin/main.lua:1105
+#: plugins/wallabag.koplugin/main.lua:1074
+#: plugins/wallabag.koplugin/main.lua:1117
 msgid "Apply"
 msgstr "应用"
 
@@ -711,12 +711,12 @@ msgid "WebDAV address, for example https://example.com/dav"
 msgstr "WebDAV 地址（例：https://example.com/dav ）"
 
 #: frontend/apps/cloudstorage/webdav.lua:91
-#: plugins/wallabag.koplugin/main.lua:1036
+#: plugins/wallabag.koplugin/main.lua:1048
 msgid "Username"
 msgstr "用户名"
 
 #: frontend/apps/cloudstorage/webdav.lua:93
-#: plugins/wallabag.koplugin/main.lua:1042
+#: plugins/wallabag.koplugin/main.lua:1054
 msgid "Password"
 msgstr "密码"
 
@@ -1058,7 +1058,7 @@ msgstr "清除已删除文件的历史记录？"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:256
 #: frontend/apps/filemanager/filemanagermenu.lua:270
-#: frontend/apps/reader/modules/readerlink.lua:172
+#: frontend/apps/reader/modules/readerlink.lua:301
 #: plugins/batterystat.koplugin/main.lua:197
 #: plugins/coverimage.koplugin/main.lua:510
 msgid "Clear"
@@ -1192,7 +1192,7 @@ msgstr "选择文件夹内所有文件"
 
 #: frontend/apps/filemanager/filemanager.lua:625
 #: frontend/apps/filemanager/filemanager.lua:630
-#: frontend/apps/reader/modules/readerlink.lua:713
+#: frontend/apps/reader/modules/readerlink.lua:141
 msgid "Copy"
 msgstr "复制"
 
@@ -1581,7 +1581,7 @@ msgstr "无法打开最近的文档"
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:943
 #: plugins/texteditor.koplugin/main.lua:110
-#: plugins/wallabag.koplugin/main.lua:158
+#: plugins/wallabag.koplugin/main.lua:170
 msgid "Settings"
 msgstr "设置"
 
@@ -1878,7 +1878,7 @@ msgstr "你想要打开上一个文档 %1 吗？"
 #: plugins/autowarmth.koplugin/main.lua:760
 #: plugins/calibre.koplugin/main.lua:317
 #: plugins/exporter.koplugin/target/joplin.lua:229
-#: plugins/wallabag.koplugin/main.lua:955
+#: plugins/wallabag.koplugin/main.lua:967
 msgid "OK"
 msgstr "确认"
 
@@ -1985,8 +1985,8 @@ msgid "Home"
 msgstr "主目录"
 
 #: frontend/apps/reader/modules/readerback.lua:141
-#: frontend/apps/reader/modules/readerlink.lua:833
-#: frontend/apps/reader/modules/readerlink.lua:854
+#: frontend/apps/reader/modules/readerlink.lua:837
+#: frontend/apps/reader/modules/readerlink.lua:858
 msgid "Location history is empty."
 msgstr "位置历史记录为空。"
 
@@ -3837,32 +3837,64 @@ msgstr ""
 "\n"
 "若您想将标注信息保存在文档中，请先将此文档移动到可写目录中。"
 
-#: frontend/apps/reader/modules/readerlink.lua:166
+#: frontend/apps/reader/modules/readerlink.lua:149
+msgid "Show QR code"
+msgstr "显示二维码"
+
+#: frontend/apps/reader/modules/readerlink.lua:162
+msgid "Open in browser"
+msgstr "在浏览器中打开"
+
+#: frontend/apps/reader/modules/readerlink.lua:176
+msgid "Read online"
+msgstr "在线阅读"
+
+#: frontend/apps/reader/modules/readerlink.lua:188
+msgid ""
+"Would you like to read this Wikipedia %1 article?\n"
+"\n"
+"%2\n"
+msgstr ""
+"要阅读维基百科 %1 文章吗？\n"
+"\n"
+"%2\n"
+
+#: frontend/apps/reader/modules/readerlink.lua:198
+msgid "Read EPUB"
+msgstr "阅读 EPUB"
+
+#: frontend/apps/reader/modules/readerlink.lua:209
+msgid ""
+"This article has previously been saved as EPUB. You may wish to read the "
+"saved EPUB instead."
+msgstr "此条目之前被保存为 EPUB 格式，你可能想要阅读这份 EPUB 文档。"
+
+#: frontend/apps/reader/modules/readerlink.lua:295
 msgid "Go back to previous location"
 msgstr "跳转到上一位置"
 
-#: frontend/apps/reader/modules/readerlink.lua:171
+#: frontend/apps/reader/modules/readerlink.lua:300
 msgid "Clear location history?"
 msgstr "清除位置历史记录？"
 
-#: frontend/apps/reader/modules/readerlink.lua:185
+#: frontend/apps/reader/modules/readerlink.lua:314
 #: frontend/ui/data/css_tweaks.lua:612
 msgid "Links"
 msgstr "链接"
 
-#: frontend/apps/reader/modules/readerlink.lua:188
+#: frontend/apps/reader/modules/readerlink.lua:317
 msgid "Tap to follow links"
 msgstr "轻按来跟随链接"
 
-#: frontend/apps/reader/modules/readerlink.lua:194
+#: frontend/apps/reader/modules/readerlink.lua:323
 msgid "Tap on links to follow them."
 msgstr "点击链接可以打开链接目标。"
 
-#: frontend/apps/reader/modules/readerlink.lua:197
+#: frontend/apps/reader/modules/readerlink.lua:326
 msgid "Ignore external links on tap"
 msgstr "点击时忽略外部链接"
 
-#: frontend/apps/reader/modules/readerlink.lua:204
+#: frontend/apps/reader/modules/readerlink.lua:333
 msgid ""
 "Ignore taps on external links. Useful with Wikipedia EPUBs to make page "
 "turning easier.\n"
@@ -3872,11 +3904,11 @@ msgstr ""
 "忽略在外部链接的点击事件。这个功能使维基百科EPUB更易翻页。\n"
 "你依旧可以从词典窗口或是长按选择菜单来打开外部链接。"
 
-#: frontend/apps/reader/modules/readerlink.lua:210
+#: frontend/apps/reader/modules/readerlink.lua:339
 msgid "Swipe to go back"
 msgstr "滑动返回"
 
-#: frontend/apps/reader/modules/readerlink.lua:216
+#: frontend/apps/reader/modules/readerlink.lua:345
 msgid ""
 "Swipe to the right to go back to the previous location after you have "
 "followed a link. When the location stack is empty, swiping to the right "
@@ -3885,11 +3917,11 @@ msgstr ""
 "在点击链接后，向右滑动可以回到之前的位置。若链接点击记录为空，则会回到上一"
 "页。"
 
-#: frontend/apps/reader/modules/readerlink.lua:219
+#: frontend/apps/reader/modules/readerlink.lua:348
 msgid "Swipe to follow nearest link"
 msgstr "滑动进入最近的链接"
 
-#: frontend/apps/reader/modules/readerlink.lua:225
+#: frontend/apps/reader/modules/readerlink.lua:354
 msgid ""
 "Swipe to the left to follow the link nearest to where you started the swipe. "
 "This is useful when a small font is used and tapping on small links is "
@@ -3898,11 +3930,11 @@ msgstr ""
 "向左滑动跳转至最接近开始滑动位置的链接的目标。此项目在小链接点击困难时会很有"
 "用。"
 
-#: frontend/apps/reader/modules/readerlink.lua:228
+#: frontend/apps/reader/modules/readerlink.lua:357
 msgid "Ignore external links on swipe"
 msgstr "滑动时忽略外部链接"
 
-#: frontend/apps/reader/modules/readerlink.lua:235
+#: frontend/apps/reader/modules/readerlink.lua:364
 msgid ""
 "Ignore external links near swipe. Useful with Wikipedia EPUBs to follow only "
 "footnotes with swipe.\n"
@@ -3913,11 +3945,11 @@ msgstr ""
 "用。\n"
 "你依旧可以从词典窗口或是长按选择菜单来打开外部链接。"
 
-#: frontend/apps/reader/modules/readerlink.lua:241
+#: frontend/apps/reader/modules/readerlink.lua:370
 msgid "Swipe to jump to latest bookmark"
 msgstr "滑动跳到最近的书签"
 
-#: frontend/apps/reader/modules/readerlink.lua:247
+#: frontend/apps/reader/modules/readerlink.lua:376
 msgid ""
 "Swipe to the left to go the most recently bookmarked page.\n"
 "This can be useful to quickly swipe back and forth between what you are "
@@ -3931,21 +3963,21 @@ msgstr ""
 "转。\n"
 "如果启用了滑动跟随链接的设置，那么此项功能仅能在没有链接的页面使用。"
 
-#: frontend/apps/reader/modules/readerlink.lua:262
+#: frontend/apps/reader/modules/readerlink.lua:391
 msgid "Allow larger tap area around links"
 msgstr "允许点击链接周围更大区域"
 
-#: frontend/apps/reader/modules/readerlink.lua:269
+#: frontend/apps/reader/modules/readerlink.lua:398
 msgid ""
 "Extends the tap area around internal links. Useful with a small font where "
 "tapping on small footnote links may be tedious."
 msgstr "扩展内部链接的点击区域。当脚注等小链接无法被点击时可以使用此选项。"
 
-#: frontend/apps/reader/modules/readerlink.lua:272
+#: frontend/apps/reader/modules/readerlink.lua:401
 msgid "Show footnotes in popup"
 msgstr "以弹框方式显示脚注"
 
-#: frontend/apps/reader/modules/readerlink.lua:281
+#: frontend/apps/reader/modules/readerlink.lua:410
 msgid ""
 "Show internal link target content in a footnote popup when it looks like it "
 "might be a footnote, instead of following the link.\n"
@@ -3965,23 +3997,23 @@ msgstr ""
 "\n"
 "在脚注内容弹窗里面，你可以向左滑动跳转到脚注的位置。"
 
-#: frontend/apps/reader/modules/readerlink.lua:291
+#: frontend/apps/reader/modules/readerlink.lua:420
 msgid "Footnote popup settings"
 msgstr "脚注弹出设置"
 
-#: frontend/apps/reader/modules/readerlink.lua:296
+#: frontend/apps/reader/modules/readerlink.lua:425
 msgid "Show more links as footnotes"
 msgstr "将更多链接显示为脚注"
 
-#: frontend/apps/reader/modules/readerlink.lua:306
+#: frontend/apps/reader/modules/readerlink.lua:435
 msgid "Loosen footnote detection rules to show more links as footnotes."
 msgstr "更宽松的脚注检测规则，将更多链接显示为脚注。"
 
-#: frontend/apps/reader/modules/readerlink.lua:310
+#: frontend/apps/reader/modules/readerlink.lua:439
 msgid "Use book font as popup font"
 msgstr "将书籍字体用作弹窗字体"
 
-#: frontend/apps/reader/modules/readerlink.lua:321
+#: frontend/apps/reader/modules/readerlink.lua:450
 msgid ""
 "Display the footnote popup text with the font set as the document font (the "
 "book text may still render with a different font if the book uses embedded "
@@ -3990,18 +4022,18 @@ msgstr ""
 "将脚注弹出文本的字体设置为文档字体（如果文档使用了嵌入式字体，书本文本仍可能"
 "以不同字体呈现）。"
 
-#: frontend/apps/reader/modules/readerlink.lua:324
-#: frontend/apps/reader/modules/readerlink.lua:344
-#: frontend/apps/reader/modules/readerlink.lua:366
+#: frontend/apps/reader/modules/readerlink.lua:453
+#: frontend/apps/reader/modules/readerlink.lua:473
+#: frontend/apps/reader/modules/readerlink.lua:495
 msgid "Set footnote popup font size"
 msgstr "设置脚注弹窗字体大小"
 
-#: frontend/apps/reader/modules/readerlink.lua:343
-#: frontend/apps/reader/modules/readerlink.lua:365 frontend/dispatcher.lua:170
+#: frontend/apps/reader/modules/readerlink.lua:472
+#: frontend/apps/reader/modules/readerlink.lua:494 frontend/dispatcher.lua:170
 msgid "Set font size"
 msgstr "设置字号"
 
-#: frontend/apps/reader/modules/readerlink.lua:345
+#: frontend/apps/reader/modules/readerlink.lua:474
 msgid ""
 "The footnote popup font can adjust to the font size you've set for the "
 "document, but you can specify here a fixed absolute font size to be used "
@@ -4010,11 +4042,11 @@ msgstr ""
 "脚注弹框字体可调整到您为文档设置的字体大小，但您可以在这里指定一个固定的绝对"
 "字体大小来代替。"
 
-#: frontend/apps/reader/modules/readerlink.lua:351
+#: frontend/apps/reader/modules/readerlink.lua:480
 msgid "Set a relative font size instead"
 msgstr "设置相对字体大小"
 
-#: frontend/apps/reader/modules/readerlink.lua:367
+#: frontend/apps/reader/modules/readerlink.lua:496
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -4029,11 +4061,11 @@ msgstr ""
 "设置为负值则字体大小会比文档的要小。\n"
 "此选项的建议值为-2。"
 
-#: frontend/apps/reader/modules/readerlink.lua:376
+#: frontend/apps/reader/modules/readerlink.lua:505
 msgid "Set an absolute font size instead"
 msgstr "设置绝对字体大小"
 
-#: frontend/apps/reader/modules/readerlink.lua:390
+#: frontend/apps/reader/modules/readerlink.lua:519
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -4043,11 +4075,11 @@ msgstr ""
 "脚注弹窗字体调整至相对文档字体的大小。\n"
 "此选项可以设置脚注字体大小相对于文档字体的大小。"
 
-#: frontend/apps/reader/modules/readerlink.lua:552
+#: frontend/apps/reader/modules/readerlink.lua:681
 msgid "Location history cleared."
 msgstr "位置历史记录已清除。"
 
-#: frontend/apps/reader/modules/readerlink.lua:665
+#: frontend/apps/reader/modules/readerlink.lua:794
 msgid ""
 "Would you like to read this local document?\n"
 "\n"
@@ -4057,7 +4089,7 @@ msgstr ""
 "\n"
 "%1\n"
 
-#: frontend/apps/reader/modules/readerlink.lua:674
+#: frontend/apps/reader/modules/readerlink.lua:803
 msgid ""
 "Link to unsupported local file:\n"
 "%1"
@@ -4065,7 +4097,7 @@ msgstr ""
 "链接到不支持的本地文件：\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:682
+#: frontend/apps/reader/modules/readerlink.lua:811
 msgid ""
 "Invalid or external link:\n"
 "%1"
@@ -4073,43 +4105,7 @@ msgstr ""
 "无效或外部链接：\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:720
-msgid "Show QR code"
-msgstr "显示二维码"
-
-#: frontend/apps/reader/modules/readerlink.lua:732
-msgid "Add to Wallabag"
-msgstr "添加至Wallabag"
-
-#: frontend/apps/reader/modules/readerlink.lua:741
-msgid "Open in browser"
-msgstr "在浏览器中打开"
-
-#: frontend/apps/reader/modules/readerlink.lua:782
-msgid ""
-"Would you like to read this Wikipedia %1 article?\n"
-"\n"
-"%2\n"
-msgstr ""
-"要阅读维基百科 %1 文章吗？\n"
-"\n"
-"%2\n"
-
-#: frontend/apps/reader/modules/readerlink.lua:784
-msgid "Read online"
-msgstr "在线阅读"
-
-#: frontend/apps/reader/modules/readerlink.lua:793
-msgid ""
-"This article has previously been saved as EPUB. You may wish to read the "
-"saved EPUB instead."
-msgstr "此条目之前被保存为 EPUB 格式，你可能想要阅读这份 EPUB 文档。"
-
-#: frontend/apps/reader/modules/readerlink.lua:795
-msgid "Read EPUB"
-msgstr "阅读 EPUB"
-
-#: frontend/apps/reader/modules/readerlink.lua:809
+#: frontend/apps/reader/modules/readerlink.lua:1426
 msgid ""
 "External link:\n"
 "\n"
@@ -6157,31 +6153,31 @@ msgstr "周六"
 msgid "Sun"
 msgstr "周日"
 
-#: frontend/datetime.lua:55 plugins/statistics.koplugin/readerprogress.lua:34
+#: frontend/datetime.lua:55
 msgid "Monday"
 msgstr "星期一"
 
-#: frontend/datetime.lua:56 plugins/statistics.koplugin/readerprogress.lua:35
+#: frontend/datetime.lua:56
 msgid "Tuesday"
 msgstr "星期二"
 
-#: frontend/datetime.lua:57 plugins/statistics.koplugin/readerprogress.lua:36
+#: frontend/datetime.lua:57
 msgid "Wednesday"
 msgstr "星期三"
 
-#: frontend/datetime.lua:58 plugins/statistics.koplugin/readerprogress.lua:37
+#: frontend/datetime.lua:58
 msgid "Thursday"
 msgstr "星期四"
 
-#: frontend/datetime.lua:59 plugins/statistics.koplugin/readerprogress.lua:38
+#: frontend/datetime.lua:59
 msgid "Friday"
 msgstr "星期五"
 
-#: frontend/datetime.lua:60 plugins/statistics.koplugin/readerprogress.lua:39
+#: frontend/datetime.lua:60
 msgid "Saturday"
 msgstr "星期六"
 
-#: frontend/datetime.lua:61 plugins/statistics.koplugin/readerprogress.lua:40
+#: frontend/datetime.lua:61
 msgid "Sunday"
 msgstr "星期日"
 
@@ -9006,7 +9002,7 @@ msgstr "版本: %1"
 #: frontend/ui/widget/touchmenu.lua:1308
 #: plugins/exporter.koplugin/target/joplin.lua:288
 #: plugins/externalkeyboard.koplugin/main.lua:159
-#: plugins/wallabag.koplugin/main.lua:332
+#: plugins/wallabag.koplugin/main.lua:344
 msgid "Help"
 msgstr "帮助"
 
@@ -11355,8 +11351,8 @@ msgid "Days"
 msgstr "天数"
 
 #: frontend/ui/widget/bookstatuswidget.lua:425
-#: plugins/statistics.koplugin/readerprogress.lua:307
-#: plugins/statistics.koplugin/readerprogress.lua:321
+#: plugins/statistics.koplugin/readerprogress.lua:297
+#: plugins/statistics.koplugin/readerprogress.lua:311
 msgid "Time"
 msgstr "时间"
 
@@ -15599,11 +15595,11 @@ msgstr "SSH"
 msgid "Connect and transfer files to the device using SSH."
 msgstr "使用SSH连接并传送文件至设备。"
 
-#: plugins/statistics.koplugin/calendarview.lua:1124
+#: plugins/statistics.koplugin/calendarview.lua:1120
 msgid "Enter month"
 msgstr "输入月份"
 
-#: plugins/statistics.koplugin/calendarview.lua:1139
+#: plugins/statistics.koplugin/calendarview.lua:1135
 msgid "Invalid year-month string (YYYY-MM)"
 msgstr "无法识别的日期字符串（YYYY-MM）"
 
@@ -15755,7 +15751,7 @@ msgid "Current book"
 msgstr "统计本书"
 
 #: plugins/statistics.koplugin/main.lua:1143
-#: plugins/statistics.koplugin/main.lua:2787
+#: plugins/statistics.koplugin/main.lua:2784
 msgid "Current statistics"
 msgstr "当前统计数据"
 
@@ -15799,7 +15795,7 @@ msgstr "按月统计书籍"
 
 #: plugins/statistics.koplugin/main.lua:1256
 #: plugins/statistics.koplugin/main.lua:1261
-#: plugins/statistics.koplugin/readerprogress.lua:110
+#: plugins/statistics.koplugin/readerprogress.lua:100
 msgid "Last week"
 msgstr "最近一周"
 
@@ -16005,24 +16001,24 @@ msgstr "没有移除任何书籍的统计信息。"
 msgid "Keeps and displays your reading statistics."
 msgstr "保留并显示你的阅读统计信息。"
 
-#: plugins/statistics.koplugin/readerprogress.lua:112
+#: plugins/statistics.koplugin/readerprogress.lua:102
 msgid "Week progress"
 msgstr "一周进度"
 
-#: plugins/statistics.koplugin/readerprogress.lua:114
+#: plugins/statistics.koplugin/readerprogress.lua:104
 msgid "Current"
 msgstr "当前阅读统计"
 
-#: plugins/statistics.koplugin/readerprogress.lua:114
+#: plugins/statistics.koplugin/readerprogress.lua:104
 msgid "Today"
 msgstr "今天"
 
-#: plugins/statistics.koplugin/readerprogress.lua:300
-#: plugins/statistics.koplugin/readerprogress.lua:314
+#: plugins/statistics.koplugin/readerprogress.lua:290
+#: plugins/statistics.koplugin/readerprogress.lua:304
 msgid "Pages"
 msgstr "页数"
 
-#: plugins/statistics.koplugin/readerprogress.lua:395
+#: plugins/statistics.koplugin/readerprogress.lua:385
 msgid ""
 "Total\n"
 "pages"
@@ -16030,7 +16026,7 @@ msgstr ""
 "总\n"
 "页数"
 
-#: plugins/statistics.koplugin/readerprogress.lua:404
+#: plugins/statistics.koplugin/readerprogress.lua:394
 msgid ""
 "Total\n"
 "time"
@@ -16038,7 +16034,7 @@ msgstr ""
 "总\n"
 "时间"
 
-#: plugins/statistics.koplugin/readerprogress.lua:413
+#: plugins/statistics.koplugin/readerprogress.lua:403
 msgid ""
 "Average\n"
 "pages"
@@ -16046,7 +16042,7 @@ msgstr ""
 "平均\n"
 "页数"
 
-#: plugins/statistics.koplugin/readerprogress.lua:422
+#: plugins/statistics.koplugin/readerprogress.lua:412
 msgid ""
 "Average\n"
 "time"
@@ -16818,19 +16814,23 @@ msgstr "此插件处理字典中的单词查询，并使用间隔重复来帮助
 msgid "Wallabag retrieval"
 msgstr "Wallabag 取回"
 
-#: plugins/wallabag.koplugin/main.lua:120 plugins/wallabag.koplugin/_meta.lua:4
+#: plugins/wallabag.koplugin/main.lua:120
+msgid "Add to Wallabag"
+msgstr "添加至Wallabag"
+
+#: plugins/wallabag.koplugin/main.lua:132 plugins/wallabag.koplugin/_meta.lua:4
 msgid "Wallabag"
 msgstr "Wallabag"
 
-#: plugins/wallabag.koplugin/main.lua:123
+#: plugins/wallabag.koplugin/main.lua:135
 msgid "Retrieve new articles from server"
 msgstr "从服务器检索新文章"
 
-#: plugins/wallabag.koplugin/main.lua:129
+#: plugins/wallabag.koplugin/main.lua:141
 msgid "Delete finished articles remotely"
 msgstr "删除远端已完成条目"
 
-#: plugins/wallabag.koplugin/main.lua:134
+#: plugins/wallabag.koplugin/main.lua:146
 msgid ""
 "Articles processed.\n"
 "Deleted: %1"
@@ -16838,96 +16838,96 @@ msgstr ""
 "条目处理完毕。\n"
 "删除: %1"
 
-#: plugins/wallabag.koplugin/main.lua:145
+#: plugins/wallabag.koplugin/main.lua:157
 msgid "Go to download folder"
 msgstr "前往下载文件夹"
 
-#: plugins/wallabag.koplugin/main.lua:165
+#: plugins/wallabag.koplugin/main.lua:177
 msgid "Configure Wallabag server"
 msgstr "配置 Wallabag 服务器"
 
-#: plugins/wallabag.koplugin/main.lua:172
+#: plugins/wallabag.koplugin/main.lua:184
 msgid "Configure Wallabag client"
 msgstr "配置 Wallabag 客户端"
 
-#: plugins/wallabag.koplugin/main.lua:182
+#: plugins/wallabag.koplugin/main.lua:194
 msgid "Not set"
 msgstr "未设置"
 
-#: plugins/wallabag.koplugin/main.lua:186
+#: plugins/wallabag.koplugin/main.lua:198
 msgid "Set download directory (%1)"
 msgstr "设置下载目录 (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:198
+#: plugins/wallabag.koplugin/main.lua:210
 msgid "All articles"
 msgstr "所有条目"
 
-#: plugins/wallabag.koplugin/main.lua:202
+#: plugins/wallabag.koplugin/main.lua:214
 msgid "Filter articles by tag (%1)"
 msgstr "按标签过滤条目 (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:212
+#: plugins/wallabag.koplugin/main.lua:224
 msgid "Ignore tags"
 msgstr "忽略标签"
 
-#: plugins/wallabag.koplugin/main.lua:214
+#: plugins/wallabag.koplugin/main.lua:226
 msgid "Ignore tags (%1)"
 msgstr "忽略标签（%1）"
 
-#: plugins/wallabag.koplugin/main.lua:219
+#: plugins/wallabag.koplugin/main.lua:231
 msgid "Tags to ignore"
 msgstr "需要忽略的标签"
 
-#: plugins/wallabag.koplugin/main.lua:220
+#: plugins/wallabag.koplugin/main.lua:232
 msgid "Enter a comma-separated list of tags to ignore."
 msgstr "输入你要忽略的标签，以半角逗号分开。"
 
-#: plugins/wallabag.koplugin/main.lua:231
+#: plugins/wallabag.koplugin/main.lua:243
 msgid "Automatic tags"
 msgstr "自动标签"
 
-#: plugins/wallabag.koplugin/main.lua:233
+#: plugins/wallabag.koplugin/main.lua:245
 msgid "Automatic tags (%1)"
 msgstr "自动标签（%1）"
 
-#: plugins/wallabag.koplugin/main.lua:238
+#: plugins/wallabag.koplugin/main.lua:250
 msgid "Tags to automatically add"
 msgstr "自动添加的标签"
 
-#: plugins/wallabag.koplugin/main.lua:239
+#: plugins/wallabag.koplugin/main.lua:251
 msgid ""
 "Enter a comma-separated list of tags to automatically add to new articles."
 msgstr "输入要自动添加到新文章的标签，以半角逗号分开。"
 
-#: plugins/wallabag.koplugin/main.lua:249
+#: plugins/wallabag.koplugin/main.lua:261
 msgid "Article deletion"
 msgstr "文章删除"
 
-#: plugins/wallabag.koplugin/main.lua:253
+#: plugins/wallabag.koplugin/main.lua:265
 msgid "Remotely delete finished articles"
 msgstr "远程删除已完成文章"
 
-#: plugins/wallabag.koplugin/main.lua:261
+#: plugins/wallabag.koplugin/main.lua:273
 msgid "Remotely delete 100% read articles"
 msgstr "远程删除100%已读文章"
 
-#: plugins/wallabag.koplugin/main.lua:270
+#: plugins/wallabag.koplugin/main.lua:282
 msgid "Mark as read instead of deleting"
 msgstr "标记为已读，而不是删除"
 
-#: plugins/wallabag.koplugin/main.lua:279
+#: plugins/wallabag.koplugin/main.lua:291
 msgid "Process deletions when downloading"
 msgstr "下载时同步删除"
 
-#: plugins/wallabag.koplugin/main.lua:287
+#: plugins/wallabag.koplugin/main.lua:299
 msgid "Synchronize remotely deleted files"
 msgstr "同步远程删除操作"
 
-#: plugins/wallabag.koplugin/main.lua:297
+#: plugins/wallabag.koplugin/main.lua:309
 msgid "Send review as tags"
 msgstr "将评论作为标签发送"
 
-#: plugins/wallabag.koplugin/main.lua:298
+#: plugins/wallabag.koplugin/main.lua:310
 msgid ""
 "This allow you to write tags in the review field, separated by commas, which "
 "can then be sent to Wallabag."
@@ -16935,15 +16935,15 @@ msgstr ""
 "你可以在评论内使用标签，这些标签将会被发送至 Wallabag。标签之间请使用分号分"
 "隔。"
 
-#: plugins/wallabag.koplugin/main.lua:309
+#: plugins/wallabag.koplugin/main.lua:321
 msgid "Remove finished articles from history"
 msgstr "从历史记录中删除完成的文章"
 
-#: plugins/wallabag.koplugin/main.lua:320
+#: plugins/wallabag.koplugin/main.lua:332
 msgid "Remove 100% read articles from history"
 msgstr "从历史记录中删除阅读进度100%的文章"
 
-#: plugins/wallabag.koplugin/main.lua:336
+#: plugins/wallabag.koplugin/main.lua:348
 msgid ""
 "Download directory: use a directory that is exclusively used by the Wallabag "
 "plugin. Existing files in this directory risk being deleted.\n"
@@ -16963,7 +16963,7 @@ msgstr ""
 "\n"
 "“同步远程删除操作”会将服务器上不存在的本地文章删除。"
 
-#: plugins/wallabag.koplugin/main.lua:351
+#: plugins/wallabag.koplugin/main.lua:363
 msgid ""
 "Wallabag is an open source read-it-later service. This plugin synchronizes "
 "with a Wallabag server.\n"
@@ -16978,27 +16978,27 @@ msgstr ""
 "\n"
 "下载至目录: %1"
 
-#: plugins/wallabag.koplugin/main.lua:374
+#: plugins/wallabag.koplugin/main.lua:386
 msgid "Please configure the server settings and set a download folder."
 msgstr "请配置服务器设置并设置一个下载文件夹."
 
-#: plugins/wallabag.koplugin/main.lua:377
+#: plugins/wallabag.koplugin/main.lua:389
 msgid "Server (★)"
 msgstr "服务器 (★)"
 
-#: plugins/wallabag.koplugin/main.lua:379
+#: plugins/wallabag.koplugin/main.lua:391
 msgid "Server"
 msgstr "服务器"
 
-#: plugins/wallabag.koplugin/main.lua:385
+#: plugins/wallabag.koplugin/main.lua:397
 msgid "Folder (★)"
 msgstr "文件夹 (★)"
 
-#: plugins/wallabag.koplugin/main.lua:387
+#: plugins/wallabag.koplugin/main.lua:399
 msgid "Folder"
 msgstr "文件夹"
 
-#: plugins/wallabag.koplugin/main.lua:399
+#: plugins/wallabag.koplugin/main.lua:411
 msgid ""
 "The download directory is not valid.\n"
 "Please configure it in the settings."
@@ -17006,40 +17006,40 @@ msgstr ""
 "下载目录不正确。\n"
 "请在设置中配置正确的下载目录。"
 
-#: plugins/wallabag.koplugin/main.lua:438
+#: plugins/wallabag.koplugin/main.lua:450
 msgid "Could not login to Wallabag server."
 msgstr "无法登录至 Wallabag 服务器。"
 
-#: plugins/wallabag.koplugin/main.lua:473
+#: plugins/wallabag.koplugin/main.lua:485
 msgid "Requesting article list failed."
 msgstr "获取文章列表失败。"
 
-#: plugins/wallabag.koplugin/main.lua:656
-#: plugins/wallabag.koplugin/main.lua:660
+#: plugins/wallabag.koplugin/main.lua:668
+#: plugins/wallabag.koplugin/main.lua:672
 msgid "Server response is not valid."
 msgstr "服务器响应无效。"
 
-#: plugins/wallabag.koplugin/main.lua:673
+#: plugins/wallabag.koplugin/main.lua:685
 msgid "Communication with server failed."
 msgstr "与服务器通信失败。"
 
-#: plugins/wallabag.koplugin/main.lua:682
+#: plugins/wallabag.koplugin/main.lua:694
 msgid "Connecting…"
 msgstr "连接中…"
 
-#: plugins/wallabag.koplugin/main.lua:691
+#: plugins/wallabag.koplugin/main.lua:703
 msgid "Adding articles from queue…"
 msgstr "正从队列中添加文章……"
 
-#: plugins/wallabag.koplugin/main.lua:704
+#: plugins/wallabag.koplugin/main.lua:716
 msgid "Getting article list…"
 msgstr "获取文章列表…"
 
-#: plugins/wallabag.koplugin/main.lua:717
+#: plugins/wallabag.koplugin/main.lua:729
 msgid "Downloading articles…"
 msgstr "正在下载条目……"
 
-#: plugins/wallabag.koplugin/main.lua:736
+#: plugins/wallabag.koplugin/main.lua:748
 msgid ""
 "Processing finished.\n"
 "\n"
@@ -17053,7 +17053,7 @@ msgstr ""
 "删除了 %2 篇文章。\n"
 "%3 篇文章失败。"
 
-#: plugins/wallabag.koplugin/main.lua:739
+#: plugins/wallabag.koplugin/main.lua:751
 msgid ""
 "Processing finished.\n"
 "\n"
@@ -17065,23 +17065,23 @@ msgstr ""
 "下载了 %1 篇文章。\n"
 "删除了 %2 篇文章。"
 
-#: plugins/wallabag.koplugin/main.lua:754
+#: plugins/wallabag.koplugin/main.lua:766
 msgid "Synchronizing remote deletions…"
 msgstr "正在同步远程删除操作…"
 
-#: plugins/wallabag.koplugin/main.lua:787
+#: plugins/wallabag.koplugin/main.lua:799
 msgid "Processing local files…"
 msgstr "正在处理本地文件…"
 
-#: plugins/wallabag.koplugin/main.lua:942
+#: plugins/wallabag.koplugin/main.lua:954
 msgid "Set a single tag to filter articles on"
 msgstr "设置一个过滤文章用的标签"
 
-#: plugins/wallabag.koplugin/main.lua:987
+#: plugins/wallabag.koplugin/main.lua:999
 msgid "Set tags"
 msgstr "设置标签"
 
-#: plugins/wallabag.koplugin/main.lua:1004
+#: plugins/wallabag.koplugin/main.lua:1016
 msgid ""
 "Enter the details of your Wallabag server and account.\n"
 "\n"
@@ -17100,35 +17100,35 @@ msgstr ""
 "\n"
 "编辑完成后请重启 KOReader。"
 
-#: plugins/wallabag.koplugin/main.lua:1013
+#: plugins/wallabag.koplugin/main.lua:1025
 msgid "Wallabag settings"
 msgstr "Wallabag 设置"
 
-#: plugins/wallabag.koplugin/main.lua:1019
+#: plugins/wallabag.koplugin/main.lua:1031
 msgid "Server URL"
 msgstr "服务器 URL"
 
-#: plugins/wallabag.koplugin/main.lua:1025
+#: plugins/wallabag.koplugin/main.lua:1037
 msgid "Client ID"
 msgstr "客户端ID"
 
-#: plugins/wallabag.koplugin/main.lua:1030
+#: plugins/wallabag.koplugin/main.lua:1042
 msgid "Client secret"
 msgstr "客户端密钥"
 
-#: plugins/wallabag.koplugin/main.lua:1085
+#: plugins/wallabag.koplugin/main.lua:1097
 msgid "Wallabag client settings"
 msgstr "Wallabag 客户端设置"
 
-#: plugins/wallabag.koplugin/main.lua:1089
+#: plugins/wallabag.koplugin/main.lua:1101
 msgid "Number of articles"
 msgstr "文章数目"
 
-#: plugins/wallabag.koplugin/main.lua:1091
+#: plugins/wallabag.koplugin/main.lua:1103
 msgid "Number of articles to download per sync"
 msgstr "每次同步下载的文章数目"
 
-#: plugins/wallabag.koplugin/main.lua:1180
+#: plugins/wallabag.koplugin/main.lua:1192
 msgid ""
 "Article added to download queue:\n"
 "%1"
@@ -17136,7 +17136,7 @@ msgstr ""
 "已添加文章至下载队列:\n"
 "%1"
 
-#: plugins/wallabag.koplugin/main.lua:1189
+#: plugins/wallabag.koplugin/main.lua:1201
 msgid ""
 "Article added to Wallabag:\n"
 "%1"
@@ -17144,7 +17144,7 @@ msgstr ""
 "添加至Wallabag的文章:\n"
 "%1"
 
-#: plugins/wallabag.koplugin/main.lua:1193
+#: plugins/wallabag.koplugin/main.lua:1205
 msgid ""
 "Error adding link to Wallabag:\n"
 "%1"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-11 09:30+0000\n"
+"POT-Creation-Date: 2022-12-11 16:07+0000\n"
 "PO-Revision-Date: 2022-12-11 16:07+0000\n"
 "Last-Translator: hombretranquilo <hombretranquilo.mbp@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/koreader/"
@@ -170,7 +170,7 @@ msgstr "Introduir nom d'arxiu"
 #: frontend/apps/reader/modules/readerdictionary.lua:695
 #: frontend/apps/reader/modules/readerfooter.lua:646
 #: frontend/apps/reader/modules/readergoto.lua:82
-#: frontend/apps/reader/modules/readerlink.lua:695
+#: frontend/apps/reader/modules/readerlink.lua:217
 #: frontend/apps/reader/modules/readersearch.lua:118
 #: frontend/apps/reader/modules/readerstatus.lua:117
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
@@ -225,10 +225,10 @@ msgstr "Introduir nom d'arxiu"
 #: plugins/vocabbuilder.koplugin/main.lua:1108
 #: plugins/vocabbuilder.koplugin/main.lua:1455
 #: plugins/vocabbuilder.koplugin/main.lua:1728
-#: plugins/wallabag.koplugin/main.lua:948
-#: plugins/wallabag.koplugin/main.lua:980
-#: plugins/wallabag.koplugin/main.lua:1048
-#: plugins/wallabag.koplugin/main.lua:1097
+#: plugins/wallabag.koplugin/main.lua:960
+#: plugins/wallabag.koplugin/main.lua:992
+#: plugins/wallabag.koplugin/main.lua:1060
+#: plugins/wallabag.koplugin/main.lua:1109
 msgid "Cancel"
 msgstr "Cancel·lar"
 
@@ -268,8 +268,8 @@ msgstr "Seleccionar"
 #: frontend/apps/cloudstorage/ftp.lua:135
 #: frontend/apps/cloudstorage/webdav.lua:151
 #: plugins/vocabbuilder.koplugin/main.lua:1461
-#: plugins/wallabag.koplugin/main.lua:347
-#: plugins/wallabag.koplugin/main.lua:1056
+#: plugins/wallabag.koplugin/main.lua:359
+#: plugins/wallabag.koplugin/main.lua:1068
 msgid "Info"
 msgstr "Info"
 
@@ -635,8 +635,8 @@ msgstr "Editar compte FTP"
 #: frontend/ui/widget/radiobuttonwidget.lua:59
 #: frontend/ui/widget/spinwidget.lua:37
 #: plugins/perceptionexpander.koplugin/main.lua:146
-#: plugins/wallabag.koplugin/main.lua:1062
-#: plugins/wallabag.koplugin/main.lua:1105
+#: plugins/wallabag.koplugin/main.lua:1074
+#: plugins/wallabag.koplugin/main.lua:1117
 msgid "Apply"
 msgstr "Aplicar"
 
@@ -707,12 +707,12 @@ msgid "WebDAV address, for example https://example.com/dav"
 msgstr "Adreça WebDAV, per exemple https://example.com/dav"
 
 #: frontend/apps/cloudstorage/webdav.lua:91
-#: plugins/wallabag.koplugin/main.lua:1036
+#: plugins/wallabag.koplugin/main.lua:1048
 msgid "Username"
 msgstr "Nom d'usuari"
 
 #: frontend/apps/cloudstorage/webdav.lua:93
-#: plugins/wallabag.koplugin/main.lua:1042
+#: plugins/wallabag.koplugin/main.lua:1054
 msgid "Password"
 msgstr "Contrasenya"
 
@@ -1054,7 +1054,7 @@ msgstr "Esborrar historial eliminats?"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:256
 #: frontend/apps/filemanager/filemanagermenu.lua:270
-#: frontend/apps/reader/modules/readerlink.lua:172
+#: frontend/apps/reader/modules/readerlink.lua:301
 #: plugins/batterystat.koplugin/main.lua:197
 #: plugins/coverimage.koplugin/main.lua:510
 msgid "Clear"
@@ -1189,7 +1189,7 @@ msgstr "Seleccionar tots els arxius de la carpeta"
 
 #: frontend/apps/filemanager/filemanager.lua:625
 #: frontend/apps/filemanager/filemanager.lua:630
-#: frontend/apps/reader/modules/readerlink.lua:713
+#: frontend/apps/reader/modules/readerlink.lua:141
 msgid "Copy"
 msgstr "Copiar"
 
@@ -1578,7 +1578,7 @@ msgstr "No es pot obrir el darrer document"
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:943
 #: plugins/texteditor.koplugin/main.lua:110
-#: plugins/wallabag.koplugin/main.lua:158
+#: plugins/wallabag.koplugin/main.lua:170
 msgid "Settings"
 msgstr "Congiguració"
 
@@ -1880,7 +1880,7 @@ msgstr "Desitja obrir l'últim document: %1?"
 #: plugins/autowarmth.koplugin/main.lua:760
 #: plugins/calibre.koplugin/main.lua:317
 #: plugins/exporter.koplugin/target/joplin.lua:229
-#: plugins/wallabag.koplugin/main.lua:955
+#: plugins/wallabag.koplugin/main.lua:967
 msgid "OK"
 msgstr "Acceptar"
 
@@ -1992,8 +1992,8 @@ msgid "Home"
 msgstr "Inici"
 
 #: frontend/apps/reader/modules/readerback.lua:141
-#: frontend/apps/reader/modules/readerlink.lua:833
-#: frontend/apps/reader/modules/readerlink.lua:854
+#: frontend/apps/reader/modules/readerlink.lua:837
+#: frontend/apps/reader/modules/readerlink.lua:858
 msgid "Location history is empty."
 msgstr "L'historial de posicions està buit."
 
@@ -3892,32 +3892,66 @@ msgstr ""
 "Per guardar els subratllats en el document cal moure l'arxiu a una carpeta "
 "amb permisos d'escriptura."
 
-#: frontend/apps/reader/modules/readerlink.lua:166
+#: frontend/apps/reader/modules/readerlink.lua:149
+msgid "Show QR code"
+msgstr "Mostrar Codi QR"
+
+#: frontend/apps/reader/modules/readerlink.lua:162
+msgid "Open in browser"
+msgstr "Obrir en el navegador"
+
+#: frontend/apps/reader/modules/readerlink.lua:176
+msgid "Read online"
+msgstr "Llegir en línia"
+
+#: frontend/apps/reader/modules/readerlink.lua:188
+msgid ""
+"Would you like to read this Wikipedia %1 article?\n"
+"\n"
+"%2\n"
+msgstr ""
+"Vol llegir l'article %1 de Viquipèdia?\n"
+"\n"
+"%2\n"
+
+#: frontend/apps/reader/modules/readerlink.lua:198
+msgid "Read EPUB"
+msgstr "Llegir EPUB"
+
+#: frontend/apps/reader/modules/readerlink.lua:209
+msgid ""
+"This article has previously been saved as EPUB. You may wish to read the "
+"saved EPUB instead."
+msgstr ""
+"Aquest article ha estat guardat prèviament com EPUB. És possible que "
+"prefereixi llegir el EPUB guardat en el seu lloc."
+
+#: frontend/apps/reader/modules/readerlink.lua:295
 msgid "Go back to previous location"
 msgstr "Retrocedir a la posició prèvia"
 
-#: frontend/apps/reader/modules/readerlink.lua:171
+#: frontend/apps/reader/modules/readerlink.lua:300
 msgid "Clear location history?"
 msgstr "Esborrar historial de localitzacions?"
 
-#: frontend/apps/reader/modules/readerlink.lua:185
+#: frontend/apps/reader/modules/readerlink.lua:314
 #: frontend/ui/data/css_tweaks.lua:612
 msgid "Links"
 msgstr "Enllaços"
 
-#: frontend/apps/reader/modules/readerlink.lua:188
+#: frontend/apps/reader/modules/readerlink.lua:317
 msgid "Tap to follow links"
 msgstr "Prémer per seguir enllaços"
 
-#: frontend/apps/reader/modules/readerlink.lua:194
+#: frontend/apps/reader/modules/readerlink.lua:323
 msgid "Tap on links to follow them."
 msgstr "Prémer sobre els enllaços per seguir-los."
 
-#: frontend/apps/reader/modules/readerlink.lua:197
+#: frontend/apps/reader/modules/readerlink.lua:326
 msgid "Ignore external links on tap"
 msgstr "Ignorar enllaços externs en prémer"
 
-#: frontend/apps/reader/modules/readerlink.lua:204
+#: frontend/apps/reader/modules/readerlink.lua:333
 msgid ""
 "Ignore taps on external links. Useful with Wikipedia EPUBs to make page "
 "turning easier.\n"
@@ -3929,11 +3963,11 @@ msgstr ""
 "Els enllaços podran ser oberts prement en ells en la finestra del diccionari "
 "o en el menú de selecció."
 
-#: frontend/apps/reader/modules/readerlink.lua:210
+#: frontend/apps/reader/modules/readerlink.lua:339
 msgid "Swipe to go back"
 msgstr "Lliscar per a retrocedir"
 
-#: frontend/apps/reader/modules/readerlink.lua:216
+#: frontend/apps/reader/modules/readerlink.lua:345
 msgid ""
 "Swipe to the right to go back to the previous location after you have "
 "followed a link. When the location stack is empty, swiping to the right "
@@ -3943,11 +3977,11 @@ msgstr ""
 "seguit un enllaç. Quan la llista d'ubicacions està buida, en lliscar cap a "
 "la dreta s'accedirà a la pàgina anterior."
 
-#: frontend/apps/reader/modules/readerlink.lua:219
+#: frontend/apps/reader/modules/readerlink.lua:348
 msgid "Swipe to follow nearest link"
 msgstr "Lliscar per seguir l'enllaç més proper"
 
-#: frontend/apps/reader/modules/readerlink.lua:225
+#: frontend/apps/reader/modules/readerlink.lua:354
 msgid ""
 "Swipe to the left to follow the link nearest to where you started the swipe. "
 "This is useful when a small font is used and tapping on small links is "
@@ -3957,11 +3991,11 @@ msgstr ""
 "és útil quan s'utilitza un tipus de lletra petit i fer clic en enllaços "
 "petits és tediós."
 
-#: frontend/apps/reader/modules/readerlink.lua:228
+#: frontend/apps/reader/modules/readerlink.lua:357
 msgid "Ignore external links on swipe"
 msgstr "Ignorar enllaços externs en fer gestos de lliscament"
 
-#: frontend/apps/reader/modules/readerlink.lua:235
+#: frontend/apps/reader/modules/readerlink.lua:364
 msgid ""
 "Ignore external links near swipe. Useful with Wikipedia EPUBs to follow only "
 "footnotes with swipe.\n"
@@ -3974,11 +4008,11 @@ msgstr ""
 "Els enllaços externs és possible seguir-los des de la finestra del "
 "diccionari o des del menú de selecció una vegada que s'ha premut en ells."
 
-#: frontend/apps/reader/modules/readerlink.lua:241
+#: frontend/apps/reader/modules/readerlink.lua:370
 msgid "Swipe to jump to latest bookmark"
 msgstr "Lliscar per anar a l'últim marcador"
 
-#: frontend/apps/reader/modules/readerlink.lua:247
+#: frontend/apps/reader/modules/readerlink.lua:376
 msgid ""
 "Swipe to the left to go the most recently bookmarked page.\n"
 "This can be useful to quickly swipe back and forth between what you are "
@@ -3995,11 +4029,11 @@ msgstr ""
 "està activada, això només funcionarà quan la pàgina actual no contingui cap "
 "enllaç."
 
-#: frontend/apps/reader/modules/readerlink.lua:262
+#: frontend/apps/reader/modules/readerlink.lua:391
 msgid "Allow larger tap area around links"
 msgstr "Augmentar la superfície de pulsació dels enllaços"
 
-#: frontend/apps/reader/modules/readerlink.lua:269
+#: frontend/apps/reader/modules/readerlink.lua:398
 msgid ""
 "Extends the tap area around internal links. Useful with a small font where "
 "tapping on small footnote links may be tedious."
@@ -4008,11 +4042,11 @@ msgstr ""
 "tipus de lletra petits en les quals prémer en enllaços de notes a peu de "
 "pàgina petits pot ser complicat."
 
-#: frontend/apps/reader/modules/readerlink.lua:272
+#: frontend/apps/reader/modules/readerlink.lua:401
 msgid "Show footnotes in popup"
 msgstr "Mostrar notes a peu de pàgina en una finestra emergent"
 
-#: frontend/apps/reader/modules/readerlink.lua:281
+#: frontend/apps/reader/modules/readerlink.lua:410
 msgid ""
 "Show internal link target content in a footnote popup when it looks like it "
 "might be a footnote, instead of following the link.\n"
@@ -4036,25 +4070,25 @@ msgstr ""
 "Des de la finestra emergent de nota a peu de pàgina, lliscant el dit a "
 "l'esquerra, es pot saltar a la ubicació de la nota en el llibre."
 
-#: frontend/apps/reader/modules/readerlink.lua:291
+#: frontend/apps/reader/modules/readerlink.lua:420
 msgid "Footnote popup settings"
 msgstr "Configuració de notes a peu de pàgina mostrades en finestres emergents"
 
-#: frontend/apps/reader/modules/readerlink.lua:296
+#: frontend/apps/reader/modules/readerlink.lua:425
 msgid "Show more links as footnotes"
 msgstr "Mostrar més enllaços com a notes a peu de pàgina"
 
-#: frontend/apps/reader/modules/readerlink.lua:306
+#: frontend/apps/reader/modules/readerlink.lua:435
 msgid "Loosen footnote detection rules to show more links as footnotes."
 msgstr ""
 "Reduir les restriccions de detecció de notes a peu de pàgina per mostrar més "
 "enllaços com a notes a peu de pàgina."
 
-#: frontend/apps/reader/modules/readerlink.lua:310
+#: frontend/apps/reader/modules/readerlink.lua:439
 msgid "Use book font as popup font"
 msgstr "Usar la font del llibre com a font de les finestres emergents"
 
-#: frontend/apps/reader/modules/readerlink.lua:321
+#: frontend/apps/reader/modules/readerlink.lua:450
 msgid ""
 "Display the footnote popup text with the font set as the document font (the "
 "book text may still render with a different font if the book uses embedded "
@@ -4064,20 +4098,20 @@ msgstr ""
 "com a font del document (el text del llibre pot mostrar-se amb una font "
 "diferent si el llibre utilitza fonts incrustades)."
 
-#: frontend/apps/reader/modules/readerlink.lua:324
-#: frontend/apps/reader/modules/readerlink.lua:344
-#: frontend/apps/reader/modules/readerlink.lua:366
+#: frontend/apps/reader/modules/readerlink.lua:453
+#: frontend/apps/reader/modules/readerlink.lua:473
+#: frontend/apps/reader/modules/readerlink.lua:495
 msgid "Set footnote popup font size"
 msgstr ""
 "Establir la grandària de lletra de les notes a peu de pàgina mostrades en "
 "finestres emergents"
 
-#: frontend/apps/reader/modules/readerlink.lua:343
-#: frontend/apps/reader/modules/readerlink.lua:365 frontend/dispatcher.lua:170
+#: frontend/apps/reader/modules/readerlink.lua:472
+#: frontend/apps/reader/modules/readerlink.lua:494 frontend/dispatcher.lua:170
 msgid "Set font size"
 msgstr "Establir grandària de lletra"
 
-#: frontend/apps/reader/modules/readerlink.lua:345
+#: frontend/apps/reader/modules/readerlink.lua:474
 msgid ""
 "The footnote popup font can adjust to the font size you've set for the "
 "document, but you can specify here a fixed absolute font size to be used "
@@ -4087,11 +4121,11 @@ msgstr ""
 "pot ajustar a la grandària de lletra establert per al document, però des "
 "d'aquí és possible especificar una grandària de font diferent."
 
-#: frontend/apps/reader/modules/readerlink.lua:351
+#: frontend/apps/reader/modules/readerlink.lua:480
 msgid "Set a relative font size instead"
 msgstr "Establir una grandària de lletra relativa"
 
-#: frontend/apps/reader/modules/readerlink.lua:367
+#: frontend/apps/reader/modules/readerlink.lua:496
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -4108,11 +4142,11 @@ msgstr ""
 "Un valor negatiu el farà més petit, mentre que un positiu ho farà més gran.\n"
 "El valor recomanat és -2."
 
-#: frontend/apps/reader/modules/readerlink.lua:376
+#: frontend/apps/reader/modules/readerlink.lua:505
 msgid "Set an absolute font size instead"
 msgstr "Establir una grandària de lletra absoluta"
 
-#: frontend/apps/reader/modules/readerlink.lua:390
+#: frontend/apps/reader/modules/readerlink.lua:519
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -4124,11 +4158,11 @@ msgstr ""
 "Aquesta opció permet especificar una grandària major o menor en relació a la "
 "grandària de la lletra del document."
 
-#: frontend/apps/reader/modules/readerlink.lua:552
+#: frontend/apps/reader/modules/readerlink.lua:681
 msgid "Location history cleared."
 msgstr "Historial de posicions esborrat."
 
-#: frontend/apps/reader/modules/readerlink.lua:665
+#: frontend/apps/reader/modules/readerlink.lua:794
 msgid ""
 "Would you like to read this local document?\n"
 "\n"
@@ -4138,7 +4172,7 @@ msgstr ""
 "\n"
 "%1\n"
 
-#: frontend/apps/reader/modules/readerlink.lua:674
+#: frontend/apps/reader/modules/readerlink.lua:803
 msgid ""
 "Link to unsupported local file:\n"
 "%1"
@@ -4146,7 +4180,7 @@ msgstr ""
 "Enllaç a un arxiu local no compatible:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:682
+#: frontend/apps/reader/modules/readerlink.lua:811
 msgid ""
 "Invalid or external link:\n"
 "%1"
@@ -4154,45 +4188,7 @@ msgstr ""
 "Enllaç no vàlid, o enllaç extern:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:720
-msgid "Show QR code"
-msgstr "Mostrar Codi QR"
-
-#: frontend/apps/reader/modules/readerlink.lua:732
-msgid "Add to Wallabag"
-msgstr "Afegir a Wallabag"
-
-#: frontend/apps/reader/modules/readerlink.lua:741
-msgid "Open in browser"
-msgstr "Obrir en el navegador"
-
-#: frontend/apps/reader/modules/readerlink.lua:782
-msgid ""
-"Would you like to read this Wikipedia %1 article?\n"
-"\n"
-"%2\n"
-msgstr ""
-"Vol llegir l'article %1 de Viquipèdia?\n"
-"\n"
-"%2\n"
-
-#: frontend/apps/reader/modules/readerlink.lua:784
-msgid "Read online"
-msgstr "Llegir en línia"
-
-#: frontend/apps/reader/modules/readerlink.lua:793
-msgid ""
-"This article has previously been saved as EPUB. You may wish to read the "
-"saved EPUB instead."
-msgstr ""
-"Aquest article ha estat guardat prèviament com EPUB. És possible que "
-"prefereixi llegir el EPUB guardat en el seu lloc."
-
-#: frontend/apps/reader/modules/readerlink.lua:795
-msgid "Read EPUB"
-msgstr "Llegir EPUB"
-
-#: frontend/apps/reader/modules/readerlink.lua:809
+#: frontend/apps/reader/modules/readerlink.lua:1426
 msgid ""
 "External link:\n"
 "\n"
@@ -6322,31 +6318,31 @@ msgstr "ds."
 msgid "Sun"
 msgstr "dg."
 
-#: frontend/datetime.lua:55 plugins/statistics.koplugin/readerprogress.lua:34
+#: frontend/datetime.lua:55
 msgid "Monday"
 msgstr "dilliuns"
 
-#: frontend/datetime.lua:56 plugins/statistics.koplugin/readerprogress.lua:35
+#: frontend/datetime.lua:56
 msgid "Tuesday"
 msgstr "Dimarts"
 
-#: frontend/datetime.lua:57 plugins/statistics.koplugin/readerprogress.lua:36
+#: frontend/datetime.lua:57
 msgid "Wednesday"
 msgstr "Dimecres"
 
-#: frontend/datetime.lua:58 plugins/statistics.koplugin/readerprogress.lua:37
+#: frontend/datetime.lua:58
 msgid "Thursday"
 msgstr "Dijous"
 
-#: frontend/datetime.lua:59 plugins/statistics.koplugin/readerprogress.lua:38
+#: frontend/datetime.lua:59
 msgid "Friday"
 msgstr "divendres"
 
-#: frontend/datetime.lua:60 plugins/statistics.koplugin/readerprogress.lua:39
+#: frontend/datetime.lua:60
 msgid "Saturday"
 msgstr "dissabte"
 
-#: frontend/datetime.lua:61 plugins/statistics.koplugin/readerprogress.lua:40
+#: frontend/datetime.lua:61
 msgid "Sunday"
 msgstr "diumenge"
 
@@ -9368,7 +9364,7 @@ msgstr "Versió: %1"
 #: frontend/ui/widget/touchmenu.lua:1308
 #: plugins/exporter.koplugin/target/joplin.lua:288
 #: plugins/externalkeyboard.koplugin/main.lua:159
-#: plugins/wallabag.koplugin/main.lua:332
+#: plugins/wallabag.koplugin/main.lua:344
 msgid "Help"
 msgstr "Ajuda"
 
@@ -11813,8 +11809,8 @@ msgid "Days"
 msgstr "Dies"
 
 #: frontend/ui/widget/bookstatuswidget.lua:425
-#: plugins/statistics.koplugin/readerprogress.lua:307
-#: plugins/statistics.koplugin/readerprogress.lua:321
+#: plugins/statistics.koplugin/readerprogress.lua:297
+#: plugins/statistics.koplugin/readerprogress.lua:311
 msgid "Time"
 msgstr "Temps"
 
@@ -16232,11 +16228,11 @@ msgstr "SSH"
 msgid "Connect and transfer files to the device using SSH."
 msgstr "Connecta i transfereix arxius al dispositiu usant SSH."
 
-#: plugins/statistics.koplugin/calendarview.lua:1124
+#: plugins/statistics.koplugin/calendarview.lua:1120
 msgid "Enter month"
 msgstr "Introduir mes"
 
-#: plugins/statistics.koplugin/calendarview.lua:1139
+#: plugins/statistics.koplugin/calendarview.lua:1135
 msgid "Invalid year-month string (YYYY-MM)"
 msgstr "Cadena any-mes no vàlida (AAAA-MM)"
 
@@ -16398,7 +16394,7 @@ msgid "Current book"
 msgstr "Llibre actual"
 
 #: plugins/statistics.koplugin/main.lua:1143
-#: plugins/statistics.koplugin/main.lua:2787
+#: plugins/statistics.koplugin/main.lua:2784
 msgid "Current statistics"
 msgstr "Estadístiques actuals"
 
@@ -16442,7 +16438,7 @@ msgstr "Llibres per mes"
 
 #: plugins/statistics.koplugin/main.lua:1256
 #: plugins/statistics.koplugin/main.lua:1261
-#: plugins/statistics.koplugin/readerprogress.lua:110
+#: plugins/statistics.koplugin/readerprogress.lua:100
 msgid "Last week"
 msgstr "Última setmana"
 
@@ -16659,24 +16655,24 @@ msgstr "No s'ha eliminat cap estadística."
 msgid "Keeps and displays your reading statistics."
 msgstr "Guarda i mostra estadístiques de lectura."
 
-#: plugins/statistics.koplugin/readerprogress.lua:112
+#: plugins/statistics.koplugin/readerprogress.lua:102
 msgid "Week progress"
 msgstr "Progrés setmanal"
 
-#: plugins/statistics.koplugin/readerprogress.lua:114
+#: plugins/statistics.koplugin/readerprogress.lua:104
 msgid "Current"
 msgstr "Actual"
 
-#: plugins/statistics.koplugin/readerprogress.lua:114
+#: plugins/statistics.koplugin/readerprogress.lua:104
 msgid "Today"
 msgstr "Avui"
 
-#: plugins/statistics.koplugin/readerprogress.lua:300
-#: plugins/statistics.koplugin/readerprogress.lua:314
+#: plugins/statistics.koplugin/readerprogress.lua:290
+#: plugins/statistics.koplugin/readerprogress.lua:304
 msgid "Pages"
 msgstr "Pàgines"
 
-#: plugins/statistics.koplugin/readerprogress.lua:395
+#: plugins/statistics.koplugin/readerprogress.lua:385
 msgid ""
 "Total\n"
 "pages"
@@ -16684,7 +16680,7 @@ msgstr ""
 "Total\n"
 "pàgines"
 
-#: plugins/statistics.koplugin/readerprogress.lua:404
+#: plugins/statistics.koplugin/readerprogress.lua:394
 msgid ""
 "Total\n"
 "time"
@@ -16692,7 +16688,7 @@ msgstr ""
 "Total\n"
 "temps"
 
-#: plugins/statistics.koplugin/readerprogress.lua:413
+#: plugins/statistics.koplugin/readerprogress.lua:403
 msgid ""
 "Average\n"
 "pages"
@@ -16700,7 +16696,7 @@ msgstr ""
 "Mitjana\n"
 "pàgines"
 
-#: plugins/statistics.koplugin/readerprogress.lua:422
+#: plugins/statistics.koplugin/readerprogress.lua:412
 msgid ""
 "Average\n"
 "time"
@@ -17489,19 +17485,23 @@ msgstr ""
 msgid "Wallabag retrieval"
 msgstr "Recuperació de Wallabag"
 
-#: plugins/wallabag.koplugin/main.lua:120 plugins/wallabag.koplugin/_meta.lua:4
+#: plugins/wallabag.koplugin/main.lua:120
+msgid "Add to Wallabag"
+msgstr "Afegir a Wallabag"
+
+#: plugins/wallabag.koplugin/main.lua:132 plugins/wallabag.koplugin/_meta.lua:4
 msgid "Wallabag"
 msgstr "Wallabag"
 
-#: plugins/wallabag.koplugin/main.lua:123
+#: plugins/wallabag.koplugin/main.lua:135
 msgid "Retrieve new articles from server"
 msgstr "Recuperar articles nous del servidor"
 
-#: plugins/wallabag.koplugin/main.lua:129
+#: plugins/wallabag.koplugin/main.lua:141
 msgid "Delete finished articles remotely"
 msgstr "Esborrar remotament articles finalitzats"
 
-#: plugins/wallabag.koplugin/main.lua:134
+#: plugins/wallabag.koplugin/main.lua:146
 msgid ""
 "Articles processed.\n"
 "Deleted: %1"
@@ -17509,98 +17509,98 @@ msgstr ""
 "Articles processats.\n"
 "Eliminats: %1"
 
-#: plugins/wallabag.koplugin/main.lua:145
+#: plugins/wallabag.koplugin/main.lua:157
 msgid "Go to download folder"
 msgstr "Anar a la carpeta de descàrrega"
 
-#: plugins/wallabag.koplugin/main.lua:165
+#: plugins/wallabag.koplugin/main.lua:177
 msgid "Configure Wallabag server"
 msgstr "Configurar el servidor de Wallabag"
 
-#: plugins/wallabag.koplugin/main.lua:172
+#: plugins/wallabag.koplugin/main.lua:184
 msgid "Configure Wallabag client"
 msgstr "Configurar el servidor de Wallabag"
 
-#: plugins/wallabag.koplugin/main.lua:182
+#: plugins/wallabag.koplugin/main.lua:194
 msgid "Not set"
 msgstr "No configurat"
 
-#: plugins/wallabag.koplugin/main.lua:186
+#: plugins/wallabag.koplugin/main.lua:198
 msgid "Set download directory (%1)"
 msgstr "Establir carpeta de descàrrega (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:198
+#: plugins/wallabag.koplugin/main.lua:210
 msgid "All articles"
 msgstr "Tots els articles"
 
-#: plugins/wallabag.koplugin/main.lua:202
+#: plugins/wallabag.koplugin/main.lua:214
 msgid "Filter articles by tag (%1)"
 msgstr "Filtrar articles per etiqueta (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:212
+#: plugins/wallabag.koplugin/main.lua:224
 msgid "Ignore tags"
 msgstr "Ignorar etiquetes"
 
-#: plugins/wallabag.koplugin/main.lua:214
+#: plugins/wallabag.koplugin/main.lua:226
 msgid "Ignore tags (%1)"
 msgstr "Ignorar etiquetes (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:219
+#: plugins/wallabag.koplugin/main.lua:231
 msgid "Tags to ignore"
 msgstr "Etiquetes a ignorar"
 
-#: plugins/wallabag.koplugin/main.lua:220
+#: plugins/wallabag.koplugin/main.lua:232
 msgid "Enter a comma-separated list of tags to ignore."
 msgstr "Introduir una llista d'etiquetes separades per comes per a ignorar."
 
-#: plugins/wallabag.koplugin/main.lua:231
+#: plugins/wallabag.koplugin/main.lua:243
 msgid "Automatic tags"
 msgstr "Etiquetes automàtiques"
 
-#: plugins/wallabag.koplugin/main.lua:233
+#: plugins/wallabag.koplugin/main.lua:245
 msgid "Automatic tags (%1)"
 msgstr "Etiquetes automàtiques (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:238
+#: plugins/wallabag.koplugin/main.lua:250
 msgid "Tags to automatically add"
 msgstr "Etiquetes a afegir automàticament"
 
-#: plugins/wallabag.koplugin/main.lua:239
+#: plugins/wallabag.koplugin/main.lua:251
 msgid ""
 "Enter a comma-separated list of tags to automatically add to new articles."
 msgstr ""
 "Introduir una llista d'etiquetes separades per comes per afegir-les "
 "automàticament als articles nous."
 
-#: plugins/wallabag.koplugin/main.lua:249
+#: plugins/wallabag.koplugin/main.lua:261
 msgid "Article deletion"
 msgstr "Eliminació d'articles"
 
-#: plugins/wallabag.koplugin/main.lua:253
+#: plugins/wallabag.koplugin/main.lua:265
 msgid "Remotely delete finished articles"
 msgstr "Esborrar remotament els articles finalitzats"
 
-#: plugins/wallabag.koplugin/main.lua:261
+#: plugins/wallabag.koplugin/main.lua:273
 msgid "Remotely delete 100% read articles"
 msgstr "Esborrar remotament els articles llegits per complet"
 
-#: plugins/wallabag.koplugin/main.lua:270
+#: plugins/wallabag.koplugin/main.lua:282
 msgid "Mark as read instead of deleting"
 msgstr "Marcar com llegit en lloc d'esborrar"
 
-#: plugins/wallabag.koplugin/main.lua:279
+#: plugins/wallabag.koplugin/main.lua:291
 msgid "Process deletions when downloading"
 msgstr "Processar eliminacions durant la descàrrega"
 
-#: plugins/wallabag.koplugin/main.lua:287
+#: plugins/wallabag.koplugin/main.lua:299
 msgid "Synchronize remotely deleted files"
 msgstr "Sincronitzar arxius eliminats remotament"
 
-#: plugins/wallabag.koplugin/main.lua:297
+#: plugins/wallabag.koplugin/main.lua:309
 msgid "Send review as tags"
 msgstr "Enviar ressenyes com a etiquetes"
 
-#: plugins/wallabag.koplugin/main.lua:298
+#: plugins/wallabag.koplugin/main.lua:310
 msgid ""
 "This allow you to write tags in the review field, separated by commas, which "
 "can then be sent to Wallabag."
@@ -17609,15 +17609,15 @@ msgstr ""
 "Wallabag. Cal escriure les etiquetes en el camp ressenya i han d'anar "
 "separades per comes."
 
-#: plugins/wallabag.koplugin/main.lua:309
+#: plugins/wallabag.koplugin/main.lua:321
 msgid "Remove finished articles from history"
 msgstr "Esborrar de l'historial els articles acabats"
 
-#: plugins/wallabag.koplugin/main.lua:320
+#: plugins/wallabag.koplugin/main.lua:332
 msgid "Remove 100% read articles from history"
 msgstr "Eliminar de l'historial els articles llegits per complet"
 
-#: plugins/wallabag.koplugin/main.lua:336
+#: plugins/wallabag.koplugin/main.lua:348
 msgid ""
 "Download directory: use a directory that is exclusively used by the Wallabag "
 "plugin. Existing files in this directory risk being deleted.\n"
@@ -17641,7 +17641,7 @@ msgstr ""
 "L'opció 'Sincronitzar arxius eliminats remotament' eliminarà els arxius "
 "locals que ja no es troben al servidor."
 
-#: plugins/wallabag.koplugin/main.lua:351
+#: plugins/wallabag.koplugin/main.lua:363
 msgid ""
 "Wallabag is an open source read-it-later service. This plugin synchronizes "
 "with a Wallabag server.\n"
@@ -17657,27 +17657,27 @@ msgstr ""
 "\n"
 "Descàrregues en la carpeta: %1"
 
-#: plugins/wallabag.koplugin/main.lua:374
+#: plugins/wallabag.koplugin/main.lua:386
 msgid "Please configure the server settings and set a download folder."
 msgstr "Configure el servidor i establisca una carpeta de descàrrega."
 
-#: plugins/wallabag.koplugin/main.lua:377
+#: plugins/wallabag.koplugin/main.lua:389
 msgid "Server (★)"
 msgstr "Servidor (★)"
 
-#: plugins/wallabag.koplugin/main.lua:379
+#: plugins/wallabag.koplugin/main.lua:391
 msgid "Server"
 msgstr "Servidor"
 
-#: plugins/wallabag.koplugin/main.lua:385
+#: plugins/wallabag.koplugin/main.lua:397
 msgid "Folder (★)"
 msgstr "Carpeta (★)"
 
-#: plugins/wallabag.koplugin/main.lua:387
+#: plugins/wallabag.koplugin/main.lua:399
 msgid "Folder"
 msgstr "Carpeta"
 
-#: plugins/wallabag.koplugin/main.lua:399
+#: plugins/wallabag.koplugin/main.lua:411
 msgid ""
 "The download directory is not valid.\n"
 "Please configure it in the settings."
@@ -17685,40 +17685,40 @@ msgstr ""
 "La carpeta de descàrrega no és vàlida.\n"
 "Aquesta opció es pot configurar en els ajustos."
 
-#: plugins/wallabag.koplugin/main.lua:438
+#: plugins/wallabag.koplugin/main.lua:450
 msgid "Could not login to Wallabag server."
 msgstr "No s'ha pogut iniciar sessió en el servidor de Wallabag."
 
-#: plugins/wallabag.koplugin/main.lua:473
+#: plugins/wallabag.koplugin/main.lua:485
 msgid "Requesting article list failed."
 msgstr "La sol·licitud de la llista d'articles ha fallat."
 
-#: plugins/wallabag.koplugin/main.lua:656
-#: plugins/wallabag.koplugin/main.lua:660
+#: plugins/wallabag.koplugin/main.lua:668
+#: plugins/wallabag.koplugin/main.lua:672
 msgid "Server response is not valid."
 msgstr "La resposta del servidor no és vàlida."
 
-#: plugins/wallabag.koplugin/main.lua:673
+#: plugins/wallabag.koplugin/main.lua:685
 msgid "Communication with server failed."
 msgstr "Error de comunicació amb el servidor."
 
-#: plugins/wallabag.koplugin/main.lua:682
+#: plugins/wallabag.koplugin/main.lua:694
 msgid "Connecting…"
 msgstr "Connectant…"
 
-#: plugins/wallabag.koplugin/main.lua:691
+#: plugins/wallabag.koplugin/main.lua:703
 msgid "Adding articles from queue…"
 msgstr "Afegir articles de la cua …"
 
-#: plugins/wallabag.koplugin/main.lua:704
+#: plugins/wallabag.koplugin/main.lua:716
 msgid "Getting article list…"
 msgstr "Generant llista d'articles…"
 
-#: plugins/wallabag.koplugin/main.lua:717
+#: plugins/wallabag.koplugin/main.lua:729
 msgid "Downloading articles…"
 msgstr "Descarregant articles…"
 
-#: plugins/wallabag.koplugin/main.lua:736
+#: plugins/wallabag.koplugin/main.lua:748
 msgid ""
 "Processing finished.\n"
 "\n"
@@ -17732,7 +17732,7 @@ msgstr ""
 "Suprimits: %2\n"
 "Fallits: %3"
 
-#: plugins/wallabag.koplugin/main.lua:739
+#: plugins/wallabag.koplugin/main.lua:751
 msgid ""
 "Processing finished.\n"
 "\n"
@@ -17744,23 +17744,23 @@ msgstr ""
 "Articles descarregats: %1\n"
 "Eliminats: %2"
 
-#: plugins/wallabag.koplugin/main.lua:754
+#: plugins/wallabag.koplugin/main.lua:766
 msgid "Synchronizing remote deletions…"
 msgstr "Sincronitzant eliminacions remotes…"
 
-#: plugins/wallabag.koplugin/main.lua:787
+#: plugins/wallabag.koplugin/main.lua:799
 msgid "Processing local files…"
 msgstr "Processant arxius locals…"
 
-#: plugins/wallabag.koplugin/main.lua:942
+#: plugins/wallabag.koplugin/main.lua:954
 msgid "Set a single tag to filter articles on"
 msgstr "Establir una etiqueta única per filtrar articles"
 
-#: plugins/wallabag.koplugin/main.lua:987
+#: plugins/wallabag.koplugin/main.lua:999
 msgid "Set tags"
 msgstr "Configurar etiquetes"
 
-#: plugins/wallabag.koplugin/main.lua:1004
+#: plugins/wallabag.koplugin/main.lua:1016
 msgid ""
 "Enter the details of your Wallabag server and account.\n"
 "\n"
@@ -17780,35 +17780,35 @@ msgstr ""
 "\n"
 "Cal reiniciar KOReader després d'editar l'arxiu de configuració."
 
-#: plugins/wallabag.koplugin/main.lua:1013
+#: plugins/wallabag.koplugin/main.lua:1025
 msgid "Wallabag settings"
 msgstr "Configuració de Wallabag"
 
-#: plugins/wallabag.koplugin/main.lua:1019
+#: plugins/wallabag.koplugin/main.lua:1031
 msgid "Server URL"
 msgstr "URL del servidor"
 
-#: plugins/wallabag.koplugin/main.lua:1025
+#: plugins/wallabag.koplugin/main.lua:1037
 msgid "Client ID"
 msgstr "ID de client"
 
-#: plugins/wallabag.koplugin/main.lua:1030
+#: plugins/wallabag.koplugin/main.lua:1042
 msgid "Client secret"
 msgstr "Contrasenya del client"
 
-#: plugins/wallabag.koplugin/main.lua:1085
+#: plugins/wallabag.koplugin/main.lua:1097
 msgid "Wallabag client settings"
 msgstr "Configuració de client de Wallabag"
 
-#: plugins/wallabag.koplugin/main.lua:1089
+#: plugins/wallabag.koplugin/main.lua:1101
 msgid "Number of articles"
 msgstr "Nombre d'articles"
 
-#: plugins/wallabag.koplugin/main.lua:1091
+#: plugins/wallabag.koplugin/main.lua:1103
 msgid "Number of articles to download per sync"
 msgstr "Nombre d'articles a descarregar en cada sincronització"
 
-#: plugins/wallabag.koplugin/main.lua:1180
+#: plugins/wallabag.koplugin/main.lua:1192
 msgid ""
 "Article added to download queue:\n"
 "%1"
@@ -17816,7 +17816,7 @@ msgstr ""
 "Article afegit a la cua de descàrrega:\n"
 "%1"
 
-#: plugins/wallabag.koplugin/main.lua:1189
+#: plugins/wallabag.koplugin/main.lua:1201
 msgid ""
 "Article added to Wallabag:\n"
 "%1"
@@ -17824,7 +17824,7 @@ msgstr ""
 "Article afegit a Wallabag:\n"
 "%1"
 
-#: plugins/wallabag.koplugin/main.lua:1193
+#: plugins/wallabag.koplugin/main.lua:1205
 msgid ""
 "Error adding link to Wallabag:\n"
 "%1"

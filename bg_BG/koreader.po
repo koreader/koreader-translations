@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-11 09:30+0000\n"
+"POT-Creation-Date: 2022-12-11 16:07+0000\n"
 "PO-Revision-Date: 2022-11-08 14:54+0000\n"
 "Last-Translator: 109247019824 <stoyan@gmx.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/koreader/"
@@ -168,7 +168,7 @@ msgstr "Въведете име на файла"
 #: frontend/apps/reader/modules/readerdictionary.lua:695
 #: frontend/apps/reader/modules/readerfooter.lua:646
 #: frontend/apps/reader/modules/readergoto.lua:82
-#: frontend/apps/reader/modules/readerlink.lua:695
+#: frontend/apps/reader/modules/readerlink.lua:217
 #: frontend/apps/reader/modules/readersearch.lua:118
 #: frontend/apps/reader/modules/readerstatus.lua:117
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
@@ -223,10 +223,10 @@ msgstr "Въведете име на файла"
 #: plugins/vocabbuilder.koplugin/main.lua:1108
 #: plugins/vocabbuilder.koplugin/main.lua:1455
 #: plugins/vocabbuilder.koplugin/main.lua:1728
-#: plugins/wallabag.koplugin/main.lua:948
-#: plugins/wallabag.koplugin/main.lua:980
-#: plugins/wallabag.koplugin/main.lua:1048
-#: plugins/wallabag.koplugin/main.lua:1097
+#: plugins/wallabag.koplugin/main.lua:960
+#: plugins/wallabag.koplugin/main.lua:992
+#: plugins/wallabag.koplugin/main.lua:1060
+#: plugins/wallabag.koplugin/main.lua:1109
 msgid "Cancel"
 msgstr "Отказ"
 
@@ -266,8 +266,8 @@ msgstr "Избиране"
 #: frontend/apps/cloudstorage/ftp.lua:135
 #: frontend/apps/cloudstorage/webdav.lua:151
 #: plugins/vocabbuilder.koplugin/main.lua:1461
-#: plugins/wallabag.koplugin/main.lua:347
-#: plugins/wallabag.koplugin/main.lua:1056
+#: plugins/wallabag.koplugin/main.lua:359
+#: plugins/wallabag.koplugin/main.lua:1068
 msgid "Info"
 msgstr "Информация"
 
@@ -624,8 +624,8 @@ msgstr "Редактирай FTP профил"
 #: frontend/ui/widget/radiobuttonwidget.lua:59
 #: frontend/ui/widget/spinwidget.lua:37
 #: plugins/perceptionexpander.koplugin/main.lua:146
-#: plugins/wallabag.koplugin/main.lua:1062
-#: plugins/wallabag.koplugin/main.lua:1105
+#: plugins/wallabag.koplugin/main.lua:1074
+#: plugins/wallabag.koplugin/main.lua:1117
 msgid "Apply"
 msgstr "Прилагане"
 
@@ -697,12 +697,12 @@ msgid "WebDAV address, for example https://example.com/dav"
 msgstr "WebDAV адрес, примерно https://example.com/dav"
 
 #: frontend/apps/cloudstorage/webdav.lua:91
-#: plugins/wallabag.koplugin/main.lua:1036
+#: plugins/wallabag.koplugin/main.lua:1048
 msgid "Username"
 msgstr "Потребителско име"
 
 #: frontend/apps/cloudstorage/webdav.lua:93
-#: plugins/wallabag.koplugin/main.lua:1042
+#: plugins/wallabag.koplugin/main.lua:1054
 msgid "Password"
 msgstr "Парола"
 
@@ -1044,7 +1044,7 @@ msgstr "Желаете ли да бъде заличена хронология�
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:256
 #: frontend/apps/filemanager/filemanagermenu.lua:270
-#: frontend/apps/reader/modules/readerlink.lua:172
+#: frontend/apps/reader/modules/readerlink.lua:301
 #: plugins/batterystat.koplugin/main.lua:197
 #: plugins/coverimage.koplugin/main.lua:510
 msgid "Clear"
@@ -1179,7 +1179,7 @@ msgstr "Избиране на всички файлове в папката"
 
 #: frontend/apps/filemanager/filemanager.lua:625
 #: frontend/apps/filemanager/filemanager.lua:630
-#: frontend/apps/reader/modules/readerlink.lua:713
+#: frontend/apps/reader/modules/readerlink.lua:141
 msgid "Copy"
 msgstr "Копиране"
 
@@ -1568,7 +1568,7 @@ msgstr "Последният документ не може да бъде отв
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:943
 #: plugins/texteditor.koplugin/main.lua:110
-#: plugins/wallabag.koplugin/main.lua:158
+#: plugins/wallabag.koplugin/main.lua:170
 msgid "Settings"
 msgstr "Настройки"
 
@@ -1873,7 +1873,7 @@ msgstr "Искате ли да отворите последния докуме�
 #: plugins/autowarmth.koplugin/main.lua:760
 #: plugins/calibre.koplugin/main.lua:317
 #: plugins/exporter.koplugin/target/joplin.lua:229
-#: plugins/wallabag.koplugin/main.lua:955
+#: plugins/wallabag.koplugin/main.lua:967
 msgid "OK"
 msgstr "Добре"
 
@@ -1986,8 +1986,8 @@ msgid "Home"
 msgstr "Начало"
 
 #: frontend/apps/reader/modules/readerback.lua:141
-#: frontend/apps/reader/modules/readerlink.lua:833
-#: frontend/apps/reader/modules/readerlink.lua:854
+#: frontend/apps/reader/modules/readerlink.lua:837
+#: frontend/apps/reader/modules/readerlink.lua:858
 msgid "Location history is empty."
 msgstr "Хронологията на местоположенията е празна."
 
@@ -3875,32 +3875,66 @@ msgstr ""
 "Ако желаете подчертаното да бъде запазено в документа, трябва първо го "
 "преместете в папка, с права за четене."
 
-#: frontend/apps/reader/modules/readerlink.lua:166
+#: frontend/apps/reader/modules/readerlink.lua:149
+msgid "Show QR code"
+msgstr "Показване на код за QR"
+
+#: frontend/apps/reader/modules/readerlink.lua:162
+msgid "Open in browser"
+msgstr "Отвори в браузер"
+
+#: frontend/apps/reader/modules/readerlink.lua:176
+msgid "Read online"
+msgstr "Чети онлайн"
+
+#: frontend/apps/reader/modules/readerlink.lua:188
+msgid ""
+"Would you like to read this Wikipedia %1 article?\n"
+"\n"
+"%2\n"
+msgstr ""
+"Искате ли да прочетете тази статия в Уикипедия %1?\n"
+"\n"
+"%2\n"
+
+#: frontend/apps/reader/modules/readerlink.lua:198
+msgid "Read EPUB"
+msgstr "Четене на EPUB"
+
+#: frontend/apps/reader/modules/readerlink.lua:209
+msgid ""
+"This article has previously been saved as EPUB. You may wish to read the "
+"saved EPUB instead."
+msgstr ""
+"Тази статия вече е била запазена като EPUB. Може да пожелаете да прочетете "
+"запазения EPUB вместо нея."
+
+#: frontend/apps/reader/modules/readerlink.lua:295
 msgid "Go back to previous location"
 msgstr "Към предишно местоположение"
 
-#: frontend/apps/reader/modules/readerlink.lua:171
+#: frontend/apps/reader/modules/readerlink.lua:300
 msgid "Clear location history?"
 msgstr "Изчистване на историята на местоположението?"
 
-#: frontend/apps/reader/modules/readerlink.lua:185
+#: frontend/apps/reader/modules/readerlink.lua:314
 #: frontend/ui/data/css_tweaks.lua:612
 msgid "Links"
 msgstr "Препратки"
 
-#: frontend/apps/reader/modules/readerlink.lua:188
+#: frontend/apps/reader/modules/readerlink.lua:317
 msgid "Tap to follow links"
 msgstr "Докосване за последване на препратки"
 
-#: frontend/apps/reader/modules/readerlink.lua:194
+#: frontend/apps/reader/modules/readerlink.lua:323
 msgid "Tap on links to follow them."
 msgstr "За да последвате препратки ги докоснете."
 
-#: frontend/apps/reader/modules/readerlink.lua:197
+#: frontend/apps/reader/modules/readerlink.lua:326
 msgid "Ignore external links on tap"
 msgstr "Пренебрегване на външни препратки при докосване"
 
-#: frontend/apps/reader/modules/readerlink.lua:204
+#: frontend/apps/reader/modules/readerlink.lua:333
 msgid ""
 "Ignore taps on external links. Useful with Wikipedia EPUBs to make page "
 "turning easier.\n"
@@ -3912,11 +3946,11 @@ msgstr ""
 "Все още можете да последвате външните препратки от прозореца на речника или "
 "от менюто за избор след задържане върху тях."
 
-#: frontend/apps/reader/modules/readerlink.lua:210
+#: frontend/apps/reader/modules/readerlink.lua:339
 msgid "Swipe to go back"
 msgstr "Плъзване за връщане назад"
 
-#: frontend/apps/reader/modules/readerlink.lua:216
+#: frontend/apps/reader/modules/readerlink.lua:345
 msgid ""
 "Swipe to the right to go back to the previous location after you have "
 "followed a link. When the location stack is empty, swiping to the right "
@@ -3926,11 +3960,11 @@ msgstr ""
 "сте последвали препратка. Ако не сте последвали препратка се отваря "
 "предишната страница."
 
-#: frontend/apps/reader/modules/readerlink.lua:219
+#: frontend/apps/reader/modules/readerlink.lua:348
 msgid "Swipe to follow nearest link"
 msgstr "Плъзване за последване на най-близката препратка"
 
-#: frontend/apps/reader/modules/readerlink.lua:225
+#: frontend/apps/reader/modules/readerlink.lua:354
 msgid ""
 "Swipe to the left to follow the link nearest to where you started the swipe. "
 "This is useful when a small font is used and tapping on small links is "
@@ -3940,11 +3974,11 @@ msgstr ""
 "от което сте започнали плъзването. Удобно е при малък шрифт и докосването на "
 "малки препратки е досадно."
 
-#: frontend/apps/reader/modules/readerlink.lua:228
+#: frontend/apps/reader/modules/readerlink.lua:357
 msgid "Ignore external links on swipe"
 msgstr "Пренебрегване на външни препратки при плъзване"
 
-#: frontend/apps/reader/modules/readerlink.lua:235
+#: frontend/apps/reader/modules/readerlink.lua:364
 #, fuzzy
 msgid ""
 "Ignore external links near swipe. Useful with Wikipedia EPUBs to follow only "
@@ -3957,11 +3991,11 @@ msgstr ""
 "Все още можете да следвате външни връзки от прозореца на речника или менюто "
 "за избор, след като сте ги задържали."
 
-#: frontend/apps/reader/modules/readerlink.lua:241
+#: frontend/apps/reader/modules/readerlink.lua:370
 msgid "Swipe to jump to latest bookmark"
 msgstr "Плъзнете, за да преминете към последната отметка"
 
-#: frontend/apps/reader/modules/readerlink.lua:247
+#: frontend/apps/reader/modules/readerlink.lua:376
 #, fuzzy
 msgid ""
 "Swipe to the left to go the most recently bookmarked page.\n"
@@ -3979,11 +4013,11 @@ msgstr ""
 "Ако е активирана някоя от другите опции за плъзгане, за да следвате връзка, "
 "тази опция ще работи само когато текущата страница не съдържа връзка."
 
-#: frontend/apps/reader/modules/readerlink.lua:262
+#: frontend/apps/reader/modules/readerlink.lua:391
 msgid "Allow larger tap area around links"
 msgstr "Използване на по-голяма зона около препратки"
 
-#: frontend/apps/reader/modules/readerlink.lua:269
+#: frontend/apps/reader/modules/readerlink.lua:398
 msgid ""
 "Extends the tap area around internal links. Useful with a small font where "
 "tapping on small footnote links may be tedious."
@@ -3991,11 +4025,11 @@ msgstr ""
 "Разширява зоната за докосване около вътрешните препратки. Удобно е при малък "
 "шрифт и докосването на малки препратки към бележки под линия е досадно."
 
-#: frontend/apps/reader/modules/readerlink.lua:272
+#: frontend/apps/reader/modules/readerlink.lua:401
 msgid "Show footnotes in popup"
 msgstr "Показване на бележките под линия в прозорец"
 
-#: frontend/apps/reader/modules/readerlink.lua:281
+#: frontend/apps/reader/modules/readerlink.lua:410
 msgid ""
 "Show internal link target content in a footnote popup when it looks like it "
 "might be a footnote, instead of following the link.\n"
@@ -4018,26 +4052,26 @@ msgstr ""
 "От изскачащия прозорец можете да отидете на мястото на бележката под линия в "
 "книгата, като плъзнете наляво."
 
-#: frontend/apps/reader/modules/readerlink.lua:291
+#: frontend/apps/reader/modules/readerlink.lua:420
 msgid "Footnote popup settings"
 msgstr "Настройки на диалога за бележка под линия"
 
-#: frontend/apps/reader/modules/readerlink.lua:296
+#: frontend/apps/reader/modules/readerlink.lua:425
 msgid "Show more links as footnotes"
 msgstr "Повече препратки като бележки под линия"
 
-#: frontend/apps/reader/modules/readerlink.lua:306
+#: frontend/apps/reader/modules/readerlink.lua:435
 #, fuzzy
 msgid "Loosen footnote detection rules to show more links as footnotes."
 msgstr ""
 "Отхлабете правилата за откриване на бележки под линия, за да показвате "
 "повече връзки като бележки под линия."
 
-#: frontend/apps/reader/modules/readerlink.lua:310
+#: frontend/apps/reader/modules/readerlink.lua:439
 msgid "Use book font as popup font"
 msgstr "Използване на шрифта от книгата"
 
-#: frontend/apps/reader/modules/readerlink.lua:321
+#: frontend/apps/reader/modules/readerlink.lua:450
 msgid ""
 "Display the footnote popup text with the font set as the document font (the "
 "book text may still render with a different font if the book uses embedded "
@@ -4047,18 +4081,18 @@ msgstr ""
 "шрифта на документа (текстът на книгата може да е с различен шрифт, ако "
 "книгата използва вградени шрифтове)."
 
-#: frontend/apps/reader/modules/readerlink.lua:324
-#: frontend/apps/reader/modules/readerlink.lua:344
-#: frontend/apps/reader/modules/readerlink.lua:366
+#: frontend/apps/reader/modules/readerlink.lua:453
+#: frontend/apps/reader/modules/readerlink.lua:473
+#: frontend/apps/reader/modules/readerlink.lua:495
 msgid "Set footnote popup font size"
 msgstr "Задаване на размер на шрифта за изскачащ прозорец за бележка под линия"
 
-#: frontend/apps/reader/modules/readerlink.lua:343
-#: frontend/apps/reader/modules/readerlink.lua:365 frontend/dispatcher.lua:170
+#: frontend/apps/reader/modules/readerlink.lua:472
+#: frontend/apps/reader/modules/readerlink.lua:494 frontend/dispatcher.lua:170
 msgid "Set font size"
 msgstr "Избор размер на шрифт"
 
-#: frontend/apps/reader/modules/readerlink.lua:345
+#: frontend/apps/reader/modules/readerlink.lua:474
 msgid ""
 "The footnote popup font can adjust to the font size you've set for the "
 "document, but you can specify here a fixed absolute font size to be used "
@@ -4068,11 +4102,11 @@ msgstr ""
 "размера на шрифта, който сте задали за документа, но тук можете да зададете "
 "фиксиран абсолютен размер на шрифта, който да се използва вместо това."
 
-#: frontend/apps/reader/modules/readerlink.lua:351
+#: frontend/apps/reader/modules/readerlink.lua:480
 msgid "Set a relative font size instead"
 msgstr "Вместо това задайте относителен размер на шрифта"
 
-#: frontend/apps/reader/modules/readerlink.lua:367
+#: frontend/apps/reader/modules/readerlink.lua:496
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -4089,11 +4123,11 @@ msgstr ""
 "Отрицателната стойност ще го направи по-малък, а положителната - по-голям.\n"
 "Препоръчителната стойност е -2."
 
-#: frontend/apps/reader/modules/readerlink.lua:376
+#: frontend/apps/reader/modules/readerlink.lua:505
 msgid "Set an absolute font size instead"
 msgstr "Вместо това задайте абсолютен размер на шрифта"
 
-#: frontend/apps/reader/modules/readerlink.lua:390
+#: frontend/apps/reader/modules/readerlink.lua:519
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -4105,11 +4139,11 @@ msgstr ""
 "Това ви позволява да зададете колко по-малък или по-голям да бъде той спрямо "
 "размера на шрифта на документа."
 
-#: frontend/apps/reader/modules/readerlink.lua:552
+#: frontend/apps/reader/modules/readerlink.lua:681
 msgid "Location history cleared."
 msgstr "Историята на местоположенията е изчистена."
 
-#: frontend/apps/reader/modules/readerlink.lua:665
+#: frontend/apps/reader/modules/readerlink.lua:794
 msgid ""
 "Would you like to read this local document?\n"
 "\n"
@@ -4119,7 +4153,7 @@ msgstr ""
 "\n"
 "%1\n"
 
-#: frontend/apps/reader/modules/readerlink.lua:674
+#: frontend/apps/reader/modules/readerlink.lua:803
 msgid ""
 "Link to unsupported local file:\n"
 "%1"
@@ -4127,7 +4161,7 @@ msgstr ""
 "Връзка към неподдържан локален файл:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:682
+#: frontend/apps/reader/modules/readerlink.lua:811
 msgid ""
 "Invalid or external link:\n"
 "%1"
@@ -4135,45 +4169,7 @@ msgstr ""
 "Невалидна или външна връзка:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:720
-msgid "Show QR code"
-msgstr "Показване на код за QR"
-
-#: frontend/apps/reader/modules/readerlink.lua:732
-msgid "Add to Wallabag"
-msgstr "Добавяне към Wallabag"
-
-#: frontend/apps/reader/modules/readerlink.lua:741
-msgid "Open in browser"
-msgstr "Отвори в браузер"
-
-#: frontend/apps/reader/modules/readerlink.lua:782
-msgid ""
-"Would you like to read this Wikipedia %1 article?\n"
-"\n"
-"%2\n"
-msgstr ""
-"Искате ли да прочетете тази статия в Уикипедия %1?\n"
-"\n"
-"%2\n"
-
-#: frontend/apps/reader/modules/readerlink.lua:784
-msgid "Read online"
-msgstr "Чети онлайн"
-
-#: frontend/apps/reader/modules/readerlink.lua:793
-msgid ""
-"This article has previously been saved as EPUB. You may wish to read the "
-"saved EPUB instead."
-msgstr ""
-"Тази статия вече е била запазена като EPUB. Може да пожелаете да прочетете "
-"запазения EPUB вместо нея."
-
-#: frontend/apps/reader/modules/readerlink.lua:795
-msgid "Read EPUB"
-msgstr "Четене на EPUB"
-
-#: frontend/apps/reader/modules/readerlink.lua:809
+#: frontend/apps/reader/modules/readerlink.lua:1426
 msgid ""
 "External link:\n"
 "\n"
@@ -6352,31 +6348,31 @@ msgstr "сб"
 msgid "Sun"
 msgstr "нд"
 
-#: frontend/datetime.lua:55 plugins/statistics.koplugin/readerprogress.lua:34
+#: frontend/datetime.lua:55
 msgid "Monday"
 msgstr "понеделник"
 
-#: frontend/datetime.lua:56 plugins/statistics.koplugin/readerprogress.lua:35
+#: frontend/datetime.lua:56
 msgid "Tuesday"
 msgstr "вторник"
 
-#: frontend/datetime.lua:57 plugins/statistics.koplugin/readerprogress.lua:36
+#: frontend/datetime.lua:57
 msgid "Wednesday"
 msgstr "сряда"
 
-#: frontend/datetime.lua:58 plugins/statistics.koplugin/readerprogress.lua:37
+#: frontend/datetime.lua:58
 msgid "Thursday"
 msgstr "четвъртък"
 
-#: frontend/datetime.lua:59 plugins/statistics.koplugin/readerprogress.lua:38
+#: frontend/datetime.lua:59
 msgid "Friday"
 msgstr "петък"
 
-#: frontend/datetime.lua:60 plugins/statistics.koplugin/readerprogress.lua:39
+#: frontend/datetime.lua:60
 msgid "Saturday"
 msgstr "събота"
 
-#: frontend/datetime.lua:61 plugins/statistics.koplugin/readerprogress.lua:40
+#: frontend/datetime.lua:61
 msgid "Sunday"
 msgstr "неделя"
 
@@ -9267,7 +9263,7 @@ msgstr "Версия: %1"
 #: frontend/ui/widget/touchmenu.lua:1308
 #: plugins/exporter.koplugin/target/joplin.lua:288
 #: plugins/externalkeyboard.koplugin/main.lua:159
-#: plugins/wallabag.koplugin/main.lua:332
+#: plugins/wallabag.koplugin/main.lua:344
 msgid "Help"
 msgstr "Помощ"
 
@@ -11403,8 +11399,8 @@ msgid "Days"
 msgstr "Дни"
 
 #: frontend/ui/widget/bookstatuswidget.lua:425
-#: plugins/statistics.koplugin/readerprogress.lua:307
-#: plugins/statistics.koplugin/readerprogress.lua:321
+#: plugins/statistics.koplugin/readerprogress.lua:297
+#: plugins/statistics.koplugin/readerprogress.lua:311
 msgid "Time"
 msgstr "Време"
 
@@ -15635,11 +15631,11 @@ msgstr "SSH"
 msgid "Connect and transfer files to the device using SSH."
 msgstr "Свържи и прехвърли файлове към устройството чрез SSH."
 
-#: plugins/statistics.koplugin/calendarview.lua:1124
+#: plugins/statistics.koplugin/calendarview.lua:1120
 msgid "Enter month"
 msgstr "Въведете месец"
 
-#: plugins/statistics.koplugin/calendarview.lua:1139
+#: plugins/statistics.koplugin/calendarview.lua:1135
 msgid "Invalid year-month string (YYYY-MM)"
 msgstr ""
 
@@ -15782,7 +15778,7 @@ msgid "Current book"
 msgstr "Текуща книга"
 
 #: plugins/statistics.koplugin/main.lua:1143
-#: plugins/statistics.koplugin/main.lua:2787
+#: plugins/statistics.koplugin/main.lua:2784
 msgid "Current statistics"
 msgstr "Текуща статистика"
 
@@ -15825,7 +15821,7 @@ msgstr "Книги по месеци"
 
 #: plugins/statistics.koplugin/main.lua:1256
 #: plugins/statistics.koplugin/main.lua:1261
-#: plugins/statistics.koplugin/readerprogress.lua:110
+#: plugins/statistics.koplugin/readerprogress.lua:100
 msgid "Last week"
 msgstr "Последна седмица"
 
@@ -16037,24 +16033,24 @@ msgstr "Не са премахнати статистически данни."
 msgid "Keeps and displays your reading statistics."
 msgstr "Пази и показва статистика на четенето."
 
-#: plugins/statistics.koplugin/readerprogress.lua:112
+#: plugins/statistics.koplugin/readerprogress.lua:102
 msgid "Week progress"
 msgstr "Седмичен прогрес"
 
-#: plugins/statistics.koplugin/readerprogress.lua:114
+#: plugins/statistics.koplugin/readerprogress.lua:104
 msgid "Current"
 msgstr "Текущ"
 
-#: plugins/statistics.koplugin/readerprogress.lua:114
+#: plugins/statistics.koplugin/readerprogress.lua:104
 msgid "Today"
 msgstr "Днес"
 
-#: plugins/statistics.koplugin/readerprogress.lua:300
-#: plugins/statistics.koplugin/readerprogress.lua:314
+#: plugins/statistics.koplugin/readerprogress.lua:290
+#: plugins/statistics.koplugin/readerprogress.lua:304
 msgid "Pages"
 msgstr "Страници"
 
-#: plugins/statistics.koplugin/readerprogress.lua:395
+#: plugins/statistics.koplugin/readerprogress.lua:385
 msgid ""
 "Total\n"
 "pages"
@@ -16062,7 +16058,7 @@ msgstr ""
 "Общо\n"
 "страници"
 
-#: plugins/statistics.koplugin/readerprogress.lua:404
+#: plugins/statistics.koplugin/readerprogress.lua:394
 msgid ""
 "Total\n"
 "time"
@@ -16070,7 +16066,7 @@ msgstr ""
 "Общо\n"
 "време"
 
-#: plugins/statistics.koplugin/readerprogress.lua:413
+#: plugins/statistics.koplugin/readerprogress.lua:403
 msgid ""
 "Average\n"
 "pages"
@@ -16078,7 +16074,7 @@ msgstr ""
 "Средно\n"
 "страници"
 
-#: plugins/statistics.koplugin/readerprogress.lua:422
+#: plugins/statistics.koplugin/readerprogress.lua:412
 msgid ""
 "Average\n"
 "time"
@@ -16811,131 +16807,135 @@ msgstr ""
 msgid "Wallabag retrieval"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:120 plugins/wallabag.koplugin/_meta.lua:4
+#: plugins/wallabag.koplugin/main.lua:120
+msgid "Add to Wallabag"
+msgstr "Добавяне към Wallabag"
+
+#: plugins/wallabag.koplugin/main.lua:132 plugins/wallabag.koplugin/_meta.lua:4
 msgid "Wallabag"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:123
+#: plugins/wallabag.koplugin/main.lua:135
 msgid "Retrieve new articles from server"
 msgstr "Получаване на нови статии от сървъра"
 
-#: plugins/wallabag.koplugin/main.lua:129
+#: plugins/wallabag.koplugin/main.lua:141
 msgid "Delete finished articles remotely"
 msgstr "Отделечено премахване на прочетени статии"
 
-#: plugins/wallabag.koplugin/main.lua:134
+#: plugins/wallabag.koplugin/main.lua:146
 msgid ""
 "Articles processed.\n"
 "Deleted: %1"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:145
+#: plugins/wallabag.koplugin/main.lua:157
 msgid "Go to download folder"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:165
+#: plugins/wallabag.koplugin/main.lua:177
 msgid "Configure Wallabag server"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:172
+#: plugins/wallabag.koplugin/main.lua:184
 msgid "Configure Wallabag client"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:182
+#: plugins/wallabag.koplugin/main.lua:194
 msgid "Not set"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:186
+#: plugins/wallabag.koplugin/main.lua:198
 msgid "Set download directory (%1)"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:198
+#: plugins/wallabag.koplugin/main.lua:210
 msgid "All articles"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:202
+#: plugins/wallabag.koplugin/main.lua:214
 msgid "Filter articles by tag (%1)"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:212
+#: plugins/wallabag.koplugin/main.lua:224
 msgid "Ignore tags"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:214
+#: plugins/wallabag.koplugin/main.lua:226
 msgid "Ignore tags (%1)"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:219
+#: plugins/wallabag.koplugin/main.lua:231
 msgid "Tags to ignore"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:220
+#: plugins/wallabag.koplugin/main.lua:232
 msgid "Enter a comma-separated list of tags to ignore."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:231
+#: plugins/wallabag.koplugin/main.lua:243
 msgid "Automatic tags"
 msgstr "Автоматични етикети"
 
-#: plugins/wallabag.koplugin/main.lua:233
+#: plugins/wallabag.koplugin/main.lua:245
 msgid "Automatic tags (%1)"
 msgstr "Автоматични етикети (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:238
+#: plugins/wallabag.koplugin/main.lua:250
 msgid "Tags to automatically add"
 msgstr "Автоматично добавяни етикети"
 
-#: plugins/wallabag.koplugin/main.lua:239
+#: plugins/wallabag.koplugin/main.lua:251
 msgid ""
 "Enter a comma-separated list of tags to automatically add to new articles."
 msgstr ""
 "Въведете етикети, разделени със запетая, за да бъдат добавяни към нови "
 "статии."
 
-#: plugins/wallabag.koplugin/main.lua:249
+#: plugins/wallabag.koplugin/main.lua:261
 msgid "Article deletion"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:253
+#: plugins/wallabag.koplugin/main.lua:265
 msgid "Remotely delete finished articles"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:261
+#: plugins/wallabag.koplugin/main.lua:273
 msgid "Remotely delete 100% read articles"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:270
+#: plugins/wallabag.koplugin/main.lua:282
 msgid "Mark as read instead of deleting"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:279
+#: plugins/wallabag.koplugin/main.lua:291
 msgid "Process deletions when downloading"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:287
+#: plugins/wallabag.koplugin/main.lua:299
 msgid "Synchronize remotely deleted files"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:297
+#: plugins/wallabag.koplugin/main.lua:309
 #, fuzzy
 msgid "Send review as tags"
 msgstr "Запазване"
 
-#: plugins/wallabag.koplugin/main.lua:298
+#: plugins/wallabag.koplugin/main.lua:310
 msgid ""
 "This allow you to write tags in the review field, separated by commas, which "
 "can then be sent to Wallabag."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:309
+#: plugins/wallabag.koplugin/main.lua:321
 msgid "Remove finished articles from history"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:320
+#: plugins/wallabag.koplugin/main.lua:332
 msgid "Remove 100% read articles from history"
 msgstr "Премахни прочетените на 100% статии от историята"
 
-#: plugins/wallabag.koplugin/main.lua:336
+#: plugins/wallabag.koplugin/main.lua:348
 msgid ""
 "Download directory: use a directory that is exclusively used by the Wallabag "
 "plugin. Existing files in this directory risk being deleted.\n"
@@ -16948,7 +16948,7 @@ msgid ""
 "no longer exist on the server."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:351
+#: plugins/wallabag.koplugin/main.lua:363
 msgid ""
 "Wallabag is an open source read-it-later service. This plugin synchronizes "
 "with a Wallabag server.\n"
@@ -16958,66 +16958,66 @@ msgid ""
 "Downloads to directory: %1"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:374
+#: plugins/wallabag.koplugin/main.lua:386
 msgid "Please configure the server settings and set a download folder."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:377
+#: plugins/wallabag.koplugin/main.lua:389
 msgid "Server (★)"
 msgstr "Сървър (★)"
 
-#: plugins/wallabag.koplugin/main.lua:379
+#: plugins/wallabag.koplugin/main.lua:391
 msgid "Server"
 msgstr "Сървър"
 
-#: plugins/wallabag.koplugin/main.lua:385
+#: plugins/wallabag.koplugin/main.lua:397
 msgid "Folder (★)"
 msgstr "Папка (★)"
 
-#: plugins/wallabag.koplugin/main.lua:387
+#: plugins/wallabag.koplugin/main.lua:399
 msgid "Folder"
 msgstr "Папка"
 
-#: plugins/wallabag.koplugin/main.lua:399
+#: plugins/wallabag.koplugin/main.lua:411
 msgid ""
 "The download directory is not valid.\n"
 "Please configure it in the settings."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:438
+#: plugins/wallabag.koplugin/main.lua:450
 msgid "Could not login to Wallabag server."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:473
+#: plugins/wallabag.koplugin/main.lua:485
 msgid "Requesting article list failed."
 msgstr "Заявката за списъци със статии е неуспешна."
 
-#: plugins/wallabag.koplugin/main.lua:656
-#: plugins/wallabag.koplugin/main.lua:660
+#: plugins/wallabag.koplugin/main.lua:668
+#: plugins/wallabag.koplugin/main.lua:672
 msgid "Server response is not valid."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:673
+#: plugins/wallabag.koplugin/main.lua:685
 msgid "Communication with server failed."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:682
+#: plugins/wallabag.koplugin/main.lua:694
 msgid "Connecting…"
 msgstr "Свързване…"
 
-#: plugins/wallabag.koplugin/main.lua:691
+#: plugins/wallabag.koplugin/main.lua:703
 msgid "Adding articles from queue…"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:704
+#: plugins/wallabag.koplugin/main.lua:716
 msgid "Getting article list…"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:717
+#: plugins/wallabag.koplugin/main.lua:729
 msgid "Downloading articles…"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:736
+#: plugins/wallabag.koplugin/main.lua:748
 msgid ""
 "Processing finished.\n"
 "\n"
@@ -17026,7 +17026,7 @@ msgid ""
 "Failed: %3"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:739
+#: plugins/wallabag.koplugin/main.lua:751
 msgid ""
 "Processing finished.\n"
 "\n"
@@ -17034,23 +17034,23 @@ msgid ""
 "Deleted: %2"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:754
+#: plugins/wallabag.koplugin/main.lua:766
 msgid "Synchronizing remote deletions…"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:787
+#: plugins/wallabag.koplugin/main.lua:799
 msgid "Processing local files…"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:942
+#: plugins/wallabag.koplugin/main.lua:954
 msgid "Set a single tag to filter articles on"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:987
+#: plugins/wallabag.koplugin/main.lua:999
 msgid "Set tags"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1004
+#: plugins/wallabag.koplugin/main.lua:1016
 msgid ""
 "Enter the details of your Wallabag server and account.\n"
 "\n"
@@ -17062,47 +17062,47 @@ msgid ""
 "Restart KOReader after editing the config file."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1013
+#: plugins/wallabag.koplugin/main.lua:1025
 msgid "Wallabag settings"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1019
+#: plugins/wallabag.koplugin/main.lua:1031
 msgid "Server URL"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1025
+#: plugins/wallabag.koplugin/main.lua:1037
 msgid "Client ID"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1030
+#: plugins/wallabag.koplugin/main.lua:1042
 msgid "Client secret"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1085
+#: plugins/wallabag.koplugin/main.lua:1097
 msgid "Wallabag client settings"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1089
+#: plugins/wallabag.koplugin/main.lua:1101
 msgid "Number of articles"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1091
+#: plugins/wallabag.koplugin/main.lua:1103
 msgid "Number of articles to download per sync"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1180
+#: plugins/wallabag.koplugin/main.lua:1192
 msgid ""
 "Article added to download queue:\n"
 "%1"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1189
+#: plugins/wallabag.koplugin/main.lua:1201
 msgid ""
 "Article added to Wallabag:\n"
 "%1"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1193
+#: plugins/wallabag.koplugin/main.lua:1205
 msgid ""
 "Error adding link to Wallabag:\n"
 "%1"

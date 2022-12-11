@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-11 09:30+0000\n"
+"POT-Creation-Date: 2022-12-11 16:07+0000\n"
 "PO-Revision-Date: 2022-12-11 16:07+0000\n"
 "Last-Translator: Sari Gabor <sari.gabor@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
@@ -170,7 +170,7 @@ msgstr "Fájlnév"
 #: frontend/apps/reader/modules/readerdictionary.lua:695
 #: frontend/apps/reader/modules/readerfooter.lua:646
 #: frontend/apps/reader/modules/readergoto.lua:82
-#: frontend/apps/reader/modules/readerlink.lua:695
+#: frontend/apps/reader/modules/readerlink.lua:217
 #: frontend/apps/reader/modules/readersearch.lua:118
 #: frontend/apps/reader/modules/readerstatus.lua:117
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
@@ -225,10 +225,10 @@ msgstr "Fájlnév"
 #: plugins/vocabbuilder.koplugin/main.lua:1108
 #: plugins/vocabbuilder.koplugin/main.lua:1455
 #: plugins/vocabbuilder.koplugin/main.lua:1728
-#: plugins/wallabag.koplugin/main.lua:948
-#: plugins/wallabag.koplugin/main.lua:980
-#: plugins/wallabag.koplugin/main.lua:1048
-#: plugins/wallabag.koplugin/main.lua:1097
+#: plugins/wallabag.koplugin/main.lua:960
+#: plugins/wallabag.koplugin/main.lua:992
+#: plugins/wallabag.koplugin/main.lua:1060
+#: plugins/wallabag.koplugin/main.lua:1109
 msgid "Cancel"
 msgstr "Mégse"
 
@@ -268,8 +268,8 @@ msgstr "Kiválasztás"
 #: frontend/apps/cloudstorage/ftp.lua:135
 #: frontend/apps/cloudstorage/webdav.lua:151
 #: plugins/vocabbuilder.koplugin/main.lua:1461
-#: plugins/wallabag.koplugin/main.lua:347
-#: plugins/wallabag.koplugin/main.lua:1056
+#: plugins/wallabag.koplugin/main.lua:359
+#: plugins/wallabag.koplugin/main.lua:1068
 msgid "Info"
 msgstr "Infó"
 
@@ -634,8 +634,8 @@ msgstr "FTP fiók szerkesztése"
 #: frontend/ui/widget/radiobuttonwidget.lua:59
 #: frontend/ui/widget/spinwidget.lua:37
 #: plugins/perceptionexpander.koplugin/main.lua:146
-#: plugins/wallabag.koplugin/main.lua:1062
-#: plugins/wallabag.koplugin/main.lua:1105
+#: plugins/wallabag.koplugin/main.lua:1074
+#: plugins/wallabag.koplugin/main.lua:1117
 msgid "Apply"
 msgstr "Alkalmazás"
 
@@ -707,12 +707,12 @@ msgid "WebDAV address, for example https://example.com/dav"
 msgstr "WebDAV cím pl. https://webcim.hu/dav"
 
 #: frontend/apps/cloudstorage/webdav.lua:91
-#: plugins/wallabag.koplugin/main.lua:1036
+#: plugins/wallabag.koplugin/main.lua:1048
 msgid "Username"
 msgstr "Felhasználónév"
 
 #: frontend/apps/cloudstorage/webdav.lua:93
-#: plugins/wallabag.koplugin/main.lua:1042
+#: plugins/wallabag.koplugin/main.lua:1054
 msgid "Password"
 msgstr "Jelszó"
 
@@ -1054,7 +1054,7 @@ msgstr "A törölt fájl előzmények törölhetőek?"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:256
 #: frontend/apps/filemanager/filemanagermenu.lua:270
-#: frontend/apps/reader/modules/readerlink.lua:172
+#: frontend/apps/reader/modules/readerlink.lua:301
 #: plugins/batterystat.koplugin/main.lua:197
 #: plugins/coverimage.koplugin/main.lua:510
 msgid "Clear"
@@ -1189,7 +1189,7 @@ msgstr "Összes fájl kijelölése a mappában"
 
 #: frontend/apps/filemanager/filemanager.lua:625
 #: frontend/apps/filemanager/filemanager.lua:630
-#: frontend/apps/reader/modules/readerlink.lua:713
+#: frontend/apps/reader/modules/readerlink.lua:141
 msgid "Copy"
 msgstr "Másolás"
 
@@ -1578,7 +1578,7 @@ msgstr "A legutóbbi dokumentum nem nyitható meg"
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:943
 #: plugins/texteditor.koplugin/main.lua:110
-#: plugins/wallabag.koplugin/main.lua:158
+#: plugins/wallabag.koplugin/main.lua:170
 msgid "Settings"
 msgstr "Beállítások"
 
@@ -1881,7 +1881,7 @@ msgstr "Megnyitja a legutóbbi dokumentumot: %1?"
 #: plugins/autowarmth.koplugin/main.lua:760
 #: plugins/calibre.koplugin/main.lua:317
 #: plugins/exporter.koplugin/target/joplin.lua:229
-#: plugins/wallabag.koplugin/main.lua:955
+#: plugins/wallabag.koplugin/main.lua:967
 msgid "OK"
 msgstr "Rendben"
 
@@ -1993,8 +1993,8 @@ msgid "Home"
 msgstr "Kezdőmappa"
 
 #: frontend/apps/reader/modules/readerback.lua:141
-#: frontend/apps/reader/modules/readerlink.lua:833
-#: frontend/apps/reader/modules/readerlink.lua:854
+#: frontend/apps/reader/modules/readerlink.lua:837
+#: frontend/apps/reader/modules/readerlink.lua:858
 msgid "Location history is empty."
 msgstr "Nincsenek helyelőzmények."
 
@@ -3891,32 +3891,66 @@ msgstr ""
 "Ha szeretné, hogy a dokumentumba is legyenek elmentve, először helyezze át "
 "egy írható helyre."
 
-#: frontend/apps/reader/modules/readerlink.lua:166
+#: frontend/apps/reader/modules/readerlink.lua:149
+msgid "Show QR code"
+msgstr "QR kód megjelenítése"
+
+#: frontend/apps/reader/modules/readerlink.lua:162
+msgid "Open in browser"
+msgstr "Megnyitás böngészőben"
+
+#: frontend/apps/reader/modules/readerlink.lua:176
+msgid "Read online"
+msgstr "Online olvasás"
+
+#: frontend/apps/reader/modules/readerlink.lua:188
+msgid ""
+"Would you like to read this Wikipedia %1 article?\n"
+"\n"
+"%2\n"
+msgstr ""
+"Szeretné elolvasni ezt a Wikipedia %1 cikket?\n"
+"\n"
+"%2\n"
+
+#: frontend/apps/reader/modules/readerlink.lua:198
+msgid "Read EPUB"
+msgstr "EPUB olvasása"
+
+#: frontend/apps/reader/modules/readerlink.lua:209
+msgid ""
+"This article has previously been saved as EPUB. You may wish to read the "
+"saved EPUB instead."
+msgstr ""
+"Ez a cikk már el lett mentve EPUB-ként. Inkább az elmentett EPUB fájlt "
+"olvassa."
+
+#: frontend/apps/reader/modules/readerlink.lua:295
 msgid "Go back to previous location"
 msgstr "Visszalépés az előző pozícióhoz"
 
-#: frontend/apps/reader/modules/readerlink.lua:171
+#: frontend/apps/reader/modules/readerlink.lua:300
 msgid "Clear location history?"
 msgstr "Törli a Helyelőzményeket?"
 
-#: frontend/apps/reader/modules/readerlink.lua:185
+#: frontend/apps/reader/modules/readerlink.lua:314
 #: frontend/ui/data/css_tweaks.lua:612
 msgid "Links"
 msgstr "Hivatkozások (linkek)"
 
-#: frontend/apps/reader/modules/readerlink.lua:188
+#: frontend/apps/reader/modules/readerlink.lua:317
 msgid "Tap to follow links"
 msgstr "Linkek követése érintésre"
 
-#: frontend/apps/reader/modules/readerlink.lua:194
+#: frontend/apps/reader/modules/readerlink.lua:323
 msgid "Tap on links to follow them."
 msgstr "Érintse meg a linkeket, azok követése céljából."
 
-#: frontend/apps/reader/modules/readerlink.lua:197
+#: frontend/apps/reader/modules/readerlink.lua:326
 msgid "Ignore external links on tap"
 msgstr "A külső linkek ne reagáljanak érintésre"
 
-#: frontend/apps/reader/modules/readerlink.lua:204
+#: frontend/apps/reader/modules/readerlink.lua:333
 msgid ""
 "Ignore taps on external links. Useful with Wikipedia EPUBs to make page "
 "turning easier.\n"
@@ -3928,11 +3962,11 @@ msgstr ""
 "Továbbra is követheti őket a szótár ablakból vagy a kiválasztás menüből, "
 "miután lenyomva tartotta őket."
 
-#: frontend/apps/reader/modules/readerlink.lua:210
+#: frontend/apps/reader/modules/readerlink.lua:339
 msgid "Swipe to go back"
 msgstr "Visszalépés suhintással"
 
-#: frontend/apps/reader/modules/readerlink.lua:216
+#: frontend/apps/reader/modules/readerlink.lua:345
 msgid ""
 "Swipe to the right to go back to the previous location after you have "
 "followed a link. When the location stack is empty, swiping to the right "
@@ -3942,11 +3976,11 @@ msgstr ""
 "kattintott. Ha az előző helyek listája üres, jobbra húzva az előző oldalra "
 "jut."
 
-#: frontend/apps/reader/modules/readerlink.lua:219
+#: frontend/apps/reader/modules/readerlink.lua:348
 msgid "Swipe to follow nearest link"
 msgstr "Suhintással a legközelebbi hivatkozás követése"
 
-#: frontend/apps/reader/modules/readerlink.lua:225
+#: frontend/apps/reader/modules/readerlink.lua:354
 msgid ""
 "Swipe to the left to follow the link nearest to where you started the swipe. "
 "This is useful when a small font is used and tapping on small links is "
@@ -3955,11 +3989,11 @@ msgstr ""
 "Suhintson balra a legközelebb található hivatkozás követéséhez. Ez akkor "
 "hasznos, ha apró betűtípust használ, és a kis linkek megérintése nehézkes."
 
-#: frontend/apps/reader/modules/readerlink.lua:228
+#: frontend/apps/reader/modules/readerlink.lua:357
 msgid "Ignore external links on swipe"
 msgstr "Külső linkek ne reagáljanak suhintásra"
 
-#: frontend/apps/reader/modules/readerlink.lua:235
+#: frontend/apps/reader/modules/readerlink.lua:364
 msgid ""
 "Ignore external links near swipe. Useful with Wikipedia EPUBs to follow only "
 "footnotes with swipe.\n"
@@ -3971,11 +4005,11 @@ msgstr ""
 "A külső hivatkozásokat továbbra is követheti a szótárablakból vagy a "
 "kiválasztás menüből, miután lenyomva tartotta őket."
 
-#: frontend/apps/reader/modules/readerlink.lua:241
+#: frontend/apps/reader/modules/readerlink.lua:370
 msgid "Swipe to jump to latest bookmark"
 msgstr "Suhintásra ugrás a legutóbbi könyvjelzőhöz"
 
-#: frontend/apps/reader/modules/readerlink.lua:247
+#: frontend/apps/reader/modules/readerlink.lua:376
 msgid ""
 "Swipe to the left to go the most recently bookmarked page.\n"
 "This can be useful to quickly swipe back and forth between what you are "
@@ -3991,11 +4025,11 @@ msgstr ""
 "Ha bármely egyéb link követési opció engedélyezve van, ez csak akkor "
 "működik, ha az aktuális oldal nem tartalmaz linket."
 
-#: frontend/apps/reader/modules/readerlink.lua:262
+#: frontend/apps/reader/modules/readerlink.lua:391
 msgid "Allow larger tap area around links"
 msgstr "Linkek körül nagyobb érintési terület"
 
-#: frontend/apps/reader/modules/readerlink.lua:269
+#: frontend/apps/reader/modules/readerlink.lua:398
 msgid ""
 "Extends the tap area around internal links. Useful with a small font where "
 "tapping on small footnote links may be tedious."
@@ -4004,11 +4038,11 @@ msgstr ""
 "apró betűtípust használ, és a kis lábjegyzetekre mutató linkek megérintése "
 "nehézkes."
 
-#: frontend/apps/reader/modules/readerlink.lua:272
+#: frontend/apps/reader/modules/readerlink.lua:401
 msgid "Show footnotes in popup"
 msgstr "Felugró lábjegyzetek"
 
-#: frontend/apps/reader/modules/readerlink.lua:281
+#: frontend/apps/reader/modules/readerlink.lua:410
 msgid ""
 "Show internal link target content in a footnote popup when it looks like it "
 "might be a footnote, instead of following the link.\n"
@@ -4032,25 +4066,25 @@ msgstr ""
 "A lábjegyzet felugró ablakból a könyvben található lábjegyzet helyére "
 "ugorhat, ha balra húzza az ujját."
 
-#: frontend/apps/reader/modules/readerlink.lua:291
+#: frontend/apps/reader/modules/readerlink.lua:420
 msgid "Footnote popup settings"
 msgstr "Előugró lábjegyzet beállítások"
 
-#: frontend/apps/reader/modules/readerlink.lua:296
+#: frontend/apps/reader/modules/readerlink.lua:425
 msgid "Show more links as footnotes"
 msgstr "További linkek a lábjegyzetekben"
 
-#: frontend/apps/reader/modules/readerlink.lua:306
+#: frontend/apps/reader/modules/readerlink.lua:435
 msgid "Loosen footnote detection rules to show more links as footnotes."
 msgstr ""
 "Lazítson a lábjegyzet-felismerési szabályokon, hogy több linket jelenítsen "
 "meg lábjegyzetként."
 
-#: frontend/apps/reader/modules/readerlink.lua:310
+#: frontend/apps/reader/modules/readerlink.lua:439
 msgid "Use book font as popup font"
 msgstr "Könyv betűtípus használata felugró betűtípusként"
 
-#: frontend/apps/reader/modules/readerlink.lua:321
+#: frontend/apps/reader/modules/readerlink.lua:450
 msgid ""
 "Display the footnote popup text with the font set as the document font (the "
 "book text may still render with a different font if the book uses embedded "
@@ -4060,18 +4094,18 @@ msgstr ""
 "beállított betűtípussal (a könyv szövege továbbra is más betűtípussal "
 "jeleníthető meg, ha a könyv beágyazott betűtípusokat használ)."
 
-#: frontend/apps/reader/modules/readerlink.lua:324
-#: frontend/apps/reader/modules/readerlink.lua:344
-#: frontend/apps/reader/modules/readerlink.lua:366
+#: frontend/apps/reader/modules/readerlink.lua:453
+#: frontend/apps/reader/modules/readerlink.lua:473
+#: frontend/apps/reader/modules/readerlink.lua:495
 msgid "Set footnote popup font size"
 msgstr "Felugró lábjegyzetek betűmérete"
 
-#: frontend/apps/reader/modules/readerlink.lua:343
-#: frontend/apps/reader/modules/readerlink.lua:365 frontend/dispatcher.lua:170
+#: frontend/apps/reader/modules/readerlink.lua:472
+#: frontend/apps/reader/modules/readerlink.lua:494 frontend/dispatcher.lua:170
 msgid "Set font size"
 msgstr "Beállítás"
 
-#: frontend/apps/reader/modules/readerlink.lua:345
+#: frontend/apps/reader/modules/readerlink.lua:474
 msgid ""
 "The footnote popup font can adjust to the font size you've set for the "
 "document, but you can specify here a fixed absolute font size to be used "
@@ -4080,11 +4114,11 @@ msgstr ""
 "A lábjegyzet felugró szövegmérete alkalmazkodhat a dokumentum "
 "szövegméretéhez, de itt megadhat egy fix méretet ehelyett."
 
-#: frontend/apps/reader/modules/readerlink.lua:351
+#: frontend/apps/reader/modules/readerlink.lua:480
 msgid "Set a relative font size instead"
 msgstr "Relatív betűméret beállítása"
 
-#: frontend/apps/reader/modules/readerlink.lua:367
+#: frontend/apps/reader/modules/readerlink.lua:496
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -4101,11 +4135,11 @@ msgstr ""
 "A negatív érték kisebbé teszi, a pozitív érték nagyítja.\n"
 "Az ajánlott érték -2."
 
-#: frontend/apps/reader/modules/readerlink.lua:376
+#: frontend/apps/reader/modules/readerlink.lua:505
 msgid "Set an absolute font size instead"
 msgstr "Abszolút betűméret beállítása"
 
-#: frontend/apps/reader/modules/readerlink.lua:390
+#: frontend/apps/reader/modules/readerlink.lua:519
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -4117,11 +4151,11 @@ msgstr ""
 "Így megadhatja, hogy mennyivel legyen kisebb vagy nagyobb a dokumentum "
 "betűméretéhez képest."
 
-#: frontend/apps/reader/modules/readerlink.lua:552
+#: frontend/apps/reader/modules/readerlink.lua:681
 msgid "Location history cleared."
 msgstr "Helyelőzmények törölve."
 
-#: frontend/apps/reader/modules/readerlink.lua:665
+#: frontend/apps/reader/modules/readerlink.lua:794
 msgid ""
 "Would you like to read this local document?\n"
 "\n"
@@ -4131,7 +4165,7 @@ msgstr ""
 "\n"
 "%1\n"
 
-#: frontend/apps/reader/modules/readerlink.lua:674
+#: frontend/apps/reader/modules/readerlink.lua:803
 msgid ""
 "Link to unsupported local file:\n"
 "%1"
@@ -4139,7 +4173,7 @@ msgstr ""
 "Hivatkozás nem támogatott helyi fájlhoz:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:682
+#: frontend/apps/reader/modules/readerlink.lua:811
 msgid ""
 "Invalid or external link:\n"
 "%1"
@@ -4147,45 +4181,7 @@ msgstr ""
 "Hibás vagy külső link:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:720
-msgid "Show QR code"
-msgstr "QR kód megjelenítése"
-
-#: frontend/apps/reader/modules/readerlink.lua:732
-msgid "Add to Wallabag"
-msgstr "Hozzáadás a Wallabag-hoz"
-
-#: frontend/apps/reader/modules/readerlink.lua:741
-msgid "Open in browser"
-msgstr "Megnyitás böngészőben"
-
-#: frontend/apps/reader/modules/readerlink.lua:782
-msgid ""
-"Would you like to read this Wikipedia %1 article?\n"
-"\n"
-"%2\n"
-msgstr ""
-"Szeretné elolvasni ezt a Wikipedia %1 cikket?\n"
-"\n"
-"%2\n"
-
-#: frontend/apps/reader/modules/readerlink.lua:784
-msgid "Read online"
-msgstr "Online olvasás"
-
-#: frontend/apps/reader/modules/readerlink.lua:793
-msgid ""
-"This article has previously been saved as EPUB. You may wish to read the "
-"saved EPUB instead."
-msgstr ""
-"Ez a cikk már el lett mentve EPUB-ként. Inkább az elmentett EPUB fájlt "
-"olvassa."
-
-#: frontend/apps/reader/modules/readerlink.lua:795
-msgid "Read EPUB"
-msgstr "EPUB olvasása"
-
-#: frontend/apps/reader/modules/readerlink.lua:809
+#: frontend/apps/reader/modules/readerlink.lua:1426
 msgid ""
 "External link:\n"
 "\n"
@@ -6312,31 +6308,31 @@ msgstr "Szombat"
 msgid "Sun"
 msgstr "Vasárnap"
 
-#: frontend/datetime.lua:55 plugins/statistics.koplugin/readerprogress.lua:34
+#: frontend/datetime.lua:55
 msgid "Monday"
 msgstr "Hétfő"
 
-#: frontend/datetime.lua:56 plugins/statistics.koplugin/readerprogress.lua:35
+#: frontend/datetime.lua:56
 msgid "Tuesday"
 msgstr "Kedd"
 
-#: frontend/datetime.lua:57 plugins/statistics.koplugin/readerprogress.lua:36
+#: frontend/datetime.lua:57
 msgid "Wednesday"
 msgstr "Szerda"
 
-#: frontend/datetime.lua:58 plugins/statistics.koplugin/readerprogress.lua:37
+#: frontend/datetime.lua:58
 msgid "Thursday"
 msgstr "Csütörtök"
 
-#: frontend/datetime.lua:59 plugins/statistics.koplugin/readerprogress.lua:38
+#: frontend/datetime.lua:59
 msgid "Friday"
 msgstr "Péntek"
 
-#: frontend/datetime.lua:60 plugins/statistics.koplugin/readerprogress.lua:39
+#: frontend/datetime.lua:60
 msgid "Saturday"
 msgstr "Szombat"
 
-#: frontend/datetime.lua:61 plugins/statistics.koplugin/readerprogress.lua:40
+#: frontend/datetime.lua:61
 msgid "Sunday"
 msgstr "Vasárnap"
 
@@ -9315,7 +9311,7 @@ msgstr "Verzió: %1"
 #: frontend/ui/widget/touchmenu.lua:1308
 #: plugins/exporter.koplugin/target/joplin.lua:288
 #: plugins/externalkeyboard.koplugin/main.lua:159
-#: plugins/wallabag.koplugin/main.lua:332
+#: plugins/wallabag.koplugin/main.lua:344
 msgid "Help"
 msgstr "Súgó"
 
@@ -11734,8 +11730,8 @@ msgid "Days"
 msgstr "Nap"
 
 #: frontend/ui/widget/bookstatuswidget.lua:425
-#: plugins/statistics.koplugin/readerprogress.lua:307
-#: plugins/statistics.koplugin/readerprogress.lua:321
+#: plugins/statistics.koplugin/readerprogress.lua:297
+#: plugins/statistics.koplugin/readerprogress.lua:311
 msgid "Time"
 msgstr "Idő"
 
@@ -16122,11 +16118,11 @@ msgstr "SSH"
 msgid "Connect and transfer files to the device using SSH."
 msgstr "Csatlakozás az eszközre és fájlok mozgatása SSH használatával."
 
-#: plugins/statistics.koplugin/calendarview.lua:1124
+#: plugins/statistics.koplugin/calendarview.lua:1120
 msgid "Enter month"
 msgstr "Adja meg a hónapot"
 
-#: plugins/statistics.koplugin/calendarview.lua:1139
+#: plugins/statistics.koplugin/calendarview.lua:1135
 msgid "Invalid year-month string (YYYY-MM)"
 msgstr "Hibás év-hónap string (ÉÉÉÉ-HH)"
 
@@ -16286,7 +16282,7 @@ msgid "Current book"
 msgstr "Aktuális könyv"
 
 #: plugins/statistics.koplugin/main.lua:1143
-#: plugins/statistics.koplugin/main.lua:2787
+#: plugins/statistics.koplugin/main.lua:2784
 msgid "Current statistics"
 msgstr "Statisztika"
 
@@ -16330,7 +16326,7 @@ msgstr "Könyvek havonta"
 
 #: plugins/statistics.koplugin/main.lua:1256
 #: plugins/statistics.koplugin/main.lua:1261
-#: plugins/statistics.koplugin/readerprogress.lua:110
+#: plugins/statistics.koplugin/readerprogress.lua:100
 msgid "Last week"
 msgstr "Legutóbbi hét"
 
@@ -16544,24 +16540,24 @@ msgstr "Nincs eltávolított statisztika."
 msgid "Keeps and displays your reading statistics."
 msgstr "Megjeleníti az olvasási statisztikákat."
 
-#: plugins/statistics.koplugin/readerprogress.lua:112
+#: plugins/statistics.koplugin/readerprogress.lua:102
 msgid "Week progress"
 msgstr "Heti folyamat"
 
-#: plugins/statistics.koplugin/readerprogress.lua:114
+#: plugins/statistics.koplugin/readerprogress.lua:104
 msgid "Current"
 msgstr "Jelenleg"
 
-#: plugins/statistics.koplugin/readerprogress.lua:114
+#: plugins/statistics.koplugin/readerprogress.lua:104
 msgid "Today"
 msgstr "Holnap"
 
-#: plugins/statistics.koplugin/readerprogress.lua:300
-#: plugins/statistics.koplugin/readerprogress.lua:314
+#: plugins/statistics.koplugin/readerprogress.lua:290
+#: plugins/statistics.koplugin/readerprogress.lua:304
 msgid "Pages"
 msgstr "Oldal"
 
-#: plugins/statistics.koplugin/readerprogress.lua:395
+#: plugins/statistics.koplugin/readerprogress.lua:385
 msgid ""
 "Total\n"
 "pages"
@@ -16569,7 +16565,7 @@ msgstr ""
 "Összes\n"
 "oldal"
 
-#: plugins/statistics.koplugin/readerprogress.lua:404
+#: plugins/statistics.koplugin/readerprogress.lua:394
 msgid ""
 "Total\n"
 "time"
@@ -16577,7 +16573,7 @@ msgstr ""
 "Összes\n"
 "idő"
 
-#: plugins/statistics.koplugin/readerprogress.lua:413
+#: plugins/statistics.koplugin/readerprogress.lua:403
 msgid ""
 "Average\n"
 "pages"
@@ -16585,7 +16581,7 @@ msgstr ""
 "Átlagos\n"
 "oldalszám"
 
-#: plugins/statistics.koplugin/readerprogress.lua:422
+#: plugins/statistics.koplugin/readerprogress.lua:412
 msgid ""
 "Average\n"
 "time"
@@ -17373,19 +17369,23 @@ msgstr ""
 msgid "Wallabag retrieval"
 msgstr "Wallabag visszanyerés"
 
-#: plugins/wallabag.koplugin/main.lua:120 plugins/wallabag.koplugin/_meta.lua:4
+#: plugins/wallabag.koplugin/main.lua:120
+msgid "Add to Wallabag"
+msgstr "Hozzáadás a Wallabag-hoz"
+
+#: plugins/wallabag.koplugin/main.lua:132 plugins/wallabag.koplugin/_meta.lua:4
 msgid "Wallabag"
 msgstr "WallaBag"
 
-#: plugins/wallabag.koplugin/main.lua:123
+#: plugins/wallabag.koplugin/main.lua:135
 msgid "Retrieve new articles from server"
 msgstr "Új hírek lekérése a kiszolgálóról"
 
-#: plugins/wallabag.koplugin/main.lua:129
+#: plugins/wallabag.koplugin/main.lua:141
 msgid "Delete finished articles remotely"
 msgstr "Kész cikkek távoli törlése"
 
-#: plugins/wallabag.koplugin/main.lua:134
+#: plugins/wallabag.koplugin/main.lua:146
 msgid ""
 "Articles processed.\n"
 "Deleted: %1"
@@ -17393,98 +17393,98 @@ msgstr ""
 "Cikkek feldolgozása.\n"
 "Törölve: %1"
 
-#: plugins/wallabag.koplugin/main.lua:145
+#: plugins/wallabag.koplugin/main.lua:157
 msgid "Go to download folder"
 msgstr "Letöltési mappa megnyitása"
 
-#: plugins/wallabag.koplugin/main.lua:165
+#: plugins/wallabag.koplugin/main.lua:177
 msgid "Configure Wallabag server"
 msgstr "Wallabag szerver beállítása"
 
-#: plugins/wallabag.koplugin/main.lua:172
+#: plugins/wallabag.koplugin/main.lua:184
 msgid "Configure Wallabag client"
 msgstr "Wallabag kliens beállítása"
 
-#: plugins/wallabag.koplugin/main.lua:182
+#: plugins/wallabag.koplugin/main.lua:194
 msgid "Not set"
 msgstr "Nincs beállítva"
 
-#: plugins/wallabag.koplugin/main.lua:186
+#: plugins/wallabag.koplugin/main.lua:198
 msgid "Set download directory (%1)"
 msgstr "Letöltési mappa beállítása (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:198
+#: plugins/wallabag.koplugin/main.lua:210
 msgid "All articles"
 msgstr "Összes cikk"
 
-#: plugins/wallabag.koplugin/main.lua:202
+#: plugins/wallabag.koplugin/main.lua:214
 msgid "Filter articles by tag (%1)"
 msgstr "Cikkek szűrése címke szerint (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:212
+#: plugins/wallabag.koplugin/main.lua:224
 msgid "Ignore tags"
 msgstr "Címkék figyelmen kívül hagyása"
 
-#: plugins/wallabag.koplugin/main.lua:214
+#: plugins/wallabag.koplugin/main.lua:226
 msgid "Ignore tags (%1)"
 msgstr "Figyelmen kívül hagyott címkék (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:219
+#: plugins/wallabag.koplugin/main.lua:231
 msgid "Tags to ignore"
 msgstr "Figyelmen kívül hagyandó címkék"
 
-#: plugins/wallabag.koplugin/main.lua:220
+#: plugins/wallabag.koplugin/main.lua:232
 msgid "Enter a comma-separated list of tags to ignore."
 msgstr "Adja meg vesszővel elválasztva a figyelmen kívül hagyandó címkéket."
 
-#: plugins/wallabag.koplugin/main.lua:231
+#: plugins/wallabag.koplugin/main.lua:243
 msgid "Automatic tags"
 msgstr "Automatikus címkék"
 
-#: plugins/wallabag.koplugin/main.lua:233
+#: plugins/wallabag.koplugin/main.lua:245
 msgid "Automatic tags (%1)"
 msgstr "Automatikus címkék (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:238
+#: plugins/wallabag.koplugin/main.lua:250
 msgid "Tags to automatically add"
 msgstr "Automatikusan hozzáadott címkék"
 
-#: plugins/wallabag.koplugin/main.lua:239
+#: plugins/wallabag.koplugin/main.lua:251
 msgid ""
 "Enter a comma-separated list of tags to automatically add to new articles."
 msgstr ""
 "Adja meg az új cikkekhez automatikusan hozzáadandó címkék vesszővel "
 "elválasztott listáját."
 
-#: plugins/wallabag.koplugin/main.lua:249
+#: plugins/wallabag.koplugin/main.lua:261
 msgid "Article deletion"
 msgstr "Cikk törlése"
 
-#: plugins/wallabag.koplugin/main.lua:253
+#: plugins/wallabag.koplugin/main.lua:265
 msgid "Remotely delete finished articles"
 msgstr "Elolvasott cikkek távolról történő törlése"
 
-#: plugins/wallabag.koplugin/main.lua:261
+#: plugins/wallabag.koplugin/main.lua:273
 msgid "Remotely delete 100% read articles"
 msgstr "100%-ban olvasott cikkek távoli törlése"
 
-#: plugins/wallabag.koplugin/main.lua:270
+#: plugins/wallabag.koplugin/main.lua:282
 msgid "Mark as read instead of deleting"
 msgstr "Törlés helyett olvasottnak jelölés"
 
-#: plugins/wallabag.koplugin/main.lua:279
+#: plugins/wallabag.koplugin/main.lua:291
 msgid "Process deletions when downloading"
 msgstr "Törlések feldolgozása letöltéskor"
 
-#: plugins/wallabag.koplugin/main.lua:287
+#: plugins/wallabag.koplugin/main.lua:299
 msgid "Synchronize remotely deleted files"
 msgstr "Távolról törölt fájlok szinkronizálása"
 
-#: plugins/wallabag.koplugin/main.lua:297
+#: plugins/wallabag.koplugin/main.lua:309
 msgid "Send review as tags"
 msgstr "Ismertető mentése címkeként"
 
-#: plugins/wallabag.koplugin/main.lua:298
+#: plugins/wallabag.koplugin/main.lua:310
 msgid ""
 "This allow you to write tags in the review field, separated by commas, which "
 "can then be sent to Wallabag."
@@ -17492,15 +17492,15 @@ msgstr ""
 "Lehetővé teszi, hogy az áttekintő mezőbe címkéket írjon, vesszővel "
 "elválasztva, ami elküldhető a Wallabagnak."
 
-#: plugins/wallabag.koplugin/main.lua:309
+#: plugins/wallabag.koplugin/main.lua:321
 msgid "Remove finished articles from history"
 msgstr "Kész cikkek eltávolítása az előzményekből"
 
-#: plugins/wallabag.koplugin/main.lua:320
+#: plugins/wallabag.koplugin/main.lua:332
 msgid "Remove 100% read articles from history"
 msgstr "Végigolvasott cikkek eltávolítása az előzményekből"
 
-#: plugins/wallabag.koplugin/main.lua:336
+#: plugins/wallabag.koplugin/main.lua:348
 msgid ""
 "Download directory: use a directory that is exclusively used by the Wallabag "
 "plugin. Existing files in this directory risk being deleted.\n"
@@ -17524,7 +17524,7 @@ msgstr ""
 "A 'Távolról törölt fájlok szinkronizálása' opció eltávolítja a szerveren már "
 "nem létező helyi fájlokat."
 
-#: plugins/wallabag.koplugin/main.lua:351
+#: plugins/wallabag.koplugin/main.lua:363
 msgid ""
 "Wallabag is an open source read-it-later service. This plugin synchronizes "
 "with a Wallabag server.\n"
@@ -17540,27 +17540,27 @@ msgstr ""
 "\n"
 "Letöltés ebbe a könyvtárba: %1"
 
-#: plugins/wallabag.koplugin/main.lua:374
+#: plugins/wallabag.koplugin/main.lua:386
 msgid "Please configure the server settings and set a download folder."
 msgstr "Állítsa be a szerver beállításait és a letöltési mappát."
 
-#: plugins/wallabag.koplugin/main.lua:377
+#: plugins/wallabag.koplugin/main.lua:389
 msgid "Server (★)"
 msgstr "Szerver (★)"
 
-#: plugins/wallabag.koplugin/main.lua:379
+#: plugins/wallabag.koplugin/main.lua:391
 msgid "Server"
 msgstr "Szerver"
 
-#: plugins/wallabag.koplugin/main.lua:385
+#: plugins/wallabag.koplugin/main.lua:397
 msgid "Folder (★)"
 msgstr "Mappa (★)"
 
-#: plugins/wallabag.koplugin/main.lua:387
+#: plugins/wallabag.koplugin/main.lua:399
 msgid "Folder"
 msgstr "Mappa"
 
-#: plugins/wallabag.koplugin/main.lua:399
+#: plugins/wallabag.koplugin/main.lua:411
 msgid ""
 "The download directory is not valid.\n"
 "Please configure it in the settings."
@@ -17568,40 +17568,40 @@ msgstr ""
 "A letöltési mappa érvénytelen.\n"
 "Konfigurálja a beállításokban."
 
-#: plugins/wallabag.koplugin/main.lua:438
+#: plugins/wallabag.koplugin/main.lua:450
 msgid "Could not login to Wallabag server."
 msgstr "Nem sikerült bejelentkezni a Wallabag szerverre."
 
-#: plugins/wallabag.koplugin/main.lua:473
+#: plugins/wallabag.koplugin/main.lua:485
 msgid "Requesting article list failed."
 msgstr "A cikklista lekérése nem sikerült."
 
-#: plugins/wallabag.koplugin/main.lua:656
-#: plugins/wallabag.koplugin/main.lua:660
+#: plugins/wallabag.koplugin/main.lua:668
+#: plugins/wallabag.koplugin/main.lua:672
 msgid "Server response is not valid."
 msgstr "A kiszolgáló válasza érvénytelen."
 
-#: plugins/wallabag.koplugin/main.lua:673
+#: plugins/wallabag.koplugin/main.lua:685
 msgid "Communication with server failed."
 msgstr "A kiszolgálóval való kommunikáció nem sikerült."
 
-#: plugins/wallabag.koplugin/main.lua:682
+#: plugins/wallabag.koplugin/main.lua:694
 msgid "Connecting…"
 msgstr "Kapcsolódás…"
 
-#: plugins/wallabag.koplugin/main.lua:691
+#: plugins/wallabag.koplugin/main.lua:703
 msgid "Adding articles from queue…"
 msgstr "Cikkek hozzáadása a sorból…"
 
-#: plugins/wallabag.koplugin/main.lua:704
+#: plugins/wallabag.koplugin/main.lua:716
 msgid "Getting article list…"
 msgstr "Cikklista beolvasása…"
 
-#: plugins/wallabag.koplugin/main.lua:717
+#: plugins/wallabag.koplugin/main.lua:729
 msgid "Downloading articles…"
 msgstr "Cikkek letöltése…"
 
-#: plugins/wallabag.koplugin/main.lua:736
+#: plugins/wallabag.koplugin/main.lua:748
 msgid ""
 "Processing finished.\n"
 "\n"
@@ -17615,7 +17615,7 @@ msgstr ""
 "Törölve: %2\n"
 "Sikertelen: %3"
 
-#: plugins/wallabag.koplugin/main.lua:739
+#: plugins/wallabag.koplugin/main.lua:751
 msgid ""
 "Processing finished.\n"
 "\n"
@@ -17627,23 +17627,23 @@ msgstr ""
 "Letöltött cikk: %1\n"
 "Törölve: %2"
 
-#: plugins/wallabag.koplugin/main.lua:754
+#: plugins/wallabag.koplugin/main.lua:766
 msgid "Synchronizing remote deletions…"
 msgstr "Távoli törlések szinkronizálása…"
 
-#: plugins/wallabag.koplugin/main.lua:787
+#: plugins/wallabag.koplugin/main.lua:799
 msgid "Processing local files…"
 msgstr "Helyi fájlok feldolgozása…"
 
-#: plugins/wallabag.koplugin/main.lua:942
+#: plugins/wallabag.koplugin/main.lua:954
 msgid "Set a single tag to filter articles on"
 msgstr "Egyetlen címke beállítása a cikkek szűréséhez"
 
-#: plugins/wallabag.koplugin/main.lua:987
+#: plugins/wallabag.koplugin/main.lua:999
 msgid "Set tags"
 msgstr "Címkék beállítása"
 
-#: plugins/wallabag.koplugin/main.lua:1004
+#: plugins/wallabag.koplugin/main.lua:1016
 msgid ""
 "Enter the details of your Wallabag server and account.\n"
 "\n"
@@ -17663,35 +17663,35 @@ msgstr ""
 "\n"
 "A config fájl szerkesztése után indítsa újra a KOReader-t."
 
-#: plugins/wallabag.koplugin/main.lua:1013
+#: plugins/wallabag.koplugin/main.lua:1025
 msgid "Wallabag settings"
 msgstr "Wallabag beállítások"
 
-#: plugins/wallabag.koplugin/main.lua:1019
+#: plugins/wallabag.koplugin/main.lua:1031
 msgid "Server URL"
 msgstr "Szerver URL"
 
-#: plugins/wallabag.koplugin/main.lua:1025
+#: plugins/wallabag.koplugin/main.lua:1037
 msgid "Client ID"
 msgstr "Kliens ID"
 
-#: plugins/wallabag.koplugin/main.lua:1030
+#: plugins/wallabag.koplugin/main.lua:1042
 msgid "Client secret"
 msgstr "Ügyféltitok"
 
-#: plugins/wallabag.koplugin/main.lua:1085
+#: plugins/wallabag.koplugin/main.lua:1097
 msgid "Wallabag client settings"
 msgstr "Wallabag kliens beállítások"
 
-#: plugins/wallabag.koplugin/main.lua:1089
+#: plugins/wallabag.koplugin/main.lua:1101
 msgid "Number of articles"
 msgstr "Cikkek száma"
 
-#: plugins/wallabag.koplugin/main.lua:1091
+#: plugins/wallabag.koplugin/main.lua:1103
 msgid "Number of articles to download per sync"
 msgstr "Szinkronizálásonként letöltendő cikkek száma"
 
-#: plugins/wallabag.koplugin/main.lua:1180
+#: plugins/wallabag.koplugin/main.lua:1192
 msgid ""
 "Article added to download queue:\n"
 "%1"
@@ -17699,7 +17699,7 @@ msgstr ""
 "Cikk hozzáadva a letöltési sorhoz:\n"
 "%1"
 
-#: plugins/wallabag.koplugin/main.lua:1189
+#: plugins/wallabag.koplugin/main.lua:1201
 msgid ""
 "Article added to Wallabag:\n"
 "%1"
@@ -17707,7 +17707,7 @@ msgstr ""
 "Cikk hozzáadva a Wallabag-hoz:\n"
 "%1"
 
-#: plugins/wallabag.koplugin/main.lua:1193
+#: plugins/wallabag.koplugin/main.lua:1205
 msgid ""
 "Error adding link to Wallabag:\n"
 "%1"

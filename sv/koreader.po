@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-11 09:30+0000\n"
+"POT-Creation-Date: 2022-12-11 16:07+0000\n"
 "PO-Revision-Date: 2020-12-03 14:29+0000\n"
 "Last-Translator: Axel Åkerblom <axel.erik.akerblom@gmail.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/koreader/"
@@ -175,7 +175,7 @@ msgstr "Ange filnamn"
 #: frontend/apps/reader/modules/readerdictionary.lua:695
 #: frontend/apps/reader/modules/readerfooter.lua:646
 #: frontend/apps/reader/modules/readergoto.lua:82
-#: frontend/apps/reader/modules/readerlink.lua:695
+#: frontend/apps/reader/modules/readerlink.lua:217
 #: frontend/apps/reader/modules/readersearch.lua:118
 #: frontend/apps/reader/modules/readerstatus.lua:117
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
@@ -230,10 +230,10 @@ msgstr "Ange filnamn"
 #: plugins/vocabbuilder.koplugin/main.lua:1108
 #: plugins/vocabbuilder.koplugin/main.lua:1455
 #: plugins/vocabbuilder.koplugin/main.lua:1728
-#: plugins/wallabag.koplugin/main.lua:948
-#: plugins/wallabag.koplugin/main.lua:980
-#: plugins/wallabag.koplugin/main.lua:1048
-#: plugins/wallabag.koplugin/main.lua:1097
+#: plugins/wallabag.koplugin/main.lua:960
+#: plugins/wallabag.koplugin/main.lua:992
+#: plugins/wallabag.koplugin/main.lua:1060
+#: plugins/wallabag.koplugin/main.lua:1109
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -276,8 +276,8 @@ msgstr "Hemmapp"
 #: frontend/apps/cloudstorage/ftp.lua:135
 #: frontend/apps/cloudstorage/webdav.lua:151
 #: plugins/vocabbuilder.koplugin/main.lua:1461
-#: plugins/wallabag.koplugin/main.lua:347
-#: plugins/wallabag.koplugin/main.lua:1056
+#: plugins/wallabag.koplugin/main.lua:359
+#: plugins/wallabag.koplugin/main.lua:1068
 msgid "Info"
 msgstr "Info"
 
@@ -634,8 +634,8 @@ msgstr "Redigera FTP-konto"
 #: frontend/ui/widget/radiobuttonwidget.lua:59
 #: frontend/ui/widget/spinwidget.lua:37
 #: plugins/perceptionexpander.koplugin/main.lua:146
-#: plugins/wallabag.koplugin/main.lua:1062
-#: plugins/wallabag.koplugin/main.lua:1105
+#: plugins/wallabag.koplugin/main.lua:1074
+#: plugins/wallabag.koplugin/main.lua:1117
 msgid "Apply"
 msgstr "Tillämpa"
 
@@ -712,12 +712,12 @@ msgid "WebDAV address, for example https://example.com/dav"
 msgstr "WebDav-adress, t.ex. https://example.com/dav"
 
 #: frontend/apps/cloudstorage/webdav.lua:91
-#: plugins/wallabag.koplugin/main.lua:1036
+#: plugins/wallabag.koplugin/main.lua:1048
 msgid "Username"
 msgstr "Användarnamn"
 
 #: frontend/apps/cloudstorage/webdav.lua:93
-#: plugins/wallabag.koplugin/main.lua:1042
+#: plugins/wallabag.koplugin/main.lua:1054
 msgid "Password"
 msgstr "Lösenord"
 
@@ -1071,7 +1071,7 @@ msgstr "Rensa historik av raderade filer"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:256
 #: frontend/apps/filemanager/filemanagermenu.lua:270
-#: frontend/apps/reader/modules/readerlink.lua:172
+#: frontend/apps/reader/modules/readerlink.lua:301
 #: plugins/batterystat.koplugin/main.lua:197
 #: plugins/coverimage.koplugin/main.lua:510
 msgid "Clear"
@@ -1204,7 +1204,7 @@ msgstr "Välj en fil att öppna"
 
 #: frontend/apps/filemanager/filemanager.lua:625
 #: frontend/apps/filemanager/filemanager.lua:630
-#: frontend/apps/reader/modules/readerlink.lua:713
+#: frontend/apps/reader/modules/readerlink.lua:141
 #, fuzzy
 msgid "Copy"
 msgstr "Kopiera"
@@ -1581,7 +1581,7 @@ msgstr "Kan inte öppna senaste dokumentet"
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:943
 #: plugins/texteditor.koplugin/main.lua:110
-#: plugins/wallabag.koplugin/main.lua:158
+#: plugins/wallabag.koplugin/main.lua:170
 msgid "Settings"
 msgstr "Inställningar"
 
@@ -1872,7 +1872,7 @@ msgstr "Vill du öppna det senaste dokumentet: %1?"
 #: plugins/autowarmth.koplugin/main.lua:760
 #: plugins/calibre.koplugin/main.lua:317
 #: plugins/exporter.koplugin/target/joplin.lua:229
-#: plugins/wallabag.koplugin/main.lua:955
+#: plugins/wallabag.koplugin/main.lua:967
 msgid "OK"
 msgstr "OK"
 
@@ -1983,8 +1983,8 @@ msgid "Home"
 msgstr ""
 
 #: frontend/apps/reader/modules/readerback.lua:141
-#: frontend/apps/reader/modules/readerlink.lua:833
-#: frontend/apps/reader/modules/readerlink.lua:854
+#: frontend/apps/reader/modules/readerlink.lua:837
+#: frontend/apps/reader/modules/readerlink.lua:858
 msgid "Location history is empty."
 msgstr "Platshistoriken är tom."
 
@@ -3910,32 +3910,66 @@ msgid ""
 "writable directory first."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerlink.lua:166
+#: frontend/apps/reader/modules/readerlink.lua:149
+msgid "Show QR code"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerlink.lua:162
+msgid "Open in browser"
+msgstr "Öppna i webbläsaren"
+
+#: frontend/apps/reader/modules/readerlink.lua:176
+msgid "Read online"
+msgstr "Läs på nätet"
+
+#: frontend/apps/reader/modules/readerlink.lua:188
+msgid ""
+"Would you like to read this Wikipedia %1 article?\n"
+"\n"
+"%2\n"
+msgstr ""
+"Vill du läsa denna Wikipedia %1 artikel?\n"
+"\n"
+"%2\n"
+
+#: frontend/apps/reader/modules/readerlink.lua:198
+msgid "Read EPUB"
+msgstr "Läs EPUB"
+
+#: frontend/apps/reader/modules/readerlink.lua:209
+msgid ""
+"This article has previously been saved as EPUB. You may wish to read the "
+"saved EPUB instead."
+msgstr ""
+"Denna artikel har tidigare sparats som EPUB. Du kanske önskar att läsa den "
+"sparade EPUB:en istället."
+
+#: frontend/apps/reader/modules/readerlink.lua:295
 msgid "Go back to previous location"
 msgstr "Gå tillbaka till föregående plats"
 
-#: frontend/apps/reader/modules/readerlink.lua:171
+#: frontend/apps/reader/modules/readerlink.lua:300
 msgid "Clear location history?"
 msgstr "Rensa platshistorik?"
 
-#: frontend/apps/reader/modules/readerlink.lua:185
+#: frontend/apps/reader/modules/readerlink.lua:314
 #: frontend/ui/data/css_tweaks.lua:612
 msgid "Links"
 msgstr "Länkar"
 
-#: frontend/apps/reader/modules/readerlink.lua:188
+#: frontend/apps/reader/modules/readerlink.lua:317
 msgid "Tap to follow links"
 msgstr "Tryck för att följa länkar"
 
-#: frontend/apps/reader/modules/readerlink.lua:194
+#: frontend/apps/reader/modules/readerlink.lua:323
 msgid "Tap on links to follow them."
 msgstr "Tryck på länkar för att följa dem."
 
-#: frontend/apps/reader/modules/readerlink.lua:197
+#: frontend/apps/reader/modules/readerlink.lua:326
 msgid "Ignore external links on tap"
 msgstr "Ignorera externa länkar vid tryck"
 
-#: frontend/apps/reader/modules/readerlink.lua:204
+#: frontend/apps/reader/modules/readerlink.lua:333
 msgid ""
 "Ignore taps on external links. Useful with Wikipedia EPUBs to make page "
 "turning easier.\n"
@@ -3947,11 +3981,11 @@ msgstr ""
 "Du kan fortfarande följa dem från uppslagsverksfönstret eller markeringsmeny "
 "efter att du hållit ner dem."
 
-#: frontend/apps/reader/modules/readerlink.lua:210
+#: frontend/apps/reader/modules/readerlink.lua:339
 msgid "Swipe to go back"
 msgstr "Svep för att gå tillbaka"
 
-#: frontend/apps/reader/modules/readerlink.lua:216
+#: frontend/apps/reader/modules/readerlink.lua:345
 msgid ""
 "Swipe to the right to go back to the previous location after you have "
 "followed a link. When the location stack is empty, swiping to the right "
@@ -3961,11 +3995,11 @@ msgstr ""
 "följt en länk. När platsstapeln är tom går du till föregående sida genom att "
 "svepa åt höger."
 
-#: frontend/apps/reader/modules/readerlink.lua:219
+#: frontend/apps/reader/modules/readerlink.lua:348
 msgid "Swipe to follow nearest link"
 msgstr "Svep för att följa närmaste länk"
 
-#: frontend/apps/reader/modules/readerlink.lua:225
+#: frontend/apps/reader/modules/readerlink.lua:354
 msgid ""
 "Swipe to the left to follow the link nearest to where you started the swipe. "
 "This is useful when a small font is used and tapping on small links is "
@@ -3975,11 +4009,11 @@ msgstr ""
 "användbart när en liten teckenstorlek används och att trycka på små länkar "
 "är omständligt."
 
-#: frontend/apps/reader/modules/readerlink.lua:228
+#: frontend/apps/reader/modules/readerlink.lua:357
 msgid "Ignore external links on swipe"
 msgstr "Ignorera external länkar vid svepning"
 
-#: frontend/apps/reader/modules/readerlink.lua:235
+#: frontend/apps/reader/modules/readerlink.lua:364
 msgid ""
 "Ignore external links near swipe. Useful with Wikipedia EPUBs to follow only "
 "footnotes with swipe.\n"
@@ -3991,11 +4025,11 @@ msgstr ""
 "Du kan fortfarande följa external länkar från ordboksfönstret eller "
 "markeringsmenyn efter att du håller på dem."
 
-#: frontend/apps/reader/modules/readerlink.lua:241
+#: frontend/apps/reader/modules/readerlink.lua:370
 msgid "Swipe to jump to latest bookmark"
 msgstr "Svep för att hoppa till senaste bokmärket"
 
-#: frontend/apps/reader/modules/readerlink.lua:247
+#: frontend/apps/reader/modules/readerlink.lua:376
 msgid ""
 "Swipe to the left to go the most recently bookmarked page.\n"
 "This can be useful to quickly swipe back and forth between what you are "
@@ -4011,11 +4045,11 @@ msgstr ""
 "Om något av de andra Svep för att följa länkalternativen är aktiverade "
 "fungerar det bara när den aktuella sidan inte innehåller någon länk."
 
-#: frontend/apps/reader/modules/readerlink.lua:262
+#: frontend/apps/reader/modules/readerlink.lua:391
 msgid "Allow larger tap area around links"
 msgstr "Tillåt en större tryckyta runt länkar"
 
-#: frontend/apps/reader/modules/readerlink.lua:269
+#: frontend/apps/reader/modules/readerlink.lua:398
 msgid ""
 "Extends the tap area around internal links. Useful with a small font where "
 "tapping on small footnote links may be tedious."
@@ -4023,11 +4057,11 @@ msgstr ""
 "Utökar tryckyta runt interna länkar. Användbart med en liten teckenstorlek "
 "där tryckning på små fotnoter kan vara svårt."
 
-#: frontend/apps/reader/modules/readerlink.lua:272
+#: frontend/apps/reader/modules/readerlink.lua:401
 msgid "Show footnotes in popup"
 msgstr "Visa fotnoter i popup"
 
-#: frontend/apps/reader/modules/readerlink.lua:281
+#: frontend/apps/reader/modules/readerlink.lua:410
 msgid ""
 "Show internal link target content in a footnote popup when it looks like it "
 "might be a footnote, instead of following the link.\n"
@@ -4049,45 +4083,45 @@ msgstr ""
 "Från fotnotsrutan kan du hopopa till fotnotsplatsen i boken genom att svepa "
 "åt vänster."
 
-#: frontend/apps/reader/modules/readerlink.lua:291
+#: frontend/apps/reader/modules/readerlink.lua:420
 #, fuzzy
 msgid "Footnote popup settings"
 msgstr "Teckensnittsinställningar"
 
-#: frontend/apps/reader/modules/readerlink.lua:296
+#: frontend/apps/reader/modules/readerlink.lua:425
 msgid "Show more links as footnotes"
 msgstr "Visa fler länkar som fotnoter"
 
-#: frontend/apps/reader/modules/readerlink.lua:306
+#: frontend/apps/reader/modules/readerlink.lua:435
 msgid "Loosen footnote detection rules to show more links as footnotes."
 msgstr ""
 "Lätta upp reglerna för fotnotsdetektering så att fler länkar visas som "
 "fotnoter."
 
-#: frontend/apps/reader/modules/readerlink.lua:310
+#: frontend/apps/reader/modules/readerlink.lua:439
 #, fuzzy
 msgid "Use book font as popup font"
 msgstr "Sätt teckenstorlek för fotnoter"
 
-#: frontend/apps/reader/modules/readerlink.lua:321
+#: frontend/apps/reader/modules/readerlink.lua:450
 msgid ""
 "Display the footnote popup text with the font set as the document font (the "
 "book text may still render with a different font if the book uses embedded "
 "fonts)."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerlink.lua:324
-#: frontend/apps/reader/modules/readerlink.lua:344
-#: frontend/apps/reader/modules/readerlink.lua:366
+#: frontend/apps/reader/modules/readerlink.lua:453
+#: frontend/apps/reader/modules/readerlink.lua:473
+#: frontend/apps/reader/modules/readerlink.lua:495
 msgid "Set footnote popup font size"
 msgstr "Sätt teckenstorlek för fotnoter"
 
-#: frontend/apps/reader/modules/readerlink.lua:343
-#: frontend/apps/reader/modules/readerlink.lua:365 frontend/dispatcher.lua:170
+#: frontend/apps/reader/modules/readerlink.lua:472
+#: frontend/apps/reader/modules/readerlink.lua:494 frontend/dispatcher.lua:170
 msgid "Set font size"
 msgstr "Ställ in teckenstorlek"
 
-#: frontend/apps/reader/modules/readerlink.lua:345
+#: frontend/apps/reader/modules/readerlink.lua:474
 msgid ""
 "The footnote popup font can adjust to the font size you've set for the "
 "document, but you can specify here a fixed absolute font size to be used "
@@ -4097,12 +4131,12 @@ msgstr ""
 "Detta lẗer dig ange hur mycket mindre eller större den bör vara jämfört med "
 "dokumentets teckenstorlek."
 
-#: frontend/apps/reader/modules/readerlink.lua:351
+#: frontend/apps/reader/modules/readerlink.lua:480
 #, fuzzy
 msgid "Set a relative font size instead"
 msgstr "Ställ in teckenstorlek för text"
 
-#: frontend/apps/reader/modules/readerlink.lua:367
+#: frontend/apps/reader/modules/readerlink.lua:496
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -4120,12 +4154,12 @@ msgstr ""
 "större.\n"
 "Det rekommenderade värdet är -2."
 
-#: frontend/apps/reader/modules/readerlink.lua:376
+#: frontend/apps/reader/modules/readerlink.lua:505
 #, fuzzy
 msgid "Set an absolute font size instead"
 msgstr "Ställ in teckenstorlek för text"
 
-#: frontend/apps/reader/modules/readerlink.lua:390
+#: frontend/apps/reader/modules/readerlink.lua:519
 msgid ""
 "The footnote popup font adjusts to the font size you've set for the "
 "document.\n"
@@ -4137,11 +4171,11 @@ msgstr ""
 "Detta lẗer dig ange hur mycket mindre eller större den bör vara jämfört med "
 "dokumentets teckenstorlek."
 
-#: frontend/apps/reader/modules/readerlink.lua:552
+#: frontend/apps/reader/modules/readerlink.lua:681
 msgid "Location history cleared."
 msgstr "Platshistoriken rensad."
 
-#: frontend/apps/reader/modules/readerlink.lua:665
+#: frontend/apps/reader/modules/readerlink.lua:794
 msgid ""
 "Would you like to read this local document?\n"
 "\n"
@@ -4151,7 +4185,7 @@ msgstr ""
 "\n"
 "%1\n"
 
-#: frontend/apps/reader/modules/readerlink.lua:674
+#: frontend/apps/reader/modules/readerlink.lua:803
 msgid ""
 "Link to unsupported local file:\n"
 "%1"
@@ -4159,7 +4193,7 @@ msgstr ""
 "Länk till den lokala filen som inte stöds:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:682
+#: frontend/apps/reader/modules/readerlink.lua:811
 msgid ""
 "Invalid or external link:\n"
 "%1"
@@ -4167,45 +4201,7 @@ msgstr ""
 "Ogiltig eller extern länk: \n"
 "%1"
 
-#: frontend/apps/reader/modules/readerlink.lua:720
-msgid "Show QR code"
-msgstr ""
-
-#: frontend/apps/reader/modules/readerlink.lua:732
-msgid "Add to Wallabag"
-msgstr "Lägg till i Wallabag"
-
-#: frontend/apps/reader/modules/readerlink.lua:741
-msgid "Open in browser"
-msgstr "Öppna i webbläsaren"
-
-#: frontend/apps/reader/modules/readerlink.lua:782
-msgid ""
-"Would you like to read this Wikipedia %1 article?\n"
-"\n"
-"%2\n"
-msgstr ""
-"Vill du läsa denna Wikipedia %1 artikel?\n"
-"\n"
-"%2\n"
-
-#: frontend/apps/reader/modules/readerlink.lua:784
-msgid "Read online"
-msgstr "Läs på nätet"
-
-#: frontend/apps/reader/modules/readerlink.lua:793
-msgid ""
-"This article has previously been saved as EPUB. You may wish to read the "
-"saved EPUB instead."
-msgstr ""
-"Denna artikel har tidigare sparats som EPUB. Du kanske önskar att läsa den "
-"sparade EPUB:en istället."
-
-#: frontend/apps/reader/modules/readerlink.lua:795
-msgid "Read EPUB"
-msgstr "Läs EPUB"
-
-#: frontend/apps/reader/modules/readerlink.lua:809
+#: frontend/apps/reader/modules/readerlink.lua:1426
 msgid ""
 "External link:\n"
 "\n"
@@ -6226,31 +6222,31 @@ msgstr "Lör"
 msgid "Sun"
 msgstr "Sön"
 
-#: frontend/datetime.lua:55 plugins/statistics.koplugin/readerprogress.lua:34
+#: frontend/datetime.lua:55
 msgid "Monday"
 msgstr "Måndag"
 
-#: frontend/datetime.lua:56 plugins/statistics.koplugin/readerprogress.lua:35
+#: frontend/datetime.lua:56
 msgid "Tuesday"
 msgstr "Tisdag"
 
-#: frontend/datetime.lua:57 plugins/statistics.koplugin/readerprogress.lua:36
+#: frontend/datetime.lua:57
 msgid "Wednesday"
 msgstr "Onsdag"
 
-#: frontend/datetime.lua:58 plugins/statistics.koplugin/readerprogress.lua:37
+#: frontend/datetime.lua:58
 msgid "Thursday"
 msgstr "Torsdag"
 
-#: frontend/datetime.lua:59 plugins/statistics.koplugin/readerprogress.lua:38
+#: frontend/datetime.lua:59
 msgid "Friday"
 msgstr "Fredag"
 
-#: frontend/datetime.lua:60 plugins/statistics.koplugin/readerprogress.lua:39
+#: frontend/datetime.lua:60
 msgid "Saturday"
 msgstr "Lördag"
 
-#: frontend/datetime.lua:61 plugins/statistics.koplugin/readerprogress.lua:40
+#: frontend/datetime.lua:61
 msgid "Sunday"
 msgstr "Söndag"
 
@@ -9203,7 +9199,7 @@ msgstr "Version"
 #: frontend/ui/widget/touchmenu.lua:1308
 #: plugins/exporter.koplugin/target/joplin.lua:288
 #: plugins/externalkeyboard.koplugin/main.lua:159
-#: plugins/wallabag.koplugin/main.lua:332
+#: plugins/wallabag.koplugin/main.lua:344
 msgid "Help"
 msgstr "Hjälp"
 
@@ -11413,8 +11409,8 @@ msgid "Days"
 msgstr "Dagar"
 
 #: frontend/ui/widget/bookstatuswidget.lua:425
-#: plugins/statistics.koplugin/readerprogress.lua:307
-#: plugins/statistics.koplugin/readerprogress.lua:321
+#: plugins/statistics.koplugin/readerprogress.lua:297
+#: plugins/statistics.koplugin/readerprogress.lua:311
 msgid "Time"
 msgstr "Tid"
 
@@ -15800,12 +15796,12 @@ msgstr "SSH"
 msgid "Connect and transfer files to the device using SSH."
 msgstr "Anslut och överför filer till enheten med SSH."
 
-#: plugins/statistics.koplugin/calendarview.lua:1124
+#: plugins/statistics.koplugin/calendarview.lua:1120
 #, fuzzy
 msgid "Enter month"
 msgstr "Ange nummer"
 
-#: plugins/statistics.koplugin/calendarview.lua:1139
+#: plugins/statistics.koplugin/calendarview.lua:1135
 msgid "Invalid year-month string (YYYY-MM)"
 msgstr ""
 
@@ -15959,7 +15955,7 @@ msgid "Current book"
 msgstr "Aktuell bok"
 
 #: plugins/statistics.koplugin/main.lua:1143
-#: plugins/statistics.koplugin/main.lua:2787
+#: plugins/statistics.koplugin/main.lua:2784
 #, fuzzy
 msgid "Current statistics"
 msgstr "Återställ bokstatistik"
@@ -16006,7 +16002,7 @@ msgstr "Böcker per månad"
 
 #: plugins/statistics.koplugin/main.lua:1256
 #: plugins/statistics.koplugin/main.lua:1261
-#: plugins/statistics.koplugin/readerprogress.lua:110
+#: plugins/statistics.koplugin/readerprogress.lua:100
 msgid "Last week"
 msgstr "Senaste veckan"
 
@@ -16236,45 +16232,45 @@ msgstr "Bokstatistik"
 msgid "Keeps and displays your reading statistics."
 msgstr "Behåller och visar din läsningsstatistik."
 
-#: plugins/statistics.koplugin/readerprogress.lua:112
+#: plugins/statistics.koplugin/readerprogress.lua:102
 msgid "Week progress"
 msgstr "Veckans framsteg"
 
-#: plugins/statistics.koplugin/readerprogress.lua:114
+#: plugins/statistics.koplugin/readerprogress.lua:104
 msgid "Current"
 msgstr "Aktuell"
 
-#: plugins/statistics.koplugin/readerprogress.lua:114
+#: plugins/statistics.koplugin/readerprogress.lua:104
 msgid "Today"
 msgstr "Idag"
 
-#: plugins/statistics.koplugin/readerprogress.lua:300
-#: plugins/statistics.koplugin/readerprogress.lua:314
+#: plugins/statistics.koplugin/readerprogress.lua:290
+#: plugins/statistics.koplugin/readerprogress.lua:304
 msgid "Pages"
 msgstr "Sidor"
 
-#: plugins/statistics.koplugin/readerprogress.lua:395
+#: plugins/statistics.koplugin/readerprogress.lua:385
 #, fuzzy
 msgid ""
 "Total\n"
 "pages"
 msgstr "Dagar totalt"
 
-#: plugins/statistics.koplugin/readerprogress.lua:404
+#: plugins/statistics.koplugin/readerprogress.lua:394
 #, fuzzy
 msgid ""
 "Total\n"
 "time"
 msgstr "Tid totalt"
 
-#: plugins/statistics.koplugin/readerprogress.lua:413
+#: plugins/statistics.koplugin/readerprogress.lua:403
 #, fuzzy
 msgid ""
 "Average\n"
 "pages"
 msgstr "Genomsnitt"
 
-#: plugins/statistics.koplugin/readerprogress.lua:422
+#: plugins/statistics.koplugin/readerprogress.lua:412
 #, fuzzy
 msgid ""
 "Average\n"
@@ -17070,19 +17066,23 @@ msgstr ""
 msgid "Wallabag retrieval"
 msgstr "Wallabaghämtning"
 
-#: plugins/wallabag.koplugin/main.lua:120 plugins/wallabag.koplugin/_meta.lua:4
+#: plugins/wallabag.koplugin/main.lua:120
+msgid "Add to Wallabag"
+msgstr "Lägg till i Wallabag"
+
+#: plugins/wallabag.koplugin/main.lua:132 plugins/wallabag.koplugin/_meta.lua:4
 msgid "Wallabag"
 msgstr "Wallabag"
 
-#: plugins/wallabag.koplugin/main.lua:123
+#: plugins/wallabag.koplugin/main.lua:135
 msgid "Retrieve new articles from server"
 msgstr "Hämta nya artiklar från server"
 
-#: plugins/wallabag.koplugin/main.lua:129
+#: plugins/wallabag.koplugin/main.lua:141
 msgid "Delete finished articles remotely"
 msgstr "Ta bort avslutade artiklar på distans"
 
-#: plugins/wallabag.koplugin/main.lua:134
+#: plugins/wallabag.koplugin/main.lua:146
 msgid ""
 "Articles processed.\n"
 "Deleted: %1"
@@ -17090,116 +17090,116 @@ msgstr ""
 "Artiklar hanterade.\n"
 "Borttagna: %1"
 
-#: plugins/wallabag.koplugin/main.lua:145
+#: plugins/wallabag.koplugin/main.lua:157
 msgid "Go to download folder"
 msgstr "Gå till hämtningsmappen"
 
-#: plugins/wallabag.koplugin/main.lua:165
+#: plugins/wallabag.koplugin/main.lua:177
 msgid "Configure Wallabag server"
 msgstr "Konfigurera Wallabag-server"
 
-#: plugins/wallabag.koplugin/main.lua:172
+#: plugins/wallabag.koplugin/main.lua:184
 msgid "Configure Wallabag client"
 msgstr "Konfigurera Wallabag-klient"
 
-#: plugins/wallabag.koplugin/main.lua:182
+#: plugins/wallabag.koplugin/main.lua:194
 msgid "Not set"
 msgstr "Inte inställd"
 
-#: plugins/wallabag.koplugin/main.lua:186
+#: plugins/wallabag.koplugin/main.lua:198
 msgid "Set download directory (%1)"
 msgstr "Ställ in hämtningskatalog (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:198
+#: plugins/wallabag.koplugin/main.lua:210
 msgid "All articles"
 msgstr "Alla artiklar"
 
-#: plugins/wallabag.koplugin/main.lua:202
+#: plugins/wallabag.koplugin/main.lua:214
 msgid "Filter articles by tag (%1)"
 msgstr "Filtrera artiklar efter tagg (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:212
+#: plugins/wallabag.koplugin/main.lua:224
 msgid "Ignore tags"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:214
+#: plugins/wallabag.koplugin/main.lua:226
 msgid "Ignore tags (%1)"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:219
+#: plugins/wallabag.koplugin/main.lua:231
 msgid "Tags to ignore"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:220
+#: plugins/wallabag.koplugin/main.lua:232
 msgid "Enter a comma-separated list of tags to ignore."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:231
+#: plugins/wallabag.koplugin/main.lua:243
 #, fuzzy
 msgid "Automatic tags"
 msgstr "Automatisk"
 
-#: plugins/wallabag.koplugin/main.lua:233
+#: plugins/wallabag.koplugin/main.lua:245
 #, fuzzy
 msgid "Automatic tags (%1)"
 msgstr "Extra stor (%1)"
 
-#: plugins/wallabag.koplugin/main.lua:238
+#: plugins/wallabag.koplugin/main.lua:250
 msgid "Tags to automatically add"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:239
+#: plugins/wallabag.koplugin/main.lua:251
 msgid ""
 "Enter a comma-separated list of tags to automatically add to new articles."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:249
+#: plugins/wallabag.koplugin/main.lua:261
 #, fuzzy
 msgid "Article deletion"
 msgstr "Filen borttagen"
 
-#: plugins/wallabag.koplugin/main.lua:253
+#: plugins/wallabag.koplugin/main.lua:265
 msgid "Remotely delete finished articles"
 msgstr "Ta bort avslutade artiklar på distans"
 
-#: plugins/wallabag.koplugin/main.lua:261
+#: plugins/wallabag.koplugin/main.lua:273
 msgid "Remotely delete 100% read articles"
 msgstr "Ta bort 100% lästa artiklar på distans"
 
-#: plugins/wallabag.koplugin/main.lua:270
+#: plugins/wallabag.koplugin/main.lua:282
 msgid "Mark as read instead of deleting"
 msgstr "Markera som läst istället för att ta bort"
 
-#: plugins/wallabag.koplugin/main.lua:279
+#: plugins/wallabag.koplugin/main.lua:291
 msgid "Process deletions when downloading"
 msgstr "Hantera borttagningar vid hämtning"
 
-#: plugins/wallabag.koplugin/main.lua:287
+#: plugins/wallabag.koplugin/main.lua:299
 msgid "Synchronize remotely deleted files"
 msgstr "Synkronisera raderade fjärrfiler"
 
-#: plugins/wallabag.koplugin/main.lua:297
+#: plugins/wallabag.koplugin/main.lua:309
 #, fuzzy
 msgid "Send review as tags"
 msgstr "Spara recension"
 
-#: plugins/wallabag.koplugin/main.lua:298
+#: plugins/wallabag.koplugin/main.lua:310
 msgid ""
 "This allow you to write tags in the review field, separated by commas, which "
 "can then be sent to Wallabag."
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:309
+#: plugins/wallabag.koplugin/main.lua:321
 #, fuzzy
 msgid "Remove finished articles from history"
 msgstr "Ta bort avslutade artiklar på distans"
 
-#: plugins/wallabag.koplugin/main.lua:320
+#: plugins/wallabag.koplugin/main.lua:332
 #, fuzzy
 msgid "Remove 100% read articles from history"
 msgstr "Ta bort avslutade artiklar på distans"
 
-#: plugins/wallabag.koplugin/main.lua:336
+#: plugins/wallabag.koplugin/main.lua:348
 msgid ""
 "Download directory: use a directory that is exclusively used by the Wallabag "
 "plugin. Existing files in this directory risk being deleted.\n"
@@ -17221,7 +17221,7 @@ msgstr ""
 "Alternativet ”Synkronisera raderade fjärrfiler” kommer att ta bort filer som "
 "inte längre finns på servern."
 
-#: plugins/wallabag.koplugin/main.lua:351
+#: plugins/wallabag.koplugin/main.lua:363
 msgid ""
 "Wallabag is an open source read-it-later service. This plugin synchronizes "
 "with a Wallabag server.\n"
@@ -17237,32 +17237,32 @@ msgstr ""
 "\n"
 "Hämtningar till katalog: %1"
 
-#: plugins/wallabag.koplugin/main.lua:374
+#: plugins/wallabag.koplugin/main.lua:386
 #, fuzzy
 msgid "Please configure the server settings and set a download folder."
 msgstr "Konfigurera server- och lokala inställningar."
 
-#: plugins/wallabag.koplugin/main.lua:377
+#: plugins/wallabag.koplugin/main.lua:389
 #, fuzzy
 msgid "Server (★)"
 msgstr "Ignorera <H1>"
 
-#: plugins/wallabag.koplugin/main.lua:379
+#: plugins/wallabag.koplugin/main.lua:391
 #, fuzzy
 msgid "Server"
 msgstr "Server-URL"
 
-#: plugins/wallabag.koplugin/main.lua:385
+#: plugins/wallabag.koplugin/main.lua:397
 #, fuzzy
 msgid "Folder (★)"
 msgstr "Gå upp en mapp"
 
-#: plugins/wallabag.koplugin/main.lua:387
+#: plugins/wallabag.koplugin/main.lua:399
 #, fuzzy
 msgid "Folder"
 msgstr "Gå upp en mapp"
 
-#: plugins/wallabag.koplugin/main.lua:399
+#: plugins/wallabag.koplugin/main.lua:411
 msgid ""
 "The download directory is not valid.\n"
 "Please configure it in the settings."
@@ -17270,42 +17270,42 @@ msgstr ""
 "Hämtningskatalogen är inte giltig.\n"
 "Konfigurera den under inställningar."
 
-#: plugins/wallabag.koplugin/main.lua:438
+#: plugins/wallabag.koplugin/main.lua:450
 msgid "Could not login to Wallabag server."
 msgstr "Kunde inte logga in på Wallabag-sever."
 
-#: plugins/wallabag.koplugin/main.lua:473
+#: plugins/wallabag.koplugin/main.lua:485
 #, fuzzy
 msgid "Requesting article list failed."
 msgstr "Hämtar artikellista…"
 
-#: plugins/wallabag.koplugin/main.lua:656
-#: plugins/wallabag.koplugin/main.lua:660
+#: plugins/wallabag.koplugin/main.lua:668
+#: plugins/wallabag.koplugin/main.lua:672
 msgid "Server response is not valid."
 msgstr "Serversvar är inte giltigt."
 
-#: plugins/wallabag.koplugin/main.lua:673
+#: plugins/wallabag.koplugin/main.lua:685
 msgid "Communication with server failed."
 msgstr "Kommunikation med servern misslyckades."
 
-#: plugins/wallabag.koplugin/main.lua:682
+#: plugins/wallabag.koplugin/main.lua:694
 msgid "Connecting…"
 msgstr "Ansluter…"
 
-#: plugins/wallabag.koplugin/main.lua:691
+#: plugins/wallabag.koplugin/main.lua:703
 #, fuzzy
 msgid "Adding articles from queue…"
 msgstr "Hämtar artiklar…"
 
-#: plugins/wallabag.koplugin/main.lua:704
+#: plugins/wallabag.koplugin/main.lua:716
 msgid "Getting article list…"
 msgstr "Hämtar artikellista…"
 
-#: plugins/wallabag.koplugin/main.lua:717
+#: plugins/wallabag.koplugin/main.lua:729
 msgid "Downloading articles…"
 msgstr "Hämtar artiklar…"
 
-#: plugins/wallabag.koplugin/main.lua:736
+#: plugins/wallabag.koplugin/main.lua:748
 msgid ""
 "Processing finished.\n"
 "\n"
@@ -17319,7 +17319,7 @@ msgstr ""
 "Togs bort: %2\n"
 "Misslyckades: % 3"
 
-#: plugins/wallabag.koplugin/main.lua:739
+#: plugins/wallabag.koplugin/main.lua:751
 msgid ""
 "Processing finished.\n"
 "\n"
@@ -17331,24 +17331,24 @@ msgstr ""
 "Artiklar hämtade: %1\n"
 "Borttagna: %2"
 
-#: plugins/wallabag.koplugin/main.lua:754
+#: plugins/wallabag.koplugin/main.lua:766
 #, fuzzy
 msgid "Synchronizing remote deletions…"
 msgstr "Synkronisera distansborttagningar…"
 
-#: plugins/wallabag.koplugin/main.lua:787
+#: plugins/wallabag.koplugin/main.lua:799
 msgid "Processing local files…"
 msgstr "Hanterar lokala filer…"
 
-#: plugins/wallabag.koplugin/main.lua:942
+#: plugins/wallabag.koplugin/main.lua:954
 msgid "Set a single tag to filter articles on"
 msgstr "Sätt en enstaka tagg att filtrera artiklar efter"
 
-#: plugins/wallabag.koplugin/main.lua:987
+#: plugins/wallabag.koplugin/main.lua:999
 msgid "Set tags"
 msgstr ""
 
-#: plugins/wallabag.koplugin/main.lua:1004
+#: plugins/wallabag.koplugin/main.lua:1016
 msgid ""
 "Enter the details of your Wallabag server and account.\n"
 "\n"
@@ -17368,35 +17368,35 @@ msgstr ""
 "\n"
 "Starta om KOReader efter att ha redigerat konfigurationsfilen."
 
-#: plugins/wallabag.koplugin/main.lua:1013
+#: plugins/wallabag.koplugin/main.lua:1025
 msgid "Wallabag settings"
 msgstr "Wallabag-inställningar"
 
-#: plugins/wallabag.koplugin/main.lua:1019
+#: plugins/wallabag.koplugin/main.lua:1031
 msgid "Server URL"
 msgstr "Server-URL"
 
-#: plugins/wallabag.koplugin/main.lua:1025
+#: plugins/wallabag.koplugin/main.lua:1037
 msgid "Client ID"
 msgstr "Klient-ID"
 
-#: plugins/wallabag.koplugin/main.lua:1030
+#: plugins/wallabag.koplugin/main.lua:1042
 msgid "Client secret"
 msgstr "Klienthemlighet"
 
-#: plugins/wallabag.koplugin/main.lua:1085
+#: plugins/wallabag.koplugin/main.lua:1097
 msgid "Wallabag client settings"
 msgstr "Inställningar för Wallabag-klient"
 
-#: plugins/wallabag.koplugin/main.lua:1089
+#: plugins/wallabag.koplugin/main.lua:1101
 msgid "Number of articles"
 msgstr "Antal artiklar"
 
-#: plugins/wallabag.koplugin/main.lua:1091
+#: plugins/wallabag.koplugin/main.lua:1103
 msgid "Number of articles to download per sync"
 msgstr "Antal artiklar att hämta per sync"
 
-#: plugins/wallabag.koplugin/main.lua:1180
+#: plugins/wallabag.koplugin/main.lua:1192
 #, fuzzy
 msgid ""
 "Article added to download queue:\n"
@@ -17405,7 +17405,7 @@ msgstr ""
 "Artikeln tillagd i Wallabag:\n"
 "%1"
 
-#: plugins/wallabag.koplugin/main.lua:1189
+#: plugins/wallabag.koplugin/main.lua:1201
 msgid ""
 "Article added to Wallabag:\n"
 "%1"
@@ -17413,7 +17413,7 @@ msgstr ""
 "Artikeln tillagd i Wallabag:\n"
 "%1"
 
-#: plugins/wallabag.koplugin/main.lua:1193
+#: plugins/wallabag.koplugin/main.lua:1205
 msgid ""
 "Error adding link to Wallabag:\n"
 "%1"
