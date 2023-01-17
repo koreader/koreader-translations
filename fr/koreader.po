@@ -27,8 +27,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-16 18:51+0000\n"
-"PO-Revision-Date: 2023-01-16 18:51+0000\n"
-"Last-Translator: ajs256 <alex.sirota@icloud.com>\n"
+"PO-Revision-Date: 2023-01-18 07:49+0000\n"
+"Last-Translator: Daniel K <danielk963@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/koreader/koreader/"
 "fr/>\n"
 "Language: fr\n"
@@ -518,6 +518,12 @@ msgid ""
 "\n"
 "Some of the previously generated long-lived tokens are still valid."
 msgstr ""
+"Les jetons d'accès Dropbox ont une durée de vie courte (4 heures). \n"
+"Pour générer un nouveau jeton d'accès, veuillez utiliser le jeton de "
+"rafraîchissement Dropbox et la chaîne <APP_KEY> : <APP_SECRET>.\n"
+"\n"
+"Certains des jetons à durée de vie longue générés précédemment sont toujours "
+"valides."
 
 #: frontend/apps/cloudstorage/dropbox.lua:108
 msgid "Dropbox cloud storage"
@@ -533,6 +539,8 @@ msgid ""
 "Dropbox refresh token\n"
 "or long-lived token (deprecated)"
 msgstr ""
+"Jeton de rafraîchissement Dropbox \n"
+"ou jeton à durée de vie longue (obsolète)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:120
 msgid ""
@@ -542,7 +550,7 @@ msgstr ""
 
 #: frontend/apps/cloudstorage/dropbox.lua:124
 msgid "Dropbox folder (/ for root)"
-msgstr ""
+msgstr "Dossier Dropbox ( / pour la racine)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/reader/modules/readerbookmark.lua:1038
@@ -678,7 +686,7 @@ msgstr "Choisir le type de « nuage »"
 
 #: frontend/apps/cloudstorage/syncservice.lua:72
 msgid "Add service"
-msgstr ""
+msgstr "Ajouter un service"
 
 #: frontend/apps/cloudstorage/syncservice.lua:128
 msgid ""
@@ -1682,7 +1690,7 @@ msgstr "Aucun dossier d’accueil n’est définit."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:313
 msgid "Choose new folder to set as home?"
-msgstr ""
+msgstr "Choisir un nouveau dossier à définir comme accueil ?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:330
 msgid "Shorten home folder"
@@ -1838,7 +1846,7 @@ msgstr "Mise en cache des appels CRE"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:683
 msgid "Dump the fontlist cache"
-msgstr ""
+msgstr "Vider le cache de la liste de polices"
 
 #. @translators This is a debug option to help determine cases when standby failed to initiate properly. PM = power management.
 #: frontend/apps/filemanager/filemanagermenu.lua:692
@@ -2720,7 +2728,7 @@ msgstr "Taille de police (%1)"
 
 #: frontend/apps/reader/modules/readerfont.lua:57
 msgid "Font-family fonts"
-msgstr ""
+msgstr "Polices de famille de polices"
 
 #: frontend/apps/reader/modules/readerfont.lua:259
 msgid "Font size set to: %1."
@@ -2820,6 +2828,19 @@ msgid ""
 "your default font is hardly used, you can quickly disable a family font for "
 "this book by unchecking the association."
 msgstr ""
+"Dans les documents basés sur HTML / CSS comme les EPUBs, les feuilles de "
+"style peuvent spécifier d'utiliser des polices par famille plutôt que par un "
+"nom de police spécifique.\n"
+"Sauf pour les polices à espacement constant et les polices mathématiques, "
+"KOReader utilise votre police par défaut pour tout nom de famille.\n"
+"Vous pouvez associer une police spécifique à chaque famille si vous vous "
+"souciez de la distinction.\n"
+"Un appui long sur un nom de police fera l'association globale (★), de sorte "
+"qu'elle s'applique à tous vos livres. C'est l'approche préférée.\n"
+"Un tap ne concernera que le livre en cours.\n"
+"Si vous rencontrez un livre où ces familles sont abusées au point où votre "
+"police par défaut est à peine utilisée, vous pouvez rapidement désactiver "
+"une police de famille pour ce livre en décochant l'association."
 
 #. @translators These are typography font family names as used in CSS, they can be kept untranslated if they are used more commonly than their translation
 #: frontend/apps/reader/modules/readerfont.lua:456
@@ -2829,7 +2850,7 @@ msgstr "Séries"
 
 #: frontend/apps/reader/modules/readerfont.lua:457
 msgid "Sans-serif"
-msgstr ""
+msgstr "Sans-serif (sans empattements)"
 
 #: frontend/apps/reader/modules/readerfont.lua:458
 #, fuzzy
@@ -2838,11 +2859,11 @@ msgstr "Monospace"
 
 #: frontend/apps/reader/modules/readerfont.lua:460
 msgid "Cursive"
-msgstr ""
+msgstr "Cursive (script)"
 
 #: frontend/apps/reader/modules/readerfont.lua:461
 msgid "Fantasy"
-msgstr ""
+msgstr "Fantaisie"
 
 #: frontend/apps/reader/modules/readerfont.lua:462
 msgid "Emoji u{1F60A}"
@@ -2854,7 +2875,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerfont.lua:464
 msgid "Math"
-msgstr ""
+msgstr "Mathématiques"
 
 #: frontend/apps/reader/modules/readerfont.lua:498
 #, fuzzy
@@ -2874,10 +2895,16 @@ msgid ""
 "Enabling this will ignore such font names and make sure your preferred "
 "family fonts are used."
 msgstr ""
+"Dans une déclaration de famille de polices CSS, les éditeurs peuvent "
+"précéder un nom de famille avec un ou plusieurs noms de polices qui doivent "
+"être utilisés s'ils sont trouvés parmi les polices intégrées ou vos propres "
+"polices.\n"
+"Activer cela ignorera ces noms de polices et s'assurera que les polices de "
+"famille préférées soient utilisées."
 
 #: frontend/apps/reader/modules/readerfont.lua:530
 msgid "(main font)"
-msgstr ""
+msgstr "(police principale)"
 
 #: frontend/apps/reader/modules/readerfont.lua:531
 #, fuzzy
@@ -2963,6 +2990,14 @@ msgid ""
 "have all the Greek characters), but may make Chinese or Indic characters "
 "smaller when picked from fallback fonts."
 msgstr ""
+"Ajustez la taille de chaque police de secours de sorte qu'elles aient toutes "
+"la même hauteur x et que les caractères en minuscules sélectionnés dans ces "
+"polices aient une taille similaire à celle des caractères de la police par "
+"défaut.\n"
+"Cela peut aider avec les mots grecs parmi le texte latin (car les polices "
+"latines n'ont souvent pas tous les caractères grecs), mais peut rendre les "
+"caractères chinois ou indic plus petits lorsqu'ils sont sélectionnés à "
+"partir des polices de secours."
 
 #: frontend/apps/reader/modules/readerfont.lua:768
 #, fuzzy
@@ -2982,6 +3017,12 @@ msgid ""
 "can fit your preferred font height, or you can make them be a bit smaller to "
 "distinguish them more easily."
 msgstr ""
+"Les polices à espacement constant peuvent paraître grandes lorsqu'elles sont "
+"en ligne avec votre police principale si celle-ci a une petite hauteur x.\n"
+"Ce paramètre permet de redimensionner toutes les polices à espacement "
+"constant de ce pourcentage pour qu'elles s'adaptent à la hauteur de police "
+"préférée ou pour les rendre un peu plus petites pour les distinguer plus "
+"facilement."
 
 #: frontend/apps/reader/modules/readerfont.lua:798
 msgid "Generate font test document"
@@ -3807,6 +3848,11 @@ msgid ""
 "the HIGHLIGHT button.\n"
 "You can also exit select mode by tapping on the start of the highlight."
 msgstr ""
+"Vous êtes actuellement en mode SÉLECTION.\n"
+"Pour terminer la surbrillance, appuyez longuement là où la surbrillance doit "
+"se terminer et appuyez sur le bouton SURBRILLANCE.\n"
+"Vous pouvez également sortir du mode sélection en tapant sur le début de la "
+"surbrillance."
 
 #: frontend/apps/reader/modules/readerhighlight.lua:825
 msgid "Note"
@@ -6638,7 +6684,7 @@ msgstr "Événements de rotation de l’accéléromètre activés."
 
 #: frontend/device/generic/device.lua:523
 msgid "Gateway ping successful"
-msgstr ""
+msgstr "Ping de la passerelle réussi."
 
 #: frontend/device/generic/device.lua:525
 msgid "Gateway ping FAILED"
@@ -8702,6 +8748,8 @@ msgstr "Supprimer ce marque-page"
 #: frontend/ui/data/css_tweaks.lua:1057
 msgid "Remove block margin and padding inside inpage footnotes."
 msgstr ""
+"Supprimer les marges et les espacements de bloc à l'intérieur des notes de "
+"bas de page."
 
 #: frontend/ui/data/css_tweaks.lua:1070
 msgid "Remove cosmetic spacing"
@@ -8710,10 +8758,12 @@ msgstr "Retirer les espacements cosmétiques"
 #: frontend/ui/data/css_tweaks.lua:1071
 msgid "Remove inline margin and padding inside inpage footnotes."
 msgstr ""
+"Supprimer les marges et les espacements en ligne à l'intérieur des notes de "
+"bas de page."
 
 #: frontend/ui/data/css_tweaks.lua:1084
 msgid "Inline all footnote content"
-msgstr ""
+msgstr "Mettre en ligne tout le contenu des notes de bas de page"
 
 #: frontend/ui/data/css_tweaks.lua:1085
 msgid ""
@@ -8722,6 +8772,12 @@ msgid ""
 "all the footnote content become a single paragraph.\n"
 "This will break any complex footnote containing quotes or lists."
 msgstr ""
+"Si le numéro de la note de bas de page est sur une seule ligne et le texte "
+"de la note sur la ligne suivante, ou s'il y a des niveaux variables "
+"d'indentation, cette modification peut faire en sorte que tout le contenu de "
+"la note de bas de page devienne un seul paragraphe.\n"
+"Cela brisera toute note de bas de page complexe contenant des citations ou "
+"des listes."
 
 #: frontend/ui/data/css_tweaks.lua:1106
 msgid "Regularize text size on inline elements"
@@ -8733,6 +8789,10 @@ msgid ""
 "vertical alignments, which would make it too irregular, you can reset all of "
 "them to get a leaner text (to the expense of loosing superscripts)."
 msgstr ""
+"Si le texte de la note de bas de page utilise des tailles de police "
+"variables ou absolues, des hauteurs de ligne ou des alignements verticaux, "
+"ce qui le rend trop irrégulier, vous pouvez réinitialiser tout cela pour "
+"obtenir un texte plus épuré (au détriment de la perte des exposants)."
 
 #: frontend/ui/data/dictionaries.lua:10
 msgid "Public Domain"
@@ -9960,7 +10020,7 @@ msgstr "Affichage automatique du menu du bas"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:71
 msgid "Not implemented"
-msgstr ""
+msgstr "Non implémenté"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:82
 msgid "Not available for any of your active layouts"
@@ -12474,11 +12534,11 @@ msgstr "Trouvé, à la ligne %1 de l'écran."
 
 #: frontend/ui/widget/touchmenu.lua:1180
 msgid "Walking you there…"
-msgstr ""
+msgstr "Je vous y accompagne…"
 
 #: frontend/ui/widget/touchmenu.lua:1243
 msgid "Walk me there"
-msgstr ""
+msgstr "Accompagnez-moi là-bas"
 
 #: frontend/ui/widget/touchmenu.lua:1270
 #: plugins/calibre.koplugin/search.lua:450
@@ -12488,7 +12548,7 @@ msgstr "Résultats de la recherche"
 
 #: frontend/ui/widget/touchmenu.lua:1300
 msgid "No menus containing '%1' found."
-msgstr ""
+msgstr "Aucun menu contenant '%1' n'a été trouvé."
 
 #: frontend/ui/widget/touchmenu.lua:1307
 #, fuzzy
@@ -12499,6 +12559,8 @@ msgstr "Résultats de la recherche"
 msgid ""
 "Search for a menu entry containing the following text (case insensitive)."
 msgstr ""
+"Rechercher une entrée de menu contenant le texte suivant (insensible à la "
+"casse)."
 
 #: frontend/ui/wikipedia.lua:387
 msgid "Loading high-res image… (tap to cancel)"
@@ -12813,6 +12875,9 @@ msgid ""
 "power-saving state *may* hang the kernel, resulting in a full device hang or "
 "a device restart."
 msgstr ""
+"Votre appareil est connu pour être extrêmement instable, de ce fait, un "
+"échec pour entrer dans un état d'économie d'énergie peut bloquer le noyau, "
+"entraînant un blocage complet de l'appareil ou un redémarrage de l'appareil."
 
 #: plugins/autosuspend.koplugin/main.lua:609
 #, fuzzy
@@ -12935,7 +13000,7 @@ msgstr "Masquer l'avertissement jusqu'à l'ouverture du prochain livre"
 
 #: plugins/autowarmth.koplugin/main.lua:202
 msgid "Disable AutoWarmth's nightmode control"
-msgstr ""
+msgstr "Désactiver la commande de mode nuit d'AutoWarmth"
 
 #: plugins/autowarmth.koplugin/main.lua:210
 msgid "Night mode changed"
@@ -12943,7 +13008,7 @@ msgstr "Mode nuit"
 
 #: plugins/autowarmth.koplugin/main.lua:211
 msgid "The AutoWarmth plugin might change it again."
-msgstr ""
+msgstr "Le plugin AutoWarmth pourrait le changer à nouveau."
 
 #: plugins/autowarmth.koplugin/main.lua:527
 #: plugins/autowarmth.koplugin/_meta.lua:4
@@ -13060,6 +13125,9 @@ msgid ""
 "  • off after sunrise and\n"
 "  • on before sunset."
 msgstr ""
+"A ce moment, le rétro-éclairage sera\n"
+"  • éteint après le lever du soleil et\n"
+"  • allumé avant le coucher du soleil."
 
 #: plugins/autowarmth.koplugin/main.lua:693
 msgid ""
