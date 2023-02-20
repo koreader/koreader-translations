@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-20 09:13+0000\n"
-"PO-Revision-Date: 2023-02-20 12:02+0000\n"
+"PO-Revision-Date: 2023-02-20 17:09+0000\n"
 "Last-Translator: うにみそ <unimiso@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
 "koreader/ja/>\n"
@@ -6880,6 +6880,10 @@ msgid ""
 "This is disabled in scroll mode. Switching from page mode with two columns "
 "to scroll mode will cause the document to be re-rendered."
 msgstr ""
+"画面幅の半分に文書をレンダリングし、1つのページ番号で2ページを一度に表示しま"
+"す。これにより2カラムに見えるようになります。\n"
+"スクロールモードでは無効です。2カラムのページモードからスクロールモードに切り"
+"替えると文書が再表示されます。"
 
 #: frontend/ui/data/creoptions.lua:136
 msgid "L/R Margins"
@@ -6891,7 +6895,7 @@ msgstr "左右の余白"
 
 #: frontend/ui/data/creoptions.lua:181
 msgid "Sync T/B Margins"
-msgstr "天地の余白を揃える"
+msgstr "上下の余白を揃える"
 
 #: frontend/ui/data/creoptions.lua:190
 msgid ""
@@ -6903,6 +6907,13 @@ msgid ""
 "In the top menu → Settings → Status bar, you can choose whether the bottom "
 "margin applies from the bottom of the screen, or from above the status bar."
 msgstr ""
+"トップとボトムのマージンを同期させます。\n"
+"- 「オフ」は上下のマージンが異なることを許可します。\n"
+"- 「オン」は上下のマージンを固定し、テキストがページの垂直方向の中央に配置さ"
+"れるようにします。\n"
+"\n"
+"トップメニュー → 設定 → ステータスバーで、下余白を画面下部から適用するか、ス"
+"テータスバーの上から適用するかを選択できます。"
 
 #: frontend/ui/data/creoptions.lua:198
 msgid "Top Margin"
@@ -6910,7 +6921,7 @@ msgstr "上余白"
 
 #: frontend/ui/data/creoptions.lua:234 frontend/ui/data/creoptions.lua:287
 msgid "Top/Bottom Margins"
-msgstr "下余白"
+msgstr "上下余白"
 
 #: frontend/ui/data/creoptions.lua:238 frontend/ui/data/creoptions.lua:291
 #: frontend/ui/elements/screensaver_menu.lua:220
@@ -6930,7 +6941,8 @@ msgstr "下余白"
 msgid ""
 "In the top menu → Settings → Status bar, you can choose whether the bottom "
 "margin applies from the bottom of the screen, or from above the status bar."
-msgstr ""
+msgstr "トップメニュー → 設定 → ステータスバーで、ボトムマージンを画面下部から適用す"
+"るか、ステータスバーの上から適用するかを選択できます。"
 
 #: frontend/ui/data/creoptions.lua:310 frontend/ui/data/koptoptions.lua:324
 msgid "View Mode"
@@ -6948,6 +6960,11 @@ msgid ""
 "- 'continuous' mode allows you to scroll the text like you would in a web "
 "browser (the 'Page Overlap' setting is only available in this mode)."
 msgstr ""
+"- 「page」モードはテキストを最も受け入れやすい場所でページに分割します（フォ"
+"ント、マージン、スタイルなどを変更するとページ番号やページ数が変更されること"
+"があります）。\n"
+"- 「連続」モードではウェブブラウザのようにテキストをスクロールできます（「ペ"
+"ージの重ね合わせ」設定はこのモードでのみ有効です）。"
 
 #: frontend/ui/data/creoptions.lua:323
 msgid "Render Mode"
@@ -6979,15 +6996,22 @@ msgid ""
 "- 'web' renders as web browsers do, allowing negative margins and possible "
 "page overflow."
 msgstr ""
+"- 「レガシー」はオリジナルのCR3ブロックレンダリングコードを使用します。\n"
+"- 「フラット」は余白を潰し、正確なページ区切りのフラットレンダリングを保証し"
+"ます。\n"
+"- 「書籍」はさらにフロートを許可しますが、空白やオーバーフローを避けるために"
+"スタイルサポートを制限します。\n"
+"- 「ウェブ」はウェブブラウザと同じようにレンダリングし、負の余白とページのオ"
+"ーバーフローを許容します。"
 
 #: frontend/ui/data/creoptions.lua:339
 msgid "Zoom (dpi)"
-msgstr "DPI設定"
+msgstr "ズーム(DPI)"
 
 #: frontend/ui/data/creoptions.lua:343
 msgctxt "Resolution"
 msgid "dpi"
-msgstr ""
+msgstr "DPI"
 
 #: frontend/ui/data/creoptions.lua:350
 msgid ""
@@ -7001,28 +7025,37 @@ msgid ""
 "to 1 cm on screen.\n"
 "Note that your selected font size is not affected by this setting."
 msgstr ""
+"CSS の絶対単位と画像のスケーリングに使用する DPI を設定します。\n"
+"- off: 絶対的な単位を無視します (古いエンジンの動作)。\n"
+"- 96¹¹¹: 96 DPIでは、1 CSS pixel = 1 screen "
+"pixelとなり、画像は元の寸法でレンダリングされます。\n"
+"- その他の値は、CSSの絶対的な単位と画像を係数で拡大縮小します (300 DPI = x3、"
+"48 DPI = x0.5)\n"
+"デバイスの実際のDPIを使用することで、CSSの1cmが画面上の1cmに実際に変換される"
+"ことが保証されます。\n"
+"なお、この設定によって選択したフォントサイズが影響を受けることはありません。"
 
 #: frontend/ui/data/creoptions.lua:368 frontend/ui/data/koptoptions.lua:361
 msgid "Line Spacing"
-msgstr "行間"
+msgstr "行間隔"
 
 #: frontend/ui/data/creoptions.lua:436 frontend/ui/data/creoptions.lua:437
 #: frontend/ui/data/koptoptions.lua:424 frontend/ui/data/koptoptions.lua:425
 msgid "decrease"
-msgstr "縮小"
+msgstr "減少"
 
 #: frontend/ui/data/creoptions.lua:436 frontend/ui/data/creoptions.lua:437
 #: frontend/ui/data/koptoptions.lua:424 frontend/ui/data/koptoptions.lua:425
 msgid "increase"
-msgstr "拡大"
+msgstr "増加"
 
 #: frontend/ui/data/creoptions.lua:463
 msgid "Word Spacing"
-msgstr "字間"
+msgstr "単語間隔"
 
 #: frontend/ui/data/creoptions.lua:467
 msgid "Word spacing"
-msgstr "字間"
+msgstr "単語間隔"
 
 #: frontend/ui/data/creoptions.lua:468
 msgid ""
@@ -7032,6 +7065,10 @@ msgid ""
 "- by how much some of them can then be reduced to make more words fit on a "
 "line."
 msgstr ""
+"単語間隔の比率を設定します。\n"
+"- 各空白文字の幅を通常の幅からどの程度拡大するか。\n"
+"- より多くの単語を1行に収められるようにするために、それらの文字のいくつかをど"
+"れだけ減らすことができるかを設定します。"
 
 #: frontend/ui/data/creoptions.lua:471
 #, fuzzy
@@ -7046,7 +7083,7 @@ msgstr "縮小率%"
 #: frontend/ui/data/creoptions.lua:484
 msgctxt "Word spacing"
 msgid "small"
-msgstr "狭く"
+msgstr "狭い"
 
 #: frontend/ui/data/creoptions.lua:484
 msgctxt "Word spacing"
@@ -7056,7 +7093,7 @@ msgstr "普通"
 #: frontend/ui/data/creoptions.lua:484
 msgctxt "Word spacing"
 msgid "large"
-msgstr "広く"
+msgstr "広い"
 
 #: frontend/ui/data/creoptions.lua:497
 msgid ""
@@ -7065,6 +7102,9 @@ msgid ""
 "additionally reduce them to make more words fit on a line (100% means no "
 "reduction)."
 msgstr ""
+"テキストの各「空白」文字の幅を通常の幅からどの程度拡大するか、また、より多く"
+"の単語を一行に収めるためにどの程度縮小するかをレンダリングエンジンに指示しま"
+"す (100% は縮小しないことを意味します)。"
 
 #: frontend/ui/data/creoptions.lua:506
 msgid "Word Expansion"
@@ -7084,7 +7124,6 @@ msgid "CJK scaling"
 msgstr "拡張率%"
 
 #: frontend/ui/data/creoptions.lua:523
-#, fuzzy
 msgctxt "Word expansion"
 msgid "none"
 msgstr "なし"
@@ -7092,12 +7131,12 @@ msgstr "なし"
 #: frontend/ui/data/creoptions.lua:523
 msgctxt "Word expansion"
 msgid "some"
-msgstr ""
+msgstr "いくつか"
 
 #: frontend/ui/data/creoptions.lua:523
 msgctxt "Word expansion"
 msgid "more"
-msgstr ""
+msgstr "より多く"
 
 #: frontend/ui/data/creoptions.lua:536
 msgid ""
@@ -7105,6 +7144,9 @@ msgid ""
 "space into words by expanding them with letter spacing. This sets the max "
 "allowed letter spacing as a % of the font size."
 msgstr ""
+"余りにも広いスペースを持つ両端揃えの行で、文字間隔を広げて余分なスペースを単"
+"語に分散させることができます。文字間隔の最大許容値をフォントサイズに対する割"
+"合で設定します。"
 
 #: frontend/ui/data/creoptions.lua:561
 msgid "CJK width scaling"
@@ -7116,11 +7158,13 @@ msgid ""
 "this percentage. This has the effect of adding space between these glyphs, "
 "and might make them easier to distinguish to some readers."
 msgstr ""
+"すべての CJK (中国語、日本語、韓国語) 文字の幅をこの割合で大きくします。これ"
+"は、これらのグリフ間にスペースを追加する効果があり、一部の読者には区別しやす"
+"くなる可能性があります。"
 
 #: frontend/ui/data/creoptions.lua:565
-#, fuzzy
 msgid "Word expansion"
-msgstr "字間"
+msgstr ""
 
 #: frontend/ui/data/creoptions.lua:577 frontend/ui/data/koptoptions.lua:475
 msgid "Contrast"
@@ -7140,10 +7184,19 @@ msgid ""
 "If a font variation is not available, as well as for fractional adjustments, "
 "it will be synthesized from the nearest available weight."
 msgstr ""
+"すべてのフォントに適用される、「レギュラー」からのフォントの太さの増分を設定"
+"します。\n"
+"\n"
+"- 0はフォントの「レギュラー（400）」バリエーションを使用します。\n"
+"- +1はフォントの「ミディアム（500）」バリエーションがあればそれを使用します。"
+"\n"
+"- +3はフォントの「ボールド(700)」がある場合、それを使用します。\n"
+"フォントのバリエーションがない場合、および端数調整については、最も近い利用可"
+"能なウェイトから合成されます。"
 
 #: frontend/ui/data/creoptions.lua:626
 msgid "The default font '%1' provides the following weight classes: %2."
-msgstr ""
+msgstr "既定のフォント '%1' は次のウェイト・クラスを提供します: %2。"
 
 #: frontend/ui/data/creoptions.lua:626
 msgctxt "List separator"
@@ -7178,10 +7231,17 @@ msgid ""
 "- native: use the font internal hinting instructions.\n"
 "- auto: use FreeType's hinting algorithm, ignoring font instructions."
 msgstr ""
+"フォントヒンティングとは、画面のピクセルグリッド上でフォントが最大限読みやす"
+"くなるように調整されるプロセスです。\n"
+"\n"
+"- off: ヒンティングを行いません。\n"
+"- native: フォント内部のヒンティング命令を使用します。\n"
+"- auto: FreeType "
+"のヒンティングアルゴリズムを使用し、フォントの命令を無視します。"
 
 #: frontend/ui/data/creoptions.lua:651
 msgid "Font Kerning"
-msgstr ""
+msgstr "フォントカーニング"
 
 #: frontend/ui/data/creoptions.lua:652 frontend/ui/data/creoptions.lua:730
 msgid "fast"
@@ -7211,6 +7271,19 @@ msgid ""
 "(Font Hinting may need to be adjusted for the best result with either "
 "kerning implementation.)"
 msgstr ""
+"フォントのカーニングとは、個々の文字フォームの間隔を調整し、視覚的に美しい結"
+"果を得るための処理です。\n"
+"\n"
+"- オフ: カーニングを行いません。\n"
+"- 速度優先: FreeType のカーニング実装を使用します (合字はありません)。\n"
+"- 良い: HarfBuzz の軽量カーニング実装を使用します (最高品質よりも高速ですが、"
+"合字がなく、非西洋文字のサポートに制限があります)。\n"
+"- 最高品質: HarfBuzzのフルカーニング実装を使う（より遅いが、いくつかのフォン"
+"トで合字をサポートする可能性があり、結合したアラビアグリフといくつかの他のス"
+"クリプトを適切に表示するためにも必要）。\n"
+"\n"
+"(どちらのカーニング実装でも最良の結果が得られるように、フォントヒンティングを"
+"調整する必要があるかもしれません。)"
 
 #: frontend/ui/data/creoptions.lua:674
 msgid "Alt Status Bar"
@@ -7240,6 +7313,9 @@ msgid ""
 "(Note that less radical changes can be achieved via Style Tweaks in the main "
 "menu.)"
 msgstr ""
+"本に埋め込まれている出版社のスタイルシートを有効または無効にします。\n"
+"(なお、より根本的な変更は、メインメニューのスタイル調整から行うことができます"
+"。)"
 
 #: frontend/ui/data/creoptions.lua:701
 msgid "Embedded Fonts"
