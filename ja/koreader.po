@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-21 02:25+0000\n"
-"PO-Revision-Date: 2023-02-21 10:14+0000\n"
+"PO-Revision-Date: 2023-02-21 20:34+0000\n"
 "Last-Translator: うにみそ <unimiso@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
 "koreader/ja/>\n"
@@ -7614,7 +7614,7 @@ msgstr "全ての対象を左揃え"
 
 #: frontend/ui/data/css_tweaks.lua:257
 msgid "Enforce left alignment of text in all elements."
-msgstr "全てのテキスト対象左揃えを強制する。"
+msgstr "全てのテキスト対象を強制的に左揃えする。"
 
 #: frontend/ui/data/css_tweaks.lua:265
 msgid "Justify most text"
@@ -7687,31 +7687,31 @@ msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:313
 msgid "Document direction RTL"
-msgstr ""
+msgstr "文書の方向は RTL"
 
 #: frontend/ui/data/css_tweaks.lua:320
 msgid "Right align most text"
-msgstr ""
+msgstr "ほとんどのテキストを右揃え"
 
 #: frontend/ui/data/css_tweaks.lua:321
 msgid "Enforce right alignment of text in common text elements."
-msgstr ""
+msgstr "普通のテキスト要素のテキストを強制的に右揃えする。"
 
 #: frontend/ui/data/css_tweaks.lua:329
 msgid "Right align all elements"
-msgstr ""
+msgstr "全ての対象を右揃え"
 
 #: frontend/ui/data/css_tweaks.lua:330
 msgid "Enforce right alignment of text in all elements."
-msgstr ""
+msgstr "全てのテキスト対象を強制的に右揃えする。"
 
 #: frontend/ui/data/css_tweaks.lua:338
 msgid "Document direction LTR"
-msgstr ""
+msgstr "文書の方向は LTR"
 
 #: frontend/ui/data/css_tweaks.lua:344
 msgid "Hyphenation, ligatures, ruby"
-msgstr "ハイフネーション、合字、ルビー"
+msgstr "ハイフネーション、合字、ルビ"
 
 #: frontend/ui/data/css_tweaks.lua:347
 msgid "Allow hyphenation on all text"
@@ -7721,13 +7721,12 @@ msgstr "全ての文章にハイフン処理を有効"
 msgid ""
 "Allow hyphenation on all text (except headings), in case the publisher has "
 "disabled it."
-msgstr ""
-"原稿設置による無効された場合、（ヘッダを除いて）全ての文章にハイフン処理を有"
-"効にする。"
+msgstr "原稿により無効されている場合でも、（ヘッダを除いて）全ての文章でハイフン処理"
+"を有効にする。"
 
 #: frontend/ui/data/css_tweaks.lua:356
 msgid "Ignore publisher line-break restrictions"
-msgstr "原稿による改行設定を無視"
+msgstr "原稿による改行制限を無視"
 
 #: frontend/ui/data/css_tweaks.lua:357
 msgid ""
@@ -7737,16 +7736,22 @@ msgid ""
 "Ignoring them will only use KOReader's own typography rules for line "
 "breaking."
 msgstr ""
+"原稿によっては、単語間の改行を避けるために非改行空白やハイフンを使用すること"
+"がありますが、これは必ずしも必要ではなく、読みやすくするために追加されたもの"
+"である可能性があります。これにより、一部の行で単語の間隔が大きくなることがあ"
+"ります。\n"
+"これらを無視すると、KOReader独自の組版規則ルールのみが改行に使用されます。"
 
 #: frontend/ui/data/css_tweaks.lua:364
 msgid "Disable common ligatures"
-msgstr ""
+msgstr "一般的な合字を無効にする"
 
 #: frontend/ui/data/css_tweaks.lua:365
 msgid ""
 "Disable common ligatures, which are enabled by default in 'best' kerning "
 "mode."
-msgstr ""
+msgstr "「品質優先」カーニングモードでは既定で有効になっている一般的な合字を無効化し"
+"ます。"
 
 #: frontend/ui/data/css_tweaks.lua:374
 msgid "Ruby"
@@ -7768,7 +7773,7 @@ msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:384
 msgid "Sans-serif font for ruby"
-msgstr "ルビ書体を Sans-serifにする"
+msgstr "ルビ書体を Sans-serif(ゴシック体)にする"
 
 #: frontend/ui/data/css_tweaks.lua:385
 msgid ""
@@ -7776,18 +7781,22 @@ msgid ""
 "feeling.\n"
 "Also force the regular text weight when used with lighter or bolder fonts."
 msgstr ""
+"ルビ文章を表示するときはサンセリフ(ゴシック)書体を使用すると、より「本らしい"
+"」感じになります。\n"
+"また、軽いフォントや太いフォントと一緒に使用する場合は、通常のテキストウェイ"
+"トを強制します。"
 
 #: frontend/ui/data/css_tweaks.lua:397
 msgid "Larger ruby text size"
-msgstr "大文字ルビ"
+msgstr "より大きなルビ文字サイズ"
 
 #: frontend/ui/data/css_tweaks.lua:398
 msgid "Increase ruby text size."
-msgstr "ルビのサイズを大きくにします。"
+msgstr "ルビ文字のサイズを大きくします。"
 
 #: frontend/ui/data/css_tweaks.lua:404
 msgid "Larger spacing between ruby lines"
-msgstr ""
+msgstr "より広いルビ行の間隔"
 
 #: frontend/ui/data/css_tweaks.lua:405
 msgid ""
@@ -7795,19 +7804,21 @@ msgid ""
 "whether or not they include ruby.\n"
 "Further small adjustments can be done with 'Line Spacing' in the bottom menu."
 msgstr ""
+"ほとんどの文章の行間を広げ、ルビがあってもなくても行の間隔が一定になるように"
+"します。\n"
+"さらに細かい調整は下部メニューの「行間」で行えます。"
 
 #: frontend/ui/data/css_tweaks.lua:413
 msgid "Render ruby content inline"
-msgstr ""
+msgstr "ルビ内容をインラインで描画する"
 
 #: frontend/ui/data/css_tweaks.lua:414
 msgid "Disable handling of <ruby> tags and render them inline."
-msgstr ""
+msgstr "<ruby>タグの処理を無効化し、インラインで描画します。"
 
 #: frontend/ui/data/css_tweaks.lua:421
-#, fuzzy
 msgid "Font size and families"
-msgstr "フォントと行の高さ"
+msgstr "フォントのサイズとファミリー"
 
 #: frontend/ui/data/css_tweaks.lua:424
 msgid "Ignore publisher font families"
@@ -7815,7 +7826,7 @@ msgstr "原稿によるフォントファミリの設定を無視"
 
 #: frontend/ui/data/css_tweaks.lua:425
 msgid "Disable font-family specified in embedded styles."
-msgstr ""
+msgstr "埋め込みスタイルで指定されたフォントファミリを無効にする。"
 
 #: frontend/ui/data/css_tweaks.lua:432
 msgid "Ignore publisher font sizes"
@@ -7823,51 +7834,52 @@ msgstr "原稿によるフォントサイズを無視"
 
 #: frontend/ui/data/css_tweaks.lua:433
 msgid "Disable font-size specified in embedded styles."
-msgstr ""
+msgstr "埋め込みスタイルで指定されたフォントサイズを無効化する。"
 
 #: frontend/ui/data/css_tweaks.lua:440
-#, fuzzy
 msgid "Reset main text font size"
-msgstr "フォントの大きさを設定"
+msgstr "本文のフォントサイズをリセットする"
 
 #: frontend/ui/data/css_tweaks.lua:441
 msgid ""
 "Disable font-size set on the main text (keeping possibly larger headings "
 "untouched), so that KOReader's font size is used."
-msgstr ""
+msgstr "本文のフォントサイズ設定を（大きな見出しはそのままに）無効にし、KOReaderのフ"
+"ォントサイズが使用されるようにする。"
 
 #: frontend/ui/data/css_tweaks.lua:447
-#, fuzzy
 msgid "Line heights"
-msgstr "高さの設定"
+msgstr "行の高さ"
 
 #: frontend/ui/data/css_tweaks.lua:450
 msgid "Ignore publisher line heights"
-msgstr "原稿による行高を無視"
+msgstr "原稿による行の高さを無視"
 
 #: frontend/ui/data/css_tweaks.lua:451
 msgid ""
 "Disable line-height specified in embedded styles, and may allow KOReader's "
 "line spacing settings to work on books where they would not."
-msgstr ""
+msgstr "埋め込みスタイルで指定された行の高さを無効にし、KOReaderの行間設定が機能しな"
+"い書籍で機能するようにすることができます。"
 
 #: frontend/ui/data/css_tweaks.lua:456
 msgid "Enforce steady line heights"
-msgstr ""
+msgstr "安定した行の高さを強制する"
 
 #: frontend/ui/data/css_tweaks.lua:457
 msgid ""
 "Prevent inline content like sub- and superscript from changing their "
 "paragraph line height."
-msgstr ""
+msgstr "下付き文字や上付き文字などのインラインコンテンツが段落の行の高さを変更しない"
+"ようにします。"
 
 #: frontend/ui/data/css_tweaks.lua:464
 msgid "Smaller sub- and superscript"
-msgstr ""
+msgstr "下付き文字と上付き文字を小さくする"
 
 #: frontend/ui/data/css_tweaks.lua:465
 msgid "Prevent sub- and superscript from affecting line-height."
-msgstr ""
+msgstr "下付き文字や上付き文字が行の高さに影響しないようにする。"
 
 #: frontend/ui/data/css_tweaks.lua:477
 msgid "Paragraphs"
@@ -7878,22 +7890,20 @@ msgid "Generic web browser paragraph style"
 msgstr "一般的なWebブラウザの段落スタイル"
 
 #: frontend/ui/data/css_tweaks.lua:481
-#, fuzzy
 msgid ""
 "Display paragraphs as browsers do, in full-block style without indentation "
 "or justification, discarding KOReader's book paragraph style.\n"
 "This might be needed with some documents that expect this style as the "
 "default, and only use CSS when it needs to diverge from this default."
 msgstr ""
-"段落をwebブラウザー表示のように、インデントや両端揃えを行わずにブロック文字列"
-"をで表示し、KOReaderの書籍の段落スタイルを破棄します。\n"
-"これは、このスタイルがデフォルトであると想定される一部のドキュメントで必要に"
-"なる場合があります。また、CSSを使用するのは、このデフォルトから変更する必要が"
-"ある場合だけです。"
+"webブラウザーが行うように、KOReaderの段落スタイルを破棄し、インデントや両端揃"
+"えのないフルブロック・スタイルで、段落を表示します。\n"
+"これは、このスタイルをデフォルトとして期待し、このデフォルトから乖離する必要"
+"がある場合にのみCSSを使用する一部のドキュメントで必要となる場合があります。"
 
 #: frontend/ui/data/css_tweaks.lua:496
 msgid "Tailor widths and text-indent for CJK"
-msgstr ""
+msgstr "日中韓の文字幅、インデントを調整する"
 
 #: frontend/ui/data/css_tweaks.lua:497
 msgid ""
@@ -7901,10 +7911,12 @@ msgid ""
 "size, so that lines of Chinese and Japanese characters don't need space "
 "added between glyphs for text justification."
 msgstr ""
+"段落幅とインデントをフォントサイズの整数倍になるように調整し、中国語や日本語"
+"の文字列が文字揃えのためにグリフ間に空白を追加する必要がないようにします。"
 
 #: frontend/ui/data/css_tweaks.lua:503
 msgid "Paragraph first-line indentation"
-msgstr "段落の先頭行で字下げ"
+msgstr "段落の先頭行での字下げ"
 
 #: frontend/ui/data/css_tweaks.lua:506
 msgid "No indentation on first paragraph line"
@@ -7924,12 +7936,12 @@ msgid ""
 "overridden by publisher styles. This will force KOReader's defaults on "
 "common elements."
 msgstr ""
-"標準は段落の最初の行の字下げをしますが、書籍により設定が上書きされます。これ"
-"はKOReaderの標準設定に反映されます。"
+"既定では段落の最初の行を字下げしますが、書籍設定により上書きされます。この設"
+"定により、一般的な要素にKOReaderの規定値が強制的に適用されます。"
 
 #: frontend/ui/data/css_tweaks.lua:522
 msgid "No indentation on first paragraph"
-msgstr "段落最初の文字を字下げしない"
+msgstr "最初の段落で字下げをしない"
 
 #: frontend/ui/data/css_tweaks.lua:523
 msgid ""
@@ -7937,46 +7949,51 @@ msgid ""
 "might be needed to correctly display drop caps, while still having "
 "indentation on following paragraphs."
 msgstr ""
+"章節内の最初の段落の最初の行をインデントしない。これは、ドロップキャップを正"
+"しく表示するために必要な場合がありますが、次の段落ではインデントが残っていま"
+"す。"
 
 #: frontend/ui/data/css_tweaks.lua:529
 msgid "No indentation on following paragraphs"
-msgstr "続く段落の最初の文字を字下げしない"
+msgstr "続く段落で字下げしない"
 
 #: frontend/ui/data/css_tweaks.lua:530
 msgid ""
 "Do not indent the first line of following paragraphs, but leave the first "
 "paragraph of its container untouched."
-msgstr ""
+msgstr "次の段落の最初の行をインデントせず、章節内の最初の段落をそのままにします。"
 
 #: frontend/ui/data/css_tweaks.lua:536 frontend/ui/data/css_tweaks.lua:540
 msgid "Spacing between paragraphs"
-msgstr ""
+msgstr "段落間に空白を入れる"
 
 #: frontend/ui/data/css_tweaks.lua:541
 msgid "Add a line of whitespace between paragraphs."
-msgstr ""
+msgstr "段落の間に一行の空白を入れます。"
 
 #: frontend/ui/data/css_tweaks.lua:548
 msgid "Spacing between paragraphs (half)"
-msgstr "段間(半分)"
+msgstr "段落間に空白を入れる(半分)"
 
 #: frontend/ui/data/css_tweaks.lua:549
 msgid "Add half a line of whitespace between paragraphs."
-msgstr ""
+msgstr "段落の間に半行の空白を入れます。"
 
 #: frontend/ui/data/css_tweaks.lua:556
 msgid "No spacing between paragraphs"
-msgstr "段間なし"
+msgstr "段落間に空白を入れない"
 
 #: frontend/ui/data/css_tweaks.lua:557
 msgid ""
 "No whitespace between paragraphs is the default, but it may be overridden by "
 "publisher styles. This will re-enable it for paragraphs and list items."
 msgstr ""
+"段落間に空白を入れないのが既定ですが、原稿のスタイルにより上書きされる場合が"
+"あります。この設定により、段落とリストアイテムの空白を再び有効にします。"
 
 #: frontend/ui/data/css_tweaks.lua:564
 msgid "Tables, links, images"
-msgstr ""
+msgstr "表、リンク、画像"
 
 #: frontend/ui/data/css_tweaks.lua:566
 msgid "Tables"
@@ -7984,7 +8001,7 @@ msgstr "表"
 
 #: frontend/ui/data/css_tweaks.lua:569
 msgid "Full-width tables"
-msgstr "表が全幅を占める"
+msgstr "表の全幅化"
 
 #: frontend/ui/data/css_tweaks.lua:570
 msgid ""
@@ -7992,6 +8009,9 @@ msgid ""
 "now use only the width needed to display that content. This restores the "
 "previous behavior.)"
 msgstr ""
+"テーブルをページの幅いっぱいに拡張します。(現在は、小さな内容のテーブルはその"
+"内容を表示するために必要な幅だけを使用します。これにより、以前の動作が復元さ"
+"れます。)"
 
 #: frontend/ui/data/css_tweaks.lua:576
 msgid "Ignore publisher table and cell widths"
@@ -8001,35 +8021,36 @@ msgstr "原稿による表とセル幅設定を無視する"
 msgid ""
 "Ignore table and cells widths specified by the publisher, and let the engine "
 "decide the most appropriate widths."
-msgstr ""
+msgstr "原稿が指定するテーブルやセルの幅は無視し、エンジンが最適な幅を決定するように"
+"します。"
 
 #: frontend/ui/data/css_tweaks.lua:582
 msgid "Center small tables"
-msgstr "小さいな表を中央揃え"
+msgstr "小さな表を中央揃え"
 
 #: frontend/ui/data/css_tweaks.lua:583
 msgid "Horizontally center tables that do not use the full page width."
-msgstr ""
+msgstr "ページの全幅を使用しないテーブルを水平方向にセンタリングする。"
 
 #: frontend/ui/data/css_tweaks.lua:590
 msgid "Ignore publisher vertical alignment in tables"
-msgstr "原稿によるテーブル内の縦方向の位置揃えを無視する"
+msgstr "原稿による表内の縦方向の位置揃えを無視する"
 
 #: frontend/ui/data/css_tweaks.lua:597
 msgid "Alternate background color of table rows"
-msgstr "表の列に背景色を二色交代に塗りつける"
+msgstr "表の行に背景色を二色交代に塗り分ける"
 
 #: frontend/ui/data/css_tweaks.lua:605
 msgid "Show borders on all tables"
-msgstr "すべてのテーブルに罫線を表示する"
+msgstr "すべての表に罫線を表示する"
 
 #: frontend/ui/data/css_tweaks.lua:616
 msgid "Links always black"
-msgstr "リンクは常に黒"
+msgstr "リンクは常に黒色"
 
 #: frontend/ui/data/css_tweaks.lua:622
 msgid "Links always blue"
-msgstr "リンクは常に青い"
+msgstr "リンクは常に青色"
 
 #: frontend/ui/data/css_tweaks.lua:629
 msgid "Links always bold"
@@ -8045,15 +8066,15 @@ msgstr "リンクは常に斜体にする"
 
 #: frontend/ui/data/css_tweaks.lua:648
 msgid "Links never italic"
-msgstr "リンクは常に斜体にない"
+msgstr "リンクは常に斜体にしない"
 
 #: frontend/ui/data/css_tweaks.lua:655
 msgid "Links always underlined"
-msgstr "リンクには常に下線が付き"
+msgstr "リンクには常に下線を付ける"
 
 #: frontend/ui/data/css_tweaks.lua:662
 msgid "Links never underlined"
-msgstr "リンクには下線は付きません"
+msgstr "リンクには下線を付けない"
 
 #: frontend/ui/data/css_tweaks.lua:667
 msgid "Images"
@@ -8061,13 +8082,14 @@ msgstr "画像"
 
 #: frontend/ui/data/css_tweaks.lua:670
 msgid "Full-width images"
-msgstr "画像は全幅を占める"
+msgstr "画像の全幅化"
 
 #: frontend/ui/data/css_tweaks.lua:671
 msgid ""
 "Useful for books containing only images, when they are smaller than your "
 "screen. May stretch images in some cases."
-msgstr ""
+msgstr "画面より小さい画像のみが含まれる書籍で便利です。場合によっては画像が引き伸ば"
+"されることがあります。"
 
 #: frontend/ui/data/css_tweaks.lua:685
 msgid "Vertically center-align images relative to text"
@@ -8079,11 +8101,11 @@ msgstr "その他"
 
 #: frontend/ui/data/css_tweaks.lua:693
 msgid "Alternative ToC hints"
-msgstr "原稿から生成する代替目次のヒント"
+msgstr "代替目次のヒント"
 
 #: frontend/ui/data/css_tweaks.lua:695
 msgid "About alternative ToC"
-msgstr "原稿から生成する代替の目次について"
+msgstr "代替目次について"
 
 #: frontend/ui/data/css_tweaks.lua:696
 msgid ""
@@ -8104,38 +8126,52 @@ msgid ""
 "toggling it twice in its menu: once to restore the original ToC, and once to "
 "build the alternative ToC again."
 msgstr ""
+"「目次」メニューの下にある「設定」メニューの専用オプションで、代替目次を作成"
+"することができます。\n"
+"\n"
+"目次は、文書の見出し<H1>から<H6>から作成されます。これらのうちいくつかは、こ"
+"こで利用可能な調整で無視することができます。\n"
+"文書に見出しがない、あるいはすべて無視された場合、代替目次は文書の断片から構"
+"築され、EPUB内の個々のHTMLファイルの先頭を指すようになります。\n"
+"\n"
+"ヒントは、ユーザースタイルの調整で他の見出しではない要素に設定することができ"
+"るので、目次項目として使用することができます。これはかなり書籍に特化したもの"
+"になるため、最終的な調整項目にはいくつかの例をご覧ください。\n"
+"\n"
+"これらの調整を適用した後、代替目次はメニューで2回切り替えて再構築する必要があ"
+"ります。1回目は元の目次を復元し、もう1回は代替目次を再度構築するためです。"
 
 #: frontend/ui/data/css_tweaks.lua:709
 msgid "Ignore all <H1> to <H6>"
-msgstr "全て無視 <H1> から <H6> まで"
+msgstr "<H1> から <H6> まで全て無視する"
 
 #: frontend/ui/data/css_tweaks.lua:714
 msgid "Ignore <H1>"
-msgstr "<H1>を無視"
+msgstr "<H1>を無視する"
 
 #: frontend/ui/data/css_tweaks.lua:719
 msgid "Ignore <H2>"
-msgstr "<H2>を無視"
+msgstr "<H2>を無視する"
 
 #: frontend/ui/data/css_tweaks.lua:724
 msgid "Ignore <H3>"
-msgstr "<H3>を無視"
+msgstr "<H3>を無視する"
 
 #: frontend/ui/data/css_tweaks.lua:729
 msgid "Ignore <H4>"
-msgstr "<H4>を無視"
+msgstr "<H4>を無視する"
 
 #: frontend/ui/data/css_tweaks.lua:734
 msgid "Ignore <H5>"
-msgstr "<H5>を無視"
+msgstr "<H5>を無視する"
 
 #: frontend/ui/data/css_tweaks.lua:739
 msgid "Ignore <H6>"
-msgstr "<H6>を無視"
+msgstr "<H6>を無視する"
 
 #: frontend/ui/data/css_tweaks.lua:745
 msgid "Example of book specific ToC hints"
-msgstr ""
+msgstr "書籍固有の目次ヒントの例"
 
 #: frontend/ui/data/css_tweaks.lua:746
 msgid ""
@@ -8145,6 +8181,10 @@ msgid ""
 "This is just an example, that will need to be adapted into a user style "
 "tweak."
 msgstr ""
+"見出しや文書断片で使える目次にならない場合は、HTMLを検査して章のタイトルを含"
+"む要素を探せばよいです。そして、そのクラス名にヒントを設定することができます"
+"。\n"
+"これは単なる例であり、ユーザースタイルの調整に適応させる必要があります。"
 
 #: frontend/ui/data/css_tweaks.lua:759
 msgid "List items"
@@ -8152,7 +8192,7 @@ msgstr "リスト項目"
 
 #: frontend/ui/data/css_tweaks.lua:762
 msgid "Force bullets with unordered lists"
-msgstr "順序なしリストに強制的にブレットを付ける"
+msgstr "順序なしリストで強制的に箇条書きにする"
 
 #: frontend/ui/data/css_tweaks.lua:767
 msgid "Force decimal numbers with ordered lists"
@@ -8167,6 +8207,8 @@ msgid ""
 "Disable generated text from ::before and ::after pseudo elements, usually "
 "used to add cosmetic text around some content."
 msgstr ""
+"擬似要素 ::before と ::after から生成されるテキストを無効にします。通常、コン"
+"テンツの周りに外観上のテキストを追加するために使用されます。"
 
 #: frontend/ui/data/css_tweaks.lua:783
 msgid "Pure black and white"
@@ -8174,7 +8216,7 @@ msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:784
 msgid "Enforce black text and borders, and remove backgrounds."
-msgstr ""
+msgstr "黒文字、黒枠を強制し、背景を取り除きます。"
 
 #: frontend/ui/data/css_tweaks.lua:796
 msgid "In-page footnotes"
@@ -8182,35 +8224,38 @@ msgstr "ページ内の脚注"
 
 #: frontend/ui/data/css_tweaks.lua:798 frontend/ui/data/css_tweaks.lua:801
 msgid "In-page FB2 footnotes"
-msgstr "FB2書式ページ内の脚注"
+msgstr "ページ内のFB2(FictionBook 2.0 eBook)脚注"
 
 #: frontend/ui/data/css_tweaks.lua:802
 msgid ""
 "Show FB2 footnote text at the bottom of pages that contain links to them."
-msgstr ""
+msgstr "FB2脚注へのリンクがあるページの下部にFB2(FictionBook 2.0 "
+"eBook)脚注を表示する。"
 
 #: frontend/ui/data/css_tweaks.lua:827
 msgid "In-page FB2 endnotes"
-msgstr ""
+msgstr "ページ内FB2(FictionBook 2.0 eBook)注釈"
 
 #: frontend/ui/data/css_tweaks.lua:828
 msgid ""
 "Show FB2 endnote text at the bottom of pages that contain links to them."
-msgstr ""
+msgstr "FB2注釈へのリンクがあるページの下部にFB2(FictionBook 2.0 "
+"eBook)注釈を表示する。"
 
 #: frontend/ui/data/css_tweaks.lua:850
 msgid "Keep regular font size"
-msgstr "フォントのサイズを維持"
+msgstr "通常のフォントサイズを維持する"
 
 #: frontend/ui/data/css_tweaks.lua:851
 msgid ""
 "FB2 footnotes and endnotes get a smaller font size when displayed in-page. "
 "This allows them to be shown with the normal font size."
-msgstr ""
+msgstr "FB2の脚注・注釈はページ内表示時にフォントサイズが小さくなります。この設定によ"
+"り通常のフォントサイズで表示することができます。"
 
 #: frontend/ui/data/css_tweaks.lua:868
 msgid "In-page EPUB footnotes"
-msgstr ""
+msgstr "ページ内のEPUB脚注"
 
 #: frontend/ui/data/css_tweaks.lua:869 frontend/ui/data/css_tweaks.lua:894
 msgid ""
@@ -8218,26 +8263,28 @@ msgid ""
 "This only works with footnotes that have specific attributes set by the "
 "publisher."
 msgstr ""
+"EPUB脚注へのリンクを含むページの下部にEPUB脚注を表示します。\n"
+"この設定は原稿により特定の属性が設定されている脚注にのみ機能します。"
 
 #: frontend/ui/data/css_tweaks.lua:893
 msgid "In-page EPUB footnotes (smaller)"
-msgstr ""
+msgstr "ページ内のEPUB脚注 (小さめ)"
 
 #: frontend/ui/data/css_tweaks.lua:921
 msgid "In-page Wikipedia footnotes"
-msgstr ""
+msgstr "ページ内のWikipedia脚注"
 
 #: frontend/ui/data/css_tweaks.lua:922 frontend/ui/data/css_tweaks.lua:939
 msgid "Show footnotes at the bottom of pages in Wikipedia EPUBs."
-msgstr ""
+msgstr "WikipediaのEPUBでページの下部に脚注を表示します。"
 
 #: frontend/ui/data/css_tweaks.lua:938
 msgid "In-page Wikipedia footnotes (smaller)"
-msgstr ""
+msgstr "ページ内のWikipedia脚注 (小さめ)"
 
 #: frontend/ui/data/css_tweaks.lua:960
 msgid "In-page classic classname footnotes"
-msgstr ""
+msgstr "ページ内のクラシッククラス名脚注"
 
 #: frontend/ui/data/css_tweaks.lua:961 frontend/ui/data/css_tweaks.lua:981
 msgid ""
@@ -8245,10 +8292,13 @@ msgid ""
 "This tweak can be duplicated as a user style tweak when books contain "
 "footnotes wrapped with other class names."
 msgstr ""
+"ページの下部にクラシックなクラス名を持つ脚注を表示します。\n"
+"この調整は、ブックが他のクラス名でラップされた脚注を含む場合、ユーザースタイ"
+"ルの調整として複製することができます。"
 
 #: frontend/ui/data/css_tweaks.lua:980
 msgid "In-page classic classname footnotes (smaller)"
-msgstr ""
+msgstr "ページ内のクラシッククラス名脚注 (小さめ)"
 
 #: frontend/ui/data/css_tweaks.lua:1011
 #, fuzzy
