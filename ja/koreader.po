@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-22 19:54+0000\n"
-"PO-Revision-Date: 2023-02-22 19:46+0000\n"
+"PO-Revision-Date: 2023-02-23 17:39+0000\n"
 "Last-Translator: うにみそ <unimiso@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
 "koreader/ja/>\n"
@@ -9992,13 +9992,14 @@ msgstr "加速度センサーの回転イベントを無視する"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:17
 msgid "This will inhibit automatic rotations triggered by your device's gyro."
-msgstr ""
+msgstr "端末のジャイロによる自動回転を抑制します。"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:29
 msgid "Lock auto rotation to current orientation"
-msgstr ""
+msgstr "現在の端末方向に自動回転をロックする"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:30
+#, fuzzy
 msgid ""
 "When checked, the gyro will only be honored when switching between the two "
 "inverse variants of your current rotation,\n"
@@ -10007,10 +10008,15 @@ msgid ""
 "inhibited.\n"
 "If you need to do so, you'll have to use the UI toggles."
 msgstr ""
+"チェックすると、ジャイロは現在の端末方向の2つの逆方向の間で切り替わるときのみ"
+"、尊重されるようになります。\n"
+"i.e., Portrait <-> Inverted Portrait OR Landscape <-> Inverted Landscape.\n"
+"逆）縦向きと（逆）横向きの切り替えは抑制されます。\n"
+"必要な時はUIトグルを使用してください。"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:49
 msgid "Keep current rotation across views"
-msgstr "各レイアウト方向で現在の回転設定を維持する"
+msgstr "ビューをまたいでも現在の端末方向を維持する"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:50
 msgid ""
@@ -10043,7 +10049,7 @@ msgstr "表紙画像をスクリーンセイバーとして使用する"
 
 #: frontend/ui/elements/screensaver_menu.lua:55
 msgid "Use image as screensaver"
-msgstr "一枚の画像をスクリーンセイバーとして使用する"
+msgstr "画像をスクリーンセイバーとして使用する"
 
 #: frontend/ui/elements/screensaver_menu.lua:64
 msgid "Use reading progress as screensaver"
@@ -10079,11 +10085,11 @@ msgstr "表紙と画像の設定"
 
 #: frontend/ui/elements/screensaver_menu.lua:130
 msgid "Black background"
-msgstr "背景を白にする"
+msgstr "黒い背景"
 
 #: frontend/ui/elements/screensaver_menu.lua:139
 msgid "White background"
-msgstr "背景を白にする"
+msgstr "白い背景"
 
 #: frontend/ui/elements/screensaver_menu.lua:148
 msgid "Leave background as-is"
@@ -10092,12 +10098,11 @@ msgstr "背景をそのままにする"
 #: frontend/ui/elements/screensaver_menu.lua:159
 #: frontend/ui/elements/screensaver_menu.lua:164
 msgid "Stretch to fit screen"
-msgstr "画面に合わせて引き伸ばす"
+msgstr "画面に合わせて拡縮する"
 
 #: frontend/ui/elements/screensaver_menu.lua:161
-#, fuzzy
 msgid "Stretch to fit screen (with limit: %1 %)"
-msgstr "画面に合わせて引き伸ばす（制限あり）"
+msgstr "画面に合わせて拡縮する（制限つき: %1 %）"
 
 #: frontend/ui/elements/screensaver_menu.lua:178
 msgid "Message settings"
@@ -10105,11 +10110,11 @@ msgstr "メッセージの設定"
 
 #: frontend/ui/elements/screensaver_menu.lua:181
 msgid "Black background behind message"
-msgstr "メッセージと画像の背景を黒にする"
+msgstr "メッセージの背景を黒にする"
 
 #: frontend/ui/elements/screensaver_menu.lua:190
 msgid "White background behind message"
-msgstr "メッセージと画像の背景を白にする"
+msgstr "メッセージの背景を白にする"
 
 #: frontend/ui/elements/screensaver_menu.lua:199
 msgid "Leave background as-is behind message"
@@ -10117,7 +10122,7 @@ msgstr "メッセージの背景をそのままにする"
 
 #: frontend/ui/elements/screensaver_menu.lua:208
 msgid "Hide reboot/poweroff message"
-msgstr "再起動/電源オフのメッセージを非表示にします"
+msgstr "再起動/電源オフのメッセージを表示しない"
 
 #: frontend/ui/elements/screensaver_menu.lua:217
 msgid "Message position"
@@ -10129,7 +10134,7 @@ msgstr "中央"
 
 #: frontend/ui/elements/screensaver_menu.lua:251
 msgid "Keep the screensaver on screen after wakeup"
-msgstr "ウェイクアップ後、スクリーンセーバーを画面に表示したままにします"
+msgstr "ウェイクアップ後、スクリーンセーバーを画面に表示したままにする"
 
 #: frontend/ui/elements/screensaver_menu.lua:263
 msgid "For 1 second"
@@ -10145,12 +10150,11 @@ msgstr "5 秒"
 
 #: frontend/ui/elements/screensaver_menu.lua:290
 msgid "Until a tap"
-msgstr "タップまで"
+msgstr "タップするまで"
 
 #: frontend/ui/elements/screensaver_menu.lua:299
-#, fuzzy
 msgid "Until 'Exit screensaver' gesture"
-msgstr "タップするとスクリーンセイバーを終了"
+msgstr "「スクリーンセイバー終了」ジェスチャーが為されるまで"
 
 #: frontend/ui/elements/timeout_android.lua:25
 msgid "1 minute"
@@ -10169,42 +10173,46 @@ msgid ""
 "You will be prompted with a permission management screen. You'll need to "
 "give KOReader permission and then restart the program."
 msgstr ""
+"KOReaderにシステム設定の変更を許可しますか？\n"
+"\n"
+"権限管理画面が表示されます。KOReaderに許可を与えてからプログラムを再起動する"
+"必要があります。"
 
 #: frontend/ui/elements/timeout_android.lua:55
 msgid "Allow"
-msgstr ""
+msgstr "許可する"
 
 #: frontend/ui/elements/timeout_android.lua:64
 msgid "Use system settings"
-msgstr "システム設定を流用"
+msgstr "システム設定を使用"
 
 #: frontend/ui/elements/timeout_android.lua:112
 msgid "Keep screen on"
-msgstr ""
+msgstr "画面を表示したまま"
 
 #: frontend/ui/elements/timeout_android.lua:121
 msgid "Allow system settings override"
-msgstr ""
+msgstr "システム設定を上書きする"
 
 #: frontend/ui/elements/timeout_android.lua:130
 msgid "Screen Timeout"
-msgstr ""
+msgstr "画面のタイムアウト"
 
 #: frontend/ui/elements/waveform_level.lua:11
 msgid "Level 0: high quality, slowest"
-msgstr ""
+msgstr "レベル 0: 高画質、最も遅い"
 
 #: frontend/ui/elements/waveform_level.lua:13
 msgid "Level %1: low quality, fastest"
-msgstr ""
+msgstr "レベル %1: 低画質、最も速い"
 
 #: frontend/ui/elements/waveform_level.lua:15
 msgid "Level %1"
-msgstr ""
+msgstr "レベル %1"
 
 #: frontend/ui/elements/waveform_level.lua:30
 msgid "Refresh speed/fidelity"
-msgstr ""
+msgstr "リフレッシュ速度/鮮明度"
 
 #: frontend/ui/language.lua:97
 msgid "Please restart KOReader for the new language setting to take effect."
@@ -10212,7 +10220,7 @@ msgstr "新しい言語の設定を有効にするため、KOReader を再起動
 
 #: frontend/ui/language.lua:116
 msgid "Language"
-msgstr "画面言語"
+msgstr "UI言語"
 
 #: frontend/ui/menusorter.lua:15
 msgid "NEW: "
@@ -10220,11 +10228,11 @@ msgstr "新規: "
 
 #: frontend/ui/network/manager.lua:48
 msgid "Error connecting to the network"
-msgstr "ネットワークに接続中にエラーが発生しました"
+msgstr "ネットワーク接続中にエラーが発生しました"
 
 #: frontend/ui/network/manager.lua:71
 msgid "You can now retry the action that required network access"
-msgstr ""
+msgstr "ネットワークアクセスが必要な動作を再試行できます"
 
 #: frontend/ui/network/manager.lua:219
 #: frontend/ui/network/networklistener.lua:18
@@ -10234,9 +10242,8 @@ msgstr "Wi-Fiを起動中…"
 #: frontend/ui/network/manager.lua:234
 #: frontend/ui/network/networklistener.lua:37
 #: frontend/ui/network/networklistener.lua:58
-#, fuzzy
 msgid "Turning off Wi-Fi…"
-msgstr "Wi-Fiを起動中…"
+msgstr "Wi-Fiを終了中…"
 
 #: frontend/ui/network/manager.lua:248
 msgid "Do you want to turn on Wi-Fi?"
@@ -10261,6 +10268,8 @@ msgid ""
 "Wi-Fi is enabled, but you're currently not connected to a network.\n"
 "How would you like to proceed?"
 msgstr ""
+"Wi-Fiは有効ですが、現在ネットワークに接続されていません。\n"
+"どのように進めますか？"
 
 #: frontend/ui/network/manager.lua:269
 msgid "Turn Wi-Fi off"
@@ -10275,7 +10284,7 @@ msgstr "接続"
 
 #: frontend/ui/network/manager.lua:281
 msgid "Connecting to Wi-Fi…"
-msgstr "WiFiに接続…"
+msgstr "WiFiに接続中…"
 
 #: frontend/ui/network/manager.lua:460
 msgid "Wi-Fi settings"
@@ -10283,7 +10292,7 @@ msgstr "Wi-Fi 設定"
 
 #: frontend/ui/network/manager.lua:497
 msgid "Gateway is unreachable, but Wi-Fi is still on!"
-msgstr ""
+msgstr "ゲートウェイに接続できませんがWi-Fiは有効です！"
 
 #: frontend/ui/network/manager.lua:518
 msgid "Wi-Fi connection"
@@ -10299,7 +10308,7 @@ msgid ""
 "Long press on this menu entry to configure HTTP proxy."
 msgstr ""
 "ヒント:\n"
-"このメニュー項目を長押しして、HTTP プロキシを設定します。"
+"このメニュー項目を長押しして HTTP プロキシを設定します。"
 
 #: frontend/ui/network/manager.lua:553
 msgid "Enter proxy address"
@@ -10321,16 +10330,15 @@ msgstr ""
 
 #: frontend/ui/network/manager.lua:580
 msgid "Restore Wi-Fi connection on resume"
-msgstr "自動的に Wi-Fi 接続を復元"
+msgstr "レジューム時に Wi-Fi 接続を復元する"
 
 #: frontend/ui/network/manager.lua:581
 msgid ""
 "This will attempt to automatically and silently re-connect to Wi-Fi on "
 "startup or on resume if Wi-Fi used to be enabled the last time you used "
 "KOReader."
-msgstr ""
-"これにより、起動時に自動的にWi-Fiに再接続したり、前回KOReaderを使用したときに"
-"有効になっていたWi-Fiを再接続します。"
+msgstr "この設定により、前回KOReaderを使用したときにWi-"
+"Fiに接続していた場合には、起動時に自動的、通知なしにWi-Fiに再接続します。"
 
 #: frontend/ui/network/manager.lua:590
 msgid "Network info"
@@ -10346,15 +10354,15 @@ msgstr "Wi-Fi がオフの時のアクション: %1"
 
 #: frontend/ui/network/manager.lua:633
 msgid "leave on"
-msgstr ""
+msgstr "そのまま"
 
 #: frontend/ui/network/manager.lua:633
 msgid "Leave on"
-msgstr ""
+msgstr "そのまま"
 
 #: frontend/ui/network/manager.lua:634
 msgid "turn off"
-msgstr "オフ"
+msgstr "切断する"
 
 #: frontend/ui/network/manager.lua:651
 msgid "Action when done with Wi-Fi: %1"
@@ -10383,13 +10391,12 @@ msgid "Wi-Fi off."
 msgstr "Wi-Fiを無効にする。"
 
 #: frontend/ui/network/networklistener.lua:75
-#, fuzzy
 msgid "Enabling Wi-Fi…"
-msgstr "WiFiを有効にしています…"
+msgstr "Wi-Fiを有効にしています…"
 
 #: frontend/ui/network/networklistener.lua:94
 msgid "Already connected to network %1."
-msgstr "ネットワーク%1にすでに接続されています。"
+msgstr "ネットワーク %1 にすでに接続されています。"
 
 #: frontend/ui/network/networklistener.lua:96
 msgid "Already connected."
