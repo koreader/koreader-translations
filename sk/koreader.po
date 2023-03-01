@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:07+0000\n"
-"PO-Revision-Date: 2023-03-01 13:07+0000\n"
+"PO-Revision-Date: 2023-03-02 16:00+0000\n"
 "Last-Translator: sonix-github <sonix.internet@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/koreader/koreader/"
 "sk/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n "
 ">= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
-"X-Generator: Weblate 4.16-rc\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: reader.lua:220
 msgid ""
@@ -1623,9 +1623,8 @@ msgid "Screensaver"
 msgstr "Šetrič obrazovky"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:429
-#, fuzzy
 msgid "Move book metadata"
-msgstr "Uložiť metadáta knihy: %1"
+msgstr "Presunúť metadáta knihy"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:438
 msgid "Advanced settings"
@@ -1787,6 +1786,8 @@ msgstr "Akceptovať"
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr ""
+"Skenovať knihy v aktuálnom priečinku a podpriečinkoch a zistiť umiestnenie "
+"ich metadát?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:842
 #: plugins/calibre.koplugin/search.lua:524
@@ -1796,20 +1797,32 @@ msgstr "Skenovať"
 #: frontend/apps/filemanager/filemanagermenu.lua:849
 msgid "No books with metadata not in your preferred location found."
 msgstr ""
+"Nenašli sa žiadne knihy s metadátami, ktoré sa nenachádzajú na vami "
+"preferovanom mieste."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:853
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
+"Nájdená 1 kniha s metadátami, ktoré sa nenachádzajú na vami preferovanom "
+"mieste."
 msgstr[1] ""
+"Nájdené %1 knihy s metadátami, ktoré sa nenachádzajú na vami preferovanom "
+"mieste."
 msgstr[2] ""
+"Nájdených %1 kníh s metadátami, ktoré sa nenachádzajú na vami preferovanom "
+"mieste."
 msgstr[3] ""
+"Nájdených %1 kníh s metadátami, ktoré sa nenachádzajú na vami preferovanom "
+"mieste."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:856
 msgid ""
 "\n"
 "Move book metadata to your preferred location?"
 msgstr ""
+"\n"
+"Presunúť metadáta knihy na preferované miesto?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:877
 #: frontend/apps/reader/modules/readermenu.lua:366
@@ -5443,8 +5456,8 @@ msgid ""
 "variants (when supported by the fonts)."
 msgstr ""
 "Niektoré jazyky majú špecifické typografické pravidlá: medzi ne patrí "
-"delenie slov, pravidlá zalamovania riadkov a varianty glyfov špecifické pre "
-"daný jazyk.\n"
+"delenie slov, pravidlá zalamovania riadkov a varianty glyfov (symboly "
+"reprezentujúce písmeno) špecifické pre daný jazyk.\n"
 "KOReader si vyberie jeden podľa jazykovej značky z metadát knihy, ale môžete "
 "si vybrať iný.\n"
 "Môžete tiež nastaviť predvolený jazyk alebo záložný jazyk dlhým stlačením.\n"
@@ -9808,16 +9821,33 @@ msgid ""
 "These settings won't be part of any synchronization or backups of your "
 "library."
 msgstr ""
+"Nastavenia zobrazenia knihy, priebeh čítania, zvýraznenia, záložky a "
+"poznámky (súhrnne nazývané metadáta) sú uložené v samostatnom priečinku s "
+"názvom <názov knihy>.sdr (\".sdr\" znamená \"sidecar\").\n"
+"\n"
+"Môžete sa rozhodnúť medzi dvoma miestami, kam sa budú ukladať:\n"
+"- pri samotnom súbore knihy (dlhodobo predvolené nastavenie): tieto "
+"priečinky sdr budú viditeľné pri prezeraní adresárov knižnice pomocou iného "
+"prehliadača súborov alebo z vášho počítača, čo môže zneprehľadniť váš pohľad "
+"na knižnicu. To vám však umožní presunúť knihy spolu s jej nastaveniami pri "
+"reorganizácii knižnice a teda prežije aj prípadné premenovanie nadradených "
+"adresárov. Takisto ak vykonáte synchronizáciu adresárov alebo zálohovanie, "
+"vaše nastavenia budú ich súčasťou.\n"
+"- všetky vo vnútri koreader/docsettings/: tieto sdr adresáre budú viditeľné "
+"a používané len aplikáciou KOReader a nebudú vám zahlcovať pohľad na "
+"adresáre vašej knižnice v inom prehliadači súborov alebo z vášho počítača. "
+"Ale akákoľvek reorganizácia vašej knižnice (adresáre alebo presuny a "
+"premenovania názvov súborov) môže mať za následok, že KOReader nenájde vaše "
+"predchádzajúce nastavenia pre tieto knihy. Tieto nastavenia nebudú súčasťou "
+"žiadnej synchronizácie ani zálohovania vašej knižnice."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:556
-#, fuzzy
 msgid "Book metadata location: %1"
 msgstr "Priečinok s metadátami knihy: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:561
-#, fuzzy
 msgid "About book metadata location"
-msgstr "Uložiť metadáta knihy: %1"
+msgstr "Informácie o umiestnení metadát knihy"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:578
 msgid "only on close and suspend"
