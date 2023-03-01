@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:07+0000\n"
-"PO-Revision-Date: 2023-03-01 13:07+0000\n"
+"PO-Revision-Date: 2023-03-02 16:00+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/koreader/"
 "koreader/uk/>\n"
@@ -21,11 +21,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
-"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
-"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
-"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 4.16-rc\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 "
+"? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
+"14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
+"100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: reader.lua:220
 msgid ""
@@ -1624,9 +1624,8 @@ msgid "Screensaver"
 msgstr "Заставка"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:429
-#, fuzzy
 msgid "Move book metadata"
-msgstr "Зберегти метадані книги: %1"
+msgstr "Перемістити метадані книги"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:438
 msgid "Advanced settings"
@@ -1785,7 +1784,7 @@ msgstr "ОК"
 #: frontend/apps/filemanager/filemanagermenu.lua:841
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
-msgstr ""
+msgstr "Сканувати книги в поточній теці та підтеках для пошуку метаданих?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:842
 #: plugins/calibre.koplugin/search.lua:524
@@ -1794,21 +1793,27 @@ msgstr "Сканувати"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:849
 msgid "No books with metadata not in your preferred location found."
-msgstr ""
+msgstr "Книг з метаданими не у вибраному вами розташуванні не знайдено."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:853
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
+"Знайдено 1 книгу з метаданими, яких немає у вибраному вами розташуванні."
 msgstr[1] ""
+"Знайдено %1 книги з метаданими, яких немає у вибраному вами розташуванні."
 msgstr[2] ""
+"Знайдено %1 книг з метаданими, яких немає у вибраному вами розташуванні."
 msgstr[3] ""
+"%1 знайдено книги з метаданими, яких немає у вибраному вами розташуванні."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:856
 msgid ""
 "\n"
 "Move book metadata to your preferred location?"
 msgstr ""
+"\n"
+"Перемістити метадані книги у бажане розташування?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:877
 #: frontend/apps/reader/modules/readermenu.lua:366
@@ -9777,16 +9782,33 @@ msgid ""
 "These settings won't be part of any synchronization or backups of your "
 "library."
 msgstr ""
+"Налаштування перегляду книги, хід читання, виділення, закладки та примітки ("
+"загалом метадані) зберігаються в окремій теці з назвою <назва файлу>.sdr (\"."
+"sdr\" означає \"додаткова тека\").\n"
+"\n"
+"Ви можете вибрати одне з двох розташувань, де їх буде збережено:\n"
+"- поряд з самим файлом книги (тривалий час типово): ці теки sdr будуть "
+"видимі, коли ви переглядатимете каталоги бібліотеки за допомогою іншого "
+"оглядача файлів або з вашого комп'ютера, що може заважати вашому баченню "
+"бібліотеки. Але це дозволить вам переміщувати їх під час реорганізації "
+"бібліотеки, а також збереже їх у разі перейменування батьківських каталогів. "
+"Крім того, якщо ви виконуєте синхронізацію каталогів або резервне "
+"копіювання, ваші налаштування буде збережено.\n"
+"- все у koreader/docsettings/: ці теки sdr буде видно і використано лише "
+"KOReader, і вони не заважатимуть вам бачити каталоги вашої бібліотеки за "
+"допомогою іншого оглядача файлів або з вашого комп'ютера. Але будь-яка "
+"реорганізація вашої бібліотеки (переміщення каталогів або перейменування "
+"файлів) може призвести до того, що KOReader не знайде ваші попередні "
+"налаштування для цих книг. Ці налаштування не буде збережено під час "
+"синхронізації або створення резервних копій вашої бібліотеки."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:556
-#, fuzzy
 msgid "Book metadata location: %1"
-msgstr "Тека метаданих книги: %1"
+msgstr "Розташування метаданих книги: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:561
-#, fuzzy
 msgid "About book metadata location"
-msgstr "Зберегти метадані книги: %1"
+msgstr "Про розташування метаданих книг"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:578
 msgid "only on close and suspend"
