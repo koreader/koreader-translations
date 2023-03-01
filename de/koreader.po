@@ -21,8 +21,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:07+0000\n"
-"PO-Revision-Date: 2023-02-22 12:44+0000\n"
-"Last-Translator: Christian Homrighausen <ch.homrighausen@gmail.com>\n"
+"PO-Revision-Date: 2023-03-02 16:00+0000\n"
+"Last-Translator: zwim <martin.zwicknagl@kirchbichl.net>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/koreader/koreader/"
 "de/>\n"
 "Language: de\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: reader.lua:220
 msgid ""
@@ -1627,9 +1627,8 @@ msgid "Screensaver"
 msgstr "Bildschirmschoner"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:429
-#, fuzzy
 msgid "Move book metadata"
-msgstr "Buch-Metadaten speichern: %1"
+msgstr "Verschiebe Buch-Metadaten"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:438
 msgid "Advanced settings"
@@ -1791,6 +1790,8 @@ msgstr "OK"
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr ""
+"Durchsuche Bücher im aktuellen Ordner und den Unterordnern nach ihrem "
+"Metadaten-Ordner?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:842
 #: plugins/calibre.koplugin/search.lua:524
@@ -1800,18 +1801,22 @@ msgstr "Scannen"
 #: frontend/apps/filemanager/filemanagermenu.lua:849
 msgid "No books with metadata not in your preferred location found."
 msgstr ""
+"Es wurden keine Bücher mit Metadaten im bevorzugten Speicherort gefunden."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:853
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
-msgstr[0] ""
+msgstr[0] "Ein Buch mit Metadaten wurde nicht im bevorzugten Speicherort gefunden."
 msgstr[1] ""
+"%1 Bücher mit Metadaten wurden nicht im bevorzugten Speicherort gefunden."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:856
 msgid ""
 "\n"
 "Move book metadata to your preferred location?"
 msgstr ""
+"\n"
+"Verschiebe Buch Metadaten in den bevorzugten Speicherort?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:877
 #: frontend/apps/reader/modules/readermenu.lua:366
@@ -3888,7 +3893,7 @@ msgid ""
 "If you wish your highlights to be saved in the document, just move it to a "
 "writable directory first."
 msgstr ""
-"Hervorheungen in diesem Dokument werden in der Einstellungsdatei "
+"Hervorhebungen in diesem Dokument werden in der Einstellungsdatei "
 "gespeichert, jedoch nicht im Dokument selbst, da sich die Datei an einem "
 "schreibgeschützten Speicherort befindet.\n"
 "\n"
@@ -4371,9 +4376,8 @@ msgid "Show"
 msgstr "Einblenden"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:411
-#, fuzzy
 msgid "Page labels font size: %1"
-msgstr "Schriftgröße der Seitenbeschriftungen (%1)"
+msgstr "Seitenbeschriftungs Schriftgröße(%1)"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:421
 msgid "Page labels font size"
@@ -4817,13 +4821,12 @@ msgstr ""
 "Lesedatum unterstützt diese Funktion nicht."
 
 #: frontend/apps/reader/modules/readerstatus.lua:145
-#, fuzzy
 msgid ""
 "You've reached the end of the document.\n"
 "The current book is marked as finished."
 msgstr ""
 "Sie haben das Ende des Dokuments erreicht.\n"
-"Das aktuelle Buch wird als gelesen markiert."
+"Das aktuelle Buch ist als gelesen markiert."
 
 #: frontend/apps/reader/modules/readerstatus.lua:181
 msgid "This is the last file in the current folder. No next file to open."
@@ -6417,7 +6420,7 @@ msgstr "%1m"
 #: frontend/datetime.lua:153
 msgctxt "Time"
 msgid "%1m %2s"
-msgstr ""
+msgstr "%1m %2s"
 
 #: frontend/datetime.lua:168 frontend/datetime.lua:170
 #: frontend/datetime.lua:182
@@ -9875,16 +9878,35 @@ msgid ""
 "These settings won't be part of any synchronization or backups of your "
 "library."
 msgstr ""
+"Buchansichtseinstellungen, Lesefortschritt, Markierungen, Lesezeichen und "
+"Notizen (zusammen als Metadaten bezeichnet) werden in einem separaten Ordner "
+"mit dem Namen <Buchdateiname>.sdr (\".sdr\" bedeutet \"Sidecar\") "
+"gespeichert.\n"
+"\n"
+"Sie können zwischen zwei Orten wählen, an denen diese gespeichert werden:\n"
+"- Neben der Buchdatei selbst (die lange Standardeinstellung): Diese sdr-"
+"Ordner werden sichtbar sein, wenn Sie Ihre Bibliotheksverzeichnisse mit "
+"einem anderen Dateibrowser oder von Ihrem Computer aus durchsuchen, was die "
+"Übersicht in Ihrer Bibliothek beeinträchtigen kann. Aber das erlaubt Ihnen, "
+"sie mitzunehmen, wenn Sie Ihre Bibliothek neu organisieren, und überlebt "
+"auch jede Umbenennung von übergeordneten Verzeichnissen. Auch wenn Sie "
+"Verzeichnissynchronisierungen oder Backups durchführen, sind Ihre "
+"Einstellungen Teil davon.\n"
+"- Alles innerhalb von koreader/docsettings/: Diese sdr-Ordner sind nur im "
+"KOReader sichtbar und behindern die Übersicht auf Ihre "
+"Bibliotheksverzeichnisse nicht. Aber jede Reorganisation Ihrer Bibliothek ("
+"Verzeichnisse oder Dateinamen verschieben und umbenennen) kann dazu führen, "
+"dass KOReader Ihre vorherigen Einstellungen für diese Bücher nicht findet. "
+"Diese Einstellungen sind nicht Teil von Synchronisierungen oder Sicherungen "
+"Ihrer Bibliothek."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:556
-#, fuzzy
 msgid "Book metadata location: %1"
-msgstr "Ordner für Buch-Metadaten: %1"
+msgstr "Speicherort für Buch-Metadaten: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:561
-#, fuzzy
 msgid "About book metadata location"
-msgstr "Buch-Metadaten speichern: %1"
+msgstr "Über den Buch-Metadaten Speicherort"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:578
 msgid "only on close and suspend"
@@ -9921,9 +9943,8 @@ msgid "Return to file browser"
 msgstr "Zurück zum Datei-Browser"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:643
-#, fuzzy
 msgid "Mark book as finished"
-msgstr "Als gelesen markieren"
+msgstr "Markiere Buch als gelesen"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:644
 msgid "Book status and return to file browser"
@@ -14615,28 +14636,24 @@ msgstr ""
 "bevor das Dokument aufgrund externer Faktoren geladen wird."
 
 #: plugins/exporter.koplugin/main.lua:188
-#, fuzzy
 msgid "%1: Exported successfully."
-msgstr ": Erfolgreich exportiert."
+msgstr "%1: Erfolgreich exportiert."
 
 #: plugins/exporter.koplugin/main.lua:190
-#, fuzzy
 msgid "%1: Exported to %2."
-msgstr ": Exportiert nach "
+msgstr "%1: Exportiert nach %2."
 
 #: plugins/exporter.koplugin/main.lua:193
-#, fuzzy
 msgid "%1: Failed to export."
-msgstr ": Der Export ist fehlgeschlagen."
+msgstr "%1: Der Export ist fehlgeschlagen."
 
 #: plugins/exporter.koplugin/main.lua:205
 msgid "Exporting may take several seconds…"
 msgstr "Exportieren kann ein paar Sekunden dauern…"
 
 #: plugins/exporter.koplugin/main.lua:222
-#, fuzzy
 msgid "Share as %1."
-msgstr "Teilen als "
+msgstr "Teilen als %1."
 
 #: plugins/exporter.koplugin/main.lua:240 plugins/exporter.koplugin/_meta.lua:4
 msgid "Export highlights"
