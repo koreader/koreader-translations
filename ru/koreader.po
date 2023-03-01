@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:07+0000\n"
-"PO-Revision-Date: 2023-02-28 09:48+0000\n"
+"PO-Revision-Date: 2023-03-02 16:00+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ru/>\n"
@@ -36,10 +36,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.16-dev\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
+"n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: reader.lua:220
 msgid ""
@@ -1638,9 +1638,8 @@ msgid "Screensaver"
 msgstr "Заставка экрана"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:429
-#, fuzzy
 msgid "Move book metadata"
-msgstr "Сохранять метаданные книги: %1"
+msgstr "Переместить метаданные книги"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:438
 msgid "Advanced settings"
@@ -1800,7 +1799,7 @@ msgstr "ОК"
 #: frontend/apps/filemanager/filemanagermenu.lua:841
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
-msgstr ""
+msgstr "Сканировать книги в текущей папке и её подпапках на наличие метаданных?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:842
 #: plugins/calibre.koplugin/search.lua:524
@@ -1809,21 +1808,24 @@ msgstr "Сканировать"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:849
 msgid "No books with metadata not in your preferred location found."
-msgstr ""
+msgstr "Книг с метаданными вне предпочитаемого вами местоположения не найдено."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:853
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+"Найдена одна книга с метаданными вне предпочитаемого вами местоположения."
+msgstr[1] "Найдены %1 книги с метаданными вне предпочитаемого вами местоположения."
+msgstr[2] "Найдено %1 книг с метаданными вне предпочитаемого вами местоположения."
+msgstr[3] "Найдено %1 книг с метаданными вне предпочитаемого вами местоположения."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:856
 msgid ""
 "\n"
 "Move book metadata to your preferred location?"
 msgstr ""
+"\n"
+"Переместить метаданные книги в предпочитаемое вами местоположение?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:877
 #: frontend/apps/reader/modules/readermenu.lua:366
@@ -9823,16 +9825,33 @@ msgid ""
 "These settings won't be part of any synchronization or backups of your "
 "library."
 msgstr ""
+"Настройки просмотра книги, прогресс чтения, выделения, закладки и заметки ("
+"так называемые «метаданные») хранятся в отдельной папке с названием "
+"<имя_книги>.sdr (где «.sdr» можно расшифровывать как «сопроводиловка»).\n"
+"\n"
+"Вы можете выбирать между двумя местоположениями, в которых будут храниться "
+"ваши околокнижные данные:\n"
+"• рядом с файлом книги (историческое место по умолчанию): sdr-папки будут "
+"видны при просмотре библиотеки в стороннем файловом менеджере или на "
+"компьютере, что может визуально её загромождать. Зато можно легко перемещать "
+"метаданные при реорганизации библиотеки, а также не бояться переименования "
+"родительских папок. Кроме того, при синхронизации или резервном копировании "
+"библиотеки ваши метаданные станут неотъемлемой частью этих процессов.\n"
+"• всё в koreader/docsettings/: в этом случае sdr-папки доступны только "
+"KOReader'у и не будут загромождать вашу библиотеку при её просмотре в "
+"стороннем файловом менеджере или на компьютере. Но любая реорганизация "
+"библиотеки (перемещение или переименование папок/файлов) может привести к "
+"тому, что KOReader не найдёт существующие метаданные для входящих в неё "
+"книг. Также эти метаданные не будут учитываться при синхронизации или "
+"резервном копировании вашей библиотеки."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:556
-#, fuzzy
 msgid "Book metadata location: %1"
-msgstr "Папка метаданных книги: %1"
+msgstr "Местоположение метаданных книги: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:561
-#, fuzzy
 msgid "About book metadata location"
-msgstr "Сохранять метаданные книги: %1"
+msgstr "О местоположении метаданных книги"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:578
 msgid "only on close and suspend"
@@ -11869,7 +11888,7 @@ msgstr ""
 "Главы показаны над их страницами.\n"
 "Под страницами можно найти разные индикаторы:\n"
 "▲ текущая страница\n"
-"❶ ❷ … предыдущие места\n"
+"❶ ❷ … предыдущие местоположения\n"
 "▒ выделенный текст\n"
 " выделенный текст с примечаниями\n"
 " страница в закладках\n"
