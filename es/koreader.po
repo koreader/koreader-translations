@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:07+0000\n"
-"PO-Revision-Date: 2023-02-28 09:48+0000\n"
+"PO-Revision-Date: 2023-03-02 16:00+0000\n"
 "Last-Translator: hombretranquilo <hombretranquilo.mbp@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/koreader/"
 "koreader/es/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: reader.lua:220
 msgid ""
@@ -1623,9 +1623,8 @@ msgid "Screensaver"
 msgstr "Salvapantallas"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:429
-#, fuzzy
 msgid "Move book metadata"
-msgstr "Guardar metadatos del libro: %1"
+msgstr "Mover metadatos del libro"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:438
 msgid "Advanced settings"
@@ -1789,6 +1788,8 @@ msgstr "Aceptar"
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr ""
+"¿Escanear los libros de la carpeta y subcarpetas actuales para localizar sus "
+"metadatos?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:842
 #: plugins/calibre.koplugin/search.lua:524
@@ -1798,18 +1799,26 @@ msgstr "Escanear"
 #: frontend/apps/filemanager/filemanagermenu.lua:849
 msgid "No books with metadata not in your preferred location found."
 msgstr ""
+"No se han encontrado libros cuyos metadatos no estén en la ubicación "
+"preferida."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:853
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
+"Encontrado 1 libro cuyos metadatos no se encuentran en la ubicación "
+"preferida."
 msgstr[1] ""
+"Encontrados %1 libros cuyos metadatos no se encuentran en la ubicación "
+"preferida."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:856
 msgid ""
 "\n"
 "Move book metadata to your preferred location?"
 msgstr ""
+"\n"
+"¿Mover los metadatos del libro a la ubicación preferida?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:877
 #: frontend/apps/reader/modules/readermenu.lua:366
@@ -3980,7 +3989,7 @@ msgid ""
 "takes you to the previous page."
 msgstr ""
 "Deslizar hacia la derecha para volver a la posición anterior después de "
-"haber seguido un enlace. Cuando la lista de ubicaciones está vacía, al "
+"haber seguido un enlace. Cuando la lista de posiciones está vacía, al "
 "deslizar hacia la derecha se accederá a la página anterior."
 
 #: frontend/apps/reader/modules/readerlink.lua:348
@@ -9900,16 +9909,37 @@ msgid ""
 "These settings won't be part of any synchronization or backups of your "
 "library."
 msgstr ""
+"La configuración de vista del libro, el progreso de lectura, los subrayados, "
+"los marcadores y las notas (que, en conjunto, se denominan metadatos) se "
+"almacenan en una carpeta independiente denominada <nombre-del-libro>.sdr (\"."
+"sdr\" significa \"sidecar\").\n"
+"\n"
+"Es posible elegir entre dos ubicaciones para guardarlos:\n"
+"- la carpeta en que se encuentra el propio archivo del libro (que es la "
+"opción por defecto usada hasta ahora): las carpetas sdr serán visibles al "
+"navegar por los directorios de la biblioteca con un explorador de archivos "
+"distinto de KOReader o con un ordenador, lo que puede complicar la "
+"visualización de los libros de la biblioteca. Esta opción permite mover las "
+"carpetas sdr si se decide reorganizar la biblioteca, y los cambios se "
+"conservan aunque se modifique el nombre de las carpetas padre. Además, si se "
+"realiza la sincronización de carpetas o se hacen copias de seguridad, los "
+"metadatos también formarán parte de ellas.\n"
+"- en la carpeta koreader/docsettings/: así, las carpetas sdr sólo serán "
+"visibles y utilizadas por KOReader, y no dificultarán la visualización de "
+"las carpetas de la biblioteca si usamos un explorador de archivos distinto "
+"de KOReader o un ordenador. Sin embargo, cualquier reorganización de la "
+"biblioteca (al mover o renombrar carpetas o nombres de archivo) puede "
+"provocar que KOReader no encuentre los metadatos de estos libros. En este "
+"caso, los metadatos no se sincronizarán ni se copiarán al realizar copias de "
+"seguridad de la biblioteca."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:556
-#, fuzzy
 msgid "Book metadata location: %1"
-msgstr "Carpeta de metadatos del libro: %1"
+msgstr "Ubicación de los metadatos del libro: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:561
-#, fuzzy
 msgid "About book metadata location"
-msgstr "Guardar metadatos del libro: %1"
+msgstr "Acerca de la ubicación de los metadatos del libro"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:578
 msgid "only on close and suspend"
