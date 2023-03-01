@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:07+0000\n"
-"PO-Revision-Date: 2023-02-25 11:51+0000\n"
+"PO-Revision-Date: 2023-03-02 16:00+0000\n"
 "Last-Translator: Ichnilatis <sophronios.sp@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
 "el/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: reader.lua:220
 msgid ""
@@ -1626,9 +1626,8 @@ msgid "Screensaver"
 msgstr "Προφύλαξη οθόνης"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:429
-#, fuzzy
 msgid "Move book metadata"
-msgstr "Αποθήκευση μεταδεδομένων βιβλίου: %1"
+msgstr "Μετακίνηση μεταδεδομένων βιβλίου"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:438
 msgid "Advanced settings"
@@ -1793,6 +1792,8 @@ msgstr "Εντάξει"
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr ""
+"Να γίνει σάρωση βιβλίων στον τρέχοντα φάκελο και τους υποφακέλους για τη "
+"θέση των μεταδεδομένων τους;"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:842
 #: plugins/calibre.koplugin/search.lua:524
@@ -1802,18 +1803,26 @@ msgstr "Σάρωση"
 #: frontend/apps/filemanager/filemanagermenu.lua:849
 msgid "No books with metadata not in your preferred location found."
 msgstr ""
+"Δεν βρέθηκαν βιβλία με μεταδεδομένα που δεν βρίσκονται στην προτιμώμενη "
+"τοποθεσία σας."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:853
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
+"Βρέθηκε 1 βιβλίο με μεταδεδομένα που δεν βρίσκονται στην προτιμώμενη "
+"τοποθεσία σας."
 msgstr[1] ""
+"Βρέθηκαν %1 βιβλία με μεταδεδομένα που δεν βρίσκονται στην προτιμώμενη "
+"τοποθεσία σας."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:856
 msgid ""
 "\n"
 "Move book metadata to your preferred location?"
 msgstr ""
+"\n"
+"Να μετακινηθούν τα μεταδεδομένα του βιβλίου στην προτιμώμενη τοποθεσία;"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:877
 #: frontend/apps/reader/modules/readermenu.lua:366
@@ -4393,9 +4402,8 @@ msgid "Show"
 msgstr "Εμφάνιση"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:411
-#, fuzzy
 msgid "Page labels font size: %1"
-msgstr "Μέγεθος γραμματοσειράς ετικετών σελίδας (%1)"
+msgstr "Μέγεθος γραμματοσειράς ετικετών σελίδας: %1"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:421
 msgid "Page labels font size"
@@ -4838,12 +4846,11 @@ msgstr ""
 "ημερομηνία τελευταίας ανάγνωσης δεν υποστηρίζει αυτήν τη δυνατότητα."
 
 #: frontend/apps/reader/modules/readerstatus.lua:145
-#, fuzzy
 msgid ""
 "You've reached the end of the document.\n"
 "The current book is marked as finished."
 msgstr ""
-"Φτάσατε στο τέλος του εγγράφου\n"
+"Φτάσατε στο τέλος του εγγράφου.\n"
 "Το τρέχον βιβλίο επισημαίνεται ως αναγνωσμένο."
 
 #: frontend/apps/reader/modules/readerstatus.lua:181
@@ -9932,16 +9939,37 @@ msgid ""
 "These settings won't be part of any synchronization or backups of your "
 "library."
 msgstr ""
+"Οι ρυθμίσεις προβολής των βιβλίων, η πρόοδος ανάγνωσης, οι επισημάνσεις, οι "
+"σελιδοδείκτες και οι σημειώσεις (συλλογικά γνωστά ως μεταδεδομένα) "
+"αποθηκεύονται σε ξεχωριστό φάκελο με όνομα <όνομα βιβλίου>.sdr (\".sdr\" "
+"σημαίνει \"sidecar\").\n"
+"\n"
+"Μπορείτε να αποφασίσετε μεταξύ δύο τοποθεσιών όπου θα αποθηκεύονται αυτά:\n"
+"- παράλληλα με το ίδιο το αρχείο του βιβλίου (η μακροχρόνια προεπιλογή): "
+"αυτοί οι φάκελοι sdr θα είναι ορατοί όταν περιηγείστε στους φακέλους της "
+"βιβλιοθήκης σας με άλλο πρόγραμμα περιήγησης αρχείων ή από τον υπολογιστή "
+"σας, γεγονός που μπορεί να προκαλέσει σύγχυση στην εικόνα της βιβλιοθήκης "
+"σας. Αυτό όμως σας επιτρέπει να τους μετακινήσετε μαζί όταν αναδιοργανώνετε "
+"τη βιβλιοθήκη σας, και επίσης επιβιώνει από τυχόν μετονομασία των γονικών "
+"καταλόγων. Επίσης, αν πραγματοποιήσετε συγχρονισμό καταλόγων ή δημιουργία "
+"αντιγράφων ασφαλείας, οι ρυθμίσεις σας θα είναι μέρος αυτών.\n"
+"- όλα μέσα στο koreader/docsettings/: αυτοί οι φάκελοι sdr θα είναι ορατοί "
+"και θα χρησιμοποιούνται μόνο από το KOReader, και δεν θα προκαλούν σύγχυση "
+"στην εικόνα των φακέλων της βιβλιοθήκης σας, όταν περιηγείστε σ' αυτήν με "
+"άλλο πρόγραμμα περιήγησης αρχείων ή από τον υπολογιστή σας. Ωστόσο "
+"οποιαδήποτε αναδιοργάνωση της βιβλιοθήκης σας (μετακινήσεις και μετονομασίες "
+"φακέλων ή ονομάτων αρχείων) μπορεί να έχει ως αποτέλεσμα το KOReader να μην "
+"βρίσκει τις προηγούμενες ρυθμίσεις σας για αυτά τα βιβλία. Αυτές οι "
+"ρυθμίσεις δεν θα αποτελούν μέρος οποιουδήποτε συγχρονισμού ή αντιγράφων "
+"ασφαλείας της βιβλιοθήκης σας."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:556
-#, fuzzy
 msgid "Book metadata location: %1"
-msgstr "Φάκελος μεταδεδομένων βιβλίων: %1"
+msgstr "Τοποθεσία μεταδεδομένων βιβλίων: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:561
-#, fuzzy
 msgid "About book metadata location"
-msgstr "Αποθήκευση μεταδεδομένων βιβλίου: %1"
+msgstr "Σχετικά με την τοποθεσία μεταδεδομένων βιβλίων"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:578
 msgid "only on close and suspend"
@@ -9979,9 +10007,8 @@ msgid "Return to file browser"
 msgstr "Επιστροφή στην περιήγηση αρχείων"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:643
-#, fuzzy
 msgid "Mark book as finished"
-msgstr "Σήμανση ως τελειωμένου"
+msgstr "Σήμανση βιβλίου ως τελειωμένου"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:644
 msgid "Book status and return to file browser"
