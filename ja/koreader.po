@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:07+0000\n"
-"PO-Revision-Date: 2023-03-02 16:00+0000\n"
+"PO-Revision-Date: 2023-03-03 15:20+0000\n"
 "Last-Translator: うにみそ <unimiso@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
 "koreader/ja/>\n"
@@ -14723,43 +14723,48 @@ msgid ""
 "the chance of at least one conversion matching the form used in the "
 "dictionary."
 msgstr ""
+"日本語文章の語形変化を取り除く際に適用する文章変換を設定します。主に、インス"
+"トールされている辞書と異なる仮名で書かれた単語を検索できるようにするための、"
+"異なる種類の仮名間の変換が含まれます。\n"
+"\n"
+"すべての変換が一度に適用されるわけではありません。その代わりに、有効な変換の"
+"すべての可能な組み合わせが試され、少なくとも1つの変換が辞書で使用されている形"
+"式と一致する可能性が最大になるようにします。"
 
 #. @translators A deinflector is a program which converts a word into its dictionary form, similar to deconjugation in European languages. See <https://en.wikipedia.org/wiki/Japanese_verb_conjugation> for more detail.
 #: plugins/japanese.koplugin/deinflector.lua:413
-#, fuzzy
 msgid "Deinflector information"
-msgstr "ストレージ情報"
+msgstr "語形変化除去器の情報"
 
 #: plugins/japanese.koplugin/deinflector.lua:421
 msgid "%1 rule"
 msgid_plural "%1 rules"
-msgstr[0] ""
+msgstr[0] "%1 ルール"
 
 #: plugins/japanese.koplugin/deinflector.lua:422
 msgid "%1 variant"
 msgid_plural "%1 variants"
-msgstr[0] ""
+msgstr[0] "%1 異表記"
 
 #. @translators %1 is the "%1 rule(s)" string, %2 is the "%1 variant(s)" string.
 #: plugins/japanese.koplugin/deinflector.lua:425
 msgid "Deinflector has %1 and %2 loaded."
-msgstr ""
+msgstr "語形変化除去器には %1 があり、%2 がロードされました。"
 
 #: plugins/japanese.koplugin/main.lua:206
 msgid "Text scan length: %1 character"
 msgid_plural "Text scan length: %1 characters"
-msgstr[0] ""
+msgstr[0] "文章をスキャンする長さ: %1 文字"
 
 #: plugins/japanese.koplugin/main.lua:208
 msgid ""
 "Number of characters to look ahead when trying to expand tap-and-hold word "
 "selection in documents."
-msgstr ""
+msgstr "文書中の長押しによる単語選択を拡大しようとしたときに、先読みする文字数。"
 
 #: plugins/japanese.koplugin/main.lua:214
-#, fuzzy
 msgid "Text scan length"
-msgstr "テキスト配置"
+msgstr "文章をスキャンする長さ"
 
 #: plugins/japanese.koplugin/main.lua:215
 msgid ""
@@ -14770,14 +14775,19 @@ msgid ""
 "\n"
 "Default value: %1"
 msgstr ""
+"文書中の単語を長押しして選択する際に先読みする最大文字数です。\n"
+"より大きな値ではより長いフレーズが自動的に選択されるようになりますが、選択速"
+"度が遅くなるというトレードオフが発生する可能性があります。\n"
+"\n"
+"既定値：%1"
 
 #: plugins/japanese.koplugin/main.lua:226
 msgid "Set scan length"
-msgstr ""
+msgstr "スキャンする長さを設定"
 
 #: plugins/japanese.koplugin/_meta.lua:4
 msgid "Japanese support"
-msgstr "日本語対応"
+msgstr "日本語支援"
 
 #: plugins/japanese.koplugin/_meta.lua:5
 msgid ""
@@ -14792,10 +14802,20 @@ msgid ""
 "You must have at least one Japanese dictionary installed in order for this "
 "plugin to work smoothly with Japanese text."
 msgstr ""
+"YomichanをモデルにしたKOReader用の日本語支援機能です。\n"
+"\n"
+"このプラグインは、Yomichanスタイルの語形変化除去と文章スキャンに対応するため"
+"にKOReaderの内蔵辞書と選択システムを拡張し、屈折動詞や多文字の単語やフレーズ"
+"をワンタップで検索できるようにします。その結果、このプラグインを使用すること"
+"でStarDictで変換された日本語辞書の同義語ベースの脱字ルールは不要になります。"
+"\n"
+"\n"
+"このプラグインが日本語文章でスムーズに動作するためには、少なくとも1つの日本語"
+"辞書がインストールされている必要があります。"
 
 #: plugins/keepalive.koplugin/main.lua:9 plugins/keepalive.koplugin/_meta.lua:4
 msgid "Keep alive"
-msgstr "オンのままにする"
+msgstr "キープアライブ"
 
 #: plugins/keepalive.koplugin/main.lua:18
 msgid ""
@@ -14807,14 +14827,13 @@ msgid ""
 "If KOReader terminates before \"Close\" is pressed, please start and close "
 "the KeepAlive plugin again to ensure settings are reset."
 msgstr ""
-"このメッセージが表示されていると、システムはスリープしません。\n"
+"このメッセージが表示されている間システムはスリープしません。\n"
 "\n"
-"この通知を閉じた後でもシステムをオンのままにしたい場合は、「オンのままにす"
-"る」を押してください。 *バッテリーを消耗します。*\n"
+"この通知を閉じた後でもシステムをオンのままにしたい場合は「オンのままにする」"
+"を押してください。 *バッテリーを消費します。*\n"
 "\n"
-"「閉じる」を押す前に KOReader が終了した場合は、もう一度KeepAlive（オンのまま"
-"にする）プラグインを開始してから閉じて、設定がリセットされるようにしてくださ"
-"い。"
+"「閉じる」を押す前に KOReader が終了した場合は、もう一度キープアライブプラグ"
+"インを開始してから閉じて、設定がリセットされるようにしてください。"
 
 #: plugins/keepalive.koplugin/main.lua:25
 msgid "Stay alive"
@@ -14830,7 +14849,7 @@ msgstr "これは '有効' 機能のダミー実装です。"
 
 #: plugins/keepalive.koplugin/_meta.lua:5
 msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
-msgstr ""
+msgstr "Wi-Fiの自動切断を防ぐため、端末を起床したままにします。"
 
 #: plugins/kosync.koplugin/main.lua:25
 msgid "Register/login to KOReader server"
@@ -14838,24 +14857,23 @@ msgstr "KOReader サーバーに登録/ログイン"
 
 #: plugins/kosync.koplugin/main.lua:60
 msgid "Progress has been synchronized."
-msgstr "進行状況を同期しました。"
+msgstr "読書進捗を同期しました。"
 
 #: plugins/kosync.koplugin/main.lua:67
 msgid ""
 "Please register or login before using the progress synchronization feature."
-msgstr "進行状況の同期機能を使用する前に登録またはログインしてください。"
+msgstr "読書進捗の同期機能を使用する前に登録またはログインしてください。"
 
 #: plugins/kosync.koplugin/main.lua:74
 msgid ""
 "Something went wrong when syncing progress, please check your network "
 "connection and try again later."
-msgstr ""
-"進行状況の同期時に何か問題が発生しました。ネットワーク接続を確認して、後でも"
-"う一度やり直してください。"
+msgstr "読書進捗の同期中に問題が発生しました。ネットワーク接続を確認して、後でもう一"
+"度やり直してください。"
 
 #: plugins/kosync.koplugin/main.lua:92
 msgid "invalid username and password"
-msgstr ""
+msgstr "無効なユーザー名かパスワード"
 
 #: plugins/kosync.koplugin/main.lua:94
 msgid "invalid username"
@@ -14867,15 +14885,15 @@ msgstr "無効なパスワード"
 
 #: plugins/kosync.koplugin/main.lua:107 plugins/kosync.koplugin/main.lua:253
 msgid "Push progress from this device"
-msgstr "このデバイスから進行状況をプッシュ"
+msgstr "このデバイスから読書進捗をプッシュ"
 
 #: plugins/kosync.koplugin/main.lua:108 plugins/kosync.koplugin/main.lua:262
 msgid "Pull progress from other devices"
-msgstr "他のデバイスから進行状況をプル"
+msgstr "他のデバイスから読書進捗をプル"
 
 #: plugins/kosync.koplugin/main.lua:138 plugins/kosync.koplugin/_meta.lua:4
 msgid "Progress sync"
-msgstr "進行状況同期"
+msgstr "読書進捗同期"
 
 #: plugins/kosync.koplugin/main.lua:142
 msgid "Logout"
@@ -14891,12 +14909,11 @@ msgstr "ログイン"
 
 #: plugins/kosync.koplugin/main.lua:161
 msgid "Auto sync now and future"
-msgstr "自動同期-今後"
+msgstr "以後は自動同期する"
 
 #: plugins/kosync.koplugin/main.lua:179
-#, fuzzy
 msgid "Whisper sync"
-msgstr "沈黙同期化"
+msgstr "静かな同期"
 
 #: plugins/kosync.koplugin/main.lua:184
 msgid "Sync to latest record (%1)"
@@ -14904,7 +14921,7 @@ msgstr "最新の記録（%1）と同期します"
 
 #: plugins/kosync.koplugin/main.lua:218
 msgid "Sync to a previous record (%1)"
-msgstr "前回の記録に同期する(%1)"
+msgstr "前回の記録（%1）に同期する"
 
 #: plugins/kosync.koplugin/main.lua:271
 msgid "Custom sync server"
@@ -14913,21 +14930,23 @@ msgstr "カスタム同期サーバー"
 #. @translators Server address defined by user for progress sync.
 #: plugins/kosync.koplugin/main.lua:276
 msgid "Custom progress sync server address"
-msgstr "カスタム進行状況同期サーバーアドレス"
+msgstr "カスタム読書進捗同期サーバーのアドレス"
 
 #: plugins/kosync.koplugin/main.lua:286
 msgid "Sync every # pages"
-msgstr "# ページごと"
+msgstr "ページ単位で同期する"
 
 #: plugins/kosync.koplugin/main.lua:291
 msgid ""
 "This value determines how many page turns it takes to update book progress.\n"
 "If set to 0, updating progress based on page turns will be disabled."
 msgstr ""
+"この値は、読書進捗を更新するのにかかるページめくり数を決定します。\n"
+"0に設定すると、ページめくりに基づく読書進捗の更新は無効になります。"
 
 #: plugins/kosync.koplugin/main.lua:299
 msgid "Number of pages before update"
-msgstr ""
+msgstr "更新するまでのページ数"
 
 #: plugins/kosync.koplugin/main.lua:309
 msgid "Document matching method"
@@ -14935,16 +14954,15 @@ msgstr "文書の照合方法"
 
 #: plugins/kosync.koplugin/main.lua:312
 msgid "Binary. Only identical files will sync progress."
-msgstr ""
-"バイナリで一致。 バイナリレベルで同じファイルのみが進行状況を同期する。"
+msgstr "バイナリ。 同一ファイルのみが読書進捗を同期する。"
 
 #: plugins/kosync.koplugin/main.lua:321
 msgid "Filename. Files with the same name will sync progress."
-msgstr "ファイル名で。 同じ名前のファイルでは進行状況を同期する。"
+msgstr "ファイル名。 同じ名前のファイルで読書進捗を同期する。"
 
 #: plugins/kosync.koplugin/main.lua:395
 msgid "Cannot login: %1"
-msgstr "ログインができません：%1"
+msgstr "ログインできません：%1"
 
 #: plugins/kosync.koplugin/main.lua:404
 msgid "Logging in. Please wait…"
@@ -14988,19 +15006,19 @@ msgstr "KOReader サーバーにログインしました。"
 
 #: plugins/kosync.koplugin/main.lua:602
 msgid "Progress has been pushed."
-msgstr "進行状況をプッシュしました。"
+msgstr "読書進捗をプッシュしました。"
 
 #: plugins/kosync.koplugin/main.lua:651
 msgid "No progress found for this document."
-msgstr "この文書の進行状況が見つかりません。"
+msgstr "この文書の読書進捗が見つかりません。"
 
 #: plugins/kosync.koplugin/main.lua:662
 msgid "Latest progress is coming from this device."
-msgstr "最新の進行状況は、このデバイスから来ています。"
+msgstr "最新の読書進捗はこのデバイスから来ています。"
 
 #: plugins/kosync.koplugin/main.lua:678
 msgid "The progress has already been synchronized."
-msgstr "進行状況はすでに同期されています。"
+msgstr "読書進捗はすでに同期されています。"
 
 #: plugins/kosync.koplugin/main.lua:708
 msgid "Sync to latest location %1% from device '%2'?"
@@ -15008,7 +15026,7 @@ msgstr "最新の場所 %1% をデバイス '%2' から同期しますか?"
 
 #: plugins/kosync.koplugin/main.lua:722
 msgid "Sync to previous location %1% from device '%2'?"
-msgstr "前の場所 %1% をデバイス '%2' から同期しますか?"
+msgstr "前回の場所 %1% をデバイス '%2' から同期しますか?"
 
 #: plugins/kosync.koplugin/_meta.lua:5
 msgid ""
@@ -15018,32 +15036,32 @@ msgstr "各KOReaderデバイスの閲覧進行状況をサーバー経由で同�
 #: plugins/movetoarchive.koplugin/main.lua:29
 #: plugins/movetoarchive.koplugin/_meta.lua:4
 msgid "Move to archive"
-msgstr "書籍アーカイブ"
+msgstr "保管庫に移動する"
 
 #: plugins/movetoarchive.koplugin/main.lua:32
 msgid "Move current book to archive"
-msgstr "現在の書籍をアーカイブに移動する"
+msgstr "現在の書籍を保管庫に移動します"
 
 #: plugins/movetoarchive.koplugin/main.lua:39
 msgid "Copy current book to archive"
-msgstr "現在の書籍をアーカイブにコピーする"
+msgstr "現在の書籍を保管庫にコピーする"
 
 #: plugins/movetoarchive.koplugin/main.lua:46
 msgid "Go to archive folder"
-msgstr "アーカイブへ移す"
+msgstr "保管庫に移動する"
 
 #: plugins/movetoarchive.koplugin/main.lua:56
 msgid "Go to last copied/moved from folder"
-msgstr ""
+msgstr "最後にコピー/移動したフォルダに移動する"
 
 #: plugins/movetoarchive.koplugin/main.lua:60
 msgid "No previous folder found."
-msgstr "前回のフォルダーがない。"
+msgstr "前回のフォルダーがありません。"
 
 #: plugins/movetoarchive.koplugin/main.lua:68
 #: plugins/movetoarchive.koplugin/main.lua:137
 msgid "Set archive folder"
-msgstr "アーカイブフォルダー設定"
+msgstr "保管庫フォルダーを設定"
 
 #: plugins/movetoarchive.koplugin/main.lua:79
 msgid ""
@@ -15051,7 +15069,7 @@ msgid ""
 "Do you want to open it from the archive folder?"
 msgstr ""
 "書籍が移動されました。\n"
-"アーカイブフォルダから開きますか？"
+"保管庫フォルダから開きますか？"
 
 #: plugins/movetoarchive.koplugin/main.lua:84
 msgid ""
@@ -15059,19 +15077,19 @@ msgid ""
 "Do you want to open it from the archive folder?"
 msgstr ""
 "書籍がコピーされました。\n"
-"アーカイブフォルダから開きますか？"
+"保管庫フォルダから開きますか？"
 
 #: plugins/movetoarchive.koplugin/main.lua:136
 msgid ""
 "No archive directory.\n"
 "Do you want to set it now?"
 msgstr ""
-"アーカイブディレクトリがありません。\n"
+"保管庫ディレクトリがありません。\n"
 "今すぐ設定しますか？"
 
 #: plugins/movetoarchive.koplugin/_meta.lua:5
 msgid "Moves/copies current book to archive folder"
-msgstr ""
+msgstr "現在の書籍を保管庫フォルダに移動/コピーする"
 
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:314
 msgid ""
@@ -15091,7 +15109,7 @@ msgid ""
 msgstr ""
 "%1\n"
 "\n"
-"画像の取得中 %2/ %3 …"
+"画像の取得中 %2 / %3 …"
 
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:509
 msgid ""
@@ -15101,7 +15119,7 @@ msgid ""
 msgstr ""
 "%1\n"
 "\n"
-"EPUB の作成中…"
+"EPUB を纏め中…"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:73
 msgid "URL"
@@ -15117,15 +15135,15 @@ msgstr "全文をダウンロード"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
 msgid "Include images"
-msgstr "画像を含め"
+msgstr "画像を含める"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:117
 msgid "Enable filter"
-msgstr "フィルターを有効"
+msgstr "フィルターを有効化"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:129
 msgid "Filter element"
-msgstr ""
+msgstr "フィルター要素"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:151
 msgid "Delete feed"
@@ -15133,7 +15151,7 @@ msgstr "フィードを削除"
 
 #: plugins/newsdownloader.koplugin/main.lua:88
 msgid "News downloader (RSS/Atom)"
-msgstr "RSSビューアー (RSS/Atom)"
+msgstr "ニュース ダウンローダー (RSS/Atom)"
 
 #: plugins/newsdownloader.koplugin/main.lua:100
 msgid "Go to news folder"
@@ -15145,7 +15163,7 @@ msgstr "ニュースフィードを同期する"
 
 #: plugins/newsdownloader.koplugin/main.lua:113
 msgid "Edit news feeds"
-msgstr "フィードを編集"
+msgstr "ニュースフィードを編集"
 
 #: plugins/newsdownloader.koplugin/main.lua:127
 msgid "Set download folder"
@@ -15153,7 +15171,7 @@ msgstr "ダウンロードフォルダーを設定"
 
 #: plugins/newsdownloader.koplugin/main.lua:132
 msgid "Never download images"
-msgstr "いつも画像をダウンロードしない"
+msgstr "常に画像をダウンロードしない"
 
 #: plugins/newsdownloader.koplugin/main.lua:143
 msgid "Delete all downloaded items"
@@ -15172,13 +15190,13 @@ msgid ""
 "Feeds can be configured with download limits and other customization through "
 "the Edit Feeds menu item."
 msgstr ""
-"ニュースダウンローダーは、RSS と Atom のニュースエントリーを取得して以下に保"
-"存します:\n"
+"ニュースダウンローダーは、RSS と Atom "
+"のニュースエントリーを取得して以下に保存します:\n"
 "%1\n"
 "\n"
-"各エントリーは別々の html ファイルで、KOReader ファイルマネージャーで閲覧する"
-"ことができます。\n"
-"アイテムのダウンロード制限は設定で設定できます。"
+"各エントリーは個別のEPUBファイルであり、KOReaderで閲覧することができます。\n"
+"フィードは「ニュースフィードの編集」メニューからダウンロード制限などのカスタ"
+"マイズが可能です。"
 
 #: plugins/newsdownloader.koplugin/main.lua:216
 #: plugins/newsdownloader.koplugin/main.lua:820
@@ -15187,14 +15205,15 @@ msgid ""
 "Invalid configuration file. Detailed error message:\n"
 "%1"
 msgstr ""
-"設定ファイルが正しくありません。詳細なエラーメッセージ:\n"
+"設定ファイルが不正です。詳細なエラーメッセージ:\n"
 "%1"
 
 #: plugins/newsdownloader.koplugin/main.lua:223
 msgid ""
 "Feed list is empty. If you want to download news, you'll have to add a feed "
 "first."
-msgstr ""
+msgstr "フィードリストは空です。ニュースをダウンロードしたい場合は、まずフィードを追"
+"加する必要があります。"
 
 #: plugins/newsdownloader.koplugin/main.lua:225
 msgid "Edit feed list"
@@ -15214,7 +15233,7 @@ msgstr "ニュースをダウンロードしました。"
 
 #: plugins/newsdownloader.koplugin/main.lua:291
 msgid "Downloading news finished with errors."
-msgstr "ニュースをダウンロードしたが、エラーが発生しました。"
+msgstr "ニュースをダウンロードしましたが、エラーが発生しました。"
 
 #: plugins/newsdownloader.koplugin/main.lua:295
 msgid ""
@@ -15222,14 +15241,17 @@ msgid ""
 "Unsupported format in: %1. Please\n"
 "review your feed configuration file."
 msgstr ""
+"一部のフィードを処理できませんでした。\n"
+"%1でサポートされていない形式があります。\n"
+"フィードの設定ファイルを確認して下さい。"
 
 #: plugins/newsdownloader.koplugin/main.lua:312
 msgid "Go to download folder?"
-msgstr "ダウンロードフォルダーに進みますか？"
+msgstr "ダウンロードフォルダーに移動しますか？"
 
 #: plugins/newsdownloader.koplugin/main.lua:316
 msgid "Go to downloads"
-msgstr "ダウンロードフォルダーに進む"
+msgstr "ダウンロードフォルダーに移動"
 
 #: plugins/newsdownloader.koplugin/main.lua:355
 #: plugins/newsdownloader.koplugin/main.lua:416
@@ -15238,7 +15260,7 @@ msgstr "(原因：コンテンツのダウンロードに失敗しました)"
 
 #: plugins/newsdownloader.koplugin/main.lua:357
 msgid "(Reason: Error during feed deserialization)"
-msgstr "(原因：コンテンツ内容の解析に失敗しました)"
+msgstr "(原因：フィードの解析に失敗しました)"
 
 #: plugins/newsdownloader.koplugin/main.lua:418
 msgid "(Reason: Couldn't process RSS)"
@@ -15273,10 +15295,12 @@ msgid ""
 "instead, go to the News Downloader settings and change "
 "'download_full_article' to 'true'."
 msgstr ""
+"これはフィードの説明だけです。代わりに記事全体をダウンロードするには、ニュー"
+"スダウンローダーの設定で「全文をダウンロード」を「true」に変更してください。"
 
 #: plugins/newsdownloader.koplugin/main.lua:599
 msgid "All downloaded news feed items deleted."
-msgstr "全てのダウンロードされたフィード項目を削除しました。"
+msgstr "全てのダウンロード済みニュースフィード項目を削除しました。"
 
 #: plugins/newsdownloader.koplugin/main.lua:621
 msgid "Loading news feed list…"
