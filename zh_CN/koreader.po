@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 13:07+0000\n"
-"PO-Revision-Date: 2023-03-02 16:00+0000\n"
+"PO-Revision-Date: 2023-03-05 14:35+0000\n"
 "Last-Translator: Kirisame Jim <jim@lotlab.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "koreader/koreader/zh_Hans/>\n"
@@ -1235,7 +1235,7 @@ msgstr "要永久删除文件夹吗？"
 
 #: frontend/apps/filemanager/filemanager.lua:993
 msgid "Book settings, highlights and notes will be deleted."
-msgstr "书籍设置、高亮和笔记将被删除。"
+msgstr "书籍设置、标注和笔记将被删除。"
 
 #: frontend/apps/filemanager/filemanager.lua:1013
 msgid ""
@@ -1940,7 +1940,7 @@ msgstr "要重置此文档吗？"
 msgid ""
 "Document progress, settings, bookmarks, highlights and notes will be "
 "permanently lost."
-msgstr "文档进度、设置、书签、高亮和笔记都会丢失。"
+msgstr "文档进度、设置、书签、标注和笔记都会丢失。"
 
 #. @translators This is the script's programming language (e.g., shell or python)
 #: frontend/apps/filemanager/filemanagerutil.lua:147
@@ -2108,7 +2108,7 @@ msgstr "要移除选中的书签吗？"
 #: frontend/apps/reader/modules/readerbookmark.lua:742
 #: frontend/apps/reader/modules/readerbookmark.lua:1154
 msgid "highlights"
-msgstr "高亮"
+msgstr "标注"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:750
 #: frontend/apps/reader/modules/readerbookmark.lua:1166
@@ -4122,7 +4122,7 @@ msgid ""
 msgstr ""
 "要将当前文档设置重置为默认值吗？\n"
 "\n"
-"重置不会影响阅读位置、高亮和书签设置。\n"
+"重置不会影响阅读位置、标注和书签设置。\n"
 "重置完毕后将会重新打开此文档。"
 
 #: frontend/apps/reader/modules/readermenu.lua:212
@@ -4288,7 +4288,7 @@ msgid ""
 msgstr ""
 "\n"
 "需要注意的是，这项样式的改动可能使书签和标注样式失效。\n"
-"如果它们没有被正确的显示，你可以退回刚刚所作的更改。\n"
+"如果它们显示不正常，你可以回退刚刚所作的更改。\n"
 "\n"
 
 #: frontend/apps/reader/modules/readerrolling.lua:351
@@ -4386,9 +4386,9 @@ msgid ""
 "toggle Rendering mode between 'legacy' and 'flat', and re-open this book, "
 "and see if they are found again, before proceeding."
 msgstr ""
-"此文档中的书签和标注引用的 %1 个（全书共 %2 个）xpath 无法找到，可能已经丢"
-"失。你可以在继续之前尝试切换渲染模式为“传统”或“平坦”并重新打开此文档，查看这"
-"些引用是否能够恢复。"
+"此文档的 %2 个书签和标注引用中，有 %1 个 xpath 无法找到并可能已经丢失。你可以"
+"在继续之前尝试切换渲染模式为“传统”或“平坦”并重新打开此文档，查看这些引用是否"
+"能够恢复。"
 
 #: frontend/apps/reader/modules/readerrolling.lua:1602
 msgid ""
@@ -4397,9 +4397,9 @@ msgid ""
 "synchronizing your reading between multiple devices, you'll need to update "
 "KOReader on all of them)."
 msgstr ""
-"此文档的书签和标注中有 %1 个（全书共 %2 个）xpath 被标准化了，可能无法在先前"
-"版本的 KOReader 中打开（如果你正在多个设备间同步阅读，你可能需要将这些设备上"
-"的 KOReader 全部都升级到新版本）。"
+"此文档的 %2 个书签和标注中，有 %1 个 xpath 被标准化了，可能无法在老版本的 "
+"KOReader 中打开（如果你正在多个设备间同步阅读，你可能需要将这些设备上的 "
+"KOReader 全部都升级到新版本）。"
 
 #: frontend/apps/reader/modules/readerrolling.lua:1617
 msgid "Not now"
@@ -9425,12 +9425,12 @@ msgid ""
 "interval is, and may slowly wear out your storage media in the long run."
 msgstr ""
 "这个设定会影响全局设置和书籍元数据写入磁盘的频率，包括但不限于你在阅读时候的"
-"阅读位置、标记高亮和书签。\n"
+"阅读位置、标注和书签。\n"
 "\n"
 "默认的行为是仅在文档被关闭、设备休眠或退出KOReader时写入。\n"
 "\n"
-"设置为定期写入可以有效地防止因软件崩溃带来的数据丢失问题， 但过短的写入间隔可"
-"能会引起写入IO增加，导致磁盘损耗增加。"
+"设置为定期写入可以有效地防止因软件崩溃带来的数据丢失问题， "
+"但过短的写入间隔可能会引起写入IO增加并增加磁盘损耗。"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:500
 msgid ""
@@ -9480,6 +9480,16 @@ msgid ""
 "These settings won't be part of any synchronization or backups of your "
 "library."
 msgstr ""
+"各书籍的元数据（包括阅读设置、进度、高亮和笔记等）都存储在对应书籍的 "
+"<书籍文件名>.sdr 的文件夹中。\n"
+"\n"
+"你可以选择这个文件夹的保存位置：\n"
+"- 与对应书籍保存在同一个文件夹中（默认值）：启用此选项后，元数据文件夹会保存"
+"在你的书籍目录中。在使用其他文件管理器（如电脑）时可能影响观感。这么做的好处"
+"是，在整理文件夹时你可以将元数据与对应书籍一起移动。\n"
+"- 保存到 “koreader/docsettings/” 文件夹：启用此选项后，元数据文件夹不会保存在"
+"书籍目录中，因此不会影响观感。但如果移动或重命名了书籍，其对应元数据的关联可"
+"能会丢失。"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:556
 msgid "Book metadata location: %1"
@@ -14053,7 +14063,7 @@ msgstr "分享为%1。"
 
 #: plugins/exporter.koplugin/main.lua:240 plugins/exporter.koplugin/_meta.lua:4
 msgid "Export highlights"
-msgstr "导出高亮"
+msgstr "导出标注"
 
 #: plugins/exporter.koplugin/main.lua:243
 msgid "Export all notes in this book"
@@ -14073,7 +14083,7 @@ msgstr "分享此书籍中的所有笔记"
 
 #: plugins/exporter.koplugin/_meta.lua:5
 msgid "Exports highlights and notes."
-msgstr "导出高亮和笔记。"
+msgstr "导出标注和笔记。"
 
 #: plugins/exporter.koplugin/target/joplin.lua:17
 msgid "KOReader Notes"
@@ -14119,7 +14129,7 @@ msgstr ""
 "有关 Joplin 的设置说明，请参阅 %1\n"
 "\n"
 "可以在以下位置配置 Markdown 格式：\n"
-"导出高亮 > 选择格式和服务 > Markdown 。"
+"导出标注 > 选择格式和服务 > Markdown 。"
 
 #: plugins/exporter.koplugin/target/json.lua:17
 msgid "Json"
@@ -14173,7 +14183,7 @@ msgstr "导出至 Markdown"
 
 #: plugins/exporter.koplugin/target/markdown.lua:99
 msgid "Format highlights based on style"
-msgstr "基于样式的格式高亮"
+msgstr "根据设定的样式显示高亮文本"
 
 #: plugins/exporter.koplugin/target/readwise.lua:53
 msgid "Readwise"
