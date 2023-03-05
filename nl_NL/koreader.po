@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-05 20:43+0000\n"
+"POT-Creation-Date: 2023-03-05 23:17+0000\n"
 "PO-Revision-Date: 2023-03-02 16:00+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -191,7 +191,7 @@ msgstr "Voer bestandsnaam in"
 #: frontend/ui/widget/networksetting.lua:294
 #: frontend/ui/widget/networksetting.lua:337
 #: frontend/ui/widget/numberpickerwidget.lua:139
-#: frontend/ui/widget/pathchooser.lua:135 frontend/ui/widget/textviewer.lua:349
+#: frontend/ui/widget/pathchooser.lua:135 frontend/ui/widget/textviewer.lua:431
 #: frontend/ui/widget/touchmenu.lua:1325
 #: plugins/autowarmth.koplugin/main.lua:752
 #: plugins/autowarmth.koplugin/main.lua:1029
@@ -376,7 +376,7 @@ msgstr "Lokale map kiezen"
 #: frontend/ui/widget/inputdialog.lua:698
 #: frontend/ui/widget/radiobuttonwidget.lua:58
 #: frontend/ui/widget/screenshoter.lua:46 frontend/ui/widget/spinwidget.lua:36
-#: frontend/ui/widget/textviewer.lua:208 plugins/keepalive.koplugin/main.lua:19
+#: frontend/ui/widget/textviewer.lua:228 plugins/keepalive.koplugin/main.lua:19
 #: plugins/newsdownloader.koplugin/main.lua:224
 #: plugins/newsdownloader.koplugin/main.lua:315
 #: plugins/newsdownloader.koplugin/main.lua:627
@@ -896,7 +896,7 @@ msgstr "Huidige map"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:182
 #: frontend/apps/reader/modules/readerbookmark.lua:1134
 #: frontend/apps/reader/modules/readersearch.lua:142
-#: frontend/ui/widget/inputdialog.lua:810 frontend/ui/widget/textviewer.lua:373
+#: frontend/ui/widget/inputdialog.lua:810 frontend/ui/widget/textviewer.lua:455
 msgid "Case sensitive"
 msgstr "Hoofdlettergevoelig"
 
@@ -3583,7 +3583,8 @@ msgid "Copy"
 msgstr "Kopieer"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:89
-#: frontend/ui/widget/inputtext.lua:168
+#: frontend/ui/viewhtml.lua:167 frontend/ui/widget/inputtext.lua:168
+#: frontend/ui/widget/textviewer.lua:516
 msgid "Selection copied to clipboard."
 msgstr "Selectie naar klembord gekopieerd."
 
@@ -3681,7 +3682,7 @@ msgid "Start content selection"
 msgstr "Inhoudsselectie starten"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:365
-#: frontend/apps/reader/modules/readerhighlight.lua:1897
+#: frontend/apps/reader/modules/readerhighlight.lua:1777
 msgid "Highlight style"
 msgstr "Markeringsstijl"
 
@@ -3821,52 +3822,15 @@ msgstr ""
 "het Nederlands en eng.traineddata voor het Engels) naar koreader/data/"
 "tessdata"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1387
-msgid "View %1"
-msgstr "Weergeven %1"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1393
-msgid "Failed getting CSS content"
-msgstr "CSS-inhoud achterhalen mislukt"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1401
-#: frontend/apps/reader/modules/readerstyletweak.lua:780
-msgid "Prettify"
-msgstr "Mooier maken"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1428
-msgid "Switch to debug view"
-msgstr "Naar debug-weergave schakelen"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1430
-msgid "Switch to rendering debug view"
-msgstr "Debug-weergave inschakelen"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1432
-msgid "Switch to unicode debug view"
-msgstr "Unicode debug-weergave inschakelen"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1435
-msgid "Switch to standard view"
-msgstr "Naar standaard-weergave schakelen"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1446
-msgid "Selection HTML"
-msgstr "Selectie-html"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1459
-msgid "Failed getting HTML for selection"
-msgstr "HTML voor selectie achterhalen mislukt"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1589
+#: frontend/apps/reader/modules/readerhighlight.lua:1469
 msgid "Default highlight action changed to '%1'."
 msgstr "Standaard markeeractie gewijzigd naar '%1'."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1626
+#: frontend/apps/reader/modules/readerhighlight.lua:1506
 msgid "Default highlight style changed to '%1'."
 msgstr "Standaard markeerstijl gewijzigd naar '%1'."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1811
+#: frontend/apps/reader/modules/readerhighlight.lua:1691
 msgid ""
 "Highlights in this document will be saved in the settings file, but they "
 "won't be written in the document itself because the file is in a read-only "
@@ -4715,7 +4679,7 @@ msgid "Invalid regular expression."
 msgstr "Ongeldige reguliere expressie."
 
 #: frontend/apps/reader/modules/readersearch.lua:112
-#: frontend/ui/widget/inputdialog.lua:778 frontend/ui/widget/textviewer.lua:344
+#: frontend/ui/widget/inputdialog.lua:778 frontend/ui/widget/textviewer.lua:426
 msgid "Enter text to search for"
 msgstr "Voer zoektekst in"
 
@@ -4909,6 +4873,11 @@ msgstr ""
 #: frontend/apps/reader/modules/readerstyletweak.lua:779
 msgid "Use sample"
 msgstr "Voorbeeld gebruiken"
+
+#: frontend/apps/reader/modules/readerstyletweak.lua:780
+#: frontend/ui/viewhtml.lua:128 frontend/ui/viewhtml.lua:413
+msgid "Prettify"
+msgstr "Mooier maken"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:781
 msgid "Condense"
@@ -11806,6 +11775,75 @@ msgstr "Uitgeschakeld"
 msgid "Rebooting…"
 msgstr "Herstarten…"
 
+#: frontend/ui/viewhtml.lua:22
+msgid "Switch to standard view"
+msgstr "Naar standaard-weergave schakelen"
+
+#: frontend/ui/viewhtml.lua:26
+msgid "Switch to debug view"
+msgstr "Naar debug-weergave schakelen"
+
+#: frontend/ui/viewhtml.lua:29
+msgid "Switch to rendering debug view"
+msgstr "Debug-weergave inschakelen"
+
+#: frontend/ui/viewhtml.lua:32
+msgid "Switch to unicode debug view"
+msgstr "Unicode debug-weergave inschakelen"
+
+#: frontend/ui/viewhtml.lua:55
+msgid "Failed getting HTML for selection"
+msgstr "HTML voor selectie achterhalen mislukt"
+
+#: frontend/ui/viewhtml.lua:114
+msgid "View %1"
+msgstr "Weergeven %1"
+
+#: frontend/ui/viewhtml.lua:120
+msgid "Failed getting CSS content"
+msgstr "CSS-inhoud achterhalen mislukt"
+
+#: frontend/ui/viewhtml.lua:180
+msgid "Selection HTML"
+msgstr "Selectie-html"
+
+#: frontend/ui/viewhtml.lua:328
+#, fuzzy
+msgid "Selector copied to clipboard."
+msgstr "Selectie naar klembord gekopieerd."
+
+#: frontend/ui/viewhtml.lua:336
+#, fuzzy
+msgid "Selector appended to clipboard."
+msgstr "Selectie naar klembord gekopieerd."
+
+#: frontend/ui/viewhtml.lua:352
+msgid "Show matched stylesheets rules (element only)"
+msgstr ""
+
+#: frontend/ui/viewhtml.lua:358
+msgid "Show matched stylesheets rules (all ancestors)"
+msgstr ""
+
+#: frontend/ui/viewhtml.lua:366
+#, fuzzy
+msgid "Copy to clipboard:"
+msgstr ""
+"Naar het klembord gekopieerd:\n"
+"%1"
+
+#: frontend/ui/viewhtml.lua:399
+msgid "Matching rulesets (all ancestors)"
+msgstr ""
+
+#: frontend/ui/viewhtml.lua:400
+msgid "Matching rulesets (element only)"
+msgstr ""
+
+#: frontend/ui/viewhtml.lua:405
+msgid "No matching rulesets"
+msgstr ""
+
 #: frontend/ui/widget/bookmapwidget.lua:1023
 msgid ""
 "Book map displays an overview of the book content.\n"
@@ -12109,17 +12147,17 @@ msgstr "Negeren"
 msgid "Changes discarded"
 msgstr "Veranderingen genegeerd"
 
-#: frontend/ui/widget/inputdialog.lua:772 frontend/ui/widget/textviewer.lua:170
-#: frontend/ui/widget/textviewer.lua:418
+#: frontend/ui/widget/inputdialog.lua:772 frontend/ui/widget/textviewer.lua:190
+#: frontend/ui/widget/textviewer.lua:500
 msgid "Find"
 msgstr "Zoeken"
 
-#: frontend/ui/widget/inputdialog.lua:793 frontend/ui/widget/textviewer.lua:355
+#: frontend/ui/widget/inputdialog.lua:793 frontend/ui/widget/textviewer.lua:437
 msgid "Find first"
 msgstr "Vind de eerste"
 
-#: frontend/ui/widget/inputdialog.lua:799 frontend/ui/widget/textviewer.lua:362
-#: frontend/ui/widget/textviewer.lua:418
+#: frontend/ui/widget/inputdialog.lua:799 frontend/ui/widget/textviewer.lua:444
+#: frontend/ui/widget/textviewer.lua:500
 msgid "Find next"
 msgstr "Volgende vinden"
 
@@ -12144,7 +12182,7 @@ msgstr "Ga naar lijn"
 msgid "Found in line %1."
 msgstr "Gevonden in lijn %1."
 
-#: frontend/ui/widget/inputdialog.lua:950 frontend/ui/widget/textviewer.lua:409
+#: frontend/ui/widget/inputdialog.lua:950 frontend/ui/widget/textviewer.lua:491
 msgid "Not found."
 msgstr "Niet gevonden."
 
@@ -12176,7 +12214,7 @@ msgstr "Regel gekopieerd naar klembord."
 msgid "Copy word"
 msgstr "Kopieer woord"
 
-#: frontend/ui/widget/inputtext.lua:223
+#: frontend/ui/widget/inputtext.lua:223 frontend/ui/widget/textviewer.lua:515
 #: plugins/vocabbuilder.koplugin/main.lua:527
 msgid "Word copied to clipboard."
 msgstr "Word gekopieerd naar klembord."
@@ -12478,7 +12516,7 @@ msgstr "Standaard gebruiken"
 msgid "Default value: %1%2"
 msgstr "Standaardwaarde: %1%2"
 
-#: frontend/ui/widget/textviewer.lua:405
+#: frontend/ui/widget/textviewer.lua:487
 msgid "Found, screen line %1."
 msgstr "Gevonden, schermregel %1."
 
@@ -18841,13 +18879,6 @@ msgstr ""
 
 #~ msgid "Are you sure that you want to delete this file?\n"
 #~ msgstr "Weet je zeker dat je dit bestand wilt verwijderen?\n"
-
-#~ msgid ""
-#~ "Copied to clipboard:\n"
-#~ "%1"
-#~ msgstr ""
-#~ "Naar het klembord gekopieerd:\n"
-#~ "%1"
 
 #~ msgid ""
 #~ "Cut to clipboard:\n"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-05 20:43+0000\n"
+"POT-Creation-Date: 2023-03-05 23:17+0000\n"
 "PO-Revision-Date: 2023-03-02 16:00+0000\n"
 "Last-Translator: Sari Gabor <sari.gabor@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
@@ -192,7 +192,7 @@ msgstr "Fájlnév"
 #: frontend/ui/widget/networksetting.lua:294
 #: frontend/ui/widget/networksetting.lua:337
 #: frontend/ui/widget/numberpickerwidget.lua:139
-#: frontend/ui/widget/pathchooser.lua:135 frontend/ui/widget/textviewer.lua:349
+#: frontend/ui/widget/pathchooser.lua:135 frontend/ui/widget/textviewer.lua:431
 #: frontend/ui/widget/touchmenu.lua:1325
 #: plugins/autowarmth.koplugin/main.lua:752
 #: plugins/autowarmth.koplugin/main.lua:1029
@@ -377,7 +377,7 @@ msgstr "Válasszon helyi mappát"
 #: frontend/ui/widget/inputdialog.lua:698
 #: frontend/ui/widget/radiobuttonwidget.lua:58
 #: frontend/ui/widget/screenshoter.lua:46 frontend/ui/widget/spinwidget.lua:36
-#: frontend/ui/widget/textviewer.lua:208 plugins/keepalive.koplugin/main.lua:19
+#: frontend/ui/widget/textviewer.lua:228 plugins/keepalive.koplugin/main.lua:19
 #: plugins/newsdownloader.koplugin/main.lua:224
 #: plugins/newsdownloader.koplugin/main.lua:315
 #: plugins/newsdownloader.koplugin/main.lua:627
@@ -898,7 +898,7 @@ msgstr "Ebben a mappában"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:182
 #: frontend/apps/reader/modules/readerbookmark.lua:1134
 #: frontend/apps/reader/modules/readersearch.lua:142
-#: frontend/ui/widget/inputdialog.lua:810 frontend/ui/widget/textviewer.lua:373
+#: frontend/ui/widget/inputdialog.lua:810 frontend/ui/widget/textviewer.lua:455
 msgid "Case sensitive"
 msgstr "Kis-nagybetű érzékeny"
 
@@ -3584,7 +3584,8 @@ msgid "Copy"
 msgstr "Másolás"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:89
-#: frontend/ui/widget/inputtext.lua:168
+#: frontend/ui/viewhtml.lua:167 frontend/ui/widget/inputtext.lua:168
+#: frontend/ui/widget/textviewer.lua:516
 msgid "Selection copied to clipboard."
 msgstr "Kijelölés a vágólapra másolva."
 
@@ -3682,7 +3683,7 @@ msgid "Start content selection"
 msgstr "Tartalom kijelölés"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:365
-#: frontend/apps/reader/modules/readerhighlight.lua:1897
+#: frontend/apps/reader/modules/readerhighlight.lua:1777
 msgid "Highlight style"
 msgstr "Kiemelési stílus"
 
@@ -3821,52 +3822,15 @@ msgstr ""
 "eng.traineddata fájlt az angol nyelvhez, az spa.traineddata fájlt a spanyol "
 "nyelvhez) a koreader/data/tessdata könyvtárba"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1387
-msgid "View %1"
-msgstr "Nézet %1"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1393
-msgid "Failed getting CSS content"
-msgstr "Nem sikerült a CSS tartalom beolvasása"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1401
-#: frontend/apps/reader/modules/readerstyletweak.lua:780
-msgid "Prettify"
-msgstr "Szépítés"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1428
-msgid "Switch to debug view"
-msgstr "Átkapcsolás hibakareső nézetre"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1430
-msgid "Switch to rendering debug view"
-msgstr "Átkapcsolás bővített hibakereső nézetre"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1432
-msgid "Switch to unicode debug view"
-msgstr "Átkapcsolás bővített unicode hibakereső nézetre"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1435
-msgid "Switch to standard view"
-msgstr "Átkapcsolás normál nézetre"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1446
-msgid "Selection HTML"
-msgstr "A kijelölés HTML nézetben"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1459
-msgid "Failed getting HTML for selection"
-msgstr "Sikertelen HTML blokk kijelölés"
-
-#: frontend/apps/reader/modules/readerhighlight.lua:1589
+#: frontend/apps/reader/modules/readerhighlight.lua:1469
 msgid "Default highlight action changed to '%1'."
 msgstr "Alapértelmezett kiemelési művelet módosítva erre: %1."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1626
+#: frontend/apps/reader/modules/readerhighlight.lua:1506
 msgid "Default highlight style changed to '%1'."
 msgstr "Alapértelmezett kiemelési stílus módosítva erre: %1."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1811
+#: frontend/apps/reader/modules/readerhighlight.lua:1691
 msgid ""
 "Highlights in this document will be saved in the settings file, but they "
 "won't be written in the document itself because the file is in a read-only "
@@ -4714,7 +4678,7 @@ msgid "Invalid regular expression."
 msgstr "Érvénytelen reguláris kifejezés."
 
 #: frontend/apps/reader/modules/readersearch.lua:112
-#: frontend/ui/widget/inputdialog.lua:778 frontend/ui/widget/textviewer.lua:344
+#: frontend/ui/widget/inputdialog.lua:778 frontend/ui/widget/textviewer.lua:426
 msgid "Enter text to search for"
 msgstr "Keresett szöveg"
 
@@ -4905,6 +4869,11 @@ msgstr "Megadhat CSS bejegyzést, amely csak erre a könyvre lesz alkalmazva."
 #: frontend/apps/reader/modules/readerstyletweak.lua:779
 msgid "Use sample"
 msgstr "Minta használata"
+
+#: frontend/apps/reader/modules/readerstyletweak.lua:780
+#: frontend/ui/viewhtml.lua:128 frontend/ui/viewhtml.lua:413
+msgid "Prettify"
+msgstr "Szépítés"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:781
 msgid "Condense"
@@ -11802,6 +11771,75 @@ msgstr "Kikapcsolva"
 msgid "Rebooting…"
 msgstr "Újraindítás…"
 
+#: frontend/ui/viewhtml.lua:22
+msgid "Switch to standard view"
+msgstr "Átkapcsolás normál nézetre"
+
+#: frontend/ui/viewhtml.lua:26
+msgid "Switch to debug view"
+msgstr "Átkapcsolás hibakareső nézetre"
+
+#: frontend/ui/viewhtml.lua:29
+msgid "Switch to rendering debug view"
+msgstr "Átkapcsolás bővített hibakereső nézetre"
+
+#: frontend/ui/viewhtml.lua:32
+msgid "Switch to unicode debug view"
+msgstr "Átkapcsolás bővített unicode hibakereső nézetre"
+
+#: frontend/ui/viewhtml.lua:55
+msgid "Failed getting HTML for selection"
+msgstr "Sikertelen HTML blokk kijelölés"
+
+#: frontend/ui/viewhtml.lua:114
+msgid "View %1"
+msgstr "Nézet %1"
+
+#: frontend/ui/viewhtml.lua:120
+msgid "Failed getting CSS content"
+msgstr "Nem sikerült a CSS tartalom beolvasása"
+
+#: frontend/ui/viewhtml.lua:180
+msgid "Selection HTML"
+msgstr "A kijelölés HTML nézetben"
+
+#: frontend/ui/viewhtml.lua:328
+#, fuzzy
+msgid "Selector copied to clipboard."
+msgstr "Kijelölés a vágólapra másolva."
+
+#: frontend/ui/viewhtml.lua:336
+#, fuzzy
+msgid "Selector appended to clipboard."
+msgstr "Kijelölés a vágólapra másolva."
+
+#: frontend/ui/viewhtml.lua:352
+msgid "Show matched stylesheets rules (element only)"
+msgstr ""
+
+#: frontend/ui/viewhtml.lua:358
+msgid "Show matched stylesheets rules (all ancestors)"
+msgstr ""
+
+#: frontend/ui/viewhtml.lua:366
+#, fuzzy
+msgid "Copy to clipboard:"
+msgstr ""
+"Vágólapra másolva:\n"
+"%1"
+
+#: frontend/ui/viewhtml.lua:399
+msgid "Matching rulesets (all ancestors)"
+msgstr ""
+
+#: frontend/ui/viewhtml.lua:400
+msgid "Matching rulesets (element only)"
+msgstr ""
+
+#: frontend/ui/viewhtml.lua:405
+msgid "No matching rulesets"
+msgstr ""
+
 #: frontend/ui/widget/bookmapwidget.lua:1023
 msgid ""
 "Book map displays an overview of the book content.\n"
@@ -12103,17 +12141,17 @@ msgstr "Elvetés"
 msgid "Changes discarded"
 msgstr "Módosítások elvetve"
 
-#: frontend/ui/widget/inputdialog.lua:772 frontend/ui/widget/textviewer.lua:170
-#: frontend/ui/widget/textviewer.lua:418
+#: frontend/ui/widget/inputdialog.lua:772 frontend/ui/widget/textviewer.lua:190
+#: frontend/ui/widget/textviewer.lua:500
 msgid "Find"
 msgstr "Keresés"
 
-#: frontend/ui/widget/inputdialog.lua:793 frontend/ui/widget/textviewer.lua:355
+#: frontend/ui/widget/inputdialog.lua:793 frontend/ui/widget/textviewer.lua:437
 msgid "Find first"
 msgstr "Keresés először"
 
-#: frontend/ui/widget/inputdialog.lua:799 frontend/ui/widget/textviewer.lua:362
-#: frontend/ui/widget/textviewer.lua:418
+#: frontend/ui/widget/inputdialog.lua:799 frontend/ui/widget/textviewer.lua:444
+#: frontend/ui/widget/textviewer.lua:500
 msgid "Find next"
 msgstr "Következő keresése"
 
@@ -12138,7 +12176,7 @@ msgstr "Ugrás megadott sorra"
 msgid "Found in line %1."
 msgstr "Találat itt: '%1.' sor."
 
-#: frontend/ui/widget/inputdialog.lua:950 frontend/ui/widget/textviewer.lua:409
+#: frontend/ui/widget/inputdialog.lua:950 frontend/ui/widget/textviewer.lua:491
 msgid "Not found."
 msgstr "Nem található."
 
@@ -12170,7 +12208,7 @@ msgstr "A sor a vágólapra másolva."
 msgid "Copy word"
 msgstr "Szó másolása"
 
-#: frontend/ui/widget/inputtext.lua:223
+#: frontend/ui/widget/inputtext.lua:223 frontend/ui/widget/textviewer.lua:515
 #: plugins/vocabbuilder.koplugin/main.lua:527
 msgid "Word copied to clipboard."
 msgstr "Szó a vágólapra másolva."
@@ -12470,7 +12508,7 @@ msgstr "Alapértelmezés"
 msgid "Default value: %1%2"
 msgstr "Alapértelmezés: %1%2"
 
-#: frontend/ui/widget/textviewer.lua:405
+#: frontend/ui/widget/textviewer.lua:487
 msgid "Found, screen line %1."
 msgstr "Találat itt: %1 sor."
 
@@ -18867,13 +18905,6 @@ msgstr ""
 
 #~ msgid "Are you sure that you want to delete this file?\n"
 #~ msgstr "Biztosan törli ezt a fájlt?\n"
-
-#~ msgid ""
-#~ "Copied to clipboard:\n"
-#~ "%1"
-#~ msgstr ""
-#~ "Vágólapra másolva:\n"
-#~ "%1"
 
 #~ msgid ""
 #~ "Cut to clipboard:\n"
