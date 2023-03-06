@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-05 23:17+0000\n"
-"PO-Revision-Date: 2023-03-02 16:00+0000\n"
+"PO-Revision-Date: 2023-03-07 20:39+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/koreader/koreader/"
 "nl/>\n"
@@ -1796,11 +1796,8 @@ msgstr[1] ""
 "%1 boeken gevonden met metadata die niet op de voorkeurslocatie staat."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:856
-#, fuzzy
 msgid "Move book metadata to your preferred location?"
-msgstr ""
-"\n"
-"Boekmetadata verplaatsen naar de voorkeurslocatie?"
+msgstr "Boekmetadata verplaatsen naar de voorkeurslocatie?"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:877
 #: frontend/apps/reader/modules/readermenu.lua:366
@@ -9763,16 +9760,33 @@ msgid ""
 "These settings won't be part of any synchronization or backups of your "
 "library."
 msgstr ""
+"Boekweergave-instellingen, leesvoortgang, markering, bladwijzers en notities "
+"(gezamenlijk bekend als metadata) worden opgeslagen in een aparte map "
+"genaamd <boek-bestandsnaam>.sdr (\".sdr\" betekent \"sidecar\").\n"
+"\n"
+"Er kan worden gekozen tussen twee locaties waar deze worden opgeslagen:\n"
+"- naast het boekbestand zelf (lange tijd standaard): deze sdr-mappen zullen "
+"zichtbaar zijn wanneer u met een andere bestandsbrowser of vanaf uw computer "
+"door uw bibliotheekmappen bladert, wat de blik enigszins zou kunnen "
+"vertroebelen. Maar hierdoor kunt u ze verplaatsen wanneer u uw bibliotheek "
+"reorganiseert, en het hernoemen van bovenliggende mappen vormt geen "
+"probleem. Ook als u directory-synchronisatie of back-ups uitvoert, zullen uw "
+"instellingen daar deel van uitmaken.\n"
+"- alles binnen koreader/docsettings/: deze sdr-mappen zullen alleen "
+"zichtbaar zijn en gebruikt worden door KOReader, en zullen het zicht op "
+"bibliotheekmappen niet belemmeren via een andere bestandsbrowser of van uw "
+"computer. Maar elke reorganisatie van uw bibliotheek (mappen of verplaatsen "
+"en hernoemen van bestandsnamen) kan tot gevolg hebben dat KOReader uw vorige "
+"instellingen voor deze boeken niet meer terugvindt. Deze instellingen maken "
+"geen deel uit van synchronisaties of back-ups van uw bibliotheek."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:556
-#, fuzzy
 msgid "Book metadata location: %1"
-msgstr "Boekmetadata-map: %1"
+msgstr "Boekmetadata-locatie: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:561
-#, fuzzy
 msgid "About book metadata location"
-msgstr "Boekmetadata opslaan: %1"
+msgstr "Over boekmetadata-locatie"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:578
 msgid "only on close and suspend"
@@ -9809,7 +9823,6 @@ msgid "Return to file browser"
 msgstr "Terug naar bestandsverkenner"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:643
-#, fuzzy
 msgid "Mark book as finished"
 msgstr "Markeren als gelezen"
 
@@ -10327,19 +10340,16 @@ msgstr ""
 "Toon meldingspopups voor wijzigingen vanuit gebaren en de profielenplugin."
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:82
-#, fuzzy
 msgid "Show past notifications"
-msgstr "Niet gedraaid"
+msgstr "Eerdere meldingen weergeven"
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:87
-#, fuzzy
 msgid "No notifications available."
-msgstr "Geen informatie beschikbaar"
+msgstr "Geen meldingen beschikbaar."
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:94
-#, fuzzy
 msgid "Past notifications"
-msgstr "Niet gedraaid"
+msgstr "Eerdere meldingen"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:16
 msgid "Ignore accelerometer rotation events"
@@ -11808,41 +11818,38 @@ msgid "Selection HTML"
 msgstr "Selectie-html"
 
 #: frontend/ui/viewhtml.lua:328
-#, fuzzy
 msgid "Selector copied to clipboard."
-msgstr "Selectie naar klembord gekopieerd."
+msgstr "Selector naar klembord gekopieerd."
 
 #: frontend/ui/viewhtml.lua:336
-#, fuzzy
 msgid "Selector appended to clipboard."
-msgstr "Selectie naar klembord gekopieerd."
+msgstr "Selector toegevoegd aan klembord."
 
 #: frontend/ui/viewhtml.lua:352
 msgid "Show matched stylesheets rules (element only)"
-msgstr ""
+msgstr "Regels voor overeenkomende stylesheets weergeven (alleen element)"
 
 #: frontend/ui/viewhtml.lua:358
 msgid "Show matched stylesheets rules (all ancestors)"
 msgstr ""
+"Regels voor overeenkomende stylesheets weergeven (alle bovenliggende "
+"elementen)"
 
 #: frontend/ui/viewhtml.lua:366
-#, fuzzy
 msgid "Copy to clipboard:"
-msgstr ""
-"Naar het klembord gekopieerd:\n"
-"%1"
+msgstr "Naar klembord kopiëren:"
 
 #: frontend/ui/viewhtml.lua:399
 msgid "Matching rulesets (all ancestors)"
-msgstr ""
+msgstr "Overeenkomende regelsets (alle bovenliggende elementen)"
 
 #: frontend/ui/viewhtml.lua:400
 msgid "Matching rulesets (element only)"
-msgstr ""
+msgstr "Overeenkomende regelsets (alleen element)"
 
 #: frontend/ui/viewhtml.lua:405
 msgid "No matching rulesets"
-msgstr ""
+msgstr "Geen overeenkomende regelsets"
 
 #: frontend/ui/widget/bookmapwidget.lua:1023
 msgid ""
@@ -13744,11 +13751,12 @@ msgid "No calibre libraries were found"
 msgstr "Er zijn geen calibrebibliotheken gevonden"
 
 #: plugins/calibre.koplugin/search.lua:556
-#, fuzzy
 msgid ""
 "Found %1 calibre libraries with %2 books:\n"
 "%3"
-msgstr "%1 calibrebibliotheken met %2 boeken gevonden: %3"
+msgstr ""
+"%1 calibrebibliotheken met %2 boeken gevonden:\n"
+"%3"
 
 #: plugins/calibre.koplugin/wireless.lua:146
 msgid "Invalid password"
@@ -17739,18 +17747,16 @@ msgid "Not set"
 msgstr "Niet ingesteld"
 
 #: plugins/wallabag.koplugin/main.lua:198
-#, fuzzy
 msgid "Set download folder: %1"
-msgstr "Downloadmap instellen"
+msgstr "Downloadmap instellen: %1"
 
 #: plugins/wallabag.koplugin/main.lua:210
 msgid "All articles"
 msgstr "Alle artikels"
 
 #: plugins/wallabag.koplugin/main.lua:214
-#, fuzzy
 msgid "Filter articles by tag: %1"
-msgstr "Filter artikels bij tag (%1)"
+msgstr "Filter artikels bij tag: %1"
 
 #: plugins/wallabag.koplugin/main.lua:224
 msgid "Ignore tags"
@@ -17855,7 +17861,6 @@ msgstr ""
 "bestanden die niet meer bestaan op de server verwijderen."
 
 #: plugins/wallabag.koplugin/main.lua:363
-#, fuzzy
 msgid ""
 "Wallabag is an open source read-it-later service. This plugin synchronizes "
 "with a Wallabag server.\n"
