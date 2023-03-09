@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-07 20:39+0000\n"
-"PO-Revision-Date: 2023-03-07 20:39+0000\n"
+"PO-Revision-Date: 2023-03-12 07:51+0000\n"
 "Last-Translator: うにみそ <unimiso@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
 "koreader/ja/>\n"
@@ -4277,9 +4277,8 @@ msgid "Show"
 msgstr "表示"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:411
-#, fuzzy
 msgid "Page labels font size: %1"
-msgstr "ページラベルのフォントサイズ (%1)"
+msgstr "ページラベルのフォントサイズ: %1"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:421
 msgid "Page labels font size"
@@ -4412,6 +4411,9 @@ msgid ""
 "synchronizing your reading between multiple devices, you'll need to update "
 "KOReader on all of them)."
 msgstr ""
+"ブックマークとハイライトのxpath %1（%2中）は既に正規化されており、以前のKORea"
+"derのバージョンでは動作しない可能性があります（複数のデバイス間で読書を同期し"
+"ている場合、すべてのデバイスでKOReaderを更新する必要があります）。"
 
 #: frontend/apps/reader/modules/readerrolling.lua:1617
 msgid "Not now"
@@ -4471,11 +4473,11 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerscrolling.lua:147
 msgid "Activation delay: %1 ms"
-msgstr ""
+msgstr "動作遅延時間: %1 ミリ秒"
 
 #: frontend/apps/reader/modules/readerscrolling.lua:154
 msgid "Scroll activation delay"
-msgstr ""
+msgstr "スクロール時の動作遅延時間"
 
 #: frontend/apps/reader/modules/readerscrolling.lua:155
 msgid ""
@@ -4486,6 +4488,11 @@ msgid ""
 "seconds).\n"
 "Default value: %1 ms"
 msgstr ""
+"スワイプやマルチスワイプを行う際に、スクロールを回避するために遅延させること"
+"ができます。\n"
+"\n"
+"遅延時間の値はミリ秒単位で、0から2000（2秒）の範囲で指定できます。\n"
+"既定値: %1 ミリ秒"
 
 #: frontend/apps/reader/modules/readerscrolling.lua:166
 #: plugins/gestures.koplugin/main.lua:502
@@ -4533,6 +4540,30 @@ msgid ""
 "Complex expressions may lead to an extremely long search time, in which case "
 "not all matches will be shown."
 msgstr ""
+"正規表現によりテキスト中の一致するパターンを検索することができます。最も単純"
+"なパターンは、`James Bond`のような単純な文字の並びです。正規表現にはさまざま"
+"な種類がありますが、私たちはECMAScriptの構文をサポートしています。その基本を"
+"以下に説明します。\n"
+"\n"
+"'Mister Moore'、'Sir Moore'、'Alfons Moore'の出現をすべて検索したいが、'Lady "
+"Moore'の出現は検索したくない場合。\n"
+"'Mister Moore|Sir Moore|Alfons Moore'と入力してください。\n"
+"\n"
+"検索文字に^$.*+?()[]{}|\\/のような特殊文字が含まれている場合は、"
+"その文字の前に\\を付けなければなりません。\n"
+"\n"
+"例\n"
+"osを含む単語 → '[^ ]+os[^ ]+'\n"
+"任意の一文字 '.' → 'r.nge'\n"
+"任意の文字 '.*' → 'J.*s'\n"
+"数字 → '[0-9]+'\n"
+"文字範囲 → '[a-f]'\n"
+"非空白文字 → '[^ ]'\n"
+"単語 → '[^ ]*[^ ]'\n"
+"文章の最後の単語 → '[^ ]*\\.'\n"
+"\n"
+"複雑な表現では検索時間が極端に長くなる場合があり、その場合はすべてのマッチが"
+"表示されません。"
 
 #: frontend/apps/reader/modules/readersearch.lua:62
 msgid "Wrong escape '\\'"
@@ -4652,7 +4683,7 @@ msgid ""
 "What would you like to do?"
 msgstr ""
 "文書の最後に到達しました。\n"
-"どうされますか？"
+"どう致しますか？"
 
 #: frontend/apps/reader/modules/readerstatus.lua:120
 msgid "Searching next file…"
@@ -4662,7 +4693,8 @@ msgstr "次のファイルを検索中…"
 msgid ""
 "Could not open next file. Sort by last read date does not support this "
 "feature."
-msgstr ""
+msgstr "次のファイルを開くことができませんでした。最終読み取り日による並び替えは、こ"
+"の機能をサポートしていません。"
 
 #: frontend/apps/reader/modules/readerstatus.lua:145
 msgid ""
@@ -4903,7 +4935,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readertoc.lua:1062
 msgid "Bind chapter navigation to ticks"
-msgstr ""
+msgstr "章ナビゲーションを目盛りに関連付ける"
 
 #: frontend/apps/reader/modules/readertoc.lua:1063
 msgid ""
@@ -4912,10 +4944,14 @@ msgid ""
 "footer.\n"
 "Enabling this option will restrict chapter navigation to progress bar ticks."
 msgstr ""
+"進捗バーで無視される目次レベルの項目は、章ナビゲーションとフッターの「次の章"
+"までの残りページ/時間」に使用されます。\n"
+"このオプションを有効にすると、章ナビゲーションが進捗バーの目盛りに制限されま"
+"す。"
 
 #: frontend/apps/reader/modules/readertoc.lua:1078
 msgid "Chapter titles from ticks only"
-msgstr ""
+msgstr "目盛りのみからの章タイトル"
 
 #: frontend/apps/reader/modules/readertoc.lua:1079
 msgid ""
@@ -4925,6 +4961,10 @@ msgid ""
 "Enabling this option will restrict display to the chapter titles of progress "
 "bar ticks."
 msgstr ""
+"進捗バーで無視される目次レベルの項目は、フッターやブックマークで現在の章のタ"
+"イトルを表示するために引き続き使用されます。\n"
+"このオプションを有効にすると、進捗バーの目盛りの章タイトルに表示が制限されま"
+"す。"
 
 #: frontend/apps/reader/modules/readertoc.lua:1096
 #: frontend/apps/reader/modules/readertoc.lua:1106
@@ -5699,11 +5739,11 @@ msgstr "カラー前景 (前景のみ表示)"
 
 #: frontend/apps/reader/modules/readerview.lua:1166
 msgid "RTL page turning."
-msgstr ""
+msgstr "RTL(右から左)ページめくり。"
 
 #: frontend/apps/reader/modules/readerview.lua:1166
 msgid "LTR page turning."
-msgstr ""
+msgstr "LTR(左から右)ページめくり。"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:54
 #: frontend/ui/widget/dictquicklookup.lua:1236
@@ -6184,7 +6224,7 @@ msgstr "日曜日"
 #: frontend/datetime.lua:181
 msgctxt "Time"
 msgid "d"
-msgstr ""
+msgstr "日"
 
 #: frontend/datetime.lua:124
 msgid "%1m"
@@ -6206,7 +6246,7 @@ msgstr "%1分"
 #: frontend/datetime.lua:153
 msgctxt "Time"
 msgid "%1m %2s"
-msgstr ""
+msgstr "%1分 %2秒"
 
 #: frontend/datetime.lua:168 frontend/datetime.lua:170
 #: frontend/datetime.lua:182
@@ -6414,15 +6454,15 @@ msgstr "インターフェース: %1"
 
 #: frontend/device/generic/device.lua:779
 msgid "MAC: %1"
-msgstr ""
+msgstr "MAC: %1"
 
 #: frontend/device/generic/device.lua:800
 msgid "SSID: \"%1\" [%2]"
-msgstr ""
+msgstr "SSID: \"%1\" [%2]"
 
 #: frontend/device/generic/device.lua:802
 msgid "SSID: \"%1\""
-msgstr ""
+msgstr "SSID: \"%1\""
 
 #: frontend/device/generic/device.lua:805
 msgid "SSID: off/any"
@@ -6446,7 +6486,7 @@ msgstr "ゲートウェイのping成功"
 
 #: frontend/device/generic/device.lua:847
 msgid "RTT: %1 ms"
-msgstr ""
+msgstr "RTT: %1 ミリ秒"
 
 #: frontend/device/generic/device.lua:850
 msgid "Gateway ping FAILED"
@@ -7215,14 +7255,12 @@ msgstr ""
 "れだけ減らすことができるかを設定します。"
 
 #: frontend/ui/data/creoptions.lua:471
-#, fuzzy
 msgid "Scaling"
-msgstr "拡張率%"
+msgstr "拡大"
 
 #: frontend/ui/data/creoptions.lua:476
-#, fuzzy
 msgid "Reduction"
-msgstr "縮小率%"
+msgstr "縮小"
 
 #: frontend/ui/data/creoptions.lua:484
 msgctxt "Word spacing"
@@ -7252,15 +7290,15 @@ msgstr ""
 
 #: frontend/ui/data/creoptions.lua:506
 msgid "Word Expansion"
-msgstr ""
+msgstr "単語伸張"
 
 #: frontend/ui/data/creoptions.lua:515
 msgid "Max word expansion"
-msgstr ""
+msgstr "最大単語伸張率"
 
 #: frontend/ui/data/creoptions.lua:516
 msgid "Set max word expansion as a percentage of the font size."
-msgstr ""
+msgstr "フォントサイズに対する率で最大単語伸張を設定します。"
 
 #: frontend/ui/data/creoptions.lua:519
 msgid "CJK scaling"
@@ -7293,7 +7331,7 @@ msgstr ""
 
 #: frontend/ui/data/creoptions.lua:561
 msgid "CJK width scaling"
-msgstr ""
+msgstr "CJK文字幅伸張"
 
 #: frontend/ui/data/creoptions.lua:562
 msgid ""
@@ -7307,7 +7345,7 @@ msgstr ""
 
 #: frontend/ui/data/creoptions.lua:565
 msgid "Word expansion"
-msgstr ""
+msgstr "単語伸張"
 
 #: frontend/ui/data/creoptions.lua:577 frontend/ui/data/koptoptions.lua:475
 msgid "Contrast"
@@ -7684,6 +7722,10 @@ msgid ""
 "Allowing orphans avoids ambiguous blank space at the bottom of a page, which "
 "could otherwise be confused with real spacing between paragraphs."
 msgstr ""
+"ページ頭孤立行は避けるが、ページ末孤立行は許容し、ページ下部の空白の可能性を"
+"許容します。\n"
+"ページ末孤立行を許容することでページ下部のあいまいな空白を避け、段落間の本当"
+"の空白と混同されることを防ぐことができます。"
 
 #: frontend/ui/data/css_tweaks.lua:230
 msgid "Ignore publisher orphan and widow rules"
@@ -8323,7 +8365,7 @@ msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:783
 msgid "Pure black and white"
-msgstr ""
+msgstr "純粋な白黒"
 
 #: frontend/ui/data/css_tweaks.lua:784
 msgid "Enforce black text and borders, and remove backgrounds."
@@ -10162,6 +10204,13 @@ msgid ""
 "saved reader rotation will not affect each other (i.e., they will be "
 "honored), and may very well be different."
 msgstr ""
+"チェックすると、ファイルブラウザとリーダーを切り替えたときに、両方向で現在の"
+"端末方向が維持され、文書が保持する回転やリーダーやファイルブラウザのデフォル"
+"ト回転がどうであっても、その回転が維持されます。\n"
+"つまり、デバイスの回転を選択すれば、その回転が維持されます。\n"
+"チェックを外すと、ファイルブラウザのデフォルトの回転と、デフォルトまたは保存"
+"されたリーダーの回転は互いに影響せず（つまり、尊重されます）、非常によく異な"
+"る場合があります。"
 
 #: frontend/ui/elements/screensaver_menu.lua:17
 msgid "Use last book's cover as screensaver"
