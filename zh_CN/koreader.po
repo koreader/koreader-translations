@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-23 20:07+0000\n"
-"PO-Revision-Date: 2023-03-20 07:32+0000\n"
+"PO-Revision-Date: 2023-03-25 08:02+0000\n"
 "Last-Translator: Kirisame Jim <jim@lotlab.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "koreader/koreader/zh_Hans/>\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.16.2-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: reader.lua:224
 msgid ""
@@ -3509,7 +3509,7 @@ msgid ""
 "[x]y for a page number in the non-linear fragment y"
 msgstr ""
 "x表示绝对页码\n"
-"[x]表示主(线性)流程中的页码\n"
+"[x]表示主(线性)流中的页码\n"
 "[x]y表示非线性片段y中的页码"
 
 #: frontend/apps/reader/modules/readergoto.lua:58
@@ -4751,37 +4751,38 @@ msgstr "你可以添加只应用于本书的CSS代码片段。"
 msgid ""
 "When set on a block element containing the target id of a href, this block "
 "element will be shown as an in-page footnote."
-msgstr ""
+msgstr "设置后，当某个链接的目标为此块级元素的ID时，此元素将显示为页内脚注。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:776
 msgid ""
 "Can be set on some specific DocFragments (ie. DocFragment[id*=16]) to ignore "
 "them in the linear pages flow."
-msgstr ""
+msgstr "对特定DocFragment元素设置后（如DocFragment[id*=16]），此元素会在线性页面流中"
+"忽略。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:777
 msgid ""
 "When set on an element, its text can be used to build the alternative table "
 "of contents."
-msgstr ""
+msgstr "设置后，此元素的内容将用于生成替代目录。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:778
 msgid ""
 "When set on a block element, this element content will be inlined with the "
 "next block element."
-msgstr ""
+msgstr "设置后，此块级元素的内容将与下一块级元素的内容放置于同一行。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:779
 msgid "1rem will enforce your main font size"
-msgstr ""
+msgstr "设置为1rem意味着与普通文本字号相同"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:780
 msgid "Disables hyphenation inside the targeted elements."
-msgstr ""
+msgstr "在目标元素中禁用文本断字功能。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:781
 msgid "1.2em is our default text indentation."
-msgstr ""
+msgstr "默认文本缩进为 1.2em。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:789
 msgid "Use sample"
@@ -11919,37 +11920,31 @@ msgid "No matching rulesets"
 msgstr "没有匹配的规则"
 
 #: frontend/ui/widget/bookmapwidget.lua:1028
-#, fuzzy
 msgid "About book map"
-msgstr "关于格式"
+msgstr "关于书籍地图"
 
 #: frontend/ui/widget/bookmapwidget.lua:1035
 #: frontend/ui/widget/pagebrowserwidget.lua:630
-#, fuzzy
 msgid "Available gestures"
-msgstr "可用"
+msgstr "可用的手势"
 
 #: frontend/ui/widget/bookmapwidget.lua:1042
 msgid "Switch current/initial views"
-msgstr ""
+msgstr "切换当前/初始视图"
 
 #: frontend/ui/widget/bookmapwidget.lua:1050
-#, fuzzy
 msgid "Switch grid/flat views"
-msgstr "切换至通常视图"
+msgstr "切换网格/平面视图"
 
 #: frontend/ui/widget/bookmapwidget.lua:1061
-#, fuzzy
 msgid "Chapters"
-msgstr "章节标记"
+msgstr "章节"
 
 #: frontend/ui/widget/bookmapwidget.lua:1088
-#, fuzzy
 msgid "Page slot width"
-msgstr "轻按区域宽度"
+msgstr "页面槽宽度"
 
 #: frontend/ui/widget/bookmapwidget.lua:1129
-#, fuzzy
 msgid ""
 "Book map displays an overview of the book content.\n"
 "\n"
@@ -11973,25 +11968,17 @@ msgstr ""
 "\n"
 "如果启用了阅读统计，则用黑条表示已读页（灰条表示本次阅读的书页）。条高度反映"
 "阅读时长。\n"
-"章节名称显示在书页之上。\n"
-"书页下标志含意：\n"
+"章节名称会显示在对应页面之上。\n"
+"页面下的标志的含义：\n"
 "▲ 当前页面\n"
 "❶ ❷ … 之前的位置\n"
-"▒ 高亮文本\n"
-" 有笔记的高亮文本\n"
-" 加书签的页面\n"
+"▒ 标注\n"
+" 带笔记的标注\n"
+" 书签\n"
 "▢ 页面浏览器中的聚焦页面\n"
 "\n"
-"轻按书中位置以浏览对应书页的缩略图。\n"
-"沿屏幕左边缘滑动可以修改书籍地图中包含的章节等级。当等级跨越 0 时，则在平铺和"
-"网格中切换书籍地图的样式。\n"
-"沿屏幕底部边缘滑动可以修改页宽度。\n"
-"在内容上垂直滑动或拖拽可以滚动。\n"
-"任意多重滑动手势则会关闭书籍地图。\n"
-"\n"
 "对于一本新打开的书籍，书籍地图的默认值是：网格图、显示所有章节、缩放至单个屏"
-"幕。此设置便于概览书籍内容。\n"
-"长按 ⓘ 在当前视图和初始视图之间切换。"
+"幕。此设置便于概览书籍内容。"
 
 #: frontend/ui/widget/bookmapwidget.lua:1148
 msgid ""
@@ -12009,6 +11996,18 @@ msgid ""
 "\n"
 "Any multiswipe will close the book map."
 msgstr ""
+"轻按书籍的某个位置，可以显示对应页面的缩略图。\n"
+"\n"
+"在屏幕左边滑动可以修改显示的章节级别。当级别变为0时，书籍地图会在网格模式或平"
+"铺模式下切换。\n"
+"\n"
+"在屏幕底边滑动可以修改页面槽的宽度。\n"
+"\n"
+"在内容处拖拽或滑动可以滚动页面。\n"
+"\n"
+"长按≡按钮可以在当前和初始视图间切换。\n"
+"\n"
+"其他多重滑动手势将关闭书籍地图。"
 
 #: frontend/ui/widget/bookstatuswidget.lua:174
 msgid "Statistics"
@@ -12488,23 +12487,20 @@ msgid "Always use this engine for file type"
 msgstr "始终对此文件类型使用该引擎"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:623
-#, fuzzy
 msgid "About page browser"
-msgstr "页面浏览器"
+msgstr "关于页面浏览器"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:638
-#, fuzzy
 msgid "Thumbnail columns"
-msgstr "文档列数"
+msgstr "缩略图列数"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:665
 msgid "Thumbnail rows"
-msgstr ""
+msgstr "缩略图行数"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:692
-#, fuzzy
 msgid "Chapters in bottom ribbon"
-msgstr "容器底边距"
+msgstr "底部滑尺章节数"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:732
 msgid ""
@@ -12524,9 +12520,21 @@ msgid ""
 " highlighted text with notes\n"
 " bookmarked page"
 msgstr ""
+"页面浏览器用于显示页面的缩略图。\n"
+"\n"
+"底部滑尺用于显示附件页面的书籍地图。\n"
+"\n"
+"如果启用了阅读统计，则用黑条表示已读页（灰条表示本次阅读的书页）。条高度反映"
+"阅读时长。\n"
+"章节名称会显示在对应页面之上。\n"
+"页面下的标志的含义：\n"
+"▲ 当前页面\n"
+"❶ ❷ … 之前的位置\n"
+"▒ 标注\n"
+" 有带笔记的标注\n"
+" 书签"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:750
-#, fuzzy
 msgid ""
 "Swipe along the top or left screen edge to change the number of columns or "
 "rows of thumbnails.\n"
@@ -12544,16 +12552,18 @@ msgid ""
 "\n"
 "Any multiswipe will close the page browser."
 msgstr ""
-"页面浏览器显示页面的缩略图。\n"
-"\n"
-"底部滑尺是缩略图所展示的页面附近的“书籍地图”：详情请参阅“书籍地图”帮助。\n"
-"\n"
 "沿屏幕的顶部或左边滑动可以更改缩略图的列或行数。\n"
+"\n"
 "垂直滑动可以移动一行，水平滑动可以移动一页。\n"
+"\n"
 "在底部滑尺上水平滑动可以移动一整条。\n"
+"\n"
 "轻按底部滑尺中某页面对应位置，以使此页面成为缩略图中心。\n"
+"\n"
 "轻按缩略图可以进入此页阅读。\n"
-"长按 ⓘ 减少或重置底部滑尺中显示的章节级别数。\n"
+"\n"
+"长按 ≡ 减少或重置底部滑尺中显示的章节级别数。\n"
+"\n"
 "任意多重滑动手势会关闭页面浏览器。"
 
 #: frontend/ui/widget/pathchooser.lua:32
