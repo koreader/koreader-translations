@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-09 04:53+0000\n"
-"PO-Revision-Date: 2023-10-08 22:46+0000\n"
+"PO-Revision-Date: 2023-10-09 23:05+0000\n"
 "Last-Translator: sonix-github <sonix.internet@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/koreader/koreader/"
 "sk/>\n"
@@ -1528,7 +1528,7 @@ msgstr "Skrátený dátum a čas"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:282
 msgid "Freeze last read date of finished books"
-msgstr ""
+msgstr "\"Zmraziť\" dátum posledného čítania prečítaných kníh"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:304
 msgid "Auto-remove deleted or purged items from history"
@@ -3690,24 +3690,20 @@ msgid "Go to %"
 msgstr "Prejsť na %"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:123
-#, fuzzy
 msgid "Custom table of contents"
-msgstr "Obsah"
+msgstr "Vlastný obsah knihy"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:130
-#, fuzzy
 msgid "Custom hidden flows"
-msgstr "Zobrazovať skryté súbory"
+msgstr "Skrytie časti obsahu knihy"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:145
-#, fuzzy
 msgid "Custom layout features"
-msgstr "Vlastné pravidlá delenia slov"
+msgstr "Možnosti vlastného rozloženia"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:149
-#, fuzzy
 msgid "About custom table of contents"
-msgstr "Alternatívny obsah knihy"
+msgstr "O vlastnom obsahu knihy"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:152
 msgid ""
@@ -3724,26 +3720,36 @@ msgid ""
 "This custom table of contents is currently limited to a single level and "
 "can't have sub-chapters."
 msgstr ""
+"V prípade, že kniha neobsahuje tabuľku s obsahom alebo by ste ju chceli "
+"nahradiť vlastnou, môžete si ju vytvoriť. Pôvodná tabuľka obsahu (ak je k "
+"dispozícii) nebude zmenená.\n"
+"\n"
+"Môžete vytvoriť, upravovať a odstrániť kapitoly:\n"
+"- v prehliadači stránky, dlhým stlačením na miniatúru;\n"
+"- na stránke knihy, výberom niektorého textu, ktorý má byť použitý ako názov "
+"kapitoly.\n"
+"(Pokiaľ ste dokončili obsahovú tabuľku a už nechcete vidieť tlačidlá, môžete "
+"vypnúť režim úprav.)\n"
+"\n"
+"Táto tabuľka obsahu knihy je momentálne obmedzená na jednu úroveň a nemôže "
+"mať podkapitoly."
 
 #: frontend/apps/reader/modules/readerhandmade.lua:166
 #: frontend/apps/reader/modules/readerhandmade.lua:227
-#, fuzzy
 msgid "Edit mode"
-msgstr "Upraviť poznámku"
+msgstr "Režim úprav"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:184
-#, fuzzy
 msgid "Clear custom table of contents"
-msgstr "Alternatívny obsah knihy"
+msgstr "Vymazať vlastnú tabuľku obsahu knihy"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:190
-#, fuzzy
 msgid "Are you sure you want to clear your custom table of contents?"
-msgstr "Naozaj si prajete vymazať štatistiky batérie?"
+msgstr "Naozaj si prajete vymazať vašu vlastnú tabuľku obsahu knihy?"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:206
 msgid "About custom hidden flows"
-msgstr ""
+msgstr "O skrytí časti obsahu knihy"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:209
 msgid ""
@@ -3768,10 +3774,31 @@ msgid ""
 "Hidden flows are shown with gray or hatched background in Book map and Page "
 "browser."
 msgstr ""
+"Skrytie časti obsahu knihy môže byť vytvorené na \"skrytie\" častí knihy "
+"počas čítania:\n"
+"- skryté časti sa automaticky preskočia pri otáčaní stránok počas čítania;\n"
+"- stránkam skrytých častí sú priradené odlišné čísla stránok a nebudú vzaté "
+"do úvahy v rôznych knižných štatistikách ako priebeh čítania knihy, kapitoly "
+"a v čase na prečítanie knihy;\n"
+"- odkazy na stránky v skrytých častiach budú stále fungovať, vrátane "
+"obsahovej tabuľky alebo knižnej mapy.\n"
+"\n"
+"Toto môže byť vhodné pre preskočenie dlhých poznámok pod čiarou alebo časti "
+"knihy so zoznamom použitej literatúry.\n"
+"Taktiež to môže byť praktické, ak máte záujem len o čítanie určitej časti "
+"knihy.\n"
+"\n"
+"V prehliadači stránok, môžete dlhým stlačením na miniatúru začať skrývanie "
+"obsahu alebo obnoviť pôvodný obsah na tejto stránke.\n"
+"(Pokiaľ ste dokončili obsahovú tabuľku a už nechcete vidieť tlačidlá, môžete "
+"vypnúť režim úprav.)\n"
+"\n"
+"Skryté časti sú zobrazené v knižnej mape a prehliadači stránok so šedým "
+"alebo šrafovaným pozadím."
 
 #: frontend/apps/reader/modules/readerhandmade.lua:240
 msgid "Clear inactive marked pages (%1)"
-msgstr ""
+msgstr "Vymazať stránky označené ako neaktívne (%1)"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:247
 msgid ""
@@ -3779,49 +3806,47 @@ msgid ""
 "restart regular flow, but that other marked pages made them have no effect.\n"
 "Are you sure you want to clear them?"
 msgstr ""
+"Stránky označené ako neaktívne sú stránky ktoré ste označili na skrytie "
+"alebo ste obnovili pôvodný obsah, avšak následné protikladné označenie "
+"stránok spôsobilo, že to nemá žiaden efekt.\n"
+"Ste si istí, že ich chcete vymazať?"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:266
-#, fuzzy
 msgid "Clear all marked pages"
-msgstr "Vymazať všetky slová"
+msgstr "Vymazať všetky označené stránky"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:272
-#, fuzzy
 msgid "Are you sure you want to clear all your custom hidden flows?"
-msgstr "Naozaj si prajete odstrániť všetky stiahnuté položky?"
+msgstr ""
+"Naozaj si prajete vymazať všetky vaše vlastné skryté časti obsahu knihy?"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:385
-#, fuzzy
 msgid "Edit TOC chapter"
-msgstr "Ďalšia kapitola"
+msgstr "Upraviť tabuľku obsahu knihy"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:387
-#, fuzzy
 msgid "Start TOC chapter"
-msgstr "Súčasná kapitola"
+msgstr "Začať kapitolu v tabuľku obsahu knihy"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:479
 msgid "Edit custom TOC chapter"
-msgstr ""
+msgstr "Upraviť kapitolu vlastnej tabuľky obsahu knihy"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:479
 msgid "Create new custom ToC chapter"
-msgstr ""
+msgstr "Vytvoriť novú kapitolu vlastnej tabuľky obsahu knihy"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:481
-#, fuzzy
 msgid "TOC chapter title"
-msgstr "Zmeniť názov"
+msgstr "Názov kapitoly tabuľky obsahu knihy"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:482
-#, fuzzy
 msgid "On page %1."
-msgstr "Aktuálna stránka (%1)"
+msgstr "Na strane %1."
 
 #: frontend/apps/reader/modules/readerhandmade.lua:521
-#, fuzzy
 msgid "Use selected text"
-msgstr "Výber v texte"
+msgstr "Použiť vybratý text"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:73
 #: frontend/apps/reader/modules/readerhighlight.lua:345
@@ -5283,6 +5308,8 @@ msgstr ""
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
+"Ak chcete používať alternatívnu tabuľky obsahu knihy, je potrebné vypnúť "
+"najskôr tú vašu vlastnú."
 
 #: frontend/apps/reader/modules/readertoc.lua:986
 msgid ""
@@ -7333,12 +7360,11 @@ msgstr "Prepínať smer otáčania stránky"
 
 #: frontend/dispatcher.lua:181
 msgid "Toggle custom TOC"
-msgstr ""
+msgstr "Prepínať vlastnú tabuľku obsahu knihy"
 
 #: frontend/dispatcher.lua:182
-#, fuzzy
 msgid "Toggle custom hidden flows"
-msgstr "Vypnúť/zapnúť preformátovanie"
+msgstr "Prepínať vlastné skrytie časti obsahu knihy"
 
 #: frontend/dispatcher.lua:184
 msgid "Set highlight action"
@@ -12855,9 +12881,8 @@ msgid "Page browser on tap"
 msgstr "Prehliadač stránok po ťuknutí"
 
 #: frontend/ui/widget/bookmapwidget.lua:1232
-#, fuzzy
 msgid "Alternative theme"
-msgstr "Tipy pre alternatívny obsah knihy"
+msgstr "Alternatívna téma"
 
 #: frontend/ui/widget/bookmapwidget.lua:1256
 msgid "Switch current/initial views"
@@ -13466,7 +13491,7 @@ msgstr "O prehliadači stránok"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:898
 msgid "Preload next/prev thumbnails"
-msgstr ""
+msgstr "Načítať ďalšie/predošlé miniatúry"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:924
 msgid "Thumbnail columns"
@@ -13554,27 +13579,24 @@ msgstr ""
 "Akékoľvek viacnásobné potiahnutie zatvorí prehliadač stránok."
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1537
-#, fuzzy
 msgid "Toggle page bookmark"
-msgstr "Prepínať záložku"
+msgstr "Prepínať záložku stránky"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1552
 msgid "Edit or remove TOC chapter"
-msgstr ""
+msgstr "Upraviť alebo odstrániť kapitolu tabuľky obsahu knihy"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1553
 msgid "Start TOC chapter here"
-msgstr ""
+msgstr "Tu začať kapitolu tabuľky obsahu knihy"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1566
-#, fuzzy
 msgid "Restart regular flow here"
-msgstr "Reštartovať neskôr"
+msgstr "Tu obnoviť pôvodný obsah"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1567
-#, fuzzy
 msgid "Start hidden flow here"
-msgstr "Spustiť s prehliadačom súborov"
+msgstr "Tu začať skrývanie časti obsahu knihy"
 
 #: frontend/ui/widget/pathchooser.lua:32
 msgid "Long-press to choose a folder"
@@ -17792,9 +17814,8 @@ msgstr ""
 "na túto zadanú maximálnu hodnotu."
 
 #: plugins/statistics.koplugin/main.lua:1132
-#, fuzzy
 msgid "Freeze statistics of finished books"
-msgstr "Vymazať štatistiky jednotlivých kníh"
+msgstr "\"Zmraziť\" štatistiky prečítaných kníh"
 
 #: plugins/statistics.koplugin/main.lua:1143
 msgid "Calendar weeks start on %1"
@@ -17995,14 +18016,12 @@ msgstr[2] "(za %1 dní) %2"
 msgstr[3] "(za %1 dní) %2"
 
 #: plugins/statistics.koplugin/main.lua:1695
-#, fuzzy
 msgid "finished"
-msgstr "Dokončené"
+msgstr "prečítané"
 
 #: plugins/statistics.koplugin/main.lua:1697
-#, fuzzy
 msgid "Book marked as finished"
-msgstr "Označiť ako prečítané"
+msgstr "Kniha označená ako prečítaná"
 
 #: plugins/statistics.koplugin/main.lua:1706
 msgid "Time spent reading this session"
