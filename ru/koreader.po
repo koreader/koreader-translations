@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-09 04:53+0000\n"
-"PO-Revision-Date: 2023-10-05 05:29+0000\n"
+"PO-Revision-Date: 2023-10-09 06:13+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ru/>\n"
@@ -37,8 +37,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
+"n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Generator: Weblate 5.1-dev\n"
 
 #: reader.lua:194
@@ -1544,7 +1544,7 @@ msgstr "Сокращать дату/время"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:282
 msgid "Freeze last read date of finished books"
-msgstr ""
+msgstr "Замораживать дату прочтения книг"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:304
 msgid "Auto-remove deleted or purged items from history"
@@ -3697,24 +3697,20 @@ msgid "Go to %"
 msgstr "Перейти на %"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:123
-#, fuzzy
 msgid "Custom table of contents"
-msgstr "Оглавление"
+msgstr "Пользовательское оглавление"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:130
-#, fuzzy
 msgid "Custom hidden flows"
-msgstr "Показывать скрытые файлы"
+msgstr "Пользовательские скрытые потоки"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:145
-#, fuzzy
 msgid "Custom layout features"
-msgstr "Настраиваемые правила переносов"
+msgstr "Пользовательские макеты"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:149
-#, fuzzy
 msgid "About custom table of contents"
-msgstr "Альтернативное оглавление ⓘ"
+msgstr "О пользовательском оглавлении"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:152
 msgid ""
@@ -3731,26 +3727,36 @@ msgid ""
 "This custom table of contents is currently limited to a single level and "
 "can't have sub-chapters."
 msgstr ""
+"Если в книге нет оглавления или вы хотите заменить его своим, можно создать "
+"пользовательское оглавление. Исходное (если оно доступно) при этом изменено "
+"не будет.\n"
+"\n"
+"Вы можете создавать, редактировать и удалять главы:\n"
+"- в браузере страниц долгим нажатием на миниатюру;\n"
+"- выделив на странице книги текст, который будет использоваться в качестве "
+"названия главы.\n"
+"(По завершении создания оглавления можно скрыть кнопки, отключив режим "
+"редактирования.)\n"
+"\n"
+"В настоящее время пользовательское оглавление ограничено одним уровнем и не "
+"может иметь подразделов."
 
 #: frontend/apps/reader/modules/readerhandmade.lua:166
 #: frontend/apps/reader/modules/readerhandmade.lua:227
-#, fuzzy
 msgid "Edit mode"
-msgstr "Редактировать заметку"
+msgstr "Режим редактирования"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:184
-#, fuzzy
 msgid "Clear custom table of contents"
-msgstr "Альтернативное оглавление ⓘ"
+msgstr "Очистить пользовательское оглавление"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:190
-#, fuzzy
 msgid "Are you sure you want to clear your custom table of contents?"
-msgstr "Вы уверены, что хотите очистить статистику батареи?"
+msgstr "Вы уверены, что хотите очистить пользовательское оглавление?"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:206
 msgid "About custom hidden flows"
-msgstr ""
+msgstr "О пользовательских скрытых потоках"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:209
 msgid ""
@@ -3775,10 +3781,30 @@ msgid ""
 "Hidden flows are shown with gray or hatched background in Book map and Page "
 "browser."
 msgstr ""
+"Для исключения разделов книги из обычного потока чтения можно создавать "
+"собственные скрытые потоки:\n"
+"- при перелистывании страниц внутри обычного потока скрытые будут "
+"автоматически пропускаться;\n"
+"- страницам в скрытых потоках присваиваются отдельные номера страниц, "
+"которые не учитываются в прогрессе книг/глав и времени чтения;\n"
+"- будет работать переход по прямым ссылкам на страницы в скрытых потоках, в "
+"том числе из оглавления или карты книги.\n"
+"\n"
+"Данная функция может быть полезна для исключения длинных сносок или "
+"библиографических разделов.\n"
+"Это также может быть удобно, если вы хотите прочитать только часть книги.\n"
+"\n"
+"Для перехода на текущей странице в скрытый поток или перезапуска обычного "
+"нужно нажать и удерживать миниатюру в браузере страниц.\n"
+"(По завершении создания потока можно скрыть кнопки, отключив режим "
+"редактирования.)\n"
+"\n"
+"Скрытые потоки отображаются в карте книги и браузере страниц на сером или "
+"заштрихованном фоне."
 
 #: frontend/apps/reader/modules/readerhandmade.lua:240
 msgid "Clear inactive marked pages (%1)"
-msgstr ""
+msgstr "Очистить неактивные отмеченные страницы (%1)"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:247
 msgid ""
@@ -3786,49 +3812,46 @@ msgid ""
 "restart regular flow, but that other marked pages made them have no effect.\n"
 "Are you sure you want to clear them?"
 msgstr ""
+"Неактивные отмеченные страницы - это страницы, выбранные для запуска "
+"скрытого потока или перезапуска обычного, но при этом другие отмеченные "
+"страницы отменяют данный эффект.\n"
+"Вы уверены, что хотите их очистить?"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:266
-#, fuzzy
 msgid "Clear all marked pages"
-msgstr "Очистить все слова"
+msgstr "Очистить все отмеченные страницы"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:272
-#, fuzzy
 msgid "Are you sure you want to clear all your custom hidden flows?"
-msgstr "Вы уверены, что хотите удалить все загруженные элементы?"
+msgstr "Вы уверены, что хотите очистить все пользовательские скрытые потоки?"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:385
-#, fuzzy
 msgid "Edit TOC chapter"
-msgstr "Следующая глава"
+msgstr "Редактировать главу в оглавлении"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:387
-#, fuzzy
 msgid "Start TOC chapter"
-msgstr "Текущая глава"
+msgstr "Начать главу в оглавлении"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:479
 msgid "Edit custom TOC chapter"
-msgstr ""
+msgstr "Редактировать главу в пользовательском оглавлении"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:479
 msgid "Create new custom ToC chapter"
-msgstr ""
+msgstr "Создать новую главу в пользовательском оглавлении"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:481
-#, fuzzy
 msgid "TOC chapter title"
-msgstr "Изменить название"
+msgstr "Название главы в пользовательском оглавлении"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:482
-#, fuzzy
 msgid "On page %1."
-msgstr "Текущая страница (%1)"
+msgstr "На странице %1."
 
 #: frontend/apps/reader/modules/readerhandmade.lua:521
-#, fuzzy
 msgid "Use selected text"
-msgstr "Пожалуйста, введите текст"
+msgstr "Использовать выделенный текст"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:73
 #: frontend/apps/reader/modules/readerhighlight.lua:345
@@ -5286,6 +5309,8 @@ msgstr ""
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
+"Для использования альтернативного оглавления необходимо отключить "
+"пользовательское."
 
 #: frontend/apps/reader/modules/readertoc.lua:986
 msgid ""
@@ -5747,7 +5772,7 @@ msgstr ""
 "Вы также можете задать язык по умолчанию или выбрать резервный язык с "
 "помощью долгого касания.\n"
 "\n"
-"Свойства, доступные для каждого языка, отмечены:\n"
+"Свойства, доступные для каждого языка, отмечены так:\n"
 "‐ : словарь переносов для конкретного языка\n"
 " : особые правила разрыва строки (в основном связанные с кавычками)\n"
 " : больше правил переноса строки (например, однобуквенные предлоги не "
@@ -7331,12 +7356,11 @@ msgstr "Изменить направление листания страниц"
 
 #: frontend/dispatcher.lua:181
 msgid "Toggle custom TOC"
-msgstr ""
+msgstr "Переключить пользовательское оглавление"
 
 #: frontend/dispatcher.lua:182
-#, fuzzy
 msgid "Toggle custom hidden flows"
-msgstr "Переключить перекомпоновку"
+msgstr "Переключить пользовательские скрытые потоки"
 
 #: frontend/dispatcher.lua:184
 msgid "Set highlight action"
@@ -12869,9 +12893,8 @@ msgid "Page browser on tap"
 msgstr "Браузер страниц по касанию"
 
 #: frontend/ui/widget/bookmapwidget.lua:1232
-#, fuzzy
 msgid "Alternative theme"
-msgstr "Подсказки альтернативного оглавления"
+msgstr "Альтернативная тема"
 
 #: frontend/ui/widget/bookmapwidget.lua:1256
 msgid "Switch current/initial views"
@@ -13479,7 +13502,7 @@ msgstr "О браузере страниц"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:898
 msgid "Preload next/prev thumbnails"
-msgstr ""
+msgstr "Предварительная загрузка соседних миниатюр"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:924
 msgid "Thumbnail columns"
@@ -13566,27 +13589,24 @@ msgstr ""
 "Любой мультисвайп закрывает браузер страниц."
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1537
-#, fuzzy
 msgid "Toggle page bookmark"
-msgstr "Поставить/снять закладку"
+msgstr "Поставить/снять закладку страницы"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1552
 msgid "Edit or remove TOC chapter"
-msgstr ""
+msgstr "Редактировать/удалить главу в оглавлении"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1553
 msgid "Start TOC chapter here"
-msgstr ""
+msgstr "Начать главу в оглавлении отсюда"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1566
-#, fuzzy
 msgid "Restart regular flow here"
-msgstr "Отложить перезапуск"
+msgstr "Перезагрузить регулярный поток отсюда"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1567
-#, fuzzy
 msgid "Start hidden flow here"
-msgstr "Старт с файлового менеджера"
+msgstr "Начать скрытый поток отсюда"
 
 #: frontend/ui/widget/pathchooser.lua:32
 msgid "Long-press to choose a folder"
@@ -17808,9 +17828,8 @@ msgstr ""
 "включена, но с продолжительностью, ограниченной указанным максимумом."
 
 #: plugins/statistics.koplugin/main.lua:1132
-#, fuzzy
 msgid "Freeze statistics of finished books"
-msgstr "Сбросить статистику по книгам"
+msgstr "Замораживать статистику прочтённых книг"
 
 #: plugins/statistics.koplugin/main.lua:1143
 msgid "Calendar weeks start on %1"
@@ -18010,14 +18029,12 @@ msgstr[2] "(за %1 дней) %2"
 msgstr[3] "(за %1 дней) %2"
 
 #: plugins/statistics.koplugin/main.lua:1695
-#, fuzzy
 msgid "finished"
-msgstr "Завершено"
+msgstr "завершено"
 
 #: plugins/statistics.koplugin/main.lua:1697
-#, fuzzy
 msgid "Book marked as finished"
-msgstr "Отметить прочитанным"
+msgstr "Отметить книгу прочитанной"
 
 #: plugins/statistics.koplugin/main.lua:1706
 msgid "Time spent reading this session"
