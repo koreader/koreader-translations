@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-12 06:08+0000\n"
+"POT-Creation-Date: 2023-10-12 13:02+0000\n"
 "PO-Revision-Date: 2023-09-23 22:57+0000\n"
 "Last-Translator: 翻译请尽量做到简洁通顺 <1049614369@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -145,7 +145,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagermenu.lua:341
 #: frontend/apps/reader/modules/readerwikipedia.lua:271
 #: frontend/ui/widget/screenshoter.lua:96
-#: plugins/exporter.koplugin/main.lua:326
+#: plugins/exporter.koplugin/main.lua:327
 #: plugins/opds.koplugin/opdsbrowser.lua:624
 msgid "Choose folder"
 msgstr "选择文件夹"
@@ -212,9 +212,11 @@ msgstr "输入文件名"
 #: plugins/calibre.koplugin/wireless.lua:428
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:787
 #: plugins/coverimage.koplugin/main.lua:355
+#: plugins/exporter.koplugin/target/flomo.lua:65
 #: plugins/exporter.koplugin/target/joplin.lua:223
 #: plugins/exporter.koplugin/target/joplin.lua:262
-#: plugins/exporter.koplugin/target/memos.lua:65
+#: plugins/exporter.koplugin/target/memos.lua:66
+#: plugins/exporter.koplugin/target/memos.lua:98
 #: plugins/exporter.koplugin/target/readwise.lua:67
 #: plugins/gestures.koplugin/main.lua:398 plugins/kosync.koplugin/main.lua:446
 #: plugins/newsdownloader.koplugin/main.lua:150
@@ -1214,7 +1216,7 @@ msgid "Exit select mode"
 msgstr "退出选择模式"
 
 #: frontend/apps/filemanager/filemanager.lua:610
-#: plugins/exporter.koplugin/main.lua:258 plugins/exporter.koplugin/_meta.lua:4
+#: plugins/exporter.koplugin/main.lua:259 plugins/exporter.koplugin/_meta.lua:4
 msgid "Export highlights"
 msgstr "导出标注"
 
@@ -13271,7 +13273,7 @@ msgstr ""
 "选择一个新的截屏文件夹？"
 
 #: frontend/ui/widget/screenshoter.lua:92
-#: plugins/exporter.koplugin/main.lua:320
+#: plugins/exporter.koplugin/main.lua:321
 msgid "Use default"
 msgstr "使用默认值"
 
@@ -15279,47 +15281,47 @@ msgstr "未知书籍"
 msgid "Unknown Author"
 msgstr "未知作者"
 
-#: plugins/exporter.koplugin/main.lua:206
+#: plugins/exporter.koplugin/main.lua:207
 msgid "%1: Exported successfully."
 msgstr "%1：成功导出。"
 
-#: plugins/exporter.koplugin/main.lua:208
+#: plugins/exporter.koplugin/main.lua:209
 msgid "%1: Exported to %2."
 msgstr "%1：导出至%2。"
 
-#: plugins/exporter.koplugin/main.lua:211
+#: plugins/exporter.koplugin/main.lua:212
 msgid "%1: Failed to export."
 msgstr "%1：导出失败。"
 
-#: plugins/exporter.koplugin/main.lua:223
+#: plugins/exporter.koplugin/main.lua:224
 msgid "Exporting may take several seconds…"
 msgstr "导出大约需要几秒钟……"
 
-#: plugins/exporter.koplugin/main.lua:240
+#: plugins/exporter.koplugin/main.lua:241
 msgid "Share as %1."
 msgstr "分享为%1。"
 
-#: plugins/exporter.koplugin/main.lua:261
+#: plugins/exporter.koplugin/main.lua:262
 msgid "Export all notes in this book"
 msgstr "导出本书笔记"
 
-#: plugins/exporter.koplugin/main.lua:270
+#: plugins/exporter.koplugin/main.lua:271
 msgid "Export all notes in your library"
 msgstr "导出所有笔记"
 
-#: plugins/exporter.koplugin/main.lua:280
+#: plugins/exporter.koplugin/main.lua:281
 msgid "Choose formats and services"
 msgstr "选择格式和服务"
 
-#: plugins/exporter.koplugin/main.lua:284
+#: plugins/exporter.koplugin/main.lua:285
 msgid "Choose export folder"
 msgstr "选择导出文件夹"
 
-#: plugins/exporter.koplugin/main.lua:297
+#: plugins/exporter.koplugin/main.lua:298
 msgid "Share all notes in this book"
 msgstr "分享此书籍中的所有笔记"
 
-#: plugins/exporter.koplugin/main.lua:319
+#: plugins/exporter.koplugin/main.lua:320
 msgid ""
 "Export folder is set to:\n"
 "%1\n"
@@ -15334,6 +15336,30 @@ msgstr ""
 #: plugins/exporter.koplugin/_meta.lua:5
 msgid "Exports highlights and notes."
 msgstr "导出标注和笔记。"
+
+#: plugins/exporter.koplugin/target/flomo.lua:51
+msgid "Flomo"
+msgstr ""
+
+#: plugins/exporter.koplugin/target/flomo.lua:55
+#, fuzzy
+msgid "Set Flomo API URL"
+msgstr "设置 Memos API 地址"
+
+#: plugins/exporter.koplugin/target/flomo.lua:60
+#, fuzzy
+msgid "Set API URL for Flomo"
+msgstr "设置 Memos 要连接到的服务器 API 地址"
+
+#: plugins/exporter.koplugin/target/flomo.lua:72
+#: plugins/exporter.koplugin/target/memos.lua:73
+msgid "Set API URL"
+msgstr "设置 API 地址"
+
+#: plugins/exporter.koplugin/target/flomo.lua:87
+#, fuzzy
+msgid "Export to Flomo"
+msgstr "导出到 Memos"
 
 #: plugins/exporter.koplugin/target/joplin.lua:17
 msgid "KOReader Notes"
@@ -15435,23 +15461,34 @@ msgstr "导出至 Markdown"
 msgid "Format highlights based on style"
 msgstr "根据设定的样式显示高亮文本"
 
-#: plugins/exporter.koplugin/target/memos.lua:51
+#: plugins/exporter.koplugin/target/memos.lua:52
 msgid "Memos"
 msgstr "Memos"
 
-#: plugins/exporter.koplugin/target/memos.lua:55
+#: plugins/exporter.koplugin/target/memos.lua:56
 msgid "Set Memos API URL"
 msgstr "设置 Memos API 地址"
 
-#: plugins/exporter.koplugin/target/memos.lua:60
+#: plugins/exporter.koplugin/target/memos.lua:61
 msgid "Set API URL for Memos"
 msgstr "设置 Memos 要连接到的服务器 API 地址"
 
-#: plugins/exporter.koplugin/target/memos.lua:72
-msgid "Set API URL"
-msgstr "设置 API 地址"
+#: plugins/exporter.koplugin/target/memos.lua:88
+#, fuzzy
+msgid "Set Memos Token"
+msgstr "设置口令"
 
-#: plugins/exporter.koplugin/target/memos.lua:87
+#: plugins/exporter.koplugin/target/memos.lua:93
+#, fuzzy
+msgid "Set Token for Memos"
+msgstr "设置 Memos 要连接到的服务器 API 地址"
+
+#: plugins/exporter.koplugin/target/memos.lua:105
+#, fuzzy
+msgid "Set Token"
+msgstr "设置口令"
+
+#: plugins/exporter.koplugin/target/memos.lua:120
 msgid "Export to Memos"
 msgstr "导出到 Memos"
 
