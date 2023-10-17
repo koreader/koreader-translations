@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-16 01:28+0000\n"
-"PO-Revision-Date: 2023-10-15 04:55+0000\n"
+"PO-Revision-Date: 2023-10-17 18:08+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Moldavian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ro_MD/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n != 1 && n % "
 "100 >= 1 && n % 100 <= 19) ? 1 : 2);\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.1\n"
 
 #: reader.lua:194
 msgid ""
@@ -10745,6 +10745,12 @@ msgid ""
 "\n"
 "You can decide between three locations/methods where these will be saved:"
 msgstr ""
+"Setările de vizualizare ale cărții, progresul citirii, evidențierile, "
+"semnele de carte și notele (cunoscute colectiv sub numele de metadate) sînt "
+"stocate într-un dosar separat numit <numele-cărții>.sdr („.sdr” însemnînd "
+"„sidecar”).\n"
+"\n"
+"Poți decide între 3 locații/metode prin care aceastea vor fi salvate:"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:552
 msgid ""
@@ -10756,6 +10762,13 @@ msgid ""
 "perform directory synchronization or backups, your settings will be part of "
 "them."
 msgstr ""
+" - lîngă fișierul cărții (implicitul bine cunoscut): dosarele sdr vor fi "
+"vizibile cînd navighezi biblioteca de cărți cu un alt navigator de fișiere "
+"sau de pe calculator, care poate aglomera vizual biblioteca de cărți. Dar "
+"acest lucru îți permite să le muți împreună cu cartea atunci cînd îți "
+"reorganizezi biblioteca și de asemenea vor supraviețui unei redenumiri a "
+"dosarului părinte. De asemenea, dacă folosești sincronizarea dosarelor sau "
+"faci copii de siguranță, setările vor fi parte componentă a acestora."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:553
 msgid ""
@@ -10766,6 +10779,12 @@ msgid ""
 "finding your previous settings for these books. These settings won't be part "
 "of any synchronization or backups of your library."
 msgstr ""
+" - toate în %1: dosarele sdr vor fi vizibile și folosite doar de KOReader, "
+"nu-ți vor aglomera vizual biblioteca de cărți la navigarea cu alt navigator "
+"de fișiere sau de pe calculator. Dar orice reorganizare a bibliotecii ("
+"redenumiri sau mutări de fișiere) va rezulta în pierderea setărilor pentru "
+"aceste cărți. De asemenea, ele nu vor fi parte a sincronizării sau copiilor "
+"de siguranță pe care le-ai putea face bibliotecii."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:554
 msgid ""
@@ -10778,6 +10797,15 @@ msgid ""
 "file browser navigation. This option may suit users with multiple copies of "
 "documents across different devices and directories."
 msgstr ""
+" - toate în %1 ca sume de control: dosarele sdr sînt identificate nu după "
+"cale și nume de fișier, dar după suma parțială MD5, permițîndu-ți să "
+"redenumești, ștergi, muți documentele fără să aglomerezi vizual biblioteca, "
+"totodată ținîndu-le asociate cu metadatele lor. Totuși, orice acțiune care "
+"modifică fișierul cum ar fi salvarea evidențierilor în PDF-uri, va duce la "
+"schimbarea sumei de control și implicit a pierderii metadatelor. Calcularea "
+"sumelor de control va încetini de asemenea și navigarea printre fișiere. "
+"Această opțiune este recomandată utilizatorilor cu multiple copii ale "
+"documentelor împrăștiate între mai multe dispozitive și dosare."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:557
 msgid ""
@@ -10788,6 +10816,12 @@ msgid ""
 "progress data. Embedding PDF annotations is currently set to \"%s\" and can "
 "be disabled at (⚙ → Document → Save Document (write highlights into PDF))."
 msgstr ""
+"%1 necesită calcularea sumelor de control parțiale ale documentelor, lucru "
+"ce va îngreuna puțin navigarea fișierelor. Orice modificări (cum ar fi "
+"încorporarea adnotărilor în PDF-uri) poate schimba suma de control parțială, "
+"astfel pierzînd evidențierile, semnele de carte și progresul citirii. "
+"Încorporarea adnotărilor în PDF este setată acum la „%s” și poate fi "
+"dezactivată la ⚙ → Document → Salvează document (scrie evidențierile în PDF)."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:558
 msgid ""
@@ -10795,6 +10829,9 @@ msgid ""
 "metadata is moved by opening those documents, or deleted, file browser "
 "navigation may remain slower."
 msgstr ""
+"Atenție: Momentan ai documente cu metadate bazate pe sumele de control. Pînă "
+"cînd metadatele sînt mutate sau șterse deschizînd acele documente, "
+"navigatorul de fișiere va răspunde mai lent la comenzi."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:559
 msgid ""
@@ -10805,6 +10842,13 @@ msgid ""
 "to the preferred storage location, or to delete %1, which will speed up file "
 "browser navigation.\n"
 msgstr ""
+"Metadatele bazate pe sume de control au fost salvate în %1 pentru "
+"următoarele documente. Stocarea bazată pe sume de control poate îngreuna "
+"navigarea în navigatorul de fișiere în dosarele mari. Așadar, dacă nu "
+"folosești stocarea metadatelor bazate pe sume de control, este recomandat să "
+"deschizi documentele asociate în KOReader pentru a migra automat metadatele "
+"lor în locul de stocare preferat sau să ștergi %1, care va îmbunătăți "
+"performantețe de navigare.\n"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:593
 msgid "Book metadata location: %1"
@@ -10816,18 +10860,18 @@ msgstr "Despre locația metadatelor cărții"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:610
 msgid "Show documents with hash-based metadata"
-msgstr ""
+msgstr "Arată documentele cu metadate bazate pe suma de control"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:611
 msgid "No documents with hash-based metadata"
-msgstr ""
+msgstr "Nu există documente cu metadate bazate pe suma de control"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:632
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "1 document cu metadate bazate pe suma de control"
+msgstr[1] "%1 documente cu metadate bazate pe suma de control"
+msgstr[2] "%1 de documente cu metadate bazate pe suma de control"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:647
 msgid "only on close and suspend"
@@ -10859,6 +10903,9 @@ msgid ""
 "resulting in its metadata (e.g., highlights and progress) being unlinked and "
 "lost."
 msgstr ""
+"Atenție: Locația metadatelor cărților este setată ca bazată pe sume de "
+"control. Scrierea evidențierilor în PDF va modifica suma de control "
+"rezultînd în faptul că metadatele vor fi pierdute (ex: progresul citirii)."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:692
 msgid "End of document action"
@@ -15840,7 +15887,7 @@ msgstr "Exportă evidențierile și notele."
 
 #: plugins/exporter.koplugin/target/flomo.lua:51
 msgid "Flomo"
-msgstr ""
+msgstr "Flomo"
 
 #: plugins/exporter.koplugin/target/flomo.lua:55
 msgid "Set Flomo API URL"
