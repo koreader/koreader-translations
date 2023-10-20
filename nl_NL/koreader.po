@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-20 09:25+0000\n"
-"PO-Revision-Date: 2023-10-20 19:42+0000\n"
+"PO-Revision-Date: 2023-10-20 20:16+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/koreader/koreader/"
 "nl/>\n"
@@ -10752,6 +10752,12 @@ msgid ""
 "\n"
 "You can decide between three locations/methods where these will be saved:"
 msgstr ""
+"Boekweergave-instellingen, leesvoortgang, hoogtepunten, bladwijzers en "
+"notities (samen bekend als metadata) worden opgeslagen in een aparte map met "
+"de naam <boek-bestandsnaam>.sdr (\".sdr\" betekent \"sidecar\", Engels voor "
+"\"zijspan\").\n"
+"\n"
+"Je kunt kiezen uit drie locaties/methodes waar deze zullen worden opgeslagen:"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:552
 msgid ""
@@ -10763,6 +10769,13 @@ msgid ""
 "perform directory synchronization or backups, your settings will be part of "
 "them."
 msgstr ""
+" - naast het boekbestand zelf (sinds jaar end ag standaard): sdr-mappen "
+"zullen zichtbaar zijn tijdens het bladeren door bibliotheekmappen met een "
+"andere bestandsverkenner of vanaf uw computer, wat het zicht op de "
+"bibliotheek kan vertroebelen. Maar hierdoor kun je ze makkelijk verplaatsen "
+"wanneer je je bibliotheek reorganiseert en overleef je ook het hernoemen van "
+"bovenliggende mappen. Als je mapsynchronisatie of back-ups uitvoert, zullen "
+"je instellingen daar ook deel van uitmaken."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:553
 msgid ""
@@ -10773,6 +10786,13 @@ msgid ""
 "finding your previous settings for these books. These settings won't be part "
 "of any synchronization or backups of your library."
 msgstr ""
+" - alles in %1: sdr-mappen zullen alleen zichtbaar zijn en gebruikt worden "
+"door KOReader, en zullen het zicht op bibliotheekmappen niet belemmeren "
+"vanuit een andere bestandsverkenner of computer. Maar als je je bibliotheek "
+"reorganiseert (mappen of bestandsnamen verplaatsen en hernoemen), kan het "
+"zijn dat KOReader je eerdere instellingen voor deze boeken niet meer "
+"terugvindt. Deze instellingen maken geen deel uit van synchronisaties of "
+"back-ups van uw bibliotheek."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:554
 msgid ""
@@ -10785,6 +10805,16 @@ msgid ""
 "file browser navigation. This option may suit users with multiple copies of "
 "documents across different devices and directories."
 msgstr ""
+" - alles binnen %1 als hashes: sdr-mappen worden niet geïdentificeerd door "
+"bestandspad/bestandsnaam maar door gedeeltelijke MD5 hash, waardoor je "
+"documenten kunt hernoemen, verplaatsen en kopiëren buiten KOReader zonder "
+"sdr map-onoverzichtelijkheid terwijl ze gekoppeld blijven aan hun metadata. "
+"Echter, elke bestandswijziging zoals het schrijven van hoogtepunten in pdf's "
+"of het downloaden vanuit calibre kan de hash veranderen en dus de gekoppelde "
+"metadata verliezen. Het berekenen van bestands-hashes kan ook de navigatie "
+"in de bestandsbrowser vertragen. Deze optie kan geschikt zijn voor "
+"gebruikers met meerdere kopieën van documenten op verschillende apparaten en "
+"mappen."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:557
 msgid ""
@@ -10795,6 +10825,13 @@ msgid ""
 "progress data. Embedding PDF annotations is currently set to \"%s\" and can "
 "be disabled at (⚙ → Document → Save Document (write highlights into PDF))."
 msgstr ""
+"%1 vereist het berekenen van gedeeltelijke bestandshashes van documenten, "
+"wat de navigatie in de bestandsbrowser kan vertragen. Bestandswijzigingen ("
+"zoals het insluiten van annotaties in pdf-bestanden of het downloaden vanuit "
+"calibre) kunnen de gedeeltelijke hash veranderen, waardoor markeringen, "
+"bladwijzers en voortgangsgegevens verloren gaan. Het insluiten van pdf-"
+"annotaties is momenteel ingesteld op \"%s\" en kan worden uitgeschakeld via "
+"(⚙ → Document → Document opslaan (markeringen in PDF schrijven))."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:558
 msgid ""
@@ -10802,6 +10839,9 @@ msgid ""
 "metadata is moved by opening those documents, or deleted, file browser "
 "navigation may remain slower."
 msgstr ""
+"Waarschuwing: Je hebt momenteel documenten met hash-gebaseerde metadata. "
+"Totdat deze metadata is verplaatst door die documenten te openen, of "
+"verwijderd, kan de navigatie in de bestandsverkenner trager blijven."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:559
 msgid ""
@@ -10812,6 +10852,13 @@ msgid ""
 "to the preferred storage location, or to delete %1, which will speed up file "
 "browser navigation.\n"
 msgstr ""
+"Hash-gebaseerde metadata is opgeslagen in %1 voor de volgende documenten. Op "
+"hash gebaseerde opslag kan de navigatie door de bestandsbrowser in grote "
+"mappen vertragen. Als je dus geen hash-gebaseerde metagegevensopslag "
+"gebruikt, is het aan te raden om de gekoppelde documenten in KOReader te "
+"openen om hun metagegevens automatisch naar de gewenste opslaglocatie te "
+"migreren, of om %1 te verwijderen, wat de navigatie in de bestandsbrowser "
+"zal versnellen.\n"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:593
 msgid "Book metadata location: %1"
@@ -10823,17 +10870,17 @@ msgstr "Over boekmetadata-locatie"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:610
 msgid "Show documents with hash-based metadata"
-msgstr ""
+msgstr "Documenten met hash-gebaseerde metadata tonen"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:611
 msgid "No documents with hash-based metadata"
-msgstr ""
+msgstr "Geen documenten met hash-gebaseerde metadata"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:632
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 document met hash-gebaseerde metadata"
+msgstr[1] "%1 documenten met hash-gebaseerde metadata"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:647
 msgid "only on close and suspend"
@@ -10864,6 +10911,11 @@ msgid ""
 "resulting in its metadata (e.g., highlights and progress) being unlinked and "
 "lost."
 msgstr ""
+"Waarschuwing: De locatie van de metagegevens van het boek is ingesteld op "
+"hash-gebaseerde opslag. Door markeringen naar een pdf te schrijven, wordt "
+"het bestand gewijzigd, waardoor de gedeeltelijke hash kan veranderen, "
+"waardoor de metagegevens (bijv. hoogtepunten en voortgang) worden "
+"losgekoppeld en verloren gaan."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:692
 msgid "End of document action"
@@ -12899,9 +12951,8 @@ msgid "Page browser on tap"
 msgstr "Paginabrowser op tik"
 
 #: frontend/ui/widget/bookmapwidget.lua:1232
-#, fuzzy
 msgid "Alternative theme"
-msgstr "Alternatieve inhoudsopgavehints"
+msgstr "Alternatief thema"
 
 #: frontend/ui/widget/bookmapwidget.lua:1256
 msgid "Switch current/initial views"
@@ -13512,7 +13563,7 @@ msgstr "Over paginabrowser"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:898
 msgid "Preload next/prev thumbnails"
-msgstr ""
+msgstr "Vorige/volgende miniaturen preloaden"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:924
 msgid "Thumbnail columns"
@@ -13602,27 +13653,24 @@ msgstr ""
 "Door meerdere keren te vegen wordt de paginabrowser gesloten."
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1537
-#, fuzzy
 msgid "Toggle page bookmark"
-msgstr "Bladwijzer schakelen"
+msgstr "Pagina-bladwijzer schakelen"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1552
 msgid "Edit or remove TOC chapter"
-msgstr ""
+msgstr "Inhoudsopgave-hoofdstuk bewerken of verwijderen"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1553
 msgid "Start TOC chapter here"
-msgstr ""
+msgstr "Inhoudsopgave-hoofdstuk hier starten"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1566
-#, fuzzy
 msgid "Restart regular flow here"
-msgstr "Later herstarten"
+msgstr "Normaal verloop hier herstarten"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1567
-#, fuzzy
 msgid "Start hidden flow here"
-msgstr "Start met bestandsverkenner"
+msgstr "Verborgen verloop hier starten"
 
 #: frontend/ui/widget/pathchooser.lua:31
 msgid "Long-press to choose a folder"
@@ -15844,17 +15892,15 @@ msgstr "Exporteert markeringen en notities."
 
 #: plugins/exporter.koplugin/target/flomo.lua:51
 msgid "Flomo"
-msgstr ""
+msgstr "Flomo"
 
 #: plugins/exporter.koplugin/target/flomo.lua:55
-#, fuzzy
 msgid "Set Flomo API URL"
-msgstr "Memos api-url instellen"
+msgstr "Flomo api-url instellen"
 
 #: plugins/exporter.koplugin/target/flomo.lua:60
-#, fuzzy
 msgid "Set API URL for Flomo"
-msgstr "Api-url instellen voor Memos"
+msgstr "Api-url instellen voor Flomo"
 
 #: plugins/exporter.koplugin/target/flomo.lua:72
 #: plugins/exporter.koplugin/target/memos.lua:73
@@ -15862,9 +15908,8 @@ msgid "Set API URL"
 msgstr "Api-url instellen"
 
 #: plugins/exporter.koplugin/target/flomo.lua:87
-#, fuzzy
 msgid "Export to Flomo"
-msgstr "Exporteer naar Memos"
+msgstr "Exporteer naar Flomo"
 
 #: plugins/exporter.koplugin/target/joplin.lua:17
 msgid "KOReader Notes"
@@ -15979,19 +16024,16 @@ msgid "Set API URL for Memos"
 msgstr "Api-url instellen voor Memos"
 
 #: plugins/exporter.koplugin/target/memos.lua:88
-#, fuzzy
 msgid "Set Memos Token"
-msgstr "Teken instellen"
+msgstr "Memos-token instellen"
 
 #: plugins/exporter.koplugin/target/memos.lua:93
-#, fuzzy
 msgid "Set Token for Memos"
-msgstr "Api-url instellen voor Memos"
+msgstr "Token voor Memos instellen"
 
 #: plugins/exporter.koplugin/target/memos.lua:105
-#, fuzzy
 msgid "Set Token"
-msgstr "Teken instellen"
+msgstr "Token instellen"
 
 #: plugins/exporter.koplugin/target/memos.lua:120
 msgid "Export to Memos"
@@ -17857,9 +17899,8 @@ msgstr ""
 "maximumwaarde."
 
 #: plugins/statistics.koplugin/main.lua:1103
-#, fuzzy
 msgid "Freeze statistics of finished books"
-msgstr "Statistieken per boek resetten"
+msgstr "Statistieken van voltooide boeken bevriezen"
 
 #: plugins/statistics.koplugin/main.lua:1114
 msgid "Calendar weeks start on %1"
@@ -18054,14 +18095,12 @@ msgstr[0] "(over 1 dag) %2"
 msgstr[1] "(over %1 dagen) %2"
 
 #: plugins/statistics.koplugin/main.lua:1666
-#, fuzzy
 msgid "finished"
-msgstr "Gelezen"
+msgstr "voltooid"
 
 #: plugins/statistics.koplugin/main.lua:1668
-#, fuzzy
 msgid "Book marked as finished"
-msgstr "Markeren als gelezen"
+msgstr "Boek markeren als voltooid"
 
 #: plugins/statistics.koplugin/main.lua:1677
 msgid "Time spent reading this session"
