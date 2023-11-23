@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-22 18:07+0000\n"
-"PO-Revision-Date: 2023-11-23 12:50+0000\n"
+"PO-Revision-Date: 2023-11-24 18:50+0000\n"
 "Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/koreader/"
 "koreader/tr/>\n"
@@ -3790,6 +3790,28 @@ msgid ""
 "Hidden flows are shown with gray or hatched background in Book map and Page "
 "browser."
 msgstr ""
+"Kitabın bölümlerini düzenli okuma akışınıza katılmaması için özel gizli "
+"akışlar oluşturulabilir:\n"
+"- Düzenli akış içinde sayfalar çevrilirken gizli akışlar otomatik olarak "
+"atlanır;\n"
+"- Gizli akışların sayfa bölümlerine farklı sayfa numaraları atanır ve "
+"çeşitli kitap ilerlemesi, bölüm ilerlemesi ve okuma süresi özelliklerinde "
+"dikkate alınmaz;\n"
+"- İçindekiler veya kitap haritası ile birlikte, gizli akışlardaki sayfalara "
+"doğrudan bağlantılar hala işleyecektir.\n"
+"\n"
+"Bu özellik, uzun dipnotların veya kaynakça bölümlerinin katılmaması için "
+"yararlı olabilir.\n"
+"Bir kitabın yalnızca bir alt kümesini okumakla ilgilendiğinizde de "
+"kullanışlı olabilir.\n"
+"\n"
+"Sayfa tarayıcısında, gizli bir akış başlatmak ya da bu sayfadaki düzenli "
+"akışı yeniden başlatmak için küçük görsele uzun basabilirsiniz.\n"
+"(Oluşturmayı tamamladığınızda ve düğmeyi artık görmek istemediğinizde "
+"düzenleme kipini kapatabilirsiniz.)\n"
+"\n"
+"Gizli akışlar, kitap haritasında ve sayfa tarayıcısında gri veya taranmış "
+"arka planla görüntülenir."
 
 #: frontend/apps/reader/modules/readerhandmade.lua:240
 msgid "Clear inactive marked pages (%1)"
@@ -3801,9 +3823,9 @@ msgid ""
 "restart regular flow, but that other marked pages made them have no effect.\n"
 "Are you sure you want to clear them?"
 msgstr ""
-"Etkin olmayan işaretlenmiş sayfalar, gizli akışı başlatma ya da normal akışı "
-"yeniden başlatma için etiketlediğiniz, ancak diğer işaretlenmiş sayfalar "
-"tarafından etkili olmaları engellenen sayfalardır.\n"
+"Etkin olmayan işaretlenmiş sayfalar, gizli akışı başlatma ya da düzenli "
+"akışı yeniden başlatma için etiketlediğiniz, ancak diğer işaretlenmiş "
+"sayfalar tarafından etkili olmaları engellenen sayfalardır.\n"
 "Bunları temizlemek istediğinize emin misiniz?"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:266
@@ -10774,11 +10796,14 @@ msgid ""
 "(collectively known as metadata) are stored in a separate folder named <book-"
 "filename>.sdr (\".sdr\" meaning \"sidecar\")."
 msgstr ""
+"Kitap görüntüleme ayarları, okuma ilerlemesi, vurgulamalar, yer imleri ve "
+"notlar (toplu olarak üst veriler olarak bilinir), <kitap-dosya-adi>.sdr (“."
+"sdr”, “sidecar” anlamına gelir) adlı ayrı bir klasöre kaydedilir."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:552
 msgid ""
 "You can decide between three locations/methods where these will be saved:"
-msgstr ""
+msgstr "Bunların kaydedileceği üç konum/yöntem arasından seçim yapabilirsiniz:"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:553
 msgid ""
@@ -10790,6 +10815,13 @@ msgid ""
 "perform directory synchronization or backups, your settings will be part of "
 "them."
 msgstr ""
+" - Kitap dosyasının yanında (varsayılan uzun süre): Kitaplık klasörlerinize "
+"başka bir dosya tarayıcısıyla veya bilgisayarınızdan göz attığınızda sdr "
+"klasörleri görünür olacaktır. Bu durum kitaplığınızın görünüşünü "
+"karmaşıklaştırabilir. Ancak bunlar, kitaplığınızı yeniden düzenlediğinizde "
+"sorunsuz taşımanızı sağlar ve ana klasörlerin adlarının değiştirilmesinden "
+"de etkilenmez. Ayrıca klasör eşitleme veya yedekleme işlemleri yaparsanız "
+"ayarlarınız bunların bir parçası olur."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:554
 msgid ""
@@ -10800,6 +10832,13 @@ msgid ""
 "finding your previous settings for these books. These settings won't be part "
 "of any synchronization or backups of your library."
 msgstr ""
+" - Tümü %1 içinde: sdr klasörleri yalnızca KOReader tarafından görülebilir "
+"ve kullanılır ve başka bir dosya tarayıcısıyla veya bilgisayarınızdan "
+"kitaplık klasörlerinizin görünüşünü karmaşıklaştırmaz. Ancak "
+"kitaplığınızdaki herhangi bir yeniden düzenleme (klasörler veya dosya adı "
+"taşıma ve yeniden adlandırma), KOReader uygulamasının bu kitaplar için "
+"önceki ayarlarınızı bulamaması ile sonuçlanabilir. Bu ayarlar "
+"kitaplığınızdaki herhangi bir eşitlemenin veya yedeklemenin parçası olmaz."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:555
 msgid ""
@@ -10812,6 +10851,16 @@ msgid ""
 "file browser navigation. This option may suit users with multiple copies of "
 "documents across different devices and directories."
 msgstr ""
+" - Tümü %1 içinde karma olarak: sdr klasörleri dosya yolu/dosya adı ile "
+"değil MD5 karma parçası ile tanımlanır. Böylecek, belgeleri sdr klasörü "
+"karmaşası olmadan KOReader dışında yeniden adlandırmanız, taşımanız ve "
+"kopyalamanız sağlanırken onları üst verilerine bağlı tutabilirsiniz. Ancak, "
+"PDF belgelerine vurgulamalar yazmak veya calibre üzerinden indirmek gibi "
+"herhangi bir dosya değişikliği karmayı değiştirebilir ve bağlantılı üst "
+"verilerin kaybolmasına neden olabilir. Dosya karmalarını hesaplamak, dosya "
+"tarayıcısında gezinmeyi de yavaşlatabilir. Bu seçenek, farklı aygıt ve "
+"klasörlerde belgenin birden çok belge kopyasını tutan kullanıcılara uygun "
+"olabilir."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:559
 msgid ""
@@ -10822,6 +10871,13 @@ msgid ""
 "progress data. Embedding PDF annotations is currently set to \"%s\" and can "
 "be disabled at (⚙ → Document → Save Document (write highlights into PDF))."
 msgstr ""
+"%1 için, dosya tarayıcısında gezinmeyi yavaşlatabilecek belgelerin dosya "
+"karmaları parçalarının hesaplanması gerekir. Herhangi bir dosya değişikliği ("
+"PDF dosyalarına açıklamalar eklemek veya calibre üzerinden indirmek gibi) "
+"karma parçasını değiştirebilir, böylece vurgular, yer imleri ve ilerleme "
+"verileri izlenemeyebilir. PDF açıklamalarının gömülmesi şu anda “%s” olarak "
+"ayarlı ve (⚙ → Belge → Belgeyi kaydet (vurgulamaları PDF içine yaz)) "
+"seçeneği ile kapatılabilir."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:560
 msgid ""
@@ -10829,6 +10885,9 @@ msgid ""
 "metadata is moved by opening those documents, or deleted, file browser "
 "navigation may remain slower."
 msgstr ""
+"Uyarı: Şu anda karma temellü üst verileri olan belgeleriniz var. Bu üst "
+"veriler bu belgeler açılarak taşınana ya da silinene kadar dosya "
+"tarayıcısında gezinmek daha yavaş olabilir."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:592
 msgid "Book metadata location: %1"
@@ -10840,11 +10899,11 @@ msgstr "Kitap üst verileri konumu hakkında"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:609
 msgid "Show documents with hash-based metadata"
-msgstr ""
+msgstr "Belgeleri karma temelli üst verilerle görüntüle"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:610
 msgid "No documents with hash-based metadata"
-msgstr ""
+msgstr "Karma temelli üst verileri olan bir belge yok"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:635
 msgid "only on close and suspend"
@@ -10875,6 +10934,10 @@ msgid ""
 "resulting in its metadata (e.g., highlights and progress) being unlinked and "
 "lost."
 msgstr ""
+"Uyarı: Kitap üst verileri konumu, karma temelli depolama olarak ayarlandı. "
+"Bir PDF belgesinde vurgulamalar yazmak, dosyayı değiştirerek karma parçasını "
+"değiştirebilir ve bu durum üst verilerin (vurgulamalar ve ilerleme gibi) "
+"bağlantısının kesilmesine ve kaybolmasına neden olabilir."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:680
 msgid "End of document action"
@@ -11049,7 +11112,7 @@ msgstr "Son düzen hatırlansın"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:164
 msgid "Swipe to input additional characters"
-msgstr ""
+msgstr "Ek karakterler yazmak için kaydırın"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:173
 msgid "Keyboard appearance settings"
@@ -13496,7 +13559,7 @@ msgstr "Sayfa tarayıcı hakkında"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:899
 msgid "Preload next/prev thumbnails"
-msgstr ""
+msgstr "Sonraki/önceki küçük görselleri önceden yüklensin"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:925
 msgid "Thumbnail columns"
@@ -13590,11 +13653,11 @@ msgstr "Sayfa yer imini aç/kapat"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1553
 msgid "Edit or remove TOC chapter"
-msgstr ""
+msgstr "İçindekiler tablosu bölümünü düzenle ya da kaldır"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1554
 msgid "Start TOC chapter here"
-msgstr ""
+msgstr "İçindekiler tablosu bölümü buradan başlatılsın"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1567
 msgid "Restart regular flow here"
@@ -15842,7 +15905,7 @@ msgstr "Vurguları ve notları dışa aktarır."
 #. @translators Flomo is a note taking app. The name probably doesn't need to be translated.
 #: plugins/exporter.koplugin/target/flomo.lua:52
 msgid "Flomo"
-msgstr ""
+msgstr "Flomo"
 
 #: plugins/exporter.koplugin/target/flomo.lua:56
 msgid "Set Flomo API URL"
@@ -16039,6 +16102,11 @@ msgid ""
 "interface, you will find the IP address of your mobile device. Enter this IP "
 "address into KOReader to complete the configuration."
 msgstr ""
+"Dışa aktarma işlemine başlamadan önce lütfen cep telefonunuzun ve KOReader "
+"uygulamanızın aynı yerel ağa bağlı olduğundan emin olun. XMNote uygulamasını "
+"açın ve “Benim” - “Vurgulamaları içe aktar” - “API ile içe aktar” seçeneğine "
+"gidin. Arayüzün alt kısmında mobil aygıtınızın IP adresini bulacaksınız. "
+"Yapılandırmayı tamamlamak için bu IP adresini KOReader uygulamasına yazın."
 
 #: plugins/externalkeyboard.koplugin/main.lua:136
 msgid "External Keyboard"
