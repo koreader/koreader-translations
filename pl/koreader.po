@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 09:23+0000\n"
+"POT-Creation-Date: 2024-01-13 11:06+0000\n"
 "PO-Revision-Date: 2024-01-13 11:06+0000\n"
 "Last-Translator: Matthaiks <kitynska@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -23,8 +23,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && ("
-"n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
+"(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 "X-Generator: Weblate 5.4-dev\n"
 
@@ -179,7 +179,7 @@ msgstr "Wprowadź nazwę pliku"
 #: frontend/apps/reader/modules/readergoto.lua:68
 #: frontend/apps/reader/modules/readerhandmade.lua:486
 #: frontend/apps/reader/modules/readerlink.lua:219
-#: frontend/apps/reader/modules/readersearch.lua:123
+#: frontend/apps/reader/modules/readersearch.lua:184
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:156
@@ -1044,7 +1044,7 @@ msgstr "Folder książki"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:72
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
 #: frontend/apps/reader/modules/readerbookmark.lua:1144
-#: frontend/apps/reader/modules/readersearch.lua:147
+#: frontend/apps/reader/modules/readersearch.lua:215
 #: frontend/ui/widget/inputdialog.lua:894 frontend/ui/widget/textviewer.lua:482
 msgid "Case sensitive"
 msgstr "Tekst jest wrażliwy na wielkość liter (wpisz tak jak jest)"
@@ -1085,6 +1085,7 @@ msgstr "Wyodrębnij"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:248
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:289
 #: frontend/apps/filemanager/filemanagerhistory.lua:86
+#: frontend/apps/reader/modules/readersearch.lua:543
 msgid "Search results (%1)"
 msgstr "Wyniki wyszukiwania (%1)"
 
@@ -3968,7 +3969,8 @@ msgid "Select and highlight"
 msgstr "Wybierz i zaznacz"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:357
-#: frontend/apps/reader/modules/readersearch.lua:76 frontend/dispatcher.lua:159
+#: frontend/apps/reader/modules/readersearch.lua:130
+#: frontend/dispatcher.lua:159
 msgid "Fulltext search"
 msgstr "Wyszukaj w dokumencie"
 
@@ -4923,7 +4925,7 @@ msgstr "Ustaw opóźnienie"
 msgid "Allow inertial scrolling"
 msgstr "Zezwalaj na przewijanie inercyjne"
 
-#: frontend/apps/reader/modules/readersearch.lua:42
+#: frontend/apps/reader/modules/readersearch.lua:48
 msgid ""
 "Regular expressions allow you to search for a matching pattern in a text. "
 "The simplest pattern is a simple sequence of characters, such as `James "
@@ -4975,47 +4977,72 @@ msgstr ""
 "Złożone wyrażenia mogą prowadzić do bardzo długiego czasu wyszukiwania, w "
 "którym to przypadku nie wszystkie dopasowania zostaną pokazane."
 
-#: frontend/apps/reader/modules/readersearch.lua:63
+#: frontend/apps/reader/modules/readersearch.lua:69
 msgid "Wrong escape '\\'"
 msgstr "Nieprawidłowe uwolnienie '\\'"
 
-#: frontend/apps/reader/modules/readersearch.lua:64
+#: frontend/apps/reader/modules/readersearch.lua:70
 msgid "Back reference does not exist."
 msgstr "Odniesienie wsteczne nie istnieje."
 
-#: frontend/apps/reader/modules/readersearch.lua:65
+#: frontend/apps/reader/modules/readersearch.lua:71
 msgid "Mismatching brackets '[]'"
 msgstr "Niedopasowane nawiasy '[]'"
 
-#: frontend/apps/reader/modules/readersearch.lua:66
+#: frontend/apps/reader/modules/readersearch.lua:72
 msgid "Mismatched parens '()'"
 msgstr "Niedopasowane nawiasy '()'"
 
-#: frontend/apps/reader/modules/readersearch.lua:67
+#: frontend/apps/reader/modules/readersearch.lua:73
 msgid "Mismatched brace '{}'"
 msgstr "Niedopasowane nawiasy klamrowe '{}'"
 
-#: frontend/apps/reader/modules/readersearch.lua:68
+#: frontend/apps/reader/modules/readersearch.lua:74
 msgid "Invalid Range in '{}'"
 msgstr "Nieprawidłowy zakres w '{}'"
 
-#: frontend/apps/reader/modules/readersearch.lua:69
+#: frontend/apps/reader/modules/readersearch.lua:75
 msgid "Invalid character range"
 msgstr "Nieprawidłowy zakres znaków"
 
-#: frontend/apps/reader/modules/readersearch.lua:70
+#: frontend/apps/reader/modules/readersearch.lua:76
 msgid "No preceding expression in repetition."
 msgstr "Brak poprzedzającego wyrażenia w powtórzeniu."
 
-#: frontend/apps/reader/modules/readersearch.lua:71
+#: frontend/apps/reader/modules/readersearch.lua:77
 msgid "Expression too complex, some hits will not be shown."
 msgstr "Wyrażenie zbyt złożone, niektóre trafienia nie będą wyświetlane."
 
-#: frontend/apps/reader/modules/readersearch.lua:72
+#: frontend/apps/reader/modules/readersearch.lua:78
 msgid "Expression may lead to an extremely long search time."
 msgstr "Wyrażenie może prowadzić do bardzo długiego czasu wyszukiwania."
 
-#: frontend/apps/reader/modules/readersearch.lua:99
+#: frontend/apps/reader/modules/readersearch.lua:82
+#, fuzzy
+msgid "Fulltext search settings"
+msgstr "Wyszukaj w dokumencie"
+
+#: frontend/apps/reader/modules/readersearch.lua:86
+#, fuzzy
+msgid "Words in context: %1"
+msgstr "Nie udało się pobrać zawartości: %1"
+
+#: frontend/apps/reader/modules/readersearch.lua:91
+#, fuzzy
+msgid "Words in context"
+msgstr "Dodawanie zawartości"
+
+#: frontend/apps/reader/modules/readersearch.lua:108
+#, fuzzy
+msgid "Results per page: %1"
+msgstr "Elementy na stronę: %1"
+
+#: frontend/apps/reader/modules/readersearch.lua:113
+#, fuzzy
+msgid "Results per page"
+msgstr "Elementy na stronę"
+
+#: frontend/apps/reader/modules/readersearch.lua:153
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -5023,34 +5050,55 @@ msgstr ""
 "Nieprawidłowe wyrażenie regularne:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:101
+#: frontend/apps/reader/modules/readersearch.lua:155
 msgid "Invalid regular expression."
 msgstr "Nieprawidłowe wyrażenie regularne."
 
-#: frontend/apps/reader/modules/readersearch.lua:117
+#: frontend/apps/reader/modules/readersearch.lua:178
 #: frontend/ui/widget/inputdialog.lua:863 frontend/ui/widget/textviewer.lua:452
 msgid "Enter text to search for"
 msgstr "Wprowadź szukany tekst"
 
-#: frontend/apps/reader/modules/readersearch.lua:153
+#. @translators Search all entries in entire document
+#: frontend/apps/reader/modules/readersearch.lua:192
+#, fuzzy
+msgid "All"
+msgstr "Wszystkie"
+
+#: frontend/apps/reader/modules/readersearch.lua:221
 msgid "Regular expression (long-press for help)"
 msgstr "Wyrażenie regularne (przytrzymaj, aby uzyskać pomoc)"
 
-#: frontend/apps/reader/modules/readersearch.lua:261
+#: frontend/apps/reader/modules/readersearch.lua:329
 msgid "No results on preceding pages"
 msgstr "Brak wyników na poprzednich stronach"
 
-#: frontend/apps/reader/modules/readersearch.lua:263
+#: frontend/apps/reader/modules/readersearch.lua:331
 msgid "No results on following pages"
 msgstr "Brak wyników na kolejnych stronach"
 
-#: frontend/apps/reader/modules/readersearch.lua:379
+#: frontend/apps/reader/modules/readersearch.lua:454
 msgid "Unspecified error"
 msgstr "Nieokreślony błąd"
 
-#: frontend/apps/reader/modules/readersearch.lua:387
+#: frontend/apps/reader/modules/readersearch.lua:462
 msgid "Too many hits"
 msgstr "Zbyt wiele trafień"
+
+#: frontend/apps/reader/modules/readersearch.lua:498
+#, fuzzy
+msgid "Searching… (tap to cancel)"
+msgstr "Trwa wczytywanie wysokiej jakości obrazu… (stuknij, aby anulować)"
+
+#: frontend/apps/reader/modules/readersearch.lua:513
+#, fuzzy
+msgid "No results in the document"
+msgstr "Brak wyników w metadanych"
+
+#: frontend/apps/reader/modules/readersearch.lua:544
+#, fuzzy
+msgid "Query: %1"
+msgstr "(zapytanie: %1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:29
 #: frontend/apps/reader/modules/readerstatus.lua:67 frontend/dispatcher.lua:168
@@ -20611,9 +20659,6 @@ msgstr ""
 #~ "%3\n"
 #~ " Pobieranie elementu %1 z %2"
 
-#~ msgid "Could not get content for: %1"
-#~ msgstr "Nie udało się pobrać zawartości: %1"
-
 #~ msgid "Error: chapters contains 0 items"
 #~ msgstr "Błąd: rozdziały zawierają 0 elementów"
 
@@ -20622,9 +20667,6 @@ msgstr ""
 
 #~ msgid "Building EPUB %1: %2"
 #~ msgstr "Tworzenie EPUB %1: %2"
-
-#~ msgid "Adding contents"
-#~ msgstr "Dodawanie zawartości"
 
 #~ msgid "Adding images"
 #~ msgstr "Dodawanie obrazów"

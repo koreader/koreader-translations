@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 09:23+0000\n"
+"POT-Creation-Date: 2024-01-13 11:06+0000\n"
 "PO-Revision-Date: 2024-01-13 09:23+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
@@ -190,7 +190,7 @@ msgstr "Введите имя файла"
 #: frontend/apps/reader/modules/readergoto.lua:68
 #: frontend/apps/reader/modules/readerhandmade.lua:486
 #: frontend/apps/reader/modules/readerlink.lua:219
-#: frontend/apps/reader/modules/readersearch.lua:123
+#: frontend/apps/reader/modules/readersearch.lua:184
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:156
@@ -1047,7 +1047,7 @@ msgstr "Папка книги"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:72
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
 #: frontend/apps/reader/modules/readerbookmark.lua:1144
-#: frontend/apps/reader/modules/readersearch.lua:147
+#: frontend/apps/reader/modules/readersearch.lua:215
 #: frontend/ui/widget/inputdialog.lua:894 frontend/ui/widget/textviewer.lua:482
 msgid "Case sensitive"
 msgstr "С учётом регистра"
@@ -1088,6 +1088,7 @@ msgstr "Извлечь"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:248
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:289
 #: frontend/apps/filemanager/filemanagerhistory.lua:86
+#: frontend/apps/reader/modules/readersearch.lua:543
 msgid "Search results (%1)"
 msgstr "Результаты поиска (%1)"
 
@@ -3970,7 +3971,8 @@ msgid "Select and highlight"
 msgstr "Выбрать и выделить"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:357
-#: frontend/apps/reader/modules/readersearch.lua:76 frontend/dispatcher.lua:159
+#: frontend/apps/reader/modules/readersearch.lua:130
+#: frontend/dispatcher.lua:159
 msgid "Fulltext search"
 msgstr "Поиск по всему тексту"
 
@@ -4914,7 +4916,7 @@ msgstr "Настройка задержки"
 msgid "Allow inertial scrolling"
 msgstr "Разрешить инерционную прокрутку"
 
-#: frontend/apps/reader/modules/readersearch.lua:42
+#: frontend/apps/reader/modules/readersearch.lua:48
 msgid ""
 "Regular expressions allow you to search for a matching pattern in a text. "
 "The simplest pattern is a simple sequence of characters, such as `James "
@@ -4966,47 +4968,72 @@ msgstr ""
 "Сложные выражения могут привести к очень долгому поиску, и в данном случае "
 "будут показаны не все совпадения."
 
-#: frontend/apps/reader/modules/readersearch.lua:63
+#: frontend/apps/reader/modules/readersearch.lua:69
 msgid "Wrong escape '\\'"
 msgstr "Неверная escape-последовательность «\\»"
 
-#: frontend/apps/reader/modules/readersearch.lua:64
+#: frontend/apps/reader/modules/readersearch.lua:70
 msgid "Back reference does not exist."
 msgstr "Обратной ссылки не существует."
 
-#: frontend/apps/reader/modules/readersearch.lua:65
+#: frontend/apps/reader/modules/readersearch.lua:71
 msgid "Mismatching brackets '[]'"
 msgstr "Несоответствующие скобки «[]»"
 
-#: frontend/apps/reader/modules/readersearch.lua:66
+#: frontend/apps/reader/modules/readersearch.lua:72
 msgid "Mismatched parens '()'"
 msgstr "Несовпадающие скобки «()»"
 
-#: frontend/apps/reader/modules/readersearch.lua:67
+#: frontend/apps/reader/modules/readersearch.lua:73
 msgid "Mismatched brace '{}'"
 msgstr "Несоответствующая скобка «{}»"
 
-#: frontend/apps/reader/modules/readersearch.lua:68
+#: frontend/apps/reader/modules/readersearch.lua:74
 msgid "Invalid Range in '{}'"
 msgstr "Недопустимый диапазон в «{}»"
 
-#: frontend/apps/reader/modules/readersearch.lua:69
+#: frontend/apps/reader/modules/readersearch.lua:75
 msgid "Invalid character range"
 msgstr "Недопустимый диапазон символов"
 
-#: frontend/apps/reader/modules/readersearch.lua:70
+#: frontend/apps/reader/modules/readersearch.lua:76
 msgid "No preceding expression in repetition."
 msgstr "Нет повторения предыдущего выражения."
 
-#: frontend/apps/reader/modules/readersearch.lua:71
+#: frontend/apps/reader/modules/readersearch.lua:77
 msgid "Expression too complex, some hits will not be shown."
 msgstr "Выражение слишком сложное, часть совпадений отображена не будет."
 
-#: frontend/apps/reader/modules/readersearch.lua:72
+#: frontend/apps/reader/modules/readersearch.lua:78
 msgid "Expression may lead to an extremely long search time."
 msgstr "Выражение может привести к очень долгому поиску."
 
-#: frontend/apps/reader/modules/readersearch.lua:99
+#: frontend/apps/reader/modules/readersearch.lua:82
+#, fuzzy
+msgid "Fulltext search settings"
+msgstr "Поиск по всему тексту"
+
+#: frontend/apps/reader/modules/readersearch.lua:86
+#, fuzzy
+msgid "Words in context: %1"
+msgstr "Не удалось получить содержимое для: %1"
+
+#: frontend/apps/reader/modules/readersearch.lua:91
+#, fuzzy
+msgid "Words in context"
+msgstr "Добавление содержимого"
+
+#: frontend/apps/reader/modules/readersearch.lua:108
+#, fuzzy
+msgid "Results per page: %1"
+msgstr "Элементов на странице: %1"
+
+#: frontend/apps/reader/modules/readersearch.lua:113
+#, fuzzy
+msgid "Results per page"
+msgstr "Элементов на странице"
+
+#: frontend/apps/reader/modules/readersearch.lua:153
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -5014,34 +5041,55 @@ msgstr ""
 "Недопустимое регулярное выражение:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:101
+#: frontend/apps/reader/modules/readersearch.lua:155
 msgid "Invalid regular expression."
 msgstr "Недопустимое регулярное выражение."
 
-#: frontend/apps/reader/modules/readersearch.lua:117
+#: frontend/apps/reader/modules/readersearch.lua:178
 #: frontend/ui/widget/inputdialog.lua:863 frontend/ui/widget/textviewer.lua:452
 msgid "Enter text to search for"
 msgstr "Введите текст поискового запроса"
 
-#: frontend/apps/reader/modules/readersearch.lua:153
+#. @translators Search all entries in entire document
+#: frontend/apps/reader/modules/readersearch.lua:192
+#, fuzzy
+msgid "All"
+msgstr "Всё"
+
+#: frontend/apps/reader/modules/readersearch.lua:221
 msgid "Regular expression (long-press for help)"
 msgstr "Регулярное выражение ⓘ"
 
-#: frontend/apps/reader/modules/readersearch.lua:261
+#: frontend/apps/reader/modules/readersearch.lua:329
 msgid "No results on preceding pages"
 msgstr "Нет результатов на предыдущих страницах"
 
-#: frontend/apps/reader/modules/readersearch.lua:263
+#: frontend/apps/reader/modules/readersearch.lua:331
 msgid "No results on following pages"
 msgstr "Нет результатов на последующих страницах"
 
-#: frontend/apps/reader/modules/readersearch.lua:379
+#: frontend/apps/reader/modules/readersearch.lua:454
 msgid "Unspecified error"
 msgstr "Неопределенная ошибка"
 
-#: frontend/apps/reader/modules/readersearch.lua:387
+#: frontend/apps/reader/modules/readersearch.lua:462
 msgid "Too many hits"
 msgstr "Слишком много совпадений"
+
+#: frontend/apps/reader/modules/readersearch.lua:498
+#, fuzzy
+msgid "Searching… (tap to cancel)"
+msgstr "Загрузка изображения с высоким разрешением… (коснитесь для отмены)"
+
+#: frontend/apps/reader/modules/readersearch.lua:513
+#, fuzzy
+msgid "No results in the document"
+msgstr "Нет результатов в метаданных"
+
+#: frontend/apps/reader/modules/readersearch.lua:544
+#, fuzzy
+msgid "Query: %1"
+msgstr "(запрос: %1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:29
 #: frontend/apps/reader/modules/readerstatus.lua:67 frontend/dispatcher.lua:168
@@ -20626,9 +20674,6 @@ msgstr ""
 #~ "%3\n"
 #~ " Загрузка элемента %1 из %2"
 
-#~ msgid "Could not get content for: %1"
-#~ msgstr "Не удалось получить содержимое для: %1"
-
 #~ msgid "Error: chapters contains 0 items"
 #~ msgstr "Ошибка: главы содержат 0 элементов"
 
@@ -20637,9 +20682,6 @@ msgstr ""
 
 #~ msgid "Building EPUB %1: %2"
 #~ msgstr "Создание EPUB %1: %2"
-
-#~ msgid "Adding contents"
-#~ msgstr "Добавление содержимого"
 
 #~ msgid "Adding images"
 #~ msgstr "Добавление изображений"

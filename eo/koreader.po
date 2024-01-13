@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 09:23+0000\n"
+"POT-Creation-Date: 2024-01-13 11:06+0000\n"
 "PO-Revision-Date: 2021-09-16 07:16+0000\n"
 "Last-Translator: Jakub Fabijan <jakubfabijan@tuta.io>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/koreader/"
@@ -154,7 +154,7 @@ msgstr "Tajpu dosiernomon"
 #: frontend/apps/reader/modules/readergoto.lua:68
 #: frontend/apps/reader/modules/readerhandmade.lua:486
 #: frontend/apps/reader/modules/readerlink.lua:219
-#: frontend/apps/reader/modules/readersearch.lua:123
+#: frontend/apps/reader/modules/readersearch.lua:184
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:156
@@ -995,7 +995,7 @@ msgstr "Elekti lokan dosierujon"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:72
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
 #: frontend/apps/reader/modules/readerbookmark.lua:1144
-#: frontend/apps/reader/modules/readersearch.lua:147
+#: frontend/apps/reader/modules/readersearch.lua:215
 #: frontend/ui/widget/inputdialog.lua:894 frontend/ui/widget/textviewer.lua:482
 msgid "Case sensitive"
 msgstr ""
@@ -1035,6 +1035,7 @@ msgstr "Malgrasega"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:248
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:289
 #: frontend/apps/filemanager/filemanagerhistory.lua:86
+#: frontend/apps/reader/modules/readersearch.lua:543
 #, fuzzy
 msgid "Search results (%1)"
 msgstr "Serĉrezultoj"
@@ -3850,7 +3851,8 @@ msgid "Select and highlight"
 msgstr "Elekti"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:357
-#: frontend/apps/reader/modules/readersearch.lua:76 frontend/dispatcher.lua:159
+#: frontend/apps/reader/modules/readersearch.lua:130
+#: frontend/dispatcher.lua:159
 msgid "Fulltext search"
 msgstr ""
 
@@ -4644,7 +4646,7 @@ msgstr ""
 msgid "Allow inertial scrolling"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:42
+#: frontend/apps/reader/modules/readersearch.lua:48
 msgid ""
 "Regular expressions allow you to search for a matching pattern in a text. "
 "The simplest pattern is a simple sequence of characters, such as `James "
@@ -4672,80 +4674,126 @@ msgid ""
 "not all matches will be shown."
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:63
+#: frontend/apps/reader/modules/readersearch.lua:69
 msgid "Wrong escape '\\'"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:64
+#: frontend/apps/reader/modules/readersearch.lua:70
 msgid "Back reference does not exist."
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:65
+#: frontend/apps/reader/modules/readersearch.lua:71
 msgid "Mismatching brackets '[]'"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:66
+#: frontend/apps/reader/modules/readersearch.lua:72
 msgid "Mismatched parens '()'"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:67
+#: frontend/apps/reader/modules/readersearch.lua:73
 msgid "Mismatched brace '{}'"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:68
+#: frontend/apps/reader/modules/readersearch.lua:74
 msgid "Invalid Range in '{}'"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:69
+#: frontend/apps/reader/modules/readersearch.lua:75
 msgid "Invalid character range"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:70
+#: frontend/apps/reader/modules/readersearch.lua:76
 msgid "No preceding expression in repetition."
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:71
+#: frontend/apps/reader/modules/readersearch.lua:77
 msgid "Expression too complex, some hits will not be shown."
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:72
+#: frontend/apps/reader/modules/readersearch.lua:78
 msgid "Expression may lead to an extremely long search time."
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:99
+#: frontend/apps/reader/modules/readersearch.lua:82
+#, fuzzy
+msgid "Fulltext search settings"
+msgstr "Agordoj pri serĉo"
+
+#: frontend/apps/reader/modules/readersearch.lua:86
+#, fuzzy
+msgid "Words in context: %1"
+msgstr ""
+"Ne eblis konservi dosieron al:\n"
+"%1"
+
+#: frontend/apps/reader/modules/readersearch.lua:91
+msgid "Words in context"
+msgstr ""
+
+#: frontend/apps/reader/modules/readersearch.lua:108
+#, fuzzy
+msgid "Results per page: %1"
+msgstr "Legosignoj en paĝo"
+
+#: frontend/apps/reader/modules/readersearch.lua:113
+#, fuzzy
+msgid "Results per page"
+msgstr "Legosignoj en paĝo"
+
+#: frontend/apps/reader/modules/readersearch.lua:153
 msgid ""
 "Invalid regular expression:\n"
 "%1"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:101
+#: frontend/apps/reader/modules/readersearch.lua:155
 msgid "Invalid regular expression."
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:117
+#: frontend/apps/reader/modules/readersearch.lua:178
 #: frontend/ui/widget/inputdialog.lua:863 frontend/ui/widget/textviewer.lua:452
 msgid "Enter text to search for"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:153
+#. @translators Search all entries in entire document
+#: frontend/apps/reader/modules/readersearch.lua:192
+#, fuzzy
+msgid "All"
+msgstr "Permesi"
+
+#: frontend/apps/reader/modules/readersearch.lua:221
 msgid "Regular expression (long-press for help)"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:261
+#: frontend/apps/reader/modules/readersearch.lua:329
 msgid "No results on preceding pages"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:263
+#: frontend/apps/reader/modules/readersearch.lua:331
 msgid "No results on following pages"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:379
+#: frontend/apps/reader/modules/readersearch.lua:454
 msgid "Unspecified error"
 msgstr ""
 
-#: frontend/apps/reader/modules/readersearch.lua:387
+#: frontend/apps/reader/modules/readersearch.lua:462
 msgid "Too many hits"
 msgstr ""
+
+#: frontend/apps/reader/modules/readersearch.lua:498
+msgid "Searching… (tap to cancel)"
+msgstr ""
+
+#: frontend/apps/reader/modules/readersearch.lua:513
+#, fuzzy
+msgid "No results in the document"
+msgstr "Malfermi lastan dokumenton"
+
+#: frontend/apps/reader/modules/readersearch.lua:544
+#, fuzzy
+msgid "Query: %1"
+msgstr "Ordigi laŭ: %1"
 
 #: frontend/apps/reader/modules/readerstatus.lua:29
 #: frontend/apps/reader/modules/readerstatus.lua:67 frontend/dispatcher.lua:168
@@ -18306,12 +18354,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "Could not initialize feed document"
-#~ msgstr ""
-#~ "Ne eblis konservi dosieron al:\n"
-#~ "%1"
-
-#, fuzzy
-#~ msgid "Could not get content for: %1"
 #~ msgstr ""
 #~ "Ne eblis konservi dosieron al:\n"
 #~ "%1"

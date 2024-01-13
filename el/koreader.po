@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 09:23+0000\n"
+"POT-Creation-Date: 2024-01-13 11:06+0000\n"
 "PO-Revision-Date: 2024-01-13 11:06+0000\n"
 "Last-Translator: Ichnilatis <sophronios.sp@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -179,7 +179,7 @@ msgstr "Εισαγάγετε το όνομα του αρχείου"
 #: frontend/apps/reader/modules/readergoto.lua:68
 #: frontend/apps/reader/modules/readerhandmade.lua:486
 #: frontend/apps/reader/modules/readerlink.lua:219
-#: frontend/apps/reader/modules/readersearch.lua:123
+#: frontend/apps/reader/modules/readersearch.lua:184
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:156
@@ -1038,7 +1038,7 @@ msgstr "Φάκελος βιβλίου"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:72
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
 #: frontend/apps/reader/modules/readerbookmark.lua:1144
-#: frontend/apps/reader/modules/readersearch.lua:147
+#: frontend/apps/reader/modules/readersearch.lua:215
 #: frontend/ui/widget/inputdialog.lua:894 frontend/ui/widget/textviewer.lua:482
 msgid "Case sensitive"
 msgstr "Διάκριση πεζών-κεφαλαίων"
@@ -1077,6 +1077,7 @@ msgstr "Εξαγωγή"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:248
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:289
 #: frontend/apps/filemanager/filemanagerhistory.lua:86
+#: frontend/apps/reader/modules/readersearch.lua:543
 msgid "Search results (%1)"
 msgstr "Αποτελέσματα αναζήτησης (%1)"
 
@@ -3983,7 +3984,8 @@ msgid "Select and highlight"
 msgstr "Επιλογή και επισήμανση"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:357
-#: frontend/apps/reader/modules/readersearch.lua:76 frontend/dispatcher.lua:159
+#: frontend/apps/reader/modules/readersearch.lua:130
+#: frontend/dispatcher.lua:159
 msgid "Fulltext search"
 msgstr "Αναζήτηση πλήρους κειμένου"
 
@@ -4952,7 +4954,7 @@ msgstr "Καθορισμός καθυστέρησης"
 msgid "Allow inertial scrolling"
 msgstr "Να επιτρέπεται η κύλιση με αδράνεια"
 
-#: frontend/apps/reader/modules/readersearch.lua:42
+#: frontend/apps/reader/modules/readersearch.lua:48
 msgid ""
 "Regular expressions allow you to search for a matching pattern in a text. "
 "The simplest pattern is a simple sequence of characters, such as `James "
@@ -5005,47 +5007,72 @@ msgstr ""
 "Οι περίπλοκες εκφράσεις μπορεί να οδηγήσουν σε εξαιρετικά μεγάλο χρόνο "
 "αναζήτησης, οπότε δεν θα εμφανιστούν όλες οι αντιστοιχίες."
 
-#: frontend/apps/reader/modules/readersearch.lua:63
+#: frontend/apps/reader/modules/readersearch.lua:69
 msgid "Wrong escape '\\'"
 msgstr "Λάθος διαφυγή '\\'"
 
-#: frontend/apps/reader/modules/readersearch.lua:64
+#: frontend/apps/reader/modules/readersearch.lua:70
 msgid "Back reference does not exist."
 msgstr "Η αντίστροφη αναφορά δεν υπάρχει."
 
-#: frontend/apps/reader/modules/readersearch.lua:65
+#: frontend/apps/reader/modules/readersearch.lua:71
 msgid "Mismatching brackets '[]'"
 msgstr "Αναντιστοιχία αγκυλών '[]'"
 
-#: frontend/apps/reader/modules/readersearch.lua:66
+#: frontend/apps/reader/modules/readersearch.lua:72
 msgid "Mismatched parens '()'"
 msgstr "Αναντιστοιχία παρενθέσεων\"()\""
 
-#: frontend/apps/reader/modules/readersearch.lua:67
+#: frontend/apps/reader/modules/readersearch.lua:73
 msgid "Mismatched brace '{}'"
 msgstr "Αναντιστοιχία αγκυλών\"{}\""
 
-#: frontend/apps/reader/modules/readersearch.lua:68
+#: frontend/apps/reader/modules/readersearch.lua:74
 msgid "Invalid Range in '{}'"
 msgstr "Μη έγκυρο εύρος στο '{}'"
 
-#: frontend/apps/reader/modules/readersearch.lua:69
+#: frontend/apps/reader/modules/readersearch.lua:75
 msgid "Invalid character range"
 msgstr "Μη έγκυρο εύρος χαρακτήρων"
 
-#: frontend/apps/reader/modules/readersearch.lua:70
+#: frontend/apps/reader/modules/readersearch.lua:76
 msgid "No preceding expression in repetition."
 msgstr "Δεν υπάρχει προηγούμενη έκφραση στην επανάληψη."
 
-#: frontend/apps/reader/modules/readersearch.lua:71
+#: frontend/apps/reader/modules/readersearch.lua:77
 msgid "Expression too complex, some hits will not be shown."
 msgstr "Πολύ σύνθετη έκφραση, ορισμένα αποτελέσματα δεν θα εμφανιστούν."
 
-#: frontend/apps/reader/modules/readersearch.lua:72
+#: frontend/apps/reader/modules/readersearch.lua:78
 msgid "Expression may lead to an extremely long search time."
 msgstr "Η έκφραση μπορεί να οδηγήσει σε εξαιρετικά μεγάλο χρόνο αναζήτησης."
 
-#: frontend/apps/reader/modules/readersearch.lua:99
+#: frontend/apps/reader/modules/readersearch.lua:82
+#, fuzzy
+msgid "Fulltext search settings"
+msgstr "Αναζήτηση πλήρους κειμένου"
+
+#: frontend/apps/reader/modules/readersearch.lua:86
+#, fuzzy
+msgid "Words in context: %1"
+msgstr "Δεν ήταν δυνατή η λήψη περιεχομένου για: %1"
+
+#: frontend/apps/reader/modules/readersearch.lua:91
+#, fuzzy
+msgid "Words in context"
+msgstr "Προσθήκη περιεχομένων"
+
+#: frontend/apps/reader/modules/readersearch.lua:108
+#, fuzzy
+msgid "Results per page: %1"
+msgstr "Στοιχεία ανά σελίδα: %1"
+
+#: frontend/apps/reader/modules/readersearch.lua:113
+#, fuzzy
+msgid "Results per page"
+msgstr "Στοιχεία ανά σελίδα"
+
+#: frontend/apps/reader/modules/readersearch.lua:153
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -5053,34 +5080,55 @@ msgstr ""
 "Μη έγκυρη κανονική έκφραση:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:101
+#: frontend/apps/reader/modules/readersearch.lua:155
 msgid "Invalid regular expression."
 msgstr "Μη έγκυρη κανονική έκφραση."
 
-#: frontend/apps/reader/modules/readersearch.lua:117
+#: frontend/apps/reader/modules/readersearch.lua:178
 #: frontend/ui/widget/inputdialog.lua:863 frontend/ui/widget/textviewer.lua:452
 msgid "Enter text to search for"
 msgstr "Εισαγάγετε κείμενο για αναζήτηση"
 
-#: frontend/apps/reader/modules/readersearch.lua:153
+#. @translators Search all entries in entire document
+#: frontend/apps/reader/modules/readersearch.lua:192
+#, fuzzy
+msgid "All"
+msgstr "Όλα"
+
+#: frontend/apps/reader/modules/readersearch.lua:221
 msgid "Regular expression (long-press for help)"
 msgstr "Κανονική έκφραση (πατήστε παρατεταμένα για βοήθεια)"
 
-#: frontend/apps/reader/modules/readersearch.lua:261
+#: frontend/apps/reader/modules/readersearch.lua:329
 msgid "No results on preceding pages"
 msgstr "Δεν υπάρχουν αποτελέσματα στις προηγούμενες σελίδες"
 
-#: frontend/apps/reader/modules/readersearch.lua:263
+#: frontend/apps/reader/modules/readersearch.lua:331
 msgid "No results on following pages"
 msgstr "Δεν υπάρχουν αποτελέσματα στις επόμενες σελίδες"
 
-#: frontend/apps/reader/modules/readersearch.lua:379
+#: frontend/apps/reader/modules/readersearch.lua:454
 msgid "Unspecified error"
 msgstr "Απροσδιόριστο σφάλμα"
 
-#: frontend/apps/reader/modules/readersearch.lua:387
+#: frontend/apps/reader/modules/readersearch.lua:462
 msgid "Too many hits"
 msgstr "Πάρα πολλά αποτελέσματα"
+
+#: frontend/apps/reader/modules/readersearch.lua:498
+#, fuzzy
+msgid "Searching… (tap to cancel)"
+msgstr "Φόρτωση εικόνας υψηλής ανάλυσης… (πατήστε για ακύρωση)"
+
+#: frontend/apps/reader/modules/readersearch.lua:513
+#, fuzzy
+msgid "No results in the document"
+msgstr "Δεν υπάρχουν αποτελέσματα στα μεταδεδομένα"
+
+#: frontend/apps/reader/modules/readersearch.lua:544
+#, fuzzy
+msgid "Query: %1"
+msgstr "(αναζήτηση : %1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:29
 #: frontend/apps/reader/modules/readerstatus.lua:67 frontend/dispatcher.lua:168
@@ -20804,9 +20852,6 @@ msgstr ""
 #~ "%3\n"
 #~ " Λήψη στοιχείου %1 από %2"
 
-#~ msgid "Could not get content for: %1"
-#~ msgstr "Δεν ήταν δυνατή η λήψη περιεχομένου για: %1"
-
 #~ msgid "Error: chapters contains 0 items"
 #~ msgstr "Σφάλμα: τα κεφάλαια περιέχουν 0 στοιχεία"
 
@@ -20815,9 +20860,6 @@ msgstr ""
 
 #~ msgid "Building EPUB %1: %2"
 #~ msgstr "Δημιουργία EPUB %1: %2"
-
-#~ msgid "Adding contents"
-#~ msgstr "Προσθήκη περιεχομένων"
 
 #~ msgid "Adding images"
 #~ msgstr "Προσθήκη εικόνων"

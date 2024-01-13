@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-13 09:23+0000\n"
+"POT-Creation-Date: 2024-01-13 11:06+0000\n"
 "PO-Revision-Date: 2023-03-20 07:32+0000\n"
 "Last-Translator: うにみそ <unimiso@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
@@ -173,7 +173,7 @@ msgstr "ファイル名を入力"
 #: frontend/apps/reader/modules/readergoto.lua:68
 #: frontend/apps/reader/modules/readerhandmade.lua:486
 #: frontend/apps/reader/modules/readerlink.lua:219
-#: frontend/apps/reader/modules/readersearch.lua:123
+#: frontend/apps/reader/modules/readersearch.lua:184
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:156
@@ -1019,7 +1019,7 @@ msgstr "ブックフォルダー"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:72
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
 #: frontend/apps/reader/modules/readerbookmark.lua:1144
-#: frontend/apps/reader/modules/readersearch.lua:147
+#: frontend/apps/reader/modules/readersearch.lua:215
 #: frontend/ui/widget/inputdialog.lua:894 frontend/ui/widget/textviewer.lua:482
 msgid "Case sensitive"
 msgstr "大/小文字を区別する"
@@ -1058,6 +1058,7 @@ msgstr "極細"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:248
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:289
 #: frontend/apps/filemanager/filemanagerhistory.lua:86
+#: frontend/apps/reader/modules/readersearch.lua:543
 msgid "Search results (%1)"
 msgstr "検索結果(%1)"
 
@@ -3918,7 +3919,8 @@ msgid "Select and highlight"
 msgstr "選択したらハイライトする"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:357
-#: frontend/apps/reader/modules/readersearch.lua:76 frontend/dispatcher.lua:159
+#: frontend/apps/reader/modules/readersearch.lua:130
+#: frontend/dispatcher.lua:159
 msgid "Fulltext search"
 msgstr "全文検索"
 
@@ -4844,7 +4846,7 @@ msgstr "遅延を設定"
 msgid "Allow inertial scrolling"
 msgstr "内部スクロールを許可する"
 
-#: frontend/apps/reader/modules/readersearch.lua:42
+#: frontend/apps/reader/modules/readersearch.lua:48
 msgid ""
 "Regular expressions allow you to search for a matching pattern in a text. "
 "The simplest pattern is a simple sequence of characters, such as `James "
@@ -4896,47 +4898,71 @@ msgstr ""
 "複雑な表現では検索時間が極端に長くなる場合があり、その場合はすべてのマッチが"
 "表示されません。"
 
-#: frontend/apps/reader/modules/readersearch.lua:63
+#: frontend/apps/reader/modules/readersearch.lua:69
 msgid "Wrong escape '\\'"
 msgstr "誤ったエスケープ '\\'"
 
-#: frontend/apps/reader/modules/readersearch.lua:64
+#: frontend/apps/reader/modules/readersearch.lua:70
 msgid "Back reference does not exist."
 msgstr "後方参照が存在しません。"
 
-#: frontend/apps/reader/modules/readersearch.lua:65
+#: frontend/apps/reader/modules/readersearch.lua:71
 msgid "Mismatching brackets '[]'"
 msgstr "角括弧の不一致 '[]'"
 
-#: frontend/apps/reader/modules/readersearch.lua:66
+#: frontend/apps/reader/modules/readersearch.lua:72
 msgid "Mismatched parens '()'"
 msgstr "丸括弧の不一致 '()'"
 
-#: frontend/apps/reader/modules/readersearch.lua:67
+#: frontend/apps/reader/modules/readersearch.lua:73
 msgid "Mismatched brace '{}'"
 msgstr "中括弧の不一致 '{}'"
 
-#: frontend/apps/reader/modules/readersearch.lua:68
+#: frontend/apps/reader/modules/readersearch.lua:74
 msgid "Invalid Range in '{}'"
 msgstr "'{}' 内の範囲が不正"
 
-#: frontend/apps/reader/modules/readersearch.lua:69
+#: frontend/apps/reader/modules/readersearch.lua:75
 msgid "Invalid character range"
 msgstr "文字範囲が不正"
 
-#: frontend/apps/reader/modules/readersearch.lua:70
+#: frontend/apps/reader/modules/readersearch.lua:76
 msgid "No preceding expression in repetition."
 msgstr "繰り返しに先行する表現がありません。"
 
-#: frontend/apps/reader/modules/readersearch.lua:71
+#: frontend/apps/reader/modules/readersearch.lua:77
 msgid "Expression too complex, some hits will not be shown."
 msgstr "表現が複雑すぎます。いくつかの検出が表示されないかもしれません。"
 
-#: frontend/apps/reader/modules/readersearch.lua:72
+#: frontend/apps/reader/modules/readersearch.lua:78
 msgid "Expression may lead to an extremely long search time."
 msgstr "表現は検索時間が極端に長くなる可能性があります。"
 
-#: frontend/apps/reader/modules/readersearch.lua:99
+#: frontend/apps/reader/modules/readersearch.lua:82
+#, fuzzy
+msgid "Fulltext search settings"
+msgstr "全文検索"
+
+#: frontend/apps/reader/modules/readersearch.lua:86
+#, fuzzy
+msgid "Words in context: %1"
+msgstr "コンテンツを取得できませんでした: %1"
+
+#: frontend/apps/reader/modules/readersearch.lua:91
+msgid "Words in context"
+msgstr ""
+
+#: frontend/apps/reader/modules/readersearch.lua:108
+#, fuzzy
+msgid "Results per page: %1"
+msgstr "ページごとのアイテム数"
+
+#: frontend/apps/reader/modules/readersearch.lua:113
+#, fuzzy
+msgid "Results per page"
+msgstr "ページごとのアイテム数"
+
+#: frontend/apps/reader/modules/readersearch.lua:153
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -4944,34 +4970,55 @@ msgstr ""
 "無効な正規表現:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:101
+#: frontend/apps/reader/modules/readersearch.lua:155
 msgid "Invalid regular expression."
 msgstr "無効な正規表現。"
 
-#: frontend/apps/reader/modules/readersearch.lua:117
+#: frontend/apps/reader/modules/readersearch.lua:178
 #: frontend/ui/widget/inputdialog.lua:863 frontend/ui/widget/textviewer.lua:452
 msgid "Enter text to search for"
 msgstr "検索するテキストを入力"
 
-#: frontend/apps/reader/modules/readersearch.lua:153
+#. @translators Search all entries in entire document
+#: frontend/apps/reader/modules/readersearch.lua:192
+#, fuzzy
+msgid "All"
+msgstr "全て"
+
+#: frontend/apps/reader/modules/readersearch.lua:221
 msgid "Regular expression (long-press for help)"
 msgstr "正規表現 (長押しでヘルプ)"
 
-#: frontend/apps/reader/modules/readersearch.lua:261
+#: frontend/apps/reader/modules/readersearch.lua:329
 msgid "No results on preceding pages"
 msgstr "前のページには結果がありません"
 
-#: frontend/apps/reader/modules/readersearch.lua:263
+#: frontend/apps/reader/modules/readersearch.lua:331
 msgid "No results on following pages"
 msgstr "以降のページには結果がありません"
 
-#: frontend/apps/reader/modules/readersearch.lua:379
+#: frontend/apps/reader/modules/readersearch.lua:454
 msgid "Unspecified error"
 msgstr "不明なエラー"
 
-#: frontend/apps/reader/modules/readersearch.lua:387
+#: frontend/apps/reader/modules/readersearch.lua:462
 msgid "Too many hits"
 msgstr "検出数が多すぎます"
+
+#: frontend/apps/reader/modules/readersearch.lua:498
+#, fuzzy
+msgid "Searching… (tap to cancel)"
+msgstr "高解像度画像の読み込み中… (タップでキャンセル)"
+
+#: frontend/apps/reader/modules/readersearch.lua:513
+#, fuzzy
+msgid "No results in the document"
+msgstr "メタデータには結果がありません"
+
+#: frontend/apps/reader/modules/readersearch.lua:544
+#, fuzzy
+msgid "Query: %1"
+msgstr "(検索ワード : %1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:29
 #: frontend/apps/reader/modules/readerstatus.lua:67 frontend/dispatcher.lua:168
@@ -20075,9 +20122,6 @@ msgstr ""
 #~ msgstr ""
 #~ "%3\n"
 #~ "ダウンロード中 %2 うちの %1"
-
-#~ msgid "Could not get content for: %1"
-#~ msgstr "コンテンツを取得できませんでした: %1"
 
 #~ msgid "Building EPUB %1"
 #~ msgstr "EPUB の作成中%1"
