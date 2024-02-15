@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-08 16:49+0000\n"
-"PO-Revision-Date: 2024-02-09 18:02+0000\n"
-"Last-Translator: Sari Gabor <sarigaborj@gmail.com>\n"
+"PO-Revision-Date: 2024-02-15 17:02+0000\n"
+"Last-Translator: Unger Szabolcs <unger.szabolcspr.com@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
 "koreader/hu/>\n"
 "Language: hu\n"
@@ -932,6 +932,12 @@ msgid ""
 "to the preferred storage location, or to delete %1, which will speed up file "
 "browser navigation."
 msgstr ""
+"A Hash-alapú metaadatot a következő dokumentumok esetében lett elmentve %1. "
+"A Hash-alapú tárolás lelassíthatja a fájlböngésző navigációját a nagy "
+"könyvtárakban. Így, ha nem használja hash-alapú metaadattároló, ajánlott "
+"megnyitni a kapcsolódó dokumentumokat KOReaderrel, hogy automatikusan "
+"áthelyezze a metaadatokat az előnyben részesített tárolási helyre, vagy "
+"törölje %1, amely felgyorsítja a fájlböngészővel történő navigációt."
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:672
 msgid ""
@@ -944,8 +950,8 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:677
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 dokumentum hash-alapú metaadatokkal"
+msgstr[1] "%1 dokumentumok hash-alapú metaadatokkal"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:16
 #: frontend/dispatcher.lua:56
@@ -3730,6 +3736,19 @@ msgid ""
 "This custom table of contents is currently limited to a single level and "
 "can't have sub-chapters."
 msgstr ""
+"Ha a könyvnek nincs tartalomjegyzéke, vagy sajátjával szeretné "
+"helyettesíteni, létrehozhat egy egyedi TOC-t. Az eredeti TOC (ha "
+"rendelkezésre áll) nem változik.\n"
+"\n"
+"Létrehozhatja, szerkesztheti és eltávolíthatja a fejezeteket:\n"
+"- az oldal böngészőjében, az ujja nyomvatartásával az indexképen;\n"
+"- egy könyvoldalon, kiválasztva a szöveget, amelyet a fejezet címeként "
+"szeretne felhasználni.\n"
+"(Amikor végzett, és már nem akarja látni a gombokat, letilthatja a "
+"Szerkesztő módot.)\n"
+"\n"
+"A tartalmak ezen egyedi tartalomjegyzéke jelenleg egyetlen szintre "
+"korlátozódik, és nem lehet alfejezeteket létrehozni."
 
 #: frontend/apps/reader/modules/readerhandmade.lua:166
 #: frontend/apps/reader/modules/readerhandmade.lua:227
@@ -5388,6 +5407,8 @@ msgstr ""
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
+"Az alternatív ToC használatához először tiltsa le a személyes "
+"tartalomjegyzékét."
 
 #: frontend/apps/reader/modules/readertoc.lua:986
 msgid ""
@@ -6964,11 +6985,11 @@ msgstr "Gyorsulásmérő forgatási eseményei bekapcsolva."
 
 #: frontend/device/generic/device.lua:418
 msgid "Later"
-msgstr ""
+msgstr "Később"
 
 #: frontend/device/generic/device.lua:422
 msgid "The update will be applied the next time KOReader is started."
-msgstr ""
+msgstr "A frissítés a KOReader legközelebbi indításakor lesz alkalmazva."
 
 #: frontend/device/generic/device.lua:832
 msgid "Interface: %1"
@@ -7388,7 +7409,7 @@ msgstr "Lapozás irányának váltása"
 
 #: frontend/dispatcher.lua:178
 msgid "Toggle custom TOC"
-msgstr ""
+msgstr "Egyedi TOC bekapcsolása"
 
 #: frontend/dispatcher.lua:179
 msgid "Toggle custom hidden flows"
@@ -7483,6 +7504,7 @@ msgstr "Rendezés"
 #: frontend/dispatcher.lua:830
 msgid "When set to 0, the gesture's distance (if any) is used"
 msgstr ""
+"Ha 0-ra van beállítva, a gesztus távolsága (ha van ilyen) kerül alkalmazásra"
 
 #: frontend/dispatcher.lua:942
 msgid "General"
@@ -10853,11 +10875,15 @@ msgid ""
 "(collectively known as metadata) are stored in a separate folder named <book-"
 "filename>.sdr (\".sdr\" meaning \"sidecar\")."
 msgstr ""
+"A könyvnézeti beállítások, olvasási előrehaladás, kiemelések, könyvjelzők és "
+"megjegyzések (összességében úgy ismertek, mint metaadata) egy külön mappában "
+"vannak tárolva, aminek a neve <book-filename>.sdr (.sdr\" jelentése \"sidecar"
+"\")."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:552
 msgid ""
 "You can decide between three locations/methods where these will be saved:"
-msgstr ""
+msgstr "3 hely és módszer közül választhat, ahol ezek el lesznek mentve:"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:553
 msgid ""
@@ -10869,8 +10895,16 @@ msgid ""
 "perform directory synchronization or backups, your settings will be part of "
 "them."
 msgstr ""
+" - Maga a könyvfájl mellett (hosszú idője ez az alapértelmezett): a sdr "
+"mappák láthatóvá válnak, amikor a könyvtári könyvtárakat egy másik "
+"fájlböngészővel vagy a számítógépről kezelik, amely összezavarhatja a "
+"könyvtárra való rálátását. Viszont, ez lehetővé teszi, hogy áthelyezze őket, "
+"amikor átszervezi a könyvtárat, és túléli bármely szülői könyvtár "
+"átnevezését. Továbbá, ha könyvtári szinkronizálást vagy biztonsági mentést "
+"végez, a beállítások is mentésre kerülnek."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:554
+#, fuzzy
 msgid ""
 " - all in %1: sdr folders will only be visible and used by KOReader, and "
 "won't clutter your vision of your library directories with another file "
@@ -10879,8 +10913,15 @@ msgid ""
 "finding your previous settings for these books. These settings won't be part "
 "of any synchronization or backups of your library."
 msgstr ""
+" -mind a %1: a sdr mappák csak a KOReader által látottak és használtak, és "
+"nem zavarja össze a könyvtár láthatóságát egy másik fájlböngészővel vagy a "
+"számítógépről. De a könyvtár bármely átszervezése (mappák vagy fájlok "
+"átnevezése és áthelyezése) ahhoz vezethet, hogy a KOReader nem találja meg "
+"ezekre a könyvekre alkalmazott beállításokat. Ezek a beállítások nem lesznek "
+"részei a könyvtár bármely szinkronizálásának vagy biztonsági mentésének."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:555
+#, fuzzy
 msgid ""
 " - all inside %1 as hashes: sdr folders are identified not by filepath/"
 "filename but by partial MD5 hash, allowing you to rename, move, and copy "
@@ -10891,6 +10932,15 @@ msgid ""
 "file browser navigation. This option may suit users with multiple copies of "
 "documents across different devices and directories."
 msgstr ""
+" - mind a %1 belül hash-ként: sdr mappákat azonosítanak, nem fájl elérési út/"
+"fájlnév alapján, hanem részleges MD5 hash-ként, lehetővé téve, hogy "
+"átnevezze, mozgassa és másolja dokumentumokat, kívül KOReader anélkül, hogy "
+"sdr mappa klaszter, miközben tartja őket kapcsolódik a metaadata. Azonban "
+"minden olyan fájlmódosítás, mint az írás kiemeli a PDF-eket, vagy letölti a "
+"kalibrét, megváltoztathatja a hashot, és így elveszíti a kapcsolódó "
+"metaadatát. A fájl hashes kiszámítása szintén lelassíthatja a fájl böngésző "
+"navigációját. Ez az opció megfelelhet a felhasználóknak a különböző eszközök "
+"és könyvtárak különböző másolatainak."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:559
 msgid ""
@@ -15443,8 +15493,9 @@ msgid "Portrait mosaic mode"
 msgstr "Portré mozaik mód"
 
 #: plugins/coverbrowser.koplugin/main.lua:220
+#, fuzzy
 msgid "Items per page in landscape mosaic mode: %1 × %2"
-msgstr ""
+msgstr "A tájképes mozaik módban található oldalak: %1 × %2"
 
 #: plugins/coverbrowser.koplugin/main.lua:228
 msgid "Landscape mosaic mode"
@@ -16132,6 +16183,7 @@ msgid "Export to XMNote"
 msgstr "Exportálás XMNote-ba"
 
 #: plugins/exporter.koplugin/target/xmnote.lua:70
+#, fuzzy
 msgid ""
 "Before starting the export process, please make sure that your mobile and "
 "KOReader are connected to the same local network. Open XMNote and go to "
@@ -16139,6 +16191,11 @@ msgid ""
 "interface, you will find the IP address of your mobile device. Enter this IP "
 "address into KOReader to complete the configuration."
 msgstr ""
+"Mielőtt elkezdené az exportfolyamatot, kérjük, győződjön meg róla, hogy a "
+"mobil és a KOReader ugyanazon helyi hálózathoz kapcsolódik. Nyissa meg az "
+"XMNote-t, és menjen a \"My\" - \"Import Highlights\" - \"Import API-n "
+"keresztül\". Az interfész alján megtalálja a mobil eszköz IP címét. Írja be "
+"ezt az IP-címet a KOReader-be, hogy befejezze a konfigurációt."
 
 #: plugins/externalkeyboard.koplugin/main.lua:136
 msgid "External Keyboard"
@@ -16819,10 +16876,13 @@ msgid "Automatically keep documents in sync"
 msgstr "Dokumentumok automatikus szinkronizálása"
 
 #: plugins/kosync.koplugin/main.lua:227
+#, fuzzy
 msgid ""
 "This may lead to nagging about toggling WiFi on document close and suspend/"
 "resume, depending on the device's connectivity."
 msgstr ""
+"Ez ahhoz vezethet, hogy a WiFi-t közelről és felfüggesztésre / folytatásra "
+"kényszerítse, az eszköz összekapcsolhatóságától függően."
 
 #: plugins/kosync.koplugin/main.lua:231
 msgid ""
