@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 16:49+0000\n"
+"POT-Creation-Date: 2024-02-16 11:33+0000\n"
 "PO-Revision-Date: 2024-02-09 18:02+0000\n"
 "Last-Translator: Matthaiks <kitynska@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -23,8 +23,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && ("
-"n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
+"(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 "X-Generator: Weblate 5.4-dev\n"
 
@@ -214,7 +214,9 @@ msgstr "Wprowadź nazwę pliku"
 #: plugins/exporter.koplugin/target/memos.lua:98
 #: plugins/exporter.koplugin/target/readwise.lua:67
 #: plugins/exporter.koplugin/target/xmnote.lua:39
-#: plugins/gestures.koplugin/main.lua:399 plugins/kosync.koplugin/main.lua:441
+#: plugins/gestures.koplugin/main.lua:399
+#: plugins/httpinspector.koplugin/main.lua:199
+#: plugins/kosync.koplugin/main.lua:441
 #: plugins/newsdownloader.koplugin/main.lua:150
 #: plugins/newsdownloader.koplugin/main.lua:747
 #: plugins/opds.koplugin/opdsbrowser.lua:142
@@ -1876,6 +1878,7 @@ msgstr "Czy chcesz otworzyć ostatni dokument: %1?"
 #: plugins/autowarmth.koplugin/main.lua:766
 #: plugins/calibre.koplugin/main.lua:331
 #: plugins/exporter.koplugin/target/joplin.lua:229
+#: plugins/httpinspector.koplugin/main.lua:206
 #: plugins/wallabag.koplugin/main.lua:954
 msgid "OK"
 msgstr "OK"
@@ -5136,7 +5139,7 @@ msgid "Delete file"
 msgstr "Usuń plik"
 
 #: frontend/apps/reader/modules/readerstatus.lua:104 frontend/dispatcher.lua:57
-#: frontend/dispatcher.lua:945
+#: frontend/dispatcher.lua:945 plugins/httpinspector.koplugin/main.lua:1020
 msgid "File browser"
 msgstr "Przeglądarka plików"
 
@@ -7514,28 +7517,29 @@ msgstr "Sortuj"
 msgid "When set to 0, the gesture's distance (if any) is used"
 msgstr "Gdy ustawiono na 0, używana jest odległość gestu (jeśli istnieje)"
 
-#: frontend/dispatcher.lua:942
+#: frontend/dispatcher.lua:942 plugins/httpinspector.koplugin/main.lua:1017
 msgid "General"
 msgstr "Ogólne"
 
 #: frontend/dispatcher.lua:943
 #: frontend/ui/elements/common_info_menu_table.lua:36
+#: plugins/httpinspector.koplugin/main.lua:1018
 msgid "Device"
 msgstr "Urządzenie"
 
-#: frontend/dispatcher.lua:944
+#: frontend/dispatcher.lua:944 plugins/httpinspector.koplugin/main.lua:1019
 msgid "Screen and lights"
 msgstr "Ekran i oświetlenie"
 
-#: frontend/dispatcher.lua:946
+#: frontend/dispatcher.lua:946 plugins/httpinspector.koplugin/main.lua:1021
 msgid "Reader"
 msgstr "Czytnik"
 
-#: frontend/dispatcher.lua:947
+#: frontend/dispatcher.lua:947 plugins/httpinspector.koplugin/main.lua:1022
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "Dokumenty o zmiennym układzie (epub, fb2, txt…)"
 
-#: frontend/dispatcher.lua:948
+#: frontend/dispatcher.lua:948 plugins/httpinspector.koplugin/main.lua:1023
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Dokumenty o stałym układzie (pdf, djvu, obrazy…)"
 
@@ -16619,6 +16623,60 @@ msgstr "Witaj"
 #: plugins/hello.koplugin/_meta.lua:5
 msgid "This is a debugging plugin."
 msgstr "To jest wtyczka do debugowania."
+
+#: plugins/httpinspector.koplugin/main.lua:138
+#, fuzzy
+msgid "KOReader HTTP inspector"
+msgstr "KOReader jest aktualny."
+
+#: plugins/httpinspector.koplugin/main.lua:144
+#, fuzzy
+msgid "Stop HTTP server"
+msgstr "Serwer SSH"
+
+#: plugins/httpinspector.koplugin/main.lua:146
+#, fuzzy
+msgid "Start HTTP server"
+msgstr "Serwer SSH"
+
+#: plugins/httpinspector.koplugin/main.lua:164
+msgid "Listening on port %1"
+msgstr ""
+
+#: plugins/httpinspector.koplugin/main.lua:166
+#, fuzzy
+msgid "Not running"
+msgstr "nieuruchomiony"
+
+#: plugins/httpinspector.koplugin/main.lua:175
+#, fuzzy
+msgid "Auto start HTTP server"
+msgstr "Nie udało się uruchomić serwera SSH."
+
+#: plugins/httpinspector.koplugin/main.lua:185
+#, fuzzy
+msgid "Port: %1"
+msgstr "Czcionka: %1"
+
+#: plugins/httpinspector.koplugin/main.lua:192
+#, fuzzy
+msgid "Set custom port"
+msgstr "Ustaw niestandardową"
+
+#: plugins/httpinspector.koplugin/main.lua:195
+msgid "Port number (default is 8080)"
+msgstr ""
+
+#: plugins/httpinspector.koplugin/_meta.lua:4
+msgid "HTTP KOReader Inspector"
+msgstr ""
+
+#: plugins/httpinspector.koplugin/_meta.lua:5
+msgid ""
+"Allow browsing KOReader internal objects over HTTP. This is aimed at "
+"developers, and may pose some security risks. Only enable this on networks "
+"you can trust."
+msgstr ""
 
 #: plugins/japanese.koplugin/deinflector.lua:278
 msgid "Halfwidth to fullwidth kana"

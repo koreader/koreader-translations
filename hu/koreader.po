@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-08 16:49+0000\n"
+"POT-Creation-Date: 2024-02-16 11:33+0000\n"
 "PO-Revision-Date: 2024-02-15 17:02+0000\n"
 "Last-Translator: Unger Szabolcs <unger.szabolcspr.com@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
@@ -208,7 +208,9 @@ msgstr "Fájlnév"
 #: plugins/exporter.koplugin/target/memos.lua:98
 #: plugins/exporter.koplugin/target/readwise.lua:67
 #: plugins/exporter.koplugin/target/xmnote.lua:39
-#: plugins/gestures.koplugin/main.lua:399 plugins/kosync.koplugin/main.lua:441
+#: plugins/gestures.koplugin/main.lua:399
+#: plugins/httpinspector.koplugin/main.lua:199
+#: plugins/kosync.koplugin/main.lua:441
 #: plugins/newsdownloader.koplugin/main.lua:150
 #: plugins/newsdownloader.koplugin/main.lua:747
 #: plugins/opds.koplugin/opdsbrowser.lua:142
@@ -1852,6 +1854,7 @@ msgstr "Megnyitja a legutóbbi dokumentumot: %1?"
 #: plugins/autowarmth.koplugin/main.lua:766
 #: plugins/calibre.koplugin/main.lua:331
 #: plugins/exporter.koplugin/target/joplin.lua:229
+#: plugins/httpinspector.koplugin/main.lua:206
 #: plugins/wallabag.koplugin/main.lua:954
 msgid "OK"
 msgstr "Rendben"
@@ -5126,7 +5129,7 @@ msgid "Delete file"
 msgstr "Fájl törlése"
 
 #: frontend/apps/reader/modules/readerstatus.lua:104 frontend/dispatcher.lua:57
-#: frontend/dispatcher.lua:945
+#: frontend/dispatcher.lua:945 plugins/httpinspector.koplugin/main.lua:1020
 msgid "File browser"
 msgstr "Fájlböngésző"
 
@@ -7506,28 +7509,29 @@ msgid "When set to 0, the gesture's distance (if any) is used"
 msgstr ""
 "Ha 0-ra van beállítva, a gesztus távolsága (ha van ilyen) kerül alkalmazásra"
 
-#: frontend/dispatcher.lua:942
+#: frontend/dispatcher.lua:942 plugins/httpinspector.koplugin/main.lua:1017
 msgid "General"
 msgstr "Általános"
 
 #: frontend/dispatcher.lua:943
 #: frontend/ui/elements/common_info_menu_table.lua:36
+#: plugins/httpinspector.koplugin/main.lua:1018
 msgid "Device"
 msgstr "Készülék"
 
-#: frontend/dispatcher.lua:944
+#: frontend/dispatcher.lua:944 plugins/httpinspector.koplugin/main.lua:1019
 msgid "Screen and lights"
 msgstr "Képernyő és megvilágítás"
 
-#: frontend/dispatcher.lua:946
+#: frontend/dispatcher.lua:946 plugins/httpinspector.koplugin/main.lua:1021
 msgid "Reader"
 msgstr "Olvasó"
 
-#: frontend/dispatcher.lua:947
+#: frontend/dispatcher.lua:947 plugins/httpinspector.koplugin/main.lua:1022
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "Tördelhető/reflow dokumentumok (epub, fb2, txt...)"
 
-#: frontend/dispatcher.lua:948
+#: frontend/dispatcher.lua:948 plugins/httpinspector.koplugin/main.lua:1023
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Fix megjelenésű dokumentumok (pdf, djvu, pics...)"
 
@@ -8088,8 +8092,8 @@ msgid ""
 "screen can be toggled by tapping."
 msgstr ""
 "Engedélyezi vagy tiltja a megjelenítő motor alternatív állapotsorát a "
-"képernyő tetején. Az állapotsor megjelenését a főmenüben lehet testre szabni."
-"\n"
+"képernyő tetején. Az állapotsor megjelenését a főmenüben lehet testre "
+"szabni.\n"
 "\n"
 "Akár be van kapcsolva, akár ki, a képernyő alján megjelenő állapotsort "
 "érintéssel lehet váltani."
@@ -10877,8 +10881,8 @@ msgid ""
 msgstr ""
 "A könyvnézeti beállítások, olvasási előrehaladás, kiemelések, könyvjelzők és "
 "megjegyzések (összességében úgy ismertek, mint metaadata) egy külön mappában "
-"vannak tárolva, aminek a neve <book-filename>.sdr (.sdr\" jelentése \"sidecar"
-"\")."
+"vannak tárolva, aminek a neve <book-filename>.sdr (.sdr\" jelentése "
+"\"sidecar\")."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:552
 msgid ""
@@ -16587,6 +16591,60 @@ msgstr "Helló"
 msgid "This is a debugging plugin."
 msgstr "Ez egy hibakereső bővítmény."
 
+#: plugins/httpinspector.koplugin/main.lua:138
+#, fuzzy
+msgid "KOReader HTTP inspector"
+msgstr "A KOReader naprakész."
+
+#: plugins/httpinspector.koplugin/main.lua:144
+#, fuzzy
+msgid "Stop HTTP server"
+msgstr "SSH szerver"
+
+#: plugins/httpinspector.koplugin/main.lua:146
+#, fuzzy
+msgid "Start HTTP server"
+msgstr "SSH szerver"
+
+#: plugins/httpinspector.koplugin/main.lua:164
+msgid "Listening on port %1"
+msgstr ""
+
+#: plugins/httpinspector.koplugin/main.lua:166
+#, fuzzy
+msgid "Not running"
+msgstr "nem fut"
+
+#: plugins/httpinspector.koplugin/main.lua:175
+#, fuzzy
+msgid "Auto start HTTP server"
+msgstr "SSH szerver indítási hiba."
+
+#: plugins/httpinspector.koplugin/main.lua:185
+#, fuzzy
+msgid "Port: %1"
+msgstr "Betűtípus: %1"
+
+#: plugins/httpinspector.koplugin/main.lua:192
+#, fuzzy
+msgid "Set custom port"
+msgstr "Egyedi beállítás"
+
+#: plugins/httpinspector.koplugin/main.lua:195
+msgid "Port number (default is 8080)"
+msgstr ""
+
+#: plugins/httpinspector.koplugin/_meta.lua:4
+msgid "HTTP KOReader Inspector"
+msgstr ""
+
+#: plugins/httpinspector.koplugin/_meta.lua:5
+msgid ""
+"Allow browsing KOReader internal objects over HTTP. This is aimed at "
+"developers, and may pose some security risks. Only enable this on networks "
+"you can trust."
+msgstr ""
+
 #: plugins/japanese.koplugin/deinflector.lua:278
 msgid "Halfwidth to fullwidth kana"
 msgstr "Félszélességűből teljes szélességű kana"
@@ -19665,9 +19723,9 @@ msgid ""
 "your own online OPDS catalogs and RSS feeds, online over-the-air software "
 "updates, an FTP client, an SSH server, …\n"
 msgstr ""
-"* hordozható: fut beágyazott eszközökön (Cervantes, Kindle, Kobo, PocketBook)"
-", Android és Linux számítógépeken. A fejlesztők a KOReader emulátort "
-"futtathatják Linuxon és MacOS-en.\n"
+"* hordozható: fut beágyazott eszközökön (Cervantes, Kindle, Kobo, "
+"PocketBook), Android és Linux számítógépeken. A fejlesztők a KOReader "
+"emulátort futtathatják Linuxon és MacOS-en.\n"
 "\n"
 "* több formátumú dokumentum-kezelés: támogatja a rögzített oldalformátumokat "
 "(PDF, DjVu, CBT, CBZ) és az újraformázható e-könyv formátumokat (EPUB, FB2, "
