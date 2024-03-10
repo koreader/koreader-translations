@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-09 15:11+0000\n"
+"POT-Creation-Date: 2024-03-10 06:06+0000\n"
 "PO-Revision-Date: 2024-02-27 20:00+0000\n"
 "Last-Translator: shetozz <a.teama3317@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -172,7 +172,7 @@ msgstr "أدخل اسم ملف"
 #: frontend/apps/reader/modules/readergoto.lua:68
 #: frontend/apps/reader/modules/readerhandmade.lua:486
 #: frontend/apps/reader/modules/readerlink.lua:219
-#: frontend/apps/reader/modules/readersearch.lua:193
+#: frontend/apps/reader/modules/readersearch.lua:221
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:156
@@ -1054,7 +1054,7 @@ msgstr "اختر مجلد"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:67
 #: frontend/apps/filemanager/filemanagerhistory.lua:382
 #: frontend/apps/reader/modules/readerbookmark.lua:1233
-#: frontend/apps/reader/modules/readersearch.lua:224
+#: frontend/apps/reader/modules/readersearch.lua:252
 #: frontend/ui/widget/inputdialog.lua:902 frontend/ui/widget/textviewer.lua:493
 msgid "Case sensitive"
 msgstr "يتأثر بحالة الحرف"
@@ -1100,12 +1100,12 @@ msgstr "ضوء إضافي"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:224
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:283
 #: frontend/apps/filemanager/filemanagerhistory.lua:81
-#: frontend/apps/reader/modules/readersearch.lua:562
+#: frontend/apps/reader/modules/readersearch.lua:595
 msgid "Search results (%1)"
 msgstr "نتائج البحث (%1)"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:225
-#: frontend/apps/reader/modules/readersearch.lua:563
+#: frontend/apps/reader/modules/readersearch.lua:596
 #, fuzzy
 msgid "Query: %1"
 msgstr "(الُمستَعلم عنه: %1)"
@@ -4038,7 +4038,7 @@ msgid "Select and highlight"
 msgstr "حدد وقم بالتظليل"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:357
-#: frontend/apps/reader/modules/readersearch.lua:132
+#: frontend/apps/reader/modules/readersearch.lua:142
 #: frontend/dispatcher.lua:159
 msgid "Fulltext search"
 msgstr "ابحثٌ في النّص"
@@ -5071,35 +5071,46 @@ msgstr "قد يؤدي التعبير إلى وقت بحث طويل للغاية.
 msgid "Fulltext search settings"
 msgstr "ابحثٌ في النّص"
 
+#: frontend/apps/reader/modules/readersearch.lua:87
+#, fuzzy
+msgid "Show all results on text selection"
+msgstr "الرجوع إلى تحديد النص"
+
 #: frontend/apps/reader/modules/readersearch.lua:88
+msgid ""
+"When invoked after text selection, show a list with all results instead of "
+"highlighting matches in book pages."
+msgstr ""
+
+#: frontend/apps/reader/modules/readersearch.lua:98
 #, fuzzy
 msgid "Words in context: %1"
 msgstr ""
 "فشل إنشاء المجلد:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:93
+#: frontend/apps/reader/modules/readersearch.lua:103
 #, fuzzy
 msgid "Words in context"
 msgstr "المحتوى"
 
-#: frontend/apps/reader/modules/readersearch.lua:110
+#: frontend/apps/reader/modules/readersearch.lua:120
 #, fuzzy
 msgid "Results per page: %1"
 msgstr "عدد العناصر لكل صفحة"
 
-#: frontend/apps/reader/modules/readersearch.lua:115
+#: frontend/apps/reader/modules/readersearch.lua:125
 #, fuzzy
 msgid "Results per page"
 msgstr "عدد العناصر لكل صفحة"
 
-#: frontend/apps/reader/modules/readersearch.lua:138
+#: frontend/apps/reader/modules/readersearch.lua:148
 #: frontend/dispatcher.lua:160
 #, fuzzy
 msgid "Last fulltext search results"
 msgstr "ابحثٌ في النّص"
 
-#: frontend/apps/reader/modules/readersearch.lua:162
+#: frontend/apps/reader/modules/readersearch.lua:189
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -5107,48 +5118,48 @@ msgstr ""
 "تعبير عادي غير صالح:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:164
+#: frontend/apps/reader/modules/readersearch.lua:191
 msgid "Invalid regular expression."
 msgstr "تعبير عادي غير صالح."
 
-#: frontend/apps/reader/modules/readersearch.lua:187
+#: frontend/apps/reader/modules/readersearch.lua:215
 #: frontend/ui/widget/inputdialog.lua:871 frontend/ui/widget/textviewer.lua:463
 msgid "Enter text to search for"
 msgstr "أدخل نصًّا للبحث عنه"
 
 #. @translators Find all results in entire document, button displayed on the search bar, should be short.
-#: frontend/apps/reader/modules/readersearch.lua:201
+#: frontend/apps/reader/modules/readersearch.lua:229
 #, fuzzy
 msgctxt "Search text"
 msgid "All"
 msgstr "الكل"
 
-#: frontend/apps/reader/modules/readersearch.lua:230
+#: frontend/apps/reader/modules/readersearch.lua:258
 msgid "Regular expression (long-press for help)"
 msgstr "التعبير العادي (الضغط مطوّلاً للحصول على المساعدة)"
 
-#: frontend/apps/reader/modules/readersearch.lua:338
+#: frontend/apps/reader/modules/readersearch.lua:366
 msgid "No results on preceding pages"
 msgstr "لا توجد نتائج في الصفحات السابقة"
 
-#: frontend/apps/reader/modules/readersearch.lua:340
+#: frontend/apps/reader/modules/readersearch.lua:368
 msgid "No results on following pages"
 msgstr "لا توجد نتائج في الصفحات التالية"
 
-#: frontend/apps/reader/modules/readersearch.lua:463
+#: frontend/apps/reader/modules/readersearch.lua:490
 msgid "Unspecified error"
 msgstr "خطأ غير محدد"
 
-#: frontend/apps/reader/modules/readersearch.lua:471
+#: frontend/apps/reader/modules/readersearch.lua:498
 msgid "Too many hits"
 msgstr "عدد ضغطات أكثر من اللازم"
 
-#: frontend/apps/reader/modules/readersearch.lua:507
+#: frontend/apps/reader/modules/readersearch.lua:534
 #, fuzzy
 msgid "Searching… (tap to cancel)"
 msgstr "جارٍ تحميلُ الصورةٍ المكبّرة (المس هنا لتلغي هذا)"
 
-#: frontend/apps/reader/modules/readersearch.lua:523
+#: frontend/apps/reader/modules/readersearch.lua:550
 #, fuzzy
 msgid "No results in the document"
 msgstr "لا توجد نتائج في البيانات الوصفية"

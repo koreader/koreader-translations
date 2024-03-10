@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-09 15:11+0000\n"
+"POT-Creation-Date: 2024-03-10 06:06+0000\n"
 "PO-Revision-Date: 2024-03-10 06:06+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
@@ -37,8 +37,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
-"n%100>=11 && n%100<=14)? 2 : 3);\n"
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Generator: Weblate 5.5-dev\n"
 
 #: reader.lua:194
@@ -191,7 +191,7 @@ msgstr "Введите имя файла"
 #: frontend/apps/reader/modules/readergoto.lua:68
 #: frontend/apps/reader/modules/readerhandmade.lua:486
 #: frontend/apps/reader/modules/readerlink.lua:219
-#: frontend/apps/reader/modules/readersearch.lua:193
+#: frontend/apps/reader/modules/readersearch.lua:221
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:156
@@ -1050,7 +1050,7 @@ msgstr "Папка книги"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:67
 #: frontend/apps/filemanager/filemanagerhistory.lua:382
 #: frontend/apps/reader/modules/readerbookmark.lua:1233
-#: frontend/apps/reader/modules/readersearch.lua:224
+#: frontend/apps/reader/modules/readersearch.lua:252
 #: frontend/ui/widget/inputdialog.lua:902 frontend/ui/widget/textviewer.lua:493
 msgid "Case sensitive"
 msgstr "С учётом регистра"
@@ -1091,12 +1091,12 @@ msgstr "Извлечь"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:224
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:283
 #: frontend/apps/filemanager/filemanagerhistory.lua:81
-#: frontend/apps/reader/modules/readersearch.lua:562
+#: frontend/apps/reader/modules/readersearch.lua:595
 msgid "Search results (%1)"
 msgstr "Результаты поиска (%1)"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:225
-#: frontend/apps/reader/modules/readersearch.lua:563
+#: frontend/apps/reader/modules/readersearch.lua:596
 msgid "Query: %1"
 msgstr "Запрос: %1"
 
@@ -4006,7 +4006,7 @@ msgid "Select and highlight"
 msgstr "Выбрать и выделить"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:357
-#: frontend/apps/reader/modules/readersearch.lua:132
+#: frontend/apps/reader/modules/readersearch.lua:142
 #: frontend/dispatcher.lua:159
 msgid "Fulltext search"
 msgstr "Поиск по всему тексту"
@@ -5053,28 +5053,39 @@ msgstr "Выражение может привести к очень долго�
 msgid "Fulltext search settings"
 msgstr "Настройки поиска по всему тексту"
 
+#: frontend/apps/reader/modules/readersearch.lua:87
+#, fuzzy
+msgid "Show all results on text selection"
+msgstr "Начать выделение текста"
+
 #: frontend/apps/reader/modules/readersearch.lua:88
+msgid ""
+"When invoked after text selection, show a list with all results instead of "
+"highlighting matches in book pages."
+msgstr ""
+
+#: frontend/apps/reader/modules/readersearch.lua:98
 msgid "Words in context: %1"
 msgstr "Слова в контексте: %1"
 
-#: frontend/apps/reader/modules/readersearch.lua:93
+#: frontend/apps/reader/modules/readersearch.lua:103
 msgid "Words in context"
 msgstr "Слова в контексте"
 
-#: frontend/apps/reader/modules/readersearch.lua:110
+#: frontend/apps/reader/modules/readersearch.lua:120
 msgid "Results per page: %1"
 msgstr "Результатов на странице: %1"
 
-#: frontend/apps/reader/modules/readersearch.lua:115
+#: frontend/apps/reader/modules/readersearch.lua:125
 msgid "Results per page"
 msgstr "Результатов на странице"
 
-#: frontend/apps/reader/modules/readersearch.lua:138
+#: frontend/apps/reader/modules/readersearch.lua:148
 #: frontend/dispatcher.lua:160
 msgid "Last fulltext search results"
 msgstr "Последние результаты поиска по всему тексту"
 
-#: frontend/apps/reader/modules/readersearch.lua:162
+#: frontend/apps/reader/modules/readersearch.lua:189
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -5082,46 +5093,46 @@ msgstr ""
 "Недопустимое регулярное выражение:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:164
+#: frontend/apps/reader/modules/readersearch.lua:191
 msgid "Invalid regular expression."
 msgstr "Недопустимое регулярное выражение."
 
-#: frontend/apps/reader/modules/readersearch.lua:187
+#: frontend/apps/reader/modules/readersearch.lua:215
 #: frontend/ui/widget/inputdialog.lua:871 frontend/ui/widget/textviewer.lua:463
 msgid "Enter text to search for"
 msgstr "Введите текст поискового запроса"
 
 #. @translators Find all results in entire document, button displayed on the search bar, should be short.
-#: frontend/apps/reader/modules/readersearch.lua:201
+#: frontend/apps/reader/modules/readersearch.lua:229
 msgctxt "Search text"
 msgid "All"
 msgstr "Всё"
 
-#: frontend/apps/reader/modules/readersearch.lua:230
+#: frontend/apps/reader/modules/readersearch.lua:258
 msgid "Regular expression (long-press for help)"
 msgstr "Регулярное выражение ⓘ"
 
-#: frontend/apps/reader/modules/readersearch.lua:338
+#: frontend/apps/reader/modules/readersearch.lua:366
 msgid "No results on preceding pages"
 msgstr "Нет результатов на предыдущих страницах"
 
-#: frontend/apps/reader/modules/readersearch.lua:340
+#: frontend/apps/reader/modules/readersearch.lua:368
 msgid "No results on following pages"
 msgstr "Нет результатов на последующих страницах"
 
-#: frontend/apps/reader/modules/readersearch.lua:463
+#: frontend/apps/reader/modules/readersearch.lua:490
 msgid "Unspecified error"
 msgstr "Неопределенная ошибка"
 
-#: frontend/apps/reader/modules/readersearch.lua:471
+#: frontend/apps/reader/modules/readersearch.lua:498
 msgid "Too many hits"
 msgstr "Слишком много совпадений"
 
-#: frontend/apps/reader/modules/readersearch.lua:507
+#: frontend/apps/reader/modules/readersearch.lua:534
 msgid "Searching… (tap to cancel)"
 msgstr "Идёт поиск… (коснитесь для отмены)"
 
-#: frontend/apps/reader/modules/readersearch.lua:523
+#: frontend/apps/reader/modules/readersearch.lua:550
 msgid "No results in the document"
 msgstr "Нет результатов в документе"
 
