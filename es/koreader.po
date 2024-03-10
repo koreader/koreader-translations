@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-10 16:37+0000\n"
-"PO-Revision-Date: 2024-03-10 16:37+0000\n"
+"PO-Revision-Date: 2024-03-11 06:40+0000\n"
 "Last-Translator: hombretranquilo <hombretranquilo.mbp@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/koreader/"
 "koreader/es/>\n"
@@ -3580,13 +3580,14 @@ msgid "Show progress bar"
 msgstr "Mostrar barra de progreso"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1640
-#, fuzzy
 msgid "Chapter progress"
-msgstr "Progreso semanal"
+msgstr "Progreso de capítulo"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1641
 msgid "Show progress bar for the current chapter, instead of the whole book."
 msgstr ""
+"Mostrar barra de progreso para el capítulo actual, en lugar de para todo el "
+"libro."
 
 #: frontend/apps/reader/modules/readerfooter.lua:1654
 msgid "alongside items"
@@ -5622,6 +5623,10 @@ msgid ""
 "stylesheet to style everything (which publishers probably don't).\n"
 "This is mostly only interesting for testing."
 msgstr ""
+"Esta opción genera una hoja de estilos User-Agent vacía, y espera que la "
+"hoja de estilos del documento aplique estilos a todo (cosa que los editores "
+"probablemente no hagan).\n"
+"Esta función sólo es interesante para realizar pruebas."
 
 #: frontend/apps/reader/modules/readertypeset.lua:215
 #: plugins/kosync.koplugin/main.lua:112
@@ -5632,11 +5637,12 @@ msgstr "Auto"
 msgid ""
 "This selects the default and preferred stylesheet for the document type."
 msgstr ""
+"Selecciona la hoja de estilo predeterminada y preferida para el tipo de "
+"documento."
 
 #: frontend/apps/reader/modules/readertypeset.lua:231
-#, fuzzy
 msgid "Traditional book look (epub.css)"
-msgstr "FictionBook (fb2.css)"
+msgstr "Aspecto de libro tradicional (epub.css)"
 
 #: frontend/apps/reader/modules/readertypeset.lua:233
 msgid ""
@@ -5651,11 +5657,20 @@ msgid ""
 "to have our added styles at play and need to reset them; try switching to "
 "html5.css when you notice such issues."
 msgstr ""
+"Esta es nuestra hoja de estilos para libros: amplía la hoja de estilos "
+"estándar HTML con estilos destinados a hacer que el contenido HTML se "
+"parezca más a un libro de papel (con texto justificado y sangría en los "
+"párrafos) que a una página web.\n"
+"Es perfecta para libros sin estilos, y puede hacer que los libros con "
+"estilos sean más legibles.\n"
+"Puede causar algunos pequeños problemas en algunos libros (títulos, "
+"encabezados o separadores mal centrados, o sangrías de texto inesperadas), "
+"ya que los editores no cuentan con que se apliquen nuestros estilos añadidos;"
+" se recomienda cambiar a html5.css si se presentan estos problemas."
 
 #: frontend/apps/reader/modules/readertypeset.lua:243
-#, fuzzy
 msgid "HTML Standard rendering (html5.css)"
-msgstr "HTML5 (html5.css)"
+msgstr "Renderizado estándar HTML (html5.css)"
 
 #: frontend/apps/reader/modules/readertypeset.lua:245
 msgid ""
@@ -5668,6 +5683,16 @@ msgid ""
 "aligned paragraphs without indentation and with spacing between them); try "
 "switching to epub.css when that happens."
 msgstr ""
+"Esta hoja de estilo se ajusta a las sugerencias de representación del "
+"estándar HTML (con algunas limitaciones), similares a las que utilizan la "
+"mayoría de los navegadores web.\n"
+"Como hoy en día la mayoría de los editores hacen y prueban sus libros con "
+"herramientas basadas en los motores de los navegadores web, esta es la hoja "
+"de estilos que hay que utilizar para ver un libro tal y como estos editores "
+"lo concibieron.\n"
+"En libros sin estilos, sin embargo, puede darles el aspecto de una página "
+"web (párrafos alineados a la izquierda sin sangría y con espaciado entre "
+"ellos); se recomienda cambiar a epub.css cuando esto ocurra."
 
 #: frontend/apps/reader/modules/readertypeset.lua:255
 msgid "FictionBook (fb2.css)"
@@ -5680,16 +5705,23 @@ msgid ""
 "(FictionBook 2 & 3 are open XML-based e-book formats which originated and "
 "gained popularity in Russia.)"
 msgstr ""
+"Esta hoja de estilo debe utilizarse sólo con documentos FB2 y FB3, que no "
+"son HTML clásico y necesitan un estilo específico.\n"
+"(FictionBook 2 y 3 son formatos abiertos de libro electrónico basados en XML "
+"que se originaron y ganaron popularidad en Rusia)."
 
 #: frontend/apps/reader/modules/readertypeset.lua:270
 msgid ""
 "This stylesheet is obsolete: don't use it. It is kept solely to be able to "
 "open documents last read years ago and to migrate their highlights."
 msgstr ""
+"Esta hoja de estilo está obsoleta, así que no debe usarse. Se conserva "
+"únicamente para poder abrir documentos leídos por última vez hace tiempo y "
+"poder migrar sus subrayados."
 
 #: frontend/apps/reader/modules/readertypeset.lua:281
 msgid "This is a user added stylesheet."
-msgstr ""
+msgstr "Esta es una hoja de estilo añadida por el usuario."
 
 #: frontend/apps/reader/modules/readertypeset.lua:287
 msgid "Obsolete"
@@ -5700,9 +5732,8 @@ msgid "Obsolete (%1)"
 msgstr "Obsoleto (%1)"
 
 #: frontend/apps/reader/modules/readertypeset.lua:411
-#, fuzzy
 msgid "Set default style for FB2 documents to %1?"
-msgstr "¿Seleccionar %1 como estilo por defecto?"
+msgstr "¿Ajustar el estilo por defecto de los documentos FB2 a %1?"
 
 #: frontend/apps/reader/modules/readertypeset.lua:412
 msgid "Set default style to %1?"
@@ -7472,9 +7503,8 @@ msgid "Toggle status bar"
 msgstr "Conmutar barra de estado"
 
 #: frontend/dispatcher.lua:137
-#, fuzzy
 msgid "Toggle chapter progress bar"
-msgstr "Mostrar barra de progreso"
+msgstr "Conmutar la barra de progreso del capítulo"
 
 #: frontend/dispatcher.lua:139
 msgid "Previous chapter"
@@ -8770,13 +8800,15 @@ msgstr "Tamaño de fuente y familias"
 
 #: frontend/ui/data/css_tweaks.lua:424
 msgid "Ignore font related HTML presentational hints"
-msgstr ""
+msgstr "Ignorar sugerencias de presentación HTML relacionadas con las fuentes"
 
 #: frontend/ui/data/css_tweaks.lua:425
 msgid ""
 "Ignore HTML attributes that contribute to styles on the elements <body> "
 "(bgcolor, text…) and <font> (face, size, color…)."
 msgstr ""
+"Ignorar los atributos HTML que contribuyen a los estilos de los elementos "
+"<body> (bgcolor, text...) y <font> (face, size, color...)."
 
 #: frontend/ui/data/css_tweaks.lua:431
 msgid "Ignore publisher font families"
@@ -8971,9 +9003,8 @@ msgid "Tables"
 msgstr "Tablas"
 
 #: frontend/ui/data/css_tweaks.lua:576
-#, fuzzy
 msgid "Ignore tables related HTML presentational hints"
-msgstr "Ignorar los eventos de rotación del acelerómetro"
+msgstr "Ignorar sugerencias de presentación HTML relacionadas con las tablas"
 
 #: frontend/ui/data/css_tweaks.lua:577
 msgid ""
@@ -8981,6 +9012,9 @@ msgid ""
 "its sub-elements (ie. align, valign, frame, rules, border, cellpading, "
 "cellspacing…)."
 msgstr ""
+"Ignorar los atributos HTML que contribuyen a los estilos del elemento "
+"<table> y sus subelementos (es decir, align, valign, frame, rules, border, "
+"cellpading, cellspacing…)."
 
 #: frontend/ui/data/css_tweaks.lua:583
 msgid "Full-width tables"
