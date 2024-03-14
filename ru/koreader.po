@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-13 23:24+0000\n"
-"PO-Revision-Date: 2024-03-11 07:04+0000\n"
+"PO-Revision-Date: 2024-03-14 11:23+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ru/>\n"
@@ -37,8 +37,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
+"n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Generator: Weblate 5.5-dev\n"
 
 #: reader.lua:194
@@ -5321,9 +5321,8 @@ msgstr ""
 "книге."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:787
-#, fuzzy
 msgid "Long-press for info ⓘ"
-msgstr "Долгое касание текста"
+msgstr "Долгое касание для информации ⓘ"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:787
 msgid ""
@@ -5345,11 +5344,28 @@ msgid ""
 "Tap on the item to insert it: you can then edit it and combine it with "
 "others."
 msgstr ""
+"Данное всплывающее меню представляет собой краткую справку по CSS, "
+"показывающую общий синтаксис селектора и свойства классического CSS.\n"
+"Также здесь показаны некоторые специфичные для KOReader нестандартные CSS-"
+"функции, которые могут быть полезны при работе с электронными книгами.\n"
+"\n"
+"Большинство из них используются стилевыми подстройками: в верхнем меню "
+"нажмите и удерживайте нужную категорию, чтобы увидеть её CSS-код и описание "
+"работы.\n"
+"Если этого недостаточно для получения желаемого эффекта, то стилевые "
+"подстройки можно адаптировать: нажмите на их CSS-код для копирования его в "
+"буфер обмена, затем вставьте сюда и внесите нужные изменения.\n"
+"\n"
+"Нажатие с удержанием любого элемента во всплывающем окне позволяет получить "
+"дополнительную информацию о том, что он делает, и какие проблемы может "
+"решить.\n"
+"\n"
+"Нажмите на элемент для его вставки: затем его можно редактировать и "
+"комбинировать с другими элементами."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:798
-#, fuzzy
 msgid "Matching elements"
-msgstr "Нет совпадающих наборов правил"
+msgstr "Соответствие элементов"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:799
 msgid ""
@@ -5359,6 +5375,11 @@ msgid ""
 "\n"
 "p:not([class]) matches a <p> without any class= attribute."
 msgstr ""
+"p.className соответствует <p> с атрибутом class='className'.\n"
+"\n"
+"*.className соответствует любому элементу с атрибутом class='className'.\n"
+"\n"
+"p:not([class]) соответствует <p> без всяких атрибутов class=."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:805
 msgid ""
@@ -5367,6 +5388,10 @@ msgid ""
 "aside p (without any intermediate symbol) matches a <p> descendant of an "
 "<aside> element."
 msgstr ""
+"aside > p соответствует непосредственному потомку <p> элемента <aside>.\n"
+"\n"
+"aside p (без промежуточного символа) соответствует любому потомку <p> "
+"элемента <aside>."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:809
 msgid ""
@@ -5443,9 +5468,8 @@ msgid ""
 msgstr ""
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:863
-#, fuzzy
 msgid "Common classic properties"
-msgstr "Показать свойства файла"
+msgstr "Общие классические свойства"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:864
 msgid "1rem will enforce your main font size."
@@ -5469,12 +5493,11 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:869
 msgid "Force text to be black."
-msgstr ""
+msgstr "Принудительный чёрный цвет текста."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:870
-#, fuzzy
 msgid "Remove any background color."
-msgstr "Оставить фон как есть"
+msgstr "Удалить цвет фона."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:871
 msgid ""
@@ -5483,9 +5506,8 @@ msgid ""
 msgstr ""
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:874
-#, fuzzy
 msgid "Private CSS properties"
-msgstr "Показать свойства файла"
+msgstr "Частные свойства CSS"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:875
 msgid ""
@@ -5496,40 +5518,36 @@ msgstr ""
 "то он будет показан в виде сноски на странице."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:876
-#, fuzzy
 msgid ""
 "Can be set on some specific DocFragments (e.g. DocFragment[id$=_16]) to "
 "ignore them in the linear pages flow."
 msgstr ""
 "Может быть задано для определённых DocFragments (например, "
-"DocFragments[id*=16]), чтобы игнорировать их в линейном потоке страниц."
+"DocFragments[[id$=_16]), чтобы игнорировать их в линейном потоке страниц."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:877
-#, fuzzy
 msgid ""
 "Can be set on contiguous footnote blocks to ignore them in the linear pages "
 "flow."
 msgstr ""
-"Может быть задано для определённых DocFragments (например, "
-"DocFragments[id*=16]), чтобы игнорировать их в линейном потоке страниц."
+"Может быть задано для смежных блоков сносок, чтобы игнорировать их в "
+"линейном потоке страниц."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:878
-#, fuzzy
 msgid ""
 "When set on an element, its text can be used to build the alternative table "
 "of contents. toc-level2 to toc-level6 can be used for nested chapters."
 msgstr ""
 "Если задан элемент, его текст можно использовать для создания "
-"альтернативного оглавления."
+"альтернативного оглавления. Уровни с 2 до 6 могут быть вложенными главами."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:879
-#, fuzzy
 msgid ""
 "When set on an element, it will be ignored when building the alternative "
 "table of contents."
 msgstr ""
-"Если задан элемент, его текст можно использовать для создания "
-"альтернативного оглавления."
+"Если задан элемент, его можно проигнорировать при создании альтернативного "
+"оглавления."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:880
 msgid ""
@@ -5560,7 +5578,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid "Caution ⚠"
-msgstr ""
+msgstr "Осторожно ⚠"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid ""
@@ -6746,9 +6764,8 @@ msgstr "Сохранить EPUB в папке текущей книги"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:217
 #: frontend/apps/reader/modules/readerwikipedia.lua:233
-#, fuzzy
 msgid "ask"
-msgstr "Башкирский"
+msgstr "спросить"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:219
 #: frontend/ui/elements/common_settings_menu_table.lua:383
@@ -6756,19 +6773,17 @@ msgid "always"
 msgstr "всегда"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:221
-#, fuzzy
 msgid "never"
-msgstr "Никогда"
+msgstr "никогда"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:223
-#, fuzzy
 msgid "Include images in EPUB: %1"
-msgstr "Включая изображения"
+msgstr "Включая изображения в EPUB: %1"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:226
 #: frontend/apps/reader/modules/readerwikipedia.lua:245
 msgid "Ask"
-msgstr ""
+msgstr "Спросить"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:227
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
@@ -6776,23 +6791,20 @@ msgid "Include images"
 msgstr "Включая изображения"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:228
-#, fuzzy
 msgid "Don't include images"
-msgstr "Не включать"
+msgstr "Не включать изображения"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:235
-#, fuzzy
 msgid "higher"
-msgstr "высокое"
+msgstr "повышенное"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:237
 msgid "standard"
-msgstr ""
+msgstr "стандарт"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:239
-#, fuzzy
 msgid "Images quality in EPUB: %1"
-msgstr "Текущее масштабирование изображений: %1"
+msgstr "Качество изображений в EPUB: %1"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:246
 #: frontend/ui/wikipedia.lua:813
