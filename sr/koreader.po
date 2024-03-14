@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-13 23:24+0000\n"
-"PO-Revision-Date: 2024-03-12 10:01+0000\n"
+"PO-Revision-Date: 2024-03-14 11:23+0000\n"
 "Last-Translator: eevan78 <ivan.pesic@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/koreader/"
 "koreader/sr/>\n"
@@ -5287,9 +5287,8 @@ msgid "You can add CSS snippets which will be applied only to this book."
 msgstr "Можете да додате CSS фрагменте који ће се применити само на ову књигу."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:787
-#, fuzzy
 msgid "Long-press for info ⓘ"
-msgstr "Дуги притисак на текст"
+msgstr "Дуги притисак за инфо ⓘ"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:787
 msgid ""
@@ -5311,11 +5310,27 @@ msgid ""
 "Tap on the item to insert it: you can then edit it and combine it with "
 "others."
 msgstr ""
+"Овај искачући мени приказује кратку CSS пушкицу која приказује општу "
+"синтаксу селектора и класичне CSS особине.\n"
+"Такође садржи и неке нестандардне CSS могућности које су специфичне за "
+"KOReader и које могу бити корисне за е-књиге.\n"
+"\n"
+"Већина ових CSS фрагмената користе наша категоризована Подешавања стила у "
+"горњем менију: погледајте га и извршите дуги притисак на подешавање стила да "
+"бисте видели CSS кôд подешавања и објашњење шта се њиме постиже.\n"
+"Ако то није довољно за оно што желите да постигнете, можете и да га "
+"прилагодите: тапните на CSS кôд подешавања да га копирате у клипборд. Онда "
+"можете овде да га налепите и да га уредите.\n"
+"\n"
+"Дуги притисак на било коју ставку овог искачућег прозора приказује још "
+"информација о томе шта она ради и који проблем може да реши.\n"
+"\n"
+"Тапните на ставку да је унесете: затим можете да је уредите и комбинујете са "
+"осталима."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:798
-#, fuzzy
 msgid "Matching elements"
-msgstr "Не подудара се ниједан скуп правила"
+msgstr "Подударајући елементи"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:799
 msgid ""
@@ -5325,6 +5340,11 @@ msgid ""
 "\n"
 "p:not([class]) matches a <p> without any class= attribute."
 msgstr ""
+"p.имеКласе подудара <p> са class='имеКласе'.\n"
+"\n"
+"*.имеКласе подудара било који елемент са class='имеКласе'.\n"
+"\n"
+"p:not([class]) подудара <p> без class= атрибута."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:805
 msgid ""
@@ -5333,6 +5353,10 @@ msgid ""
 "aside p (without any intermediate symbol) matches a <p> descendant of an "
 "<aside> element."
 msgstr ""
+"aside > p подудара <p> децу елемента <aside>.\n"
+"\n"
+"aside p (без било каквог симбола између) подудара <p> потомке <aside> "
+"елемента."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:809
 msgid ""
@@ -5340,6 +5364,10 @@ msgid ""
 "\n"
 "p ~ img matches a <img> if any of its previous siblings is a <p>."
 msgstr ""
+"p + img подудара <img> ако је његов претходни братски елемент <p>.\n"
+"\n"
+"p ~ img подудара <img> ако је било који од његових претходних братских "
+"елемената <p>."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:814
 msgid ""
@@ -5351,6 +5379,13 @@ msgid ""
 "[name~=\"what\"] matches if the value of the attribute 'name' contains "
 "'what' as a word (among other words separated by spaces)."
 msgstr ""
+"[име=\"шта\"] подудара елемент који има атрибут ’име’ и чија је вредност "
+"тачно ’шта’.\n"
+"\n"
+"[име] подудара ако је присутан атрибут ’име’.\n"
+"\n"
+"[име~=\"шта\"] подудара ако вредност атрибута ’име’ садржи ’шта’ као реч ("
+"између осталих речи раздвојених размацима)."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:821
 msgid ""
@@ -5361,6 +5396,12 @@ msgid ""
 "\n"
 "[name$=\"what\"] matches if the attribute value ends with 'what'."
 msgstr ""
+"[име*=\"шта\" i] подудара било који елемент који има атрибут ’име’ чија "
+"вредност садржи ’шта’, без обзира на разлику у величини слова.\n"
+"\n"
+"[име^=\"шта\"] подудара ако вредност атрибута почиње са ’шта’.\n"
+"\n"
+"[име$=\"шта\"] подудара ако се вредност атрибута завршава са ’шта’."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:828
 msgid ""
@@ -5375,6 +5416,16 @@ msgid ""
 "\n"
 "p[_~=\"what\"] matches any <p> that contains the word 'what'."
 msgstr ""
+"Слично са синтаксом подударања атрибута, само што претражује текст унутар "
+"елемента.\n"
+"\n"
+"p[_=\"шта\"] подудара сваки <p> чији текст је тачно ’шта’.\n"
+"\n"
+"p[_] подудара сваки <p> који није празан.\n"
+"\n"
+"p:not([_]) подудара сваки празан <p>.\n"
+"\n"
+"p[_~=\"шта\"] подудара сваки <p> који садржи реч ’шта’."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:839
 msgid ""
@@ -5389,6 +5440,17 @@ msgid ""
 "\n"
 "p[_$=\"what\"] matches any <p> whose text ends with 'what'."
 msgstr ""
+"Слично са синтаксом подударања атрибута, само што тражи по унутрашњем тексту "
+"елемента.\n"
+"\n"
+"p[_*=\"шта\" i] подудара сваки <p> који садржи ’шта’, без обзира на разлику "
+"у величини слова.\n"
+"\n"
+"p[_^=\"шта\"] подудара сваки <p> чији текст почиње са ’шта’.\n"
+"(Ово може да се употреби за проналажење „Чин” или „Сцена”, или имена ликова "
+"у драмама, и њихово истицање у односу на остали текст.)\n"
+"\n"
+"p[_$=\"шта\"] подудара сваки <p> чији се текст завршава са ’шта’."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:849
 msgid ""
@@ -5398,6 +5460,11 @@ msgid ""
 "\n"
 "p:nth-child(odd) matches any other <p> in a series of sibling <p>."
 msgstr ""
+"p:first-child подудара <p> који је прво дете свог родитеља.\n"
+"\n"
+"p:last-child подудара <p> који је последње дете свог родитеља.\n"
+"\n"
+"p:nth-child(odd) подудара сваки други <p> у низу братских елемената <p>."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:856
 msgid ""
@@ -5407,11 +5474,16 @@ msgid ""
 "matching the element: tap on one of them to copy it to the clipboard.\n"
 "You can then paste it here with long-press in the text box."
 msgstr ""
+"На страници књиге, изаберите текст који се простире око (испред и иза) "
+"елемента који вас интересује и употребите ’Прикажи HTML’.\n"
+"У HTML приказивачу урадите дуги притисак на ознаке или текст тако да "
+"добијете листу селектора подударајућег елемента: тапните на један од њих и "
+"копирајте га у клипборд.\n"
+"Затим можете овде да га налепите дугим притиском на текст поље."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:863
-#, fuzzy
 msgid "Common classic properties"
-msgstr "Прикажи особине фајла"
+msgstr "Опште класичне особине"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:864
 msgid "1rem will enforce your main font size."
@@ -5419,7 +5491,7 @@ msgstr "1rem форсира величину вашег главног фонт�
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:865
 msgid "Remove bold. Use 'bold' to get bold."
-msgstr ""
+msgstr "Уклања подебљање слова. Употребите 'bold' да добијете подебљана слова."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:866
 msgid "Disables hyphenation inside the targeted elements."
@@ -5432,26 +5504,29 @@ msgstr "1.2еm је наше подразумевано увлачење тек�
 #: frontend/apps/reader/modules/readerstyletweak.lua:868
 msgid "Start a new page with this element. Use 'avoid' to avoid a new page."
 msgstr ""
+"Овим елементом почиње нова страница. Употребите 'avoid' да спречите отварање "
+"нове странице."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:869
 msgid "Force text to be black."
-msgstr ""
+msgstr "Форсира текст у црној боји."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:870
-#, fuzzy
 msgid "Remove any background color."
-msgstr "Остави позадину онакву каква је"
+msgstr "Уклања све боје позадине."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:871
 msgid ""
 "Limit an element width to 50% of your screen width (use 'max-height: 50vh' "
 "for 50% of the screen height). Can be useful with <img> to limit their size."
 msgstr ""
+"Ограничава ширину елемента на 50% ширине екрана (употребите 'max-height: "
+"50vh' за 50% висине екрана). Може бити корисно за <img>, да се ограничи "
+"величина елемената."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:874
-#, fuzzy
 msgid "Private CSS properties"
-msgstr "Прикажи особине фајла"
+msgstr "Приватне CSS особине"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:875
 msgid ""
@@ -5462,40 +5537,36 @@ msgstr ""
 "елемент ће се приказати као фуснота унутар странице."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:876
-#, fuzzy
 msgid ""
 "Can be set on some specific DocFragments (e.g. DocFragment[id$=_16]) to "
 "ignore them in the linear pages flow."
 msgstr ""
 "Може да се постави за неке одређене DocFragment елементе (нпр. "
-"DocFragment[id*=16]) када желите да се изузму из линеарног тока страница."
+"DocFragment[id$=_16]) када желите да се изузму из линеарног тока страница."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:877
-#, fuzzy
 msgid ""
 "Can be set on contiguous footnote blocks to ignore them in the linear pages "
 "flow."
 msgstr ""
-"Може да се постави за неке одређене DocFragment елементе (нпр. "
-"DocFragment[id*=16]) када желите да се изузму из линеарног тока страница."
+"Може да се постави за континуални блок фуснота када желите да се изузму из "
+"линеарног тока страница."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:878
-#, fuzzy
 msgid ""
 "When set on an element, its text can be used to build the alternative table "
 "of contents. toc-level2 to toc-level6 can be used for nested chapters."
 msgstr ""
 "Када се постави на елемент, његов текст може да се употреби за изградњу "
-"алтернативног садржаја."
+"алтернативног садржаја. За угњеждена поглавља може да се користи toc-level2 "
+"до toc-level6."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:879
-#, fuzzy
 msgid ""
 "When set on an element, it will be ignored when building the alternative "
 "table of contents."
 msgstr ""
-"Када се постави на елемент, његов текст може да се употреби за изградњу "
-"алтернативног садржаја."
+"Када се постави на елемент, он неће бити уграђен у алтернативни садржај."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:880
 msgid ""
@@ -5503,12 +5574,18 @@ msgid ""
 "footnote popup, in case KOReader wrongly detect this target is not a "
 "footnote."
 msgstr ""
+"Може да се постави на циљ линкова (<div id='..'>) тако да се, у случају да "
+"KOReader погрешно детектује да овај циљ није фуснота, линк на њих окине као "
+"искачућа фуснота."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:881
 msgid ""
 "Can be set on links (<a href='#..'>) to have them trigger as footnote "
 "popups, in case KOReader wrongly detect the links is not to a footnote."
 msgstr ""
+"Може да се постави на линкове (<a href='#..'>) тако да се, у случају да "
+"KOReader погрешно детектује да овај линк није на фусноту, окине као искачућа "
+"фуснота."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:882
 msgid ""
@@ -5519,14 +5596,20 @@ msgid ""
 "this with:\n"
 "DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 msgstr ""
+"Може да се постави на линковима (<a href='#..'>) тако да НЕ окину искачуће "
+"фусноте, као и фусноте унутар странице.\n"
+"Ако неки DocFragment представља индекс назива са унакрсним референцама и "
+"генерише фусноте унутар странице које заузимају половину расположивог "
+"простора, спречићете то помоћу следећег:\n"
+"DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:888
 msgid "Useful 'content:' values"
-msgstr ""
+msgstr "Корисне ’content:’ вредности"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid "Caution ⚠"
-msgstr ""
+msgstr "Опрез ⚠"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid ""
@@ -5539,39 +5622,54 @@ msgid ""
 "\n"
 "If used as-is, they will act on ALL elements!"
 msgstr ""
+"Будите опрезни са следећим: поставите их у одговарајући дискриминишући "
+"селектор, као на пример:\n"
+"\n"
+"span.одређеноИмеКласе\n"
+"\n"
+"p[_*=\"кључнареч\" i]\n"
+"\n"
+"Ако се користи овакво какво је, имаће ефекат над СВИМ елементима!"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:897
 msgid "Insert a visible space before an element."
-msgstr ""
+msgstr "Умеће видљиви размак испред елемента."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:898
 msgid ""
 "Insert a visible non-breakable space before an element, so it sticks to "
 "what's before."
 msgstr ""
+"Умеће испред елемента видљиви размак који не може да се преломи, тако да се "
+"лепи за оно што стоји испред њега."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:899
 msgid ""
 "U+2060 WORD JOINER may act as a glue (like an invisible non-breakable space) "
 "before an element, so it sticks to what's before."
 msgstr ""
+"U+2060 WORD JOINER може да служи као лепак (као невеидљиви размак који не "
+"може да се преломи) испред елемента, тако да се лепи за оно што се налази "
+"испред."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:900
 msgid ""
 "U+200B ZERO WIDTH SPACE may allow a linebreak before an element, in case the "
 "absence of any space prevents that."
 msgstr ""
+"U+200B ZERO WIDTH SPACE може да дозволи прелом линије испред елемента, у "
+"случају да нема никаквог размака који то спречава."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:901
 msgid ""
 "Insert the value of the attribute 'title' at start of an element content."
-msgstr ""
+msgstr "Умеће вредност атрибута ’title’ на почетак садржаја елемента."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:902
 #: frontend/apps/reader/modules/readerstyletweak.lua:903
 #: frontend/apps/reader/modules/readerstyletweak.lua:904
 msgid "Prepend a visible marker."
-msgstr ""
+msgstr "Поставља на почетак видљиви маркер."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:913
 msgid "Use sample"
@@ -6709,9 +6807,8 @@ msgstr "Чувај Википедија EPUB у текућем фолдеру к
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:217
 #: frontend/apps/reader/modules/readerwikipedia.lua:233
-#, fuzzy
 msgid "ask"
-msgstr "башкирски"
+msgstr "питај"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:219
 #: frontend/ui/elements/common_settings_menu_table.lua:383
@@ -6719,19 +6816,17 @@ msgid "always"
 msgstr "увек"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:221
-#, fuzzy
 msgid "never"
-msgstr "Никада"
+msgstr "никада"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:223
-#, fuzzy
 msgid "Include images in EPUB: %1"
-msgstr "Заједно са сликама"
+msgstr "Укључи слике у EPUB: %1"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:226
 #: frontend/apps/reader/modules/readerwikipedia.lua:245
 msgid "Ask"
-msgstr ""
+msgstr "Питај"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:227
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
@@ -6739,23 +6834,20 @@ msgid "Include images"
 msgstr "Заједно са сликама"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:228
-#, fuzzy
 msgid "Don't include images"
-msgstr "Не желим"
+msgstr "Немој да укључиш слике"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:235
-#, fuzzy
 msgid "higher"
-msgstr "високи"
+msgstr "више"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:237
 msgid "standard"
-msgstr ""
+msgstr "стандардно"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:239
-#, fuzzy
 msgid "Images quality in EPUB: %1"
-msgstr "Скалирање слика је постављено на: %1"
+msgstr "Квалитет слика у EPUB: %1"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:246
 #: frontend/ui/wikipedia.lua:813
@@ -19918,7 +20010,7 @@ msgstr "Уклони 100% прочитане чланке из историје"
 
 #: plugins/wallabag.koplugin/main.lua:345
 msgid "Prefer original non-HTML document"
-msgstr ""
+msgstr "Радије бирај оригинални не-HTML документ"
 
 #: plugins/wallabag.koplugin/main.lua:361
 msgid ""
