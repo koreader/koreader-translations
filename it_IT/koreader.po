@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 16:07+0000\n"
-"PO-Revision-Date: 2024-03-13 11:56+0000\n"
+"PO-Revision-Date: 2024-03-15 17:02+0000\n"
 "Last-Translator: Enrico Segre <enricoalbertoernestosegre@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/koreader/"
 "koreader/it/>\n"
@@ -2707,7 +2707,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1130
 msgid "Failed to fetch dictionary. Are you online?"
-msgstr ""
+msgstr "Recupero del dizionario fallito. Sei online?"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1138
 msgid "Downloading…"
@@ -5329,9 +5329,8 @@ msgstr ""
 "libro."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:787
-#, fuzzy
 msgid "Long-press for info ⓘ"
-msgstr "Pressione a lungo sul testo"
+msgstr "Pressione a lungo per info ⓘ"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:787
 msgid ""
@@ -5355,9 +5354,8 @@ msgid ""
 msgstr ""
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:798
-#, fuzzy
 msgid "Matching elements"
-msgstr "Nessun insieme di regole corrispondenti"
+msgstr "Elementi corrispondenti"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:799
 msgid ""
@@ -5367,6 +5365,11 @@ msgid ""
 "\n"
 "p:not([class]) matches a <p> without any class= attribute."
 msgstr ""
+"p.className corrisponde a <p> con class='className'.\n"
+"\n"
+"*.className corrisponde a qualsiasi elemento con class='className'.\n"
+"\n"
+"p:not([class]) corrisponde a <p> senza alcun attributo class=."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:805
 msgid ""
@@ -5375,6 +5378,10 @@ msgid ""
 "aside p (without any intermediate symbol) matches a <p> descendant of an "
 "<aside> element."
 msgstr ""
+"aside > p corrisponde a <p> figli di un elemento <aside>.\n"
+"\n"
+"aside p (senza simbolo intermedio) corrisponde a un discendente <p> di un "
+"elemento <aside>."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:809
 msgid ""
@@ -5382,6 +5389,11 @@ msgid ""
 "\n"
 "p ~ img matches a <img> if any of its previous siblings is a <p>."
 msgstr ""
+"p + img corrisponde a <img> se il suo fratello immediatamente precedente è "
+"un <p>.\n"
+"\n"
+"p ~ img corrisponde a <img> se uno qualsiasi dei suoi precedenti fratelli è "
+"un <p>."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:814
 msgid ""
@@ -5393,6 +5405,13 @@ msgid ""
 "[name~=\"what\"] matches if the value of the attribute 'name' contains "
 "'what' as a word (among other words separated by spaces)."
 msgstr ""
+"[name=\"what\"] corrisponde se l'elemento ha l'attributo 'name' e il suo "
+"valore è esattamente 'what'.\n"
+"\n"
+"[name] corrisponde se l'attributo 'name' è presente.\n"
+"\n"
+"[name~=\"what\"] corrisponde se il valore dell'attributo 'name' contiene "
+"'what' come una parola (tra le altre parole separate dagli spazi)."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:821
 msgid ""
@@ -5403,6 +5422,12 @@ msgid ""
 "\n"
 "[name$=\"what\"] matches if the attribute value ends with 'what'."
 msgstr ""
+"[name*=\"what\" i] corrisponde a qualsiasi elemento con l'attributo 'name' "
+"con un valore che contiene 'what', insensibile maiuscolo/minuscolo.\n"
+"\n"
+"[name^=\"what\"] corrisponde se il valore dell'attributo inizia con 'what'.\n"
+"\n"
+"[name$=\"what\"] corrisponde se il valore dell'attributo termina con 'what'."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:828
 msgid ""
@@ -5417,6 +5442,17 @@ msgid ""
 "\n"
 "p[_~=\"what\"] matches any <p> that contains the word 'what'."
 msgstr ""
+"Simile nella sintassi all'attributo corrispondente, ma corrisponde al testo "
+"interno di un elemento.\n"
+"\n"
+"p[_=\"what\"] corrisponde a qualsiasi <p> il cui testo è esattamente \"what\""
+".\n"
+"\n"
+"p[_] corrisponde a qualsiasi <p> non vuoto.\n"
+"\n"
+"p:not([_]) corrisponde a qualsiasi <p> vuoto.\n"
+"\n"
+"p[_~=\"what\"] corrisponde a qualsiasi <p> che contiene la parola \"what\"."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:839
 msgid ""
@@ -5431,6 +5467,18 @@ msgid ""
 "\n"
 "p[_$=\"what\"] matches any <p> whose text ends with 'what'."
 msgstr ""
+"Simile in sintassi alla corrispondenza di attributi, ma riferito al testo "
+"interno di un elemento.\n"
+"\n"
+"p[_*=\"what\" i] corrisponde a qualsiasi <p> che contiene \"what\", "
+"insensibile a maiuscole/minuscole.\n"
+"\n"
+"p[_^=\"what\"] corrisponde a qualsiasi <p> il cui testo inizia con \"what\"."
+"\n"
+"(Questo può essere usato per trovare per esempio \"Atto\" o \"Scena\", o "
+"nomi di personaggi in drammi, e farli risaltare.)\n"
+"\n"
+"p[_$=\"what\"] corrisponde a qualsiasi <p> il cui testo termina con \"what\"."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:849
 msgid ""
@@ -5440,6 +5488,11 @@ msgid ""
 "\n"
 "p:nth-child(odd) matches any other <p> in a series of sibling <p>."
 msgstr ""
+"p: first-child corrisponde a <p> che è il primo figlio del suo genitore.\n"
+"\n"
+"p:last-child corrisponde a <p> che è l'ultimo figlio del suo genitore.\n"
+"\n"
+"p:nth-child(odd) corrisponde a ogni <p> dispari in una serie di <p> fratelli."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:856
 msgid ""
@@ -5449,11 +5502,16 @@ msgid ""
 "matching the element: tap on one of them to copy it to the clipboard.\n"
 "You can then paste it here with long-press in the text box."
 msgstr ""
+"In una pagina di libro, selezionare del testo che comprenda (prima e dopo) "
+"l'elemento che interessa, e utilizzare 'Visualizza HTML'.\n"
+"Nel visualizzatore HTML, premere a lungo sui tag o sul testo per ottenere un "
+"elenco di selettori che corrispondono all'elemento: toccare su uno di loro "
+"per copiarlo negli appunti.\n"
+"Si può quindi incollarlo qui con una pressione lunga nella casella di testo."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:863
-#, fuzzy
 msgid "Common classic properties"
-msgstr "Mostra le proprietà del file"
+msgstr "Proprietà classiche comuni"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:864
 msgid "1rem will enforce your main font size."
@@ -5461,7 +5519,7 @@ msgstr "1rem imporrà la dimensione del carattere principale."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:865
 msgid "Remove bold. Use 'bold' to get bold."
-msgstr ""
+msgstr "Togliere il grassetto. Utilizzare 'bold' per ottenere grassetto."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:866
 msgid "Disables hyphenation inside the targeted elements."
@@ -5474,26 +5532,29 @@ msgstr "il nostro rientro del testo predefinito è 1.2em."
 #: frontend/apps/reader/modules/readerstyletweak.lua:868
 msgid "Start a new page with this element. Use 'avoid' to avoid a new page."
 msgstr ""
+"Inizia una nuova pagina con questo elemento. Utilizzare 'avoid' per evitare "
+"una nuova pagina."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:869
 msgid "Force text to be black."
-msgstr ""
+msgstr "Forza il testo ad essere nero."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:870
-#, fuzzy
 msgid "Remove any background color."
-msgstr "Lascia lo sfondo così com'è"
+msgstr "Rimuovere qualsiasi colore di sfondo."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:871
 msgid ""
 "Limit an element width to 50% of your screen width (use 'max-height: 50vh' "
 "for 50% of the screen height). Can be useful with <img> to limit their size."
 msgstr ""
+"Limitare la larghezza di un elemento al 50% della larghezza dello schermo ("
+"usare 'max-height: 50vh' per il 50% dell'altezza dello schermo). Può essere "
+"utile con <img> per limitare le loro dimensioni."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:874
-#, fuzzy
 msgid "Private CSS properties"
-msgstr "Mostra le proprietà del file"
+msgstr "Proprietà private CSS"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:875
 msgid ""
@@ -5505,40 +5566,37 @@ msgstr ""
 "nella pagina."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:876
-#, fuzzy
 msgid ""
 "Can be set on some specific DocFragments (e.g. DocFragment[id$=_16]) to "
 "ignore them in the linear pages flow."
 msgstr ""
 "Può essere impostato su alcuni DocFragment specifici (p.es. "
-"DocFragment[id*=16]) per ignorarli nel flusso delle pagine lineari."
+"DocFragment[id$=_16]) per ignorarli nel flusso lineari delle pagine."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:877
-#, fuzzy
 msgid ""
 "Can be set on contiguous footnote blocks to ignore them in the linear pages "
 "flow."
 msgstr ""
-"Può essere impostato su alcuni DocFragment specifici (p.es. "
-"DocFragment[id*=16]) per ignorarli nel flusso delle pagine lineari."
+"Può essere impostato su blocchi di note a pie pagina contigui, per ignorarli "
+"nel flusso lineare delle pagine."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:878
-#, fuzzy
 msgid ""
 "When set on an element, its text can be used to build the alternative table "
 "of contents. toc-level2 to toc-level6 can be used for nested chapters."
 msgstr ""
 "Quando impostato su un elemento, il suo testo può essere utilizzato per "
-"costruire il sommario alternativo."
+"costruire l'indice alternativo. Da toc-level2 a toc-level6 possono essere "
+"utilizzati per livelli di sottocapitoli."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:879
-#, fuzzy
 msgid ""
 "When set on an element, it will be ignored when building the alternative "
 "table of contents."
 msgstr ""
-"Quando impostato su un elemento, il suo testo può essere utilizzato per "
-"costruire il sommario alternativo."
+"Quando impostato su un elemento, viene ignorato nella costruzione del "
+"sommario alternativo."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:880
 msgid ""
