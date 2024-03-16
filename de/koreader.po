@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-14 16:07+0000\n"
-"PO-Revision-Date: 2024-03-16 18:01+0000\n"
+"PO-Revision-Date: 2024-03-17 11:21+0000\n"
 "Last-Translator: elvvis <elvvis@hotmail.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/koreader/koreader/"
 "de/>\n"
@@ -5423,6 +5423,11 @@ msgid ""
 "\n"
 "p ~ img matches a <img> if any of its previous siblings is a <p>."
 msgstr ""
+"p + img stimmt mit einem <img> überein, wenn sein unmittelbar vorheriges "
+"Geschwister ein <p> ist.\n"
+"\n"
+"p ~ img stimmt mit einem <img> überein, wenn eines seiner vorherigen "
+"Geschwister ein <p> ist."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:814
 msgid ""
@@ -5434,6 +5439,13 @@ msgid ""
 "[name~=\"what\"] matches if the value of the attribute 'name' contains "
 "'what' as a word (among other words separated by spaces)."
 msgstr ""
+"[name=\"what\"] passt, wenn das Element das Attribut \"name\" hat und sein "
+"Wert genau \"what\" ist.\n"
+"\n"
+"[name] trifft zu, wenn das Attribut \"name\" vorhanden ist.\n"
+"\n"
+"[name~=\"what\"] passt, wenn der Wert des Attributs \"name\" das Wort \"what"
+"\" enthält (neben anderen durch Leerzeichen getrennten Wörtern)."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:821
 msgid ""
@@ -5444,6 +5456,12 @@ msgid ""
 "\n"
 "[name$=\"what\"] matches if the attribute value ends with 'what'."
 msgstr ""
+"[name*=\"what\" i] findet jedes Element, das das Attribut \"name\" mit einem "
+"Wert hat, der \"was\" enthält, unabhängig von der Groß-/Kleinschreibung.\n"
+"\n"
+"[name^=\"what\"] passt, wenn der Wert des Attributs mit 'was' beginnt.\n"
+"\n"
+"[name$=\"what\"] passt, wenn der Wert des Attributs mit \"what\" endet."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:828
 msgid ""
@@ -5458,6 +5476,16 @@ msgid ""
 "\n"
 "p[_~=\"what\"] matches any <p> that contains the word 'what'."
 msgstr ""
+"Ähnlich in der Syntax wie der Attributabgleich, aber mit dem inneren Text "
+"eines Elements.\n"
+"\n"
+"p[_=\"what\"] passt zu jedem <p>, dessen Text genau \"what\" ist.\n"
+"\n"
+"p[_] passt zu jedem nicht leeren <p>.\n"
+"\n"
+"p:not([_]) passt auf jedes leere <p>.\n"
+"\n"
+"p[_~=\"what\"] passt zu jedem <p>, das das Wort \"what\" enthält."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:839
 msgid ""
@@ -5472,6 +5500,17 @@ msgid ""
 "\n"
 "p[_$=\"what\"] matches any <p> whose text ends with 'what'."
 msgstr ""
+"Ähnlich in der Syntax wie der Attributabgleich, aber auf den inneren Text "
+"eines Elements abgestimmt.\n"
+"\n"
+"p[_*=\"what\" i] passt auf jedes <p>, das 'what' enthält, unabhängig von der "
+"Groß-/Kleinschreibung.\n"
+"\n"
+"p[_^=\"what\"] passt auf jedes <p>, dessen Text mit \"what\" beginnt.\n"
+"(Dies kann verwendet werden, um \"Act\" oder \"Scene\" oder Charakternamen "
+"in Theaterstücken abzugleichen und sie hervorzuheben).\n"
+"\n"
+"p[_$=\"what\"] passt auf jedes <p>, dessen Text mit 'what' endet."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:849
 msgid ""
@@ -5481,6 +5520,14 @@ msgid ""
 "\n"
 "p:nth-child(odd) matches any other <p> in a series of sibling <p>."
 msgstr ""
+"p:first-child stimmt mit einem <p> überein, das das erste Kind seines "
+"Elternteils ist.\n"
+"\n"
+"p:last-child stimmt mit einem <p> überein, das das letzte Kind seines "
+"Elternteils ist.\n"
+"\n"
+"p:nth-child(odd) passt zu jedem anderen <p> in einer Reihe von "
+"Geschwister-<p>."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:856
 msgid ""
@@ -5490,11 +5537,16 @@ msgid ""
 "matching the element: tap on one of them to copy it to the clipboard.\n"
 "You can then paste it here with long-press in the text box."
 msgstr ""
+"Markieren Sie auf einer Buchseite einen Text, der sich um das gewünschte "
+"Element herum (vor und nach) befindet, und verwenden Sie \"HTML anzeigen\".\n"
+"Drücken Sie im HTML-Viewer lange auf Tags oder Text, um eine Liste von "
+"Selektoren zu erhalten, die zu dem Element passen: Tippen Sie auf einen von "
+"ihnen, um ihn in die Zwischenablage zu kopieren.\n"
+"Sie können den Text dann durch langes Drücken in das Textfeld einfügen."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:863
-#, fuzzy
 msgid "Common classic properties"
-msgstr "Dateieigenschaften anzeigen"
+msgstr "Gemeinsame klassische Eigenschaften"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:864
 msgid "1rem will enforce your main font size."
@@ -5502,7 +5554,7 @@ msgstr "1rem wird deine Hauptschriftgröße festlegen."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:865
 msgid "Remove bold. Use 'bold' to get bold."
-msgstr ""
+msgstr "Fettschrift entfernen. Verwenden Sie 'bold', um fett zu werden."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:866
 msgid "Disables hyphenation inside the targeted elements."
@@ -5515,26 +5567,29 @@ msgstr "1,2 em ist der Standard-Einzug für Text."
 #: frontend/apps/reader/modules/readerstyletweak.lua:868
 msgid "Start a new page with this element. Use 'avoid' to avoid a new page."
 msgstr ""
+"Beginnen Sie eine neue Seite mit diesem Element. Verwenden Sie \"vermeiden\""
+", um eine neue Seite zu vermeiden."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:869
 msgid "Force text to be black."
-msgstr ""
+msgstr "Erzwingen Sie die Darstellung von schwarzem Text."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:870
-#, fuzzy
 msgid "Remove any background color."
-msgstr "Hintergrund beibehalten"
+msgstr "Entfernen Sie jegliche Hintergrundfarbe."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:871
 msgid ""
 "Limit an element width to 50% of your screen width (use 'max-height: 50vh' "
 "for 50% of the screen height). Can be useful with <img> to limit their size."
 msgstr ""
+"Begrenzen Sie die Breite eines Elements auf 50 % Ihrer Bildschirmbreite ("
+"verwenden Sie „max-height: 50vh“ für 50 % der Bildschirmhöhe). Kann mit "
+"<img> nützlich sein, um ihre Größe zu begrenzen."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:874
-#, fuzzy
 msgid "Private CSS properties"
-msgstr "Dateieigenschaften anzeigen"
+msgstr "Private CSS-Eigenschaften"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:875
 msgid ""
@@ -5545,7 +5600,6 @@ msgstr ""
 "enthält, wird dieses Blockelement als Fußnote auf der Seite angezeigt."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:876
-#, fuzzy
 msgid ""
 "Can be set on some specific DocFragments (e.g. DocFragment[id$=_16]) to "
 "ignore them in the linear pages flow."
@@ -5554,31 +5608,29 @@ msgstr ""
 "um sie im linearen Seitenfluss zu ignorieren."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:877
-#, fuzzy
 msgid ""
 "Can be set on contiguous footnote blocks to ignore them in the linear pages "
 "flow."
 msgstr ""
-"Kann für bestimmte DocFragments gesetzt werden (z.B. DocFragment[id*=16]), "
-"um sie im linearen Seitenfluss zu ignorieren."
+"Kann für zusammenhängende Fußnotenblöcke festgelegt werden, um diese im "
+"linearen Seitenfluss zu ignorieren."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:878
-#, fuzzy
 msgid ""
 "When set on an element, its text can be used to build the alternative table "
 "of contents. toc-level2 to toc-level6 can be used for nested chapters."
 msgstr ""
-"Wenn auf ein Element gesetzt, kann dessen Text zur Erstellung des "
-"alternativen Inhaltsverzeichnisses verwendet werden."
+"Wenn es auf ein Element gesetzt wird, kann dessen Text verwendet werden, um "
+"das alternative Inhaltsverzeichnis zu erstellen. toc-level2 bis toc-level6 "
+"können für verschachtelte Kapitel verwendet werden."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:879
-#, fuzzy
 msgid ""
 "When set on an element, it will be ignored when building the alternative "
 "table of contents."
 msgstr ""
-"Wenn auf ein Element gesetzt, kann dessen Text zur Erstellung des "
-"alternativen Inhaltsverzeichnisses verwendet werden."
+"Wenn es für ein Element festgelegt ist, wird es beim Aufbau des alternativen "
+"Inhaltsverzeichnisses ignoriert."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:880
 msgid ""
@@ -5586,12 +5638,18 @@ msgid ""
 "footnote popup, in case KOReader wrongly detect this target is not a "
 "footnote."
 msgstr ""
+"Kann auf das Ziel von Links (<div id='..'>) gesetzt werden, um deren Link "
+"als Fußnoten-Popup auszulösen, falls KOReader fälschlicherweise erkennt, "
+"dass dieses Ziel keine Fußnote ist."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:881
 msgid ""
 "Can be set on links (<a href='#..'>) to have them trigger as footnote "
 "popups, in case KOReader wrongly detect the links is not to a footnote."
 msgstr ""
+"Kann auf Links (<a href='#..'>) gesetzt werden, um sie als Fußnoten-Popups "
+"auszulösen, für den Fall, dass KOReader fälschlicherweise erkennt, dass der "
+"Link nicht zu einer Fußnote gehört."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:882
 msgid ""
@@ -5602,14 +5660,20 @@ msgid ""
 "this with:\n"
 "DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 msgstr ""
+"Kann auf Links (<a href='#..'>) gesetzt werden, damit sie KEINE Fußnoten-"
+"Popups und seiteninterne Fußnoten auslösen.\n"
+"Wenn ein DocFragment einen Index von Namen mit Querverweisen präsentiert, "
+"was dazu führt, dass seiteninterne Fußnoten die Hälfte dieser Seiten "
+"einnehmen, können Sie dies vermeiden mit:\n"
+"DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:888
 msgid "Useful 'content:' values"
-msgstr ""
+msgstr "Nützliche 'content:'-Werte"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid "Caution ⚠"
-msgstr ""
+msgstr "Vorsicht ⚠"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid ""
@@ -5622,39 +5686,56 @@ msgid ""
 "\n"
 "If used as-is, they will act on ALL elements!"
 msgstr ""
+"Seien Sie vorsichtig mit diesen: kleben Sie sie an einen richtigen "
+"diskriminierenden Selektor, wie:\n"
+"\n"
+"span.specificClassName\n"
+"\n"
+"p[_*=\"keyword\" i]\n"
+"\n"
+"Wenn sie so verwendet werden, wirken sie auf ALLE Elemente!"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:897
 msgid "Insert a visible space before an element."
-msgstr ""
+msgstr "Fügen Sie ein sichtbares Leerzeichen vor einem Element ein."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:898
 msgid ""
 "Insert a visible non-breakable space before an element, so it sticks to "
 "what's before."
 msgstr ""
+"Fügen Sie ein sichtbares, nicht unterbrechbares Leerzeichen vor einem "
+"Element ein, damit es an dem vorhergehenden Element haften bleibt."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:899
 msgid ""
 "U+2060 WORD JOINER may act as a glue (like an invisible non-breakable space) "
 "before an element, so it sticks to what's before."
 msgstr ""
+"U+2060 WORD JOINER kann als Klebstoff (wie ein unsichtbares, nicht "
+"abbrechbares Leerzeichen) vor einem Element fungieren, so dass es an dem "
+"davor stehenden Element haften bleibt."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:900
 msgid ""
 "U+200B ZERO WIDTH SPACE may allow a linebreak before an element, in case the "
 "absence of any space prevents that."
 msgstr ""
+"U+200B ZERO WIDTH SPACE kann einen Zeilenumbruch vor einem Element erlauben, "
+"falls das Fehlen eines Leerzeichens dies verhindert."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:901
 msgid ""
 "Insert the value of the attribute 'title' at start of an element content."
 msgstr ""
+"Einfügen des Wertes des Attributs \"title\" am Anfang eines Elementes "
+"content."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:902
 #: frontend/apps/reader/modules/readerstyletweak.lua:903
 #: frontend/apps/reader/modules/readerstyletweak.lua:904
 msgid "Prepend a visible marker."
-msgstr ""
+msgstr "Voranstellen einer sichtbaren Markierung."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:913
 msgid "Use sample"
@@ -6811,9 +6892,8 @@ msgstr "Wikipedia EPUB im aktuellen Buchverzeichnis speichern"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:217
 #: frontend/apps/reader/modules/readerwikipedia.lua:233
-#, fuzzy
 msgid "ask"
-msgstr "Baschkirisch"
+msgstr "fragen"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:219
 #: frontend/ui/elements/common_settings_menu_table.lua:383
@@ -6821,19 +6901,17 @@ msgid "always"
 msgstr "immer"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:221
-#, fuzzy
 msgid "never"
-msgstr "Nie"
+msgstr "nie"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:223
-#, fuzzy
 msgid "Include images in EPUB: %1"
-msgstr "Bilder einbeziehen"
+msgstr "Bilder in EPUB einbinden: %1"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:226
 #: frontend/apps/reader/modules/readerwikipedia.lua:245
 msgid "Ask"
-msgstr ""
+msgstr "Fragen"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:227
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
@@ -6841,23 +6919,20 @@ msgid "Include images"
 msgstr "Bilder einbeziehen"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:228
-#, fuzzy
 msgid "Don't include images"
-msgstr "Nicht einbeziehen"
+msgstr "Keine Bilder einbinden"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:235
-#, fuzzy
 msgid "higher"
-msgstr "hoch"
+msgstr "höher"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:237
 msgid "standard"
-msgstr ""
+msgstr "Standard"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:239
-#, fuzzy
 msgid "Images quality in EPUB: %1"
-msgstr "Bildskalierung eingestellt auf: %1"
+msgstr "Bildqualität in EPUB: %1"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:246
 #: frontend/ui/wikipedia.lua:813
