@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-17 11:21+0000\n"
-"PO-Revision-Date: 2024-03-15 17:02+0000\n"
+"PO-Revision-Date: 2024-03-18 12:04+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
 "koreader/ru/>\n"
@@ -37,8 +37,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
+"n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Generator: Weblate 5.5-dev\n"
 
 #: reader.lua:194
@@ -5419,6 +5419,13 @@ msgid ""
 "[name~=\"what\"] matches if the value of the attribute 'name' contains "
 "'what' as a word (among other words separated by spaces)."
 msgstr ""
+"[name=\"what\"] соответствует, если элемент имеет атрибут «name» и его "
+"значение равно «what».\n"
+"\n"
+"[name] соответствует, если присутствует атрибут «name».\n"
+"\n"
+"[name~=\"what\"] соответствует, если значение атрибута «name» содержит слово "
+"«what» (среди других слов, разделённых пробелами)."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:821
 msgid ""
@@ -5429,6 +5436,13 @@ msgid ""
 "\n"
 "[name$=\"what\"] matches if the attribute value ends with 'what'."
 msgstr ""
+"[name*=\"what\" i] соответствует любому элементу, имеющему атрибут «name» со "
+"значением, содержащим «what», без учёта регистра.\n"
+"\n"
+"[name^=\"what\"] соответствует, если значение атрибута начинается с «what».\n"
+"\n"
+"[name$=\"what\"] соответствует, если значение атрибута заканчивается на "
+"«what»."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:828
 msgid ""
@@ -5443,6 +5457,16 @@ msgid ""
 "\n"
 "p[_~=\"what\"] matches any <p> that contains the word 'what'."
 msgstr ""
+"Синтаксис аналогичен сопоставлению атрибутов, но соответствует внутреннему "
+"тексту элемента.\n"
+"\n"
+"p[_=\"what\"] соответствует любому <p>, точный текст которого «what».\n"
+"\n"
+"p[_] соответствует любому непустому <p>.\n"
+"\n"
+"p:not([_]) соответствует любому пустому <p>.\n"
+"\n"
+"p[_~=\"what\"] соответствует любому <p>, содержащему слово «what»."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:839
 msgid ""
@@ -5457,6 +5481,19 @@ msgid ""
 "\n"
 "p[_$=\"what\"] matches any <p> whose text ends with 'what'."
 msgstr ""
+"Синтаксис аналогичен сопоставлению атрибутов, но соответствует внутреннему "
+"тексту элемента.\n"
+"\n"
+"p[_*=\"what\" i] соответствует любому <p>, содержащему «what», без учёта "
+"регистра.\n"
+"\n"
+"p[_^=\"what\"] соответствует любому <p>, текст которого начинается с «what»."
+"\n"
+"(Это можно использовать для сопоставления «акт/сцена» или имён персонажей в "
+"пьесах, а также для их выделения.)\n"
+"\n"
+"p[_$=\"what\"] соответствует любому <p>, текст которого заканчивается на "
+"«what»."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:849
 msgid ""
@@ -5466,6 +5503,14 @@ msgid ""
 "\n"
 "p:nth-child(odd) matches any other <p> in a series of sibling <p>."
 msgstr ""
+"p:first-child соответствует <p>, который является первым дочерним элементом "
+"своего родителя.\n"
+"\n"
+"p:last-child соответствует <p>, который является последним дочерним "
+"элементом своего родителя.\n"
+"\n"
+"p:nth-child(odd) соответствует любому другому <p> в серии родственных "
+"элементв <p>."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:856
 msgid ""
@@ -5475,6 +5520,13 @@ msgid ""
 "matching the element: tap on one of them to copy it to the clipboard.\n"
 "You can then paste it here with long-press in the text box."
 msgstr ""
+"На странице книги выделите текст, охватывающий (до и после) интересующий вас "
+"элемент, затем откройте «Просмотр HTML».\n"
+"В средстве просмотра HTML долгим касанием тегов или текста можно получить "
+"список соответствующих элементу селекторов: для копирования нужного в буфер "
+"обмена просто коснитесь его.\n"
+"Затем вы можете вставить скопированное сюда же, удерживая палец на текстовом "
+"поле."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:863
 msgid "Common classic properties"
@@ -5486,7 +5538,7 @@ msgstr "Значение 1rem будет принудительно задано
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:865
 msgid "Remove bold. Use 'bold' to get bold."
-msgstr ""
+msgstr "Удалить жирность. Используйте «bold» для увеличения веса шрифта."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:866
 msgid "Disables hyphenation inside the targeted elements."
@@ -5499,6 +5551,8 @@ msgstr "1.2em - отступ текста по умолчанию."
 #: frontend/apps/reader/modules/readerstyletweak.lua:868
 msgid "Start a new page with this element. Use 'avoid' to avoid a new page."
 msgstr ""
+"Начать новую страницу с данным элементом. Свойство «avoid» запрещает разрыв "
+"страниц внутри элемента."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:869
 msgid "Force text to be black."
@@ -5513,6 +5567,8 @@ msgid ""
 "Limit an element width to 50% of your screen width (use 'max-height: 50vh' "
 "for 50% of the screen height). Can be useful with <img> to limit their size."
 msgstr ""
+"Ограничить ширину элемента до 50% ширины экрана (или «max-height: 50vh» для "
+"высоты). Может быть полезно с <img> для ограничения размера изображений."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:874
 msgid "Private CSS properties"
@@ -5564,12 +5620,17 @@ msgid ""
 "footnote popup, in case KOReader wrongly detect this target is not a "
 "footnote."
 msgstr ""
+"Можно задать для цели ссылок (<div id='..'>) отображение ссылки в виде "
+"всплывающей сноски, если KOReader ошибочно определит не являющуюся сноской "
+"цель (target)."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:881
 msgid ""
 "Can be set on links (<a href='#..'>) to have them trigger as footnote "
 "popups, in case KOReader wrongly detect the links is not to a footnote."
 msgstr ""
+"Можно задать для ссылок (<a href='#..'>) отображение в виде всплывающей "
+"сноски, если KOReader ошибочно определит не являющиеся сносками ссылки."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:882
 msgid ""
@@ -5580,10 +5641,16 @@ msgid ""
 "this with:\n"
 "DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 msgstr ""
+"Можно задать для ссылок (<a href='#..'>), чтобы они НЕ отображались в виде "
+"всплывающих и постраничных сносок.\n"
+"Если в каком-либо DocFragment представлен индекс имён с перекрёстными "
+"ссылками, в результате чего сноски на страницах занимают половину их "
+"площади, то этого можно избежать так:\n"
+"DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:888
 msgid "Useful 'content:' values"
-msgstr ""
+msgstr "Полезные значения свойства «content:»"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid "Caution ⚠"
@@ -5600,39 +5667,53 @@ msgid ""
 "\n"
 "If used as-is, they will act on ALL elements!"
 msgstr ""
+"Будьте с этим осторожны: прикрепите их к правильному различающему селектору, "
+"например:\n"
+"\n"
+"span.specificClassName\n"
+"\n"
+"p[_*=\"keyword\" i]\n"
+"\n"
+"Если использовать их как есть, они будут действовать на ВСЕ элементы!"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:897
 msgid "Insert a visible space before an element."
-msgstr ""
+msgstr "Вставить видимый пробел перед элементом."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:898
 msgid ""
 "Insert a visible non-breakable space before an element, so it sticks to "
 "what's before."
 msgstr ""
+"Вставить видимый неразрывный пробел перед элементом, чтобы он прилипал к "
+"предыдущему."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:899
 msgid ""
 "U+2060 WORD JOINER may act as a glue (like an invisible non-breakable space) "
 "before an element, so it sticks to what's before."
 msgstr ""
+"U+2060 WORD JOINER может действовать как клей (вроде невидимого неразрывного "
+"пробела) перед элементом, поэтому он прилипает к предыдущему."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:900
 msgid ""
 "U+200B ZERO WIDTH SPACE may allow a linebreak before an element, in case the "
 "absence of any space prevents that."
 msgstr ""
+"U+200B ZERO WIDTH SPACE может разрешить перенос строки перед элементом, если "
+"этому препятствует отсутствие пробела."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:901
 msgid ""
 "Insert the value of the attribute 'title' at start of an element content."
-msgstr ""
+msgstr "Вставить значение атрибута «title» в начало содержимого элемента."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:902
 #: frontend/apps/reader/modules/readerstyletweak.lua:903
 #: frontend/apps/reader/modules/readerstyletweak.lua:904
 msgid "Prepend a visible marker."
-msgstr ""
+msgstr "Добавить визуальный маркер."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:913
 msgid "Use sample"
@@ -20053,7 +20134,7 @@ msgstr "Удалять прочитанные на 100% статьи из ист
 
 #: plugins/wallabag.koplugin/main.lua:345
 msgid "Prefer original non-HTML document"
-msgstr ""
+msgstr "В приоритете исходный документ, отличный от HTML"
 
 #: plugins/wallabag.koplugin/main.lua:361
 msgid ""
