@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-09 11:01+0000\n"
+"POT-Creation-Date: 2024-04-16 17:04+0000\n"
 "PO-Revision-Date: 2024-04-09 17:50+0000\n"
 "Last-Translator: elvvis <elvvis@hotmail.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -167,12 +167,12 @@ msgstr "Dateinamen eingeben"
 #: frontend/apps/cloudstorage/dropbox.lua:130
 #: frontend/apps/cloudstorage/ftp.lua:127
 #: frontend/apps/cloudstorage/webdav.lua:126
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
-#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanager.lua:989
 #: frontend/apps/filemanager/filemanager.lua:1117
 #: frontend/apps/filemanager/filemanager.lua:1444
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
+#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:56
 #: frontend/apps/filemanager/filemanagershortcuts.lua:107
 #: frontend/apps/reader/modules/readerbookmark.lua:1053
@@ -204,7 +204,7 @@ msgstr "Dateinamen eingeben"
 #: frontend/ui/widget/networksetting.lua:340
 #: frontend/ui/widget/numberpickerwidget.lua:139
 #: frontend/ui/widget/pathchooser.lua:134 frontend/ui/widget/textviewer.lua:468
-#: frontend/ui/widget/touchmenu.lua:1330
+#: frontend/ui/widget/touchmenu.lua:1330 plugins/SSH.koplugin/main.lua:130
 #: plugins/autowarmth.koplugin/main.lua:759
 #: plugins/autowarmth.koplugin/main.lua:1060
 #: plugins/calibre.koplugin/main.lua:324
@@ -230,7 +230,7 @@ msgstr "Dateinamen eingeben"
 #: plugins/opds.koplugin/opdsbrowser.lua:646
 #: plugins/opds.koplugin/opdspse.lua:179
 #: plugins/perceptionexpander.koplugin/main.lua:138
-#: plugins/profiles.koplugin/main.lua:264 plugins/SSH.koplugin/main.lua:130
+#: plugins/profiles.koplugin/main.lua:264
 #: plugins/statistics.koplugin/main.lua:1246
 #: plugins/statistics.koplugin/main.lua:2306
 #: plugins/statistics.koplugin/main.lua:2480
@@ -297,12 +297,12 @@ msgid "Edit"
 msgstr "Bearbeiten"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:395
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
-#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/filemanager/filemanager.lua:255
 #: frontend/apps/filemanager/filemanager.lua:571
 #: frontend/apps/filemanager/filemanager.lua:576
 #: frontend/apps/filemanager/filemanager.lua:1046
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
+#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/reader/modules/readerhighlight.lua:983
 #: frontend/ui/widget/screenshoter.lua:51
 #: plugins/bookshortcuts.koplugin/main.lua:138
@@ -441,12 +441,6 @@ msgstr "Erstellen"
 msgid "Enter folder after creation"
 msgstr "Ordner nach Erstellung eingeben"
 
-#: frontend/apps/cloudstorage/dropboxapi.lua:213
-#: frontend/apps/cloudstorage/webdavapi.lua:175
-#: frontend/ui/widget/filechooser.lua:451
-msgid "Long-press to choose current folder"
-msgstr "Langes Drücken zur Auswahl des aktuellen Ordners"
-
 #: frontend/apps/cloudstorage/dropbox.lua:33
 #: frontend/apps/cloudstorage/ftp.lua:38
 #: frontend/apps/cloudstorage/webdav.lua:26
@@ -561,13 +555,13 @@ msgstr "Dropbox Ordner (/ für root)"
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
 #: frontend/apps/reader/modules/readerwikipedia.lua:174
 #: frontend/ui/widget/inputdialog.lua:766
-#: frontend/ui/widget/inputdialog.lua:807
+#: frontend/ui/widget/inputdialog.lua:807 plugins/SSH.koplugin/main.lua:137
 #: plugins/coverimage.koplugin/main.lua:362
 #: plugins/gestures.koplugin/main.lua:406
 #: plugins/newsdownloader.koplugin/main.lua:755
 #: plugins/opds.koplugin/opdsbrowser.lua:149
 #: plugins/opds.koplugin/opdsbrowser.lua:178
-#: plugins/profiles.koplugin/main.lua:271 plugins/SSH.koplugin/main.lua:137
+#: plugins/profiles.koplugin/main.lua:271
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:591
 msgid "Save"
@@ -588,6 +582,12 @@ msgstr ""
 "Land: %4\n"
 "Speicher gesamt: %5\n"
 "Benutzter Speicher: %6"
+
+#: frontend/apps/cloudstorage/dropboxapi.lua:213
+#: frontend/apps/cloudstorage/webdavapi.lua:175
+#: frontend/ui/widget/filechooser.lua:451
+msgid "Long-press to choose current folder"
+msgstr "Langes Drücken zur Auswahl des aktuellen Ordners"
 
 #: frontend/apps/cloudstorage/ftp.lua:29
 msgid ""
@@ -740,6 +740,365 @@ msgstr "Passwort"
 #: frontend/apps/cloudstorage/webdav.lua:120
 msgid "Start folder, for example /books"
 msgstr "Startordner, zum Beispiel /books"
+
+#: frontend/apps/filemanager/filemanager.lua:48
+msgid "KOReader"
+msgstr "KOReader"
+
+#: frontend/apps/filemanager/filemanager.lua:217
+msgctxt "File"
+msgid "Copy"
+msgstr "Kopieren"
+
+#: frontend/apps/filemanager/filemanager.lua:225
+msgctxt "File"
+msgid "Paste"
+msgstr "Einfügen"
+
+#: frontend/apps/filemanager/filemanager.lua:233
+#: frontend/apps/reader/modules/readerhighlight.lua:65
+#: frontend/ui/widget/inputtext.lua:245
+msgid "Select"
+msgstr "Auswählen"
+
+#: frontend/apps/filemanager/filemanager.lua:247
+msgid "Cut"
+msgstr "Ausschneiden"
+
+#: frontend/apps/filemanager/filemanager.lua:263
+#: frontend/apps/filemanager/filemanager.lua:1124
+msgid "Rename"
+msgstr "Umbenennen"
+
+#: frontend/apps/filemanager/filemanager.lua:300
+msgid "Open with…"
+msgstr "Öffne mit…"
+
+#: frontend/apps/filemanager/filemanager.lua:322
+msgid "Convert"
+msgstr "Umwandeln"
+
+#: frontend/apps/filemanager/filemanager.lua:334
+#: frontend/apps/filemanager/filemanager.lua:646
+msgid "Set as HOME folder"
+msgstr "Als HOME-Verzeichnis festlegen"
+
+#: frontend/apps/filemanager/filemanager.lua:468
+#: frontend/apps/reader/modules/readerback.lua:179
+msgid "Exit KOReader?"
+msgstr "KOReader beenden?"
+
+#: frontend/apps/filemanager/filemanager.lua:469
+#: frontend/apps/reader/modules/readerback.lua:180
+#: frontend/apps/reader/modules/readerdevicestatus.lua:103
+#: frontend/ui/elements/common_exit_menu_table.lua:9
+#: frontend/ui/elements/common_exit_menu_table.lua:16
+msgid "Exit"
+msgstr "Beenden"
+
+#: frontend/apps/filemanager/filemanager.lua:520
+msgid "1 file selected"
+msgid_plural "%1 files selected"
+msgstr[0] "1 Datei ausgewählt"
+msgstr[1] "%1 Dateien ausgewählt"
+
+#: frontend/apps/filemanager/filemanager.lua:521
+msgid "No files selected"
+msgstr "Keine Dateien ausgewählt"
+
+#: frontend/apps/filemanager/filemanager.lua:525
+msgid "Show selected files list"
+msgstr "Liste der ausgewählten Dateien anzeigen"
+
+#: frontend/apps/filemanager/filemanager.lua:533
+#: frontend/apps/filemanager/filemanager.lua:919
+#: frontend/apps/reader/modules/readerlink.lua:143
+msgid "Copy"
+msgstr "Kopieren"
+
+#: frontend/apps/filemanager/filemanager.lua:543
+msgid "Select all files in folder"
+msgstr "Alle Dateien im Ordner auswählen"
+
+#: frontend/apps/filemanager/filemanager.lua:550
+#: frontend/apps/filemanager/filemanager.lua:916
+#: frontend/apps/filemanager/filemanager.lua:1181
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
+msgid "Move"
+msgstr "Verschieben"
+
+#: frontend/apps/filemanager/filemanager.lua:560
+#: frontend/apps/reader/modules/readerbookmark.lua:664
+msgid "Deselect all"
+msgstr "Alle abwählen"
+
+#: frontend/apps/filemanager/filemanager.lua:575
+msgid ""
+"Delete selected files?\n"
+"If you delete a file, it is permanently lost."
+msgstr ""
+"Ausgewählte Dateien löschen?\n"
+"Wenn Sie eine Datei löschen, ist sie dauerhaft verloren."
+
+#: frontend/apps/filemanager/filemanager.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:702
+#: frontend/apps/reader/modules/readerhighlight.lua:692
+msgid "Exit select mode"
+msgstr "Beenden des Auswahlmodus"
+
+#: frontend/apps/filemanager/filemanager.lua:594
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:261
+msgid "Export highlights"
+msgstr "Hervorhebungen exportieren"
+
+#: frontend/apps/filemanager/filemanager.lua:618
+msgid "Select files"
+msgstr "Dateien auswählen"
+
+#: frontend/apps/filemanager/filemanager.lua:636
+#: frontend/apps/reader/modules/readerbookmark.lua:1064
+#: frontend/ui/widget/inputtext.lua:255
+msgid "Paste"
+msgstr "Einfügen"
+
+#: frontend/apps/filemanager/filemanager.lua:655
+msgid "Go to HOME folder"
+msgstr "Gehe zu HOME-Verzeichnis"
+
+#: frontend/apps/filemanager/filemanager.lua:664
+msgid "Open random document"
+msgstr "Öffne zufälliges Dokument"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+msgid "Switch to SDCard"
+msgstr "Zur SD-Karte wechseln"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+msgid "Switch to internal storage"
+msgstr "Umschalten auf internen Speicher"
+
+#: frontend/apps/filemanager/filemanager.lua:704
+msgid "Import files here"
+msgstr "Dateien hier importieren"
+
+#: frontend/apps/filemanager/filemanager.lua:800
+msgid "Set '%1' as HOME folder?"
+msgstr "'%1' als HOME-Verzeichnis festlegen?"
+
+#: frontend/apps/filemanager/filemanager.lua:801
+msgid "Set as HOME"
+msgstr "Als HOME setzten"
+
+#: frontend/apps/filemanager/filemanager.lua:819
+msgid "Do you want to open %1?"
+msgstr "Wollen Sie %1 öffnen?"
+
+#: frontend/apps/filemanager/filemanager.lua:820
+#: frontend/apps/filemanager/filemanager.lua:1450
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
+#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
+#: plugins/texteditor.koplugin/main.lua:457
+msgid "Open"
+msgstr "Öffnen"
+
+#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
+#: frontend/apps/filemanager/filemanager.lua:826
+msgid "Another"
+msgstr "Weiteres"
+
+#: frontend/apps/filemanager/filemanager.lua:833
+msgid "File not found"
+msgstr "Datei nicht gefunden"
+
+#: frontend/apps/filemanager/filemanager.lua:891
+msgid ""
+"File already exists:\n"
+"%1"
+msgstr ""
+"Die Datei existiert bereits:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:892
+msgid ""
+"Folder already exists:\n"
+"%1"
+msgstr ""
+"Der Ordner existiert bereits:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:896
+#: frontend/apps/filemanager/filemanager.lua:1178
+#: frontend/apps/filemanager/filemanagerconverter.lua:97
+#: frontend/apps/reader/modules/readerdictionary.lua:1087
+#: plugins/opds.koplugin/opdsbrowser.lua:770
+msgid "Overwrite"
+msgstr "Überschreiben"
+
+#: frontend/apps/filemanager/filemanager.lua:915
+msgid "Move selected files to the current folder?"
+msgstr "Ausgewählte Dateien in den aktuellen Ordner verschieben?"
+
+#: frontend/apps/filemanager/filemanager.lua:918
+msgid "Copy selected files to the current folder?"
+msgstr "Ausgewählte Dateien in den aktuellen Ordner kopieren?"
+
+#: frontend/apps/filemanager/filemanager.lua:931
+msgid "overwrite existing files"
+msgstr "Bestehende Dateien überschreiben"
+
+#: frontend/apps/filemanager/filemanager.lua:971
+msgid "1 file was not moved"
+msgid_plural "%1 files were not moved"
+msgstr[0] "1 Datei wurde nicht verschoben"
+msgstr[1] "%1 Dateien wurden nicht verschoben"
+
+#: frontend/apps/filemanager/filemanager.lua:972
+msgid "1 file was not copied"
+msgid_plural "%1 files were not copied"
+msgstr[0] "1 Datei wurde nicht kopiert"
+msgstr[1] "%1 Dateien wurden nicht kopiert"
+
+#: frontend/apps/filemanager/filemanager.lua:1011
+msgid ""
+"Failed to create folder:\n"
+"%1"
+msgstr ""
+"Ordner konnte nicht erstellt werden:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1034
+msgid ""
+"File not found:\n"
+"%1"
+msgstr ""
+"Datei nicht gefunden:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete file permanently?"
+msgstr "Datei dauerhaft löschen?"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete folder permanently?"
+msgstr "Ordner dauerhaft löschen?"
+
+#: frontend/apps/filemanager/filemanager.lua:1042
+msgid "Book settings, highlights and notes will be deleted."
+msgstr "Die Bucheinstellungen, Markierungen und Notizen werden gelöscht."
+
+#: frontend/apps/filemanager/filemanager.lua:1076
+msgid ""
+"Failed to delete:\n"
+"%1"
+msgstr ""
+"Das Löschen ist fehlgeschlagen:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1102
+msgid "Failed to delete 1 file."
+msgid_plural "Failed to delete %1 files."
+msgstr[0] "Das Löschen von 1 Datei ist fehlgeschlagen."
+msgstr[1] "Das Löschen von %1 Dateien ist fehlgeschlagen."
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename file"
+msgstr "Datei umbenennen"
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename folder"
+msgstr "Ordner umbenennen"
+
+#: frontend/apps/filemanager/filemanager.lua:1156
+msgid ""
+"Failed to rename:\n"
+"%1\n"
+"to:\n"
+"%2"
+msgstr ""
+"Umbenennen fehlgeschlagen:\n"
+"%1\n"
+"in:\n"
+"%2"
+
+#: frontend/apps/filemanager/filemanager.lua:1167
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"File cannot be renamed."
+msgstr ""
+"Ordner existiert bereits:\n"
+"%1\n"
+"Datei kann nicht umbenannt werden."
+
+#: frontend/apps/filemanager/filemanager.lua:1169
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Folder cannot be renamed."
+msgstr ""
+"Datei existiert bereits:\n"
+"%1\n"
+"Ordner kann nicht umbenannt werden."
+
+#: frontend/apps/filemanager/filemanager.lua:1177
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Overwrite file?"
+msgstr ""
+"Datei existiert bereits:\n"
+"%1\n"
+"Datei überschreiben?"
+
+#: frontend/apps/filemanager/filemanager.lua:1180
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"Move the folder inside it?"
+msgstr ""
+"Ordner existiert bereits:\n"
+"%1\n"
+"Den Ordner darin verschieben?"
+
+#: frontend/apps/filemanager/filemanager.lua:1333
+msgid "Selected files (%1)"
+msgstr "Ausgewählte Dateien (%1)"
+
+#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
+#: frontend/apps/filemanager/filemanager.lua:1360
+msgid "%1 ~Unsupported"
+msgstr "%1 ~Nicht unterstützt"
+
+#: frontend/apps/filemanager/filemanager.lua:1396
+msgid "Reset default for this file"
+msgstr "Standardeinstellung für diese Datei zurücksetzen"
+
+#: frontend/apps/filemanager/filemanager.lua:1406
+msgid "Reset default for %1 files"
+msgstr "Standardeinstellung für %1 Dateien zurücksetzen"
+
+#: frontend/apps/filemanager/filemanager.lua:1417
+msgid "View defaults for file types"
+msgstr "Standardeinstellungen für Dateitypen anzeigen"
+
+#: frontend/apps/filemanager/filemanager.lua:1456
+msgid "Always open '%2' with %1?"
+msgstr "Immer '%2' mit %1 öffnen?"
+
+#: frontend/apps/filemanager/filemanager.lua:1457
+#: frontend/apps/filemanager/filemanager.lua:1467
+#: frontend/ui/elements/common_settings_menu_table.lua:383
+#: frontend/ui/elements/common_settings_menu_table.lua:660
+msgid "Always"
+msgstr "Immer"
+
+#: frontend/apps/filemanager/filemanager.lua:1466
+msgid "Always open %2 files with %1?"
+msgstr "Immer %2 Dateien mit %1 öffnen?"
+
+#: frontend/apps/filemanager/filemanager.lua:1484
+msgid "Open %1 with:"
+msgstr "Öffne %1 mit:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:27
 #: frontend/apps/filemanager/filemanagerutil.lua:277
@@ -928,13 +1287,6 @@ msgstr[1] ""
 msgid "Move book metadata to your preferred location?"
 msgstr "Verschiebe Buch Metadaten in den bevorzugten Speicherort?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
-#: frontend/apps/filemanager/filemanager.lua:550
-#: frontend/apps/filemanager/filemanager.lua:916
-#: frontend/apps/filemanager/filemanager.lua:1181
-msgid "Move"
-msgstr "Verschieben"
-
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:658
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
@@ -1011,14 +1363,6 @@ msgstr "HTML"
 msgid "Overwrite existing HTML file?"
 msgstr "Überschreibe existierende HTML-Datei?"
 
-#: frontend/apps/filemanager/filemanagerconverter.lua:97
-#: frontend/apps/filemanager/filemanager.lua:896
-#: frontend/apps/filemanager/filemanager.lua:1178
-#: frontend/apps/reader/modules/readerdictionary.lua:1087
-#: plugins/opds.koplugin/opdsbrowser.lua:770
-msgid "Overwrite"
-msgstr "Überschreiben"
-
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:30
 msgid "Enter text to search for in filename"
 msgstr "Text eingeben, nach dem im Dateinamen gesucht werden soll"
@@ -1085,14 +1429,6 @@ msgstr "Suchergebnisse (%1)"
 #: frontend/apps/reader/modules/readersearch.lua:596
 msgid "Query: %1"
 msgstr "Abfrage: %1"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
-#: frontend/apps/filemanager/filemanager.lua:820
-#: frontend/apps/filemanager/filemanager.lua:1450
-#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
-#: plugins/texteditor.koplugin/main.lua:457
-msgid "Open"
-msgstr "Öffnen"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:308
 msgid "Title: %1"
@@ -1196,342 +1532,6 @@ msgstr "Text eingeben, um im Verlauf zu suchen"
 #: plugins/vocabbuilder.koplugin/main.lua:1550
 msgid "Search"
 msgstr "Suchen"
-
-#: frontend/apps/filemanager/filemanager.lua:48
-msgid "KOReader"
-msgstr "KOReader"
-
-#: frontend/apps/filemanager/filemanager.lua:217
-msgctxt "File"
-msgid "Copy"
-msgstr "Kopieren"
-
-#: frontend/apps/filemanager/filemanager.lua:225
-msgctxt "File"
-msgid "Paste"
-msgstr "Einfügen"
-
-#: frontend/apps/filemanager/filemanager.lua:233
-#: frontend/apps/reader/modules/readerhighlight.lua:65
-#: frontend/ui/widget/inputtext.lua:245
-msgid "Select"
-msgstr "Auswählen"
-
-#: frontend/apps/filemanager/filemanager.lua:247
-msgid "Cut"
-msgstr "Ausschneiden"
-
-#: frontend/apps/filemanager/filemanager.lua:263
-#: frontend/apps/filemanager/filemanager.lua:1124
-msgid "Rename"
-msgstr "Umbenennen"
-
-#: frontend/apps/filemanager/filemanager.lua:300
-msgid "Open with…"
-msgstr "Öffne mit…"
-
-#: frontend/apps/filemanager/filemanager.lua:322
-msgid "Convert"
-msgstr "Umwandeln"
-
-#: frontend/apps/filemanager/filemanager.lua:334
-#: frontend/apps/filemanager/filemanager.lua:646
-msgid "Set as HOME folder"
-msgstr "Als HOME-Verzeichnis festlegen"
-
-#: frontend/apps/filemanager/filemanager.lua:468
-#: frontend/apps/reader/modules/readerback.lua:179
-msgid "Exit KOReader?"
-msgstr "KOReader beenden?"
-
-#: frontend/apps/filemanager/filemanager.lua:469
-#: frontend/apps/reader/modules/readerback.lua:180
-#: frontend/apps/reader/modules/readerdevicestatus.lua:103
-#: frontend/ui/elements/common_exit_menu_table.lua:9
-#: frontend/ui/elements/common_exit_menu_table.lua:16
-msgid "Exit"
-msgstr "Beenden"
-
-#: frontend/apps/filemanager/filemanager.lua:520
-msgid "1 file selected"
-msgid_plural "%1 files selected"
-msgstr[0] "1 Datei ausgewählt"
-msgstr[1] "%1 Dateien ausgewählt"
-
-#: frontend/apps/filemanager/filemanager.lua:521
-msgid "No files selected"
-msgstr "Keine Dateien ausgewählt"
-
-#: frontend/apps/filemanager/filemanager.lua:525
-msgid "Show selected files list"
-msgstr "Liste der ausgewählten Dateien anzeigen"
-
-#: frontend/apps/filemanager/filemanager.lua:533
-#: frontend/apps/filemanager/filemanager.lua:919
-#: frontend/apps/reader/modules/readerlink.lua:143
-msgid "Copy"
-msgstr "Kopieren"
-
-#: frontend/apps/filemanager/filemanager.lua:543
-msgid "Select all files in folder"
-msgstr "Alle Dateien im Ordner auswählen"
-
-#: frontend/apps/filemanager/filemanager.lua:560
-#: frontend/apps/reader/modules/readerbookmark.lua:664
-msgid "Deselect all"
-msgstr "Alle abwählen"
-
-#: frontend/apps/filemanager/filemanager.lua:575
-msgid ""
-"Delete selected files?\n"
-"If you delete a file, it is permanently lost."
-msgstr ""
-"Ausgewählte Dateien löschen?\n"
-"Wenn Sie eine Datei löschen, ist sie dauerhaft verloren."
-
-#: frontend/apps/filemanager/filemanager.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:702
-#: frontend/apps/reader/modules/readerhighlight.lua:692
-msgid "Exit select mode"
-msgstr "Beenden des Auswahlmodus"
-
-#: frontend/apps/filemanager/filemanager.lua:594
-#: plugins/exporter.koplugin/main.lua:261 plugins/exporter.koplugin/_meta.lua:4
-msgid "Export highlights"
-msgstr "Hervorhebungen exportieren"
-
-#: frontend/apps/filemanager/filemanager.lua:618
-msgid "Select files"
-msgstr "Dateien auswählen"
-
-#: frontend/apps/filemanager/filemanager.lua:636
-#: frontend/apps/reader/modules/readerbookmark.lua:1064
-#: frontend/ui/widget/inputtext.lua:255
-msgid "Paste"
-msgstr "Einfügen"
-
-#: frontend/apps/filemanager/filemanager.lua:655
-msgid "Go to HOME folder"
-msgstr "Gehe zu HOME-Verzeichnis"
-
-#: frontend/apps/filemanager/filemanager.lua:664
-msgid "Open random document"
-msgstr "Öffne zufälliges Dokument"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-msgid "Switch to SDCard"
-msgstr "Zur SD-Karte wechseln"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-msgid "Switch to internal storage"
-msgstr "Umschalten auf internen Speicher"
-
-#: frontend/apps/filemanager/filemanager.lua:704
-msgid "Import files here"
-msgstr "Dateien hier importieren"
-
-#: frontend/apps/filemanager/filemanager.lua:800
-msgid "Set '%1' as HOME folder?"
-msgstr "'%1' als HOME-Verzeichnis festlegen?"
-
-#: frontend/apps/filemanager/filemanager.lua:801
-msgid "Set as HOME"
-msgstr "Als HOME setzten"
-
-#: frontend/apps/filemanager/filemanager.lua:819
-msgid "Do you want to open %1?"
-msgstr "Wollen Sie %1 öffnen?"
-
-#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:826
-msgid "Another"
-msgstr "Weiteres"
-
-#: frontend/apps/filemanager/filemanager.lua:833
-msgid "File not found"
-msgstr "Datei nicht gefunden"
-
-#: frontend/apps/filemanager/filemanager.lua:891
-msgid ""
-"File already exists:\n"
-"%1"
-msgstr ""
-"Die Datei existiert bereits:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:892
-msgid ""
-"Folder already exists:\n"
-"%1"
-msgstr ""
-"Der Ordner existiert bereits:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:915
-msgid "Move selected files to the current folder?"
-msgstr "Ausgewählte Dateien in den aktuellen Ordner verschieben?"
-
-#: frontend/apps/filemanager/filemanager.lua:918
-msgid "Copy selected files to the current folder?"
-msgstr "Ausgewählte Dateien in den aktuellen Ordner kopieren?"
-
-#: frontend/apps/filemanager/filemanager.lua:931
-msgid "overwrite existing files"
-msgstr "Bestehende Dateien überschreiben"
-
-#: frontend/apps/filemanager/filemanager.lua:971
-msgid "1 file was not moved"
-msgid_plural "%1 files were not moved"
-msgstr[0] "1 Datei wurde nicht verschoben"
-msgstr[1] "%1 Dateien wurden nicht verschoben"
-
-#: frontend/apps/filemanager/filemanager.lua:972
-msgid "1 file was not copied"
-msgid_plural "%1 files were not copied"
-msgstr[0] "1 Datei wurde nicht kopiert"
-msgstr[1] "%1 Dateien wurden nicht kopiert"
-
-#: frontend/apps/filemanager/filemanager.lua:1011
-msgid ""
-"Failed to create folder:\n"
-"%1"
-msgstr ""
-"Ordner konnte nicht erstellt werden:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1034
-msgid ""
-"File not found:\n"
-"%1"
-msgstr ""
-"Datei nicht gefunden:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete file permanently?"
-msgstr "Datei dauerhaft löschen?"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete folder permanently?"
-msgstr "Ordner dauerhaft löschen?"
-
-#: frontend/apps/filemanager/filemanager.lua:1042
-msgid "Book settings, highlights and notes will be deleted."
-msgstr "Die Bucheinstellungen, Markierungen und Notizen werden gelöscht."
-
-#: frontend/apps/filemanager/filemanager.lua:1076
-msgid ""
-"Failed to delete:\n"
-"%1"
-msgstr ""
-"Das Löschen ist fehlgeschlagen:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1102
-msgid "Failed to delete 1 file."
-msgid_plural "Failed to delete %1 files."
-msgstr[0] "Das Löschen von 1 Datei ist fehlgeschlagen."
-msgstr[1] "Das Löschen von %1 Dateien ist fehlgeschlagen."
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename file"
-msgstr "Datei umbenennen"
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename folder"
-msgstr "Ordner umbenennen"
-
-#: frontend/apps/filemanager/filemanager.lua:1156
-msgid ""
-"Failed to rename:\n"
-"%1\n"
-"to:\n"
-"%2"
-msgstr ""
-"Umbenennen fehlgeschlagen:\n"
-"%1\n"
-"in:\n"
-"%2"
-
-#: frontend/apps/filemanager/filemanager.lua:1167
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"File cannot be renamed."
-msgstr ""
-"Ordner existiert bereits:\n"
-"%1\n"
-"Datei kann nicht umbenannt werden."
-
-#: frontend/apps/filemanager/filemanager.lua:1169
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Folder cannot be renamed."
-msgstr ""
-"Datei existiert bereits:\n"
-"%1\n"
-"Ordner kann nicht umbenannt werden."
-
-#: frontend/apps/filemanager/filemanager.lua:1177
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Overwrite file?"
-msgstr ""
-"Datei existiert bereits:\n"
-"%1\n"
-"Datei überschreiben?"
-
-#: frontend/apps/filemanager/filemanager.lua:1180
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"Move the folder inside it?"
-msgstr ""
-"Ordner existiert bereits:\n"
-"%1\n"
-"Den Ordner darin verschieben?"
-
-#: frontend/apps/filemanager/filemanager.lua:1333
-msgid "Selected files (%1)"
-msgstr "Ausgewählte Dateien (%1)"
-
-#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
-#: frontend/apps/filemanager/filemanager.lua:1360
-msgid "%1 ~Unsupported"
-msgstr "%1 ~Nicht unterstützt"
-
-#: frontend/apps/filemanager/filemanager.lua:1396
-msgid "Reset default for this file"
-msgstr "Standardeinstellung für diese Datei zurücksetzen"
-
-#: frontend/apps/filemanager/filemanager.lua:1406
-msgid "Reset default for %1 files"
-msgstr "Standardeinstellung für %1 Dateien zurücksetzen"
-
-#: frontend/apps/filemanager/filemanager.lua:1417
-msgid "View defaults for file types"
-msgstr "Standardeinstellungen für Dateitypen anzeigen"
-
-#: frontend/apps/filemanager/filemanager.lua:1456
-msgid "Always open '%2' with %1?"
-msgstr "Immer '%2' mit %1 öffnen?"
-
-#: frontend/apps/filemanager/filemanager.lua:1457
-#: frontend/apps/filemanager/filemanager.lua:1467
-#: frontend/ui/elements/common_settings_menu_table.lua:383
-#: frontend/ui/elements/common_settings_menu_table.lua:660
-msgid "Always"
-msgstr "Immer"
-
-#: frontend/apps/filemanager/filemanager.lua:1466
-msgid "Always open %2 files with %1?"
-msgstr "Immer %2 Dateien mit %1 öffnen?"
-
-#: frontend/apps/filemanager/filemanager.lua:1484
-msgid "Open %1 with:"
-msgstr "Öffne %1 mit:"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:130
 msgid "Cannot open last document"
@@ -14725,23 +14725,90 @@ msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 B"
 
-#: plugins/archiveviewer.koplugin/main.lua:17
+#: plugins/SSH.koplugin/_meta.lua:4
+msgid "SSH"
+msgstr "SSH"
+
+#: plugins/SSH.koplugin/_meta.lua:5
+msgid "Connect and transfer files to the device using SSH."
+msgstr "Verbinden und Übertragen von Dateien auf das Gerät mittels SSH."
+
+#. @translators: %1 is the SSH port, %2 is the network info.
+#: plugins/SSH.koplugin/main.lua:73
+msgid ""
+"SSH server started.\n"
+"\n"
+"SSH port: %1\n"
+"%2"
+msgstr ""
+"SSH-Server gestartet.\n"
+"\n"
+"SSH-Port: %1\n"
+"%2"
+
+#: plugins/SSH.koplugin/main.lua:81
+msgid "Failed to start SSH server."
+msgstr "Der SSH-Server konnte nicht gestartet werden."
+
+#: plugins/SSH.koplugin/main.lua:94
+msgid "SSH server stopped."
+msgstr "SSH-Server gestoppt."
+
+#: plugins/SSH.koplugin/main.lua:123
+msgid "Choose SSH port"
+msgstr "Wähle SSH-Port"
+
+#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
+msgid "SSH server"
+msgstr "SSH-Server"
+
+#: plugins/SSH.koplugin/main.lua:174
+msgid "SSH port (%1)"
+msgstr "SSH Port (%1)"
+
+#: plugins/SSH.koplugin/main.lua:183
+msgid "SSH public key"
+msgstr "Öffentlicher SSH-Schlüssel"
+
+#: plugins/SSH.koplugin/main.lua:189
+msgid ""
+"Put your public SSH keys in\n"
+"%1"
+msgstr ""
+"Setze den öffentlichen SSH-Schlüssel in\n"
+"%1"
+
+#: plugins/SSH.koplugin/main.lua:195
+msgid "Login without password (DANGEROUS)"
+msgstr "Ohne Passwort einloggen (GEFÄHRLICH)"
+
+#: plugins/SSH.koplugin/main.lua:208
+msgid "Toggle SSH server"
+msgstr "SSH-Server umschalten"
+
 #: plugins/archiveviewer.koplugin/_meta.lua:4
+#: plugins/archiveviewer.koplugin/main.lua:17
 msgid "Archive viewer"
 msgstr "Archivbetrachter"
+
+#: plugins/archiveviewer.koplugin/_meta.lua:5
+msgid "Enables exploring the content of zip archives."
+msgstr "Ermöglicht das Durchsuchen des Inhalts von Zip-Archiven."
 
 #: plugins/archiveviewer.koplugin/main.lua:216
 msgid "On extraction, if the file already exists, it will be overwritten."
 msgstr ""
 "Wenn die Datei beim Extrahieren bereits existiert, wird sie überschrieben."
 
-#: plugins/archiveviewer.koplugin/_meta.lua:5
-msgid "Enables exploring the content of zip archives."
-msgstr "Ermöglicht das Durchsuchen des Inhalts von Zip-Archiven."
-
-#: plugins/autodim.koplugin/main.lua:51 plugins/autodim.koplugin/_meta.lua:4
+#: plugins/autodim.koplugin/_meta.lua:4 plugins/autodim.koplugin/main.lua:51
 msgid "Automatic dimmer"
 msgstr "Automatischer Dimmer"
+
+#: plugins/autodim.koplugin/_meta.lua:5
+msgid "This plugin allows dimming the frontlight after a period of inactivity."
+msgstr ""
+"Dieses Plugin ermöglicht es, die Helligkeit der Beleuchtung automatisch "
+"abzusenken."
 
 #: plugins/autodim.koplugin/main.lua:56
 msgid "Idle time for dimmer"
@@ -14783,16 +14850,18 @@ msgstr "Dimme auf Prozentsatz der regulären Helligkeit"
 msgid "The lowest brightness as a percentage of the regular brightness."
 msgstr "Die geringste Helligkeit als Prozentsatz der regulären Helligkeit."
 
-#: plugins/autodim.koplugin/_meta.lua:5
-msgid "This plugin allows dimming the frontlight after a period of inactivity."
-msgstr ""
-"Dieses Plugin ermöglicht es, die Helligkeit der Beleuchtung automatisch "
-"abzusenken."
-
-#: plugins/autofrontlight.koplugin/main.lua:114
 #: plugins/autofrontlight.koplugin/_meta.lua:4
+#: plugins/autofrontlight.koplugin/main.lua:114
 msgid "Auto frontlight"
 msgstr "Auto-Beleuchtung"
+
+#: plugins/autofrontlight.koplugin/_meta.lua:5
+msgid ""
+"Automatically turns the frontlight on and off once brightness in the "
+"environment reaches a certain level."
+msgstr ""
+"Schaltet die Beleuchtungt automatisch ein und aus, sobald die Helligkeit in "
+"der Umgebung ein bestimmtes Niveau erreicht."
 
 #: plugins/autofrontlight.koplugin/main.lua:117
 msgid ""
@@ -14812,13 +14881,15 @@ msgstr ""
 msgid "enable"
 msgstr "an"
 
-#: plugins/autofrontlight.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the frontlight on and off once brightness in the "
-"environment reaches a certain level."
+#: plugins/autostandby.koplugin/_meta.lua:4
+msgid "Auto Standby"
+msgstr "Automatischer Standby"
+
+#: plugins/autostandby.koplugin/_meta.lua:5
+msgid "Put into standby on no input, wake up from standby on UI input"
 msgstr ""
-"Schaltet die Beleuchtungt automatisch ein und aus, sobald die Helligkeit in "
-"der Umgebung ein bestimmtes Niveau erreicht."
+"Bei keiner Eingabe in den Standby-Modus versetzt, bei UI-Eingabe aus dem "
+"Standby-Modus aufgeweckt"
 
 #: plugins/autostandby.koplugin/main.lua:55
 msgid "Auto-standby settings"
@@ -14848,15 +14919,17 @@ msgstr "Immer Standby, wenn Batterie niedrig"
 msgid "Update"
 msgstr "Aktualisierung"
 
-#: plugins/autostandby.koplugin/_meta.lua:4
-msgid "Auto Standby"
-msgstr "Automatischer Standby"
+#: plugins/autosuspend.koplugin/_meta.lua:4
+msgid "Auto power save"
+msgstr "Automatisches Energiesparen"
 
-#: plugins/autostandby.koplugin/_meta.lua:5
-msgid "Put into standby on no input, wake up from standby on UI input"
+#: plugins/autosuspend.koplugin/_meta.lua:5
+msgid ""
+"Puts the device into standby, suspend or power off after specified periods "
+"of inactivity."
 msgstr ""
-"Bei keiner Eingabe in den Standby-Modus versetzt, bei UI-Eingabe aus dem "
-"Standby-Modus aufgeweckt"
+"Versetzt das Gerät nach einer bestimmten Zeit der Inaktivität in den Standby-"
+"Modus, in den Ruhezustand oder schaltet es aus."
 
 #: plugins/autosuspend.koplugin/main.lua:443
 #: plugins/autoturn.koplugin/main.lua:148
@@ -14955,17 +15028,19 @@ msgstr "Timeout für Autostandby"
 msgid "Enter time in minutes and seconds."
 msgstr "Gib eine Zeit in Minuten und Sekunden ein."
 
-#: plugins/autosuspend.koplugin/_meta.lua:4
-msgid "Auto power save"
-msgstr "Automatisches Energiesparen"
+#: plugins/autoturn.koplugin/_meta.lua:4 plugins/autoturn.koplugin/main.lua:131
+msgid "Autoturn"
+msgstr "Automatisches Blättern"
 
-#: plugins/autosuspend.koplugin/_meta.lua:5
+#: plugins/autoturn.koplugin/_meta.lua:5
 msgid ""
-"Puts the device into standby, suspend or power off after specified periods "
-"of inactivity."
+"Automatically turns the page after a set period of time.\n"
+"\n"
+"Hold to set the scrolling distance."
 msgstr ""
-"Versetzt das Gerät nach einer bestimmten Zeit der Inaktivität in den Standby-"
-"Modus, in den Ruhezustand oder schaltet es aus."
+"Wechselt die Seite automatisch nach einer bestimmten Zeitspanne.\n"
+"\n"
+"Halten Sie diese Taste gedrückt, um den Scrollabstand einzustellen."
 
 #: plugins/autoturn.koplugin/main.lua:71
 msgid "Autoturn is now active and will automatically turn the page every %1."
@@ -14983,10 +15058,6 @@ msgstr ""
 msgid "Autoturn: %1"
 msgstr "Automatisches Blättern: %1"
 
-#: plugins/autoturn.koplugin/main.lua:131 plugins/autoturn.koplugin/_meta.lua:4
-msgid "Autoturn"
-msgstr "Automatisches Blättern"
-
 #: plugins/autoturn.koplugin/main.lua:140
 msgid "Autoturn time"
 msgstr "Zeit für automatisches Blättern"
@@ -14999,15 +15070,21 @@ msgstr "Distanz festlegen"
 msgid "Scrolling distance"
 msgstr "Scroll-Distanz"
 
-#: plugins/autoturn.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the page after a set period of time.\n"
-"\n"
-"Hold to set the scrolling distance."
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+msgid "Auto warmth and night mode"
+msgstr "Automatische Wärme und Nachtmodus"
+
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+msgid "Auto night mode"
+msgstr "Automatischer Nachtmodus"
+
+#: plugins/autowarmth.koplugin/_meta.lua:5
+msgid "This plugin allows to set the frontlight warmth automagically."
 msgstr ""
-"Wechselt die Seite automatisch nach einer bestimmten Zeitspanne.\n"
-"\n"
-"Halten Sie diese Taste gedrückt, um den Scrollabstand einzustellen."
+"Dieses Plugin ermöglicht es, die Wärme der Beleuchtung automatisch "
+"einzustellen."
 
 #: plugins/autowarmth.koplugin/main.lua:118
 msgid "Show ephemeris"
@@ -15065,16 +15142,6 @@ msgstr "Nachtmodus geändert"
 #: plugins/autowarmth.koplugin/main.lua:223
 msgid "The AutoWarmth plugin might change it again."
 msgstr "Das AutoWarmth-Plugin könnte sich wieder ändern."
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-msgid "Auto warmth and night mode"
-msgstr "Automatische Wärme und Nachtmodus"
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-msgid "Auto night mode"
-msgstr "Automatischer Nachtmodus"
 
 #: plugins/autowarmth.koplugin/main.lua:557
 msgid ""
@@ -15494,12 +15561,6 @@ msgstr "Beleuchtung umschalten zwischen"
 msgid "%1 and %2"
 msgstr "%1 und %2"
 
-#: plugins/autowarmth.koplugin/_meta.lua:5
-msgid "This plugin allows to set the frontlight warmth automagically."
-msgstr ""
-"Dieses Plugin ermöglicht es, die Wärme der Beleuchtung automatisch "
-"einzustellen."
-
 #: plugins/backgroundrunner.koplugin/_meta.lua:4
 msgid "Background runner"
 msgstr "Hintergrundaktivität"
@@ -15510,6 +15571,16 @@ msgid ""
 msgstr ""
 "Service für andere Plugins: Ermöglicht es, dass Aufgaben regelmäßig im "
 "Hintergrund ausgeführt werden."
+
+#: plugins/batterystat.koplugin/_meta.lua:4
+#: plugins/batterystat.koplugin/main.lua:272
+#: plugins/batterystat.koplugin/main.lua:284
+msgid "Battery statistics"
+msgstr "Akku Statistiken"
+
+#: plugins/batterystat.koplugin/_meta.lua:5
+msgid "Collects and displays battery statistics."
+msgstr "Sammelt und zeigt Akku-Statistiken."
 
 #: plugins/batterystat.koplugin/main.lua:88
 msgid "Consumed:"
@@ -15563,20 +15634,15 @@ msgstr "Aufgeladen:"
 msgid "Since last charge"
 msgstr "Seit letztem Laden"
 
-#: plugins/batterystat.koplugin/main.lua:272
-#: plugins/batterystat.koplugin/main.lua:284
-#: plugins/batterystat.koplugin/_meta.lua:4
-msgid "Battery statistics"
-msgstr "Akku Statistiken"
-
-#: plugins/batterystat.koplugin/_meta.lua:5
-msgid "Collects and displays battery statistics."
-msgstr "Sammelt und zeigt Akku-Statistiken."
-
-#: plugins/bookshortcuts.koplugin/main.lua:77
 #: plugins/bookshortcuts.koplugin/_meta.lua:4
+#: plugins/bookshortcuts.koplugin/main.lua:77
 msgid "Book shortcuts"
 msgstr "Buchverknüpfungen"
+
+#: plugins/bookshortcuts.koplugin/_meta.lua:5
+msgid "This plugin allows adding a book shortcut to a gesture."
+msgstr ""
+"Dieses Plugin ermöglicht das Hinzufügen einer Buchverknüpfung zu einer Geste."
 
 #: plugins/bookshortcuts.koplugin/main.lua:87
 msgid "last book"
@@ -15598,10 +15664,17 @@ msgstr "Rekursiv in Ordnern suchen"
 msgid "Do you want to delete this shortcut?"
 msgstr "Möchten Sie diese Verknüpfung löschen?"
 
-#: plugins/bookshortcuts.koplugin/_meta.lua:5
-msgid "This plugin allows adding a book shortcut to a gesture."
+#: plugins/calibre.koplugin/_meta.lua:4 plugins/calibre.koplugin/main.lua:74
+msgid "Calibre"
+msgstr "Calibre"
+
+#: plugins/calibre.koplugin/_meta.lua:5
+msgid ""
+"Integration with calibre. Send documents from calibre library via Wi-Fi and "
+"search calibre metadata."
 msgstr ""
-"Dieses Plugin ermöglicht das Hinzufügen einer Buchverknüpfung zu einer Geste."
+"Integration mit Calibre. Senden Sie Dokumente aus der Calibre-Bibliothek "
+"über WLAN und durchsuchen Sie Calibre-Metadaten."
 
 #: plugins/calibre.koplugin/main.lua:58 plugins/calibre.koplugin/main.lua:110
 #: plugins/calibre.koplugin/search.lua:194
@@ -15623,10 +15696,6 @@ msgstr "Alle Calibre-Autoren durchsuchen"
 #: plugins/calibre.koplugin/main.lua:62
 msgid "Browse all calibre titles"
 msgstr "Alle Calibre-Titel durchsuchen"
-
-#: plugins/calibre.koplugin/main.lua:74 plugins/calibre.koplugin/_meta.lua:4
-msgid "Calibre"
-msgstr "Calibre"
 
 #: plugins/calibre.koplugin/main.lua:79
 msgid "Disconnect"
@@ -15747,14 +15816,6 @@ msgid ""
 msgstr ""
 "Nicht unterstützte Formate werden von calibre in das erste Format der Liste "
 "konvertiert."
-
-#: plugins/calibre.koplugin/_meta.lua:5
-msgid ""
-"Integration with calibre. Send documents from calibre library via Wi-Fi and "
-"search calibre metadata."
-msgstr ""
-"Integration mit Calibre. Senden Sie Dokumente aus der Calibre-Bibliothek "
-"über WLAN und durchsuchen Sie Calibre-Metadaten."
 
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
@@ -15916,6 +15977,14 @@ msgid ""
 msgstr ""
 "%1 gelöschte Dateien in %2:\n"
 " %3"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:4
+msgid "Cover browser"
+msgstr "Umschlagbild-Browser"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:5
+msgid "Alternative display modes for file browser and history."
+msgstr "Alternative Anzeigemodi für Dateibrowser und Verlauf."
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:123
 msgid "not readable by engine"
@@ -16351,13 +16420,14 @@ msgstr ""
 msgid "Purge"
 msgstr "Bereinigen"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:4
-msgid "Cover browser"
-msgstr "Umschlagbild-Browser"
+#: plugins/coverimage.koplugin/_meta.lua:4
+#: plugins/coverimage.koplugin/main.lua:683
+msgid "Cover image"
+msgstr "Umschlagbild"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:5
-msgid "Alternative display modes for file browser and history."
-msgstr "Alternative Anzeigemodi für Dateibrowser und Verlauf."
+#: plugins/coverimage.koplugin/_meta.lua:5
+msgid "Stores cover image to a file."
+msgstr "Speichert das Umschlagbild in einer Datei."
 
 #: plugins/coverimage.koplugin/main.lua:102
 msgid ""
@@ -16571,11 +16641,6 @@ msgstr "BMP-Dateiformat (Farbe)"
 msgid "BMP file format (grayscale)"
 msgstr "BMP-Dateiformat (Graustufen)"
 
-#: plugins/coverimage.koplugin/main.lua:683
-#: plugins/coverimage.koplugin/_meta.lua:4
-msgid "Cover image"
-msgstr "Umschlagbild"
-
 #: plugins/coverimage.koplugin/main.lua:690
 msgid "About cover image"
 msgstr "Über Umschlagbild"
@@ -16620,14 +16685,18 @@ msgstr "Sie können ein Ersatzbild auswählen."
 msgid "Turn on fallback image"
 msgstr "Ersatzbild einschalten"
 
-#: plugins/coverimage.koplugin/_meta.lua:5
-msgid "Stores cover image to a file."
-msgstr "Speichert das Umschlagbild in einer Datei."
-
-#: plugins/docsettingtweak.koplugin/main.lua:48
 #: plugins/docsettingtweak.koplugin/_meta.lua:4
+#: plugins/docsettingtweak.koplugin/main.lua:48
 msgid "Tweak document settings"
 msgstr "Dokumenteinstellungen optimieren"
+
+#: plugins/docsettingtweak.koplugin/_meta.lua:5
+msgid ""
+"This plugin allows you to tweak document settings before the document is "
+"loaded based on external factors."
+msgstr ""
+"Dieses Plugin ermöglicht es Ihnen, die Dokumenteinstellungen zu optimieren, "
+"bevor das Dokument aufgrund externer Faktoren geladen wird."
 
 #: plugins/docsettingtweak.koplugin/main.lua:62
 msgid "Directory Defaults: %1"
@@ -16650,13 +16719,9 @@ msgstr "Standardeinstellungen ungültig: %1"
 msgid "Defaults empty"
 msgstr "Standardeinstellungen leer"
 
-#: plugins/docsettingtweak.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows you to tweak document settings before the document is "
-"loaded based on external factors."
-msgstr ""
-"Dieses Plugin ermöglicht es Ihnen, die Dokumenteinstellungen zu optimieren, "
-"bevor das Dokument aufgrund externer Faktoren geladen wird."
+#: plugins/exporter.koplugin/_meta.lua:5
+msgid "Exports highlights and notes."
+msgstr "Exportiert Hervorhebungen und Notizen."
 
 #: plugins/exporter.koplugin/clip.lua:124
 msgid "Unknown Book"
@@ -16709,10 +16774,6 @@ msgstr "Alle Notizen in diesem Buch teilen"
 #: plugins/exporter.koplugin/main.lua:313
 msgid "Current export folder:"
 msgstr "Aktuelles Export-Verzeichnis:"
-
-#: plugins/exporter.koplugin/_meta.lua:5
-msgid "Exports highlights and notes."
-msgstr "Exportiert Hervorhebungen und Notizen."
 
 #. @translators Flomo is a note taking app. The name probably doesn't need to be translated.
 #: plugins/exporter.koplugin/target/flomo.lua:52
@@ -16920,6 +16981,14 @@ msgstr ""
 "mobilen Geräts. Geben Sie diese IP-Adresse in KOReader ein, um die "
 "Konfiguration abzuschließen."
 
+#: plugins/externalkeyboard.koplugin/_meta.lua:4
+msgid "External keyboard"
+msgstr "Externe Tastatur"
+
+#: plugins/externalkeyboard.koplugin/_meta.lua:5
+msgid "Manages USB OTG and configures keyboard."
+msgstr "Verwaltet USB OTG und konfiguriert die Tastatur."
+
 #: plugins/externalkeyboard.koplugin/main.lua:136
 msgid "External Keyboard"
 msgstr "Externe Tastatur"
@@ -16948,13 +17017,13 @@ msgstr ""
 "Beachten Sie, dass das Gerät im OTG-Modus von einem Computer nicht als USB-"
 "Laufwerk erkannt werden kann."
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:4
-msgid "External keyboard"
-msgstr "Externe Tastatur"
+#: plugins/gestures.koplugin/_meta.lua:4
+msgid "Gestures"
+msgstr "Gesten"
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:5
-msgid "Manages USB OTG and configures keyboard."
-msgstr "Verwaltet USB OTG und konfiguriert die Tastatur."
+#: plugins/gestures.koplugin/_meta.lua:5
+msgid "This plugin provides gesture support."
+msgstr "Dieses Plugin bietet Unterstützung für Gesten."
 
 #: plugins/gestures.koplugin/main.lua:42 plugins/gestures.koplugin/main.lua:46
 #: plugins/gestures.koplugin/main.lua:60 plugins/gestures.koplugin/main.lua:64
@@ -17288,13 +17357,13 @@ msgstr ""
 msgid "You have just performed your first multiswipe gesture."
 msgstr "Du hast zum ersten Mal eine Multiswipe Geste ausgeführt."
 
-#: plugins/gestures.koplugin/_meta.lua:4
-msgid "Gestures"
-msgstr "Gesten"
+#: plugins/hello.koplugin/_meta.lua:4
+msgid "Hello"
+msgstr "Hallo"
 
-#: plugins/gestures.koplugin/_meta.lua:5
-msgid "This plugin provides gesture support."
-msgstr "Dieses Plugin bietet Unterstützung für Gesten."
+#: plugins/hello.koplugin/_meta.lua:5
+msgid "This is a debugging plugin."
+msgstr "Dies ist ein Debugging-Plugin."
 
 #: plugins/hello.koplugin/main.lua:24 plugins/hello.koplugin/main.lua:34
 #: plugins/hello.koplugin/main.lua:48
@@ -17305,13 +17374,19 @@ msgstr "Hallo Welt"
 msgid "Hello, plugin world"
 msgstr "Hallo Welt plugin"
 
-#: plugins/hello.koplugin/_meta.lua:4
-msgid "Hello"
-msgstr "Hallo"
+#: plugins/httpinspector.koplugin/_meta.lua:4
+msgid "HTTP KOReader Inspector"
+msgstr "HTTP KOReader Inspektor"
 
-#: plugins/hello.koplugin/_meta.lua:5
-msgid "This is a debugging plugin."
-msgstr "Dies ist ein Debugging-Plugin."
+#: plugins/httpinspector.koplugin/_meta.lua:5
+msgid ""
+"Allow browsing KOReader internal objects over HTTP. This is aimed at "
+"developers, and may pose some security risks. Only enable this on networks "
+"you can trust."
+msgstr ""
+"Erlaubt das Durchsuchen von KOReader-internen Objekten über HTTP. Dies ist "
+"für Entwickler gedacht und kann einige Sicherheitsrisiken mit sich bringen. "
+"Aktivieren Sie dies nur in Netzwerken, denen Sie vertrauen können."
 
 #: plugins/httpinspector.koplugin/main.lua:136
 msgid "KOReader HTTP inspector"
@@ -17349,19 +17424,34 @@ msgstr "Benutzerdefinierten Port festlegen"
 msgid "Port number (default is 8080)"
 msgstr "Portnummer (Standard ist 8080)"
 
-#: plugins/httpinspector.koplugin/_meta.lua:4
-msgid "HTTP KOReader Inspector"
-msgstr "HTTP KOReader Inspektor"
+#: plugins/japanese.koplugin/_meta.lua:4
+msgid "Japanese support"
+msgstr "Unterstützung für Japanisch"
 
-#: plugins/httpinspector.koplugin/_meta.lua:5
+#: plugins/japanese.koplugin/_meta.lua:5
 msgid ""
-"Allow browsing KOReader internal objects over HTTP. This is aimed at "
-"developers, and may pose some security risks. Only enable this on networks "
-"you can trust."
+"Japanese language support for KOReader, modeled after Yomichan.\n"
+"\n"
+"This plugin extends KOReader's built-in dictionary and selection system to "
+"support Yomichan-style deinflection and text scanning, allowing for one-tap "
+"searches of inflected verbs and multi-character words and phrases. As such, "
+"this plugin removes the need for synonym-based deinflection rules for "
+"StarDict-converted Japanese dictionaries.\n"
+"\n"
+"You must have at least one Japanese dictionary installed in order for this "
+"plugin to work smoothly with Japanese text."
 msgstr ""
-"Erlaubt das Durchsuchen von KOReader-internen Objekten über HTTP. Dies ist "
-"für Entwickler gedacht und kann einige Sicherheitsrisiken mit sich bringen. "
-"Aktivieren Sie dies nur in Netzwerken, denen Sie vertrauen können."
+"Japanische Sprachunterstützung für KOReader, nach dem Vorbild von Yomichan.\n"
+"\n"
+"Dieses Plugin erweitert das in KOReader eingebaute Wörterbuch und "
+"Auswahlsystem um die Unterstützung der Yomichan-ähnlichen Deinflektierung "
+"und Textsuche, die eine Suche nach flektierten Verben und mehrstelligen "
+"Wörtern und Sätzen mit einem Tastendruck ermöglicht. Mit diesem Plugin "
+"entfällt der Bedarf an synonymbasierten Deinflektionsregeln für StarDict-"
+"konvertierte japanische Wörterbücher.\n"
+"\n"
+"Sie müssen mindestens ein japanisches Wörterbuch installiert haben, damit "
+"dieses Plugin reibungslos mit japanischem Text arbeiten kann."
 
 #: plugins/japanese.koplugin/deinflector.lua:278
 msgid "Halfwidth to fullwidth kana"
@@ -17508,38 +17598,15 @@ msgstr ""
 msgid "Set scan length"
 msgstr "Text-Scan-Länge einstellen"
 
-#: plugins/japanese.koplugin/_meta.lua:4
-msgid "Japanese support"
-msgstr "Unterstützung für Japanisch"
-
-#: plugins/japanese.koplugin/_meta.lua:5
-msgid ""
-"Japanese language support for KOReader, modeled after Yomichan.\n"
-"\n"
-"This plugin extends KOReader's built-in dictionary and selection system to "
-"support Yomichan-style deinflection and text scanning, allowing for one-tap "
-"searches of inflected verbs and multi-character words and phrases. As such, "
-"this plugin removes the need for synonym-based deinflection rules for "
-"StarDict-converted Japanese dictionaries.\n"
-"\n"
-"You must have at least one Japanese dictionary installed in order for this "
-"plugin to work smoothly with Japanese text."
-msgstr ""
-"Japanische Sprachunterstützung für KOReader, nach dem Vorbild von Yomichan.\n"
-"\n"
-"Dieses Plugin erweitert das in KOReader eingebaute Wörterbuch und "
-"Auswahlsystem um die Unterstützung der Yomichan-ähnlichen Deinflektierung "
-"und Textsuche, die eine Suche nach flektierten Verben und mehrstelligen "
-"Wörtern und Sätzen mit einem Tastendruck ermöglicht. Mit diesem Plugin "
-"entfällt der Bedarf an synonymbasierten Deinflektionsregeln für StarDict-"
-"konvertierte japanische Wörterbücher.\n"
-"\n"
-"Sie müssen mindestens ein japanisches Wörterbuch installiert haben, damit "
-"dieses Plugin reibungslos mit japanischem Text arbeiten kann."
-
-#: plugins/keepalive.koplugin/main.lua:9 plugins/keepalive.koplugin/_meta.lua:4
+#: plugins/keepalive.koplugin/_meta.lua:4 plugins/keepalive.koplugin/main.lua:9
 msgid "Keep alive"
 msgstr "Keep-alive"
+
+#: plugins/keepalive.koplugin/_meta.lua:5
+msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
+msgstr ""
+"Stellt sicher, dass das Gerät aktiv bleibt, um automatische WLAN-Trennungen "
+"zu verhindern."
 
 #: plugins/keepalive.koplugin/main.lua:18
 msgid ""
@@ -17573,11 +17640,16 @@ msgstr "Dies ist eine Dummy-Implementierung der 'Disable'-Funktion."
 msgid "This is a dummy implementation of 'enable' function."
 msgstr "Dies ist eine Dummy-Implementierung der 'Enable'-Funktion."
 
-#: plugins/keepalive.koplugin/_meta.lua:5
-msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
+#: plugins/kosync.koplugin/_meta.lua:4 plugins/kosync.koplugin/main.lua:188
+msgid "Progress sync"
+msgstr "Fortschrittssynchronisierung"
+
+#: plugins/kosync.koplugin/_meta.lua:5
+msgid ""
+"Synchronizes your reading progess to a server across your KOReader devices."
 msgstr ""
-"Stellt sicher, dass das Gerät aktiv bleibt, um automatische WLAN-Trennungen "
-"zu verhindern."
+"Synchronisiert Ihren Lesefortschritt mit einem Server auf allen KOReader-"
+"Geräten."
 
 #: plugins/kosync.koplugin/main.lua:26
 msgid "Register/login to KOReader server"
@@ -17621,10 +17693,6 @@ msgstr "Übertrage Fortschritt von diesem Gerät"
 #: plugins/kosync.koplugin/main.lua:168
 msgid "Pull progress from other devices"
 msgstr "Lade Fortschritt von anderen Geräten"
-
-#: plugins/kosync.koplugin/main.lua:188 plugins/kosync.koplugin/_meta.lua:4
-msgid "Progress sync"
-msgstr "Fortschrittssynchronisierung"
 
 #: plugins/kosync.koplugin/main.lua:191
 msgid "Custom sync server"
@@ -17801,21 +17869,18 @@ msgstr "Synchronisiere mit letztem Fortschritt %1% von Gerät '%2'?"
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "Synchronisiere mit vorherigem Fortschritt %1% von Gerät '%2'?"
 
-#: plugins/kosync.koplugin/_meta.lua:5
-msgid ""
-"Synchronizes your reading progess to a server across your KOReader devices."
-msgstr ""
-"Synchronisiert Ihren Lesefortschritt mit einem Server auf allen KOReader-"
-"Geräten."
+#: plugins/movetoarchive.koplugin/_meta.lua:4
+#: plugins/movetoarchive.koplugin/main.lua:34
+msgid "Move to archive"
+msgstr "Ins Archiv verschieben"
+
+#: plugins/movetoarchive.koplugin/_meta.lua:5
+msgid "Moves/copies current book to archive folder"
+msgstr "Verschiebt/Kopiert das aktuelle Buch in ein Archivierungsverzeichnis"
 
 #: plugins/movetoarchive.koplugin/main.lua:17
 msgid "Move current book to archive"
 msgstr "Aktuelles Buch ins Archiv verschieben"
-
-#: plugins/movetoarchive.koplugin/main.lua:34
-#: plugins/movetoarchive.koplugin/_meta.lua:4
-msgid "Move to archive"
-msgstr "Ins Archiv verschieben"
 
 #: plugins/movetoarchive.koplugin/main.lua:44
 msgid "Copy current book to archive"
@@ -17862,9 +17927,13 @@ msgstr ""
 "Kein Archivierungsverzeichnis.\n"
 "Wollen Sie es jetzt festlegen?"
 
-#: plugins/movetoarchive.koplugin/_meta.lua:5
-msgid "Moves/copies current book to archive folder"
-msgstr "Verschiebt/Kopiert das aktuelle Buch in ein Archivierungsverzeichnis"
+#: plugins/newsdownloader.koplugin/_meta.lua:4
+msgid "News downloader"
+msgstr "Nachrichten-Downloader"
+
+#: plugins/newsdownloader.koplugin/_meta.lua:5
+msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
+msgstr "Ruft RSS- und Atom-News Artikel ab und speichert sie als HTML-Dateien."
 
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:314
 msgid ""
@@ -18179,13 +18248,13 @@ msgstr "Konfiguration ungültig: %1"
 msgid "Configuration empty"
 msgstr "Leere Konfiguration"
 
-#: plugins/newsdownloader.koplugin/_meta.lua:4
-msgid "News downloader"
-msgstr "Nachrichten-Downloader"
+#: plugins/opds.koplugin/_meta.lua:4
+msgid "OPDS"
+msgstr "OPDS"
 
-#: plugins/newsdownloader.koplugin/_meta.lua:5
-msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
-msgstr "Ruft RSS- und Atom-News Artikel ab und speichert sie als HTML-Dateien."
+#: plugins/opds.koplugin/_meta.lua:5
+msgid "OPDS allows you to download books from online catalogs."
+msgstr "Mit OPDS können Sie Bücher aus Online-Katalogen herunterladen."
 
 #: plugins/opds.koplugin/main.lua:13 plugins/opds.koplugin/opdscatalog.lua:14
 msgid "OPDS Catalog"
@@ -18194,14 +18263,6 @@ msgstr "OPDS Katalog"
 #: plugins/opds.koplugin/main.lua:45
 msgid "OPDS catalog"
 msgstr "OPDS Katalog"
-
-#: plugins/opds.koplugin/_meta.lua:4
-msgid "OPDS"
-msgstr "OPDS"
-
-#: plugins/opds.koplugin/_meta.lua:5
-msgid "OPDS allows you to download books from online catalogs."
-msgstr "Mit OPDS können Sie Bücher aus Online-Katalogen herunterladen."
 
 #: plugins/opds.koplugin/opdsbrowser.lua:111
 msgid "Catalog name"
@@ -18377,6 +18438,17 @@ msgstr "Lese später"
 msgid "Stream"
 msgstr "Stream"
 
+#: plugins/patchmanagement.koplugin/_meta.lua:4
+#: plugins/patchmanagement.koplugin/main.lua:138
+msgid "Patch management"
+msgstr "Patch Verwaltung"
+
+#: plugins/patchmanagement.koplugin/_meta.lua:5
+msgid "This plugin allows enabling, disabling or editing user patches."
+msgstr ""
+"Dieses Plugin ermöglicht das Ein-, Ausschalten und Editieren von User "
+"Patches."
+
 #: plugins/patchmanagement.koplugin/main.lua:95
 msgid ""
 "Patches changed. Current set of patches will be applied on next restart."
@@ -18417,11 +18489,6 @@ msgstr ""
 "Patches sind ein sehr mächtiges Feature, deshalb sollten sie vorsichtig "
 "angewendet werden!"
 
-#: plugins/patchmanagement.koplugin/main.lua:138
-#: plugins/patchmanagement.koplugin/_meta.lua:4
-msgid "Patch management"
-msgstr "Patch Verwaltung"
-
 #: plugins/patchmanagement.koplugin/main.lua:152
 msgid "About patch management"
 msgstr "Über Patch Verwaltung"
@@ -18450,11 +18517,17 @@ msgstr "Vor dem Beenden"
 msgid "On exit"
 msgstr "Beim Beenden"
 
-#: plugins/patchmanagement.koplugin/_meta.lua:5
-msgid "This plugin allows enabling, disabling or editing user patches."
+#: plugins/perceptionexpander.koplugin/_meta.lua:4
+msgid "Perception expander"
+msgstr "Perception Expander"
+
+#: plugins/perceptionexpander.koplugin/_meta.lua:5
+msgid ""
+"Improves your reading speed with the help of two vertical lines over the "
+"text."
 msgstr ""
-"Dieses Plugin ermöglicht das Ein-, Ausschalten und Editieren von User "
-"Patches."
+"Verbessert Ihre Lesegeschwindigkeit mit Hilfe von zwei vertikalen Linien "
+"über dem Text."
 
 #: plugins/perceptionexpander.koplugin/main.lua:108
 msgid "Perception expander settings"
@@ -18488,25 +18561,20 @@ msgstr "Speed reading Modul - Perception Expander"
 msgid "For more information see wiki page Perception Expander Plugin"
 msgstr "Für weitere Informationen siehe Wiki-Seite Perception Expander Plugin"
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:4
-msgid "Perception expander"
-msgstr "Perception Expander"
+#: plugins/profiles.koplugin/_meta.lua:4 plugins/profiles.koplugin/main.lua:78
+msgid "Profiles"
+msgstr "Profile"
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:5
+#: plugins/profiles.koplugin/_meta.lua:5
 msgid ""
-"Improves your reading speed with the help of two vertical lines over the "
-"text."
+"This plugin allows combining multiple settings to make switchable 'profiles'."
 msgstr ""
-"Verbessert Ihre Lesegeschwindigkeit mit Hilfe von zwei vertikalen Linien "
-"über dem Text."
+"Dieses Plugin erlaubt die Kombination mehrerer Einstellungen, um schaltbare "
+"'Profile' zu erstellen."
 
 #: plugins/profiles.koplugin/main.lua:60
 msgid "Profile %1"
 msgstr "Profil %1"
-
-#: plugins/profiles.koplugin/main.lua:78 plugins/profiles.koplugin/_meta.lua:4
-msgid "Profiles"
-msgstr "Profile"
 
 #: plugins/profiles.koplugin/main.lua:89
 msgid "New"
@@ -18557,21 +18625,23 @@ msgstr "Profilname eingeben"
 msgid "Profile already exists: %1"
 msgstr "Profil existiert bereits: %1"
 
-#: plugins/profiles.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows combining multiple settings to make switchable 'profiles'."
-msgstr ""
-"Dieses Plugin erlaubt die Kombination mehrerer Einstellungen, um schaltbare "
-"'Profile' zu erstellen."
-
-#: plugins/qrclipboard.koplugin/main.lua:24
 #: plugins/qrclipboard.koplugin/_meta.lua:4
+#: plugins/qrclipboard.koplugin/main.lua:24
 msgid "QR from clipboard"
 msgstr "QR aus der Zwischenablage"
 
 #: plugins/qrclipboard.koplugin/_meta.lua:5
 msgid "This plugin generates a QR code from clipboard content."
 msgstr "Dieses Plugin erzeugt einen QR-Code aus dem Inhalt der Zwischenablage."
+
+#: plugins/readtimer.koplugin/_meta.lua:4
+#: plugins/readtimer.koplugin/main.lua:99
+msgid "Read timer"
+msgstr "Lese-Timer"
+
+#: plugins/readtimer.koplugin/_meta.lua:5
+msgid "Shows an alarm after a specified amount of time."
+msgstr "Zeigt einen Alarm nach einer bestimmten Zeitdauer."
 
 #: plugins/readtimer.koplugin/main.lua:23
 msgid "Time is up"
@@ -18588,11 +18658,6 @@ msgstr "Erledigt"
 #: plugins/readtimer.koplugin/main.lua:96
 msgid "Read timer (%1)"
 msgstr "Lese-Timer (%1)"
-
-#: plugins/readtimer.koplugin/main.lua:99
-#: plugins/readtimer.koplugin/_meta.lua:4
-msgid "Read timer"
-msgstr "Lese-Timer"
 
 #: plugins/readtimer.koplugin/main.lua:116
 msgid "Set alarm"
@@ -18641,70 +18706,14 @@ msgstr "Der Timer wird in %1 ablaufen."
 msgid "Stop timer"
 msgstr "Stoppe den Timer"
 
-#: plugins/readtimer.koplugin/_meta.lua:5
-msgid "Shows an alarm after a specified amount of time."
-msgstr "Zeigt einen Alarm nach einer bestimmten Zeitdauer."
+#: plugins/statistics.koplugin/_meta.lua:4
+#: plugins/statistics.koplugin/main.lua:1056
+msgid "Reading statistics"
+msgstr "Lesestatistiken"
 
-#. @translators: %1 is the SSH port, %2 is the network info.
-#: plugins/SSH.koplugin/main.lua:73
-msgid ""
-"SSH server started.\n"
-"\n"
-"SSH port: %1\n"
-"%2"
-msgstr ""
-"SSH-Server gestartet.\n"
-"\n"
-"SSH-Port: %1\n"
-"%2"
-
-#: plugins/SSH.koplugin/main.lua:81
-msgid "Failed to start SSH server."
-msgstr "Der SSH-Server konnte nicht gestartet werden."
-
-#: plugins/SSH.koplugin/main.lua:94
-msgid "SSH server stopped."
-msgstr "SSH-Server gestoppt."
-
-#: plugins/SSH.koplugin/main.lua:123
-msgid "Choose SSH port"
-msgstr "Wähle SSH-Port"
-
-#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
-msgid "SSH server"
-msgstr "SSH-Server"
-
-#: plugins/SSH.koplugin/main.lua:174
-msgid "SSH port (%1)"
-msgstr "SSH Port (%1)"
-
-#: plugins/SSH.koplugin/main.lua:183
-msgid "SSH public key"
-msgstr "Öffentlicher SSH-Schlüssel"
-
-#: plugins/SSH.koplugin/main.lua:189
-msgid ""
-"Put your public SSH keys in\n"
-"%1"
-msgstr ""
-"Setze den öffentlichen SSH-Schlüssel in\n"
-"%1"
-
-#: plugins/SSH.koplugin/main.lua:195
-msgid "Login without password (DANGEROUS)"
-msgstr "Ohne Passwort einloggen (GEFÄHRLICH)"
-
-#: plugins/SSH.koplugin/main.lua:208
-msgid "Toggle SSH server"
-msgstr "SSH-Server umschalten"
-
-#: plugins/SSH.koplugin/_meta.lua:4
-msgid "SSH"
-msgstr "SSH"
-
-#: plugins/SSH.koplugin/_meta.lua:5
-msgid "Connect and transfer files to the device using SSH."
-msgstr "Verbinden und Übertragen von Dateien auf das Gerät mittels SSH."
+#: plugins/statistics.koplugin/_meta.lua:5
+msgid "Keeps and displays your reading statistics."
+msgstr "Speichert und zeigt Ihre Lesestatistik an."
 
 #: plugins/statistics.koplugin/calendarview.lua:1178
 msgid "Enter month"
@@ -18781,11 +18790,6 @@ msgstr[1] ""
 #: plugins/statistics.koplugin/main.lua:1030
 msgid "Enabled"
 msgstr "Aktiviert"
-
-#: plugins/statistics.koplugin/main.lua:1056
-#: plugins/statistics.koplugin/_meta.lua:4
-msgid "Reading statistics"
-msgstr "Lesestatistiken"
 
 #: plugins/statistics.koplugin/main.lua:1064
 msgid "Read page duration limits: %1 s – %2 s"
@@ -19222,10 +19226,6 @@ msgstr "Keine Statistiken entfernt."
 msgid "Syncing book statistics. This may take a while."
 msgstr "Synchronisierung der Buchstatistiken. Dies kann eine Weile dauern."
 
-#: plugins/statistics.koplugin/_meta.lua:5
-msgid "Keeps and displays your reading statistics."
-msgstr "Speichert und zeigt Ihre Lesestatistik an."
-
 #: plugins/statistics.koplugin/readerprogress.lua:108
 msgid "Week progress"
 msgstr "Wochenfortschritt"
@@ -19274,6 +19274,17 @@ msgid ""
 msgstr ""
 "Durchschnittliche\n"
 "Zeit/Tag"
+
+#: plugins/systemstat.koplugin/_meta.lua:4
+#: plugins/systemstat.koplugin/main.lua:297
+#: plugins/systemstat.koplugin/main.lua:309
+#: plugins/systemstat.koplugin/main.lua:319
+msgid "System statistics"
+msgstr "Systemstatistiken"
+
+#: plugins/systemstat.koplugin/_meta.lua:5
+msgid "Shows system statistics."
+msgstr "Systemstatistiken zeigen."
 
 #: plugins/systemstat.koplugin/main.lua:57
 msgid "KOReader started at"
@@ -19403,16 +19414,15 @@ msgstr "    Gesamt"
 msgid "    Used percentage"
 msgstr "    Verbrauchte Prozent"
 
-#: plugins/systemstat.koplugin/main.lua:297
-#: plugins/systemstat.koplugin/main.lua:309
-#: plugins/systemstat.koplugin/main.lua:319
-#: plugins/systemstat.koplugin/_meta.lua:4
-msgid "System statistics"
-msgstr "Systemstatistiken"
+#: plugins/terminal.koplugin/_meta.lua:4 plugins/terminal.koplugin/main.lua:302
+#: plugins/terminal.koplugin/main.lua:467
+#: plugins/terminal.koplugin/main.lua:617
+msgid "Terminal emulator"
+msgstr "Terminal Emulator"
 
-#: plugins/systemstat.koplugin/_meta.lua:5
-msgid "Shows system statistics."
-msgstr "Systemstatistiken zeigen."
+#: plugins/terminal.koplugin/_meta.lua:5
+msgid "KOReader's terminal emulator"
+msgstr "KOReader's Terminal Emulator"
 
 #: plugins/terminal.koplugin/aliases.lua:63
 #: plugins/terminal.koplugin/aliases.lua:142
@@ -19434,12 +19444,6 @@ msgstr "Alias Name:"
 #: plugins/terminal.koplugin/aliases.lua:93
 msgid "Alias command:"
 msgstr "Alias Kommando:"
-
-#: plugins/terminal.koplugin/main.lua:302
-#: plugins/terminal.koplugin/main.lua:467
-#: plugins/terminal.koplugin/main.lua:617 plugins/terminal.koplugin/_meta.lua:4
-msgid "Terminal emulator"
-msgstr "Terminal Emulator"
 
 #. @translators This is the ESC-key on the keyboard.
 #: plugins/terminal.koplugin/main.lua:326
@@ -19553,14 +19557,16 @@ msgstr ""
 "Hier können sie den Kommandozeilen-Interpreter auswählen.\n"
 "Default: sh"
 
-#: plugins/terminal.koplugin/_meta.lua:5
-msgid "KOReader's terminal emulator"
-msgstr "KOReader's Terminal Emulator"
-
-#: plugins/texteditor.koplugin/main.lua:32
 #: plugins/texteditor.koplugin/_meta.lua:4
+#: plugins/texteditor.koplugin/main.lua:32
 msgid "Text editor"
 msgstr "Texteditor"
+
+#: plugins/texteditor.koplugin/_meta.lua:5
+msgid "A basic text editor for making small changes to plain text files."
+msgstr ""
+"Ein einfacher Texteditor, mit dem Sie kleine Änderungen an einfachen "
+"Textdateien vornehmen können."
 
 #: plugins/texteditor.koplugin/main.lua:45
 msgid "Text editor: open last file"
@@ -19828,11 +19834,13 @@ msgstr "Datei gelöscht"
 msgid "Failed deleting file: %1"
 msgstr "Fehler beim Löschen der Datei: %1"
 
-#: plugins/texteditor.koplugin/_meta.lua:5
-msgid "A basic text editor for making small changes to plain text files."
-msgstr ""
-"Ein einfacher Texteditor, mit dem Sie kleine Änderungen an einfachen "
-"Textdateien vornehmen können."
+#: plugins/timesync.koplugin/_meta.lua:4
+msgid "Time sync"
+msgstr "Zeitsynchronisation"
+
+#: plugins/timesync.koplugin/_meta.lua:5
+msgid "Synchronizes the device time with NTP servers."
+msgstr "Synchronisiert die Gerätezeit mit NTP-Servern."
 
 #: plugins/timesync.koplugin/main.lua:50
 msgid "New time is %1."
@@ -19857,13 +19865,19 @@ msgstr ""
 msgid "Synchronize time"
 msgstr "Zeit synchronisieren"
 
-#: plugins/timesync.koplugin/_meta.lua:4
-msgid "Time sync"
-msgstr "Zeitsynchronisation"
+#: plugins/vocabbuilder.koplugin/_meta.lua:4
+#: plugins/vocabbuilder.koplugin/main.lua:1950
+#: plugins/vocabbuilder.koplugin/main.lua:2021
+msgid "Vocabulary builder"
+msgstr "Vokabeltrainer"
 
-#: plugins/timesync.koplugin/_meta.lua:5
-msgid "Synchronizes the device time with NTP servers."
-msgstr "Synchronisiert die Gerätezeit mit NTP-Servern."
+#: plugins/vocabbuilder.koplugin/_meta.lua:5
+msgid ""
+"This plugin processes dictionary word lookups and uses spaced repetition to "
+"help you remember new words."
+msgstr ""
+"Dieses Plugin verarbeitet Wörterbuch-Wortsuchen und verwendet räumliche "
+"Wiederholungen, um Ihnen zu helfen, sich an neue Wörter zu erinnern."
 
 #: plugins/vocabbuilder.koplugin/main.lua:77
 msgid "Add to vocabulary builder"
@@ -20063,23 +20077,17 @@ msgstr "Titel ändern"
 msgid "Words reloaded"
 msgstr "Wörter neu geladen"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1950
-#: plugins/vocabbuilder.koplugin/main.lua:2021
-#: plugins/vocabbuilder.koplugin/_meta.lua:4
-msgid "Vocabulary builder"
-msgstr "Vokabeltrainer"
-
 #: plugins/vocabbuilder.koplugin/main.lua:2032
 msgid "Open vocabulary builder"
 msgstr "Vokabeltrainer öffnen"
 
-#: plugins/vocabbuilder.koplugin/_meta.lua:5
-msgid ""
-"This plugin processes dictionary word lookups and uses spaced repetition to "
-"help you remember new words."
-msgstr ""
-"Dieses Plugin verarbeitet Wörterbuch-Wortsuchen und verwendet räumliche "
-"Wiederholungen, um Ihnen zu helfen, sich an neue Wörter zu erinnern."
+#: plugins/wallabag.koplugin/_meta.lua:4 plugins/wallabag.koplugin/main.lua:133
+msgid "Wallabag"
+msgstr "Wallabag"
+
+#: plugins/wallabag.koplugin/_meta.lua:5
+msgid "Synchronises articles with a Wallabag server."
+msgstr "Synchronisiere Artikel mit einem Wallabag-Server."
 
 #: plugins/wallabag.koplugin/main.lua:45
 msgid "Wallabag retrieval"
@@ -20088,10 +20096,6 @@ msgstr "Wallabag-Abruf"
 #: plugins/wallabag.koplugin/main.lua:121
 msgid "Add to Wallabag"
 msgstr "Zu Wallabag hinzufügen"
-
-#: plugins/wallabag.koplugin/main.lua:133 plugins/wallabag.koplugin/_meta.lua:4
-msgid "Wallabag"
-msgstr "Wallabag"
 
 #: plugins/wallabag.koplugin/main.lua:136
 msgid "Retrieve new articles from server"
@@ -20438,10 +20442,6 @@ msgid ""
 msgstr ""
 "Fehler beim hinzufügen zu Wallabag:\n"
 "%1"
-
-#: plugins/wallabag.koplugin/_meta.lua:5
-msgid "Synchronises articles with a Wallabag server."
-msgstr "Synchronisiere Artikel mit einem Wallabag-Server."
 
 #: tools/kobo_touch_probe.lua:54
 msgid "Tap the lower right corner"

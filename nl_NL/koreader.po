@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-09 11:01+0000\n"
+"POT-Creation-Date: 2024-04-16 17:04+0000\n"
 "PO-Revision-Date: 2024-04-12 18:02+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -155,12 +155,12 @@ msgstr "Voer bestandsnaam in"
 #: frontend/apps/cloudstorage/dropbox.lua:130
 #: frontend/apps/cloudstorage/ftp.lua:127
 #: frontend/apps/cloudstorage/webdav.lua:126
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
-#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanager.lua:989
 #: frontend/apps/filemanager/filemanager.lua:1117
 #: frontend/apps/filemanager/filemanager.lua:1444
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
+#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:56
 #: frontend/apps/filemanager/filemanagershortcuts.lua:107
 #: frontend/apps/reader/modules/readerbookmark.lua:1053
@@ -192,7 +192,7 @@ msgstr "Voer bestandsnaam in"
 #: frontend/ui/widget/networksetting.lua:340
 #: frontend/ui/widget/numberpickerwidget.lua:139
 #: frontend/ui/widget/pathchooser.lua:134 frontend/ui/widget/textviewer.lua:468
-#: frontend/ui/widget/touchmenu.lua:1330
+#: frontend/ui/widget/touchmenu.lua:1330 plugins/SSH.koplugin/main.lua:130
 #: plugins/autowarmth.koplugin/main.lua:759
 #: plugins/autowarmth.koplugin/main.lua:1060
 #: plugins/calibre.koplugin/main.lua:324
@@ -218,7 +218,7 @@ msgstr "Voer bestandsnaam in"
 #: plugins/opds.koplugin/opdsbrowser.lua:646
 #: plugins/opds.koplugin/opdspse.lua:179
 #: plugins/perceptionexpander.koplugin/main.lua:138
-#: plugins/profiles.koplugin/main.lua:264 plugins/SSH.koplugin/main.lua:130
+#: plugins/profiles.koplugin/main.lua:264
 #: plugins/statistics.koplugin/main.lua:1246
 #: plugins/statistics.koplugin/main.lua:2306
 #: plugins/statistics.koplugin/main.lua:2480
@@ -285,12 +285,12 @@ msgid "Edit"
 msgstr "Bewerk"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:395
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
-#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/filemanager/filemanager.lua:255
 #: frontend/apps/filemanager/filemanager.lua:571
 #: frontend/apps/filemanager/filemanager.lua:576
 #: frontend/apps/filemanager/filemanager.lua:1046
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
+#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/reader/modules/readerhighlight.lua:983
 #: frontend/ui/widget/screenshoter.lua:51
 #: plugins/bookshortcuts.koplugin/main.lua:138
@@ -427,12 +427,6 @@ msgstr "Aanmaken"
 msgid "Enter folder after creation"
 msgstr "Map invoeren na aanmaken"
 
-#: frontend/apps/cloudstorage/dropboxapi.lua:213
-#: frontend/apps/cloudstorage/webdavapi.lua:175
-#: frontend/ui/widget/filechooser.lua:451
-msgid "Long-press to choose current folder"
-msgstr "Langer indrukken om huidige map te kiezen"
-
 #: frontend/apps/cloudstorage/dropbox.lua:33
 #: frontend/apps/cloudstorage/ftp.lua:38
 #: frontend/apps/cloudstorage/webdav.lua:26
@@ -547,13 +541,13 @@ msgstr "Dropbox-map (/ voor root)"
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
 #: frontend/apps/reader/modules/readerwikipedia.lua:174
 #: frontend/ui/widget/inputdialog.lua:766
-#: frontend/ui/widget/inputdialog.lua:807
+#: frontend/ui/widget/inputdialog.lua:807 plugins/SSH.koplugin/main.lua:137
 #: plugins/coverimage.koplugin/main.lua:362
 #: plugins/gestures.koplugin/main.lua:406
 #: plugins/newsdownloader.koplugin/main.lua:755
 #: plugins/opds.koplugin/opdsbrowser.lua:149
 #: plugins/opds.koplugin/opdsbrowser.lua:178
-#: plugins/profiles.koplugin/main.lua:271 plugins/SSH.koplugin/main.lua:137
+#: plugins/profiles.koplugin/main.lua:271
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:591
 msgid "Save"
@@ -574,6 +568,12 @@ msgstr ""
 "Land: %4\n"
 "Totaal ruimte: %5\n"
 "Gebruikte ruimte: %6"
+
+#: frontend/apps/cloudstorage/dropboxapi.lua:213
+#: frontend/apps/cloudstorage/webdavapi.lua:175
+#: frontend/ui/widget/filechooser.lua:451
+msgid "Long-press to choose current folder"
+msgstr "Langer indrukken om huidige map te kiezen"
 
 #: frontend/apps/cloudstorage/ftp.lua:29
 msgid ""
@@ -726,6 +726,365 @@ msgstr "Wachtwoord"
 #: frontend/apps/cloudstorage/webdav.lua:120
 msgid "Start folder, for example /books"
 msgstr "Startmap, bijvoorbeeld /boeken"
+
+#: frontend/apps/filemanager/filemanager.lua:48
+msgid "KOReader"
+msgstr "KOReader"
+
+#: frontend/apps/filemanager/filemanager.lua:217
+msgctxt "File"
+msgid "Copy"
+msgstr "Kopieer"
+
+#: frontend/apps/filemanager/filemanager.lua:225
+msgctxt "File"
+msgid "Paste"
+msgstr "Plak"
+
+#: frontend/apps/filemanager/filemanager.lua:233
+#: frontend/apps/reader/modules/readerhighlight.lua:65
+#: frontend/ui/widget/inputtext.lua:245
+msgid "Select"
+msgstr "Selecteren"
+
+#: frontend/apps/filemanager/filemanager.lua:247
+msgid "Cut"
+msgstr "Knip"
+
+#: frontend/apps/filemanager/filemanager.lua:263
+#: frontend/apps/filemanager/filemanager.lua:1124
+msgid "Rename"
+msgstr "Naam wijzigen"
+
+#: frontend/apps/filemanager/filemanager.lua:300
+msgid "Open with…"
+msgstr "Openen met…"
+
+#: frontend/apps/filemanager/filemanager.lua:322
+msgid "Convert"
+msgstr "Converteren"
+
+#: frontend/apps/filemanager/filemanager.lua:334
+#: frontend/apps/filemanager/filemanager.lua:646
+msgid "Set as HOME folder"
+msgstr "Instellen als thuismap"
+
+#: frontend/apps/filemanager/filemanager.lua:468
+#: frontend/apps/reader/modules/readerback.lua:179
+msgid "Exit KOReader?"
+msgstr "KOReader aflsuiten?"
+
+#: frontend/apps/filemanager/filemanager.lua:469
+#: frontend/apps/reader/modules/readerback.lua:180
+#: frontend/apps/reader/modules/readerdevicestatus.lua:103
+#: frontend/ui/elements/common_exit_menu_table.lua:9
+#: frontend/ui/elements/common_exit_menu_table.lua:16
+msgid "Exit"
+msgstr "Sluiten"
+
+#: frontend/apps/filemanager/filemanager.lua:520
+msgid "1 file selected"
+msgid_plural "%1 files selected"
+msgstr[0] "1 bestand geselecteerd"
+msgstr[1] "%1 bestanden geselecteerd"
+
+#: frontend/apps/filemanager/filemanager.lua:521
+msgid "No files selected"
+msgstr "Geen bestanden geselecteerd"
+
+#: frontend/apps/filemanager/filemanager.lua:525
+msgid "Show selected files list"
+msgstr "Lijst met geselecteerde bestanden weergeven"
+
+#: frontend/apps/filemanager/filemanager.lua:533
+#: frontend/apps/filemanager/filemanager.lua:919
+#: frontend/apps/reader/modules/readerlink.lua:143
+msgid "Copy"
+msgstr "Kopiëren"
+
+#: frontend/apps/filemanager/filemanager.lua:543
+msgid "Select all files in folder"
+msgstr "Alle bestanden in map selecteren"
+
+#: frontend/apps/filemanager/filemanager.lua:550
+#: frontend/apps/filemanager/filemanager.lua:916
+#: frontend/apps/filemanager/filemanager.lua:1181
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
+msgid "Move"
+msgstr "Verplaatsen"
+
+#: frontend/apps/filemanager/filemanager.lua:560
+#: frontend/apps/reader/modules/readerbookmark.lua:664
+msgid "Deselect all"
+msgstr "Alles deselecteren"
+
+#: frontend/apps/filemanager/filemanager.lua:575
+msgid ""
+"Delete selected files?\n"
+"If you delete a file, it is permanently lost."
+msgstr ""
+"Geselecteerde bestanden verwijderen?\n"
+"Een verwijderd bestand is voor altijd verloren."
+
+#: frontend/apps/filemanager/filemanager.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:702
+#: frontend/apps/reader/modules/readerhighlight.lua:692
+msgid "Exit select mode"
+msgstr "Selectiemodus verlaten"
+
+#: frontend/apps/filemanager/filemanager.lua:594
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:261
+msgid "Export highlights"
+msgstr "Markeringen exporteren"
+
+#: frontend/apps/filemanager/filemanager.lua:618
+msgid "Select files"
+msgstr "Bestanden selecteren"
+
+#: frontend/apps/filemanager/filemanager.lua:636
+#: frontend/apps/reader/modules/readerbookmark.lua:1064
+#: frontend/ui/widget/inputtext.lua:255
+msgid "Paste"
+msgstr "Plak"
+
+#: frontend/apps/filemanager/filemanager.lua:655
+msgid "Go to HOME folder"
+msgstr "Ga naar thuismap"
+
+#: frontend/apps/filemanager/filemanager.lua:664
+msgid "Open random document"
+msgstr "Willekeurig document openen"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+msgid "Switch to SDCard"
+msgstr "Overschakelen naar SDCard"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+msgid "Switch to internal storage"
+msgstr "Overschakelen naar interne opslag"
+
+#: frontend/apps/filemanager/filemanager.lua:704
+msgid "Import files here"
+msgstr "Bestanden hier importeren"
+
+#: frontend/apps/filemanager/filemanager.lua:800
+msgid "Set '%1' as HOME folder?"
+msgstr "'%1' instellen als thuismap?"
+
+#: frontend/apps/filemanager/filemanager.lua:801
+msgid "Set as HOME"
+msgstr "Instellen als thuismap"
+
+#: frontend/apps/filemanager/filemanager.lua:819
+msgid "Do you want to open %1?"
+msgstr "%1 openen?"
+
+#: frontend/apps/filemanager/filemanager.lua:820
+#: frontend/apps/filemanager/filemanager.lua:1450
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
+#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
+#: plugins/texteditor.koplugin/main.lua:457
+msgid "Open"
+msgstr "Openen"
+
+#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
+#: frontend/apps/filemanager/filemanager.lua:826
+msgid "Another"
+msgstr "Andere"
+
+#: frontend/apps/filemanager/filemanager.lua:833
+msgid "File not found"
+msgstr "Bestand niet gevonden"
+
+#: frontend/apps/filemanager/filemanager.lua:891
+msgid ""
+"File already exists:\n"
+"%1"
+msgstr ""
+"Bestand bestaat al:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:892
+msgid ""
+"Folder already exists:\n"
+"%1"
+msgstr ""
+"Map bestaat al:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:896
+#: frontend/apps/filemanager/filemanager.lua:1178
+#: frontend/apps/filemanager/filemanagerconverter.lua:97
+#: frontend/apps/reader/modules/readerdictionary.lua:1087
+#: plugins/opds.koplugin/opdsbrowser.lua:770
+msgid "Overwrite"
+msgstr "Overschrijven"
+
+#: frontend/apps/filemanager/filemanager.lua:915
+msgid "Move selected files to the current folder?"
+msgstr "Geselecteerde bestanden naar de huidige map verplaatsen?"
+
+#: frontend/apps/filemanager/filemanager.lua:918
+msgid "Copy selected files to the current folder?"
+msgstr "Geselecteerde bestanden naar de huidige map kopiëren?"
+
+#: frontend/apps/filemanager/filemanager.lua:931
+msgid "overwrite existing files"
+msgstr "bestaande bestanden overschrijven"
+
+#: frontend/apps/filemanager/filemanager.lua:971
+msgid "1 file was not moved"
+msgid_plural "%1 files were not moved"
+msgstr[0] "1 bestand niet verplaatst"
+msgstr[1] "%1 bestanden niet verplaatst"
+
+#: frontend/apps/filemanager/filemanager.lua:972
+msgid "1 file was not copied"
+msgid_plural "%1 files were not copied"
+msgstr[0] "1 bestand niet gekopieerd"
+msgstr[1] "%1 bestanden niet gekopieerd"
+
+#: frontend/apps/filemanager/filemanager.lua:1011
+msgid ""
+"Failed to create folder:\n"
+"%1"
+msgstr ""
+"Map aanmaken mislukt:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1034
+msgid ""
+"File not found:\n"
+"%1"
+msgstr ""
+"Bestand niet gevonden:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete file permanently?"
+msgstr "Bestand permanent verwijderen?"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete folder permanently?"
+msgstr "Map permanent verwijderen?"
+
+#: frontend/apps/filemanager/filemanager.lua:1042
+msgid "Book settings, highlights and notes will be deleted."
+msgstr "Bookinstellingen, markeringen en notities zullen worden gewist."
+
+#: frontend/apps/filemanager/filemanager.lua:1076
+msgid ""
+"Failed to delete:\n"
+"%1"
+msgstr ""
+"Verwijderen mislukt:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1102
+msgid "Failed to delete 1 file."
+msgid_plural "Failed to delete %1 files."
+msgstr[0] "Het verwijderen van 1 bestand is mislukt."
+msgstr[1] "Het verwijderen van %1 bestanden is mislukt."
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename file"
+msgstr "Bestandsnaam wijzigen"
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename folder"
+msgstr "Mapnaam wijzigen"
+
+#: frontend/apps/filemanager/filemanager.lua:1156
+msgid ""
+"Failed to rename:\n"
+"%1\n"
+"to:\n"
+"%2"
+msgstr ""
+"Naam wijzigen mislukt:\n"
+"%1\n"
+"naar:\n"
+"%2"
+
+#: frontend/apps/filemanager/filemanager.lua:1167
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"File cannot be renamed."
+msgstr ""
+"Map bestaat al:\n"
+"%1\n"
+"De bestandsnaam kan niet worden gewijzigd."
+
+#: frontend/apps/filemanager/filemanager.lua:1169
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Folder cannot be renamed."
+msgstr ""
+"Het bestand bestaat al:\n"
+"%1\n"
+"De mapnaam kan niet worden gewijzigd."
+
+#: frontend/apps/filemanager/filemanager.lua:1177
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Overwrite file?"
+msgstr ""
+"Het bestand bestaat al:\n"
+"%1\n"
+"Overschrijven?"
+
+#: frontend/apps/filemanager/filemanager.lua:1180
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"Move the folder inside it?"
+msgstr ""
+"Map bestaat al:\n"
+"%1\n"
+"De geselecteerde map erin plaatsen?"
+
+#: frontend/apps/filemanager/filemanager.lua:1333
+msgid "Selected files (%1)"
+msgstr "Geselecteerde bestanden (%1)"
+
+#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
+#: frontend/apps/filemanager/filemanager.lua:1360
+msgid "%1 ~Unsupported"
+msgstr "%1 ~Niet ondersteund"
+
+#: frontend/apps/filemanager/filemanager.lua:1396
+msgid "Reset default for this file"
+msgstr "Standaardinstellingen voor dit bestand herstellen"
+
+#: frontend/apps/filemanager/filemanager.lua:1406
+msgid "Reset default for %1 files"
+msgstr "Standaardinstellingen voor %1 bestanden herstellen"
+
+#: frontend/apps/filemanager/filemanager.lua:1417
+msgid "View defaults for file types"
+msgstr "Standaarden voor bestandstypes weergeven"
+
+#: frontend/apps/filemanager/filemanager.lua:1456
+msgid "Always open '%2' with %1?"
+msgstr "'%2' altijd met %1 openen?"
+
+#: frontend/apps/filemanager/filemanager.lua:1457
+#: frontend/apps/filemanager/filemanager.lua:1467
+#: frontend/ui/elements/common_settings_menu_table.lua:383
+#: frontend/ui/elements/common_settings_menu_table.lua:660
+msgid "Always"
+msgstr "Altijd"
+
+#: frontend/apps/filemanager/filemanager.lua:1466
+msgid "Always open %2 files with %1?"
+msgstr "%2-bestanden altijd met %1 openen?"
+
+#: frontend/apps/filemanager/filemanager.lua:1484
+msgid "Open %1 with:"
+msgstr "Open %1 met:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:27
 #: frontend/apps/filemanager/filemanagerutil.lua:277
@@ -911,13 +1270,6 @@ msgstr[1] ""
 msgid "Move book metadata to your preferred location?"
 msgstr "Boekmetadata verplaatsen naar de voorkeurslocatie?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
-#: frontend/apps/filemanager/filemanager.lua:550
-#: frontend/apps/filemanager/filemanager.lua:916
-#: frontend/apps/filemanager/filemanager.lua:1181
-msgid "Move"
-msgstr "Verplaatsen"
-
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:658
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
@@ -994,14 +1346,6 @@ msgstr "HTML"
 msgid "Overwrite existing HTML file?"
 msgstr "Bestaand HTML-bestand overschrijven?"
 
-#: frontend/apps/filemanager/filemanagerconverter.lua:97
-#: frontend/apps/filemanager/filemanager.lua:896
-#: frontend/apps/filemanager/filemanager.lua:1178
-#: frontend/apps/reader/modules/readerdictionary.lua:1087
-#: plugins/opds.koplugin/opdsbrowser.lua:770
-msgid "Overwrite"
-msgstr "Overschrijven"
-
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:30
 msgid "Enter text to search for in filename"
 msgstr "Voer tekst in om naar te zoeken in bestandsnaam"
@@ -1068,14 +1412,6 @@ msgstr "Zoekresultaten (%1)"
 #: frontend/apps/reader/modules/readersearch.lua:596
 msgid "Query: %1"
 msgstr "Zoekopdracht: %1"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
-#: frontend/apps/filemanager/filemanager.lua:820
-#: frontend/apps/filemanager/filemanager.lua:1450
-#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
-#: plugins/texteditor.koplugin/main.lua:457
-msgid "Open"
-msgstr "Openen"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:308
 msgid "Title: %1"
@@ -1179,342 +1515,6 @@ msgstr "Tekst om in geschiedenis te zoeken"
 #: plugins/vocabbuilder.koplugin/main.lua:1550
 msgid "Search"
 msgstr "Zoeken"
-
-#: frontend/apps/filemanager/filemanager.lua:48
-msgid "KOReader"
-msgstr "KOReader"
-
-#: frontend/apps/filemanager/filemanager.lua:217
-msgctxt "File"
-msgid "Copy"
-msgstr "Kopieer"
-
-#: frontend/apps/filemanager/filemanager.lua:225
-msgctxt "File"
-msgid "Paste"
-msgstr "Plak"
-
-#: frontend/apps/filemanager/filemanager.lua:233
-#: frontend/apps/reader/modules/readerhighlight.lua:65
-#: frontend/ui/widget/inputtext.lua:245
-msgid "Select"
-msgstr "Selecteren"
-
-#: frontend/apps/filemanager/filemanager.lua:247
-msgid "Cut"
-msgstr "Knip"
-
-#: frontend/apps/filemanager/filemanager.lua:263
-#: frontend/apps/filemanager/filemanager.lua:1124
-msgid "Rename"
-msgstr "Naam wijzigen"
-
-#: frontend/apps/filemanager/filemanager.lua:300
-msgid "Open with…"
-msgstr "Openen met…"
-
-#: frontend/apps/filemanager/filemanager.lua:322
-msgid "Convert"
-msgstr "Converteren"
-
-#: frontend/apps/filemanager/filemanager.lua:334
-#: frontend/apps/filemanager/filemanager.lua:646
-msgid "Set as HOME folder"
-msgstr "Instellen als thuismap"
-
-#: frontend/apps/filemanager/filemanager.lua:468
-#: frontend/apps/reader/modules/readerback.lua:179
-msgid "Exit KOReader?"
-msgstr "KOReader aflsuiten?"
-
-#: frontend/apps/filemanager/filemanager.lua:469
-#: frontend/apps/reader/modules/readerback.lua:180
-#: frontend/apps/reader/modules/readerdevicestatus.lua:103
-#: frontend/ui/elements/common_exit_menu_table.lua:9
-#: frontend/ui/elements/common_exit_menu_table.lua:16
-msgid "Exit"
-msgstr "Sluiten"
-
-#: frontend/apps/filemanager/filemanager.lua:520
-msgid "1 file selected"
-msgid_plural "%1 files selected"
-msgstr[0] "1 bestand geselecteerd"
-msgstr[1] "%1 bestanden geselecteerd"
-
-#: frontend/apps/filemanager/filemanager.lua:521
-msgid "No files selected"
-msgstr "Geen bestanden geselecteerd"
-
-#: frontend/apps/filemanager/filemanager.lua:525
-msgid "Show selected files list"
-msgstr "Lijst met geselecteerde bestanden weergeven"
-
-#: frontend/apps/filemanager/filemanager.lua:533
-#: frontend/apps/filemanager/filemanager.lua:919
-#: frontend/apps/reader/modules/readerlink.lua:143
-msgid "Copy"
-msgstr "Kopiëren"
-
-#: frontend/apps/filemanager/filemanager.lua:543
-msgid "Select all files in folder"
-msgstr "Alle bestanden in map selecteren"
-
-#: frontend/apps/filemanager/filemanager.lua:560
-#: frontend/apps/reader/modules/readerbookmark.lua:664
-msgid "Deselect all"
-msgstr "Alles deselecteren"
-
-#: frontend/apps/filemanager/filemanager.lua:575
-msgid ""
-"Delete selected files?\n"
-"If you delete a file, it is permanently lost."
-msgstr ""
-"Geselecteerde bestanden verwijderen?\n"
-"Een verwijderd bestand is voor altijd verloren."
-
-#: frontend/apps/filemanager/filemanager.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:702
-#: frontend/apps/reader/modules/readerhighlight.lua:692
-msgid "Exit select mode"
-msgstr "Selectiemodus verlaten"
-
-#: frontend/apps/filemanager/filemanager.lua:594
-#: plugins/exporter.koplugin/main.lua:261 plugins/exporter.koplugin/_meta.lua:4
-msgid "Export highlights"
-msgstr "Markeringen exporteren"
-
-#: frontend/apps/filemanager/filemanager.lua:618
-msgid "Select files"
-msgstr "Bestanden selecteren"
-
-#: frontend/apps/filemanager/filemanager.lua:636
-#: frontend/apps/reader/modules/readerbookmark.lua:1064
-#: frontend/ui/widget/inputtext.lua:255
-msgid "Paste"
-msgstr "Plak"
-
-#: frontend/apps/filemanager/filemanager.lua:655
-msgid "Go to HOME folder"
-msgstr "Ga naar thuismap"
-
-#: frontend/apps/filemanager/filemanager.lua:664
-msgid "Open random document"
-msgstr "Willekeurig document openen"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-msgid "Switch to SDCard"
-msgstr "Overschakelen naar SDCard"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-msgid "Switch to internal storage"
-msgstr "Overschakelen naar interne opslag"
-
-#: frontend/apps/filemanager/filemanager.lua:704
-msgid "Import files here"
-msgstr "Bestanden hier importeren"
-
-#: frontend/apps/filemanager/filemanager.lua:800
-msgid "Set '%1' as HOME folder?"
-msgstr "'%1' instellen als thuismap?"
-
-#: frontend/apps/filemanager/filemanager.lua:801
-msgid "Set as HOME"
-msgstr "Instellen als thuismap"
-
-#: frontend/apps/filemanager/filemanager.lua:819
-msgid "Do you want to open %1?"
-msgstr "%1 openen?"
-
-#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:826
-msgid "Another"
-msgstr "Andere"
-
-#: frontend/apps/filemanager/filemanager.lua:833
-msgid "File not found"
-msgstr "Bestand niet gevonden"
-
-#: frontend/apps/filemanager/filemanager.lua:891
-msgid ""
-"File already exists:\n"
-"%1"
-msgstr ""
-"Bestand bestaat al:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:892
-msgid ""
-"Folder already exists:\n"
-"%1"
-msgstr ""
-"Map bestaat al:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:915
-msgid "Move selected files to the current folder?"
-msgstr "Geselecteerde bestanden naar de huidige map verplaatsen?"
-
-#: frontend/apps/filemanager/filemanager.lua:918
-msgid "Copy selected files to the current folder?"
-msgstr "Geselecteerde bestanden naar de huidige map kopiëren?"
-
-#: frontend/apps/filemanager/filemanager.lua:931
-msgid "overwrite existing files"
-msgstr "bestaande bestanden overschrijven"
-
-#: frontend/apps/filemanager/filemanager.lua:971
-msgid "1 file was not moved"
-msgid_plural "%1 files were not moved"
-msgstr[0] "1 bestand niet verplaatst"
-msgstr[1] "%1 bestanden niet verplaatst"
-
-#: frontend/apps/filemanager/filemanager.lua:972
-msgid "1 file was not copied"
-msgid_plural "%1 files were not copied"
-msgstr[0] "1 bestand niet gekopieerd"
-msgstr[1] "%1 bestanden niet gekopieerd"
-
-#: frontend/apps/filemanager/filemanager.lua:1011
-msgid ""
-"Failed to create folder:\n"
-"%1"
-msgstr ""
-"Map aanmaken mislukt:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1034
-msgid ""
-"File not found:\n"
-"%1"
-msgstr ""
-"Bestand niet gevonden:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete file permanently?"
-msgstr "Bestand permanent verwijderen?"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete folder permanently?"
-msgstr "Map permanent verwijderen?"
-
-#: frontend/apps/filemanager/filemanager.lua:1042
-msgid "Book settings, highlights and notes will be deleted."
-msgstr "Bookinstellingen, markeringen en notities zullen worden gewist."
-
-#: frontend/apps/filemanager/filemanager.lua:1076
-msgid ""
-"Failed to delete:\n"
-"%1"
-msgstr ""
-"Verwijderen mislukt:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1102
-msgid "Failed to delete 1 file."
-msgid_plural "Failed to delete %1 files."
-msgstr[0] "Het verwijderen van 1 bestand is mislukt."
-msgstr[1] "Het verwijderen van %1 bestanden is mislukt."
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename file"
-msgstr "Bestandsnaam wijzigen"
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename folder"
-msgstr "Mapnaam wijzigen"
-
-#: frontend/apps/filemanager/filemanager.lua:1156
-msgid ""
-"Failed to rename:\n"
-"%1\n"
-"to:\n"
-"%2"
-msgstr ""
-"Naam wijzigen mislukt:\n"
-"%1\n"
-"naar:\n"
-"%2"
-
-#: frontend/apps/filemanager/filemanager.lua:1167
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"File cannot be renamed."
-msgstr ""
-"Map bestaat al:\n"
-"%1\n"
-"De bestandsnaam kan niet worden gewijzigd."
-
-#: frontend/apps/filemanager/filemanager.lua:1169
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Folder cannot be renamed."
-msgstr ""
-"Het bestand bestaat al:\n"
-"%1\n"
-"De mapnaam kan niet worden gewijzigd."
-
-#: frontend/apps/filemanager/filemanager.lua:1177
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Overwrite file?"
-msgstr ""
-"Het bestand bestaat al:\n"
-"%1\n"
-"Overschrijven?"
-
-#: frontend/apps/filemanager/filemanager.lua:1180
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"Move the folder inside it?"
-msgstr ""
-"Map bestaat al:\n"
-"%1\n"
-"De geselecteerde map erin plaatsen?"
-
-#: frontend/apps/filemanager/filemanager.lua:1333
-msgid "Selected files (%1)"
-msgstr "Geselecteerde bestanden (%1)"
-
-#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
-#: frontend/apps/filemanager/filemanager.lua:1360
-msgid "%1 ~Unsupported"
-msgstr "%1 ~Niet ondersteund"
-
-#: frontend/apps/filemanager/filemanager.lua:1396
-msgid "Reset default for this file"
-msgstr "Standaardinstellingen voor dit bestand herstellen"
-
-#: frontend/apps/filemanager/filemanager.lua:1406
-msgid "Reset default for %1 files"
-msgstr "Standaardinstellingen voor %1 bestanden herstellen"
-
-#: frontend/apps/filemanager/filemanager.lua:1417
-msgid "View defaults for file types"
-msgstr "Standaarden voor bestandstypes weergeven"
-
-#: frontend/apps/filemanager/filemanager.lua:1456
-msgid "Always open '%2' with %1?"
-msgstr "'%2' altijd met %1 openen?"
-
-#: frontend/apps/filemanager/filemanager.lua:1457
-#: frontend/apps/filemanager/filemanager.lua:1467
-#: frontend/ui/elements/common_settings_menu_table.lua:383
-#: frontend/ui/elements/common_settings_menu_table.lua:660
-msgid "Always"
-msgstr "Altijd"
-
-#: frontend/apps/filemanager/filemanager.lua:1466
-msgid "Always open %2 files with %1?"
-msgstr "%2-bestanden altijd met %1 openen?"
-
-#: frontend/apps/filemanager/filemanager.lua:1484
-msgid "Open %1 with:"
-msgstr "Open %1 met:"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:130
 msgid "Cannot open last document"
@@ -14605,22 +14605,89 @@ msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 B"
 
-#: plugins/archiveviewer.koplugin/main.lua:17
+#: plugins/SSH.koplugin/_meta.lua:4
+msgid "SSH"
+msgstr "SSH"
+
+#: plugins/SSH.koplugin/_meta.lua:5
+msgid "Connect and transfer files to the device using SSH."
+msgstr "Maakt verbinding over SSH, bv. om bestanden op het apparaat te zetten."
+
+#. @translators: %1 is the SSH port, %2 is the network info.
+#: plugins/SSH.koplugin/main.lua:73
+msgid ""
+"SSH server started.\n"
+"\n"
+"SSH port: %1\n"
+"%2"
+msgstr ""
+"SSH-server gestart.\n"
+"\n"
+"SSH-poort: %1\n"
+"%2"
+
+#: plugins/SSH.koplugin/main.lua:81
+msgid "Failed to start SSH server."
+msgstr "Kan SSH-server niet starten."
+
+#: plugins/SSH.koplugin/main.lua:94
+msgid "SSH server stopped."
+msgstr "SSH-server is gestopt."
+
+#: plugins/SSH.koplugin/main.lua:123
+msgid "Choose SSH port"
+msgstr "SSH-poort kiezen"
+
+#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
+msgid "SSH server"
+msgstr "SSH-server"
+
+#: plugins/SSH.koplugin/main.lua:174
+msgid "SSH port (%1)"
+msgstr "SSH-poort (%1)"
+
+#: plugins/SSH.koplugin/main.lua:183
+msgid "SSH public key"
+msgstr "SSH publieke sleutel"
+
+#: plugins/SSH.koplugin/main.lua:189
+msgid ""
+"Put your public SSH keys in\n"
+"%1"
+msgstr ""
+"Plaats publieke SSH-sleutels in\n"
+"%1"
+
+#: plugins/SSH.koplugin/main.lua:195
+msgid "Login without password (DANGEROUS)"
+msgstr "Inloggen zonder wachtwoord (GEVAARLIJK)"
+
+#: plugins/SSH.koplugin/main.lua:208
+msgid "Toggle SSH server"
+msgstr "SSH-server schakelen"
+
 #: plugins/archiveviewer.koplugin/_meta.lua:4
+#: plugins/archiveviewer.koplugin/main.lua:17
 msgid "Archive viewer"
 msgstr "Archiefviewer"
-
-#: plugins/archiveviewer.koplugin/main.lua:216
-msgid "On extraction, if the file already exists, it will be overwritten."
-msgstr "Als het bestand bij het uitpakken al bestaat, wordt het overschreven."
 
 #: plugins/archiveviewer.koplugin/_meta.lua:5
 msgid "Enables exploring the content of zip archives."
 msgstr "Hiermee kan de inhoud van zip-archieven worden verkend."
 
-#: plugins/autodim.koplugin/main.lua:51 plugins/autodim.koplugin/_meta.lua:4
+#: plugins/archiveviewer.koplugin/main.lua:216
+msgid "On extraction, if the file already exists, it will be overwritten."
+msgstr "Als het bestand bij het uitpakken al bestaat, wordt het overschreven."
+
+#: plugins/autodim.koplugin/_meta.lua:4 plugins/autodim.koplugin/main.lua:51
 msgid "Automatic dimmer"
 msgstr "Automatische dimmer"
+
+#: plugins/autodim.koplugin/_meta.lua:5
+msgid "This plugin allows dimming the frontlight after a period of inactivity."
+msgstr ""
+"Deze plugin maakt het mogelijk om het licht te dimmen na een periode van "
+"inactiviteit."
 
 #: plugins/autodim.koplugin/main.lua:56
 msgid "Idle time for dimmer"
@@ -14662,16 +14729,18 @@ msgstr "Dimmen tot percentage"
 msgid "The lowest brightness as a percentage of the regular brightness."
 msgstr "De laagste helderheid als percentage van de normale helderheid."
 
-#: plugins/autodim.koplugin/_meta.lua:5
-msgid "This plugin allows dimming the frontlight after a period of inactivity."
-msgstr ""
-"Deze plugin maakt het mogelijk om het licht te dimmen na een periode van "
-"inactiviteit."
-
-#: plugins/autofrontlight.koplugin/main.lua:114
 #: plugins/autofrontlight.koplugin/_meta.lua:4
+#: plugins/autofrontlight.koplugin/main.lua:114
 msgid "Auto frontlight"
 msgstr "Automatisch licht"
+
+#: plugins/autofrontlight.koplugin/_meta.lua:5
+msgid ""
+"Automatically turns the frontlight on and off once brightness in the "
+"environment reaches a certain level."
+msgstr ""
+"Schakelt het licht automatisch aan en uit afhankelijk van de "
+"omgevingshelderheid."
 
 #: plugins/autofrontlight.koplugin/main.lua:117
 msgid ""
@@ -14691,13 +14760,13 @@ msgstr ""
 msgid "enable"
 msgstr "inschakelen"
 
-#: plugins/autofrontlight.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the frontlight on and off once brightness in the "
-"environment reaches a certain level."
-msgstr ""
-"Schakelt het licht automatisch aan en uit afhankelijk van de "
-"omgevingshelderheid."
+#: plugins/autostandby.koplugin/_meta.lua:4
+msgid "Auto Standby"
+msgstr "Autostandby"
+
+#: plugins/autostandby.koplugin/_meta.lua:5
+msgid "Put into standby on no input, wake up from standby on UI input"
+msgstr "Zet in slaapstand bij geen invoer, ontwaken bij ui-invoer"
 
 #: plugins/autostandby.koplugin/main.lua:55
 msgid "Auto-standby settings"
@@ -14727,13 +14796,17 @@ msgstr "Altijd slapen als batterij lager dan"
 msgid "Update"
 msgstr "Updaten"
 
-#: plugins/autostandby.koplugin/_meta.lua:4
-msgid "Auto Standby"
-msgstr "Autostandby"
+#: plugins/autosuspend.koplugin/_meta.lua:4
+msgid "Auto power save"
+msgstr "Automatische energiebesparing"
 
-#: plugins/autostandby.koplugin/_meta.lua:5
-msgid "Put into standby on no input, wake up from standby on UI input"
-msgstr "Zet in slaapstand bij geen invoer, ontwaken bij ui-invoer"
+#: plugins/autosuspend.koplugin/_meta.lua:5
+msgid ""
+"Puts the device into standby, suspend or power off after specified periods "
+"of inactivity."
+msgstr ""
+"Laat het apparaat na een gespecificeerde periode van inactiviteit pauzeren, "
+"inslapen of uitschakalen."
 
 #: plugins/autosuspend.koplugin/main.lua:443
 #: plugins/autoturn.koplugin/main.lua:148
@@ -14830,17 +14903,19 @@ msgstr "Timeout voor automatisch slapen"
 msgid "Enter time in minutes and seconds."
 msgstr "Voer een tijd in minuten en seconden in."
 
-#: plugins/autosuspend.koplugin/_meta.lua:4
-msgid "Auto power save"
-msgstr "Automatische energiebesparing"
+#: plugins/autoturn.koplugin/_meta.lua:4 plugins/autoturn.koplugin/main.lua:131
+msgid "Autoturn"
+msgstr "Auto-omslaan"
 
-#: plugins/autosuspend.koplugin/_meta.lua:5
+#: plugins/autoturn.koplugin/_meta.lua:5
 msgid ""
-"Puts the device into standby, suspend or power off after specified periods "
-"of inactivity."
+"Automatically turns the page after a set period of time.\n"
+"\n"
+"Hold to set the scrolling distance."
 msgstr ""
-"Laat het apparaat na een gespecificeerde periode van inactiviteit pauzeren, "
-"inslapen of uitschakalen."
+"Slaat automatisch de pagina om na een ingestelde tijdsperiode.\n"
+"\n"
+"Houd het menu ingedrukt om de afstand in te stellen."
 
 #: plugins/autoturn.koplugin/main.lua:71
 msgid "Autoturn is now active and will automatically turn the page every %1."
@@ -14859,10 +14934,6 @@ msgstr ""
 msgid "Autoturn: %1"
 msgstr "Auto-omslaan: %1"
 
-#: plugins/autoturn.koplugin/main.lua:131 plugins/autoturn.koplugin/_meta.lua:4
-msgid "Autoturn"
-msgstr "Auto-omslaan"
-
 #: plugins/autoturn.koplugin/main.lua:140
 msgid "Autoturn time"
 msgstr "Auto-omslaantijd"
@@ -14875,15 +14946,21 @@ msgstr "Afstand instellen"
 msgid "Scrolling distance"
 msgstr "Scrollafstand"
 
-#: plugins/autoturn.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the page after a set period of time.\n"
-"\n"
-"Hold to set the scrolling distance."
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+msgid "Auto warmth and night mode"
+msgstr "Automatische warmte- en nachtstand"
+
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+msgid "Auto night mode"
+msgstr "Automatische nachtstand"
+
+#: plugins/autowarmth.koplugin/_meta.lua:5
+msgid "This plugin allows to set the frontlight warmth automagically."
 msgstr ""
-"Slaat automatisch de pagina om na een ingestelde tijdsperiode.\n"
-"\n"
-"Houd het menu ingedrukt om de afstand in te stellen."
+"Deze plugin maakt het mogelijk om automatisch de warmte van het licht in te "
+"stellen."
 
 #: plugins/autowarmth.koplugin/main.lua:118
 msgid "Show ephemeris"
@@ -14941,16 +15018,6 @@ msgstr "Nachtmodus gewijzigd"
 #: plugins/autowarmth.koplugin/main.lua:223
 msgid "The AutoWarmth plugin might change it again."
 msgstr "De AutoWarmth-plugin kan het opnieuw wijzigen."
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-msgid "Auto warmth and night mode"
-msgstr "Automatische warmte- en nachtstand"
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-msgid "Auto night mode"
-msgstr "Automatische nachtstand"
 
 #: plugins/autowarmth.koplugin/main.lua:557
 msgid ""
@@ -15368,12 +15435,6 @@ msgstr "Schakel licht uit tussen"
 msgid "%1 and %2"
 msgstr "%1 en %2"
 
-#: plugins/autowarmth.koplugin/_meta.lua:5
-msgid "This plugin allows to set the frontlight warmth automagically."
-msgstr ""
-"Deze plugin maakt het mogelijk om automatisch de warmte van het licht in te "
-"stellen."
-
 #: plugins/backgroundrunner.koplugin/_meta.lua:4
 msgid "Background runner"
 msgstr "Achtergrond proces"
@@ -15384,6 +15445,16 @@ msgid ""
 msgstr ""
 "Service voor andere plugins: staat toe om taken regelmatig op de achtergrond "
 "te draaien."
+
+#: plugins/batterystat.koplugin/_meta.lua:4
+#: plugins/batterystat.koplugin/main.lua:272
+#: plugins/batterystat.koplugin/main.lua:284
+msgid "Battery statistics"
+msgstr "Batterijstatistieken"
+
+#: plugins/batterystat.koplugin/_meta.lua:5
+msgid "Collects and displays battery statistics."
+msgstr "Houdt batterijstatistieken bij en kan ze ook weergeven."
 
 #: plugins/batterystat.koplugin/main.lua:88
 msgid "Consumed:"
@@ -15437,20 +15508,16 @@ msgstr "Opgeladen:"
 msgid "Since last charge"
 msgstr "Sinds vorige lading"
 
-#: plugins/batterystat.koplugin/main.lua:272
-#: plugins/batterystat.koplugin/main.lua:284
-#: plugins/batterystat.koplugin/_meta.lua:4
-msgid "Battery statistics"
-msgstr "Batterijstatistieken"
-
-#: plugins/batterystat.koplugin/_meta.lua:5
-msgid "Collects and displays battery statistics."
-msgstr "Houdt batterijstatistieken bij en kan ze ook weergeven."
-
-#: plugins/bookshortcuts.koplugin/main.lua:77
 #: plugins/bookshortcuts.koplugin/_meta.lua:4
+#: plugins/bookshortcuts.koplugin/main.lua:77
 msgid "Book shortcuts"
 msgstr "Boeksnelkoppelingen"
+
+#: plugins/bookshortcuts.koplugin/_meta.lua:5
+msgid "This plugin allows adding a book shortcut to a gesture."
+msgstr ""
+"Deze plugin maakt het mogelijk om een boeksnelkoppeling toe te voegen aan "
+"een gebaar."
 
 #: plugins/bookshortcuts.koplugin/main.lua:87
 msgid "last book"
@@ -15472,11 +15539,17 @@ msgstr "Recursief zoeken in mappen"
 msgid "Do you want to delete this shortcut?"
 msgstr "Deze snelkoppeling verwijderen?"
 
-#: plugins/bookshortcuts.koplugin/_meta.lua:5
-msgid "This plugin allows adding a book shortcut to a gesture."
+#: plugins/calibre.koplugin/_meta.lua:4 plugins/calibre.koplugin/main.lua:74
+msgid "Calibre"
+msgstr "Calibre"
+
+#: plugins/calibre.koplugin/_meta.lua:5
+msgid ""
+"Integration with calibre. Send documents from calibre library via Wi-Fi and "
+"search calibre metadata."
 msgstr ""
-"Deze plugin maakt het mogelijk om een boeksnelkoppeling toe te voegen aan "
-"een gebaar."
+"Integratie met calibre. Voor het verzenden van documenten vanuit de "
+"calibrebibliotheek via wifi en het doorzoeken van calibremetadata."
 
 #: plugins/calibre.koplugin/main.lua:58 plugins/calibre.koplugin/main.lua:110
 #: plugins/calibre.koplugin/search.lua:194
@@ -15498,10 +15571,6 @@ msgstr "Blader door calibre-auteurs"
 #: plugins/calibre.koplugin/main.lua:62
 msgid "Browse all calibre titles"
 msgstr "Blader door alle calibretitels"
-
-#: plugins/calibre.koplugin/main.lua:74 plugins/calibre.koplugin/_meta.lua:4
-msgid "Calibre"
-msgstr "Calibre"
 
 #: plugins/calibre.koplugin/main.lua:79
 msgid "Disconnect"
@@ -15622,14 +15691,6 @@ msgid ""
 msgstr ""
 "Niet-ondersteunde formaten worden door calibre omgezet naar het eerste "
 "formaat van de lijst."
-
-#: plugins/calibre.koplugin/_meta.lua:5
-msgid ""
-"Integration with calibre. Send documents from calibre library via Wi-Fi and "
-"search calibre metadata."
-msgstr ""
-"Integratie met calibre. Voor het verzenden van documenten vanuit de "
-"calibrebibliotheek via wifi en het doorzoeken van calibremetadata."
 
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
@@ -15790,6 +15851,14 @@ msgid ""
 msgstr ""
 "%1 bestanden verwijderd uit %2:\n"
 " %3"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:4
+msgid "Cover browser"
+msgstr "Boekomslagverkenner"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:5
+msgid "Alternative display modes for file browser and history."
+msgstr "Alternatieve weergavemodi voor de bestandsverkenner en geschiedenis."
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:123
 msgid "not readable by engine"
@@ -16219,13 +16288,14 @@ msgstr ""
 msgid "Purge"
 msgstr "Verwijder"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:4
-msgid "Cover browser"
-msgstr "Boekomslagverkenner"
+#: plugins/coverimage.koplugin/_meta.lua:4
+#: plugins/coverimage.koplugin/main.lua:683
+msgid "Cover image"
+msgstr "Omslagafbeelding"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:5
-msgid "Alternative display modes for file browser and history."
-msgstr "Alternatieve weergavemodi voor de bestandsverkenner en geschiedenis."
+#: plugins/coverimage.koplugin/_meta.lua:5
+msgid "Stores cover image to a file."
+msgstr "Slaat omslagafbeelding op in een bestand."
 
 #: plugins/coverimage.koplugin/main.lua:102
 msgid ""
@@ -16440,11 +16510,6 @@ msgstr "BMP-bestandsformaat (kleur)"
 msgid "BMP file format (grayscale)"
 msgstr "BMP-bestandsformaat (grijs)"
 
-#: plugins/coverimage.koplugin/main.lua:683
-#: plugins/coverimage.koplugin/_meta.lua:4
-msgid "Cover image"
-msgstr "Omslagafbeelding"
-
 #: plugins/coverimage.koplugin/main.lua:690
 msgid "About cover image"
 msgstr "Over omslagafbeelding"
@@ -16490,14 +16555,18 @@ msgstr "Er kan een reserveafbeelding worden gekozen."
 msgid "Turn on fallback image"
 msgstr "Reserveafbeelding inschakelen"
 
-#: plugins/coverimage.koplugin/_meta.lua:5
-msgid "Stores cover image to a file."
-msgstr "Slaat omslagafbeelding op in een bestand."
-
-#: plugins/docsettingtweak.koplugin/main.lua:48
 #: plugins/docsettingtweak.koplugin/_meta.lua:4
+#: plugins/docsettingtweak.koplugin/main.lua:48
 msgid "Tweak document settings"
 msgstr "Documentinstellingen aanpassen"
+
+#: plugins/docsettingtweak.koplugin/_meta.lua:5
+msgid ""
+"This plugin allows you to tweak document settings before the document is "
+"loaded based on external factors."
+msgstr ""
+"Deze plugin staat toe om documentinstellingen aan te passen voordat het "
+"document wordt geladen, op basis van externe factoren."
 
 #: plugins/docsettingtweak.koplugin/main.lua:62
 msgid "Directory Defaults: %1"
@@ -16520,13 +16589,9 @@ msgstr "Standaarden niet geldig: %1"
 msgid "Defaults empty"
 msgstr "Standaarden leeg"
 
-#: plugins/docsettingtweak.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows you to tweak document settings before the document is "
-"loaded based on external factors."
-msgstr ""
-"Deze plugin staat toe om documentinstellingen aan te passen voordat het "
-"document wordt geladen, op basis van externe factoren."
+#: plugins/exporter.koplugin/_meta.lua:5
+msgid "Exports highlights and notes."
+msgstr "Exporteert markeringen en notities."
 
 #: plugins/exporter.koplugin/clip.lua:124
 msgid "Unknown Book"
@@ -16579,10 +16644,6 @@ msgstr "Deel alle aantekeningen in dit boek"
 #: plugins/exporter.koplugin/main.lua:313
 msgid "Current export folder:"
 msgstr "Huidige exportmap:"
-
-#: plugins/exporter.koplugin/_meta.lua:5
-msgid "Exports highlights and notes."
-msgstr "Exporteert markeringen en notities."
 
 #. @translators Flomo is a note taking app. The name probably doesn't need to be translated.
 #: plugins/exporter.koplugin/target/flomo.lua:52
@@ -16789,6 +16850,14 @@ msgstr ""
 "API\". Onderaan de interface vind je het IP-adres van je mobiele apparaat. "
 "Voer dit IP-adres in KOReader in om de configuratie te voltooien."
 
+#: plugins/externalkeyboard.koplugin/_meta.lua:4
+msgid "External keyboard"
+msgstr "Extern toetsenbord"
+
+#: plugins/externalkeyboard.koplugin/_meta.lua:5
+msgid "Manages USB OTG and configures keyboard."
+msgstr "Beheert usb-otg en configureert het toetsenbord."
+
 #: plugins/externalkeyboard.koplugin/main.lua:136
 msgid "External Keyboard"
 msgstr "Extern toetsenbord"
@@ -16817,13 +16886,13 @@ msgstr ""
 "Merk op dat het apparaat in otg-modus niet door een computer herkend zal "
 "worden als een usb-station."
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:4
-msgid "External keyboard"
-msgstr "Extern toetsenbord"
+#: plugins/gestures.koplugin/_meta.lua:4
+msgid "Gestures"
+msgstr "Gebaren"
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:5
-msgid "Manages USB OTG and configures keyboard."
-msgstr "Beheert usb-otg en configureert het toetsenbord."
+#: plugins/gestures.koplugin/_meta.lua:5
+msgid "This plugin provides gesture support."
+msgstr "Deze plugin biedt ondersteuning voor gebaren."
 
 #: plugins/gestures.koplugin/main.lua:42 plugins/gestures.koplugin/main.lua:46
 #: plugins/gestures.koplugin/main.lua:60 plugins/gestures.koplugin/main.lua:64
@@ -17153,13 +17222,13 @@ msgstr ""
 msgid "You have just performed your first multiswipe gesture."
 msgstr "Je hebt je eerste multiveeggebaar gemaakt."
 
-#: plugins/gestures.koplugin/_meta.lua:4
-msgid "Gestures"
-msgstr "Gebaren"
+#: plugins/hello.koplugin/_meta.lua:4
+msgid "Hello"
+msgstr "Hallo"
 
-#: plugins/gestures.koplugin/_meta.lua:5
-msgid "This plugin provides gesture support."
-msgstr "Deze plugin biedt ondersteuning voor gebaren."
+#: plugins/hello.koplugin/_meta.lua:5
+msgid "This is a debugging plugin."
+msgstr "Dit is een debug-plugin."
 
 #: plugins/hello.koplugin/main.lua:24 plugins/hello.koplugin/main.lua:34
 #: plugins/hello.koplugin/main.lua:48
@@ -17170,13 +17239,19 @@ msgstr "Hallo wereld"
 msgid "Hello, plugin world"
 msgstr "Hallo, plugin-wereld"
 
-#: plugins/hello.koplugin/_meta.lua:4
-msgid "Hello"
-msgstr "Hallo"
+#: plugins/httpinspector.koplugin/_meta.lua:4
+msgid "HTTP KOReader Inspector"
+msgstr "HTTP KOReader Inspecteur"
 
-#: plugins/hello.koplugin/_meta.lua:5
-msgid "This is a debugging plugin."
-msgstr "Dit is een debug-plugin."
+#: plugins/httpinspector.koplugin/_meta.lua:5
+msgid ""
+"Allow browsing KOReader internal objects over HTTP. This is aimed at "
+"developers, and may pose some security risks. Only enable this on networks "
+"you can trust."
+msgstr ""
+"Laat het browsen van interne KOReader-objecten over HTTP toe. Dit is bedoeld "
+"voor ontwikkelaars en kan enkele beveiligingsrisico's met zich meebrengen. "
+"Schakel dit alleen in op netwerken die je kunt vertrouwen."
 
 #: plugins/httpinspector.koplugin/main.lua:136
 msgid "KOReader HTTP inspector"
@@ -17214,19 +17289,35 @@ msgstr "Aangepaste poort instellen"
 msgid "Port number (default is 8080)"
 msgstr "Poortnummer (standaard is 8080)"
 
-#: plugins/httpinspector.koplugin/_meta.lua:4
-msgid "HTTP KOReader Inspector"
-msgstr "HTTP KOReader Inspecteur"
+#: plugins/japanese.koplugin/_meta.lua:4
+msgid "Japanese support"
+msgstr "Ondersteuning voor Japans"
 
-#: plugins/httpinspector.koplugin/_meta.lua:5
+#: plugins/japanese.koplugin/_meta.lua:5
 msgid ""
-"Allow browsing KOReader internal objects over HTTP. This is aimed at "
-"developers, and may pose some security risks. Only enable this on networks "
-"you can trust."
+"Japanese language support for KOReader, modeled after Yomichan.\n"
+"\n"
+"This plugin extends KOReader's built-in dictionary and selection system to "
+"support Yomichan-style deinflection and text scanning, allowing for one-tap "
+"searches of inflected verbs and multi-character words and phrases. As such, "
+"this plugin removes the need for synonym-based deinflection rules for "
+"StarDict-converted Japanese dictionaries.\n"
+"\n"
+"You must have at least one Japanese dictionary installed in order for this "
+"plugin to work smoothly with Japanese text."
 msgstr ""
-"Laat het browsen van interne KOReader-objecten over HTTP toe. Dit is bedoeld "
-"voor ontwikkelaars en kan enkele beveiligingsrisico's met zich meebrengen. "
-"Schakel dit alleen in op netwerken die je kunt vertrouwen."
+"Ondersteuning voor de Japanse taal voor KOReader, gemodelleerd naar "
+"Yomichan.\n"
+"\n"
+"Deze plugin breidt het ingebouwde woordenboek- en selectiesysteem van "
+"KOReader uit met ondersteuning voor Yomichan-achtige ontleding en "
+"tekstscanning, waardoor met één tik kan worden gezocht op verbogen "
+"werkwoorden en woorden en zinsdelen met meerdere tekens. Als zodanig maakt "
+"deze plugin een einde aan de noodzaak van op synoniemen gebaseerde "
+"deinflectieregels voor StarDict-converteerde Japanse woordenboeken.\n"
+"\n"
+"Er moet ten minste één Japans woordenboek geïnstalleerd zijn om deze plugin "
+"probleemloos met Japanse tekst te laten werken."
 
 #: plugins/japanese.koplugin/deinflector.lua:278
 msgid "Halfwidth to fullwidth kana"
@@ -17374,39 +17465,15 @@ msgstr ""
 msgid "Set scan length"
 msgstr "Scanlengte instellen"
 
-#: plugins/japanese.koplugin/_meta.lua:4
-msgid "Japanese support"
-msgstr "Ondersteuning voor Japans"
-
-#: plugins/japanese.koplugin/_meta.lua:5
-msgid ""
-"Japanese language support for KOReader, modeled after Yomichan.\n"
-"\n"
-"This plugin extends KOReader's built-in dictionary and selection system to "
-"support Yomichan-style deinflection and text scanning, allowing for one-tap "
-"searches of inflected verbs and multi-character words and phrases. As such, "
-"this plugin removes the need for synonym-based deinflection rules for "
-"StarDict-converted Japanese dictionaries.\n"
-"\n"
-"You must have at least one Japanese dictionary installed in order for this "
-"plugin to work smoothly with Japanese text."
-msgstr ""
-"Ondersteuning voor de Japanse taal voor KOReader, gemodelleerd naar "
-"Yomichan.\n"
-"\n"
-"Deze plugin breidt het ingebouwde woordenboek- en selectiesysteem van "
-"KOReader uit met ondersteuning voor Yomichan-achtige ontleding en "
-"tekstscanning, waardoor met één tik kan worden gezocht op verbogen "
-"werkwoorden en woorden en zinsdelen met meerdere tekens. Als zodanig maakt "
-"deze plugin een einde aan de noodzaak van op synoniemen gebaseerde "
-"deinflectieregels voor StarDict-converteerde Japanse woordenboeken.\n"
-"\n"
-"Er moet ten minste één Japans woordenboek geïnstalleerd zijn om deze plugin "
-"probleemloos met Japanse tekst te laten werken."
-
-#: plugins/keepalive.koplugin/main.lua:9 plugins/keepalive.koplugin/_meta.lua:4
+#: plugins/keepalive.koplugin/_meta.lua:4 plugins/keepalive.koplugin/main.lua:9
 msgid "Keep alive"
 msgstr "Blijf in leven"
+
+#: plugins/keepalive.koplugin/_meta.lua:5
+msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
+msgstr ""
+"Houdt het apparaat wakker om het automatisch verbreken van wifi-verbindingen "
+"te voorkomen."
 
 #: plugins/keepalive.koplugin/main.lua:18
 msgid ""
@@ -17439,11 +17506,15 @@ msgstr "Dit is een fopimplementatie van de \"uitschakelen\"-functie."
 msgid "This is a dummy implementation of 'enable' function."
 msgstr "Dit is een fopimplementatie van de \"inschakelen\"-functie."
 
-#: plugins/keepalive.koplugin/_meta.lua:5
-msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
+#: plugins/kosync.koplugin/_meta.lua:4 plugins/kosync.koplugin/main.lua:188
+msgid "Progress sync"
+msgstr "Voortgangssynchronisatie"
+
+#: plugins/kosync.koplugin/_meta.lua:5
+msgid ""
+"Synchronizes your reading progess to a server across your KOReader devices."
 msgstr ""
-"Houdt het apparaat wakker om het automatisch verbreken van wifi-verbindingen "
-"te voorkomen."
+"Synchroniseert leesvoortgang over meerdere KOReader-apparaten met een server."
 
 #: plugins/kosync.koplugin/main.lua:26
 msgid "Register/login to KOReader server"
@@ -17485,10 +17556,6 @@ msgstr "Voortgang van dit apparaat doorgeven"
 #: plugins/kosync.koplugin/main.lua:168
 msgid "Pull progress from other devices"
 msgstr "Voortgang van andere apparaten halen"
-
-#: plugins/kosync.koplugin/main.lua:188 plugins/kosync.koplugin/_meta.lua:4
-msgid "Progress sync"
-msgstr "Voortgangssynchronisatie"
 
 #: plugins/kosync.koplugin/main.lua:191
 msgid "Custom sync server"
@@ -17665,20 +17732,18 @@ msgstr "Synchroniseren naar recentste plaats %1% van apparaat '%2'?"
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "Synchroniseren naar vorige plaats %1% van apparaat '%2'?"
 
-#: plugins/kosync.koplugin/_meta.lua:5
-msgid ""
-"Synchronizes your reading progess to a server across your KOReader devices."
-msgstr ""
-"Synchroniseert leesvoortgang over meerdere KOReader-apparaten met een server."
+#: plugins/movetoarchive.koplugin/_meta.lua:4
+#: plugins/movetoarchive.koplugin/main.lua:34
+msgid "Move to archive"
+msgstr "Naar archief verplaatsen"
+
+#: plugins/movetoarchive.koplugin/_meta.lua:5
+msgid "Moves/copies current book to archive folder"
+msgstr "Verplaatst/kopieert het huidige boek naar de archiefmap"
 
 #: plugins/movetoarchive.koplugin/main.lua:17
 msgid "Move current book to archive"
 msgstr "Huidig boek naar archief verplaatsen"
-
-#: plugins/movetoarchive.koplugin/main.lua:34
-#: plugins/movetoarchive.koplugin/_meta.lua:4
-msgid "Move to archive"
-msgstr "Naar archief verplaatsen"
 
 #: plugins/movetoarchive.koplugin/main.lua:44
 msgid "Copy current book to archive"
@@ -17725,9 +17790,13 @@ msgstr ""
 "Geen archiefmap.\n"
 "Nu instellen?"
 
-#: plugins/movetoarchive.koplugin/_meta.lua:5
-msgid "Moves/copies current book to archive folder"
-msgstr "Verplaatst/kopieert het huidige boek naar de archiefmap"
+#: plugins/newsdownloader.koplugin/_meta.lua:4
+msgid "News downloader"
+msgstr "Nieuwsdownloader"
+
+#: plugins/newsdownloader.koplugin/_meta.lua:5
+msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
+msgstr "Haalt RSS en Atom-feeds op en slaat ze op als HTML."
 
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:314
 msgid ""
@@ -18037,13 +18106,13 @@ msgstr "Configuratie ongeldig: %1"
 msgid "Configuration empty"
 msgstr "Configuratie leeg"
 
-#: plugins/newsdownloader.koplugin/_meta.lua:4
-msgid "News downloader"
-msgstr "Nieuwsdownloader"
+#: plugins/opds.koplugin/_meta.lua:4
+msgid "OPDS"
+msgstr "OPDS"
 
-#: plugins/newsdownloader.koplugin/_meta.lua:5
-msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
-msgstr "Haalt RSS en Atom-feeds op en slaat ze op als HTML."
+#: plugins/opds.koplugin/_meta.lua:5
+msgid "OPDS allows you to download books from online catalogs."
+msgstr "Met OPDS kunnen boeken uit online catalogi worden gedownload."
 
 #: plugins/opds.koplugin/main.lua:13 plugins/opds.koplugin/opdscatalog.lua:14
 msgid "OPDS Catalog"
@@ -18052,14 +18121,6 @@ msgstr "OPDS-catalogus"
 #: plugins/opds.koplugin/main.lua:45
 msgid "OPDS catalog"
 msgstr "OPDS-catalogus"
-
-#: plugins/opds.koplugin/_meta.lua:4
-msgid "OPDS"
-msgstr "OPDS"
-
-#: plugins/opds.koplugin/_meta.lua:5
-msgid "OPDS allows you to download books from online catalogs."
-msgstr "Met OPDS kunnen boeken uit online catalogi worden gedownload."
 
 #: plugins/opds.koplugin/opdsbrowser.lua:111
 msgid "Catalog name"
@@ -18234,6 +18295,17 @@ msgstr "Lees later"
 msgid "Stream"
 msgstr "Streamen"
 
+#: plugins/patchmanagement.koplugin/_meta.lua:4
+#: plugins/patchmanagement.koplugin/main.lua:138
+msgid "Patch management"
+msgstr "Patchbeheer"
+
+#: plugins/patchmanagement.koplugin/_meta.lua:5
+msgid "This plugin allows enabling, disabling or editing user patches."
+msgstr ""
+"Deze plugin maakt het mogelijk om gebruikerspatches in of uit te schakelen "
+"en te bewerken."
+
 #: plugins/patchmanagement.koplugin/main.lua:95
 msgid ""
 "Patches changed. Current set of patches will be applied on next restart."
@@ -18273,11 +18345,6 @@ msgstr ""
 "\n"
 "Patches zijn een geavanceerde functie, dus wees voorzichtig!"
 
-#: plugins/patchmanagement.koplugin/main.lua:138
-#: plugins/patchmanagement.koplugin/_meta.lua:4
-msgid "Patch management"
-msgstr "Patchbeheer"
-
 #: plugins/patchmanagement.koplugin/main.lua:152
 msgid "About patch management"
 msgstr "Over patchbeheer"
@@ -18306,11 +18373,15 @@ msgstr "Voor afsluiten"
 msgid "On exit"
 msgstr "Bij afsluiten"
 
-#: plugins/patchmanagement.koplugin/_meta.lua:5
-msgid "This plugin allows enabling, disabling or editing user patches."
-msgstr ""
-"Deze plugin maakt het mogelijk om gebruikerspatches in of uit te schakelen "
-"en te bewerken."
+#: plugins/perceptionexpander.koplugin/_meta.lua:4
+msgid "Perception expander"
+msgstr "Waarnemingsuitbreider"
+
+#: plugins/perceptionexpander.koplugin/_meta.lua:5
+msgid ""
+"Improves your reading speed with the help of two vertical lines over the "
+"text."
+msgstr "Verbetert leessnelheid met twee verticale lijnen langs de tekst."
 
 #: plugins/perceptionexpander.koplugin/main.lua:108
 msgid "Perception expander settings"
@@ -18344,23 +18415,20 @@ msgstr "Snelleesmodule - waarnemingsuitbreider"
 msgid "For more information see wiki page Perception Expander Plugin"
 msgstr "Zie voor meer informatie de wikipagina \"Perception Expander Plugin\""
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:4
-msgid "Perception expander"
-msgstr "Waarnemingsuitbreider"
+#: plugins/profiles.koplugin/_meta.lua:4 plugins/profiles.koplugin/main.lua:78
+msgid "Profiles"
+msgstr "Profielen"
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:5
+#: plugins/profiles.koplugin/_meta.lua:5
 msgid ""
-"Improves your reading speed with the help of two vertical lines over the "
-"text."
-msgstr "Verbetert leessnelheid met twee verticale lijnen langs de tekst."
+"This plugin allows combining multiple settings to make switchable 'profiles'."
+msgstr ""
+"Deze plugin maakt het mogelijk om meerdere instellingen te combineren om "
+"schakelbare 'profielen' te maken."
 
 #: plugins/profiles.koplugin/main.lua:60
 msgid "Profile %1"
 msgstr "Profiel %1"
-
-#: plugins/profiles.koplugin/main.lua:78 plugins/profiles.koplugin/_meta.lua:4
-msgid "Profiles"
-msgstr "Profielen"
 
 #: plugins/profiles.koplugin/main.lua:89
 msgid "New"
@@ -18411,21 +18479,23 @@ msgstr "Profielnaam invoeren"
 msgid "Profile already exists: %1"
 msgstr "Het profiel bestaat al: %1"
 
-#: plugins/profiles.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows combining multiple settings to make switchable 'profiles'."
-msgstr ""
-"Deze plugin maakt het mogelijk om meerdere instellingen te combineren om "
-"schakelbare 'profielen' te maken."
-
-#: plugins/qrclipboard.koplugin/main.lua:24
 #: plugins/qrclipboard.koplugin/_meta.lua:4
+#: plugins/qrclipboard.koplugin/main.lua:24
 msgid "QR from clipboard"
 msgstr "QR van klembord"
 
 #: plugins/qrclipboard.koplugin/_meta.lua:5
 msgid "This plugin generates a QR code from clipboard content."
 msgstr "Deze plug-in genereert een QR-code van de inhoud van het klembord."
+
+#: plugins/readtimer.koplugin/_meta.lua:4
+#: plugins/readtimer.koplugin/main.lua:99
+msgid "Read timer"
+msgstr "Leeswekkertje"
+
+#: plugins/readtimer.koplugin/_meta.lua:5
+msgid "Shows an alarm after a specified amount of time."
+msgstr "Toons een alarm na een eerst ingestelde tijd."
 
 #: plugins/readtimer.koplugin/main.lua:23
 msgid "Time is up"
@@ -18442,11 +18512,6 @@ msgstr "Voltooid"
 #: plugins/readtimer.koplugin/main.lua:96
 msgid "Read timer (%1)"
 msgstr "Leeswekkertje (%1)"
-
-#: plugins/readtimer.koplugin/main.lua:99
-#: plugins/readtimer.koplugin/_meta.lua:4
-msgid "Read timer"
-msgstr "Leeswekkertje"
 
 #: plugins/readtimer.koplugin/main.lua:116
 msgid "Set alarm"
@@ -18494,70 +18559,14 @@ msgstr "De timer zal aflopen over %1."
 msgid "Stop timer"
 msgstr "Wekker stoppen"
 
-#: plugins/readtimer.koplugin/_meta.lua:5
-msgid "Shows an alarm after a specified amount of time."
-msgstr "Toons een alarm na een eerst ingestelde tijd."
+#: plugins/statistics.koplugin/_meta.lua:4
+#: plugins/statistics.koplugin/main.lua:1056
+msgid "Reading statistics"
+msgstr "Leesstatistieken"
 
-#. @translators: %1 is the SSH port, %2 is the network info.
-#: plugins/SSH.koplugin/main.lua:73
-msgid ""
-"SSH server started.\n"
-"\n"
-"SSH port: %1\n"
-"%2"
-msgstr ""
-"SSH-server gestart.\n"
-"\n"
-"SSH-poort: %1\n"
-"%2"
-
-#: plugins/SSH.koplugin/main.lua:81
-msgid "Failed to start SSH server."
-msgstr "Kan SSH-server niet starten."
-
-#: plugins/SSH.koplugin/main.lua:94
-msgid "SSH server stopped."
-msgstr "SSH-server is gestopt."
-
-#: plugins/SSH.koplugin/main.lua:123
-msgid "Choose SSH port"
-msgstr "SSH-poort kiezen"
-
-#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
-msgid "SSH server"
-msgstr "SSH-server"
-
-#: plugins/SSH.koplugin/main.lua:174
-msgid "SSH port (%1)"
-msgstr "SSH-poort (%1)"
-
-#: plugins/SSH.koplugin/main.lua:183
-msgid "SSH public key"
-msgstr "SSH publieke sleutel"
-
-#: plugins/SSH.koplugin/main.lua:189
-msgid ""
-"Put your public SSH keys in\n"
-"%1"
-msgstr ""
-"Plaats publieke SSH-sleutels in\n"
-"%1"
-
-#: plugins/SSH.koplugin/main.lua:195
-msgid "Login without password (DANGEROUS)"
-msgstr "Inloggen zonder wachtwoord (GEVAARLIJK)"
-
-#: plugins/SSH.koplugin/main.lua:208
-msgid "Toggle SSH server"
-msgstr "SSH-server schakelen"
-
-#: plugins/SSH.koplugin/_meta.lua:4
-msgid "SSH"
-msgstr "SSH"
-
-#: plugins/SSH.koplugin/_meta.lua:5
-msgid "Connect and transfer files to the device using SSH."
-msgstr "Maakt verbinding over SSH, bv. om bestanden op het apparaat te zetten."
+#: plugins/statistics.koplugin/_meta.lua:5
+msgid "Keeps and displays your reading statistics."
+msgstr "Houdt leesstatistieken bij en kan ze ook weergeven."
 
 #: plugins/statistics.koplugin/calendarview.lua:1178
 msgid "Enter month"
@@ -18634,11 +18643,6 @@ msgstr[1] ""
 #: plugins/statistics.koplugin/main.lua:1030
 msgid "Enabled"
 msgstr "Ingeschakeld"
-
-#: plugins/statistics.koplugin/main.lua:1056
-#: plugins/statistics.koplugin/_meta.lua:4
-msgid "Reading statistics"
-msgstr "Leesstatistieken"
 
 #: plugins/statistics.koplugin/main.lua:1064
 msgid "Read page duration limits: %1 s – %2 s"
@@ -19069,10 +19073,6 @@ msgstr "Geen statistieken verwijderd."
 msgid "Syncing book statistics. This may take a while."
 msgstr "Boekstatistieken aan het synchroniseren. Dit kan even duren."
 
-#: plugins/statistics.koplugin/_meta.lua:5
-msgid "Keeps and displays your reading statistics."
-msgstr "Houdt leesstatistieken bij en kan ze ook weergeven."
-
 #: plugins/statistics.koplugin/readerprogress.lua:108
 msgid "Week progress"
 msgstr "Wekelijkse voortgang"
@@ -19121,6 +19121,17 @@ msgid ""
 msgstr ""
 "Gemiddelde\n"
 "tijd/dag"
+
+#: plugins/systemstat.koplugin/_meta.lua:4
+#: plugins/systemstat.koplugin/main.lua:297
+#: plugins/systemstat.koplugin/main.lua:309
+#: plugins/systemstat.koplugin/main.lua:319
+msgid "System statistics"
+msgstr "Systeemstatistieken"
+
+#: plugins/systemstat.koplugin/_meta.lua:5
+msgid "Shows system statistics."
+msgstr "Toont systeemstatistieken."
 
 #: plugins/systemstat.koplugin/main.lua:57
 msgid "KOReader started at"
@@ -19250,16 +19261,15 @@ msgstr "    Totaal"
 msgid "    Used percentage"
 msgstr "    Percentage gebruikt"
 
-#: plugins/systemstat.koplugin/main.lua:297
-#: plugins/systemstat.koplugin/main.lua:309
-#: plugins/systemstat.koplugin/main.lua:319
-#: plugins/systemstat.koplugin/_meta.lua:4
-msgid "System statistics"
-msgstr "Systeemstatistieken"
+#: plugins/terminal.koplugin/_meta.lua:4 plugins/terminal.koplugin/main.lua:302
+#: plugins/terminal.koplugin/main.lua:467
+#: plugins/terminal.koplugin/main.lua:617
+msgid "Terminal emulator"
+msgstr "Terminalemulator"
 
-#: plugins/systemstat.koplugin/_meta.lua:5
-msgid "Shows system statistics."
-msgstr "Toont systeemstatistieken."
+#: plugins/terminal.koplugin/_meta.lua:5
+msgid "KOReader's terminal emulator"
+msgstr "KOReader's terminalemulator"
 
 #: plugins/terminal.koplugin/aliases.lua:63
 #: plugins/terminal.koplugin/aliases.lua:142
@@ -19281,12 +19291,6 @@ msgstr "Aliasnaam:"
 #: plugins/terminal.koplugin/aliases.lua:93
 msgid "Alias command:"
 msgstr "Aliascommando:"
-
-#: plugins/terminal.koplugin/main.lua:302
-#: plugins/terminal.koplugin/main.lua:467
-#: plugins/terminal.koplugin/main.lua:617 plugins/terminal.koplugin/_meta.lua:4
-msgid "Terminal emulator"
-msgstr "Terminalemulator"
 
 #. @translators This is the ESC-key on the keyboard.
 #: plugins/terminal.koplugin/main.lua:326
@@ -19400,14 +19404,14 @@ msgstr ""
 "Hier kan de opstartshell worden geselecteerd.\n"
 "Standaard: sh"
 
-#: plugins/terminal.koplugin/_meta.lua:5
-msgid "KOReader's terminal emulator"
-msgstr "KOReader's terminalemulator"
-
-#: plugins/texteditor.koplugin/main.lua:32
 #: plugins/texteditor.koplugin/_meta.lua:4
+#: plugins/texteditor.koplugin/main.lua:32
 msgid "Text editor"
 msgstr "Tekstbewerker"
+
+#: plugins/texteditor.koplugin/_meta.lua:5
+msgid "A basic text editor for making small changes to plain text files."
+msgstr "Een eenvoudige tekstbewerker om platte tekst te wijzigen."
 
 #: plugins/texteditor.koplugin/main.lua:45
 msgid "Text editor: open last file"
@@ -19675,9 +19679,13 @@ msgstr "Bestand verwijderd"
 msgid "Failed deleting file: %1"
 msgstr "Bestand verwijderen mislukt: %1"
 
-#: plugins/texteditor.koplugin/_meta.lua:5
-msgid "A basic text editor for making small changes to plain text files."
-msgstr "Een eenvoudige tekstbewerker om platte tekst te wijzigen."
+#: plugins/timesync.koplugin/_meta.lua:4
+msgid "Time sync"
+msgstr "Tijdsynchronisatie"
+
+#: plugins/timesync.koplugin/_meta.lua:5
+msgid "Synchronizes the device time with NTP servers."
+msgstr "Synchroniseert de tijd van het apparaat met NTP-servers."
 
 #: plugins/timesync.koplugin/main.lua:50
 msgid "New time is %1."
@@ -19700,13 +19708,19 @@ msgstr "Tijd ophalen mislukt. Controleer de netwerkverbinding."
 msgid "Synchronize time"
 msgstr "Synchroniseer tijd"
 
-#: plugins/timesync.koplugin/_meta.lua:4
-msgid "Time sync"
-msgstr "Tijdsynchronisatie"
+#: plugins/vocabbuilder.koplugin/_meta.lua:4
+#: plugins/vocabbuilder.koplugin/main.lua:1950
+#: plugins/vocabbuilder.koplugin/main.lua:2021
+msgid "Vocabulary builder"
+msgstr "Woordenschatbouwer"
 
-#: plugins/timesync.koplugin/_meta.lua:5
-msgid "Synchronizes the device time with NTP servers."
-msgstr "Synchroniseert de tijd van het apparaat met NTP-servers."
+#: plugins/vocabbuilder.koplugin/_meta.lua:5
+msgid ""
+"This plugin processes dictionary word lookups and uses spaced repetition to "
+"help you remember new words."
+msgstr ""
+"Deze plugin verwerkt woordenboekzoekopdrachten en gebruikt gespreide "
+"herhaling om nieuwe woorden te helpen onthouden."
 
 #: plugins/vocabbuilder.koplugin/main.lua:77
 msgid "Add to vocabulary builder"
@@ -19905,23 +19919,17 @@ msgstr "Titel wijzigen"
 msgid "Words reloaded"
 msgstr "Woorden opnieuw geladen"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1950
-#: plugins/vocabbuilder.koplugin/main.lua:2021
-#: plugins/vocabbuilder.koplugin/_meta.lua:4
-msgid "Vocabulary builder"
-msgstr "Woordenschatbouwer"
-
 #: plugins/vocabbuilder.koplugin/main.lua:2032
 msgid "Open vocabulary builder"
 msgstr "Woordenschatbouwer openen"
 
-#: plugins/vocabbuilder.koplugin/_meta.lua:5
-msgid ""
-"This plugin processes dictionary word lookups and uses spaced repetition to "
-"help you remember new words."
-msgstr ""
-"Deze plugin verwerkt woordenboekzoekopdrachten en gebruikt gespreide "
-"herhaling om nieuwe woorden te helpen onthouden."
+#: plugins/wallabag.koplugin/_meta.lua:4 plugins/wallabag.koplugin/main.lua:133
+msgid "Wallabag"
+msgstr "Wallabag"
+
+#: plugins/wallabag.koplugin/_meta.lua:5
+msgid "Synchronises articles with a Wallabag server."
+msgstr "Synchroniseert artikels met een Wallabagserver."
 
 #: plugins/wallabag.koplugin/main.lua:45
 msgid "Wallabag retrieval"
@@ -19930,10 +19938,6 @@ msgstr "Wallabag ophalen"
 #: plugins/wallabag.koplugin/main.lua:121
 msgid "Add to Wallabag"
 msgstr "Aan Wallabag toevoegen"
-
-#: plugins/wallabag.koplugin/main.lua:133 plugins/wallabag.koplugin/_meta.lua:4
-msgid "Wallabag"
-msgstr "Wallabag"
 
 #: plugins/wallabag.koplugin/main.lua:136
 msgid "Retrieve new articles from server"
@@ -20275,10 +20279,6 @@ msgid ""
 msgstr ""
 "Fout bij link aan Wallabag toevoegen:\n"
 "%1"
-
-#: plugins/wallabag.koplugin/_meta.lua:5
-msgid "Synchronises articles with a Wallabag server."
-msgstr "Synchroniseert artikels met een Wallabagserver."
 
 #: tools/kobo_touch_probe.lua:54
 msgid "Tap the lower right corner"

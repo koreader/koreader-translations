@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-09 11:01+0000\n"
+"POT-Creation-Date: 2024-04-16 17:04+0000\n"
 "PO-Revision-Date: 2024-04-16 17:04+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Moldavian <https://hosted.weblate.org/projects/koreader/"
@@ -154,12 +154,12 @@ msgstr "Întrodu nume fișier"
 #: frontend/apps/cloudstorage/dropbox.lua:130
 #: frontend/apps/cloudstorage/ftp.lua:127
 #: frontend/apps/cloudstorage/webdav.lua:126
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
-#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanager.lua:989
 #: frontend/apps/filemanager/filemanager.lua:1117
 #: frontend/apps/filemanager/filemanager.lua:1444
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
+#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:56
 #: frontend/apps/filemanager/filemanagershortcuts.lua:107
 #: frontend/apps/reader/modules/readerbookmark.lua:1053
@@ -191,7 +191,7 @@ msgstr "Întrodu nume fișier"
 #: frontend/ui/widget/networksetting.lua:340
 #: frontend/ui/widget/numberpickerwidget.lua:139
 #: frontend/ui/widget/pathchooser.lua:134 frontend/ui/widget/textviewer.lua:468
-#: frontend/ui/widget/touchmenu.lua:1330
+#: frontend/ui/widget/touchmenu.lua:1330 plugins/SSH.koplugin/main.lua:130
 #: plugins/autowarmth.koplugin/main.lua:759
 #: plugins/autowarmth.koplugin/main.lua:1060
 #: plugins/calibre.koplugin/main.lua:324
@@ -217,7 +217,7 @@ msgstr "Întrodu nume fișier"
 #: plugins/opds.koplugin/opdsbrowser.lua:646
 #: plugins/opds.koplugin/opdspse.lua:179
 #: plugins/perceptionexpander.koplugin/main.lua:138
-#: plugins/profiles.koplugin/main.lua:264 plugins/SSH.koplugin/main.lua:130
+#: plugins/profiles.koplugin/main.lua:264
 #: plugins/statistics.koplugin/main.lua:1246
 #: plugins/statistics.koplugin/main.lua:2306
 #: plugins/statistics.koplugin/main.lua:2480
@@ -284,12 +284,12 @@ msgid "Edit"
 msgstr "Editează"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:395
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
-#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/filemanager/filemanager.lua:255
 #: frontend/apps/filemanager/filemanager.lua:571
 #: frontend/apps/filemanager/filemanager.lua:576
 #: frontend/apps/filemanager/filemanager.lua:1046
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
+#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/reader/modules/readerhighlight.lua:983
 #: frontend/ui/widget/screenshoter.lua:51
 #: plugins/bookshortcuts.koplugin/main.lua:138
@@ -429,12 +429,6 @@ msgstr "Crează"
 msgid "Enter folder after creation"
 msgstr "Accesează dosarul după creare"
 
-#: frontend/apps/cloudstorage/dropboxapi.lua:213
-#: frontend/apps/cloudstorage/webdavapi.lua:175
-#: frontend/ui/widget/filechooser.lua:451
-msgid "Long-press to choose current folder"
-msgstr "Apasă lung pentru a alege dosarul curent"
-
 #: frontend/apps/cloudstorage/dropbox.lua:33
 #: frontend/apps/cloudstorage/ftp.lua:38
 #: frontend/apps/cloudstorage/webdav.lua:26
@@ -550,13 +544,13 @@ msgstr "Dosar Dropbox (/ pentru rădăcină)"
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
 #: frontend/apps/reader/modules/readerwikipedia.lua:174
 #: frontend/ui/widget/inputdialog.lua:766
-#: frontend/ui/widget/inputdialog.lua:807
+#: frontend/ui/widget/inputdialog.lua:807 plugins/SSH.koplugin/main.lua:137
 #: plugins/coverimage.koplugin/main.lua:362
 #: plugins/gestures.koplugin/main.lua:406
 #: plugins/newsdownloader.koplugin/main.lua:755
 #: plugins/opds.koplugin/opdsbrowser.lua:149
 #: plugins/opds.koplugin/opdsbrowser.lua:178
-#: plugins/profiles.koplugin/main.lua:271 plugins/SSH.koplugin/main.lua:137
+#: plugins/profiles.koplugin/main.lua:271
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:591
 msgid "Save"
@@ -577,6 +571,12 @@ msgstr ""
 "Țară: %4\n"
 "Spațiu total: %5\n"
 "Spațiu folosit: %6"
+
+#: frontend/apps/cloudstorage/dropboxapi.lua:213
+#: frontend/apps/cloudstorage/webdavapi.lua:175
+#: frontend/ui/widget/filechooser.lua:451
+msgid "Long-press to choose current folder"
+msgstr "Apasă lung pentru a alege dosarul curent"
 
 #: frontend/apps/cloudstorage/ftp.lua:29
 msgid ""
@@ -729,6 +729,369 @@ msgstr "Parolă"
 #: frontend/apps/cloudstorage/webdav.lua:120
 msgid "Start folder, for example /books"
 msgstr "Dosar de start, de exemplu /books"
+
+#: frontend/apps/filemanager/filemanager.lua:48
+msgid "KOReader"
+msgstr "KOReader"
+
+#: frontend/apps/filemanager/filemanager.lua:217
+msgctxt "File"
+msgid "Copy"
+msgstr "Copiază"
+
+#: frontend/apps/filemanager/filemanager.lua:225
+msgctxt "File"
+msgid "Paste"
+msgstr "Lipește"
+
+#: frontend/apps/filemanager/filemanager.lua:233
+#: frontend/apps/reader/modules/readerhighlight.lua:65
+#: frontend/ui/widget/inputtext.lua:245
+msgid "Select"
+msgstr "Selectează"
+
+#: frontend/apps/filemanager/filemanager.lua:247
+msgid "Cut"
+msgstr "Decupează"
+
+#: frontend/apps/filemanager/filemanager.lua:263
+#: frontend/apps/filemanager/filemanager.lua:1124
+msgid "Rename"
+msgstr "Redenumește"
+
+#: frontend/apps/filemanager/filemanager.lua:300
+msgid "Open with…"
+msgstr "Deschide cu…"
+
+#: frontend/apps/filemanager/filemanager.lua:322
+msgid "Convert"
+msgstr "Convertește"
+
+#: frontend/apps/filemanager/filemanager.lua:334
+#: frontend/apps/filemanager/filemanager.lua:646
+msgid "Set as HOME folder"
+msgstr "Setează ca dosar „Acasă”"
+
+#: frontend/apps/filemanager/filemanager.lua:468
+#: frontend/apps/reader/modules/readerback.lua:179
+msgid "Exit KOReader?"
+msgstr "Ieși din KOReader?"
+
+#: frontend/apps/filemanager/filemanager.lua:469
+#: frontend/apps/reader/modules/readerback.lua:180
+#: frontend/apps/reader/modules/readerdevicestatus.lua:103
+#: frontend/ui/elements/common_exit_menu_table.lua:9
+#: frontend/ui/elements/common_exit_menu_table.lua:16
+msgid "Exit"
+msgstr "Ieșire"
+
+#: frontend/apps/filemanager/filemanager.lua:520
+msgid "1 file selected"
+msgid_plural "%1 files selected"
+msgstr[0] "1 fișier selectat"
+msgstr[1] "%1 fișiere selectate"
+msgstr[2] "%1 de fișiere selectate"
+
+#: frontend/apps/filemanager/filemanager.lua:521
+msgid "No files selected"
+msgstr "Nici un fișier selectat"
+
+#: frontend/apps/filemanager/filemanager.lua:525
+msgid "Show selected files list"
+msgstr "Arată lista cu fișierele selectate"
+
+#: frontend/apps/filemanager/filemanager.lua:533
+#: frontend/apps/filemanager/filemanager.lua:919
+#: frontend/apps/reader/modules/readerlink.lua:143
+msgid "Copy"
+msgstr "Copiază"
+
+#: frontend/apps/filemanager/filemanager.lua:543
+msgid "Select all files in folder"
+msgstr "Selectează toate fișierele din dosar"
+
+#: frontend/apps/filemanager/filemanager.lua:550
+#: frontend/apps/filemanager/filemanager.lua:916
+#: frontend/apps/filemanager/filemanager.lua:1181
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
+msgid "Move"
+msgstr "Mută"
+
+#: frontend/apps/filemanager/filemanager.lua:560
+#: frontend/apps/reader/modules/readerbookmark.lua:664
+msgid "Deselect all"
+msgstr "Deselectează tot"
+
+#: frontend/apps/filemanager/filemanager.lua:575
+msgid ""
+"Delete selected files?\n"
+"If you delete a file, it is permanently lost."
+msgstr ""
+"Ștergi fișierele selectate?\n"
+"Dacă ștergi un fișier, va fi pierdut definitiv."
+
+#: frontend/apps/filemanager/filemanager.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:702
+#: frontend/apps/reader/modules/readerhighlight.lua:692
+msgid "Exit select mode"
+msgstr "Părăsește modul de selecție"
+
+#: frontend/apps/filemanager/filemanager.lua:594
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:261
+msgid "Export highlights"
+msgstr "Exportă evidențieri"
+
+#: frontend/apps/filemanager/filemanager.lua:618
+msgid "Select files"
+msgstr "Selectează fișiere"
+
+#: frontend/apps/filemanager/filemanager.lua:636
+#: frontend/apps/reader/modules/readerbookmark.lua:1064
+#: frontend/ui/widget/inputtext.lua:255
+msgid "Paste"
+msgstr "Lipește"
+
+#: frontend/apps/filemanager/filemanager.lua:655
+msgid "Go to HOME folder"
+msgstr "Mergi la dosarul „Acasă”"
+
+#: frontend/apps/filemanager/filemanager.lua:664
+msgid "Open random document"
+msgstr "Deschide un document aleator"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+msgid "Switch to SDCard"
+msgstr "Treci la Card SD"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+msgid "Switch to internal storage"
+msgstr "Treci la stocare internă"
+
+#: frontend/apps/filemanager/filemanager.lua:704
+msgid "Import files here"
+msgstr "Importă fișierele aici"
+
+#: frontend/apps/filemanager/filemanager.lua:800
+msgid "Set '%1' as HOME folder?"
+msgstr "Setezi '%1' ca dosar „ACASĂ”?"
+
+#: frontend/apps/filemanager/filemanager.lua:801
+msgid "Set as HOME"
+msgstr "Setare ca „Acasă”"
+
+#: frontend/apps/filemanager/filemanager.lua:819
+msgid "Do you want to open %1?"
+msgstr "Dorești să deschizi %1?"
+
+#: frontend/apps/filemanager/filemanager.lua:820
+#: frontend/apps/filemanager/filemanager.lua:1450
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
+#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
+#: plugins/texteditor.koplugin/main.lua:457
+msgid "Open"
+msgstr "Deschide"
+
+#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
+#: frontend/apps/filemanager/filemanager.lua:826
+msgid "Another"
+msgstr "Altul"
+
+#: frontend/apps/filemanager/filemanager.lua:833
+msgid "File not found"
+msgstr "Fișierul nu a fost găsit"
+
+#: frontend/apps/filemanager/filemanager.lua:891
+msgid ""
+"File already exists:\n"
+"%1"
+msgstr ""
+"Fișierul deja există:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:892
+msgid ""
+"Folder already exists:\n"
+"%1"
+msgstr ""
+"Dosajul deja există:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:896
+#: frontend/apps/filemanager/filemanager.lua:1178
+#: frontend/apps/filemanager/filemanagerconverter.lua:97
+#: frontend/apps/reader/modules/readerdictionary.lua:1087
+#: plugins/opds.koplugin/opdsbrowser.lua:770
+msgid "Overwrite"
+msgstr "Suprascrie"
+
+#: frontend/apps/filemanager/filemanager.lua:915
+msgid "Move selected files to the current folder?"
+msgstr "Muți fișierele selectate în dosarul curent?"
+
+#: frontend/apps/filemanager/filemanager.lua:918
+msgid "Copy selected files to the current folder?"
+msgstr "Copiezi fișierele selectate în dosarul curent?"
+
+#: frontend/apps/filemanager/filemanager.lua:931
+msgid "overwrite existing files"
+msgstr "suprascrie fișierele existente"
+
+#: frontend/apps/filemanager/filemanager.lua:971
+msgid "1 file was not moved"
+msgid_plural "%1 files were not moved"
+msgstr[0] "1 fișier nu a fost mutat"
+msgstr[1] "%1 fișiere nu au fost mutate"
+msgstr[2] "%1 de fișiere nu au fost mutate"
+
+#: frontend/apps/filemanager/filemanager.lua:972
+msgid "1 file was not copied"
+msgid_plural "%1 files were not copied"
+msgstr[0] "1 fișier nu a fost copiat"
+msgstr[1] "%1 fișiere nu au fost copiate"
+msgstr[2] "%1 de fișiere nu au fost copiate"
+
+#: frontend/apps/filemanager/filemanager.lua:1011
+msgid ""
+"Failed to create folder:\n"
+"%1"
+msgstr ""
+"A eșuat crearea dosarului:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1034
+msgid ""
+"File not found:\n"
+"%1"
+msgstr ""
+"Fișierul nu a fost găsit:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete file permanently?"
+msgstr "Ștergi fișierul definitiv?"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete folder permanently?"
+msgstr "Ștergi dosarul definitiv?"
+
+#: frontend/apps/filemanager/filemanager.lua:1042
+msgid "Book settings, highlights and notes will be deleted."
+msgstr "Setările cărții, evidențierile și notele vor fi șterse."
+
+#: frontend/apps/filemanager/filemanager.lua:1076
+msgid ""
+"Failed to delete:\n"
+"%1"
+msgstr ""
+"A eșuat ștergerea:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1102
+msgid "Failed to delete 1 file."
+msgid_plural "Failed to delete %1 files."
+msgstr[0] "A eșuat ștergerea unui fișier."
+msgstr[1] "A eșuat ștergerea a %1 fișiere."
+msgstr[2] "A eșuat ștergerea a %1 de fișiere."
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename file"
+msgstr "Redenumește fișier"
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename folder"
+msgstr "Redenumește dosar"
+
+#: frontend/apps/filemanager/filemanager.lua:1156
+msgid ""
+"Failed to rename:\n"
+"%1\n"
+"to:\n"
+"%2"
+msgstr ""
+"Nu s-a putut redenumi:\n"
+"%1\n"
+"în:\n"
+"%2"
+
+#: frontend/apps/filemanager/filemanager.lua:1167
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"File cannot be renamed."
+msgstr ""
+"Dosarul există deja:\n"
+"%1\n"
+"Fișierul nu poate fi redenumit."
+
+#: frontend/apps/filemanager/filemanager.lua:1169
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Folder cannot be renamed."
+msgstr ""
+"Fișierul există deja:\n"
+"%1\n"
+"Dosatul nu poate fi redenumit."
+
+#: frontend/apps/filemanager/filemanager.lua:1177
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Overwrite file?"
+msgstr ""
+"Fișierul există deja:\n"
+"%1\n"
+"Suprascri fișierul?"
+
+#: frontend/apps/filemanager/filemanager.lua:1180
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"Move the folder inside it?"
+msgstr ""
+"Dosarul există deja:\n"
+"%1\n"
+"Muți dosarul în interiorul lui?"
+
+#: frontend/apps/filemanager/filemanager.lua:1333
+msgid "Selected files (%1)"
+msgstr "Fișiere selectate (%1)"
+
+#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
+#: frontend/apps/filemanager/filemanager.lua:1360
+msgid "%1 ~Unsupported"
+msgstr "%1 ~Nesuportat"
+
+#: frontend/apps/filemanager/filemanager.lua:1396
+msgid "Reset default for this file"
+msgstr "Resetează implicitul pentru acest fișier"
+
+#: frontend/apps/filemanager/filemanager.lua:1406
+msgid "Reset default for %1 files"
+msgstr "Resetează implicitul pentru %1 fișiere"
+
+#: frontend/apps/filemanager/filemanager.lua:1417
+msgid "View defaults for file types"
+msgstr "Vezi implicitele pentru tipurile de fișiere"
+
+#: frontend/apps/filemanager/filemanager.lua:1456
+msgid "Always open '%2' with %1?"
+msgstr "Deschizi mereu „%2” cu %1?"
+
+#: frontend/apps/filemanager/filemanager.lua:1457
+#: frontend/apps/filemanager/filemanager.lua:1467
+#: frontend/ui/elements/common_settings_menu_table.lua:383
+#: frontend/ui/elements/common_settings_menu_table.lua:660
+msgid "Always"
+msgstr "Întotdeauna"
+
+#: frontend/apps/filemanager/filemanager.lua:1466
+msgid "Always open %2 files with %1?"
+msgstr "Deschizi mereu fișierele %2 cu %1?"
+
+#: frontend/apps/filemanager/filemanager.lua:1484
+msgid "Open %1 with:"
+msgstr "Deschide %1 cu:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:27
 #: frontend/apps/filemanager/filemanagerutil.lua:277
@@ -919,13 +1282,6 @@ msgstr[2] ""
 msgid "Move book metadata to your preferred location?"
 msgstr "Muți metadatele cărții în locația ta preferată?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
-#: frontend/apps/filemanager/filemanager.lua:550
-#: frontend/apps/filemanager/filemanager.lua:916
-#: frontend/apps/filemanager/filemanager.lua:1181
-msgid "Move"
-msgstr "Mută"
-
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:658
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
@@ -1003,14 +1359,6 @@ msgstr "HTML"
 msgid "Overwrite existing HTML file?"
 msgstr "Suprascrii fișierul HTML existent?"
 
-#: frontend/apps/filemanager/filemanagerconverter.lua:97
-#: frontend/apps/filemanager/filemanager.lua:896
-#: frontend/apps/filemanager/filemanager.lua:1178
-#: frontend/apps/reader/modules/readerdictionary.lua:1087
-#: plugins/opds.koplugin/opdsbrowser.lua:770
-msgid "Overwrite"
-msgstr "Suprascrie"
-
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:30
 msgid "Enter text to search for in filename"
 msgstr "Întrodu textul de căutat în numele fișierului"
@@ -1078,14 +1426,6 @@ msgstr "Rezultate căutare (%1)"
 #: frontend/apps/reader/modules/readersearch.lua:596
 msgid "Query: %1"
 msgstr "Interogare: %1"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
-#: frontend/apps/filemanager/filemanager.lua:820
-#: frontend/apps/filemanager/filemanager.lua:1450
-#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
-#: plugins/texteditor.koplugin/main.lua:457
-msgid "Open"
-msgstr "Deschide"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:308
 msgid "Title: %1"
@@ -1189,346 +1529,6 @@ msgstr "Întrodu textul de căutat în istoric"
 #: plugins/vocabbuilder.koplugin/main.lua:1550
 msgid "Search"
 msgstr "Caută"
-
-#: frontend/apps/filemanager/filemanager.lua:48
-msgid "KOReader"
-msgstr "KOReader"
-
-#: frontend/apps/filemanager/filemanager.lua:217
-msgctxt "File"
-msgid "Copy"
-msgstr "Copiază"
-
-#: frontend/apps/filemanager/filemanager.lua:225
-msgctxt "File"
-msgid "Paste"
-msgstr "Lipește"
-
-#: frontend/apps/filemanager/filemanager.lua:233
-#: frontend/apps/reader/modules/readerhighlight.lua:65
-#: frontend/ui/widget/inputtext.lua:245
-msgid "Select"
-msgstr "Selectează"
-
-#: frontend/apps/filemanager/filemanager.lua:247
-msgid "Cut"
-msgstr "Decupează"
-
-#: frontend/apps/filemanager/filemanager.lua:263
-#: frontend/apps/filemanager/filemanager.lua:1124
-msgid "Rename"
-msgstr "Redenumește"
-
-#: frontend/apps/filemanager/filemanager.lua:300
-msgid "Open with…"
-msgstr "Deschide cu…"
-
-#: frontend/apps/filemanager/filemanager.lua:322
-msgid "Convert"
-msgstr "Convertește"
-
-#: frontend/apps/filemanager/filemanager.lua:334
-#: frontend/apps/filemanager/filemanager.lua:646
-msgid "Set as HOME folder"
-msgstr "Setează ca dosar „Acasă”"
-
-#: frontend/apps/filemanager/filemanager.lua:468
-#: frontend/apps/reader/modules/readerback.lua:179
-msgid "Exit KOReader?"
-msgstr "Ieși din KOReader?"
-
-#: frontend/apps/filemanager/filemanager.lua:469
-#: frontend/apps/reader/modules/readerback.lua:180
-#: frontend/apps/reader/modules/readerdevicestatus.lua:103
-#: frontend/ui/elements/common_exit_menu_table.lua:9
-#: frontend/ui/elements/common_exit_menu_table.lua:16
-msgid "Exit"
-msgstr "Ieșire"
-
-#: frontend/apps/filemanager/filemanager.lua:520
-msgid "1 file selected"
-msgid_plural "%1 files selected"
-msgstr[0] "1 fișier selectat"
-msgstr[1] "%1 fișiere selectate"
-msgstr[2] "%1 de fișiere selectate"
-
-#: frontend/apps/filemanager/filemanager.lua:521
-msgid "No files selected"
-msgstr "Nici un fișier selectat"
-
-#: frontend/apps/filemanager/filemanager.lua:525
-msgid "Show selected files list"
-msgstr "Arată lista cu fișierele selectate"
-
-#: frontend/apps/filemanager/filemanager.lua:533
-#: frontend/apps/filemanager/filemanager.lua:919
-#: frontend/apps/reader/modules/readerlink.lua:143
-msgid "Copy"
-msgstr "Copiază"
-
-#: frontend/apps/filemanager/filemanager.lua:543
-msgid "Select all files in folder"
-msgstr "Selectează toate fișierele din dosar"
-
-#: frontend/apps/filemanager/filemanager.lua:560
-#: frontend/apps/reader/modules/readerbookmark.lua:664
-msgid "Deselect all"
-msgstr "Deselectează tot"
-
-#: frontend/apps/filemanager/filemanager.lua:575
-msgid ""
-"Delete selected files?\n"
-"If you delete a file, it is permanently lost."
-msgstr ""
-"Ștergi fișierele selectate?\n"
-"Dacă ștergi un fișier, va fi pierdut definitiv."
-
-#: frontend/apps/filemanager/filemanager.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:702
-#: frontend/apps/reader/modules/readerhighlight.lua:692
-msgid "Exit select mode"
-msgstr "Părăsește modul de selecție"
-
-#: frontend/apps/filemanager/filemanager.lua:594
-#: plugins/exporter.koplugin/main.lua:261 plugins/exporter.koplugin/_meta.lua:4
-msgid "Export highlights"
-msgstr "Exportă evidențieri"
-
-#: frontend/apps/filemanager/filemanager.lua:618
-msgid "Select files"
-msgstr "Selectează fișiere"
-
-#: frontend/apps/filemanager/filemanager.lua:636
-#: frontend/apps/reader/modules/readerbookmark.lua:1064
-#: frontend/ui/widget/inputtext.lua:255
-msgid "Paste"
-msgstr "Lipește"
-
-#: frontend/apps/filemanager/filemanager.lua:655
-msgid "Go to HOME folder"
-msgstr "Mergi la dosarul „Acasă”"
-
-#: frontend/apps/filemanager/filemanager.lua:664
-msgid "Open random document"
-msgstr "Deschide un document aleator"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-msgid "Switch to SDCard"
-msgstr "Treci la Card SD"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-msgid "Switch to internal storage"
-msgstr "Treci la stocare internă"
-
-#: frontend/apps/filemanager/filemanager.lua:704
-msgid "Import files here"
-msgstr "Importă fișierele aici"
-
-#: frontend/apps/filemanager/filemanager.lua:800
-msgid "Set '%1' as HOME folder?"
-msgstr "Setezi '%1' ca dosar „ACASĂ”?"
-
-#: frontend/apps/filemanager/filemanager.lua:801
-msgid "Set as HOME"
-msgstr "Setare ca „Acasă”"
-
-#: frontend/apps/filemanager/filemanager.lua:819
-msgid "Do you want to open %1?"
-msgstr "Dorești să deschizi %1?"
-
-#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:826
-msgid "Another"
-msgstr "Altul"
-
-#: frontend/apps/filemanager/filemanager.lua:833
-msgid "File not found"
-msgstr "Fișierul nu a fost găsit"
-
-#: frontend/apps/filemanager/filemanager.lua:891
-msgid ""
-"File already exists:\n"
-"%1"
-msgstr ""
-"Fișierul deja există:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:892
-msgid ""
-"Folder already exists:\n"
-"%1"
-msgstr ""
-"Dosajul deja există:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:915
-msgid "Move selected files to the current folder?"
-msgstr "Muți fișierele selectate în dosarul curent?"
-
-#: frontend/apps/filemanager/filemanager.lua:918
-msgid "Copy selected files to the current folder?"
-msgstr "Copiezi fișierele selectate în dosarul curent?"
-
-#: frontend/apps/filemanager/filemanager.lua:931
-msgid "overwrite existing files"
-msgstr "suprascrie fișierele existente"
-
-#: frontend/apps/filemanager/filemanager.lua:971
-msgid "1 file was not moved"
-msgid_plural "%1 files were not moved"
-msgstr[0] "1 fișier nu a fost mutat"
-msgstr[1] "%1 fișiere nu au fost mutate"
-msgstr[2] "%1 de fișiere nu au fost mutate"
-
-#: frontend/apps/filemanager/filemanager.lua:972
-msgid "1 file was not copied"
-msgid_plural "%1 files were not copied"
-msgstr[0] "1 fișier nu a fost copiat"
-msgstr[1] "%1 fișiere nu au fost copiate"
-msgstr[2] "%1 de fișiere nu au fost copiate"
-
-#: frontend/apps/filemanager/filemanager.lua:1011
-msgid ""
-"Failed to create folder:\n"
-"%1"
-msgstr ""
-"A eșuat crearea dosarului:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1034
-msgid ""
-"File not found:\n"
-"%1"
-msgstr ""
-"Fișierul nu a fost găsit:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete file permanently?"
-msgstr "Ștergi fișierul definitiv?"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete folder permanently?"
-msgstr "Ștergi dosarul definitiv?"
-
-#: frontend/apps/filemanager/filemanager.lua:1042
-msgid "Book settings, highlights and notes will be deleted."
-msgstr "Setările cărții, evidențierile și notele vor fi șterse."
-
-#: frontend/apps/filemanager/filemanager.lua:1076
-msgid ""
-"Failed to delete:\n"
-"%1"
-msgstr ""
-"A eșuat ștergerea:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1102
-msgid "Failed to delete 1 file."
-msgid_plural "Failed to delete %1 files."
-msgstr[0] "A eșuat ștergerea unui fișier."
-msgstr[1] "A eșuat ștergerea a %1 fișiere."
-msgstr[2] "A eșuat ștergerea a %1 de fișiere."
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename file"
-msgstr "Redenumește fișier"
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename folder"
-msgstr "Redenumește dosar"
-
-#: frontend/apps/filemanager/filemanager.lua:1156
-msgid ""
-"Failed to rename:\n"
-"%1\n"
-"to:\n"
-"%2"
-msgstr ""
-"Nu s-a putut redenumi:\n"
-"%1\n"
-"în:\n"
-"%2"
-
-#: frontend/apps/filemanager/filemanager.lua:1167
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"File cannot be renamed."
-msgstr ""
-"Dosarul există deja:\n"
-"%1\n"
-"Fișierul nu poate fi redenumit."
-
-#: frontend/apps/filemanager/filemanager.lua:1169
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Folder cannot be renamed."
-msgstr ""
-"Fișierul există deja:\n"
-"%1\n"
-"Dosatul nu poate fi redenumit."
-
-#: frontend/apps/filemanager/filemanager.lua:1177
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Overwrite file?"
-msgstr ""
-"Fișierul există deja:\n"
-"%1\n"
-"Suprascri fișierul?"
-
-#: frontend/apps/filemanager/filemanager.lua:1180
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"Move the folder inside it?"
-msgstr ""
-"Dosarul există deja:\n"
-"%1\n"
-"Muți dosarul în interiorul lui?"
-
-#: frontend/apps/filemanager/filemanager.lua:1333
-msgid "Selected files (%1)"
-msgstr "Fișiere selectate (%1)"
-
-#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
-#: frontend/apps/filemanager/filemanager.lua:1360
-msgid "%1 ~Unsupported"
-msgstr "%1 ~Nesuportat"
-
-#: frontend/apps/filemanager/filemanager.lua:1396
-msgid "Reset default for this file"
-msgstr "Resetează implicitul pentru acest fișier"
-
-#: frontend/apps/filemanager/filemanager.lua:1406
-msgid "Reset default for %1 files"
-msgstr "Resetează implicitul pentru %1 fișiere"
-
-#: frontend/apps/filemanager/filemanager.lua:1417
-msgid "View defaults for file types"
-msgstr "Vezi implicitele pentru tipurile de fișiere"
-
-#: frontend/apps/filemanager/filemanager.lua:1456
-msgid "Always open '%2' with %1?"
-msgstr "Deschizi mereu „%2” cu %1?"
-
-#: frontend/apps/filemanager/filemanager.lua:1457
-#: frontend/apps/filemanager/filemanager.lua:1467
-#: frontend/ui/elements/common_settings_menu_table.lua:383
-#: frontend/ui/elements/common_settings_menu_table.lua:660
-msgid "Always"
-msgstr "Întotdeauna"
-
-#: frontend/apps/filemanager/filemanager.lua:1466
-msgid "Always open %2 files with %1?"
-msgstr "Deschizi mereu fișierele %2 cu %1?"
-
-#: frontend/apps/filemanager/filemanager.lua:1484
-msgid "Open %1 with:"
-msgstr "Deschide %1 cu:"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:130
 msgid "Cannot open last document"
@@ -5464,8 +5464,8 @@ msgid ""
 "matching the element: tap on one of them to copy it to the clipboard.\n"
 "You can then paste it here with long-press in the text box."
 msgstr ""
-"Pe o pagină a cărții, selectează niște text care se întinde în jurul ("
-"înainte și după) elementului de care ești interesat și folosește „Vezi cod "
+"Pe o pagină a cărții, selectează niște text care se întinde în jurul "
+"(înainte și după) elementului de care ești interesat și folosește „Vezi cod "
 "HTML”.\n"
 "În vizualizatorul de cod HTML, apasă lung pe tag-uri sau pe text pentru a "
 "vedea o listă de selectori care se potrivesc cu elementul: atinge unul "
@@ -9069,8 +9069,8 @@ msgid ""
 "Ignore HTML attributes that contribute to styles on the elements <body> "
 "(bgcolor, text…) and <font> (face, size, color…)."
 msgstr ""
-"Ignoră atributele HTML care contribuie la stilurile elementelor <body> ("
-"bgcolor, text…) și <font> (face, size, color…)."
+"Ignoră atributele HTML care contribuie la stilurile elementelor <body> "
+"(bgcolor, text…) și <font> (face, size, color…)."
 
 #: frontend/ui/data/css_tweaks.lua:431
 msgid "Ignore publisher font families"
@@ -14531,23 +14531,90 @@ msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 O"
 
-#: plugins/archiveviewer.koplugin/main.lua:17
+#: plugins/SSH.koplugin/_meta.lua:4
+msgid "SSH"
+msgstr "SSH"
+
+#: plugins/SSH.koplugin/_meta.lua:5
+msgid "Connect and transfer files to the device using SSH."
+msgstr "Conectează‑te și transferă fișiere pe dispozitiv prin SSH."
+
+#. @translators: %1 is the SSH port, %2 is the network info.
+#: plugins/SSH.koplugin/main.lua:73
+msgid ""
+"SSH server started.\n"
+"\n"
+"SSH port: %1\n"
+"%2"
+msgstr ""
+"Server-ul SSH a pornit.\n"
+"\n"
+"Port SSH: %1\n"
+"%2"
+
+#: plugins/SSH.koplugin/main.lua:81
+msgid "Failed to start SSH server."
+msgstr "A eșuat pornirea server-ului SSH."
+
+#: plugins/SSH.koplugin/main.lua:94
+msgid "SSH server stopped."
+msgstr "Server SSH oprit."
+
+#: plugins/SSH.koplugin/main.lua:123
+msgid "Choose SSH port"
+msgstr "Alege port SSH"
+
+#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
+msgid "SSH server"
+msgstr "Server SSH"
+
+#: plugins/SSH.koplugin/main.lua:174
+msgid "SSH port (%1)"
+msgstr "Port SSH (%1)"
+
+#: plugins/SSH.koplugin/main.lua:183
+msgid "SSH public key"
+msgstr "Cheie publică SSH"
+
+#: plugins/SSH.koplugin/main.lua:189
+msgid ""
+"Put your public SSH keys in\n"
+"%1"
+msgstr ""
+"Pune cheile tale publice SSH în\n"
+"%1"
+
+#: plugins/SSH.koplugin/main.lua:195
+msgid "Login without password (DANGEROUS)"
+msgstr "Autentificare fără parolă (PERICULOS)"
+
+#: plugins/SSH.koplugin/main.lua:208
+msgid "Toggle SSH server"
+msgstr "Comută stare server SSH"
+
 #: plugins/archiveviewer.koplugin/_meta.lua:4
+#: plugins/archiveviewer.koplugin/main.lua:17
 msgid "Archive viewer"
 msgstr "Vizualizator arhivă"
+
+#: plugins/archiveviewer.koplugin/_meta.lua:5
+msgid "Enables exploring the content of zip archives."
+msgstr "Permite explorarea conținutului arhivelor zip."
 
 #: plugins/archiveviewer.koplugin/main.lua:216
 msgid "On extraction, if the file already exists, it will be overwritten."
 msgstr ""
 "În cursul extragerii, dacă fișierul deja există, acesta va fi suprascris."
 
-#: plugins/archiveviewer.koplugin/_meta.lua:5
-msgid "Enables exploring the content of zip archives."
-msgstr "Permite explorarea conținutului arhivelor zip."
-
-#: plugins/autodim.koplugin/main.lua:51 plugins/autodim.koplugin/_meta.lua:4
+#: plugins/autodim.koplugin/_meta.lua:4 plugins/autodim.koplugin/main.lua:51
 msgid "Automatic dimmer"
 msgstr "Dimmer automat"
+
+#: plugins/autodim.koplugin/_meta.lua:5
+msgid "This plugin allows dimming the frontlight after a period of inactivity."
+msgstr ""
+"Acest plugin permite diminuarea luminozității după o perioadă de "
+"inactivitate."
 
 #: plugins/autodim.koplugin/main.lua:56
 msgid "Idle time for dimmer"
@@ -14589,16 +14656,18 @@ msgstr "Diminuează în procent de"
 msgid "The lowest brightness as a percentage of the regular brightness."
 msgstr "Luminozitatea minimă ca procent din luminozitatea obișnuită."
 
-#: plugins/autodim.koplugin/_meta.lua:5
-msgid "This plugin allows dimming the frontlight after a period of inactivity."
-msgstr ""
-"Acest plugin permite diminuarea luminozității după o perioadă de "
-"inactivitate."
-
-#: plugins/autofrontlight.koplugin/main.lua:114
 #: plugins/autofrontlight.koplugin/_meta.lua:4
+#: plugins/autofrontlight.koplugin/main.lua:114
 msgid "Auto frontlight"
 msgstr "Iluminare automată"
+
+#: plugins/autofrontlight.koplugin/_meta.lua:5
+msgid ""
+"Automatically turns the frontlight on and off once brightness in the "
+"environment reaches a certain level."
+msgstr ""
+"Pornește sau oprește iluminarea automat dacă luminozitatea ambientală trece "
+"de un anumit nivel."
 
 #: plugins/autofrontlight.koplugin/main.lua:117
 msgid ""
@@ -14618,13 +14687,13 @@ msgstr ""
 msgid "enable"
 msgstr "activare"
 
-#: plugins/autofrontlight.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the frontlight on and off once brightness in the "
-"environment reaches a certain level."
-msgstr ""
-"Pornește sau oprește iluminarea automat dacă luminozitatea ambientală trece "
-"de un anumit nivel."
+#: plugins/autostandby.koplugin/_meta.lua:4
+msgid "Auto Standby"
+msgstr "Suspendare automată"
+
+#: plugins/autostandby.koplugin/_meta.lua:5
+msgid "Put into standby on no input, wake up from standby on UI input"
+msgstr "Pune în suspendare dacă nu există atingeri, trezește la atingere"
 
 #: plugins/autostandby.koplugin/main.lua:55
 msgid "Auto-standby settings"
@@ -14654,13 +14723,17 @@ msgstr "Întră mereu în suspendare dacă bateria este sub"
 msgid "Update"
 msgstr "Actualizează"
 
-#: plugins/autostandby.koplugin/_meta.lua:4
-msgid "Auto Standby"
-msgstr "Suspendare automată"
+#: plugins/autosuspend.koplugin/_meta.lua:4
+msgid "Auto power save"
+msgstr "Economisire consum automată"
 
-#: plugins/autostandby.koplugin/_meta.lua:5
-msgid "Put into standby on no input, wake up from standby on UI input"
-msgstr "Pune în suspendare dacă nu există atingeri, trezește la atingere"
+#: plugins/autosuspend.koplugin/_meta.lua:5
+msgid ""
+"Puts the device into standby, suspend or power off after specified periods "
+"of inactivity."
+msgstr ""
+"Pune dispozitivul în așteptare, suspendă sau închide după perioada "
+"specificată de inactivitate."
 
 #: plugins/autosuspend.koplugin/main.lua:443
 #: plugins/autoturn.koplugin/main.lua:148
@@ -14757,17 +14830,19 @@ msgstr "Interval pentru autostandby"
 msgid "Enter time in minutes and seconds."
 msgstr "Întrodu timpul în minute și secunde."
 
-#: plugins/autosuspend.koplugin/_meta.lua:4
-msgid "Auto power save"
-msgstr "Economisire consum automată"
+#: plugins/autoturn.koplugin/_meta.lua:4 plugins/autoturn.koplugin/main.lua:131
+msgid "Autoturn"
+msgstr "Întoarce pagina automat"
 
-#: plugins/autosuspend.koplugin/_meta.lua:5
+#: plugins/autoturn.koplugin/_meta.lua:5
 msgid ""
-"Puts the device into standby, suspend or power off after specified periods "
-"of inactivity."
+"Automatically turns the page after a set period of time.\n"
+"\n"
+"Hold to set the scrolling distance."
 msgstr ""
-"Pune dispozitivul în așteptare, suspendă sau închide după perioada "
-"specificată de inactivitate."
+"Întoarce pagina automat după o perioadă de timp prestabilită.\n"
+"\n"
+"Ține apăsat pentru a seta distanța de derulare."
 
 #: plugins/autoturn.koplugin/main.lua:71
 msgid "Autoturn is now active and will automatically turn the page every %1."
@@ -14787,10 +14862,6 @@ msgstr ""
 msgid "Autoturn: %1"
 msgstr "Întoarcere automată: %1"
 
-#: plugins/autoturn.koplugin/main.lua:131 plugins/autoturn.koplugin/_meta.lua:4
-msgid "Autoturn"
-msgstr "Întoarce pagina automat"
-
 #: plugins/autoturn.koplugin/main.lua:140
 msgid "Autoturn time"
 msgstr "Timp întoarcere automată pagină"
@@ -14803,15 +14874,19 @@ msgstr "Setează distanță"
 msgid "Scrolling distance"
 msgstr "Distanță derulare"
 
-#: plugins/autoturn.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the page after a set period of time.\n"
-"\n"
-"Hold to set the scrolling distance."
-msgstr ""
-"Întoarce pagina automat după o perioadă de timp prestabilită.\n"
-"\n"
-"Ține apăsat pentru a seta distanța de derulare."
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+msgid "Auto warmth and night mode"
+msgstr "Nuanță și mod de noapte automat"
+
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+msgid "Auto night mode"
+msgstr "Mod de noapte automat"
+
+#: plugins/autowarmth.koplugin/_meta.lua:5
+msgid "This plugin allows to set the frontlight warmth automagically."
+msgstr "Acest plugin permite setarea nuanței iluminării automat."
 
 #: plugins/autowarmth.koplugin/main.lua:118
 msgid "Show ephemeris"
@@ -14869,16 +14944,6 @@ msgstr "Mod de noapte schimbat"
 #: plugins/autowarmth.koplugin/main.lua:223
 msgid "The AutoWarmth plugin might change it again."
 msgstr "Plugin-ul AutoWarmth o poate schimba din nou."
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-msgid "Auto warmth and night mode"
-msgstr "Nuanță și mod de noapte automat"
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-msgid "Auto night mode"
-msgstr "Mod de noapte automat"
 
 #: plugins/autowarmth.koplugin/main.lua:557
 msgid ""
@@ -15297,10 +15362,6 @@ msgstr "Oprește iluminarea între"
 msgid "%1 and %2"
 msgstr "%1 și %2"
 
-#: plugins/autowarmth.koplugin/_meta.lua:5
-msgid "This plugin allows to set the frontlight warmth automagically."
-msgstr "Acest plugin permite setarea nuanței iluminării automat."
-
 #: plugins/backgroundrunner.koplugin/_meta.lua:4
 msgid "Background runner"
 msgstr "Motor rulare în fundal"
@@ -15311,6 +15372,16 @@ msgid ""
 msgstr ""
 "Serviciu pentru alte plugin-uri: permite executarea sarcinilor în mod "
 "regulat în fundal."
+
+#: plugins/batterystat.koplugin/_meta.lua:4
+#: plugins/batterystat.koplugin/main.lua:272
+#: plugins/batterystat.koplugin/main.lua:284
+msgid "Battery statistics"
+msgstr "Statistici baterie"
+
+#: plugins/batterystat.koplugin/_meta.lua:5
+msgid "Collects and displays battery statistics."
+msgstr "Colectează și afișează statisticile bateriei."
 
 #: plugins/batterystat.koplugin/main.lua:88
 msgid "Consumed:"
@@ -15364,20 +15435,15 @@ msgstr "Încărcat:"
 msgid "Since last charge"
 msgstr "De la ultima încărcare"
 
-#: plugins/batterystat.koplugin/main.lua:272
-#: plugins/batterystat.koplugin/main.lua:284
-#: plugins/batterystat.koplugin/_meta.lua:4
-msgid "Battery statistics"
-msgstr "Statistici baterie"
-
-#: plugins/batterystat.koplugin/_meta.lua:5
-msgid "Collects and displays battery statistics."
-msgstr "Colectează și afișează statisticile bateriei."
-
-#: plugins/bookshortcuts.koplugin/main.lua:77
 #: plugins/bookshortcuts.koplugin/_meta.lua:4
+#: plugins/bookshortcuts.koplugin/main.lua:77
 msgid "Book shortcuts"
 msgstr "Scurtături cărți"
+
+#: plugins/bookshortcuts.koplugin/_meta.lua:5
+msgid "This plugin allows adding a book shortcut to a gesture."
+msgstr ""
+"Acest plugin permite adăugarea unei scurtături către o carte printr-un gest."
 
 #: plugins/bookshortcuts.koplugin/main.lua:87
 msgid "last book"
@@ -15399,10 +15465,17 @@ msgstr "Caută recursiv în subdirectoare"
 msgid "Do you want to delete this shortcut?"
 msgstr "Dorești să ștergi această scurtătură?"
 
-#: plugins/bookshortcuts.koplugin/_meta.lua:5
-msgid "This plugin allows adding a book shortcut to a gesture."
+#: plugins/calibre.koplugin/_meta.lua:4 plugins/calibre.koplugin/main.lua:74
+msgid "Calibre"
+msgstr "Calibre"
+
+#: plugins/calibre.koplugin/_meta.lua:5
+msgid ""
+"Integration with calibre. Send documents from calibre library via Wi-Fi and "
+"search calibre metadata."
 msgstr ""
-"Acest plugin permite adăugarea unei scurtături către o carte printr-un gest."
+"Integrare cu Calibre. Trimite documente din biblioteca Calibre prin Wi-Fi și "
+"caută metadate."
 
 #: plugins/calibre.koplugin/main.lua:58 plugins/calibre.koplugin/main.lua:110
 #: plugins/calibre.koplugin/search.lua:194
@@ -15424,10 +15497,6 @@ msgstr "Răsfoiește printre toți autorii din Calibre"
 #: plugins/calibre.koplugin/main.lua:62
 msgid "Browse all calibre titles"
 msgstr "Răsfoiește printre toate titlurile din Calibre"
-
-#: plugins/calibre.koplugin/main.lua:74 plugins/calibre.koplugin/_meta.lua:4
-msgid "Calibre"
-msgstr "Calibre"
 
 #: plugins/calibre.koplugin/main.lua:79
 msgid "Disconnect"
@@ -15548,14 +15617,6 @@ msgid ""
 msgstr ""
 "Formatele nesuportate vor fi convertite de calibre în primul format din "
 "listă."
-
-#: plugins/calibre.koplugin/_meta.lua:5
-msgid ""
-"Integration with calibre. Send documents from calibre library via Wi-Fi and "
-"search calibre metadata."
-msgstr ""
-"Integrare cu Calibre. Trimite documente din biblioteca Calibre prin Wi-Fi și "
-"caută metadate."
 
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
@@ -15717,6 +15778,15 @@ msgid ""
 msgstr ""
 "Șterse %1 fișiere din %2:\n"
 " %3"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:4
+msgid "Cover browser"
+msgstr "Navigator coperți"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:5
+msgid "Alternative display modes for file browser and history."
+msgstr ""
+"Moduri de afișare alternative pentru navigatorul de fișiere și istoric."
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:123
 msgid "not readable by engine"
@@ -16153,14 +16223,14 @@ msgstr ""
 msgid "Purge"
 msgstr "Curăță"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:4
-msgid "Cover browser"
-msgstr "Navigator coperți"
+#: plugins/coverimage.koplugin/_meta.lua:4
+#: plugins/coverimage.koplugin/main.lua:683
+msgid "Cover image"
+msgstr "Copertă"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:5
-msgid "Alternative display modes for file browser and history."
-msgstr ""
-"Moduri de afișare alternative pentru navigatorul de fișiere și istoric."
+#: plugins/coverimage.koplugin/_meta.lua:5
+msgid "Stores cover image to a file."
+msgstr "Stochează imaginea coperții într-un fișier."
 
 #: plugins/coverimage.koplugin/main.lua:102
 msgid ""
@@ -16372,11 +16442,6 @@ msgstr "Format fișier BMP (color)"
 msgid "BMP file format (grayscale)"
 msgstr "Format fișier BMP (tonuri de gri)"
 
-#: plugins/coverimage.koplugin/main.lua:683
-#: plugins/coverimage.koplugin/_meta.lua:4
-msgid "Cover image"
-msgstr "Copertă"
-
 #: plugins/coverimage.koplugin/main.lua:690
 msgid "About cover image"
 msgstr "Despre imaginea coperții"
@@ -16421,14 +16486,18 @@ msgstr "Poți alege o imagine de rezervă."
 msgid "Turn on fallback image"
 msgstr "Activează imaginea de rezervă"
 
-#: plugins/coverimage.koplugin/_meta.lua:5
-msgid "Stores cover image to a file."
-msgstr "Stochează imaginea coperții într-un fișier."
-
-#: plugins/docsettingtweak.koplugin/main.lua:48
 #: plugins/docsettingtweak.koplugin/_meta.lua:4
+#: plugins/docsettingtweak.koplugin/main.lua:48
 msgid "Tweak document settings"
 msgstr "Ajustează setările documentului"
+
+#: plugins/docsettingtweak.koplugin/_meta.lua:5
+msgid ""
+"This plugin allows you to tweak document settings before the document is "
+"loaded based on external factors."
+msgstr ""
+"Acest plugin vă permite să reglați setările documentului înainte ca "
+"documentul să fie încărcat pe baza unor factori externi."
 
 #: plugins/docsettingtweak.koplugin/main.lua:62
 msgid "Directory Defaults: %1"
@@ -16451,13 +16520,9 @@ msgstr "Setări implicite invalide: %1"
 msgid "Defaults empty"
 msgstr "Setări implicite lipsă"
 
-#: plugins/docsettingtweak.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows you to tweak document settings before the document is "
-"loaded based on external factors."
-msgstr ""
-"Acest plugin vă permite să reglați setările documentului înainte ca "
-"documentul să fie încărcat pe baza unor factori externi."
+#: plugins/exporter.koplugin/_meta.lua:5
+msgid "Exports highlights and notes."
+msgstr "Exportă evidențierile și notele."
 
 #: plugins/exporter.koplugin/clip.lua:124
 msgid "Unknown Book"
@@ -16510,10 +16575,6 @@ msgstr "Partajează toate notele din această carte"
 #: plugins/exporter.koplugin/main.lua:313
 msgid "Current export folder:"
 msgstr "Dosarul curent pentru export:"
-
-#: plugins/exporter.koplugin/_meta.lua:5
-msgid "Exports highlights and notes."
-msgstr "Exportă evidențierile și notele."
 
 #. @translators Flomo is a note taking app. The name probably doesn't need to be translated.
 #: plugins/exporter.koplugin/target/flomo.lua:52
@@ -16720,6 +16781,14 @@ msgstr ""
 "interfeței vei găsi adresa IP a dispozitivului tău mobil. Întrodu această "
 "adresă IP în KOReader pentru a finaliza configurarea."
 
+#: plugins/externalkeyboard.koplugin/_meta.lua:4
+msgid "External keyboard"
+msgstr "Tastatură externă"
+
+#: plugins/externalkeyboard.koplugin/_meta.lua:5
+msgid "Manages USB OTG and configures keyboard."
+msgstr "Gestionează USB OTG și configurează tastatura."
+
 #: plugins/externalkeyboard.koplugin/main.lua:136
 msgid "External Keyboard"
 msgstr "Tastatură externă"
@@ -16748,13 +16817,13 @@ msgstr ""
 "Ia aminte că în modul OTG dispozitivul nu va fi recunoscut de PC ca un drive "
 "USB."
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:4
-msgid "External keyboard"
-msgstr "Tastatură externă"
+#: plugins/gestures.koplugin/_meta.lua:4
+msgid "Gestures"
+msgstr "Gesturi"
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:5
-msgid "Manages USB OTG and configures keyboard."
-msgstr "Gestionează USB OTG și configurează tastatura."
+#: plugins/gestures.koplugin/_meta.lua:5
+msgid "This plugin provides gesture support."
+msgstr "Acest plugin oferă suport pentru gesturi."
 
 #: plugins/gestures.koplugin/main.lua:42 plugins/gestures.koplugin/main.lua:46
 #: plugins/gestures.koplugin/main.lua:60 plugins/gestures.koplugin/main.lua:64
@@ -17083,13 +17152,13 @@ msgstr ""
 msgid "You have just performed your first multiswipe gesture."
 msgstr "Tocmai ai făcut prima ta glisare multiplă."
 
-#: plugins/gestures.koplugin/_meta.lua:4
-msgid "Gestures"
-msgstr "Gesturi"
+#: plugins/hello.koplugin/_meta.lua:4
+msgid "Hello"
+msgstr "Salut"
 
-#: plugins/gestures.koplugin/_meta.lua:5
-msgid "This plugin provides gesture support."
-msgstr "Acest plugin oferă suport pentru gesturi."
+#: plugins/hello.koplugin/_meta.lua:5
+msgid "This is a debugging plugin."
+msgstr "Acesta este un plugin pentru depanare."
 
 #: plugins/hello.koplugin/main.lua:24 plugins/hello.koplugin/main.lua:34
 #: plugins/hello.koplugin/main.lua:48
@@ -17100,13 +17169,19 @@ msgstr "Salut Lume"
 msgid "Hello, plugin world"
 msgstr "Salut, lumea plugin-urilor"
 
-#: plugins/hello.koplugin/_meta.lua:4
-msgid "Hello"
-msgstr "Salut"
+#: plugins/httpinspector.koplugin/_meta.lua:4
+msgid "HTTP KOReader Inspector"
+msgstr "Inspector HTTP KOReader"
 
-#: plugins/hello.koplugin/_meta.lua:5
-msgid "This is a debugging plugin."
-msgstr "Acesta este un plugin pentru depanare."
+#: plugins/httpinspector.koplugin/_meta.lua:5
+msgid ""
+"Allow browsing KOReader internal objects over HTTP. This is aimed at "
+"developers, and may pose some security risks. Only enable this on networks "
+"you can trust."
+msgstr ""
+"Permite navigarea printre obiectele interne KOReader prin HTTP. Acest lucru "
+"este pentru dezvoltatori și poate prezenta riscuri de securitate. Activează "
+"asta doar în rețele în care ai încredere."
 
 #: plugins/httpinspector.koplugin/main.lua:136
 msgid "KOReader HTTP inspector"
@@ -17144,19 +17219,34 @@ msgstr "Setează port particularizat"
 msgid "Port number (default is 8080)"
 msgstr "Număr port (implicit este 8080)"
 
-#: plugins/httpinspector.koplugin/_meta.lua:4
-msgid "HTTP KOReader Inspector"
-msgstr "Inspector HTTP KOReader"
+#: plugins/japanese.koplugin/_meta.lua:4
+msgid "Japanese support"
+msgstr "Suport japoneză"
 
-#: plugins/httpinspector.koplugin/_meta.lua:5
+#: plugins/japanese.koplugin/_meta.lua:5
 msgid ""
-"Allow browsing KOReader internal objects over HTTP. This is aimed at "
-"developers, and may pose some security risks. Only enable this on networks "
-"you can trust."
+"Japanese language support for KOReader, modeled after Yomichan.\n"
+"\n"
+"This plugin extends KOReader's built-in dictionary and selection system to "
+"support Yomichan-style deinflection and text scanning, allowing for one-tap "
+"searches of inflected verbs and multi-character words and phrases. As such, "
+"this plugin removes the need for synonym-based deinflection rules for "
+"StarDict-converted Japanese dictionaries.\n"
+"\n"
+"You must have at least one Japanese dictionary installed in order for this "
+"plugin to work smoothly with Japanese text."
 msgstr ""
-"Permite navigarea printre obiectele interne KOReader prin HTTP. Acest lucru "
-"este pentru dezvoltatori și poate prezenta riscuri de securitate. Activează "
-"asta doar în rețele în care ai încredere."
+"Suport limbă japoneză pentru KOReader, modelat după Yomichan.\n"
+"\n"
+"Acest plugin extinde dicționarul intern și sistemul de selectare pentru a "
+"suporta stilul Yomichan de dedeclinare și scanare a textului, permițînd "
+"căutări printr-o singură atingere a verbelor conjugate și cuvintelor multi-"
+"caracter și frazelor. Așa că acest plugin elimină necesitatea dedeclinării "
+"bazată pe reguli de sinonimie pentru dicțioinarele japoneze bazate pe "
+"StarDict.\n"
+"\n"
+"Trebuie să ai cel puțin un dicționar japonez instalat pentru ca acest plugin "
+"să funcționeze cu text japonez."
 
 #: plugins/japanese.koplugin/deinflector.lua:278
 msgid "Halfwidth to fullwidth kana"
@@ -17307,38 +17397,13 @@ msgstr ""
 msgid "Set scan length"
 msgstr "Setează lungimea de scanat"
 
-#: plugins/japanese.koplugin/_meta.lua:4
-msgid "Japanese support"
-msgstr "Suport japoneză"
-
-#: plugins/japanese.koplugin/_meta.lua:5
-msgid ""
-"Japanese language support for KOReader, modeled after Yomichan.\n"
-"\n"
-"This plugin extends KOReader's built-in dictionary and selection system to "
-"support Yomichan-style deinflection and text scanning, allowing for one-tap "
-"searches of inflected verbs and multi-character words and phrases. As such, "
-"this plugin removes the need for synonym-based deinflection rules for "
-"StarDict-converted Japanese dictionaries.\n"
-"\n"
-"You must have at least one Japanese dictionary installed in order for this "
-"plugin to work smoothly with Japanese text."
-msgstr ""
-"Suport limbă japoneză pentru KOReader, modelat după Yomichan.\n"
-"\n"
-"Acest plugin extinde dicționarul intern și sistemul de selectare pentru a "
-"suporta stilul Yomichan de dedeclinare și scanare a textului, permițînd "
-"căutări printr-o singură atingere a verbelor conjugate și cuvintelor multi-"
-"caracter și frazelor. Așa că acest plugin elimină necesitatea dedeclinării "
-"bazată pe reguli de sinonimie pentru dicțioinarele japoneze bazate pe "
-"StarDict.\n"
-"\n"
-"Trebuie să ai cel puțin un dicționar japonez instalat pentru ca acest plugin "
-"să funcționeze cu text japonez."
-
-#: plugins/keepalive.koplugin/main.lua:9 plugins/keepalive.koplugin/_meta.lua:4
+#: plugins/keepalive.koplugin/_meta.lua:4 plugins/keepalive.koplugin/main.lua:9
 msgid "Keep alive"
 msgstr "Ține treaz"
+
+#: plugins/keepalive.koplugin/_meta.lua:5
+msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
+msgstr "Ține dispozitivul treaz pentru a preveni deconectarea Wi-Fi automată."
 
 #: plugins/keepalive.koplugin/main.lua:18
 msgid ""
@@ -17371,9 +17436,16 @@ msgstr "Aceasta este o implementare fictivă a funcției „dezactivare”."
 msgid "This is a dummy implementation of 'enable' function."
 msgstr "Aceasta este o implementare fictivă a funcției „activare”."
 
-#: plugins/keepalive.koplugin/_meta.lua:5
-msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
-msgstr "Ține dispozitivul treaz pentru a preveni deconectarea Wi-Fi automată."
+#: plugins/kosync.koplugin/_meta.lua:4 plugins/kosync.koplugin/main.lua:188
+msgid "Progress sync"
+msgstr "Sincronizare progres"
+
+#: plugins/kosync.koplugin/_meta.lua:5
+msgid ""
+"Synchronizes your reading progess to a server across your KOReader devices."
+msgstr ""
+"Sincronizează progresul de citire pe un server între toate dispozitivele "
+"tale cu KOReader."
 
 #: plugins/kosync.koplugin/main.lua:26
 msgid "Register/login to KOReader server"
@@ -17417,10 +17489,6 @@ msgstr "Trimite progresul de pe acest dispozitiv"
 #: plugins/kosync.koplugin/main.lua:168
 msgid "Pull progress from other devices"
 msgstr "Preia progresul de la alte dispozitive"
-
-#: plugins/kosync.koplugin/main.lua:188 plugins/kosync.koplugin/_meta.lua:4
-msgid "Progress sync"
-msgstr "Sincronizare progres"
 
 #: plugins/kosync.koplugin/main.lua:191
 msgid "Custom sync server"
@@ -17597,21 +17665,18 @@ msgstr "Sincronizezi la ultima locație %1% de pe dispozitivul „%2”?"
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "Sincronizezi la locația anterioară %1% de pe dispozitivul „%2”?"
 
-#: plugins/kosync.koplugin/_meta.lua:5
-msgid ""
-"Synchronizes your reading progess to a server across your KOReader devices."
-msgstr ""
-"Sincronizează progresul de citire pe un server între toate dispozitivele "
-"tale cu KOReader."
+#: plugins/movetoarchive.koplugin/_meta.lua:4
+#: plugins/movetoarchive.koplugin/main.lua:34
+msgid "Move to archive"
+msgstr "Mută în arhivă"
+
+#: plugins/movetoarchive.koplugin/_meta.lua:5
+msgid "Moves/copies current book to archive folder"
+msgstr "Mută/copiază cartea curentă în dosarul de arhive"
 
 #: plugins/movetoarchive.koplugin/main.lua:17
 msgid "Move current book to archive"
 msgstr "Mută cartea curentă în arhivă"
-
-#: plugins/movetoarchive.koplugin/main.lua:34
-#: plugins/movetoarchive.koplugin/_meta.lua:4
-msgid "Move to archive"
-msgstr "Mută în arhivă"
 
 #: plugins/movetoarchive.koplugin/main.lua:44
 msgid "Copy current book to archive"
@@ -17658,9 +17723,13 @@ msgstr ""
 "Nu exită dosar de arhivare.\n"
 "Dorești să îl setezi acum?"
 
-#: plugins/movetoarchive.koplugin/_meta.lua:5
-msgid "Moves/copies current book to archive folder"
-msgstr "Mută/copiază cartea curentă în dosarul de arhive"
+#: plugins/newsdownloader.koplugin/_meta.lua:4
+msgid "News downloader"
+msgstr "Descărcător știri"
+
+#: plugins/newsdownloader.koplugin/_meta.lua:5
+msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
+msgstr "Preia știri RSS și Atom și le salvează ca fișiere HTML."
 
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:314
 msgid ""
@@ -17969,13 +18038,13 @@ msgstr "Configurare invalidă: %1"
 msgid "Configuration empty"
 msgstr "Configurări goale"
 
-#: plugins/newsdownloader.koplugin/_meta.lua:4
-msgid "News downloader"
-msgstr "Descărcător știri"
+#: plugins/opds.koplugin/_meta.lua:4
+msgid "OPDS"
+msgstr "OPDS"
 
-#: plugins/newsdownloader.koplugin/_meta.lua:5
-msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
-msgstr "Preia știri RSS și Atom și le salvează ca fișiere HTML."
+#: plugins/opds.koplugin/_meta.lua:5
+msgid "OPDS allows you to download books from online catalogs."
+msgstr "OPDS îți permite să descarci cărți din cataloage online."
 
 #: plugins/opds.koplugin/main.lua:13 plugins/opds.koplugin/opdscatalog.lua:14
 msgid "OPDS Catalog"
@@ -17984,14 +18053,6 @@ msgstr "Catalog OPDS"
 #: plugins/opds.koplugin/main.lua:45
 msgid "OPDS catalog"
 msgstr "Catalog OPDS"
-
-#: plugins/opds.koplugin/_meta.lua:4
-msgid "OPDS"
-msgstr "OPDS"
-
-#: plugins/opds.koplugin/_meta.lua:5
-msgid "OPDS allows you to download books from online catalogs."
-msgstr "OPDS îți permite să descarci cărți din cataloage online."
 
 #: plugins/opds.koplugin/opdsbrowser.lua:111
 msgid "Catalog name"
@@ -18166,6 +18227,17 @@ msgstr "Citește mai tîrziu"
 msgid "Stream"
 msgstr "Stream"
 
+#: plugins/patchmanagement.koplugin/_meta.lua:4
+#: plugins/patchmanagement.koplugin/main.lua:138
+msgid "Patch management"
+msgstr "Management patch-uri"
+
+#: plugins/patchmanagement.koplugin/_meta.lua:5
+msgid "This plugin allows enabling, disabling or editing user patches."
+msgstr ""
+"Acest plugin permite activarea, dezactivarea sau editarea patch-urilor "
+"utilizator."
+
 #: plugins/patchmanagement.koplugin/main.lua:95
 msgid ""
 "Patches changed. Current set of patches will be applied on next restart."
@@ -18206,11 +18278,6 @@ msgstr ""
 "Patch-urile sînt considerate o caracteristică avansată, deci fii atent la ce "
 "faci!"
 
-#: plugins/patchmanagement.koplugin/main.lua:138
-#: plugins/patchmanagement.koplugin/_meta.lua:4
-msgid "Patch management"
-msgstr "Management patch-uri"
-
 #: plugins/patchmanagement.koplugin/main.lua:152
 msgid "About patch management"
 msgstr "Despre managementul patch-urilor"
@@ -18239,11 +18306,17 @@ msgstr "Înainte de ieșire"
 msgid "On exit"
 msgstr "La ieșire"
 
-#: plugins/patchmanagement.koplugin/_meta.lua:5
-msgid "This plugin allows enabling, disabling or editing user patches."
+#: plugins/perceptionexpander.koplugin/_meta.lua:4
+msgid "Perception expander"
+msgstr "Expandarea percepției"
+
+#: plugins/perceptionexpander.koplugin/_meta.lua:5
+msgid ""
+"Improves your reading speed with the help of two vertical lines over the "
+"text."
 msgstr ""
-"Acest plugin permite activarea, dezactivarea sau editarea patch-urilor "
-"utilizator."
+"Îmbunătățește viteza de citire cu ajutorul a două linii verticale laterale "
+"suprapuse pe text."
 
 #: plugins/perceptionexpander.koplugin/main.lua:108
 msgid "Perception expander settings"
@@ -18278,25 +18351,20 @@ msgid "For more information see wiki page Perception Expander Plugin"
 msgstr ""
 "Pentru mai multe informații vezi pagina de wiki „Perception Expander Plugin”"
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:4
-msgid "Perception expander"
-msgstr "Expandarea percepției"
+#: plugins/profiles.koplugin/_meta.lua:4 plugins/profiles.koplugin/main.lua:78
+msgid "Profiles"
+msgstr "Profile"
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:5
+#: plugins/profiles.koplugin/_meta.lua:5
 msgid ""
-"Improves your reading speed with the help of two vertical lines over the "
-"text."
+"This plugin allows combining multiple settings to make switchable 'profiles'."
 msgstr ""
-"Îmbunătățește viteza de citire cu ajutorul a două linii verticale laterale "
-"suprapuse pe text."
+"Acest plugin permite combinarea mai multor setări pentru a crea profile ușor "
+"de comutat."
 
 #: plugins/profiles.koplugin/main.lua:60
 msgid "Profile %1"
 msgstr "Profil %1"
-
-#: plugins/profiles.koplugin/main.lua:78 plugins/profiles.koplugin/_meta.lua:4
-msgid "Profiles"
-msgstr "Profile"
 
 #: plugins/profiles.koplugin/main.lua:89
 msgid "New"
@@ -18347,15 +18415,8 @@ msgstr "Întrodu nume profil"
 msgid "Profile already exists: %1"
 msgstr "Profilul există deja: %1"
 
-#: plugins/profiles.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows combining multiple settings to make switchable 'profiles'."
-msgstr ""
-"Acest plugin permite combinarea mai multor setări pentru a crea profile ușor "
-"de comutat."
-
-#: plugins/qrclipboard.koplugin/main.lua:24
 #: plugins/qrclipboard.koplugin/_meta.lua:4
+#: plugins/qrclipboard.koplugin/main.lua:24
 msgid "QR from clipboard"
 msgstr "QR din clipboard"
 
@@ -18363,6 +18424,15 @@ msgstr "QR din clipboard"
 msgid "This plugin generates a QR code from clipboard content."
 msgstr ""
 "Acest plugin generează un cod QR din conținutul curent al clipboard-ului."
+
+#: plugins/readtimer.koplugin/_meta.lua:4
+#: plugins/readtimer.koplugin/main.lua:99
+msgid "Read timer"
+msgstr "Temporizator citire"
+
+#: plugins/readtimer.koplugin/_meta.lua:5
+msgid "Shows an alarm after a specified amount of time."
+msgstr "Arată o alarmă după un timp specificat."
 
 #: plugins/readtimer.koplugin/main.lua:23
 msgid "Time is up"
@@ -18379,11 +18449,6 @@ msgstr "Gata"
 #: plugins/readtimer.koplugin/main.lua:96
 msgid "Read timer (%1)"
 msgstr "Temporizator citire (%1)"
-
-#: plugins/readtimer.koplugin/main.lua:99
-#: plugins/readtimer.koplugin/_meta.lua:4
-msgid "Read timer"
-msgstr "Temporizator citire"
 
 #: plugins/readtimer.koplugin/main.lua:116
 msgid "Set alarm"
@@ -18430,70 +18495,14 @@ msgstr "Temporizatorul va expira în %1."
 msgid "Stop timer"
 msgstr "Oprește temporizatorul"
 
-#: plugins/readtimer.koplugin/_meta.lua:5
-msgid "Shows an alarm after a specified amount of time."
-msgstr "Arată o alarmă după un timp specificat."
+#: plugins/statistics.koplugin/_meta.lua:4
+#: plugins/statistics.koplugin/main.lua:1056
+msgid "Reading statistics"
+msgstr "Statistici citire"
 
-#. @translators: %1 is the SSH port, %2 is the network info.
-#: plugins/SSH.koplugin/main.lua:73
-msgid ""
-"SSH server started.\n"
-"\n"
-"SSH port: %1\n"
-"%2"
-msgstr ""
-"Server-ul SSH a pornit.\n"
-"\n"
-"Port SSH: %1\n"
-"%2"
-
-#: plugins/SSH.koplugin/main.lua:81
-msgid "Failed to start SSH server."
-msgstr "A eșuat pornirea server-ului SSH."
-
-#: plugins/SSH.koplugin/main.lua:94
-msgid "SSH server stopped."
-msgstr "Server SSH oprit."
-
-#: plugins/SSH.koplugin/main.lua:123
-msgid "Choose SSH port"
-msgstr "Alege port SSH"
-
-#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
-msgid "SSH server"
-msgstr "Server SSH"
-
-#: plugins/SSH.koplugin/main.lua:174
-msgid "SSH port (%1)"
-msgstr "Port SSH (%1)"
-
-#: plugins/SSH.koplugin/main.lua:183
-msgid "SSH public key"
-msgstr "Cheie publică SSH"
-
-#: plugins/SSH.koplugin/main.lua:189
-msgid ""
-"Put your public SSH keys in\n"
-"%1"
-msgstr ""
-"Pune cheile tale publice SSH în\n"
-"%1"
-
-#: plugins/SSH.koplugin/main.lua:195
-msgid "Login without password (DANGEROUS)"
-msgstr "Autentificare fără parolă (PERICULOS)"
-
-#: plugins/SSH.koplugin/main.lua:208
-msgid "Toggle SSH server"
-msgstr "Comută stare server SSH"
-
-#: plugins/SSH.koplugin/_meta.lua:4
-msgid "SSH"
-msgstr "SSH"
-
-#: plugins/SSH.koplugin/_meta.lua:5
-msgid "Connect and transfer files to the device using SSH."
-msgstr "Conectează‑te și transferă fișiere pe dispozitiv prin SSH."
+#: plugins/statistics.koplugin/_meta.lua:5
+msgid "Keeps and displays your reading statistics."
+msgstr "Păstrează și afișează statisticile tale de citire."
 
 #: plugins/statistics.koplugin/calendarview.lua:1178
 msgid "Enter month"
@@ -18574,11 +18583,6 @@ msgstr[2] ""
 #: plugins/statistics.koplugin/main.lua:1030
 msgid "Enabled"
 msgstr "Activat"
-
-#: plugins/statistics.koplugin/main.lua:1056
-#: plugins/statistics.koplugin/_meta.lua:4
-msgid "Reading statistics"
-msgstr "Statistici citire"
 
 #: plugins/statistics.koplugin/main.lua:1064
 msgid "Read page duration limits: %1 s – %2 s"
@@ -19015,10 +19019,6 @@ msgstr "Nici o statistică eliminată."
 msgid "Syncing book statistics. This may take a while."
 msgstr "Se sincronizează statisticile cărții. Asta poate dura un timp."
 
-#: plugins/statistics.koplugin/_meta.lua:5
-msgid "Keeps and displays your reading statistics."
-msgstr "Păstrează și afișează statisticile tale de citire."
-
 #: plugins/statistics.koplugin/readerprogress.lua:108
 msgid "Week progress"
 msgstr "Progresul săptămînii"
@@ -19067,6 +19067,17 @@ msgid ""
 msgstr ""
 "Medie\n"
 "timp/zi"
+
+#: plugins/systemstat.koplugin/_meta.lua:4
+#: plugins/systemstat.koplugin/main.lua:297
+#: plugins/systemstat.koplugin/main.lua:309
+#: plugins/systemstat.koplugin/main.lua:319
+msgid "System statistics"
+msgstr "Statistici sistem"
+
+#: plugins/systemstat.koplugin/_meta.lua:5
+msgid "Shows system statistics."
+msgstr "Afișează statisticile de sistem."
 
 #: plugins/systemstat.koplugin/main.lua:57
 msgid "KOReader started at"
@@ -19196,16 +19207,15 @@ msgstr "    Total"
 msgid "    Used percentage"
 msgstr "    Procent folosit"
 
-#: plugins/systemstat.koplugin/main.lua:297
-#: plugins/systemstat.koplugin/main.lua:309
-#: plugins/systemstat.koplugin/main.lua:319
-#: plugins/systemstat.koplugin/_meta.lua:4
-msgid "System statistics"
-msgstr "Statistici sistem"
+#: plugins/terminal.koplugin/_meta.lua:4 plugins/terminal.koplugin/main.lua:302
+#: plugins/terminal.koplugin/main.lua:467
+#: plugins/terminal.koplugin/main.lua:617
+msgid "Terminal emulator"
+msgstr "Emulator terminal"
 
-#: plugins/systemstat.koplugin/_meta.lua:5
-msgid "Shows system statistics."
-msgstr "Afișează statisticile de sistem."
+#: plugins/terminal.koplugin/_meta.lua:5
+msgid "KOReader's terminal emulator"
+msgstr "Emulator terminal KOReader"
 
 #: plugins/terminal.koplugin/aliases.lua:63
 #: plugins/terminal.koplugin/aliases.lua:142
@@ -19227,12 +19237,6 @@ msgstr "Nume alias:"
 #: plugins/terminal.koplugin/aliases.lua:93
 msgid "Alias command:"
 msgstr "Alias comandă:"
-
-#: plugins/terminal.koplugin/main.lua:302
-#: plugins/terminal.koplugin/main.lua:467
-#: plugins/terminal.koplugin/main.lua:617 plugins/terminal.koplugin/_meta.lua:4
-msgid "Terminal emulator"
-msgstr "Emulator terminal"
 
 #. @translators This is the ESC-key on the keyboard.
 #: plugins/terminal.koplugin/main.lua:326
@@ -19344,14 +19348,16 @@ msgstr ""
 "Aici poți alege shell-ul de pornire.\n"
 "Implicit: sh"
 
-#: plugins/terminal.koplugin/_meta.lua:5
-msgid "KOReader's terminal emulator"
-msgstr "Emulator terminal KOReader"
-
-#: plugins/texteditor.koplugin/main.lua:32
 #: plugins/texteditor.koplugin/_meta.lua:4
+#: plugins/texteditor.koplugin/main.lua:32
 msgid "Text editor"
 msgstr "Editor text"
+
+#: plugins/texteditor.koplugin/_meta.lua:5
+msgid "A basic text editor for making small changes to plain text files."
+msgstr ""
+"Un editor de text simplu pentru a face mici modificări în fișiere text "
+"simple."
 
 #: plugins/texteditor.koplugin/main.lua:45
 msgid "Text editor: open last file"
@@ -19617,11 +19623,13 @@ msgstr "Fișier șters"
 msgid "Failed deleting file: %1"
 msgstr "A eșuat ștergerea fișierului %1"
 
-#: plugins/texteditor.koplugin/_meta.lua:5
-msgid "A basic text editor for making small changes to plain text files."
-msgstr ""
-"Un editor de text simplu pentru a face mici modificări în fișiere text "
-"simple."
+#: plugins/timesync.koplugin/_meta.lua:4
+msgid "Time sync"
+msgstr "Sincronizare oră"
+
+#: plugins/timesync.koplugin/_meta.lua:5
+msgid "Synchronizes the device time with NTP servers."
+msgstr "Sincronizează dispozitivul cu un server NTP."
 
 #: plugins/timesync.koplugin/main.lua:50
 msgid "New time is %1."
@@ -19645,13 +19653,19 @@ msgstr ""
 msgid "Synchronize time"
 msgstr "Sincronizează ora"
 
-#: plugins/timesync.koplugin/_meta.lua:4
-msgid "Time sync"
-msgstr "Sincronizare oră"
+#: plugins/vocabbuilder.koplugin/_meta.lua:4
+#: plugins/vocabbuilder.koplugin/main.lua:1950
+#: plugins/vocabbuilder.koplugin/main.lua:2021
+msgid "Vocabulary builder"
+msgstr "Constructor vocabular"
 
-#: plugins/timesync.koplugin/_meta.lua:5
-msgid "Synchronizes the device time with NTP servers."
-msgstr "Sincronizează dispozitivul cu un server NTP."
+#: plugins/vocabbuilder.koplugin/_meta.lua:5
+msgid ""
+"This plugin processes dictionary word lookups and uses spaced repetition to "
+"help you remember new words."
+msgstr ""
+"Acest plugin procesează căutările cuvintelor în dicționar și folosește "
+"repetiția spațială pentru a te ajuta să reții cuvintele noi."
 
 #: plugins/vocabbuilder.koplugin/main.lua:77
 msgid "Add to vocabulary builder"
@@ -19851,23 +19865,17 @@ msgstr "Schimbă titlu"
 msgid "Words reloaded"
 msgstr "Cuvintele au fost reîncărcate"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1950
-#: plugins/vocabbuilder.koplugin/main.lua:2021
-#: plugins/vocabbuilder.koplugin/_meta.lua:4
-msgid "Vocabulary builder"
-msgstr "Constructor vocabular"
-
 #: plugins/vocabbuilder.koplugin/main.lua:2032
 msgid "Open vocabulary builder"
 msgstr "Deschide Constructor vocabular"
 
-#: plugins/vocabbuilder.koplugin/_meta.lua:5
-msgid ""
-"This plugin processes dictionary word lookups and uses spaced repetition to "
-"help you remember new words."
-msgstr ""
-"Acest plugin procesează căutările cuvintelor în dicționar și folosește "
-"repetiția spațială pentru a te ajuta să reții cuvintele noi."
+#: plugins/wallabag.koplugin/_meta.lua:4 plugins/wallabag.koplugin/main.lua:133
+msgid "Wallabag"
+msgstr "Wallabag"
+
+#: plugins/wallabag.koplugin/_meta.lua:5
+msgid "Synchronises articles with a Wallabag server."
+msgstr "Sincronizează articolele cu un server Wallabag."
 
 #: plugins/wallabag.koplugin/main.lua:45
 msgid "Wallabag retrieval"
@@ -19876,10 +19884,6 @@ msgstr "Preluare din Wallabag"
 #: plugins/wallabag.koplugin/main.lua:121
 msgid "Add to Wallabag"
 msgstr "Adaugă în Wallabag"
-
-#: plugins/wallabag.koplugin/main.lua:133 plugins/wallabag.koplugin/_meta.lua:4
-msgid "Wallabag"
-msgstr "Wallabag"
 
 #: plugins/wallabag.koplugin/main.lua:136
 msgid "Retrieve new articles from server"
@@ -20221,10 +20225,6 @@ msgid ""
 msgstr ""
 "Nu s-a putut adăuga legătura în Wallabag:\n"
 "%1"
-
-#: plugins/wallabag.koplugin/_meta.lua:5
-msgid "Synchronises articles with a Wallabag server."
-msgstr "Sincronizează articolele cu un server Wallabag."
 
 #: tools/kobo_touch_probe.lua:54
 msgid "Tap the lower right corner"

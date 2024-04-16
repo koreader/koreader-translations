@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-09 11:01+0000\n"
+"POT-Creation-Date: 2024-04-16 17:04+0000\n"
 "PO-Revision-Date: 2024-04-12 18:02+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -160,12 +160,12 @@ msgstr "파일이름 입력"
 #: frontend/apps/cloudstorage/dropbox.lua:130
 #: frontend/apps/cloudstorage/ftp.lua:127
 #: frontend/apps/cloudstorage/webdav.lua:126
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
-#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanager.lua:989
 #: frontend/apps/filemanager/filemanager.lua:1117
 #: frontend/apps/filemanager/filemanager.lua:1444
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
+#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:56
 #: frontend/apps/filemanager/filemanagershortcuts.lua:107
 #: frontend/apps/reader/modules/readerbookmark.lua:1053
@@ -197,7 +197,7 @@ msgstr "파일이름 입력"
 #: frontend/ui/widget/networksetting.lua:340
 #: frontend/ui/widget/numberpickerwidget.lua:139
 #: frontend/ui/widget/pathchooser.lua:134 frontend/ui/widget/textviewer.lua:468
-#: frontend/ui/widget/touchmenu.lua:1330
+#: frontend/ui/widget/touchmenu.lua:1330 plugins/SSH.koplugin/main.lua:130
 #: plugins/autowarmth.koplugin/main.lua:759
 #: plugins/autowarmth.koplugin/main.lua:1060
 #: plugins/calibre.koplugin/main.lua:324
@@ -223,7 +223,7 @@ msgstr "파일이름 입력"
 #: plugins/opds.koplugin/opdsbrowser.lua:646
 #: plugins/opds.koplugin/opdspse.lua:179
 #: plugins/perceptionexpander.koplugin/main.lua:138
-#: plugins/profiles.koplugin/main.lua:264 plugins/SSH.koplugin/main.lua:130
+#: plugins/profiles.koplugin/main.lua:264
 #: plugins/statistics.koplugin/main.lua:1246
 #: plugins/statistics.koplugin/main.lua:2306
 #: plugins/statistics.koplugin/main.lua:2480
@@ -290,12 +290,12 @@ msgid "Edit"
 msgstr "수정"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:395
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
-#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/filemanager/filemanager.lua:255
 #: frontend/apps/filemanager/filemanager.lua:571
 #: frontend/apps/filemanager/filemanager.lua:576
 #: frontend/apps/filemanager/filemanager.lua:1046
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
+#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/reader/modules/readerhighlight.lua:983
 #: frontend/ui/widget/screenshoter.lua:51
 #: plugins/bookshortcuts.koplugin/main.lua:138
@@ -430,12 +430,6 @@ msgstr "만들기"
 msgid "Enter folder after creation"
 msgstr "만든 후 폴더 입력"
 
-#: frontend/apps/cloudstorage/dropboxapi.lua:213
-#: frontend/apps/cloudstorage/webdavapi.lua:175
-#: frontend/ui/widget/filechooser.lua:451
-msgid "Long-press to choose current folder"
-msgstr "현재 폴더를 선택하려면 길게 누르세요"
-
 #: frontend/apps/cloudstorage/dropbox.lua:33
 #: frontend/apps/cloudstorage/ftp.lua:38
 #: frontend/apps/cloudstorage/webdav.lua:26
@@ -550,13 +544,13 @@ msgstr "Dropbox 폴더(루트 폴더면 /)"
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
 #: frontend/apps/reader/modules/readerwikipedia.lua:174
 #: frontend/ui/widget/inputdialog.lua:766
-#: frontend/ui/widget/inputdialog.lua:807
+#: frontend/ui/widget/inputdialog.lua:807 plugins/SSH.koplugin/main.lua:137
 #: plugins/coverimage.koplugin/main.lua:362
 #: plugins/gestures.koplugin/main.lua:406
 #: plugins/newsdownloader.koplugin/main.lua:755
 #: plugins/opds.koplugin/opdsbrowser.lua:149
 #: plugins/opds.koplugin/opdsbrowser.lua:178
-#: plugins/profiles.koplugin/main.lua:271 plugins/SSH.koplugin/main.lua:137
+#: plugins/profiles.koplugin/main.lua:271
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:591
 msgid "Save"
@@ -577,6 +571,12 @@ msgstr ""
 "국가: %4\n"
 "총 공간: %5\n"
 "사용한 공간: %6"
+
+#: frontend/apps/cloudstorage/dropboxapi.lua:213
+#: frontend/apps/cloudstorage/webdavapi.lua:175
+#: frontend/ui/widget/filechooser.lua:451
+msgid "Long-press to choose current folder"
+msgstr "현재 폴더를 선택하려면 길게 누르세요"
 
 #: frontend/apps/cloudstorage/ftp.lua:29
 msgid ""
@@ -729,6 +729,361 @@ msgstr "암호"
 #: frontend/apps/cloudstorage/webdav.lua:120
 msgid "Start folder, for example /books"
 msgstr "폴더 시작, 예를 들어 /books"
+
+#: frontend/apps/filemanager/filemanager.lua:48
+msgid "KOReader"
+msgstr "KOReader"
+
+#: frontend/apps/filemanager/filemanager.lua:217
+msgctxt "File"
+msgid "Copy"
+msgstr "복사"
+
+#: frontend/apps/filemanager/filemanager.lua:225
+msgctxt "File"
+msgid "Paste"
+msgstr "붙여넣기"
+
+#: frontend/apps/filemanager/filemanager.lua:233
+#: frontend/apps/reader/modules/readerhighlight.lua:65
+#: frontend/ui/widget/inputtext.lua:245
+msgid "Select"
+msgstr "선택"
+
+#: frontend/apps/filemanager/filemanager.lua:247
+msgid "Cut"
+msgstr "잘라내기"
+
+#: frontend/apps/filemanager/filemanager.lua:263
+#: frontend/apps/filemanager/filemanager.lua:1124
+msgid "Rename"
+msgstr "이름바꾸기"
+
+#: frontend/apps/filemanager/filemanager.lua:300
+msgid "Open with…"
+msgstr "다음으로 열기…"
+
+#: frontend/apps/filemanager/filemanager.lua:322
+msgid "Convert"
+msgstr "변환"
+
+#: frontend/apps/filemanager/filemanager.lua:334
+#: frontend/apps/filemanager/filemanager.lua:646
+msgid "Set as HOME folder"
+msgstr "홈 폴더로 설정"
+
+#: frontend/apps/filemanager/filemanager.lua:468
+#: frontend/apps/reader/modules/readerback.lua:179
+msgid "Exit KOReader?"
+msgstr "KOReader를 끝낼까요?"
+
+#: frontend/apps/filemanager/filemanager.lua:469
+#: frontend/apps/reader/modules/readerback.lua:180
+#: frontend/apps/reader/modules/readerdevicestatus.lua:103
+#: frontend/ui/elements/common_exit_menu_table.lua:9
+#: frontend/ui/elements/common_exit_menu_table.lua:16
+msgid "Exit"
+msgstr "끝내기"
+
+#: frontend/apps/filemanager/filemanager.lua:520
+msgid "1 file selected"
+msgid_plural "%1 files selected"
+msgstr[0] "파일 %1개 선택됨"
+
+#: frontend/apps/filemanager/filemanager.lua:521
+msgid "No files selected"
+msgstr "선택 파일 없음"
+
+#: frontend/apps/filemanager/filemanager.lua:525
+msgid "Show selected files list"
+msgstr "선택한 파일 목록 표시"
+
+#: frontend/apps/filemanager/filemanager.lua:533
+#: frontend/apps/filemanager/filemanager.lua:919
+#: frontend/apps/reader/modules/readerlink.lua:143
+msgid "Copy"
+msgstr "복사"
+
+#: frontend/apps/filemanager/filemanager.lua:543
+msgid "Select all files in folder"
+msgstr "폴더의 모든 파일 선택"
+
+#: frontend/apps/filemanager/filemanager.lua:550
+#: frontend/apps/filemanager/filemanager.lua:916
+#: frontend/apps/filemanager/filemanager.lua:1181
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
+msgid "Move"
+msgstr "옮기기"
+
+#: frontend/apps/filemanager/filemanager.lua:560
+#: frontend/apps/reader/modules/readerbookmark.lua:664
+msgid "Deselect all"
+msgstr "모두 선택 해제"
+
+#: frontend/apps/filemanager/filemanager.lua:575
+msgid ""
+"Delete selected files?\n"
+"If you delete a file, it is permanently lost."
+msgstr ""
+"선택한 파일을 삭제할까요?\n"
+"파일을 삭제하면 영구적으로 사라집니다."
+
+#: frontend/apps/filemanager/filemanager.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:702
+#: frontend/apps/reader/modules/readerhighlight.lua:692
+msgid "Exit select mode"
+msgstr "선택 모드 끝내기"
+
+#: frontend/apps/filemanager/filemanager.lua:594
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:261
+msgid "Export highlights"
+msgstr "강조 표시 내보내기"
+
+#: frontend/apps/filemanager/filemanager.lua:618
+msgid "Select files"
+msgstr "파일 선택"
+
+#: frontend/apps/filemanager/filemanager.lua:636
+#: frontend/apps/reader/modules/readerbookmark.lua:1064
+#: frontend/ui/widget/inputtext.lua:255
+msgid "Paste"
+msgstr "붙여넣기"
+
+#: frontend/apps/filemanager/filemanager.lua:655
+msgid "Go to HOME folder"
+msgstr "홈 폴더로 이동"
+
+#: frontend/apps/filemanager/filemanager.lua:664
+msgid "Open random document"
+msgstr "무작위 문서 열기"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+msgid "Switch to SDCard"
+msgstr "SDCard로 전환"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+msgid "Switch to internal storage"
+msgstr "내부 저장소로 전환"
+
+#: frontend/apps/filemanager/filemanager.lua:704
+msgid "Import files here"
+msgstr "여기에 파일 가져오기"
+
+#: frontend/apps/filemanager/filemanager.lua:800
+msgid "Set '%1' as HOME folder?"
+msgstr "'%1'를 홈 폴더로 설정할까요?"
+
+#: frontend/apps/filemanager/filemanager.lua:801
+msgid "Set as HOME"
+msgstr "홈으로 설정"
+
+#: frontend/apps/filemanager/filemanager.lua:819
+msgid "Do you want to open %1?"
+msgstr "%1을 열까요?"
+
+#: frontend/apps/filemanager/filemanager.lua:820
+#: frontend/apps/filemanager/filemanager.lua:1450
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
+#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
+#: plugins/texteditor.koplugin/main.lua:457
+msgid "Open"
+msgstr "열기"
+
+#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
+#: frontend/apps/filemanager/filemanager.lua:826
+msgid "Another"
+msgstr "또 다른"
+
+#: frontend/apps/filemanager/filemanager.lua:833
+msgid "File not found"
+msgstr "파일을 찾을 수 없음"
+
+#: frontend/apps/filemanager/filemanager.lua:891
+msgid ""
+"File already exists:\n"
+"%1"
+msgstr ""
+"파일이 이미 있습니다:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:892
+msgid ""
+"Folder already exists:\n"
+"%1"
+msgstr ""
+"폴더가 이미 있습니다:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:896
+#: frontend/apps/filemanager/filemanager.lua:1178
+#: frontend/apps/filemanager/filemanagerconverter.lua:97
+#: frontend/apps/reader/modules/readerdictionary.lua:1087
+#: plugins/opds.koplugin/opdsbrowser.lua:770
+msgid "Overwrite"
+msgstr "덮어쓰기"
+
+#: frontend/apps/filemanager/filemanager.lua:915
+msgid "Move selected files to the current folder?"
+msgstr "선택한 파일을 현재 폴더로 이동할까?"
+
+#: frontend/apps/filemanager/filemanager.lua:918
+msgid "Copy selected files to the current folder?"
+msgstr "선택한 파일을 현재 폴더에 복사할까요?"
+
+#: frontend/apps/filemanager/filemanager.lua:931
+msgid "overwrite existing files"
+msgstr "기존의 파일을 덮어쓰기"
+
+#: frontend/apps/filemanager/filemanager.lua:971
+msgid "1 file was not moved"
+msgid_plural "%1 files were not moved"
+msgstr[0] "%1 파일이 이동되지 않았습니다"
+
+#: frontend/apps/filemanager/filemanager.lua:972
+msgid "1 file was not copied"
+msgid_plural "%1 files were not copied"
+msgstr[0] "%1 파일이 복사되지 않았습니다"
+
+#: frontend/apps/filemanager/filemanager.lua:1011
+msgid ""
+"Failed to create folder:\n"
+"%1"
+msgstr ""
+"폴더 생성 실패:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1034
+msgid ""
+"File not found:\n"
+"%1"
+msgstr ""
+"파일을 찾을 수 없음:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete file permanently?"
+msgstr "파일을 영구적으로 삭제할까요?"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete folder permanently?"
+msgstr "폴더를 영구적으로 삭제할까요?"
+
+#: frontend/apps/filemanager/filemanager.lua:1042
+msgid "Book settings, highlights and notes will be deleted."
+msgstr "책 설정과 하이라이트, 메모가 삭제됩니다."
+
+#: frontend/apps/filemanager/filemanager.lua:1076
+msgid ""
+"Failed to delete:\n"
+"%1"
+msgstr ""
+"삭제 실패:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1102
+msgid "Failed to delete 1 file."
+msgid_plural "Failed to delete %1 files."
+msgstr[0] "%1 파일을 삭제하지 못했습니다."
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename file"
+msgstr "파일 이름바꾸기"
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename folder"
+msgstr "폴더 이름 바꾸기"
+
+#: frontend/apps/filemanager/filemanager.lua:1156
+msgid ""
+"Failed to rename:\n"
+"%1\n"
+"to:\n"
+"%2"
+msgstr ""
+"%1\n"
+"에서:\n"
+"%2\n"
+"로 이름 변경 실패"
+
+#: frontend/apps/filemanager/filemanager.lua:1167
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"File cannot be renamed."
+msgstr ""
+"폴더가 이미 있습니다:\n"
+"%1\n"
+"파일이름을 바꿀 수 없습니다."
+
+#: frontend/apps/filemanager/filemanager.lua:1169
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Folder cannot be renamed."
+msgstr ""
+"존재하는 파일입니다:\n"
+"%1\n"
+"폴더이름을 바꿀 수 없습니다."
+
+#: frontend/apps/filemanager/filemanager.lua:1177
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Overwrite file?"
+msgstr ""
+"이미 존재하는 파일입니다:\n"
+"%1\n"
+"파일을 덮어쓸까요?"
+
+#: frontend/apps/filemanager/filemanager.lua:1180
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"Move the folder inside it?"
+msgstr ""
+"폴더가 이미 있습니다:\n"
+"%1\n"
+"폴더를 내부로 옮길까요?"
+
+#: frontend/apps/filemanager/filemanager.lua:1333
+msgid "Selected files (%1)"
+msgstr "선택한 파일(%1)"
+
+#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
+#: frontend/apps/filemanager/filemanager.lua:1360
+msgid "%1 ~Unsupported"
+msgstr "%1 ~지원되지 않음"
+
+#: frontend/apps/filemanager/filemanager.lua:1396
+msgid "Reset default for this file"
+msgstr "이 파일의 기본값 재설정"
+
+#: frontend/apps/filemanager/filemanager.lua:1406
+msgid "Reset default for %1 files"
+msgstr "%1 파일에 대한 기본값 재설정"
+
+#: frontend/apps/filemanager/filemanager.lua:1417
+msgid "View defaults for file types"
+msgstr "파일 형식의 기본값 보기"
+
+#: frontend/apps/filemanager/filemanager.lua:1456
+msgid "Always open '%2' with %1?"
+msgstr "항상 %1로 %2 파일을 열까요?"
+
+#: frontend/apps/filemanager/filemanager.lua:1457
+#: frontend/apps/filemanager/filemanager.lua:1467
+#: frontend/ui/elements/common_settings_menu_table.lua:383
+#: frontend/ui/elements/common_settings_menu_table.lua:660
+msgid "Always"
+msgstr "항상"
+
+#: frontend/apps/filemanager/filemanager.lua:1466
+msgid "Always open %2 files with %1?"
+msgstr "항상 %1로 %2 파일을 열까요?"
+
+#: frontend/apps/filemanager/filemanager.lua:1484
+msgid "Open %1 with:"
+msgstr "%1로 열기:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:27
 #: frontend/apps/filemanager/filemanagerutil.lua:277
@@ -911,13 +1266,6 @@ msgstr[0] "원하는 위치에 메타데이터가 없는 %1 책을 찾았습니�
 msgid "Move book metadata to your preferred location?"
 msgstr "도서 메타데이터를 원하는 위치로 옮길까요?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
-#: frontend/apps/filemanager/filemanager.lua:550
-#: frontend/apps/filemanager/filemanager.lua:916
-#: frontend/apps/filemanager/filemanager.lua:1181
-msgid "Move"
-msgstr "옮기기"
-
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:658
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
@@ -991,14 +1339,6 @@ msgstr "HTML"
 msgid "Overwrite existing HTML file?"
 msgstr "기존의 HTML 파일에 덮어쓸까요?"
 
-#: frontend/apps/filemanager/filemanagerconverter.lua:97
-#: frontend/apps/filemanager/filemanager.lua:896
-#: frontend/apps/filemanager/filemanager.lua:1178
-#: frontend/apps/reader/modules/readerdictionary.lua:1087
-#: plugins/opds.koplugin/opdsbrowser.lua:770
-msgid "Overwrite"
-msgstr "덮어쓰기"
-
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:30
 msgid "Enter text to search for in filename"
 msgstr "파일이름에 검색할 내용을 입력"
@@ -1064,14 +1404,6 @@ msgstr "검색 결과(%1)"
 #: frontend/apps/reader/modules/readersearch.lua:596
 msgid "Query: %1"
 msgstr "질의어: %1"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
-#: frontend/apps/filemanager/filemanager.lua:820
-#: frontend/apps/filemanager/filemanager.lua:1450
-#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
-#: plugins/texteditor.koplugin/main.lua:457
-msgid "Open"
-msgstr "열기"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:308
 msgid "Title: %1"
@@ -1175,338 +1507,6 @@ msgstr "검색한 내력을 검색할 텍스트를 입력하세요"
 #: plugins/vocabbuilder.koplugin/main.lua:1550
 msgid "Search"
 msgstr "검색"
-
-#: frontend/apps/filemanager/filemanager.lua:48
-msgid "KOReader"
-msgstr "KOReader"
-
-#: frontend/apps/filemanager/filemanager.lua:217
-msgctxt "File"
-msgid "Copy"
-msgstr "복사"
-
-#: frontend/apps/filemanager/filemanager.lua:225
-msgctxt "File"
-msgid "Paste"
-msgstr "붙여넣기"
-
-#: frontend/apps/filemanager/filemanager.lua:233
-#: frontend/apps/reader/modules/readerhighlight.lua:65
-#: frontend/ui/widget/inputtext.lua:245
-msgid "Select"
-msgstr "선택"
-
-#: frontend/apps/filemanager/filemanager.lua:247
-msgid "Cut"
-msgstr "잘라내기"
-
-#: frontend/apps/filemanager/filemanager.lua:263
-#: frontend/apps/filemanager/filemanager.lua:1124
-msgid "Rename"
-msgstr "이름바꾸기"
-
-#: frontend/apps/filemanager/filemanager.lua:300
-msgid "Open with…"
-msgstr "다음으로 열기…"
-
-#: frontend/apps/filemanager/filemanager.lua:322
-msgid "Convert"
-msgstr "변환"
-
-#: frontend/apps/filemanager/filemanager.lua:334
-#: frontend/apps/filemanager/filemanager.lua:646
-msgid "Set as HOME folder"
-msgstr "홈 폴더로 설정"
-
-#: frontend/apps/filemanager/filemanager.lua:468
-#: frontend/apps/reader/modules/readerback.lua:179
-msgid "Exit KOReader?"
-msgstr "KOReader를 끝낼까요?"
-
-#: frontend/apps/filemanager/filemanager.lua:469
-#: frontend/apps/reader/modules/readerback.lua:180
-#: frontend/apps/reader/modules/readerdevicestatus.lua:103
-#: frontend/ui/elements/common_exit_menu_table.lua:9
-#: frontend/ui/elements/common_exit_menu_table.lua:16
-msgid "Exit"
-msgstr "끝내기"
-
-#: frontend/apps/filemanager/filemanager.lua:520
-msgid "1 file selected"
-msgid_plural "%1 files selected"
-msgstr[0] "파일 %1개 선택됨"
-
-#: frontend/apps/filemanager/filemanager.lua:521
-msgid "No files selected"
-msgstr "선택 파일 없음"
-
-#: frontend/apps/filemanager/filemanager.lua:525
-msgid "Show selected files list"
-msgstr "선택한 파일 목록 표시"
-
-#: frontend/apps/filemanager/filemanager.lua:533
-#: frontend/apps/filemanager/filemanager.lua:919
-#: frontend/apps/reader/modules/readerlink.lua:143
-msgid "Copy"
-msgstr "복사"
-
-#: frontend/apps/filemanager/filemanager.lua:543
-msgid "Select all files in folder"
-msgstr "폴더의 모든 파일 선택"
-
-#: frontend/apps/filemanager/filemanager.lua:560
-#: frontend/apps/reader/modules/readerbookmark.lua:664
-msgid "Deselect all"
-msgstr "모두 선택 해제"
-
-#: frontend/apps/filemanager/filemanager.lua:575
-msgid ""
-"Delete selected files?\n"
-"If you delete a file, it is permanently lost."
-msgstr ""
-"선택한 파일을 삭제할까요?\n"
-"파일을 삭제하면 영구적으로 사라집니다."
-
-#: frontend/apps/filemanager/filemanager.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:702
-#: frontend/apps/reader/modules/readerhighlight.lua:692
-msgid "Exit select mode"
-msgstr "선택 모드 끝내기"
-
-#: frontend/apps/filemanager/filemanager.lua:594
-#: plugins/exporter.koplugin/main.lua:261 plugins/exporter.koplugin/_meta.lua:4
-msgid "Export highlights"
-msgstr "강조 표시 내보내기"
-
-#: frontend/apps/filemanager/filemanager.lua:618
-msgid "Select files"
-msgstr "파일 선택"
-
-#: frontend/apps/filemanager/filemanager.lua:636
-#: frontend/apps/reader/modules/readerbookmark.lua:1064
-#: frontend/ui/widget/inputtext.lua:255
-msgid "Paste"
-msgstr "붙여넣기"
-
-#: frontend/apps/filemanager/filemanager.lua:655
-msgid "Go to HOME folder"
-msgstr "홈 폴더로 이동"
-
-#: frontend/apps/filemanager/filemanager.lua:664
-msgid "Open random document"
-msgstr "무작위 문서 열기"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-msgid "Switch to SDCard"
-msgstr "SDCard로 전환"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-msgid "Switch to internal storage"
-msgstr "내부 저장소로 전환"
-
-#: frontend/apps/filemanager/filemanager.lua:704
-msgid "Import files here"
-msgstr "여기에 파일 가져오기"
-
-#: frontend/apps/filemanager/filemanager.lua:800
-msgid "Set '%1' as HOME folder?"
-msgstr "'%1'를 홈 폴더로 설정할까요?"
-
-#: frontend/apps/filemanager/filemanager.lua:801
-msgid "Set as HOME"
-msgstr "홈으로 설정"
-
-#: frontend/apps/filemanager/filemanager.lua:819
-msgid "Do you want to open %1?"
-msgstr "%1을 열까요?"
-
-#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:826
-msgid "Another"
-msgstr "또 다른"
-
-#: frontend/apps/filemanager/filemanager.lua:833
-msgid "File not found"
-msgstr "파일을 찾을 수 없음"
-
-#: frontend/apps/filemanager/filemanager.lua:891
-msgid ""
-"File already exists:\n"
-"%1"
-msgstr ""
-"파일이 이미 있습니다:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:892
-msgid ""
-"Folder already exists:\n"
-"%1"
-msgstr ""
-"폴더가 이미 있습니다:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:915
-msgid "Move selected files to the current folder?"
-msgstr "선택한 파일을 현재 폴더로 이동할까?"
-
-#: frontend/apps/filemanager/filemanager.lua:918
-msgid "Copy selected files to the current folder?"
-msgstr "선택한 파일을 현재 폴더에 복사할까요?"
-
-#: frontend/apps/filemanager/filemanager.lua:931
-msgid "overwrite existing files"
-msgstr "기존의 파일을 덮어쓰기"
-
-#: frontend/apps/filemanager/filemanager.lua:971
-msgid "1 file was not moved"
-msgid_plural "%1 files were not moved"
-msgstr[0] "%1 파일이 이동되지 않았습니다"
-
-#: frontend/apps/filemanager/filemanager.lua:972
-msgid "1 file was not copied"
-msgid_plural "%1 files were not copied"
-msgstr[0] "%1 파일이 복사되지 않았습니다"
-
-#: frontend/apps/filemanager/filemanager.lua:1011
-msgid ""
-"Failed to create folder:\n"
-"%1"
-msgstr ""
-"폴더 생성 실패:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1034
-msgid ""
-"File not found:\n"
-"%1"
-msgstr ""
-"파일을 찾을 수 없음:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete file permanently?"
-msgstr "파일을 영구적으로 삭제할까요?"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete folder permanently?"
-msgstr "폴더를 영구적으로 삭제할까요?"
-
-#: frontend/apps/filemanager/filemanager.lua:1042
-msgid "Book settings, highlights and notes will be deleted."
-msgstr "책 설정과 하이라이트, 메모가 삭제됩니다."
-
-#: frontend/apps/filemanager/filemanager.lua:1076
-msgid ""
-"Failed to delete:\n"
-"%1"
-msgstr ""
-"삭제 실패:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1102
-msgid "Failed to delete 1 file."
-msgid_plural "Failed to delete %1 files."
-msgstr[0] "%1 파일을 삭제하지 못했습니다."
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename file"
-msgstr "파일 이름바꾸기"
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename folder"
-msgstr "폴더 이름 바꾸기"
-
-#: frontend/apps/filemanager/filemanager.lua:1156
-msgid ""
-"Failed to rename:\n"
-"%1\n"
-"to:\n"
-"%2"
-msgstr ""
-"%1\n"
-"에서:\n"
-"%2\n"
-"로 이름 변경 실패"
-
-#: frontend/apps/filemanager/filemanager.lua:1167
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"File cannot be renamed."
-msgstr ""
-"폴더가 이미 있습니다:\n"
-"%1\n"
-"파일이름을 바꿀 수 없습니다."
-
-#: frontend/apps/filemanager/filemanager.lua:1169
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Folder cannot be renamed."
-msgstr ""
-"존재하는 파일입니다:\n"
-"%1\n"
-"폴더이름을 바꿀 수 없습니다."
-
-#: frontend/apps/filemanager/filemanager.lua:1177
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Overwrite file?"
-msgstr ""
-"이미 존재하는 파일입니다:\n"
-"%1\n"
-"파일을 덮어쓸까요?"
-
-#: frontend/apps/filemanager/filemanager.lua:1180
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"Move the folder inside it?"
-msgstr ""
-"폴더가 이미 있습니다:\n"
-"%1\n"
-"폴더를 내부로 옮길까요?"
-
-#: frontend/apps/filemanager/filemanager.lua:1333
-msgid "Selected files (%1)"
-msgstr "선택한 파일(%1)"
-
-#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
-#: frontend/apps/filemanager/filemanager.lua:1360
-msgid "%1 ~Unsupported"
-msgstr "%1 ~지원되지 않음"
-
-#: frontend/apps/filemanager/filemanager.lua:1396
-msgid "Reset default for this file"
-msgstr "이 파일의 기본값 재설정"
-
-#: frontend/apps/filemanager/filemanager.lua:1406
-msgid "Reset default for %1 files"
-msgstr "%1 파일에 대한 기본값 재설정"
-
-#: frontend/apps/filemanager/filemanager.lua:1417
-msgid "View defaults for file types"
-msgstr "파일 형식의 기본값 보기"
-
-#: frontend/apps/filemanager/filemanager.lua:1456
-msgid "Always open '%2' with %1?"
-msgstr "항상 %1로 %2 파일을 열까요?"
-
-#: frontend/apps/filemanager/filemanager.lua:1457
-#: frontend/apps/filemanager/filemanager.lua:1467
-#: frontend/ui/elements/common_settings_menu_table.lua:383
-#: frontend/ui/elements/common_settings_menu_table.lua:660
-msgid "Always"
-msgstr "항상"
-
-#: frontend/apps/filemanager/filemanager.lua:1466
-msgid "Always open %2 files with %1?"
-msgstr "항상 %1로 %2 파일을 열까요?"
-
-#: frontend/apps/filemanager/filemanager.lua:1484
-msgid "Open %1 with:"
-msgstr "%1로 열기:"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:130
 msgid "Cannot open last document"
@@ -12064,8 +12064,9 @@ msgstr "백그라운드 채우기"
 msgid ""
 "This option will only become available, if you have selected 'Leave screen "
 "as-is' as wallpaper and have 'Sleep screen message' on."
-msgstr "이 옵션은 배경 화면으로 '화면 그대로 두기'를 선택하고 '잠든 화면 문구'가 "
-"켜져 있는 경우에만 사용할 수 있습니다."
+msgstr ""
+"이 옵션은 배경 화면으로 '화면 그대로 두기'를 선택하고 '잠든 화면 문구'가 켜"
+"져 있는 경우에만 사용할 수 있습니다."
 
 #: frontend/ui/elements/screensaver_menu.lua:147
 msgid "Message position"
@@ -12886,8 +12887,8 @@ msgid ""
 "  %H time left in document\n"
 "  %b battery level"
 msgstr ""
-"잠든 화면에 표시할 사용자 지정 문구를 입력합니다. 다음과 같은 이스케이프 "
-"시퀀스를 사용할 수 있습니다:\n"
+"잠든 화면에 표시할 사용자 지정 문구를 입력합니다. 다음과 같은 이스케이프 시퀀"
+"스를 사용할 수 있습니다:\n"
 "  %T 제목\n"
 "  %A 저자\n"
 "  %S 시리즈\n"
@@ -14268,22 +14269,89 @@ msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 B"
 
-#: plugins/archiveviewer.koplugin/main.lua:17
+#: plugins/SSH.koplugin/_meta.lua:4
+msgid "SSH"
+msgstr "SSH"
+
+#: plugins/SSH.koplugin/_meta.lua:5
+msgid "Connect and transfer files to the device using SSH."
+msgstr "SSH를 사용하여 기기에 연결한 후 파일을 전송하세요."
+
+#. @translators: %1 is the SSH port, %2 is the network info.
+#: plugins/SSH.koplugin/main.lua:73
+msgid ""
+"SSH server started.\n"
+"\n"
+"SSH port: %1\n"
+"%2"
+msgstr ""
+"SSH 서버가 시작되었습니다.\n"
+"\n"
+"SSH 포트: %1\n"
+"%2"
+
+#: plugins/SSH.koplugin/main.lua:81
+msgid "Failed to start SSH server."
+msgstr "SSH 서버를 시작하지 못했습니다."
+
+#: plugins/SSH.koplugin/main.lua:94
+msgid "SSH server stopped."
+msgstr "SSH 서버가 중지되었습니다."
+
+#: plugins/SSH.koplugin/main.lua:123
+msgid "Choose SSH port"
+msgstr "SSH 포트 고르기"
+
+#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
+msgid "SSH server"
+msgstr "SSH 서버"
+
+#: plugins/SSH.koplugin/main.lua:174
+msgid "SSH port (%1)"
+msgstr "SSH 포트 (%1)"
+
+#: plugins/SSH.koplugin/main.lua:183
+msgid "SSH public key"
+msgstr "SSH 공개 키"
+
+#: plugins/SSH.koplugin/main.lua:189
+msgid ""
+"Put your public SSH keys in\n"
+"%1"
+msgstr ""
+"공개 SSH 키를 넣으세요\n"
+"%1"
+
+#: plugins/SSH.koplugin/main.lua:195
+msgid "Login without password (DANGEROUS)"
+msgstr "비밀번호 없이 로그인 (위험해요)"
+
+#: plugins/SSH.koplugin/main.lua:208
+msgid "Toggle SSH server"
+msgstr "SSH 서버 토글"
+
 #: plugins/archiveviewer.koplugin/_meta.lua:4
+#: plugins/archiveviewer.koplugin/main.lua:17
 msgid "Archive viewer"
 msgstr "아카이브 뷰어"
-
-#: plugins/archiveviewer.koplugin/main.lua:216
-msgid "On extraction, if the file already exists, it will be overwritten."
-msgstr "압축을 풀 때, 파일이 이미 있으면 덮어씁니다."
 
 #: plugins/archiveviewer.koplugin/_meta.lua:5
 msgid "Enables exploring the content of zip archives."
 msgstr "zip 아카이브의 내용을 탐색할 수 있습니다."
 
-#: plugins/autodim.koplugin/main.lua:51 plugins/autodim.koplugin/_meta.lua:4
+#: plugins/archiveviewer.koplugin/main.lua:216
+msgid "On extraction, if the file already exists, it will be overwritten."
+msgstr "압축을 풀 때, 파일이 이미 있으면 덮어씁니다."
+
+#: plugins/autodim.koplugin/_meta.lua:4 plugins/autodim.koplugin/main.lua:51
 msgid "Automatic dimmer"
 msgstr "자동 빛조절"
+
+#: plugins/autodim.koplugin/_meta.lua:5
+msgid "This plugin allows dimming the frontlight after a period of inactivity."
+msgstr ""
+"이 플러그인을 사용하면 일정 시간 동안 활동이 없으면 전면 조명을 어둡게 할 수 "
+"있습니다."
 
 #: plugins/autodim.koplugin/main.lua:56
 msgid "Idle time for dimmer"
@@ -14325,16 +14393,16 @@ msgstr "백분율로 어둡게"
 msgid "The lowest brightness as a percentage of the regular brightness."
 msgstr "일반 밝기의 백분율로 나타낸 가장 낮은 밝기입니다."
 
-#: plugins/autodim.koplugin/_meta.lua:5
-msgid "This plugin allows dimming the frontlight after a period of inactivity."
-msgstr ""
-"이 플러그인을 사용하면 일정 시간 동안 활동이 없으면 전면 조명을 어둡게 할 수 "
-"있습니다."
-
-#: plugins/autofrontlight.koplugin/main.lua:114
 #: plugins/autofrontlight.koplugin/_meta.lua:4
+#: plugins/autofrontlight.koplugin/main.lua:114
 msgid "Auto frontlight"
 msgstr "자동 조명"
+
+#: plugins/autofrontlight.koplugin/_meta.lua:5
+msgid ""
+"Automatically turns the frontlight on and off once brightness in the "
+"environment reaches a certain level."
+msgstr "주변 밝기가 일정 수준이 되면 자동으로 조명을 켜고 끕니다."
 
 #: plugins/autofrontlight.koplugin/main.lua:117
 msgid ""
@@ -14353,11 +14421,13 @@ msgstr ""
 msgid "enable"
 msgstr "활성화"
 
-#: plugins/autofrontlight.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the frontlight on and off once brightness in the "
-"environment reaches a certain level."
-msgstr "주변 밝기가 일정 수준이 되면 자동으로 조명을 켜고 끕니다."
+#: plugins/autostandby.koplugin/_meta.lua:4
+msgid "Auto Standby"
+msgstr "자동 대기 상태"
+
+#: plugins/autostandby.koplugin/_meta.lua:5
+msgid "Put into standby on no input, wake up from standby on UI input"
+msgstr "입력이 없으면 대기 모드로 전환하고, UI 입력되면 대기 모드에서 깨우기"
 
 #: plugins/autostandby.koplugin/main.lua:55
 msgid "Auto-standby settings"
@@ -14387,13 +14457,17 @@ msgstr "배터리가 낮으면 항상 대기 상태로"
 msgid "Update"
 msgstr "업데이트"
 
-#: plugins/autostandby.koplugin/_meta.lua:4
-msgid "Auto Standby"
-msgstr "자동 대기 상태"
+#: plugins/autosuspend.koplugin/_meta.lua:4
+msgid "Auto power save"
+msgstr "자동 절전"
 
-#: plugins/autostandby.koplugin/_meta.lua:5
-msgid "Put into standby on no input, wake up from standby on UI input"
-msgstr "입력이 없으면 대기 모드로 전환하고, UI 입력되면 대기 모드에서 깨우기"
+#: plugins/autosuspend.koplugin/_meta.lua:5
+msgid ""
+"Puts the device into standby, suspend or power off after specified periods "
+"of inactivity."
+msgstr ""
+"지정된 시간 동안 사용하지 않으면 장치를 대기나 일시 중단, 전원 끄기로 전환합"
+"니다."
 
 #: plugins/autosuspend.koplugin/main.lua:443
 #: plugins/autoturn.koplugin/main.lua:148
@@ -14489,17 +14563,19 @@ msgstr "자동 대기를 위한 시간 간격"
 msgid "Enter time in minutes and seconds."
 msgstr "분과 초로 시간을 입력하세요."
 
-#: plugins/autosuspend.koplugin/_meta.lua:4
-msgid "Auto power save"
-msgstr "자동 절전"
+#: plugins/autoturn.koplugin/_meta.lua:4 plugins/autoturn.koplugin/main.lua:131
+msgid "Autoturn"
+msgstr "자동 넘기기"
 
-#: plugins/autosuspend.koplugin/_meta.lua:5
+#: plugins/autoturn.koplugin/_meta.lua:5
 msgid ""
-"Puts the device into standby, suspend or power off after specified periods "
-"of inactivity."
+"Automatically turns the page after a set period of time.\n"
+"\n"
+"Hold to set the scrolling distance."
 msgstr ""
-"지정된 시간 동안 사용하지 않으면 장치를 대기나 일시 중단, 전원 끄기로 전환합"
-"니다."
+"지정된 시간이 지나면 자동으로 페이지를 넘깁니다.\n"
+"\n"
+"스크롤할 거리를 설정하려면 길게 누르세요."
 
 #: plugins/autoturn.koplugin/main.lua:71
 msgid "Autoturn is now active and will automatically turn the page every %1."
@@ -14516,10 +14592,6 @@ msgstr ""
 msgid "Autoturn: %1"
 msgstr "자동 넘기기: %1"
 
-#: plugins/autoturn.koplugin/main.lua:131 plugins/autoturn.koplugin/_meta.lua:4
-msgid "Autoturn"
-msgstr "자동 넘기기"
-
 #: plugins/autoturn.koplugin/main.lua:140
 msgid "Autoturn time"
 msgstr "자동 넘김 시간"
@@ -14532,15 +14604,20 @@ msgstr "거리 설정"
 msgid "Scrolling distance"
 msgstr "거리 스크롤하기"
 
-#: plugins/autoturn.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the page after a set period of time.\n"
-"\n"
-"Hold to set the scrolling distance."
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+msgid "Auto warmth and night mode"
+msgstr "자동 색 온도와 야간 모드"
+
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+msgid "Auto night mode"
+msgstr "자동 야간 모드"
+
+#: plugins/autowarmth.koplugin/_meta.lua:5
+msgid "This plugin allows to set the frontlight warmth automagically."
 msgstr ""
-"지정된 시간이 지나면 자동으로 페이지를 넘깁니다.\n"
-"\n"
-"스크롤할 거리를 설정하려면 길게 누르세요."
+"이 플러그인을 사용하면 전면 조명의 색 온도를 자동으로 설정할 수 있습니다."
 
 #: plugins/autowarmth.koplugin/main.lua:118
 msgid "Show ephemeris"
@@ -14598,16 +14675,6 @@ msgstr "야간 모드 변경됨"
 #: plugins/autowarmth.koplugin/main.lua:223
 msgid "The AutoWarmth plugin might change it again."
 msgstr "자동 색 온도 플러그인은 다시 변경할 수 있습니다."
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-msgid "Auto warmth and night mode"
-msgstr "자동 색 온도와 야간 모드"
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-msgid "Auto night mode"
-msgstr "자동 야간 모드"
 
 #: plugins/autowarmth.koplugin/main.lua:557
 msgid ""
@@ -15016,11 +15083,6 @@ msgstr "전면 조명을 끄는 사이 토글"
 msgid "%1 and %2"
 msgstr "%1 및 %2"
 
-#: plugins/autowarmth.koplugin/_meta.lua:5
-msgid "This plugin allows to set the frontlight warmth automagically."
-msgstr ""
-"이 플러그인을 사용하면 전면 조명의 색 온도를 자동으로 설정할 수 있습니다."
-
 #: plugins/backgroundrunner.koplugin/_meta.lua:4
 msgid "Background runner"
 msgstr "백그라운드 실행기"
@@ -15031,6 +15093,16 @@ msgid ""
 msgstr ""
 "다른 플러그인에 대한 서비스: 작업을 백그라운드에서 정기적으로 실행할 수 있습"
 "니다."
+
+#: plugins/batterystat.koplugin/_meta.lua:4
+#: plugins/batterystat.koplugin/main.lua:272
+#: plugins/batterystat.koplugin/main.lua:284
+msgid "Battery statistics"
+msgstr "배터리 통계"
+
+#: plugins/batterystat.koplugin/_meta.lua:5
+msgid "Collects and displays battery statistics."
+msgstr "배터리 통계를 모으고 표시합니다."
 
 #: plugins/batterystat.koplugin/main.lua:88
 msgid "Consumed:"
@@ -15084,20 +15156,14 @@ msgstr "충전:"
 msgid "Since last charge"
 msgstr "지난 충전 이후"
 
-#: plugins/batterystat.koplugin/main.lua:272
-#: plugins/batterystat.koplugin/main.lua:284
-#: plugins/batterystat.koplugin/_meta.lua:4
-msgid "Battery statistics"
-msgstr "배터리 통계"
-
-#: plugins/batterystat.koplugin/_meta.lua:5
-msgid "Collects and displays battery statistics."
-msgstr "배터리 통계를 모으고 표시합니다."
-
-#: plugins/bookshortcuts.koplugin/main.lua:77
 #: plugins/bookshortcuts.koplugin/_meta.lua:4
+#: plugins/bookshortcuts.koplugin/main.lua:77
 msgid "Book shortcuts"
 msgstr "책 바로가기"
+
+#: plugins/bookshortcuts.koplugin/_meta.lua:5
+msgid "This plugin allows adding a book shortcut to a gesture."
+msgstr "이 플러그인을 사용하면 제스처에 책 바로가기를 추가할 수 있습니다."
 
 #: plugins/bookshortcuts.koplugin/main.lua:87
 msgid "last book"
@@ -15119,9 +15185,17 @@ msgstr "재귀적으로 폴더 검색"
 msgid "Do you want to delete this shortcut?"
 msgstr "이 바로가기를 삭제할까요?"
 
-#: plugins/bookshortcuts.koplugin/_meta.lua:5
-msgid "This plugin allows adding a book shortcut to a gesture."
-msgstr "이 플러그인을 사용하면 제스처에 책 바로가기를 추가할 수 있습니다."
+#: plugins/calibre.koplugin/_meta.lua:4 plugins/calibre.koplugin/main.lua:74
+msgid "Calibre"
+msgstr "캘리버"
+
+#: plugins/calibre.koplugin/_meta.lua:5
+msgid ""
+"Integration with calibre. Send documents from calibre library via Wi-Fi and "
+"search calibre metadata."
+msgstr ""
+"캘리브와 통합. Wi-Fi로 캘리브 라이브러리에서 문서를 보내고 캘리브 메타데이터"
+"를 검색하세요."
 
 #: plugins/calibre.koplugin/main.lua:58 plugins/calibre.koplugin/main.lua:110
 #: plugins/calibre.koplugin/search.lua:194
@@ -15143,10 +15217,6 @@ msgstr "모든 calibre 작성자 찾아보기"
 #: plugins/calibre.koplugin/main.lua:62
 msgid "Browse all calibre titles"
 msgstr "모든 calibre 제목 찾아보기"
-
-#: plugins/calibre.koplugin/main.lua:74 plugins/calibre.koplugin/_meta.lua:4
-msgid "Calibre"
-msgstr "캘리버"
 
 #: plugins/calibre.koplugin/main.lua:79
 msgid "Disconnect"
@@ -15265,14 +15335,6 @@ msgid ""
 "Unsupported formats will be converted by calibre to the first format of the "
 "list."
 msgstr "지원되지 않는 형식은 calibre에서 목록의 첫번째 형식으로 변환됩니다."
-
-#: plugins/calibre.koplugin/_meta.lua:5
-msgid ""
-"Integration with calibre. Send documents from calibre library via Wi-Fi and "
-"search calibre metadata."
-msgstr ""
-"캘리브와 통합. Wi-Fi로 캘리브 라이브러리에서 문서를 보내고 캘리브 메타데이터"
-"를 검색하세요."
 
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
@@ -15433,6 +15495,14 @@ msgid ""
 msgstr ""
 "%2에서 삭제된 %1 파일:\n"
 " %3"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:4
+msgid "Cover browser"
+msgstr "표지 보기"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:5
+msgid "Alternative display modes for file browser and history."
+msgstr "파일 탐색과 최근 내력을 위한 대체 디스플레이 모드."
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:123
 msgid "not readable by engine"
@@ -15854,13 +15924,14 @@ msgstr ""
 msgid "Purge"
 msgstr "완전 삭제"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:4
-msgid "Cover browser"
-msgstr "표지 보기"
+#: plugins/coverimage.koplugin/_meta.lua:4
+#: plugins/coverimage.koplugin/main.lua:683
+msgid "Cover image"
+msgstr "표지 그림"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:5
-msgid "Alternative display modes for file browser and history."
-msgstr "파일 탐색과 최근 내력을 위한 대체 디스플레이 모드."
+#: plugins/coverimage.koplugin/_meta.lua:5
+msgid "Stores cover image to a file."
+msgstr "표지 이미지를 파일로 저장합니다."
 
 #: plugins/coverimage.koplugin/main.lua:102
 msgid ""
@@ -16071,11 +16142,6 @@ msgstr "BMP 파일 형식(색상)"
 msgid "BMP file format (grayscale)"
 msgstr "BMP 파일 형식(회색조)"
 
-#: plugins/coverimage.koplugin/main.lua:683
-#: plugins/coverimage.koplugin/_meta.lua:4
-msgid "Cover image"
-msgstr "표지 그림"
-
 #: plugins/coverimage.koplugin/main.lua:690
 msgid "About cover image"
 msgstr "표지 이미지에 대하여"
@@ -16120,14 +16186,18 @@ msgstr "대체 이미지를 선택할 수 있습니다."
 msgid "Turn on fallback image"
 msgstr "대체 이미지 켜기"
 
-#: plugins/coverimage.koplugin/_meta.lua:5
-msgid "Stores cover image to a file."
-msgstr "표지 이미지를 파일로 저장합니다."
-
-#: plugins/docsettingtweak.koplugin/main.lua:48
 #: plugins/docsettingtweak.koplugin/_meta.lua:4
+#: plugins/docsettingtweak.koplugin/main.lua:48
 msgid "Tweak document settings"
 msgstr "문서 설정 조정"
+
+#: plugins/docsettingtweak.koplugin/_meta.lua:5
+msgid ""
+"This plugin allows you to tweak document settings before the document is "
+"loaded based on external factors."
+msgstr ""
+"이 플러그인을 사용하면 외부 요인에 따라 문서를 열기 전에 문서 설정을 덧꾸밀 "
+"수 있습니다."
 
 #: plugins/docsettingtweak.koplugin/main.lua:62
 msgid "Directory Defaults: %1"
@@ -16150,13 +16220,9 @@ msgstr "잘못된 기본값 : %1"
 msgid "Defaults empty"
 msgstr "기본값이 비어 있음"
 
-#: plugins/docsettingtweak.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows you to tweak document settings before the document is "
-"loaded based on external factors."
-msgstr ""
-"이 플러그인을 사용하면 외부 요인에 따라 문서를 열기 전에 문서 설정을 덧꾸밀 "
-"수 있습니다."
+#: plugins/exporter.koplugin/_meta.lua:5
+msgid "Exports highlights and notes."
+msgstr "강조 표시와 메모를 내보냅니다."
 
 #: plugins/exporter.koplugin/clip.lua:124
 msgid "Unknown Book"
@@ -16209,10 +16275,6 @@ msgstr "이 책의 모든 메모 공유"
 #: plugins/exporter.koplugin/main.lua:313
 msgid "Current export folder:"
 msgstr "현재 내보내기 폴더:"
-
-#: plugins/exporter.koplugin/_meta.lua:5
-msgid "Exports highlights and notes."
-msgstr "강조 표시와 메모를 내보냅니다."
 
 #. @translators Flomo is a note taking app. The name probably doesn't need to be translated.
 #: plugins/exporter.koplugin/target/flomo.lua:52
@@ -16418,6 +16480,14 @@ msgstr ""
 "\"API를 통해 가져오기\"로 이동합니다. 인터페이스 하단에서 모바일 기기의 IP 주"
 "소를 찾을 수 있습니다. 이 IP 주소를 KOReader에 입력하면 구성이 완료됩니다."
 
+#: plugins/externalkeyboard.koplugin/_meta.lua:4
+msgid "External keyboard"
+msgstr "외부 키보드"
+
+#: plugins/externalkeyboard.koplugin/_meta.lua:5
+msgid "Manages USB OTG and configures keyboard."
+msgstr "USB OTG를 관리하고 키보드를 구성합니다."
+
 #: plugins/externalkeyboard.koplugin/main.lua:136
 msgid "External Keyboard"
 msgstr "외부 키보드"
@@ -16444,13 +16514,13 @@ msgid ""
 "computer."
 msgstr "OTG 모드에서는 장치가 컴퓨터에서 USB 드라이브로 인식되지 않습니다."
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:4
-msgid "External keyboard"
-msgstr "외부 키보드"
+#: plugins/gestures.koplugin/_meta.lua:4
+msgid "Gestures"
+msgstr "제스처"
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:5
-msgid "Manages USB OTG and configures keyboard."
-msgstr "USB OTG를 관리하고 키보드를 구성합니다."
+#: plugins/gestures.koplugin/_meta.lua:5
+msgid "This plugin provides gesture support."
+msgstr "이 플러그인은 제스처 지원을 제공합니다."
 
 #: plugins/gestures.koplugin/main.lua:42 plugins/gestures.koplugin/main.lua:46
 #: plugins/gestures.koplugin/main.lua:60 plugins/gestures.koplugin/main.lua:64
@@ -16769,13 +16839,13 @@ msgstr ""
 msgid "You have just performed your first multiswipe gesture."
 msgstr "첫번째 다중 스와이프 제스처를 수행했습니다."
 
-#: plugins/gestures.koplugin/_meta.lua:4
-msgid "Gestures"
-msgstr "제스처"
+#: plugins/hello.koplugin/_meta.lua:4
+msgid "Hello"
+msgstr "안녕하세요"
 
-#: plugins/gestures.koplugin/_meta.lua:5
-msgid "This plugin provides gesture support."
-msgstr "이 플러그인은 제스처 지원을 제공합니다."
+#: plugins/hello.koplugin/_meta.lua:5
+msgid "This is a debugging plugin."
+msgstr "이것은 디버깅 플러그인입니다."
 
 #: plugins/hello.koplugin/main.lua:24 plugins/hello.koplugin/main.lua:34
 #: plugins/hello.koplugin/main.lua:48
@@ -16786,13 +16856,19 @@ msgstr "모두 안녕하세요"
 msgid "Hello, plugin world"
 msgstr "플러그인 세상에 오신 것을 환영합니다"
 
-#: plugins/hello.koplugin/_meta.lua:4
-msgid "Hello"
-msgstr "안녕하세요"
+#: plugins/httpinspector.koplugin/_meta.lua:4
+msgid "HTTP KOReader Inspector"
+msgstr "HTTP KOReader 검사기"
 
-#: plugins/hello.koplugin/_meta.lua:5
-msgid "This is a debugging plugin."
-msgstr "이것은 디버깅 플러그인입니다."
+#: plugins/httpinspector.koplugin/_meta.lua:5
+msgid ""
+"Allow browsing KOReader internal objects over HTTP. This is aimed at "
+"developers, and may pose some security risks. Only enable this on networks "
+"you can trust."
+msgstr ""
+"HTTP를 통한 KOReader 내부 개체 탐색을 허용합니다. 이는 개발자를 대상으로 하"
+"며 일부 보안 위험을 초래할 수 있습니다. 신뢰할 수 있는 네트워크에서만 이 옵션"
+"을 활성화하세요."
 
 #: plugins/httpinspector.koplugin/main.lua:136
 msgid "KOReader HTTP inspector"
@@ -16830,19 +16906,32 @@ msgstr "사용자 지정 포트 설정"
 msgid "Port number (default is 8080)"
 msgstr "포트 번호(기본값은 8080)"
 
-#: plugins/httpinspector.koplugin/_meta.lua:4
-msgid "HTTP KOReader Inspector"
-msgstr "HTTP KOReader 검사기"
+#: plugins/japanese.koplugin/_meta.lua:4
+msgid "Japanese support"
+msgstr "일본어 지원"
 
-#: plugins/httpinspector.koplugin/_meta.lua:5
+#: plugins/japanese.koplugin/_meta.lua:5
 msgid ""
-"Allow browsing KOReader internal objects over HTTP. This is aimed at "
-"developers, and may pose some security risks. Only enable this on networks "
-"you can trust."
+"Japanese language support for KOReader, modeled after Yomichan.\n"
+"\n"
+"This plugin extends KOReader's built-in dictionary and selection system to "
+"support Yomichan-style deinflection and text scanning, allowing for one-tap "
+"searches of inflected verbs and multi-character words and phrases. As such, "
+"this plugin removes the need for synonym-based deinflection rules for "
+"StarDict-converted Japanese dictionaries.\n"
+"\n"
+"You must have at least one Japanese dictionary installed in order for this "
+"plugin to work smoothly with Japanese text."
 msgstr ""
-"HTTP를 통한 KOReader 내부 개체 탐색을 허용합니다. 이는 개발자를 대상으로 하"
-"며 일부 보안 위험을 초래할 수 있습니다. 신뢰할 수 있는 네트워크에서만 이 옵션"
-"을 활성화하세요."
+"요미칸을 모델로 한 KOReader의 일본어 지원.\n"
+"\n"
+"이 플러그인은 KOReader의 내장 사전과 선택 시스템을 확장하여 요미칸 스타일의 "
+"deinflection 변형 및 텍스트 스캔을 지원하여 deinflected 동사와 여러 문자 단"
+"어 및 구를 한 번의 탭으로 검색할 수 있습니다. 따라서 이 플러그인은 StarDict으"
+"로 변환된 일본어 사전에 대한 동의어 기반 변형 규칙의 필요성을 제거합니다.\n"
+"\n"
+"이 플러그인이 일본어 텍스트와 원활하게 작동하려면 적어도 하나의 일본어 사전"
+"이 설치되어 있어야 합니다."
 
 #: plugins/japanese.koplugin/deinflector.lua:278
 msgid "Halfwidth to fullwidth kana"
@@ -16977,36 +17066,13 @@ msgstr ""
 msgid "Set scan length"
 msgstr "스캔 길이 설정"
 
-#: plugins/japanese.koplugin/_meta.lua:4
-msgid "Japanese support"
-msgstr "일본어 지원"
-
-#: plugins/japanese.koplugin/_meta.lua:5
-msgid ""
-"Japanese language support for KOReader, modeled after Yomichan.\n"
-"\n"
-"This plugin extends KOReader's built-in dictionary and selection system to "
-"support Yomichan-style deinflection and text scanning, allowing for one-tap "
-"searches of inflected verbs and multi-character words and phrases. As such, "
-"this plugin removes the need for synonym-based deinflection rules for "
-"StarDict-converted Japanese dictionaries.\n"
-"\n"
-"You must have at least one Japanese dictionary installed in order for this "
-"plugin to work smoothly with Japanese text."
-msgstr ""
-"요미칸을 모델로 한 KOReader의 일본어 지원.\n"
-"\n"
-"이 플러그인은 KOReader의 내장 사전과 선택 시스템을 확장하여 요미칸 스타일의 "
-"deinflection 변형 및 텍스트 스캔을 지원하여 deinflected 동사와 여러 문자 단"
-"어 및 구를 한 번의 탭으로 검색할 수 있습니다. 따라서 이 플러그인은 StarDict으"
-"로 변환된 일본어 사전에 대한 동의어 기반 변형 규칙의 필요성을 제거합니다.\n"
-"\n"
-"이 플러그인이 일본어 텍스트와 원활하게 작동하려면 적어도 하나의 일본어 사전"
-"이 설치되어 있어야 합니다."
-
-#: plugins/keepalive.koplugin/main.lua:9 plugins/keepalive.koplugin/_meta.lua:4
+#: plugins/keepalive.koplugin/_meta.lua:4 plugins/keepalive.koplugin/main.lua:9
 msgid "Keep alive"
 msgstr "켠 상태 유지"
+
+#: plugins/keepalive.koplugin/_meta.lua:5
+msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
+msgstr "자동으로 와이파이 연결이 끊지는 것을 막으려면 기기를 켜 놓으세요."
 
 #: plugins/keepalive.koplugin/main.lua:18
 msgid ""
@@ -17038,9 +17104,14 @@ msgstr "지금 '비활성화' 기능을 가상으로 실행하는 중입니다."
 msgid "This is a dummy implementation of 'enable' function."
 msgstr "지금 '활성화' 기능을 가상으로 실행하는 중입니다."
 
-#: plugins/keepalive.koplugin/_meta.lua:5
-msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
-msgstr "자동으로 와이파이 연결이 끊지는 것을 막으려면 기기를 켜 놓으세요."
+#: plugins/kosync.koplugin/_meta.lua:4 plugins/kosync.koplugin/main.lua:188
+msgid "Progress sync"
+msgstr "읽은 과정 동기화"
+
+#: plugins/kosync.koplugin/_meta.lua:5
+msgid ""
+"Synchronizes your reading progess to a server across your KOReader devices."
+msgstr "독서 진행 과정을 KOReader 기기로 서버와 동기화합니다."
 
 #: plugins/kosync.koplugin/main.lua:26
 msgid "Register/login to KOReader server"
@@ -17082,10 +17153,6 @@ msgstr "이 기기의 최근 읽은 위치 내보내기"
 #: plugins/kosync.koplugin/main.lua:168
 msgid "Pull progress from other devices"
 msgstr "다른 기기에서 최근 읽은 위치 가져오기"
-
-#: plugins/kosync.koplugin/main.lua:188 plugins/kosync.koplugin/_meta.lua:4
-msgid "Progress sync"
-msgstr "읽은 과정 동기화"
 
 #: plugins/kosync.koplugin/main.lua:191
 msgid "Custom sync server"
@@ -17258,19 +17325,18 @@ msgstr "기기 '%2'의 최근 위치 %1%에 동기화할까요?"
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "기기 '%2'의 이전 위치 %1%에 동기화할까요?"
 
-#: plugins/kosync.koplugin/_meta.lua:5
-msgid ""
-"Synchronizes your reading progess to a server across your KOReader devices."
-msgstr "독서 진행 과정을 KOReader 기기로 서버와 동기화합니다."
+#: plugins/movetoarchive.koplugin/_meta.lua:4
+#: plugins/movetoarchive.koplugin/main.lua:34
+msgid "Move to archive"
+msgstr "보관함으로 이동"
+
+#: plugins/movetoarchive.koplugin/_meta.lua:5
+msgid "Moves/copies current book to archive folder"
+msgstr "현재 책을 보관 폴더로 이동/복사"
 
 #: plugins/movetoarchive.koplugin/main.lua:17
 msgid "Move current book to archive"
 msgstr "현재 책을 보관함으로 이동"
-
-#: plugins/movetoarchive.koplugin/main.lua:34
-#: plugins/movetoarchive.koplugin/_meta.lua:4
-msgid "Move to archive"
-msgstr "보관함으로 이동"
 
 #: plugins/movetoarchive.koplugin/main.lua:44
 msgid "Copy current book to archive"
@@ -17317,9 +17383,13 @@ msgstr ""
 "보관 디렉터리가 없습니다.\n"
 "지금 설정할까요?"
 
-#: plugins/movetoarchive.koplugin/_meta.lua:5
-msgid "Moves/copies current book to archive folder"
-msgstr "현재 책을 보관 폴더로 이동/복사"
+#: plugins/newsdownloader.koplugin/_meta.lua:4
+msgid "News downloader"
+msgstr "뉴스 다운로더"
+
+#: plugins/newsdownloader.koplugin/_meta.lua:5
+msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
+msgstr "RSS과 Atom 뉴스 항목을 검색하여 HTML 파일로 저장합니다."
 
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:314
 msgid ""
@@ -17623,13 +17693,13 @@ msgstr "잘못된 구성입니다: %1"
 msgid "Configuration empty"
 msgstr "구성이 비어 있습니다"
 
-#: plugins/newsdownloader.koplugin/_meta.lua:4
-msgid "News downloader"
-msgstr "뉴스 다운로더"
+#: plugins/opds.koplugin/_meta.lua:4
+msgid "OPDS"
+msgstr "OPDS"
 
-#: plugins/newsdownloader.koplugin/_meta.lua:5
-msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
-msgstr "RSS과 Atom 뉴스 항목을 검색하여 HTML 파일로 저장합니다."
+#: plugins/opds.koplugin/_meta.lua:5
+msgid "OPDS allows you to download books from online catalogs."
+msgstr "OPDS를 사용하면 온라인 카탈로그에서 책을 다운로드할 수 있습니다."
 
 #: plugins/opds.koplugin/main.lua:13 plugins/opds.koplugin/opdscatalog.lua:14
 msgid "OPDS Catalog"
@@ -17638,14 +17708,6 @@ msgstr "OPDS 카탈로그"
 #: plugins/opds.koplugin/main.lua:45
 msgid "OPDS catalog"
 msgstr "OPDS 카탈로그"
-
-#: plugins/opds.koplugin/_meta.lua:4
-msgid "OPDS"
-msgstr "OPDS"
-
-#: plugins/opds.koplugin/_meta.lua:5
-msgid "OPDS allows you to download books from online catalogs."
-msgstr "OPDS를 사용하면 온라인 카탈로그에서 책을 다운로드할 수 있습니다."
 
 #: plugins/opds.koplugin/opdsbrowser.lua:111
 msgid "Catalog name"
@@ -17815,6 +17877,17 @@ msgstr "나중에 읽기"
 msgid "Stream"
 msgstr "스트림"
 
+#: plugins/patchmanagement.koplugin/_meta.lua:4
+#: plugins/patchmanagement.koplugin/main.lua:138
+msgid "Patch management"
+msgstr "패치 관리"
+
+#: plugins/patchmanagement.koplugin/_meta.lua:5
+msgid "This plugin allows enabling, disabling or editing user patches."
+msgstr ""
+"이 플러그인을 사용하면 사용자 패치를 활성화, 비활성화 또는 편집할 수 있습니"
+"다."
+
 #: plugins/patchmanagement.koplugin/main.lua:95
 msgid ""
 "Patches changed. Current set of patches will be applied on next restart."
@@ -17850,11 +17923,6 @@ msgstr ""
 "\n"
 "패치는 고급 기능이므로 신중하게 진행하세요!"
 
-#: plugins/patchmanagement.koplugin/main.lua:138
-#: plugins/patchmanagement.koplugin/_meta.lua:4
-msgid "Patch management"
-msgstr "패치 관리"
-
 #: plugins/patchmanagement.koplugin/main.lua:152
 msgid "About patch management"
 msgstr "패치 관리에 대한 정보"
@@ -17883,11 +17951,15 @@ msgstr "끝내기 전"
 msgid "On exit"
 msgstr "끝낼 때"
 
-#: plugins/patchmanagement.koplugin/_meta.lua:5
-msgid "This plugin allows enabling, disabling or editing user patches."
-msgstr ""
-"이 플러그인을 사용하면 사용자 패치를 활성화, 비활성화 또는 편집할 수 있습니"
-"다."
+#: plugins/perceptionexpander.koplugin/_meta.lua:4
+msgid "Perception expander"
+msgstr "인지 향상"
+
+#: plugins/perceptionexpander.koplugin/_meta.lua:5
+msgid ""
+"Improves your reading speed with the help of two vertical lines over the "
+"text."
+msgstr "텍스트 위에 두 개의 수직선을 사용하여 읽기 속도를 향상시킵니다."
 
 #: plugins/perceptionexpander.koplugin/main.lua:108
 msgid "Perception expander settings"
@@ -17923,23 +17995,19 @@ msgstr ""
 "더 자세한 정보는 Perception Expander Plugin(인지 향상 플러그인) 위키 페이지"
 "를 봐 주세요"
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:4
-msgid "Perception expander"
-msgstr "인지 향상"
+#: plugins/profiles.koplugin/_meta.lua:4 plugins/profiles.koplugin/main.lua:78
+msgid "Profiles"
+msgstr "프로필"
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:5
+#: plugins/profiles.koplugin/_meta.lua:5
 msgid ""
-"Improves your reading speed with the help of two vertical lines over the "
-"text."
-msgstr "텍스트 위에 두 개의 수직선을 사용하여 읽기 속도를 향상시킵니다."
+"This plugin allows combining multiple settings to make switchable 'profiles'."
+msgstr ""
+"이 플러그인은 여러 설정을 결합하여 전환 가능한 '프로필'을 만들 수 있습니다."
 
 #: plugins/profiles.koplugin/main.lua:60
 msgid "Profile %1"
 msgstr "프로필 %1"
-
-#: plugins/profiles.koplugin/main.lua:78 plugins/profiles.koplugin/_meta.lua:4
-msgid "Profiles"
-msgstr "프로필"
 
 #: plugins/profiles.koplugin/main.lua:89
 msgid "New"
@@ -17990,20 +18058,23 @@ msgstr "프로필 이름을 입력하세요"
 msgid "Profile already exists: %1"
 msgstr "프로필이 이미 있습니다: %1"
 
-#: plugins/profiles.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows combining multiple settings to make switchable 'profiles'."
-msgstr ""
-"이 플러그인은 여러 설정을 결합하여 전환 가능한 '프로필'을 만들 수 있습니다."
-
-#: plugins/qrclipboard.koplugin/main.lua:24
 #: plugins/qrclipboard.koplugin/_meta.lua:4
+#: plugins/qrclipboard.koplugin/main.lua:24
 msgid "QR from clipboard"
 msgstr "클립보드에서 QR"
 
 #: plugins/qrclipboard.koplugin/_meta.lua:5
 msgid "This plugin generates a QR code from clipboard content."
 msgstr "이 플러그인은 클립보드 콘텐츠에서 QR 코드를 만듭니다."
+
+#: plugins/readtimer.koplugin/_meta.lua:4
+#: plugins/readtimer.koplugin/main.lua:99
+msgid "Read timer"
+msgstr "읽는 시간 측정"
+
+#: plugins/readtimer.koplugin/_meta.lua:5
+msgid "Shows an alarm after a specified amount of time."
+msgstr "지정된 시간 후에 알림을 봅니다."
 
 #: plugins/readtimer.koplugin/main.lua:23
 msgid "Time is up"
@@ -18020,11 +18091,6 @@ msgstr "끝"
 #: plugins/readtimer.koplugin/main.lua:96
 msgid "Read timer (%1)"
 msgstr "타이머 읽기(%1)"
-
-#: plugins/readtimer.koplugin/main.lua:99
-#: plugins/readtimer.koplugin/_meta.lua:4
-msgid "Read timer"
-msgstr "읽는 시간 측정"
 
 #: plugins/readtimer.koplugin/main.lua:116
 msgid "Set alarm"
@@ -18071,70 +18137,14 @@ msgstr "타이머는 %1에 만료됩니다."
 msgid "Stop timer"
 msgstr "타이머 멈춤"
 
-#: plugins/readtimer.koplugin/_meta.lua:5
-msgid "Shows an alarm after a specified amount of time."
-msgstr "지정된 시간 후에 알림을 봅니다."
+#: plugins/statistics.koplugin/_meta.lua:4
+#: plugins/statistics.koplugin/main.lua:1056
+msgid "Reading statistics"
+msgstr "읽기 통계"
 
-#. @translators: %1 is the SSH port, %2 is the network info.
-#: plugins/SSH.koplugin/main.lua:73
-msgid ""
-"SSH server started.\n"
-"\n"
-"SSH port: %1\n"
-"%2"
-msgstr ""
-"SSH 서버가 시작되었습니다.\n"
-"\n"
-"SSH 포트: %1\n"
-"%2"
-
-#: plugins/SSH.koplugin/main.lua:81
-msgid "Failed to start SSH server."
-msgstr "SSH 서버를 시작하지 못했습니다."
-
-#: plugins/SSH.koplugin/main.lua:94
-msgid "SSH server stopped."
-msgstr "SSH 서버가 중지되었습니다."
-
-#: plugins/SSH.koplugin/main.lua:123
-msgid "Choose SSH port"
-msgstr "SSH 포트 고르기"
-
-#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
-msgid "SSH server"
-msgstr "SSH 서버"
-
-#: plugins/SSH.koplugin/main.lua:174
-msgid "SSH port (%1)"
-msgstr "SSH 포트 (%1)"
-
-#: plugins/SSH.koplugin/main.lua:183
-msgid "SSH public key"
-msgstr "SSH 공개 키"
-
-#: plugins/SSH.koplugin/main.lua:189
-msgid ""
-"Put your public SSH keys in\n"
-"%1"
-msgstr ""
-"공개 SSH 키를 넣으세요\n"
-"%1"
-
-#: plugins/SSH.koplugin/main.lua:195
-msgid "Login without password (DANGEROUS)"
-msgstr "비밀번호 없이 로그인 (위험해요)"
-
-#: plugins/SSH.koplugin/main.lua:208
-msgid "Toggle SSH server"
-msgstr "SSH 서버 토글"
-
-#: plugins/SSH.koplugin/_meta.lua:4
-msgid "SSH"
-msgstr "SSH"
-
-#: plugins/SSH.koplugin/_meta.lua:5
-msgid "Connect and transfer files to the device using SSH."
-msgstr "SSH를 사용하여 기기에 연결한 후 파일을 전송하세요."
+#: plugins/statistics.koplugin/_meta.lua:5
+msgid "Keeps and displays your reading statistics."
+msgstr "읽기 통계를 유지하고 표시합니다."
 
 #: plugins/statistics.koplugin/calendarview.lua:1178
 msgid "Enter month"
@@ -18207,11 +18217,6 @@ msgstr[0] ""
 #: plugins/statistics.koplugin/main.lua:1030
 msgid "Enabled"
 msgstr "활성"
-
-#: plugins/statistics.koplugin/main.lua:1056
-#: plugins/statistics.koplugin/_meta.lua:4
-msgid "Reading statistics"
-msgstr "읽기 통계"
 
 #: plugins/statistics.koplugin/main.lua:1064
 msgid "Read page duration limits: %1 s – %2 s"
@@ -18627,10 +18632,6 @@ msgstr "제거된 통계 없음."
 msgid "Syncing book statistics. This may take a while."
 msgstr "책 통계 동기화하기. 시간이 걸릴 수 있습니다."
 
-#: plugins/statistics.koplugin/_meta.lua:5
-msgid "Keeps and displays your reading statistics."
-msgstr "읽기 통계를 유지하고 표시합니다."
-
 #: plugins/statistics.koplugin/readerprogress.lua:108
 msgid "Week progress"
 msgstr "주간 경과"
@@ -18679,6 +18680,17 @@ msgid ""
 msgstr ""
 "평균\n"
 "시간/일"
+
+#: plugins/systemstat.koplugin/_meta.lua:4
+#: plugins/systemstat.koplugin/main.lua:297
+#: plugins/systemstat.koplugin/main.lua:309
+#: plugins/systemstat.koplugin/main.lua:319
+msgid "System statistics"
+msgstr "시스템 통계"
+
+#: plugins/systemstat.koplugin/_meta.lua:5
+msgid "Shows system statistics."
+msgstr "시스템 통계를 봅니다."
 
 #: plugins/systemstat.koplugin/main.lua:57
 msgid "KOReader started at"
@@ -18808,16 +18820,15 @@ msgstr "    총 용량"
 msgid "    Used percentage"
 msgstr "    사용된 비율"
 
-#: plugins/systemstat.koplugin/main.lua:297
-#: plugins/systemstat.koplugin/main.lua:309
-#: plugins/systemstat.koplugin/main.lua:319
-#: plugins/systemstat.koplugin/_meta.lua:4
-msgid "System statistics"
-msgstr "시스템 통계"
+#: plugins/terminal.koplugin/_meta.lua:4 plugins/terminal.koplugin/main.lua:302
+#: plugins/terminal.koplugin/main.lua:467
+#: plugins/terminal.koplugin/main.lua:617
+msgid "Terminal emulator"
+msgstr "터미널 에뮬레이트"
 
-#: plugins/systemstat.koplugin/_meta.lua:5
-msgid "Shows system statistics."
-msgstr "시스템 통계를 봅니다."
+#: plugins/terminal.koplugin/_meta.lua:5
+msgid "KOReader's terminal emulator"
+msgstr "KOReader의 터미널 에뮬레이터"
 
 #: plugins/terminal.koplugin/aliases.lua:63
 #: plugins/terminal.koplugin/aliases.lua:142
@@ -18839,12 +18850,6 @@ msgstr "별칭 이름:"
 #: plugins/terminal.koplugin/aliases.lua:93
 msgid "Alias command:"
 msgstr "별칭 명령:"
-
-#: plugins/terminal.koplugin/main.lua:302
-#: plugins/terminal.koplugin/main.lua:467
-#: plugins/terminal.koplugin/main.lua:617 plugins/terminal.koplugin/_meta.lua:4
-msgid "Terminal emulator"
-msgstr "터미널 에뮬레이트"
 
 #. @translators This is the ESC-key on the keyboard.
 #: plugins/terminal.koplugin/main.lua:326
@@ -18955,14 +18960,14 @@ msgstr ""
 "시작 쉘을 선택할 수 있습니다.\n"
 "기본값: sh"
 
-#: plugins/terminal.koplugin/_meta.lua:5
-msgid "KOReader's terminal emulator"
-msgstr "KOReader의 터미널 에뮬레이터"
-
-#: plugins/texteditor.koplugin/main.lua:32
 #: plugins/texteditor.koplugin/_meta.lua:4
+#: plugins/texteditor.koplugin/main.lua:32
 msgid "Text editor"
 msgstr "텍스트 편집기"
+
+#: plugins/texteditor.koplugin/_meta.lua:5
+msgid "A basic text editor for making small changes to plain text files."
+msgstr "일반 텍스트 파일을 약간 수정하기 위한 기본적인 텍스트 편집기."
 
 #: plugins/texteditor.koplugin/main.lua:45
 msgid "Text editor: open last file"
@@ -19225,9 +19230,13 @@ msgstr "파일 삭제됨"
 msgid "Failed deleting file: %1"
 msgstr "파일 삭제 실패: %1"
 
-#: plugins/texteditor.koplugin/_meta.lua:5
-msgid "A basic text editor for making small changes to plain text files."
-msgstr "일반 텍스트 파일을 약간 수정하기 위한 기본적인 텍스트 편집기."
+#: plugins/timesync.koplugin/_meta.lua:4
+msgid "Time sync"
+msgstr "시간 동기화"
+
+#: plugins/timesync.koplugin/_meta.lua:5
+msgid "Synchronizes the device time with NTP servers."
+msgstr "기기의 시간을 NTP 서버에서 동기화합니다."
 
 #: plugins/timesync.koplugin/main.lua:50
 msgid "New time is %1."
@@ -19251,13 +19260,19 @@ msgstr ""
 msgid "Synchronize time"
 msgstr "시간 동기화"
 
-#: plugins/timesync.koplugin/_meta.lua:4
-msgid "Time sync"
-msgstr "시간 동기화"
+#: plugins/vocabbuilder.koplugin/_meta.lua:4
+#: plugins/vocabbuilder.koplugin/main.lua:1950
+#: plugins/vocabbuilder.koplugin/main.lua:2021
+msgid "Vocabulary builder"
+msgstr "어휘 빌더"
 
-#: plugins/timesync.koplugin/_meta.lua:5
-msgid "Synchronizes the device time with NTP servers."
-msgstr "기기의 시간을 NTP 서버에서 동기화합니다."
+#: plugins/vocabbuilder.koplugin/_meta.lua:5
+msgid ""
+"This plugin processes dictionary word lookups and uses spaced repetition to "
+"help you remember new words."
+msgstr ""
+"이 플러그인은 사전 단어 조회를 처리하고 간격 반복을 사용하여 새로운 단어를 기"
+"억하는 데 도움이 됩니다."
 
 #: plugins/vocabbuilder.koplugin/main.lua:77
 msgid "Add to vocabulary builder"
@@ -19456,23 +19471,17 @@ msgstr "제목 변경"
 msgid "Words reloaded"
 msgstr "다시 로드된 단어"
 
-#: plugins/vocabbuilder.koplugin/main.lua:1950
-#: plugins/vocabbuilder.koplugin/main.lua:2021
-#: plugins/vocabbuilder.koplugin/_meta.lua:4
-msgid "Vocabulary builder"
-msgstr "어휘 빌더"
-
 #: plugins/vocabbuilder.koplugin/main.lua:2032
 msgid "Open vocabulary builder"
 msgstr "어휘 빌더 열기"
 
-#: plugins/vocabbuilder.koplugin/_meta.lua:5
-msgid ""
-"This plugin processes dictionary word lookups and uses spaced repetition to "
-"help you remember new words."
-msgstr ""
-"이 플러그인은 사전 단어 조회를 처리하고 간격 반복을 사용하여 새로운 단어를 기"
-"억하는 데 도움이 됩니다."
+#: plugins/wallabag.koplugin/_meta.lua:4 plugins/wallabag.koplugin/main.lua:133
+msgid "Wallabag"
+msgstr "Wallabag"
+
+#: plugins/wallabag.koplugin/_meta.lua:5
+msgid "Synchronises articles with a Wallabag server."
+msgstr "Wallabag 서버와 글감을 동기화합니다."
 
 #: plugins/wallabag.koplugin/main.lua:45
 msgid "Wallabag retrieval"
@@ -19481,10 +19490,6 @@ msgstr "Wallabag 검색"
 #: plugins/wallabag.koplugin/main.lua:121
 msgid "Add to Wallabag"
 msgstr "Wallabag에 추가"
-
-#: plugins/wallabag.koplugin/main.lua:133 plugins/wallabag.koplugin/_meta.lua:4
-msgid "Wallabag"
-msgstr "Wallabag"
 
 #: plugins/wallabag.koplugin/main.lua:136
 msgid "Retrieve new articles from server"
@@ -19822,10 +19827,6 @@ msgid ""
 msgstr ""
 "Wallabag에 링크를 추가하면서 오류가 생겼니다:\n"
 "%1"
-
-#: plugins/wallabag.koplugin/_meta.lua:5
-msgid "Synchronises articles with a Wallabag server."
-msgstr "Wallabag 서버와 글감을 동기화합니다."
 
 #: tools/kobo_touch_probe.lua:54
 msgid "Tap the lower right corner"

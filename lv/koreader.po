@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-09 11:01+0000\n"
+"POT-Creation-Date: 2024-04-16 17:04+0000\n"
 "PO-Revision-Date: 2023-04-24 07:37+0000\n"
 "Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
 "Language-Team: Latvian <https://hosted.weblate.org/projects/koreader/"
@@ -152,12 +152,12 @@ msgstr "Ievadiet faila nosaukumu"
 #: frontend/apps/cloudstorage/dropbox.lua:130
 #: frontend/apps/cloudstorage/ftp.lua:127
 #: frontend/apps/cloudstorage/webdav.lua:126
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
-#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanager.lua:989
 #: frontend/apps/filemanager/filemanager.lua:1117
 #: frontend/apps/filemanager/filemanager.lua:1444
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
+#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:56
 #: frontend/apps/filemanager/filemanagershortcuts.lua:107
 #: frontend/apps/reader/modules/readerbookmark.lua:1053
@@ -189,7 +189,7 @@ msgstr "Ievadiet faila nosaukumu"
 #: frontend/ui/widget/networksetting.lua:340
 #: frontend/ui/widget/numberpickerwidget.lua:139
 #: frontend/ui/widget/pathchooser.lua:134 frontend/ui/widget/textviewer.lua:468
-#: frontend/ui/widget/touchmenu.lua:1330
+#: frontend/ui/widget/touchmenu.lua:1330 plugins/SSH.koplugin/main.lua:130
 #: plugins/autowarmth.koplugin/main.lua:759
 #: plugins/autowarmth.koplugin/main.lua:1060
 #: plugins/calibre.koplugin/main.lua:324
@@ -215,7 +215,7 @@ msgstr "Ievadiet faila nosaukumu"
 #: plugins/opds.koplugin/opdsbrowser.lua:646
 #: plugins/opds.koplugin/opdspse.lua:179
 #: plugins/perceptionexpander.koplugin/main.lua:138
-#: plugins/profiles.koplugin/main.lua:264 plugins/SSH.koplugin/main.lua:130
+#: plugins/profiles.koplugin/main.lua:264
 #: plugins/statistics.koplugin/main.lua:1246
 #: plugins/statistics.koplugin/main.lua:2306
 #: plugins/statistics.koplugin/main.lua:2480
@@ -282,12 +282,12 @@ msgid "Edit"
 msgstr "Labot"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:395
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
-#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/filemanager/filemanager.lua:255
 #: frontend/apps/filemanager/filemanager.lua:571
 #: frontend/apps/filemanager/filemanager.lua:576
 #: frontend/apps/filemanager/filemanager.lua:1046
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
+#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/reader/modules/readerhighlight.lua:983
 #: frontend/ui/widget/screenshoter.lua:51
 #: plugins/bookshortcuts.koplugin/main.lua:138
@@ -426,12 +426,6 @@ msgstr "Izveidot"
 msgid "Enter folder after creation"
 msgstr "Pēc izveidošanas iet mapē"
 
-#: frontend/apps/cloudstorage/dropboxapi.lua:213
-#: frontend/apps/cloudstorage/webdavapi.lua:175
-#: frontend/ui/widget/filechooser.lua:451
-msgid "Long-press to choose current folder"
-msgstr "Turiet, lai izvēlētos pašreizējo mapi"
-
 #: frontend/apps/cloudstorage/dropbox.lua:33
 #: frontend/apps/cloudstorage/ftp.lua:38
 #: frontend/apps/cloudstorage/webdav.lua:26
@@ -547,13 +541,13 @@ msgstr "Dropbox mape (/ kā saknes mape)"
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
 #: frontend/apps/reader/modules/readerwikipedia.lua:174
 #: frontend/ui/widget/inputdialog.lua:766
-#: frontend/ui/widget/inputdialog.lua:807
+#: frontend/ui/widget/inputdialog.lua:807 plugins/SSH.koplugin/main.lua:137
 #: plugins/coverimage.koplugin/main.lua:362
 #: plugins/gestures.koplugin/main.lua:406
 #: plugins/newsdownloader.koplugin/main.lua:755
 #: plugins/opds.koplugin/opdsbrowser.lua:149
 #: plugins/opds.koplugin/opdsbrowser.lua:178
-#: plugins/profiles.koplugin/main.lua:271 plugins/SSH.koplugin/main.lua:137
+#: plugins/profiles.koplugin/main.lua:271
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:591
 msgid "Save"
@@ -574,6 +568,12 @@ msgstr ""
 "Valsts: %4\n"
 "Vieta kopā: %5\n"
 "Izmantotā vieta: %6"
+
+#: frontend/apps/cloudstorage/dropboxapi.lua:213
+#: frontend/apps/cloudstorage/webdavapi.lua:175
+#: frontend/ui/widget/filechooser.lua:451
+msgid "Long-press to choose current folder"
+msgstr "Turiet, lai izvēlētos pašreizējo mapi"
 
 #: frontend/apps/cloudstorage/ftp.lua:29
 msgid ""
@@ -726,6 +726,376 @@ msgstr "Parole"
 #: frontend/apps/cloudstorage/webdav.lua:120
 msgid "Start folder, for example /books"
 msgstr ""
+
+#: frontend/apps/filemanager/filemanager.lua:48
+msgid "KOReader"
+msgstr "KOReader"
+
+#: frontend/apps/filemanager/filemanager.lua:217
+msgctxt "File"
+msgid "Copy"
+msgstr "Kopēt"
+
+#: frontend/apps/filemanager/filemanager.lua:225
+msgctxt "File"
+msgid "Paste"
+msgstr "Ielīmēt"
+
+#: frontend/apps/filemanager/filemanager.lua:233
+#: frontend/apps/reader/modules/readerhighlight.lua:65
+#: frontend/ui/widget/inputtext.lua:245
+msgid "Select"
+msgstr "Izvēlēties"
+
+#: frontend/apps/filemanager/filemanager.lua:247
+msgid "Cut"
+msgstr "Izgriezt"
+
+#: frontend/apps/filemanager/filemanager.lua:263
+#: frontend/apps/filemanager/filemanager.lua:1124
+msgid "Rename"
+msgstr "Pārsaukt"
+
+#: frontend/apps/filemanager/filemanager.lua:300
+msgid "Open with…"
+msgstr "Atvērt ar…"
+
+#: frontend/apps/filemanager/filemanager.lua:322
+msgid "Convert"
+msgstr "Konvertēt"
+
+#: frontend/apps/filemanager/filemanager.lua:334
+#: frontend/apps/filemanager/filemanager.lua:646
+msgid "Set as HOME folder"
+msgstr "Iestatīt kā MĀJAS mapi"
+
+#: frontend/apps/filemanager/filemanager.lua:468
+#: frontend/apps/reader/modules/readerback.lua:179
+msgid "Exit KOReader?"
+msgstr "Iziet no KOReader?"
+
+#: frontend/apps/filemanager/filemanager.lua:469
+#: frontend/apps/reader/modules/readerback.lua:180
+#: frontend/apps/reader/modules/readerdevicestatus.lua:103
+#: frontend/ui/elements/common_exit_menu_table.lua:9
+#: frontend/ui/elements/common_exit_menu_table.lua:16
+msgid "Exit"
+msgstr "Iziet"
+
+#: frontend/apps/filemanager/filemanager.lua:520
+msgid "1 file selected"
+msgid_plural "%1 files selected"
+msgstr[0] "Izvēlēti %1 faili"
+msgstr[1] "Izvēlēts %1 fails"
+msgstr[2] "Izvēlēti %1 faili"
+
+#: frontend/apps/filemanager/filemanager.lua:521
+msgid "No files selected"
+msgstr "Nav izvēlēts neviens fails"
+
+#: frontend/apps/filemanager/filemanager.lua:525
+#, fuzzy
+msgid "Show selected files list"
+msgstr "Izvēlēties failus"
+
+#: frontend/apps/filemanager/filemanager.lua:533
+#: frontend/apps/filemanager/filemanager.lua:919
+#: frontend/apps/reader/modules/readerlink.lua:143
+msgid "Copy"
+msgstr "Kopēt"
+
+#: frontend/apps/filemanager/filemanager.lua:543
+msgid "Select all files in folder"
+msgstr "Izvēlēties visus failus mapē"
+
+#: frontend/apps/filemanager/filemanager.lua:550
+#: frontend/apps/filemanager/filemanager.lua:916
+#: frontend/apps/filemanager/filemanager.lua:1181
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
+msgid "Move"
+msgstr "Pārvietot"
+
+#: frontend/apps/filemanager/filemanager.lua:560
+#: frontend/apps/reader/modules/readerbookmark.lua:664
+msgid "Deselect all"
+msgstr "Notīrīt izvēli visiem"
+
+#: frontend/apps/filemanager/filemanager.lua:575
+msgid ""
+"Delete selected files?\n"
+"If you delete a file, it is permanently lost."
+msgstr ""
+"Dzēst izvēlētos failus?\n"
+"Ja failu izdzēšat, to vairs nevarēs atgūt."
+
+#: frontend/apps/filemanager/filemanager.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:702
+#: frontend/apps/reader/modules/readerhighlight.lua:692
+msgid "Exit select mode"
+msgstr "Iziet no izvēles režīma"
+
+#: frontend/apps/filemanager/filemanager.lua:594
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:261
+msgid "Export highlights"
+msgstr "Eksportēt izcēlumus"
+
+#: frontend/apps/filemanager/filemanager.lua:618
+msgid "Select files"
+msgstr "Izvēlēties failus"
+
+#: frontend/apps/filemanager/filemanager.lua:636
+#: frontend/apps/reader/modules/readerbookmark.lua:1064
+#: frontend/ui/widget/inputtext.lua:255
+msgid "Paste"
+msgstr "Ielīmēt"
+
+#: frontend/apps/filemanager/filemanager.lua:655
+msgid "Go to HOME folder"
+msgstr "Doties uz MĀJAS mapi"
+
+#: frontend/apps/filemanager/filemanager.lua:664
+msgid "Open random document"
+msgstr "Atvērt nejaušu dokumentu"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+msgid "Switch to SDCard"
+msgstr "Pārslēgties uz SD karti"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+msgid "Switch to internal storage"
+msgstr "Pārslēgties uz iekšējo krātuvi"
+
+#: frontend/apps/filemanager/filemanager.lua:704
+msgid "Import files here"
+msgstr "Importēt failus šeit"
+
+#: frontend/apps/filemanager/filemanager.lua:800
+msgid "Set '%1' as HOME folder?"
+msgstr "Uzstādīt '%1' kā MĀJAS mapi?"
+
+#: frontend/apps/filemanager/filemanager.lua:801
+msgid "Set as HOME"
+msgstr "Uzstādīt kā MĀJAS mapi"
+
+#: frontend/apps/filemanager/filemanager.lua:819
+msgid "Do you want to open %1?"
+msgstr "Vai Jūs vēlaties atvērt %1?"
+
+#: frontend/apps/filemanager/filemanager.lua:820
+#: frontend/apps/filemanager/filemanager.lua:1450
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
+#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
+#: plugins/texteditor.koplugin/main.lua:457
+msgid "Open"
+msgstr "Atvērt"
+
+#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
+#: frontend/apps/filemanager/filemanager.lua:826
+msgid "Another"
+msgstr "Vēl vienu"
+
+#: frontend/apps/filemanager/filemanager.lua:833
+msgid "File not found"
+msgstr "Fails nav atrasts"
+
+#: frontend/apps/filemanager/filemanager.lua:891
+#, fuzzy
+msgid ""
+"File already exists:\n"
+"%1"
+msgstr "Fails %1 jau eksistē."
+
+#: frontend/apps/filemanager/filemanager.lua:892
+#, fuzzy
+msgid ""
+"Folder already exists:\n"
+"%1"
+msgstr "Fails %1 jau eksistē."
+
+#: frontend/apps/filemanager/filemanager.lua:896
+#: frontend/apps/filemanager/filemanager.lua:1178
+#: frontend/apps/filemanager/filemanagerconverter.lua:97
+#: frontend/apps/reader/modules/readerdictionary.lua:1087
+#: plugins/opds.koplugin/opdsbrowser.lua:770
+msgid "Overwrite"
+msgstr "Pārrakstīt"
+
+#: frontend/apps/filemanager/filemanager.lua:915
+msgid "Move selected files to the current folder?"
+msgstr "Pārvietot izvēlētos failus uz pašreizējo mapi?"
+
+#: frontend/apps/filemanager/filemanager.lua:918
+msgid "Copy selected files to the current folder?"
+msgstr "Kopēt izvēlētos failus uz pašreizējo mapi?"
+
+#: frontend/apps/filemanager/filemanager.lua:931
+#, fuzzy
+msgid "overwrite existing files"
+msgstr "Pārrakstīt esošo HTML failu?"
+
+#: frontend/apps/filemanager/filemanager.lua:971
+#, fuzzy
+msgid "1 file was not moved"
+msgid_plural "%1 files were not moved"
+msgstr[0] "Izvēlēti %1 faili"
+msgstr[1] "Izvēlēts %1 fails"
+msgstr[2] "Izvēlēti %1 faili"
+
+#: frontend/apps/filemanager/filemanager.lua:972
+#, fuzzy
+msgid "1 file was not copied"
+msgid_plural "%1 files were not copied"
+msgstr[0] "Izvēlēti %1 faili"
+msgstr[1] "Izvēlēts %1 fails"
+msgstr[2] "Izvēlēti %1 faili"
+
+#: frontend/apps/filemanager/filemanager.lua:1011
+msgid ""
+"Failed to create folder:\n"
+"%1"
+msgstr ""
+"Neizdevās izveidot mapi:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1034
+msgid ""
+"File not found:\n"
+"%1"
+msgstr ""
+"Fails nav atrasts:\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete file permanently?"
+msgstr "Dzēst failu uz visiem laikiem?"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete folder permanently?"
+msgstr "Dzēst mapi uz visiem laikiem?"
+
+#: frontend/apps/filemanager/filemanager.lua:1042
+msgid "Book settings, highlights and notes will be deleted."
+msgstr "Grāmatu iestatījumi, izcēlumi un piezīmes tiks dzēstas."
+
+#: frontend/apps/filemanager/filemanager.lua:1076
+msgid ""
+"Failed to delete:\n"
+"%1"
+msgstr ""
+"Neizdevās izdzēst: \n"
+"%1"
+
+#: frontend/apps/filemanager/filemanager.lua:1102
+#, fuzzy
+msgid "Failed to delete 1 file."
+msgid_plural "Failed to delete %1 files."
+msgstr[0] "Neizdevās lejupielādēt %1 failus."
+msgstr[1] "Neizdevās lejupielādēt %1 failu."
+msgstr[2] "Neizdevās lejupielādēt %1 failus."
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename file"
+msgstr "Pārsaukt failu"
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename folder"
+msgstr "Pārsaukt mapi"
+
+#: frontend/apps/filemanager/filemanager.lua:1156
+msgid ""
+"Failed to rename:\n"
+"%1\n"
+"to:\n"
+"%2"
+msgstr ""
+"Neizdevās pārdēvēt:\n"
+"%1\n"
+"uz:\n"
+"%2"
+
+#: frontend/apps/filemanager/filemanager.lua:1167
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"File cannot be renamed."
+msgstr ""
+"Mape jau pastāv:\n"
+"%1\n"
+"Failu nevar pārdēvēt."
+
+#: frontend/apps/filemanager/filemanager.lua:1169
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Folder cannot be renamed."
+msgstr ""
+"Fails jau pastāv:\n"
+"%1\n"
+"Mapi nevar pārdēvēt."
+
+#: frontend/apps/filemanager/filemanager.lua:1177
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Overwrite file?"
+msgstr ""
+"Fails jau eksistē:\n"
+"%1\n"
+"Pārrakstīt failu?"
+
+#: frontend/apps/filemanager/filemanager.lua:1180
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"Move the folder inside it?"
+msgstr ""
+"Mape jau pastāv:\n"
+"%1\n"
+"Pārvietot mapi tajā?"
+
+#: frontend/apps/filemanager/filemanager.lua:1333
+#, fuzzy
+msgid "Selected files (%1)"
+msgstr "Izdzēsts fails: %1"
+
+#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
+#: frontend/apps/filemanager/filemanager.lua:1360
+msgid "%1 ~Unsupported"
+msgstr "%1 ~Neatbalstīts"
+
+#: frontend/apps/filemanager/filemanager.lua:1396
+#, fuzzy
+msgid "Reset default for this file"
+msgstr "Atjaunot noklusējuma"
+
+#: frontend/apps/filemanager/filemanager.lua:1406
+#, fuzzy
+msgid "Reset default for %1 files"
+msgstr "Atjaunot noklusējuma"
+
+#: frontend/apps/filemanager/filemanager.lua:1417
+#, fuzzy
+msgid "View defaults for file types"
+msgstr "Izmantot noklusējuma"
+
+#: frontend/apps/filemanager/filemanager.lua:1456
+msgid "Always open '%2' with %1?"
+msgstr "Vienmēr atvērt '%2' ar %1?"
+
+#: frontend/apps/filemanager/filemanager.lua:1457
+#: frontend/apps/filemanager/filemanager.lua:1467
+#: frontend/ui/elements/common_settings_menu_table.lua:383
+#: frontend/ui/elements/common_settings_menu_table.lua:660
+msgid "Always"
+msgstr "Vienmēr"
+
+#: frontend/apps/filemanager/filemanager.lua:1466
+msgid "Always open %2 files with %1?"
+msgstr "Vienmēr atvērt '%2' failus ar %1?"
+
+#: frontend/apps/filemanager/filemanager.lua:1484
+msgid "Open %1 with:"
+msgstr "Atvērt %1 ar:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:27
 #: frontend/apps/filemanager/filemanagerutil.lua:277
@@ -921,13 +1291,6 @@ msgstr[2] ""
 msgid "Move book metadata to your preferred location?"
 msgstr "Vai pārvietot grāmatas metadatus uz jūsu vēlamo vietu?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
-#: frontend/apps/filemanager/filemanager.lua:550
-#: frontend/apps/filemanager/filemanager.lua:916
-#: frontend/apps/filemanager/filemanager.lua:1181
-msgid "Move"
-msgstr "Pārvietot"
-
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:658
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
@@ -999,14 +1362,6 @@ msgstr "HTML"
 msgid "Overwrite existing HTML file?"
 msgstr "Pārrakstīt esošo HTML failu?"
 
-#: frontend/apps/filemanager/filemanagerconverter.lua:97
-#: frontend/apps/filemanager/filemanager.lua:896
-#: frontend/apps/filemanager/filemanager.lua:1178
-#: frontend/apps/reader/modules/readerdictionary.lua:1087
-#: plugins/opds.koplugin/opdsbrowser.lua:770
-msgid "Overwrite"
-msgstr "Pārrakstīt"
-
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:30
 msgid "Enter text to search for in filename"
 msgstr "Ievadiet faila nosaukumā meklējamo tekstu"
@@ -1075,14 +1430,6 @@ msgstr "Meklēšanas rezultāti (%1)"
 #, fuzzy
 msgid "Query: %1"
 msgstr "(vaicājums: %1)"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
-#: frontend/apps/filemanager/filemanager.lua:820
-#: frontend/apps/filemanager/filemanager.lua:1450
-#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
-#: plugins/texteditor.koplugin/main.lua:457
-msgid "Open"
-msgstr "Atvērt"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:308
 #, fuzzy
@@ -1191,353 +1538,6 @@ msgstr "Ievadiet meklējamo tekstu"
 #: plugins/vocabbuilder.koplugin/main.lua:1550
 msgid "Search"
 msgstr "Meklēt"
-
-#: frontend/apps/filemanager/filemanager.lua:48
-msgid "KOReader"
-msgstr "KOReader"
-
-#: frontend/apps/filemanager/filemanager.lua:217
-msgctxt "File"
-msgid "Copy"
-msgstr "Kopēt"
-
-#: frontend/apps/filemanager/filemanager.lua:225
-msgctxt "File"
-msgid "Paste"
-msgstr "Ielīmēt"
-
-#: frontend/apps/filemanager/filemanager.lua:233
-#: frontend/apps/reader/modules/readerhighlight.lua:65
-#: frontend/ui/widget/inputtext.lua:245
-msgid "Select"
-msgstr "Izvēlēties"
-
-#: frontend/apps/filemanager/filemanager.lua:247
-msgid "Cut"
-msgstr "Izgriezt"
-
-#: frontend/apps/filemanager/filemanager.lua:263
-#: frontend/apps/filemanager/filemanager.lua:1124
-msgid "Rename"
-msgstr "Pārsaukt"
-
-#: frontend/apps/filemanager/filemanager.lua:300
-msgid "Open with…"
-msgstr "Atvērt ar…"
-
-#: frontend/apps/filemanager/filemanager.lua:322
-msgid "Convert"
-msgstr "Konvertēt"
-
-#: frontend/apps/filemanager/filemanager.lua:334
-#: frontend/apps/filemanager/filemanager.lua:646
-msgid "Set as HOME folder"
-msgstr "Iestatīt kā MĀJAS mapi"
-
-#: frontend/apps/filemanager/filemanager.lua:468
-#: frontend/apps/reader/modules/readerback.lua:179
-msgid "Exit KOReader?"
-msgstr "Iziet no KOReader?"
-
-#: frontend/apps/filemanager/filemanager.lua:469
-#: frontend/apps/reader/modules/readerback.lua:180
-#: frontend/apps/reader/modules/readerdevicestatus.lua:103
-#: frontend/ui/elements/common_exit_menu_table.lua:9
-#: frontend/ui/elements/common_exit_menu_table.lua:16
-msgid "Exit"
-msgstr "Iziet"
-
-#: frontend/apps/filemanager/filemanager.lua:520
-msgid "1 file selected"
-msgid_plural "%1 files selected"
-msgstr[0] "Izvēlēti %1 faili"
-msgstr[1] "Izvēlēts %1 fails"
-msgstr[2] "Izvēlēti %1 faili"
-
-#: frontend/apps/filemanager/filemanager.lua:521
-msgid "No files selected"
-msgstr "Nav izvēlēts neviens fails"
-
-#: frontend/apps/filemanager/filemanager.lua:525
-#, fuzzy
-msgid "Show selected files list"
-msgstr "Izvēlēties failus"
-
-#: frontend/apps/filemanager/filemanager.lua:533
-#: frontend/apps/filemanager/filemanager.lua:919
-#: frontend/apps/reader/modules/readerlink.lua:143
-msgid "Copy"
-msgstr "Kopēt"
-
-#: frontend/apps/filemanager/filemanager.lua:543
-msgid "Select all files in folder"
-msgstr "Izvēlēties visus failus mapē"
-
-#: frontend/apps/filemanager/filemanager.lua:560
-#: frontend/apps/reader/modules/readerbookmark.lua:664
-msgid "Deselect all"
-msgstr "Notīrīt izvēli visiem"
-
-#: frontend/apps/filemanager/filemanager.lua:575
-msgid ""
-"Delete selected files?\n"
-"If you delete a file, it is permanently lost."
-msgstr ""
-"Dzēst izvēlētos failus?\n"
-"Ja failu izdzēšat, to vairs nevarēs atgūt."
-
-#: frontend/apps/filemanager/filemanager.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:702
-#: frontend/apps/reader/modules/readerhighlight.lua:692
-msgid "Exit select mode"
-msgstr "Iziet no izvēles režīma"
-
-#: frontend/apps/filemanager/filemanager.lua:594
-#: plugins/exporter.koplugin/main.lua:261 plugins/exporter.koplugin/_meta.lua:4
-msgid "Export highlights"
-msgstr "Eksportēt izcēlumus"
-
-#: frontend/apps/filemanager/filemanager.lua:618
-msgid "Select files"
-msgstr "Izvēlēties failus"
-
-#: frontend/apps/filemanager/filemanager.lua:636
-#: frontend/apps/reader/modules/readerbookmark.lua:1064
-#: frontend/ui/widget/inputtext.lua:255
-msgid "Paste"
-msgstr "Ielīmēt"
-
-#: frontend/apps/filemanager/filemanager.lua:655
-msgid "Go to HOME folder"
-msgstr "Doties uz MĀJAS mapi"
-
-#: frontend/apps/filemanager/filemanager.lua:664
-msgid "Open random document"
-msgstr "Atvērt nejaušu dokumentu"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-msgid "Switch to SDCard"
-msgstr "Pārslēgties uz SD karti"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-msgid "Switch to internal storage"
-msgstr "Pārslēgties uz iekšējo krātuvi"
-
-#: frontend/apps/filemanager/filemanager.lua:704
-msgid "Import files here"
-msgstr "Importēt failus šeit"
-
-#: frontend/apps/filemanager/filemanager.lua:800
-msgid "Set '%1' as HOME folder?"
-msgstr "Uzstādīt '%1' kā MĀJAS mapi?"
-
-#: frontend/apps/filemanager/filemanager.lua:801
-msgid "Set as HOME"
-msgstr "Uzstādīt kā MĀJAS mapi"
-
-#: frontend/apps/filemanager/filemanager.lua:819
-msgid "Do you want to open %1?"
-msgstr "Vai Jūs vēlaties atvērt %1?"
-
-#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:826
-msgid "Another"
-msgstr "Vēl vienu"
-
-#: frontend/apps/filemanager/filemanager.lua:833
-msgid "File not found"
-msgstr "Fails nav atrasts"
-
-#: frontend/apps/filemanager/filemanager.lua:891
-#, fuzzy
-msgid ""
-"File already exists:\n"
-"%1"
-msgstr "Fails %1 jau eksistē."
-
-#: frontend/apps/filemanager/filemanager.lua:892
-#, fuzzy
-msgid ""
-"Folder already exists:\n"
-"%1"
-msgstr "Fails %1 jau eksistē."
-
-#: frontend/apps/filemanager/filemanager.lua:915
-msgid "Move selected files to the current folder?"
-msgstr "Pārvietot izvēlētos failus uz pašreizējo mapi?"
-
-#: frontend/apps/filemanager/filemanager.lua:918
-msgid "Copy selected files to the current folder?"
-msgstr "Kopēt izvēlētos failus uz pašreizējo mapi?"
-
-#: frontend/apps/filemanager/filemanager.lua:931
-#, fuzzy
-msgid "overwrite existing files"
-msgstr "Pārrakstīt esošo HTML failu?"
-
-#: frontend/apps/filemanager/filemanager.lua:971
-#, fuzzy
-msgid "1 file was not moved"
-msgid_plural "%1 files were not moved"
-msgstr[0] "Izvēlēti %1 faili"
-msgstr[1] "Izvēlēts %1 fails"
-msgstr[2] "Izvēlēti %1 faili"
-
-#: frontend/apps/filemanager/filemanager.lua:972
-#, fuzzy
-msgid "1 file was not copied"
-msgid_plural "%1 files were not copied"
-msgstr[0] "Izvēlēti %1 faili"
-msgstr[1] "Izvēlēts %1 fails"
-msgstr[2] "Izvēlēti %1 faili"
-
-#: frontend/apps/filemanager/filemanager.lua:1011
-msgid ""
-"Failed to create folder:\n"
-"%1"
-msgstr ""
-"Neizdevās izveidot mapi:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1034
-msgid ""
-"File not found:\n"
-"%1"
-msgstr ""
-"Fails nav atrasts:\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete file permanently?"
-msgstr "Dzēst failu uz visiem laikiem?"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete folder permanently?"
-msgstr "Dzēst mapi uz visiem laikiem?"
-
-#: frontend/apps/filemanager/filemanager.lua:1042
-msgid "Book settings, highlights and notes will be deleted."
-msgstr "Grāmatu iestatījumi, izcēlumi un piezīmes tiks dzēstas."
-
-#: frontend/apps/filemanager/filemanager.lua:1076
-msgid ""
-"Failed to delete:\n"
-"%1"
-msgstr ""
-"Neizdevās izdzēst: \n"
-"%1"
-
-#: frontend/apps/filemanager/filemanager.lua:1102
-#, fuzzy
-msgid "Failed to delete 1 file."
-msgid_plural "Failed to delete %1 files."
-msgstr[0] "Neizdevās lejupielādēt %1 failus."
-msgstr[1] "Neizdevās lejupielādēt %1 failu."
-msgstr[2] "Neizdevās lejupielādēt %1 failus."
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename file"
-msgstr "Pārsaukt failu"
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename folder"
-msgstr "Pārsaukt mapi"
-
-#: frontend/apps/filemanager/filemanager.lua:1156
-msgid ""
-"Failed to rename:\n"
-"%1\n"
-"to:\n"
-"%2"
-msgstr ""
-"Neizdevās pārdēvēt:\n"
-"%1\n"
-"uz:\n"
-"%2"
-
-#: frontend/apps/filemanager/filemanager.lua:1167
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"File cannot be renamed."
-msgstr ""
-"Mape jau pastāv:\n"
-"%1\n"
-"Failu nevar pārdēvēt."
-
-#: frontend/apps/filemanager/filemanager.lua:1169
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Folder cannot be renamed."
-msgstr ""
-"Fails jau pastāv:\n"
-"%1\n"
-"Mapi nevar pārdēvēt."
-
-#: frontend/apps/filemanager/filemanager.lua:1177
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Overwrite file?"
-msgstr ""
-"Fails jau eksistē:\n"
-"%1\n"
-"Pārrakstīt failu?"
-
-#: frontend/apps/filemanager/filemanager.lua:1180
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"Move the folder inside it?"
-msgstr ""
-"Mape jau pastāv:\n"
-"%1\n"
-"Pārvietot mapi tajā?"
-
-#: frontend/apps/filemanager/filemanager.lua:1333
-#, fuzzy
-msgid "Selected files (%1)"
-msgstr "Izdzēsts fails: %1"
-
-#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
-#: frontend/apps/filemanager/filemanager.lua:1360
-msgid "%1 ~Unsupported"
-msgstr "%1 ~Neatbalstīts"
-
-#: frontend/apps/filemanager/filemanager.lua:1396
-#, fuzzy
-msgid "Reset default for this file"
-msgstr "Atjaunot noklusējuma"
-
-#: frontend/apps/filemanager/filemanager.lua:1406
-#, fuzzy
-msgid "Reset default for %1 files"
-msgstr "Atjaunot noklusējuma"
-
-#: frontend/apps/filemanager/filemanager.lua:1417
-#, fuzzy
-msgid "View defaults for file types"
-msgstr "Izmantot noklusējuma"
-
-#: frontend/apps/filemanager/filemanager.lua:1456
-msgid "Always open '%2' with %1?"
-msgstr "Vienmēr atvērt '%2' ar %1?"
-
-#: frontend/apps/filemanager/filemanager.lua:1457
-#: frontend/apps/filemanager/filemanager.lua:1467
-#: frontend/ui/elements/common_settings_menu_table.lua:383
-#: frontend/ui/elements/common_settings_menu_table.lua:660
-msgid "Always"
-msgstr "Vienmēr"
-
-#: frontend/apps/filemanager/filemanager.lua:1466
-msgid "Always open %2 files with %1?"
-msgstr "Vienmēr atvērt '%2' failus ar %1?"
-
-#: frontend/apps/filemanager/filemanager.lua:1484
-msgid "Open %1 with:"
-msgstr "Atvērt %1 ar:"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:130
 msgid "Cannot open last document"
@@ -14420,24 +14420,90 @@ msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 B"
 
-#: plugins/archiveviewer.koplugin/main.lua:17
+#: plugins/SSH.koplugin/_meta.lua:4
+msgid "SSH"
+msgstr "SSH"
+
+#: plugins/SSH.koplugin/_meta.lua:5
+msgid "Connect and transfer files to the device using SSH."
+msgstr "Pieslēdzies un pārvieto failus uz ierīci izmantojot SSH."
+
+#. @translators: %1 is the SSH port, %2 is the network info.
+#: plugins/SSH.koplugin/main.lua:73
+msgid ""
+"SSH server started.\n"
+"\n"
+"SSH port: %1\n"
+"%2"
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:81
+#, fuzzy
+msgid "Failed to start SSH server."
+msgstr "Sākt SSH serveri"
+
+#: plugins/SSH.koplugin/main.lua:94
+#, fuzzy
+msgid "SSH server stopped."
+msgstr "SSH serveris"
+
+#: plugins/SSH.koplugin/main.lua:123
+msgid "Choose SSH port"
+msgstr "Izvēlēties SSH portu"
+
+#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
+msgid "SSH server"
+msgstr "SSH serveris"
+
+#: plugins/SSH.koplugin/main.lua:174
+#, fuzzy
+msgid "SSH port (%1)"
+msgstr ""
+"SSH ports: %1\n"
+"%2"
+
+#: plugins/SSH.koplugin/main.lua:183
+msgid "SSH public key"
+msgstr "SSH publiskā atslēga"
+
+#: plugins/SSH.koplugin/main.lua:189
+#, fuzzy
+msgid ""
+"Put your public SSH keys in\n"
+"%1"
+msgstr "Ievietojiet savu publisko SSH atslēgu šeit: %1"
+
+#: plugins/SSH.koplugin/main.lua:195
+msgid "Login without password (DANGEROUS)"
+msgstr "Pieslēgties bez paroles (BĪSTAMI!)"
+
+#: plugins/SSH.koplugin/main.lua:208
+#, fuzzy
+msgid "Toggle SSH server"
+msgstr "Apstādināt SSH serveri"
+
 #: plugins/archiveviewer.koplugin/_meta.lua:4
+#: plugins/archiveviewer.koplugin/main.lua:17
 #, fuzzy
 msgid "Archive viewer"
 msgstr "Teksta skatītājs"
+
+#: plugins/archiveviewer.koplugin/_meta.lua:5
+msgid "Enables exploring the content of zip archives."
+msgstr ""
 
 #: plugins/archiveviewer.koplugin/main.lua:216
 #, fuzzy
 msgid "On extraction, if the file already exists, it will be overwritten."
 msgstr "Fails %1 jau eksistē. Vai vēlaties pārrakstīt?"
 
-#: plugins/archiveviewer.koplugin/_meta.lua:5
-msgid "Enables exploring the content of zip archives."
-msgstr ""
-
-#: plugins/autodim.koplugin/main.lua:51 plugins/autodim.koplugin/_meta.lua:4
+#: plugins/autodim.koplugin/_meta.lua:4 plugins/autodim.koplugin/main.lua:51
 msgid "Automatic dimmer"
 msgstr "Automātiskais aptumšotājs"
+
+#: plugins/autodim.koplugin/_meta.lua:5
+msgid "This plugin allows dimming the frontlight after a period of inactivity."
+msgstr ""
 
 #: plugins/autodim.koplugin/main.lua:56
 msgid "Idle time for dimmer"
@@ -14482,14 +14548,18 @@ msgstr "Baterijas %"
 msgid "The lowest brightness as a percentage of the regular brightness."
 msgstr ""
 
-#: plugins/autodim.koplugin/_meta.lua:5
-msgid "This plugin allows dimming the frontlight after a period of inactivity."
-msgstr ""
-
-#: plugins/autofrontlight.koplugin/main.lua:114
 #: plugins/autofrontlight.koplugin/_meta.lua:4
+#: plugins/autofrontlight.koplugin/main.lua:114
 msgid "Auto frontlight"
 msgstr "Automātiskais apgaismojums"
+
+#: plugins/autofrontlight.koplugin/_meta.lua:5
+msgid ""
+"Automatically turns the frontlight on and off once brightness in the "
+"environment reaches a certain level."
+msgstr ""
+"Automātiski pārslēdz apgaismojumu ja apkārtējās vides spilgtums sasniedz "
+"noteiktu līmeni."
 
 #: plugins/autofrontlight.koplugin/main.lua:117
 msgid ""
@@ -14509,13 +14579,14 @@ msgstr ""
 msgid "enable"
 msgstr "ieslēgt"
 
-#: plugins/autofrontlight.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the frontlight on and off once brightness in the "
-"environment reaches a certain level."
+#: plugins/autostandby.koplugin/_meta.lua:4
+msgid "Auto Standby"
+msgstr "Auto gatavība"
+
+#: plugins/autostandby.koplugin/_meta.lua:5
+msgid "Put into standby on no input, wake up from standby on UI input"
 msgstr ""
-"Automātiski pārslēdz apgaismojumu ja apkārtējās vides spilgtums sasniedz "
-"noteiktu līmeni."
+"Ievietot gatavības režīmā, kad nav aktivitātes, pamodināt, kad sāk lietot UI"
 
 #: plugins/autostandby.koplugin/main.lua:55
 msgid "Auto-standby settings"
@@ -14545,14 +14616,17 @@ msgstr "Vienmēr būt gatavam ja atlikusī baterija ir zem"
 msgid "Update"
 msgstr "Atjaunināt"
 
-#: plugins/autostandby.koplugin/_meta.lua:4
-msgid "Auto Standby"
-msgstr "Auto gatavība"
+#: plugins/autosuspend.koplugin/_meta.lua:4
+#, fuzzy
+msgid "Auto power save"
+msgstr "Nesaglabāt"
 
-#: plugins/autostandby.koplugin/_meta.lua:5
-msgid "Put into standby on no input, wake up from standby on UI input"
-msgstr ""
-"Ievietot gatavības režīmā, kad nav aktivitātes, pamodināt, kad sāk lietot UI"
+#: plugins/autosuspend.koplugin/_meta.lua:5
+#, fuzzy
+msgid ""
+"Puts the device into standby, suspend or power off after specified periods "
+"of inactivity."
+msgstr "Iemidzināt ierīci pēc neaktivitātes perioda."
 
 #: plugins/autosuspend.koplugin/main.lua:443
 #: plugins/autoturn.koplugin/main.lua:148
@@ -14647,17 +14721,19 @@ msgstr "Taimauts sekundēs"
 msgid "Enter time in minutes and seconds."
 msgstr "Uzstādīt lasīšanas taimeri (stundas:minūtes)"
 
-#: plugins/autosuspend.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Auto power save"
-msgstr "Nesaglabāt"
+#: plugins/autoturn.koplugin/_meta.lua:4 plugins/autoturn.koplugin/main.lua:131
+msgid "Autoturn"
+msgstr "Automātiskā lappušu pāršķiršana"
 
-#: plugins/autosuspend.koplugin/_meta.lua:5
-#, fuzzy
+#: plugins/autoturn.koplugin/_meta.lua:5
 msgid ""
-"Puts the device into standby, suspend or power off after specified periods "
-"of inactivity."
-msgstr "Iemidzināt ierīci pēc neaktivitātes perioda."
+"Automatically turns the page after a set period of time.\n"
+"\n"
+"Hold to set the scrolling distance."
+msgstr ""
+"Automātiski pāršķirt lappusi pēc uzstādītā laika perioda.\n"
+"\n"
+"Turēt, lai uzstādītu ritināšanas distanci."
 
 #: plugins/autoturn.koplugin/main.lua:71
 #, fuzzy
@@ -14679,10 +14755,6 @@ msgstr ""
 msgid "Autoturn: %1"
 msgstr "Automātiskā lappušu pāršķiršana (%1 s)"
 
-#: plugins/autoturn.koplugin/main.lua:131 plugins/autoturn.koplugin/_meta.lua:4
-msgid "Autoturn"
-msgstr "Automātiskā lappušu pāršķiršana"
-
 #: plugins/autoturn.koplugin/main.lua:140
 #, fuzzy
 msgid "Autoturn time"
@@ -14696,15 +14768,20 @@ msgstr "Uzstādīt distanci"
 msgid "Scrolling distance"
 msgstr "Ritināšanas distance"
 
-#: plugins/autoturn.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the page after a set period of time.\n"
-"\n"
-"Hold to set the scrolling distance."
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+msgid "Auto warmth and night mode"
+msgstr "Automātiskais siltuma un nakts režīms"
+
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+#, fuzzy
+msgid "Auto night mode"
+msgstr "Uzstādīt nakts režīmu"
+
+#: plugins/autowarmth.koplugin/_meta.lua:5
+msgid "This plugin allows to set the frontlight warmth automagically."
 msgstr ""
-"Automātiski pāršķirt lappusi pēc uzstādītā laika perioda.\n"
-"\n"
-"Turēt, lai uzstādītu ritināšanas distanci."
 
 #: plugins/autowarmth.koplugin/main.lua:118
 #, fuzzy
@@ -14765,17 +14842,6 @@ msgstr "Nakts režīms"
 #: plugins/autowarmth.koplugin/main.lua:223
 msgid "The AutoWarmth plugin might change it again."
 msgstr ""
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-msgid "Auto warmth and night mode"
-msgstr "Automātiskais siltuma un nakts režīms"
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Auto night mode"
-msgstr "Uzstādīt nakts režīmu"
 
 #: plugins/autowarmth.koplugin/main.lua:557
 msgid ""
@@ -15184,10 +15250,6 @@ msgstr "Pārslēgt apgaismojumu"
 msgid "%1 and %2"
 msgstr ""
 
-#: plugins/autowarmth.koplugin/_meta.lua:5
-msgid "This plugin allows to set the frontlight warmth automagically."
-msgstr ""
-
 #: plugins/backgroundrunner.koplugin/_meta.lua:4
 msgid "Background runner"
 msgstr "Fona process"
@@ -15196,6 +15258,16 @@ msgstr "Fona process"
 msgid ""
 "Service to other plugins: allows tasks to run regularly in the background."
 msgstr "Serviss citiem spraudņiem: atļauj regulāri izpildīt uzdevumus fonā."
+
+#: plugins/batterystat.koplugin/_meta.lua:4
+#: plugins/batterystat.koplugin/main.lua:272
+#: plugins/batterystat.koplugin/main.lua:284
+msgid "Battery statistics"
+msgstr "Baterijas statistika"
+
+#: plugins/batterystat.koplugin/_meta.lua:5
+msgid "Collects and displays battery statistics."
+msgstr "Savāc un attēlo baterijas statistiku."
 
 #: plugins/batterystat.koplugin/main.lua:88
 #, fuzzy
@@ -15257,20 +15329,14 @@ msgstr "Uzlādēti %"
 msgid "Since last charge"
 msgstr "Kopš pēdējās uzlādes"
 
-#: plugins/batterystat.koplugin/main.lua:272
-#: plugins/batterystat.koplugin/main.lua:284
-#: plugins/batterystat.koplugin/_meta.lua:4
-msgid "Battery statistics"
-msgstr "Baterijas statistika"
-
-#: plugins/batterystat.koplugin/_meta.lua:5
-msgid "Collects and displays battery statistics."
-msgstr "Savāc un attēlo baterijas statistiku."
-
-#: plugins/bookshortcuts.koplugin/main.lua:77
 #: plugins/bookshortcuts.koplugin/_meta.lua:4
+#: plugins/bookshortcuts.koplugin/main.lua:77
 msgid "Book shortcuts"
 msgstr "Grāmatas īsceļi"
+
+#: plugins/bookshortcuts.koplugin/_meta.lua:5
+msgid "This plugin allows adding a book shortcut to a gesture."
+msgstr ""
 
 #: plugins/bookshortcuts.koplugin/main.lua:87
 #, fuzzy
@@ -15296,9 +15362,17 @@ msgstr ""
 msgid "Do you want to delete this shortcut?"
 msgstr "Vai vēlaties izdzēst profilu?"
 
-#: plugins/bookshortcuts.koplugin/_meta.lua:5
-msgid "This plugin allows adding a book shortcut to a gesture."
+#: plugins/calibre.koplugin/_meta.lua:4 plugins/calibre.koplugin/main.lua:74
+msgid "Calibre"
+msgstr "Calibre"
+
+#: plugins/calibre.koplugin/_meta.lua:5
+msgid ""
+"Integration with calibre. Send documents from calibre library via Wi-Fi and "
+"search calibre metadata."
 msgstr ""
+"Integrācija ar calibre. Sūtīt dokumentus no calibre bibliotēkas, izmantojot "
+"Wi-Fi un meklēt calibre metadatus."
 
 #: plugins/calibre.koplugin/main.lua:58 plugins/calibre.koplugin/main.lua:110
 #: plugins/calibre.koplugin/search.lua:194
@@ -15323,10 +15397,6 @@ msgstr "Pārlūkot visas calibre birkas"
 #, fuzzy
 msgid "Browse all calibre titles"
 msgstr "Pārlūkot visas calibre sērijas"
-
-#: plugins/calibre.koplugin/main.lua:74 plugins/calibre.koplugin/_meta.lua:4
-msgid "Calibre"
-msgstr "Calibre"
 
 #: plugins/calibre.koplugin/main.lua:79
 msgid "Disconnect"
@@ -15453,14 +15523,6 @@ msgid ""
 "Unsupported formats will be converted by calibre to the first format of the "
 "list."
 msgstr ""
-
-#: plugins/calibre.koplugin/_meta.lua:5
-msgid ""
-"Integration with calibre. Send documents from calibre library via Wi-Fi and "
-"search calibre metadata."
-msgstr ""
-"Integrācija ar calibre. Sūtīt dokumentus no calibre bibliotēkas, izmantojot "
-"Wi-Fi un meklēt calibre metadatus."
 
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
@@ -15627,6 +15689,14 @@ msgid ""
 msgstr ""
 "Izdzēst %1 failus %2:\n"
 "%3"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:4
+msgid "Cover browser"
+msgstr "Vāku pārlūks"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:5
+msgid "Alternative display modes for file browser and history."
+msgstr "Alternatīvs attēlošanas režīms failiu pārlūkam un vēsturei."
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:123
 msgid "not readable by engine"
@@ -16070,13 +16140,14 @@ msgstr ""
 msgid "Purge"
 msgstr "Iztīrīt"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:4
-msgid "Cover browser"
-msgstr "Vāku pārlūks"
+#: plugins/coverimage.koplugin/_meta.lua:4
+#: plugins/coverimage.koplugin/main.lua:683
+msgid "Cover image"
+msgstr "Vāka attēls"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:5
-msgid "Alternative display modes for file browser and history."
-msgstr "Alternatīvs attēlošanas režīms failiu pārlūkam un vēsturei."
+#: plugins/coverimage.koplugin/_meta.lua:5
+msgid "Stores cover image to a file."
+msgstr "Saglabā vāka attēlu failā."
 
 #: plugins/coverimage.koplugin/main.lua:102
 #, fuzzy
@@ -16288,11 +16359,6 @@ msgstr "BMP faila formāts"
 msgid "BMP file format (grayscale)"
 msgstr "BMP faila formāts"
 
-#: plugins/coverimage.koplugin/main.lua:683
-#: plugins/coverimage.koplugin/_meta.lua:4
-msgid "Cover image"
-msgstr "Vāka attēls"
-
 #: plugins/coverimage.koplugin/main.lua:690
 msgid "About cover image"
 msgstr "Par vāka attēlu"
@@ -16338,14 +16404,18 @@ msgstr "Ieslēgt rezerves attēlu"
 msgid "Turn on fallback image"
 msgstr "Ieslēgt rezerves attēlu"
 
-#: plugins/coverimage.koplugin/_meta.lua:5
-msgid "Stores cover image to a file."
-msgstr "Saglabā vāka attēlu failā."
-
-#: plugins/docsettingtweak.koplugin/main.lua:48
 #: plugins/docsettingtweak.koplugin/_meta.lua:4
+#: plugins/docsettingtweak.koplugin/main.lua:48
 msgid "Tweak document settings"
 msgstr "Pielabot dokumenta iestatījumus"
+
+#: plugins/docsettingtweak.koplugin/_meta.lua:5
+msgid ""
+"This plugin allows you to tweak document settings before the document is "
+"loaded based on external factors."
+msgstr ""
+"Spraudnis atļauj Jums pielabot dokumenta iestatījumus pirms dokuments ir "
+"ielādēts."
 
 #: plugins/docsettingtweak.koplugin/main.lua:62
 msgid "Directory Defaults: %1"
@@ -16369,13 +16439,9 @@ msgstr "Noklusējuma iestatījumi nepareizi: %1"
 msgid "Defaults empty"
 msgstr "Noklusējuma iestatījumi tukši"
 
-#: plugins/docsettingtweak.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows you to tweak document settings before the document is "
-"loaded based on external factors."
-msgstr ""
-"Spraudnis atļauj Jums pielabot dokumenta iestatījumus pirms dokuments ir "
-"ielādēts."
+#: plugins/exporter.koplugin/_meta.lua:5
+msgid "Exports highlights and notes."
+msgstr "Eksportē izcēlumus un piezīmes."
 
 #: plugins/exporter.koplugin/clip.lua:124
 #, fuzzy
@@ -16438,10 +16504,6 @@ msgstr "Eksportēt grāmatas visas piezīmes"
 #, fuzzy
 msgid "Current export folder:"
 msgstr "Konkrētā mape"
-
-#: plugins/exporter.koplugin/_meta.lua:5
-msgid "Exports highlights and notes."
-msgstr "Eksportē izcēlumus un piezīmes."
 
 #. @translators Flomo is a note taking app. The name probably doesn't need to be translated.
 #: plugins/exporter.koplugin/target/flomo.lua:52
@@ -16661,6 +16723,15 @@ msgid ""
 "address into KOReader to complete the configuration."
 msgstr ""
 
+#: plugins/externalkeyboard.koplugin/_meta.lua:4
+#, fuzzy
+msgid "External keyboard"
+msgstr "Klaviatūras izkārtojums"
+
+#: plugins/externalkeyboard.koplugin/_meta.lua:5
+msgid "Manages USB OTG and configures keyboard."
+msgstr ""
+
 #: plugins/externalkeyboard.koplugin/main.lua:136
 #, fuzzy
 msgid "External Keyboard"
@@ -16690,14 +16761,13 @@ msgid ""
 "computer."
 msgstr ""
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:4
-#, fuzzy
-msgid "External keyboard"
-msgstr "Klaviatūras izkārtojums"
+#: plugins/gestures.koplugin/_meta.lua:4
+msgid "Gestures"
+msgstr "Žesti"
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:5
-msgid "Manages USB OTG and configures keyboard."
-msgstr ""
+#: plugins/gestures.koplugin/_meta.lua:5
+msgid "This plugin provides gesture support."
+msgstr "Spraudnis nodrošina žestu atbalstu."
 
 #: plugins/gestures.koplugin/main.lua:42 plugins/gestures.koplugin/main.lua:46
 #: plugins/gestures.koplugin/main.lua:60 plugins/gestures.koplugin/main.lua:64
@@ -17045,13 +17115,13 @@ msgstr ""
 msgid "You have just performed your first multiswipe gesture."
 msgstr "Jūs tikko veicāt savu pirmo multi-pavilkšanas žestu."
 
-#: plugins/gestures.koplugin/_meta.lua:4
-msgid "Gestures"
-msgstr "Žesti"
+#: plugins/hello.koplugin/_meta.lua:4
+msgid "Hello"
+msgstr "Sveiki"
 
-#: plugins/gestures.koplugin/_meta.lua:5
-msgid "This plugin provides gesture support."
-msgstr "Spraudnis nodrošina žestu atbalstu."
+#: plugins/hello.koplugin/_meta.lua:5
+msgid "This is a debugging plugin."
+msgstr "Šis ir atkļūdošanas spraudnis."
 
 #: plugins/hello.koplugin/main.lua:24 plugins/hello.koplugin/main.lua:34
 #: plugins/hello.koplugin/main.lua:48
@@ -17062,13 +17132,16 @@ msgstr "Sveika Pasaule"
 msgid "Hello, plugin world"
 msgstr "Sveika spraudņu pasaule"
 
-#: plugins/hello.koplugin/_meta.lua:4
-msgid "Hello"
-msgstr "Sveiki"
+#: plugins/httpinspector.koplugin/_meta.lua:4
+msgid "HTTP KOReader Inspector"
+msgstr ""
 
-#: plugins/hello.koplugin/_meta.lua:5
-msgid "This is a debugging plugin."
-msgstr "Šis ir atkļūdošanas spraudnis."
+#: plugins/httpinspector.koplugin/_meta.lua:5
+msgid ""
+"Allow browsing KOReader internal objects over HTTP. This is aimed at "
+"developers, and may pose some security risks. Only enable this on networks "
+"you can trust."
+msgstr ""
 
 #: plugins/httpinspector.koplugin/main.lua:136
 #, fuzzy
@@ -17113,15 +17186,23 @@ msgstr "pielāgots"
 msgid "Port number (default is 8080)"
 msgstr ""
 
-#: plugins/httpinspector.koplugin/_meta.lua:4
-msgid "HTTP KOReader Inspector"
-msgstr ""
+#: plugins/japanese.koplugin/_meta.lua:4
+#, fuzzy
+msgid "Japanese support"
+msgstr "Japāņu"
 
-#: plugins/httpinspector.koplugin/_meta.lua:5
+#: plugins/japanese.koplugin/_meta.lua:5
 msgid ""
-"Allow browsing KOReader internal objects over HTTP. This is aimed at "
-"developers, and may pose some security risks. Only enable this on networks "
-"you can trust."
+"Japanese language support for KOReader, modeled after Yomichan.\n"
+"\n"
+"This plugin extends KOReader's built-in dictionary and selection system to "
+"support Yomichan-style deinflection and text scanning, allowing for one-tap "
+"searches of inflected verbs and multi-character words and phrases. As such, "
+"this plugin removes the need for synonym-based deinflection rules for "
+"StarDict-converted Japanese dictionaries.\n"
+"\n"
+"You must have at least one Japanese dictionary installed in order for this "
+"plugin to work smoothly with Japanese text."
 msgstr ""
 
 #: plugins/japanese.koplugin/deinflector.lua:278
@@ -17250,28 +17331,13 @@ msgstr ""
 msgid "Set scan length"
 msgstr ""
 
-#: plugins/japanese.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Japanese support"
-msgstr "Japāņu"
-
-#: plugins/japanese.koplugin/_meta.lua:5
-msgid ""
-"Japanese language support for KOReader, modeled after Yomichan.\n"
-"\n"
-"This plugin extends KOReader's built-in dictionary and selection system to "
-"support Yomichan-style deinflection and text scanning, allowing for one-tap "
-"searches of inflected verbs and multi-character words and phrases. As such, "
-"this plugin removes the need for synonym-based deinflection rules for "
-"StarDict-converted Japanese dictionaries.\n"
-"\n"
-"You must have at least one Japanese dictionary installed in order for this "
-"plugin to work smoothly with Japanese text."
-msgstr ""
-
-#: plugins/keepalive.koplugin/main.lua:9 plugins/keepalive.koplugin/_meta.lua:4
+#: plugins/keepalive.koplugin/_meta.lua:4 plugins/keepalive.koplugin/main.lua:9
 msgid "Keep alive"
 msgstr "Palikt nomodā"
+
+#: plugins/keepalive.koplugin/_meta.lua:5
+msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
+msgstr "Patur ierīci nomodā, lai novērstu automātisku Wi-Fi atvienošanos."
 
 #: plugins/keepalive.koplugin/main.lua:18
 msgid ""
@@ -17304,9 +17370,15 @@ msgstr "This is a dummy implementation of 'disable' function."
 msgid "This is a dummy implementation of 'enable' function."
 msgstr "This is a dummy implementation of 'enable' function."
 
-#: plugins/keepalive.koplugin/_meta.lua:5
-msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
-msgstr "Patur ierīci nomodā, lai novērstu automātisku Wi-Fi atvienošanos."
+#: plugins/kosync.koplugin/_meta.lua:4 plugins/kosync.koplugin/main.lua:188
+msgid "Progress sync"
+msgstr "Progresa sinhronizācija"
+
+#: plugins/kosync.koplugin/_meta.lua:5
+msgid ""
+"Synchronizes your reading progess to a server across your KOReader devices."
+msgstr ""
+"Sinhronizē lasīšanas progresu uz serveri un citām Jūsu KOReader ierīcēm."
 
 #: plugins/kosync.koplugin/main.lua:26
 msgid "Register/login to KOReader server"
@@ -17350,10 +17422,6 @@ msgstr "Iesūtīt progresu no šīs ierīces"
 #: plugins/kosync.koplugin/main.lua:168
 msgid "Pull progress from other devices"
 msgstr "Saņemt progresu no citām ierīcēm"
-
-#: plugins/kosync.koplugin/main.lua:188 plugins/kosync.koplugin/_meta.lua:4
-msgid "Progress sync"
-msgstr "Progresa sinhronizācija"
 
 #: plugins/kosync.koplugin/main.lua:191
 msgid "Custom sync server"
@@ -17525,20 +17593,18 @@ msgstr "Sinhronizēt līdz pēdējai lokācijai %1% no ierīces '%2'?"
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "Sinhronizēt līdz iepriekšējai lokācijai %1% no ierīces '%2'?"
 
-#: plugins/kosync.koplugin/_meta.lua:5
-msgid ""
-"Synchronizes your reading progess to a server across your KOReader devices."
-msgstr ""
-"Sinhronizē lasīšanas progresu uz serveri un citām Jūsu KOReader ierīcēm."
+#: plugins/movetoarchive.koplugin/_meta.lua:4
+#: plugins/movetoarchive.koplugin/main.lua:34
+msgid "Move to archive"
+msgstr "Pārvietot uz arhīvu"
+
+#: plugins/movetoarchive.koplugin/_meta.lua:5
+msgid "Moves/copies current book to archive folder"
+msgstr "Pārvieto/kopē grāmatu uz arhīva mapi"
 
 #: plugins/movetoarchive.koplugin/main.lua:17
 msgid "Move current book to archive"
 msgstr "Pārvietot grāmatu uz arhīvu"
-
-#: plugins/movetoarchive.koplugin/main.lua:34
-#: plugins/movetoarchive.koplugin/_meta.lua:4
-msgid "Move to archive"
-msgstr "Pārvietot uz arhīvu"
 
 #: plugins/movetoarchive.koplugin/main.lua:44
 msgid "Copy current book to archive"
@@ -17585,9 +17651,13 @@ msgstr ""
 "Nav arhīva mape.\n"
 "Vai vēlaties to uzstādīt?"
 
-#: plugins/movetoarchive.koplugin/_meta.lua:5
-msgid "Moves/copies current book to archive folder"
-msgstr "Pārvieto/kopē grāmatu uz arhīva mapi"
+#: plugins/newsdownloader.koplugin/_meta.lua:4
+msgid "News downloader"
+msgstr "Ziņu lejupielādētājs"
+
+#: plugins/newsdownloader.koplugin/_meta.lua:5
+msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
+msgstr "Iegūst RSS un Atom ziņas un saglabā tās kā HTML failus."
 
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:314
 msgid ""
@@ -17913,13 +17983,13 @@ msgstr "Iestatījumi nepareizi: %1"
 msgid "Configuration empty"
 msgstr "Iestatījumi tukši"
 
-#: plugins/newsdownloader.koplugin/_meta.lua:4
-msgid "News downloader"
-msgstr "Ziņu lejupielādētājs"
+#: plugins/opds.koplugin/_meta.lua:4
+msgid "OPDS"
+msgstr ""
 
-#: plugins/newsdownloader.koplugin/_meta.lua:5
-msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
-msgstr "Iegūst RSS un Atom ziņas un saglabā tās kā HTML failus."
+#: plugins/opds.koplugin/_meta.lua:5
+msgid "OPDS allows you to download books from online catalogs."
+msgstr ""
 
 #: plugins/opds.koplugin/main.lua:13 plugins/opds.koplugin/opdscatalog.lua:14
 msgid "OPDS Catalog"
@@ -17928,14 +17998,6 @@ msgstr "OPDS katalogs"
 #: plugins/opds.koplugin/main.lua:45
 msgid "OPDS catalog"
 msgstr "OPDS katalogs"
-
-#: plugins/opds.koplugin/_meta.lua:4
-msgid "OPDS"
-msgstr ""
-
-#: plugins/opds.koplugin/_meta.lua:5
-msgid "OPDS allows you to download books from online catalogs."
-msgstr ""
 
 #: plugins/opds.koplugin/opdsbrowser.lua:111
 msgid "Catalog name"
@@ -18109,6 +18171,16 @@ msgstr "Lasīt vēlāk"
 msgid "Stream"
 msgstr ""
 
+#: plugins/patchmanagement.koplugin/_meta.lua:4
+#: plugins/patchmanagement.koplugin/main.lua:138
+#, fuzzy
+msgid "Patch management"
+msgstr "Spraudņu pārvaldīšana"
+
+#: plugins/patchmanagement.koplugin/_meta.lua:5
+msgid "This plugin allows enabling, disabling or editing user patches."
+msgstr ""
+
 #: plugins/patchmanagement.koplugin/main.lua:95
 msgid ""
 "Patches changed. Current set of patches will be applied on next restart."
@@ -18133,12 +18205,6 @@ msgid ""
 "\n"
 "Patches are an advanced feature, so be careful what you do!"
 msgstr ""
-
-#: plugins/patchmanagement.koplugin/main.lua:138
-#: plugins/patchmanagement.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Patch management"
-msgstr "Spraudņu pārvaldīšana"
 
 #: plugins/patchmanagement.koplugin/main.lua:152
 #, fuzzy
@@ -18169,9 +18235,15 @@ msgstr ""
 msgid "On exit"
 msgstr ""
 
-#: plugins/patchmanagement.koplugin/_meta.lua:5
-msgid "This plugin allows enabling, disabling or editing user patches."
-msgstr ""
+#: plugins/perceptionexpander.koplugin/_meta.lua:4
+msgid "Perception expander"
+msgstr "Uztveres paplašinātājs"
+
+#: plugins/perceptionexpander.koplugin/_meta.lua:5
+msgid ""
+"Improves your reading speed with the help of two vertical lines over the "
+"text."
+msgstr "Uzlabo lasīšanas ātrumu ar divu vertikālu līniju palīdzību."
 
 #: plugins/perceptionexpander.koplugin/main.lua:108
 msgid "Perception expander settings"
@@ -18206,23 +18278,19 @@ msgid "For more information see wiki page Perception Expander Plugin"
 msgstr ""
 "Lai uzzinātu vairāk, apmeklējiet wiki lapu Perception Expander Plugin (angl.)"
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:4
-msgid "Perception expander"
-msgstr "Uztveres paplašinātājs"
+#: plugins/profiles.koplugin/_meta.lua:4 plugins/profiles.koplugin/main.lua:78
+msgid "Profiles"
+msgstr "Profili"
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:5
+#: plugins/profiles.koplugin/_meta.lua:5
 msgid ""
-"Improves your reading speed with the help of two vertical lines over the "
-"text."
-msgstr "Uzlabo lasīšanas ātrumu ar divu vertikālu līniju palīdzību."
+"This plugin allows combining multiple settings to make switchable 'profiles'."
+msgstr ""
+"Spraudnis atļauj kombinēt vairākus iestatījumus katram profilam atsevišķi."
 
 #: plugins/profiles.koplugin/main.lua:60
 #, fuzzy
 msgid "Profile %1"
-msgstr "Profili"
-
-#: plugins/profiles.koplugin/main.lua:78 plugins/profiles.koplugin/_meta.lua:4
-msgid "Profiles"
 msgstr "Profili"
 
 #: plugins/profiles.koplugin/main.lua:89
@@ -18276,20 +18344,23 @@ msgstr "Ievadiet profila nosaukumu"
 msgid "Profile already exists: %1"
 msgstr "Fails %1 jau eksistē."
 
-#: plugins/profiles.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows combining multiple settings to make switchable 'profiles'."
-msgstr ""
-"Spraudnis atļauj kombinēt vairākus iestatījumus katram profilam atsevišķi."
-
-#: plugins/qrclipboard.koplugin/main.lua:24
 #: plugins/qrclipboard.koplugin/_meta.lua:4
+#: plugins/qrclipboard.koplugin/main.lua:24
 msgid "QR from clipboard"
 msgstr "QR no starpliktuves"
 
 #: plugins/qrclipboard.koplugin/_meta.lua:5
 msgid "This plugin generates a QR code from clipboard content."
 msgstr "Spraudnis ģenerē QR kodu no starpliktuves satura."
+
+#: plugins/readtimer.koplugin/_meta.lua:4
+#: plugins/readtimer.koplugin/main.lua:99
+msgid "Read timer"
+msgstr "Lasīšanas taimeris"
+
+#: plugins/readtimer.koplugin/_meta.lua:5
+msgid "Shows an alarm after a specified amount of time."
+msgstr "Parādīt brīdinājumu pēc noteikta laika intervāla."
 
 #: plugins/readtimer.koplugin/main.lua:23
 #, fuzzy
@@ -18308,11 +18379,6 @@ msgstr ""
 #, fuzzy
 msgid "Read timer (%1)"
 msgstr "Lasīšanas taimeris (%1m)"
-
-#: plugins/readtimer.koplugin/main.lua:99
-#: plugins/readtimer.koplugin/_meta.lua:4
-msgid "Read timer"
-msgstr "Lasīšanas taimeris"
 
 #: plugins/readtimer.koplugin/main.lua:116
 #, fuzzy
@@ -18365,71 +18431,14 @@ msgstr ""
 msgid "Stop timer"
 msgstr "Apstādināt taimeri"
 
-#: plugins/readtimer.koplugin/_meta.lua:5
-msgid "Shows an alarm after a specified amount of time."
-msgstr "Parādīt brīdinājumu pēc noteikta laika intervāla."
+#: plugins/statistics.koplugin/_meta.lua:4
+#: plugins/statistics.koplugin/main.lua:1056
+msgid "Reading statistics"
+msgstr "Lasīšanas statistika"
 
-#. @translators: %1 is the SSH port, %2 is the network info.
-#: plugins/SSH.koplugin/main.lua:73
-msgid ""
-"SSH server started.\n"
-"\n"
-"SSH port: %1\n"
-"%2"
-msgstr ""
-
-#: plugins/SSH.koplugin/main.lua:81
-#, fuzzy
-msgid "Failed to start SSH server."
-msgstr "Sākt SSH serveri"
-
-#: plugins/SSH.koplugin/main.lua:94
-#, fuzzy
-msgid "SSH server stopped."
-msgstr "SSH serveris"
-
-#: plugins/SSH.koplugin/main.lua:123
-msgid "Choose SSH port"
-msgstr "Izvēlēties SSH portu"
-
-#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
-msgid "SSH server"
-msgstr "SSH serveris"
-
-#: plugins/SSH.koplugin/main.lua:174
-#, fuzzy
-msgid "SSH port (%1)"
-msgstr ""
-"SSH ports: %1\n"
-"%2"
-
-#: plugins/SSH.koplugin/main.lua:183
-msgid "SSH public key"
-msgstr "SSH publiskā atslēga"
-
-#: plugins/SSH.koplugin/main.lua:189
-#, fuzzy
-msgid ""
-"Put your public SSH keys in\n"
-"%1"
-msgstr "Ievietojiet savu publisko SSH atslēgu šeit: %1"
-
-#: plugins/SSH.koplugin/main.lua:195
-msgid "Login without password (DANGEROUS)"
-msgstr "Pieslēgties bez paroles (BĪSTAMI!)"
-
-#: plugins/SSH.koplugin/main.lua:208
-#, fuzzy
-msgid "Toggle SSH server"
-msgstr "Apstādināt SSH serveri"
-
-#: plugins/SSH.koplugin/_meta.lua:4
-msgid "SSH"
-msgstr "SSH"
-
-#: plugins/SSH.koplugin/_meta.lua:5
-msgid "Connect and transfer files to the device using SSH."
-msgstr "Pieslēdzies un pārvieto failus uz ierīci izmantojot SSH."
+#: plugins/statistics.koplugin/_meta.lua:5
+msgid "Keeps and displays your reading statistics."
+msgstr "Attēlo Jūsu lasīšanas statistiku."
 
 #: plugins/statistics.koplugin/calendarview.lua:1178
 msgid "Enter month"
@@ -18512,11 +18521,6 @@ msgstr[2] ""
 #: plugins/statistics.koplugin/main.lua:1030
 msgid "Enabled"
 msgstr "Ieslēgts"
-
-#: plugins/statistics.koplugin/main.lua:1056
-#: plugins/statistics.koplugin/_meta.lua:4
-msgid "Reading statistics"
-msgstr "Lasīšanas statistika"
 
 #: plugins/statistics.koplugin/main.lua:1064
 #, fuzzy
@@ -18969,10 +18973,6 @@ msgstr "Statistika netika notīrīta."
 msgid "Syncing book statistics. This may take a while."
 msgstr "Sinhronizējam laiku. Tas var aizņemt pāris sekundes."
 
-#: plugins/statistics.koplugin/_meta.lua:5
-msgid "Keeps and displays your reading statistics."
-msgstr "Attēlo Jūsu lasīšanas statistiku."
-
 #: plugins/statistics.koplugin/readerprogress.lua:108
 msgid "Week progress"
 msgstr "Nedēļas progress"
@@ -19017,6 +19017,17 @@ msgid ""
 "Average\n"
 "time/day"
 msgstr "Vidēji"
+
+#: plugins/systemstat.koplugin/_meta.lua:4
+#: plugins/systemstat.koplugin/main.lua:297
+#: plugins/systemstat.koplugin/main.lua:309
+#: plugins/systemstat.koplugin/main.lua:319
+msgid "System statistics"
+msgstr "Sistēmas statistika"
+
+#: plugins/systemstat.koplugin/_meta.lua:5
+msgid "Shows system statistics."
+msgstr "Rādīt sistēmas statistiku."
 
 #: plugins/systemstat.koplugin/main.lua:57
 msgid "KOReader started at"
@@ -19153,16 +19164,16 @@ msgstr "    Kopā"
 msgid "    Used percentage"
 msgstr "    Izmantots %"
 
-#: plugins/systemstat.koplugin/main.lua:297
-#: plugins/systemstat.koplugin/main.lua:309
-#: plugins/systemstat.koplugin/main.lua:319
-#: plugins/systemstat.koplugin/_meta.lua:4
-msgid "System statistics"
-msgstr "Sistēmas statistika"
+#: plugins/terminal.koplugin/_meta.lua:4 plugins/terminal.koplugin/main.lua:302
+#: plugins/terminal.koplugin/main.lua:467
+#: plugins/terminal.koplugin/main.lua:617
+msgid "Terminal emulator"
+msgstr "Termināļa emulators"
 
-#: plugins/systemstat.koplugin/_meta.lua:5
-msgid "Shows system statistics."
-msgstr "Rādīt sistēmas statistiku."
+#: plugins/terminal.koplugin/_meta.lua:5
+#, fuzzy
+msgid "KOReader's terminal emulator"
+msgstr "Termināļa emulators"
 
 #: plugins/terminal.koplugin/aliases.lua:63
 #: plugins/terminal.koplugin/aliases.lua:142
@@ -19188,12 +19199,6 @@ msgstr "Faila nosaukums:"
 #, fuzzy
 msgid "Alias command:"
 msgstr "Rediģēt komandas"
-
-#: plugins/terminal.koplugin/main.lua:302
-#: plugins/terminal.koplugin/main.lua:467
-#: plugins/terminal.koplugin/main.lua:617 plugins/terminal.koplugin/_meta.lua:4
-msgid "Terminal emulator"
-msgstr "Termināļa emulators"
 
 #. @translators This is the ESC-key on the keyboard.
 #: plugins/terminal.koplugin/main.lua:326
@@ -19294,15 +19299,16 @@ msgid ""
 "Default: sh"
 msgstr ""
 
-#: plugins/terminal.koplugin/_meta.lua:5
-#, fuzzy
-msgid "KOReader's terminal emulator"
-msgstr "Termināļa emulators"
-
-#: plugins/texteditor.koplugin/main.lua:32
 #: plugins/texteditor.koplugin/_meta.lua:4
+#: plugins/texteditor.koplugin/main.lua:32
 msgid "Text editor"
 msgstr "Teksta redaktors"
+
+#: plugins/texteditor.koplugin/_meta.lua:5
+msgid "A basic text editor for making small changes to plain text files."
+msgstr ""
+"Vienkāršs teksta redaktors ar kura palīdzību var izdarīt izmaiņas parastiem "
+"teksta failiem."
 
 #: plugins/texteditor.koplugin/main.lua:45
 #, fuzzy
@@ -19577,11 +19583,13 @@ msgstr "Fails izdzēsts"
 msgid "Failed deleting file: %1"
 msgstr "Neizdevās izdzēst failu: %1"
 
-#: plugins/texteditor.koplugin/_meta.lua:5
-msgid "A basic text editor for making small changes to plain text files."
-msgstr ""
-"Vienkāršs teksta redaktors ar kura palīdzību var izdarīt izmaiņas parastiem "
-"teksta failiem."
+#: plugins/timesync.koplugin/_meta.lua:4
+msgid "Time sync"
+msgstr "Laika sinhronizācija"
+
+#: plugins/timesync.koplugin/_meta.lua:5
+msgid "Synchronizes the device time with NTP servers."
+msgstr "Sinhronizēt ierīces laiku ar NTP serveriem."
 
 #: plugins/timesync.koplugin/main.lua:50
 msgid "New time is %1."
@@ -19604,13 +19612,17 @@ msgstr "Neizdevās iegūt laiku no servera. Pārbaudiet tīkla konfigurāciju."
 msgid "Synchronize time"
 msgstr "Sinhronizēt laiku"
 
-#: plugins/timesync.koplugin/_meta.lua:4
-msgid "Time sync"
-msgstr "Laika sinhronizācija"
+#: plugins/vocabbuilder.koplugin/_meta.lua:4
+#: plugins/vocabbuilder.koplugin/main.lua:1950
+#: plugins/vocabbuilder.koplugin/main.lua:2021
+msgid "Vocabulary builder"
+msgstr "Vārdu krājuma veidotājs"
 
-#: plugins/timesync.koplugin/_meta.lua:5
-msgid "Synchronizes the device time with NTP servers."
-msgstr "Sinhronizēt ierīces laiku ar NTP serveriem."
+#: plugins/vocabbuilder.koplugin/_meta.lua:5
+msgid ""
+"This plugin processes dictionary word lookups and uses spaced repetition to "
+"help you remember new words."
+msgstr ""
 
 #: plugins/vocabbuilder.koplugin/main.lua:77
 msgid "Add to vocabulary builder"
@@ -19827,21 +19839,17 @@ msgstr "Ievadiet faila nosaukumu"
 msgid "Words reloaded"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:1950
-#: plugins/vocabbuilder.koplugin/main.lua:2021
-#: plugins/vocabbuilder.koplugin/_meta.lua:4
-msgid "Vocabulary builder"
-msgstr "Vārdu krājuma veidotājs"
-
 #: plugins/vocabbuilder.koplugin/main.lua:2032
 msgid "Open vocabulary builder"
 msgstr "Atvērt vārdu krājuma veidotāju"
 
-#: plugins/vocabbuilder.koplugin/_meta.lua:5
-msgid ""
-"This plugin processes dictionary word lookups and uses spaced repetition to "
-"help you remember new words."
-msgstr ""
+#: plugins/wallabag.koplugin/_meta.lua:4 plugins/wallabag.koplugin/main.lua:133
+msgid "Wallabag"
+msgstr "Wallabag"
+
+#: plugins/wallabag.koplugin/_meta.lua:5
+msgid "Synchronises articles with a Wallabag server."
+msgstr "Sinhronizēt rakstus ar Wallabag serveri."
 
 #: plugins/wallabag.koplugin/main.lua:45
 msgid "Wallabag retrieval"
@@ -19850,10 +19858,6 @@ msgstr "Wallabag iegūšana"
 #: plugins/wallabag.koplugin/main.lua:121
 msgid "Add to Wallabag"
 msgstr "Pievienot Wallabag"
-
-#: plugins/wallabag.koplugin/main.lua:133 plugins/wallabag.koplugin/_meta.lua:4
-msgid "Wallabag"
-msgstr "Wallabag"
 
 #: plugins/wallabag.koplugin/main.lua:136
 msgid "Retrieve new articles from server"
@@ -20200,10 +20204,6 @@ msgid ""
 msgstr ""
 "Kļūda pievienojot saiti Wallabag:\n"
 "%1"
-
-#: plugins/wallabag.koplugin/_meta.lua:5
-msgid "Synchronises articles with a Wallabag server."
-msgstr "Sinhronizēt rakstus ar Wallabag serveri."
 
 #: tools/kobo_touch_probe.lua:54
 msgid "Tap the lower right corner"

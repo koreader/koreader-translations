@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-09 11:01+0000\n"
+"POT-Creation-Date: 2024-04-16 17:04+0000\n"
 "PO-Revision-Date: 2024-02-28 13:32+0000\n"
 "Last-Translator: Aitor Salaberria <trslbrr@gmail.com>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -149,12 +149,12 @@ msgstr "Sartu fitxategi-izena"
 #: frontend/apps/cloudstorage/dropbox.lua:130
 #: frontend/apps/cloudstorage/ftp.lua:127
 #: frontend/apps/cloudstorage/webdav.lua:126
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
-#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanager.lua:989
 #: frontend/apps/filemanager/filemanager.lua:1117
 #: frontend/apps/filemanager/filemanager.lua:1444
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:483
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
+#: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:56
 #: frontend/apps/filemanager/filemanagershortcuts.lua:107
 #: frontend/apps/reader/modules/readerbookmark.lua:1053
@@ -186,7 +186,7 @@ msgstr "Sartu fitxategi-izena"
 #: frontend/ui/widget/networksetting.lua:340
 #: frontend/ui/widget/numberpickerwidget.lua:139
 #: frontend/ui/widget/pathchooser.lua:134 frontend/ui/widget/textviewer.lua:468
-#: frontend/ui/widget/touchmenu.lua:1330
+#: frontend/ui/widget/touchmenu.lua:1330 plugins/SSH.koplugin/main.lua:130
 #: plugins/autowarmth.koplugin/main.lua:759
 #: plugins/autowarmth.koplugin/main.lua:1060
 #: plugins/calibre.koplugin/main.lua:324
@@ -212,7 +212,7 @@ msgstr "Sartu fitxategi-izena"
 #: plugins/opds.koplugin/opdsbrowser.lua:646
 #: plugins/opds.koplugin/opdspse.lua:179
 #: plugins/perceptionexpander.koplugin/main.lua:138
-#: plugins/profiles.koplugin/main.lua:264 plugins/SSH.koplugin/main.lua:130
+#: plugins/profiles.koplugin/main.lua:264
 #: plugins/statistics.koplugin/main.lua:1246
 #: plugins/statistics.koplugin/main.lua:2306
 #: plugins/statistics.koplugin/main.lua:2480
@@ -282,12 +282,12 @@ msgid "Edit"
 msgstr "Editatu"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:395
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
-#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/filemanager/filemanager.lua:255
 #: frontend/apps/filemanager/filemanager.lua:571
 #: frontend/apps/filemanager/filemanager.lua:576
 #: frontend/apps/filemanager/filemanager.lua:1046
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
+#: frontend/apps/filemanager/filemanagerhistory.lua:175
 #: frontend/apps/reader/modules/readerhighlight.lua:983
 #: frontend/ui/widget/screenshoter.lua:51
 #: plugins/bookshortcuts.koplugin/main.lua:138
@@ -422,13 +422,6 @@ msgstr "Sortu"
 msgid "Enter folder after creation"
 msgstr ""
 
-#: frontend/apps/cloudstorage/dropboxapi.lua:213
-#: frontend/apps/cloudstorage/webdavapi.lua:175
-#: frontend/ui/widget/filechooser.lua:451
-#, fuzzy
-msgid "Long-press to choose current folder"
-msgstr "Joan karpeta nagusira"
-
 #: frontend/apps/cloudstorage/dropbox.lua:33
 #: frontend/apps/cloudstorage/ftp.lua:38
 #: frontend/apps/cloudstorage/webdav.lua:26
@@ -530,13 +523,13 @@ msgstr ""
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
 #: frontend/apps/reader/modules/readerwikipedia.lua:174
 #: frontend/ui/widget/inputdialog.lua:766
-#: frontend/ui/widget/inputdialog.lua:807
+#: frontend/ui/widget/inputdialog.lua:807 plugins/SSH.koplugin/main.lua:137
 #: plugins/coverimage.koplugin/main.lua:362
 #: plugins/gestures.koplugin/main.lua:406
 #: plugins/newsdownloader.koplugin/main.lua:755
 #: plugins/opds.koplugin/opdsbrowser.lua:149
 #: plugins/opds.koplugin/opdsbrowser.lua:178
-#: plugins/profiles.koplugin/main.lua:271 plugins/SSH.koplugin/main.lua:137
+#: plugins/profiles.koplugin/main.lua:271
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:591
 msgid "Save"
@@ -551,6 +544,13 @@ msgid ""
 "Space total: %5\n"
 "Space used: %6"
 msgstr ""
+
+#: frontend/apps/cloudstorage/dropboxapi.lua:213
+#: frontend/apps/cloudstorage/webdavapi.lua:175
+#: frontend/ui/widget/filechooser.lua:451
+#, fuzzy
+msgid "Long-press to choose current folder"
+msgstr "Joan karpeta nagusira"
 
 #: frontend/apps/cloudstorage/ftp.lua:29
 #, fuzzy
@@ -695,6 +695,372 @@ msgstr "Pasahitza"
 #: frontend/apps/cloudstorage/webdav.lua:120
 msgid "Start folder, for example /books"
 msgstr ""
+
+#: frontend/apps/filemanager/filemanager.lua:48
+msgid "KOReader"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanager.lua:217
+msgctxt "File"
+msgid "Copy"
+msgstr "Kopiatu"
+
+#: frontend/apps/filemanager/filemanager.lua:225
+msgctxt "File"
+msgid "Paste"
+msgstr "Itsatsi"
+
+#: frontend/apps/filemanager/filemanager.lua:233
+#: frontend/apps/reader/modules/readerhighlight.lua:65
+#: frontend/ui/widget/inputtext.lua:245
+msgid "Select"
+msgstr "Aukeratu"
+
+#: frontend/apps/filemanager/filemanager.lua:247
+msgid "Cut"
+msgstr "Ebaki"
+
+#: frontend/apps/filemanager/filemanager.lua:263
+#: frontend/apps/filemanager/filemanager.lua:1124
+msgid "Rename"
+msgstr "Berrizendatu"
+
+#: frontend/apps/filemanager/filemanager.lua:300
+msgid "Open with…"
+msgstr "Ireki honekin..."
+
+#: frontend/apps/filemanager/filemanager.lua:322
+msgid "Convert"
+msgstr "Bihurtu"
+
+#: frontend/apps/filemanager/filemanager.lua:334
+#: frontend/apps/filemanager/filemanager.lua:646
+#, fuzzy
+msgid "Set as HOME folder"
+msgstr "Ezarri HOME direktorio gisa"
+
+#: frontend/apps/filemanager/filemanager.lua:468
+#: frontend/apps/reader/modules/readerback.lua:179
+msgid "Exit KOReader?"
+msgstr "Irten KOReader-tik?"
+
+#: frontend/apps/filemanager/filemanager.lua:469
+#: frontend/apps/reader/modules/readerback.lua:180
+#: frontend/apps/reader/modules/readerdevicestatus.lua:103
+#: frontend/ui/elements/common_exit_menu_table.lua:9
+#: frontend/ui/elements/common_exit_menu_table.lua:16
+msgid "Exit"
+msgstr "Irten"
+
+#: frontend/apps/filemanager/filemanager.lua:520
+#, fuzzy
+msgid "1 file selected"
+msgid_plural "%1 files selected"
+msgstr[0] "Fitxategia ezabatuta"
+msgstr[1] "Fitxategia ezabatuta"
+
+#: frontend/apps/filemanager/filemanager.lua:521
+msgid "No files selected"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanager.lua:525
+#, fuzzy
+msgid "Show selected files list"
+msgstr "Hasiera karpeta"
+
+#: frontend/apps/filemanager/filemanager.lua:533
+#: frontend/apps/filemanager/filemanager.lua:919
+#: frontend/apps/reader/modules/readerlink.lua:143
+#, fuzzy
+msgid "Copy"
+msgstr "Kopiatu"
+
+#: frontend/apps/filemanager/filemanager.lua:543
+#, fuzzy
+msgid "Select all files in folder"
+msgstr "Aukeratu irekitzeko fitxategi bat"
+
+#: frontend/apps/filemanager/filemanager.lua:550
+#: frontend/apps/filemanager/filemanager.lua:916
+#: frontend/apps/filemanager/filemanager.lua:1181
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
+msgid "Move"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanager.lua:560
+#: frontend/apps/reader/modules/readerbookmark.lua:664
+#, fuzzy
+msgid "Deselect all"
+msgstr "Desgaitu"
+
+#: frontend/apps/filemanager/filemanager.lua:575
+#, fuzzy
+msgid ""
+"Delete selected files?\n"
+"If you delete a file, it is permanently lost."
+msgstr "Fitxategi bat ezabatzen baduzu, betirako galduko da."
+
+#: frontend/apps/filemanager/filemanager.lua:587
+#: frontend/apps/reader/modules/readerbookmark.lua:702
+#: frontend/apps/reader/modules/readerhighlight.lua:692
+#, fuzzy
+msgid "Exit select mode"
+msgstr "Testu editorea"
+
+#: frontend/apps/filemanager/filemanager.lua:594
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:261
+#, fuzzy
+msgid "Export highlights"
+msgstr "Nabarmentzeak guztia"
+
+#: frontend/apps/filemanager/filemanager.lua:618
+#, fuzzy
+msgid "Select files"
+msgstr "Hasiera karpeta"
+
+#: frontend/apps/filemanager/filemanager.lua:636
+#: frontend/apps/reader/modules/readerbookmark.lua:1064
+#: frontend/ui/widget/inputtext.lua:255
+msgid "Paste"
+msgstr "Itsatsi"
+
+#: frontend/apps/filemanager/filemanager.lua:655
+#, fuzzy
+msgid "Go to HOME folder"
+msgstr "Berrien karpetara joan"
+
+#: frontend/apps/filemanager/filemanager.lua:664
+msgid "Open random document"
+msgstr "Ireki ausaz dokumentu bat"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+#, fuzzy
+msgid "Switch to SDCard"
+msgstr "Aldatu ikuspegi orokorrera"
+
+#: frontend/apps/filemanager/filemanager.lua:684
+#, fuzzy
+msgid "Switch to internal storage"
+msgstr "Aldatu ikuspegi orokorrera"
+
+#: frontend/apps/filemanager/filemanager.lua:704
+msgid "Import files here"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanager.lua:800
+#, fuzzy
+msgid "Set '%1' as HOME folder?"
+msgstr "Ezarri '%1' HOME direktorioa gisa?"
+
+#: frontend/apps/filemanager/filemanager.lua:801
+msgid "Set as HOME"
+msgstr "Ezarri HOME gisa"
+
+#: frontend/apps/filemanager/filemanager.lua:819
+msgid "Do you want to open %1?"
+msgstr "%1 ireki nahi duzu?"
+
+#: frontend/apps/filemanager/filemanager.lua:820
+#: frontend/apps/filemanager/filemanager.lua:1450
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
+#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
+#: plugins/texteditor.koplugin/main.lua:457
+msgid "Open"
+msgstr "Ireki"
+
+#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
+#: frontend/apps/filemanager/filemanager.lua:826
+msgid "Another"
+msgstr "Beste bat"
+
+#: frontend/apps/filemanager/filemanager.lua:833
+msgid "File not found"
+msgstr "Fitxategia ez da aurkitu"
+
+#: frontend/apps/filemanager/filemanager.lua:891
+#, fuzzy
+msgid ""
+"File already exists:\n"
+"%1"
+msgstr "%1 fitxategia dagoeneko existitzen da."
+
+#: frontend/apps/filemanager/filemanager.lua:892
+#, fuzzy
+msgid ""
+"Folder already exists:\n"
+"%1"
+msgstr "%1 fitxategia dagoeneko existitzen da."
+
+#: frontend/apps/filemanager/filemanager.lua:896
+#: frontend/apps/filemanager/filemanager.lua:1178
+#: frontend/apps/filemanager/filemanagerconverter.lua:97
+#: frontend/apps/reader/modules/readerdictionary.lua:1087
+#: plugins/opds.koplugin/opdsbrowser.lua:770
+msgid "Overwrite"
+msgstr "Gainidatzi"
+
+#: frontend/apps/filemanager/filemanager.lua:915
+#, fuzzy
+msgid "Move selected files to the current folder?"
+msgstr "Joan karpeta nagusira"
+
+#: frontend/apps/filemanager/filemanager.lua:918
+#, fuzzy
+msgid "Copy selected files to the current folder?"
+msgstr "Joan karpeta nagusira"
+
+#: frontend/apps/filemanager/filemanager.lua:931
+#, fuzzy
+msgid "overwrite existing files"
+msgstr "HTML fitxategia gainidatzi nahi duzu?"
+
+#: frontend/apps/filemanager/filemanager.lua:971
+#, fuzzy
+msgid "1 file was not moved"
+msgid_plural "%1 files were not moved"
+msgstr[0] "Fitxategia ezabatuta"
+msgstr[1] "Fitxategia ezabatuta"
+
+#: frontend/apps/filemanager/filemanager.lua:972
+#, fuzzy
+msgid "1 file was not copied"
+msgid_plural "%1 files were not copied"
+msgstr[0] "Fitxategia ezabatuta"
+msgstr[1] "Fitxategia ezabatuta"
+
+#: frontend/apps/filemanager/filemanager.lua:1011
+#, fuzzy
+msgid ""
+"Failed to create folder:\n"
+"%1"
+msgstr "Uneko karpeta"
+
+#: frontend/apps/filemanager/filemanager.lua:1034
+#, fuzzy
+msgid ""
+"File not found:\n"
+"%1"
+msgstr "Fitxategia ez da aurkitu"
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+#, fuzzy
+msgid "Delete file permanently?"
+msgstr "Fitxategi bat ezabatzen baduzu, betirako galduko da."
+
+#: frontend/apps/filemanager/filemanager.lua:1040
+msgid "Delete folder permanently?"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanager.lua:1042
+#, fuzzy
+msgid "Book settings, highlights and notes will be deleted."
+msgstr "Esportatu nabarmentze eta oharrak Evernote hodeiara."
+
+#: frontend/apps/filemanager/filemanager.lua:1076
+#, fuzzy
+msgid ""
+"Failed to delete:\n"
+"%1"
+msgstr "Huts egin du fitxategia ezabatzen: %1"
+
+#: frontend/apps/filemanager/filemanager.lua:1102
+#, fuzzy
+msgid "Failed to delete 1 file."
+msgid_plural "Failed to delete %1 files."
+msgstr[0] "Deskarga karpetara joan"
+msgstr[1] "Deskarga karpetara joan"
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+msgid "Rename file"
+msgstr "Berrizendatu fitxategia"
+
+#: frontend/apps/filemanager/filemanager.lua:1113
+#, fuzzy
+msgid "Rename folder"
+msgstr "Berrizendatu fitxategia"
+
+#: frontend/apps/filemanager/filemanager.lua:1156
+msgid ""
+"Failed to rename:\n"
+"%1\n"
+"to:\n"
+"%2"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanager.lua:1167
+#, fuzzy
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"File cannot be renamed."
+msgstr "Fitxategia dagoeneko existitzen da. Gainidatzi?"
+
+#: frontend/apps/filemanager/filemanager.lua:1169
+#, fuzzy
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Folder cannot be renamed."
+msgstr "Fitxategia dagoeneko existitzen da. Gainidatzi?"
+
+#: frontend/apps/filemanager/filemanager.lua:1177
+#, fuzzy
+msgid ""
+"File already exists:\n"
+"%1\n"
+"Overwrite file?"
+msgstr "Fitxategia dagoeneko existitzen da. Gainidatzi?"
+
+#: frontend/apps/filemanager/filemanager.lua:1180
+#, fuzzy
+msgid ""
+"Folder already exists:\n"
+"%1\n"
+"Move the folder inside it?"
+msgstr "Fitxategia dagoeneko existitzen da. Gainidatzi?"
+
+#: frontend/apps/filemanager/filemanager.lua:1333
+#, fuzzy
+msgid "Selected files (%1)"
+msgstr "Ezabatu fitxategia"
+
+#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
+#: frontend/apps/filemanager/filemanager.lua:1360
+msgid "%1 ~Unsupported"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanager.lua:1396
+#, fuzzy
+msgid "Reset default for this file"
+msgstr "Beti erabili motor hau fitxategi honentzako"
+
+#: frontend/apps/filemanager/filemanager.lua:1406
+#, fuzzy
+msgid "Reset default for %1 files"
+msgstr "Ezarri %1 estilo lehenetsi gisa?"
+
+#: frontend/apps/filemanager/filemanager.lua:1417
+msgid "View defaults for file types"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanager.lua:1456
+msgid "Always open '%2' with %1?"
+msgstr "'%2' beti %1 kin ireki?"
+
+#: frontend/apps/filemanager/filemanager.lua:1457
+#: frontend/apps/filemanager/filemanager.lua:1467
+#: frontend/ui/elements/common_settings_menu_table.lua:383
+#: frontend/ui/elements/common_settings_menu_table.lua:660
+msgid "Always"
+msgstr "Beti"
+
+#: frontend/apps/filemanager/filemanager.lua:1466
+msgid "Always open %2 files with %1?"
+msgstr "%2 fitxategiak beti %1 kin ireki"
+
+#: frontend/apps/filemanager/filemanager.lua:1484
+msgid "Open %1 with:"
+msgstr "Ireki %1 honekin:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:27
 #: frontend/apps/filemanager/filemanagerutil.lua:277
@@ -888,13 +1254,6 @@ msgstr[1] ""
 msgid "Move book metadata to your preferred location?"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:643
-#: frontend/apps/filemanager/filemanager.lua:550
-#: frontend/apps/filemanager/filemanager.lua:916
-#: frontend/apps/filemanager/filemanager.lua:1181
-msgid "Move"
-msgstr ""
-
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:658
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
@@ -964,14 +1323,6 @@ msgstr "HTML"
 #: frontend/apps/filemanager/filemanagerconverter.lua:96
 msgid "Overwrite existing HTML file?"
 msgstr "HTML fitxategia gainidatzi nahi duzu?"
-
-#: frontend/apps/filemanager/filemanagerconverter.lua:97
-#: frontend/apps/filemanager/filemanager.lua:896
-#: frontend/apps/filemanager/filemanager.lua:1178
-#: frontend/apps/reader/modules/readerdictionary.lua:1087
-#: plugins/opds.koplugin/opdsbrowser.lua:770
-msgid "Overwrite"
-msgstr "Gainidatzi"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:30
 #, fuzzy
@@ -1044,14 +1395,6 @@ msgstr "Bilaketaren Emaitzak"
 #, fuzzy
 msgid "Query: %1"
 msgstr "(kontsulta: %1)"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
-#: frontend/apps/filemanager/filemanager.lua:820
-#: frontend/apps/filemanager/filemanager.lua:1450
-#: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
-#: plugins/texteditor.koplugin/main.lua:457
-msgid "Open"
-msgstr "Ireki"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:308
 #, fuzzy
@@ -1167,349 +1510,6 @@ msgstr "Sartu bilatu nahi duzun testua"
 #: plugins/vocabbuilder.koplugin/main.lua:1550
 msgid "Search"
 msgstr "Bilatu"
-
-#: frontend/apps/filemanager/filemanager.lua:48
-msgid "KOReader"
-msgstr ""
-
-#: frontend/apps/filemanager/filemanager.lua:217
-msgctxt "File"
-msgid "Copy"
-msgstr "Kopiatu"
-
-#: frontend/apps/filemanager/filemanager.lua:225
-msgctxt "File"
-msgid "Paste"
-msgstr "Itsatsi"
-
-#: frontend/apps/filemanager/filemanager.lua:233
-#: frontend/apps/reader/modules/readerhighlight.lua:65
-#: frontend/ui/widget/inputtext.lua:245
-msgid "Select"
-msgstr "Aukeratu"
-
-#: frontend/apps/filemanager/filemanager.lua:247
-msgid "Cut"
-msgstr "Ebaki"
-
-#: frontend/apps/filemanager/filemanager.lua:263
-#: frontend/apps/filemanager/filemanager.lua:1124
-msgid "Rename"
-msgstr "Berrizendatu"
-
-#: frontend/apps/filemanager/filemanager.lua:300
-msgid "Open with…"
-msgstr "Ireki honekin..."
-
-#: frontend/apps/filemanager/filemanager.lua:322
-msgid "Convert"
-msgstr "Bihurtu"
-
-#: frontend/apps/filemanager/filemanager.lua:334
-#: frontend/apps/filemanager/filemanager.lua:646
-#, fuzzy
-msgid "Set as HOME folder"
-msgstr "Ezarri HOME direktorio gisa"
-
-#: frontend/apps/filemanager/filemanager.lua:468
-#: frontend/apps/reader/modules/readerback.lua:179
-msgid "Exit KOReader?"
-msgstr "Irten KOReader-tik?"
-
-#: frontend/apps/filemanager/filemanager.lua:469
-#: frontend/apps/reader/modules/readerback.lua:180
-#: frontend/apps/reader/modules/readerdevicestatus.lua:103
-#: frontend/ui/elements/common_exit_menu_table.lua:9
-#: frontend/ui/elements/common_exit_menu_table.lua:16
-msgid "Exit"
-msgstr "Irten"
-
-#: frontend/apps/filemanager/filemanager.lua:520
-#, fuzzy
-msgid "1 file selected"
-msgid_plural "%1 files selected"
-msgstr[0] "Fitxategia ezabatuta"
-msgstr[1] "Fitxategia ezabatuta"
-
-#: frontend/apps/filemanager/filemanager.lua:521
-msgid "No files selected"
-msgstr ""
-
-#: frontend/apps/filemanager/filemanager.lua:525
-#, fuzzy
-msgid "Show selected files list"
-msgstr "Hasiera karpeta"
-
-#: frontend/apps/filemanager/filemanager.lua:533
-#: frontend/apps/filemanager/filemanager.lua:919
-#: frontend/apps/reader/modules/readerlink.lua:143
-#, fuzzy
-msgid "Copy"
-msgstr "Kopiatu"
-
-#: frontend/apps/filemanager/filemanager.lua:543
-#, fuzzy
-msgid "Select all files in folder"
-msgstr "Aukeratu irekitzeko fitxategi bat"
-
-#: frontend/apps/filemanager/filemanager.lua:560
-#: frontend/apps/reader/modules/readerbookmark.lua:664
-#, fuzzy
-msgid "Deselect all"
-msgstr "Desgaitu"
-
-#: frontend/apps/filemanager/filemanager.lua:575
-#, fuzzy
-msgid ""
-"Delete selected files?\n"
-"If you delete a file, it is permanently lost."
-msgstr "Fitxategi bat ezabatzen baduzu, betirako galduko da."
-
-#: frontend/apps/filemanager/filemanager.lua:587
-#: frontend/apps/reader/modules/readerbookmark.lua:702
-#: frontend/apps/reader/modules/readerhighlight.lua:692
-#, fuzzy
-msgid "Exit select mode"
-msgstr "Testu editorea"
-
-#: frontend/apps/filemanager/filemanager.lua:594
-#: plugins/exporter.koplugin/main.lua:261 plugins/exporter.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Export highlights"
-msgstr "Nabarmentzeak guztia"
-
-#: frontend/apps/filemanager/filemanager.lua:618
-#, fuzzy
-msgid "Select files"
-msgstr "Hasiera karpeta"
-
-#: frontend/apps/filemanager/filemanager.lua:636
-#: frontend/apps/reader/modules/readerbookmark.lua:1064
-#: frontend/ui/widget/inputtext.lua:255
-msgid "Paste"
-msgstr "Itsatsi"
-
-#: frontend/apps/filemanager/filemanager.lua:655
-#, fuzzy
-msgid "Go to HOME folder"
-msgstr "Berrien karpetara joan"
-
-#: frontend/apps/filemanager/filemanager.lua:664
-msgid "Open random document"
-msgstr "Ireki ausaz dokumentu bat"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-#, fuzzy
-msgid "Switch to SDCard"
-msgstr "Aldatu ikuspegi orokorrera"
-
-#: frontend/apps/filemanager/filemanager.lua:684
-#, fuzzy
-msgid "Switch to internal storage"
-msgstr "Aldatu ikuspegi orokorrera"
-
-#: frontend/apps/filemanager/filemanager.lua:704
-msgid "Import files here"
-msgstr ""
-
-#: frontend/apps/filemanager/filemanager.lua:800
-#, fuzzy
-msgid "Set '%1' as HOME folder?"
-msgstr "Ezarri '%1' HOME direktorioa gisa?"
-
-#: frontend/apps/filemanager/filemanager.lua:801
-msgid "Set as HOME"
-msgstr "Ezarri HOME gisa"
-
-#: frontend/apps/filemanager/filemanager.lua:819
-msgid "Do you want to open %1?"
-msgstr "%1 ireki nahi duzu?"
-
-#. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:826
-msgid "Another"
-msgstr "Beste bat"
-
-#: frontend/apps/filemanager/filemanager.lua:833
-msgid "File not found"
-msgstr "Fitxategia ez da aurkitu"
-
-#: frontend/apps/filemanager/filemanager.lua:891
-#, fuzzy
-msgid ""
-"File already exists:\n"
-"%1"
-msgstr "%1 fitxategia dagoeneko existitzen da."
-
-#: frontend/apps/filemanager/filemanager.lua:892
-#, fuzzy
-msgid ""
-"Folder already exists:\n"
-"%1"
-msgstr "%1 fitxategia dagoeneko existitzen da."
-
-#: frontend/apps/filemanager/filemanager.lua:915
-#, fuzzy
-msgid "Move selected files to the current folder?"
-msgstr "Joan karpeta nagusira"
-
-#: frontend/apps/filemanager/filemanager.lua:918
-#, fuzzy
-msgid "Copy selected files to the current folder?"
-msgstr "Joan karpeta nagusira"
-
-#: frontend/apps/filemanager/filemanager.lua:931
-#, fuzzy
-msgid "overwrite existing files"
-msgstr "HTML fitxategia gainidatzi nahi duzu?"
-
-#: frontend/apps/filemanager/filemanager.lua:971
-#, fuzzy
-msgid "1 file was not moved"
-msgid_plural "%1 files were not moved"
-msgstr[0] "Fitxategia ezabatuta"
-msgstr[1] "Fitxategia ezabatuta"
-
-#: frontend/apps/filemanager/filemanager.lua:972
-#, fuzzy
-msgid "1 file was not copied"
-msgid_plural "%1 files were not copied"
-msgstr[0] "Fitxategia ezabatuta"
-msgstr[1] "Fitxategia ezabatuta"
-
-#: frontend/apps/filemanager/filemanager.lua:1011
-#, fuzzy
-msgid ""
-"Failed to create folder:\n"
-"%1"
-msgstr "Uneko karpeta"
-
-#: frontend/apps/filemanager/filemanager.lua:1034
-#, fuzzy
-msgid ""
-"File not found:\n"
-"%1"
-msgstr "Fitxategia ez da aurkitu"
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-#, fuzzy
-msgid "Delete file permanently?"
-msgstr "Fitxategi bat ezabatzen baduzu, betirako galduko da."
-
-#: frontend/apps/filemanager/filemanager.lua:1040
-msgid "Delete folder permanently?"
-msgstr ""
-
-#: frontend/apps/filemanager/filemanager.lua:1042
-#, fuzzy
-msgid "Book settings, highlights and notes will be deleted."
-msgstr "Esportatu nabarmentze eta oharrak Evernote hodeiara."
-
-#: frontend/apps/filemanager/filemanager.lua:1076
-#, fuzzy
-msgid ""
-"Failed to delete:\n"
-"%1"
-msgstr "Huts egin du fitxategia ezabatzen: %1"
-
-#: frontend/apps/filemanager/filemanager.lua:1102
-#, fuzzy
-msgid "Failed to delete 1 file."
-msgid_plural "Failed to delete %1 files."
-msgstr[0] "Deskarga karpetara joan"
-msgstr[1] "Deskarga karpetara joan"
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-msgid "Rename file"
-msgstr "Berrizendatu fitxategia"
-
-#: frontend/apps/filemanager/filemanager.lua:1113
-#, fuzzy
-msgid "Rename folder"
-msgstr "Berrizendatu fitxategia"
-
-#: frontend/apps/filemanager/filemanager.lua:1156
-msgid ""
-"Failed to rename:\n"
-"%1\n"
-"to:\n"
-"%2"
-msgstr ""
-
-#: frontend/apps/filemanager/filemanager.lua:1167
-#, fuzzy
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"File cannot be renamed."
-msgstr "Fitxategia dagoeneko existitzen da. Gainidatzi?"
-
-#: frontend/apps/filemanager/filemanager.lua:1169
-#, fuzzy
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Folder cannot be renamed."
-msgstr "Fitxategia dagoeneko existitzen da. Gainidatzi?"
-
-#: frontend/apps/filemanager/filemanager.lua:1177
-#, fuzzy
-msgid ""
-"File already exists:\n"
-"%1\n"
-"Overwrite file?"
-msgstr "Fitxategia dagoeneko existitzen da. Gainidatzi?"
-
-#: frontend/apps/filemanager/filemanager.lua:1180
-#, fuzzy
-msgid ""
-"Folder already exists:\n"
-"%1\n"
-"Move the folder inside it?"
-msgstr "Fitxategia dagoeneko existitzen da. Gainidatzi?"
-
-#: frontend/apps/filemanager/filemanager.lua:1333
-#, fuzzy
-msgid "Selected files (%1)"
-msgstr "Ezabatu fitxategia"
-
-#. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
-#: frontend/apps/filemanager/filemanager.lua:1360
-msgid "%1 ~Unsupported"
-msgstr ""
-
-#: frontend/apps/filemanager/filemanager.lua:1396
-#, fuzzy
-msgid "Reset default for this file"
-msgstr "Beti erabili motor hau fitxategi honentzako"
-
-#: frontend/apps/filemanager/filemanager.lua:1406
-#, fuzzy
-msgid "Reset default for %1 files"
-msgstr "Ezarri %1 estilo lehenetsi gisa?"
-
-#: frontend/apps/filemanager/filemanager.lua:1417
-msgid "View defaults for file types"
-msgstr ""
-
-#: frontend/apps/filemanager/filemanager.lua:1456
-msgid "Always open '%2' with %1?"
-msgstr "'%2' beti %1 kin ireki?"
-
-#: frontend/apps/filemanager/filemanager.lua:1457
-#: frontend/apps/filemanager/filemanager.lua:1467
-#: frontend/ui/elements/common_settings_menu_table.lua:383
-#: frontend/ui/elements/common_settings_menu_table.lua:660
-msgid "Always"
-msgstr "Beti"
-
-#: frontend/apps/filemanager/filemanager.lua:1466
-msgid "Always open %2 files with %1?"
-msgstr "%2 fitxategiak beti %1 kin ireki"
-
-#: frontend/apps/filemanager/filemanager.lua:1484
-msgid "Open %1 with:"
-msgstr "Ireki %1 honekin:"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:130
 msgid "Cannot open last document"
@@ -13727,25 +13727,89 @@ msgctxt "Data storage size"
 msgid "%1 B"
 msgstr ""
 
-#: plugins/archiveviewer.koplugin/main.lua:17
+#: plugins/SSH.koplugin/_meta.lua:4
+msgid "SSH"
+msgstr "SSH"
+
+#: plugins/SSH.koplugin/_meta.lua:5
+msgid "Connect and transfer files to the device using SSH."
+msgstr "Konektatu eta transferitu fitxategiak gailura SSH erabilita."
+
+#. @translators: %1 is the SSH port, %2 is the network info.
+#: plugins/SSH.koplugin/main.lua:73
+msgid ""
+"SSH server started.\n"
+"\n"
+"SSH port: %1\n"
+"%2"
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:81
+#, fuzzy
+msgid "Failed to start SSH server."
+msgstr "Abiarazi SSH zerbitzaria"
+
+#: plugins/SSH.koplugin/main.lua:94
+#, fuzzy
+msgid "SSH server stopped."
+msgstr "SSH zerbitzaria"
+
+#: plugins/SSH.koplugin/main.lua:123
+msgid "Choose SSH port"
+msgstr "Aukeratu SSH portua"
+
+#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
+msgid "SSH server"
+msgstr "SSH zerbitzaria"
+
+#: plugins/SSH.koplugin/main.lua:174
+#, fuzzy
+msgid "SSH port (%1)"
+msgstr "SSH portua:"
+
+#: plugins/SSH.koplugin/main.lua:183
+msgid "SSH public key"
+msgstr "SSH gako publikoa"
+
+#: plugins/SSH.koplugin/main.lua:189
+#, fuzzy
+msgid ""
+"Put your public SSH keys in\n"
+"%1"
+msgstr "Kokatu zure SSH gako publikoa hemen: %1"
+
+#: plugins/SSH.koplugin/main.lua:195
+msgid "Login without password (DANGEROUS)"
+msgstr "Saioa hasi pasahitza gabe (ARRISKUTSUA)"
+
+#: plugins/SSH.koplugin/main.lua:208
+#, fuzzy
+msgid "Toggle SSH server"
+msgstr "Gelditu SSH zerbitzaria"
+
 #: plugins/archiveviewer.koplugin/_meta.lua:4
+#: plugins/archiveviewer.koplugin/main.lua:17
 #, fuzzy
 msgid "Archive viewer"
 msgstr "Testu editorea"
+
+#: plugins/archiveviewer.koplugin/_meta.lua:5
+msgid "Enables exploring the content of zip archives."
+msgstr ""
 
 #: plugins/archiveviewer.koplugin/main.lua:216
 #, fuzzy
 msgid "On extraction, if the file already exists, it will be overwritten."
 msgstr "%1 fitxategia dagoeneko existitzen da. Gainidatzi nahi duzu?"
 
-#: plugins/archiveviewer.koplugin/_meta.lua:5
-msgid "Enables exploring the content of zip archives."
-msgstr ""
-
-#: plugins/autodim.koplugin/main.lua:51 plugins/autodim.koplugin/_meta.lua:4
+#: plugins/autodim.koplugin/_meta.lua:4 plugins/autodim.koplugin/main.lua:51
 #, fuzzy
 msgid "Automatic dimmer"
 msgstr "Automatiko"
+
+#: plugins/autodim.koplugin/_meta.lua:5
+msgid "This plugin allows dimming the frontlight after a period of inactivity."
+msgstr ""
 
 #: plugins/autodim.koplugin/main.lua:56
 msgid "Idle time for dimmer"
@@ -13792,14 +13856,16 @@ msgstr "Burututako ehunekoa"
 msgid "The lowest brightness as a percentage of the regular brightness."
 msgstr ""
 
-#: plugins/autodim.koplugin/_meta.lua:5
-msgid "This plugin allows dimming the frontlight after a period of inactivity."
-msgstr ""
-
-#: plugins/autofrontlight.koplugin/main.lua:114
 #: plugins/autofrontlight.koplugin/_meta.lua:4
+#: plugins/autofrontlight.koplugin/main.lua:114
 msgid "Auto frontlight"
 msgstr "Aurreko argia automatikoa"
+
+#: plugins/autofrontlight.koplugin/_meta.lua:5
+msgid ""
+"Automatically turns the frontlight on and off once brightness in the "
+"environment reaches a certain level."
+msgstr ""
 
 #: plugins/autofrontlight.koplugin/main.lua:117
 msgid ""
@@ -13814,10 +13880,13 @@ msgstr ""
 msgid "enable"
 msgstr "gaitu"
 
-#: plugins/autofrontlight.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the frontlight on and off once brightness in the "
-"environment reaches a certain level."
+#: plugins/autostandby.koplugin/_meta.lua:4
+#, fuzzy
+msgid "Auto Standby"
+msgstr "Auto Zuzenketa"
+
+#: plugins/autostandby.koplugin/_meta.lua:5
+msgid "Put into standby on no input, wake up from standby on UI input"
 msgstr ""
 
 #: plugins/autostandby.koplugin/main.lua:55
@@ -13850,13 +13919,15 @@ msgstr ""
 msgid "Update"
 msgstr "Eguneratu"
 
-#: plugins/autostandby.koplugin/_meta.lua:4
+#: plugins/autosuspend.koplugin/_meta.lua:4
 #, fuzzy
-msgid "Auto Standby"
-msgstr "Auto Zuzenketa"
+msgid "Auto power save"
+msgstr "Ez gorde"
 
-#: plugins/autostandby.koplugin/_meta.lua:5
-msgid "Put into standby on no input, wake up from standby on UI input"
+#: plugins/autosuspend.koplugin/_meta.lua:5
+msgid ""
+"Puts the device into standby, suspend or power off after specified periods "
+"of inactivity."
 msgstr ""
 
 #: plugins/autosuspend.koplugin/main.lua:443
@@ -13951,15 +14022,15 @@ msgstr "Auto eseki"
 msgid "Enter time in minutes and seconds."
 msgstr "Denbora-muga minututan"
 
-#: plugins/autosuspend.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Auto power save"
-msgstr "Ez gorde"
+#: plugins/autoturn.koplugin/_meta.lua:4 plugins/autoturn.koplugin/main.lua:131
+msgid "Autoturn"
+msgstr ""
 
-#: plugins/autosuspend.koplugin/_meta.lua:5
+#: plugins/autoturn.koplugin/_meta.lua:5
 msgid ""
-"Puts the device into standby, suspend or power off after specified periods "
-"of inactivity."
+"Automatically turns the page after a set period of time.\n"
+"\n"
+"Hold to set the scrolling distance."
 msgstr ""
 
 #: plugins/autoturn.koplugin/main.lua:71
@@ -13977,10 +14048,6 @@ msgstr ""
 msgid "Autoturn: %1"
 msgstr "Egilea(k): %1"
 
-#: plugins/autoturn.koplugin/main.lua:131 plugins/autoturn.koplugin/_meta.lua:4
-msgid "Autoturn"
-msgstr ""
-
 #: plugins/autoturn.koplugin/main.lua:140
 #, fuzzy
 msgid "Autoturn time"
@@ -13994,11 +14061,20 @@ msgstr ""
 msgid "Scrolling distance"
 msgstr ""
 
-#: plugins/autoturn.koplugin/_meta.lua:5
-msgid ""
-"Automatically turns the page after a set period of time.\n"
-"\n"
-"Hold to set the scrolling distance."
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+#, fuzzy
+msgid "Auto warmth and night mode"
+msgstr "Gau modua"
+
+#: plugins/autowarmth.koplugin/_meta.lua:4
+#: plugins/autowarmth.koplugin/main.lua:533
+#, fuzzy
+msgid "Auto night mode"
+msgstr "Gau modua"
+
+#: plugins/autowarmth.koplugin/_meta.lua:5
+msgid "This plugin allows to set the frontlight warmth automagically."
 msgstr ""
 
 #: plugins/autowarmth.koplugin/main.lua:118
@@ -14059,18 +14135,6 @@ msgstr "Gau modua"
 #: plugins/autowarmth.koplugin/main.lua:223
 msgid "The AutoWarmth plugin might change it again."
 msgstr ""
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Auto warmth and night mode"
-msgstr "Gau modua"
-
-#: plugins/autowarmth.koplugin/main.lua:533
-#: plugins/autowarmth.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Auto night mode"
-msgstr "Gau modua"
 
 #: plugins/autowarmth.koplugin/main.lua:557
 msgid ""
@@ -14477,10 +14541,6 @@ msgstr "Pizte modua"
 msgid "%1 and %2"
 msgstr ""
 
-#: plugins/autowarmth.koplugin/_meta.lua:5
-msgid "This plugin allows to set the frontlight warmth automagically."
-msgstr ""
-
 #: plugins/backgroundrunner.koplugin/_meta.lua:4
 msgid "Background runner"
 msgstr ""
@@ -14489,6 +14549,16 @@ msgstr ""
 msgid ""
 "Service to other plugins: allows tasks to run regularly in the background."
 msgstr ""
+
+#: plugins/batterystat.koplugin/_meta.lua:4
+#: plugins/batterystat.koplugin/main.lua:272
+#: plugins/batterystat.koplugin/main.lua:284
+msgid "Battery statistics"
+msgstr "Bateriaren estatistikak"
+
+#: plugins/batterystat.koplugin/_meta.lua:5
+msgid "Collects and displays battery statistics."
+msgstr "Eskuratu eta erakutsi bateria estatistikak."
 
 #: plugins/batterystat.koplugin/main.lua:88
 msgid "Consumed:"
@@ -14547,21 +14617,15 @@ msgstr "Handia (%1)"
 msgid "Since last charge"
 msgstr "Azken kargatik"
 
-#: plugins/batterystat.koplugin/main.lua:272
-#: plugins/batterystat.koplugin/main.lua:284
-#: plugins/batterystat.koplugin/_meta.lua:4
-msgid "Battery statistics"
-msgstr "Bateriaren estatistikak"
-
-#: plugins/batterystat.koplugin/_meta.lua:5
-msgid "Collects and displays battery statistics."
-msgstr "Eskuratu eta erakutsi bateria estatistikak."
-
-#: plugins/bookshortcuts.koplugin/main.lua:77
 #: plugins/bookshortcuts.koplugin/_meta.lua:4
+#: plugins/bookshortcuts.koplugin/main.lua:77
 #, fuzzy
 msgid "Book shortcuts"
 msgstr "Karpeta lasterbideak"
+
+#: plugins/bookshortcuts.koplugin/_meta.lua:5
+msgid "This plugin allows adding a book shortcut to a gesture."
+msgstr ""
 
 #: plugins/bookshortcuts.koplugin/main.lua:87
 #, fuzzy
@@ -14587,8 +14651,15 @@ msgstr ""
 msgid "Do you want to delete this shortcut?"
 msgstr "Ziur fitxategia ezabatu nahi duzula?\n"
 
-#: plugins/bookshortcuts.koplugin/_meta.lua:5
-msgid "This plugin allows adding a book shortcut to a gesture."
+#: plugins/calibre.koplugin/_meta.lua:4 plugins/calibre.koplugin/main.lua:74
+#, fuzzy
+msgid "Calibre"
+msgstr "calibre hostalaria"
+
+#: plugins/calibre.koplugin/_meta.lua:5
+msgid ""
+"Integration with calibre. Send documents from calibre library via Wi-Fi and "
+"search calibre metadata."
 msgstr ""
 
 #: plugins/calibre.koplugin/main.lua:58 plugins/calibre.koplugin/main.lua:110
@@ -14616,11 +14687,6 @@ msgstr "Bilatu etiketak"
 #, fuzzy
 msgid "Browse all calibre titles"
 msgstr "Bilatu bildumak"
-
-#: plugins/calibre.koplugin/main.lua:74 plugins/calibre.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Calibre"
-msgstr "calibre hostalaria"
 
 #: plugins/calibre.koplugin/main.lua:79
 msgid "Disconnect"
@@ -14755,12 +14821,6 @@ msgstr ""
 msgid ""
 "Unsupported formats will be converted by calibre to the first format of the "
 "list."
-msgstr ""
-
-#: plugins/calibre.koplugin/_meta.lua:5
-msgid ""
-"Integration with calibre. Send documents from calibre library via Wi-Fi and "
-"search calibre metadata."
 msgstr ""
 
 #: plugins/calibre.koplugin/search.lua:146
@@ -14922,6 +14982,14 @@ msgstr "Ezabatu fitxategia"
 msgid ""
 "Deleted %1 files in %2:\n"
 " %3"
+msgstr ""
+
+#: plugins/coverbrowser.koplugin/_meta.lua:4
+msgid "Cover browser"
+msgstr "Azal bilatzailea"
+
+#: plugins/coverbrowser.koplugin/_meta.lua:5
+msgid "Alternative display modes for file browser and history."
 msgstr ""
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:123
@@ -15339,13 +15407,16 @@ msgstr ""
 msgid "Purge"
 msgstr "Garbitu"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:4
-msgid "Cover browser"
-msgstr "Azal bilatzailea"
+#: plugins/coverimage.koplugin/_meta.lua:4
+#: plugins/coverimage.koplugin/main.lua:683
+#, fuzzy
+msgid "Cover image"
+msgstr "Irudi-azala:"
 
-#: plugins/coverbrowser.koplugin/_meta.lua:5
-msgid "Alternative display modes for file browser and history."
-msgstr ""
+#: plugins/coverimage.koplugin/_meta.lua:5
+#, fuzzy
+msgid "Stores cover image to a file."
+msgstr "Azal irudia ez dago eskuragarri."
 
 #: plugins/coverimage.koplugin/main.lua:102
 msgid ""
@@ -15531,12 +15602,6 @@ msgstr ""
 msgid "BMP file format (grayscale)"
 msgstr ""
 
-#: plugins/coverimage.koplugin/main.lua:683
-#: plugins/coverimage.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Cover image"
-msgstr "Irudi-azala:"
-
 #: plugins/coverimage.koplugin/main.lua:690
 #, fuzzy
 msgid "About cover image"
@@ -15585,14 +15650,15 @@ msgstr ""
 msgid "Turn on fallback image"
 msgstr ""
 
-#: plugins/coverimage.koplugin/_meta.lua:5
-#, fuzzy
-msgid "Stores cover image to a file."
-msgstr "Azal irudia ez dago eskuragarri."
-
-#: plugins/docsettingtweak.koplugin/main.lua:48
 #: plugins/docsettingtweak.koplugin/_meta.lua:4
+#: plugins/docsettingtweak.koplugin/main.lua:48
 msgid "Tweak document settings"
+msgstr ""
+
+#: plugins/docsettingtweak.koplugin/_meta.lua:5
+msgid ""
+"This plugin allows you to tweak document settings before the document is "
+"loaded based on external factors."
 msgstr ""
 
 #: plugins/docsettingtweak.koplugin/main.lua:62
@@ -15616,11 +15682,10 @@ msgstr ""
 msgid "Defaults empty"
 msgstr ""
 
-#: plugins/docsettingtweak.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows you to tweak document settings before the document is "
-"loaded based on external factors."
-msgstr ""
+#: plugins/exporter.koplugin/_meta.lua:5
+#, fuzzy
+msgid "Exports highlights and notes."
+msgstr "Esportatu nabarmentze eta oharrak Evernote hodeiara."
 
 #: plugins/exporter.koplugin/clip.lua:124
 #, fuzzy
@@ -15682,11 +15747,6 @@ msgstr "Esportatu ohar guztiak liburu honetatik"
 #, fuzzy
 msgid "Current export folder:"
 msgstr "Uneko karpeta"
-
-#: plugins/exporter.koplugin/_meta.lua:5
-#, fuzzy
-msgid "Exports highlights and notes."
-msgstr "Esportatu nabarmentze eta oharrak Evernote hodeiara."
 
 #. @translators Flomo is a note taking app. The name probably doesn't need to be translated.
 #: plugins/exporter.koplugin/target/flomo.lua:52
@@ -15899,6 +15959,14 @@ msgid ""
 "address into KOReader to complete the configuration."
 msgstr ""
 
+#: plugins/externalkeyboard.koplugin/_meta.lua:4
+msgid "External keyboard"
+msgstr ""
+
+#: plugins/externalkeyboard.koplugin/_meta.lua:5
+msgid "Manages USB OTG and configures keyboard."
+msgstr ""
+
 #: plugins/externalkeyboard.koplugin/main.lua:136
 msgid "External Keyboard"
 msgstr ""
@@ -15927,12 +15995,13 @@ msgid ""
 "computer."
 msgstr ""
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:4
-msgid "External keyboard"
-msgstr ""
+#: plugins/gestures.koplugin/_meta.lua:4
+#, fuzzy
+msgid "Gestures"
+msgstr "Keinu kudeaketa"
 
-#: plugins/externalkeyboard.koplugin/_meta.lua:5
-msgid "Manages USB OTG and configures keyboard."
+#: plugins/gestures.koplugin/_meta.lua:5
+msgid "This plugin provides gesture support."
 msgstr ""
 
 #: plugins/gestures.koplugin/main.lua:42 plugins/gestures.koplugin/main.lua:46
@@ -16230,14 +16299,13 @@ msgstr ""
 msgid "You have just performed your first multiswipe gesture."
 msgstr ""
 
-#: plugins/gestures.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Gestures"
-msgstr "Keinu kudeaketa"
+#: plugins/hello.koplugin/_meta.lua:4
+msgid "Hello"
+msgstr "Kaixo"
 
-#: plugins/gestures.koplugin/_meta.lua:5
-msgid "This plugin provides gesture support."
-msgstr ""
+#: plugins/hello.koplugin/_meta.lua:5
+msgid "This is a debugging plugin."
+msgstr "Hau arazketa plugina da."
 
 #: plugins/hello.koplugin/main.lua:24 plugins/hello.koplugin/main.lua:34
 #: plugins/hello.koplugin/main.lua:48
@@ -16248,13 +16316,16 @@ msgstr "Kaixo Mundua"
 msgid "Hello, plugin world"
 msgstr "Kaixo, plugin mundua"
 
-#: plugins/hello.koplugin/_meta.lua:4
-msgid "Hello"
-msgstr "Kaixo"
+#: plugins/httpinspector.koplugin/_meta.lua:4
+msgid "HTTP KOReader Inspector"
+msgstr ""
 
-#: plugins/hello.koplugin/_meta.lua:5
-msgid "This is a debugging plugin."
-msgstr "Hau arazketa plugina da."
+#: plugins/httpinspector.koplugin/_meta.lua:5
+msgid ""
+"Allow browsing KOReader internal objects over HTTP. This is aimed at "
+"developers, and may pose some security risks. Only enable this on networks "
+"you can trust."
+msgstr ""
 
 #: plugins/httpinspector.koplugin/main.lua:136
 #, fuzzy
@@ -16299,15 +16370,23 @@ msgstr "Ezarri ordua"
 msgid "Port number (default is 8080)"
 msgstr ""
 
-#: plugins/httpinspector.koplugin/_meta.lua:4
-msgid "HTTP KOReader Inspector"
-msgstr ""
+#: plugins/japanese.koplugin/_meta.lua:4
+#, fuzzy
+msgid "Japanese support"
+msgstr "Japoniera"
 
-#: plugins/httpinspector.koplugin/_meta.lua:5
+#: plugins/japanese.koplugin/_meta.lua:5
 msgid ""
-"Allow browsing KOReader internal objects over HTTP. This is aimed at "
-"developers, and may pose some security risks. Only enable this on networks "
-"you can trust."
+"Japanese language support for KOReader, modeled after Yomichan.\n"
+"\n"
+"This plugin extends KOReader's built-in dictionary and selection system to "
+"support Yomichan-style deinflection and text scanning, allowing for one-tap "
+"searches of inflected verbs and multi-character words and phrases. As such, "
+"this plugin removes the need for synonym-based deinflection rules for "
+"StarDict-converted Japanese dictionaries.\n"
+"\n"
+"You must have at least one Japanese dictionary installed in order for this "
+"plugin to work smoothly with Japanese text."
 msgstr ""
 
 #: plugins/japanese.koplugin/deinflector.lua:278
@@ -16432,28 +16511,13 @@ msgstr ""
 msgid "Set scan length"
 msgstr ""
 
-#: plugins/japanese.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Japanese support"
-msgstr "Japoniera"
-
-#: plugins/japanese.koplugin/_meta.lua:5
-msgid ""
-"Japanese language support for KOReader, modeled after Yomichan.\n"
-"\n"
-"This plugin extends KOReader's built-in dictionary and selection system to "
-"support Yomichan-style deinflection and text scanning, allowing for one-tap "
-"searches of inflected verbs and multi-character words and phrases. As such, "
-"this plugin removes the need for synonym-based deinflection rules for "
-"StarDict-converted Japanese dictionaries.\n"
-"\n"
-"You must have at least one Japanese dictionary installed in order for this "
-"plugin to work smoothly with Japanese text."
-msgstr ""
-
-#: plugins/keepalive.koplugin/main.lua:9 plugins/keepalive.koplugin/_meta.lua:4
+#: plugins/keepalive.koplugin/_meta.lua:4 plugins/keepalive.koplugin/main.lua:9
 msgid "Keep alive"
 msgstr "Mantendu piztuta"
+
+#: plugins/keepalive.koplugin/_meta.lua:5
+msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
+msgstr ""
 
 #: plugins/keepalive.koplugin/main.lua:18
 msgid ""
@@ -16478,8 +16542,13 @@ msgstr ""
 msgid "This is a dummy implementation of 'enable' function."
 msgstr ""
 
-#: plugins/keepalive.koplugin/_meta.lua:5
-msgid "Keeps the device awake to prevent automatic Wi-Fi disconnects."
+#: plugins/kosync.koplugin/_meta.lua:4 plugins/kosync.koplugin/main.lua:188
+msgid "Progress sync"
+msgstr ""
+
+#: plugins/kosync.koplugin/_meta.lua:5
+msgid ""
+"Synchronizes your reading progess to a server across your KOReader devices."
 msgstr ""
 
 #: plugins/kosync.koplugin/main.lua:26
@@ -16521,10 +16590,6 @@ msgstr ""
 
 #: plugins/kosync.koplugin/main.lua:168
 msgid "Pull progress from other devices"
-msgstr ""
-
-#: plugins/kosync.koplugin/main.lua:188 plugins/kosync.koplugin/_meta.lua:4
-msgid "Progress sync"
 msgstr ""
 
 #: plugins/kosync.koplugin/main.lua:191
@@ -16694,18 +16759,17 @@ msgstr ""
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr ""
 
-#: plugins/kosync.koplugin/_meta.lua:5
-msgid ""
-"Synchronizes your reading progess to a server across your KOReader devices."
+#: plugins/movetoarchive.koplugin/_meta.lua:4
+#: plugins/movetoarchive.koplugin/main.lua:34
+msgid "Move to archive"
+msgstr ""
+
+#: plugins/movetoarchive.koplugin/_meta.lua:5
+msgid "Moves/copies current book to archive folder"
 msgstr ""
 
 #: plugins/movetoarchive.koplugin/main.lua:17
 msgid "Move current book to archive"
-msgstr ""
-
-#: plugins/movetoarchive.koplugin/main.lua:34
-#: plugins/movetoarchive.koplugin/_meta.lua:4
-msgid "Move to archive"
 msgstr ""
 
 #: plugins/movetoarchive.koplugin/main.lua:44
@@ -16752,9 +16816,15 @@ msgid ""
 "Do you want to set it now?"
 msgstr "%1 direktorioa dagoeneko existitzen da. Gainidatzi nahi duzu?"
 
-#: plugins/movetoarchive.koplugin/_meta.lua:5
-msgid "Moves/copies current book to archive folder"
+#: plugins/newsdownloader.koplugin/_meta.lua:4
+msgid "News downloader"
+msgstr "Berrien deskargatzailea"
+
+#: plugins/newsdownloader.koplugin/_meta.lua:5
+msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
 msgstr ""
+"RSS eta Atom berriak eskuratzen ditu eta HTML fitxategiak bezala gordetzen "
+"ditu."
 
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:314
 #, fuzzy
@@ -17064,15 +17134,13 @@ msgstr "Konfigurazio baliogabea: %1"
 msgid "Configuration empty"
 msgstr "Konfigurazio hutsa"
 
-#: plugins/newsdownloader.koplugin/_meta.lua:4
-msgid "News downloader"
-msgstr "Berrien deskargatzailea"
-
-#: plugins/newsdownloader.koplugin/_meta.lua:5
-msgid "Retrieves RSS and Atom news entries and saves them as HTML files."
+#: plugins/opds.koplugin/_meta.lua:4
+msgid "OPDS"
 msgstr ""
-"RSS eta Atom berriak eskuratzen ditu eta HTML fitxategiak bezala gordetzen "
-"ditu."
+
+#: plugins/opds.koplugin/_meta.lua:5
+msgid "OPDS allows you to download books from online catalogs."
+msgstr ""
 
 #: plugins/opds.koplugin/main.lua:13 plugins/opds.koplugin/opdscatalog.lua:14
 msgid "OPDS Catalog"
@@ -17081,14 +17149,6 @@ msgstr "OPDS Katalogoa"
 #: plugins/opds.koplugin/main.lua:45
 msgid "OPDS catalog"
 msgstr "OPDS katalogoa"
-
-#: plugins/opds.koplugin/_meta.lua:4
-msgid "OPDS"
-msgstr ""
-
-#: plugins/opds.koplugin/_meta.lua:5
-msgid "OPDS allows you to download books from online catalogs."
-msgstr ""
 
 #: plugins/opds.koplugin/opdsbrowser.lua:111
 msgid "Catalog name"
@@ -17247,6 +17307,16 @@ msgstr "Irakurri gero"
 msgid "Stream"
 msgstr ""
 
+#: plugins/patchmanagement.koplugin/_meta.lua:4
+#: plugins/patchmanagement.koplugin/main.lua:138
+#, fuzzy
+msgid "Patch management"
+msgstr "Plugin kudeaketa"
+
+#: plugins/patchmanagement.koplugin/_meta.lua:5
+msgid "This plugin allows enabling, disabling or editing user patches."
+msgstr ""
+
 #: plugins/patchmanagement.koplugin/main.lua:95
 msgid ""
 "Patches changed. Current set of patches will be applied on next restart."
@@ -17271,12 +17341,6 @@ msgid ""
 "\n"
 "Patches are an advanced feature, so be careful what you do!"
 msgstr ""
-
-#: plugins/patchmanagement.koplugin/main.lua:138
-#: plugins/patchmanagement.koplugin/_meta.lua:4
-#, fuzzy
-msgid "Patch management"
-msgstr "Plugin kudeaketa"
 
 #: plugins/patchmanagement.koplugin/main.lua:152
 #, fuzzy
@@ -17307,8 +17371,14 @@ msgstr ""
 msgid "On exit"
 msgstr ""
 
-#: plugins/patchmanagement.koplugin/_meta.lua:5
-msgid "This plugin allows enabling, disabling or editing user patches."
+#: plugins/perceptionexpander.koplugin/_meta.lua:4
+msgid "Perception expander"
+msgstr ""
+
+#: plugins/perceptionexpander.koplugin/_meta.lua:5
+msgid ""
+"Improves your reading speed with the help of two vertical lines over the "
+"text."
 msgstr ""
 
 #: plugins/perceptionexpander.koplugin/main.lua:108
@@ -17343,22 +17413,17 @@ msgstr ""
 "Informazio gehiago lortzeko begiratu wiki-ko \"Perception Expander Plugin\" "
 "orrialdea"
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:4
-msgid "Perception expander"
+#: plugins/profiles.koplugin/_meta.lua:4 plugins/profiles.koplugin/main.lua:78
+msgid "Profiles"
 msgstr ""
 
-#: plugins/perceptionexpander.koplugin/_meta.lua:5
+#: plugins/profiles.koplugin/_meta.lua:5
 msgid ""
-"Improves your reading speed with the help of two vertical lines over the "
-"text."
+"This plugin allows combining multiple settings to make switchable 'profiles'."
 msgstr ""
 
 #: plugins/profiles.koplugin/main.lua:60
 msgid "Profile %1"
-msgstr ""
-
-#: plugins/profiles.koplugin/main.lua:78 plugins/profiles.koplugin/_meta.lua:4
-msgid "Profiles"
 msgstr ""
 
 #: plugins/profiles.koplugin/main.lua:89
@@ -17416,18 +17481,22 @@ msgstr "Sartu fitxategi izena"
 msgid "Profile already exists: %1"
 msgstr "%1 fitxategia dagoeneko existitzen da."
 
-#: plugins/profiles.koplugin/_meta.lua:5
-msgid ""
-"This plugin allows combining multiple settings to make switchable 'profiles'."
-msgstr ""
-
-#: plugins/qrclipboard.koplugin/main.lua:24
 #: plugins/qrclipboard.koplugin/_meta.lua:4
+#: plugins/qrclipboard.koplugin/main.lua:24
 msgid "QR from clipboard"
 msgstr ""
 
 #: plugins/qrclipboard.koplugin/_meta.lua:5
 msgid "This plugin generates a QR code from clipboard content."
+msgstr ""
+
+#: plugins/readtimer.koplugin/_meta.lua:4
+#: plugins/readtimer.koplugin/main.lua:99
+msgid "Read timer"
+msgstr "Irakurtze tenporizadorea"
+
+#: plugins/readtimer.koplugin/_meta.lua:5
+msgid "Shows an alarm after a specified amount of time."
 msgstr ""
 
 #: plugins/readtimer.koplugin/main.lua:23
@@ -17447,11 +17516,6 @@ msgstr ""
 #, fuzzy
 msgid "Read timer (%1)"
 msgstr "Irakurtze tenporizadorea (%1m)"
-
-#: plugins/readtimer.koplugin/main.lua:99
-#: plugins/readtimer.koplugin/_meta.lua:4
-msgid "Read timer"
-msgstr "Irakurtze tenporizadorea"
 
 #: plugins/readtimer.koplugin/main.lua:116
 #, fuzzy
@@ -17499,69 +17563,14 @@ msgstr ""
 msgid "Stop timer"
 msgstr "Gelditu tenporizadorea"
 
-#: plugins/readtimer.koplugin/_meta.lua:5
-msgid "Shows an alarm after a specified amount of time."
-msgstr ""
+#: plugins/statistics.koplugin/_meta.lua:4
+#: plugins/statistics.koplugin/main.lua:1056
+msgid "Reading statistics"
+msgstr "Irakurketa estatistikak"
 
-#. @translators: %1 is the SSH port, %2 is the network info.
-#: plugins/SSH.koplugin/main.lua:73
-msgid ""
-"SSH server started.\n"
-"\n"
-"SSH port: %1\n"
-"%2"
-msgstr ""
-
-#: plugins/SSH.koplugin/main.lua:81
-#, fuzzy
-msgid "Failed to start SSH server."
-msgstr "Abiarazi SSH zerbitzaria"
-
-#: plugins/SSH.koplugin/main.lua:94
-#, fuzzy
-msgid "SSH server stopped."
-msgstr "SSH zerbitzaria"
-
-#: plugins/SSH.koplugin/main.lua:123
-msgid "Choose SSH port"
-msgstr "Aukeratu SSH portua"
-
-#: plugins/SSH.koplugin/main.lua:158 plugins/SSH.koplugin/main.lua:161
-msgid "SSH server"
-msgstr "SSH zerbitzaria"
-
-#: plugins/SSH.koplugin/main.lua:174
-#, fuzzy
-msgid "SSH port (%1)"
-msgstr "SSH portua:"
-
-#: plugins/SSH.koplugin/main.lua:183
-msgid "SSH public key"
-msgstr "SSH gako publikoa"
-
-#: plugins/SSH.koplugin/main.lua:189
-#, fuzzy
-msgid ""
-"Put your public SSH keys in\n"
-"%1"
-msgstr "Kokatu zure SSH gako publikoa hemen: %1"
-
-#: plugins/SSH.koplugin/main.lua:195
-msgid "Login without password (DANGEROUS)"
-msgstr "Saioa hasi pasahitza gabe (ARRISKUTSUA)"
-
-#: plugins/SSH.koplugin/main.lua:208
-#, fuzzy
-msgid "Toggle SSH server"
-msgstr "Gelditu SSH zerbitzaria"
-
-#: plugins/SSH.koplugin/_meta.lua:4
-msgid "SSH"
-msgstr "SSH"
-
-#: plugins/SSH.koplugin/_meta.lua:5
-msgid "Connect and transfer files to the device using SSH."
-msgstr "Konektatu eta transferitu fitxategiak gailura SSH erabilita."
+#: plugins/statistics.koplugin/_meta.lua:5
+msgid "Keeps and displays your reading statistics."
+msgstr "Zure irakurketa estatistikak mantendu eta erakusten ditu."
 
 #: plugins/statistics.koplugin/calendarview.lua:1178
 #, fuzzy
@@ -17637,11 +17646,6 @@ msgstr[1] ""
 #: plugins/statistics.koplugin/main.lua:1030
 msgid "Enabled"
 msgstr "Gaituta"
-
-#: plugins/statistics.koplugin/main.lua:1056
-#: plugins/statistics.koplugin/_meta.lua:4
-msgid "Reading statistics"
-msgstr "Irakurketa estatistikak"
 
 #: plugins/statistics.koplugin/main.lua:1064
 msgid "Read page duration limits: %1 s – %2 s"
@@ -18081,10 +18085,6 @@ msgstr "Irakurritako artikulu guztiak ezabatuta."
 msgid "Syncing book statistics. This may take a while."
 msgstr "Denbora sinkronizatzen. Honek zenbait segundo iraun dezake."
 
-#: plugins/statistics.koplugin/_meta.lua:5
-msgid "Keeps and displays your reading statistics."
-msgstr "Zure irakurketa estatistikak mantendu eta erakusten ditu."
-
 #: plugins/statistics.koplugin/readerprogress.lua:108
 msgid "Week progress"
 msgstr "Asteko egoera"
@@ -18129,6 +18129,17 @@ msgid ""
 "Average\n"
 "time/day"
 msgstr "Batezbestekoa"
+
+#: plugins/systemstat.koplugin/_meta.lua:4
+#: plugins/systemstat.koplugin/main.lua:297
+#: plugins/systemstat.koplugin/main.lua:309
+#: plugins/systemstat.koplugin/main.lua:319
+msgid "System statistics"
+msgstr "Sistemaren estatistikak"
+
+#: plugins/systemstat.koplugin/_meta.lua:5
+msgid "Shows system statistics."
+msgstr "Erakutsi sistemaren estatistikak."
 
 #: plugins/systemstat.koplugin/main.lua:57
 msgid "KOReader started at"
@@ -18264,16 +18275,16 @@ msgstr "Guztira"
 msgid "    Used percentage"
 msgstr "    Erabilitako portzentaia"
 
-#: plugins/systemstat.koplugin/main.lua:297
-#: plugins/systemstat.koplugin/main.lua:309
-#: plugins/systemstat.koplugin/main.lua:319
-#: plugins/systemstat.koplugin/_meta.lua:4
-msgid "System statistics"
-msgstr "Sistemaren estatistikak"
+#: plugins/terminal.koplugin/_meta.lua:4 plugins/terminal.koplugin/main.lua:302
+#: plugins/terminal.koplugin/main.lua:467
+#: plugins/terminal.koplugin/main.lua:617
+msgid "Terminal emulator"
+msgstr "Terminal-emuladorea"
 
-#: plugins/systemstat.koplugin/_meta.lua:5
-msgid "Shows system statistics."
-msgstr "Erakutsi sistemaren estatistikak."
+#: plugins/terminal.koplugin/_meta.lua:5
+#, fuzzy
+msgid "KOReader's terminal emulator"
+msgstr "Terminal-emuladorea"
 
 #: plugins/terminal.koplugin/aliases.lua:63
 #: plugins/terminal.koplugin/aliases.lua:142
@@ -18298,12 +18309,6 @@ msgstr "Fitxategi-izena:"
 #: plugins/terminal.koplugin/aliases.lua:93
 msgid "Alias command:"
 msgstr ""
-
-#: plugins/terminal.koplugin/main.lua:302
-#: plugins/terminal.koplugin/main.lua:467
-#: plugins/terminal.koplugin/main.lua:617 plugins/terminal.koplugin/_meta.lua:4
-msgid "Terminal emulator"
-msgstr "Terminal-emuladorea"
 
 #. @translators This is the ESC-key on the keyboard.
 #: plugins/terminal.koplugin/main.lua:326
@@ -18404,15 +18409,15 @@ msgid ""
 "Default: sh"
 msgstr ""
 
-#: plugins/terminal.koplugin/_meta.lua:5
-#, fuzzy
-msgid "KOReader's terminal emulator"
-msgstr "Terminal-emuladorea"
-
-#: plugins/texteditor.koplugin/main.lua:32
 #: plugins/texteditor.koplugin/_meta.lua:4
+#: plugins/texteditor.koplugin/main.lua:32
 msgid "Text editor"
 msgstr "Testu editorea"
+
+#: plugins/texteditor.koplugin/_meta.lua:5
+msgid "A basic text editor for making small changes to plain text files."
+msgstr ""
+"Testu editore basikoa aldaketa txikiak egiteko testu planoko fitxategietan."
 
 #: plugins/texteditor.koplugin/main.lua:45
 #, fuzzy
@@ -18651,10 +18656,13 @@ msgstr "Fitxategia ezabatuta"
 msgid "Failed deleting file: %1"
 msgstr "Huts egin du fitxategia ezabatzen: %1"
 
-#: plugins/texteditor.koplugin/_meta.lua:5
-msgid "A basic text editor for making small changes to plain text files."
-msgstr ""
-"Testu editore basikoa aldaketa txikiak egiteko testu planoko fitxategietan."
+#: plugins/timesync.koplugin/_meta.lua:4
+msgid "Time sync"
+msgstr "Sinkronizazio denbora"
+
+#: plugins/timesync.koplugin/_meta.lua:5
+msgid "Synchronizes the device time with NTP servers."
+msgstr "Sinkronizatu gailuaren denbora NTP zerbitzariekin."
 
 #: plugins/timesync.koplugin/main.lua:50
 msgid "New time is %1."
@@ -18677,13 +18685,17 @@ msgstr ""
 msgid "Synchronize time"
 msgstr "Sinkronizatu ordua"
 
-#: plugins/timesync.koplugin/_meta.lua:4
-msgid "Time sync"
-msgstr "Sinkronizazio denbora"
+#: plugins/vocabbuilder.koplugin/_meta.lua:4
+#: plugins/vocabbuilder.koplugin/main.lua:1950
+#: plugins/vocabbuilder.koplugin/main.lua:2021
+msgid "Vocabulary builder"
+msgstr ""
 
-#: plugins/timesync.koplugin/_meta.lua:5
-msgid "Synchronizes the device time with NTP servers."
-msgstr "Sinkronizatu gailuaren denbora NTP zerbitzariekin."
+#: plugins/vocabbuilder.koplugin/_meta.lua:5
+msgid ""
+"This plugin processes dictionary word lookups and uses spaced repetition to "
+"help you remember new words."
+msgstr ""
 
 #: plugins/vocabbuilder.koplugin/main.lua:77
 msgid "Add to vocabulary builder"
@@ -18897,21 +18909,17 @@ msgstr "Sartu fitxategi izena"
 msgid "Words reloaded"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/main.lua:1950
-#: plugins/vocabbuilder.koplugin/main.lua:2021
-#: plugins/vocabbuilder.koplugin/_meta.lua:4
-msgid "Vocabulary builder"
-msgstr ""
-
 #: plugins/vocabbuilder.koplugin/main.lua:2032
 msgid "Open vocabulary builder"
 msgstr ""
 
-#: plugins/vocabbuilder.koplugin/_meta.lua:5
-msgid ""
-"This plugin processes dictionary word lookups and uses spaced repetition to "
-"help you remember new words."
-msgstr ""
+#: plugins/wallabag.koplugin/_meta.lua:4 plugins/wallabag.koplugin/main.lua:133
+msgid "Wallabag"
+msgstr "Wallabag"
+
+#: plugins/wallabag.koplugin/_meta.lua:5
+msgid "Synchronises articles with a Wallabag server."
+msgstr "Sinkronizatu artikuluak Wallabag zerbitzariarekin"
 
 #: plugins/wallabag.koplugin/main.lua:45
 msgid "Wallabag retrieval"
@@ -18920,10 +18928,6 @@ msgstr "Wallabag berreskuratzea"
 #: plugins/wallabag.koplugin/main.lua:121
 msgid "Add to Wallabag"
 msgstr "Gehitu Wallabag-era"
-
-#: plugins/wallabag.koplugin/main.lua:133 plugins/wallabag.koplugin/_meta.lua:4
-msgid "Wallabag"
-msgstr "Wallabag"
 
 #: plugins/wallabag.koplugin/main.lua:136
 msgid "Retrieve new articles from server"
@@ -19243,10 +19247,6 @@ msgid ""
 msgstr ""
 "Esteka Wallabag-era gehitzeak huts egin du:\n"
 "%1"
-
-#: plugins/wallabag.koplugin/_meta.lua:5
-msgid "Synchronises articles with a Wallabag server."
-msgstr "Sinkronizatu artikuluak Wallabag zerbitzariarekin"
 
 #: tools/kobo_touch_probe.lua:54
 msgid "Tap the lower right corner"
