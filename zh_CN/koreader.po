@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-28 15:09+0000\n"
-"PO-Revision-Date: 2024-04-30 05:29+0000\n"
+"PO-Revision-Date: 2024-04-30 10:35+0000\n"
 "Last-Translator: 李亚东 <lyd0319@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "koreader/koreader/zh_Hans/>\n"
@@ -1403,9 +1403,8 @@ msgstr "搜索结果（%1）"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:225
 #: frontend/apps/reader/modules/readersearch.lua:596
-#, fuzzy
 msgid "Query: %1"
-msgstr "（查询：%1）"
+msgstr "查询：%1"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:308
 msgid "Title: %1"
@@ -5226,6 +5225,11 @@ msgid ""
 "\n"
 "p:not([class]) matches a <p> without any class= attribute."
 msgstr ""
+"p.className 匹配带有 class='className' 的 <p> 元素。\n"
+"\n"
+"*.className 匹配任何具有 class='className' 的元素。\n"
+"\n"
+"p:not([class]) 匹配没有任何 class 属性的 <p> 元素。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:805
 msgid ""
@@ -5234,6 +5238,9 @@ msgid ""
 "aside p (without any intermediate symbol) matches a <p> descendant of an "
 "<aside> element."
 msgstr ""
+"aside > p 匹配 <aside> 元素的子级中的 <p> 元素。\n"
+"\n"
+"aside p（没有任何中间符号）匹配 <aside> 元素的后代中的 <p> 元素。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:809
 msgid ""
@@ -5241,6 +5248,9 @@ msgid ""
 "\n"
 "p ~ img matches a <img> if any of its previous siblings is a <p>."
 msgstr ""
+"p + img 匹配一个 <img> 元素，如果它的直接前一个兄弟元素是一个 <p>。\n"
+"\n"
+"p ~ img 匹配一个 <img> 元素，如果它的任何前一个兄弟元素是一个 <p>。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:814
 msgid ""
@@ -5252,6 +5262,12 @@ msgid ""
 "[name~=\"what\"] matches if the value of the attribute 'name' contains "
 "'what' as a word (among other words separated by spaces)."
 msgstr ""
+"[name=\"what\"] 匹配如果元素具有属性 'name'，且其值恰好为 'what'。\n"
+"\n"
+"[name] 匹配如果属性 'name' 存在。\n"
+"\n"
+"[name~=\"what\"] 匹配如果属性 'name' 的值包含 'what' "
+"作为一个单词（以空格分隔的其他单词中的一个）。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:821
 msgid ""
@@ -5262,6 +5278,12 @@ msgid ""
 "\n"
 "[name$=\"what\"] matches if the attribute value ends with 'what'."
 msgstr ""
+"[name*=\"what\" i] 匹配任何具有包含 'what' 的值的属性 'name' "
+"的元素，不区分大小写。\n"
+"\n"
+"[name^=\"what\"] 匹配如果属性值以 'what' 开头。\n"
+"\n"
+"[name$=\"what\"] 匹配如果属性值以 'what' 结尾。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:828
 msgid ""
@@ -5276,6 +5298,15 @@ msgid ""
 "\n"
 "p[_~=\"what\"] matches any <p> that contains the word 'what'."
 msgstr ""
+"类似于属性匹配的语法，但匹配元素的内部文本。\n"
+"\n"
+"p[_=\"what\"] 匹配任何内部文本为 'what' 的 <p> 元素。\n"
+"\n"
+"p[_] 匹配任何非空的 <p> 元素。\n"
+"\n"
+"p:not([_]) 匹配任何空的 <p> 元素。\n"
+"\n"
+"p[_~=\"what\"] 匹配任何包含单词 'what' 的 <p> 元素。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:839
 msgid ""
@@ -5290,6 +5321,15 @@ msgid ""
 "\n"
 "p[_$=\"what\"] matches any <p> whose text ends with 'what'."
 msgstr ""
+"类似于属性匹配的语法，但匹配元素的内部文本。\n"
+"\n"
+"p[_*=\"what\" i] 匹配任何包含 'what' 的 <p> 元素，不区分大小写。\n"
+"\n"
+"p[_^=\"what\"] 匹配任何以 'what' 开头的 <p> 元素。\n"
+"（这可以用于匹配 \"Act\" 或 \"Scene\""
+"，或者戏剧中的角色名，并使它们突出显示。）\n"
+"\n"
+"p[_$=\"what\"] 匹配任何以 'what' 结尾的 <p> 元素。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:849
 msgid ""
@@ -5299,6 +5339,11 @@ msgid ""
 "\n"
 "p:nth-child(odd) matches any other <p> in a series of sibling <p>."
 msgstr ""
+"p:first-child 匹配作为其父元素的第一个子元素的 <p>。\n"
+"\n"
+"p:last-child 匹配作为其父元素的最后一个子元素的 <p>。\n"
+"\n"
+"p:nth-child(odd) 匹配兄弟元素中的任何其他 <p> 元素，是奇数位置的元素。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:856
 msgid ""
@@ -5308,6 +5353,11 @@ msgid ""
 "matching the element: tap on one of them to copy it to the clipboard.\n"
 "You can then paste it here with long-press in the text box."
 msgstr ""
+"在书页上，选择围绕您感兴趣的元素的一些文本（在其之前和之后），然后使用“查看 "
+"HTML”。\n"
+"在 HTML 查看器中，长按标签或文本以获取与元素匹配的选择器列表：点击其中一个以"
+"将其复制到剪贴板。\n"
+"然后您可以在此处长按文本框粘贴它。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:863
 #, fuzzy
@@ -5320,7 +5370,7 @@ msgstr "设置为1rem意味着与普通文本字号相同。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:865
 msgid "Remove bold. Use 'bold' to get bold."
-msgstr ""
+msgstr "移除粗体。使用 'bold' 来获得粗体。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:866
 msgid "Disables hyphenation inside the targeted elements."
@@ -5332,22 +5382,23 @@ msgstr "默认文本缩进为 1.2em。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:868
 msgid "Start a new page with this element. Use 'avoid' to avoid a new page."
-msgstr ""
+msgstr "使用这个元素开始一个新页面。使用 'avoid' 来避免新页面。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:869
 msgid "Force text to be black."
-msgstr ""
+msgstr "强制文本为黑色。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:870
-#, fuzzy
 msgid "Remove any background color."
-msgstr "背景保持原样"
+msgstr "背景保持原样。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:871
 msgid ""
 "Limit an element width to 50% of your screen width (use 'max-height: 50vh' "
 "for 50% of the screen height). Can be useful with <img> to limit their size."
 msgstr ""
+"限制元素宽度为屏幕宽度的 50%（使用 'max-width: 50vw' 来表示屏幕宽度的 50%）。"
+"这在限制 <img> 的大小时可能会有用。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:874
 #, fuzzy
@@ -5397,13 +5448,15 @@ msgid ""
 "Can be set on target of links (<div id='..'>) to have their link trigger as "
 "footnote popup, in case KOReader wrongly detect this target is not a "
 "footnote."
-msgstr ""
+msgstr "可以设置在链接的目标上（<div id='..'>）以使它们的链接触发为脚注弹出窗口，"
+"以防 KOReader 错误地检测到此目标不是脚注。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:881
 msgid ""
 "Can be set on links (<a href='#..'>) to have them trigger as footnote "
 "popups, in case KOReader wrongly detect the links is not to a footnote."
-msgstr ""
+msgstr "可以设置在链接（<a href='#..'>）上，以使它们触发为脚注弹出窗口，以防 "
+"KOReader 错误地检测到链接不是指向脚注。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:882
 msgid ""
@@ -5414,14 +5467,19 @@ msgid ""
 "this with:\n"
 "DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 msgstr ""
+"可以设置在链接（<a href='#..'>）上，以使它们不触发脚注弹出窗口和页面内脚注。"
+"\n"
+"如果某个 DocFragment 呈现了带有交叉引用的名称索引，导致页面内脚注占据了这些页"
+"面的一半，您可以使用以下方式避免这种情况：\n"
+"DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:888
 msgid "Useful 'content:' values"
-msgstr ""
+msgstr "有用的 'content:' 值"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid "Caution ⚠"
-msgstr ""
+msgstr "警告 ⚠"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid ""
@@ -5434,39 +5492,47 @@ msgid ""
 "\n"
 "If used as-is, they will act on ALL elements!"
 msgstr ""
+"谨慎使用这些：将它们附加到适当的区分选择器上，比如：\n"
+"\n"
+"span.specificClassName\n"
+"\n"
+"p[_*=\"keyword\" i]\n"
+"\n"
+"如果直接使用，它们将作用于所有元素！"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:897
 msgid "Insert a visible space before an element."
-msgstr ""
+msgstr "在一个元素之前插入一个可见空格。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:898
 msgid ""
 "Insert a visible non-breakable space before an element, so it sticks to "
 "what's before."
-msgstr ""
+msgstr "在元素之前插入一个可见的不间断空格，以便它与前面的内容紧密连接在一起。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:899
 msgid ""
 "U+2060 WORD JOINER may act as a glue (like an invisible non-breakable space) "
 "before an element, so it sticks to what's before."
-msgstr ""
+msgstr "U+2060 字词连接器可以像胶水一样（就像一个不可见的不间断空格），放在元素之前，"
+"使其与前面的内容紧密连接在一起。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:900
 msgid ""
 "U+200B ZERO WIDTH SPACE may allow a linebreak before an element, in case the "
 "absence of any space prevents that."
-msgstr ""
+msgstr "U+200B 零宽度空格可以在元素之前允许换行，以防止没有任何空格导致无法换行。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:901
 msgid ""
 "Insert the value of the attribute 'title' at start of an element content."
-msgstr ""
+msgstr "在元素内容的开头插入属性 'title' 的值。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:902
 #: frontend/apps/reader/modules/readerstyletweak.lua:903
 #: frontend/apps/reader/modules/readerstyletweak.lua:904
 msgid "Prepend a visible marker."
-msgstr ""
+msgstr "在前面添加一个可见的标记。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:913
 msgid "Use sample"
@@ -5685,6 +5751,9 @@ msgid ""
 "stylesheet to style everything (which publishers probably don't).\n"
 "This is mostly only interesting for testing."
 msgstr ""
+"这设置了一个空的用户代理样式表，并期望文档样式表来为所有内容进行样式设置（出"
+"版商可能不会这样做）。\n"
+"这主要只对测试是有兴趣的。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:215
 #: plugins/kosync.koplugin/main.lua:112
@@ -5694,7 +5763,7 @@ msgstr "自动"
 #: frontend/apps/reader/modules/readertypeset.lua:217
 msgid ""
 "This selects the default and preferred stylesheet for the document type."
-msgstr ""
+msgstr "这选择了文档类型的默认和首选样式表。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:231
 #, fuzzy
@@ -5714,6 +5783,13 @@ msgid ""
 "to have our added styles at play and need to reset them; try switching to "
 "html5.css when you notice such issues."
 msgstr ""
+"这是我们的书籍外观样式表：它通过在 HTML 标准样式表上添加样式，使 HTML "
+"内容看起来更像一本纸质书籍（使用两端对齐的文本和段落缩进），而不是一个网页。"
+"\n"
+"它非常适合未经样式处理的书籍，并且可能使经过样式处理的书籍更易阅读。\n"
+"它可能会在某些书籍上引起一些小问题（标题、标题或分隔符错位，或文本缩进不符合"
+"预期），因为出版商并不希望我们添加的样式起作用，需要重置它们；当您注意到这些"
+"问题时，请尝试切换到 html5.css。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:243
 #, fuzzy
@@ -5731,6 +5807,12 @@ msgid ""
 "aligned paragraphs without indentation and with spacing between them); try "
 "switching to epub.css when that happens."
 msgstr ""
+"这个样式表符合 HTML "
+"标准的呈现建议（有一些限制），类似于大多数网络浏览器使用的方式。\n"
+"由于大多数出版商现在使用基于网络浏览器引擎的工具制作和测试他们的书籍，因此这"
+"是要使用的样式表，以查看出版商所期望的书籍外观。\n"
+"但是，在未经样式处理的书籍上，它可能使它们看起来像一个网页（左对齐的段落没有"
+"缩进，并且它们之间有间距）；当发生这种情况时，请尝试切换到 epub.css。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:255
 msgid "FictionBook (fb2.css)"
@@ -5743,16 +5825,19 @@ msgid ""
 "(FictionBook 2 & 3 are open XML-based e-book formats which originated and "
 "gained popularity in Russia.)"
 msgstr ""
+"这个样式表仅用于 FB2 和 FB3 文档，它们不是经典的 HTML，需要一些特定的样式。\n"
+"（FictionBook 2 和 3 是源自俄罗斯并且变得流行的基于开放 XML 的电子书格式。）"
 
 #: frontend/apps/reader/modules/readertypeset.lua:270
 msgid ""
 "This stylesheet is obsolete: don't use it. It is kept solely to be able to "
 "open documents last read years ago and to migrate their highlights."
-msgstr ""
+msgstr "这个样式表已经过时：请不要使用它。它仅被保留用于能够打开几年前最后阅读的文档"
+"，并迁移其高亮。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:281
 msgid "This is a user added stylesheet."
-msgstr ""
+msgstr "这是用户添加的样式表。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:287
 msgid "Obsolete"
@@ -6550,9 +6635,8 @@ msgstr "在当前书籍文件夹保存维基百科 EPUB"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:217
 #: frontend/apps/reader/modules/readerwikipedia.lua:233
-#, fuzzy
 msgid "ask"
-msgstr "巴什基尔语"
+msgstr "问"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:219
 #: frontend/ui/elements/common_settings_menu_table.lua:383
@@ -6565,14 +6649,13 @@ msgid "never"
 msgstr "从不"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:223
-#, fuzzy
 msgid "Include images in EPUB: %1"
-msgstr "包含图片"
+msgstr "在EPUB中包含图片：%1"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:226
 #: frontend/apps/reader/modules/readerwikipedia.lua:245
 msgid "Ask"
-msgstr ""
+msgstr "问"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:227
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
@@ -6585,13 +6668,12 @@ msgid "Don't include images"
 msgstr "不包含"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:235
-#, fuzzy
 msgid "higher"
-msgstr "高"
+msgstr "更高"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:237
 msgid "standard"
-msgstr ""
+msgstr "标准的"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:239
 #, fuzzy
@@ -10647,14 +10729,12 @@ msgid "Enable verbose logging"
 msgstr "启用详细调试信息"
 
 #: frontend/ui/elements/common_info_menu_table.lua:88
-#, fuzzy
 msgid "Verbose logging disabled"
-msgstr "前光已关闭。"
+msgstr "详细日志记录已禁用"
 
 #: frontend/ui/elements/common_info_menu_table.lua:94
-#, fuzzy
 msgid "Verbose logging enabled"
-msgstr "前光已开启。"
+msgstr "详细日志记录已启用"
 
 #: frontend/ui/elements/common_info_menu_table.lua:107
 msgid "Version: %1"
@@ -11820,14 +11900,12 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 秒"
 
 #: frontend/ui/elements/screensaver_menu.lua:74
-#, fuzzy
 msgid "3 seconds"
-msgstr "%1 秒"
+msgstr "3 秒"
 
 #: frontend/ui/elements/screensaver_menu.lua:75
-#, fuzzy
 msgid "5 seconds"
-msgstr "%1 秒"
+msgstr "5秒"
 
 #: frontend/ui/elements/screensaver_menu.lua:76
 msgid "Until a tap"
@@ -11844,9 +11922,8 @@ msgid "Custom images"
 msgstr "自定义封面图片"
 
 #: frontend/ui/elements/screensaver_menu.lua:88
-#, fuzzy
 msgid "Select image or document cover"
-msgstr "当前屏保文档封面："
+msgstr "选择图片或文档封面"
 
 #: frontend/ui/elements/screensaver_menu.lua:98
 #, fuzzy
@@ -13828,12 +13905,8 @@ msgid "Long-press to choose"
 msgstr "长按选择"
 
 #: frontend/ui/widget/pathchooser.lua:116
-#, fuzzy
 msgid "Choose this file?"
-msgstr ""
-"选择该文件吗？\n"
-"\n"
-"%1"
+msgstr "选择该文件吗？"
 
 #: frontend/ui/widget/pathchooser.lua:120
 #, fuzzy
@@ -13842,25 +13915,16 @@ msgid_plural "File size: %1 bytes"
 msgstr[0] "字体大小 ：%1"
 
 #: frontend/ui/widget/pathchooser.lua:121
-#, fuzzy
 msgid "Last modified: %1"
-msgstr "修改日期"
+msgstr "修改日期：%1"
 
 #: frontend/ui/widget/pathchooser.lua:124
-#, fuzzy
 msgid "Choose this folder?"
-msgstr ""
-"选择此文件夹吗？\n"
-"\n"
-"%1"
+msgstr "选择此文件夹吗？"
 
 #: frontend/ui/widget/pathchooser.lua:126
-#, fuzzy
 msgid "Choose this path?"
-msgstr ""
-"选择该路径吗？\n"
-"\n"
-"%1"
+msgstr "选择该路径吗？"
 
 #: frontend/ui/widget/qrwidget.lua:20
 msgid "... (truncated...)"
@@ -16649,23 +16713,20 @@ msgstr ""
 "患。请仅在可信网络中启用。"
 
 #: plugins/httpinspector.koplugin/main.lua:136
-#, fuzzy
 msgid "KOReader HTTP inspector"
-msgstr "KOReader 已升级到最新版本。"
+msgstr "KOReader HTTP 检查器"
 
 #: plugins/httpinspector.koplugin/main.lua:142
-#, fuzzy
 msgid "Stop HTTP server"
-msgstr "SSH 服务器"
+msgstr "关闭 HTTP server"
 
 #: plugins/httpinspector.koplugin/main.lua:144
-#, fuzzy
 msgid "Start HTTP server"
-msgstr "SSH 服务器"
+msgstr "开启 HTTP server"
 
 #: plugins/httpinspector.koplugin/main.lua:162
 msgid "Listening on port %1"
-msgstr "监听于端口 %1"
+msgstr "监听端口 %1"
 
 #: plugins/httpinspector.koplugin/main.lua:164
 #, fuzzy
@@ -16673,19 +16734,16 @@ msgid "Not running"
 msgstr "未在运行"
 
 #: plugins/httpinspector.koplugin/main.lua:173
-#, fuzzy
 msgid "Auto start HTTP server"
-msgstr "启动 SSH 服务器失败。"
+msgstr "自动启动 HTTP server"
 
 #: plugins/httpinspector.koplugin/main.lua:183
-#, fuzzy
 msgid "Port: %1"
-msgstr "字体：%1"
+msgstr "端口：%1"
 
 #: plugins/httpinspector.koplugin/main.lua:190
-#, fuzzy
 msgid "Set custom port"
-msgstr "自定义"
+msgstr "设置自定义端口"
 
 #: plugins/httpinspector.koplugin/main.lua:193
 msgid "Port number (default is 8080)"
@@ -19075,9 +19133,8 @@ msgid "Clean all words including progress?"
 msgstr "清除所有单词及进度？"
 
 #: plugins/vocabbuilder.koplugin/main.lua:390
-#, fuzzy
 msgid "Change book title"
-msgstr "更改书籍标题为："
+msgstr "更改书籍标题"
 
 #: plugins/vocabbuilder.koplugin/main.lua:398
 #, fuzzy
