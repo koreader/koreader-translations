@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-30 10:35+0000\n"
+"POT-Creation-Date: 2024-05-01 06:07+0000\n"
 "PO-Revision-Date: 2023-04-24 07:37+0000\n"
 "Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
 "Language-Team: Latvian <https://hosted.weblate.org/projects/koreader/"
@@ -129,7 +129,7 @@ msgstr ""
 "%3"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
-#: frontend/apps/filemanager/filemanagerutil.lua:360
+#: frontend/apps/filemanager/filemanagerutil.lua:341
 #: plugins/opds.koplugin/opdsbrowser.lua:624
 msgid "Choose folder"
 msgstr "Izvēlieties mapi"
@@ -152,12 +152,13 @@ msgstr "Ievadiet faila nosaukumu"
 #: frontend/apps/cloudstorage/dropbox.lua:130
 #: frontend/apps/cloudstorage/ftp.lua:127
 #: frontend/apps/cloudstorage/webdav.lua:126
-#: frontend/apps/filemanager/filemanager.lua:989
-#: frontend/apps/filemanager/filemanager.lua:1117
-#: frontend/apps/filemanager/filemanager.lua:1444
+#: frontend/apps/filemanager/filemanager.lua:995
+#: frontend/apps/filemanager/filemanager.lua:1123
+#: frontend/apps/filemanager/filemanager.lua:1450
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:483
+#: frontend/apps/filemanager/filemanagercollection.lua:490
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:35
-#: frontend/apps/filemanager/filemanagerhistory.lua:352
+#: frontend/apps/filemanager/filemanagerhistory.lua:377
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:56
 #: frontend/apps/filemanager/filemanagershortcuts.lua:107
 #: frontend/apps/reader/modules/readerbookmark.lua:1053
@@ -283,11 +284,11 @@ msgstr "Labot"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:395
 #: frontend/apps/filemanager/filemanager.lua:255
-#: frontend/apps/filemanager/filemanager.lua:571
-#: frontend/apps/filemanager/filemanager.lua:576
-#: frontend/apps/filemanager/filemanager.lua:1046
+#: frontend/apps/filemanager/filemanager.lua:577
+#: frontend/apps/filemanager/filemanager.lua:582
+#: frontend/apps/filemanager/filemanager.lua:1052
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:273
-#: frontend/apps/filemanager/filemanagerhistory.lua:175
+#: frontend/apps/filemanager/filemanagerhistory.lua:185
 #: frontend/apps/reader/modules/readerhighlight.lua:983
 #: frontend/ui/widget/screenshoter.lua:51
 #: plugins/bookshortcuts.koplugin/main.lua:138
@@ -392,9 +393,9 @@ msgstr "Augšupielādēt failu"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:593
 #: frontend/apps/cloudstorage/cloudstorage.lua:654
-#: frontend/apps/filemanager/filemanager.lua:604
-#: frontend/apps/filemanager/filemanager.lua:627
-#: frontend/apps/filemanager/filemanager.lua:985
+#: frontend/apps/filemanager/filemanager.lua:610
+#: frontend/apps/filemanager/filemanager.lua:633
+#: frontend/apps/filemanager/filemanager.lua:991
 #: frontend/ui/widget/pathchooser.lua:175
 msgid "New folder"
 msgstr "Jauna mape"
@@ -412,7 +413,7 @@ msgid "Uploading…"
 msgstr "Augšupielādēju…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:665
-#: frontend/apps/filemanager/filemanager.lua:996
+#: frontend/apps/filemanager/filemanager.lua:1002
 #: frontend/apps/reader/modules/readerhandmade.lua:498
 #: frontend/ui/wikipedia.lua:1542
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:502
@@ -422,7 +423,7 @@ msgid "Create"
 msgstr "Izveidot"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:692
-#: frontend/apps/filemanager/filemanager.lua:1021
+#: frontend/apps/filemanager/filemanager.lua:1027
 msgid "Enter folder after creation"
 msgstr "Pēc izveidošanas iet mapē"
 
@@ -532,6 +533,7 @@ msgstr "Dropbox mape (/ kā saknes mape)"
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:490
+#: frontend/apps/filemanager/filemanagercollection.lua:497
 #: frontend/apps/filemanager/filemanagershortcuts.lua:114
 #: frontend/apps/reader/modules/readerbookmark.lua:1070
 #: frontend/apps/reader/modules/readerbookmark.lua:1134
@@ -752,7 +754,7 @@ msgid "Cut"
 msgstr "Izgriezt"
 
 #: frontend/apps/filemanager/filemanager.lua:263
-#: frontend/apps/filemanager/filemanager.lua:1124
+#: frontend/apps/filemanager/filemanager.lua:1130
 msgid "Rename"
 msgstr "Pārsaukt"
 
@@ -765,7 +767,7 @@ msgid "Convert"
 msgstr "Konvertēt"
 
 #: frontend/apps/filemanager/filemanager.lua:334
-#: frontend/apps/filemanager/filemanager.lua:646
+#: frontend/apps/filemanager/filemanager.lua:652
 msgid "Set as HOME folder"
 msgstr "Iestatīt kā MĀJAS mapi"
 
@@ -782,45 +784,46 @@ msgstr "Iziet no KOReader?"
 msgid "Exit"
 msgstr "Iziet"
 
-#: frontend/apps/filemanager/filemanager.lua:520
+#: frontend/apps/filemanager/filemanager.lua:523
 msgid "1 file selected"
 msgid_plural "%1 files selected"
 msgstr[0] "Izvēlēti %1 faili"
 msgstr[1] "Izvēlēts %1 fails"
 msgstr[2] "Izvēlēti %1 faili"
 
-#: frontend/apps/filemanager/filemanager.lua:521
+#: frontend/apps/filemanager/filemanager.lua:524
 msgid "No files selected"
 msgstr "Nav izvēlēts neviens fails"
 
-#: frontend/apps/filemanager/filemanager.lua:525
+#: frontend/apps/filemanager/filemanager.lua:531
 #, fuzzy
 msgid "Show selected files list"
 msgstr "Izvēlēties failus"
 
-#: frontend/apps/filemanager/filemanager.lua:533
-#: frontend/apps/filemanager/filemanager.lua:919
+#: frontend/apps/filemanager/filemanager.lua:539
+#: frontend/apps/filemanager/filemanager.lua:925
 #: frontend/apps/reader/modules/readerlink.lua:143
 msgid "Copy"
 msgstr "Kopēt"
 
-#: frontend/apps/filemanager/filemanager.lua:543
+#: frontend/apps/filemanager/filemanager.lua:549
 msgid "Select all files in folder"
 msgstr "Izvēlēties visus failus mapē"
 
-#: frontend/apps/filemanager/filemanager.lua:550
-#: frontend/apps/filemanager/filemanager.lua:916
-#: frontend/apps/filemanager/filemanager.lua:1181
+#: frontend/apps/filemanager/filemanager.lua:556
+#: frontend/apps/filemanager/filemanager.lua:922
+#: frontend/apps/filemanager/filemanager.lua:1187
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:643
 msgid "Move"
 msgstr "Pārvietot"
 
-#: frontend/apps/filemanager/filemanager.lua:560
+#: frontend/apps/filemanager/filemanager.lua:566
+#: frontend/apps/filemanager/filemanagercollection.lua:431
 #: frontend/apps/reader/modules/readerbookmark.lua:664
 msgid "Deselect all"
 msgstr "Notīrīt izvēli visiem"
 
-#: frontend/apps/filemanager/filemanager.lua:575
+#: frontend/apps/filemanager/filemanager.lua:581
 msgid ""
 "Delete selected files?\n"
 "If you delete a file, it is permanently lost."
@@ -828,61 +831,61 @@ msgstr ""
 "Dzēst izvēlētos failus?\n"
 "Ja failu izdzēšat, to vairs nevarēs atgūt."
 
-#: frontend/apps/filemanager/filemanager.lua:587
+#: frontend/apps/filemanager/filemanager.lua:593
 #: frontend/apps/reader/modules/readerbookmark.lua:702
 #: frontend/apps/reader/modules/readerhighlight.lua:692
 msgid "Exit select mode"
 msgstr "Iziet no izvēles režīma"
 
-#: frontend/apps/filemanager/filemanager.lua:594
+#: frontend/apps/filemanager/filemanager.lua:600
 #: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:261
 msgid "Export highlights"
 msgstr "Eksportēt izcēlumus"
 
-#: frontend/apps/filemanager/filemanager.lua:618
+#: frontend/apps/filemanager/filemanager.lua:624
 msgid "Select files"
 msgstr "Izvēlēties failus"
 
-#: frontend/apps/filemanager/filemanager.lua:636
+#: frontend/apps/filemanager/filemanager.lua:642
 #: frontend/apps/reader/modules/readerbookmark.lua:1064
 #: frontend/ui/widget/inputtext.lua:255
 msgid "Paste"
 msgstr "Ielīmēt"
 
-#: frontend/apps/filemanager/filemanager.lua:655
+#: frontend/apps/filemanager/filemanager.lua:661
 msgid "Go to HOME folder"
 msgstr "Doties uz MĀJAS mapi"
 
-#: frontend/apps/filemanager/filemanager.lua:664
+#: frontend/apps/filemanager/filemanager.lua:670
 msgid "Open random document"
 msgstr "Atvērt nejaušu dokumentu"
 
-#: frontend/apps/filemanager/filemanager.lua:684
+#: frontend/apps/filemanager/filemanager.lua:690
 msgid "Switch to SDCard"
 msgstr "Pārslēgties uz SD karti"
 
-#: frontend/apps/filemanager/filemanager.lua:684
+#: frontend/apps/filemanager/filemanager.lua:690
 msgid "Switch to internal storage"
 msgstr "Pārslēgties uz iekšējo krātuvi"
 
-#: frontend/apps/filemanager/filemanager.lua:704
+#: frontend/apps/filemanager/filemanager.lua:710
 msgid "Import files here"
 msgstr "Importēt failus šeit"
 
-#: frontend/apps/filemanager/filemanager.lua:800
+#: frontend/apps/filemanager/filemanager.lua:806
 msgid "Set '%1' as HOME folder?"
 msgstr "Uzstādīt '%1' kā MĀJAS mapi?"
 
-#: frontend/apps/filemanager/filemanager.lua:801
+#: frontend/apps/filemanager/filemanager.lua:807
 msgid "Set as HOME"
 msgstr "Uzstādīt kā MĀJAS mapi"
 
-#: frontend/apps/filemanager/filemanager.lua:819
+#: frontend/apps/filemanager/filemanager.lua:825
 msgid "Do you want to open %1?"
 msgstr "Vai Jūs vēlaties atvērt %1?"
 
-#: frontend/apps/filemanager/filemanager.lua:820
-#: frontend/apps/filemanager/filemanager.lua:1450
+#: frontend/apps/filemanager/filemanager.lua:826
+#: frontend/apps/filemanager/filemanager.lua:1456
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:296
 #: frontend/ui/widget/textviewer.lua:686 frontend/ui/widget/touchmenu.lua:1253
 #: plugins/texteditor.koplugin/main.lua:457
@@ -890,50 +893,50 @@ msgid "Open"
 msgstr "Atvērt"
 
 #. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
-#: frontend/apps/filemanager/filemanager.lua:826
+#: frontend/apps/filemanager/filemanager.lua:832
 msgid "Another"
 msgstr "Vēl vienu"
 
-#: frontend/apps/filemanager/filemanager.lua:833
+#: frontend/apps/filemanager/filemanager.lua:839
 msgid "File not found"
 msgstr "Fails nav atrasts"
 
-#: frontend/apps/filemanager/filemanager.lua:891
+#: frontend/apps/filemanager/filemanager.lua:897
 #, fuzzy
 msgid ""
 "File already exists:\n"
 "%1"
 msgstr "Fails %1 jau eksistē."
 
-#: frontend/apps/filemanager/filemanager.lua:892
+#: frontend/apps/filemanager/filemanager.lua:898
 #, fuzzy
 msgid ""
 "Folder already exists:\n"
 "%1"
 msgstr "Fails %1 jau eksistē."
 
-#: frontend/apps/filemanager/filemanager.lua:896
-#: frontend/apps/filemanager/filemanager.lua:1178
+#: frontend/apps/filemanager/filemanager.lua:902
+#: frontend/apps/filemanager/filemanager.lua:1184
 #: frontend/apps/filemanager/filemanagerconverter.lua:97
 #: frontend/apps/reader/modules/readerdictionary.lua:1087
 #: plugins/opds.koplugin/opdsbrowser.lua:770
 msgid "Overwrite"
 msgstr "Pārrakstīt"
 
-#: frontend/apps/filemanager/filemanager.lua:915
+#: frontend/apps/filemanager/filemanager.lua:921
 msgid "Move selected files to the current folder?"
 msgstr "Pārvietot izvēlētos failus uz pašreizējo mapi?"
 
-#: frontend/apps/filemanager/filemanager.lua:918
+#: frontend/apps/filemanager/filemanager.lua:924
 msgid "Copy selected files to the current folder?"
 msgstr "Kopēt izvēlētos failus uz pašreizējo mapi?"
 
-#: frontend/apps/filemanager/filemanager.lua:931
+#: frontend/apps/filemanager/filemanager.lua:937
 #, fuzzy
 msgid "overwrite existing files"
 msgstr "Pārrakstīt esošo HTML failu?"
 
-#: frontend/apps/filemanager/filemanager.lua:971
+#: frontend/apps/filemanager/filemanager.lua:977
 #, fuzzy
 msgid "1 file was not moved"
 msgid_plural "%1 files were not moved"
@@ -941,7 +944,7 @@ msgstr[0] "Izvēlēti %1 faili"
 msgstr[1] "Izvēlēts %1 fails"
 msgstr[2] "Izvēlēti %1 faili"
 
-#: frontend/apps/filemanager/filemanager.lua:972
+#: frontend/apps/filemanager/filemanager.lua:978
 #, fuzzy
 msgid "1 file was not copied"
 msgid_plural "%1 files were not copied"
@@ -949,7 +952,7 @@ msgstr[0] "Izvēlēti %1 faili"
 msgstr[1] "Izvēlēts %1 fails"
 msgstr[2] "Izvēlēti %1 faili"
 
-#: frontend/apps/filemanager/filemanager.lua:1011
+#: frontend/apps/filemanager/filemanager.lua:1017
 msgid ""
 "Failed to create folder:\n"
 "%1"
@@ -957,7 +960,7 @@ msgstr ""
 "Neizdevās izveidot mapi:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:1034
+#: frontend/apps/filemanager/filemanager.lua:1040
 msgid ""
 "File not found:\n"
 "%1"
@@ -965,19 +968,19 @@ msgstr ""
 "Fails nav atrasts:\n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:1040
+#: frontend/apps/filemanager/filemanager.lua:1046
 msgid "Delete file permanently?"
 msgstr "Dzēst failu uz visiem laikiem?"
 
-#: frontend/apps/filemanager/filemanager.lua:1040
+#: frontend/apps/filemanager/filemanager.lua:1046
 msgid "Delete folder permanently?"
 msgstr "Dzēst mapi uz visiem laikiem?"
 
-#: frontend/apps/filemanager/filemanager.lua:1042
+#: frontend/apps/filemanager/filemanager.lua:1048
 msgid "Book settings, highlights and notes will be deleted."
 msgstr "Grāmatu iestatījumi, izcēlumi un piezīmes tiks dzēstas."
 
-#: frontend/apps/filemanager/filemanager.lua:1076
+#: frontend/apps/filemanager/filemanager.lua:1082
 msgid ""
 "Failed to delete:\n"
 "%1"
@@ -985,7 +988,7 @@ msgstr ""
 "Neizdevās izdzēst: \n"
 "%1"
 
-#: frontend/apps/filemanager/filemanager.lua:1102
+#: frontend/apps/filemanager/filemanager.lua:1108
 #, fuzzy
 msgid "Failed to delete 1 file."
 msgid_plural "Failed to delete %1 files."
@@ -993,15 +996,15 @@ msgstr[0] "Neizdevās lejupielādēt %1 failus."
 msgstr[1] "Neizdevās lejupielādēt %1 failu."
 msgstr[2] "Neizdevās lejupielādēt %1 failus."
 
-#: frontend/apps/filemanager/filemanager.lua:1113
+#: frontend/apps/filemanager/filemanager.lua:1119
 msgid "Rename file"
 msgstr "Pārsaukt failu"
 
-#: frontend/apps/filemanager/filemanager.lua:1113
+#: frontend/apps/filemanager/filemanager.lua:1119
 msgid "Rename folder"
 msgstr "Pārsaukt mapi"
 
-#: frontend/apps/filemanager/filemanager.lua:1156
+#: frontend/apps/filemanager/filemanager.lua:1162
 msgid ""
 "Failed to rename:\n"
 "%1\n"
@@ -1013,7 +1016,7 @@ msgstr ""
 "uz:\n"
 "%2"
 
-#: frontend/apps/filemanager/filemanager.lua:1167
+#: frontend/apps/filemanager/filemanager.lua:1173
 msgid ""
 "Folder already exists:\n"
 "%1\n"
@@ -1023,7 +1026,7 @@ msgstr ""
 "%1\n"
 "Failu nevar pārdēvēt."
 
-#: frontend/apps/filemanager/filemanager.lua:1169
+#: frontend/apps/filemanager/filemanager.lua:1175
 msgid ""
 "File already exists:\n"
 "%1\n"
@@ -1033,7 +1036,7 @@ msgstr ""
 "%1\n"
 "Mapi nevar pārdēvēt."
 
-#: frontend/apps/filemanager/filemanager.lua:1177
+#: frontend/apps/filemanager/filemanager.lua:1183
 msgid ""
 "File already exists:\n"
 "%1\n"
@@ -1043,7 +1046,7 @@ msgstr ""
 "%1\n"
 "Pārrakstīt failu?"
 
-#: frontend/apps/filemanager/filemanager.lua:1180
+#: frontend/apps/filemanager/filemanager.lua:1186
 msgid ""
 "Folder already exists:\n"
 "%1\n"
@@ -1053,53 +1056,53 @@ msgstr ""
 "%1\n"
 "Pārvietot mapi tajā?"
 
-#: frontend/apps/filemanager/filemanager.lua:1333
+#: frontend/apps/filemanager/filemanager.lua:1339
 #, fuzzy
 msgid "Selected files (%1)"
 msgstr "Izdzēsts fails: %1"
 
 #. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
-#: frontend/apps/filemanager/filemanager.lua:1360
+#: frontend/apps/filemanager/filemanager.lua:1366
 msgid "%1 ~Unsupported"
 msgstr "%1 ~Neatbalstīts"
 
-#: frontend/apps/filemanager/filemanager.lua:1396
+#: frontend/apps/filemanager/filemanager.lua:1402
 #, fuzzy
 msgid "Reset default for this file"
 msgstr "Atjaunot noklusējuma"
 
-#: frontend/apps/filemanager/filemanager.lua:1406
+#: frontend/apps/filemanager/filemanager.lua:1412
 #, fuzzy
 msgid "Reset default for %1 files"
 msgstr "Atjaunot noklusējuma"
 
-#: frontend/apps/filemanager/filemanager.lua:1417
+#: frontend/apps/filemanager/filemanager.lua:1423
 #, fuzzy
 msgid "View defaults for file types"
 msgstr "Izmantot noklusējuma"
 
-#: frontend/apps/filemanager/filemanager.lua:1456
+#: frontend/apps/filemanager/filemanager.lua:1462
 msgid "Always open '%2' with %1?"
 msgstr "Vienmēr atvērt '%2' ar %1?"
 
-#: frontend/apps/filemanager/filemanager.lua:1457
-#: frontend/apps/filemanager/filemanager.lua:1467
+#: frontend/apps/filemanager/filemanager.lua:1463
+#: frontend/apps/filemanager/filemanager.lua:1473
 #: frontend/ui/elements/common_settings_menu_table.lua:383
 #: frontend/ui/elements/common_settings_menu_table.lua:660
 msgid "Always"
 msgstr "Vienmēr"
 
-#: frontend/apps/filemanager/filemanager.lua:1466
+#: frontend/apps/filemanager/filemanager.lua:1472
 msgid "Always open %2 files with %1?"
 msgstr "Vienmēr atvērt '%2' failus ar %1?"
 
-#: frontend/apps/filemanager/filemanager.lua:1484
+#: frontend/apps/filemanager/filemanager.lua:1490
 msgid "Open %1 with:"
 msgstr "Atvērt %1 ar:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:27
-#: frontend/apps/filemanager/filemanagerutil.lua:277
-#: frontend/dispatcher.lua:172 plugins/opds.koplugin/opdsbrowser.lua:682
+#: frontend/apps/filemanager/filemanagerutil.lua:258
+#: frontend/dispatcher.lua:173 plugins/opds.koplugin/opdsbrowser.lua:682
 msgid "Book information"
 msgstr "Grāmatas informācija"
 
@@ -1314,35 +1317,115 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: frontend/apps/filemanager/filemanagercollection.lua:16
+#: frontend/apps/filemanager/filemanagercollection.lua:21
+#: frontend/apps/filemanager/filemanagercollection.lua:190
+#: frontend/dispatcher.lua:57
+#, fuzzy
+msgid "Collections"
+msgstr "Izņemt no kolekcijas"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:22
 #: frontend/dispatcher.lua:56
 msgid "Favorites"
 msgstr "Izlase"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:95
-#: frontend/apps/filemanager/filemanagerutil.lua:242
-msgid "Remove from favorites"
-msgstr "Izņemt no izlases"
+#: frontend/apps/filemanager/filemanagercollection.lua:154
+msgid "Remove from collection"
+msgstr "Izņemt no kolekcijas"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:179
-#: frontend/apps/filemanager/filemanagercollection.lua:235
-msgid "Sort favorites"
-msgstr "Šķirot izlasi"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:186
+#: frontend/apps/filemanager/filemanagercollection.lua:199
+#: frontend/apps/filemanager/filemanagercollection.lua:251
 #, fuzzy
-msgid "Add a book to favorites"
+msgid "Arrange books in collection"
+msgstr "Mainīt pietuvināšanas koeficientu"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:206
+#, fuzzy
+msgid "Add a book to collection"
 msgstr "Pievienot izlasei"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:211
+#: frontend/apps/filemanager/filemanagercollection.lua:229
 #, fuzzy
-msgid "Remove current book from favorites"
+msgid "Remove current book from collection"
 msgstr "Izņemt no izlases"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:211
+#: frontend/apps/filemanager/filemanagercollection.lua:229
 #, fuzzy
-msgid "Add current book to favorites"
+msgid "Add current book to collection"
 msgstr "Pārvietot grāmatu uz arhīvu"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:342
+#, fuzzy
+msgid "Collections (%1)"
+msgstr "Ikonas (%1)"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:346
+#, fuzzy
+msgid "Selected collections: %1"
+msgstr "Izdzēsts fails: %1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:384
+#, fuzzy
+msgid "Remove collection"
+msgstr "Izņemt no kolekcijas"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:391
+#, fuzzy
+msgid "Rename collection"
+msgstr "Izņemt no kolekcijas"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:418
+#, fuzzy
+msgid "New collection"
+msgstr "Izņemt no kolekcijas"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:441
+#: frontend/apps/reader/modules/readerbookmark.lua:633
+msgid "Select all"
+msgstr "Izvēlēties visas"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:453
+#, fuzzy
+msgid "Apply selection"
+msgstr "Raksta dzēšana"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:467
+#: frontend/apps/filemanager/filemanagercollection.lua:563
+#, fuzzy
+msgid "Arrange collections"
+msgstr "Izņemt no kolekcijas"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:485
+#, fuzzy
+msgid "Enter collection name"
+msgstr "Ievadiet profila nosaukumu"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:503
+#, fuzzy
+msgid "Collection already exists: %1"
+msgstr "Fails %1 jau eksistē."
+
+#: frontend/apps/filemanager/filemanagercollection.lua:550
+#, fuzzy
+msgid "Remove collection?"
+msgstr "Izņemt no kolekcijas"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:551
+#: frontend/apps/reader/modules/readerbookmark.lua:559
+#: frontend/apps/reader/modules/readerbookmark.lua:709
+#: frontend/apps/reader/modules/readerbookmark.lua:714
+#: frontend/apps/reader/modules/readerhandmade.lua:515
+#: frontend/apps/reader/modules/readeruserhyph.lua:293
+#: plugins/gestures.koplugin/main.lua:477
+#: plugins/statistics.koplugin/main.lua:2567
+#: plugins/texteditor.koplugin/main.lua:286
+msgid "Remove"
+msgstr "Noņemt"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:577
+#, fuzzy
+msgid "Add to collection"
+msgstr "Izņemt no kolekcijas"
 
 #. @translators See <https://en.wikipedia.org/wiki/Markdown>. In languages written in the Latin alphabet this is unlikely to change.
 #: frontend/apps/filemanager/filemanagerconverter.lua:18
@@ -1379,7 +1462,7 @@ msgid "Book folder"
 msgstr "Grāmatu mape"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:67
-#: frontend/apps/filemanager/filemanagerhistory.lua:382
+#: frontend/apps/filemanager/filemanagerhistory.lua:407
 #: frontend/apps/reader/modules/readerbookmark.lua:1233
 #: frontend/apps/reader/modules/readersearch.lua:252
 #: frontend/ui/widget/inputdialog.lua:902 frontend/ui/widget/textviewer.lua:493
@@ -1420,7 +1503,7 @@ msgstr "Izvilkt"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:224
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:283
-#: frontend/apps/filemanager/filemanagerhistory.lua:81
+#: frontend/apps/filemanager/filemanagerhistory.lua:82
 #: frontend/apps/reader/modules/readersearch.lua:595
 msgid "Search results (%1)"
 msgstr "Meklēšanas rezultāti (%1)"
@@ -1441,51 +1524,56 @@ msgstr "Laiks: %1"
 msgid "Authors: %1"
 msgstr "Autori:"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:20
+#: frontend/apps/filemanager/filemanagerhistory.lua:21
 #: frontend/dispatcher.lua:54
 msgid "History"
 msgstr "Vēsture"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:24
+#: frontend/apps/filemanager/filemanagerhistory.lua:25
 msgctxt "Book status filter"
 msgid "All"
 msgstr "Visi"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:25
+#: frontend/apps/filemanager/filemanagerhistory.lua:26
 msgctxt "Book status filter"
 msgid "Reading"
 msgstr "Tiek lasīts"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:26
+#: frontend/apps/filemanager/filemanagerhistory.lua:27
 msgctxt "Book status filter"
 msgid "On hold"
 msgstr "Nopauzēts"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:27
+#: frontend/apps/filemanager/filemanagerhistory.lua:28
 msgctxt "Book status filter"
 msgid "Finished"
 msgstr "Pabeigts"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:28
+#: frontend/apps/filemanager/filemanagerhistory.lua:29
 msgctxt "Book status filter"
 msgid "Deleted"
 msgstr "Dzēsts"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:29
+#: frontend/apps/filemanager/filemanagerhistory.lua:30
 msgctxt "Book status filter"
 msgid "New"
 msgstr "Jauns"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:83
+#: frontend/apps/filemanager/filemanagerhistory.lua:84
+#, fuzzy
+msgid "Filtered by collections (%1)"
+msgstr "Rediģēt vārdu"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:86
 #, fuzzy
 msgid "Status: %1 (%2)"
 msgstr "%1 (%2)"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:188
+#: frontend/apps/filemanager/filemanagerhistory.lua:198
 msgid "Remove from history"
 msgstr "Izņemt no vēstures"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:286
+#: frontend/apps/filemanager/filemanagerhistory.lua:297
 #: frontend/apps/reader/modules/readerbookmark.lua:756
 #: frontend/apps/reader/modules/readerbookmark.lua:766
 #: frontend/apps/reader/modules/readerbookmark.lua:774
@@ -1493,22 +1581,27 @@ msgstr "Izņemt no vēstures"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:309
+#: frontend/apps/filemanager/filemanagerhistory.lua:321
+#, fuzzy
+msgid "Filter by collections"
+msgstr "Izņemt no kolekcijas"
+
+#: frontend/apps/filemanager/filemanagerhistory.lua:334
 #, fuzzy
 msgid "Search in filename and book metadata"
 msgstr "Meklēt arī grāmatu metadatos"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:320
+#: frontend/apps/filemanager/filemanagerhistory.lua:345
 #: frontend/apps/filemanager/filemanagermenu.lua:298
 msgid "Clear history of deleted files"
 msgstr "Izdzēst dzēsto failu vēsturi"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:323
+#: frontend/apps/filemanager/filemanagerhistory.lua:348
 #: frontend/apps/filemanager/filemanagermenu.lua:301
 msgid "Clear history of deleted files?"
 msgstr "Izdzēst dzēsto failu vēsturi?"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:324
+#: frontend/apps/filemanager/filemanagerhistory.lua:349
 #: frontend/apps/filemanager/filemanagermenu.lua:302
 #: frontend/apps/reader/modules/readerfont.lua:718
 #: frontend/apps/reader/modules/readerlink.lua:304
@@ -1518,16 +1611,16 @@ msgstr "Izdzēst dzēsto failu vēsturi?"
 msgid "Clear"
 msgstr "Notīrīt"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:337
+#: frontend/apps/filemanager/filemanagerhistory.lua:362
 msgid "Filter by book status"
 msgstr "Filtrēt pēc grāmatu statusa"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:347
+#: frontend/apps/filemanager/filemanagerhistory.lua:372
 #, fuzzy
 msgid "Enter text to search history for"
 msgstr "Ievadiet meklējamo tekstu"
 
-#: frontend/apps/filemanager/filemanagerhistory.lua:359
+#: frontend/apps/filemanager/filemanagerhistory.lua:384
 #: frontend/apps/reader/modules/readerbookmark.lua:1197
 #: frontend/apps/reader/modules/readerhighlight.lua:147
 #: frontend/ui/widget/dictquicklookup.lua:497
@@ -1826,7 +1919,7 @@ msgstr "Ieslēgt LED indikatoru, ja neizdodas ieiet strāvas pārvaldības rež�
 
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagermenu.lua:781
-#: frontend/dispatcher.lua:127 frontend/ui/widget/menu.lua:808
+#: frontend/dispatcher.lua:128 frontend/ui/widget/menu.lua:808
 msgid "File search"
 msgstr "Failu meklēšana"
 
@@ -1978,7 +2071,7 @@ msgstr ""
 "Vai tiešām vēlaties turpināt?"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:13
-#: frontend/dispatcher.lua:126 frontend/ui/widget/pathchooser.lua:162
+#: frontend/dispatcher.lua:127 frontend/ui/widget/pathchooser.lua:162
 msgid "Folder shortcuts"
 msgstr "Mapes īsceļi"
 
@@ -2066,52 +2159,48 @@ msgstr "Par vāka attēlu"
 msgid "custom book metadata"
 msgstr "Pārvietot grāmatas metadatus"
 
-#: frontend/apps/filemanager/filemanagerutil.lua:242
-msgid "Add to favorites"
-msgstr "Pievienot izlasei"
-
-#: frontend/apps/filemanager/filemanagerutil.lua:258
+#: frontend/apps/filemanager/filemanagerutil.lua:239
 msgid "Show folder"
 msgstr "Rādīt mapi"
 
-#: frontend/apps/filemanager/filemanagerutil.lua:290
-#: frontend/dispatcher.lua:174 plugins/opds.koplugin/opdsbrowser.lua:675
+#: frontend/apps/filemanager/filemanagerutil.lua:271
+#: frontend/dispatcher.lua:175 plugins/opds.koplugin/opdsbrowser.lua:675
 msgid "Book cover"
 msgstr "Grāmatas vāks"
 
-#: frontend/apps/filemanager/filemanagerutil.lua:303
-#: frontend/dispatcher.lua:173
+#: frontend/apps/filemanager/filemanagerutil.lua:284
+#: frontend/dispatcher.lua:174
 msgid "Book description"
 msgstr "Grāmatas apraksts"
 
 #. @translators This is the script's programming language (e.g., shell or python)
-#: frontend/apps/filemanager/filemanagerutil.lua:319
+#: frontend/apps/filemanager/filemanagerutil.lua:300
 msgid "Execute %1 script"
 msgstr "Izpildīt %1 skriptu"
 
 #. @translators %1 is the script's programming language (e.g., shell or python), %2 is the filename
-#: frontend/apps/filemanager/filemanagerutil.lua:324
+#: frontend/apps/filemanager/filemanagerutil.lua:305
 msgid "Running %1 script %2…"
 msgstr "Izpildu %1 skriptu %2…"
 
-#: frontend/apps/filemanager/filemanagerutil.lua:339
+#: frontend/apps/filemanager/filemanagerutil.lua:320
 msgid "The script exited successfully."
 msgstr "Skripts izpildījās veiksmīgi."
 
-#: frontend/apps/filemanager/filemanagerutil.lua:344
+#: frontend/apps/filemanager/filemanagerutil.lua:325
 msgid "The script returned a non-zero status code: %1!"
 msgstr "Skripts atgrieza ne-nulles kodu: %1!"
 
-#: frontend/apps/filemanager/filemanagerutil.lua:360
+#: frontend/apps/filemanager/filemanagerutil.lua:341
 #, fuzzy
 msgid "Choose file"
 msgstr "Izvēlieties mapi"
 
-#: frontend/apps/filemanager/filemanagerutil.lua:390
+#: frontend/apps/filemanager/filemanagerutil.lua:371
 msgid "Use default"
 msgstr "Izmantot noklusējuma"
 
-#: frontend/apps/filemanager/filemanagerutil.lua:400
+#: frontend/apps/filemanager/filemanagerutil.lua:381
 #: frontend/ui/data/optionsutil.lua:121
 #: plugins/coverimage.koplugin/main.lua:543
 msgid "not set"
@@ -2126,7 +2215,7 @@ msgstr "Lokāciju vēsture ir tukša."
 #: frontend/apps/reader/modules/readerbookmark.lua:72
 #: frontend/apps/reader/modules/readerbookmark.lua:100
 #: frontend/apps/reader/modules/readerbookmark.lua:467
-#: frontend/dispatcher.lua:167
+#: frontend/dispatcher.lua:168
 msgid "Bookmarks"
 msgstr "Grāmatzīmes"
 
@@ -2175,7 +2264,7 @@ msgid "Add page number / timestamp to bookmark"
 msgstr "Pievienot grāmatzīmei lapaspuses numuru / laikspiedolu"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:189
-#: frontend/dispatcher.lua:168
+#: frontend/dispatcher.lua:169
 msgid "Bookmark search"
 msgstr "Grāmatzīmju meklēšana"
 
@@ -2206,17 +2295,6 @@ msgstr "Noņemt grāmatzīmi"
 msgid "Remove this bookmark?"
 msgstr "Noņemt šo grāmatzīmi?"
 
-#: frontend/apps/reader/modules/readerbookmark.lua:559
-#: frontend/apps/reader/modules/readerbookmark.lua:709
-#: frontend/apps/reader/modules/readerbookmark.lua:714
-#: frontend/apps/reader/modules/readerhandmade.lua:515
-#: frontend/apps/reader/modules/readeruserhyph.lua:293
-#: plugins/gestures.koplugin/main.lua:477
-#: plugins/statistics.koplugin/main.lua:2567
-#: plugins/texteditor.koplugin/main.lua:286
-msgid "Remove"
-msgstr "Noņemt"
-
 #: frontend/apps/reader/modules/readerbookmark.lua:570
 #: frontend/apps/reader/modules/readerbookmark.lua:1044
 #: frontend/apps/reader/modules/readerhighlight.lua:999
@@ -2244,10 +2322,6 @@ msgstr[2] "Izvēlētas %1 grāmatzīmes"
 #: frontend/apps/reader/modules/readerbookmark.lua:629
 msgid "No bookmarks selected"
 msgstr "Nav izvēlēta neviena grāmatzīme"
-
-#: frontend/apps/reader/modules/readerbookmark.lua:633
-msgid "Select all"
-msgstr "Izvēlēties visas"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:645
 msgid "Select page"
@@ -2302,7 +2376,7 @@ msgid "Current page"
 msgstr "Esošā lapa"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:809
-#: frontend/dispatcher.lua:151
+#: frontend/dispatcher.lua:152
 msgid "Latest bookmark"
 msgstr "Jaunākā grāmatzīme"
 
@@ -2402,8 +2476,8 @@ msgid "Chapter marks"
 msgstr "Nodaļas marķieri"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:297
-#: frontend/dispatcher.lua:107 frontend/dispatcher.lua:113
-#: frontend/dispatcher.lua:115 frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:108 frontend/dispatcher.lua:114
+#: frontend/dispatcher.lua:116 frontend/dispatcher.lua:118
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:341 frontend/ui/data/creoptions.lua:358
 #: frontend/ui/data/creoptions.lua:648 frontend/ui/data/creoptions.lua:671
@@ -2606,7 +2680,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:214
 #: frontend/apps/reader/modules/readerdictionary.lua:940
-#: frontend/dispatcher.lua:59 plugins/vocabbuilder.koplugin/main.lua:80
+#: frontend/dispatcher.lua:60 plugins/vocabbuilder.koplugin/main.lua:80
 msgid "Dictionary lookup"
 msgstr "Meklēt vārdnīcā"
 
@@ -3723,7 +3797,7 @@ msgid "Minimal progress bar width in percentage of screen width"
 msgstr "Minimālais progresa joslas platums (% no ekrāna platuma)"
 
 #: frontend/apps/reader/modules/readergoto.lua:17
-#: frontend/apps/reader/modules/readergoto.lua:75 frontend/dispatcher.lua:145
+#: frontend/apps/reader/modules/readergoto.lua:75 frontend/dispatcher.lua:146
 #: frontend/ui/widget/keyvaluepage.lua:412 frontend/ui/widget/menu.lua:786
 #: frontend/ui/widget/sortwidget.lua:255
 #: plugins/statistics.koplugin/calendarview.lua:621
@@ -3731,7 +3805,7 @@ msgstr "Minimālais progresa joslas platums (% no ekrāna platuma)"
 msgid "Go to page"
 msgstr "Iet uz lappusi"
 
-#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:146
+#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:147
 msgid "Skim document"
 msgstr "Pāršķirstīt dokumentu"
 
@@ -4004,7 +4078,7 @@ msgstr "Ekrānšāviņš"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:357
 #: frontend/apps/reader/modules/readersearch.lua:142
-#: frontend/dispatcher.lua:161
+#: frontend/dispatcher.lua:162
 msgid "Fulltext search"
 msgstr "Pilna teksta meklēšana"
 
@@ -4142,7 +4216,7 @@ msgid "Select on text"
 msgstr "Izvēlēties fonta izmēru"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:601
-#: frontend/dispatcher.lua:176
+#: frontend/dispatcher.lua:177
 #, fuzzy
 msgid "Translate current page"
 msgstr "Pievienot kā grāmatzīmi esošo lapu"
@@ -4453,7 +4527,7 @@ msgid "Set footnote popup font size"
 msgstr "Uzstādīt vēres izlecošā loga fonta izmēru"
 
 #: frontend/apps/reader/modules/readerlink.lua:490
-#: frontend/apps/reader/modules/readerlink.lua:512 frontend/dispatcher.lua:207
+#: frontend/apps/reader/modules/readerlink.lua:512 frontend/dispatcher.lua:208
 msgid "Set font size"
 msgstr "Uzstādīt fonta izmēru"
 
@@ -5072,7 +5146,7 @@ msgid "Results per page"
 msgstr "Priekšmeti lapā"
 
 #: frontend/apps/reader/modules/readersearch.lua:148
-#: frontend/dispatcher.lua:162
+#: frontend/dispatcher.lua:163
 #, fuzzy
 msgid "Last fulltext search results"
 msgstr "Pilna teksta meklēšana"
@@ -5135,7 +5209,7 @@ msgid "No results in the document"
 msgstr "Ignorēt metadatus"
 
 #: frontend/apps/reader/modules/readerstatus.lua:29
-#: frontend/apps/reader/modules/readerstatus.lua:70 frontend/dispatcher.lua:171
+#: frontend/apps/reader/modules/readerstatus.lua:70 frontend/dispatcher.lua:172
 #: frontend/ui/elements/common_settings_menu_table.lua:690
 msgid "Book status"
 msgstr "Grāmatas status"
@@ -5165,8 +5239,8 @@ msgstr "Atvērt nākamo failu"
 msgid "Delete file"
 msgstr "Izdzēst failu"
 
-#: frontend/apps/reader/modules/readerstatus.lua:104 frontend/dispatcher.lua:57
-#: frontend/dispatcher.lua:949 plugins/httpinspector.koplugin/main.lua:1018
+#: frontend/apps/reader/modules/readerstatus.lua:104 frontend/dispatcher.lua:58
+#: frontend/dispatcher.lua:951 plugins/httpinspector.koplugin/main.lua:1018
 msgid "File browser"
 msgstr "Failu pārlūks"
 
@@ -5638,16 +5712,16 @@ msgid "Book tweak saved (not enabled)."
 msgstr "Grāmatas uzlabojums saglabāts (nav ieslēgts)."
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:67
-#: frontend/dispatcher.lua:164 frontend/ui/widget/bookmapwidget.lua:700
+#: frontend/dispatcher.lua:165 frontend/ui/widget/bookmapwidget.lua:700
 msgid "Book map"
 msgstr "Grāmatas karte"
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:79
-#: frontend/dispatcher.lua:166 frontend/ui/widget/pagebrowserwidget.lua:35
+#: frontend/dispatcher.lua:167 frontend/ui/widget/pagebrowserwidget.lua:35
 msgid "Page browser"
 msgstr "Lapu pārlūks"
 
-#: frontend/apps/reader/modules/readertoc.lua:69 frontend/dispatcher.lua:163
+#: frontend/apps/reader/modules/readertoc.lua:69 frontend/dispatcher.lua:164
 msgid "Table of contents"
 msgstr "Satura rādītājs"
 
@@ -6641,7 +6715,7 @@ msgstr "Meklēt Wikipedia"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:71
 #: frontend/apps/reader/modules/readerwikipedia.lua:388
-#: frontend/dispatcher.lua:60
+#: frontend/dispatcher.lua:61
 msgid "Wikipedia lookup"
 msgstr "Wikipedia uzmeklēšana"
 
@@ -7509,7 +7583,7 @@ msgstr "Restartēt"
 msgid "Are you sure you want to power off the device?"
 msgstr "Vai Jūs tiešām vēlaties izslēgt ierīci?"
 
-#: frontend/device/generic/device.lua:1050 frontend/dispatcher.lua:73
+#: frontend/device/generic/device.lua:1050 frontend/dispatcher.lua:74
 #: frontend/ui/elements/common_exit_menu_table.lua:51
 msgid "Power off"
 msgstr "Izslēgt"
@@ -7539,163 +7613,163 @@ msgstr "Lasīšanas progress"
 msgid "History search"
 msgstr "Vēstures iestatījumi"
 
-#: frontend/dispatcher.lua:62
+#: frontend/dispatcher.lua:63
 msgid "Show menu"
 msgstr "Parādīt izvēlni"
 
-#: frontend/dispatcher.lua:63
+#: frontend/dispatcher.lua:64
 #: frontend/ui/elements/common_info_menu_table.lua:39
 #, fuzzy
 msgid "Menu search"
 msgstr "Failu meklēšana"
 
-#: frontend/dispatcher.lua:64
+#: frontend/dispatcher.lua:65
 msgid "Screenshot"
 msgstr "Ekrānšāviņš"
 
-#: frontend/dispatcher.lua:68
+#: frontend/dispatcher.lua:69
 #, fuzzy
 msgid "Exit sleep screen"
 msgstr "Pieskarieties, lai izietu no ekrānsaudzētāja"
 
-#: frontend/dispatcher.lua:69 frontend/ui/elements/mass_storage.lua:43
+#: frontend/dispatcher.lua:70 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
 msgstr "Sākt USB datu krātuvi"
 
-#: frontend/dispatcher.lua:70
+#: frontend/dispatcher.lua:71
 msgid "Suspend"
 msgstr "Apturēt"
 
-#: frontend/dispatcher.lua:71
+#: frontend/dispatcher.lua:72
 #: frontend/ui/elements/common_exit_menu_table.lua:22
 msgid "Restart KOReader"
 msgstr "Restartēt KOReader"
 
-#: frontend/dispatcher.lua:72
+#: frontend/dispatcher.lua:73
 #: frontend/ui/elements/common_exit_menu_table.lua:42
 msgid "Reboot the device"
 msgstr "Restartēt ierīci"
 
-#: frontend/dispatcher.lua:74
+#: frontend/dispatcher.lua:75
 msgid "Exit KOReader"
 msgstr "Iziet KOReader"
 
-#: frontend/dispatcher.lua:76
+#: frontend/dispatcher.lua:77
 msgid "Toggle hold corners"
 msgstr "Pārslēgt stūru turēšanu"
 
-#: frontend/dispatcher.lua:77
+#: frontend/dispatcher.lua:78
 #, fuzzy
 msgid "Enable touch input"
 msgstr "Pārslēgt orientāciju"
 
-#: frontend/dispatcher.lua:78
+#: frontend/dispatcher.lua:79
 #, fuzzy
 msgid "Disable touch input"
 msgstr "Pārslēgt orientāciju"
 
-#: frontend/dispatcher.lua:79
+#: frontend/dispatcher.lua:80
 #, fuzzy
 msgid "Toggle touch input"
 msgstr "Pārslēgt orientāciju"
 
-#: frontend/dispatcher.lua:81 frontend/ui/elements/physical_buttons.lua:11
+#: frontend/dispatcher.lua:82 frontend/ui/elements/physical_buttons.lua:11
 msgid "Invert page turn buttons"
 msgstr "Invertēt lappuses pārškiršanas pogas"
 
-#: frontend/dispatcher.lua:83
+#: frontend/dispatcher.lua:84
 #, fuzzy
 msgid "Toggle key repeat"
 msgstr "Pārslēgt orientāciju"
 
-#: frontend/dispatcher.lua:84
+#: frontend/dispatcher.lua:85
 msgid "Toggle accelerometer"
 msgstr "Pārslēgt akselerometru"
 
-#: frontend/dispatcher.lua:85
+#: frontend/dispatcher.lua:86
 msgid "Toggle orientation"
 msgstr "Pārslēgt orientāciju"
 
-#: frontend/dispatcher.lua:86
+#: frontend/dispatcher.lua:87
 msgid "Invert rotation"
 msgstr "Invertēt rotāciju"
 
-#: frontend/dispatcher.lua:87
+#: frontend/dispatcher.lua:88
 msgid "Rotate by 90° CW"
 msgstr "Rotēt par 90° pulksteņrādītāja virzienā"
 
-#: frontend/dispatcher.lua:88
+#: frontend/dispatcher.lua:89
 #, fuzzy
 msgid "Rotate by 90° CCW"
 msgstr "Rotēt par 90° pulksteņrādītāja virzienā"
 
-#: frontend/dispatcher.lua:90
+#: frontend/dispatcher.lua:91
 msgid "Turn on Wi-Fi"
 msgstr "Ieslēgt Wi-Fi"
 
-#: frontend/dispatcher.lua:91
+#: frontend/dispatcher.lua:92
 msgid "Turn off Wi-Fi"
 msgstr "Izslēgt Wi-Fi"
 
-#: frontend/dispatcher.lua:92
+#: frontend/dispatcher.lua:93
 msgid "Toggle Wi-Fi"
 msgstr "Pārslēgt Wi-Fi"
 
-#: frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:94
 #, fuzzy
 msgid "Toggle Fullscreen"
 msgstr "Pilnekrāns"
 
-#: frontend/dispatcher.lua:94
+#: frontend/dispatcher.lua:95
 #, fuzzy
 msgid "Show network info"
 msgstr "Tīkla informācija"
 
-#: frontend/dispatcher.lua:98
+#: frontend/dispatcher.lua:99
 msgid "Show frontlight dialog"
 msgstr "Parādīt apgaismojuma dialogu"
 
-#: frontend/dispatcher.lua:99
+#: frontend/dispatcher.lua:100
 msgid "Toggle frontlight"
 msgstr "Pārslēgt apgaismojumu"
 
-#: frontend/dispatcher.lua:100
+#: frontend/dispatcher.lua:101
 #, fuzzy
 msgid "Set frontlight brightness"
 msgstr "Uzstādīt apgaismojuma spilgtumu - %1"
 
-#: frontend/dispatcher.lua:101
+#: frontend/dispatcher.lua:102
 #, fuzzy
 msgid "Increase frontlight brightness"
 msgstr "Palielināt apgaismojuma spilgtumu par %1"
 
-#: frontend/dispatcher.lua:102
+#: frontend/dispatcher.lua:103
 #, fuzzy
 msgid "Decrease frontlight brightness"
 msgstr "Samazināt apgaismojuma spilgtumu par %1"
 
-#: frontend/dispatcher.lua:103
+#: frontend/dispatcher.lua:104
 msgid "Set frontlight warmth"
 msgstr "Iestatīt priekšējā apgaismojuma siltumu"
 
-#: frontend/dispatcher.lua:104
+#: frontend/dispatcher.lua:105
 msgid "Increase frontlight warmth"
 msgstr "Palielināt priekšējā apgaismojuma siltumu"
 
-#: frontend/dispatcher.lua:105
+#: frontend/dispatcher.lua:106
 msgid "Decrease frontlight warmth"
 msgstr "Samazināt priekšējā apgaismojuma siltumu"
 
-#: frontend/dispatcher.lua:106
+#: frontend/dispatcher.lua:107
 msgid "Toggle night mode"
 msgstr "Pārslēgt nakts režīmu"
 
-#: frontend/dispatcher.lua:107
+#: frontend/dispatcher.lua:108
 msgid "Set night mode"
 msgstr "Uzstādīt nakts režīmu"
 
-#: frontend/dispatcher.lua:107 frontend/dispatcher.lua:113
-#: frontend/dispatcher.lua:115 frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:108 frontend/dispatcher.lua:114
+#: frontend/dispatcher.lua:116 frontend/dispatcher.lua:118
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:671 frontend/ui/data/creoptions.lua:684
 #: frontend/ui/data/creoptions.lua:696 frontend/ui/data/creoptions.lua:735
@@ -7708,273 +7782,273 @@ msgstr "Uzstādīt nakts režīmu"
 msgid "on"
 msgstr "ieslēgts"
 
-#: frontend/dispatcher.lua:109
+#: frontend/dispatcher.lua:110
 msgid "Full screen refresh"
 msgstr "Pilna ekrāna atjaunošana"
 
-#: frontend/dispatcher.lua:110
+#: frontend/dispatcher.lua:111
 #, fuzzy
 msgid "Full refresh rate (always)"
 msgstr "Pilns atsvaidzināšanas biežums"
 
-#: frontend/dispatcher.lua:111
+#: frontend/dispatcher.lua:112
 #, fuzzy
 msgid "Full refresh rate (not in night mode)"
 msgstr "Zibsnīt katras %1 lappuses (nelietot nakts režīmā)"
 
-#: frontend/dispatcher.lua:112
+#: frontend/dispatcher.lua:113
 #, fuzzy
 msgid "Full refresh rate (in night mode)"
 msgstr "Zibsnīt katras %1 lappuses (lietot arī nakts režīmā)"
 
-#: frontend/dispatcher.lua:113 frontend/ui/elements/refresh_menu_table.lua:109
+#: frontend/dispatcher.lua:114 frontend/ui/elements/refresh_menu_table.lua:109
 msgid "Always flash on chapter boundaries"
 msgstr "Vienmēr mirgot uz nodaļas robežas"
 
-#: frontend/dispatcher.lua:114
+#: frontend/dispatcher.lua:115
 msgid "Toggle flashing on chapter boundaries"
 msgstr "Pārslēgt mirgošanu uz nodaļas robežas"
 
-#: frontend/dispatcher.lua:115
+#: frontend/dispatcher.lua:116
 msgid "Never flash on chapter's 2nd page"
 msgstr "Nemirgot uz nodaļas 2. lapas"
 
-#: frontend/dispatcher.lua:116
+#: frontend/dispatcher.lua:117
 msgid "Toggle flashing on chapter's 2nd page"
 msgstr "Pārslēgt mirgošanu uz nodaļas 2. lapas"
 
-#: frontend/dispatcher.lua:117 frontend/ui/elements/refresh_menu_table.lua:120
+#: frontend/dispatcher.lua:118 frontend/ui/elements/refresh_menu_table.lua:120
 #, fuzzy
 msgid "Always flash on pages with images"
 msgstr "Vienmēr mirgot uz nodaļas robežas"
 
-#: frontend/dispatcher.lua:118
+#: frontend/dispatcher.lua:119
 #, fuzzy
 msgid "Toggle flashing on pages with images"
 msgstr "Pārslēgt mirgošanu uz nodaļas 2. lapas"
 
-#: frontend/dispatcher.lua:122
+#: frontend/dispatcher.lua:123
 msgid "Folder up"
 msgstr "Mape augšup"
 
-#: frontend/dispatcher.lua:123
+#: frontend/dispatcher.lua:124
 msgid "Show plus menu"
 msgstr "Parādīt papildus izvēlni"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 #, fuzzy
 msgid "Toggle select mode"
 msgstr "Pārslēgt režīmu"
 
-#: frontend/dispatcher.lua:125
+#: frontend/dispatcher.lua:126
 #, fuzzy
 msgid "Refresh content"
 msgstr "Atjaunot"
 
-#: frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:134
 #, fuzzy
 msgid "Open next document in folder"
 msgstr "Atvērt fontu mapi"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Show bottom menu"
 msgstr "Parādīt apakšējo izvēlni"
 
-#: frontend/dispatcher.lua:136
+#: frontend/dispatcher.lua:137
 #, fuzzy
 msgid "Toggle status bar"
 msgstr "Alternatīva statusa josla"
 
-#: frontend/dispatcher.lua:137
+#: frontend/dispatcher.lua:138
 #, fuzzy
 msgid "Toggle chapter progress bar"
 msgstr "Parādīt progresa joslu"
 
-#: frontend/dispatcher.lua:139
+#: frontend/dispatcher.lua:140
 msgid "Previous chapter"
 msgstr "Iepriekšējā nodaļa"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Next chapter"
 msgstr "Nākamā nodaļa"
 
-#: frontend/dispatcher.lua:141
+#: frontend/dispatcher.lua:142
 msgid "First page"
 msgstr "Pirmā lapa"
 
-#: frontend/dispatcher.lua:142
+#: frontend/dispatcher.lua:143
 msgid "Last page"
 msgstr "Pēdējā lapa"
 
-#: frontend/dispatcher.lua:143
+#: frontend/dispatcher.lua:144
 #, fuzzy
 msgid "Random page"
 msgstr "Izlasītās lappuses"
 
-#: frontend/dispatcher.lua:144
+#: frontend/dispatcher.lua:145
 #, fuzzy
 msgid "Turn pages"
 msgstr "Esošā lapa"
 
-#: frontend/dispatcher.lua:147
+#: frontend/dispatcher.lua:148
 msgid "Previous bookmark"
 msgstr "Iepriekšējā grāmatzīme"
 
-#: frontend/dispatcher.lua:148
+#: frontend/dispatcher.lua:149
 msgid "Next bookmark"
 msgstr "Nākamā grāmatzīme"
 
-#: frontend/dispatcher.lua:149
+#: frontend/dispatcher.lua:150
 #, fuzzy
 msgid "First bookmark"
 msgstr "Jaunākā grāmatzīme"
 
-#: frontend/dispatcher.lua:150
+#: frontend/dispatcher.lua:151
 #, fuzzy
 msgid "Last bookmark"
 msgstr "Jaunākā grāmatzīme"
 
-#: frontend/dispatcher.lua:153
+#: frontend/dispatcher.lua:154
 msgid "Back"
 msgstr "Atpakaļ"
 
-#: frontend/dispatcher.lua:154
+#: frontend/dispatcher.lua:155
 msgid "Back to previous location"
 msgstr "Atpakaļ uz iepriekšējo lokāciju"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 #, fuzzy
 msgid "Forward to next location"
 msgstr "Doties uz iepriekšējo lokāciju"
 
-#: frontend/dispatcher.lua:156
+#: frontend/dispatcher.lua:157
 msgid "Follow nearest link"
 msgstr "Sekot tuvākajai hipersaitei"
 
-#: frontend/dispatcher.lua:157
+#: frontend/dispatcher.lua:158
 msgid "Follow nearest internal link"
 msgstr "Sekot tuvākajai iekšējai hipersaitei"
 
-#: frontend/dispatcher.lua:158
+#: frontend/dispatcher.lua:159
 #, fuzzy
 msgid "Add current location to history"
 msgstr "Notīrīt lokāciju vēsturi"
 
-#: frontend/dispatcher.lua:159
+#: frontend/dispatcher.lua:160
 msgid "Clear location history"
 msgstr "Notīrīt lokāciju vēsturi"
 
-#: frontend/dispatcher.lua:165 frontend/ui/widget/bookmapwidget.lua:700
+#: frontend/dispatcher.lua:166 frontend/ui/widget/bookmapwidget.lua:700
 #, fuzzy
 msgid "Book map (overview)"
 msgstr "Grāmatas vāks"
 
-#: frontend/dispatcher.lua:169
+#: frontend/dispatcher.lua:170
 msgid "Toggle bookmark"
 msgstr "Pārslēgt grāmatzīmes"
 
-#: frontend/dispatcher.lua:178
+#: frontend/dispatcher.lua:179
 #, fuzzy
 msgid "Toggle page turn animations"
 msgstr "Pārslēgt lapu pagriešanas virzienu"
 
-#: frontend/dispatcher.lua:179
+#: frontend/dispatcher.lua:180
 msgid "Toggle page turn direction"
 msgstr "Pārslēgt lapu pagriešanas virzienu"
 
-#: frontend/dispatcher.lua:180
+#: frontend/dispatcher.lua:181
 msgid "Toggle custom TOC"
 msgstr ""
 
-#: frontend/dispatcher.lua:181
+#: frontend/dispatcher.lua:182
 #, fuzzy
 msgid "Toggle custom hidden flows"
 msgstr "Pārslēgt ieplūšanu"
 
-#: frontend/dispatcher.lua:183
+#: frontend/dispatcher.lua:184
 #, fuzzy
 msgid "Set highlight action"
 msgstr "Šķirstīt izcēlumu darbības"
 
-#: frontend/dispatcher.lua:184
+#: frontend/dispatcher.lua:185
 msgid "Cycle highlight action"
 msgstr "Šķirstīt izcēlumu darbības"
 
-#: frontend/dispatcher.lua:185
+#: frontend/dispatcher.lua:186
 msgid "Cycle highlight style"
 msgstr "Ciklot izcelšanas stilu"
 
-#: frontend/dispatcher.lua:187
+#: frontend/dispatcher.lua:188
 #, fuzzy
 msgid "Save book metadata"
 msgstr "Automātiski saglabāt grāmatas metadatus: %1"
 
-#: frontend/dispatcher.lua:191
+#: frontend/dispatcher.lua:192
 #, fuzzy
 msgid "Set font"
 msgstr "Uzstādīt fonta izmēru"
 
-#: frontend/dispatcher.lua:192
+#: frontend/dispatcher.lua:193
 #, fuzzy
 msgid "Increase font size"
 msgstr "Palielināt fonta izmēru par %1"
 
-#: frontend/dispatcher.lua:193
+#: frontend/dispatcher.lua:194
 #, fuzzy
 msgid "Decrease font size"
 msgstr "Samazināt fonta izmēru par %1"
 
-#: frontend/dispatcher.lua:196
+#: frontend/dispatcher.lua:197
 msgid "Toggle page flipping"
 msgstr "Pārslēgt lapas pāršķiršanu"
 
-#: frontend/dispatcher.lua:197
+#: frontend/dispatcher.lua:198
 #, fuzzy
 msgid "Toggle bookmark flipping"
 msgstr "Pārslēgt lapas pāršķiršanu"
 
-#: frontend/dispatcher.lua:198
+#: frontend/dispatcher.lua:199
 msgid "Toggle reflow"
 msgstr "Pārslēgt ieplūšanu"
 
-#: frontend/dispatcher.lua:199
+#: frontend/dispatcher.lua:200
 msgid "Zoom mode"
 msgstr "Pietuvināšanas režīms"
 
-#: frontend/dispatcher.lua:200
+#: frontend/dispatcher.lua:201
 msgid "Change zoom factor"
 msgstr "Mainīt pietuvināšanas koeficientu"
 
-#: frontend/dispatcher.lua:202
+#: frontend/dispatcher.lua:203
 msgid "Toggle panel zoom"
 msgstr "Pārslēgt paneļa mērogošanu"
 
-#: frontend/dispatcher.lua:224
+#: frontend/dispatcher.lua:225
 #, fuzzy
 msgid "Zoom"
 msgstr "Mērogot uz"
 
-#: frontend/dispatcher.lua:248 frontend/ui/data/creoptions.lua:419
+#: frontend/dispatcher.lua:249 frontend/ui/data/creoptions.lua:419
 #: frontend/ui/data/creoptions.lua:431 frontend/ui/data/creoptions.lua:442
 #: frontend/ui/data/creoptions.lua:452 frontend/ui/data/koptoptions.lua:430
 #: frontend/ui/data/koptoptions.lua:445 frontend/ui/widget/toggleswitch.lua:245
 msgid "Font Size"
 msgstr "Fonta izmērs"
 
-#: frontend/dispatcher.lua:602
+#: frontend/dispatcher.lua:604
 msgid "Unknown item"
 msgstr "Nezināms priekšmets"
 
-#: frontend/dispatcher.lua:683 plugins/gestures.koplugin/main.lua:236
+#: frontend/dispatcher.lua:685 plugins/gestures.koplugin/main.lua:236
 #, fuzzy
 msgid "Pass through"
 msgstr "Iziet cauri"
 
-#: frontend/dispatcher.lua:686 frontend/dispatcher.lua:930
+#: frontend/dispatcher.lua:688 frontend/dispatcher.lua:932
 msgid "Nothing"
 msgstr "Nekas"
 
-#: frontend/dispatcher.lua:692
+#: frontend/dispatcher.lua:694
 #, fuzzy
 msgctxt "Dispatcher"
 msgid "1 action"
@@ -7983,58 +8057,59 @@ msgstr[0] "Bez rotācijas"
 msgstr[1] "Bez rotācijas"
 msgstr[2] "Bez rotācijas"
 
-#: frontend/dispatcher.lua:717 frontend/dispatcher.lua:986
-msgid "Sort"
-msgstr "Šķirot"
+#: frontend/dispatcher.lua:719 frontend/dispatcher.lua:988
+#, fuzzy
+msgid "Arrange actions"
+msgstr "Bez rotācijas"
 
-#: frontend/dispatcher.lua:834
+#: frontend/dispatcher.lua:836
 msgid "When set to 0, the gesture's distance (if any) is used"
 msgstr ""
 
-#: frontend/dispatcher.lua:946 plugins/httpinspector.koplugin/main.lua:1015
+#: frontend/dispatcher.lua:948 plugins/httpinspector.koplugin/main.lua:1015
 msgid "General"
 msgstr ""
 
-#: frontend/dispatcher.lua:947
+#: frontend/dispatcher.lua:949
 #: frontend/ui/elements/common_settings_menu_table.lua:715
 #: plugins/httpinspector.koplugin/main.lua:1016
 msgid "Device"
 msgstr "Ierīce"
 
-#: frontend/dispatcher.lua:948 plugins/httpinspector.koplugin/main.lua:1017
+#: frontend/dispatcher.lua:950 plugins/httpinspector.koplugin/main.lua:1017
 #, fuzzy
 msgid "Screen and lights"
 msgstr "Ekrānšāviņš"
 
-#: frontend/dispatcher.lua:950 plugins/httpinspector.koplugin/main.lua:1019
+#: frontend/dispatcher.lua:952 plugins/httpinspector.koplugin/main.lua:1019
 #, fuzzy
 msgid "Reader"
 msgstr "KOReader"
 
-#: frontend/dispatcher.lua:951 plugins/httpinspector.koplugin/main.lua:1020
+#: frontend/dispatcher.lua:953 plugins/httpinspector.koplugin/main.lua:1020
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "Iepludināms dokuments (epub, fb2, txt...)"
 
-#: frontend/dispatcher.lua:952 plugins/httpinspector.koplugin/main.lua:1021
+#: frontend/dispatcher.lua:954 plugins/httpinspector.koplugin/main.lua:1021
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Fiksēts dokumentu izkārtojums (pdf, djvu, pics...)"
 
-#: frontend/dispatcher.lua:1006 plugins/profiles.koplugin/main.lua:131
+#: frontend/dispatcher.lua:1008 plugins/profiles.koplugin/main.lua:131
 #, fuzzy
 msgid "Show as QuickMenu"
 msgstr "Parādīt papildus izvēlni"
 
-#: frontend/dispatcher.lua:1031
+#: frontend/dispatcher.lua:1033
 #, fuzzy
 msgid "Keep QuickMenu open"
 msgstr "Paturēt ekrānu ieslēgtu"
 
-#: frontend/dispatcher.lua:1074
+#: frontend/dispatcher.lua:1076
 #, fuzzy
 msgid "QuickMenu"
 msgstr "Parādīt papildus izvēlni"
 
-#: frontend/dispatcher.lua:1081
+#: frontend/dispatcher.lua:1083
 #, fuzzy
 msgid "Execute all"
 msgstr "Izpildīt"
@@ -16004,7 +16079,8 @@ msgid "History display mode"
 msgstr "Vēstures attēlošanas režīms"
 
 #: plugins/coverbrowser.koplugin/main.lua:148
-msgid "Favorites display mode"
+#, fuzzy
+msgid "Collections display mode"
 msgstr "Izlases attēlošanas režīms"
 
 #: plugins/coverbrowser.koplugin/main.lua:155
@@ -16079,7 +16155,7 @@ msgstr "Attēlot norādījumus atvērtām grāmatām vēsturē"
 
 #: plugins/coverbrowser.koplugin/main.lua:367
 #, fuzzy
-msgid "Show hint for book status in favorites"
+msgid "Show hint for book status in collections"
 msgstr "Attēlot norādījumus atvērtajām izlases grāmatām"
 
 #: plugins/coverbrowser.koplugin/main.lua:377
@@ -20271,6 +20347,18 @@ msgid ""
 "updates, an FTP client, an SSH server, …\n"
 msgstr ""
 
+#~ msgid "Remove from favorites"
+#~ msgstr "Izņemt no izlases"
+
+#~ msgid "Sort favorites"
+#~ msgstr "Šķirot izlasi"
+
+#~ msgid "Add to favorites"
+#~ msgstr "Pievienot izlasei"
+
+#~ msgid "Sort"
+#~ msgstr "Šķirot"
+
 #, fuzzy
 #~ msgid "Leave background as-is"
 #~ msgstr "Aiz ziņām un attēliem fonu neizmainīt"
@@ -20760,13 +20848,6 @@ msgstr ""
 
 #~ msgid "Don't save"
 #~ msgstr "Nesaglabāt"
-
-#~ msgid "Remove from collection"
-#~ msgstr "Izņemt no kolekcijas"
-
-#, fuzzy
-#~ msgid "Sort collection"
-#~ msgstr "Izņemt no kolekcijas"
 
 #, fuzzy
 #~ msgid ""
