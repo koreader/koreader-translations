@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-12 22:20+0000\n"
-"PO-Revision-Date: 2024-05-14 05:01+0000\n"
+"PO-Revision-Date: 2024-05-15 03:55+0000\n"
 "Last-Translator: pedrogmattos <pedrogrimattos@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "koreader/koreader/pt_BR/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: reader.lua:194
 msgid ""
@@ -4455,7 +4455,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerlink.lua:419
 msgid "Show footnotes in popup"
-msgstr "Mostrar notas de rodapé em pop-up"
+msgstr "Mostrar notas de rodapé em janela"
 
 #: frontend/apps/reader/modules/readerlink.lua:428
 msgid ""
@@ -4482,7 +4482,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerlink.lua:438
 msgid "Footnote popup settings"
-msgstr "Configurações do pop-up da nota de rodapé"
+msgstr "Configurações da nota de rodapé em janela"
 
 #: frontend/apps/reader/modules/readerlink.lua:443
 msgid "Show more links as footnotes"
@@ -4504,15 +4504,15 @@ msgid ""
 "book text may still render with a different font if the book uses embedded "
 "fonts)."
 msgstr ""
-"Exibe o texto pop-up da nota de rodapé com a fonte definida como a fonte do "
-"documento (o texto do livro ainda pode ser renderizado com uma fonte "
+"Exibe o texto da nota de rodapé em janela com a fonte definida como a fonte "
+"do documento (o texto do livro ainda pode ser renderizado com uma fonte "
 "diferente se o livro usar fontes incorporadas)."
 
 #: frontend/apps/reader/modules/readerlink.lua:471
 #: frontend/apps/reader/modules/readerlink.lua:491
 #: frontend/apps/reader/modules/readerlink.lua:513
 msgid "Set footnote popup font size"
-msgstr "Definir tamanho da fonte pop-up da nota de rodapé"
+msgstr "Definir tamanho da fonte da nota de rodapé em janela"
 
 #: frontend/apps/reader/modules/readerlink.lua:490
 #: frontend/apps/reader/modules/readerlink.lua:512 frontend/dispatcher.lua:209
@@ -4525,7 +4525,7 @@ msgid ""
 "document, but you can specify here a fixed absolute font size to be used "
 "instead."
 msgstr ""
-"A fonte pop-up da nota de rodapé pode se ajustar ao tamanho da fonte que "
+"A fonte da nota de rodapé na janela pode se ajustar ao tamanho da fonte que "
 "você definiu para o documento, mas em vez disso você pode especificar aqui "
 "um tamanho de fonte absoluto fixo para ser usado."
 
@@ -4543,7 +4543,7 @@ msgid ""
 "larger.\n"
 "The recommended value is -2."
 msgstr ""
-"A fonte pop-up da nota de rodapé se ajusta ao tamanho da fonte que você "
+"A fonte da nota de rodapé na janela se ajusta ao tamanho da fonte que você "
 "definiu para o documento.\n"
 "Você pode especificar aqui quanto menor ou maior ele deve ser em relação ao "
 "tamanho da fonte do documento.\n"
@@ -4561,7 +4561,7 @@ msgid ""
 "This allows you to specify how much smaller or larger it should be relative "
 "to the document font size."
 msgstr ""
-"A fonte pop-up da nota de rodapé ajusta-se ao tamanho da fonte que você "
+"A fonte da nota de rodapé na janela se ajusta ao tamanho da fonte que você "
 "definiu para o documento.\n"
 "Isso permite que você especifique quanto menor ou maior deve ser em relação "
 "ao tamanho da fonte do documento."
@@ -5677,12 +5677,18 @@ msgid ""
 "footnote popup, in case KOReader wrongly detect this target is not a "
 "footnote."
 msgstr ""
+"Pode ser definido no destino de ligações (<div id='..'>) para que sejam "
+"ativadas como nota de rodapé em janela, caso o KoReader erroneamente detecte "
+"que ele não é uma nota de rodapé."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:879
 msgid ""
 "Can be set on links (<a href='#..'>) to have them trigger as footnote "
 "popups, in case KOReader wrongly detect the links is not to a footnote."
 msgstr ""
+"Pode ser definido em ligações (<a href='#..'>) para que sejam ativadas como "
+"nota de rodapé em janela, caso o KoReader erroneamente detecte que não são "
+"uma nota de rodapé."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:880
 msgid ""
@@ -5693,10 +5699,16 @@ msgid ""
 "this with:\n"
 "DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 msgstr ""
+"Pode ser deinido em ligações (<a href='#..'>) para que elas não ativem notas "
+"de rodapé em janela e em página.\n"
+"Se algum DocFragment apresentar um índice de nomes com referências cruzadas, "
+"resultando em notas de rodapé em página que tomam metade dessas páginas, "
+"você pode evitar isso com:\n"
+"DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:886
 msgid "Useful 'content:' values"
-msgstr ""
+msgstr "Valores úteis de 'content:'"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:887
 msgid "Caution ⚠"
@@ -5713,6 +5725,14 @@ msgid ""
 "\n"
 "If used as-is, they will act on ALL elements!"
 msgstr ""
+"Tenha cuidado com estes: fixe-os a um seletor de discriminação apropriado, "
+"como:\n"
+"\n"
+"span.specificClassName\n"
+"\n"
+"p[_*=\"keyword\" i]\n"
+"\n"
+"Se usados como estão, eles atuarão sobre TODOS os elementos!"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:895
 msgid "Insert a visible space before an element."
@@ -5746,12 +5766,13 @@ msgstr ""
 msgid ""
 "Insert the value of the attribute 'title' at start of an element content."
 msgstr ""
+"Inserir o valor do atributo 'title' no começo do conteúdo de um elemento."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:900
 #: frontend/apps/reader/modules/readerstyletweak.lua:901
 #: frontend/apps/reader/modules/readerstyletweak.lua:902
 msgid "Prepend a visible marker."
-msgstr ""
+msgstr "Prefixar um marcador visível."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:911
 msgid "Use sample"
@@ -5935,9 +5956,8 @@ msgid "ToC entry font size"
 msgstr "Tamanho da fonte das entradas do índice"
 
 #: frontend/apps/reader/modules/readertoc.lua:1193
-#, fuzzy
 msgid "Show chapter length"
-msgstr "Mostrar marcas de capítulo"
+msgstr "Mostrar comprimento do capítulo"
 
 #: frontend/apps/reader/modules/readertoc.lua:1204
 msgid "With dots"
@@ -5983,6 +6003,10 @@ msgid ""
 "stylesheet to style everything (which publishers probably don't).\n"
 "This is mostly only interesting for testing."
 msgstr ""
+"Isto define uma folha de estilo User-Agent vazia, e espera que a folha de "
+"estilo do documento defina o estilo de tudo (o que as editoras provavelmente "
+"não fazem).\n"
+"Em geral, isto só é interessante para testes."
 
 #: frontend/apps/reader/modules/readertypeset.lua:215
 #: plugins/kosync.koplugin/main.lua:112
@@ -5993,11 +6017,11 @@ msgstr "Automático"
 msgid ""
 "This selects the default and preferred stylesheet for the document type."
 msgstr ""
+"Isto seleciona a folha de estilo padrão e preferida para o tipo de documento."
 
 #: frontend/apps/reader/modules/readertypeset.lua:231
-#, fuzzy
 msgid "Traditional book look (epub.css)"
-msgstr "FictionBook (fb2.css)"
+msgstr "Aparência tradicional de livro (epub.css)"
 
 #: frontend/apps/reader/modules/readertypeset.lua:233
 msgid ""
@@ -6012,11 +6036,21 @@ msgid ""
 "to have our added styles at play and need to reset them; try switching to "
 "html5.css when you notice such issues."
 msgstr ""
+"Esta é a nossa folha de estilo semelhante a um livro: ela estende a folha de "
+"estilo padrão de HTML com estilos destinados a fazer o conteúdo HTML se "
+"parecer mais com um livro de papel (com texto justificado e recuo em "
+"parágrafos) do que com uma página de rede.\n"
+"Ela é perfeita para livros não estilizados, e pode fazer com que livros "
+"estilizados fiquem mais legíveis.\n"
+"Ela pode causar alguns pequenos problemas em alguns livros (títulos, "
+"cabeçalhos ou separadores descentralizados, ou recuo inesperado de texto), "
+"já que as editoras não esperam ter nossos estilos adicionais ativados e "
+"precisam redefini-los; tente mudar para o html5.css quando notar tais "
+"problemas."
 
 #: frontend/apps/reader/modules/readertypeset.lua:243
-#, fuzzy
 msgid "HTML Standard rendering (html5.css)"
-msgstr "HTML5 (html5.css)"
+msgstr "Renderização HTML Padrão (html5.css)"
 
 #: frontend/apps/reader/modules/readertypeset.lua:245
 msgid ""
@@ -6029,6 +6063,15 @@ msgid ""
 "aligned paragraphs without indentation and with spacing between them); try "
 "switching to epub.css when that happens."
 msgstr ""
+"Esta folha de estilo obedece às sugestões de renderização do padrão HTML ("
+"com algumas limitações), similar ao que a maioria dos navegadores de rede "
+"usam.\n"
+"Como a maioria das editoras atualmente fazem e testam seus livros com "
+"ferramentas baseadas em motores de navegadores de rede, ela é a folha de "
+"estilo a ser usada para visualizar um livro como essas editoras pretendiam.\n"
+"Em livros não estilizados, no entanto, ela pode dar uma aparência de página "
+"de rede (parágrafos alinhados à esquerda sem recuo e com espaçamento entre "
+"eles); tente mudar para epib.css quando isso acontecer."
 
 #: frontend/apps/reader/modules/readertypeset.lua:255
 msgid "FictionBook (fb2.css)"
@@ -6041,16 +6084,23 @@ msgid ""
 "(FictionBook 2 & 3 are open XML-based e-book formats which originated and "
 "gained popularity in Russia.)"
 msgstr ""
+"Esta folha de estilo deve ser usada somente com documentos FB2 e FB3, que "
+"não são HTML clássico, e necessitam estilização específica.\n"
+"(FictionBook 2 & 3 são formatos abertos de livro eletrônico baseados em XML "
+"que se originaram e ganharam popularidade na Rússia.)"
 
 #: frontend/apps/reader/modules/readertypeset.lua:270
 msgid ""
 "This stylesheet is obsolete: don't use it. It is kept solely to be able to "
 "open documents last read years ago and to migrate their highlights."
 msgstr ""
+"Esta folha de estilo está obsoleta: não use ela! Ela é mantida somente para "
+"ser possível abrir documentos lidos pela última vez anos atrás e para migrar "
+"seus destaques."
 
 #: frontend/apps/reader/modules/readertypeset.lua:281
 msgid "This is a user added stylesheet."
-msgstr ""
+msgstr "Esta é uma folha de estilo adicionada por usuário."
 
 #: frontend/apps/reader/modules/readertypeset.lua:287
 msgid "Obsolete"
@@ -6061,9 +6111,8 @@ msgid "Obsolete (%1)"
 msgstr "Obsoleto (%1)"
 
 #: frontend/apps/reader/modules/readertypeset.lua:411
-#, fuzzy
 msgid "Set default style for FB2 documents to %1?"
-msgstr "Definir o estilo padrão para %1?"
+msgstr "Definir o estilo padrão de documentos FB2 para %1?"
 
 #: frontend/apps/reader/modules/readertypeset.lua:412
 msgid "Set default style to %1?"
@@ -6865,9 +6914,8 @@ msgstr "Salvar o EPUB da Wikipédia na pasta do livro atual"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:217
 #: frontend/apps/reader/modules/readerwikipedia.lua:233
-#, fuzzy
 msgid "ask"
-msgstr "Bashkir"
+msgstr "perguntar"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:219
 #: frontend/ui/elements/common_settings_menu_table.lua:383
@@ -6875,19 +6923,17 @@ msgid "always"
 msgstr "sempre"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:221
-#, fuzzy
 msgid "never"
-msgstr "Nunca"
+msgstr "nunca"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:223
-#, fuzzy
 msgid "Include images in EPUB: %1"
-msgstr "Incluir imagens"
+msgstr "Incluir imagens em EPUB: %1"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:226
 #: frontend/apps/reader/modules/readerwikipedia.lua:245
 msgid "Ask"
-msgstr ""
+msgstr "Perguntar"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:227
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
@@ -6895,23 +6941,20 @@ msgid "Include images"
 msgstr "Incluir imagens"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:228
-#, fuzzy
 msgid "Don't include images"
-msgstr "Não incluir"
+msgstr "Não incluir imagens"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:235
-#, fuzzy
 msgid "higher"
-msgstr "alta"
+msgstr "mais alta"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:237
 msgid "standard"
-msgstr ""
+msgstr "padrão"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:239
-#, fuzzy
 msgid "Images quality in EPUB: %1"
-msgstr "Escala da imagem definida para: %1"
+msgstr "Qualidade das imagens em EPUB: %1"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:246
 #: frontend/ui/wikipedia.lua:813
@@ -7546,14 +7589,12 @@ msgid "Accelerometer rotation events on."
 msgstr "Eventos de rotação do acelerômetro ligados."
 
 #: frontend/device/devicelistener.lua:213
-#, fuzzy
 msgid "Orientation locked."
-msgstr "Orientação"
+msgstr "Orientação travada."
 
 #: frontend/device/devicelistener.lua:215
-#, fuzzy
 msgid "Orientation unlocked."
-msgstr "Orientação"
+msgstr "Orientação destravada."
 
 #: frontend/device/generic/device.lua:419
 msgid "Later"
@@ -7689,9 +7730,8 @@ msgid "Screenshot"
 msgstr "Captura de tela"
 
 #: frontend/dispatcher.lua:69
-#, fuzzy
 msgid "Exit sleep screen"
-msgstr "Sair do protetor de tela"
+msgstr "Sair da tela de suspensão"
 
 #: frontend/dispatcher.lua:70 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
@@ -7907,9 +7947,8 @@ msgid "Toggle status bar"
 msgstr "Alternar barra de estado"
 
 #: frontend/dispatcher.lua:139
-#, fuzzy
 msgid "Toggle chapter progress bar"
-msgstr "Mostrar barra de progresso"
+msgstr "Alternar barra de progresso do capítulo"
 
 #: frontend/dispatcher.lua:141
 msgid "Previous chapter"
@@ -7928,9 +7967,8 @@ msgid "Last page"
 msgstr "Última página"
 
 #: frontend/dispatcher.lua:145
-#, fuzzy
 msgid "Random page"
-msgstr "Páginas lidas"
+msgstr "Página aleatória"
 
 #: frontend/dispatcher.lua:146
 msgid "Turn pages"
@@ -8087,9 +8125,8 @@ msgstr[0] "1 ação"
 msgstr[1] "%1 ações"
 
 #: frontend/dispatcher.lua:721 frontend/dispatcher.lua:990
-#, fuzzy
 msgid "Arrange actions"
-msgstr "1 ação"
+msgstr "Organizar ações"
 
 #: frontend/dispatcher.lua:838
 msgid "When set to 0, the gesture's distance (if any) is used"
@@ -9182,13 +9219,15 @@ msgstr "Tamanho da fonte e famílias"
 
 #: frontend/ui/data/css_tweaks.lua:424
 msgid "Ignore font related HTML presentational hints"
-msgstr ""
+msgstr "Ignorar sugestões de apresentação de HTML relacionadas à fonte"
 
 #: frontend/ui/data/css_tweaks.lua:425
 msgid ""
 "Ignore HTML attributes that contribute to styles on the elements <body> "
 "(bgcolor, text…) and <font> (face, size, color…)."
 msgstr ""
+"Ignorar atibutos de HTML que contribuem para o estilo de elementos <body> ("
+"bgcolor, text…) e <font> (face, size, color…)."
 
 #: frontend/ui/data/css_tweaks.lua:431
 msgid "Ignore publisher font families"
@@ -9382,9 +9421,8 @@ msgid "Tables"
 msgstr "Tabelas"
 
 #: frontend/ui/data/css_tweaks.lua:576
-#, fuzzy
 msgid "Ignore tables related HTML presentational hints"
-msgstr "Ignorar eventos de rotação do acelerômetro"
+msgstr "Ignorar sugestões de apresentação de HTML relacionadas a tabelas"
 
 #: frontend/ui/data/css_tweaks.lua:577
 msgid ""
@@ -9392,6 +9430,9 @@ msgid ""
 "its sub-elements (ie. align, valign, frame, rules, border, cellpadding, "
 "cellspacing…)."
 msgstr ""
+"Ignorar atributos de HTML que contribuem para o estilo de elementos <table> "
+"e seus subelementos (isto é, align, valign, frame, rules, border, "
+"cellpadding, cellspacing…)."
 
 #: frontend/ui/data/css_tweaks.lua:583
 msgid "Full-width tables"
@@ -11712,7 +11753,6 @@ msgid "Open fonts folder"
 msgstr "Abrir pasta de fontes"
 
 #: frontend/ui/elements/font_ui_fallbacks.lua:53
-#, fuzzy
 msgid ""
 "If some book titles, dictionary entries and such are not displayed well but "
 "shown as %1 or %2, it may be necessary to download the required fonts for "
@@ -11733,10 +11773,10 @@ msgstr ""
 "\n"
 "https://fonts.google.com/noto\n"
 "\n"
-"Somente fontes com o nome \"Noto Sans xyz\" ou \"Noto Sans xyz "
-"UI\" (regular, sem negrito, sem itálico e sem serifa) estarão disponíveis "
-"neste menu. No entanto, as fontes em negrito serão usadas se existirem suas "
-"fontes regulares correspondentes."
+"Somente fontes com o nome \"Noto Sans xyz\" ou \"Noto Sans xyz UI\" ("
+"regular, sem negrito, sem itálico e sem serifa) estarão disponíveis neste "
+"menu. No entanto, as fontes em negrito serão usadas se suas fontes regulares "
+"correspondentes existirem."
 
 #: frontend/ui/elements/font_ui_fallbacks.lua:104
 msgid "About additional UI fallback fonts"
@@ -12406,7 +12446,7 @@ msgstr "Editar mensagem da tela de suspensão"
 #: frontend/ui/elements/screensaver_menu.lua:135
 #, fuzzy
 msgid "Background fill"
-msgstr "Preenchimento do segundo plano"
+msgstr "Preenchimento do fundo"
 
 #: frontend/ui/elements/screensaver_menu.lua:136
 msgid ""
@@ -13237,12 +13277,10 @@ msgid "Current screensaver folder:"
 msgstr "Pasta atual do protetor de tela:"
 
 #: frontend/ui/screensaver.lua:278
-#, fuzzy
 msgid "Current sleep screen image or document cover:"
-msgstr "Capa de documento atual para protetor de tela:"
+msgstr "Imagem da tela de suspensão ou capa de documento atual:"
 
 #: frontend/ui/screensaver.lua:318
-#, fuzzy
 msgid ""
 "Enter a custom message to be displayed on the sleep screen. The following "
 "escape sequences are available:\n"
@@ -13256,14 +13294,14 @@ msgid ""
 "  %H time left in document\n"
 "  %b battery level"
 msgstr ""
-"Digite a mensagem a ser exibida pelo protetor de tela. As seguintes "
-"sequências de escape podem ser usadas:\n"
+"Digite uma mensagem personalizada a ser exibida na tela de suspensão. As "
+"seguintes sequências de escape podem ser usadas:\n"
 "  %T título\n"
-"  %A autores\n"
+"  %A autor(es)\n"
 "  %S série\n"
 "  %c número da página atual\n"
-"  %t número total de páginas\n"
-"  %p porcentagem de leitura\n"
+"  %t número de páginas total\n"
+"  %p porcentagem lida\n"
 "  %h tempo restante no capítulo\n"
 "  %H tempo restante no documento\n"
 "  %b nível de bateria"
@@ -13947,16 +13985,15 @@ msgstr "tipo"
 
 #: frontend/ui/widget/filechooser.lua:154
 msgid "percent - unopened first"
-msgstr "porcentagem - não abertos primeiro"
+msgstr "porcentagem – não abertos primeiro"
 
 #: frontend/ui/widget/filechooser.lua:184
 msgid "percent - unopened last"
-msgstr "porcentagem - não abertos por último"
+msgstr "porcentagem – não abertos por último"
 
 #: frontend/ui/widget/filechooser.lua:215
-#, fuzzy
 msgid "percent – unopened – finished last"
-msgstr "porcentagem - não abertos - concluídos"
+msgstr "porcentagem – não abertos – concluídos por último"
 
 #: frontend/ui/widget/filechooser.lua:366
 msgid "Current folder not readable. Some content may not be shown."
@@ -14542,7 +14579,7 @@ msgstr "Levando você lá…"
 
 #: frontend/ui/widget/touchmenu.lua:1260
 msgid "Walk me there"
-msgstr "Leve-me lá"
+msgstr "Ir para lá"
 
 #: frontend/ui/widget/touchmenu.lua:1287
 #: plugins/calibre.koplugin/search.lua:495
