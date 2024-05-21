@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-20 19:26+0000\n"
+"POT-Creation-Date: 2024-05-21 19:17+0000\n"
 "PO-Revision-Date: 2024-05-21 19:17+0000\n"
 "Last-Translator: sonix-github <sonix.internet@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -47,7 +47,7 @@ msgid "Ignore"
 msgstr "Ignorovať"
 
 #: reader.lua:207 frontend/apps/reader/modules/readerdictionary.lua:1272
-#: frontend/apps/reader/modules/readerfooter.lua:1604
+#: frontend/apps/reader/modules/readerfooter.lua:1974
 #: frontend/apps/reader/modules/readerrolling.lua:572
 #: frontend/apps/reader/modules/readertypography.lua:332
 #: frontend/apps/reader/modules/readertypography.lua:421
@@ -170,7 +170,7 @@ msgstr "Zadajte názov súboru"
 #: frontend/apps/reader/modules/readerbookmark.lua:1220
 #: frontend/apps/reader/modules/readercropping.lua:60
 #: frontend/apps/reader/modules/readerdictionary.lua:733
-#: frontend/apps/reader/modules/readerfooter.lua:634
+#: frontend/apps/reader/modules/readerfooter.lua:637
 #: frontend/apps/reader/modules/readergoto.lua:68
 #: frontend/apps/reader/modules/readerhandmade.lua:491
 #: frontend/apps/reader/modules/readerlink.lua:220
@@ -1180,7 +1180,7 @@ msgstr "Ťuknúť sem pre zobrazenie"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:159
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:670
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:671
-#: frontend/apps/reader/modules/readerfooter.lua:2114
+#: frontend/apps/reader/modules/readerfooter.lua:2145
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:286 frontend/ui/screensaver.lua:93
 #: frontend/ui/screensaver.lua:126 frontend/ui/screensaver.lua:127
@@ -1636,7 +1636,6 @@ msgstr "Nie je možné otvoriť posledný dokument"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:155
 #: frontend/apps/reader/modules/readerdictionary.lua:211
-#: frontend/apps/reader/modules/readerfooter.lua:1097
 #: frontend/apps/reader/modules/readertoc.lua:1003
 #: frontend/ui/otamanager.lua:494 plugins/newsdownloader.koplugin/main.lua:124
 #: plugins/perceptionexpander.koplugin/main.lua:176
@@ -1686,6 +1685,7 @@ msgid "Items per page"
 msgstr "Položiek na stranu"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:207
+#: frontend/apps/reader/modules/readerfooter.lua:1617
 msgid "Item font size: %1"
 msgstr "Veľkosť písma položiek: %1"
 
@@ -2440,11 +2440,11 @@ msgid "Alt status bar"
 msgstr "Alternatívny stavový riadok"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:214
-msgid "About alternate status bar"
+#, fuzzy
+msgid "About alt status bar"
 msgstr "O alternatívnom stavovom riadku"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:224
-#: frontend/apps/reader/modules/readerfooter.lua:1142
 msgid "Auto refresh"
 msgstr "Automatické obnovenie"
 
@@ -2453,7 +2453,7 @@ msgid "Book author and title"
 msgstr "Autor a názov knihy"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:246
-#: frontend/apps/reader/modules/readerfooter.lua:971
+#: frontend/apps/reader/modules/readerfooter.lua:975
 msgid "Current time"
 msgstr "Aktuálny čas"
 
@@ -2462,7 +2462,7 @@ msgid "Total pages"
 msgstr "Celkový počet strán"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:276
-#: frontend/apps/reader/modules/readerfooter.lua:976
+#: frontend/apps/reader/modules/readerfooter.lua:980
 msgid "Progress percentage"
 msgstr "Prečítané v percentách"
 
@@ -2471,58 +2471,40 @@ msgid "Chapter marks"
 msgstr "Značky kapitol"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:297
-#: frontend/dispatcher.lua:109 frontend/dispatcher.lua:115
-#: frontend/dispatcher.lua:117 frontend/dispatcher.lua:119
-#: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
-#: frontend/ui/data/creoptions.lua:341 frontend/ui/data/creoptions.lua:358
-#: frontend/ui/data/creoptions.lua:648 frontend/ui/data/creoptions.lua:671
-#: frontend/ui/data/creoptions.lua:684 frontend/ui/data/creoptions.lua:696
-#: frontend/ui/data/creoptions.lua:735 frontend/ui/data/koptoptions.lua:358
-#: frontend/ui/data/koptoptions.lua:467 frontend/ui/data/koptoptions.lua:504
-#: frontend/ui/data/koptoptions.lua:514 frontend/ui/data/koptoptions.lua:527
-#: frontend/ui/data/koptoptions.lua:570 frontend/ui/data/koptoptions.lua:613
-#: plugins/coverimage.koplugin/main.lua:484
-#: plugins/coverimage.koplugin/main.lua:506
-#: plugins/coverimage.koplugin/main.lua:641
-#: plugins/vocabbuilder.koplugin/main.lua:122
-#: plugins/vocabbuilder.koplugin/main.lua:139
-msgid "off"
-msgstr "vypnuté"
-
-#: frontend/apps/reader/modules/readercoptlistener.lua:300
-msgid "percentage"
-msgstr "percent"
-
-#: frontend/apps/reader/modules/readercoptlistener.lua:302
-msgid "icon"
-msgstr "ikona"
-
-#: frontend/apps/reader/modules/readercoptlistener.lua:305
-msgid "Battery status: %1"
+#, fuzzy
+msgid "Battery status"
 msgstr "Stav batérie: %1"
 
-#: frontend/apps/reader/modules/readercoptlistener.lua:309
+#: frontend/apps/reader/modules/readercoptlistener.lua:300
+#, fuzzy
+msgid "Battery status: percentage"
+msgstr "Úroveň nabitia batérie"
+
+#: frontend/apps/reader/modules/readercoptlistener.lua:302
+#, fuzzy
+msgid "Battery status: icon"
+msgstr "Stav batérie: %1"
+
+#: frontend/apps/reader/modules/readercoptlistener.lua:312
 msgid "Battery icon"
 msgstr "Ikona batérie"
 
-#: frontend/apps/reader/modules/readercoptlistener.lua:329
+#: frontend/apps/reader/modules/readercoptlistener.lua:332
 msgid "Battery percentage"
 msgstr "Úroveň nabitia batérie"
 
-#: frontend/apps/reader/modules/readercoptlistener.lua:352
+#: frontend/apps/reader/modules/readercoptlistener.lua:355
 #: frontend/apps/reader/modules/readerdictionary.lua:353
-#: frontend/apps/reader/modules/readerfooter.lua:1190
 #: frontend/ui/widget/textviewer.lua:597 plugins/terminal.koplugin/main.lua:518
 msgid "Font size: %1"
 msgstr "Veľkosť písma: %1"
 
-#: frontend/apps/reader/modules/readercoptlistener.lua:363
+#: frontend/apps/reader/modules/readercoptlistener.lua:366
 msgid "Size of top status bar"
 msgstr "Veľkosť horného stavového riadku"
 
-#: frontend/apps/reader/modules/readercoptlistener.lua:364
-#: frontend/apps/reader/modules/readerfooter.lua:1200
-#: frontend/apps/reader/modules/readerfooter.lua:1744
+#: frontend/apps/reader/modules/readercoptlistener.lua:367
+#: frontend/apps/reader/modules/readerfooter.lua:1627
 msgid "Set size"
 msgstr "Nastaviť veľkosť"
 
@@ -3316,19 +3298,19 @@ msgstr "%1 Vypnuté"
 msgid "%1 On"
 msgstr "%1 Zapnuté"
 
-#: frontend/apps/reader/modules/readerfooter.lua:618
+#: frontend/apps/reader/modules/readerfooter.lua:621
 msgid "Enter a custom text"
 msgstr "Zadajte vlastný text"
 
-#: frontend/apps/reader/modules/readerfooter.lua:622
+#: frontend/apps/reader/modules/readerfooter.lua:625
 msgid "Custom string:"
 msgstr "Vlastný reťazec:"
 
-#: frontend/apps/reader/modules/readerfooter.lua:627
+#: frontend/apps/reader/modules/readerfooter.lua:630
 msgid "Number of repetitions:"
 msgstr "Počet opakovaní:"
 
-#: frontend/apps/reader/modules/readerfooter.lua:641
+#: frontend/apps/reader/modules/readerfooter.lua:644
 #: frontend/apps/reader/modules/readerzooming.lua:705
 #: frontend/ui/screensaver.lua:362 plugins/autowarmth.koplugin/main.lua:673
 #: plugins/autowarmth.koplugin/main.lua:838
@@ -3339,304 +3321,336 @@ msgstr "Počet opakovaní:"
 msgid "Set"
 msgstr "Nastaviť"
 
-#: frontend/apps/reader/modules/readerfooter.lua:676
+#: frontend/apps/reader/modules/readerfooter.lua:679
 msgid "Can be configured to include or exclude the current page."
 msgstr "Dá sa nakonfigurovať na zahrnutie alebo vylúčenie aktuálnej stránky."
 
-#: frontend/apps/reader/modules/readerfooter.lua:677
+#: frontend/apps/reader/modules/readerfooter.lua:680
 msgid "Progress percentage can be shown with zero, one or two decimal places."
 msgstr ""
 "Priebeh čítania môže byť zobrazený ako celé číslo, alebo číslo s jedným "
 "alebo dvoma desatinnými miestami."
 
-#: frontend/apps/reader/modules/readerfooter.lua:678
+#: frontend/apps/reader/modules/readerfooter.lua:681
 msgid "Show memory usage in MiB."
 msgstr "Zobraziť využitie pamäte v MiB."
 
-#: frontend/apps/reader/modules/readerfooter.lua:965
-msgid "Show all at once"
-msgstr "Zobraziť všetko naraz"
+#: frontend/apps/reader/modules/readerfooter.lua:682
+msgid ""
+"When status bar is hidden, this setting will utilize the entirety of screen "
+"real state (for your book) and will temporarily overlap status bar and text "
+"when shown."
+msgstr ""
 
-#: frontend/apps/reader/modules/readerfooter.lua:966
-msgid "Reclaim bar height from bottom margin"
-msgstr "Vynútiť výšku lišty od spodného okraja"
+#: frontend/apps/reader/modules/readerfooter.lua:969
+#, fuzzy
+msgid "Show all selected items at once"
+msgstr "Zobraziť zoznam vybratých súborov"
 
-#: frontend/apps/reader/modules/readerfooter.lua:967
+#: frontend/apps/reader/modules/readerfooter.lua:970
+#, fuzzy
+msgid "Overlap status bar"
+msgstr "Alternatívny stavový riadok"
+
+#: frontend/apps/reader/modules/readerfooter.lua:971
 msgid "Bookmark count (%1)"
 msgstr "Počet záložiek (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:968
+#: frontend/apps/reader/modules/readerfooter.lua:972
 msgid "Current page (%1)"
 msgstr "Aktuálna stránka (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:969
+#: frontend/apps/reader/modules/readerfooter.lua:973
 msgid "Pages left in book (%1)"
 msgstr "Počet zostávajúcich strán v knihe (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:971
+#: frontend/apps/reader/modules/readerfooter.lua:975
 msgid "Current time (%1)"
 msgstr "Aktuálny čas (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:972
+#: frontend/apps/reader/modules/readerfooter.lua:976
 msgid "Current page in chapter (%1)"
 msgstr "Aktuálna strana v kapitole (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:973
+#: frontend/apps/reader/modules/readerfooter.lua:977
 msgid "Pages left in chapter (%1)"
 msgstr "Zostávajúce strany v kapitole (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:974
-msgid "Battery status (%1)"
-msgstr "Úroveň nabitia batérie (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:978
+#, fuzzy
+msgid "Battery percentage (%1)"
+msgstr "Úroveň nabitia batérie"
 
-#: frontend/apps/reader/modules/readerfooter.lua:976
+#: frontend/apps/reader/modules/readerfooter.lua:980
 msgid "Progress percentage (%1)"
 msgstr "Priebeh čítania (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:978
-msgid "Book time to read (%1)"
-msgstr "Čas na prečítanie knihy (%1)"
-
-#: frontend/apps/reader/modules/readerfooter.lua:978
-msgid "Book time to read"
-msgstr "Čas na prečítanie knihy"
-
-#: frontend/apps/reader/modules/readerfooter.lua:979
-msgid "Chapter time to read (%1)"
-msgstr "Čas na prečítanie kapitoly (%1)"
-
-#: frontend/apps/reader/modules/readerfooter.lua:980
-msgid "Frontlight level (%1)"
-msgstr "Úroveň nasvietenia/podsvietenia displeja (%1)"
-
-#: frontend/apps/reader/modules/readerfooter.lua:981
-msgid "Frontlight warmth (%1)"
-msgstr "Farebná teplota nasvietenia/podsvietenia displeja (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:982
+#, fuzzy
+msgid "Time left to finish book (%1)"
+msgstr "Počet zostávajúcich strán v knihe (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:982
+#, fuzzy
+msgid "Time left to finish book"
+msgstr "Čas strávený čítaním tejto knihy"
+
+#: frontend/apps/reader/modules/readerfooter.lua:983
+#, fuzzy
+msgid "Time left to finish chapter (%1)"
+msgstr "Zostávajúce strany v kapitole (%1)"
+
+#: frontend/apps/reader/modules/readerfooter.lua:984
+#, fuzzy
+msgid "Brightness level (%1)"
+msgstr "Úroveň nasvietenia/podsvietenia displeja (%1)"
+
+#: frontend/apps/reader/modules/readerfooter.lua:985
+#, fuzzy
+msgid "Warmth level (%1)"
+msgstr "Úroveň nasvietenia/podsvietenia displeja (%1)"
+
+#: frontend/apps/reader/modules/readerfooter.lua:986
 msgid "KOReader memory usage (%1)"
 msgstr "Využitie pamäte KOReader (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:983
+#: frontend/apps/reader/modules/readerfooter.lua:987
 msgid "Wi-Fi status (%1)"
 msgstr "Stav Wi-Fi (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:984
+#: frontend/apps/reader/modules/readerfooter.lua:988
 msgid "Book title"
 msgstr "Názov knihy"
 
-#: frontend/apps/reader/modules/readerfooter.lua:985
-msgid "Current chapter"
-msgstr "Súčasná kapitola"
+#: frontend/apps/reader/modules/readerfooter.lua:989
+#, fuzzy
+msgid "Chapter title"
+msgstr "Názov kapitoly tabuľky obsahu knihy"
 
-#: frontend/apps/reader/modules/readerfooter.lua:986
-msgid "Custom text: '%1'%2"
+#: frontend/apps/reader/modules/readerfooter.lua:990
+#, fuzzy
+msgid "Custom text (long press to edit): '%1'%2"
 msgstr "Vlastný text: '%1'%2"
 
-#: frontend/apps/reader/modules/readerfooter.lua:996
+#: frontend/apps/reader/modules/readerfooter.lua:1000
 msgid "Status bar"
 msgstr "Stavový riadok"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1005
+#: frontend/apps/reader/modules/readerfooter.lua:1008
 msgid "Toggle mode"
 msgstr "Prepínať režim"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1100
-msgid "Sort items"
-msgstr "Triediť položky"
+msgid "Progress bar"
+msgstr "Lišta s indikáciou priebehu"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1110
-msgid "Sort footer items"
-msgstr "Zoradiť položky päty"
+#: frontend/apps/reader/modules/readerfooter.lua:1104
+msgid "Show progress bar"
+msgstr "Zobraziť lištu s indikátorom priebehu"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1127
-msgid "Hide empty items"
-msgstr "Skryť prázdne položky"
+#: frontend/apps/reader/modules/readerfooter.lua:1123
+#, fuzzy
+msgid "Show chapter-progress bar instead"
+msgstr "Prepínať lištu s priebehom čítania kapitoly"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1128
-msgid "This will hide values like 0 or off."
-msgstr "Týmto sa skryjú hodnoty ako 0 alebo vypnuté."
+#: frontend/apps/reader/modules/readerfooter.lua:1124
+msgid "Show progress bar for the current chapter, instead of the whole book."
+msgstr ""
+"Zobraziť indikátor priebehu pre aktuálnu kapitolu namiesto celej knihy."
 
-#: frontend/apps/reader/modules/readerfooter.lua:1152
-msgid "Show footer separator"
-msgstr "Zobraziť oddeľovač päty"
+#: frontend/apps/reader/modules/readerfooter.lua:1138
+msgid "alongside items"
+msgstr "popri položkách"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1162
-msgid "Lock status bar"
-msgstr "Zamknúť stavový riadok"
+#: frontend/apps/reader/modules/readerfooter.lua:1140
+msgid "above items"
+msgstr "nad položkami"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1171
-msgid "Hold footer to skim"
-msgstr "Pre \"prebehnutie\" dokumentu podržte pätu"
+#: frontend/apps/reader/modules/readerfooter.lua:1142
+msgid "below items"
+msgstr "pod položkami"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1183
-msgid "bold"
-msgstr "hrubé"
+#: frontend/apps/reader/modules/readerfooter.lua:1144
+msgid "Position: %1"
+msgstr "Pozícia: %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1185
-msgid "Font: %1%2"
-msgstr "Písmo: %1%2"
+#: frontend/apps/reader/modules/readerfooter.lua:1151
+msgid "Above items"
+msgstr "Nad položkami"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1201
-msgid "Footer font size"
-msgstr "Veľkosť písma päty"
+#: frontend/apps/reader/modules/readerfooter.lua:1161
+msgid "Alongside items"
+msgstr "Popri položkách"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1221
-msgid "Use bold font"
-msgstr "Použiť tučné písmo"
+#: frontend/apps/reader/modules/readerfooter.lua:1179
+msgid "Below items"
+msgstr "Pod položkami"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1243
-msgid "Container height: %1"
-msgstr "Výška kontajnera: %1"
+#: frontend/apps/reader/modules/readerfooter.lua:1193
+msgid "Thickness and height: thin"
+msgstr ""
 
-#: frontend/apps/reader/modules/readerfooter.lua:1253
+#: frontend/apps/reader/modules/readerfooter.lua:1195
+msgid "Thickness and height: thick"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:1203
+#: frontend/apps/reader/modules/readerfooter.lua:1443
+msgid "Thick"
+msgstr "Široký"
+
+#: frontend/apps/reader/modules/readerfooter.lua:1216
+#: frontend/apps/reader/modules/readerfooter.lua:1421
+msgid "Thin"
+msgstr "Úzky"
+
+#: frontend/apps/reader/modules/readerfooter.lua:1229
+#: frontend/apps/reader/modules/readerfooter.lua:1900
 msgid "Set height"
 msgstr "Nastaviť výšku"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1254
-msgid "Container height"
-msgstr "Výška kontajnera"
+#: frontend/apps/reader/modules/readerfooter.lua:1251
+#, fuzzy
+msgid "Progress bar height"
+msgstr "Veľkosť lišty s indikátorom priebehu"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1269
-msgid "Container bottom margin: %1"
-msgstr "Spodný okraj kontajnera: %1"
+#: frontend/apps/reader/modules/readerfooter.lua:1270
+msgid "static margins (10)"
+msgstr "statické okraje (10)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1279
-msgid "Set margin"
-msgstr "Nastaviť okraj"
+#: frontend/apps/reader/modules/readerfooter.lua:1273
+msgid "no margins (0)"
+msgstr "žiadne okraje (0)"
+
+#: frontend/apps/reader/modules/readerfooter.lua:1275
+msgid "static margins (%1)"
+msgstr "statické okraje (%1)"
+
+#: frontend/apps/reader/modules/readerfooter.lua:1278
+msgid "same as book margins (%1)"
+msgstr "rovnaké ako okraje knihy (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1280
-msgid "Container bottom margin"
-msgstr "Spodný okraj kontajnera"
+msgid "Margins: %1"
+msgstr "Okraje: %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1294
-msgid "Maximum width of items"
-msgstr "Maximálna šírka položiek"
+#: frontend/apps/reader/modules/readerfooter.lua:1288
+msgid "No margins (0)"
+msgstr "Žiadne okraje (0)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1298
-msgid "Book title: %1 %"
-msgstr "Názov knihy: %1 %"
+#: frontend/apps/reader/modules/readerfooter.lua:1302
+msgid "Same as book margins"
+msgstr "Rovnaké ako okraje knihy"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1309
-#: frontend/apps/reader/modules/readerfooter.lua:1335
-msgid "Maximum width"
-msgstr "Maximálna šírka"
+#: frontend/apps/reader/modules/readerfooter.lua:1304
+msgid "Same as book margins (%1)"
+msgstr "Rovnaké ako okraje knihy (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1310
-msgid "Maximum book title width in percentage of screen width"
-msgstr "Maximálna šírka názvu knihy v percentách šírky obrazovky"
+#: frontend/apps/reader/modules/readerfooter.lua:1321
+msgid "Static margins (%1)"
+msgstr "Statické okraje (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1324
-msgid "Current chapter: %1 %"
-msgstr "Aktuálna kapitola: %1 %"
+#: frontend/apps/reader/modules/readerfooter.lua:1347
+#, fuzzy
+msgid "Minimum progress bar width: %1%"
+msgstr "Minimálna šírka: %1 %"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1336
-msgid "Maximum chapter width in percentage of screen width"
-msgstr "Maximálna šírka kapitoly v percentách šírky obrazovky"
+#: frontend/apps/reader/modules/readerfooter.lua:1362
+#, fuzzy
+msgid "Minimum progress bar width"
+msgstr "Minimálna šírka"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1354
-#: frontend/apps/reader/modules/readerfooter.lua:1378
-#: frontend/ui/widget/doublespinwidget.lua:30
-msgid "Left"
-msgstr "Vľavo"
+#: frontend/apps/reader/modules/readerfooter.lua:1363
+msgid "Minimum percentage of screen width assigned to progress bar"
+msgstr ""
 
-#: frontend/apps/reader/modules/readerfooter.lua:1356
-#: frontend/apps/reader/modules/readerfooter.lua:1388
-#: frontend/ui/widget/doublespinwidget.lua:36
-msgid "Right"
-msgstr "Vpravo"
+#: frontend/apps/reader/modules/readerfooter.lua:1377
+#, fuzzy
+msgid "Show initial-position marker"
+msgstr "Zobraziť značku počiatočnej pozície"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1358
-#: frontend/apps/reader/modules/readerfooter.lua:1368
-#: frontend/apps/reader/modules/readerhighlight.lua:373
-msgid "Center"
-msgstr "Na stred"
-
-#: frontend/apps/reader/modules/readerfooter.lua:1360
-msgid "Alignment: %1"
-msgstr "Zarovnanie: %1"
-
-#: frontend/apps/reader/modules/readerfooter.lua:1403
-msgctxt "Status bar"
-msgid "Icons"
-msgstr "Ikony"
-
-#: frontend/apps/reader/modules/readerfooter.lua:1405
-msgctxt "Status bar"
-msgid "Compact"
-msgstr "Kompaktné"
+#: frontend/apps/reader/modules/readerfooter.lua:1391
+msgid "Show chapter markers"
+msgstr "Zobraziť značky pre kapitoly"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1407
-msgctxt "Status bar"
-msgid "Letters"
-msgstr "Písmená"
+msgid "thick"
+msgstr "široké"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1409
-msgid "Item style: %1"
-msgstr "Typ oddeľovača položiek: %1"
+msgid "thin"
+msgstr "úzke"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1418
-msgctxt "Status bar"
-msgid "Icons (%1)"
-msgstr "Ikony (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:1411
+#: frontend/ui/data/koptoptions.lua:600
+msgid "medium"
+msgstr "stredné"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1434
-msgctxt "Status bar"
-msgid "Letters (%1)"
-msgstr "Písmená (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:1413
+#, fuzzy
+msgid "Chapter marker width: %1"
+msgstr "Šírka značky pre kapitoly (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1450
-msgctxt "Status bar"
-msgid "Compact (%1)"
-msgstr "Kompaktné (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:1432
+msgid "Medium"
+msgstr "Stredné"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1466
-msgid "Item separator: %1"
-msgstr "Oddeľovač položiek: %1"
+#: frontend/apps/reader/modules/readerfooter.lua:1460
+#, fuzzy
+msgid "Status bar items"
+msgstr "Stavový riadok"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1470
-msgid "Vertical line (|)"
-msgstr "Vertikálna čiara (|)"
+#: frontend/apps/reader/modules/readerfooter.lua:1491
+#, fuzzy
+msgid "Configure items"
+msgstr "Konfigurovať"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1480
-msgid "Bullet (•)"
-msgstr "Odrážka (•)"
+#: frontend/apps/reader/modules/readerfooter.lua:1494
+#, fuzzy
+msgid "Arrange items in status bar"
+msgstr "Alternatívny stavový riadok"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1490
-msgid "Dot (·)"
-msgstr "Bodka (·)"
+#: frontend/apps/reader/modules/readerfooter.lua:1504
+#, fuzzy
+msgid "Arrange items"
+msgstr "Zoradiť akcie"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1500
-msgid "No separator"
-msgstr "Žiaden oddeľovač"
+#: frontend/apps/reader/modules/readerfooter.lua:1521
+#, fuzzy
+msgid "Auto refresh items"
+msgstr "Čas automatickej obnovy"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1513
-msgid "Progress percentage format: %1"
-msgstr "Percentuálny formát priebehu čítania: %1"
+#: frontend/apps/reader/modules/readerfooter.lua:1522
+msgid ""
+"This option allows certain items to update without needing user interaction "
+"(i.e page refresh). For example, the time item will update every minute "
+"regardless of user input."
+msgstr ""
 
-#: frontend/apps/reader/modules/readerfooter.lua:1519
-msgid "No decimal point (%1)"
-msgstr "Bez desatinnej čiarky (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:1532
+#, fuzzy
+msgid "Hide inactive items"
+msgstr "Skryť prázdne položky"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1531
-msgid "1 digit after decimal point (%1)"
-msgstr "1 číslica za desatinnou čiarkou (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:1533
+msgid ""
+"This option will hide inactive items from appearing on the status bar. For "
+"example, if the frontlight is 'off' (i.e 0 brightness), no symbols or values "
+"will be displayed until the brightness is set to a value >= 1."
+msgstr ""
 
-#: frontend/apps/reader/modules/readerfooter.lua:1543
-msgid "2 digits after decimal point (%1)"
-msgstr "2 číslice za desatinnou čiarkou (%1)"
-
-#: frontend/apps/reader/modules/readerfooter.lua:1556
+#: frontend/apps/reader/modules/readerfooter.lua:1546
 msgid "Include current page in pages left"
 msgstr "Zahrnúť aktuálnu stranu do zostávajúcich strán"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1557
+#: frontend/apps/reader/modules/readerfooter.lua:1547
+#, fuzzy
 msgid ""
-"Normally, the current page is not counted as remaining, so \"pages "
-"left\" (in a book or chapter with n pages) will run from n-1 to 0 on the "
-"last page.\n"
-"With this enabled, the current page is included, so the count goes from n to "
-"1 instead."
+"By default, KOReader does not include the current page when calculating "
+"pages left. For example, in a book or chapter with n pages the 'pages left' "
+"item will range from 'n−1' to 0 (last page).\n"
+"With this feature enabled, the current page is factored in, resulting in the "
+"count going from n to 1 instead."
 msgstr ""
 "Bežne sa aktuálna strana nepočíta ako zostávajúca, takže „zostávajúce "
 "strany“ (v knihe alebo kapitole s n stranami) budú prebiehať od n-1 po 0 na "
@@ -3644,162 +3658,209 @@ msgstr ""
 "Keď je toto povolené, aktuálna stránka je zahrnutá, takže počet sa namiesto "
 "toho mení od n do 1."
 
-#: frontend/apps/reader/modules/readerfooter.lua:1577
-msgid "Hide battery status if level higher than: %1 %"
-msgstr "Skryť stav batérie, ak je úroveň nabitia vyššia ako: %1 %"
+#: frontend/apps/reader/modules/readerfooter.lua:1563
+msgid "Progress percentage format: %1"
+msgstr "Percentuálny formát priebehu čítania: %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1579
-msgid "Hide battery status"
-msgstr "Skryť stav batérie"
+#: frontend/apps/reader/modules/readerfooter.lua:1570
+#, fuzzy
+msgid "No decimal places (%1)"
+msgstr "Bez desatinnej čiarky (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1598
-msgid "Hide battery threshold"
-msgstr "Skryť hraničnú úroveň batérie"
+#: frontend/apps/reader/modules/readerfooter.lua:1582
+#, fuzzy
+msgid "1 decimal place (%1)"
+msgstr "Bez desatinnej čiarky (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1617
-msgid "Progress bar"
-msgstr "Lišta s indikáciou priebehu"
+#: frontend/apps/reader/modules/readerfooter.lua:1594
+#, fuzzy
+msgid "2 decimal places (%1)"
+msgstr "Bez desatinnej čiarky (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1621
-msgid "Show progress bar"
-msgstr "Zobraziť lištu s indikátorom priebehu"
+#: frontend/apps/reader/modules/readerfooter.lua:1610
+msgid "bold"
+msgstr "hrubé"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1640
-msgid "Chapter progress"
-msgstr "Priebeh čítania kapitoly"
+#: frontend/apps/reader/modules/readerfooter.lua:1612
+#, fuzzy
+msgid "Item font: %1%2"
+msgstr "Veľkosť písma položiek: %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1641
-msgid "Show progress bar for the current chapter, instead of the whole book."
-msgstr ""
-"Zobraziť indikátor priebehu pre aktuálnu kapitolu namiesto celej knihy."
+#: frontend/apps/reader/modules/readerfooter.lua:1628
+#, fuzzy
+msgid "Set font size for items"
+msgstr "Nastaviť veľkosť písma na %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1654
-msgid "alongside items"
-msgstr "popri položkách"
+#: frontend/apps/reader/modules/readerfooter.lua:1648
+#, fuzzy
+msgid "Items in bold"
+msgstr "tučným písmom"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1656
-msgid "above items"
-msgstr "nad položkami"
+#: frontend/apps/reader/modules/readerfooter.lua:1672
+#, fuzzy
+msgctxt "Status bar"
+msgid "icons"
+msgstr "ikona"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1658
-msgid "below items"
-msgstr "pod položkami"
+#: frontend/apps/reader/modules/readerfooter.lua:1674
+#, fuzzy
+msgctxt "Status bar"
+msgid "compact"
+msgstr "kompaktné"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1660
-msgid "Position: %1"
-msgstr "Pozícia: %1"
+#: frontend/apps/reader/modules/readerfooter.lua:1676
+#, fuzzy
+msgctxt "Status bar"
+msgid "letters"
+msgstr "Písmená"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1667
-msgid "Above items"
-msgstr "Nad položkami"
+#: frontend/apps/reader/modules/readerfooter.lua:1678
+#, fuzzy
+msgid "Item symbols: %1"
+msgstr "Typ oddeľovača položiek: %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1677
-msgid "Alongside items"
-msgstr "Popri položkách"
+#: frontend/apps/reader/modules/readerfooter.lua:1687
+msgctxt "Status bar"
+msgid "Icons (%1)"
+msgstr "Ikony (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1695
-msgid "Below items"
-msgstr "Pod položkami"
-
-#: frontend/apps/reader/modules/readerfooter.lua:1709
-msgid "Style: thin"
-msgstr "Štýl: úzky"
-
-#: frontend/apps/reader/modules/readerfooter.lua:1711
-msgid "Style: thick"
-msgstr "Štýl: široký"
+#: frontend/apps/reader/modules/readerfooter.lua:1703
+msgctxt "Status bar"
+msgid "Letters (%1)"
+msgstr "Písmená (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1719
-#: frontend/apps/reader/modules/readerfooter.lua:1834
-msgid "Thick"
-msgstr "Široký"
+msgctxt "Status bar"
+msgid "Compact (%1)"
+msgstr "Kompaktné (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1732
-#: frontend/apps/reader/modules/readerfooter.lua:1812
-msgid "Thin"
-msgstr "Úzky"
+#: frontend/apps/reader/modules/readerfooter.lua:1735
+msgid "Item separator: %1"
+msgstr "Oddeľovač položiek: %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1766
-msgid "Progress bar size"
-msgstr "Veľkosť lišty s indikátorom priebehu"
+#: frontend/apps/reader/modules/readerfooter.lua:1740
+#, fuzzy
+msgid "Vertical bar (|)"
+msgstr "Vertikálna čiara (|)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1783
-msgid "Show chapter markers"
-msgstr "Zobraziť značky pre kapitoly"
+#: frontend/apps/reader/modules/readerfooter.lua:1750
+msgid "Bullet (•)"
+msgstr "Odrážka (•)"
+
+#: frontend/apps/reader/modules/readerfooter.lua:1760
+msgid "Dot (·)"
+msgstr "Bodka (·)"
+
+#: frontend/apps/reader/modules/readerfooter.lua:1770
+msgid "No separator"
+msgstr "Žiaden oddeľovač"
+
+#: frontend/apps/reader/modules/readerfooter.lua:1782
+msgid "Item max width"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerfooter.lua:1786
+#, fuzzy
+msgid "Book-title item: %1%"
+msgstr "Názov knihy: %1 %"
+
+#: frontend/apps/reader/modules/readerfooter.lua:1797
+#, fuzzy
+msgid "Book-title item"
+msgstr "Názov knihy"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1798
-msgid "thick"
-msgstr "široké"
+#, fuzzy
+msgid "Maximum percentage of screen width used for book-title"
+msgstr "Maximálna šírka kapitoly v percentách šírky obrazovky"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1800
-msgid "thin"
-msgstr "úzke"
+#: frontend/apps/reader/modules/readerfooter.lua:1813
+#, fuzzy
+msgid "Chapter-title item: %1%"
+msgstr "Čas na prečítanie kapitoly (%1)"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1802
-#: frontend/ui/data/koptoptions.lua:600
-msgid "medium"
-msgstr "stredné"
+#: frontend/apps/reader/modules/readerfooter.lua:1824
+#, fuzzy
+msgid "Chapter-title item"
+msgstr "Názov kapitoly tabuľky obsahu knihy"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1804
-msgid "Chapter marker width (%1)"
-msgstr "Šírka značky pre kapitoly (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:1825
+#, fuzzy
+msgid "Maximum percentage of screen width used for chapter-title item"
+msgstr "Maximálna šírka kapitoly v percentách šírky obrazovky"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1823
-msgid "Medium"
-msgstr "Stredné"
+#: frontend/apps/reader/modules/readerfooter.lua:1844
+#: frontend/apps/reader/modules/readerfooter.lua:1857
+#: frontend/ui/widget/doublespinwidget.lua:30
+msgid "Left"
+msgstr "Vľavo"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1847
-msgid "Show initial position marker"
-msgstr "Zobraziť značku počiatočnej pozície"
+#: frontend/apps/reader/modules/readerfooter.lua:1846
+#: frontend/apps/reader/modules/readerfooter.lua:1877
+#: frontend/ui/widget/doublespinwidget.lua:36
+msgid "Right"
+msgstr "Vpravo"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1861
-msgid "static margins (10)"
-msgstr "statické okraje (10)"
+#: frontend/apps/reader/modules/readerfooter.lua:1848
+#: frontend/apps/reader/modules/readerfooter.lua:1867
+#: frontend/apps/reader/modules/readerhighlight.lua:373
+msgid "Center"
+msgstr "Na stred"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1864
-msgid "no margins (0)"
-msgstr "žiadne okraje (0)"
+#: frontend/apps/reader/modules/readerfooter.lua:1850
+msgid "Alignment: %1"
+msgstr "Zarovnanie: %1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1866
-msgid "static margins (%1)"
-msgstr "statické okraje (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:1890
+#, fuzzy
+msgid "Height: %1"
+msgstr "Názov:%1"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1869
-msgid "same as book margins (%1)"
-msgstr "rovnaké ako okraje knihy (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:1901
+#, fuzzy
+msgid "Items container height"
+msgstr "Výška kontajnera"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1871
-msgid "Margins: %1"
-msgstr "Okraje: %1"
+#: frontend/apps/reader/modules/readerfooter.lua:1916
+#, fuzzy
+msgid "Bottom margin: %1"
+msgstr "Spodný okraj"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1879
-msgid "No margins (0)"
-msgstr "Žiadne okraje (0)"
+#: frontend/apps/reader/modules/readerfooter.lua:1926
+msgid "Set margin"
+msgstr "Nastaviť okraj"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1893
-msgid "Same as book margins"
-msgstr "Rovnaké ako okraje knihy"
+#: frontend/apps/reader/modules/readerfooter.lua:1927
+msgid "Container bottom margin"
+msgstr "Spodný okraj kontajnera"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1895
-msgid "Same as book margins (%1)"
-msgstr "Rovnaké ako okraje knihy (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:1947
+#, fuzzy
+msgid "Hide battery item when higher than: %1%"
+msgstr "Skryť stav batérie, ak je úroveň nabitia vyššia ako: %1 %"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1912
-msgid "Static margins (%1)"
-msgstr "Statické okraje (%1)"
+#: frontend/apps/reader/modules/readerfooter.lua:1949
+#, fuzzy
+msgid "Hide battery item at custom threshold"
+msgstr "Skryť hraničnú úroveň batérie"
 
-#: frontend/apps/reader/modules/readerfooter.lua:1938
-msgid "Minimal width: %1 %"
-msgstr "Minimálna šírka: %1 %"
-
-#: frontend/apps/reader/modules/readerfooter.lua:1953
-msgid "Minimal width"
-msgstr "Minimálna šírka"
-
-#: frontend/apps/reader/modules/readerfooter.lua:1954
-msgid "Minimal progress bar width in percentage of screen width"
+#: frontend/apps/reader/modules/readerfooter.lua:1968
+msgid "Minimum threshold to hide battery item"
 msgstr ""
-"Minimálna šírka lišty s indikátorom priebehu v percentách šírky obrazovky"
+
+#: frontend/apps/reader/modules/readerfooter.lua:1992
+#, fuzzy
+msgid "Show status bar separator"
+msgstr "Zobraziť oddeľovač päty"
+
+#: frontend/apps/reader/modules/readerfooter.lua:2004
+msgid "Lock status bar"
+msgstr "Zamknúť stavový riadok"
+
+#: frontend/apps/reader/modules/readerfooter.lua:2015
+#, fuzzy
+msgid "Hold status bar to skim"
+msgstr "Pre \"prebehnutie\" dokumentu podržte pätu"
 
 #: frontend/apps/reader/modules/readergoto.lua:17
 #: frontend/apps/reader/modules/readergoto.lua:75 frontend/dispatcher.lua:147
@@ -7953,6 +8014,24 @@ msgstr "Nastaviť nočný režim"
 #: plugins/vocabbuilder.koplugin/main.lua:139
 msgid "on"
 msgstr "zapnuté"
+
+#: frontend/dispatcher.lua:109 frontend/dispatcher.lua:115
+#: frontend/dispatcher.lua:117 frontend/dispatcher.lua:119
+#: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
+#: frontend/ui/data/creoptions.lua:341 frontend/ui/data/creoptions.lua:358
+#: frontend/ui/data/creoptions.lua:648 frontend/ui/data/creoptions.lua:671
+#: frontend/ui/data/creoptions.lua:684 frontend/ui/data/creoptions.lua:696
+#: frontend/ui/data/creoptions.lua:735 frontend/ui/data/koptoptions.lua:358
+#: frontend/ui/data/koptoptions.lua:467 frontend/ui/data/koptoptions.lua:504
+#: frontend/ui/data/koptoptions.lua:514 frontend/ui/data/koptoptions.lua:527
+#: frontend/ui/data/koptoptions.lua:570 frontend/ui/data/koptoptions.lua:613
+#: plugins/coverimage.koplugin/main.lua:484
+#: plugins/coverimage.koplugin/main.lua:506
+#: plugins/coverimage.koplugin/main.lua:641
+#: plugins/vocabbuilder.koplugin/main.lua:122
+#: plugins/vocabbuilder.koplugin/main.lua:139
+msgid "off"
+msgstr "vypnuté"
 
 #: frontend/dispatcher.lua:111
 msgid "Full screen refresh"
@@ -20603,6 +20682,96 @@ msgstr ""
 "pridanie vlastných online katalógov OPDS a kanálov RSS, online aktualizácie "
 "softvéru cez internet, klient FTP, server SSH, ...\n"
 
+#~ msgid "percentage"
+#~ msgstr "percent"
+
+#~ msgid "Show all at once"
+#~ msgstr "Zobraziť všetko naraz"
+
+#~ msgid "Reclaim bar height from bottom margin"
+#~ msgstr "Vynútiť výšku lišty od spodného okraja"
+
+#~ msgid "Battery status (%1)"
+#~ msgstr "Úroveň nabitia batérie (%1)"
+
+#~ msgid "Book time to read (%1)"
+#~ msgstr "Čas na prečítanie knihy (%1)"
+
+#~ msgid "Book time to read"
+#~ msgstr "Čas na prečítanie knihy"
+
+#~ msgid "Frontlight warmth (%1)"
+#~ msgstr "Farebná teplota nasvietenia/podsvietenia displeja (%1)"
+
+#~ msgid "Current chapter"
+#~ msgstr "Súčasná kapitola"
+
+#~ msgid "Sort items"
+#~ msgstr "Triediť položky"
+
+#~ msgid "Sort footer items"
+#~ msgstr "Zoradiť položky päty"
+
+#~ msgid "This will hide values like 0 or off."
+#~ msgstr "Týmto sa skryjú hodnoty ako 0 alebo vypnuté."
+
+#~ msgid "Font: %1%2"
+#~ msgstr "Písmo: %1%2"
+
+#~ msgid "Footer font size"
+#~ msgstr "Veľkosť písma päty"
+
+#~ msgid "Use bold font"
+#~ msgstr "Použiť tučné písmo"
+
+#~ msgid "Container height: %1"
+#~ msgstr "Výška kontajnera: %1"
+
+#~ msgid "Container bottom margin: %1"
+#~ msgstr "Spodný okraj kontajnera: %1"
+
+#~ msgid "Maximum width of items"
+#~ msgstr "Maximálna šírka položiek"
+
+#~ msgid "Maximum width"
+#~ msgstr "Maximálna šírka"
+
+#~ msgid "Maximum book title width in percentage of screen width"
+#~ msgstr "Maximálna šírka názvu knihy v percentách šírky obrazovky"
+
+#~ msgid "Current chapter: %1 %"
+#~ msgstr "Aktuálna kapitola: %1 %"
+
+#~ msgctxt "Status bar"
+#~ msgid "Icons"
+#~ msgstr "Ikony"
+
+#~ msgctxt "Status bar"
+#~ msgid "Compact"
+#~ msgstr "Kompaktné"
+
+#~ msgid "1 digit after decimal point (%1)"
+#~ msgstr "1 číslica za desatinnou čiarkou (%1)"
+
+#~ msgid "2 digits after decimal point (%1)"
+#~ msgstr "2 číslice za desatinnou čiarkou (%1)"
+
+#~ msgid "Hide battery status"
+#~ msgstr "Skryť stav batérie"
+
+#~ msgid "Chapter progress"
+#~ msgstr "Priebeh čítania kapitoly"
+
+#~ msgid "Style: thin"
+#~ msgstr "Štýl: úzky"
+
+#~ msgid "Style: thick"
+#~ msgstr "Štýl: široký"
+
+#~ msgid "Minimal progress bar width in percentage of screen width"
+#~ msgstr ""
+#~ "Minimálna šírka lišty s indikátorom priebehu v percentách šírky obrazovky"
+
 #~ msgid "Set as screensaver"
 #~ msgstr "Nastaviť ako šetrič obrazovky"
 
@@ -21289,9 +21458,6 @@ msgstr ""
 #~ msgid "Prefix: %1"
 #~ msgstr "Predpona: %1"
 
-#~ msgid "Time spent reading this book"
-#~ msgstr "Čas strávený čítaním tejto knihy"
-
 #~ msgid "Reading started"
 #~ msgstr "Čítanie sa začalo"
 
@@ -21340,9 +21506,6 @@ msgstr ""
 
 #~ msgid "Go %1 pages"
 #~ msgstr "Prejsť %1 strán"
-
-#~ msgid "Set font size to %1"
-#~ msgstr "Nastaviť veľkosť písma na %1"
 
 #~ msgctxt "Number placeholder"
 #~ msgid "#"
@@ -21887,9 +22050,6 @@ msgstr ""
 
 #~ msgid "Other settings"
 #~ msgstr "Ďalšie nastavenia"
-
-#~ msgid "Auto refresh time"
-#~ msgstr "Čas automatickej obnovy"
 
 #, fuzzy
 #~ msgid "Page number"
