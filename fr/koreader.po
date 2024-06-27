@@ -27,8 +27,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-27 09:47+0000\n"
-"PO-Revision-Date: 2024-06-26 12:26+0000\n"
-"Last-Translator: \"J. Lavoie\" <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2024-06-28 03:47+0000\n"
+"Last-Translator: Rémi Saurel <remi@saurel.eu>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/koreader/koreader/"
 "fr/>\n"
 "Language: fr\n"
@@ -36,7 +36,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6-rc\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: reader.lua:194
 msgid ""
@@ -1136,7 +1136,7 @@ msgstr "Titre :"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:40
 msgid "Authors:"
-msgstr "Auteurs :"
+msgstr "Auteur(e)s :"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:41
 #: plugins/calibre.koplugin/search.lua:154
@@ -1330,8 +1330,8 @@ msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
 msgstr ""
-"%1. Titre : %2 ; Auteur : %3\n"
-"Document : %4"
+"%1. Titre : %2 ; Auteur(e) : %3\n"
+"Document : %4"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:677
 msgid "1 document with hash-based metadata"
@@ -1526,7 +1526,7 @@ msgstr "Titre : %1"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:325
 msgid "Authors: %1"
-msgstr "Auteur(s) : %1"
+msgstr "Auteur(e)s : %1"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:418
 msgid "Select in file browser"
@@ -2252,9 +2252,8 @@ msgid "Bookmark browsing mode"
 msgstr "Mode de navigation dans les signets"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:111
-#, fuzzy
 msgid "Max lines per bookmark: %1"
-msgstr "Activer/Désactiver le marque-page"
+msgstr "Nombre de lignes maximum par signet : %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:111
 #: frontend/apps/reader/modules/readerrolling.lua:519
@@ -2263,17 +2262,18 @@ msgid "disabled"
 msgstr "désactivé"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:117
-#, fuzzy
 msgid "Max lines per bookmark"
-msgstr "Activer/Désactiver le marque-page"
+msgstr "Nombre de lignes maximum par signet"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:118
 msgid "Set maximum number of lines to enable flexible item heights."
 msgstr ""
+"Configurer le nombre de lignes maximum pour rendre la hauteur des éléments "
+"flexible."
 
 #: frontend/apps/reader/modules/readerbookmark.lua:141
 msgid "flexible"
-msgstr ""
+msgstr "flexible"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:143
 msgid "Bookmarks per page: %1"
@@ -2321,24 +2321,20 @@ msgid "note, or highlighted text"
 msgstr "annotation, ou texte surligné"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:281
-#, fuzzy
 msgid "page number"
-msgstr "Numéro de page"
+msgstr "numéro de page"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:282
-#, fuzzy
 msgid "date"
-msgstr "Mettre à jour"
+msgstr "date"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:285
-#, fuzzy
 msgid "page number, reverse"
-msgstr "Numéro de page"
+msgstr "numéro de page, inversé"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:286
-#, fuzzy
 msgid "date, reverse"
-msgstr "Serveur de mise à jour"
+msgstr "date, inversé"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:604
 #: plugins/exporter.koplugin/clip.lua:261
@@ -2505,7 +2501,7 @@ msgstr "Actualisation automatique"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:354
 msgid "Book author and title"
-msgstr "Auteur et titre du livre"
+msgstr "Auteur(e) et titre du livre"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:364
 #: frontend/apps/reader/modules/readerfooter.lua:988
@@ -3475,9 +3471,8 @@ msgid "Wi-Fi status (%1)"
 msgstr "État du Wi-Fi (%1)"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1001
-#, fuzzy
 msgid "Book author"
-msgstr "Parcourir les auteurs"
+msgstr "Auteur(e) du livre"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1002
 msgid "Book title"
@@ -3660,7 +3655,6 @@ msgid "Include current page in pages left"
 msgstr "Inclure la page courante dans les pages restantes"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1494
-#, fuzzy
 msgid ""
 "By default, KOReader does not include the current page when calculating "
 "pages left. For example, in a book or chapter with n pages the 'pages left' "
@@ -3668,11 +3662,11 @@ msgid ""
 "With this feature enabled, the current page is factored in, resulting in the "
 "count going from n to 1 instead."
 msgstr ""
-"Normalement, la page courante n’est pas compté comme restante, donc les "
-"« pages restantes » (dans un livre ou chapitre de n pages) commenceront à "
-"n-1 et finiront à 0.\n"
-"Lorsque cette option est activé, la page courante est inclus, donc le compte "
-"va de n à 1."
+"Normalement, la page courante n’est pas comptée comme restante, donc les « "
+"pages restantes » (dans un livre ou chapitre de n pages) commenceront à n-1 "
+"et finiront à 0 (dernière page).\n"
+"Lorsque cette option est activée, la page courante est comptée, le compte "
+"allant dans ce cas de n à 1."
 
 #: frontend/apps/reader/modules/readerfooter.lua:1510
 msgid "Progress percentage format: %1"
@@ -3707,14 +3701,13 @@ msgid "Book-author item: %1 %"
 msgstr "Titre du livre : %1 %"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1615
-#, fuzzy
 msgid "Book-author item"
-msgstr "Auteur et titre du livre"
+msgstr "Auteur(e) du livre"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1616
-#, fuzzy
 msgid "Maximum percentage of screen width used for book-author"
-msgstr "Largeur maximale du chapitre en pourcentage de la taille d’écran"
+msgstr ""
+"Largeur maximale de l'auteur(e) du livre en pourcentage de la taille d’écran"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1631
 #, fuzzy
@@ -3773,7 +3766,7 @@ msgstr "Masquer le niveau de charge passé un certain point"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1771
 msgid "Minimum threshold to hide battery item"
-msgstr ""
+msgstr "Niveau minimal pour masquer l’état de la batterie"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1791
 msgid "Show status bar separator"
@@ -7778,9 +7771,8 @@ msgid "Unable to communicate with the Wi-Fi backend"
 msgstr ""
 
 #: frontend/device/kindle/device.lua:216
-#, fuzzy
 msgid "Scanning for Wi-Fi networks timed out"
-msgstr "Recherche de réseaux…"
+msgstr "La recherche de réseaux Wi-Fi a expiré"
 
 #: frontend/dispatcher.lua:53 plugins/statistics.koplugin/main.lua:1319
 msgid "Reading progress"
@@ -10022,7 +10014,7 @@ msgstr "Arabe"
 
 #: frontend/ui/data/isolanguage.lua:11 frontend/ui/translator.lua:34
 msgid "Assamese"
-msgstr "Assamese"
+msgstr "Assamais"
 
 #: frontend/ui/data/isolanguage.lua:12 frontend/ui/translator.lua:36
 msgid "Azerbaijani"
@@ -10054,7 +10046,7 @@ msgstr "Breton"
 
 #: frontend/ui/data/isolanguage.lua:22
 msgid "Church Slavic"
-msgstr "Vieux Bulgare"
+msgstr "Vieux-slave"
 
 #: frontend/ui/data/isolanguage.lua:23
 msgid "Cornish"
@@ -10070,7 +10062,7 @@ msgstr "Maldivien"
 
 #: frontend/ui/data/isolanguage.lua:29
 msgid "Dzongkha"
-msgstr ""
+msgstr "Dzongkha"
 
 #: frontend/ui/data/isolanguage.lua:30
 msgid "Modern Greek"
@@ -10082,20 +10074,19 @@ msgstr "Anglais"
 
 #: frontend/ui/data/isolanguage.lua:35
 msgid "Faroese"
-msgstr "Faroese"
+msgstr "Féroïen"
 
 #: frontend/ui/data/isolanguage.lua:36 frontend/ui/translator.lua:120
 msgid "Persian"
 msgstr "Persan"
 
 #: frontend/ui/data/isolanguage.lua:37
-#, fuzzy
 msgid "Filipino"
-msgstr "Philippin (tagalog)"
+msgstr "Philippin"
 
 #: frontend/ui/data/isolanguage.lua:40
 msgid "Western Frisian"
-msgstr "Frison Occidental"
+msgstr "Frison occidental"
 
 #: frontend/ui/data/isolanguage.lua:41
 msgid "Scottish Gaelic"
@@ -10120,7 +10111,7 @@ msgstr "Haoussa"
 
 #: frontend/ui/data/isolanguage.lua:48
 msgid "Serbo-Croatian"
-msgstr "Serbo-Croate"
+msgstr "Serbo-croate"
 
 #: frontend/ui/data/isolanguage.lua:49 frontend/ui/translator.lua:73
 msgid "Hebrew"
@@ -10229,15 +10220,15 @@ msgstr "Navajo"
 
 #: frontend/ui/data/isolanguage.lua:88
 msgid "Norwegian Nynorsk"
-msgstr "Nynorsk Norvégien"
+msgstr "Norvégien nynorsk"
 
 #: frontend/ui/data/isolanguage.lua:89
 msgid "Norwegian Bokmål"
-msgstr "Norvégien Bokmål"
+msgstr "Norvégien bokmål"
 
 #: frontend/ui/data/isolanguage.lua:92
 msgid "Oriya"
-msgstr ""
+msgstr "Odia"
 
 #: frontend/ui/data/isolanguage.lua:93 frontend/ui/translator.lua:118
 msgid "Oromo"
@@ -10245,7 +10236,7 @@ msgstr "Oromo"
 
 #: frontend/ui/data/isolanguage.lua:94
 msgid "Panjabi"
-msgstr "Punjabi"
+msgstr "Pendjabi"
 
 #: frontend/ui/data/isolanguage.lua:95
 msgid "Pali"
@@ -10265,7 +10256,7 @@ msgstr "Sanskrit"
 
 #: frontend/ui/data/isolanguage.lua:104
 msgid "Sinhala"
-msgstr ""
+msgstr "Singhalais"
 
 #: frontend/ui/data/isolanguage.lua:107 frontend/ui/translator.lua:134
 msgid "Sindhi"
@@ -10281,7 +10272,7 @@ msgstr "Swati"
 
 #: frontend/ui/data/isolanguage.lua:112 frontend/ui/translator.lua:140
 msgid "Sundanese"
-msgstr "Sundanese"
+msgstr "Soundanais"
 
 #: frontend/ui/data/isolanguage.lua:113 frontend/ui/translator.lua:141
 msgid "Swahili"
@@ -10289,11 +10280,11 @@ msgstr "Swahili"
 
 #: frontend/ui/data/isolanguage.lua:115
 msgid "Syriac"
-msgstr ""
+msgstr "Syriaque"
 
 #: frontend/ui/data/isolanguage.lua:116 frontend/ui/translator.lua:145
 msgid "Tamil"
-msgstr "Tamil"
+msgstr "Tamoul"
 
 #: frontend/ui/data/isolanguage.lua:117 frontend/ui/translator.lua:146
 msgid "Tatar"
@@ -10301,7 +10292,7 @@ msgstr "Tatar"
 
 #: frontend/ui/data/isolanguage.lua:118 frontend/ui/translator.lua:147
 msgid "Telugu"
-msgstr "Telugu"
+msgstr "Télougou"
 
 #: frontend/ui/data/isolanguage.lua:119 frontend/ui/translator.lua:144
 msgid "Tajik"
@@ -10313,11 +10304,11 @@ msgstr "Tagalog"
 
 #: frontend/ui/data/isolanguage.lua:121 frontend/ui/translator.lua:148
 msgid "Thai"
-msgstr "Thaïlandais"
+msgstr "Thaï"
 
 #: frontend/ui/data/isolanguage.lua:122 frontend/ui/translator.lua:149
 msgid "Tigrinya"
-msgstr "Tigrinya"
+msgstr "Tigrigna"
 
 #: frontend/ui/data/isolanguage.lua:123
 #, fuzzy
@@ -10326,7 +10317,7 @@ msgstr "Tsonga"
 
 #: frontend/ui/data/isolanguage.lua:125
 msgid "Uighur"
-msgstr "Ouïghours"
+msgstr "Ouïghour"
 
 #: frontend/ui/data/isolanguage.lua:127 frontend/ui/translator.lua:155
 msgid "Urdu"
@@ -10358,6 +10349,7 @@ msgid "Yiddish"
 msgstr "Yiddish"
 
 #: frontend/ui/data/isolanguage.lua:134 frontend/ui/translator.lua:163
+#, fuzzy
 msgid "Yoruba"
 msgstr "Yoruba"
 
@@ -10376,15 +10368,15 @@ msgstr "Adyghé"
 
 #: frontend/ui/data/isolanguage.lua:143
 msgid "Southern Altai"
-msgstr "Sud de l’Altaï"
+msgstr "Altaï méridional"
 
 #: frontend/ui/data/isolanguage.lua:144
 msgid "Old English"
-msgstr "Vieux anglais"
+msgstr "Vieil anglais"
 
 #: frontend/ui/data/isolanguage.lua:145
 msgid "Official Aramaic"
-msgstr "Araméen officiel"
+msgstr "Araméen impérial"
 
 #: frontend/ui/data/isolanguage.lua:146
 msgid "Asturian"
@@ -10412,39 +10404,39 @@ msgstr "Tatar de Crimée"
 
 #: frontend/ui/data/isolanguage.lua:152
 msgid "Lower Sorbian"
-msgstr "Bas-Sorabe"
+msgstr "Bas sorabe"
 
 #: frontend/ui/data/isolanguage.lua:153
 msgid "Middle Dutch"
-msgstr "Néerlandais"
+msgstr "Moyen néerlandais"
 
 #: frontend/ui/data/isolanguage.lua:154
 msgid "Middle English"
-msgstr "Moyen Anglais"
+msgstr "Moyen anglais"
 
 #: frontend/ui/data/isolanguage.lua:155
 msgid "Middle French"
-msgstr "Ancien Français"
+msgstr "Moyen français"
 
 #: frontend/ui/data/isolanguage.lua:156
 msgid "Old French"
-msgstr "Vieux Français"
+msgstr "Ancien français"
 
 #: frontend/ui/data/isolanguage.lua:158
 msgid "Old High German"
-msgstr "Allemand"
+msgstr "Vieux haut allemand"
 
 #: frontend/ui/data/isolanguage.lua:159
 msgid "Gothic"
-msgstr "Gothique"
+msgstr "Gotique"
 
 #: frontend/ui/data/isolanguage.lua:160
 msgid "Ancient Greek"
-msgstr "Grec Ancien"
+msgstr "Grec ancien"
 
 #: frontend/ui/data/isolanguage.lua:161
 msgid "Swiss German"
-msgstr "Suisse Allemand"
+msgstr "Suisse allemand"
 
 #: frontend/ui/data/isolanguage.lua:162 frontend/ui/translator.lua:72
 msgid "Hawaiian"
@@ -10452,7 +10444,7 @@ msgstr "Hawaïen"
 
 #: frontend/ui/data/isolanguage.lua:163
 msgid "Hiligaynon"
-msgstr "Hiligaynon"
+msgstr "Hiligaïnon"
 
 #: frontend/ui/data/isolanguage.lua:164
 msgid "Kumyk"
@@ -10460,7 +10452,7 @@ msgstr "Koumyk"
 
 #: frontend/ui/data/isolanguage.lua:165
 msgid "Ladino"
-msgstr "Ladino"
+msgstr "Judéo-espagnol"
 
 #: frontend/ui/data/isolanguage.lua:166
 msgid "Manchu"
@@ -10468,23 +10460,23 @@ msgstr "Mandchou"
 
 #: frontend/ui/data/isolanguage.lua:167
 msgid "Low German"
-msgstr "Bas Allemand"
+msgstr "Bas allemand"
 
 #: frontend/ui/data/isolanguage.lua:168
 msgid "Old Norse"
-msgstr "Vieux Norrois"
+msgstr "Vieux norrois"
 
 #: frontend/ui/data/isolanguage.lua:169
 msgid "Ottoman Turkish"
-msgstr "Turc Ottoman"
+msgstr "Turc ottoman"
 
 #: frontend/ui/data/isolanguage.lua:170
 msgid "Macedo-Romanian"
-msgstr "Macède-Roumain"
+msgstr "Aroumain"
 
 #: frontend/ui/data/isolanguage.lua:171
 msgid "Yakut"
-msgstr "Yakout"
+msgstr "Iakoute"
 
 #: frontend/ui/data/isolanguage.lua:172
 msgid "Sicilian"
@@ -10492,15 +10484,15 @@ msgstr "Sicilien"
 
 #: frontend/ui/data/isolanguage.lua:173
 msgid "Scots"
-msgstr "Ecossais"
+msgstr "Scots"
 
 #: frontend/ui/data/isolanguage.lua:174
 msgid "Old Irish"
-msgstr "Vieil Irlandais"
+msgstr "Vieil irlandais"
 
 #: frontend/ui/data/isolanguage.lua:175
 msgid "Shan"
-msgstr "Chan"
+msgstr "Shan"
 
 #: frontend/ui/data/isolanguage.lua:176
 msgid "Sumerian"
@@ -10672,11 +10664,11 @@ msgstr "Chinois (traditionnel)"
 
 #: frontend/ui/data/isolanguage.lua:226
 msgid "Danish - Fraktur"
-msgstr ""
+msgstr "Danois (gothique)"
 
 #: frontend/ui/data/isolanguage.lua:227
 msgid "German - Fraktur"
-msgstr ""
+msgstr "Allemand (gothique)"
 
 #: frontend/ui/data/isolanguage.lua:228
 #, fuzzy
@@ -10695,7 +10687,7 @@ msgstr "Géorgien"
 
 #: frontend/ui/data/isolanguage.lua:231
 msgid "Slovak - Fraktur"
-msgstr ""
+msgstr "Slovaque (gothique)"
 
 #: frontend/ui/data/isolanguage.lua:232
 #, fuzzy
@@ -10709,7 +10701,7 @@ msgstr "Serbe"
 
 #: frontend/ui/data/isolanguage.lua:234
 msgid "Uzbek -Cyrillic"
-msgstr ""
+msgstr "Ouzbek (cyrillique)"
 
 #. @translators Keitai input is a kind of Japanese keyboard input mode (similar to T9 keypad input). See <https://en.wikipedia.org/wiki/Japanese_input_method#Mobile_phones> for more information.
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:131
@@ -12853,11 +12845,9 @@ msgid "Turn off"
 msgstr "Eteindre"
 
 #: frontend/ui/network/manager.lua:454
-#, fuzzy
 msgid "Wi-Fi is enabled, but you're currently not connected to a network."
 msgstr ""
-"Le Wi-Fi est activé, mais vous n’êtes actuellement pas connecté au réseau.\n"
-"Comment voulez-vous procéder ?"
+"Le Wi-Fi est activé, mais vous n’êtes actuellement pas connecté à un réseau."
 
 #: frontend/ui/network/manager.lua:458
 msgid "Please note that a connection attempt is currently in progress!"
@@ -12870,9 +12860,8 @@ msgid ""
 msgstr ""
 
 #: frontend/ui/network/manager.lua:463
-#, fuzzy
 msgid "How would you like to proceed?"
-msgstr "Si vous voulez réinitialiser les données,"
+msgstr "Comment souhaitez-vous procéder ?"
 
 #: frontend/ui/network/manager.lua:468
 msgid "Turn Wi-Fi off"
@@ -13001,9 +12990,8 @@ msgid "Connection failed"
 msgstr "La connexion a échoué"
 
 #: frontend/ui/network/manager.lua:1129
-#, fuzzy
 msgid "Connecting to network %1…"
-msgstr "Connecté au réseau %1"
+msgstr "Connexion au réseau %1…"
 
 #: frontend/ui/network/networklistener.lua:49
 msgid "Wi-Fi off."
@@ -13589,7 +13577,6 @@ msgid "Current image or document cover:"
 msgstr "Couverture actuelle de l'image ou du document :"
 
 #: frontend/ui/screensaver.lua:318
-#, fuzzy
 msgid ""
 "Enter a custom message to be displayed on the sleep screen. The following "
 "escape sequences are available:\n"
@@ -13603,10 +13590,10 @@ msgid ""
 "  %H time left in document\n"
 "  %b battery level"
 msgstr ""
-"Entrez le message à afficher par l’écran de veille. Les séquences "
-"d’échappement suivantes peuvent être utilisées :\n"
+"Entrez le message à afficher par l’écran de veille. Les séquences d’"
+"échappement suivantes peuvent être utilisées :\n"
 " %T titre\n"
-"%A auteur(s)\n"
+"%A auteur(es)\n"
 "%S série\n"
 "%c numéro de page actuel\n"
 "%t nombre total de pages\n"
@@ -14015,7 +14002,6 @@ msgid "10-page markers"
 msgstr "10 marque-pages"
 
 #: frontend/ui/widget/bookmapwidget.lua:1357
-#, fuzzy
 msgid ""
 "Book map provides a summary of a book's content, showing chapters and pages "
 "visually. If statistics are enabled, black bars represent pages already read "
@@ -14030,12 +14016,11 @@ msgid ""
 " bookmarked page\n"
 "▢ focused page when coming from Pages browser"
 msgstr ""
-"Le plan du livre affiche un aperçu du contenu du livre.\n"
+"Le plan du livre affiche un aperçu du contenu du livre. Si les statistiques "
+"sont activées, des barres noires sont affichées pour les pages déjà lues ("
+"grises pour les pages lues dans la session de lecture en cours). Leurs "
+"hauteurs varient en fonction du temps passé à lire la page.\n"
 "\n"
-"Si les statistiques sont activées, des barres noires sont affichées pour les "
-"pages déjà lues (grises pour les pages lues dans la session de lecture en "
-"cours). Leurs hauteurs varient en fonction du temps passé à lire la page.\n"
-"Les chapitres sont affichés au-dessus des pages qu'ils englobent.\n"
 "Sous les pages, ces indicateurs peuvent apparaître :\n"
 "▲ page actuelle\n"
 "❶ ❷ … emplacements précédents\n"
@@ -16015,7 +16000,7 @@ msgstr "Parcourir toutes les séries de calibre"
 
 #: plugins/calibre.koplugin/main.lua:75
 msgid "Browse all calibre authors"
-msgstr "Parcourir tous les auteurs de Calibre"
+msgstr "Parcourir tous les auteur(e)s de Calibre"
 
 #: plugins/calibre.koplugin/main.lua:76
 msgid "Browse all calibre titles"
@@ -16078,7 +16063,7 @@ msgstr "Rechercher par titre"
 
 #: plugins/calibre.koplugin/main.lua:221
 msgid "Search by authors"
-msgstr "Rechercher par auteurs"
+msgstr "Rechercher par auteur(e)s"
 
 #: plugins/calibre.koplugin/main.lua:230
 msgid "Search by series"
@@ -16195,7 +16180,7 @@ msgstr ""
 
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
-msgstr "Auteur(s) :"
+msgstr "Auteur(es) :"
 
 #: plugins/calibre.koplugin/search.lua:147
 msgid "Unknown"
@@ -16215,7 +16200,7 @@ msgstr "Parcourir les étiquettes"
 
 #: plugins/calibre.koplugin/search.lua:219
 msgid "Browse authors"
-msgstr "Parcourir les auteurs"
+msgstr "Parcourir les auteur(e)s"
 
 #: plugins/calibre.koplugin/search.lua:228
 msgid "Browse titles"
@@ -16244,7 +16229,7 @@ msgstr "Parcourir par séries"
 
 #: plugins/calibre.koplugin/search.lua:438
 msgid "Browse by authors"
-msgstr "Parcourir par auteurs"
+msgstr "Parcourir par auteur(e)s"
 
 #: plugins/calibre.koplugin/search.lua:441
 msgid "Browse by titles"
@@ -16724,7 +16709,7 @@ msgstr "Séries"
 
 #: plugins/coverbrowser.koplugin/main.lua:371
 msgid "Append series metadata to authors"
-msgstr "Ajouter les métadonnées des séries aux auteurs"
+msgstr "Ajouter les métadonnées des séries aux auteur(e)s"
 
 #: plugins/coverbrowser.koplugin/main.lua:384
 msgid "Append series metadata to title"
@@ -17112,7 +17097,7 @@ msgstr "Livre inconnu"
 
 #: plugins/exporter.koplugin/clip.lua:125
 msgid "Unknown Author"
-msgstr "Auteur inconnu"
+msgstr "Auteur(e) inconnu(e)"
 
 #: plugins/exporter.koplugin/main.lua:210
 msgid "%1: Exported successfully."
@@ -17186,7 +17171,7 @@ msgstr "Notes KOReader"
 
 #: plugins/exporter.koplugin/target/joplin.lua:199
 msgid "Joplin"
-msgstr "Auteur"
+msgstr "Joplin"
 
 #: plugins/exporter.koplugin/target/joplin.lua:203
 msgid "Set Joplin IP and Port"
@@ -19510,7 +19495,7 @@ msgstr "Titre"
 
 #: plugins/statistics.koplugin/main.lua:1814
 msgid "Author(s)"
-msgstr "Auteur(s)"
+msgstr "Auteur(es)"
 
 #: plugins/statistics.koplugin/main.lua:1842
 msgid "Last read date"
