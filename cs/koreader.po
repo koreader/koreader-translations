@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-11 20:56+0000\n"
-"PO-Revision-Date: 2024-07-01 23:09+0000\n"
+"PO-Revision-Date: 2024-07-18 15:09+0000\n"
 "Last-Translator: leschek <leschekleschek@post.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/koreader/koreader/"
 "cs/>\n"
@@ -2922,11 +2922,11 @@ msgstr "Nastavení písma"
 #. @translators 'font-family' is a CSS property name, keep it untranslated
 #: frontend/apps/reader/modules/readerfont.lua:62
 msgid "Font-family fonts (%1)"
-msgstr "Písma rodiny písem (%1)"
+msgstr "Písma font-family (%1)"
 
 #: frontend/apps/reader/modules/readerfont.lua:64
 msgid "Font-family fonts"
-msgstr "Písma rodiny písem"
+msgstr "Písma font-family"
 
 #: frontend/apps/reader/modules/readerfont.lua:209
 msgid "Font size set to: %1."
@@ -3024,16 +3024,16 @@ msgid ""
 msgstr ""
 "V dokumentech založených na HTML/CSS, jako je EPUB, mohou soubory stylů "
 "určit použití písem podle rodiny namísto konkrétního názvu písma.\n"
-"S výjimkou neproporcionálního a matematického písma používá KOReader výchozí "
-"písmo pro jakýkoli název rodiny.\n"
-"Pokud vám záleží na odlišení, můžete ke každé rodině přiřadit konkrétní "
-"písmo.\n"
+"S výjimkou neproporcionálního a matematického písma používá KOReader vaše "
+"výchozí písmo pro jakýkoli řez písma.\n"
+"Pokud vám záleží na odlišení, můžete ke každému řezu písma přiřadit "
+"konkrétní písmo.\n"
 "Dlouhým stisknutím názvu písma provedete globální přiřazení (★), takže se "
 "vztahuje na všechny vaše knihy. Tento přístup je preferovaný.\n"
 "Klepnutí ovlivní pouze aktuální knihu.\n"
-"Pokud se setkáte s knihou, kde jsou takové rodiny zneužívány do té míry, že "
-"se výchozí písmo téměř nepoužívá, můžete pro tuto knihu rychle zakázat "
-"rodinu písma zrušením přidružení."
+"Pokud se setkáte s knihou, kde jsou takové řezy písma zneužívány do té míry, "
+"že se výchozí písmo téměř nepoužívá, můžete pro tuto knihu rychle zakázat "
+"řez písma zrušením přidružení."
 
 #. @translators These are typography font family names as used in CSS, they can be kept untranslated if they are used more commonly than their translation
 #: frontend/apps/reader/modules/readerfont.lua:399
@@ -3070,11 +3070,11 @@ msgstr "Matematické"
 
 #: frontend/apps/reader/modules/readerfont.lua:441
 msgid "About font-family fonts"
-msgstr "O písmech rodiny písem"
+msgstr "O font-family (řezech písma)"
 
 #: frontend/apps/reader/modules/readerfont.lua:451
 msgid "Ignore publisher font names when font-family is set"
-msgstr "Ignorovat názvy písem vydavatele, když je nastavena rodina písma"
+msgstr "Ignorovat názvy písem vydavatele, když je nastaven řez písma"
 
 #: frontend/apps/reader/modules/readerfont.lua:459
 msgid ""
@@ -3084,11 +3084,11 @@ msgid ""
 "Enabling this will ignore such font names and make sure your preferred "
 "family fonts are used."
 msgstr ""
-"V deklaraci rodiny písma CSS mohou vydavatelé před název rodiny uvést jeden "
-"nebo více názvů písem, které se použijí, pokud se nacházejí mezi vloženými "
-"písmy nebo vlastními písmy.\n"
+"V deklaraci CSS font-family (znamená řez písma) mohou vydavatelé před název "
+"řezu písma uvést jeden nebo více názvů písem, které se použijí, pokud se "
+"nacházejí mezi vloženými písmy nebo vlastními písmy.\n"
 "Povolení této funkce bude takové názvy písem ignorovat a zajistí, že budou "
-"použita preferovaná písma rodiny."
+"použity preferované řezy písma."
 
 #: frontend/apps/reader/modules/readerfont.lua:473
 msgid "(main font)"
@@ -3120,7 +3120,7 @@ msgstr "Písmo pro %1"
 
 #: frontend/apps/reader/modules/readerfont.lua:614
 msgid "Font family font set for this book only."
-msgstr "Rodina písem nastavená pouze pro tuto knihu."
+msgstr "Řez písma nastavený pouze pro tuto knihu."
 
 #: frontend/apps/reader/modules/readerfont.lua:661
 msgid "Display font names with their own font"
@@ -5210,9 +5210,8 @@ msgid "Words in context"
 msgstr "Přidávání obsahu"
 
 #: frontend/apps/reader/modules/readersearch.lua:120
-#, fuzzy
 msgid "Results per page: %1"
-msgstr "Položek na stránce"
+msgstr "Počet výsledků na stránce: %1"
 
 #: frontend/apps/reader/modules/readersearch.lua:125
 msgid "Results per page"
@@ -5484,6 +5483,11 @@ msgid ""
 "\n"
 "p:not([class]) matches a <p> without any class= attribute."
 msgstr ""
+"p.jméno_třídy odpovídá <p> s class='jméno_třídy'.\n"
+"\n"
+"*.jméno_třídy odpovídá jakémukoliv elementu s class='jméno_třídy'.\n"
+"\n"
+"p:not([class]) odpovídá <p> bez jakéhokoli class= atributu."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:802
 msgid ""
@@ -7631,9 +7635,8 @@ msgid "Unable to communicate with the Wi-Fi backend"
 msgstr ""
 
 #: frontend/device/kindle/device.lua:216
-#, fuzzy
 msgid "Scanning for Wi-Fi networks timed out"
-msgstr "Vyhledávání sítí…"
+msgstr "Vypršel časový limit pro vyhledání Wi-Fi sítě"
 
 #: frontend/dispatcher.lua:53 plugins/statistics.koplugin/main.lua:1319
 msgid "Reading progress"
@@ -7657,9 +7660,8 @@ msgid "Screenshot"
 msgstr "Snímek obrazovky"
 
 #: frontend/dispatcher.lua:70
-#, fuzzy
 msgid "Exit sleep screen"
-msgstr "Ukončit spořič obrazovky"
+msgstr "Ukončit obrazovku uspaného zařízení"
 
 #: frontend/dispatcher.lua:71 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
@@ -9202,7 +9204,7 @@ msgstr "Ignorovat rodiny písem vydavatele"
 
 #: frontend/ui/data/css_tweaks.lua:432
 msgid "Disable font-family specified in embedded styles."
-msgstr "Zakáže rodiny písem určených ve vložených stylech."
+msgstr "Zakáže font-family (řezy písem) určených ve vložených stylech."
 
 #: frontend/ui/data/css_tweaks.lua:439
 msgid "Ignore publisher font sizes"
@@ -12596,26 +12598,24 @@ msgid "Turn off"
 msgstr "Vypnout"
 
 #: frontend/ui/network/manager.lua:454
-#, fuzzy
 msgid "Wi-Fi is enabled, but you're currently not connected to a network."
-msgstr ""
-"Wi-Fi je povolena, ale nejste připojeni k síti.\n"
-"Jak chcete postupovat dál?"
+msgstr "Wi-Fi je povolena, ale momentálně nejste připojeni k síti."
 
 #: frontend/ui/network/manager.lua:458
 msgid "Please note that a connection attempt is currently in progress!"
-msgstr ""
+msgstr "Vezměte prosím na vědomí, že právě probíhá pokus o připojení!"
 
 #: frontend/ui/network/manager.lua:461
 msgid ""
 "KOReader is currently waiting for connectivity. This may take up to 45s, so "
 "you may just want to try again later."
 msgstr ""
+"KOReader momentálně čeká na připojení. Může to trvat až 45s, tak to možná "
+"budete chtít zkusit znovu později."
 
 #: frontend/ui/network/manager.lua:463
-#, fuzzy
 msgid "How would you like to proceed?"
-msgstr "Pokud chcete resetovat data,"
+msgstr "Jak chcete pokračovat?"
 
 #: frontend/ui/network/manager.lua:468
 msgid "Turn Wi-Fi off"
@@ -12741,9 +12741,8 @@ msgid "Connection failed"
 msgstr "Připojení se nezdařilo"
 
 #: frontend/ui/network/manager.lua:1129
-#, fuzzy
 msgid "Connecting to network %1…"
-msgstr "Připojeno k síti %1"
+msgstr "Připojování k síti %1…"
 
 #: frontend/ui/network/networklistener.lua:49
 msgid "Wi-Fi off."
@@ -12809,7 +12808,7 @@ msgstr ""
 
 #: frontend/ui/otamanager.lua:177
 msgid "Unable to determine OTA model."
-msgstr ""
+msgstr "Nelze určit OTA model."
 
 #: frontend/ui/otamanager.lua:181
 msgid "Unable to contact OTA server. Try again later, or try another mirror."
@@ -13308,17 +13307,14 @@ msgid "(Press F2 to resume)"
 msgstr "(Stiskněte F2 pro pokračování)"
 
 #: frontend/ui/screensaver.lua:268
-#, fuzzy
 msgid "Current random image folder:"
-msgstr "Vybrat náhodnou složku s obrázky"
+msgstr "Aktuální složka náhodných obrázků:"
 
 #: frontend/ui/screensaver.lua:278
-#, fuzzy
 msgid "Current image or document cover:"
-msgstr "Vybrat obrázek nebo obálku dokumentu"
+msgstr "Aktuální obrázek nebo obálka dokumentu:"
 
 #: frontend/ui/screensaver.lua:318
-#, fuzzy
 msgid ""
 "Enter a custom message to be displayed on the sleep screen. The following "
 "escape sequences are available:\n"
@@ -13332,8 +13328,8 @@ msgid ""
 "  %H time left in document\n"
 "  %b battery level"
 msgstr ""
-"Vložte text, který chcete zobrazit na spořiči obrazovky. Můžete použít "
-"následující proměnné:\n"
+"Zadejte text, který chcete zobrazit na obrazovce uspaného zařízení. Můžete "
+"použít následující proměnné:\n"
 "  %T - název\n"
 "  %A - autoři\n"
 "  %S - série\n"
@@ -14514,9 +14510,8 @@ msgstr ""
 "Nebylo nastaveno gesto pro ukončení spořiče obrazovky. Pro ukončení ťukněte."
 
 #: frontend/ui/widget/screenshoter.lua:62
-#, fuzzy
 msgid "Set as book cover"
-msgstr "Uložit obálku knihy"
+msgstr "Nastavit jako obálku knihy"
 
 #: frontend/ui/widget/screenshoter.lua:73
 #: plugins/archiveviewer.koplugin/main.lua:207
@@ -14524,9 +14519,8 @@ msgid "View"
 msgstr "Zobrazit"
 
 #: frontend/ui/widget/screenshoter.lua:86
-#, fuzzy
 msgid "Set as wallpaper"
-msgstr "Nastavit alarm"
+msgstr "Nastavit jako tapetu"
 
 #: frontend/ui/widget/screenshoter.lua:96
 msgid "Screenshot saved to:"
@@ -14542,14 +14536,12 @@ msgid "%1 / %2"
 msgstr "%1 / %2"
 
 #: frontend/ui/widget/sortwidget.lua:487
-#, fuzzy
 msgid "Sort A to Z"
-msgstr "Seřadit podle typu"
+msgstr "Seřadit od A po Z"
 
 #: frontend/ui/widget/sortwidget.lua:495
-#, fuzzy
 msgid "Sort Z to A"
-msgstr "Seřadit podle typu"
+msgstr "Seřadit od Z po A"
 
 #: frontend/ui/widget/sortwidget.lua:503
 msgid "Sort A to Z (natural)"
@@ -15154,7 +15146,7 @@ msgstr "Noční režim byl změněn"
 
 #: plugins/autowarmth.koplugin/main.lua:235
 msgid "The AutoWarmth plugin might change it again."
-msgstr ""
+msgstr "Doplněk pro automatickou teplotu to může znovu změnit."
 
 #: plugins/autowarmth.koplugin/main.lua:571
 msgid ""
@@ -15694,14 +15686,12 @@ msgid "Browse all calibre titles"
 msgstr "Procházet všechny názvy calibre"
 
 #: plugins/calibre.koplugin/main.lua:77
-#, fuzzy
 msgid "Calibre wireless connect"
-msgstr "Povolit bezdrátového klienta"
+msgstr "Připojit bezdrátově ke Calibre"
 
 #: plugins/calibre.koplugin/main.lua:78
-#, fuzzy
 msgid "Calibre wireless disconnect"
-msgstr "Povolit bezdrátového klienta"
+msgstr "Odpojit bezdrátové připojení ke Calibre"
 
 #: plugins/calibre.koplugin/main.lua:95
 msgid "Disconnect"
@@ -15717,7 +15707,7 @@ msgstr "Nastavení bezdrátového připojení"
 
 #: plugins/calibre.koplugin/main.lua:122
 msgid "JSON parser"
-msgstr ""
+msgstr "JSON parsování"
 
 #: plugins/calibre.koplugin/main.lua:143
 msgid "Manage libraries"
@@ -15828,17 +15818,16 @@ msgstr ""
 "seznamu."
 
 #: plugins/calibre.koplugin/main.lua:425
-#, fuzzy
 msgid "Automatic"
-msgstr "Automaticky"
+msgstr "Automatické"
 
 #: plugins/calibre.koplugin/main.lua:426
 msgid "The program will decide based on the size of the JSON file. Recommended"
-msgstr ""
+msgstr "Program se rozhodne na základě velikosti souboru JSON. Doporučeno"
 
 #: plugins/calibre.koplugin/main.lua:435
 msgid "Fast"
-msgstr ""
+msgstr "Rychlé"
 
 #: plugins/calibre.koplugin/main.lua:436
 msgid "Faster parsing, but may not take too kindly to malformed input files"
@@ -15846,24 +15835,25 @@ msgstr ""
 
 #: plugins/calibre.koplugin/main.lua:445
 msgid "Safe"
-msgstr ""
+msgstr "Bezpečné"
 
 #: plugins/calibre.koplugin/main.lua:446
 msgid ""
 "Slower, but safer. Useful if you're experiencing problems with the other "
 "modes"
-msgstr ""
+msgstr "Pomalejší, ale bezpečnější. Hodí se, když máte problémy s jinými režimy"
 
 #: plugins/calibre.koplugin/main.lua:455
-#, fuzzy
 msgid "Legacy"
-msgstr "původní"
+msgstr "Původní"
 
 #: plugins/calibre.koplugin/main.lua:456
 msgid ""
 "Fast, but requires more RAM, only recommended on modest library sizes (or "
 "beefier devices)"
 msgstr ""
+"Rychlé, ale vyžaduje více RAM. Doporučuje se jen u menší velikosti knihovny ("
+"nebo na výkonnějších zařízeních)"
 
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
@@ -16310,9 +16300,8 @@ msgid "History display mode"
 msgstr "Režim zobrazení Historie"
 
 #: plugins/coverbrowser.koplugin/main.lua:144
-#, fuzzy
 msgid "Collections display mode"
-msgstr "Režim zobrazení Oblíbených"
+msgstr "Režim zobrazení Kolekcí"
 
 #: plugins/coverbrowser.koplugin/main.lua:151
 msgid "Display mode"
