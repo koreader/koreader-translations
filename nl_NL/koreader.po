@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-06 11:26+0000\n"
+"POT-Creation-Date: 2024-08-06 16:27+0000\n"
 "PO-Revision-Date: 2024-07-11 20:56+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -49,6 +49,7 @@ msgstr "Negeren"
 #: frontend/apps/reader/modules/readerdictionary.lua:1272
 #: frontend/apps/reader/modules/readerfooter.lua:1612
 #: frontend/apps/reader/modules/readerrolling.lua:482
+#: frontend/apps/reader/modules/readersearch.lua:142
 #: frontend/apps/reader/modules/readertypography.lua:332
 #: frontend/apps/reader/modules/readertypography.lua:421
 #: frontend/apps/reader/modules/readertypography.lua:478
@@ -174,7 +175,7 @@ msgstr "Voer bestandsnaam in"
 #: frontend/apps/reader/modules/readergoto.lua:69
 #: frontend/apps/reader/modules/readerhandmade.lua:491
 #: frontend/apps/reader/modules/readerlink.lua:224
-#: frontend/apps/reader/modules/readersearch.lua:221
+#: frontend/apps/reader/modules/readersearch.lua:260
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:167
@@ -1446,7 +1447,7 @@ msgstr "Boekenmap"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:67
 #: frontend/apps/filemanager/filemanagerhistory.lua:421
 #: frontend/apps/reader/modules/readerbookmark.lua:1390
-#: frontend/apps/reader/modules/readersearch.lua:252
+#: frontend/apps/reader/modules/readersearch.lua:291
 #: frontend/ui/widget/inputdialog.lua:909 frontend/ui/widget/textviewer.lua:493
 msgid "Case sensitive"
 msgstr "Hoofdlettergevoelig"
@@ -1484,13 +1485,13 @@ msgstr "Extraheren"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:219
 #: frontend/apps/reader/modules/readerbookmark.lua:1010
-#: frontend/apps/reader/modules/readersearch.lua:615
+#: frontend/apps/reader/modules/readersearch.lua:653
 msgid "Query: %1"
 msgstr "Zoekopdracht: %1"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:248
 #: frontend/apps/filemanager/filemanagerhistory.lua:88
-#: frontend/apps/reader/modules/readersearch.lua:614
+#: frontend/apps/reader/modules/readersearch.lua:704
 msgid "Search results (%1)"
 msgstr "Zoekresultaten (%1)"
 
@@ -1614,7 +1615,7 @@ msgstr "Het vorige document kon niet worden geopend"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:155
 #: frontend/apps/reader/modules/readerdictionary.lua:211
-#: frontend/apps/reader/modules/readertoc.lua:1003
+#: frontend/apps/reader/modules/readertoc.lua:1024
 #: frontend/ui/otamanager.lua:437 plugins/newsdownloader.koplugin/main.lua:124
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:1062
@@ -2225,6 +2226,7 @@ msgstr "Max lijnen per bladwijzer: %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:111
 #: frontend/apps/reader/modules/readerrolling.lua:429
+#: frontend/apps/reader/modules/readersearch.lua:123
 #: frontend/apps/reader/modules/readertypography.lua:542
 msgid "disabled"
 msgstr "uitgeschakeld"
@@ -2234,11 +2236,13 @@ msgid "Max lines per bookmark"
 msgstr "Max lijnen per bladwijzer"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:118
+#: frontend/apps/reader/modules/readersearch.lua:130
 msgid "Set maximum number of lines to enable flexible item heights."
 msgstr ""
 "Stel het maximum aantal regels in om flexibele itemhoogtes mogelijk te maken."
 
 #: frontend/apps/reader/modules/readerbookmark.lua:141
+#: frontend/apps/reader/modules/readersearch.lua:155
 msgid "flexible"
 msgstr "flexibel"
 
@@ -2387,6 +2391,7 @@ msgid "Bookmark type:"
 msgstr "Bladwijzertype:"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1069
+#: frontend/apps/reader/modules/readersearch.lua:679
 msgid "Page: %1"
 msgstr "Pagina: %1"
 
@@ -4082,7 +4087,7 @@ msgid "Select and highlight"
 msgstr "Selecteren en markeren"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:365
-#: frontend/apps/reader/modules/readersearch.lua:142
+#: frontend/apps/reader/modules/readersearch.lua:181
 #: frontend/dispatcher.lua:169
 msgid "Fulltext search"
 msgstr "Volledige tekst doorzoeken"
@@ -5082,7 +5087,7 @@ msgstr "Vertraging instellen"
 msgid "Allow inertial scrolling"
 msgstr "Inertiëeel vertraagd scrollen toestaan"
 
-#: frontend/apps/reader/modules/readersearch.lua:50
+#: frontend/apps/reader/modules/readersearch.lua:52
 msgid ""
 "Regular expressions allow you to search for a matching pattern in a text. "
 "The simplest pattern is a simple sequence of characters, such as `James "
@@ -5135,55 +5140,55 @@ msgstr ""
 "Complexe uitdrukkingen kunnen tot een extreem lange zoektijd lijden. In dat "
 "geval zullen niet alle overeenkomsten worden getoond."
 
-#: frontend/apps/reader/modules/readersearch.lua:71
+#: frontend/apps/reader/modules/readersearch.lua:73
 msgid "Wrong escape '\\'"
 msgstr "Verkeerde escape '\\'"
 
-#: frontend/apps/reader/modules/readersearch.lua:72
+#: frontend/apps/reader/modules/readersearch.lua:74
 msgid "Back reference does not exist."
 msgstr "Terugverwijzing bestaat niet."
 
-#: frontend/apps/reader/modules/readersearch.lua:73
+#: frontend/apps/reader/modules/readersearch.lua:75
 msgid "Mismatching brackets '[]'"
 msgstr "Niet-overeenkomende haakjes '[]'"
 
-#: frontend/apps/reader/modules/readersearch.lua:74
+#: frontend/apps/reader/modules/readersearch.lua:76
 msgid "Mismatched parens '()'"
 msgstr "Niet-overeenkomende haakjes '()'"
 
-#: frontend/apps/reader/modules/readersearch.lua:75
+#: frontend/apps/reader/modules/readersearch.lua:77
 msgid "Mismatched brace '{}'"
 msgstr "Niet-overeenkomende accolade '{}'"
 
-#: frontend/apps/reader/modules/readersearch.lua:76
+#: frontend/apps/reader/modules/readersearch.lua:78
 msgid "Invalid Range in '{}'"
 msgstr "Ongeldig bereik in '{}'"
 
-#: frontend/apps/reader/modules/readersearch.lua:77
+#: frontend/apps/reader/modules/readersearch.lua:79
 msgid "Invalid character range"
 msgstr "Ongeldig tekenbereik"
 
-#: frontend/apps/reader/modules/readersearch.lua:78
+#: frontend/apps/reader/modules/readersearch.lua:80
 msgid "No preceding expression in repetition."
 msgstr "Geen voorafgaande uitdrukking in herhaling."
 
-#: frontend/apps/reader/modules/readersearch.lua:79
+#: frontend/apps/reader/modules/readersearch.lua:81
 msgid "Expression too complex, some hits will not be shown."
 msgstr "Expressie te complex, sommige hits worden niet getoond."
 
-#: frontend/apps/reader/modules/readersearch.lua:80
+#: frontend/apps/reader/modules/readersearch.lua:82
 msgid "Expression may lead to an extremely long search time."
 msgstr "Expressie kan tot een extreem lange zoektijd leiden."
 
-#: frontend/apps/reader/modules/readersearch.lua:84
+#: frontend/apps/reader/modules/readersearch.lua:86
 msgid "Fulltext search settings"
 msgstr "Instellingen voor volledige tekst doorzoeken"
 
-#: frontend/apps/reader/modules/readersearch.lua:87
+#: frontend/apps/reader/modules/readersearch.lua:89
 msgid "Show all results on text selection"
 msgstr "Alle resultaten tonen bij tekstselectie"
 
-#: frontend/apps/reader/modules/readersearch.lua:88
+#: frontend/apps/reader/modules/readersearch.lua:90
 msgid ""
 "When invoked after text selection, show a list with all results instead of "
 "highlighting matches in book pages."
@@ -5191,28 +5196,38 @@ msgstr ""
 "Wanneer dit wordt aangeroepen na tekstselectie, wordt een lijst met alle "
 "resultaten getoond in plaats van gemarkeerde resultaten op boekpagina's."
 
-#: frontend/apps/reader/modules/readersearch.lua:98
+#: frontend/apps/reader/modules/readersearch.lua:100
 msgid "Words in context: %1"
 msgstr "Woorden in context: %1"
 
-#: frontend/apps/reader/modules/readersearch.lua:103
+#: frontend/apps/reader/modules/readersearch.lua:105
 msgid "Words in context"
 msgstr "Woorden in context"
 
-#: frontend/apps/reader/modules/readersearch.lua:120
+#: frontend/apps/reader/modules/readersearch.lua:123
+#, fuzzy
+msgid "Max lines per result: %1"
+msgstr "Max lijnen per bladwijzer: %1"
+
+#: frontend/apps/reader/modules/readersearch.lua:129
+#, fuzzy
+msgid "Max lines per result"
+msgstr "Max lijnen per bladwijzer"
+
+#: frontend/apps/reader/modules/readersearch.lua:156
 msgid "Results per page: %1"
 msgstr "Resultaten per pagina: %1"
 
-#: frontend/apps/reader/modules/readersearch.lua:125
+#: frontend/apps/reader/modules/readersearch.lua:164
 msgid "Results per page"
 msgstr "Resultaten per pagina"
 
-#: frontend/apps/reader/modules/readersearch.lua:148
+#: frontend/apps/reader/modules/readersearch.lua:187
 #: frontend/dispatcher.lua:170
 msgid "Last fulltext search results"
 msgstr "Laatste volledige-tekst-zoekresultaten"
 
-#: frontend/apps/reader/modules/readersearch.lua:189
+#: frontend/apps/reader/modules/readersearch.lua:228
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -5220,48 +5235,58 @@ msgstr ""
 "Ongeldige reguliere expressie:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:191
+#: frontend/apps/reader/modules/readersearch.lua:230
 msgid "Invalid regular expression."
 msgstr "Ongeldige reguliere expressie."
 
-#: frontend/apps/reader/modules/readersearch.lua:215
+#: frontend/apps/reader/modules/readersearch.lua:254
 #: frontend/ui/widget/inputdialog.lua:878 frontend/ui/widget/textviewer.lua:463
 msgid "Enter text to search for"
 msgstr "Voer zoektekst in"
 
 #. @translators Find all results in entire document, button displayed on the search bar, should be short.
-#: frontend/apps/reader/modules/readersearch.lua:229
+#: frontend/apps/reader/modules/readersearch.lua:268
 msgctxt "Search text"
 msgid "All"
 msgstr "Alles"
 
-#: frontend/apps/reader/modules/readersearch.lua:258
+#: frontend/apps/reader/modules/readersearch.lua:297
 msgid "Regular expression (long-press for help)"
 msgstr "Reguliere expressie (ingedrukt houden voor hulp)"
 
-#: frontend/apps/reader/modules/readersearch.lua:385
+#: frontend/apps/reader/modules/readersearch.lua:424
 msgid "No results on preceding pages"
 msgstr "Geen resultaten op voorgaande pagina's"
 
-#: frontend/apps/reader/modules/readersearch.lua:387
+#: frontend/apps/reader/modules/readersearch.lua:426
 msgid "No results on following pages"
 msgstr "Geen resultaten op volgende pagina's"
 
-#: frontend/apps/reader/modules/readersearch.lua:509
+#: frontend/apps/reader/modules/readersearch.lua:548
 msgid "Unspecified error"
 msgstr "Niet-gespecificeerde fout"
 
-#: frontend/apps/reader/modules/readersearch.lua:517
+#: frontend/apps/reader/modules/readersearch.lua:556
 msgid "Too many hits"
 msgstr "Te veel hits"
 
-#: frontend/apps/reader/modules/readersearch.lua:553
+#: frontend/apps/reader/modules/readersearch.lua:592
 msgid "Searching… (tap to cancel)"
 msgstr "Zoeken… (tik om te annuleren)"
 
-#: frontend/apps/reader/modules/readersearch.lua:569
+#: frontend/apps/reader/modules/readersearch.lua:608
 msgid "No results in the document"
 msgstr "Geen resultaten in het document"
+
+#: frontend/apps/reader/modules/readersearch.lua:714
+#, fuzzy
+msgid "Filter by current chapter"
+msgstr "Huidig hoofdstuk"
+
+#: frontend/apps/reader/modules/readersearch.lua:741
+#, fuzzy
+msgid "Current page: %1"
+msgstr "Huidige pagina (%1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:29
 #: frontend/apps/reader/modules/readerstatus.lua:70 frontend/dispatcher.lua:179
@@ -5889,11 +5914,11 @@ msgstr "Paginabrowser"
 msgid "Table of contents"
 msgstr "Inhoudsopgave"
 
-#: frontend/apps/reader/modules/readertoc.lua:1008
+#: frontend/apps/reader/modules/readertoc.lua:1029
 msgid "Alternative table of contents"
 msgstr "Alternatieve inhoudsopgave"
 
-#: frontend/apps/reader/modules/readertoc.lua:1010
+#: frontend/apps/reader/modules/readertoc.lua:1031
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -5916,14 +5941,14 @@ msgstr ""
 "worden gebruikt als inhoudsopgave-elementen.\n"
 "Zie Stijlaanpassingen → Diversen → Alternatieve inhoudsopgavehints."
 
-#: frontend/apps/reader/modules/readertoc.lua:1017
+#: frontend/apps/reader/modules/readertoc.lua:1038
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
 "Om de alternatieve inhoudsopgave te gebruiken, moet de aangepaste "
 "inhoudsopgave eerst worden uitgeschakeld."
 
-#: frontend/apps/reader/modules/readertoc.lua:1030
+#: frontend/apps/reader/modules/readertoc.lua:1051
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -5935,25 +5960,25 @@ msgstr ""
 "De originele inhoudsopgave terugzetten? (Het boek zal opnieuw worden "
 "geladen.)"
 
-#: frontend/apps/reader/modules/readertoc.lua:1045
+#: frontend/apps/reader/modules/readertoc.lua:1066
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
 msgstr "Een alternatieve inhoudsopgave gebruiken op basis van koppen?"
 
-#: frontend/apps/reader/modules/readertoc.lua:1072
+#: frontend/apps/reader/modules/readertoc.lua:1093
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
 msgstr[0] "1 vermelding op inhoudsopgave-diepte %2"
 msgstr[1] "%1 vermeldingen op inhoudsopgave-diepte %2"
 
-#: frontend/apps/reader/modules/readertoc.lua:1094
+#: frontend/apps/reader/modules/readertoc.lua:1115
 msgid "Progress bars: 1 tick"
 msgid_plural "Progress bars: %1 ticks"
 msgstr[0] "Voortgangsbalken: 1 aanduiding"
 msgstr[1] "Voortgangsbalken: %1 aanduidingen"
 
-#: frontend/apps/reader/modules/readertoc.lua:1096
+#: frontend/apps/reader/modules/readertoc.lua:1117
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
@@ -5963,11 +5988,11 @@ msgstr ""
 "als de inhoudsopgave complex is. Hiermee kan het aantal vinkjes worden "
 "beperkt."
 
-#: frontend/apps/reader/modules/readertoc.lua:1117
+#: frontend/apps/reader/modules/readertoc.lua:1138
 msgid "Bind chapter navigation to ticks"
 msgstr "Hoofdstuknavigatie aan vinkjes binden"
 
-#: frontend/apps/reader/modules/readertoc.lua:1118
+#: frontend/apps/reader/modules/readertoc.lua:1139
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for chapter navigation and 'page/time left until next chapter' in the "
@@ -5980,11 +6005,11 @@ msgstr ""
 "Door deze optie in te schakelen, wordt hoofdstuknavigatie beperkt tot de "
 "vinkjes op de voortgangsbalk."
 
-#: frontend/apps/reader/modules/readertoc.lua:1133
+#: frontend/apps/reader/modules/readertoc.lua:1154
 msgid "Chapter titles from ticks only"
 msgstr "Alleen hoofdstuktitels van vinkjes"
 
-#: frontend/apps/reader/modules/readertoc.lua:1134
+#: frontend/apps/reader/modules/readertoc.lua:1155
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for displaying the title of the current chapter in the footer and in "
@@ -5998,21 +6023,21 @@ msgstr ""
 "Door deze optie in te schakelen, wordt hoofdstukweergave beperkt tot de "
 "vinkjes op de voortgangsbalk."
 
-#: frontend/apps/reader/modules/readertoc.lua:1151
-#: frontend/apps/reader/modules/readertoc.lua:1161
+#: frontend/apps/reader/modules/readertoc.lua:1172
+#: frontend/apps/reader/modules/readertoc.lua:1182
 msgid "ToC entries per page"
 msgstr "Inhoudsopgave-vermeldingen per pagina"
 
-#: frontend/apps/reader/modules/readertoc.lua:1174
-#: frontend/apps/reader/modules/readertoc.lua:1186
+#: frontend/apps/reader/modules/readertoc.lua:1195
+#: frontend/apps/reader/modules/readertoc.lua:1207
 msgid "ToC entry font size"
 msgstr "Inhoudsopgave lettergrootte"
 
-#: frontend/apps/reader/modules/readertoc.lua:1195
+#: frontend/apps/reader/modules/readertoc.lua:1216
 msgid "Show chapter length"
 msgstr "Hoofdstuklengte weergeven"
 
-#: frontend/apps/reader/modules/readertoc.lua:1206
+#: frontend/apps/reader/modules/readertoc.lua:1227
 msgid "Dot leaders"
 msgstr "Opvultekens"
 
@@ -20996,9 +21021,6 @@ msgstr "aantekeningen"
 
 #~ msgid "Frontlight warmth (%1)"
 #~ msgstr "Lichtwarmte (%1)"
-
-#~ msgid "Current chapter"
-#~ msgstr "Huidig hoofdstuk"
 
 #~ msgid "Sort items"
 #~ msgstr "Items sorteren"

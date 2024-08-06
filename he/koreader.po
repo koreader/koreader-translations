@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-06 11:26+0000\n"
+"POT-Creation-Date: 2024-08-06 16:27+0000\n"
 "PO-Revision-Date: 2024-08-03 06:20+0000\n"
 "Last-Translator: Enrico Segre <enricoalbertoernestosegre@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -47,6 +47,7 @@ msgstr "התעלם"
 #: frontend/apps/reader/modules/readerdictionary.lua:1272
 #: frontend/apps/reader/modules/readerfooter.lua:1612
 #: frontend/apps/reader/modules/readerrolling.lua:482
+#: frontend/apps/reader/modules/readersearch.lua:142
 #: frontend/apps/reader/modules/readertypography.lua:332
 #: frontend/apps/reader/modules/readertypography.lua:421
 #: frontend/apps/reader/modules/readertypography.lua:478
@@ -171,7 +172,7 @@ msgstr "הזן שם קובץ"
 #: frontend/apps/reader/modules/readergoto.lua:69
 #: frontend/apps/reader/modules/readerhandmade.lua:491
 #: frontend/apps/reader/modules/readerlink.lua:224
-#: frontend/apps/reader/modules/readersearch.lua:221
+#: frontend/apps/reader/modules/readersearch.lua:260
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:167
@@ -1456,7 +1457,7 @@ msgstr "תיקיית הספר"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:67
 #: frontend/apps/filemanager/filemanagerhistory.lua:421
 #: frontend/apps/reader/modules/readerbookmark.lua:1390
-#: frontend/apps/reader/modules/readersearch.lua:252
+#: frontend/apps/reader/modules/readersearch.lua:291
 #: frontend/ui/widget/inputdialog.lua:909 frontend/ui/widget/textviewer.lua:493
 msgid "Case sensitive"
 msgstr "תלוי רישיות"
@@ -1496,13 +1497,13 @@ msgstr "לחלץ"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:219
 #: frontend/apps/reader/modules/readerbookmark.lua:1010
-#: frontend/apps/reader/modules/readersearch.lua:615
+#: frontend/apps/reader/modules/readersearch.lua:653
 msgid "Query: %1"
 msgstr "שאילתה: %1"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:248
 #: frontend/apps/filemanager/filemanagerhistory.lua:88
-#: frontend/apps/reader/modules/readersearch.lua:614
+#: frontend/apps/reader/modules/readersearch.lua:704
 msgid "Search results (%1)"
 msgstr "תוצאות החיפוש (%1)"
 
@@ -1626,7 +1627,7 @@ msgstr "לא ניתן לפתוח את המסמך האחרון"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:155
 #: frontend/apps/reader/modules/readerdictionary.lua:211
-#: frontend/apps/reader/modules/readertoc.lua:1003
+#: frontend/apps/reader/modules/readertoc.lua:1024
 #: frontend/ui/otamanager.lua:437 plugins/newsdownloader.koplugin/main.lua:124
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:1062
@@ -2231,6 +2232,7 @@ msgstr "מספר שורות מרבי לסימנייה: %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:111
 #: frontend/apps/reader/modules/readerrolling.lua:429
+#: frontend/apps/reader/modules/readersearch.lua:123
 #: frontend/apps/reader/modules/readertypography.lua:542
 msgid "disabled"
 msgstr "מושבת"
@@ -2240,10 +2242,12 @@ msgid "Max lines per bookmark"
 msgstr "מספר שורות מרבי לסימנייה"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:118
+#: frontend/apps/reader/modules/readersearch.lua:130
 msgid "Set maximum number of lines to enable flexible item heights."
 msgstr "הגדרת מספר מרבי של שורות כדי לאפשר גבהים גמישים של פריטים."
 
 #: frontend/apps/reader/modules/readerbookmark.lua:141
+#: frontend/apps/reader/modules/readersearch.lua:155
 msgid "flexible"
 msgstr "גמיש"
 
@@ -2394,6 +2398,7 @@ msgid "Bookmark type:"
 msgstr "סוג סימניות:"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1069
+#: frontend/apps/reader/modules/readersearch.lua:679
 msgid "Page: %1"
 msgstr "עמוד: %1"
 
@@ -4048,7 +4053,7 @@ msgid "Select and highlight"
 msgstr "בחירה והדגשה"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:365
-#: frontend/apps/reader/modules/readersearch.lua:142
+#: frontend/apps/reader/modules/readersearch.lua:181
 #: frontend/dispatcher.lua:169
 msgid "Fulltext search"
 msgstr "חפש במסמך"
@@ -5004,7 +5009,7 @@ msgstr "הגדר עיכוב"
 msgid "Allow inertial scrolling"
 msgstr "אפשר גלילה אינרציאלית"
 
-#: frontend/apps/reader/modules/readersearch.lua:50
+#: frontend/apps/reader/modules/readersearch.lua:52
 msgid ""
 "Regular expressions allow you to search for a matching pattern in a text. "
 "The simplest pattern is a simple sequence of characters, such as `James "
@@ -5055,55 +5060,55 @@ msgstr ""
 "ביטויים מורכבים עשויים להוביל לזמן חיפוש ארוך במיוחד, ובמקרה שכזה לא כל "
 "ההתאמות יוצגו."
 
-#: frontend/apps/reader/modules/readersearch.lua:71
+#: frontend/apps/reader/modules/readersearch.lua:73
 msgid "Wrong escape '\\'"
 msgstr "‚\\’ שגוי להחרגה"
 
-#: frontend/apps/reader/modules/readersearch.lua:72
+#: frontend/apps/reader/modules/readersearch.lua:74
 msgid "Back reference does not exist."
 msgstr "לא קיימת הפנייה חוזרת."
 
-#: frontend/apps/reader/modules/readersearch.lua:73
+#: frontend/apps/reader/modules/readersearch.lua:75
 msgid "Mismatching brackets '[]'"
 msgstr "סוגריים מרובעים לא מאוזנים ‚[]’"
 
-#: frontend/apps/reader/modules/readersearch.lua:74
+#: frontend/apps/reader/modules/readersearch.lua:76
 msgid "Mismatched parens '()'"
 msgstr "סוגריים לא מאוזנים ‚()’"
 
-#: frontend/apps/reader/modules/readersearch.lua:75
+#: frontend/apps/reader/modules/readersearch.lua:77
 msgid "Mismatched brace '{}'"
 msgstr "סוגריים מסולסלים לא מאוזנים ‚{}’"
 
-#: frontend/apps/reader/modules/readersearch.lua:76
+#: frontend/apps/reader/modules/readersearch.lua:78
 msgid "Invalid Range in '{}'"
 msgstr "טווח שגוי ב־‚{}’"
 
-#: frontend/apps/reader/modules/readersearch.lua:77
+#: frontend/apps/reader/modules/readersearch.lua:79
 msgid "Invalid character range"
 msgstr "טווח התווים שגוי"
 
-#: frontend/apps/reader/modules/readersearch.lua:78
+#: frontend/apps/reader/modules/readersearch.lua:80
 msgid "No preceding expression in repetition."
 msgstr "אין ביטוי עוקב בחזרה."
 
-#: frontend/apps/reader/modules/readersearch.lua:79
+#: frontend/apps/reader/modules/readersearch.lua:81
 msgid "Expression too complex, some hits will not be shown."
 msgstr "הביטוי מורכב מדי, חלק מהתוצאות לא תופענה."
 
-#: frontend/apps/reader/modules/readersearch.lua:80
+#: frontend/apps/reader/modules/readersearch.lua:82
 msgid "Expression may lead to an extremely long search time."
 msgstr "הביטוי עשוי להוביל לזמן חיפוש ארוך במיוחד."
 
-#: frontend/apps/reader/modules/readersearch.lua:84
+#: frontend/apps/reader/modules/readersearch.lua:86
 msgid "Fulltext search settings"
 msgstr "חיפוש במסמך"
 
-#: frontend/apps/reader/modules/readersearch.lua:87
+#: frontend/apps/reader/modules/readersearch.lua:89
 msgid "Show all results on text selection"
 msgstr "הצגת כל התוצאות מבחירת טקסט"
 
-#: frontend/apps/reader/modules/readersearch.lua:88
+#: frontend/apps/reader/modules/readersearch.lua:90
 msgid ""
 "When invoked after text selection, show a list with all results instead of "
 "highlighting matches in book pages."
@@ -5111,28 +5116,38 @@ msgstr ""
 "כאשר נקרא לאחר בחירת טקסט, מציג רשימה עם כל התוצאות, במקום להדגיש תוצאות "
 "בעמודי הספר."
 
-#: frontend/apps/reader/modules/readersearch.lua:98
+#: frontend/apps/reader/modules/readersearch.lua:100
 msgid "Words in context: %1"
 msgstr "מילים בהקשר: %1"
 
-#: frontend/apps/reader/modules/readersearch.lua:103
+#: frontend/apps/reader/modules/readersearch.lua:105
 msgid "Words in context"
 msgstr "מילים בהקשר"
 
-#: frontend/apps/reader/modules/readersearch.lua:120
+#: frontend/apps/reader/modules/readersearch.lua:123
+#, fuzzy
+msgid "Max lines per result: %1"
+msgstr "מספר שורות מרבי לסימנייה: %1"
+
+#: frontend/apps/reader/modules/readersearch.lua:129
+#, fuzzy
+msgid "Max lines per result"
+msgstr "מספר שורות מרבי לסימנייה"
+
+#: frontend/apps/reader/modules/readersearch.lua:156
 msgid "Results per page: %1"
 msgstr "תוצאות בעמוד: %1"
 
-#: frontend/apps/reader/modules/readersearch.lua:125
+#: frontend/apps/reader/modules/readersearch.lua:164
 msgid "Results per page"
 msgstr "תוצאות בעמוד"
 
-#: frontend/apps/reader/modules/readersearch.lua:148
+#: frontend/apps/reader/modules/readersearch.lua:187
 #: frontend/dispatcher.lua:170
 msgid "Last fulltext search results"
 msgstr "תוצאות אחרונות מהחיפוש בטקסט מלא"
 
-#: frontend/apps/reader/modules/readersearch.lua:189
+#: frontend/apps/reader/modules/readersearch.lua:228
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -5140,48 +5155,58 @@ msgstr ""
 "ביטוי רגולרי שגוי:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:191
+#: frontend/apps/reader/modules/readersearch.lua:230
 msgid "Invalid regular expression."
 msgstr "ביטוי רגולרי שגוי."
 
-#: frontend/apps/reader/modules/readersearch.lua:215
+#: frontend/apps/reader/modules/readersearch.lua:254
 #: frontend/ui/widget/inputdialog.lua:878 frontend/ui/widget/textviewer.lua:463
 msgid "Enter text to search for"
 msgstr "הזן טקסט לחיפוש"
 
 #. @translators Find all results in entire document, button displayed on the search bar, should be short.
-#: frontend/apps/reader/modules/readersearch.lua:229
+#: frontend/apps/reader/modules/readersearch.lua:268
 msgctxt "Search text"
 msgid "All"
 msgstr "הכול"
 
-#: frontend/apps/reader/modules/readersearch.lua:258
+#: frontend/apps/reader/modules/readersearch.lua:297
 msgid "Regular expression (long-press for help)"
 msgstr "ביטוי רגולרי (יש להחזיק לקבלת עזרה)"
 
-#: frontend/apps/reader/modules/readersearch.lua:385
+#: frontend/apps/reader/modules/readersearch.lua:424
 msgid "No results on preceding pages"
 msgstr "אין תוצאות בעמודים הקודמים"
 
-#: frontend/apps/reader/modules/readersearch.lua:387
+#: frontend/apps/reader/modules/readersearch.lua:426
 msgid "No results on following pages"
 msgstr "אין תוצאות בעמודים הבאים"
 
-#: frontend/apps/reader/modules/readersearch.lua:509
+#: frontend/apps/reader/modules/readersearch.lua:548
 msgid "Unspecified error"
 msgstr "שגיאה בלתי מתועדת"
 
-#: frontend/apps/reader/modules/readersearch.lua:517
+#: frontend/apps/reader/modules/readersearch.lua:556
 msgid "Too many hits"
 msgstr "יותר מדי תוצאות"
 
-#: frontend/apps/reader/modules/readersearch.lua:553
+#: frontend/apps/reader/modules/readersearch.lua:592
 msgid "Searching… (tap to cancel)"
 msgstr "מתבצע חיפוש… (נגיעה לביטול)"
 
-#: frontend/apps/reader/modules/readersearch.lua:569
+#: frontend/apps/reader/modules/readersearch.lua:608
 msgid "No results in the document"
 msgstr "אין תוצאות במסמך"
+
+#: frontend/apps/reader/modules/readersearch.lua:714
+#, fuzzy
+msgid "Filter by current chapter"
+msgstr "הפרק הנוכחי"
+
+#: frontend/apps/reader/modules/readersearch.lua:741
+#, fuzzy
+msgid "Current page: %1"
+msgstr "העמוד הנוכחי (%1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:29
 #: frontend/apps/reader/modules/readerstatus.lua:70 frontend/dispatcher.lua:179
@@ -5783,11 +5808,11 @@ msgstr "דפדפן עמודים"
 msgid "Table of contents"
 msgstr "תוכן העניינים"
 
-#: frontend/apps/reader/modules/readertoc.lua:1008
+#: frontend/apps/reader/modules/readertoc.lua:1029
 msgid "Alternative table of contents"
 msgstr "תוכן העניינים חלופי"
 
-#: frontend/apps/reader/modules/readertoc.lua:1010
+#: frontend/apps/reader/modules/readertoc.lua:1031
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -5807,14 +5832,14 @@ msgstr ""
 "בהכוונות משתמש, כך שהם יוכלו לשמש כפריטים של תוכן העניינים.\n"
 "עיין תחת: כוונוני סגנון ← שונים ← רמזים חלופיים לתוכן העניינים."
 
-#: frontend/apps/reader/modules/readertoc.lua:1017
+#: frontend/apps/reader/modules/readertoc.lua:1038
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
 "כדי להשתמש בתוכן העניינים החלופי, יש להשבית את תוכן העניינים המותאם שלך "
 "תחילה."
 
-#: frontend/apps/reader/modules/readertoc.lua:1030
+#: frontend/apps/reader/modules/readertoc.lua:1051
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -5824,13 +5849,13 @@ msgstr ""
 "תוכן העניינים של ספר זה הוא כרגע חלופה מיוצרת מכותרות המסמך.\n"
 "האם אתה רוצה להחזיר את תוכן העניינים המקורי? (הספר יוטען מחדש.)"
 
-#: frontend/apps/reader/modules/readertoc.lua:1045
+#: frontend/apps/reader/modules/readertoc.lua:1066
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
 msgstr "האם ברצונך להשתמש בתוכן העניינים החלופי, הבנוי מכותרות המסמך?"
 
-#: frontend/apps/reader/modules/readertoc.lua:1072
+#: frontend/apps/reader/modules/readertoc.lua:1093
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
 msgstr[0] "ערך אחד בעומק %2 של תוכן העניינים"
@@ -5838,7 +5863,7 @@ msgstr[1] "שני ערכים בעומק %2 של תוכן העניינים"
 msgstr[2] "%1 ערכים בעומק %2 של תוכן העניינים"
 msgstr[3] "%1 ערכים בעומק %2 של תוכן העניינים"
 
-#: frontend/apps/reader/modules/readertoc.lua:1094
+#: frontend/apps/reader/modules/readertoc.lua:1115
 msgid "Progress bars: 1 tick"
 msgid_plural "Progress bars: %1 ticks"
 msgstr[0] "סרגלי התקדמות: שנתה אחת"
@@ -5846,7 +5871,7 @@ msgstr[1] "סרגלי התקדמות: שתי שנתות"
 msgstr[2] "סרגלי התקדמות: %1 שנתות"
 msgstr[3] "סרגלי התקדמות: %1 שנתות"
 
-#: frontend/apps/reader/modules/readertoc.lua:1096
+#: frontend/apps/reader/modules/readertoc.lua:1117
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
@@ -5855,11 +5880,11 @@ msgstr ""
 "פסי ההתקדמות בתחתית העמוד ובחלונית הרפרוף עלולים להיות צפופים כאשר תוכן "
 "העניינים מורכב. הגדרה זו מאפשרת לך להגביל את מספר הסימונים."
 
-#: frontend/apps/reader/modules/readertoc.lua:1117
+#: frontend/apps/reader/modules/readertoc.lua:1138
 msgid "Bind chapter navigation to ticks"
 msgstr "אגד ניווט פרקים לסימני הפרדה בסרגל"
 
-#: frontend/apps/reader/modules/readertoc.lua:1118
+#: frontend/apps/reader/modules/readertoc.lua:1139
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for chapter navigation and 'page/time left until next chapter' in the "
@@ -5870,11 +5895,11 @@ msgstr ""
 "ול-\"עמודים/זמן שנותר עד לפרק הבא\" בסרגל התחתון.\n"
 "הפעלת אפשרות זו תגביל את ניווט הפרקים לסימני סרגל התקדמות."
 
-#: frontend/apps/reader/modules/readertoc.lua:1133
+#: frontend/apps/reader/modules/readertoc.lua:1154
 msgid "Chapter titles from ticks only"
 msgstr "כותרות של הפרקים המסומנים בסרגל בלבד"
 
-#: frontend/apps/reader/modules/readertoc.lua:1134
+#: frontend/apps/reader/modules/readertoc.lua:1155
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for displaying the title of the current chapter in the footer and in "
@@ -5886,21 +5911,21 @@ msgstr ""
 "כותרת הפרק הנוכחי בכותרת התחתונה ובסימניות.\n"
 "הפעלת אפשרות זו תגביל את התצוגה לכותרות הפרקים של סימני סרגל התקדמות."
 
-#: frontend/apps/reader/modules/readertoc.lua:1151
-#: frontend/apps/reader/modules/readertoc.lua:1161
+#: frontend/apps/reader/modules/readertoc.lua:1172
+#: frontend/apps/reader/modules/readertoc.lua:1182
 msgid "ToC entries per page"
 msgstr "ערכי תוכן העניינים בעמוד"
 
-#: frontend/apps/reader/modules/readertoc.lua:1174
-#: frontend/apps/reader/modules/readertoc.lua:1186
+#: frontend/apps/reader/modules/readertoc.lua:1195
+#: frontend/apps/reader/modules/readertoc.lua:1207
 msgid "ToC entry font size"
 msgstr "גודל הגופן של ערכי תוכן העניינים"
 
-#: frontend/apps/reader/modules/readertoc.lua:1195
+#: frontend/apps/reader/modules/readertoc.lua:1216
 msgid "Show chapter length"
 msgstr "להציג אורך הפרק"
 
-#: frontend/apps/reader/modules/readertoc.lua:1206
+#: frontend/apps/reader/modules/readertoc.lua:1227
 msgid "Dot leaders"
 msgstr "נקודות פותחות"
 
@@ -20603,9 +20628,6 @@ msgstr "הסברים"
 
 #~ msgid "Frontlight warmth (%1)"
 #~ msgstr "חום התאורה הקדמית (%1)"
-
-#~ msgid "Current chapter"
-#~ msgstr "הפרק הנוכחי"
 
 #~ msgid "Sort items"
 #~ msgstr "מיין פריטים"

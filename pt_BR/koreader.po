@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-06 11:26+0000\n"
+"POT-Creation-Date: 2024-08-06 16:27+0000\n"
 "PO-Revision-Date: 2024-08-05 03:09+0000\n"
 "Last-Translator: pedrogmattos <pedrogrimattos@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
@@ -58,6 +58,7 @@ msgstr "Ignorar"
 #: frontend/apps/reader/modules/readerdictionary.lua:1272
 #: frontend/apps/reader/modules/readerfooter.lua:1612
 #: frontend/apps/reader/modules/readerrolling.lua:482
+#: frontend/apps/reader/modules/readersearch.lua:142
 #: frontend/apps/reader/modules/readertypography.lua:332
 #: frontend/apps/reader/modules/readertypography.lua:421
 #: frontend/apps/reader/modules/readertypography.lua:478
@@ -183,7 +184,7 @@ msgstr "Digitar o nome do arquivo"
 #: frontend/apps/reader/modules/readergoto.lua:69
 #: frontend/apps/reader/modules/readerhandmade.lua:491
 #: frontend/apps/reader/modules/readerlink.lua:224
-#: frontend/apps/reader/modules/readersearch.lua:221
+#: frontend/apps/reader/modules/readersearch.lua:260
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:46
 #: frontend/apps/reader/modules/readerwikipedia.lua:167
@@ -1460,7 +1461,7 @@ msgstr "Pasta do livro"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:67
 #: frontend/apps/filemanager/filemanagerhistory.lua:421
 #: frontend/apps/reader/modules/readerbookmark.lua:1390
-#: frontend/apps/reader/modules/readersearch.lua:252
+#: frontend/apps/reader/modules/readersearch.lua:291
 #: frontend/ui/widget/inputdialog.lua:909 frontend/ui/widget/textviewer.lua:493
 msgid "Case sensitive"
 msgstr "Sensível à caixa (maiúscula/minúscula)"
@@ -1498,13 +1499,13 @@ msgstr "Extrair"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:219
 #: frontend/apps/reader/modules/readerbookmark.lua:1010
-#: frontend/apps/reader/modules/readersearch.lua:615
+#: frontend/apps/reader/modules/readersearch.lua:653
 msgid "Query: %1"
 msgstr "Consulta: %1"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:248
 #: frontend/apps/filemanager/filemanagerhistory.lua:88
-#: frontend/apps/reader/modules/readersearch.lua:614
+#: frontend/apps/reader/modules/readersearch.lua:704
 msgid "Search results (%1)"
 msgstr "Resultados da busca (%1)"
 
@@ -1628,7 +1629,7 @@ msgstr "Não é possível abrir o último documento"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:155
 #: frontend/apps/reader/modules/readerdictionary.lua:211
-#: frontend/apps/reader/modules/readertoc.lua:1003
+#: frontend/apps/reader/modules/readertoc.lua:1024
 #: frontend/ui/otamanager.lua:437 plugins/newsdownloader.koplugin/main.lua:124
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:1062
@@ -2238,6 +2239,7 @@ msgstr "Máximo de linhas por marcador: %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:111
 #: frontend/apps/reader/modules/readerrolling.lua:429
+#: frontend/apps/reader/modules/readersearch.lua:123
 #: frontend/apps/reader/modules/readertypography.lua:542
 msgid "disabled"
 msgstr "desativado"
@@ -2247,10 +2249,12 @@ msgid "Max lines per bookmark"
 msgstr "Máximo de linhas por marcador"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:118
+#: frontend/apps/reader/modules/readersearch.lua:130
 msgid "Set maximum number of lines to enable flexible item heights."
 msgstr "Definir número máximo de linhas para ativar altura flexível de itens."
 
 #: frontend/apps/reader/modules/readerbookmark.lua:141
+#: frontend/apps/reader/modules/readersearch.lua:155
 msgid "flexible"
 msgstr "flexível"
 
@@ -2399,6 +2403,7 @@ msgid "Bookmark type:"
 msgstr "Tipo de marcador:"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1069
+#: frontend/apps/reader/modules/readersearch.lua:679
 msgid "Page: %1"
 msgstr "Página: %1"
 
@@ -4087,7 +4092,7 @@ msgid "Select and highlight"
 msgstr "Selecionar e destacar"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:365
-#: frontend/apps/reader/modules/readersearch.lua:142
+#: frontend/apps/reader/modules/readersearch.lua:181
 #: frontend/dispatcher.lua:169
 msgid "Fulltext search"
 msgstr "Busca no texto"
@@ -5082,7 +5087,7 @@ msgstr "Definir atraso"
 msgid "Allow inertial scrolling"
 msgstr "Permitir rolagem inercial"
 
-#: frontend/apps/reader/modules/readersearch.lua:50
+#: frontend/apps/reader/modules/readersearch.lua:52
 msgid ""
 "Regular expressions allow you to search for a matching pattern in a text. "
 "The simplest pattern is a simple sequence of characters, such as `James "
@@ -5134,55 +5139,55 @@ msgstr ""
 "Expressões complexas podem levar um tempo de busca extremamente longo, e "
 "nesse caso nem todos resultados vão ser exibidos."
 
-#: frontend/apps/reader/modules/readersearch.lua:71
+#: frontend/apps/reader/modules/readersearch.lua:73
 msgid "Wrong escape '\\'"
 msgstr "Escape incorreto '\\'"
 
-#: frontend/apps/reader/modules/readersearch.lua:72
+#: frontend/apps/reader/modules/readersearch.lua:74
 msgid "Back reference does not exist."
 msgstr "Referência não existe."
 
-#: frontend/apps/reader/modules/readersearch.lua:73
+#: frontend/apps/reader/modules/readersearch.lua:75
 msgid "Mismatching brackets '[]'"
 msgstr "Colchetes descasados '[]'"
 
-#: frontend/apps/reader/modules/readersearch.lua:74
+#: frontend/apps/reader/modules/readersearch.lua:76
 msgid "Mismatched parens '()'"
 msgstr "Parênteses descasados '()'"
 
-#: frontend/apps/reader/modules/readersearch.lua:75
+#: frontend/apps/reader/modules/readersearch.lua:77
 msgid "Mismatched brace '{}'"
 msgstr "Chaves descasadas '{}'"
 
-#: frontend/apps/reader/modules/readersearch.lua:76
+#: frontend/apps/reader/modules/readersearch.lua:78
 msgid "Invalid Range in '{}'"
 msgstr "Intervalo inválido em '{}'"
 
-#: frontend/apps/reader/modules/readersearch.lua:77
+#: frontend/apps/reader/modules/readersearch.lua:79
 msgid "Invalid character range"
 msgstr "Intervalo de caracteres inválido"
 
-#: frontend/apps/reader/modules/readersearch.lua:78
+#: frontend/apps/reader/modules/readersearch.lua:80
 msgid "No preceding expression in repetition."
 msgstr "Nenhuma expressão precedente em repetição."
 
-#: frontend/apps/reader/modules/readersearch.lua:79
+#: frontend/apps/reader/modules/readersearch.lua:81
 msgid "Expression too complex, some hits will not be shown."
 msgstr "Expressão muito complexa, algumas coincidências não vão ser exibidas."
 
-#: frontend/apps/reader/modules/readersearch.lua:80
+#: frontend/apps/reader/modules/readersearch.lua:82
 msgid "Expression may lead to an extremely long search time."
 msgstr "Expressão pode levar a um tempo de busca extremamente longo."
 
-#: frontend/apps/reader/modules/readersearch.lua:84
+#: frontend/apps/reader/modules/readersearch.lua:86
 msgid "Fulltext search settings"
 msgstr "Configurações da busca de texto"
 
-#: frontend/apps/reader/modules/readersearch.lua:87
+#: frontend/apps/reader/modules/readersearch.lua:89
 msgid "Show all results on text selection"
 msgstr "Mostrar todos resultados na seleção de texto"
 
-#: frontend/apps/reader/modules/readersearch.lua:88
+#: frontend/apps/reader/modules/readersearch.lua:90
 msgid ""
 "When invoked after text selection, show a list with all results instead of "
 "highlighting matches in book pages."
@@ -5190,28 +5195,38 @@ msgstr ""
 "Quando invocado após seleção de texto, mostrar a lista com todos resultados "
 "em vez de destacar correspondências nas páginas do livro."
 
-#: frontend/apps/reader/modules/readersearch.lua:98
+#: frontend/apps/reader/modules/readersearch.lua:100
 msgid "Words in context: %1"
 msgstr "Palavras no contexto: %1"
 
-#: frontend/apps/reader/modules/readersearch.lua:103
+#: frontend/apps/reader/modules/readersearch.lua:105
 msgid "Words in context"
 msgstr "Palavras no contexto"
 
-#: frontend/apps/reader/modules/readersearch.lua:120
+#: frontend/apps/reader/modules/readersearch.lua:123
+#, fuzzy
+msgid "Max lines per result: %1"
+msgstr "Máximo de linhas por marcador: %1"
+
+#: frontend/apps/reader/modules/readersearch.lua:129
+#, fuzzy
+msgid "Max lines per result"
+msgstr "Máximo de linhas por marcador"
+
+#: frontend/apps/reader/modules/readersearch.lua:156
 msgid "Results per page: %1"
 msgstr "Resultados por página: %1"
 
-#: frontend/apps/reader/modules/readersearch.lua:125
+#: frontend/apps/reader/modules/readersearch.lua:164
 msgid "Results per page"
 msgstr "Resultados por página"
 
-#: frontend/apps/reader/modules/readersearch.lua:148
+#: frontend/apps/reader/modules/readersearch.lua:187
 #: frontend/dispatcher.lua:170
 msgid "Last fulltext search results"
 msgstr "Últimos resultados da busca de texto"
 
-#: frontend/apps/reader/modules/readersearch.lua:189
+#: frontend/apps/reader/modules/readersearch.lua:228
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -5219,48 +5234,58 @@ msgstr ""
 "Expressão regular inválida:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:191
+#: frontend/apps/reader/modules/readersearch.lua:230
 msgid "Invalid regular expression."
 msgstr "Expressão regular inválida."
 
-#: frontend/apps/reader/modules/readersearch.lua:215
+#: frontend/apps/reader/modules/readersearch.lua:254
 #: frontend/ui/widget/inputdialog.lua:878 frontend/ui/widget/textviewer.lua:463
 msgid "Enter text to search for"
 msgstr "Digite o texto para buscar"
 
 #. @translators Find all results in entire document, button displayed on the search bar, should be short.
-#: frontend/apps/reader/modules/readersearch.lua:229
+#: frontend/apps/reader/modules/readersearch.lua:268
 msgctxt "Search text"
 msgid "All"
 msgstr "Todos"
 
-#: frontend/apps/reader/modules/readersearch.lua:258
+#: frontend/apps/reader/modules/readersearch.lua:297
 msgid "Regular expression (long-press for help)"
 msgstr "Expressão regular (pressione e segure para ajuda)"
 
-#: frontend/apps/reader/modules/readersearch.lua:385
+#: frontend/apps/reader/modules/readersearch.lua:424
 msgid "No results on preceding pages"
 msgstr "Nenhum resultado nas páginas anteriores"
 
-#: frontend/apps/reader/modules/readersearch.lua:387
+#: frontend/apps/reader/modules/readersearch.lua:426
 msgid "No results on following pages"
 msgstr "Nenhum resultado nas páginas seguintes"
 
-#: frontend/apps/reader/modules/readersearch.lua:509
+#: frontend/apps/reader/modules/readersearch.lua:548
 msgid "Unspecified error"
 msgstr "Erro não especificado"
 
-#: frontend/apps/reader/modules/readersearch.lua:517
+#: frontend/apps/reader/modules/readersearch.lua:556
 msgid "Too many hits"
 msgstr "Muitas coincidências"
 
-#: frontend/apps/reader/modules/readersearch.lua:553
+#: frontend/apps/reader/modules/readersearch.lua:592
 msgid "Searching… (tap to cancel)"
 msgstr "Buscando... (toque para cancelar)"
 
-#: frontend/apps/reader/modules/readersearch.lua:569
+#: frontend/apps/reader/modules/readersearch.lua:608
 msgid "No results in the document"
 msgstr "Nenhum resultado no documento"
+
+#: frontend/apps/reader/modules/readersearch.lua:714
+#, fuzzy
+msgid "Filter by current chapter"
+msgstr "Capítulo atual"
+
+#: frontend/apps/reader/modules/readersearch.lua:741
+#, fuzzy
+msgid "Current page: %1"
+msgstr "Página atual (%1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:29
 #: frontend/apps/reader/modules/readerstatus.lua:70 frontend/dispatcher.lua:179
@@ -5885,11 +5910,11 @@ msgstr "Navegador de páginas"
 msgid "Table of contents"
 msgstr "Índice"
 
-#: frontend/apps/reader/modules/readertoc.lua:1008
+#: frontend/apps/reader/modules/readertoc.lua:1029
 msgid "Alternative table of contents"
 msgstr "Índice alternativo"
 
-#: frontend/apps/reader/modules/readertoc.lua:1010
+#: frontend/apps/reader/modules/readertoc.lua:1031
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -5912,13 +5937,13 @@ msgstr ""
 "que possam ser usados como itens do índice.\n"
 "Veja Ajustes de estilo → Diversos → Dicas do índice alternativo."
 
-#: frontend/apps/reader/modules/readertoc.lua:1017
+#: frontend/apps/reader/modules/readertoc.lua:1038
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
 "Para usar o índice alternativo, desative seu índice personalizado primeiro."
 
-#: frontend/apps/reader/modules/readertoc.lua:1030
+#: frontend/apps/reader/modules/readertoc.lua:1051
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -5929,26 +5954,26 @@ msgstr ""
 "títulos dos documentos.\n"
 "Deseja recuperar o índice original? (O livro será recarregado.)"
 
-#: frontend/apps/reader/modules/readertoc.lua:1045
+#: frontend/apps/reader/modules/readertoc.lua:1066
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
 msgstr ""
 "Deseja usar um índice alternativo criado a partir dos títulos do documento?"
 
-#: frontend/apps/reader/modules/readertoc.lua:1072
+#: frontend/apps/reader/modules/readertoc.lua:1093
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
 msgstr[0] "1 entrada no nível %2 do índice"
 msgstr[1] "%1 entradas no nível %2 do índice"
 
-#: frontend/apps/reader/modules/readertoc.lua:1094
+#: frontend/apps/reader/modules/readertoc.lua:1115
 msgid "Progress bars: 1 tick"
 msgid_plural "Progress bars: %1 ticks"
 msgstr[0] "Barras de progresso: 1 marca"
 msgstr[1] "Barras de progresso: %1 marcas"
 
-#: frontend/apps/reader/modules/readertoc.lua:1096
+#: frontend/apps/reader/modules/readertoc.lua:1117
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
@@ -5958,11 +5983,11 @@ msgstr ""
 "apertadas quando o índice é complexo. Isso permite que você restrinja o "
 "número de marcas."
 
-#: frontend/apps/reader/modules/readertoc.lua:1117
+#: frontend/apps/reader/modules/readertoc.lua:1138
 msgid "Bind chapter navigation to ticks"
 msgstr "Vincular a navegação de capítulos às marcas"
 
-#: frontend/apps/reader/modules/readertoc.lua:1118
+#: frontend/apps/reader/modules/readertoc.lua:1139
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for chapter navigation and 'page/time left until next chapter' in the "
@@ -5975,11 +6000,11 @@ msgstr ""
 "Ativar esta opção vai restringir a navegação de capítulos às marcas na barra "
 "de progresso."
 
-#: frontend/apps/reader/modules/readertoc.lua:1133
+#: frontend/apps/reader/modules/readertoc.lua:1154
 msgid "Chapter titles from ticks only"
 msgstr "Títulos de capítulos somente a partir das marcas"
 
-#: frontend/apps/reader/modules/readertoc.lua:1134
+#: frontend/apps/reader/modules/readertoc.lua:1155
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for displaying the title of the current chapter in the footer and in "
@@ -5993,21 +6018,21 @@ msgstr ""
 "Ativar essa opção vai restringir a exibição aos títulos de capítulo das "
 "marcas da barra de progresso."
 
-#: frontend/apps/reader/modules/readertoc.lua:1151
-#: frontend/apps/reader/modules/readertoc.lua:1161
+#: frontend/apps/reader/modules/readertoc.lua:1172
+#: frontend/apps/reader/modules/readertoc.lua:1182
 msgid "ToC entries per page"
 msgstr "Entradas do índice por página"
 
-#: frontend/apps/reader/modules/readertoc.lua:1174
-#: frontend/apps/reader/modules/readertoc.lua:1186
+#: frontend/apps/reader/modules/readertoc.lua:1195
+#: frontend/apps/reader/modules/readertoc.lua:1207
 msgid "ToC entry font size"
 msgstr "Tamanho da fonte das entradas do índice"
 
-#: frontend/apps/reader/modules/readertoc.lua:1195
+#: frontend/apps/reader/modules/readertoc.lua:1216
 msgid "Show chapter length"
 msgstr "Mostrar comprimento do capítulo"
 
-#: frontend/apps/reader/modules/readertoc.lua:1206
+#: frontend/apps/reader/modules/readertoc.lua:1227
 msgid "Dot leaders"
 msgstr "Linha pontilhada"
 
@@ -21011,9 +21036,6 @@ msgstr "anotações"
 
 #~ msgid "Frontlight warmth (%1)"
 #~ msgstr "Temperatura de cor da iluminação (%1)"
-
-#~ msgid "Current chapter"
-#~ msgstr "Capítulo atual"
 
 #~ msgid "Sort items"
 #~ msgstr "Ordenar itens"
