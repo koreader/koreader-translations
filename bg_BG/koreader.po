@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-26 21:03+0000\n"
-"PO-Revision-Date: 2024-08-26 21:03+0000\n"
+"PO-Revision-Date: 2024-08-28 06:09+0000\n"
 "Last-Translator: 109247019824 <stoyan@gmx.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/koreader/"
 "koreader/bg/>\n"
@@ -28,9 +28,9 @@ msgid ""
 "If your device is grayscale, you can disable color rendering in the screen "
 "sub-menu for reduced memory usage."
 msgstr ""
-"Устройство ще показва документите цветно.\n"
-"Ако е черно-бяло, с цел да намалите използваната памет, можете да забраните "
-"цветовете в меню Екран."
+"Документите ще бъдат показвани в цвят.\n"
+"Ако екранът е черно-бял, за да бъде използвана по-малко памет изключете "
+"цветовете от меню Екран."
 
 #: reader.lua:202
 msgid ""
@@ -3572,7 +3572,7 @@ msgstr "Потребителски текст: '%1'%2"
 
 #: frontend/apps/reader/modules/readerfooter.lua:990
 msgid "Status bar"
-msgstr "Лента за състоянието"
+msgstr "Лента за състояние"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1003
 #, fuzzy
@@ -5414,7 +5414,7 @@ msgstr "Премахване на файла"
 #: frontend/apps/reader/modules/readerstatus.lua:110 frontend/dispatcher.lua:59
 #: frontend/dispatcher.lua:944 plugins/httpinspector.koplugin/main.lua:1043
 msgid "File browser"
-msgstr "Файлов браузър"
+msgstr "Управление на файлове"
 
 #: frontend/apps/reader/modules/readerstatus.lua:123
 msgid ""
@@ -8201,9 +8201,8 @@ msgid "Clear location history"
 msgstr "Изчистване на историята на местоположението"
 
 #: frontend/dispatcher.lua:173 frontend/ui/widget/bookmapwidget.lua:707
-#, fuzzy
 msgid "Book map (overview)"
-msgstr "Корица на книгата"
+msgstr "Карта на книгата (обзор)"
 
 #: frontend/dispatcher.lua:177
 msgid "Toggle bookmark"
@@ -11195,7 +11194,7 @@ msgstr "голямо"
 
 #: frontend/ui/data/koptoptions.lua:618
 msgid "Indentation"
-msgstr "Отстъпи"
+msgstr "Отстъп"
 
 #: frontend/ui/data/koptoptions.lua:630
 msgid "Document Columns"
@@ -11840,7 +11839,7 @@ msgstr "Отбелязване на книгата като прочетена"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:722
 msgid "Book status and return to file browser"
-msgstr "Преглед на състоянието и към списъка с файлове"
+msgstr "Състояние на книгата и към управление на файлове"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:733
 msgid "Keyboard"
@@ -13659,55 +13658,45 @@ msgid "No matching rulesets"
 msgstr ""
 
 #: frontend/ui/widget/bookmapwidget.lua:1197
-#, fuzzy
 msgid "About book map (overview)"
-msgstr "Относно корицата"
+msgstr "Относно картата на книгата (обзор)"
 
 #: frontend/ui/widget/bookmapwidget.lua:1197
-#, fuzzy
 msgid "About book map"
-msgstr "Относно корицата"
+msgstr "Относно картата на книгата"
 
 #: frontend/ui/widget/bookmapwidget.lua:1204
 #: frontend/ui/widget/pagebrowserwidget.lua:878
-#, fuzzy
 msgid "Available gestures"
-msgstr "Документ с мостри на шрифтовете"
+msgstr "Достъпни жестове"
 
 #: frontend/ui/widget/bookmapwidget.lua:1211
-#, fuzzy
 msgid "Page browser on tap"
-msgstr "Преглед на страници"
+msgstr "Преглед на страници с докосване"
 
 #: frontend/ui/widget/bookmapwidget.lua:1221
-#, fuzzy
 msgid "Alternative theme"
-msgstr "Подсказки на алтернативното съдържание"
+msgstr "Алтернативна тема"
 
 #: frontend/ui/widget/bookmapwidget.lua:1233
-#, fuzzy
 msgid "Switch current/initial view"
-msgstr "Превключване на стандартен изглед"
+msgstr "Изглед: текущ/начален"
 
 #: frontend/ui/widget/bookmapwidget.lua:1241
-#, fuzzy
 msgid "Switch grid/flat views"
-msgstr "Превключване на стандартен изглед"
+msgstr "Изглед: решетка/плосък"
 
 #: frontend/ui/widget/bookmapwidget.lua:1252
-#, fuzzy
 msgid "Chapter levels"
-msgstr "Заряд на батерията"
+msgstr "Нива на заглавията"
 
 #: frontend/ui/widget/bookmapwidget.lua:1279
-#, fuzzy
 msgid "Page-slot width"
-msgstr "Ширина на зоната за докосване напред"
+msgstr "Ширина на страница"
 
 #: frontend/ui/widget/bookmapwidget.lua:1308
-#, fuzzy
 msgid "10-page markers"
-msgstr "отметки на стр."
+msgstr "10-стр. маркери"
 
 #: frontend/ui/widget/bookmapwidget.lua:1357
 msgid ""
@@ -13724,6 +13713,18 @@ msgid ""
 " bookmarked page\n"
 "▢ focused page when coming from Pages browser"
 msgstr ""
+"Картата на книгата предоставя сбит преглед на съдържанието, като изобразява "
+"главите и страниците. Ако е включена статистиката черните линии "
+"представляват прочетените страници (сивите са прочетеното в текущия сеанс) с "
+"различна височина, в зависимост от времето за прочитане.\n"
+"\n"
+"Легенда:\n"
+"▲ текуща страница\n"
+"❶ ❷ … предишни места\n"
+"▒ подчертан текст\n"
+" подчертан текст с бележки\n"
+" отбелязана страница\n"
+"▢ страница на фокус при отваряне от Преглед на страници"
 
 #: frontend/ui/widget/bookmapwidget.lua:1369
 msgid ""
