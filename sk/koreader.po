@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-23 08:54+0000\n"
+"POT-Creation-Date: 2024-10-23 10:07+0000\n"
 "PO-Revision-Date: 2024-10-13 15:13+0000\n"
 "Last-Translator: sonix-github <sonix.internet@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -222,7 +222,9 @@ msgstr "Zadajte názov súboru"
 #: plugins/opds.koplugin/opdsbrowser.lua:664
 #: plugins/opds.koplugin/opdspse.lua:179
 #: plugins/perceptionexpander.koplugin/main.lua:138
-#: plugins/profiles.koplugin/main.lua:282
+#: plugins/profiles.koplugin/main.lua:307
+#: plugins/profiles.koplugin/main.lua:610
+#: plugins/profiles.koplugin/main.lua:676
 #: plugins/statistics.koplugin/main.lua:1274
 #: plugins/statistics.koplugin/main.lua:2335
 #: plugins/statistics.koplugin/main.lua:2509
@@ -303,8 +305,8 @@ msgstr "Upraviť"
 #: plugins/newsdownloader.koplugin/main.lua:151
 #: plugins/opds.koplugin/opdsbrowser.lua:842
 #: plugins/opds.koplugin/opdsbrowser.lua:846
-#: plugins/profiles.koplugin/main.lua:234
-#: plugins/profiles.koplugin/main.lua:240
+#: plugins/profiles.koplugin/main.lua:259
+#: plugins/profiles.koplugin/main.lua:265
 #: plugins/statistics.koplugin/main.lua:1269
 #: plugins/statistics.koplugin/main.lua:1278
 #: plugins/terminal.koplugin/aliases.lua:106
@@ -560,7 +562,9 @@ msgstr "Priečinok Dropbox (/ pre koreňový adresár)"
 #: plugins/newsdownloader.koplugin/main.lua:759
 #: plugins/opds.koplugin/opdsbrowser.lua:149
 #: plugins/opds.koplugin/opdsbrowser.lua:178
-#: plugins/profiles.koplugin/main.lua:289
+#: plugins/profiles.koplugin/main.lua:314
+#: plugins/profiles.koplugin/main.lua:617
+#: plugins/profiles.koplugin/main.lua:683
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:659
 msgid "Save"
@@ -5618,7 +5622,7 @@ msgid "Don't show in action list"
 msgstr "Nezobrazovať v zozname akcií"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:130
-#: plugins/profiles.koplugin/main.lua:168
+#: plugins/profiles.koplugin/main.lua:191
 msgid "Show in action list"
 msgstr "Zobraziť v zozname akcií"
 
@@ -7254,6 +7258,7 @@ msgstr "opýtať sa"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:230
 #: frontend/ui/elements/common_settings_menu_table.lua:379
+#: plugins/profiles.koplugin/main.lua:537
 msgid "always"
 msgstr "vždy"
 
@@ -8560,7 +8565,7 @@ msgstr "Preformátovateľné dokumenty (epub, fb2, txt...)"
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Pevné rozloženie dokumentov (pdf, djvu, obrázky...)"
 
-#: frontend/dispatcher.lua:1016 plugins/profiles.koplugin/main.lua:133
+#: frontend/dispatcher.lua:1016 plugins/profiles.koplugin/main.lua:134
 msgid "Show as QuickMenu"
 msgstr "Zobraziť ako rýchle menu"
 
@@ -8575,6 +8580,14 @@ msgstr "Rýchle menu"
 #: frontend/dispatcher.lua:1091
 msgid "Execute all"
 msgstr "Vykonať všetko"
+
+#: frontend/dispatcher.lua:1164
+#, fuzzy
+msgid "Executing profile: %1"
+msgstr ""
+"Rozbalenie archívu zlyhalo:\n"
+"\n"
+"%1"
 
 #: frontend/fontlist.lua:247
 msgid ""
@@ -15601,22 +15614,22 @@ msgstr "Zrušené. Upratovanie…"
 msgid "Packing EPUB…"
 msgstr "Vytváram EPUB…"
 
-#: frontend/util.lua:1024
+#: frontend/util.lua:1070
 msgctxt "Data storage size"
 msgid "%1 GB"
 msgstr "%1 GB"
 
-#: frontend/util.lua:1027
+#: frontend/util.lua:1073
 msgctxt "Data storage size"
 msgid "%1 MB"
 msgstr "%1 MB"
 
-#: frontend/util.lua:1030
+#: frontend/util.lua:1076
 msgctxt "Data storage size"
 msgid "%1 kB"
 msgstr "%1 kB"
 
-#: frontend/util.lua:1032
+#: frontend/util.lua:1078
 msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 B"
@@ -19514,7 +19527,7 @@ msgstr ""
 "Viac informácií o rozšírenom vnímaní nájdete na stránkach Wikipédie pre "
 "KOReader pod 'Perception Expander Plugin'"
 
-#: plugins/profiles.koplugin/_meta.lua:4 plugins/profiles.koplugin/main.lua:80
+#: plugins/profiles.koplugin/_meta.lua:4 plugins/profiles.koplugin/main.lua:82
 msgid "Profiles"
 msgstr "Profily"
 
@@ -19525,66 +19538,120 @@ msgstr ""
 "Tento doplnok umožní skombinovať viacero nastavení a tak vytvárať "
 "prepínateľné „profily“."
 
-#: plugins/profiles.koplugin/main.lua:62
+#: plugins/profiles.koplugin/main.lua:64
 msgid "Profile %1"
 msgstr "Profil %1"
 
-#: plugins/profiles.koplugin/main.lua:91
+#: plugins/profiles.koplugin/main.lua:93
 msgid "New"
 msgstr "Nový"
 
-#: plugins/profiles.koplugin/main.lua:105
-msgid "New with current document settings"
+#: plugins/profiles.koplugin/main.lua:107
+#, fuzzy
+msgid "New with current book settings"
 msgstr "Nový s aktuálnymi nastaveniami dokumentu"
 
-#: plugins/profiles.koplugin/main.lua:126
+#: plugins/profiles.koplugin/main.lua:127
+#: plugins/profiles.koplugin/main.lua:773
 #: plugins/terminal.koplugin/aliases.lua:151
 msgid "Execute"
 msgstr "Vykonaj"
 
-#: plugins/profiles.koplugin/main.lua:140
+#: plugins/profiles.koplugin/main.lua:141
 msgid "Auto-execute"
 msgstr "Automaticky vykonať"
 
-#: plugins/profiles.koplugin/main.lua:149
+#: plugins/profiles.koplugin/main.lua:152
+#, fuzzy
+msgid "Ask to execute"
+msgstr "Automaticky vykonať"
+
+#: plugins/profiles.koplugin/main.lua:162
 msgid "on KOReader start"
 msgstr "pri spustení KOReadera"
 
-#: plugins/profiles.koplugin/main.lua:150
-msgid "on document opening"
-msgstr "pri otváraní dokumentu"
+#: plugins/profiles.koplugin/main.lua:163
+#, fuzzy
+msgid "on wake-up"
+msgstr "  zobudenia"
 
-#: plugins/profiles.koplugin/main.lua:151
-msgid "on document closing"
-msgstr "pri zatváraní dokumentu"
-
-#: plugins/profiles.koplugin/main.lua:152
+#: plugins/profiles.koplugin/main.lua:164
 msgid "on rotation"
 msgstr "pri otáčaní"
 
-#: plugins/profiles.koplugin/main.lua:189
+#: plugins/profiles.koplugin/main.lua:166
+#, fuzzy
+msgid "on book opening"
+msgstr "pri otváraní dokumentu"
+
+#: plugins/profiles.koplugin/main.lua:167
+#, fuzzy
+msgid "on book closing"
+msgstr "pri zatváraní dokumentu"
+
+#: plugins/profiles.koplugin/main.lua:180
+#, fuzzy
+msgid "Show notification on executing"
+msgstr "Zobraziť predchádzajúce upozornenia"
+
+#: plugins/profiles.koplugin/main.lua:209
 msgid "Edit actions: (%1)"
 msgstr "Upraviť akcie: (%1)"
 
-#: plugins/profiles.koplugin/main.lua:194
+#: plugins/profiles.koplugin/main.lua:219
 msgid "Rename: %1"
 msgstr "Premenovať: %1"
 
-#: plugins/profiles.koplugin/main.lua:216
+#: plugins/profiles.koplugin/main.lua:241
 msgid "Duplicate"
 msgstr "Duplikovať"
 
-#: plugins/profiles.koplugin/main.lua:239
+#: plugins/profiles.koplugin/main.lua:264
 msgid "Do you want to delete this profile?"
 msgstr "Prajete si odstrániť tento profil?"
 
-#: plugins/profiles.koplugin/main.lua:278
+#: plugins/profiles.koplugin/main.lua:303
 msgid "Enter profile name"
 msgstr "Zadajte názov profilu"
 
-#: plugins/profiles.koplugin/main.lua:296
+#: plugins/profiles.koplugin/main.lua:321
 msgid "Profile already exists: %1"
 msgstr "Profil už existuje: %1"
+
+#: plugins/profiles.koplugin/main.lua:532
+#, fuzzy
+msgid "if device orientation is"
+msgstr "Prepínať orientáciu"
+
+#: plugins/profiles.koplugin/main.lua:533
+#, fuzzy
+msgid "if book metadata contains"
+msgstr "Informácie o umiestnení metadát knihy"
+
+#: plugins/profiles.koplugin/main.lua:534
+msgid "if book file path contains"
+msgstr ""
+
+#: plugins/profiles.koplugin/main.lua:598
+#: plugins/profiles.koplugin/main.lua:668
+#: plugins/statistics.koplugin/main.lua:1332
+msgid "Current book"
+msgstr "Aktuálna kniha"
+
+#: plugins/profiles.koplugin/main.lua:631
+#, fuzzy
+msgid "Enter text contained in:"
+msgstr "Zadajte text, ktorý chcete vyhľadať v názve súboru"
+
+#: plugins/profiles.koplugin/main.lua:697
+#, fuzzy
+msgid "Enter text contained in file path"
+msgstr "Zadajte text, ktorý chcete vyhľadať v názve súboru"
+
+#: plugins/profiles.koplugin/main.lua:772
+#, fuzzy
+msgid "Do you want to execute profile?"
+msgstr "Prajete si odstrániť tento profil?"
 
 #: plugins/qrclipboard.koplugin/_meta.lua:4
 #: plugins/qrclipboard.koplugin/main.lua:24
@@ -19894,10 +19961,6 @@ msgstr ""
 #: plugins/statistics.koplugin/main.lua:1316
 msgid "Reset statistics"
 msgstr "Vymazať štatistiky"
-
-#: plugins/statistics.koplugin/main.lua:1332
-msgid "Current book"
-msgstr "Aktuálna kniha"
 
 #: plugins/statistics.koplugin/main.lua:1336
 #: plugins/statistics.koplugin/main.lua:3059
