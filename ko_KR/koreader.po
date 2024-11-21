@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-20 22:11+0000\n"
+"POT-Creation-Date: 2024-11-21 06:03+0000\n"
 "PO-Revision-Date: 2024-11-13 05:20+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -140,6 +140,7 @@ msgstr ""
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
 #: frontend/apps/filemanager/filemanagerutil.lua:344
 #: plugins/opds.koplugin/opdsbrowser.lua:642
+#: plugins/texteditor.koplugin/main.lua:355
 msgid "Choose folder"
 msgstr "폴더 선택"
 
@@ -150,7 +151,7 @@ msgstr "파일이름 바꾸기"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:260
 #: plugins/opds.koplugin/opdsbrowser.lua:658
-#: plugins/texteditor.koplugin/main.lua:364
+#: plugins/texteditor.koplugin/main.lua:350
 msgid "Enter filename"
 msgstr "파일이름 입력"
 
@@ -164,8 +165,8 @@ msgstr "파일이름 입력"
 #: frontend/apps/filemanager/filemanager.lua:1001
 #: frontend/apps/filemanager/filemanager.lua:1129
 #: frontend/apps/filemanager/filemanager.lua:1458
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:498
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:644
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:513
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:659
 #: frontend/apps/filemanager/filemanagercollection.lua:503
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
@@ -237,7 +238,7 @@ msgstr "파일이름 입력"
 #: plugins/statistics.koplugin/main.lua:2548
 #: plugins/terminal.koplugin/aliases.lua:100
 #: plugins/terminal.koplugin/main.lua:643
-#: plugins/texteditor.koplugin/main.lua:368
+#: plugins/texteditor.koplugin/main.lua:371
 #: plugins/vocabbuilder.koplugin/main.lua:1173
 #: plugins/vocabbuilder.koplugin/main.lua:1563
 #: plugins/vocabbuilder.koplugin/main.lua:1854
@@ -274,6 +275,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:361
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:772
 #: frontend/ui/widget/pathchooser.lua:140
 msgid "Choose"
 msgstr "고르기"
@@ -289,9 +291,10 @@ msgid "Info"
 msgstr "정보"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:387
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:804
 #: plugins/opds.koplugin/opdsbrowser.lua:835
 #: plugins/statistics.koplugin/main.lua:1288
-#: plugins/texteditor.koplugin/main.lua:375
+#: plugins/texteditor.koplugin/main.lua:378
 #: plugins/vocabbuilder.koplugin/main.lua:242
 msgid "Edit"
 msgstr "수정"
@@ -425,11 +428,12 @@ msgstr "업로드 중…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:665
 #: frontend/apps/filemanager/filemanager.lua:1008
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:785
 #: frontend/apps/reader/modules/readerhandmade.lua:501
 #: frontend/ui/wikipedia.lua:1542
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:610
 #: plugins/statistics.koplugin/main.lua:332
-#: plugins/texteditor.koplugin/main.lua:417
+#: plugins/texteditor.koplugin/main.lua:416
 msgid "Create"
 msgstr "만들기"
 
@@ -542,7 +546,7 @@ msgstr "Dropbox 폴더(루트 폴더면 /)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:505
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:520
 #: frontend/apps/filemanager/filemanagercollection.lua:510
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
@@ -828,7 +832,7 @@ msgstr "폴더의 모든 파일 선택"
 #: frontend/apps/filemanager/filemanager.lua:543
 #: frontend/apps/filemanager/filemanager.lua:924
 #: frontend/apps/filemanager/filemanager.lua:1193
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:722
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:890
 msgid "Move"
 msgstr "옮기기"
 
@@ -905,7 +909,7 @@ msgstr "%1을 열까요?"
 #: frontend/apps/filemanager/filemanager.lua:1465
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:362
 #: frontend/ui/widget/textviewer.lua:694 frontend/ui/widget/touchmenu.lua:1255
-#: plugins/texteditor.koplugin/main.lua:452
+#: plugins/texteditor.koplugin/main.lua:451
 msgid "Open"
 msgstr "열기"
 
@@ -1109,81 +1113,81 @@ msgstr "%1로 열기:"
 msgid "Classic (filename only)"
 msgstr "클래식 (파일이름만)"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:28
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:29
 #: frontend/apps/filemanager/filemanagerutil.lua:261
-#: frontend/dispatcher.lua:186 plugins/opds.koplugin/opdsbrowser.lua:700
+#: frontend/dispatcher.lua:187 plugins/opds.koplugin/opdsbrowser.lua:700
 msgid "Book information"
 msgstr "책 정보"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:39
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
 msgid "Cover image:"
 msgstr "표지 그림:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
 #: plugins/calibre.koplugin/search.lua:145
 msgid "Title:"
 msgstr "제목:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
 msgstr "저자:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
 #: plugins/calibre.koplugin/search.lua:154
 msgid "Series:"
 msgstr "연속물:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
 msgid "Series index:"
 msgstr "시리즈 색인:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
 msgid "Language:"
 msgstr "언어:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
 msgid "Keywords:"
 msgstr "키워드:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
 msgid "Description:"
 msgstr "설명:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:48
 msgid "Pages:"
 msgstr "페이지:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:82
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:92
 msgid "Filename:"
 msgstr "파일이름:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:83
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:93
 msgid "Format:"
 msgstr "형식:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:84
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:94
 #: plugins/calibre.koplugin/search.lua:147
 msgid "Size:"
 msgstr "크기:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:85
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:95
 msgid "File date:"
 msgstr "파일 날짜:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:86
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:96
 msgid "Folder:"
 msgstr "폴더:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:100
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:110
 msgid "Tap to display"
 msgstr "탭하여 표시하기"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:120
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:156
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:749
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:750
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:130
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:166
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:917
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:918
 #: frontend/apps/reader/modules/readerfooter.lua:1998
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/screensaver.lua:97
@@ -1202,57 +1206,62 @@ msgstr "탭하여 표시하기"
 msgid "N/A"
 msgstr "해당 없음"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:161
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:171
 msgid "number of lines and words not available"
 msgstr "사용할 수 없는 줄과 단어 수"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 msgid "1 line"
 msgid_plural "%1 lines"
 msgstr[0] "%1 줄"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 msgid "1 word"
 msgid_plural "%1 words"
 msgstr[0] "%1 낱말"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:163
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:173
 msgid "Current page:"
 msgstr "현재 페이지:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:182
 msgid "Rating:"
 msgstr "평점:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
 msgid "Review:"
 msgstr "서평:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:337
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:192
+#, fuzzy
+msgid "Notebook file:"
+msgstr "책 제목 입력:"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:352
 msgid "No book description available."
 msgstr "쓸 수 있는 책 설명이 없음."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:354
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:369
 msgid "No cover image available."
 msgstr "쓸 수 있는 표지 그림이 없습니다."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:491
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:506
 msgid "Edit book metadata:"
 msgstr "책 메타데이터 편집:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:543
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:558
 msgid "Copy original"
 msgstr "원본 복사"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:551
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:566
 msgid "View original"
 msgstr "원본 보기"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:564
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:579
 msgid "Reset custom"
 msgstr "사용자 설정 초기화"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:568
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:583
 msgid ""
 "Reset custom cover?\n"
 "Image file will be deleted."
@@ -1260,11 +1269,11 @@ msgstr ""
 "사용자 표지를 재설정할까요?\n"
 "이미지 파일이 삭제됩니다."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:569
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
 msgid "Reset custom book metadata field?"
 msgstr "사용자 지정 책 메타데이터 필드를 재설정할까요?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:570
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:585
 #: frontend/apps/filemanager/filemanagerutil.lua:186
 #: frontend/apps/filemanager/filemanagerutil.lua:196
 #: frontend/apps/reader/modules/readermenu.lua:203
@@ -1275,47 +1284,88 @@ msgstr "사용자 지정 책 메타데이터 필드를 재설정할까요?"
 msgid "Reset"
 msgstr "초기화"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:599
 msgid "Set custom"
 msgstr "사용자 지정 설정"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:598
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:613
 msgid "Book metadata:"
 msgstr "책 메타데이터:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:636
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
 msgid "Edit book review"
 msgstr "서평 수정"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:666
 #: frontend/ui/widget/bookstatuswidget.lua:558
 msgid "Save review"
 msgstr "서평 저장"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:707
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:734
+#: frontend/apps/filemanager/filemanagerutil.lua:374
+msgid "Use default"
+msgstr "기본값 사용"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:742
+#, fuzzy
+msgid "Reset default"
+msgstr "기본값 사용"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:747
+#, fuzzy
+msgid "Notebook file default location reset"
+msgstr "도서 메타데이터 위치 정보"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:753
+#, fuzzy
+msgid "Use local"
+msgstr "샘플 사용"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:761
+#: frontend/ui/widget/configdialog.lua:1238
+#: frontend/ui/widget/configdialog.lua:1249
+#: frontend/ui/widget/configdialog.lua:1334
+#: frontend/ui/widget/configdialog.lua:1344
+#: frontend/ui/widget/configdialog.lua:1414
+#: frontend/ui/widget/configdialog.lua:1452
+msgid "Set as default"
+msgstr "기본값으로 설정"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:766
+#, fuzzy
+msgid "Notebook file default location saved"
+msgstr "도서 메타데이터 위치 정보"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:796
+#: frontend/ui/widget/screenshoter.lua:77
+#: plugins/archiveviewer.koplugin/main.lua:207
+msgid "View"
+msgstr "보기"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:875
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr "현재 폴더와 하위 폴더의 책에서 메타데이터 위치를 검색할까요?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:708
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:876
 #: plugins/calibre.koplugin/search.lua:518
 msgid "Scan"
 msgstr "스캔"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:714
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:882
 msgid "No books with metadata not in your preferred location found."
 msgstr "원하는 위치에 없는 메타데이터가 있는 책을 찾을 수 없습니다."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:718
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:886
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] "원하는 위치에 메타데이터가 없는 %1 책을 찾았습니다."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:721
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:889
 msgid "Move book metadata to your preferred location?"
 msgstr "도서 메타데이터를 원하는 위치로 옮길까요?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:737
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:905
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
 "based storage may slow down file browser navigation in large directories. "
@@ -1330,7 +1380,7 @@ msgstr ""
 "어 메타데이터를 기본 저장 위치로 자동 마이그레이션하거나 파일 탐색기의 탐색 "
 "속도를 높일 수 있는 %1를 삭제하는 것이 좋습니다."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:751
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:919
 msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
@@ -1338,7 +1388,7 @@ msgstr ""
 "%1. 제목: %2; 지은이: %3\n"
 "문서: %4"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:756
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:924
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "해시 기반 메타데이터가 있는 %1 개 문서"
@@ -1502,7 +1552,7 @@ msgstr "'%1'에 대한 결과가 없습니다."
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:236
 #: frontend/apps/filemanager/filemanagermenu.lua:799
-#: frontend/dispatcher.lua:137 frontend/ui/widget/menu.lua:794
+#: frontend/dispatcher.lua:138 frontend/ui/widget/menu.lua:794
 msgid "File search"
 msgstr "파일 검색"
 
@@ -1810,12 +1860,12 @@ msgstr "페이지별 항목 목록 정보"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:432
 #: frontend/apps/reader/modules/readerbookmark.lua:233
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 msgid "Reverse sorting"
 msgstr "역순으로 정렬"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:442
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Folders and files mixed"
 msgstr "폴더와 파일 혼합"
 
@@ -1958,7 +2008,7 @@ msgstr ""
 "검색 결과에서 책을 탭하여 엽니다."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:813
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 msgid "Last file search results"
 msgstr "마지막 파일 검색 결과"
 
@@ -2089,7 +2139,7 @@ msgstr ""
 "계속할까요?"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:12
-#: frontend/dispatcher.lua:136 frontend/ui/widget/pathchooser.lua:162
+#: frontend/dispatcher.lua:137 frontend/ui/widget/pathchooser.lua:162
 msgid "Folder shortcuts"
 msgstr "폴더 단축키"
 
@@ -2171,12 +2221,12 @@ msgid "Show folder"
 msgstr "폴더 표시"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:274
-#: frontend/dispatcher.lua:188 plugins/opds.koplugin/opdsbrowser.lua:693
+#: frontend/dispatcher.lua:189 plugins/opds.koplugin/opdsbrowser.lua:693
 msgid "Book cover"
 msgstr "책 표지"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:287
-#: frontend/dispatcher.lua:187
+#: frontend/dispatcher.lua:188
 msgid "Book description"
 msgstr "책 설명"
 
@@ -2201,10 +2251,6 @@ msgstr "스크립트가 0이 아닌 상태 코드를 보내왔습니다: %1!"
 #: frontend/apps/filemanager/filemanagerutil.lua:344
 msgid "Choose file"
 msgstr "파일 선택"
-
-#: frontend/apps/filemanager/filemanagerutil.lua:374
-msgid "Use default"
-msgstr "기본값 사용"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:384
 #: frontend/ui/data/optionsutil.lua:175
@@ -2238,7 +2284,7 @@ msgstr "페이지 책갈피 목록"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:79
 #: frontend/apps/reader/modules/readerbookmark.lua:107
-#: frontend/dispatcher.lua:181
+#: frontend/dispatcher.lua:182
 msgid "Bookmarks"
 msgstr "책갈피"
 
@@ -2308,7 +2354,7 @@ msgid "Show separator between items"
 msgstr "항목 사이에 구분 기호 표시"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:246
-#: frontend/dispatcher.lua:182
+#: frontend/dispatcher.lua:183
 msgid "Bookmark search"
 msgstr "책갈피 검색"
 
@@ -2397,7 +2443,7 @@ msgid "Current page"
 msgstr "현재 페이지"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:923
-#: frontend/dispatcher.lua:163
+#: frontend/dispatcher.lua:164
 msgid "Latest bookmark"
 msgstr "최근 책갈피"
 
@@ -2710,7 +2756,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:223
 #: frontend/apps/reader/modules/readerdictionary.lua:956
-#: frontend/dispatcher.lua:61 plugins/vocabbuilder.koplugin/main.lua:2040
+#: frontend/dispatcher.lua:62 plugins/vocabbuilder.koplugin/main.lua:2040
 msgid "Dictionary lookup"
 msgstr "사전 조회"
 
@@ -3804,7 +3850,7 @@ msgid "Right"
 msgstr "오른쪽"
 
 #: frontend/apps/reader/modules/readergoto.lua:17
-#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:157
+#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:158
 #: frontend/ui/widget/keyvaluepage.lua:411 frontend/ui/widget/menu.lua:773
 #: frontend/ui/widget/sortwidget.lua:255
 #: plugins/statistics.koplugin/calendarview.lua:620
@@ -3812,7 +3858,7 @@ msgstr "오른쪽"
 msgid "Go to page"
 msgstr "페이지로 가기"
 
-#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:158
+#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:159
 msgid "Skim document"
 msgstr "문서 훑어보기"
 
@@ -4088,9 +4134,9 @@ msgstr "강조 표시를 PDF로 작성합니다: %1"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:670 frontend/ui/data/creoptions.lua:683
 #: frontend/ui/data/creoptions.lua:695 frontend/ui/data/creoptions.lua:734
@@ -4105,9 +4151,9 @@ msgstr "켜기"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:339 frontend/ui/data/creoptions.lua:356
 #: frontend/ui/data/creoptions.lua:647 frontend/ui/data/creoptions.lua:670
@@ -4177,7 +4223,7 @@ msgstr "선택과 강조 표시"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:375
 #: frontend/apps/reader/modules/readersearch.lua:190
-#: frontend/dispatcher.lua:175
+#: frontend/dispatcher.lua:176
 msgid "Fulltext search"
 msgstr "전문 검색"
 
@@ -4422,7 +4468,7 @@ msgid "Selection on text"
 msgstr "텍스트에서 선택"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:872
-#: frontend/dispatcher.lua:190
+#: frontend/dispatcher.lua:191
 msgid "Translate current page"
 msgstr "현재 페이지 번역"
 
@@ -5347,7 +5393,7 @@ msgid "Results per page"
 msgstr "페이지 별 결과"
 
 #: frontend/apps/reader/modules/readersearch.lua:196
-#: frontend/dispatcher.lua:176
+#: frontend/dispatcher.lua:177
 msgid "Last fulltext search results"
 msgstr "마지막 전체 텍스트 검색 결과"
 
@@ -5407,7 +5453,7 @@ msgid "Current page: %1"
 msgstr "현재 페이지: %1"
 
 #: frontend/apps/reader/modules/readerstatus.lua:19
-#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:185
+#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:186
 #: frontend/ui/elements/common_settings_menu_table.lua:683
 msgid "Book status"
 msgstr "책 상태"
@@ -5432,12 +5478,12 @@ msgstr "다음 파일 열기"
 
 #: frontend/apps/reader/modules/readerstatus.lua:103
 #: frontend/ui/elements/common_settings_menu_table.lua:684
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Delete file"
 msgstr "파일 삭제"
 
 #: frontend/apps/reader/modules/readerstatus.lua:110 frontend/dispatcher.lua:59
-#: frontend/dispatcher.lua:960 plugins/httpinspector.koplugin/main.lua:1043
+#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1043
 msgid "File browser"
 msgstr "파일 탐색기"
 
@@ -5990,16 +6036,16 @@ msgid "Book tweak saved (not enabled)."
 msgstr "책 조정이 저장되었습니다(활성화되지 않음)."
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:79
-#: frontend/dispatcher.lua:178 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
 msgid "Book map"
 msgstr "책 지도"
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:93
-#: frontend/dispatcher.lua:180 frontend/ui/widget/pagebrowserwidget.lua:35
+#: frontend/dispatcher.lua:181 frontend/ui/widget/pagebrowserwidget.lua:35
 msgid "Page browser"
 msgstr "페이지 탐색기"
 
-#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:177
+#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:178
 msgid "Table of contents"
 msgstr "차례"
 
@@ -6985,7 +7031,7 @@ msgstr "위키피디아 검색"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:82
 #: frontend/apps/reader/modules/readerwikipedia.lua:399
-#: frontend/dispatcher.lua:62
+#: frontend/dispatcher.lua:63
 msgid "Wikipedia lookup"
 msgstr "위키피디아 조회"
 
@@ -7829,7 +7875,7 @@ msgstr "재시동"
 msgid "Are you sure you want to power off the device?"
 msgstr "기기의 전원을 정말로 끌까요?"
 
-#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:75
+#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:76
 #: frontend/ui/elements/common_exit_menu_table.lua:51
 msgid "Power off"
 msgstr "전원 끄기"
@@ -7864,491 +7910,496 @@ msgstr "읽기 진행률"
 msgid "History search"
 msgstr "내역 검색"
 
-#: frontend/dispatcher.lua:64
+#: frontend/dispatcher.lua:60
+#, fuzzy
+msgid "Notebook file"
+msgstr "책 폴더"
+
+#: frontend/dispatcher.lua:65
 msgid "Show menu"
 msgstr "메뉴 보기"
 
-#: frontend/dispatcher.lua:65
+#: frontend/dispatcher.lua:66
 #: frontend/ui/elements/common_info_menu_table.lua:39
 msgid "Menu search"
 msgstr "메뉴 검색"
 
-#: frontend/dispatcher.lua:66
+#: frontend/dispatcher.lua:67
 msgid "Screenshot"
 msgstr "화면갈무리"
 
-#: frontend/dispatcher.lua:70
+#: frontend/dispatcher.lua:71
 msgid "Exit sleep screen"
 msgstr "잠든 화면 끝내기"
 
-#: frontend/dispatcher.lua:71 frontend/ui/elements/mass_storage.lua:43
+#: frontend/dispatcher.lua:72 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
 msgstr "USB 저장 장치 시작"
 
-#: frontend/dispatcher.lua:72
+#: frontend/dispatcher.lua:73
 #: frontend/ui/elements/common_exit_menu_table.lua:34
 msgid "Sleep"
 msgstr "잠자기"
 
-#: frontend/dispatcher.lua:73
+#: frontend/dispatcher.lua:74
 #: frontend/ui/elements/common_exit_menu_table.lua:22
 msgid "Restart KOReader"
 msgstr "KOReader 다시 시작"
 
-#: frontend/dispatcher.lua:74
+#: frontend/dispatcher.lua:75
 #: frontend/ui/elements/common_exit_menu_table.lua:42
 msgid "Reboot the device"
 msgstr "기기 재시동"
 
-#: frontend/dispatcher.lua:76
+#: frontend/dispatcher.lua:77
 msgid "Exit KOReader"
 msgstr "KOReader 끝내기"
 
-#: frontend/dispatcher.lua:78
+#: frontend/dispatcher.lua:79
 msgid "Toggle long-press on corners"
 msgstr "모서리를 길게 눌러 토글"
 
-#: frontend/dispatcher.lua:79
+#: frontend/dispatcher.lua:80
 msgid "Enable touch input"
 msgstr "터치 입력 활성화"
 
-#: frontend/dispatcher.lua:80
+#: frontend/dispatcher.lua:81
 msgid "Disable touch input"
 msgstr "터치 입력 비활성화"
 
-#: frontend/dispatcher.lua:81
+#: frontend/dispatcher.lua:82
 msgid "Toggle touch input"
 msgstr "터치 입력 토글"
 
-#: frontend/dispatcher.lua:83 frontend/ui/elements/physical_buttons.lua:28
+#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:28
 msgid "Invert left-side page-turn buttons"
 msgstr "왼쪽 페이지 넘기기 버튼 반전"
 
-#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:40
+#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:40
 msgid "Invert right-side page-turn buttons"
 msgstr "오른쪽 페이지 넘기기 버튼 반전"
 
-#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:11
+#: frontend/dispatcher.lua:86 frontend/ui/elements/physical_buttons.lua:11
 msgid "Invert page-turn buttons"
 msgstr "페이지 넘기기 버튼 반전"
 
-#: frontend/dispatcher.lua:87
+#: frontend/dispatcher.lua:88
 msgid "Toggle key repeat"
 msgstr "키 반복 토글"
 
-#: frontend/dispatcher.lua:88
+#: frontend/dispatcher.lua:89
 msgid "Toggle accelerometer"
 msgstr "가속도계 토글"
 
-#: frontend/dispatcher.lua:89
+#: frontend/dispatcher.lua:90
 msgid "Enable accelerometer for 5 seconds"
 msgstr "가속도계를 5초 동안 활성화"
 
-#: frontend/dispatcher.lua:90
+#: frontend/dispatcher.lua:91
 #: frontend/ui/elements/screen_rotation_menu_table.lua:46
 msgid "Lock auto rotation to current orientation"
 msgstr "자동 회전을 현재 상태로 잠금"
 
-#: frontend/dispatcher.lua:91
+#: frontend/dispatcher.lua:92
 msgid "Toggle orientation"
 msgstr "방향 토글"
 
-#: frontend/dispatcher.lua:92
+#: frontend/dispatcher.lua:93
 msgid "Invert rotation"
 msgstr "회전 반대로"
 
-#: frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:94
 msgid "Rotate by 90° CW"
 msgstr "시계 방향 90° 회전"
 
-#: frontend/dispatcher.lua:94
+#: frontend/dispatcher.lua:95
 msgid "Rotate by 90° CCW"
 msgstr "시계 반대 방향 90° 회전"
 
-#: frontend/dispatcher.lua:96
+#: frontend/dispatcher.lua:97
 msgid "Turn on Wi-Fi"
 msgstr "Wi-Fi 켜기"
 
-#: frontend/dispatcher.lua:97
+#: frontend/dispatcher.lua:98
 msgid "Turn off Wi-Fi"
 msgstr "Wi-Fi 끄기"
 
-#: frontend/dispatcher.lua:98
+#: frontend/dispatcher.lua:99
 msgid "Toggle Wi-Fi"
 msgstr "Wi-Fi 토글"
 
-#: frontend/dispatcher.lua:99
+#: frontend/dispatcher.lua:100
 msgid "Toggle Fullscreen"
 msgstr "전체 화면 토글"
 
-#: frontend/dispatcher.lua:100
+#: frontend/dispatcher.lua:101
 msgid "Show network info"
 msgstr "네트워크 정보 보기"
 
-#: frontend/dispatcher.lua:104
+#: frontend/dispatcher.lua:105
 msgid "Show frontlight dialog"
 msgstr "전면 조명 대화 상자 표시"
 
-#: frontend/dispatcher.lua:105
+#: frontend/dispatcher.lua:106
 msgid "Toggle frontlight"
 msgstr "전면 조명 토글"
 
-#: frontend/dispatcher.lua:106
+#: frontend/dispatcher.lua:107
 msgid "Set frontlight brightness"
 msgstr "전면 조명 밝기 설정"
 
-#: frontend/dispatcher.lua:107
+#: frontend/dispatcher.lua:108
 msgid "Increase frontlight brightness"
 msgstr "전면 조명 밝기 증가"
 
-#: frontend/dispatcher.lua:108
+#: frontend/dispatcher.lua:109
 msgid "Decrease frontlight brightness"
 msgstr "전면 조명 밝기 감소"
 
-#: frontend/dispatcher.lua:109
+#: frontend/dispatcher.lua:110
 msgid "Set frontlight warmth"
 msgstr "전면 조명 색 온도 설정"
 
-#: frontend/dispatcher.lua:110
+#: frontend/dispatcher.lua:111
 msgid "Increase frontlight warmth"
 msgstr "전면 조명 색 온도 증가"
 
-#: frontend/dispatcher.lua:111
+#: frontend/dispatcher.lua:112
 msgid "Decrease frontlight warmth"
 msgstr "전면 조명 색 온도 감소"
 
-#: frontend/dispatcher.lua:112
+#: frontend/dispatcher.lua:113
 msgid "Toggle night mode"
 msgstr "야간 모드 토글"
 
-#: frontend/dispatcher.lua:113
+#: frontend/dispatcher.lua:114
 msgid "Set night mode"
 msgstr "야간 모드 설정"
 
-#: frontend/dispatcher.lua:115
+#: frontend/dispatcher.lua:116
 msgid "Full screen refresh"
 msgstr "전체 화면 새로 고침"
 
-#: frontend/dispatcher.lua:116
+#: frontend/dispatcher.lua:117
 msgid "Full refresh rate (always)"
 msgstr "전체 새로 고침 빈도(매번)"
 
-#: frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:118
 msgid "Full refresh rate (not in night mode)"
 msgstr "전체 새로 고침 빈도(야간 모드 제외)"
 
-#: frontend/dispatcher.lua:118
+#: frontend/dispatcher.lua:119
 msgid "Full refresh rate (in night mode)"
 msgstr "전체 새로 고침 빈도(야간 모드에서)"
 
-#: frontend/dispatcher.lua:119 frontend/ui/elements/refresh_menu_table.lua:109
+#: frontend/dispatcher.lua:120 frontend/ui/elements/refresh_menu_table.lua:109
 msgid "Always flash on chapter boundaries"
 msgstr "챕터 경계에서 항상 갱신"
 
-#: frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:121
 msgid "Toggle flashing on chapter boundaries"
 msgstr "챕터 경계에서 깜박임 토글"
 
-#: frontend/dispatcher.lua:121
+#: frontend/dispatcher.lua:122
 msgid "Never flash on chapter's 2nd page"
 msgstr "챕터의 두 번째 페이지에서 갱신 않기"
 
-#: frontend/dispatcher.lua:122
+#: frontend/dispatcher.lua:123
 msgid "Toggle flashing on chapter's 2nd page"
 msgstr "챕터의 두 번째 페이지에서 깜박임 토글"
 
-#: frontend/dispatcher.lua:123 frontend/ui/elements/refresh_menu_table.lua:120
+#: frontend/dispatcher.lua:124 frontend/ui/elements/refresh_menu_table.lua:120
 msgid "Always flash on pages with images"
 msgstr "이미지가 있는 페이지에서는 항상 갱신"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Toggle flashing on pages with images"
 msgstr "이미지가 있는 페이지에서 깜박임 토글"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Set display mode"
 msgstr "디스플레이 모드 설정"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 msgid "Sort by"
 msgstr "정렬 기준"
 
-#: frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:134
 msgid "Show plus menu"
 msgstr "추가 메뉴 보기"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Toggle select mode"
 msgstr "선택 모드 토글"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Refresh content"
 msgstr "콘텐트 새로 고침"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Folder up"
 msgstr "폴더 위로"
 
-#: frontend/dispatcher.lua:145
+#: frontend/dispatcher.lua:146
 msgid "Open next document in folder"
 msgstr "폴더에서 다음 문서 열기"
 
-#: frontend/dispatcher.lua:147
+#: frontend/dispatcher.lua:148
 msgid "Show bottom menu"
 msgstr "하단 메뉴 표시하기"
 
-#: frontend/dispatcher.lua:148
+#: frontend/dispatcher.lua:149
 msgid "Toggle status bar"
 msgstr "상태 표시줄 토글"
 
-#: frontend/dispatcher.lua:149
+#: frontend/dispatcher.lua:150
 msgid "Toggle chapter progress bar"
 msgstr "챕터 진행률 표시줄 토글"
 
-#: frontend/dispatcher.lua:151
+#: frontend/dispatcher.lua:152
 msgid "Previous chapter"
 msgstr "이전 챕터"
 
-#: frontend/dispatcher.lua:152
+#: frontend/dispatcher.lua:153
 msgid "Next chapter"
 msgstr "다음 챕터"
 
-#: frontend/dispatcher.lua:153
+#: frontend/dispatcher.lua:154
 msgid "First page"
 msgstr "첫 페이지"
 
-#: frontend/dispatcher.lua:154
+#: frontend/dispatcher.lua:155
 msgid "Last page"
 msgstr "끝 페이지"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 msgid "Random page"
 msgstr "임의의 페이지"
 
-#: frontend/dispatcher.lua:156
+#: frontend/dispatcher.lua:157
 msgid "Turn pages"
 msgstr "페이지 넘기기"
 
-#: frontend/dispatcher.lua:159
+#: frontend/dispatcher.lua:160
 msgid "Previous bookmark"
 msgstr "이전 책갈피"
 
-#: frontend/dispatcher.lua:160
+#: frontend/dispatcher.lua:161
 msgid "Next bookmark"
 msgstr "다음 책갈피"
 
-#: frontend/dispatcher.lua:161
+#: frontend/dispatcher.lua:162
 msgid "First bookmark"
 msgstr "첫번째 책갈피"
 
-#: frontend/dispatcher.lua:162
+#: frontend/dispatcher.lua:163
 msgid "Last bookmark"
 msgstr "마지막 책갈피"
 
-#: frontend/dispatcher.lua:165
+#: frontend/dispatcher.lua:166
 msgid "Back"
 msgstr "뒤로"
 
-#: frontend/dispatcher.lua:166
+#: frontend/dispatcher.lua:167
 msgid "Back to previous location"
 msgstr "이전 위치로 이동"
 
-#: frontend/dispatcher.lua:167
+#: frontend/dispatcher.lua:168
 msgid "Forward to next location"
 msgstr "다음 위치로 이동"
 
-#: frontend/dispatcher.lua:168
+#: frontend/dispatcher.lua:169
 msgid "Follow nearest link"
 msgstr "가장 가까운 링크 따라가기"
 
-#: frontend/dispatcher.lua:169
+#: frontend/dispatcher.lua:170
 msgid "Follow nearest internal link"
 msgstr "가장 가까운 내부 링크 따라가기"
 
-#: frontend/dispatcher.lua:170
+#: frontend/dispatcher.lua:171
 msgid "Select previous link in current page"
 msgstr "현재 페이지에서 이전 링크 선택"
 
-#: frontend/dispatcher.lua:171
+#: frontend/dispatcher.lua:172
 msgid "Select next link in current page"
 msgstr "현재 페이지에서 다음 링크 선택"
 
-#: frontend/dispatcher.lua:172
+#: frontend/dispatcher.lua:173
 msgid "Add current location to history"
 msgstr "내역에 현재 위치 추가"
 
-#: frontend/dispatcher.lua:173
+#: frontend/dispatcher.lua:174
 msgid "Clear location history"
 msgstr "위치 내역 지우기"
 
-#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:180 frontend/ui/widget/bookmapwidget.lua:707
 msgid "Book map (overview)"
 msgstr "책 지도 (개요)"
 
-#: frontend/dispatcher.lua:183
+#: frontend/dispatcher.lua:184
 msgid "Toggle bookmark"
 msgstr "책갈피 토글"
 
-#: frontend/dispatcher.lua:192
+#: frontend/dispatcher.lua:193
 msgid "Toggle page turn animations"
 msgstr "페이지 넘김 애니메이션 토글"
 
-#: frontend/dispatcher.lua:193
+#: frontend/dispatcher.lua:194
 msgid "Toggle page turn direction"
 msgstr "페이지 넘김 방향 토글"
 
-#: frontend/dispatcher.lua:194
+#: frontend/dispatcher.lua:195
 msgid "Toggle custom TOC"
 msgstr "사용자 지정 차례 토글"
 
-#: frontend/dispatcher.lua:195
+#: frontend/dispatcher.lua:196
 msgid "Toggle custom hidden flows"
 msgstr "사용자 지정 숨겨진 흐름 토글"
 
-#: frontend/dispatcher.lua:197
+#: frontend/dispatcher.lua:198
 msgid "Set highlight action"
 msgstr "강조 표시 동작 설정"
 
-#: frontend/dispatcher.lua:198
+#: frontend/dispatcher.lua:199
 msgid "Cycle highlight action"
 msgstr "강조 표시 동작 순환하기"
 
-#: frontend/dispatcher.lua:199
+#: frontend/dispatcher.lua:200
 msgid "Cycle highlight style"
 msgstr "강조 표시 스타일 사이클"
 
-#: frontend/dispatcher.lua:201
+#: frontend/dispatcher.lua:202
 msgid "Save book metadata"
 msgstr "책 메타데이터 저장"
 
-#: frontend/dispatcher.lua:205
+#: frontend/dispatcher.lua:206
 msgid "Font face"
 msgstr "폰트 페이스"
 
-#: frontend/dispatcher.lua:206
+#: frontend/dispatcher.lua:207
 msgid "Increase font size"
 msgstr "글꼴 크기 늘이기"
 
-#: frontend/dispatcher.lua:207
+#: frontend/dispatcher.lua:208
 msgid "Decrease font size"
 msgstr "글꼴 크기 줄이기"
 
-#: frontend/dispatcher.lua:210
+#: frontend/dispatcher.lua:211
 msgid "Toggle page flipping"
 msgstr "페이지 넘김 토글"
 
-#: frontend/dispatcher.lua:211
+#: frontend/dispatcher.lua:212
 msgid "Toggle bookmark flipping"
 msgstr "책갈피 넘김 토글"
 
-#: frontend/dispatcher.lua:212
+#: frontend/dispatcher.lua:213
 msgid "Toggle reflow"
 msgstr "가변형 토글"
 
-#: frontend/dispatcher.lua:213
+#: frontend/dispatcher.lua:214
 msgid "Zoom mode"
 msgstr "확대/축소 모드"
 
-#: frontend/dispatcher.lua:214
+#: frontend/dispatcher.lua:215
 msgid "Change zoom factor"
 msgstr "확대/축소 비율 변경"
 
-#: frontend/dispatcher.lua:216
+#: frontend/dispatcher.lua:217
 msgid "Toggle panel zoom"
 msgstr "패널 확대/축소 토글"
 
-#: frontend/dispatcher.lua:221 frontend/ui/widget/textviewer.lua:612
+#: frontend/dispatcher.lua:222 frontend/ui/widget/textviewer.lua:612
 msgid "Font size"
 msgstr "글꼴 크기"
 
-#: frontend/dispatcher.lua:238
+#: frontend/dispatcher.lua:239
 msgid "Zoom"
 msgstr "확대"
 
-#: frontend/dispatcher.lua:262 frontend/ui/data/creoptions.lua:417
+#: frontend/dispatcher.lua:263 frontend/ui/data/creoptions.lua:417
 #: frontend/ui/data/creoptions.lua:429 frontend/ui/data/creoptions.lua:440
 #: frontend/ui/data/creoptions.lua:450 frontend/ui/data/koptoptions.lua:445
 #: frontend/ui/data/koptoptions.lua:459 frontend/ui/widget/toggleswitch.lua:245
 msgid "Font Size"
 msgstr "글꼴 크기"
 
-#: frontend/dispatcher.lua:263
+#: frontend/dispatcher.lua:264
 msgid "Change font size"
 msgstr "글꼴 크기 변경"
 
-#: frontend/dispatcher.lua:636
+#: frontend/dispatcher.lua:638
 msgid "Unknown item"
 msgstr "알 수없는 항목"
 
-#: frontend/dispatcher.lua:658
+#: frontend/dispatcher.lua:660
 msgid "gesture distance"
 msgstr "제스처 거리"
 
-#: frontend/dispatcher.lua:723 frontend/dispatcher.lua:941
+#: frontend/dispatcher.lua:725 frontend/dispatcher.lua:943
 msgid "Nothing"
 msgstr "없음"
 
-#: frontend/dispatcher.lua:729
+#: frontend/dispatcher.lua:731
 msgctxt "Dispatcher"
 msgid "1 action"
 msgid_plural "%1 actions"
 msgstr[0] "%1 동작"
 
-#: frontend/dispatcher.lua:731 plugins/gestures.koplugin/main.lua:236
+#: frontend/dispatcher.lua:733 plugins/gestures.koplugin/main.lua:236
 msgid "Pass through"
 msgstr "통과"
 
-#: frontend/dispatcher.lua:753 frontend/dispatcher.lua:996
+#: frontend/dispatcher.lua:755 frontend/dispatcher.lua:998
 msgid "Arrange actions"
 msgstr "작업 정렬"
 
-#: frontend/dispatcher.lua:870
+#: frontend/dispatcher.lua:872
 msgid "Use gesture distance"
 msgstr "제스처 거리 사용"
 
-#: frontend/dispatcher.lua:957 plugins/httpinspector.koplugin/main.lua:1040
+#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1040
 msgid "General"
 msgstr "일반"
 
-#: frontend/dispatcher.lua:958
+#: frontend/dispatcher.lua:960
 #: frontend/ui/elements/common_settings_menu_table.lua:708
 #: plugins/httpinspector.koplugin/main.lua:1041
 msgid "Device"
 msgstr "기기"
 
-#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1042
+#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1042
 msgid "Screen and lights"
 msgstr "화면과 조명"
 
-#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1044
+#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1044
 msgid "Reader"
 msgstr "리더"
 
-#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1045
+#: frontend/dispatcher.lua:964 plugins/httpinspector.koplugin/main.lua:1045
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "가변형 문서 (epub, fb2, txt…)"
 
-#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1046
+#: frontend/dispatcher.lua:965 plugins/httpinspector.koplugin/main.lua:1046
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "고정형 문서 (pdf, djvu, pics…)"
 
-#: frontend/dispatcher.lua:1016 plugins/profiles.koplugin/main.lua:134
+#: frontend/dispatcher.lua:1018 plugins/profiles.koplugin/main.lua:134
 msgid "Show as QuickMenu"
 msgstr "빠른 메뉴로 표시"
 
-#: frontend/dispatcher.lua:1041
+#: frontend/dispatcher.lua:1043
 msgid "Keep QuickMenu open"
 msgstr "빠른 메뉴를 열어두기"
 
-#: frontend/dispatcher.lua:1084
+#: frontend/dispatcher.lua:1086
 msgid "QuickMenu"
 msgstr "빠른 메뉴"
 
-#: frontend/dispatcher.lua:1091
+#: frontend/dispatcher.lua:1093
 msgid "Execute all"
 msgstr "모두 실행"
 
-#: frontend/dispatcher.lua:1164
+#: frontend/dispatcher.lua:1166
 msgid "Executing profile: %1"
 msgstr "프로필을 실행 중입니다: %1"
 
@@ -14377,15 +14428,6 @@ msgstr "이 책에 대한 몇 마디"
 msgid "Set values"
 msgstr "설정 값"
 
-#: frontend/ui/widget/configdialog.lua:1238
-#: frontend/ui/widget/configdialog.lua:1249
-#: frontend/ui/widget/configdialog.lua:1334
-#: frontend/ui/widget/configdialog.lua:1344
-#: frontend/ui/widget/configdialog.lua:1414
-#: frontend/ui/widget/configdialog.lua:1452
-msgid "Set as default"
-msgstr "기본값으로 설정"
-
 #: frontend/ui/widget/configdialog.lua:1248
 #: frontend/ui/widget/configdialog.lua:1343
 #: frontend/ui/widget/configdialog.lua:1410
@@ -14993,11 +15035,6 @@ msgstr "구성된 화면보호기 끝내기 제스처가 없습니다. 끝내려
 msgid "Set as book cover"
 msgstr "책 표지로 설정"
 
-#: frontend/ui/widget/screenshoter.lua:77
-#: plugins/archiveviewer.koplugin/main.lua:207
-msgid "View"
-msgstr "보기"
-
 #: frontend/ui/widget/screenshoter.lua:90
 msgid "Set as wallpaper"
 msgstr "배경화면으로 설정"
@@ -15052,7 +15089,7 @@ msgid "Text viewer"
 msgstr "텍스트 뷰어"
 
 #: frontend/ui/widget/textviewer.lua:692
-#: plugins/texteditor.koplugin/main.lua:450
+#: plugins/texteditor.koplugin/main.lua:449
 msgid ""
 "This file is %2:\n"
 "\n"
@@ -18653,12 +18690,10 @@ msgid "Enable CSS filter?"
 msgstr "CSS 필터를 활성화할까요?"
 
 #: plugins/newsdownloader.koplugin/main.lua:797
-#: plugins/texteditor.koplugin/main.lua:355
 msgid "Yes"
 msgstr "예"
 
 #: plugins/newsdownloader.koplugin/main.lua:802
-#: plugins/texteditor.koplugin/main.lua:356
 msgid "No"
 msgstr "아니요"
 
@@ -20169,27 +20204,10 @@ msgstr ""
 "\n"
 "텍스트 편집기 내역에서 제거할까요?"
 
-#: plugins/texteditor.koplugin/main.lua:348
+#: plugins/texteditor.koplugin/main.lua:415
+#, fuzzy
 msgid ""
-"To start editing a new file, you will have to:\n"
-"\n"
-"- First choose a folder\n"
-"- Then enter a name for the new file\n"
-"- And start editing it\n"
-"\n"
-"Do you want to proceed?"
-msgstr ""
-"새 파일 편집을 시작하려면 다음을 수행해야 합니다:\n"
-"\n"
-"- 먼저 폴더를 선택하십시오\n"
-"- 그런 다음 새 파일의 이름을 입력합니다\n"
-"- 그리고 편집을 시작합니다\n"
-"\n"
-"진행할까요?"
-
-#: plugins/texteditor.koplugin/main.lua:416
-msgid ""
-"This file does not exist anymore:\n"
+"This file does not exist:\n"
 "\n"
 "%1\n"
 "\n"
@@ -20201,7 +20219,7 @@ msgstr ""
 "\n"
 "새로 만들어서 편집을 시작할까요??"
 
-#: plugins/texteditor.koplugin/main.lua:433
+#: plugins/texteditor.koplugin/main.lua:432
 msgid ""
 "This file is not a regular file:\n"
 "\n"
@@ -20211,7 +20229,7 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:471
+#: plugins/texteditor.koplugin/main.lua:470
 msgid ""
 "This file can not be created:\n"
 "\n"
@@ -20251,28 +20269,28 @@ msgstr "QR"
 msgid "Text reset to last saved content"
 msgstr "최근에 저장된 컨텐츠로 텍스트 재설정"
 
-#: plugins/texteditor.koplugin/main.lua:587
+#: plugins/texteditor.koplugin/main.lua:590
 msgid "File is read only"
 msgstr "파일이 읽기 전용입니다"
 
-#: plugins/texteditor.koplugin/main.lua:593
-#: plugins/texteditor.koplugin/main.lua:620
-#: plugins/texteditor.koplugin/main.lua:644
+#: plugins/texteditor.koplugin/main.lua:596
+#: plugins/texteditor.koplugin/main.lua:623
+#: plugins/texteditor.koplugin/main.lua:647
 msgid "File saved"
 msgstr "파일 저장됨"
 
-#: plugins/texteditor.koplugin/main.lua:595
-#: plugins/texteditor.koplugin/main.lua:604
-#: plugins/texteditor.koplugin/main.lua:622
-#: plugins/texteditor.koplugin/main.lua:646
+#: plugins/texteditor.koplugin/main.lua:598
+#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:625
+#: plugins/texteditor.koplugin/main.lua:649
 msgid "Failed saving file: %1"
 msgstr "저장 실패한 파일: %1"
 
-#: plugins/texteditor.koplugin/main.lua:602
+#: plugins/texteditor.koplugin/main.lua:605
 msgid "Lua syntax OK, file saved"
 msgstr "Lua 구문 확인, 파일 저장됨"
 
-#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:610
 msgid ""
 "Lua syntax check failed:\n"
 "\n"
@@ -20292,15 +20310,15 @@ msgstr ""
 "\n"
 "%2"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Do not save"
 msgstr "저장하지 마세요"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Save anyway"
 msgstr "어쨌든 저장하기"
 
-#: plugins/texteditor.koplugin/main.lua:628
+#: plugins/texteditor.koplugin/main.lua:631
 msgid ""
 "Text content is empty.\n"
 "Do you want to keep this file as empty, or do you prefer to delete it?\n"
@@ -20312,15 +20330,15 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Keep empty file"
 msgstr "빈 파일 유지"
 
-#: plugins/texteditor.koplugin/main.lua:637
+#: plugins/texteditor.koplugin/main.lua:640
 msgid "File deleted"
 msgstr "파일 삭제됨"
 
-#: plugins/texteditor.koplugin/main.lua:639
+#: plugins/texteditor.koplugin/main.lua:642
 msgid "Failed deleting file: %1"
 msgstr "파일 삭제 실패: %1"
 
@@ -21035,6 +21053,23 @@ msgstr "왈라백"
 #: tools/update-metadata.lua:60
 msgid "annotations"
 msgstr "주석"
+
+#~ msgid ""
+#~ "To start editing a new file, you will have to:\n"
+#~ "\n"
+#~ "- First choose a folder\n"
+#~ "- Then enter a name for the new file\n"
+#~ "- And start editing it\n"
+#~ "\n"
+#~ "Do you want to proceed?"
+#~ msgstr ""
+#~ "새 파일 편집을 시작하려면 다음을 수행해야 합니다:\n"
+#~ "\n"
+#~ "- 먼저 폴더를 선택하십시오\n"
+#~ "- 그런 다음 새 파일의 이름을 입력합니다\n"
+#~ "- 그리고 편집을 시작합니다\n"
+#~ "\n"
+#~ "진행할까요?"
 
 #~ msgid "Connected to Bluetooth"
 #~ msgstr "블루투스에 연결됨"

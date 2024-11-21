@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-20 22:11+0000\n"
+"POT-Creation-Date: 2024-11-21 06:03+0000\n"
 "PO-Revision-Date: 2024-11-03 14:00+0000\n"
 "Last-Translator: Miren <librezale@miren.be>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -132,6 +132,7 @@ msgstr ""
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
 #: frontend/apps/filemanager/filemanagerutil.lua:344
 #: plugins/opds.koplugin/opdsbrowser.lua:642
+#: plugins/texteditor.koplugin/main.lua:355
 msgid "Choose folder"
 msgstr "Aukeratu karpeta"
 
@@ -142,7 +143,7 @@ msgstr "Aldatu fitxategi-izena"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:260
 #: plugins/opds.koplugin/opdsbrowser.lua:658
-#: plugins/texteditor.koplugin/main.lua:364
+#: plugins/texteditor.koplugin/main.lua:350
 msgid "Enter filename"
 msgstr "Sartu fitxategi-izena"
 
@@ -156,8 +157,8 @@ msgstr "Sartu fitxategi-izena"
 #: frontend/apps/filemanager/filemanager.lua:1001
 #: frontend/apps/filemanager/filemanager.lua:1129
 #: frontend/apps/filemanager/filemanager.lua:1458
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:498
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:644
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:513
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:659
 #: frontend/apps/filemanager/filemanagercollection.lua:503
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
@@ -229,7 +230,7 @@ msgstr "Sartu fitxategi-izena"
 #: plugins/statistics.koplugin/main.lua:2548
 #: plugins/terminal.koplugin/aliases.lua:100
 #: plugins/terminal.koplugin/main.lua:643
-#: plugins/texteditor.koplugin/main.lua:368
+#: plugins/texteditor.koplugin/main.lua:371
 #: plugins/vocabbuilder.koplugin/main.lua:1173
 #: plugins/vocabbuilder.koplugin/main.lua:1563
 #: plugins/vocabbuilder.koplugin/main.lua:1854
@@ -266,6 +267,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:361
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:772
 #: frontend/ui/widget/pathchooser.lua:140
 msgid "Choose"
 msgstr "Aukeratu"
@@ -281,9 +283,10 @@ msgid "Info"
 msgstr "Infoa"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:387
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:804
 #: plugins/opds.koplugin/opdsbrowser.lua:835
 #: plugins/statistics.koplugin/main.lua:1288
-#: plugins/texteditor.koplugin/main.lua:375
+#: plugins/texteditor.koplugin/main.lua:378
 #: plugins/vocabbuilder.koplugin/main.lua:242
 msgid "Edit"
 msgstr "Editatu"
@@ -419,11 +422,12 @@ msgstr "Deskargatzen…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:665
 #: frontend/apps/filemanager/filemanager.lua:1008
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:785
 #: frontend/apps/reader/modules/readerhandmade.lua:501
 #: frontend/ui/wikipedia.lua:1542
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:610
 #: plugins/statistics.koplugin/main.lua:332
-#: plugins/texteditor.koplugin/main.lua:417
+#: plugins/texteditor.koplugin/main.lua:416
 msgid "Create"
 msgstr "Sortu"
 
@@ -527,7 +531,7 @@ msgstr "Droobox karpeta (/ errorako)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:505
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:520
 #: frontend/apps/filemanager/filemanagercollection.lua:510
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
@@ -806,7 +810,7 @@ msgstr "Aukeratu karpetako fitxategi guztiak"
 #: frontend/apps/filemanager/filemanager.lua:543
 #: frontend/apps/filemanager/filemanager.lua:924
 #: frontend/apps/filemanager/filemanager.lua:1193
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:722
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:890
 msgid "Move"
 msgstr "Mugitu"
 
@@ -885,7 +889,7 @@ msgstr "%1 ireki nahi duzu?"
 #: frontend/apps/filemanager/filemanager.lua:1465
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:362
 #: frontend/ui/widget/textviewer.lua:694 frontend/ui/widget/touchmenu.lua:1255
-#: plugins/texteditor.koplugin/main.lua:452
+#: plugins/texteditor.koplugin/main.lua:451
 msgid "Open"
 msgstr "Ireki"
 
@@ -1085,84 +1089,84 @@ msgstr "Ireki %1 honekin:"
 msgid "Classic (filename only)"
 msgstr "Klasikoa (fitxategi-izena bakarrik)"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:28
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:29
 #: frontend/apps/filemanager/filemanagerutil.lua:261
-#: frontend/dispatcher.lua:186 plugins/opds.koplugin/opdsbrowser.lua:700
+#: frontend/dispatcher.lua:187 plugins/opds.koplugin/opdsbrowser.lua:700
 msgid "Book information"
 msgstr "Liburuaren informazioa"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:39
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
 msgid "Cover image:"
 msgstr "Irudi-azala:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
 #: plugins/calibre.koplugin/search.lua:145
 msgid "Title:"
 msgstr "Izenburua:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
 msgstr "Egilea(k):"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
 #: plugins/calibre.koplugin/search.lua:154
 msgid "Series:"
 msgstr "Bilduma:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
 #, fuzzy
 msgid "Series index:"
 msgstr "Bilduma:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
 msgid "Language:"
 msgstr "Hizkuntza:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
 msgid "Keywords:"
 msgstr "Gako-hitzak:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
 msgid "Description:"
 msgstr "Deskribapena:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:48
 msgid "Pages:"
 msgstr "Orrialdeak:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:82
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:92
 msgid "Filename:"
 msgstr "Fitxategi-izena:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:83
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:93
 msgid "Format:"
 msgstr "Formatua:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:84
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:94
 #: plugins/calibre.koplugin/search.lua:147
 msgid "Size:"
 msgstr "Tamaina:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:85
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:95
 #, fuzzy
 msgid "File date:"
 msgstr "Fitxategi-izena:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:86
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:96
 #, fuzzy
 msgid "Folder:"
 msgstr "FTP karpeta"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:100
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:110
 msgid "Tap to display"
 msgstr "Sakatu ikusteko"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:120
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:156
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:749
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:750
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:130
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:166
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:917
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:918
 #: frontend/apps/reader/modules/readerfooter.lua:1998
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/screensaver.lua:97
@@ -1181,79 +1185,84 @@ msgstr "Sakatu ikusteko"
 msgid "N/A"
 msgstr "Ez aplikagarria"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:161
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:171
 msgid "number of lines and words not available"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 #, fuzzy
 msgid "1 line"
 msgid_plural "%1 lines"
 msgstr[0] "Azpimarratu"
 msgstr[1] "Azpimarratu"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 #, fuzzy
 msgid "1 word"
 msgid_plural "%1 words"
 msgstr[0] "Kopiatu"
 msgstr[1] "Kopiatu"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:163
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:173
 #, fuzzy
 msgid "Current page:"
 msgstr "Egungo denbora"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:182
 #, fuzzy
 msgid "Rating:"
 msgstr "Kalifikazioa: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
 #, fuzzy
 msgid "Review:"
 msgstr "Kritika"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:337
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:192
+#, fuzzy
+msgid "Notebook file:"
+msgstr "Liburuaren egoera"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:352
 msgid "No book description available."
 msgstr "Liburuaren deskribapena ez dago eskuragarri."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:354
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:369
 msgid "No cover image available."
 msgstr "Azal irudia ez dago eskuragarri."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:491
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:506
 #, fuzzy
 msgid "Edit book metadata:"
 msgstr "Ez ikusi metadatuak"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:543
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:558
 #, fuzzy
 msgid "Copy original"
 msgstr "Kopiatu"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:551
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:566
 #, fuzzy
 msgid "View original"
 msgstr "Karpeta berria"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:564
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:579
 #, fuzzy
 msgid "Reset custom"
 msgstr "Irudi-azala:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:568
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:583
 msgid ""
 "Reset custom cover?\n"
 "Image file will be deleted."
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:569
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
 #, fuzzy
 msgid "Reset custom book metadata field?"
 msgstr "Ez ikusi metadatuak"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:570
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:585
 #: frontend/apps/filemanager/filemanagerutil.lua:186
 #: frontend/apps/filemanager/filemanagerutil.lua:196
 #: frontend/apps/reader/modules/readermenu.lua:203
@@ -1264,51 +1273,91 @@ msgstr "Ez ikusi metadatuak"
 msgid "Reset"
 msgstr "Berrasieratu"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:599
 #, fuzzy
 msgid "Set custom"
 msgstr "Ezarri ordua"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:598
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:613
 #, fuzzy
 msgid "Book metadata:"
 msgstr "Ez ikusi metadatuak"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:636
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
 #, fuzzy
 msgid "Edit book review"
 msgstr "Hasiera karpeta"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:666
 #: frontend/ui/widget/bookstatuswidget.lua:558
 msgid "Save review"
 msgstr "Berrikusketa gorde"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:707
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:734
+#: frontend/apps/filemanager/filemanagerutil.lua:374
+msgid "Use default"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:742
+#, fuzzy
+msgid "Reset default"
+msgstr "Ezarri lehenetsia"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:747
+msgid "Notebook file default location reset"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:753
+msgid "Use local"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:761
+#: frontend/ui/widget/configdialog.lua:1238
+#: frontend/ui/widget/configdialog.lua:1249
+#: frontend/ui/widget/configdialog.lua:1334
+#: frontend/ui/widget/configdialog.lua:1344
+#: frontend/ui/widget/configdialog.lua:1414
+#: frontend/ui/widget/configdialog.lua:1452
+#, fuzzy
+msgid "Set as default"
+msgstr "Ezarri lehenetsia"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:766
+msgid "Notebook file default location saved"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:796
+#: frontend/ui/widget/screenshoter.lua:77
+#: plugins/archiveviewer.koplugin/main.lua:207
+#, fuzzy
+msgid "View"
+msgstr "Ikusi %1"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:875
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:708
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:876
 #: plugins/calibre.koplugin/search.lua:518
 msgid "Scan"
 msgstr "Eskaneatu"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:714
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:882
 msgid "No books with metadata not in your preferred location found."
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:718
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:886
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
 msgstr[1] ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:721
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:889
 msgid "Move book metadata to your preferred location?"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:737
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:905
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
 "based storage may slow down file browser navigation in large directories. "
@@ -1318,13 +1367,13 @@ msgid ""
 "browser navigation."
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:751
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:919
 msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:756
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:924
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] ""
@@ -1511,7 +1560,7 @@ msgstr ""
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:236
 #: frontend/apps/filemanager/filemanagermenu.lua:799
-#: frontend/dispatcher.lua:137 frontend/ui/widget/menu.lua:794
+#: frontend/dispatcher.lua:138 frontend/ui/widget/menu.lua:794
 msgid "File search"
 msgstr "Fitxategien bilaketa"
 
@@ -1833,12 +1882,12 @@ msgstr "Elementuak orrialde bakoitzeko"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:432
 #: frontend/apps/reader/modules/readerbookmark.lua:233
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 msgid "Reverse sorting"
 msgstr "Alderantzizko ordenazioa"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:442
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Folders and files mixed"
 msgstr "Karpetak eta fitxategiak nahasian"
 
@@ -1978,7 +2027,7 @@ msgid ""
 msgstr ""
 
 #: frontend/apps/filemanager/filemanagermenu.lua:813
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 #, fuzzy
 msgid "Last file search results"
 msgstr "Bilaketaren Emaitzak"
@@ -2107,7 +2156,7 @@ msgid ""
 msgstr ""
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:12
-#: frontend/dispatcher.lua:136 frontend/ui/widget/pathchooser.lua:162
+#: frontend/dispatcher.lua:137 frontend/ui/widget/pathchooser.lua:162
 msgid "Folder shortcuts"
 msgstr "Karpeta lasterbideak"
 
@@ -2201,12 +2250,12 @@ msgid "Show folder"
 msgstr "Hasiera karpeta"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:274
-#: frontend/dispatcher.lua:188 plugins/opds.koplugin/opdsbrowser.lua:693
+#: frontend/dispatcher.lua:189 plugins/opds.koplugin/opdsbrowser.lua:693
 msgid "Book cover"
 msgstr "Liburuaren azala"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:287
-#: frontend/dispatcher.lua:187
+#: frontend/dispatcher.lua:188
 msgid "Book description"
 msgstr "Liburuaren deskribapena"
 
@@ -2236,10 +2285,6 @@ msgstr ""
 #, fuzzy
 msgid "Choose file"
 msgstr "Hasiera karpeta"
-
-#: frontend/apps/filemanager/filemanagerutil.lua:374
-msgid "Use default"
-msgstr ""
 
 #: frontend/apps/filemanager/filemanagerutil.lua:384
 #: frontend/ui/data/optionsutil.lua:175
@@ -2276,7 +2321,7 @@ msgstr "Berrizendatu laster-marka"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:79
 #: frontend/apps/reader/modules/readerbookmark.lua:107
-#: frontend/dispatcher.lua:181
+#: frontend/dispatcher.lua:182
 msgid "Bookmarks"
 msgstr "Laster-markak"
 
@@ -2354,7 +2399,7 @@ msgid "Show separator between items"
 msgstr ""
 
 #: frontend/apps/reader/modules/readerbookmark.lua:246
-#: frontend/dispatcher.lua:182
+#: frontend/dispatcher.lua:183
 #, fuzzy
 msgid "Bookmark search"
 msgstr "Laster-markak"
@@ -2463,7 +2508,7 @@ msgid "Current page"
 msgstr "Egungo denbora"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:923
-#: frontend/dispatcher.lua:163
+#: frontend/dispatcher.lua:164
 #, fuzzy
 msgid "Latest bookmark"
 msgstr "Berrizendatu laster-marka"
@@ -2797,7 +2842,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:223
 #: frontend/apps/reader/modules/readerdictionary.lua:956
-#: frontend/dispatcher.lua:61 plugins/vocabbuilder.koplugin/main.lua:2040
+#: frontend/dispatcher.lua:62 plugins/vocabbuilder.koplugin/main.lua:2040
 msgid "Dictionary lookup"
 msgstr "Hiztegian bilatu"
 
@@ -3904,7 +3949,7 @@ msgid "Right"
 msgstr "Eskuina"
 
 #: frontend/apps/reader/modules/readergoto.lua:17
-#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:157
+#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:158
 #: frontend/ui/widget/keyvaluepage.lua:411 frontend/ui/widget/menu.lua:773
 #: frontend/ui/widget/sortwidget.lua:255
 #: plugins/statistics.koplugin/calendarview.lua:620
@@ -3912,7 +3957,7 @@ msgstr "Eskuina"
 msgid "Go to page"
 msgstr "Joan orrialdera"
 
-#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:158
+#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:159
 msgid "Skim document"
 msgstr "Jauzi dokumentua"
 
@@ -4173,9 +4218,9 @@ msgstr "Gorde dokumentua (idatzi nabarmendutakoak PDF batean)"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:670 frontend/ui/data/creoptions.lua:683
 #: frontend/ui/data/creoptions.lua:695 frontend/ui/data/creoptions.lua:734
@@ -4190,9 +4235,9 @@ msgstr "aktibatuta"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:339 frontend/ui/data/creoptions.lua:356
 #: frontend/ui/data/creoptions.lua:647 frontend/ui/data/creoptions.lua:670
@@ -4266,7 +4311,7 @@ msgstr "Pantaila"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:375
 #: frontend/apps/reader/modules/readersearch.lua:190
-#: frontend/dispatcher.lua:175
+#: frontend/dispatcher.lua:176
 msgid "Fulltext search"
 msgstr ""
 
@@ -4524,7 +4569,7 @@ msgid "Selection on text"
 msgstr "Aukeratu letra-tipo tamaina"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:872
-#: frontend/dispatcher.lua:190
+#: frontend/dispatcher.lua:191
 #, fuzzy
 msgid "Translate current page"
 msgstr "Laster-markatu uneko orrialdea"
@@ -5339,7 +5384,7 @@ msgid "Results per page"
 msgstr "Elementuak orrialde bakoitzeko"
 
 #: frontend/apps/reader/modules/readersearch.lua:196
-#: frontend/dispatcher.lua:176
+#: frontend/dispatcher.lua:177
 #, fuzzy
 msgid "Last fulltext search results"
 msgstr "Bilaketaren Emaitzak"
@@ -5401,7 +5446,7 @@ msgid "Current page: %1"
 msgstr "Uneko orrialdea (%1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:19
-#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:185
+#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:186
 #: frontend/ui/elements/common_settings_menu_table.lua:683
 msgid "Book status"
 msgstr "Liburuaren egoera"
@@ -5426,12 +5471,12 @@ msgstr "Ireki hurrengo fitxategia"
 
 #: frontend/apps/reader/modules/readerstatus.lua:103
 #: frontend/ui/elements/common_settings_menu_table.lua:684
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Delete file"
 msgstr "Ezabatu fitxategia"
 
 #: frontend/apps/reader/modules/readerstatus.lua:110 frontend/dispatcher.lua:59
-#: frontend/dispatcher.lua:960 plugins/httpinspector.koplugin/main.lua:1043
+#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1043
 msgid "File browser"
 msgstr " Fitxategi-arakatzailea "
 
@@ -5886,18 +5931,18 @@ msgid "Book tweak saved (not enabled)."
 msgstr ""
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:79
-#: frontend/dispatcher.lua:178 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
 #, fuzzy
 msgid "Book map"
 msgstr "Laster-markak"
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:93
-#: frontend/dispatcher.lua:180 frontend/ui/widget/pagebrowserwidget.lua:35
+#: frontend/dispatcher.lua:181 frontend/ui/widget/pagebrowserwidget.lua:35
 #, fuzzy
 msgid "Page browser"
 msgstr "fitxategi-arakatzailea"
 
-#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:177
+#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:178
 msgid "Table of contents"
 msgstr "Edukien taula"
 
@@ -6788,7 +6833,7 @@ msgstr "Bilatu Wikipedian"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:82
 #: frontend/apps/reader/modules/readerwikipedia.lua:399
-#: frontend/dispatcher.lua:62
+#: frontend/dispatcher.lua:63
 msgid "Wikipedia lookup"
 msgstr "Wikipedian bilatu"
 
@@ -7654,7 +7699,7 @@ msgstr "Berrabiarazi"
 msgid "Are you sure you want to power off the device?"
 msgstr "Ziur gailua amatatu nahi duzula?"
 
-#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:75
+#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:76
 #: frontend/ui/elements/common_exit_menu_table.lua:51
 msgid "Power off"
 msgstr "Itzali"
@@ -7692,492 +7737,497 @@ msgstr "Irakurketa egoera"
 msgid "History search"
 msgstr "Hiztegiaren ezarpenak"
 
-#: frontend/dispatcher.lua:64
+#: frontend/dispatcher.lua:60
+#, fuzzy
+msgid "Notebook file"
+msgstr "Hasiera karpeta"
+
+#: frontend/dispatcher.lua:65
 msgid "Show menu"
 msgstr "Erakutsi menua"
 
-#: frontend/dispatcher.lua:65
+#: frontend/dispatcher.lua:66
 #: frontend/ui/elements/common_info_menu_table.lua:39
 #, fuzzy
 msgid "Menu search"
 msgstr "Martxoa"
 
-#: frontend/dispatcher.lua:66
+#: frontend/dispatcher.lua:67
 #, fuzzy
 msgid "Screenshot"
 msgstr "Pantaila"
 
-#: frontend/dispatcher.lua:70
+#: frontend/dispatcher.lua:71
 #, fuzzy
 msgid "Exit sleep screen"
 msgstr "Sakatu pantaila-babesletik ateratzeko"
 
-#: frontend/dispatcher.lua:71 frontend/ui/elements/mass_storage.lua:43
+#: frontend/dispatcher.lua:72 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
 msgstr "Abiarazi USB biltegiratzea"
 
-#: frontend/dispatcher.lua:72
+#: frontend/dispatcher.lua:73
 #: frontend/ui/elements/common_exit_menu_table.lua:34
 msgid "Sleep"
 msgstr "Lo"
 
-#: frontend/dispatcher.lua:73
+#: frontend/dispatcher.lua:74
 #: frontend/ui/elements/common_exit_menu_table.lua:22
 msgid "Restart KOReader"
 msgstr "Berrabiarazi KOReader"
 
-#: frontend/dispatcher.lua:74
+#: frontend/dispatcher.lua:75
 #: frontend/ui/elements/common_exit_menu_table.lua:42
 msgid "Reboot the device"
 msgstr "Berrabiarazi gailua"
 
-#: frontend/dispatcher.lua:76
+#: frontend/dispatcher.lua:77
 msgid "Exit KOReader"
 msgstr "Irten KOReader-tik"
 
-#: frontend/dispatcher.lua:78
+#: frontend/dispatcher.lua:79
 #, fuzzy
 msgid "Toggle long-press on corners"
 msgstr "Joan karpeta nagusira"
 
-#: frontend/dispatcher.lua:79
+#: frontend/dispatcher.lua:80
 #, fuzzy
 msgid "Enable touch input"
 msgstr "Orientazioa"
 
-#: frontend/dispatcher.lua:80
+#: frontend/dispatcher.lua:81
 #, fuzzy
 msgid "Disable touch input"
 msgstr "Orientazioa"
 
-#: frontend/dispatcher.lua:81
+#: frontend/dispatcher.lua:82
 #, fuzzy
 msgid "Toggle touch input"
 msgstr "Orientazioa"
 
-#: frontend/dispatcher.lua:83 frontend/ui/elements/physical_buttons.lua:28
+#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:28
 msgid "Invert left-side page-turn buttons"
 msgstr ""
 
-#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:40
+#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:40
 msgid "Invert right-side page-turn buttons"
 msgstr ""
 
-#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:11
+#: frontend/dispatcher.lua:86 frontend/ui/elements/physical_buttons.lua:11
 #, fuzzy
 msgid "Invert page-turn buttons"
 msgstr "Biratu gabe"
 
-#: frontend/dispatcher.lua:87
+#: frontend/dispatcher.lua:88
 #, fuzzy
 msgid "Toggle key repeat"
 msgstr "Orientazioa"
 
-#: frontend/dispatcher.lua:88
+#: frontend/dispatcher.lua:89
 msgid "Toggle accelerometer"
 msgstr ""
 
-#: frontend/dispatcher.lua:89
+#: frontend/dispatcher.lua:90
 msgid "Enable accelerometer for 5 seconds"
 msgstr ""
 
-#: frontend/dispatcher.lua:90
+#: frontend/dispatcher.lua:91
 #: frontend/ui/elements/screen_rotation_menu_table.lua:46
 msgid "Lock auto rotation to current orientation"
 msgstr ""
 
-#: frontend/dispatcher.lua:91
+#: frontend/dispatcher.lua:92
 #, fuzzy
 msgid "Toggle orientation"
 msgstr "Orientazioa"
 
-#: frontend/dispatcher.lua:92
+#: frontend/dispatcher.lua:93
 #, fuzzy
 msgid "Invert rotation"
 msgstr "Biratu gabe"
 
-#: frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:94
 msgid "Rotate by 90° CW"
 msgstr ""
 
-#: frontend/dispatcher.lua:94
+#: frontend/dispatcher.lua:95
 msgid "Rotate by 90° CCW"
 msgstr ""
 
-#: frontend/dispatcher.lua:96
+#: frontend/dispatcher.lua:97
 #, fuzzy
 msgid "Turn on Wi-Fi"
 msgstr "Piztu"
 
-#: frontend/dispatcher.lua:97
+#: frontend/dispatcher.lua:98
 #, fuzzy
 msgid "Turn off Wi-Fi"
 msgstr "Itzali"
 
-#: frontend/dispatcher.lua:98
+#: frontend/dispatcher.lua:99
 #, fuzzy
 msgid "Toggle Wi-Fi"
 msgstr "Aldatu wifia"
 
-#: frontend/dispatcher.lua:99
+#: frontend/dispatcher.lua:100
 #, fuzzy
 msgid "Toggle Fullscreen"
 msgstr "Pantaila osoa"
 
-#: frontend/dispatcher.lua:100
+#: frontend/dispatcher.lua:101
 #, fuzzy
 msgid "Show network info"
 msgstr "Sarearen informazioa"
 
-#: frontend/dispatcher.lua:104
+#: frontend/dispatcher.lua:105
 msgid "Show frontlight dialog"
 msgstr ""
 
-#: frontend/dispatcher.lua:105
+#: frontend/dispatcher.lua:106
 msgid "Toggle frontlight"
 msgstr ""
 
-#: frontend/dispatcher.lua:106
+#: frontend/dispatcher.lua:107
 #, fuzzy
 msgid "Set frontlight brightness"
 msgstr "Aurreko argia automatikoa"
 
-#: frontend/dispatcher.lua:107
+#: frontend/dispatcher.lua:108
 #, fuzzy
 msgid "Increase frontlight brightness"
 msgstr "Aurreko argia automatikoa"
 
-#: frontend/dispatcher.lua:108
+#: frontend/dispatcher.lua:109
 #, fuzzy
 msgid "Decrease frontlight brightness"
 msgstr "Aurreko argia automatikoa"
 
-#: frontend/dispatcher.lua:109
+#: frontend/dispatcher.lua:110
 #, fuzzy
 msgid "Set frontlight warmth"
 msgstr "Aurreko argia automatikoa"
 
-#: frontend/dispatcher.lua:110
+#: frontend/dispatcher.lua:111
 #, fuzzy
 msgid "Increase frontlight warmth"
 msgstr "Aurreko argia automatikoa"
 
-#: frontend/dispatcher.lua:111
+#: frontend/dispatcher.lua:112
 #, fuzzy
 msgid "Decrease frontlight warmth"
 msgstr "Aurreko argia automatikoa"
 
-#: frontend/dispatcher.lua:112
+#: frontend/dispatcher.lua:113
 #, fuzzy
 msgid "Toggle night mode"
 msgstr "Pizte modua"
 
-#: frontend/dispatcher.lua:113
+#: frontend/dispatcher.lua:114
 #, fuzzy
 msgid "Set night mode"
 msgstr "Gau modua"
 
-#: frontend/dispatcher.lua:115
+#: frontend/dispatcher.lua:116
 msgid "Full screen refresh"
 msgstr "Pantailaren freskatze osoa"
 
-#: frontend/dispatcher.lua:116
+#: frontend/dispatcher.lua:117
 #, fuzzy
 msgid "Full refresh rate (always)"
 msgstr "Freskatze-tasa osoa"
 
-#: frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:118
 #, fuzzy
 msgid "Full refresh rate (not in night mode)"
 msgstr "Freskatze-tasa osoa"
 
-#: frontend/dispatcher.lua:118
+#: frontend/dispatcher.lua:119
 #, fuzzy
 msgid "Full refresh rate (in night mode)"
 msgstr "Freskatze-tasa osoa"
 
-#: frontend/dispatcher.lua:119 frontend/ui/elements/refresh_menu_table.lua:109
+#: frontend/dispatcher.lua:120 frontend/ui/elements/refresh_menu_table.lua:109
 msgid "Always flash on chapter boundaries"
 msgstr ""
 
-#: frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:121
 msgid "Toggle flashing on chapter boundaries"
 msgstr ""
 
-#: frontend/dispatcher.lua:121
+#: frontend/dispatcher.lua:122
 msgid "Never flash on chapter's 2nd page"
 msgstr ""
 
-#: frontend/dispatcher.lua:122
+#: frontend/dispatcher.lua:123
 msgid "Toggle flashing on chapter's 2nd page"
 msgstr ""
 
-#: frontend/dispatcher.lua:123 frontend/ui/elements/refresh_menu_table.lua:120
+#: frontend/dispatcher.lua:124 frontend/ui/elements/refresh_menu_table.lua:120
 msgid "Always flash on pages with images"
 msgstr ""
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Toggle flashing on pages with images"
 msgstr ""
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 #, fuzzy
 msgid "Set display mode"
 msgstr "Bistaratze modua"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 #, fuzzy
 msgid "Sort by"
 msgstr "Ordenatu honela: %1"
 
-#: frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:134
 msgid "Show plus menu"
 msgstr ""
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 #, fuzzy
 msgid "Toggle select mode"
 msgstr "Pizte modua"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 #, fuzzy
 msgid "Refresh content"
 msgstr "Eguneratu"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Folder up"
 msgstr ""
 
-#: frontend/dispatcher.lua:145
+#: frontend/dispatcher.lua:146
 #, fuzzy
 msgid "Open next document in folder"
 msgstr "Azkeneko dokumentua ireki"
 
-#: frontend/dispatcher.lua:147
+#: frontend/dispatcher.lua:148
 msgid "Show bottom menu"
 msgstr "Erakutsi menu botoia"
 
-#: frontend/dispatcher.lua:148
+#: frontend/dispatcher.lua:149
 #, fuzzy
 msgid "Toggle status bar"
 msgstr "Egoera-barra"
 
-#: frontend/dispatcher.lua:149
+#: frontend/dispatcher.lua:150
 #, fuzzy
 msgid "Toggle chapter progress bar"
 msgstr "Erakutsi aurrerapen-barra"
 
-#: frontend/dispatcher.lua:151
+#: frontend/dispatcher.lua:152
 msgid "Previous chapter"
 msgstr "Aurreko kapitulua"
 
-#: frontend/dispatcher.lua:152
+#: frontend/dispatcher.lua:153
 msgid "Next chapter"
 msgstr "Hurrengo kapitulua"
 
-#: frontend/dispatcher.lua:153
+#: frontend/dispatcher.lua:154
 #, fuzzy
 msgid "First page"
 msgstr "Irekitako lehena"
 
-#: frontend/dispatcher.lua:154
+#: frontend/dispatcher.lua:155
 #, fuzzy
 msgid "Last page"
 msgstr "Irekitako azkena"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 #, fuzzy
 msgid "Random page"
 msgstr "Irakurritako orriak"
 
-#: frontend/dispatcher.lua:156
+#: frontend/dispatcher.lua:157
 #, fuzzy
 msgid "Turn pages"
 msgstr "Egungo denbora"
 
-#: frontend/dispatcher.lua:159
+#: frontend/dispatcher.lua:160
 #, fuzzy
 msgid "Previous bookmark"
 msgstr "Ezabatu laster-marka"
 
-#: frontend/dispatcher.lua:160
+#: frontend/dispatcher.lua:161
 #, fuzzy
 msgid "Next bookmark"
 msgstr "Berrizendatu laster-marka"
 
-#: frontend/dispatcher.lua:161
+#: frontend/dispatcher.lua:162
 #, fuzzy
 msgid "First bookmark"
 msgstr "Berrizendatu laster-marka"
 
-#: frontend/dispatcher.lua:162
+#: frontend/dispatcher.lua:163
 #, fuzzy
 msgid "Last bookmark"
 msgstr "Berrizendatu laster-marka"
 
-#: frontend/dispatcher.lua:165
+#: frontend/dispatcher.lua:166
 msgid "Back"
 msgstr "Atzera"
 
-#: frontend/dispatcher.lua:166
+#: frontend/dispatcher.lua:167
 msgid "Back to previous location"
 msgstr "Joan aurreko kokapenera"
 
-#: frontend/dispatcher.lua:167
+#: frontend/dispatcher.lua:168
 #, fuzzy
 msgid "Forward to next location"
 msgstr "Joan aurreko kokalekura"
 
-#: frontend/dispatcher.lua:168
+#: frontend/dispatcher.lua:169
 msgid "Follow nearest link"
 msgstr ""
 
-#: frontend/dispatcher.lua:169
+#: frontend/dispatcher.lua:170
 msgid "Follow nearest internal link"
 msgstr ""
 
-#: frontend/dispatcher.lua:170
+#: frontend/dispatcher.lua:171
 #, fuzzy
 msgid "Select previous link in current page"
 msgstr "Aurreko orria"
 
-#: frontend/dispatcher.lua:171
+#: frontend/dispatcher.lua:172
 msgid "Select next link in current page"
 msgstr ""
 
-#: frontend/dispatcher.lua:172
+#: frontend/dispatcher.lua:173
 #, fuzzy
 msgid "Add current location to history"
 msgstr "Garbitu kokapen historia"
 
-#: frontend/dispatcher.lua:173
+#: frontend/dispatcher.lua:174
 msgid "Clear location history"
 msgstr "Garbitu kokapen historia"
 
-#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:180 frontend/ui/widget/bookmapwidget.lua:707
 #, fuzzy
 msgid "Book map (overview)"
 msgstr "Liburuaren azala"
 
-#: frontend/dispatcher.lua:183
+#: frontend/dispatcher.lua:184
 msgid "Toggle bookmark"
 msgstr "Aktibatu laster-marka"
 
-#: frontend/dispatcher.lua:192
+#: frontend/dispatcher.lua:193
 #, fuzzy
 msgid "Toggle page turn animations"
 msgstr "Moztu Orrialdea"
 
-#: frontend/dispatcher.lua:193
+#: frontend/dispatcher.lua:194
 msgid "Toggle page turn direction"
 msgstr ""
 
-#: frontend/dispatcher.lua:194
+#: frontend/dispatcher.lua:195
 msgid "Toggle custom TOC"
 msgstr ""
 
-#: frontend/dispatcher.lua:195
+#: frontend/dispatcher.lua:196
 msgid "Toggle custom hidden flows"
 msgstr ""
 
-#: frontend/dispatcher.lua:197
+#: frontend/dispatcher.lua:198
 #, fuzzy
 msgid "Set highlight action"
 msgstr "Nabarmentze ekintza"
 
-#: frontend/dispatcher.lua:198
+#: frontend/dispatcher.lua:199
 msgid "Cycle highlight action"
 msgstr ""
 
-#: frontend/dispatcher.lua:199
+#: frontend/dispatcher.lua:200
 msgid "Cycle highlight style"
 msgstr ""
 
-#: frontend/dispatcher.lua:201
+#: frontend/dispatcher.lua:202
 #, fuzzy
 msgid "Save book metadata"
 msgstr "Ez ikusi metadatuak"
 
-#: frontend/dispatcher.lua:205
+#: frontend/dispatcher.lua:206
 #, fuzzy
 msgid "Font face"
 msgstr "Letra-tipo tamaina"
 
-#: frontend/dispatcher.lua:206
+#: frontend/dispatcher.lua:207
 #, fuzzy
 msgid "Increase font size"
 msgstr "Letra-tipo tamaina handitze..."
 
-#: frontend/dispatcher.lua:207
+#: frontend/dispatcher.lua:208
 #, fuzzy
 msgid "Decrease font size"
 msgstr "Letra-tipo tamaina txikitzen..."
 
-#: frontend/dispatcher.lua:210
+#: frontend/dispatcher.lua:211
 msgid "Toggle page flipping"
 msgstr ""
 
-#: frontend/dispatcher.lua:211
+#: frontend/dispatcher.lua:212
 #, fuzzy
 msgid "Toggle bookmark flipping"
 msgstr "Aktibatu laster-marka"
 
-#: frontend/dispatcher.lua:212
+#: frontend/dispatcher.lua:213
 msgid "Toggle reflow"
 msgstr ""
 
-#: frontend/dispatcher.lua:213
+#: frontend/dispatcher.lua:214
 #, fuzzy
 msgid "Zoom mode"
 msgstr "Zoom egin orrialdea egokitzeko"
 
-#: frontend/dispatcher.lua:214
+#: frontend/dispatcher.lua:215
 #, fuzzy
 msgid "Change zoom factor"
 msgstr "Aldatu SSH portua"
 
-#: frontend/dispatcher.lua:216
+#: frontend/dispatcher.lua:217
 #, fuzzy
 msgid "Toggle panel zoom"
 msgstr "Aktibatu laster-marka"
 
-#: frontend/dispatcher.lua:221 frontend/ui/widget/textviewer.lua:612
+#: frontend/dispatcher.lua:222 frontend/ui/widget/textviewer.lua:612
 #, fuzzy
 msgid "Font size"
 msgstr "Letra-tipo tamaina"
 
-#: frontend/dispatcher.lua:238
+#: frontend/dispatcher.lua:239
 #, fuzzy
 msgid "Zoom"
 msgstr "Zoom egin orrialdea egokitzeko"
 
-#: frontend/dispatcher.lua:262 frontend/ui/data/creoptions.lua:417
+#: frontend/dispatcher.lua:263 frontend/ui/data/creoptions.lua:417
 #: frontend/ui/data/creoptions.lua:429 frontend/ui/data/creoptions.lua:440
 #: frontend/ui/data/creoptions.lua:450 frontend/ui/data/koptoptions.lua:445
 #: frontend/ui/data/koptoptions.lua:459 frontend/ui/widget/toggleswitch.lua:245
 msgid "Font Size"
 msgstr "Letra-tipo tamaina"
 
-#: frontend/dispatcher.lua:263
+#: frontend/dispatcher.lua:264
 #, fuzzy
 msgid "Change font size"
 msgstr "Ezarri letra-tipo tamaina"
 
-#: frontend/dispatcher.lua:636
+#: frontend/dispatcher.lua:638
 #, fuzzy
 msgid "Unknown item"
 msgstr "Wi-Fi konexioa"
 
-#: frontend/dispatcher.lua:658
+#: frontend/dispatcher.lua:660
 #, fuzzy
 msgid "gesture distance"
 msgstr "Keinu kudeaketa"
 
-#: frontend/dispatcher.lua:723 frontend/dispatcher.lua:941
+#: frontend/dispatcher.lua:725 frontend/dispatcher.lua:943
 msgid "Nothing"
 msgstr "Ezer ez"
 
-#: frontend/dispatcher.lua:729
+#: frontend/dispatcher.lua:731
 #, fuzzy
 msgctxt "Dispatcher"
 msgid "1 action"
@@ -8185,68 +8235,68 @@ msgid_plural "%1 actions"
 msgstr[0] "Biratu gabe"
 msgstr[1] "Biratu gabe"
 
-#: frontend/dispatcher.lua:731 plugins/gestures.koplugin/main.lua:236
+#: frontend/dispatcher.lua:733 plugins/gestures.koplugin/main.lua:236
 msgid "Pass through"
 msgstr ""
 
-#: frontend/dispatcher.lua:753 frontend/dispatcher.lua:996
+#: frontend/dispatcher.lua:755 frontend/dispatcher.lua:998
 #, fuzzy
 msgid "Arrange actions"
 msgstr "Biratu gabe"
 
-#: frontend/dispatcher.lua:870
+#: frontend/dispatcher.lua:872
 msgid "Use gesture distance"
 msgstr ""
 
-#: frontend/dispatcher.lua:957 plugins/httpinspector.koplugin/main.lua:1040
+#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1040
 msgid "General"
 msgstr "Orokorra"
 
-#: frontend/dispatcher.lua:958
+#: frontend/dispatcher.lua:960
 #: frontend/ui/elements/common_settings_menu_table.lua:708
 #: plugins/httpinspector.koplugin/main.lua:1041
 msgid "Device"
 msgstr "Gailua"
 
-#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1042
+#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1042
 #, fuzzy
 msgid "Screen and lights"
 msgstr "Pantaila"
 
-#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1044
+#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1044
 #, fuzzy
 msgid "Reader"
 msgstr "Irakurri gero"
 
-#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1045
+#: frontend/dispatcher.lua:964 plugins/httpinspector.koplugin/main.lua:1045
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr ""
 
-#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1046
+#: frontend/dispatcher.lua:965 plugins/httpinspector.koplugin/main.lua:1046
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr ""
 
-#: frontend/dispatcher.lua:1016 plugins/profiles.koplugin/main.lua:134
+#: frontend/dispatcher.lua:1018 plugins/profiles.koplugin/main.lua:134
 #, fuzzy
 msgid "Show as QuickMenu"
 msgstr "Erakutsi menua"
 
-#: frontend/dispatcher.lua:1041
+#: frontend/dispatcher.lua:1043
 #, fuzzy
 msgid "Keep QuickMenu open"
 msgstr "Mantendu pantaila piztuta"
 
-#: frontend/dispatcher.lua:1084
+#: frontend/dispatcher.lua:1086
 #, fuzzy
 msgid "QuickMenu"
 msgstr "Erakutsi menua"
 
-#: frontend/dispatcher.lua:1091
+#: frontend/dispatcher.lua:1093
 #, fuzzy
 msgid "Execute all"
 msgstr "Exekutatu"
 
-#: frontend/dispatcher.lua:1164
+#: frontend/dispatcher.lua:1166
 #, fuzzy
 msgid "Executing profile: %1"
 msgstr "Huts egin du fitxategia ezabatzen: %1"
@@ -13738,16 +13788,6 @@ msgstr "Hitz gutxi batzuk liburuari buruz"
 msgid "Set values"
 msgstr "Ezarri data"
 
-#: frontend/ui/widget/configdialog.lua:1238
-#: frontend/ui/widget/configdialog.lua:1249
-#: frontend/ui/widget/configdialog.lua:1334
-#: frontend/ui/widget/configdialog.lua:1344
-#: frontend/ui/widget/configdialog.lua:1414
-#: frontend/ui/widget/configdialog.lua:1452
-#, fuzzy
-msgid "Set as default"
-msgstr "Ezarri lehenetsia"
-
 #: frontend/ui/widget/configdialog.lua:1248
 #: frontend/ui/widget/configdialog.lua:1343
 #: frontend/ui/widget/configdialog.lua:1410
@@ -14372,12 +14412,6 @@ msgstr ""
 msgid "Set as book cover"
 msgstr "Liburuaren azala"
 
-#: frontend/ui/widget/screenshoter.lua:77
-#: plugins/archiveviewer.koplugin/main.lua:207
-#, fuzzy
-msgid "View"
-msgstr "Ikusi %1"
-
 #: frontend/ui/widget/screenshoter.lua:90
 #, fuzzy
 msgid "Set as wallpaper"
@@ -14443,7 +14477,7 @@ msgid "Text viewer"
 msgstr "Testu editorea"
 
 #: frontend/ui/widget/textviewer.lua:692
-#: plugins/texteditor.koplugin/main.lua:450
+#: plugins/texteditor.koplugin/main.lua:449
 msgid ""
 "This file is %2:\n"
 "\n"
@@ -18028,12 +18062,10 @@ msgid "Enable CSS filter?"
 msgstr "Gaitu wifia"
 
 #: plugins/newsdownloader.koplugin/main.lua:797
-#: plugins/texteditor.koplugin/main.lua:355
 msgid "Yes"
 msgstr "Bai"
 
 #: plugins/newsdownloader.koplugin/main.lua:802
-#: plugins/texteditor.koplugin/main.lua:356
 msgid "No"
 msgstr "Ez"
 
@@ -19571,20 +19603,10 @@ msgid ""
 "Remove it from text editor history?"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:348
+#: plugins/texteditor.koplugin/main.lua:415
+#, fuzzy
 msgid ""
-"To start editing a new file, you will have to:\n"
-"\n"
-"- First choose a folder\n"
-"- Then enter a name for the new file\n"
-"- And start editing it\n"
-"\n"
-"Do you want to proceed?"
-msgstr ""
-
-#: plugins/texteditor.koplugin/main.lua:416
-msgid ""
-"This file does not exist anymore:\n"
+"This file does not exist:\n"
 "\n"
 "%1\n"
 "\n"
@@ -19596,14 +19618,14 @@ msgstr ""
 "\n"
 "Sortu eta editatu nahi duzu?"
 
-#: plugins/texteditor.koplugin/main.lua:433
+#: plugins/texteditor.koplugin/main.lua:432
 msgid ""
 "This file is not a regular file:\n"
 "\n"
 "%1"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:471
+#: plugins/texteditor.koplugin/main.lua:470
 msgid ""
 "This file can not be created:\n"
 "\n"
@@ -19643,28 +19665,28 @@ msgstr "QR"
 msgid "Text reset to last saved content"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:587
+#: plugins/texteditor.koplugin/main.lua:590
 msgid "File is read only"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:593
-#: plugins/texteditor.koplugin/main.lua:620
-#: plugins/texteditor.koplugin/main.lua:644
+#: plugins/texteditor.koplugin/main.lua:596
+#: plugins/texteditor.koplugin/main.lua:623
+#: plugins/texteditor.koplugin/main.lua:647
 msgid "File saved"
 msgstr "Fitxategia gordeta"
 
-#: plugins/texteditor.koplugin/main.lua:595
-#: plugins/texteditor.koplugin/main.lua:604
-#: plugins/texteditor.koplugin/main.lua:622
-#: plugins/texteditor.koplugin/main.lua:646
+#: plugins/texteditor.koplugin/main.lua:598
+#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:625
+#: plugins/texteditor.koplugin/main.lua:649
 msgid "Failed saving file: %1"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:602
+#: plugins/texteditor.koplugin/main.lua:605
 msgid "Lua syntax OK, file saved"
 msgstr "Lua sintaxi EGOKIA, fitxategia gordeta"
 
-#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:610
 msgid ""
 "Lua syntax check failed:\n"
 "\n"
@@ -19684,15 +19706,15 @@ msgstr ""
 "\n"
 "%2"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Do not save"
 msgstr "Ez gorde"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Save anyway"
 msgstr "Gorde hala ere"
 
-#: plugins/texteditor.koplugin/main.lua:628
+#: plugins/texteditor.koplugin/main.lua:631
 msgid ""
 "Text content is empty.\n"
 "Do you want to keep this file as empty, or do you prefer to delete it?\n"
@@ -19700,15 +19722,15 @@ msgid ""
 "%1"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Keep empty file"
 msgstr "Mantendu fitxategia hutsik"
 
-#: plugins/texteditor.koplugin/main.lua:637
+#: plugins/texteditor.koplugin/main.lua:640
 msgid "File deleted"
 msgstr "Fitxategia ezabatuta"
 
-#: plugins/texteditor.koplugin/main.lua:639
+#: plugins/texteditor.koplugin/main.lua:642
 msgid "Failed deleting file: %1"
 msgstr "Huts egin du fitxategia ezabatzen: %1"
 

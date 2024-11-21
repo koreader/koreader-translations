@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-20 22:11+0000\n"
+"POT-Creation-Date: 2024-11-21 06:03+0000\n"
 "PO-Revision-Date: 2024-07-03 19:59+0000\n"
 "Last-Translator: Tình <ddtinh2503@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/koreader/"
@@ -134,6 +134,7 @@ msgstr ""
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
 #: frontend/apps/filemanager/filemanagerutil.lua:344
 #: plugins/opds.koplugin/opdsbrowser.lua:642
+#: plugins/texteditor.koplugin/main.lua:355
 msgid "Choose folder"
 msgstr "Chọn thư mục"
 
@@ -144,7 +145,7 @@ msgstr "Đổi tên tệp"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:260
 #: plugins/opds.koplugin/opdsbrowser.lua:658
-#: plugins/texteditor.koplugin/main.lua:364
+#: plugins/texteditor.koplugin/main.lua:350
 msgid "Enter filename"
 msgstr "Nhập tên tệp"
 
@@ -158,8 +159,8 @@ msgstr "Nhập tên tệp"
 #: frontend/apps/filemanager/filemanager.lua:1001
 #: frontend/apps/filemanager/filemanager.lua:1129
 #: frontend/apps/filemanager/filemanager.lua:1458
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:498
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:644
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:513
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:659
 #: frontend/apps/filemanager/filemanagercollection.lua:503
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
@@ -231,7 +232,7 @@ msgstr "Nhập tên tệp"
 #: plugins/statistics.koplugin/main.lua:2548
 #: plugins/terminal.koplugin/aliases.lua:100
 #: plugins/terminal.koplugin/main.lua:643
-#: plugins/texteditor.koplugin/main.lua:368
+#: plugins/texteditor.koplugin/main.lua:371
 #: plugins/vocabbuilder.koplugin/main.lua:1173
 #: plugins/vocabbuilder.koplugin/main.lua:1563
 #: plugins/vocabbuilder.koplugin/main.lua:1854
@@ -268,6 +269,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:361
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:772
 #: frontend/ui/widget/pathchooser.lua:140
 msgid "Choose"
 msgstr "Chọn"
@@ -283,9 +285,10 @@ msgid "Info"
 msgstr "Thông tin"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:387
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:804
 #: plugins/opds.koplugin/opdsbrowser.lua:835
 #: plugins/statistics.koplugin/main.lua:1288
-#: plugins/texteditor.koplugin/main.lua:375
+#: plugins/texteditor.koplugin/main.lua:378
 #: plugins/vocabbuilder.koplugin/main.lua:242
 msgid "Edit"
 msgstr "Chỉnh sửa"
@@ -419,11 +422,12 @@ msgstr "Đang tải lên…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:665
 #: frontend/apps/filemanager/filemanager.lua:1008
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:785
 #: frontend/apps/reader/modules/readerhandmade.lua:501
 #: frontend/ui/wikipedia.lua:1542
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:610
 #: plugins/statistics.koplugin/main.lua:332
-#: plugins/texteditor.koplugin/main.lua:417
+#: plugins/texteditor.koplugin/main.lua:416
 msgid "Create"
 msgstr "Tạo"
 
@@ -537,7 +541,7 @@ msgstr "Thư mục Dropbox (/ cho root)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:505
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:520
 #: frontend/apps/filemanager/filemanagercollection.lua:510
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
@@ -821,7 +825,7 @@ msgstr "Chọn tất cả các tệp trong một thư mục"
 #: frontend/apps/filemanager/filemanager.lua:543
 #: frontend/apps/filemanager/filemanager.lua:924
 #: frontend/apps/filemanager/filemanager.lua:1193
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:722
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:890
 msgid "Move"
 msgstr "Di chuyển"
 
@@ -898,7 +902,7 @@ msgstr "Bạn có muốn mở %1 không?"
 #: frontend/apps/filemanager/filemanager.lua:1465
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:362
 #: frontend/ui/widget/textviewer.lua:694 frontend/ui/widget/touchmenu.lua:1255
-#: plugins/texteditor.koplugin/main.lua:452
+#: plugins/texteditor.koplugin/main.lua:451
 msgid "Open"
 msgstr "Mở"
 
@@ -1102,82 +1106,82 @@ msgstr "Mở %1 bằng:"
 msgid "Classic (filename only)"
 msgstr "Cổ điển (chỉ tên tệp)"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:28
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:29
 #: frontend/apps/filemanager/filemanagerutil.lua:261
-#: frontend/dispatcher.lua:186 plugins/opds.koplugin/opdsbrowser.lua:700
+#: frontend/dispatcher.lua:187 plugins/opds.koplugin/opdsbrowser.lua:700
 msgid "Book information"
 msgstr "Thông tin sách"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:39
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
 msgid "Cover image:"
 msgstr "Ảnh bìa:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
 #: plugins/calibre.koplugin/search.lua:145
 msgid "Title:"
 msgstr "Tiêu đề:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
 #: plugins/calibre.koplugin/search.lua:146
 #, fuzzy
 msgid "Author(s):"
 msgstr "Tác giả:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
 #: plugins/calibre.koplugin/search.lua:154
 msgid "Series:"
 msgstr "Sê-ri:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
 msgid "Series index:"
 msgstr "Sê-ri:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
 msgid "Language:"
 msgstr "Ngôn ngữ:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
 msgid "Keywords:"
 msgstr "Từ khóa:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
 msgid "Description:"
 msgstr "Mô tả:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:48
 msgid "Pages:"
 msgstr "Trang:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:82
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:92
 msgid "Filename:"
 msgstr "Tên tệp:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:83
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:93
 msgid "Format:"
 msgstr "Định dạng:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:84
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:94
 #: plugins/calibre.koplugin/search.lua:147
 msgid "Size:"
 msgstr "Kích thước:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:85
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:95
 msgid "File date:"
 msgstr "Ngày sửa đổi:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:86
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:96
 msgid "Folder:"
 msgstr "Thư mục:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:100
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:110
 msgid "Tap to display"
 msgstr "Chạm để hiển thị"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:120
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:156
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:749
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:750
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:130
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:166
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:917
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:918
 #: frontend/apps/reader/modules/readerfooter.lua:1998
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/screensaver.lua:97
@@ -1196,62 +1200,67 @@ msgstr "Chạm để hiển thị"
 msgid "N/A"
 msgstr "N/A"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:161
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:171
 msgid "number of lines and words not available"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 #, fuzzy
 msgid "1 line"
 msgid_plural "%1 lines"
 msgstr[0] "Gạch chân"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 #, fuzzy
 msgid "1 word"
 msgid_plural "%1 words"
 msgstr[0] "Sao chép"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:163
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:173
 #, fuzzy
 msgid "Current page:"
 msgstr "Trang hiện tại"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:182
 #, fuzzy
 msgid "Rating:"
 msgstr "Latin"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
 #, fuzzy
 msgid "Review:"
 msgstr "Xem trước"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:337
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:192
+#, fuzzy
+msgid "Notebook file:"
+msgstr "Tiêu đề sách"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:352
 msgid "No book description available."
 msgstr "Không có mô tả sách nào."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:354
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:369
 msgid "No cover image available."
 msgstr "Không có ảnh bìa."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:491
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:506
 msgid "Edit book metadata:"
 msgstr "Chỉnh sửa siêu dữ liệu sách:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:543
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:558
 msgid "Copy original"
 msgstr "Sao chép bản gốc"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:551
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:566
 msgid "View original"
 msgstr "Xem bản gốc"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:564
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:579
 msgid "Reset custom"
 msgstr "Đặt lại tùy chỉnh"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:568
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:583
 msgid ""
 "Reset custom cover?\n"
 "Image file will be deleted."
@@ -1259,11 +1268,11 @@ msgstr ""
 "Đặt lại bìa tùy chỉnh?\n"
 "Tập tin hình ảnh sẽ bị xóa."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:569
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
 msgid "Reset custom book metadata field?"
 msgstr "Đặt lại trường siêu dữ liệu sách tùy chỉnh?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:570
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:585
 #: frontend/apps/filemanager/filemanagerutil.lua:186
 #: frontend/apps/filemanager/filemanagerutil.lua:196
 #: frontend/apps/reader/modules/readermenu.lua:203
@@ -1274,52 +1283,92 @@ msgstr "Đặt lại trường siêu dữ liệu sách tùy chỉnh?"
 msgid "Reset"
 msgstr "Đặt lại"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:599
 msgid "Set custom"
 msgstr "Đặt tùy chỉnh"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:598
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:613
 msgid "Book metadata:"
 msgstr "Siêu dữ liệu sách:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:636
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
 #, fuzzy
 msgid "Edit book review"
 msgstr "Chọn thư mục"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:666
 #: frontend/ui/widget/bookstatuswidget.lua:558
 msgid "Save review"
 msgstr "Lưu bản xem trước"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:707
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:734
+#: frontend/apps/filemanager/filemanagerutil.lua:374
+msgid "Use default"
+msgstr "Dùng mặc định"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:742
+#, fuzzy
+msgid "Reset default"
+msgstr "Dùng mặc định"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:747
+msgid "Notebook file default location reset"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:753
+#, fuzzy
+msgid "Use local"
+msgstr "Dùng mẫu"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:761
+#: frontend/ui/widget/configdialog.lua:1238
+#: frontend/ui/widget/configdialog.lua:1249
+#: frontend/ui/widget/configdialog.lua:1334
+#: frontend/ui/widget/configdialog.lua:1344
+#: frontend/ui/widget/configdialog.lua:1414
+#: frontend/ui/widget/configdialog.lua:1452
+msgid "Set as default"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:766
+msgid "Notebook file default location saved"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:796
+#: frontend/ui/widget/screenshoter.lua:77
+#: plugins/archiveviewer.koplugin/main.lua:207
+#, fuzzy
+msgid "View"
+msgstr "Xem"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:875
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr ""
 "Quét sách trong thư mục hiện tại và các thư mục con để tìm vị trí siêu dữ "
 "liệu của chúng?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:708
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:876
 #: plugins/calibre.koplugin/search.lua:518
 msgid "Scan"
 msgstr "Quét"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:714
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:882
 msgid "No books with metadata not in your preferred location found."
 msgstr ""
 "Không tìm thấy sách nào có siêu dữ liệu không ở vị trí ưa thích của bạn."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:718
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:886
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
 "Đã tìm thấy %1 cuốn sách có siêu dữ liệu không ở vị trí ưa thích của bạn."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:721
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:889
 msgid "Move book metadata to your preferred location?"
 msgstr "Di chuyển siêu dữ liệu sách tới vị trí ưa thích của bạn?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:737
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:905
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
 "based storage may slow down file browser navigation in large directories. "
@@ -1329,7 +1378,7 @@ msgid ""
 "browser navigation."
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:751
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:919
 msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
@@ -1337,7 +1386,7 @@ msgstr ""
 "%1. Tiêu đề: %2; Tác giả: %3\n"
 "Tài liệu: %4"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:756
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:924
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] ""
@@ -1503,7 +1552,7 @@ msgstr "Không có kết quả cho '%1'."
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:236
 #: frontend/apps/filemanager/filemanagermenu.lua:799
-#: frontend/dispatcher.lua:137 frontend/ui/widget/menu.lua:794
+#: frontend/dispatcher.lua:138 frontend/ui/widget/menu.lua:794
 msgid "File search"
 msgstr "Tìm kiếm tập tin"
 
@@ -1813,12 +1862,12 @@ msgstr "Số lượng mục danh sách thông tin trên mỗi trang"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:432
 #: frontend/apps/reader/modules/readerbookmark.lua:233
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 msgid "Reverse sorting"
 msgstr "Sắp xếp ngược lại"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:442
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Folders and files mixed"
 msgstr "Các thư mục và tập tin được trộn lẫn"
 
@@ -1964,7 +2013,7 @@ msgstr ""
 "Nhấn vào tên sách trong kết quả tìm kiếm để mở sách."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:813
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 #, fuzzy
 msgid "Last file search results"
 msgstr "Tìm kiếm toàn văn"
@@ -2096,7 +2145,7 @@ msgstr ""
 "Bạn có chắc chắn muốn tiếp tục không?"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:12
-#: frontend/dispatcher.lua:136 frontend/ui/widget/pathchooser.lua:162
+#: frontend/dispatcher.lua:137 frontend/ui/widget/pathchooser.lua:162
 msgid "Folder shortcuts"
 msgstr "Lối tắt thư mục"
 
@@ -2178,12 +2227,12 @@ msgid "Show folder"
 msgstr "Hiển thị thư mục"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:274
-#: frontend/dispatcher.lua:188 plugins/opds.koplugin/opdsbrowser.lua:693
+#: frontend/dispatcher.lua:189 plugins/opds.koplugin/opdsbrowser.lua:693
 msgid "Book cover"
 msgstr "Bìa sách"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:287
-#: frontend/dispatcher.lua:187
+#: frontend/dispatcher.lua:188
 msgid "Book description"
 msgstr "Mô tả sách"
 
@@ -2208,10 +2257,6 @@ msgstr "Tập lệnh trả về mã trạng thái khác không: %1!"
 #: frontend/apps/filemanager/filemanagerutil.lua:344
 msgid "Choose file"
 msgstr "Chọn tập tin"
-
-#: frontend/apps/filemanager/filemanagerutil.lua:374
-msgid "Use default"
-msgstr "Dùng mặc định"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:384
 #: frontend/ui/data/optionsutil.lua:175
@@ -2245,7 +2290,7 @@ msgstr "Dấu trang trong trang hiện tại"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:79
 #: frontend/apps/reader/modules/readerbookmark.lua:107
-#: frontend/dispatcher.lua:181
+#: frontend/dispatcher.lua:182
 msgid "Bookmarks"
 msgstr "Dấu trang"
 
@@ -2316,7 +2361,7 @@ msgid "Show separator between items"
 msgstr "Hiển thị dấu phân cách giữa các mục nhập thư mục"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:246
-#: frontend/dispatcher.lua:182
+#: frontend/dispatcher.lua:183
 msgid "Bookmark search"
 msgstr "Tìm dấu trang"
 
@@ -2409,7 +2454,7 @@ msgid "Current page"
 msgstr "Trang hiện tại"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:923
-#: frontend/dispatcher.lua:163
+#: frontend/dispatcher.lua:164
 msgid "Latest bookmark"
 msgstr "Dấu trang mới nhất"
 
@@ -2726,7 +2771,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:223
 #: frontend/apps/reader/modules/readerdictionary.lua:956
-#: frontend/dispatcher.lua:61 plugins/vocabbuilder.koplugin/main.lua:2040
+#: frontend/dispatcher.lua:62 plugins/vocabbuilder.koplugin/main.lua:2040
 msgid "Dictionary lookup"
 msgstr "Tra cứu từ điển"
 
@@ -3848,7 +3893,7 @@ msgid "Right"
 msgstr "Phải"
 
 #: frontend/apps/reader/modules/readergoto.lua:17
-#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:157
+#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:158
 #: frontend/ui/widget/keyvaluepage.lua:411 frontend/ui/widget/menu.lua:773
 #: frontend/ui/widget/sortwidget.lua:255
 #: plugins/statistics.koplugin/calendarview.lua:620
@@ -3856,7 +3901,7 @@ msgstr "Phải"
 msgid "Go to page"
 msgstr "Đi đến trang"
 
-#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:158
+#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:159
 msgid "Skim document"
 msgstr "Tua nhanh văn bản"
 
@@ -4118,9 +4163,9 @@ msgstr "Lưu văn bản (lưu đánh dấu vào PDF)"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:670 frontend/ui/data/creoptions.lua:683
 #: frontend/ui/data/creoptions.lua:695 frontend/ui/data/creoptions.lua:734
@@ -4135,9 +4180,9 @@ msgstr "bật"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:339 frontend/ui/data/creoptions.lua:356
 #: frontend/ui/data/creoptions.lua:647 frontend/ui/data/creoptions.lua:670
@@ -4210,7 +4255,7 @@ msgstr "Đánh dấu lựa chọn"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:375
 #: frontend/apps/reader/modules/readersearch.lua:190
-#: frontend/dispatcher.lua:175
+#: frontend/dispatcher.lua:176
 msgid "Fulltext search"
 msgstr "Tìm kiếm toàn văn"
 
@@ -4470,7 +4515,7 @@ msgid "Selection on text"
 msgstr "Lựa chọn văn bản"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:872
-#: frontend/dispatcher.lua:190
+#: frontend/dispatcher.lua:191
 #, fuzzy
 msgid "Translate current page"
 msgstr "Thêm trang hiện tại làm dấu trang"
@@ -5413,7 +5458,7 @@ msgid "Results per page"
 msgstr "Các mục trên mỗi trang"
 
 #: frontend/apps/reader/modules/readersearch.lua:196
-#: frontend/dispatcher.lua:176
+#: frontend/dispatcher.lua:177
 #, fuzzy
 msgid "Last fulltext search results"
 msgstr "Tìm kiếm toàn văn"
@@ -5478,7 +5523,7 @@ msgid "Current page: %1"
 msgstr "Trang hiện tại (%1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:19
-#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:185
+#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:186
 #: frontend/ui/elements/common_settings_menu_table.lua:683
 msgid "Book status"
 msgstr "Tình trạng sách"
@@ -5504,12 +5549,12 @@ msgstr "Mở file tiếp theo"
 
 #: frontend/apps/reader/modules/readerstatus.lua:103
 #: frontend/ui/elements/common_settings_menu_table.lua:684
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Delete file"
 msgstr "Xóa tập tin"
 
 #: frontend/apps/reader/modules/readerstatus.lua:110 frontend/dispatcher.lua:59
-#: frontend/dispatcher.lua:960 plugins/httpinspector.koplugin/main.lua:1043
+#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1043
 msgid "File browser"
 msgstr "Duyệt file"
 
@@ -5977,16 +6022,16 @@ msgid "Book tweak saved (not enabled)."
 msgstr "Đã lưu chỉnh sửa sách (chưa được bật)."
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:79
-#: frontend/dispatcher.lua:178 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
 msgid "Book map"
 msgstr "Sơ đồ chương"
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:93
-#: frontend/dispatcher.lua:180 frontend/ui/widget/pagebrowserwidget.lua:35
+#: frontend/dispatcher.lua:181 frontend/ui/widget/pagebrowserwidget.lua:35
 msgid "Page browser"
 msgstr "Duyệt theo trang"
 
-#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:177
+#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:178
 msgid "Table of contents"
 msgstr "Mục lục"
 
@@ -6963,7 +7008,7 @@ msgstr "Tìm trên Wikipedia"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:82
 #: frontend/apps/reader/modules/readerwikipedia.lua:399
-#: frontend/dispatcher.lua:62
+#: frontend/dispatcher.lua:63
 msgid "Wikipedia lookup"
 msgstr "Tra cứu Wikipedia"
 
@@ -7857,7 +7902,7 @@ msgstr "Khởi động lại"
 msgid "Are you sure you want to power off the device?"
 msgstr "Tắt nguồn thiết bị?"
 
-#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:75
+#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:76
 #: frontend/ui/elements/common_exit_menu_table.lua:51
 msgid "Power off"
 msgstr "Tắt nguồn"
@@ -7895,540 +7940,545 @@ msgstr "Tiến độ đọc"
 msgid "History search"
 msgstr "Cài đặt lịch sử"
 
-#: frontend/dispatcher.lua:64
+#: frontend/dispatcher.lua:60
+#, fuzzy
+msgid "Notebook file"
+msgstr "Chọn thư mục"
+
+#: frontend/dispatcher.lua:65
 msgid "Show menu"
 msgstr "Hiển thị menu"
 
-#: frontend/dispatcher.lua:65
+#: frontend/dispatcher.lua:66
 #: frontend/ui/elements/common_info_menu_table.lua:39
 #, fuzzy
 msgid "Menu search"
 msgstr "Tìm kiếm tập tin"
 
-#: frontend/dispatcher.lua:66
+#: frontend/dispatcher.lua:67
 msgid "Screenshot"
 msgstr "Chụp màn hình"
 
-#: frontend/dispatcher.lua:70
+#: frontend/dispatcher.lua:71
 #, fuzzy
 msgid "Exit sleep screen"
 msgstr "Màn hình chờ"
 
-#: frontend/dispatcher.lua:71 frontend/ui/elements/mass_storage.lua:43
+#: frontend/dispatcher.lua:72 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
 msgstr "Bắt đầu Bộ nhớ USB"
 
-#: frontend/dispatcher.lua:72
+#: frontend/dispatcher.lua:73
 #: frontend/ui/elements/common_exit_menu_table.lua:34
 msgid "Sleep"
 msgstr "Ngủ"
 
-#: frontend/dispatcher.lua:73
+#: frontend/dispatcher.lua:74
 #: frontend/ui/elements/common_exit_menu_table.lua:22
 msgid "Restart KOReader"
 msgstr "Khởi động lại KOReader"
 
-#: frontend/dispatcher.lua:74
+#: frontend/dispatcher.lua:75
 #: frontend/ui/elements/common_exit_menu_table.lua:42
 msgid "Reboot the device"
 msgstr "Khởi động lại thiết bị"
 
-#: frontend/dispatcher.lua:76
+#: frontend/dispatcher.lua:77
 msgid "Exit KOReader"
 msgstr "Thoát KOReader"
 
-#: frontend/dispatcher.lua:78
+#: frontend/dispatcher.lua:79
 #, fuzzy
 msgid "Toggle long-press on corners"
 msgstr "Nhấn giữ để chọn đường dẫn hiện tại"
 
-#: frontend/dispatcher.lua:79
+#: frontend/dispatcher.lua:80
 #, fuzzy
 msgid "Enable touch input"
 msgstr "Tùy chọn xoay màn hình"
 
-#: frontend/dispatcher.lua:80
+#: frontend/dispatcher.lua:81
 #, fuzzy
 msgid "Disable touch input"
 msgstr "Tùy chọn xoay màn hình"
 
-#: frontend/dispatcher.lua:81
+#: frontend/dispatcher.lua:82
 #, fuzzy
 msgid "Toggle touch input"
 msgstr "Tùy chọn xoay màn hình"
 
-#: frontend/dispatcher.lua:83 frontend/ui/elements/physical_buttons.lua:28
+#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:28
 #, fuzzy
 msgid "Invert left-side page-turn buttons"
 msgstr "Ngăn chuyển trang bằng phím cứng"
 
-#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:40
+#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:40
 #, fuzzy
 msgid "Invert right-side page-turn buttons"
 msgstr "Ngăn chuyển trang bằng phím cứng"
 
-#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:11
+#: frontend/dispatcher.lua:86 frontend/ui/elements/physical_buttons.lua:11
 #, fuzzy
 msgid "Invert page-turn buttons"
 msgstr "Ngăn chuyển trang bằng phím cứng"
 
-#: frontend/dispatcher.lua:87
+#: frontend/dispatcher.lua:88
 #, fuzzy
 msgid "Toggle key repeat"
 msgstr "Tùy chọn xoay màn hình"
 
-#: frontend/dispatcher.lua:88
+#: frontend/dispatcher.lua:89
 msgid "Toggle accelerometer"
 msgstr "Tùy chọn gia tốc kế"
 
-#: frontend/dispatcher.lua:89
+#: frontend/dispatcher.lua:90
 #, fuzzy
 msgid "Enable accelerometer for 5 seconds"
 msgstr "Bỏ qua xoay hồi chuyển"
 
-#: frontend/dispatcher.lua:90
+#: frontend/dispatcher.lua:91
 #: frontend/ui/elements/screen_rotation_menu_table.lua:46
 msgid "Lock auto rotation to current orientation"
 msgstr ""
 
-#: frontend/dispatcher.lua:91
+#: frontend/dispatcher.lua:92
 msgid "Toggle orientation"
 msgstr "Tùy chọn xoay màn hình"
 
-#: frontend/dispatcher.lua:92
+#: frontend/dispatcher.lua:93
 msgid "Invert rotation"
 msgstr "Đảo ngược xoay"
 
-#: frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:94
 msgid "Rotate by 90° CW"
 msgstr "Xoay 90 độ (kim đồng hồ)"
 
-#: frontend/dispatcher.lua:94
+#: frontend/dispatcher.lua:95
 #, fuzzy
 msgid "Rotate by 90° CCW"
 msgstr "Xoay 90 độ (kim đồng hồ)"
 
-#: frontend/dispatcher.lua:96
+#: frontend/dispatcher.lua:97
 msgid "Turn on Wi-Fi"
 msgstr "Bật wifi"
 
-#: frontend/dispatcher.lua:97
+#: frontend/dispatcher.lua:98
 msgid "Turn off Wi-Fi"
 msgstr "Tắt Wi-Fi"
 
-#: frontend/dispatcher.lua:98
+#: frontend/dispatcher.lua:99
 msgid "Toggle Wi-Fi"
 msgstr "Tùy chọn bật tắt Wi-Fi"
 
-#: frontend/dispatcher.lua:99
+#: frontend/dispatcher.lua:100
 msgid "Toggle Fullscreen"
 msgstr "Tùy chọn toàn màn hình"
 
-#: frontend/dispatcher.lua:100
+#: frontend/dispatcher.lua:101
 msgid "Show network info"
 msgstr "Hiển thị thông tin mạng"
 
-#: frontend/dispatcher.lua:104
+#: frontend/dispatcher.lua:105
 msgid "Show frontlight dialog"
 msgstr "Hiển thị hộp thoại đèn trước"
 
-#: frontend/dispatcher.lua:105
+#: frontend/dispatcher.lua:106
 msgid "Toggle frontlight"
 msgstr "Tùy chọn độ sáng màn"
 
-#: frontend/dispatcher.lua:106
+#: frontend/dispatcher.lua:107
 msgid "Set frontlight brightness"
 msgstr "Thiết lập độ sáng đèn trước"
 
-#: frontend/dispatcher.lua:107
+#: frontend/dispatcher.lua:108
 msgid "Increase frontlight brightness"
 msgstr "Tăng độ sáng đèn trước"
 
-#: frontend/dispatcher.lua:108
+#: frontend/dispatcher.lua:109
 msgid "Decrease frontlight brightness"
 msgstr "Giảm độ sáng đèn trước"
 
-#: frontend/dispatcher.lua:109
+#: frontend/dispatcher.lua:110
 #, fuzzy
 msgid "Set frontlight warmth"
 msgstr "Đặt độ ấm thành %1"
 
-#: frontend/dispatcher.lua:110
+#: frontend/dispatcher.lua:111
 #, fuzzy
 msgid "Increase frontlight warmth"
 msgstr "Tăng độ ấm lên %1"
 
-#: frontend/dispatcher.lua:111
+#: frontend/dispatcher.lua:112
 #, fuzzy
 msgid "Decrease frontlight warmth"
 msgstr "Giảm độ ấm đi %1"
 
-#: frontend/dispatcher.lua:112
+#: frontend/dispatcher.lua:113
 msgid "Toggle night mode"
 msgstr "Tùy chọn chế độ tối"
 
-#: frontend/dispatcher.lua:113
+#: frontend/dispatcher.lua:114
 msgid "Set night mode"
 msgstr "Đặt chế độ tối"
 
-#: frontend/dispatcher.lua:115
+#: frontend/dispatcher.lua:116
 msgid "Full screen refresh"
 msgstr "Làm mới toàn màn hình"
 
-#: frontend/dispatcher.lua:116
+#: frontend/dispatcher.lua:117
 #, fuzzy
 msgid "Full refresh rate (always)"
 msgstr "Làm mới tối đa"
 
-#: frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:118
 #, fuzzy
 msgid "Full refresh rate (not in night mode)"
 msgstr "Làm mới trang sau mỗi %1 (trừ chế độ tối)"
 
-#: frontend/dispatcher.lua:118
+#: frontend/dispatcher.lua:119
 #, fuzzy
 msgid "Full refresh rate (in night mode)"
 msgstr "Làm mới trang sau mỗi %1 (chỉ chế độ tối)"
 
-#: frontend/dispatcher.lua:119 frontend/ui/elements/refresh_menu_table.lua:109
+#: frontend/dispatcher.lua:120 frontend/ui/elements/refresh_menu_table.lua:109
 msgid "Always flash on chapter boundaries"
 msgstr "Luôn làm mới sau mỗi chương"
 
-#: frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:121
 msgid "Toggle flashing on chapter boundaries"
 msgstr "Tùy chọn làm mới sau mỗi chương"
 
-#: frontend/dispatcher.lua:121
+#: frontend/dispatcher.lua:122
 msgid "Never flash on chapter's 2nd page"
 msgstr "Không bao giờ làm mới trang thứ 2 mỗi chương"
 
-#: frontend/dispatcher.lua:122
+#: frontend/dispatcher.lua:123
 msgid "Toggle flashing on chapter's 2nd page"
 msgstr "Tùy chọn làm mới trang thứ 2 mỗi chương"
 
-#: frontend/dispatcher.lua:123 frontend/ui/elements/refresh_menu_table.lua:120
+#: frontend/dispatcher.lua:124 frontend/ui/elements/refresh_menu_table.lua:120
 #, fuzzy
 msgid "Always flash on pages with images"
 msgstr "Luôn làm mới sau mỗi chương"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 #, fuzzy
 msgid "Toggle flashing on pages with images"
 msgstr "Tùy chọn làm mới trang thứ 2 mỗi chương"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 #, fuzzy
 msgid "Set display mode"
 msgstr "Chế độ hiển thị"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 #, fuzzy
 msgid "Sort by"
 msgstr "Sắp xếp theo: %1"
 
-#: frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:134
 msgid "Show plus menu"
 msgstr "Hiển thị menu mở rộng"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Toggle select mode"
 msgstr "Tùy chọn lựa chọn chế độ"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Refresh content"
 msgstr "Làm mới nội dung"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Folder up"
 msgstr "Thư mục trên"
 
-#: frontend/dispatcher.lua:145
+#: frontend/dispatcher.lua:146
 #, fuzzy
 msgid "Open next document in folder"
 msgstr "Mở thư mục phông"
 
-#: frontend/dispatcher.lua:147
+#: frontend/dispatcher.lua:148
 msgid "Show bottom menu"
 msgstr "Hiển thị menu dưới"
 
-#: frontend/dispatcher.lua:148
+#: frontend/dispatcher.lua:149
 msgid "Toggle status bar"
 msgstr "Tùy chọn thanh trạng thái"
 
-#: frontend/dispatcher.lua:149
+#: frontend/dispatcher.lua:150
 #, fuzzy
 msgid "Toggle chapter progress bar"
 msgstr "Hiển thị thanh tiến độ"
 
-#: frontend/dispatcher.lua:151
+#: frontend/dispatcher.lua:152
 msgid "Previous chapter"
 msgstr "Chương trước"
 
-#: frontend/dispatcher.lua:152
+#: frontend/dispatcher.lua:153
 msgid "Next chapter"
 msgstr "Chương kế tiếp"
 
-#: frontend/dispatcher.lua:153
+#: frontend/dispatcher.lua:154
 msgid "First page"
 msgstr "Trang đầu"
 
-#: frontend/dispatcher.lua:154
+#: frontend/dispatcher.lua:155
 msgid "Last page"
 msgstr "Trang cuối"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 #, fuzzy
 msgid "Random page"
 msgstr "Trang đọc"
 
-#: frontend/dispatcher.lua:156
+#: frontend/dispatcher.lua:157
 #, fuzzy
 msgid "Turn pages"
 msgstr "Trang hiện tại"
 
-#: frontend/dispatcher.lua:159
+#: frontend/dispatcher.lua:160
 msgid "Previous bookmark"
 msgstr "Dấu trang trước"
 
-#: frontend/dispatcher.lua:160
+#: frontend/dispatcher.lua:161
 msgid "Next bookmark"
 msgstr "Dấu trang tiếp theo"
 
-#: frontend/dispatcher.lua:161
+#: frontend/dispatcher.lua:162
 #, fuzzy
 msgid "First bookmark"
 msgstr "Dấu trang mới nhất"
 
-#: frontend/dispatcher.lua:162
+#: frontend/dispatcher.lua:163
 #, fuzzy
 msgid "Last bookmark"
 msgstr "Dấu trang mới nhất"
 
-#: frontend/dispatcher.lua:165
+#: frontend/dispatcher.lua:166
 msgid "Back"
 msgstr "Quay lại"
 
-#: frontend/dispatcher.lua:166
+#: frontend/dispatcher.lua:167
 msgid "Back to previous location"
 msgstr "Quay lại vị trí trước"
 
-#: frontend/dispatcher.lua:167
+#: frontend/dispatcher.lua:168
 #, fuzzy
 msgid "Forward to next location"
 msgstr "Quay lại vị trí trước đó"
 
-#: frontend/dispatcher.lua:168
+#: frontend/dispatcher.lua:169
 msgid "Follow nearest link"
 msgstr "Hiển thị liên kết gần đây nhất"
 
-#: frontend/dispatcher.lua:169
+#: frontend/dispatcher.lua:170
 msgid "Follow nearest internal link"
 msgstr "Hiển thị liên kết nội bộ gần đây nhất"
 
-#: frontend/dispatcher.lua:170
+#: frontend/dispatcher.lua:171
 #, fuzzy
 msgid "Select previous link in current page"
 msgstr "Trang trước"
 
-#: frontend/dispatcher.lua:171
+#: frontend/dispatcher.lua:172
 msgid "Select next link in current page"
 msgstr ""
 
-#: frontend/dispatcher.lua:172
+#: frontend/dispatcher.lua:173
 #, fuzzy
 msgid "Add current location to history"
 msgstr "Xóa lịch sử vị trí"
 
-#: frontend/dispatcher.lua:173
+#: frontend/dispatcher.lua:174
 msgid "Clear location history"
 msgstr "Xóa lịch sử vị trí"
 
-#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:180 frontend/ui/widget/bookmapwidget.lua:707
 #, fuzzy
 msgid "Book map (overview)"
 msgstr "Bìa sách"
 
-#: frontend/dispatcher.lua:183
+#: frontend/dispatcher.lua:184
 msgid "Toggle bookmark"
 msgstr "Tùy chọn dấu trang"
 
-#: frontend/dispatcher.lua:192
+#: frontend/dispatcher.lua:193
 msgid "Toggle page turn animations"
 msgstr "Tùy chọn hoạt ảnh chuyển trang"
 
-#: frontend/dispatcher.lua:193
+#: frontend/dispatcher.lua:194
 msgid "Toggle page turn direction"
 msgstr "Tùy chọn hướng chuyển trang"
 
-#: frontend/dispatcher.lua:194
+#: frontend/dispatcher.lua:195
 msgid "Toggle custom TOC"
 msgstr ""
 
-#: frontend/dispatcher.lua:195
+#: frontend/dispatcher.lua:196
 #, fuzzy
 msgid "Toggle custom hidden flows"
 msgstr "Tùy chọn reflow"
 
-#: frontend/dispatcher.lua:197
+#: frontend/dispatcher.lua:198
 #, fuzzy
 msgid "Set highlight action"
 msgstr "Khoanh tròn đánh dấu"
 
-#: frontend/dispatcher.lua:198
+#: frontend/dispatcher.lua:199
 msgid "Cycle highlight action"
 msgstr "Khoanh tròn đánh dấu"
 
-#: frontend/dispatcher.lua:199
+#: frontend/dispatcher.lua:200
 msgid "Cycle highlight style"
 msgstr "Kiểu khoanh tròn đánh dấu"
 
-#: frontend/dispatcher.lua:201
+#: frontend/dispatcher.lua:202
 #, fuzzy
 msgid "Save book metadata"
 msgstr "Bỏ qua siêu dữ liệu"
 
-#: frontend/dispatcher.lua:205
+#: frontend/dispatcher.lua:206
 #, fuzzy
 msgid "Font face"
 msgstr "Cỡ phông"
 
-#: frontend/dispatcher.lua:206
+#: frontend/dispatcher.lua:207
 #, fuzzy
 msgid "Increase font size"
 msgstr "Tăng kích thước phông %1"
 
-#: frontend/dispatcher.lua:207
+#: frontend/dispatcher.lua:208
 #, fuzzy
 msgid "Decrease font size"
 msgstr "Giảm kích thước phông %1"
 
-#: frontend/dispatcher.lua:210
+#: frontend/dispatcher.lua:211
 msgid "Toggle page flipping"
 msgstr "Tùy chọn lật trang"
 
-#: frontend/dispatcher.lua:211
+#: frontend/dispatcher.lua:212
 #, fuzzy
 msgid "Toggle bookmark flipping"
 msgstr "Tùy chọn lật trang"
 
-#: frontend/dispatcher.lua:212
+#: frontend/dispatcher.lua:213
 msgid "Toggle reflow"
 msgstr "Tùy chọn reflow"
 
-#: frontend/dispatcher.lua:213
+#: frontend/dispatcher.lua:214
 msgid "Zoom mode"
 msgstr "Chế độ thu phóng"
 
-#: frontend/dispatcher.lua:214
+#: frontend/dispatcher.lua:215
 msgid "Change zoom factor"
 msgstr "Đổi tỷ lệ thu phóng"
 
-#: frontend/dispatcher.lua:216
+#: frontend/dispatcher.lua:217
 msgid "Toggle panel zoom"
 msgstr "Tùy chọn thu phóng khung"
 
-#: frontend/dispatcher.lua:221 frontend/ui/widget/textviewer.lua:612
+#: frontend/dispatcher.lua:222 frontend/ui/widget/textviewer.lua:612
 msgid "Font size"
 msgstr "Cỡ chữ"
 
-#: frontend/dispatcher.lua:238
+#: frontend/dispatcher.lua:239
 #, fuzzy
 msgid "Zoom"
 msgstr "Thu phóng để vừa trang"
 
-#: frontend/dispatcher.lua:262 frontend/ui/data/creoptions.lua:417
+#: frontend/dispatcher.lua:263 frontend/ui/data/creoptions.lua:417
 #: frontend/ui/data/creoptions.lua:429 frontend/ui/data/creoptions.lua:440
 #: frontend/ui/data/creoptions.lua:450 frontend/ui/data/koptoptions.lua:445
 #: frontend/ui/data/koptoptions.lua:459 frontend/ui/widget/toggleswitch.lua:245
 msgid "Font Size"
 msgstr "Cỡ phông"
 
-#: frontend/dispatcher.lua:263
+#: frontend/dispatcher.lua:264
 #, fuzzy
 msgid "Change font size"
 msgstr "Đặt cỡ font"
 
-#: frontend/dispatcher.lua:636
+#: frontend/dispatcher.lua:638
 msgid "Unknown item"
 msgstr "Mục không rõ"
 
-#: frontend/dispatcher.lua:658
+#: frontend/dispatcher.lua:660
 #, fuzzy
 msgid "gesture distance"
 msgstr "Đặt khoảng cách"
 
-#: frontend/dispatcher.lua:723 frontend/dispatcher.lua:941
+#: frontend/dispatcher.lua:725 frontend/dispatcher.lua:943
 msgid "Nothing"
 msgstr "Không có gì"
 
-#: frontend/dispatcher.lua:729
+#: frontend/dispatcher.lua:731
 #, fuzzy
 msgctxt "Dispatcher"
 msgid "1 action"
 msgid_plural "%1 actions"
 msgstr[0] "Không xoay"
 
-#: frontend/dispatcher.lua:731 plugins/gestures.koplugin/main.lua:236
+#: frontend/dispatcher.lua:733 plugins/gestures.koplugin/main.lua:236
 msgid "Pass through"
 msgstr "Đi qua"
 
-#: frontend/dispatcher.lua:753 frontend/dispatcher.lua:996
+#: frontend/dispatcher.lua:755 frontend/dispatcher.lua:998
 #, fuzzy
 msgid "Arrange actions"
 msgstr "Không xoay"
 
-#: frontend/dispatcher.lua:870
+#: frontend/dispatcher.lua:872
 #, fuzzy
 msgid "Use gesture distance"
 msgstr "Đặt khoảng cách"
 
-#: frontend/dispatcher.lua:957 plugins/httpinspector.koplugin/main.lua:1040
+#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1040
 msgid "General"
 msgstr "Thông thường"
 
-#: frontend/dispatcher.lua:958
+#: frontend/dispatcher.lua:960
 #: frontend/ui/elements/common_settings_menu_table.lua:708
 #: plugins/httpinspector.koplugin/main.lua:1041
 msgid "Device"
 msgstr "Thiết bị"
 
-#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1042
+#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1042
 msgid "Screen and lights"
 msgstr "Màn hình và đèn"
 
-#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1044
+#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1044
 msgid "Reader"
 msgstr "Người đọc"
 
-#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1045
+#: frontend/dispatcher.lua:964 plugins/httpinspector.koplugin/main.lua:1045
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "Văn bản có thể reflow (epub, fb2, txt…)"
 
-#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1046
+#: frontend/dispatcher.lua:965 plugins/httpinspector.koplugin/main.lua:1046
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Văn bản đã thay đổi bố cục (pdf, djvu, pics…)"
 
-#: frontend/dispatcher.lua:1016 plugins/profiles.koplugin/main.lua:134
+#: frontend/dispatcher.lua:1018 plugins/profiles.koplugin/main.lua:134
 #, fuzzy
 msgid "Show as QuickMenu"
 msgstr "Hiển thị menu mở rộng"
 
-#: frontend/dispatcher.lua:1041
+#: frontend/dispatcher.lua:1043
 #, fuzzy
 msgid "Keep QuickMenu open"
 msgstr "Giữ màn hình bật"
 
-#: frontend/dispatcher.lua:1084
+#: frontend/dispatcher.lua:1086
 #, fuzzy
 msgid "QuickMenu"
 msgstr "Hiển thị menu mở rộng"
 
-#: frontend/dispatcher.lua:1091
+#: frontend/dispatcher.lua:1093
 #, fuzzy
 msgid "Execute all"
 msgstr "Thực thi"
 
-#: frontend/dispatcher.lua:1164
+#: frontend/dispatcher.lua:1166
 #, fuzzy
 msgid "Executing profile: %1"
 msgstr ""
@@ -14173,15 +14223,6 @@ msgstr "Đôi từ về sách"
 msgid "Set values"
 msgstr "Đặt mục"
 
-#: frontend/ui/widget/configdialog.lua:1238
-#: frontend/ui/widget/configdialog.lua:1249
-#: frontend/ui/widget/configdialog.lua:1334
-#: frontend/ui/widget/configdialog.lua:1344
-#: frontend/ui/widget/configdialog.lua:1414
-#: frontend/ui/widget/configdialog.lua:1452
-msgid "Set as default"
-msgstr ""
-
 #: frontend/ui/widget/configdialog.lua:1248
 #: frontend/ui/widget/configdialog.lua:1343
 #: frontend/ui/widget/configdialog.lua:1410
@@ -14805,12 +14846,6 @@ msgstr ""
 msgid "Set as book cover"
 msgstr "Bìa sách"
 
-#: frontend/ui/widget/screenshoter.lua:77
-#: plugins/archiveviewer.koplugin/main.lua:207
-#, fuzzy
-msgid "View"
-msgstr "Xem"
-
 #: frontend/ui/widget/screenshoter.lua:90
 #, fuzzy
 msgid "Set as wallpaper"
@@ -14876,7 +14911,7 @@ msgid "Text viewer"
 msgstr "Trình xem văn bản"
 
 #: frontend/ui/widget/textviewer.lua:692
-#: plugins/texteditor.koplugin/main.lua:450
+#: plugins/texteditor.koplugin/main.lua:449
 msgid ""
 "This file is %2:\n"
 "\n"
@@ -18497,12 +18532,10 @@ msgid "Enable CSS filter?"
 msgstr "Vô hiệu hóa C blitter"
 
 #: plugins/newsdownloader.koplugin/main.lua:797
-#: plugins/texteditor.koplugin/main.lua:355
 msgid "Yes"
 msgstr "Có"
 
 #: plugins/newsdownloader.koplugin/main.lua:802
-#: plugins/texteditor.koplugin/main.lua:356
 msgid "No"
 msgstr "Không"
 
@@ -20030,20 +20063,10 @@ msgstr ""
 "\n"
 "Xóa khỏi lịch sử soạn thảo văn bản?"
 
-#: plugins/texteditor.koplugin/main.lua:348
+#: plugins/texteditor.koplugin/main.lua:415
+#, fuzzy
 msgid ""
-"To start editing a new file, you will have to:\n"
-"\n"
-"- First choose a folder\n"
-"- Then enter a name for the new file\n"
-"- And start editing it\n"
-"\n"
-"Do you want to proceed?"
-msgstr ""
-
-#: plugins/texteditor.koplugin/main.lua:416
-msgid ""
-"This file does not exist anymore:\n"
+"This file does not exist:\n"
 "\n"
 "%1\n"
 "\n"
@@ -20055,7 +20078,7 @@ msgstr ""
 "\n"
 "Tạo mới?"
 
-#: plugins/texteditor.koplugin/main.lua:433
+#: plugins/texteditor.koplugin/main.lua:432
 msgid ""
 "This file is not a regular file:\n"
 "\n"
@@ -20065,7 +20088,7 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:471
+#: plugins/texteditor.koplugin/main.lua:470
 msgid ""
 "This file can not be created:\n"
 "\n"
@@ -20106,28 +20129,28 @@ msgstr "QR"
 msgid "Text reset to last saved content"
 msgstr "Văn bản đã được đặt lại về nội dung được lưu cuối cùng"
 
-#: plugins/texteditor.koplugin/main.lua:587
+#: plugins/texteditor.koplugin/main.lua:590
 msgid "File is read only"
 msgstr "Tệp chỉ đọc"
 
-#: plugins/texteditor.koplugin/main.lua:593
-#: plugins/texteditor.koplugin/main.lua:620
-#: plugins/texteditor.koplugin/main.lua:644
+#: plugins/texteditor.koplugin/main.lua:596
+#: plugins/texteditor.koplugin/main.lua:623
+#: plugins/texteditor.koplugin/main.lua:647
 msgid "File saved"
 msgstr "Đã lưu tệp"
 
-#: plugins/texteditor.koplugin/main.lua:595
-#: plugins/texteditor.koplugin/main.lua:604
-#: plugins/texteditor.koplugin/main.lua:622
-#: plugins/texteditor.koplugin/main.lua:646
+#: plugins/texteditor.koplugin/main.lua:598
+#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:625
+#: plugins/texteditor.koplugin/main.lua:649
 msgid "Failed saving file: %1"
 msgstr "Lưu tệp thất bại: %1"
 
-#: plugins/texteditor.koplugin/main.lua:602
+#: plugins/texteditor.koplugin/main.lua:605
 msgid "Lua syntax OK, file saved"
 msgstr "Hoàn tất kiểm tra cú pháp Lua, tệp đã lưu"
 
-#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:610
 msgid ""
 "Lua syntax check failed:\n"
 "\n"
@@ -20147,15 +20170,15 @@ msgstr ""
 "\n"
 "%2"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Do not save"
 msgstr "Không lưu"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Save anyway"
 msgstr "Vẫn lưu"
 
-#: plugins/texteditor.koplugin/main.lua:628
+#: plugins/texteditor.koplugin/main.lua:631
 msgid ""
 "Text content is empty.\n"
 "Do you want to keep this file as empty, or do you prefer to delete it?\n"
@@ -20167,15 +20190,15 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Keep empty file"
 msgstr "Giữ tệp trống"
 
-#: plugins/texteditor.koplugin/main.lua:637
+#: plugins/texteditor.koplugin/main.lua:640
 msgid "File deleted"
 msgstr "Đã xóa tệp"
 
-#: plugins/texteditor.koplugin/main.lua:639
+#: plugins/texteditor.koplugin/main.lua:642
 msgid "Failed deleting file: %1"
 msgstr "Xóa tệp thất bại: %1"
 

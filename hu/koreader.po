@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-20 22:11+0000\n"
+"POT-Creation-Date: 2024-11-21 06:03+0000\n"
 "PO-Revision-Date: 2024-10-02 07:35+0000\n"
 "Last-Translator: Sari Gabor <sarigaborj@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
@@ -136,6 +136,7 @@ msgstr ""
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
 #: frontend/apps/filemanager/filemanagerutil.lua:344
 #: plugins/opds.koplugin/opdsbrowser.lua:642
+#: plugins/texteditor.koplugin/main.lua:355
 msgid "Choose folder"
 msgstr "Mappa választása"
 
@@ -146,7 +147,7 @@ msgstr "Fájlnév módosítása"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:260
 #: plugins/opds.koplugin/opdsbrowser.lua:658
-#: plugins/texteditor.koplugin/main.lua:364
+#: plugins/texteditor.koplugin/main.lua:350
 msgid "Enter filename"
 msgstr "Fájlnév"
 
@@ -160,8 +161,8 @@ msgstr "Fájlnév"
 #: frontend/apps/filemanager/filemanager.lua:1001
 #: frontend/apps/filemanager/filemanager.lua:1129
 #: frontend/apps/filemanager/filemanager.lua:1458
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:498
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:644
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:513
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:659
 #: frontend/apps/filemanager/filemanagercollection.lua:503
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
@@ -233,7 +234,7 @@ msgstr "Fájlnév"
 #: plugins/statistics.koplugin/main.lua:2548
 #: plugins/terminal.koplugin/aliases.lua:100
 #: plugins/terminal.koplugin/main.lua:643
-#: plugins/texteditor.koplugin/main.lua:368
+#: plugins/texteditor.koplugin/main.lua:371
 #: plugins/vocabbuilder.koplugin/main.lua:1173
 #: plugins/vocabbuilder.koplugin/main.lua:1563
 #: plugins/vocabbuilder.koplugin/main.lua:1854
@@ -270,6 +271,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:361
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:772
 #: frontend/ui/widget/pathchooser.lua:140
 msgid "Choose"
 msgstr "Kiválasztás"
@@ -285,9 +287,10 @@ msgid "Info"
 msgstr "Infó"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:387
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:804
 #: plugins/opds.koplugin/opdsbrowser.lua:835
 #: plugins/statistics.koplugin/main.lua:1288
-#: plugins/texteditor.koplugin/main.lua:375
+#: plugins/texteditor.koplugin/main.lua:378
 #: plugins/vocabbuilder.koplugin/main.lua:242
 msgid "Edit"
 msgstr "Szerkesztés"
@@ -423,11 +426,12 @@ msgstr "Feltöltés folyamatban…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:665
 #: frontend/apps/filemanager/filemanager.lua:1008
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:785
 #: frontend/apps/reader/modules/readerhandmade.lua:501
 #: frontend/ui/wikipedia.lua:1542
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:610
 #: plugins/statistics.koplugin/main.lua:332
-#: plugins/texteditor.koplugin/main.lua:417
+#: plugins/texteditor.koplugin/main.lua:416
 msgid "Create"
 msgstr "Létrehozás"
 
@@ -540,7 +544,7 @@ msgstr "Dropbox mappa (/ a főkönyvtár)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:505
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:520
 #: frontend/apps/filemanager/filemanagercollection.lua:510
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
@@ -828,7 +832,7 @@ msgstr "Összes fájl kijelölése a mappában"
 #: frontend/apps/filemanager/filemanager.lua:543
 #: frontend/apps/filemanager/filemanager.lua:924
 #: frontend/apps/filemanager/filemanager.lua:1193
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:722
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:890
 msgid "Move"
 msgstr "Mozgatás"
 
@@ -905,7 +909,7 @@ msgstr "Megnyitja ezt: %1?"
 #: frontend/apps/filemanager/filemanager.lua:1465
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:362
 #: frontend/ui/widget/textviewer.lua:694 frontend/ui/widget/touchmenu.lua:1255
-#: plugins/texteditor.koplugin/main.lua:452
+#: plugins/texteditor.koplugin/main.lua:451
 msgid "Open"
 msgstr "Megnyitás"
 
@@ -1112,81 +1116,81 @@ msgstr "%1 megnyitása ezzel:"
 msgid "Classic (filename only)"
 msgstr "Klasszikus (csak fájlnevek)"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:28
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:29
 #: frontend/apps/filemanager/filemanagerutil.lua:261
-#: frontend/dispatcher.lua:186 plugins/opds.koplugin/opdsbrowser.lua:700
+#: frontend/dispatcher.lua:187 plugins/opds.koplugin/opdsbrowser.lua:700
 msgid "Book information"
 msgstr "Könyv információk"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:39
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
 msgid "Cover image:"
 msgstr "Borítókép:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
 #: plugins/calibre.koplugin/search.lua:145
 msgid "Title:"
 msgstr "Cím:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
 msgstr "Szerző(k):"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
 #: plugins/calibre.koplugin/search.lua:154
 msgid "Series:"
 msgstr "Sorozat:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
 msgid "Series index:"
 msgstr "Sorozat index:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
 msgid "Language:"
 msgstr "Nyelv:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
 msgid "Keywords:"
 msgstr "Kulcsszavak:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
 msgid "Description:"
 msgstr "Leírás:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:48
 msgid "Pages:"
 msgstr "Oldalszám:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:82
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:92
 msgid "Filename:"
 msgstr "Fájlnév:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:83
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:93
 msgid "Format:"
 msgstr "Fájlformátum:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:84
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:94
 #: plugins/calibre.koplugin/search.lua:147
 msgid "Size:"
 msgstr "Fájlméret:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:85
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:95
 msgid "File date:"
 msgstr "Fájldátum:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:86
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:96
 msgid "Folder:"
 msgstr "Mappa:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:100
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:110
 msgid "Tap to display"
 msgstr "Megjelenítés koppintásra"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:120
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:156
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:749
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:750
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:130
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:166
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:917
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:918
 #: frontend/apps/reader/modules/readerfooter.lua:1998
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/screensaver.lua:97
@@ -1205,59 +1209,64 @@ msgstr "Megjelenítés koppintásra"
 msgid "N/A"
 msgstr "nincs elérhető adat"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:161
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:171
 msgid "number of lines and words not available"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 msgid "1 line"
 msgid_plural "%1 lines"
 msgstr[0] "1 sor"
 msgstr[1] "%1 sor"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 msgid "1 word"
 msgid_plural "%1 words"
 msgstr[0] "1 szó"
 msgstr[1] "%1 szó"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:163
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:173
 msgid "Current page:"
 msgstr "Aktuális oldal:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:182
 msgid "Rating:"
 msgstr "Értékelés:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
 msgid "Review:"
 msgstr "Ismertető:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:337
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:192
+#, fuzzy
+msgid "Notebook file:"
+msgstr "Könyv címe:"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:352
 msgid "No book description available."
 msgstr "Nincs elérhető könyvleírás."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:354
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:369
 msgid "No cover image available."
 msgstr "Nincs elérhető borítókép."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:491
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:506
 msgid "Edit book metadata:"
 msgstr "Könyv metaadatok szerkesztése:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:543
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:558
 msgid "Copy original"
 msgstr "Eredeti másolása"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:551
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:566
 msgid "View original"
 msgstr "Eredeti megtekintése"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:564
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:579
 msgid "Reset custom"
 msgstr "Egyedi reset"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:568
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:583
 msgid ""
 "Reset custom cover?\n"
 "Image file will be deleted."
@@ -1265,11 +1274,11 @@ msgstr ""
 "Egyedi borítókép alapállapotba?\n"
 "A képfájl törlésre kerül."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:569
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
 msgid "Reset custom book metadata field?"
 msgstr "Egyedi metaadat mezők resetelése?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:570
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:585
 #: frontend/apps/filemanager/filemanagerutil.lua:186
 #: frontend/apps/filemanager/filemanagerutil.lua:196
 #: frontend/apps/reader/modules/readermenu.lua:203
@@ -1280,42 +1289,83 @@ msgstr "Egyedi metaadat mezők resetelése?"
 msgid "Reset"
 msgstr "Alapállapotba állítás"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:599
 msgid "Set custom"
 msgstr "Egyedi beállítás"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:598
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:613
 msgid "Book metadata:"
 msgstr "Könyv metaadat:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:636
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
 msgid "Edit book review"
 msgstr "Könyv ismertető szerkesztése"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:666
 #: frontend/ui/widget/bookstatuswidget.lua:558
 msgid "Save review"
 msgstr "Ismertető mentése"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:707
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:734
+#: frontend/apps/filemanager/filemanagerutil.lua:374
+msgid "Use default"
+msgstr "Alapértelmezés"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:742
+#, fuzzy
+msgid "Reset default"
+msgstr "Alapértelmezés"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:747
+#, fuzzy
+msgid "Notebook file default location reset"
+msgstr "A könyv metaadatokról"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:753
+#, fuzzy
+msgid "Use local"
+msgstr "Minta használata"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:761
+#: frontend/ui/widget/configdialog.lua:1238
+#: frontend/ui/widget/configdialog.lua:1249
+#: frontend/ui/widget/configdialog.lua:1334
+#: frontend/ui/widget/configdialog.lua:1344
+#: frontend/ui/widget/configdialog.lua:1414
+#: frontend/ui/widget/configdialog.lua:1452
+msgid "Set as default"
+msgstr "Beállítás alapértelmezettként"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:766
+#, fuzzy
+msgid "Notebook file default location saved"
+msgstr "A könyv metaadatokról"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:796
+#: frontend/ui/widget/screenshoter.lua:77
+#: plugins/archiveviewer.koplugin/main.lua:207
+msgid "View"
+msgstr "Nézet"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:875
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr ""
 "Az aktuális mappában és az almappákban lévő könyvek beolvasása a "
 "metaadatokra vonatkozóan?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:708
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:876
 #: plugins/calibre.koplugin/search.lua:518
 msgid "Scan"
 msgstr "Beolvasás (Scan)"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:714
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:882
 msgid "No books with metadata not in your preferred location found."
 msgstr ""
 "Nem találtunk olyan könyveket, amelyek metaadatai nem az Ön által preferált "
 "helyen vannak."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:718
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:886
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
@@ -1325,11 +1375,11 @@ msgstr[1] ""
 "%1 olyan könyv van, amelyek metaadatai nem az Ön által preferált helyen "
 "találhatók."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:721
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:889
 msgid "Move book metadata to your preferred location?"
 msgstr "Áthelyezi a könyv metaadatait a kívánt helyre?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:737
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:905
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
 "based storage may slow down file browser navigation in large directories. "
@@ -1345,7 +1395,7 @@ msgstr ""
 "áthelyezze a metaadatokat az előnyben részesített tárolási helyre, vagy "
 "törölje %1, amely felgyorsítja a fájlböngészővel történő navigációt."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:751
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:919
 msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
@@ -1353,7 +1403,7 @@ msgstr ""
 "%1. Cím: %2; Szerző: %3\n"
 "DOkumentum: %4"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:756
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:924
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "1 dokumentum hash-alapú metaadatokkal"
@@ -1518,7 +1568,7 @@ msgstr "Nincs egyezés a következővel: '%1'."
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:236
 #: frontend/apps/filemanager/filemanagermenu.lua:799
-#: frontend/dispatcher.lua:137 frontend/ui/widget/menu.lua:794
+#: frontend/dispatcher.lua:138 frontend/ui/widget/menu.lua:794
 msgid "File search"
 msgstr "Fájlkeresés"
 
@@ -1827,12 +1877,12 @@ msgstr "Info lista elemszám oldalanként"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:432
 #: frontend/apps/reader/modules/readerbookmark.lua:233
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 msgid "Reverse sorting"
 msgstr "Fordított rendezés"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:442
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Folders and files mixed"
 msgstr "Mappák és fájlok vegyesen"
 
@@ -1980,7 +2030,7 @@ msgstr ""
 "A keresési eredményekben lévő könyv megnyitásához koppintson a könyvre."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:813
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 #, fuzzy
 msgid "Last file search results"
 msgstr "Utolsó teljesszöveges keresési eredmények"
@@ -2114,7 +2164,7 @@ msgstr ""
 "Biztosan folytassuk?"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:12
-#: frontend/dispatcher.lua:136 frontend/ui/widget/pathchooser.lua:162
+#: frontend/dispatcher.lua:137 frontend/ui/widget/pathchooser.lua:162
 msgid "Folder shortcuts"
 msgstr "Mappahivatkozások"
 
@@ -2197,12 +2247,12 @@ msgid "Show folder"
 msgstr "Mappa megjelenítése"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:274
-#: frontend/dispatcher.lua:188 plugins/opds.koplugin/opdsbrowser.lua:693
+#: frontend/dispatcher.lua:189 plugins/opds.koplugin/opdsbrowser.lua:693
 msgid "Book cover"
 msgstr "A könyv címlapja"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:287
-#: frontend/dispatcher.lua:187
+#: frontend/dispatcher.lua:188
 msgid "Book description"
 msgstr "A könyv leírása"
 
@@ -2227,10 +2277,6 @@ msgstr "A parancsfájl nem nulla állapotkódot adott vissza: %1!"
 #: frontend/apps/filemanager/filemanagerutil.lua:344
 msgid "Choose file"
 msgstr "Válasszon egy fájlt"
-
-#: frontend/apps/filemanager/filemanagerutil.lua:374
-msgid "Use default"
-msgstr "Alapértelmezés"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:384
 #: frontend/ui/data/optionsutil.lua:175
@@ -2264,7 +2310,7 @@ msgstr "oldal könyvjelzők"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:79
 #: frontend/apps/reader/modules/readerbookmark.lua:107
-#: frontend/dispatcher.lua:181
+#: frontend/dispatcher.lua:182
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
 
@@ -2334,7 +2380,7 @@ msgid "Show separator between items"
 msgstr "Elválasztó megjelenítése az elemek között"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:246
-#: frontend/dispatcher.lua:182
+#: frontend/dispatcher.lua:183
 msgid "Bookmark search"
 msgstr "Könyvjelző keresése"
 
@@ -2425,7 +2471,7 @@ msgid "Current page"
 msgstr "Aktuális oldal"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:923
-#: frontend/dispatcher.lua:163
+#: frontend/dispatcher.lua:164
 msgid "Latest bookmark"
 msgstr "Legutóbbi könyvjelző"
 
@@ -2739,7 +2785,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:223
 #: frontend/apps/reader/modules/readerdictionary.lua:956
-#: frontend/dispatcher.lua:61 plugins/vocabbuilder.koplugin/main.lua:2040
+#: frontend/dispatcher.lua:62 plugins/vocabbuilder.koplugin/main.lua:2040
 msgid "Dictionary lookup"
 msgstr "Szótár használata"
 
@@ -3875,7 +3921,7 @@ msgid "Right"
 msgstr "Jobbra"
 
 #: frontend/apps/reader/modules/readergoto.lua:17
-#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:157
+#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:158
 #: frontend/ui/widget/keyvaluepage.lua:411 frontend/ui/widget/menu.lua:773
 #: frontend/ui/widget/sortwidget.lua:255
 #: plugins/statistics.koplugin/calendarview.lua:620
@@ -3883,7 +3929,7 @@ msgstr "Jobbra"
 msgid "Go to page"
 msgstr "Ugrás megadott oldalra"
 
-#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:158
+#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:159
 msgid "Skim document"
 msgstr "Dokumentum felfedezése"
 
@@ -4168,9 +4214,9 @@ msgstr "Kiemeléseket kiírása PDF-be: %1"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:670 frontend/ui/data/creoptions.lua:683
 #: frontend/ui/data/creoptions.lua:695 frontend/ui/data/creoptions.lua:734
@@ -4185,9 +4231,9 @@ msgstr "be"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:339 frontend/ui/data/creoptions.lua:356
 #: frontend/ui/data/creoptions.lua:647 frontend/ui/data/creoptions.lua:670
@@ -4257,7 +4303,7 @@ msgstr "Kiválasztás és kiemelés"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:375
 #: frontend/apps/reader/modules/readersearch.lua:190
-#: frontend/dispatcher.lua:175
+#: frontend/dispatcher.lua:176
 msgid "Fulltext search"
 msgstr "Teljes-szöveges keresés"
 
@@ -4510,7 +4556,7 @@ msgid "Selection on text"
 msgstr "Szövegkijelölés"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:872
-#: frontend/dispatcher.lua:190
+#: frontend/dispatcher.lua:191
 msgid "Translate current page"
 msgstr "Aktuális oldal fordítása"
 
@@ -5477,7 +5523,7 @@ msgid "Results per page"
 msgstr "Eredmény oldalanként"
 
 #: frontend/apps/reader/modules/readersearch.lua:196
-#: frontend/dispatcher.lua:176
+#: frontend/dispatcher.lua:177
 msgid "Last fulltext search results"
 msgstr "Utolsó teljesszöveges keresési eredmények"
 
@@ -5539,7 +5585,7 @@ msgid "Current page: %1"
 msgstr "Aktuális oldalszám (%1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:19
-#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:185
+#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:186
 #: frontend/ui/elements/common_settings_menu_table.lua:683
 msgid "Book status"
 msgstr "Könyvállapot módosítása"
@@ -5564,12 +5610,12 @@ msgstr "Következő fájl megnyitása"
 
 #: frontend/apps/reader/modules/readerstatus.lua:103
 #: frontend/ui/elements/common_settings_menu_table.lua:684
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Delete file"
 msgstr "Fájl törlése"
 
 #: frontend/apps/reader/modules/readerstatus.lua:110 frontend/dispatcher.lua:59
-#: frontend/dispatcher.lua:960 plugins/httpinspector.koplugin/main.lua:1043
+#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1043
 msgid "File browser"
 msgstr "Fájlböngésző"
 
@@ -6049,16 +6095,16 @@ msgid "Book tweak saved (not enabled)."
 msgstr "A könyv stíluskorrekciója elmentve (nincs alkalmazva)."
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:79
-#: frontend/dispatcher.lua:178 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
 msgid "Book map"
 msgstr "Könyvtérkép"
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:93
-#: frontend/dispatcher.lua:180 frontend/ui/widget/pagebrowserwidget.lua:35
+#: frontend/dispatcher.lua:181 frontend/ui/widget/pagebrowserwidget.lua:35
 msgid "Page browser"
 msgstr "Oldalböngésző"
 
-#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:177
+#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:178
 msgid "Table of contents"
 msgstr "Tartalomjegyzék"
 
@@ -7051,7 +7097,7 @@ msgstr "Keresés a Wikipedián"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:82
 #: frontend/apps/reader/modules/readerwikipedia.lua:399
-#: frontend/dispatcher.lua:62
+#: frontend/dispatcher.lua:63
 msgid "Wikipedia lookup"
 msgstr "Keresés a Wikipediában"
 
@@ -7907,7 +7953,7 @@ msgstr "Újraindítás"
 msgid "Are you sure you want to power off the device?"
 msgstr "Kikapcsolja a készüléket?"
 
-#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:75
+#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:76
 #: frontend/ui/elements/common_exit_menu_table.lua:51
 msgid "Power off"
 msgstr "A készülék kikapcsolása"
@@ -7942,499 +7988,504 @@ msgstr "Olvasási folyamat"
 msgid "History search"
 msgstr "Keresés az előzményekben"
 
-#: frontend/dispatcher.lua:64
+#: frontend/dispatcher.lua:60
+#, fuzzy
+msgid "Notebook file"
+msgstr "könyv mappa"
+
+#: frontend/dispatcher.lua:65
 msgid "Show menu"
 msgstr "Menü megjelenítése"
 
-#: frontend/dispatcher.lua:65
+#: frontend/dispatcher.lua:66
 #: frontend/ui/elements/common_info_menu_table.lua:39
 msgid "Menu search"
 msgstr "Keresés a menüben"
 
-#: frontend/dispatcher.lua:66
+#: frontend/dispatcher.lua:67
 msgid "Screenshot"
 msgstr "Képernyőmentés"
 
-#: frontend/dispatcher.lua:70
+#: frontend/dispatcher.lua:71
 msgid "Exit sleep screen"
 msgstr "Kilépés az alvóképernyőből"
 
-#: frontend/dispatcher.lua:71 frontend/ui/elements/mass_storage.lua:43
+#: frontend/dispatcher.lua:72 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
 msgstr "USB tárhely-mód indítása"
 
-#: frontend/dispatcher.lua:72
+#: frontend/dispatcher.lua:73
 #: frontend/ui/elements/common_exit_menu_table.lua:34
 msgid "Sleep"
 msgstr "A KOReader altatása"
 
-#: frontend/dispatcher.lua:73
+#: frontend/dispatcher.lua:74
 #: frontend/ui/elements/common_exit_menu_table.lua:22
 msgid "Restart KOReader"
 msgstr "A KOReader újraindítása"
 
-#: frontend/dispatcher.lua:74
+#: frontend/dispatcher.lua:75
 #: frontend/ui/elements/common_exit_menu_table.lua:42
 msgid "Reboot the device"
 msgstr "A készülék újraindítása"
 
-#: frontend/dispatcher.lua:76
+#: frontend/dispatcher.lua:77
 msgid "Exit KOReader"
 msgstr "Kilépés a KOReader-ből"
 
-#: frontend/dispatcher.lua:78
+#: frontend/dispatcher.lua:79
 msgid "Toggle long-press on corners"
 msgstr "Nyomva tartás átkapcsolása sarkokon"
 
-#: frontend/dispatcher.lua:79
+#: frontend/dispatcher.lua:80
 msgid "Enable touch input"
 msgstr "Érintéses input engedélyezése"
 
-#: frontend/dispatcher.lua:80
+#: frontend/dispatcher.lua:81
 msgid "Disable touch input"
 msgstr "Érintéses input kikapcsolása"
 
-#: frontend/dispatcher.lua:81
+#: frontend/dispatcher.lua:82
 msgid "Toggle touch input"
 msgstr "Érintéses bemenet váltása"
 
-#: frontend/dispatcher.lua:83 frontend/ui/elements/physical_buttons.lua:28
+#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:28
 #, fuzzy
 msgid "Invert left-side page-turn buttons"
 msgstr "Lapozó gombok felcserélése"
 
-#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:40
+#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:40
 #, fuzzy
 msgid "Invert right-side page-turn buttons"
 msgstr "Lapozó gombok felcserélése"
 
-#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:11
+#: frontend/dispatcher.lua:86 frontend/ui/elements/physical_buttons.lua:11
 #, fuzzy
 msgid "Invert page-turn buttons"
 msgstr "Lapozó gombok felcserélése"
 
-#: frontend/dispatcher.lua:87
+#: frontend/dispatcher.lua:88
 msgid "Toggle key repeat"
 msgstr "Billentyűismétlés átkapcsolása"
 
-#: frontend/dispatcher.lua:88
+#: frontend/dispatcher.lua:89
 msgid "Toggle accelerometer"
 msgstr "Gyorsulásmérő váltása"
 
-#: frontend/dispatcher.lua:89
+#: frontend/dispatcher.lua:90
 #, fuzzy
 msgid "Enable accelerometer for 5 seconds"
 msgstr "Gyorsulásmérő forgatási eseményeinek figyelmen kívül hagyása"
 
-#: frontend/dispatcher.lua:90
+#: frontend/dispatcher.lua:91
 #: frontend/ui/elements/screen_rotation_menu_table.lua:46
 msgid "Lock auto rotation to current orientation"
 msgstr "Tájolás rögzítése a jelenlegi helyzetben"
 
-#: frontend/dispatcher.lua:91
+#: frontend/dispatcher.lua:92
 msgid "Toggle orientation"
 msgstr "Tájolás módosítása"
 
-#: frontend/dispatcher.lua:92
+#: frontend/dispatcher.lua:93
 msgid "Invert rotation"
 msgstr "Inverz forgatás"
 
-#: frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:94
 msgid "Rotate by 90° CW"
 msgstr "Forgatás 90° az óramutató járási irányába"
 
-#: frontend/dispatcher.lua:94
+#: frontend/dispatcher.lua:95
 msgid "Rotate by 90° CCW"
 msgstr "Forgatás 90° CCW"
 
-#: frontend/dispatcher.lua:96
+#: frontend/dispatcher.lua:97
 msgid "Turn on Wi-Fi"
 msgstr "WiFi bekapcsolása"
 
-#: frontend/dispatcher.lua:97
+#: frontend/dispatcher.lua:98
 msgid "Turn off Wi-Fi"
 msgstr "WiFi kikapcsolása"
 
-#: frontend/dispatcher.lua:98
+#: frontend/dispatcher.lua:99
 msgid "Toggle Wi-Fi"
 msgstr "WiFi ki/be"
 
-#: frontend/dispatcher.lua:99
+#: frontend/dispatcher.lua:100
 msgid "Toggle Fullscreen"
 msgstr "Teljesképernyő ki/be"
 
-#: frontend/dispatcher.lua:100
+#: frontend/dispatcher.lua:101
 msgid "Show network info"
 msgstr "Hálózati információk"
 
-#: frontend/dispatcher.lua:104
+#: frontend/dispatcher.lua:105
 msgid "Show frontlight dialog"
 msgstr "Interaktív fényerő beállítás"
 
-#: frontend/dispatcher.lua:105
+#: frontend/dispatcher.lua:106
 msgid "Toggle frontlight"
 msgstr "Kijelzővilágítás ki/be"
 
-#: frontend/dispatcher.lua:106
+#: frontend/dispatcher.lua:107
 msgid "Set frontlight brightness"
 msgstr "Fényerő beállítása"
 
-#: frontend/dispatcher.lua:107
+#: frontend/dispatcher.lua:108
 msgid "Increase frontlight brightness"
 msgstr "Fényerő növelése"
 
-#: frontend/dispatcher.lua:108
+#: frontend/dispatcher.lua:109
 msgid "Decrease frontlight brightness"
 msgstr "Fényerő csökkentése"
 
-#: frontend/dispatcher.lua:109
+#: frontend/dispatcher.lua:110
 msgid "Set frontlight warmth"
 msgstr "Színhőmérséklet beállítása"
 
-#: frontend/dispatcher.lua:110
+#: frontend/dispatcher.lua:111
 msgid "Increase frontlight warmth"
 msgstr "Színhőmérséklet növelése"
 
-#: frontend/dispatcher.lua:111
+#: frontend/dispatcher.lua:112
 msgid "Decrease frontlight warmth"
 msgstr "Színhőmérséklet csökkentése"
 
-#: frontend/dispatcher.lua:112
+#: frontend/dispatcher.lua:113
 msgid "Toggle night mode"
 msgstr "Éjszakai mód be/ki"
 
-#: frontend/dispatcher.lua:113
+#: frontend/dispatcher.lua:114
 msgid "Set night mode"
 msgstr "Éjszakai mód be"
 
-#: frontend/dispatcher.lua:115
+#: frontend/dispatcher.lua:116
 msgid "Full screen refresh"
 msgstr "Teljes képernyő frissítése"
 
-#: frontend/dispatcher.lua:116
+#: frontend/dispatcher.lua:117
 msgid "Full refresh rate (always)"
 msgstr "Képernyőfrissítés (mindig)"
 
-#: frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:118
 msgid "Full refresh rate (not in night mode)"
 msgstr "Teljes képernyőfrissítés (nem éjjeli módban)"
 
-#: frontend/dispatcher.lua:118
+#: frontend/dispatcher.lua:119
 msgid "Full refresh rate (in night mode)"
 msgstr "Teljes képernyőfrissítés (éjjeli módban)"
 
-#: frontend/dispatcher.lua:119 frontend/ui/elements/refresh_menu_table.lua:109
+#: frontend/dispatcher.lua:120 frontend/ui/elements/refresh_menu_table.lua:109
 msgid "Always flash on chapter boundaries"
 msgstr "Fejezethatárokon mindig 'Flash'"
 
-#: frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:121
 msgid "Toggle flashing on chapter boundaries"
 msgstr "Fejezethatárokon mindig 'Flash' átkapcsolás"
 
-#: frontend/dispatcher.lua:121
+#: frontend/dispatcher.lua:122
 msgid "Never flash on chapter's 2nd page"
 msgstr "Fejezetek 2. oldalán nincs 'Flash'"
 
-#: frontend/dispatcher.lua:122
+#: frontend/dispatcher.lua:123
 msgid "Toggle flashing on chapter's 2nd page"
 msgstr "Fejezetek 2. oldalán 'Flash' átkapcsolása"
 
-#: frontend/dispatcher.lua:123 frontend/ui/elements/refresh_menu_table.lua:120
+#: frontend/dispatcher.lua:124 frontend/ui/elements/refresh_menu_table.lua:120
 msgid "Always flash on pages with images"
 msgstr "Képeket tartalmazó oldalakon frissítés mindig"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Toggle flashing on pages with images"
 msgstr "Frissítés átkapcsolása képeket tartalmazó oldalakon"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Set display mode"
 msgstr "Megjelenési mód"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 msgid "Sort by"
 msgstr "Rendezés"
 
-#: frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:134
 msgid "Show plus menu"
 msgstr "Plusz menü megjelenítése"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Toggle select mode"
 msgstr "Kiválasztási mód váltása"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Refresh content"
 msgstr "Tartalom frissítése"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Folder up"
 msgstr "Egy mappaszinttel fejlebb"
 
-#: frontend/dispatcher.lua:145
+#: frontend/dispatcher.lua:146
 msgid "Open next document in folder"
 msgstr "Következő dokumentum megnyitása a mappában"
 
-#: frontend/dispatcher.lua:147
+#: frontend/dispatcher.lua:148
 msgid "Show bottom menu"
 msgstr "Alsó menü megjelenítése"
 
-#: frontend/dispatcher.lua:148
+#: frontend/dispatcher.lua:149
 msgid "Toggle status bar"
 msgstr "Állapotsor ki/be"
 
-#: frontend/dispatcher.lua:149
+#: frontend/dispatcher.lua:150
 msgid "Toggle chapter progress bar"
 msgstr "Fejezet folyamatjelző sáv átkapcsolása"
 
-#: frontend/dispatcher.lua:151
+#: frontend/dispatcher.lua:152
 msgid "Previous chapter"
 msgstr "Előző fejezet"
 
-#: frontend/dispatcher.lua:152
+#: frontend/dispatcher.lua:153
 msgid "Next chapter"
 msgstr "Következő fejezet"
 
-#: frontend/dispatcher.lua:153
+#: frontend/dispatcher.lua:154
 msgid "First page"
 msgstr "Első oldal"
 
-#: frontend/dispatcher.lua:154
+#: frontend/dispatcher.lua:155
 msgid "Last page"
 msgstr "Legutóbbi oldal"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 msgid "Random page"
 msgstr "Véletlenszerű oldal"
 
-#: frontend/dispatcher.lua:156
+#: frontend/dispatcher.lua:157
 msgid "Turn pages"
 msgstr "Lapozás"
 
-#: frontend/dispatcher.lua:159
+#: frontend/dispatcher.lua:160
 msgid "Previous bookmark"
 msgstr "Előző könyvjelző"
 
-#: frontend/dispatcher.lua:160
+#: frontend/dispatcher.lua:161
 msgid "Next bookmark"
 msgstr "Következő könyvjelző"
 
-#: frontend/dispatcher.lua:161
+#: frontend/dispatcher.lua:162
 msgid "First bookmark"
 msgstr "Első könyvjelző"
 
-#: frontend/dispatcher.lua:162
+#: frontend/dispatcher.lua:163
 msgid "Last bookmark"
 msgstr "Utolsó könyvjelző"
 
-#: frontend/dispatcher.lua:165
+#: frontend/dispatcher.lua:166
 msgid "Back"
 msgstr "Vissza"
 
-#: frontend/dispatcher.lua:166
+#: frontend/dispatcher.lua:167
 msgid "Back to previous location"
 msgstr "Visszalépés ez előző pozícióhoz"
 
-#: frontend/dispatcher.lua:167
+#: frontend/dispatcher.lua:168
 msgid "Forward to next location"
 msgstr "Tovább a következő helyre"
 
-#: frontend/dispatcher.lua:168
+#: frontend/dispatcher.lua:169
 msgid "Follow nearest link"
 msgstr "Kövesse a 'közelebbi' linket"
 
-#: frontend/dispatcher.lua:169
+#: frontend/dispatcher.lua:170
 msgid "Follow nearest internal link"
 msgstr "Kövesse a 'közelebbi' belső linket"
 
-#: frontend/dispatcher.lua:170
+#: frontend/dispatcher.lua:171
 #, fuzzy
 msgid "Select previous link in current page"
 msgstr "Ugrás az előző oldalra"
 
-#: frontend/dispatcher.lua:171
+#: frontend/dispatcher.lua:172
 msgid "Select next link in current page"
 msgstr ""
 
-#: frontend/dispatcher.lua:172
+#: frontend/dispatcher.lua:173
 msgid "Add current location to history"
 msgstr "Jelenlegi hely hozzáadása a helyelőzményekhez"
 
-#: frontend/dispatcher.lua:173
+#: frontend/dispatcher.lua:174
 msgid "Clear location history"
 msgstr "Helyelőzmények törlése"
 
-#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:180 frontend/ui/widget/bookmapwidget.lua:707
 msgid "Book map (overview)"
 msgstr "Könyvtérkép (áttekintés)"
 
-#: frontend/dispatcher.lua:183
+#: frontend/dispatcher.lua:184
 msgid "Toggle bookmark"
 msgstr "Könyvjelző ki/be"
 
-#: frontend/dispatcher.lua:192
+#: frontend/dispatcher.lua:193
 msgid "Toggle page turn animations"
 msgstr "Lapozási animációk váltása"
 
-#: frontend/dispatcher.lua:193
+#: frontend/dispatcher.lua:194
 msgid "Toggle page turn direction"
 msgstr "Lapozás irányának váltása"
 
-#: frontend/dispatcher.lua:194
+#: frontend/dispatcher.lua:195
 msgid "Toggle custom TOC"
 msgstr "Egyedi TOC bekapcsolása"
 
-#: frontend/dispatcher.lua:195
+#: frontend/dispatcher.lua:196
 msgid "Toggle custom hidden flows"
 msgstr "Rejtett áramlatok ki/be"
 
-#: frontend/dispatcher.lua:197
+#: frontend/dispatcher.lua:198
 msgid "Set highlight action"
 msgstr "Kiemelési művelet kiválasztása"
 
-#: frontend/dispatcher.lua:198
+#: frontend/dispatcher.lua:199
 msgid "Cycle highlight action"
 msgstr "Ciklikus kiemelési művelet"
 
-#: frontend/dispatcher.lua:199
+#: frontend/dispatcher.lua:200
 msgid "Cycle highlight style"
 msgstr "Ciklikus kiemelési stílus"
 
-#: frontend/dispatcher.lua:201
+#: frontend/dispatcher.lua:202
 msgid "Save book metadata"
 msgstr "Könyv metaadatok mentése"
 
-#: frontend/dispatcher.lua:205
+#: frontend/dispatcher.lua:206
 msgid "Font face"
 msgstr "Betűtípus"
 
-#: frontend/dispatcher.lua:206
+#: frontend/dispatcher.lua:207
 msgid "Increase font size"
 msgstr "Betűméret növelése"
 
-#: frontend/dispatcher.lua:207
+#: frontend/dispatcher.lua:208
 msgid "Decrease font size"
 msgstr "Betűméret csökkentése"
 
-#: frontend/dispatcher.lua:210
+#: frontend/dispatcher.lua:211
 msgid "Toggle page flipping"
 msgstr "Oldal lapozás ki/be"
 
-#: frontend/dispatcher.lua:211
+#: frontend/dispatcher.lua:212
 msgid "Toggle bookmark flipping"
 msgstr "Könyvjelzőváltás"
 
-#: frontend/dispatcher.lua:212
+#: frontend/dispatcher.lua:213
 msgid "Toggle reflow"
 msgstr "Tördelhető/reflow ki/be"
 
-#: frontend/dispatcher.lua:213
+#: frontend/dispatcher.lua:214
 msgid "Zoom mode"
 msgstr "Nagyítás mód"
 
-#: frontend/dispatcher.lua:214
+#: frontend/dispatcher.lua:215
 msgid "Change zoom factor"
 msgstr "Nagyítási faktor módosítása"
 
-#: frontend/dispatcher.lua:216
+#: frontend/dispatcher.lua:217
 msgid "Toggle panel zoom"
 msgstr "Panel zoom ki/be"
 
-#: frontend/dispatcher.lua:221 frontend/ui/widget/textviewer.lua:612
+#: frontend/dispatcher.lua:222 frontend/ui/widget/textviewer.lua:612
 msgid "Font size"
 msgstr "Betűméret"
 
-#: frontend/dispatcher.lua:238
+#: frontend/dispatcher.lua:239
 msgid "Zoom"
 msgstr "Nagyítás"
 
-#: frontend/dispatcher.lua:262 frontend/ui/data/creoptions.lua:417
+#: frontend/dispatcher.lua:263 frontend/ui/data/creoptions.lua:417
 #: frontend/ui/data/creoptions.lua:429 frontend/ui/data/creoptions.lua:440
 #: frontend/ui/data/creoptions.lua:450 frontend/ui/data/koptoptions.lua:445
 #: frontend/ui/data/koptoptions.lua:459 frontend/ui/widget/toggleswitch.lua:245
 msgid "Font Size"
 msgstr "Betűméret"
 
-#: frontend/dispatcher.lua:263
+#: frontend/dispatcher.lua:264
 msgid "Change font size"
 msgstr "Betűméret módosítása"
 
-#: frontend/dispatcher.lua:636
+#: frontend/dispatcher.lua:638
 msgid "Unknown item"
 msgstr "Ismeretlen elem"
 
-#: frontend/dispatcher.lua:658
+#: frontend/dispatcher.lua:660
 #, fuzzy
 msgid "gesture distance"
 msgstr "Távolság beállítása"
 
-#: frontend/dispatcher.lua:723 frontend/dispatcher.lua:941
+#: frontend/dispatcher.lua:725 frontend/dispatcher.lua:943
 msgid "Nothing"
 msgstr "Nincs funkció"
 
-#: frontend/dispatcher.lua:729
+#: frontend/dispatcher.lua:731
 msgctxt "Dispatcher"
 msgid "1 action"
 msgid_plural "%1 actions"
 msgstr[0] "1 művelet"
 msgstr[1] "%1 művelet"
 
-#: frontend/dispatcher.lua:731 plugins/gestures.koplugin/main.lua:236
+#: frontend/dispatcher.lua:733 plugins/gestures.koplugin/main.lua:236
 msgid "Pass through"
 msgstr "Figyelmen kívül hagyva"
 
-#: frontend/dispatcher.lua:753 frontend/dispatcher.lua:996
+#: frontend/dispatcher.lua:755 frontend/dispatcher.lua:998
 msgid "Arrange actions"
 msgstr "Rendezési műveletek"
 
-#: frontend/dispatcher.lua:870
+#: frontend/dispatcher.lua:872
 #, fuzzy
 msgid "Use gesture distance"
 msgstr "Távolság beállítása"
 
-#: frontend/dispatcher.lua:957 plugins/httpinspector.koplugin/main.lua:1040
+#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1040
 msgid "General"
 msgstr "Általános"
 
-#: frontend/dispatcher.lua:958
+#: frontend/dispatcher.lua:960
 #: frontend/ui/elements/common_settings_menu_table.lua:708
 #: plugins/httpinspector.koplugin/main.lua:1041
 msgid "Device"
 msgstr "Készülék"
 
-#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1042
+#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1042
 msgid "Screen and lights"
 msgstr "Képernyő és megvilágítás"
 
-#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1044
+#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1044
 msgid "Reader"
 msgstr "Olvasó"
 
-#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1045
+#: frontend/dispatcher.lua:964 plugins/httpinspector.koplugin/main.lua:1045
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "Tördelhető/reflow dokumentumok (epub, fb2, txt...)"
 
-#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1046
+#: frontend/dispatcher.lua:965 plugins/httpinspector.koplugin/main.lua:1046
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Fix megjelenésű dokumentumok (pdf, djvu, pics...)"
 
-#: frontend/dispatcher.lua:1016 plugins/profiles.koplugin/main.lua:134
+#: frontend/dispatcher.lua:1018 plugins/profiles.koplugin/main.lua:134
 msgid "Show as QuickMenu"
 msgstr "Megjelenítés Gyorsmenüként"
 
-#: frontend/dispatcher.lua:1041
+#: frontend/dispatcher.lua:1043
 msgid "Keep QuickMenu open"
 msgstr "Maradjon bekapcsolva a gyorsmenü"
 
-#: frontend/dispatcher.lua:1084
+#: frontend/dispatcher.lua:1086
 msgid "QuickMenu"
 msgstr "Gyorsmenü"
 
-#: frontend/dispatcher.lua:1091
+#: frontend/dispatcher.lua:1093
 msgid "Execute all"
 msgstr "Összes futtatása"
 
-#: frontend/dispatcher.lua:1164
+#: frontend/dispatcher.lua:1166
 #, fuzzy
 msgid "Executing profile: %1"
 msgstr ""
@@ -14593,15 +14644,6 @@ msgstr "Néhány szó a könyvről"
 msgid "Set values"
 msgstr "Értékek beállítása"
 
-#: frontend/ui/widget/configdialog.lua:1238
-#: frontend/ui/widget/configdialog.lua:1249
-#: frontend/ui/widget/configdialog.lua:1334
-#: frontend/ui/widget/configdialog.lua:1344
-#: frontend/ui/widget/configdialog.lua:1414
-#: frontend/ui/widget/configdialog.lua:1452
-msgid "Set as default"
-msgstr "Beállítás alapértelmezettként"
-
 #: frontend/ui/widget/configdialog.lua:1248
 #: frontend/ui/widget/configdialog.lua:1343
 #: frontend/ui/widget/configdialog.lua:1410
@@ -15217,11 +15259,6 @@ msgstr ""
 msgid "Set as book cover"
 msgstr "Legyen ez a borítókép"
 
-#: frontend/ui/widget/screenshoter.lua:77
-#: plugins/archiveviewer.koplugin/main.lua:207
-msgid "View"
-msgstr "Nézet"
-
 #: frontend/ui/widget/screenshoter.lua:90
 msgid "Set as wallpaper"
 msgstr "Legyen ez a háttérkép"
@@ -15276,7 +15313,7 @@ msgid "Text viewer"
 msgstr "Szöveg megjelenítő"
 
 #: frontend/ui/widget/textviewer.lua:692
-#: plugins/texteditor.koplugin/main.lua:450
+#: plugins/texteditor.koplugin/main.lua:449
 msgid ""
 "This file is %2:\n"
 "\n"
@@ -18964,12 +19001,10 @@ msgid "Enable CSS filter?"
 msgstr "CSS szűrő engedélyezése?"
 
 #: plugins/newsdownloader.koplugin/main.lua:797
-#: plugins/texteditor.koplugin/main.lua:355
 msgid "Yes"
 msgstr "Igen"
 
 #: plugins/newsdownloader.koplugin/main.lua:802
-#: plugins/texteditor.koplugin/main.lua:356
 msgid "No"
 msgstr "Nem"
 
@@ -20538,27 +20573,10 @@ msgstr ""
 "\n"
 "Eltávolítja a szövegszerkesztő előzményeiből?"
 
-#: plugins/texteditor.koplugin/main.lua:348
+#: plugins/texteditor.koplugin/main.lua:415
+#, fuzzy
 msgid ""
-"To start editing a new file, you will have to:\n"
-"\n"
-"- First choose a folder\n"
-"- Then enter a name for the new file\n"
-"- And start editing it\n"
-"\n"
-"Do you want to proceed?"
-msgstr ""
-"Egy új fájl szerkesztésének megkezdéséhez:\n"
-"\n"
-"- Válasszon ki egy mappát\n"
-"- Adja meg az új fájl nevét\n"
-"- Kezdje el a szerkesztést\n"
-"\n"
-"Akarja most elkezdeni?"
-
-#: plugins/texteditor.koplugin/main.lua:416
-msgid ""
-"This file does not exist anymore:\n"
+"This file does not exist:\n"
 "\n"
 "%1\n"
 "\n"
@@ -20570,7 +20588,7 @@ msgstr ""
 "\n"
 "Létrehozza és elkezdi szerkeszteni?"
 
-#: plugins/texteditor.koplugin/main.lua:433
+#: plugins/texteditor.koplugin/main.lua:432
 msgid ""
 "This file is not a regular file:\n"
 "\n"
@@ -20580,7 +20598,7 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:471
+#: plugins/texteditor.koplugin/main.lua:470
 msgid ""
 "This file can not be created:\n"
 "\n"
@@ -20620,28 +20638,28 @@ msgstr "QR"
 msgid "Text reset to last saved content"
 msgstr "Szöveg visszaállítása az utolsó mentett tartalomra"
 
-#: plugins/texteditor.koplugin/main.lua:587
+#: plugins/texteditor.koplugin/main.lua:590
 msgid "File is read only"
 msgstr "Csak olvasható fájl"
 
-#: plugins/texteditor.koplugin/main.lua:593
-#: plugins/texteditor.koplugin/main.lua:620
-#: plugins/texteditor.koplugin/main.lua:644
+#: plugins/texteditor.koplugin/main.lua:596
+#: plugins/texteditor.koplugin/main.lua:623
+#: plugins/texteditor.koplugin/main.lua:647
 msgid "File saved"
 msgstr "Fájl elmentve"
 
-#: plugins/texteditor.koplugin/main.lua:595
-#: plugins/texteditor.koplugin/main.lua:604
-#: plugins/texteditor.koplugin/main.lua:622
-#: plugins/texteditor.koplugin/main.lua:646
+#: plugins/texteditor.koplugin/main.lua:598
+#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:625
+#: plugins/texteditor.koplugin/main.lua:649
 msgid "Failed saving file: %1"
 msgstr "Fájl mentési hiba: %1"
 
-#: plugins/texteditor.koplugin/main.lua:602
+#: plugins/texteditor.koplugin/main.lua:605
 msgid "Lua syntax OK, file saved"
 msgstr "Lua szintaxis rendben, fájl elmentve"
 
-#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:610
 msgid ""
 "Lua syntax check failed:\n"
 "\n"
@@ -20661,15 +20679,15 @@ msgstr ""
 "\n"
 "%2"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Do not save"
 msgstr "Ne történjen mentés"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Save anyway"
 msgstr "Mentés mindenkor"
 
-#: plugins/texteditor.koplugin/main.lua:628
+#: plugins/texteditor.koplugin/main.lua:631
 msgid ""
 "Text content is empty.\n"
 "Do you want to keep this file as empty, or do you prefer to delete it?\n"
@@ -20681,15 +20699,15 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Keep empty file"
 msgstr "Tartsa üresen a fájlt"
 
-#: plugins/texteditor.koplugin/main.lua:637
+#: plugins/texteditor.koplugin/main.lua:640
 msgid "File deleted"
 msgstr "Fájl törölve"
 
-#: plugins/texteditor.koplugin/main.lua:639
+#: plugins/texteditor.koplugin/main.lua:642
 msgid "Failed deleting file: %1"
 msgstr "Fájltörlési hiba: %1"
 
@@ -21419,6 +21437,23 @@ msgstr "wallabag"
 #: tools/update-metadata.lua:60
 msgid "annotations"
 msgstr "megjegyzések"
+
+#~ msgid ""
+#~ "To start editing a new file, you will have to:\n"
+#~ "\n"
+#~ "- First choose a folder\n"
+#~ "- Then enter a name for the new file\n"
+#~ "- And start editing it\n"
+#~ "\n"
+#~ "Do you want to proceed?"
+#~ msgstr ""
+#~ "Egy új fájl szerkesztésének megkezdéséhez:\n"
+#~ "\n"
+#~ "- Válasszon ki egy mappát\n"
+#~ "- Adja meg az új fájl nevét\n"
+#~ "- Kezdje el a szerkesztést\n"
+#~ "\n"
+#~ "Akarja most elkezdeni?"
 
 #~ msgid "Connected to Bluetooth"
 #~ msgstr "Kapcsolódva Bluetooth-ra"

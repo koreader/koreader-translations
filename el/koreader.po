@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-20 22:11+0000\n"
+"POT-Creation-Date: 2024-11-21 06:03+0000\n"
 "PO-Revision-Date: 2024-11-18 15:26+0000\n"
 "Last-Translator: Ichnilatis <sophronios.sp@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -142,6 +142,7 @@ msgstr ""
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
 #: frontend/apps/filemanager/filemanagerutil.lua:344
 #: plugins/opds.koplugin/opdsbrowser.lua:642
+#: plugins/texteditor.koplugin/main.lua:355
 msgid "Choose folder"
 msgstr "Επιλογή φακέλου"
 
@@ -152,7 +153,7 @@ msgstr "Αλλαγή ονόματος αρχείου"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:260
 #: plugins/opds.koplugin/opdsbrowser.lua:658
-#: plugins/texteditor.koplugin/main.lua:364
+#: plugins/texteditor.koplugin/main.lua:350
 msgid "Enter filename"
 msgstr "Εισαγάγετε το όνομα του αρχείου"
 
@@ -166,8 +167,8 @@ msgstr "Εισαγάγετε το όνομα του αρχείου"
 #: frontend/apps/filemanager/filemanager.lua:1001
 #: frontend/apps/filemanager/filemanager.lua:1129
 #: frontend/apps/filemanager/filemanager.lua:1458
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:498
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:644
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:513
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:659
 #: frontend/apps/filemanager/filemanagercollection.lua:503
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
@@ -239,7 +240,7 @@ msgstr "Εισαγάγετε το όνομα του αρχείου"
 #: plugins/statistics.koplugin/main.lua:2548
 #: plugins/terminal.koplugin/aliases.lua:100
 #: plugins/terminal.koplugin/main.lua:643
-#: plugins/texteditor.koplugin/main.lua:368
+#: plugins/texteditor.koplugin/main.lua:371
 #: plugins/vocabbuilder.koplugin/main.lua:1173
 #: plugins/vocabbuilder.koplugin/main.lua:1563
 #: plugins/vocabbuilder.koplugin/main.lua:1854
@@ -276,6 +277,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:361
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:772
 #: frontend/ui/widget/pathchooser.lua:140
 msgid "Choose"
 msgstr "Επιλογή"
@@ -291,9 +293,10 @@ msgid "Info"
 msgstr "Πληροφορίες"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:387
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:804
 #: plugins/opds.koplugin/opdsbrowser.lua:835
 #: plugins/statistics.koplugin/main.lua:1288
-#: plugins/texteditor.koplugin/main.lua:375
+#: plugins/texteditor.koplugin/main.lua:378
 #: plugins/vocabbuilder.koplugin/main.lua:242
 msgid "Edit"
 msgstr "Επεξεργασία"
@@ -431,11 +434,12 @@ msgstr "Μεταφόρτωση…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:665
 #: frontend/apps/filemanager/filemanager.lua:1008
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:785
 #: frontend/apps/reader/modules/readerhandmade.lua:501
 #: frontend/ui/wikipedia.lua:1542
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:610
 #: plugins/statistics.koplugin/main.lua:332
-#: plugins/texteditor.koplugin/main.lua:417
+#: plugins/texteditor.koplugin/main.lua:416
 msgid "Create"
 msgstr "Δημιουργία"
 
@@ -549,7 +553,7 @@ msgstr "Φάκελος Dropbox (/ για root)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:505
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:520
 #: frontend/apps/filemanager/filemanagercollection.lua:510
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
@@ -837,7 +841,7 @@ msgstr "Επιλογή όλων των αρχείων του φακέλου"
 #: frontend/apps/filemanager/filemanager.lua:543
 #: frontend/apps/filemanager/filemanager.lua:924
 #: frontend/apps/filemanager/filemanager.lua:1193
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:722
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:890
 msgid "Move"
 msgstr "Μετακίνηση"
 
@@ -914,7 +918,7 @@ msgstr "Θέλετε να ανοίξετε το %1;"
 #: frontend/apps/filemanager/filemanager.lua:1465
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:362
 #: frontend/ui/widget/textviewer.lua:694 frontend/ui/widget/touchmenu.lua:1255
-#: plugins/texteditor.koplugin/main.lua:452
+#: plugins/texteditor.koplugin/main.lua:451
 msgid "Open"
 msgstr "Άνοιγμα"
 
@@ -1122,81 +1126,81 @@ msgstr "Άνοιγμα \"%1\" με:"
 msgid "Classic (filename only)"
 msgstr "Κλασικός (μόνο όνομα αρχείου)"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:28
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:29
 #: frontend/apps/filemanager/filemanagerutil.lua:261
-#: frontend/dispatcher.lua:186 plugins/opds.koplugin/opdsbrowser.lua:700
+#: frontend/dispatcher.lua:187 plugins/opds.koplugin/opdsbrowser.lua:700
 msgid "Book information"
 msgstr "Πληροφορίες βιβλίου"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:39
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
 msgid "Cover image:"
 msgstr "Εικόνα εξωφύλλου:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
 #: plugins/calibre.koplugin/search.lua:145
 msgid "Title:"
 msgstr "Τίτλος:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
 msgstr "Συγγραφέας/-είς:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
 #: plugins/calibre.koplugin/search.lua:154
 msgid "Series:"
 msgstr "Σειρά:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
 msgid "Series index:"
 msgstr "Αύξοντας αριθμός:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
 msgid "Language:"
 msgstr "Γλώσσα:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
 msgid "Keywords:"
 msgstr "Λέξεις κλειδιά:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
 msgid "Description:"
 msgstr "Περιγραφή:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:48
 msgid "Pages:"
 msgstr "Σελίδες:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:82
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:92
 msgid "Filename:"
 msgstr "Όνομα αρχείου:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:83
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:93
 msgid "Format:"
 msgstr "Μορφή:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:84
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:94
 #: plugins/calibre.koplugin/search.lua:147
 msgid "Size:"
 msgstr "Μέγεθος:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:85
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:95
 msgid "File date:"
 msgstr "Ημερομηνία αρχείου:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:86
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:96
 msgid "Folder:"
 msgstr "Φάκελος:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:100
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:110
 msgid "Tap to display"
 msgstr "Πατήστε για εμφάνιση"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:120
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:156
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:749
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:750
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:130
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:166
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:917
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:918
 #: frontend/apps/reader/modules/readerfooter.lua:1998
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/screensaver.lua:97
@@ -1215,59 +1219,64 @@ msgstr "Πατήστε για εμφάνιση"
 msgid "N/A"
 msgstr "Δ/Υ"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:161
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:171
 msgid "number of lines and words not available"
 msgstr "αριθμός γραμμών και λέξεων μη διαθέσιμος"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 msgid "1 line"
 msgid_plural "%1 lines"
 msgstr[0] "1 γραμμή"
 msgstr[1] "%1 γραμμές"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 msgid "1 word"
 msgid_plural "%1 words"
 msgstr[0] "1 λέξη"
 msgstr[1] "%1 λέξεις"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:163
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:173
 msgid "Current page:"
 msgstr "Τρέχουσα σελίδα:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:182
 msgid "Rating:"
 msgstr "Αξιολόγηση:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
 msgid "Review:"
 msgstr "Κριτική:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:337
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:192
+#, fuzzy
+msgid "Notebook file:"
+msgstr "Εισαγάγετε τίτλο βιβλίου:"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:352
 msgid "No book description available."
 msgstr "Δεν υπάρχει διαθέσιμη περιγραφή βιβλίου."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:354
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:369
 msgid "No cover image available."
 msgstr "Δεν υπάρχει διαθέσιμη εικόνα εξωφύλλου."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:491
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:506
 msgid "Edit book metadata:"
 msgstr "Επεξεργασία μεταδεδομένων βιβλίου:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:543
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:558
 msgid "Copy original"
 msgstr "Αντιγραφή αρχικών δεδομένων"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:551
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:566
 msgid "View original"
 msgstr "Προβολή αρχικών δεδομένων"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:564
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:579
 msgid "Reset custom"
 msgstr "Επαναφορά αρχικών δεδομένων"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:568
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:583
 msgid ""
 "Reset custom cover?\n"
 "Image file will be deleted."
@@ -1275,11 +1284,11 @@ msgstr ""
 "Να γίνει επαναφορά του αρχικού εξωφύλλου;\n"
 "Το αρχείο εικόνας του προσαρμοσμένου εξωφύλλου θα διαγραφεί."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:569
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
 msgid "Reset custom book metadata field?"
 msgstr "Να γίνει επαναφορά του πεδίου προσαρμοσμένων μεταδεδομένων βιβλίου;"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:570
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:585
 #: frontend/apps/filemanager/filemanagerutil.lua:186
 #: frontend/apps/filemanager/filemanagerutil.lua:196
 #: frontend/apps/reader/modules/readermenu.lua:203
@@ -1290,42 +1299,83 @@ msgstr "Να γίνει επαναφορά του πεδίου προσαρμο�
 msgid "Reset"
 msgstr "Επαναφορά"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:599
 msgid "Set custom"
 msgstr "Ορισμός προσαρμοσμένων δεδομένων"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:598
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:613
 msgid "Book metadata:"
 msgstr "Μεταδεδομένα βιβλίου:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:636
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
 msgid "Edit book review"
 msgstr "Επεξεργασία κριτικής βιβλίου"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:666
 #: frontend/ui/widget/bookstatuswidget.lua:558
 msgid "Save review"
 msgstr "Αποθήκευση κριτικής"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:707
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:734
+#: frontend/apps/filemanager/filemanagerutil.lua:374
+msgid "Use default"
+msgstr "Χρήση προεπιλογής"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:742
+#, fuzzy
+msgid "Reset default"
+msgstr "Χρήση προεπιλογής"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:747
+#, fuzzy
+msgid "Notebook file default location reset"
+msgstr "Σχετικά με την τοποθεσία μεταδεδομένων βιβλίων"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:753
+#, fuzzy
+msgid "Use local"
+msgstr "Χρήση δείγματος"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:761
+#: frontend/ui/widget/configdialog.lua:1238
+#: frontend/ui/widget/configdialog.lua:1249
+#: frontend/ui/widget/configdialog.lua:1334
+#: frontend/ui/widget/configdialog.lua:1344
+#: frontend/ui/widget/configdialog.lua:1414
+#: frontend/ui/widget/configdialog.lua:1452
+msgid "Set as default"
+msgstr "Ορισμός ως προεπιλογής"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:766
+#, fuzzy
+msgid "Notebook file default location saved"
+msgstr "Σχετικά με την τοποθεσία μεταδεδομένων βιβλίων"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:796
+#: frontend/ui/widget/screenshoter.lua:77
+#: plugins/archiveviewer.koplugin/main.lua:207
+msgid "View"
+msgstr "Προβολή"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:875
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr ""
 "Να γίνει σάρωση βιβλίων στον τρέχοντα φάκελο και τους υποφακέλους για τη "
 "θέση των μεταδεδομένων τους;"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:708
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:876
 #: plugins/calibre.koplugin/search.lua:518
 msgid "Scan"
 msgstr "Σάρωση"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:714
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:882
 msgid "No books with metadata not in your preferred location found."
 msgstr ""
 "Δεν βρέθηκαν βιβλία με μεταδεδομένα που δεν βρίσκονται στην προτιμώμενη "
 "τοποθεσία σας."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:718
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:886
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
@@ -1335,12 +1385,12 @@ msgstr[1] ""
 "Βρέθηκαν %1 βιβλία με μεταδεδομένα που δεν βρίσκονται στην προτιμώμενη "
 "τοποθεσία σας."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:721
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:889
 msgid "Move book metadata to your preferred location?"
 msgstr ""
 "Να μετακινηθούν τα μεταδεδομένα του βιβλίου στην προτιμώμενη τοποθεσία;"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:737
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:905
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
 "based storage may slow down file browser navigation in large directories. "
@@ -1358,7 +1408,7 @@ msgstr ""
 "αποθήκευσης ή να διαγράψετε τον %1, γεγονός που θα επιταχύνει την περιήγηση "
 "στον Περιηγητή αρχείων."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:751
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:919
 msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
@@ -1366,7 +1416,7 @@ msgstr ""
 "%1. Τίτλος: %2, Συγγραφέας: %3\n"
 "Έγγραφο: %4"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:756
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:924
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "1 έγγραφο με μεταδεδομένα βασισμένα σε κατακερματισμό"
@@ -1531,7 +1581,7 @@ msgstr "Δεν υπάρχουν αποτελέσματα για το \"%1\"."
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:236
 #: frontend/apps/filemanager/filemanagermenu.lua:799
-#: frontend/dispatcher.lua:137 frontend/ui/widget/menu.lua:794
+#: frontend/dispatcher.lua:138 frontend/ui/widget/menu.lua:794
 msgid "File search"
 msgstr "Αναζήτηση αρχείου"
 
@@ -1843,12 +1893,12 @@ msgstr "Στοιχεία καταλόγων πληροφοριών ανά σελ
 
 #: frontend/apps/filemanager/filemanagermenu.lua:432
 #: frontend/apps/reader/modules/readerbookmark.lua:233
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 msgid "Reverse sorting"
 msgstr "Αντίστροφη ταξινόμηση"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:442
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Folders and files mixed"
 msgstr "Φάκελοι και αρχεία ανάμεικτα"
 
@@ -1996,7 +2046,7 @@ msgstr ""
 "Πατήστε ένα βιβλίο στα αποτελέσματα αναζήτησης για να το ανοίξετε."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:813
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 msgid "Last file search results"
 msgstr "Αποτελέσματα τελευταίας αναζήτησης αρχείου"
 
@@ -2130,7 +2180,7 @@ msgstr ""
 "Είστε σίγουροι ότι θέλετε να συνεχίσετε;"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:12
-#: frontend/dispatcher.lua:136 frontend/ui/widget/pathchooser.lua:162
+#: frontend/dispatcher.lua:137 frontend/ui/widget/pathchooser.lua:162
 msgid "Folder shortcuts"
 msgstr "Συντομεύσεις φακέλων"
 
@@ -2213,12 +2263,12 @@ msgid "Show folder"
 msgstr "Εμφάνιση φακέλου"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:274
-#: frontend/dispatcher.lua:188 plugins/opds.koplugin/opdsbrowser.lua:693
+#: frontend/dispatcher.lua:189 plugins/opds.koplugin/opdsbrowser.lua:693
 msgid "Book cover"
 msgstr "Εξώφυλλο βιβλίου"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:287
-#: frontend/dispatcher.lua:187
+#: frontend/dispatcher.lua:188
 msgid "Book description"
 msgstr "Περιγραφή βιβλίου"
 
@@ -2243,10 +2293,6 @@ msgstr "Η δέσμη ενεργειών επέστρεψε έναν μη μηδ
 #: frontend/apps/filemanager/filemanagerutil.lua:344
 msgid "Choose file"
 msgstr "Επιλογή αρχείου"
-
-#: frontend/apps/filemanager/filemanagerutil.lua:374
-msgid "Use default"
-msgstr "Χρήση προεπιλογής"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:384
 #: frontend/ui/data/optionsutil.lua:175
@@ -2280,7 +2326,7 @@ msgstr "σελιδοδείκτες"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:79
 #: frontend/apps/reader/modules/readerbookmark.lua:107
-#: frontend/dispatcher.lua:181
+#: frontend/dispatcher.lua:182
 msgid "Bookmarks"
 msgstr "Επισημειώσεις"
 
@@ -2353,7 +2399,7 @@ msgid "Show separator between items"
 msgstr "Εμφάνιση διαχωριστικού μεταξύ των στοιχείων"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:246
-#: frontend/dispatcher.lua:182
+#: frontend/dispatcher.lua:183
 msgid "Bookmark search"
 msgstr "Αναζήτηση επισημειώσεων"
 
@@ -2443,7 +2489,7 @@ msgid "Current page"
 msgstr "Τρέχουσα σελίδα"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:923
-#: frontend/dispatcher.lua:163
+#: frontend/dispatcher.lua:164
 msgid "Latest bookmark"
 msgstr "Τελευταία επισημείωση"
 
@@ -2756,7 +2802,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:223
 #: frontend/apps/reader/modules/readerdictionary.lua:956
-#: frontend/dispatcher.lua:61 plugins/vocabbuilder.koplugin/main.lua:2040
+#: frontend/dispatcher.lua:62 plugins/vocabbuilder.koplugin/main.lua:2040
 msgid "Dictionary lookup"
 msgstr "Αναζήτηση στο λεξικό"
 
@@ -3889,7 +3935,7 @@ msgid "Right"
 msgstr "Δεξιά"
 
 #: frontend/apps/reader/modules/readergoto.lua:17
-#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:157
+#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:158
 #: frontend/ui/widget/keyvaluepage.lua:411 frontend/ui/widget/menu.lua:773
 #: frontend/ui/widget/sortwidget.lua:255
 #: plugins/statistics.koplugin/calendarview.lua:620
@@ -3897,7 +3943,7 @@ msgstr "Δεξιά"
 msgid "Go to page"
 msgstr "Μετάβαση στη σελίδα"
 
-#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:158
+#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:159
 msgid "Skim document"
 msgstr "Γρήγορο ξεφύλλισμα"
 
@@ -4185,9 +4231,9 @@ msgstr "Εγγραφή των επισημάνσεων στο PDF: %1"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:670 frontend/ui/data/creoptions.lua:683
 #: frontend/ui/data/creoptions.lua:695 frontend/ui/data/creoptions.lua:734
@@ -4202,9 +4248,9 @@ msgstr "ναι"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:339 frontend/ui/data/creoptions.lua:356
 #: frontend/ui/data/creoptions.lua:647 frontend/ui/data/creoptions.lua:670
@@ -4274,7 +4320,7 @@ msgstr "Επιλογή και επισήμανση"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:375
 #: frontend/apps/reader/modules/readersearch.lua:190
-#: frontend/dispatcher.lua:175
+#: frontend/dispatcher.lua:176
 msgid "Fulltext search"
 msgstr "Αναζήτηση πλήρους κειμένου"
 
@@ -4534,7 +4580,7 @@ msgid "Selection on text"
 msgstr "Επιλογή σε κείμενο"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:872
-#: frontend/dispatcher.lua:190
+#: frontend/dispatcher.lua:191
 msgid "Translate current page"
 msgstr "Μετάφραση τρέχουσας σελίδας"
 
@@ -5518,7 +5564,7 @@ msgid "Results per page"
 msgstr "Αποτελέσματα ανά σελίδα"
 
 #: frontend/apps/reader/modules/readersearch.lua:196
-#: frontend/dispatcher.lua:176
+#: frontend/dispatcher.lua:177
 msgid "Last fulltext search results"
 msgstr "Τελευταία αποτελέσματα αναζήτησης πλήρους κειμένου"
 
@@ -5578,7 +5624,7 @@ msgid "Current page: %1"
 msgstr "Τρέχουσα σελίδα: %1"
 
 #: frontend/apps/reader/modules/readerstatus.lua:19
-#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:185
+#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:186
 #: frontend/ui/elements/common_settings_menu_table.lua:683
 msgid "Book status"
 msgstr "Κατάσταση βιβλίου"
@@ -5603,12 +5649,12 @@ msgstr "Άνοιγμα επόμενου αρχείου"
 
 #: frontend/apps/reader/modules/readerstatus.lua:103
 #: frontend/ui/elements/common_settings_menu_table.lua:684
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Delete file"
 msgstr "Διαγραφή αρχείου"
 
 #: frontend/apps/reader/modules/readerstatus.lua:110 frontend/dispatcher.lua:59
-#: frontend/dispatcher.lua:960 plugins/httpinspector.koplugin/main.lua:1043
+#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1043
 msgid "File browser"
 msgstr "Περιηγητής αρχείων"
 
@@ -6207,16 +6253,16 @@ msgid "Book tweak saved (not enabled)."
 msgstr "Η τροποποίηση του βιβλίου αποθηκεύτηκε (δεν ενεργοποιήθηκε)."
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:79
-#: frontend/dispatcher.lua:178 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
 msgid "Book map"
 msgstr "Χάρτης βιβλίου"
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:93
-#: frontend/dispatcher.lua:180 frontend/ui/widget/pagebrowserwidget.lua:35
+#: frontend/dispatcher.lua:181 frontend/ui/widget/pagebrowserwidget.lua:35
 msgid "Page browser"
 msgstr "Περιήγηση σελίδων"
 
-#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:177
+#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:178
 msgid "Table of contents"
 msgstr "Πίνακας περιεχομένων"
 
@@ -7254,7 +7300,7 @@ msgstr "Αναζήτηση στη Βικιπαίδεια"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:82
 #: frontend/apps/reader/modules/readerwikipedia.lua:399
-#: frontend/dispatcher.lua:62
+#: frontend/dispatcher.lua:63
 msgid "Wikipedia lookup"
 msgstr "Αναζήτηση στη Βικιπαίδεια"
 
@@ -8118,7 +8164,7 @@ msgstr "Επανεκκίνηση"
 msgid "Are you sure you want to power off the device?"
 msgstr "Θέλετε σίγουρα να απενεργοποιήσετε τη συσκευή;"
 
-#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:75
+#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:76
 #: frontend/ui/elements/common_exit_menu_table.lua:51
 msgid "Power off"
 msgstr "Απενεργοποίηση"
@@ -8153,492 +8199,497 @@ msgstr "Πρόοδος ανάγνωσης"
 msgid "History search"
 msgstr "Αναζήτηση ιστορικού"
 
-#: frontend/dispatcher.lua:64
+#: frontend/dispatcher.lua:60
+#, fuzzy
+msgid "Notebook file"
+msgstr "φάκελος βιβλίου"
+
+#: frontend/dispatcher.lua:65
 msgid "Show menu"
 msgstr "Εμφάνιση μενού"
 
-#: frontend/dispatcher.lua:65
+#: frontend/dispatcher.lua:66
 #: frontend/ui/elements/common_info_menu_table.lua:39
 msgid "Menu search"
 msgstr "Αναζήτηση μενού"
 
-#: frontend/dispatcher.lua:66
+#: frontend/dispatcher.lua:67
 msgid "Screenshot"
 msgstr "Στιγμιότυπο οθόνης"
 
-#: frontend/dispatcher.lua:70
+#: frontend/dispatcher.lua:71
 msgid "Exit sleep screen"
 msgstr "Έξοδος από την οθόνη αναστολής λειτουργίας"
 
-#: frontend/dispatcher.lua:71 frontend/ui/elements/mass_storage.lua:43
+#: frontend/dispatcher.lua:72 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
 msgstr "Εκκίνηση αποθήκευσης USB"
 
-#: frontend/dispatcher.lua:72
+#: frontend/dispatcher.lua:73
 #: frontend/ui/elements/common_exit_menu_table.lua:34
 msgid "Sleep"
 msgstr "Αναστολή λειτουργίας"
 
-#: frontend/dispatcher.lua:73
+#: frontend/dispatcher.lua:74
 #: frontend/ui/elements/common_exit_menu_table.lua:22
 msgid "Restart KOReader"
 msgstr "Επανεκκίνηση του KOReader"
 
-#: frontend/dispatcher.lua:74
+#: frontend/dispatcher.lua:75
 #: frontend/ui/elements/common_exit_menu_table.lua:42
 msgid "Reboot the device"
 msgstr "Επανεκκίνηση της συσκευής"
 
-#: frontend/dispatcher.lua:76
+#: frontend/dispatcher.lua:77
 msgid "Exit KOReader"
 msgstr "Έξοδος από το KOReader"
 
-#: frontend/dispatcher.lua:78
+#: frontend/dispatcher.lua:79
 msgid "Toggle long-press on corners"
 msgstr "Εναλλαγή παρατεταμένου πατήματος στις γωνίες"
 
-#: frontend/dispatcher.lua:79
+#: frontend/dispatcher.lua:80
 msgid "Enable touch input"
 msgstr "Ενεργοποίηση εισαγωγής αφής"
 
-#: frontend/dispatcher.lua:80
+#: frontend/dispatcher.lua:81
 msgid "Disable touch input"
 msgstr "Απενεργοποίηση εισαγωγής αφής"
 
-#: frontend/dispatcher.lua:81
+#: frontend/dispatcher.lua:82
 msgid "Toggle touch input"
 msgstr "Εναλλαγή εισαγωγής αφής"
 
-#: frontend/dispatcher.lua:83 frontend/ui/elements/physical_buttons.lua:28
+#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:28
 msgid "Invert left-side page-turn buttons"
 msgstr "Αντιστροφή των κουμπιών αλλαγής σελίδας της αριστερής πλευράς"
 
-#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:40
+#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:40
 msgid "Invert right-side page-turn buttons"
 msgstr "Αντιστροφή των κουμπιών αλλαγής σελίδας της δεξιάς πλευράς"
 
-#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:11
+#: frontend/dispatcher.lua:86 frontend/ui/elements/physical_buttons.lua:11
 msgid "Invert page-turn buttons"
 msgstr "Αντιστροφή κουμπιών αλλαγής σελίδας"
 
-#: frontend/dispatcher.lua:87
+#: frontend/dispatcher.lua:88
 msgid "Toggle key repeat"
 msgstr "Εναλλαγή επανάληψης πλήκτρου"
 
-#: frontend/dispatcher.lua:88
+#: frontend/dispatcher.lua:89
 msgid "Toggle accelerometer"
 msgstr "Εναλλαγή επιταχυνσιόμετρου"
 
-#: frontend/dispatcher.lua:89
+#: frontend/dispatcher.lua:90
 msgid "Enable accelerometer for 5 seconds"
 msgstr "Ενεργοποίηση του επιταχυνσιόμετρου για 5 δευτερόλεπτα"
 
-#: frontend/dispatcher.lua:90
+#: frontend/dispatcher.lua:91
 #: frontend/ui/elements/screen_rotation_menu_table.lua:46
 msgid "Lock auto rotation to current orientation"
 msgstr "Κλείδωμα αυτόματης περιστροφής στον τρέχοντα προσανατολισμό"
 
-#: frontend/dispatcher.lua:91
+#: frontend/dispatcher.lua:92
 msgid "Toggle orientation"
 msgstr "Εναλλαγή προσανατολισμού"
 
-#: frontend/dispatcher.lua:92
+#: frontend/dispatcher.lua:93
 msgid "Invert rotation"
 msgstr "Αντιστροφή περιστροφής"
 
-#: frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:94
 msgid "Rotate by 90° CW"
 msgstr "Περιστροφή 90° δεξιόστροφα"
 
-#: frontend/dispatcher.lua:94
+#: frontend/dispatcher.lua:95
 msgid "Rotate by 90° CCW"
 msgstr "Περιστροφή κατά 90° δεξιόστροφα"
 
-#: frontend/dispatcher.lua:96
+#: frontend/dispatcher.lua:97
 msgid "Turn on Wi-Fi"
 msgstr "Ενεργοποίηση Wi-Fi"
 
-#: frontend/dispatcher.lua:97
+#: frontend/dispatcher.lua:98
 msgid "Turn off Wi-Fi"
 msgstr "Απενεργοποίηση Wi-Fi"
 
-#: frontend/dispatcher.lua:98
+#: frontend/dispatcher.lua:99
 msgid "Toggle Wi-Fi"
 msgstr "Εναλλαγή Wi-Fi"
 
-#: frontend/dispatcher.lua:99
+#: frontend/dispatcher.lua:100
 msgid "Toggle Fullscreen"
 msgstr "Εναλλαγή πλήρους οθόνης"
 
-#: frontend/dispatcher.lua:100
+#: frontend/dispatcher.lua:101
 msgid "Show network info"
 msgstr "Εμφάνιση πληροφοριών δικτύου"
 
-#: frontend/dispatcher.lua:104
+#: frontend/dispatcher.lua:105
 msgid "Show frontlight dialog"
 msgstr "Εμφάνιση διαλόγου φωτισμού"
 
-#: frontend/dispatcher.lua:105
+#: frontend/dispatcher.lua:106
 msgid "Toggle frontlight"
 msgstr "Εναλλαγή εμπρόσθιου φωτισμού"
 
-#: frontend/dispatcher.lua:106
+#: frontend/dispatcher.lua:107
 msgid "Set frontlight brightness"
 msgstr "Ρύθμιση φωτεινότητας εμπρόσθιου φωτισμού"
 
-#: frontend/dispatcher.lua:107
+#: frontend/dispatcher.lua:108
 msgid "Increase frontlight brightness"
 msgstr "Αύξηση φωτεινότητας εμπρόσθιου φωτισμού"
 
-#: frontend/dispatcher.lua:108
+#: frontend/dispatcher.lua:109
 msgid "Decrease frontlight brightness"
 msgstr "Μείωση φωτεινότητας εμπρόσθιου φωτισμού"
 
-#: frontend/dispatcher.lua:109
+#: frontend/dispatcher.lua:110
 msgid "Set frontlight warmth"
 msgstr "Ρύθμιση θερμού φωτισμού"
 
-#: frontend/dispatcher.lua:110
+#: frontend/dispatcher.lua:111
 msgid "Increase frontlight warmth"
 msgstr "Αύξηση θερμού φωτισμού"
 
-#: frontend/dispatcher.lua:111
+#: frontend/dispatcher.lua:112
 msgid "Decrease frontlight warmth"
 msgstr "Μείωση θερμού φωτισμού"
 
-#: frontend/dispatcher.lua:112
+#: frontend/dispatcher.lua:113
 msgid "Toggle night mode"
 msgstr "Εναλλαγή νυχτερινής λειτουργίας"
 
-#: frontend/dispatcher.lua:113
+#: frontend/dispatcher.lua:114
 msgid "Set night mode"
 msgstr "Νυχτερινή λειτουργία"
 
-#: frontend/dispatcher.lua:115
+#: frontend/dispatcher.lua:116
 msgid "Full screen refresh"
 msgstr "Πλήρης ανανέωση οθόνης"
 
-#: frontend/dispatcher.lua:116
+#: frontend/dispatcher.lua:117
 msgid "Full refresh rate (always)"
 msgstr "Ρυθμός πλήρους ανανέωσης (πάντα)"
 
-#: frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:118
 msgid "Full refresh rate (not in night mode)"
 msgstr "Ανανέωση οθόνης (όχι στη νυχτερινή λειτουργία)"
 
-#: frontend/dispatcher.lua:118
+#: frontend/dispatcher.lua:119
 msgid "Full refresh rate (in night mode)"
 msgstr "Ανανέωση οθόνης (σε νυχτερινή λειτουργία)"
 
-#: frontend/dispatcher.lua:119 frontend/ui/elements/refresh_menu_table.lua:109
+#: frontend/dispatcher.lua:120 frontend/ui/elements/refresh_menu_table.lua:109
 msgid "Always flash on chapter boundaries"
 msgstr "Πάντα ανανέωση οθόνης κατά την αλλαγή κεφαλαίου"
 
-#: frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:121
 msgid "Toggle flashing on chapter boundaries"
 msgstr "Εναλλαγή ανανέωσης κατά την αλλαγή κεφαλαίου"
 
-#: frontend/dispatcher.lua:121
+#: frontend/dispatcher.lua:122
 msgid "Never flash on chapter's 2nd page"
 msgstr "Αποτροπή ανανέωσης οθόνης στη 2η σελίδα του κεφαλαίου"
 
-#: frontend/dispatcher.lua:122
+#: frontend/dispatcher.lua:123
 msgid "Toggle flashing on chapter's 2nd page"
 msgstr "Εναλλαγή ανανέωσης οθόνης στην 2η σελίδα του κεφαλαίου"
 
-#: frontend/dispatcher.lua:123 frontend/ui/elements/refresh_menu_table.lua:120
+#: frontend/dispatcher.lua:124 frontend/ui/elements/refresh_menu_table.lua:120
 msgid "Always flash on pages with images"
 msgstr "Πάντα ανανέωση οθόνης σε σελίδες με εικόνες"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 msgid "Toggle flashing on pages with images"
 msgstr "Εναλλαγή ανανέωσης οθόνης σε σελίδες με εικόνες"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 msgid "Set display mode"
 msgstr "Ορισμός τρόπου προβολής"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 msgid "Sort by"
 msgstr "Ταξινόμηση κατά"
 
-#: frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:134
 msgid "Show plus menu"
 msgstr "Εμφάνιση επιπλέον μενού"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Toggle select mode"
 msgstr "Εναλλαγή λειτουργίας επιλογής"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Refresh content"
 msgstr "Ανανέωση περιεχομένου"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Folder up"
 msgstr "Γονικός φάκελος"
 
-#: frontend/dispatcher.lua:145
+#: frontend/dispatcher.lua:146
 msgid "Open next document in folder"
 msgstr "Άνοιγμα επόμενου εγγράφου στον φάκελο"
 
-#: frontend/dispatcher.lua:147
+#: frontend/dispatcher.lua:148
 msgid "Show bottom menu"
 msgstr "Εμφάνιση κάτω μενού"
 
-#: frontend/dispatcher.lua:148
+#: frontend/dispatcher.lua:149
 msgid "Toggle status bar"
 msgstr "Ενεργοποίηση / απενεργοποίηση γραμμής κατάστασης"
 
-#: frontend/dispatcher.lua:149
+#: frontend/dispatcher.lua:150
 msgid "Toggle chapter progress bar"
 msgstr "Εναλλαγή της γραμμής προόδου κεφαλαίου"
 
-#: frontend/dispatcher.lua:151
+#: frontend/dispatcher.lua:152
 msgid "Previous chapter"
 msgstr "Προηγούμενο κεφάλαιο"
 
-#: frontend/dispatcher.lua:152
+#: frontend/dispatcher.lua:153
 msgid "Next chapter"
 msgstr "Επόμενο κεφάλαιο"
 
-#: frontend/dispatcher.lua:153
+#: frontend/dispatcher.lua:154
 msgid "First page"
 msgstr "Πρώτη σελίδα"
 
-#: frontend/dispatcher.lua:154
+#: frontend/dispatcher.lua:155
 msgid "Last page"
 msgstr "Τελευταία σελίδα"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 msgid "Random page"
 msgstr "Τυχαία σελίδα"
 
-#: frontend/dispatcher.lua:156
+#: frontend/dispatcher.lua:157
 msgid "Turn pages"
 msgstr "Αλλαγή σελίδων"
 
-#: frontend/dispatcher.lua:159
+#: frontend/dispatcher.lua:160
 msgid "Previous bookmark"
 msgstr "Προηγούμενη επισημείωση"
 
-#: frontend/dispatcher.lua:160
+#: frontend/dispatcher.lua:161
 msgid "Next bookmark"
 msgstr "Επόμενη επισημείωση"
 
-#: frontend/dispatcher.lua:161
+#: frontend/dispatcher.lua:162
 msgid "First bookmark"
 msgstr "Πρώτος σελιδοδείκτης"
 
-#: frontend/dispatcher.lua:162
+#: frontend/dispatcher.lua:163
 msgid "Last bookmark"
 msgstr "Τελευταίος σελιδοδείκτης"
 
-#: frontend/dispatcher.lua:165
+#: frontend/dispatcher.lua:166
 msgid "Back"
 msgstr "Επιστροφή"
 
-#: frontend/dispatcher.lua:166
+#: frontend/dispatcher.lua:167
 msgid "Back to previous location"
 msgstr "Επιστροφή στην προηγούμενη τοποθεσία"
 
-#: frontend/dispatcher.lua:167
+#: frontend/dispatcher.lua:168
 msgid "Forward to next location"
 msgstr "Μετάβαση στην επόμενη τοποθεσία"
 
-#: frontend/dispatcher.lua:168
+#: frontend/dispatcher.lua:169
 msgid "Follow nearest link"
 msgstr "Παρακολούθηση πλησιέστερου συνδέσμου"
 
-#: frontend/dispatcher.lua:169
+#: frontend/dispatcher.lua:170
 msgid "Follow nearest internal link"
 msgstr "Παρακολούθηση πλησιέστερου εσωτερικού συνδέσμου"
 
-#: frontend/dispatcher.lua:170
+#: frontend/dispatcher.lua:171
 msgid "Select previous link in current page"
 msgstr "Επιλογή προηγούμενου συνδέσμου στην τρέχουσα σελίδα"
 
-#: frontend/dispatcher.lua:171
+#: frontend/dispatcher.lua:172
 msgid "Select next link in current page"
 msgstr "Επιλογή επόμενου συνδέσμου στην τρέχουσα σελίδα"
 
-#: frontend/dispatcher.lua:172
+#: frontend/dispatcher.lua:173
 msgid "Add current location to history"
 msgstr "Προσθήκη τρέχουσας τοποθεσίας στο ιστορικό"
 
-#: frontend/dispatcher.lua:173
+#: frontend/dispatcher.lua:174
 msgid "Clear location history"
 msgstr "Εκκαθάριση ιστορικού τοποθεσιών"
 
-#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:180 frontend/ui/widget/bookmapwidget.lua:707
 msgid "Book map (overview)"
 msgstr "Χάρτης βιβλίου (επισκόπηση)"
 
-#: frontend/dispatcher.lua:183
+#: frontend/dispatcher.lua:184
 msgid "Toggle bookmark"
 msgstr "Εναλλαγή σελιδοδείκτη"
 
-#: frontend/dispatcher.lua:192
+#: frontend/dispatcher.lua:193
 msgid "Toggle page turn animations"
 msgstr "Εναλλαγή της κίνησης αλλαγής σελίδας"
 
-#: frontend/dispatcher.lua:193
+#: frontend/dispatcher.lua:194
 msgid "Toggle page turn direction"
 msgstr "Εναλλαγή της κατεύθυνσης αλλαγής της σελίδας"
 
-#: frontend/dispatcher.lua:194
+#: frontend/dispatcher.lua:195
 msgid "Toggle custom TOC"
 msgstr "Εναλλαγή προσαρμοσμένου Πίνακα περιεχομένων"
 
-#: frontend/dispatcher.lua:195
+#: frontend/dispatcher.lua:196
 msgid "Toggle custom hidden flows"
 msgstr "Ενεργοποίηση/απενεργοποίηση προσαρμοσμένων κρυφών ροών κειμένου"
 
-#: frontend/dispatcher.lua:197
+#: frontend/dispatcher.lua:198
 msgid "Set highlight action"
 msgstr "Ορισμός ενέργειας επισήμανσης"
 
-#: frontend/dispatcher.lua:198
+#: frontend/dispatcher.lua:199
 msgid "Cycle highlight action"
 msgstr "Ανακύκληση ενέργειας επισήμανσης"
 
-#: frontend/dispatcher.lua:199
+#: frontend/dispatcher.lua:200
 msgid "Cycle highlight style"
 msgstr "Ανακύκληση τρόπου επισήμανσης"
 
-#: frontend/dispatcher.lua:201
+#: frontend/dispatcher.lua:202
 msgid "Save book metadata"
 msgstr "Αποθήκευση μεταδεδομένων βιβλίου"
 
-#: frontend/dispatcher.lua:205
+#: frontend/dispatcher.lua:206
 msgid "Font face"
 msgstr "Γραμματοσειρά"
 
-#: frontend/dispatcher.lua:206
+#: frontend/dispatcher.lua:207
 msgid "Increase font size"
 msgstr "Αύξηση μεγέθους γραμματοσειράς"
 
-#: frontend/dispatcher.lua:207
+#: frontend/dispatcher.lua:208
 msgid "Decrease font size"
 msgstr "Μείωση μεγέθους γραμματοσειράς"
 
-#: frontend/dispatcher.lua:210
+#: frontend/dispatcher.lua:211
 msgid "Toggle page flipping"
 msgstr "Εναλλαγή λειτουργίας ξεφυλλίσματος"
 
-#: frontend/dispatcher.lua:211
+#: frontend/dispatcher.lua:212
 msgid "Toggle bookmark flipping"
 msgstr "Εναλλαγή περιήγησης σελιδοδεικτών"
 
-#: frontend/dispatcher.lua:212
+#: frontend/dispatcher.lua:213
 msgid "Toggle reflow"
 msgstr "Ενεργοποίηση / απενεργοποίηση αναδιάταξης κειμένου"
 
-#: frontend/dispatcher.lua:213
+#: frontend/dispatcher.lua:214
 msgid "Zoom mode"
 msgstr "Λειτουργία μεγέθυνσης"
 
-#: frontend/dispatcher.lua:214
+#: frontend/dispatcher.lua:215
 msgid "Change zoom factor"
 msgstr "Αλλαγή συντελεστή μεγέθυνσης"
 
-#: frontend/dispatcher.lua:216
+#: frontend/dispatcher.lua:217
 msgid "Toggle panel zoom"
 msgstr "Ενεργοποίηση / απενεργοποίηση μεγέθυνσης πάνελ"
 
-#: frontend/dispatcher.lua:221 frontend/ui/widget/textviewer.lua:612
+#: frontend/dispatcher.lua:222 frontend/ui/widget/textviewer.lua:612
 msgid "Font size"
 msgstr "Μέγεθος γραμματοσειράς"
 
-#: frontend/dispatcher.lua:238
+#: frontend/dispatcher.lua:239
 msgid "Zoom"
 msgstr "Μεγέθυνση"
 
-#: frontend/dispatcher.lua:262 frontend/ui/data/creoptions.lua:417
+#: frontend/dispatcher.lua:263 frontend/ui/data/creoptions.lua:417
 #: frontend/ui/data/creoptions.lua:429 frontend/ui/data/creoptions.lua:440
 #: frontend/ui/data/creoptions.lua:450 frontend/ui/data/koptoptions.lua:445
 #: frontend/ui/data/koptoptions.lua:459 frontend/ui/widget/toggleswitch.lua:245
 msgid "Font Size"
 msgstr "Μέγεθος γραμματοσειράς"
 
-#: frontend/dispatcher.lua:263
+#: frontend/dispatcher.lua:264
 msgid "Change font size"
 msgstr "Αλλαγή μεγέθους γραμματοσειράς"
 
-#: frontend/dispatcher.lua:636
+#: frontend/dispatcher.lua:638
 msgid "Unknown item"
 msgstr "Άγνωστο στοιχείο"
 
-#: frontend/dispatcher.lua:658
+#: frontend/dispatcher.lua:660
 msgid "gesture distance"
 msgstr "Διάνυσμα χειρονομίας"
 
-#: frontend/dispatcher.lua:723 frontend/dispatcher.lua:941
+#: frontend/dispatcher.lua:725 frontend/dispatcher.lua:943
 msgid "Nothing"
 msgstr "Τίποτα"
 
-#: frontend/dispatcher.lua:729
+#: frontend/dispatcher.lua:731
 msgctxt "Dispatcher"
 msgid "1 action"
 msgid_plural "%1 actions"
 msgstr[0] "1 ενέργεια"
 msgstr[1] "%1 ενέργειες"
 
-#: frontend/dispatcher.lua:731 plugins/gestures.koplugin/main.lua:236
+#: frontend/dispatcher.lua:733 plugins/gestures.koplugin/main.lua:236
 msgid "Pass through"
 msgstr "Διέλευση"
 
-#: frontend/dispatcher.lua:753 frontend/dispatcher.lua:996
+#: frontend/dispatcher.lua:755 frontend/dispatcher.lua:998
 msgid "Arrange actions"
 msgstr "Οργάνωση ενεργειών"
 
-#: frontend/dispatcher.lua:870
+#: frontend/dispatcher.lua:872
 msgid "Use gesture distance"
 msgstr "Χρήση διανύσματος χειρονομίας"
 
-#: frontend/dispatcher.lua:957 plugins/httpinspector.koplugin/main.lua:1040
+#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1040
 msgid "General"
 msgstr "Γενικά"
 
-#: frontend/dispatcher.lua:958
+#: frontend/dispatcher.lua:960
 #: frontend/ui/elements/common_settings_menu_table.lua:708
 #: plugins/httpinspector.koplugin/main.lua:1041
 msgid "Device"
 msgstr "Συσκευή"
 
-#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1042
+#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1042
 msgid "Screen and lights"
 msgstr "Οθόνη και φωτισμός"
 
-#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1044
+#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1044
 msgid "Reader"
 msgstr "Αναγνώστης"
 
-#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1045
+#: frontend/dispatcher.lua:964 plugins/httpinspector.koplugin/main.lua:1045
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "Έγγραφα μεταβλητής διάταξης (epub, fb2, txt ...)"
 
-#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1046
+#: frontend/dispatcher.lua:965 plugins/httpinspector.koplugin/main.lua:1046
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "Έγγραφα σταθερής διάταξης (pdf, djvu, φωτογραφίες…)"
 
-#: frontend/dispatcher.lua:1016 plugins/profiles.koplugin/main.lua:134
+#: frontend/dispatcher.lua:1018 plugins/profiles.koplugin/main.lua:134
 msgid "Show as QuickMenu"
 msgstr "Εμφάνιση ως «Γρήγορο μενού»"
 
-#: frontend/dispatcher.lua:1041
+#: frontend/dispatcher.lua:1043
 msgid "Keep QuickMenu open"
 msgstr "Διατήρηση Γρήγορου Μενού ανοικτού"
 
-#: frontend/dispatcher.lua:1084
+#: frontend/dispatcher.lua:1086
 msgid "QuickMenu"
 msgstr "Γρήγορο μενού"
 
-#: frontend/dispatcher.lua:1091
+#: frontend/dispatcher.lua:1093
 msgid "Execute all"
 msgstr "Εκτέλεση όλων"
 
-#: frontend/dispatcher.lua:1164
+#: frontend/dispatcher.lua:1166
 msgid "Executing profile: %1"
 msgstr "Εκτέλεση προφίλ: %1"
 
@@ -14920,15 +14971,6 @@ msgstr "Λίγα λόγια για το βιβλίο"
 msgid "Set values"
 msgstr "Ορισμός τιμών"
 
-#: frontend/ui/widget/configdialog.lua:1238
-#: frontend/ui/widget/configdialog.lua:1249
-#: frontend/ui/widget/configdialog.lua:1334
-#: frontend/ui/widget/configdialog.lua:1344
-#: frontend/ui/widget/configdialog.lua:1414
-#: frontend/ui/widget/configdialog.lua:1452
-msgid "Set as default"
-msgstr "Ορισμός ως προεπιλογής"
-
 #: frontend/ui/widget/configdialog.lua:1248
 #: frontend/ui/widget/configdialog.lua:1343
 #: frontend/ui/widget/configdialog.lua:1410
@@ -15550,11 +15592,6 @@ msgstr ""
 msgid "Set as book cover"
 msgstr "Ορισμός ως εξωφύλλου βιβλίου"
 
-#: frontend/ui/widget/screenshoter.lua:77
-#: plugins/archiveviewer.koplugin/main.lua:207
-msgid "View"
-msgstr "Προβολή"
-
 #: frontend/ui/widget/screenshoter.lua:90
 msgid "Set as wallpaper"
 msgstr "Ορισμός ως ταπετσαρίας"
@@ -15609,7 +15646,7 @@ msgid "Text viewer"
 msgstr "Προβολή κειμένου"
 
 #: frontend/ui/widget/textviewer.lua:692
-#: plugins/texteditor.koplugin/main.lua:450
+#: plugins/texteditor.koplugin/main.lua:449
 msgid ""
 "This file is %2:\n"
 "\n"
@@ -19329,12 +19366,10 @@ msgid "Enable CSS filter?"
 msgstr "Να ενεργοποιηθεί το φίλτρο CSS;"
 
 #: plugins/newsdownloader.koplugin/main.lua:797
-#: plugins/texteditor.koplugin/main.lua:355
 msgid "Yes"
 msgstr "Ναι"
 
 #: plugins/newsdownloader.koplugin/main.lua:802
-#: plugins/texteditor.koplugin/main.lua:356
 msgid "No"
 msgstr "Όχι"
 
@@ -20900,27 +20935,10 @@ msgstr ""
 "\n"
 "Να διαγραφεί από το ιστορικό του επεξεργαστή κειμένου;"
 
-#: plugins/texteditor.koplugin/main.lua:348
+#: plugins/texteditor.koplugin/main.lua:415
+#, fuzzy
 msgid ""
-"To start editing a new file, you will have to:\n"
-"\n"
-"- First choose a folder\n"
-"- Then enter a name for the new file\n"
-"- And start editing it\n"
-"\n"
-"Do you want to proceed?"
-msgstr ""
-"Για να ξεκινήσετε την επεξεργασία ενός νέου αρχείου, θα πρέπει:\n"
-"\n"
-"- Να επιλέξετε πρώτα έναν φάκελο\n"
-"- Στη συνέχεια, να εισαγάγετε ένα όνομα για το νέο αρχείο\n"
-"- Και να αρχίσετε την επεξεργασία του\n"
-"\n"
-"Θέλετε να προχωρήσετε;"
-
-#: plugins/texteditor.koplugin/main.lua:416
-msgid ""
-"This file does not exist anymore:\n"
+"This file does not exist:\n"
 "\n"
 "%1\n"
 "\n"
@@ -20932,7 +20950,7 @@ msgstr ""
 "\n"
 "Θέλετε να το δημιουργήσετε και να αρχίσετε να το επεξεργάζεστε;"
 
-#: plugins/texteditor.koplugin/main.lua:433
+#: plugins/texteditor.koplugin/main.lua:432
 msgid ""
 "This file is not a regular file:\n"
 "\n"
@@ -20942,7 +20960,7 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:471
+#: plugins/texteditor.koplugin/main.lua:470
 msgid ""
 "This file can not be created:\n"
 "\n"
@@ -20982,28 +21000,28 @@ msgstr "κώδικας QR"
 msgid "Text reset to last saved content"
 msgstr "Επαναφορά κειμένου στο τελευταίο αποθηκευμένο περιεχόμενο"
 
-#: plugins/texteditor.koplugin/main.lua:587
+#: plugins/texteditor.koplugin/main.lua:590
 msgid "File is read only"
 msgstr "Το αρχείο είναι μόνο για ανάγνωση"
 
-#: plugins/texteditor.koplugin/main.lua:593
-#: plugins/texteditor.koplugin/main.lua:620
-#: plugins/texteditor.koplugin/main.lua:644
+#: plugins/texteditor.koplugin/main.lua:596
+#: plugins/texteditor.koplugin/main.lua:623
+#: plugins/texteditor.koplugin/main.lua:647
 msgid "File saved"
 msgstr "Το αρχείο αποθηκεύτηκε"
 
-#: plugins/texteditor.koplugin/main.lua:595
-#: plugins/texteditor.koplugin/main.lua:604
-#: plugins/texteditor.koplugin/main.lua:622
-#: plugins/texteditor.koplugin/main.lua:646
+#: plugins/texteditor.koplugin/main.lua:598
+#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:625
+#: plugins/texteditor.koplugin/main.lua:649
 msgid "Failed saving file: %1"
 msgstr "Αποτυχία αποθήκευσης αρχείου: %1"
 
-#: plugins/texteditor.koplugin/main.lua:602
+#: plugins/texteditor.koplugin/main.lua:605
 msgid "Lua syntax OK, file saved"
 msgstr "Σύνταξη Lua OK, το αρχείο αποθηκεύτηκε"
 
-#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:610
 msgid ""
 "Lua syntax check failed:\n"
 "\n"
@@ -21023,15 +21041,15 @@ msgstr ""
 "\n"
 "%2"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Do not save"
 msgstr "Να μην αποθηκευτεί"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Save anyway"
 msgstr "Αποθήκευση ούτως ή άλλως"
 
-#: plugins/texteditor.koplugin/main.lua:628
+#: plugins/texteditor.koplugin/main.lua:631
 msgid ""
 "Text content is empty.\n"
 "Do you want to keep this file as empty, or do you prefer to delete it?\n"
@@ -21043,15 +21061,15 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Keep empty file"
 msgstr "Διατήρηση κενού αρχείου"
 
-#: plugins/texteditor.koplugin/main.lua:637
+#: plugins/texteditor.koplugin/main.lua:640
 msgid "File deleted"
 msgstr "Το αρχείο διαγράφηκε"
 
-#: plugins/texteditor.koplugin/main.lua:639
+#: plugins/texteditor.koplugin/main.lua:642
 msgid "Failed deleting file: %1"
 msgstr "Αποτυχία διαγραφής αρχείου: %1"
 
@@ -21786,6 +21804,23 @@ msgstr "wallabag"
 #: tools/update-metadata.lua:60
 msgid "annotations"
 msgstr "επισημειώσεις"
+
+#~ msgid ""
+#~ "To start editing a new file, you will have to:\n"
+#~ "\n"
+#~ "- First choose a folder\n"
+#~ "- Then enter a name for the new file\n"
+#~ "- And start editing it\n"
+#~ "\n"
+#~ "Do you want to proceed?"
+#~ msgstr ""
+#~ "Για να ξεκινήσετε την επεξεργασία ενός νέου αρχείου, θα πρέπει:\n"
+#~ "\n"
+#~ "- Να επιλέξετε πρώτα έναν φάκελο\n"
+#~ "- Στη συνέχεια, να εισαγάγετε ένα όνομα για το νέο αρχείο\n"
+#~ "- Και να αρχίσετε την επεξεργασία του\n"
+#~ "\n"
+#~ "Θέλετε να προχωρήσετε;"
 
 #~ msgid "Connected to Bluetooth"
 #~ msgstr "Συνδεδεμένο με το Bluetooth"

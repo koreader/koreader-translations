@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-20 22:11+0000\n"
+"POT-Creation-Date: 2024-11-21 06:03+0000\n"
 "PO-Revision-Date: 2024-02-27 20:00+0000\n"
 "Last-Translator: shetozz <a.teama3317@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -134,6 +134,7 @@ msgstr ""
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
 #: frontend/apps/filemanager/filemanagerutil.lua:344
 #: plugins/opds.koplugin/opdsbrowser.lua:642
+#: plugins/texteditor.koplugin/main.lua:355
 msgid "Choose folder"
 msgstr "اختر مجلد"
 
@@ -144,7 +145,7 @@ msgstr "تغيير اسم الملف"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:260
 #: plugins/opds.koplugin/opdsbrowser.lua:658
-#: plugins/texteditor.koplugin/main.lua:364
+#: plugins/texteditor.koplugin/main.lua:350
 msgid "Enter filename"
 msgstr "أدخل اسم ملف"
 
@@ -158,8 +159,8 @@ msgstr "أدخل اسم ملف"
 #: frontend/apps/filemanager/filemanager.lua:1001
 #: frontend/apps/filemanager/filemanager.lua:1129
 #: frontend/apps/filemanager/filemanager.lua:1458
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:498
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:644
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:513
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:659
 #: frontend/apps/filemanager/filemanagercollection.lua:503
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:367
@@ -231,7 +232,7 @@ msgstr "أدخل اسم ملف"
 #: plugins/statistics.koplugin/main.lua:2548
 #: plugins/terminal.koplugin/aliases.lua:100
 #: plugins/terminal.koplugin/main.lua:643
-#: plugins/texteditor.koplugin/main.lua:368
+#: plugins/texteditor.koplugin/main.lua:371
 #: plugins/vocabbuilder.koplugin/main.lua:1173
 #: plugins/vocabbuilder.koplugin/main.lua:1563
 #: plugins/vocabbuilder.koplugin/main.lua:1854
@@ -268,6 +269,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:361
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:772
 #: frontend/ui/widget/pathchooser.lua:140
 msgid "Choose"
 msgstr "اختر"
@@ -283,9 +285,10 @@ msgid "Info"
 msgstr "معلومات"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:387
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:804
 #: plugins/opds.koplugin/opdsbrowser.lua:835
 #: plugins/statistics.koplugin/main.lua:1288
-#: plugins/texteditor.koplugin/main.lua:375
+#: plugins/texteditor.koplugin/main.lua:378
 #: plugins/vocabbuilder.koplugin/main.lua:242
 msgid "Edit"
 msgstr "تحرير"
@@ -429,11 +432,12 @@ msgstr "جارٍ التحميل…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:665
 #: frontend/apps/filemanager/filemanager.lua:1008
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:785
 #: frontend/apps/reader/modules/readerhandmade.lua:501
 #: frontend/ui/wikipedia.lua:1542
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:610
 #: plugins/statistics.koplugin/main.lua:332
-#: plugins/texteditor.koplugin/main.lua:417
+#: plugins/texteditor.koplugin/main.lua:416
 msgid "Create"
 msgstr "أنشئ"
 
@@ -547,7 +551,7 @@ msgstr "مجلد Dropbox (للمدير /)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:505
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:520
 #: frontend/apps/filemanager/filemanagercollection.lua:510
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
@@ -843,7 +847,7 @@ msgstr "اختيار كل الملفات في المجلد"
 #: frontend/apps/filemanager/filemanager.lua:543
 #: frontend/apps/filemanager/filemanager.lua:924
 #: frontend/apps/filemanager/filemanager.lua:1193
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:722
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:890
 msgid "Move"
 msgstr "نقل"
 
@@ -920,7 +924,7 @@ msgstr "هل تريد فتح %1؟"
 #: frontend/apps/filemanager/filemanager.lua:1465
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:362
 #: frontend/ui/widget/textviewer.lua:694 frontend/ui/widget/touchmenu.lua:1255
-#: plugins/texteditor.koplugin/main.lua:452
+#: plugins/texteditor.koplugin/main.lua:451
 msgid "Open"
 msgstr "فتح"
 
@@ -1145,82 +1149,82 @@ msgstr "فتح %1 باستخدام:"
 msgid "Classic (filename only)"
 msgstr "كلاسيكي (اسم الملف فقط)"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:28
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:29
 #: frontend/apps/filemanager/filemanagerutil.lua:261
-#: frontend/dispatcher.lua:186 plugins/opds.koplugin/opdsbrowser.lua:700
+#: frontend/dispatcher.lua:187 plugins/opds.koplugin/opdsbrowser.lua:700
 msgid "Book information"
 msgstr "معلومات الكتاب"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:39
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
 msgid "Cover image:"
 msgstr "صورة الغلاف:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:40
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
 #: plugins/calibre.koplugin/search.lua:145
 msgid "Title:"
 msgstr "العنوان:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:41
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Author(s):"
 msgstr "المؤلف (المؤلفين):"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:42
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
 #: plugins/calibre.koplugin/search.lua:154
 msgid "Series:"
 msgstr "سلسلة:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:43
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
 #, fuzzy
 msgid "Series index:"
 msgstr "سلسلة:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:44
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
 msgid "Language:"
 msgstr "اللغة:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:45
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
 msgid "Keywords:"
 msgstr "الكلمات الرئيسة:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:46
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
 msgid "Description:"
 msgstr "الوصف:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:47
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:48
 msgid "Pages:"
 msgstr "الصفحات:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:82
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:92
 msgid "Filename:"
 msgstr "اسم الملف:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:83
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:93
 msgid "Format:"
 msgstr "التنسيق:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:84
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:94
 #: plugins/calibre.koplugin/search.lua:147
 msgid "Size:"
 msgstr "الحجم:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:85
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:95
 msgid "File date:"
 msgstr "تاريخ الملف:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:86
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:96
 msgid "Folder:"
 msgstr "مجلّدٌ:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:100
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:110
 msgid "Tap to display"
 msgstr "المس للعرض"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:120
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:156
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:749
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:750
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:130
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:166
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:917
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:918
 #: frontend/apps/reader/modules/readerfooter.lua:1998
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/screensaver.lua:97
@@ -1239,11 +1243,11 @@ msgstr "المس للعرض"
 msgid "N/A"
 msgstr "غ/م"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:161
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:171
 msgid "number of lines and words not available"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 #, fuzzy
 msgid "1 line"
 msgid_plural "%1 lines"
@@ -1254,7 +1258,7 @@ msgstr[3] "تسطير"
 msgstr[4] "تسطير"
 msgstr[5] "تسطير"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:162
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 #, fuzzy
 msgid "1 word"
 msgid_plural "%1 words"
@@ -1265,50 +1269,55 @@ msgstr[3] "نسخ الكلمة"
 msgstr[4] "نسخ الكلمة"
 msgstr[5] "نسخ الكلمة"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:163
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:173
 #, fuzzy
 msgid "Current page:"
 msgstr "الصفحة الحالية"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:172
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:182
 #, fuzzy
 msgid "Rating:"
 msgstr "التقييم: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:174
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:184
 #, fuzzy
 msgid "Review:"
 msgstr "مراجعة"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:337
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:192
+#, fuzzy
+msgid "Notebook file:"
+msgstr "عنوان الكتاب"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:352
 msgid "No book description available."
 msgstr "لا يوجد وصف متوفر للكتاب."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:354
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:369
 msgid "No cover image available."
 msgstr "لا تتوفّر صورة غلاف."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:491
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:506
 #, fuzzy
 msgid "Edit book metadata:"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:543
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:558
 #, fuzzy
 msgid "Copy original"
 msgstr "نسخ الكل"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:551
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:566
 #, fuzzy
 msgid "View original"
 msgstr "عرض الملف"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:564
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:579
 #, fuzzy
 msgid "Reset custom"
 msgstr "مخصّص"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:568
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:583
 msgid ""
 "Reset custom cover?\n"
 "Image file will be deleted."
@@ -1316,12 +1325,12 @@ msgstr ""
 "تراجع عن تخصيص الغلاف؟\n"
 "ستُمْحى الصورة."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:569
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
 #, fuzzy
 msgid "Reset custom book metadata field?"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:570
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:585
 #: frontend/apps/filemanager/filemanagerutil.lua:186
 #: frontend/apps/filemanager/filemanagerutil.lua:196
 #: frontend/apps/reader/modules/readermenu.lua:203
@@ -1332,41 +1341,82 @@ msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1
 msgid "Reset"
 msgstr "إرجاع"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:584
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:599
 #, fuzzy
 msgid "Set custom"
 msgstr "مخصّص"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:598
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:613
 #, fuzzy
 msgid "Book metadata:"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:636
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
 #, fuzzy
 msgid "Edit book review"
 msgstr "اختر مجلد"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:651
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:666
 #: frontend/ui/widget/bookstatuswidget.lua:558
 msgid "Save review"
 msgstr "حفظُ التقييم"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:707
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:734
+#: frontend/apps/filemanager/filemanagerutil.lua:374
+msgid "Use default"
+msgstr "استخدم الافتراضيّ"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:742
+#, fuzzy
+msgid "Reset default"
+msgstr "استخدم الافتراضيّ"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:747
+#, fuzzy
+msgid "Notebook file default location reset"
+msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:753
+#, fuzzy
+msgid "Use local"
+msgstr "استخدام نموذج"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:761
+#: frontend/ui/widget/configdialog.lua:1238
+#: frontend/ui/widget/configdialog.lua:1249
+#: frontend/ui/widget/configdialog.lua:1334
+#: frontend/ui/widget/configdialog.lua:1344
+#: frontend/ui/widget/configdialog.lua:1414
+#: frontend/ui/widget/configdialog.lua:1452
+msgid "Set as default"
+msgstr "تعيين كافتراضي"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:766
+#, fuzzy
+msgid "Notebook file default location saved"
+msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:796
+#: frontend/ui/widget/screenshoter.lua:77
+#: plugins/archiveviewer.koplugin/main.lua:207
+msgid "View"
+msgstr "عرض"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:875
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr "افحص المجلد الحالي وما يحويه من مجلدات بحثا عن بيانات مواقعهم؟"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:708
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:876
 #: plugins/calibre.koplugin/search.lua:518
 msgid "Scan"
 msgstr "افحص"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:714
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:882
 msgid "No books with metadata not in your preferred location found."
 msgstr "لا كتب ذات بيانات تعريفية خارج موقعك المفضل."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:718
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:886
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] "لا كتب ذات بيانات تعريفية خارج موقعك المفضل."
@@ -1376,12 +1426,12 @@ msgstr[3] "هناك %1 كتب ذات بيانات تعريفية خارج موق
 msgstr[4] "هناك %1 كتابا ذَوِي بيانات تعريفية خارج موقعك المفضل."
 msgstr[5] "هناك %1 كتاب ذَوِي بيانات تعريفية خارج موقعك المفضل."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:721
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:889
 #, fuzzy
 msgid "Move book metadata to your preferred location?"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:737
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:905
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
 "based storage may slow down file browser navigation in large directories. "
@@ -1396,7 +1446,7 @@ msgstr ""
 "بك أن تفتح الملفات المرتبطة بها في كوريدر KOReader لتُنقَل تلقائيا إلى موقعك "
 "المفضل، أو يمكنك مسح %1، لتسريع تصفحك للملفات."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:751
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:919
 msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
@@ -1404,7 +1454,7 @@ msgstr ""
 "%1. العنوان: %2; الكاتب: %3\n"
 "الملف: %4"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:756
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:924
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "لا ملفات ذات بيانات تعريفية مبنية على التشفير"
@@ -1593,7 +1643,7 @@ msgstr "لا نتائج لِ '%1'."
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:236
 #: frontend/apps/filemanager/filemanagermenu.lua:799
-#: frontend/dispatcher.lua:137 frontend/ui/widget/menu.lua:794
+#: frontend/dispatcher.lua:138 frontend/ui/widget/menu.lua:794
 msgid "File search"
 msgstr "البحث في الملف"
 
@@ -1923,12 +1973,12 @@ msgstr "معلومات قائمة العناصر في كل صفحة"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:432
 #: frontend/apps/reader/modules/readerbookmark.lua:233
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:131
 msgid "Reverse sorting"
 msgstr "فرزٌ عكسيّ"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:442
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:132
 msgid "Folders and files mixed"
 msgstr "خلط الملفات والمجلدات"
 
@@ -2075,7 +2125,7 @@ msgstr ""
 "اضغط على كتاب في نتائج البحث لفتحه."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:813
-#: frontend/dispatcher.lua:138
+#: frontend/dispatcher.lua:139
 #, fuzzy
 msgid "Last file search results"
 msgstr "ابحثٌ في النّص"
@@ -2208,7 +2258,7 @@ msgstr ""
 "هل أنت متأكد أنّك تريد المتابعة؟"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:12
-#: frontend/dispatcher.lua:136 frontend/ui/widget/pathchooser.lua:162
+#: frontend/dispatcher.lua:137 frontend/ui/widget/pathchooser.lua:162
 msgid "Folder shortcuts"
 msgstr "اختصارات المجلّدات"
 
@@ -2302,12 +2352,12 @@ msgid "Show folder"
 msgstr "اظهار المجلّد"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:274
-#: frontend/dispatcher.lua:188 plugins/opds.koplugin/opdsbrowser.lua:693
+#: frontend/dispatcher.lua:189 plugins/opds.koplugin/opdsbrowser.lua:693
 msgid "Book cover"
 msgstr "غلاف الكتاب"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:287
-#: frontend/dispatcher.lua:187
+#: frontend/dispatcher.lua:188
 msgid "Book description"
 msgstr "وصف الكتاب"
 
@@ -2333,10 +2383,6 @@ msgstr "أرجع البرنامج النصّي (السكريبت) قيمة حا�
 #, fuzzy
 msgid "Choose file"
 msgstr "اختر مجلد"
-
-#: frontend/apps/filemanager/filemanagerutil.lua:374
-msgid "Use default"
-msgstr "استخدم الافتراضيّ"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:384
 #: frontend/ui/data/optionsutil.lua:175
@@ -2370,7 +2416,7 @@ msgstr "إشارات مرجعية للصفحة"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:79
 #: frontend/apps/reader/modules/readerbookmark.lua:107
-#: frontend/dispatcher.lua:181
+#: frontend/dispatcher.lua:182
 msgid "Bookmarks"
 msgstr "العلامات المرجعية"
 
@@ -2443,7 +2489,7 @@ msgid "Show separator between items"
 msgstr "إظهار الفاصل بين العناصر"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:246
-#: frontend/dispatcher.lua:182
+#: frontend/dispatcher.lua:183
 msgid "Bookmark search"
 msgstr "بحث الإشارات المرجعية"
 
@@ -2551,7 +2597,7 @@ msgid "Current page"
 msgstr "الصفحة الحالية"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:923
-#: frontend/dispatcher.lua:163
+#: frontend/dispatcher.lua:164
 msgid "Latest bookmark"
 msgstr "أحدث إشارة مرجعية"
 
@@ -2877,7 +2923,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:223
 #: frontend/apps/reader/modules/readerdictionary.lua:956
-#: frontend/dispatcher.lua:61 plugins/vocabbuilder.koplugin/main.lua:2040
+#: frontend/dispatcher.lua:62 plugins/vocabbuilder.koplugin/main.lua:2040
 msgid "Dictionary lookup"
 msgstr "البحث في قاموس"
 
@@ -4013,7 +4059,7 @@ msgid "Right"
 msgstr "يمين"
 
 #: frontend/apps/reader/modules/readergoto.lua:17
-#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:157
+#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:158
 #: frontend/ui/widget/keyvaluepage.lua:411 frontend/ui/widget/menu.lua:773
 #: frontend/ui/widget/sortwidget.lua:255
 #: plugins/statistics.koplugin/calendarview.lua:620
@@ -4021,7 +4067,7 @@ msgstr "يمين"
 msgid "Go to page"
 msgstr "اذهب إلى الصفحة"
 
-#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:158
+#: frontend/apps/reader/modules/readergoto.lua:23 frontend/dispatcher.lua:159
 msgid "Skim document"
 msgstr "مستند مقشود"
 
@@ -4283,9 +4329,9 @@ msgstr "حِفظُ المُستَند (تثبيتُ التخطيطاتِ على 
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:670 frontend/ui/data/creoptions.lua:683
 #: frontend/ui/data/creoptions.lua:695 frontend/ui/data/creoptions.lua:734
@@ -4300,9 +4346,9 @@ msgstr "تشغيل"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:558
-#: frontend/dispatcher.lua:113 frontend/dispatcher.lua:119
-#: frontend/dispatcher.lua:121 frontend/dispatcher.lua:123
-#: frontend/dispatcher.lua:130 frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
 #: frontend/ui/data/creoptions.lua:105 frontend/ui/data/creoptions.lua:181
 #: frontend/ui/data/creoptions.lua:339 frontend/ui/data/creoptions.lua:356
 #: frontend/ui/data/creoptions.lua:647 frontend/ui/data/creoptions.lua:670
@@ -4375,7 +4421,7 @@ msgstr "حدد وقم بالتظليل"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:375
 #: frontend/apps/reader/modules/readersearch.lua:190
-#: frontend/dispatcher.lua:175
+#: frontend/dispatcher.lua:176
 msgid "Fulltext search"
 msgstr "ابحثٌ في النّص"
 
@@ -4659,7 +4705,7 @@ msgid "Selection on text"
 msgstr "تحديد حجم الخط"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:872
-#: frontend/dispatcher.lua:190
+#: frontend/dispatcher.lua:191
 #, fuzzy
 msgid "Translate current page"
 msgstr "وضع علامة مرجعية للصفحة الحالية"
@@ -5604,7 +5650,7 @@ msgid "Results per page"
 msgstr "عدد العناصر لكل صفحة"
 
 #: frontend/apps/reader/modules/readersearch.lua:196
-#: frontend/dispatcher.lua:176
+#: frontend/dispatcher.lua:177
 #, fuzzy
 msgid "Last fulltext search results"
 msgstr "ابحثٌ في النّص"
@@ -5669,7 +5715,7 @@ msgid "Current page: %1"
 msgstr "الصفحة الحالية (%1)"
 
 #: frontend/apps/reader/modules/readerstatus.lua:19
-#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:185
+#: frontend/apps/reader/modules/readerstatus.lua:76 frontend/dispatcher.lua:186
 #: frontend/ui/elements/common_settings_menu_table.lua:683
 msgid "Book status"
 msgstr "حالة الكتاب"
@@ -5695,12 +5741,12 @@ msgstr "فتح الملف التالي"
 
 #: frontend/apps/reader/modules/readerstatus.lua:103
 #: frontend/ui/elements/common_settings_menu_table.lua:684
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Delete file"
 msgstr "حَدّفُ ملف"
 
 #: frontend/apps/reader/modules/readerstatus.lua:110 frontend/dispatcher.lua:59
-#: frontend/dispatcher.lua:960 plugins/httpinspector.koplugin/main.lua:1043
+#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1043
 msgid "File browser"
 msgstr "متصفح الملفات"
 
@@ -6165,18 +6211,18 @@ msgid "Book tweak saved (not enabled)."
 msgstr "تم حفظ قرص الكتاب (غير ممكّن)."
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:79
-#: frontend/dispatcher.lua:178 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
 #, fuzzy
 msgid "Book map"
 msgstr "العلامات المرجعية"
 
 #: frontend/apps/reader/modules/readerthumbnail.lua:93
-#: frontend/dispatcher.lua:180 frontend/ui/widget/pagebrowserwidget.lua:35
+#: frontend/dispatcher.lua:181 frontend/ui/widget/pagebrowserwidget.lua:35
 #, fuzzy
 msgid "Page browser"
 msgstr "متصفح الملفات"
 
-#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:177
+#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:178
 msgid "Table of contents"
 msgstr "جدول المحتويات"
 
@@ -7159,7 +7205,7 @@ msgstr "بحث في ويكيبيديا"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:82
 #: frontend/apps/reader/modules/readerwikipedia.lua:399
-#: frontend/dispatcher.lua:62
+#: frontend/dispatcher.lua:63
 msgid "Wikipedia lookup"
 msgstr "البحث في ويكيبيديا"
 
@@ -8053,7 +8099,7 @@ msgstr "إعادةُ تشغيل الجهاز"
 msgid "Are you sure you want to power off the device?"
 msgstr "أتُريدُ إيقافَ تشغيلِ الجهازِ حَقًّا؟"
 
-#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:75
+#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:76
 #: frontend/ui/elements/common_exit_menu_table.lua:51
 msgid "Power off"
 msgstr "إيقاف تشغيل الجهاز"
@@ -8092,479 +8138,484 @@ msgstr "حالة تقدم القراءة"
 msgid "History search"
 msgstr "إعدادات السجل"
 
-#: frontend/dispatcher.lua:64
+#: frontend/dispatcher.lua:60
+#, fuzzy
+msgid "Notebook file"
+msgstr "اختر مجلد"
+
+#: frontend/dispatcher.lua:65
 msgid "Show menu"
 msgstr "أظهر القائمة"
 
-#: frontend/dispatcher.lua:65
+#: frontend/dispatcher.lua:66
 #: frontend/ui/elements/common_info_menu_table.lua:39
 #, fuzzy
 msgid "Menu search"
 msgstr "البحث في الملف"
 
-#: frontend/dispatcher.lua:66
+#: frontend/dispatcher.lua:67
 msgid "Screenshot"
 msgstr "لقطة الشاشة"
 
-#: frontend/dispatcher.lua:70
+#: frontend/dispatcher.lua:71
 #, fuzzy
 msgid "Exit sleep screen"
 msgstr "المس للخروجِ من شاشةِ الإيقاف"
 
-#: frontend/dispatcher.lua:71 frontend/ui/elements/mass_storage.lua:43
+#: frontend/dispatcher.lua:72 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
 msgstr "قُم بِوَصلِ ذاكرةِ الجهاز عبر USB"
 
-#: frontend/dispatcher.lua:72
+#: frontend/dispatcher.lua:73
 #: frontend/ui/elements/common_exit_menu_table.lua:34
 msgid "Sleep"
 msgstr "سكون"
 
-#: frontend/dispatcher.lua:73
+#: frontend/dispatcher.lua:74
 #: frontend/ui/elements/common_exit_menu_table.lua:22
 msgid "Restart KOReader"
 msgstr "أعد تشغيل KOReader"
 
-#: frontend/dispatcher.lua:74
+#: frontend/dispatcher.lua:75
 #: frontend/ui/elements/common_exit_menu_table.lua:42
 msgid "Reboot the device"
 msgstr "إعادة تشغيل الجهاز"
 
-#: frontend/dispatcher.lua:76
+#: frontend/dispatcher.lua:77
 msgid "Exit KOReader"
 msgstr "أخرج من KOReader"
 
-#: frontend/dispatcher.lua:78
+#: frontend/dispatcher.lua:79
 #, fuzzy
 msgid "Toggle long-press on corners"
 msgstr "تجاهل الضغط لفترة طويلة على الزوايا"
 
-#: frontend/dispatcher.lua:79
+#: frontend/dispatcher.lua:80
 #, fuzzy
 msgid "Enable touch input"
 msgstr "تبديل الاتجاه"
 
-#: frontend/dispatcher.lua:80
+#: frontend/dispatcher.lua:81
 #, fuzzy
 msgid "Disable touch input"
 msgstr "تبديل الاتجاه"
 
-#: frontend/dispatcher.lua:81
+#: frontend/dispatcher.lua:82
 #, fuzzy
 msgid "Toggle touch input"
 msgstr "تبديل الاتجاه"
 
-#: frontend/dispatcher.lua:83 frontend/ui/elements/physical_buttons.lua:28
+#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:28
 #, fuzzy
 msgid "Invert left-side page-turn buttons"
 msgstr "قَلْبُ اتِّجاهِ أزرارِ تقليبِ الصَّفحة"
 
-#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:40
+#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:40
 #, fuzzy
 msgid "Invert right-side page-turn buttons"
 msgstr "قَلْبُ اتِّجاهِ أزرارِ تقليبِ الصَّفحة"
 
-#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:11
+#: frontend/dispatcher.lua:86 frontend/ui/elements/physical_buttons.lua:11
 #, fuzzy
 msgid "Invert page-turn buttons"
 msgstr "قَلْبُ اتِّجاهِ أزرارِ تقليبِ الصَّفحة"
 
-#: frontend/dispatcher.lua:87
+#: frontend/dispatcher.lua:88
 #, fuzzy
 msgid "Toggle key repeat"
 msgstr "تبديل الاتجاه"
 
-#: frontend/dispatcher.lua:88
+#: frontend/dispatcher.lua:89
 msgid "Toggle accelerometer"
 msgstr "بدّل حساس الدوران"
 
-#: frontend/dispatcher.lua:89
+#: frontend/dispatcher.lua:90
 #, fuzzy
 msgid "Enable accelerometer for 5 seconds"
 msgstr "تجاهل مُخرجاتِ حسّاسِ دورانِ الجهاز"
 
-#: frontend/dispatcher.lua:90
+#: frontend/dispatcher.lua:91
 #: frontend/ui/elements/screen_rotation_menu_table.lua:46
 msgid "Lock auto rotation to current orientation"
 msgstr "قفل التدوير التلقائي للاتجاه الحالي"
 
-#: frontend/dispatcher.lua:91
+#: frontend/dispatcher.lua:92
 msgid "Toggle orientation"
 msgstr "تبديل الاتجاه"
 
-#: frontend/dispatcher.lua:92
+#: frontend/dispatcher.lua:93
 msgid "Invert rotation"
 msgstr "عكس الدوران"
 
-#: frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:94
 msgid "Rotate by 90° CW"
 msgstr "استدارة بمقدار 90 درجة مئوية"
 
-#: frontend/dispatcher.lua:94
+#: frontend/dispatcher.lua:95
 #, fuzzy
 msgid "Rotate by 90° CCW"
 msgstr "استدارة بمقدار 90 درجة مئوية"
 
-#: frontend/dispatcher.lua:96
+#: frontend/dispatcher.lua:97
 msgid "Turn on Wi-Fi"
 msgstr "تشغيل Wi-Fi"
 
-#: frontend/dispatcher.lua:97
+#: frontend/dispatcher.lua:98
 msgid "Turn off Wi-Fi"
 msgstr "إيقاف Wi-Fi"
 
-#: frontend/dispatcher.lua:98
+#: frontend/dispatcher.lua:99
 msgid "Toggle Wi-Fi"
 msgstr "اقلب زرّ تشغيل Wi-Fi"
 
-#: frontend/dispatcher.lua:99
+#: frontend/dispatcher.lua:100
 #, fuzzy
 msgid "Toggle Fullscreen"
 msgstr "ملء الشاشة"
 
-#: frontend/dispatcher.lua:100
+#: frontend/dispatcher.lua:101
 #, fuzzy
 msgid "Show network info"
 msgstr "معلومات الشبكة"
 
-#: frontend/dispatcher.lua:104
+#: frontend/dispatcher.lua:105
 msgid "Show frontlight dialog"
 msgstr "اعرض مربّع الإضاءة الأماميّة"
 
-#: frontend/dispatcher.lua:105
+#: frontend/dispatcher.lua:106
 msgid "Toggle frontlight"
 msgstr "تبديل الإضاءة الأمامية"
 
-#: frontend/dispatcher.lua:106
+#: frontend/dispatcher.lua:107
 #, fuzzy
 msgid "Set frontlight brightness"
 msgstr "تعيين سطوع الإضاءة الأمامية إلى %1"
 
-#: frontend/dispatcher.lua:107
+#: frontend/dispatcher.lua:108
 #, fuzzy
 msgid "Increase frontlight brightness"
 msgstr "زيادة سطوع الاضاءة الأمامية بمقدار %1"
 
-#: frontend/dispatcher.lua:108
+#: frontend/dispatcher.lua:109
 #, fuzzy
 msgid "Decrease frontlight brightness"
 msgstr "تقليل سطوع الإضاءة الأمامية بمقدار %1"
 
-#: frontend/dispatcher.lua:109
+#: frontend/dispatcher.lua:110
 #, fuzzy
 msgid "Set frontlight warmth"
 msgstr "ضبط دفء الإضاءة الأمامية على %1"
 
-#: frontend/dispatcher.lua:110
+#: frontend/dispatcher.lua:111
 #, fuzzy
 msgid "Increase frontlight warmth"
 msgstr "زيادة دفء الضوء الأمامي بمقدار %1"
 
-#: frontend/dispatcher.lua:111
+#: frontend/dispatcher.lua:112
 #, fuzzy
 msgid "Decrease frontlight warmth"
 msgstr "تقليل دفء الإضاءة الأمامية بمقدار %1"
 
-#: frontend/dispatcher.lua:112
+#: frontend/dispatcher.lua:113
 msgid "Toggle night mode"
 msgstr "تبديل إلى الوضع الليلي"
 
-#: frontend/dispatcher.lua:113
+#: frontend/dispatcher.lua:114
 msgid "Set night mode"
 msgstr "تعيين الوضع الليلي"
 
-#: frontend/dispatcher.lua:115
+#: frontend/dispatcher.lua:116
 msgid "Full screen refresh"
 msgstr "تحديث ملء الشاشة"
 
-#: frontend/dispatcher.lua:116
+#: frontend/dispatcher.lua:117
 #, fuzzy
 msgid "Full refresh rate (always)"
 msgstr "فترةُ رمشٍ كاملة"
 
-#: frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:118
 #, fuzzy
 msgid "Full refresh rate (not in night mode)"
 msgstr "وميض كل %1 صفحات (ليس في الوضع الليلي)"
 
-#: frontend/dispatcher.lua:118
+#: frontend/dispatcher.lua:119
 #, fuzzy
 msgid "Full refresh rate (in night mode)"
 msgstr "وميض كل %1 صفحات (في الوضع الليلي)"
 
-#: frontend/dispatcher.lua:119 frontend/ui/elements/refresh_menu_table.lua:109
+#: frontend/dispatcher.lua:120 frontend/ui/elements/refresh_menu_table.lua:109
 msgid "Always flash on chapter boundaries"
 msgstr "الوميض دائما على حدود الفصل"
 
-#: frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:121
 msgid "Toggle flashing on chapter boundaries"
 msgstr "تبديل الوميض على حدود الفصل"
 
-#: frontend/dispatcher.lua:121
+#: frontend/dispatcher.lua:122
 msgid "Never flash on chapter's 2nd page"
 msgstr "لا تومض أبدًا على الصفحة الثانية من الفصل"
 
-#: frontend/dispatcher.lua:122
+#: frontend/dispatcher.lua:123
 msgid "Toggle flashing on chapter's 2nd page"
 msgstr "تبديل الوميض على الصفحة الثانية من الفصل"
 
-#: frontend/dispatcher.lua:123 frontend/ui/elements/refresh_menu_table.lua:120
+#: frontend/dispatcher.lua:124 frontend/ui/elements/refresh_menu_table.lua:120
 #, fuzzy
 msgid "Always flash on pages with images"
 msgstr "الوميض دائما على حدود الفصل"
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:125
 #, fuzzy
 msgid "Toggle flashing on pages with images"
 msgstr "تبديل الوميض على الصفحة الثانية من الفصل"
 
-#: frontend/dispatcher.lua:128
+#: frontend/dispatcher.lua:129
 #, fuzzy
 msgid "Set display mode"
 msgstr "وضع العرض"
 
-#: frontend/dispatcher.lua:129
+#: frontend/dispatcher.lua:130
 #, fuzzy
 msgid "Sort by"
 msgstr "فرز وفق: %1"
 
-#: frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:134
 msgid "Show plus menu"
 msgstr "أظهر قائمة الإضافة"
 
-#: frontend/dispatcher.lua:134
+#: frontend/dispatcher.lua:135
 msgid "Toggle select mode"
 msgstr "تبديل وضع التحديد"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:136
 msgid "Refresh content"
 msgstr "تحديث المحتوى"
 
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:141
 msgid "Folder up"
 msgstr "مجلّدٌ إلى الأعلى"
 
-#: frontend/dispatcher.lua:145
+#: frontend/dispatcher.lua:146
 #, fuzzy
 msgid "Open next document in folder"
 msgstr "فَتحُ مُجَلَّدِ الخُطوط"
 
-#: frontend/dispatcher.lua:147
+#: frontend/dispatcher.lua:148
 msgid "Show bottom menu"
 msgstr "أظهر القائمة السفليّة"
 
-#: frontend/dispatcher.lua:148
+#: frontend/dispatcher.lua:149
 msgid "Toggle status bar"
 msgstr "تبديل شريط الحالة"
 
-#: frontend/dispatcher.lua:149
+#: frontend/dispatcher.lua:150
 #, fuzzy
 msgid "Toggle chapter progress bar"
 msgstr "اعرض شريط تقدّم القراءة"
 
-#: frontend/dispatcher.lua:151
+#: frontend/dispatcher.lua:152
 msgid "Previous chapter"
 msgstr "الفصل السابق"
 
-#: frontend/dispatcher.lua:152
+#: frontend/dispatcher.lua:153
 msgid "Next chapter"
 msgstr "الفصل التالي"
 
-#: frontend/dispatcher.lua:153
+#: frontend/dispatcher.lua:154
 msgid "First page"
 msgstr "الصفحة الأولى"
 
-#: frontend/dispatcher.lua:154
+#: frontend/dispatcher.lua:155
 msgid "Last page"
 msgstr "آخر صفحة"
 
-#: frontend/dispatcher.lua:155
+#: frontend/dispatcher.lua:156
 #, fuzzy
 msgid "Random page"
 msgstr "الصفحات المقروءة"
 
-#: frontend/dispatcher.lua:156
+#: frontend/dispatcher.lua:157
 #, fuzzy
 msgid "Turn pages"
 msgstr "الصفحة الحالية"
 
-#: frontend/dispatcher.lua:159
+#: frontend/dispatcher.lua:160
 msgid "Previous bookmark"
 msgstr "الإشارة المرجعية السابقة"
 
-#: frontend/dispatcher.lua:160
+#: frontend/dispatcher.lua:161
 msgid "Next bookmark"
 msgstr "الإشارة المرجعية التالية"
 
-#: frontend/dispatcher.lua:161
+#: frontend/dispatcher.lua:162
 #, fuzzy
 msgid "First bookmark"
 msgstr "أحدث إشارة مرجعية"
 
-#: frontend/dispatcher.lua:162
+#: frontend/dispatcher.lua:163
 #, fuzzy
 msgid "Last bookmark"
 msgstr "أحدث إشارة مرجعية"
 
-#: frontend/dispatcher.lua:165
+#: frontend/dispatcher.lua:166
 msgid "Back"
 msgstr "العودة"
 
-#: frontend/dispatcher.lua:166
+#: frontend/dispatcher.lua:167
 msgid "Back to previous location"
 msgstr "العودة إلى الموقع السابق"
 
-#: frontend/dispatcher.lua:167
+#: frontend/dispatcher.lua:168
 #, fuzzy
 msgid "Forward to next location"
 msgstr "انتقل إلى الموقع السابق"
 
-#: frontend/dispatcher.lua:168
+#: frontend/dispatcher.lua:169
 msgid "Follow nearest link"
 msgstr "اتبع أقرب رابط"
 
-#: frontend/dispatcher.lua:169
+#: frontend/dispatcher.lua:170
 msgid "Follow nearest internal link"
 msgstr "الذهاب إلى أقرب رابط داخلي"
 
-#: frontend/dispatcher.lua:170
+#: frontend/dispatcher.lua:171
 #, fuzzy
 msgid "Select previous link in current page"
 msgstr "الانتقال إلى صفحة القراءة السابقة"
 
-#: frontend/dispatcher.lua:171
+#: frontend/dispatcher.lua:172
 msgid "Select next link in current page"
 msgstr ""
 
-#: frontend/dispatcher.lua:172
+#: frontend/dispatcher.lua:173
 #, fuzzy
 msgid "Add current location to history"
 msgstr "أضف الصفحة الافتتاحية إلى سجل الموقع"
 
-#: frontend/dispatcher.lua:173
+#: frontend/dispatcher.lua:174
 msgid "Clear location history"
 msgstr "إزالة سجل الأماكن"
 
-#: frontend/dispatcher.lua:179 frontend/ui/widget/bookmapwidget.lua:707
+#: frontend/dispatcher.lua:180 frontend/ui/widget/bookmapwidget.lua:707
 #, fuzzy
 msgid "Book map (overview)"
 msgstr "غلاف الكتاب"
 
-#: frontend/dispatcher.lua:183
+#: frontend/dispatcher.lua:184
 msgid "Toggle bookmark"
 msgstr "تبديل العلامة المرجعية"
 
-#: frontend/dispatcher.lua:192
+#: frontend/dispatcher.lua:193
 #, fuzzy
 msgid "Toggle page turn animations"
 msgstr "بدّل اتجاه قلب الصفحة"
 
-#: frontend/dispatcher.lua:193
+#: frontend/dispatcher.lua:194
 msgid "Toggle page turn direction"
 msgstr "بدّل اتجاه قلب الصفحة"
 
-#: frontend/dispatcher.lua:194
+#: frontend/dispatcher.lua:195
 msgid "Toggle custom TOC"
 msgstr ""
 
-#: frontend/dispatcher.lua:195
+#: frontend/dispatcher.lua:196
 #, fuzzy
 msgid "Toggle custom hidden flows"
 msgstr "تبديل وضع إعادة التدفّق"
 
-#: frontend/dispatcher.lua:197
+#: frontend/dispatcher.lua:198
 #, fuzzy
 msgid "Set highlight action"
 msgstr "خيار دورة التظليل"
 
-#: frontend/dispatcher.lua:198
+#: frontend/dispatcher.lua:199
 msgid "Cycle highlight action"
 msgstr "خيار دورة التظليل"
 
-#: frontend/dispatcher.lua:199
+#: frontend/dispatcher.lua:200
 msgid "Cycle highlight style"
 msgstr "نمط دورة التظليل"
 
-#: frontend/dispatcher.lua:201
+#: frontend/dispatcher.lua:202
 #, fuzzy
 msgid "Save book metadata"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/dispatcher.lua:205
+#: frontend/dispatcher.lua:206
 #, fuzzy
 msgid "Font face"
 msgstr "حجم الخط"
 
-#: frontend/dispatcher.lua:206
+#: frontend/dispatcher.lua:207
 #, fuzzy
 msgid "Increase font size"
 msgstr "تكبير حجم الخط بمقدار %1"
 
-#: frontend/dispatcher.lua:207
+#: frontend/dispatcher.lua:208
 #, fuzzy
 msgid "Decrease font size"
 msgstr "تصغير حجم الخط بمقدار %1"
 
-#: frontend/dispatcher.lua:210
+#: frontend/dispatcher.lua:211
 msgid "Toggle page flipping"
 msgstr "بدّل قلب الصفحة"
 
-#: frontend/dispatcher.lua:211
+#: frontend/dispatcher.lua:212
 #, fuzzy
 msgid "Toggle bookmark flipping"
 msgstr "بدّل قلب الصفحة"
 
-#: frontend/dispatcher.lua:212
+#: frontend/dispatcher.lua:213
 msgid "Toggle reflow"
 msgstr "تبديل وضع إعادة التدفّق"
 
-#: frontend/dispatcher.lua:213
+#: frontend/dispatcher.lua:214
 msgid "Zoom mode"
 msgstr "وضع التكبير"
 
-#: frontend/dispatcher.lua:214
+#: frontend/dispatcher.lua:215
 msgid "Change zoom factor"
 msgstr "تغيير عامل التكبير"
 
-#: frontend/dispatcher.lua:216
+#: frontend/dispatcher.lua:217
 msgid "Toggle panel zoom"
 msgstr "تبديل لوحة التكبير"
 
-#: frontend/dispatcher.lua:221 frontend/ui/widget/textviewer.lua:612
+#: frontend/dispatcher.lua:222 frontend/ui/widget/textviewer.lua:612
 msgid "Font size"
 msgstr "حجم الخط"
 
-#: frontend/dispatcher.lua:238
+#: frontend/dispatcher.lua:239
 #, fuzzy
 msgid "Zoom"
 msgstr "تكبير إلى"
 
-#: frontend/dispatcher.lua:262 frontend/ui/data/creoptions.lua:417
+#: frontend/dispatcher.lua:263 frontend/ui/data/creoptions.lua:417
 #: frontend/ui/data/creoptions.lua:429 frontend/ui/data/creoptions.lua:440
 #: frontend/ui/data/creoptions.lua:450 frontend/ui/data/koptoptions.lua:445
 #: frontend/ui/data/koptoptions.lua:459 frontend/ui/widget/toggleswitch.lua:245
 msgid "Font Size"
 msgstr "حجم الخط"
 
-#: frontend/dispatcher.lua:263
+#: frontend/dispatcher.lua:264
 #, fuzzy
 msgid "Change font size"
 msgstr "تعيين حجم الخط"
 
-#: frontend/dispatcher.lua:636
+#: frontend/dispatcher.lua:638
 msgid "Unknown item"
 msgstr "عنصر غير معروف"
 
-#: frontend/dispatcher.lua:658
+#: frontend/dispatcher.lua:660
 #, fuzzy
 msgid "gesture distance"
 msgstr "حدّد مسافة"
 
-#: frontend/dispatcher.lua:723 frontend/dispatcher.lua:941
+#: frontend/dispatcher.lua:725 frontend/dispatcher.lua:943
 msgid "Nothing"
 msgstr "لاشيء"
 
-#: frontend/dispatcher.lua:729
+#: frontend/dispatcher.lua:731
 #, fuzzy
 msgctxt "Dispatcher"
 msgid "1 action"
@@ -8576,67 +8627,67 @@ msgstr[3] "لا دوران"
 msgstr[4] "لا دوران"
 msgstr[5] "لا دوران"
 
-#: frontend/dispatcher.lua:731 plugins/gestures.koplugin/main.lua:236
+#: frontend/dispatcher.lua:733 plugins/gestures.koplugin/main.lua:236
 msgid "Pass through"
 msgstr ""
 
-#: frontend/dispatcher.lua:753 frontend/dispatcher.lua:996
+#: frontend/dispatcher.lua:755 frontend/dispatcher.lua:998
 #, fuzzy
 msgid "Arrange actions"
 msgstr "لا دوران"
 
-#: frontend/dispatcher.lua:870
+#: frontend/dispatcher.lua:872
 #, fuzzy
 msgid "Use gesture distance"
 msgstr "حدّد مسافة"
 
-#: frontend/dispatcher.lua:957 plugins/httpinspector.koplugin/main.lua:1040
+#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1040
 msgid "General"
 msgstr "عام"
 
-#: frontend/dispatcher.lua:958
+#: frontend/dispatcher.lua:960
 #: frontend/ui/elements/common_settings_menu_table.lua:708
 #: plugins/httpinspector.koplugin/main.lua:1041
 msgid "Device"
 msgstr "الجهاز"
 
-#: frontend/dispatcher.lua:959 plugins/httpinspector.koplugin/main.lua:1042
+#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1042
 msgid "Screen and lights"
 msgstr "الشاشة والأضواء"
 
-#: frontend/dispatcher.lua:961 plugins/httpinspector.koplugin/main.lua:1044
+#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1044
 msgid "Reader"
 msgstr "قارئ"
 
-#: frontend/dispatcher.lua:962 plugins/httpinspector.koplugin/main.lua:1045
+#: frontend/dispatcher.lua:964 plugins/httpinspector.koplugin/main.lua:1045
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "مستندات قابلة لإعادة الانسياب (epub ، fb2 ، txt ...)"
 
-#: frontend/dispatcher.lua:963 plugins/httpinspector.koplugin/main.lua:1046
+#: frontend/dispatcher.lua:965 plugins/httpinspector.koplugin/main.lua:1046
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "المستندات ذات التنسيق الثابت (pdf، djvu، pics ...)"
 
-#: frontend/dispatcher.lua:1016 plugins/profiles.koplugin/main.lua:134
+#: frontend/dispatcher.lua:1018 plugins/profiles.koplugin/main.lua:134
 #, fuzzy
 msgid "Show as QuickMenu"
 msgstr "أظهر قائمة الإضافة"
 
-#: frontend/dispatcher.lua:1041
+#: frontend/dispatcher.lua:1043
 #, fuzzy
 msgid "Keep QuickMenu open"
 msgstr "أبقِ الشَّاشةَ مضاءة"
 
-#: frontend/dispatcher.lua:1084
+#: frontend/dispatcher.lua:1086
 #, fuzzy
 msgid "QuickMenu"
 msgstr "أظهر قائمة الإضافة"
 
-#: frontend/dispatcher.lua:1091
+#: frontend/dispatcher.lua:1093
 #, fuzzy
 msgid "Execute all"
 msgstr "نفََّذ"
 
-#: frontend/dispatcher.lua:1164
+#: frontend/dispatcher.lua:1166
 #, fuzzy
 msgid "Executing profile: %1"
 msgstr ""
@@ -14767,15 +14818,6 @@ msgstr "بعض الكلمات حول الكتاب"
 msgid "Set values"
 msgstr "تعيين القيم"
 
-#: frontend/ui/widget/configdialog.lua:1238
-#: frontend/ui/widget/configdialog.lua:1249
-#: frontend/ui/widget/configdialog.lua:1334
-#: frontend/ui/widget/configdialog.lua:1344
-#: frontend/ui/widget/configdialog.lua:1414
-#: frontend/ui/widget/configdialog.lua:1452
-msgid "Set as default"
-msgstr "تعيين كافتراضي"
-
 #: frontend/ui/widget/configdialog.lua:1248
 #: frontend/ui/widget/configdialog.lua:1343
 #: frontend/ui/widget/configdialog.lua:1410
@@ -15392,11 +15434,6 @@ msgstr ""
 msgid "Set as book cover"
 msgstr "غلاف الكتاب"
 
-#: frontend/ui/widget/screenshoter.lua:77
-#: plugins/archiveviewer.koplugin/main.lua:207
-msgid "View"
-msgstr "عرض"
-
 #: frontend/ui/widget/screenshoter.lua:90
 #, fuzzy
 msgid "Set as wallpaper"
@@ -15464,7 +15501,7 @@ msgid "Text viewer"
 msgstr "عارض النصوص"
 
 #: frontend/ui/widget/textviewer.lua:692
-#: plugins/texteditor.koplugin/main.lua:450
+#: plugins/texteditor.koplugin/main.lua:449
 msgid ""
 "This file is %2:\n"
 "\n"
@@ -19058,12 +19095,10 @@ msgid "Enable CSS filter?"
 msgstr "تمكين عامل تصفية CSS؟"
 
 #: plugins/newsdownloader.koplugin/main.lua:797
-#: plugins/texteditor.koplugin/main.lua:355
 msgid "Yes"
 msgstr "نعم"
 
 #: plugins/newsdownloader.koplugin/main.lua:802
-#: plugins/texteditor.koplugin/main.lua:356
 msgid "No"
 msgstr "لا"
 
@@ -20606,34 +20641,23 @@ msgid ""
 "Remove it from text editor history?"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:348
+#: plugins/texteditor.koplugin/main.lua:415
 msgid ""
-"To start editing a new file, you will have to:\n"
-"\n"
-"- First choose a folder\n"
-"- Then enter a name for the new file\n"
-"- And start editing it\n"
-"\n"
-"Do you want to proceed?"
-msgstr ""
-
-#: plugins/texteditor.koplugin/main.lua:416
-msgid ""
-"This file does not exist anymore:\n"
+"This file does not exist:\n"
 "\n"
 "%1\n"
 "\n"
 "Do you want to create it and start editing it?"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:433
+#: plugins/texteditor.koplugin/main.lua:432
 msgid ""
 "This file is not a regular file:\n"
 "\n"
 "%1"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:471
+#: plugins/texteditor.koplugin/main.lua:470
 msgid ""
 "This file can not be created:\n"
 "\n"
@@ -20668,28 +20692,28 @@ msgstr ""
 msgid "Text reset to last saved content"
 msgstr "تمت إعادة تعيين النص إلى آخر محتوىً محفوظ"
 
-#: plugins/texteditor.koplugin/main.lua:587
+#: plugins/texteditor.koplugin/main.lua:590
 msgid "File is read only"
 msgstr "الملف موسومٌ بوسم للقراءة فقط"
 
-#: plugins/texteditor.koplugin/main.lua:593
-#: plugins/texteditor.koplugin/main.lua:620
-#: plugins/texteditor.koplugin/main.lua:644
+#: plugins/texteditor.koplugin/main.lua:596
+#: plugins/texteditor.koplugin/main.lua:623
+#: plugins/texteditor.koplugin/main.lua:647
 msgid "File saved"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:595
-#: plugins/texteditor.koplugin/main.lua:604
-#: plugins/texteditor.koplugin/main.lua:622
-#: plugins/texteditor.koplugin/main.lua:646
+#: plugins/texteditor.koplugin/main.lua:598
+#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:625
+#: plugins/texteditor.koplugin/main.lua:649
 msgid "Failed saving file: %1"
 msgstr "فشلت عملية حفظ الملف: %1"
 
-#: plugins/texteditor.koplugin/main.lua:602
+#: plugins/texteditor.koplugin/main.lua:605
 msgid "Lua syntax OK, file saved"
 msgstr "صياغة Lua صحيحة, تمّ حفظ الملف"
 
-#: plugins/texteditor.koplugin/main.lua:607
+#: plugins/texteditor.koplugin/main.lua:610
 msgid ""
 "Lua syntax check failed:\n"
 "\n"
@@ -20709,15 +20733,15 @@ msgstr ""
 "\n"
 "%2"
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Do not save"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:615
+#: plugins/texteditor.koplugin/main.lua:618
 msgid "Save anyway"
 msgstr ""
 
-#: plugins/texteditor.koplugin/main.lua:628
+#: plugins/texteditor.koplugin/main.lua:631
 msgid ""
 "Text content is empty.\n"
 "Do you want to keep this file as empty, or do you prefer to delete it?\n"
@@ -20729,15 +20753,15 @@ msgstr ""
 "\n"
 "%1"
 
-#: plugins/texteditor.koplugin/main.lua:632
+#: plugins/texteditor.koplugin/main.lua:635
 msgid "Keep empty file"
 msgstr "أبقِ الملف الفارغ"
 
-#: plugins/texteditor.koplugin/main.lua:637
+#: plugins/texteditor.koplugin/main.lua:640
 msgid "File deleted"
 msgstr "تم حذف الملف"
 
-#: plugins/texteditor.koplugin/main.lua:639
+#: plugins/texteditor.koplugin/main.lua:642
 msgid "Failed deleting file: %1"
 msgstr "فشلت عملية حذف الملف: %1"
 
