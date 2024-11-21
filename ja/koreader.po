@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-21 06:03+0000\n"
+"POT-Creation-Date: 2024-11-21 06:04+0000\n"
 "PO-Revision-Date: 2024-08-22 05:01+0000\n"
 "Last-Translator: Assem Askarova <assask499@users.noreply.hosted.weblate."
 "org>\n"
@@ -378,7 +378,7 @@ msgstr "ローカルフォルダーを選択"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:567
 #: frontend/apps/reader/modules/readerbookmark.lua:1180
-#: frontend/apps/reader/modules/readerhighlight.lua:965
+#: frontend/apps/reader/modules/readerhighlight.lua:994
 #: frontend/apps/reader/modules/readerstyletweak.lua:139
 #: frontend/ui/elements/menu_keyboard_layout.lua:179
 #: frontend/ui/widget/datetimewidget.lua:81
@@ -853,7 +853,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanager.lua:580
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:456
 #: frontend/apps/reader/modules/readerbookmark.lua:819
-#: frontend/apps/reader/modules/readerhighlight.lua:964
+#: frontend/apps/reader/modules/readerhighlight.lua:993
 msgid "Exit select mode"
 msgstr "選択モードを解除"
 
@@ -2481,6 +2481,7 @@ msgid "Select page"
 msgstr "ページを選択"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:797
+#: frontend/apps/reader/modules/readerhighlight.lua:1234
 #, fuzzy
 msgid "Delete note"
 msgstr "ファイル削除"
@@ -2577,6 +2578,7 @@ msgstr "このブックマークを削除しますか？"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1171
 #: frontend/apps/reader/modules/readerbookmark.lua:1259
+#: frontend/apps/reader/modules/readerhighlight.lua:1248
 msgid "Edit note"
 msgstr "メモを編集"
 
@@ -4249,13 +4251,13 @@ msgid "Follow Link"
 msgstr "リンクをフォロー"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
-#: frontend/apps/reader/modules/readerhighlight.lua:562
+#: frontend/apps/reader/modules/readerhighlight.lua:591
 #, fuzzy
 msgid "Write highlights into PDF: %1"
 msgstr "この PDF にハイライトを書き込みますか？"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
-#: frontend/apps/reader/modules/readerhighlight.lua:558
+#: frontend/apps/reader/modules/readerhighlight.lua:587
 #: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
 #: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
 #: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
@@ -4272,7 +4274,7 @@ msgid "on"
 msgstr "オン"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
-#: frontend/apps/reader/modules/readerhighlight.lua:558
+#: frontend/apps/reader/modules/readerhighlight.lua:587
 #: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
 #: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
 #: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
@@ -4396,35 +4398,50 @@ msgstr "ハイライト不透明度"
 msgid "The higher the value, the darker the gray."
 msgstr "値が大きいほど、ハイライトは暗くなります。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:491
+#: frontend/apps/reader/modules/readerhighlight.lua:488
+#, fuzzy
+msgid "Highlight line height: %1 %"
+msgstr "ハイライト不透明度: %1"
+
+#: frontend/apps/reader/modules/readerhighlight.lua:503
+#, fuzzy
+msgid "Highlight line height"
+msgstr "ハイライト"
+
+#: frontend/apps/reader/modules/readerhighlight.lua:504
+#, fuzzy
+msgid "Percentage of the text line height."
+msgstr "画面高さに対する割合"
+
+#: frontend/apps/reader/modules/readerhighlight.lua:520
 msgid "Note marker: %1"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:508
+#: frontend/apps/reader/modules/readerhighlight.lua:537
 msgid "Note marker"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:529
+#: frontend/apps/reader/modules/readerhighlight.lua:558
 #, fuzzy
 msgid "Apply current style and color to all highlights"
 msgstr "デフォルトスタイルを %1 に設定しますか?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:532
+#: frontend/apps/reader/modules/readerhighlight.lua:561
 #, fuzzy
 msgid "Are you sure you want to update all highlights?"
 msgstr "ダウンロードしたすべての項目を削除してもよろしいですか？"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:546
+#: frontend/apps/reader/modules/readerhighlight.lua:575
 #, fuzzy
 msgid "Applied style and color to 1 highlight"
 msgid_plural "Applied style and color to %1 highlights"
 msgstr[0] "デフォルトスタイルを %1 に設定しますか?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:567
+#: frontend/apps/reader/modules/readerhighlight.lua:596
 msgid "On"
 msgstr "オン"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:579
+#: frontend/apps/reader/modules/readerhighlight.lua:608
 msgid ""
 "Warning: Book metadata location is set to hash-based storage. Writing "
 "highlights into a PDF modifies the file which may change the partial hash, "
@@ -4432,7 +4449,7 @@ msgid ""
 "lost."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:585
+#: frontend/apps/reader/modules/readerhighlight.lua:614
 msgid ""
 "Highlights in this document will be saved in the settings file, but they "
 "won't be written in the document itself because the file is in a read-only "
@@ -4447,72 +4464,72 @@ msgstr ""
 "もし、ハイライトを文書に保存したい場合は、まず書き込み可能なディレクトリに移"
 "動してください。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:599
+#: frontend/apps/reader/modules/readerhighlight.lua:628
 msgid "Off"
 msgstr "オフ"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:615
+#: frontend/apps/reader/modules/readerhighlight.lua:644
 msgid "Show reminder on book opening"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:625
+#: frontend/apps/reader/modules/readerhighlight.lua:654
 #, fuzzy
 msgid "Write all highlights into PDF file"
 msgstr "この PDF にハイライトを書き込みますか？"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:631
+#: frontend/apps/reader/modules/readerhighlight.lua:660
 #, fuzzy
 msgid "Are you sure you want to write all KOReader highlights into PDF file?"
 msgstr "ダウンロードしたすべての項目を削除してもよろしいですか？"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:646
+#: frontend/apps/reader/modules/readerhighlight.lua:675
 #, fuzzy
 msgid "1 highlight written into PDF file"
 msgid_plural "%1 highlights written into PDF file"
 msgstr[0] "この PDF にハイライトを書き込みますか？"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:654
+#: frontend/apps/reader/modules/readerhighlight.lua:683
 #, fuzzy
 msgid "Delete all highlights from PDF file"
 msgstr "選択したらハイライトする"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:660
+#: frontend/apps/reader/modules/readerhighlight.lua:689
 #, fuzzy
 msgid "Are you sure you want to delete all KOReader highlights from PDF file?"
 msgstr "ダウンロードしたすべての項目を削除してもよろしいですか？"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:671
+#: frontend/apps/reader/modules/readerhighlight.lua:700
 #, fuzzy
 msgid "1 highlight deleted from PDF file"
 msgid_plural "%1 highlights deleted from PDF file"
 msgstr[0] "この PDF にハイライトを書き込みますか？"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:684
+#: frontend/apps/reader/modules/readerhighlight.lua:713
 msgid "Panel zoom (manga/comic)"
 msgstr "パネルズーム(マンガ/コミック)"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:691
+#: frontend/apps/reader/modules/readerhighlight.lua:720
 msgid "Long-press on text"
 msgstr "文字を長押しする"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:694
+#: frontend/apps/reader/modules/readerhighlight.lua:723
 msgid "Dictionary on single word selection"
 msgstr "1 つの単語を選択する場合辞書を表示"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:739
+#: frontend/apps/reader/modules/readerhighlight.lua:768
 #, fuzzy
 msgid "Highlight dialog position: %1"
 msgstr "ハイライト不透明度: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:749
+#: frontend/apps/reader/modules/readerhighlight.lua:778
 msgid "Highlight very-long-press interval: %1 s"
 msgstr "ハイライトにする長押し間隔: %1 s"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:755
+#: frontend/apps/reader/modules/readerhighlight.lua:784
 msgid "Highlight very-long-press interval"
 msgstr "ハイライトにする長押し間隔"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:756
+#: frontend/apps/reader/modules/readerhighlight.lua:785
 msgid ""
 "If a long-press is not released in this interval, it is considered a very-"
 "long-press. On document text, single word selection will not be triggered."
@@ -4521,7 +4538,7 @@ msgstr ""
 "では、単一の単語の選択と認識されません。"
 
 #. @translators This is the time unit for seconds.
-#: frontend/apps/reader/modules/readerhighlight.lua:763
+#: frontend/apps/reader/modules/readerhighlight.lua:792
 #: frontend/datetime.lua:184
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:154
 #: plugins/autodim.koplugin/main.lua:111
@@ -4530,7 +4547,7 @@ msgctxt "Time"
 msgid "s"
 msgstr "秒"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:765
+#: frontend/apps/reader/modules/readerhighlight.lua:794
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:155
 #: plugins/gestures.koplugin/main.lua:554
 #: plugins/gestures.koplugin/main.lua:581
@@ -4541,11 +4558,11 @@ msgstr "秒"
 msgid "Set interval"
 msgstr "間隔設定"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:778
+#: frontend/apps/reader/modules/readerhighlight.lua:807
 msgid "Auto-scroll when selection reaches a corner"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:779
+#: frontend/apps/reader/modules/readerhighlight.lua:808
 msgid ""
 "Auto-scroll to show part of the previous page when your text selection "
 "reaches the top left corner, or of the next page when it reaches the bottom "
@@ -4554,17 +4571,17 @@ msgid ""
 "previous or next column."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:801
+#: frontend/apps/reader/modules/readerhighlight.lua:830
 #, fuzzy
 msgid "Rate of movement in content selection: %1"
 msgstr "コンテンツの選択を開始します"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:812
+#: frontend/apps/reader/modules/readerhighlight.lua:841
 #, fuzzy
 msgid "Rate of movement"
 msgstr "目次"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:813
+#: frontend/apps/reader/modules/readerhighlight.lua:842
 msgid ""
 "Select a decimal value from 0.25 to 5. A smaller value results in a larger "
 "travel distance per keystroke. Font size and this value are inversely "
@@ -4572,47 +4589,47 @@ msgid ""
 "versa."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:823
+#: frontend/apps/reader/modules/readerhighlight.lua:852
 msgid "Speed-up rate on multiple keystrokes"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:837
+#: frontend/apps/reader/modules/readerhighlight.lua:866
 #, fuzzy
 msgid "Speed-up rate interval: 1 second"
 msgid_plural "Speed-up rate interval: %1 seconds"
 msgstr[0] "ケータイタップ間隔: %1 秒"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:851
+#: frontend/apps/reader/modules/readerhighlight.lua:880
 #, fuzzy
 msgid "Time interval"
 msgstr "スワイプ間隔"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:852
+#: frontend/apps/reader/modules/readerhighlight.lua:881
 msgid ""
 "Select a decimal value up to 1 second. This is the period of time within "
 "which multiple keystrokes will speed-up rate of travel."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:865
+#: frontend/apps/reader/modules/readerhighlight.lua:894
 #, fuzzy
 msgid "Selection on text"
 msgstr "テキストを選択"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:872
+#: frontend/apps/reader/modules/readerhighlight.lua:901
 #: frontend/dispatcher.lua:191
 #, fuzzy
 msgid "Translate current page"
 msgstr "現在のページをブックマークに追加"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:882
+#: frontend/apps/reader/modules/readerhighlight.lua:911
 msgid "Allow panel zoom"
 msgstr "パネルのズームを許可"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:897
+#: frontend/apps/reader/modules/readerhighlight.lua:926
 msgid "Fall back to text selection"
 msgstr "テキストの選択に戻ります"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:962
+#: frontend/apps/reader/modules/readerhighlight.lua:991
 msgid ""
 "You are currently in SELECT mode.\n"
 "To finish highlighting, long press where the highlight should end and press "
@@ -4625,35 +4642,36 @@ msgstr ""
 "また、ハイライトの開始位置をタップすることで選択モードを終了することができま"
 "す。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1197
-#: frontend/apps/reader/modules/readerhighlight.lua:1257
+#: frontend/apps/reader/modules/readerhighlight.lua:1226
+#: frontend/apps/reader/modules/readerhighlight.lua:1309
 msgid "Note"
 msgstr "メモ"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1205
+#: frontend/apps/reader/modules/readerhighlight.lua:1257
 #, fuzzy
 msgid "Delete highlight"
 msgstr "選択したらハイライトする"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1212
-msgid "Edit highlight"
-msgstr "ハイライト編集"
+#: frontend/apps/reader/modules/readerhighlight.lua:1264
+#, fuzzy
+msgid "Highlight menu"
+msgstr "ハイライト"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1240
+#: frontend/apps/reader/modules/readerhighlight.lua:1292
 msgctxt "Highlight"
 msgid "Style"
 msgstr "ハイライト様式"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1248
+#: frontend/apps/reader/modules/readerhighlight.lua:1300
 msgctxt "Highlight"
 msgid "Color"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1265
+#: frontend/apps/reader/modules/readerhighlight.lua:1317
 msgid "Details"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1776
+#: frontend/apps/reader/modules/readerhighlight.lua:1828
 #, fuzzy
 msgid ""
 "No OCR results or no language data.\n"
@@ -4681,19 +4699,19 @@ msgstr ""
 "Tesseract v3.04 の言語データファイル(英語の場合は eng.traineddata 、スペイン"
 "語の場合は spa.traineddata など)を koreader/data/tessdata にコピーします"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1984
+#: frontend/apps/reader/modules/readerhighlight.lua:2036
 msgid "Default highlight action changed to '%1'."
 msgstr "既定のハイライト動作を'%1'に変更しました。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2032
+#: frontend/apps/reader/modules/readerhighlight.lua:2084
 msgid "Default highlight style changed to '%1'."
 msgstr "既定のハイライトスタイルを'%1'に変更しました。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2223
+#: frontend/apps/reader/modules/readerhighlight.lua:2275
 msgid "Highlight style"
 msgstr "ハイライトの様式設定"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2257
+#: frontend/apps/reader/modules/readerhighlight.lua:2309
 #, fuzzy
 msgid "Highlight color"
 msgstr "ハイライト"
@@ -6990,11 +7008,11 @@ msgstr "ハイフン ('-') または空白 (' ')でハイフネーション位�
 msgid "Invalid hyphenation!"
 msgstr "ハイフネーションが不正！"
 
-#: frontend/apps/reader/modules/readerview.lua:866
+#: frontend/apps/reader/modules/readerview.lua:873
 msgid "Rotation mode set to: %1"
 msgstr "回転モードを %1 に設定しました"
 
-#: frontend/apps/reader/modules/readerview.lua:893
+#: frontend/apps/reader/modules/readerview.lua:900
 msgid ""
 "Continuous view (scroll mode) works best with zoom to page width, zoom to "
 "content width or zoom to rows.\n"
@@ -7009,65 +7027,65 @@ msgstr ""
 "み合わせでは、連続表示を行うと、ページをめくるときに予期せぬずれが生じること"
 "があります。"
 
-#: frontend/apps/reader/modules/readerview.lua:1030
+#: frontend/apps/reader/modules/readerview.lua:1037
 #, fuzzy
 msgid "Contrast set to: %1."
 msgstr "フォントサイズを %1 に設定しました。"
 
-#: frontend/apps/reader/modules/readerview.lua:1053
+#: frontend/apps/reader/modules/readerview.lua:1060
 msgid "Hardware dithering set to: %1."
 msgstr "ハードウェアディザを %1 に設定しました。"
 
-#: frontend/apps/reader/modules/readerview.lua:1058
+#: frontend/apps/reader/modules/readerview.lua:1065
 msgid "Software dithering set to: %1."
 msgstr "ソフトウェアディザを %1 に設定しました。"
 
-#: frontend/apps/reader/modules/readerview.lua:1064
+#: frontend/apps/reader/modules/readerview.lua:1071
 msgid "Font zoom set to: %1."
 msgstr "フォントのズーム倍率が%1に設定されました。"
 
-#: frontend/apps/reader/modules/readerview.lua:1085
+#: frontend/apps/reader/modules/readerview.lua:1092
 msgid "View mode set to: %1"
 msgstr "閲覧モードを %1 に設定しました"
 
-#: frontend/apps/reader/modules/readerview.lua:1091
+#: frontend/apps/reader/modules/readerview.lua:1098
 msgid "Page gap set to %1."
 msgstr "ページ間隔が%1に設定されました。"
 
 #. @translators Selects which layers of the DjVu image should be rendered.  Valid  rendering  modes are color, black, mask, foreground, and background. See http://djvu.sourceforge.net/ and https://en.wikipedia.org/wiki/DjVu for more information about the format.
-#: frontend/apps/reader/modules/readerview.lua:1130
+#: frontend/apps/reader/modules/readerview.lua:1137
 msgid "DjVu render mode"
 msgstr "DjVu 描画モード"
 
-#: frontend/apps/reader/modules/readerview.lua:1132
+#: frontend/apps/reader/modules/readerview.lua:1139
 msgid "COLOUR (works for both colour and b&w pages)"
 msgstr "カラー (カラーと白黒ページの両方で動作)"
 
-#: frontend/apps/reader/modules/readerview.lua:1133
+#: frontend/apps/reader/modules/readerview.lua:1140
 msgid "BLACK & WHITE (for b&w pages only, much faster)"
 msgstr "白黒 (白黒ページに対してのみ、非常に高速)"
 
-#: frontend/apps/reader/modules/readerview.lua:1134
+#: frontend/apps/reader/modules/readerview.lua:1141
 msgid "COLOUR ONLY (slightly faster than COLOUR)"
 msgstr "カラーのみ (カラーより少し速い)"
 
-#: frontend/apps/reader/modules/readerview.lua:1135
+#: frontend/apps/reader/modules/readerview.lua:1142
 msgid "MASK ONLY (for b&w pages only)"
 msgstr "マスクのみ (白黒ページのみ)"
 
-#: frontend/apps/reader/modules/readerview.lua:1136
+#: frontend/apps/reader/modules/readerview.lua:1143
 msgid "COLOUR BACKGROUND (show only background)"
 msgstr "カラー背景 (背景のみ表示)"
 
-#: frontend/apps/reader/modules/readerview.lua:1137
+#: frontend/apps/reader/modules/readerview.lua:1144
 msgid "COLOUR FOREGROUND (show only foreground)"
 msgstr "カラー前景 (前景のみ表示)"
 
-#: frontend/apps/reader/modules/readerview.lua:1202
+#: frontend/apps/reader/modules/readerview.lua:1209
 msgid "RTL page turning."
 msgstr "RTL(右から左)ページめくり。"
 
-#: frontend/apps/reader/modules/readerview.lua:1202
+#: frontend/apps/reader/modules/readerview.lua:1209
 msgid "LTR page turning."
 msgstr "LTR(左から右)ページめくり。"
 
@@ -21342,6 +21360,9 @@ msgstr "Wallabag"
 msgid "annotations"
 msgstr "回転"
 
+#~ msgid "Edit highlight"
+#~ msgstr "ハイライト編集"
+
 #~ msgid ""
 #~ "To start editing a new file, you will have to:\n"
 #~ "\n"
@@ -22832,9 +22853,6 @@ msgstr "回転"
 #~ msgstr ""
 #~ "ニュースのダウンロードが完了しました。 一部のフィードを処理できませんでし"
 #~ "た。 サポートされていない形式: %1"
-
-#~ msgid "Highlighting"
-#~ msgstr "ハイライト"
 
 #~ msgid "Ask with pop-up dialog"
 #~ msgstr "ポップアップで確認"

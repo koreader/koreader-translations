@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-21 06:03+0000\n"
+"POT-Creation-Date: 2024-11-21 06:04+0000\n"
 "PO-Revision-Date: 2024-11-13 14:06+0000\n"
 "Last-Translator: cyanjiang <cyanjiang@163.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -384,7 +384,7 @@ msgstr "选择本地文件夹"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:567
 #: frontend/apps/reader/modules/readerbookmark.lua:1180
-#: frontend/apps/reader/modules/readerhighlight.lua:965
+#: frontend/apps/reader/modules/readerhighlight.lua:994
 #: frontend/apps/reader/modules/readerstyletweak.lua:139
 #: frontend/ui/elements/menu_keyboard_layout.lua:179
 #: frontend/ui/widget/datetimewidget.lua:81
@@ -856,7 +856,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanager.lua:580
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:456
 #: frontend/apps/reader/modules/readerbookmark.lua:819
-#: frontend/apps/reader/modules/readerhighlight.lua:964
+#: frontend/apps/reader/modules/readerhighlight.lua:993
 msgid "Exit select mode"
 msgstr "退出选择模式"
 
@@ -2407,6 +2407,7 @@ msgid "Select page"
 msgstr "选择页面"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:797
+#: frontend/apps/reader/modules/readerhighlight.lua:1234
 msgid "Delete note"
 msgstr "删除注释"
 
@@ -2492,6 +2493,7 @@ msgstr "删除此书签？"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1171
 #: frontend/apps/reader/modules/readerbookmark.lua:1259
+#: frontend/apps/reader/modules/readerhighlight.lua:1248
 msgid "Edit note"
 msgstr "编辑笔记"
 
@@ -4107,12 +4109,12 @@ msgid "Follow Link"
 msgstr "链接跳转"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
-#: frontend/apps/reader/modules/readerhighlight.lua:562
+#: frontend/apps/reader/modules/readerhighlight.lua:591
 msgid "Write highlights into PDF: %1"
 msgstr "将标注保存到 PDF: %1"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
-#: frontend/apps/reader/modules/readerhighlight.lua:558
+#: frontend/apps/reader/modules/readerhighlight.lua:587
 #: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
 #: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
 #: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
@@ -4129,7 +4131,7 @@ msgid "on"
 msgstr "开启"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
-#: frontend/apps/reader/modules/readerhighlight.lua:558
+#: frontend/apps/reader/modules/readerhighlight.lua:587
 #: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
 #: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
 #: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
@@ -4248,32 +4250,47 @@ msgstr "灰色高亮不透明度"
 msgid "The higher the value, the darker the gray."
 msgstr "数值越高，灰色部分颜色越深。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:491
+#: frontend/apps/reader/modules/readerhighlight.lua:488
+#, fuzzy
+msgid "Highlight line height: %1 %"
+msgstr "高亮色：%1"
+
+#: frontend/apps/reader/modules/readerhighlight.lua:503
+#, fuzzy
+msgid "Highlight line height"
+msgstr "标注"
+
+#: frontend/apps/reader/modules/readerhighlight.lua:504
+#, fuzzy
+msgid "Percentage of the text line height."
+msgstr "屏幕高度百分比"
+
+#: frontend/apps/reader/modules/readerhighlight.lua:520
 msgid "Note marker: %1"
 msgstr "笔记标记：%1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:508
+#: frontend/apps/reader/modules/readerhighlight.lua:537
 msgid "Note marker"
 msgstr "笔记标记"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:529
+#: frontend/apps/reader/modules/readerhighlight.lua:558
 msgid "Apply current style and color to all highlights"
 msgstr "将当前的样式和颜色应用到所有标注上"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:532
+#: frontend/apps/reader/modules/readerhighlight.lua:561
 msgid "Are you sure you want to update all highlights?"
 msgstr "你确定要更新所有的标注吗？"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:546
+#: frontend/apps/reader/modules/readerhighlight.lua:575
 msgid "Applied style and color to 1 highlight"
 msgid_plural "Applied style and color to %1 highlights"
 msgstr[0] "设置 样式和颜色到 %1 标注"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:567
+#: frontend/apps/reader/modules/readerhighlight.lua:596
 msgid "On"
 msgstr "打开"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:579
+#: frontend/apps/reader/modules/readerhighlight.lua:608
 msgid ""
 "Warning: Book metadata location is set to hash-based storage. Writing "
 "highlights into a PDF modifies the file which may change the partial hash, "
@@ -4283,7 +4300,7 @@ msgstr ""
 "警告：当前书籍使用了基于哈希的元数据存储。将标注保存到PDF文件会修改文件本身，"
 "可能会导致哈希变动并造成元数据（标注、阅读进度等）丢失。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:585
+#: frontend/apps/reader/modules/readerhighlight.lua:614
 msgid ""
 "Highlights in this document will be saved in the settings file, but they "
 "won't be written in the document itself because the file is in a read-only "
@@ -4297,71 +4314,71 @@ msgstr ""
 "\n"
 "若您想将标注信息保存在文档中，请先将此文档移动到可写目录中。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:599
+#: frontend/apps/reader/modules/readerhighlight.lua:628
 msgid "Off"
 msgstr "关闭"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:615
+#: frontend/apps/reader/modules/readerhighlight.lua:644
 msgid "Show reminder on book opening"
 msgstr "打开书籍时显示提醒"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:625
+#: frontend/apps/reader/modules/readerhighlight.lua:654
 #, fuzzy
 msgid "Write all highlights into PDF file"
 msgstr "要将标注保存到 PDF 文件中吗"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:631
+#: frontend/apps/reader/modules/readerhighlight.lua:660
 #, fuzzy
 msgid "Are you sure you want to write all KOReader highlights into PDF file?"
 msgstr "您确定要将所有 KOReader 标注写入 PDF 文件吗？"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:646
+#: frontend/apps/reader/modules/readerhighlight.lua:675
 #, fuzzy
 msgid "1 highlight written into PDF file"
 msgid_plural "%1 highlights written into PDF file"
 msgstr[0] "%1 标记写入 PDF 文件"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:654
+#: frontend/apps/reader/modules/readerhighlight.lua:683
 #, fuzzy
 msgid "Delete all highlights from PDF file"
 msgstr "删除 PDF 文件中的所有标注"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:660
+#: frontend/apps/reader/modules/readerhighlight.lua:689
 #, fuzzy
 msgid "Are you sure you want to delete all KOReader highlights from PDF file?"
 msgstr "您确定要从 PDF 文件中删除所有 KOReader 标注吗？"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:671
+#: frontend/apps/reader/modules/readerhighlight.lua:700
 #, fuzzy
 msgid "1 highlight deleted from PDF file"
 msgid_plural "%1 highlights deleted from PDF file"
 msgstr[0] "%1高亮删除的pdf文件"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:684
+#: frontend/apps/reader/modules/readerhighlight.lua:713
 msgid "Panel zoom (manga/comic)"
 msgstr "控制面板缩放 (日本漫画/连环漫画)"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:691
+#: frontend/apps/reader/modules/readerhighlight.lua:720
 msgid "Long-press on text"
 msgstr "长按文本"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:694
+#: frontend/apps/reader/modules/readerhighlight.lua:723
 msgid "Dictionary on single word selection"
 msgstr "选中单个单词时的词典"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:739
+#: frontend/apps/reader/modules/readerhighlight.lua:768
 msgid "Highlight dialog position: %1"
 msgstr "标注对话框位置：%1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:749
+#: frontend/apps/reader/modules/readerhighlight.lua:778
 msgid "Highlight very-long-press interval: %1 s"
 msgstr "高亮时间非常久的长按间隔：%1 秒"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:755
+#: frontend/apps/reader/modules/readerhighlight.lua:784
 msgid "Highlight very-long-press interval"
 msgstr "高亮时间非常久的长按间隔"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:756
+#: frontend/apps/reader/modules/readerhighlight.lua:785
 msgid ""
 "If a long-press is not released in this interval, it is considered a very-"
 "long-press. On document text, single word selection will not be triggered."
@@ -4370,7 +4387,7 @@ msgstr ""
 "会触发选中单个单词。"
 
 #. @translators This is the time unit for seconds.
-#: frontend/apps/reader/modules/readerhighlight.lua:763
+#: frontend/apps/reader/modules/readerhighlight.lua:792
 #: frontend/datetime.lua:184
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:154
 #: plugins/autodim.koplugin/main.lua:111
@@ -4379,7 +4396,7 @@ msgctxt "Time"
 msgid "s"
 msgstr "秒"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:765
+#: frontend/apps/reader/modules/readerhighlight.lua:794
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:155
 #: plugins/gestures.koplugin/main.lua:554
 #: plugins/gestures.koplugin/main.lua:581
@@ -4390,11 +4407,11 @@ msgstr "秒"
 msgid "Set interval"
 msgstr "设置时间间隔"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:778
+#: frontend/apps/reader/modules/readerhighlight.lua:807
 msgid "Auto-scroll when selection reaches a corner"
 msgstr "当选择越过页脚时自动翻页"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:779
+#: frontend/apps/reader/modules/readerhighlight.lua:808
 msgid ""
 "Auto-scroll to show part of the previous page when your text selection "
 "reaches the top left corner, or of the next page when it reaches the bottom "
@@ -4406,15 +4423,15 @@ msgstr ""
 "时，自动滚动显示下一页的部分内容。\n"
 "在双栏模式下，只能显示上一栏或下一栏。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:801
+#: frontend/apps/reader/modules/readerhighlight.lua:830
 msgid "Rate of movement in content selection: %1"
 msgstr "内容选择的移动速率:%1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:812
+#: frontend/apps/reader/modules/readerhighlight.lua:841
 msgid "Rate of movement"
 msgstr "移动速率"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:813
+#: frontend/apps/reader/modules/readerhighlight.lua:842
 msgid ""
 "Select a decimal value from 0.25 to 5. A smaller value results in a larger "
 "travel distance per keystroke. Font size and this value are inversely "
@@ -4424,43 +4441,43 @@ msgstr ""
 "选择一个介于0.25到5之间的十进制值。较小的值会导致键程较大。字号和此值呈负相"
 "关，这意味着较小的字号需要较大的值，反之亦然。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:823
+#: frontend/apps/reader/modules/readerhighlight.lua:852
 msgid "Speed-up rate on multiple keystrokes"
 msgstr "多次按键的加速率"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:837
+#: frontend/apps/reader/modules/readerhighlight.lua:866
 msgid "Speed-up rate interval: 1 second"
 msgid_plural "Speed-up rate interval: %1 seconds"
 msgstr[0] "提速间隔： %1 秒"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:851
+#: frontend/apps/reader/modules/readerhighlight.lua:880
 msgid "Time interval"
 msgstr "时间间隔"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:852
+#: frontend/apps/reader/modules/readerhighlight.lua:881
 msgid ""
 "Select a decimal value up to 1 second. This is the period of time within "
 "which multiple keystrokes will speed-up rate of travel."
 msgstr "选择不超过 1 秒的十进制值。在这段时间内，多次点击将加速移动速度。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:865
+#: frontend/apps/reader/modules/readerhighlight.lua:894
 msgid "Selection on text"
 msgstr "选择文本"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:872
+#: frontend/apps/reader/modules/readerhighlight.lua:901
 #: frontend/dispatcher.lua:191
 msgid "Translate current page"
 msgstr "翻译本页"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:882
+#: frontend/apps/reader/modules/readerhighlight.lua:911
 msgid "Allow panel zoom"
 msgstr "允许控制面板缩放"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:897
+#: frontend/apps/reader/modules/readerhighlight.lua:926
 msgid "Fall back to text selection"
 msgstr "退回到文本选择"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:962
+#: frontend/apps/reader/modules/readerhighlight.lua:991
 msgid ""
 "You are currently in SELECT mode.\n"
 "To finish highlighting, long press where the highlight should end and press "
@@ -4471,34 +4488,35 @@ msgstr ""
 "如果要结束高亮， 长按高亮处或者点击高亮按钮。\n"
 "你也可以通过点击高亮的开始处来退出选择模式."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1197
-#: frontend/apps/reader/modules/readerhighlight.lua:1257
+#: frontend/apps/reader/modules/readerhighlight.lua:1226
+#: frontend/apps/reader/modules/readerhighlight.lua:1309
 msgid "Note"
 msgstr "笔记"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1205
+#: frontend/apps/reader/modules/readerhighlight.lua:1257
 msgid "Delete highlight"
 msgstr "删除标注"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1212
-msgid "Edit highlight"
-msgstr "编辑标注"
+#: frontend/apps/reader/modules/readerhighlight.lua:1264
+#, fuzzy
+msgid "Highlight menu"
+msgstr "标注"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1240
+#: frontend/apps/reader/modules/readerhighlight.lua:1292
 msgctxt "Highlight"
 msgid "Style"
 msgstr "样式"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1248
+#: frontend/apps/reader/modules/readerhighlight.lua:1300
 msgctxt "Highlight"
 msgid "Color"
 msgstr "颜色"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1265
+#: frontend/apps/reader/modules/readerhighlight.lua:1317
 msgid "Details"
 msgstr "详细内容"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1776
+#: frontend/apps/reader/modules/readerhighlight.lua:1828
 msgid ""
 "No OCR results or no language data.\n"
 "\n"
@@ -4523,19 +4541,19 @@ msgstr ""
 "复制语言数据文件 （比如适用于英语的 eng.traineddata 和适用于西班牙语的 spa."
 "traineddata）到koreader/data/tessdata 文件夹内"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1984
+#: frontend/apps/reader/modules/readerhighlight.lua:2036
 msgid "Default highlight action changed to '%1'."
 msgstr "默认标注动作设置为'%1'。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2032
+#: frontend/apps/reader/modules/readerhighlight.lua:2084
 msgid "Default highlight style changed to '%1'."
 msgstr "默认标注样式设置为'%1'。"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2223
+#: frontend/apps/reader/modules/readerhighlight.lua:2275
 msgid "Highlight style"
 msgstr "高亮样式"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2257
+#: frontend/apps/reader/modules/readerhighlight.lua:2309
 msgid "Highlight color"
 msgstr "标注颜色"
 
@@ -6876,11 +6894,11 @@ msgstr "通过连字符 ('-') 或空格 (' ') 添加断字位置。"
 msgid "Invalid hyphenation!"
 msgstr "无效连字符！"
 
-#: frontend/apps/reader/modules/readerview.lua:866
+#: frontend/apps/reader/modules/readerview.lua:873
 msgid "Rotation mode set to: %1"
 msgstr "旋转模式已设为: %1"
 
-#: frontend/apps/reader/modules/readerview.lua:893
+#: frontend/apps/reader/modules/readerview.lua:900
 msgid ""
 "Continuous view (scroll mode) works best with zoom to page width, zoom to "
 "content width or zoom to rows.\n"
@@ -6894,64 +6912,64 @@ msgstr ""
 "在与缩放为适应页面、页面高度、内容高度或列数相结合的情况下，连续视图可能会在"
 "翻页时出现意料不到的偏移。"
 
-#: frontend/apps/reader/modules/readerview.lua:1030
+#: frontend/apps/reader/modules/readerview.lua:1037
 msgid "Contrast set to: %1."
 msgstr "对比度已设为: %1。"
 
-#: frontend/apps/reader/modules/readerview.lua:1053
+#: frontend/apps/reader/modules/readerview.lua:1060
 msgid "Hardware dithering set to: %1."
 msgstr "硬件抖动已设为：%1。"
 
-#: frontend/apps/reader/modules/readerview.lua:1058
+#: frontend/apps/reader/modules/readerview.lua:1065
 msgid "Software dithering set to: %1."
 msgstr "软件抖动已设为：%1。"
 
-#: frontend/apps/reader/modules/readerview.lua:1064
+#: frontend/apps/reader/modules/readerview.lua:1071
 msgid "Font zoom set to: %1."
 msgstr "字体缩放已设为: %1。"
 
-#: frontend/apps/reader/modules/readerview.lua:1085
+#: frontend/apps/reader/modules/readerview.lua:1092
 msgid "View mode set to: %1"
 msgstr "查看模式已设为: %1"
 
-#: frontend/apps/reader/modules/readerview.lua:1091
+#: frontend/apps/reader/modules/readerview.lua:1098
 msgid "Page gap set to %1."
 msgstr "页间距设为 %1。"
 
 #. @translators Selects which layers of the DjVu image should be rendered.  Valid  rendering  modes are color, black, mask, foreground, and background. See http://djvu.sourceforge.net/ and https://en.wikipedia.org/wiki/DjVu for more information about the format.
-#: frontend/apps/reader/modules/readerview.lua:1130
+#: frontend/apps/reader/modules/readerview.lua:1137
 msgid "DjVu render mode"
 msgstr "DjVu 渲染模式"
 
-#: frontend/apps/reader/modules/readerview.lua:1132
+#: frontend/apps/reader/modules/readerview.lua:1139
 msgid "COLOUR (works for both colour and b&w pages)"
 msgstr "COLOUR（适用于彩色和黑白页面）"
 
-#: frontend/apps/reader/modules/readerview.lua:1133
+#: frontend/apps/reader/modules/readerview.lua:1140
 msgid "BLACK & WHITE (for b&w pages only, much faster)"
 msgstr "BLACK & WHITE（仅适用于黑白页面，渲染更快）"
 
-#: frontend/apps/reader/modules/readerview.lua:1134
+#: frontend/apps/reader/modules/readerview.lua:1141
 msgid "COLOUR ONLY (slightly faster than COLOUR)"
 msgstr "COLOUR ONLY（比 COLOUR 模式稍快）"
 
-#: frontend/apps/reader/modules/readerview.lua:1135
+#: frontend/apps/reader/modules/readerview.lua:1142
 msgid "MASK ONLY (for b&w pages only)"
 msgstr "MASK ONLY（仅适用于黑白页面）"
 
-#: frontend/apps/reader/modules/readerview.lua:1136
+#: frontend/apps/reader/modules/readerview.lua:1143
 msgid "COLOUR BACKGROUND (show only background)"
 msgstr "COLOUR BACKGROUND（仅显示背景图层）"
 
-#: frontend/apps/reader/modules/readerview.lua:1137
+#: frontend/apps/reader/modules/readerview.lua:1144
 msgid "COLOUR FOREGROUND (show only foreground)"
 msgstr "COLOUR FOREGROUND（仅显示前景图层）"
 
-#: frontend/apps/reader/modules/readerview.lua:1202
+#: frontend/apps/reader/modules/readerview.lua:1209
 msgid "RTL page turning."
 msgstr "从右至左翻页。"
 
-#: frontend/apps/reader/modules/readerview.lua:1202
+#: frontend/apps/reader/modules/readerview.lua:1209
 msgid "LTR page turning."
 msgstr "从左至右翻页。"
 
@@ -20802,6 +20820,9 @@ msgstr "Wallabag"
 msgid "annotations"
 msgstr "注释"
 
+#~ msgid "Edit highlight"
+#~ msgstr "编辑标注"
+
 #~ msgid ""
 #~ "To start editing a new file, you will have to:\n"
 #~ "\n"
@@ -22598,9 +22619,6 @@ msgstr "注释"
 #~ "Downloading news finished. Could not process some feeds. Unsupported "
 #~ "format in: %1"
 #~ msgstr "新闻下载完毕。无法处理一些订阅。不支持格式：%1"
-
-#~ msgid "Highlighting"
-#~ msgstr "标注"
 
 #~ msgid "Allow highlighting"
 #~ msgstr "允许标注"

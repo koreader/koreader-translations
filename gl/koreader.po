@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-21 06:03+0000\n"
+"POT-Creation-Date: 2024-11-21 06:04+0000\n"
 "PO-Revision-Date: 2024-11-14 04:33+0000\n"
 "Last-Translator: Juan Comesaña Fernández <xan.comesana@gmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/koreader/"
@@ -384,7 +384,7 @@ msgstr "Escoller cartafol local"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:567
 #: frontend/apps/reader/modules/readerbookmark.lua:1180
-#: frontend/apps/reader/modules/readerhighlight.lua:965
+#: frontend/apps/reader/modules/readerhighlight.lua:994
 #: frontend/apps/reader/modules/readerstyletweak.lua:139
 #: frontend/ui/elements/menu_keyboard_layout.lua:179
 #: frontend/ui/widget/datetimewidget.lua:81
@@ -860,7 +860,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanager.lua:580
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:456
 #: frontend/apps/reader/modules/readerbookmark.lua:819
-#: frontend/apps/reader/modules/readerhighlight.lua:964
+#: frontend/apps/reader/modules/readerhighlight.lua:993
 msgid "Exit select mode"
 msgstr "Saír do modo de selección"
 
@@ -2442,6 +2442,7 @@ msgid "Select page"
 msgstr "Seleccionar páxina"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:797
+#: frontend/apps/reader/modules/readerhighlight.lua:1234
 msgid "Delete note"
 msgstr "Borrar nota"
 
@@ -2527,6 +2528,7 @@ msgstr "Borrar este marcador?"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1171
 #: frontend/apps/reader/modules/readerbookmark.lua:1259
+#: frontend/apps/reader/modules/readerhighlight.lua:1248
 msgid "Edit note"
 msgstr "Editar nota"
 
@@ -4186,12 +4188,12 @@ msgid "Follow Link"
 msgstr "Seguir Ligazón"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
-#: frontend/apps/reader/modules/readerhighlight.lua:562
+#: frontend/apps/reader/modules/readerhighlight.lua:591
 msgid "Write highlights into PDF: %1"
 msgstr "Gardar os textos destacados no PDF: %1"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
-#: frontend/apps/reader/modules/readerhighlight.lua:558
+#: frontend/apps/reader/modules/readerhighlight.lua:587
 #: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
 #: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
 #: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
@@ -4208,7 +4210,7 @@ msgid "on"
 msgstr "si"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:347
-#: frontend/apps/reader/modules/readerhighlight.lua:558
+#: frontend/apps/reader/modules/readerhighlight.lua:587
 #: frontend/dispatcher.lua:114 frontend/dispatcher.lua:120
 #: frontend/dispatcher.lua:122 frontend/dispatcher.lua:124
 #: frontend/dispatcher.lua:131 frontend/dispatcher.lua:132
@@ -4327,33 +4329,48 @@ msgstr "Opacidade do resalte gris"
 msgid "The higher the value, the darker the gray."
 msgstr "Canto máis alto é o valor, máis escuro é o gris."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:491
+#: frontend/apps/reader/modules/readerhighlight.lua:488
+#, fuzzy
+msgid "Highlight line height: %1 %"
+msgstr "Cor para resaltar texto: %1"
+
+#: frontend/apps/reader/modules/readerhighlight.lua:503
+#, fuzzy
+msgid "Highlight line height"
+msgstr "Destacar texto"
+
+#: frontend/apps/reader/modules/readerhighlight.lua:504
+#, fuzzy
+msgid "Percentage of the text line height."
+msgstr "Porcentaxe da altura da pantalla"
+
+#: frontend/apps/reader/modules/readerhighlight.lua:520
 msgid "Note marker: %1"
 msgstr "Marcador de notas: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:508
+#: frontend/apps/reader/modules/readerhighlight.lua:537
 msgid "Note marker"
 msgstr "Marcador de notas"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:529
+#: frontend/apps/reader/modules/readerhighlight.lua:558
 msgid "Apply current style and color to all highlights"
 msgstr "Aplicar o estilo actual e cor a todos os texto destacados"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:532
+#: frontend/apps/reader/modules/readerhighlight.lua:561
 msgid "Are you sure you want to update all highlights?"
 msgstr "Queres actualizar todos os textos destacados?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:546
+#: frontend/apps/reader/modules/readerhighlight.lua:575
 msgid "Applied style and color to 1 highlight"
 msgid_plural "Applied style and color to %1 highlights"
 msgstr[0] "Aplicados o estilo e cor a 1 texto destacado"
 msgstr[1] "Aplicados o estilo e cor a %1 textos destacados"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:567
+#: frontend/apps/reader/modules/readerhighlight.lua:596
 msgid "On"
 msgstr "Activar"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:579
+#: frontend/apps/reader/modules/readerhighlight.lua:608
 msgid ""
 "Warning: Book metadata location is set to hash-based storage. Writing "
 "highlights into a PDF modifies the file which may change the partial hash, "
@@ -4365,7 +4382,7 @@ msgstr ""
 "ficheiro e pode modificar o hash parcial, resultando en que o seus metadatos "
 "(por ex. textos destacados e progreso) se desvinculen e perdan."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:585
+#: frontend/apps/reader/modules/readerhighlight.lua:614
 msgid ""
 "Highlights in this document will be saved in the settings file, but they "
 "won't be written in the document itself because the file is in a read-only "
@@ -4381,67 +4398,67 @@ msgstr ""
 "Para que os textos destacados se garden no documento, simplemente móveo a un "
 "cartafol con permisos de escritura."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:599
+#: frontend/apps/reader/modules/readerhighlight.lua:628
 msgid "Off"
 msgstr "Desactivar"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:615
+#: frontend/apps/reader/modules/readerhighlight.lua:644
 msgid "Show reminder on book opening"
 msgstr "Mostrar o recordatorio ao abrir o libro"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:625
+#: frontend/apps/reader/modules/readerhighlight.lua:654
 msgid "Write all highlights into PDF file"
 msgstr "Escribir todos os textos destacados nun ficheiro PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:631
+#: frontend/apps/reader/modules/readerhighlight.lua:660
 msgid "Are you sure you want to write all KOReader highlights into PDF file?"
 msgstr "Queres gardar todos os textos destacados de KOReader nun ficheiro PDF?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:646
+#: frontend/apps/reader/modules/readerhighlight.lua:675
 msgid "1 highlight written into PDF file"
 msgid_plural "%1 highlights written into PDF file"
 msgstr[0] "1 texto destacado gardado no ficheiro PDF"
 msgstr[1] "%1 textos destacados gardados no ficheiro PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:654
+#: frontend/apps/reader/modules/readerhighlight.lua:683
 msgid "Delete all highlights from PDF file"
 msgstr "Borrar todos os textos destacados do ficheiro PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:660
+#: frontend/apps/reader/modules/readerhighlight.lua:689
 msgid "Are you sure you want to delete all KOReader highlights from PDF file?"
 msgstr "Queres borrar todos os textos destacados de KOReader do ficheiro PDF?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:671
+#: frontend/apps/reader/modules/readerhighlight.lua:700
 msgid "1 highlight deleted from PDF file"
 msgid_plural "%1 highlights deleted from PDF file"
 msgstr[0] "1 texto destacado borrado do ficheiro PDF"
 msgstr[1] "%1 textos destacados borrados do ficheiro PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:684
+#: frontend/apps/reader/modules/readerhighlight.lua:713
 msgid "Panel zoom (manga/comic)"
 msgstr "Zoom de viñeta (manga/cómic)"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:691
+#: frontend/apps/reader/modules/readerhighlight.lua:720
 msgid "Long-press on text"
 msgstr "Pulsación longa no texto"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:694
+#: frontend/apps/reader/modules/readerhighlight.lua:723
 msgid "Dictionary on single word selection"
 msgstr "Busca en dicionario ao seleccionar unha soa palabra"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:739
+#: frontend/apps/reader/modules/readerhighlight.lua:768
 msgid "Highlight dialog position: %1"
 msgstr "Posición do diálogo de destacar texto: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:749
+#: frontend/apps/reader/modules/readerhighlight.lua:778
 msgid "Highlight very-long-press interval: %1 s"
 msgstr "Intervalo de pulsación moi longa para destacar: %1 s"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:755
+#: frontend/apps/reader/modules/readerhighlight.lua:784
 msgid "Highlight very-long-press interval"
 msgstr "Intervalo de pulsación moi longa para destacar"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:756
+#: frontend/apps/reader/modules/readerhighlight.lua:785
 msgid ""
 "If a long-press is not released in this interval, it is considered a very-"
 "long-press. On document text, single word selection will not be triggered."
@@ -4451,7 +4468,7 @@ msgstr ""
 "a selección dunha soa palabra."
 
 #. @translators This is the time unit for seconds.
-#: frontend/apps/reader/modules/readerhighlight.lua:763
+#: frontend/apps/reader/modules/readerhighlight.lua:792
 #: frontend/datetime.lua:184
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:154
 #: plugins/autodim.koplugin/main.lua:111
@@ -4460,7 +4477,7 @@ msgctxt "Time"
 msgid "s"
 msgstr "s"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:765
+#: frontend/apps/reader/modules/readerhighlight.lua:794
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:155
 #: plugins/gestures.koplugin/main.lua:554
 #: plugins/gestures.koplugin/main.lua:581
@@ -4471,11 +4488,11 @@ msgstr "s"
 msgid "Set interval"
 msgstr "Axustar intervalo"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:778
+#: frontend/apps/reader/modules/readerhighlight.lua:807
 msgid "Auto-scroll when selection reaches a corner"
 msgstr "Desprazar automaticamente cando a selección alcanza a unha esquina"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:779
+#: frontend/apps/reader/modules/readerhighlight.lua:808
 msgid ""
 "Auto-scroll to show part of the previous page when your text selection "
 "reaches the top left corner, or of the next page when it reaches the bottom "
@@ -4489,15 +4506,15 @@ msgstr ""
 "Coa excepción do modo en dúas columnas, onde está limitado a mostrar só a "
 "columna anterior ou a seguinte."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:801
+#: frontend/apps/reader/modules/readerhighlight.lua:830
 msgid "Rate of movement in content selection: %1"
 msgstr "Velocidade de movemento na selección de contido: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:812
+#: frontend/apps/reader/modules/readerhighlight.lua:841
 msgid "Rate of movement"
 msgstr "Velodicade de movemento"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:813
+#: frontend/apps/reader/modules/readerhighlight.lua:842
 msgid ""
 "Select a decimal value from 0.25 to 5. A smaller value results in a larger "
 "travel distance per keystroke. Font size and this value are inversely "
@@ -4509,21 +4526,21 @@ msgstr ""
 "este valor están correlacionados inversamente, é dicir, un tamaño de fonte "
 "máis pequeno require un valor maior e viceversa."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:823
+#: frontend/apps/reader/modules/readerhighlight.lua:852
 msgid "Speed-up rate on multiple keystrokes"
 msgstr "Acelerar a velocidade en pulsacións múltiples"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:837
+#: frontend/apps/reader/modules/readerhighlight.lua:866
 msgid "Speed-up rate interval: 1 second"
 msgid_plural "Speed-up rate interval: %1 seconds"
 msgstr[0] "Intervalo de aceleración da taxa: %1 segundo"
 msgstr[1] "Intervalo de aceleración da taxa: %1 segundos"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:851
+#: frontend/apps/reader/modules/readerhighlight.lua:880
 msgid "Time interval"
 msgstr "Intervalo temporal"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:852
+#: frontend/apps/reader/modules/readerhighlight.lua:881
 msgid ""
 "Select a decimal value up to 1 second. This is the period of time within "
 "which multiple keystrokes will speed-up rate of travel."
@@ -4531,24 +4548,24 @@ msgstr ""
 "Selecciona un valor decimal de ata 1 segundo. Este é o período temporal "
 "dentro do cal múltiples pulsacións aceleraran a velocidade de desprazamento."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:865
+#: frontend/apps/reader/modules/readerhighlight.lua:894
 msgid "Selection on text"
 msgstr "Selección no texto"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:872
+#: frontend/apps/reader/modules/readerhighlight.lua:901
 #: frontend/dispatcher.lua:191
 msgid "Translate current page"
 msgstr "Traducir a páxina actual"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:882
+#: frontend/apps/reader/modules/readerhighlight.lua:911
 msgid "Allow panel zoom"
 msgstr "Permitir zoom de viñeta"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:897
+#: frontend/apps/reader/modules/readerhighlight.lua:926
 msgid "Fall back to text selection"
 msgstr "Volver á selección de texto"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:962
+#: frontend/apps/reader/modules/readerhighlight.lua:991
 msgid ""
 "You are currently in SELECT mode.\n"
 "To finish highlighting, long press where the highlight should end and press "
@@ -4560,34 +4577,35 @@ msgstr ""
 "rematar e pulsa o botón DESTACAR.\n"
 "Podes saír tamén do modo de selección premendo no inicio do texto destacado."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1197
-#: frontend/apps/reader/modules/readerhighlight.lua:1257
+#: frontend/apps/reader/modules/readerhighlight.lua:1226
+#: frontend/apps/reader/modules/readerhighlight.lua:1309
 msgid "Note"
 msgstr "Nota"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1205
+#: frontend/apps/reader/modules/readerhighlight.lua:1257
 msgid "Delete highlight"
 msgstr "Borrar destaque"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1212
-msgid "Edit highlight"
-msgstr "Editar texto destacado"
+#: frontend/apps/reader/modules/readerhighlight.lua:1264
+#, fuzzy
+msgid "Highlight menu"
+msgstr "Destacar"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1240
+#: frontend/apps/reader/modules/readerhighlight.lua:1292
 msgctxt "Highlight"
 msgid "Style"
 msgstr "Estilo"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1248
+#: frontend/apps/reader/modules/readerhighlight.lua:1300
 msgctxt "Highlight"
 msgid "Color"
 msgstr "Cor"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1265
+#: frontend/apps/reader/modules/readerhighlight.lua:1317
 msgid "Details"
 msgstr "Detalles"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1776
+#: frontend/apps/reader/modules/readerhighlight.lua:1828
 msgid ""
 "No OCR results or no language data.\n"
 "\n"
@@ -4613,19 +4631,19 @@ msgstr ""
 "Copia os ficheiros de datos de idioma (por ex. eng.traineddata para inglés e "
 "spa.traineddata para castelán) en koreader/data/tessdata"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1984
+#: frontend/apps/reader/modules/readerhighlight.lua:2036
 msgid "Default highlight action changed to '%1'."
 msgstr "Acción de destaque de texto cambiada a '%1'."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2032
+#: frontend/apps/reader/modules/readerhighlight.lua:2084
 msgid "Default highlight style changed to '%1'."
 msgstr "Estilo por defecto de destaque de texto cambiado a '%1'."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2223
+#: frontend/apps/reader/modules/readerhighlight.lua:2275
 msgid "Highlight style"
 msgstr "Estilo para destacar texto"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2257
+#: frontend/apps/reader/modules/readerhighlight.lua:2309
 msgid "Highlight color"
 msgstr "Cor para texto destacado"
 
@@ -7113,11 +7131,11 @@ msgstr ""
 msgid "Invalid hyphenation!"
 msgstr "Separación en sílabas non válida!"
 
-#: frontend/apps/reader/modules/readerview.lua:866
+#: frontend/apps/reader/modules/readerview.lua:873
 msgid "Rotation mode set to: %1"
 msgstr "Modo de rotación axustado a: %1"
 
-#: frontend/apps/reader/modules/readerview.lua:893
+#: frontend/apps/reader/modules/readerview.lua:900
 msgid ""
 "Continuous view (scroll mode) works best with zoom to page width, zoom to "
 "content width or zoom to rows.\n"
@@ -7131,64 +7149,64 @@ msgstr ""
 "Combinado co zoom axustado á páxina, ou á altura da páxina ou á altura de "
 "contido, a vista continua pode provocar saltos inesperados ao pasar páxina."
 
-#: frontend/apps/reader/modules/readerview.lua:1030
+#: frontend/apps/reader/modules/readerview.lua:1037
 msgid "Contrast set to: %1."
 msgstr "Contraste axustado a: %1."
 
-#: frontend/apps/reader/modules/readerview.lua:1053
+#: frontend/apps/reader/modules/readerview.lua:1060
 msgid "Hardware dithering set to: %1."
 msgstr "Entrelazado por hardware axustado a: %1."
 
-#: frontend/apps/reader/modules/readerview.lua:1058
+#: frontend/apps/reader/modules/readerview.lua:1065
 msgid "Software dithering set to: %1."
 msgstr "Entrelazado por software axustado a: %1."
 
-#: frontend/apps/reader/modules/readerview.lua:1064
+#: frontend/apps/reader/modules/readerview.lua:1071
 msgid "Font zoom set to: %1."
 msgstr "Zoom da fonte axustado a: %1."
 
-#: frontend/apps/reader/modules/readerview.lua:1085
+#: frontend/apps/reader/modules/readerview.lua:1092
 msgid "View mode set to: %1"
 msgstr "Modo de visualización axustado a: %1"
 
-#: frontend/apps/reader/modules/readerview.lua:1091
+#: frontend/apps/reader/modules/readerview.lua:1098
 msgid "Page gap set to %1."
 msgstr "Separación entre páxinas axustado a %1."
 
 #. @translators Selects which layers of the DjVu image should be rendered.  Valid  rendering  modes are color, black, mask, foreground, and background. See http://djvu.sourceforge.net/ and https://en.wikipedia.org/wiki/DjVu for more information about the format.
-#: frontend/apps/reader/modules/readerview.lua:1130
+#: frontend/apps/reader/modules/readerview.lua:1137
 msgid "DjVu render mode"
 msgstr "Modo de renderización de DjVu"
 
-#: frontend/apps/reader/modules/readerview.lua:1132
+#: frontend/apps/reader/modules/readerview.lua:1139
 msgid "COLOUR (works for both colour and b&w pages)"
 msgstr "COR (funciona para páxinas en cor e en b&n)"
 
-#: frontend/apps/reader/modules/readerview.lua:1133
+#: frontend/apps/reader/modules/readerview.lua:1140
 msgid "BLACK & WHITE (for b&w pages only, much faster)"
 msgstr "BRANCO e NEGRO (para páxinas en b&n, moi rápido)"
 
-#: frontend/apps/reader/modules/readerview.lua:1134
+#: frontend/apps/reader/modules/readerview.lua:1141
 msgid "COLOUR ONLY (slightly faster than COLOUR)"
 msgstr "SO COR (un pouco máis rápido que COR)"
 
-#: frontend/apps/reader/modules/readerview.lua:1135
+#: frontend/apps/reader/modules/readerview.lua:1142
 msgid "MASK ONLY (for b&w pages only)"
 msgstr "SÓ MÁSCARA (para páxinas en b&n)"
 
-#: frontend/apps/reader/modules/readerview.lua:1136
+#: frontend/apps/reader/modules/readerview.lua:1143
 msgid "COLOUR BACKGROUND (show only background)"
 msgstr "COR DE FONDO"
 
-#: frontend/apps/reader/modules/readerview.lua:1137
+#: frontend/apps/reader/modules/readerview.lua:1144
 msgid "COLOUR FOREGROUND (show only foreground)"
 msgstr "COR DE PRIMEIRO PLANO (mostrar só o primeiro plano)"
 
-#: frontend/apps/reader/modules/readerview.lua:1202
+#: frontend/apps/reader/modules/readerview.lua:1209
 msgid "RTL page turning."
 msgstr "Pasar páxina de DAE."
 
-#: frontend/apps/reader/modules/readerview.lua:1202
+#: frontend/apps/reader/modules/readerview.lua:1209
 msgid "LTR page turning."
 msgstr "Pasar páxina de EAD."
 
@@ -21530,6 +21548,9 @@ msgstr "wallabag"
 msgid "annotations"
 msgstr "anotacións"
 
+#~ msgid "Edit highlight"
+#~ msgstr "Editar texto destacado"
+
 #~ msgid ""
 #~ "To start editing a new file, you will have to:\n"
 #~ "\n"
@@ -23323,9 +23344,6 @@ msgstr "anotacións"
 #~ msgstr ""
 #~ "A descarga de novas finalizou. Non foi posible procesar algunhas delas. "
 #~ "Tipo non soportado en: %1"
-
-#~ msgid "Highlighting"
-#~ msgstr "Destacar texto"
 
 #~ msgid "Allow highlighting"
 #~ msgstr "Permitir destacar texto"
