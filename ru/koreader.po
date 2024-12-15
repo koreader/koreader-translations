@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-12 21:26+0000\n"
+"POT-Creation-Date: 2024-12-15 16:24+0000\n"
 "PO-Revision-Date: 2024-12-13 06:34+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
@@ -37,8 +37,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
-"n%100>=11 && n%100<=14)? 2 : 3);\n"
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Generator: Weblate 5.9-dev\n"
 
 #: reader.lua:194
@@ -179,8 +179,8 @@ msgstr "Введите имя файла"
 #: frontend/apps/filemanager/filemanager.lua:1503
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:517
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:663
-#: frontend/apps/filemanager/filemanagercollection.lua:533
-#: frontend/apps/filemanager/filemanagercollection.lua:625
+#: frontend/apps/filemanager/filemanagercollection.lua:576
+#: frontend/apps/filemanager/filemanagercollection.lua:668
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:381
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:76
@@ -314,7 +314,7 @@ msgstr "Редактировать"
 #: frontend/apps/filemanager/filemanager.lua:603
 #: frontend/apps/filemanager/filemanager.lua:608
 #: frontend/apps/filemanager/filemanager.lua:1103
-#: frontend/apps/filemanager/filemanagercollection.lua:170
+#: frontend/apps/filemanager/filemanagercollection.lua:171
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:343
 #: frontend/apps/filemanager/filemanagerhistory.lua:192
 #: frontend/apps/reader/modules/readerbookmark.lua:802
@@ -564,7 +564,7 @@ msgstr "Папка Dropbox (/ для корневой)"
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:524
-#: frontend/apps/filemanager/filemanagercollection.lua:540
+#: frontend/apps/filemanager/filemanagercollection.lua:583
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
 #: frontend/apps/reader/modules/readerbookmark.lua:1346
@@ -857,7 +857,7 @@ msgid "Move"
 msgstr "Переместить"
 
 #: frontend/apps/filemanager/filemanager.lua:592
-#: frontend/apps/filemanager/filemanagercollection.lua:464
+#: frontend/apps/filemanager/filemanagercollection.lua:507
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:427
 #: frontend/apps/reader/modules/readerbookmark.lua:782
 msgid "Deselect all"
@@ -1435,92 +1435,115 @@ msgstr[1] "%1 документа с метаданными на основе х�
 msgstr[2] "%1 документов с метаданными на основе хэша"
 msgstr[3] "%1 документов с метаданными на основе хэша"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:20
-#: frontend/apps/filemanager/filemanagercollection.lua:227
+#: frontend/apps/filemanager/filemanagercollection.lua:21
+#: frontend/apps/filemanager/filemanagercollection.lua:228
 #: frontend/dispatcher.lua:59
 msgid "Collections"
 msgstr "Подборки"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:21
+#: frontend/apps/filemanager/filemanagercollection.lua:22
 #: frontend/dispatcher.lua:58
 msgid "Favorites"
 msgstr "Избранное"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:178
+#: frontend/apps/filemanager/filemanagercollection.lua:179
 msgid "Remove from collection"
 msgstr "Удалить из подборки"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:236
-#: frontend/apps/filemanager/filemanagercollection.lua:290
+#: frontend/apps/filemanager/filemanagercollection.lua:237
+#: frontend/apps/filemanager/filemanagercollection.lua:307
 msgid "Arrange books in collection"
 msgstr "Упорядочить книги в подборке"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:243
+#: frontend/apps/filemanager/filemanagercollection.lua:245
+#, fuzzy
+msgid "Add all books from a folder"
+msgstr "Добавить книгу в подборку"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:252
+msgid "Add all books from a folder and its subfolders"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagercollection.lua:260
 msgid "Add a book to collection"
 msgstr "Добавить книгу в подборку"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:267
+#: frontend/apps/filemanager/filemanagercollection.lua:284
 msgid "Remove current book from collection"
 msgstr "Удалить текущую книгу из подборки"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:267
+#: frontend/apps/filemanager/filemanagercollection.lua:284
 msgid "Add current book to collection"
 msgstr "Добавить текущую книгу в коллекцию"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:371
+#: frontend/apps/filemanager/filemanagercollection.lua:331
+#, fuzzy
+msgid "No books added to collection"
+msgstr "Добавить книгу в подборку"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:333
+#, fuzzy
+msgid "1 book added to collection"
+msgid_plural "%1 books added to collection"
+msgstr[0] "Добавить книгу в подборку"
+msgstr[1] "Добавить книгу в подборку"
+msgstr[2] "Добавить книгу в подборку"
+msgstr[3] "Добавить книгу в подборку"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:414
 msgid "Collections (%1)"
 msgstr "Подборки (%1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:375
+#: frontend/apps/filemanager/filemanagercollection.lua:418
 #: frontend/apps/reader/modules/readerbookmark.lua:1001
 msgid "Selected: %1"
 msgstr "Выбрано: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:417
+#: frontend/apps/filemanager/filemanagercollection.lua:460
 msgid "Remove collection"
 msgstr "Удалить подборку"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:424
+#: frontend/apps/filemanager/filemanagercollection.lua:467
 msgid "Rename collection"
 msgstr "Переименовать подборку"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:451
+#: frontend/apps/filemanager/filemanagercollection.lua:494
 msgid "New collection"
 msgstr "Новая подборка"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:474
+#: frontend/apps/filemanager/filemanagercollection.lua:517
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:441
 #: frontend/apps/reader/modules/readerbookmark.lua:751
 msgid "Select all"
 msgstr "Выбрать всё"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:486
+#: frontend/apps/filemanager/filemanagercollection.lua:529
 msgid "Apply selection"
 msgstr "Применить выбор"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:500
-#: frontend/apps/filemanager/filemanagercollection.lua:607
+#: frontend/apps/filemanager/filemanagercollection.lua:543
+#: frontend/apps/filemanager/filemanagercollection.lua:650
 msgid "Arrange collections"
 msgstr "Упорядочить подборки"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:510
+#: frontend/apps/filemanager/filemanagercollection.lua:553
 #: frontend/dispatcher.lua:60
 msgid "Collections search"
 msgstr "Поиск подборок"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:528
+#: frontend/apps/filemanager/filemanagercollection.lua:571
 msgid "Enter collection name"
 msgstr "Введите имя подборки"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:546
+#: frontend/apps/filemanager/filemanagercollection.lua:589
 msgid "Collection already exists: %1"
 msgstr "Подборка уже существует: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:593
+#: frontend/apps/filemanager/filemanagercollection.lua:636
 msgid "Remove collection?"
 msgstr "Удалить подборку?"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:594
+#: frontend/apps/filemanager/filemanagercollection.lua:637
 #: frontend/apps/reader/modules/readerbookmark.lua:826
 #: frontend/apps/reader/modules/readerbookmark.lua:831
 #: frontend/apps/reader/modules/readerbookmark.lua:1158
@@ -1532,13 +1555,13 @@ msgstr "Удалить подборку?"
 msgid "Remove"
 msgstr "Удалить"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:620
+#: frontend/apps/filemanager/filemanagercollection.lua:663
 #: frontend/apps/reader/modules/readersearch.lua:263
 #: frontend/ui/widget/inputdialog.lua:936 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
 msgstr "Введите текст поискового запроса"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:632
+#: frontend/apps/filemanager/filemanagercollection.lua:675
 #: frontend/apps/filemanager/filemanagerhistory.lua:388
 #: frontend/apps/reader/modules/readerbookmark.lua:1404
 #: frontend/apps/reader/modules/readerhighlight.lua:153
@@ -1552,7 +1575,7 @@ msgstr "Введите текст поискового запроса"
 msgid "Search"
 msgstr "Поиск"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:650
+#: frontend/apps/filemanager/filemanagercollection.lua:693
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:85
 #: frontend/apps/filemanager/filemanagerhistory.lua:411
 #: frontend/apps/reader/modules/readerbookmark.lua:1441
@@ -1561,21 +1584,21 @@ msgstr "Поиск"
 msgid "Case sensitive"
 msgstr "С учётом регистра"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:676
+#: frontend/apps/filemanager/filemanagercollection.lua:719
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:115
 #: frontend/apps/reader/modules/readersearch.lua:601
 msgid "Searching… (tap to cancel)"
 msgstr "Идёт поиск… (коснитесь для отмены)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:709
+#: frontend/apps/filemanager/filemanagercollection.lua:752
 msgid "No results for: %1"
 msgstr "Нет результатов для: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:718
+#: frontend/apps/filemanager/filemanagercollection.lua:761
 msgid "Search results: %1"
 msgstr "Результаты поиска: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:736
+#: frontend/apps/filemanager/filemanagercollection.lua:779
 msgid "Collections…"
 msgstr "Подборки…"
 
@@ -15737,22 +15760,22 @@ msgstr "Отмена. Очистка…"
 msgid "Packing EPUB…"
 msgstr "Упаковка EPUB…"
 
-#: frontend/util.lua:1070
+#: frontend/util.lua:1071
 msgctxt "Data storage size"
 msgid "%1 GB"
 msgstr "%1 ГБ"
 
-#: frontend/util.lua:1073
+#: frontend/util.lua:1074
 msgctxt "Data storage size"
 msgid "%1 MB"
 msgstr "%1 МБ"
 
-#: frontend/util.lua:1076
+#: frontend/util.lua:1077
 msgctxt "Data storage size"
 msgid "%1 kB"
 msgstr "%1 КБ"
 
-#: frontend/util.lua:1078
+#: frontend/util.lua:1079
 msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 Б"

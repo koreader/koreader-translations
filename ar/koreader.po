@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-12 21:26+0000\n"
+"POT-Creation-Date: 2024-12-15 16:24+0000\n"
 "PO-Revision-Date: 2024-02-27 20:00+0000\n"
 "Last-Translator: shetozz <a.teama3317@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -160,8 +160,8 @@ msgstr "أدخل اسم ملف"
 #: frontend/apps/filemanager/filemanager.lua:1503
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:517
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:663
-#: frontend/apps/filemanager/filemanagercollection.lua:533
-#: frontend/apps/filemanager/filemanagercollection.lua:625
+#: frontend/apps/filemanager/filemanagercollection.lua:576
+#: frontend/apps/filemanager/filemanagercollection.lua:668
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:381
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:76
@@ -295,7 +295,7 @@ msgstr "تحرير"
 #: frontend/apps/filemanager/filemanager.lua:603
 #: frontend/apps/filemanager/filemanager.lua:608
 #: frontend/apps/filemanager/filemanager.lua:1103
-#: frontend/apps/filemanager/filemanagercollection.lua:170
+#: frontend/apps/filemanager/filemanagercollection.lua:171
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:343
 #: frontend/apps/filemanager/filemanagerhistory.lua:192
 #: frontend/apps/reader/modules/readerbookmark.lua:802
@@ -549,7 +549,7 @@ msgstr "مجلد Dropbox (للمدير /)"
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:524
-#: frontend/apps/filemanager/filemanagercollection.lua:540
+#: frontend/apps/filemanager/filemanagercollection.lua:583
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
 #: frontend/apps/reader/modules/readerbookmark.lua:1346
@@ -849,7 +849,7 @@ msgid "Move"
 msgstr "نقل"
 
 #: frontend/apps/filemanager/filemanager.lua:592
-#: frontend/apps/filemanager/filemanagercollection.lua:464
+#: frontend/apps/filemanager/filemanagercollection.lua:507
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:427
 #: frontend/apps/reader/modules/readerbookmark.lua:782
 msgid "Deselect all"
@@ -1462,108 +1462,133 @@ msgstr[3] "%1 ملفات ذات بيانات تعريفية مبنية على ا
 msgstr[4] "%1 ملفا ذوي بيانات تعريفية مبنية على التشفير"
 msgstr[5] "%1 ملف ذو بيانات تعريفية مبنية على التشفير"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:20
-#: frontend/apps/filemanager/filemanagercollection.lua:227
+#: frontend/apps/filemanager/filemanagercollection.lua:21
+#: frontend/apps/filemanager/filemanagercollection.lua:228
 #: frontend/dispatcher.lua:59
 #, fuzzy
 msgid "Collections"
 msgstr "إزالة من المجموعة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:21
+#: frontend/apps/filemanager/filemanagercollection.lua:22
 #: frontend/dispatcher.lua:58
 msgid "Favorites"
 msgstr "المفضّلة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:178
+#: frontend/apps/filemanager/filemanagercollection.lua:179
 msgid "Remove from collection"
 msgstr "إزالة من المجموعة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:236
-#: frontend/apps/filemanager/filemanagercollection.lua:290
+#: frontend/apps/filemanager/filemanagercollection.lua:237
+#: frontend/apps/filemanager/filemanagercollection.lua:307
 #, fuzzy
 msgid "Arrange books in collection"
 msgstr "تغيير عامل التكبير"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:243
+#: frontend/apps/filemanager/filemanagercollection.lua:245
+#, fuzzy
+msgid "Add all books from a folder"
+msgstr "أضف إلى المفضّلة"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:252
+msgid "Add all books from a folder and its subfolders"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagercollection.lua:260
 #, fuzzy
 msgid "Add a book to collection"
 msgstr "أضف إلى المفضّلة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:267
+#: frontend/apps/filemanager/filemanagercollection.lua:284
 #, fuzzy
 msgid "Remove current book from collection"
 msgstr "أزِلْ من قائمة المفضّلة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:267
+#: frontend/apps/filemanager/filemanagercollection.lua:284
 #, fuzzy
 msgid "Add current book to collection"
 msgstr "نسخ الكتاب الحالي إلى الأرشيف"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:371
+#: frontend/apps/filemanager/filemanagercollection.lua:331
+#, fuzzy
+msgid "No books added to collection"
+msgstr "أضف إلى المفضّلة"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:333
+#, fuzzy
+msgid "1 book added to collection"
+msgid_plural "%1 books added to collection"
+msgstr[0] "أضف إلى المفضّلة"
+msgstr[1] "أضف إلى المفضّلة"
+msgstr[2] "أضف إلى المفضّلة"
+msgstr[3] "أضف إلى المفضّلة"
+msgstr[4] "أضف إلى المفضّلة"
+msgstr[5] "أضف إلى المفضّلة"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:414
 #, fuzzy
 msgid "Collections (%1)"
 msgstr "رموز (%1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:375
+#: frontend/apps/filemanager/filemanagercollection.lua:418
 #: frontend/apps/reader/modules/readerbookmark.lua:1001
 #, fuzzy
 msgid "Selected: %1"
 msgstr "الملف المحذوف: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:417
+#: frontend/apps/filemanager/filemanagercollection.lua:460
 #, fuzzy
 msgid "Remove collection"
 msgstr "إزالة من المجموعة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:424
+#: frontend/apps/filemanager/filemanagercollection.lua:467
 #, fuzzy
 msgid "Rename collection"
 msgstr "إزالة من المجموعة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:451
+#: frontend/apps/filemanager/filemanagercollection.lua:494
 #, fuzzy
 msgid "New collection"
 msgstr "إزالة من المجموعة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:474
+#: frontend/apps/filemanager/filemanagercollection.lua:517
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:441
 #: frontend/apps/reader/modules/readerbookmark.lua:751
 msgid "Select all"
 msgstr "تحديد الكل"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:486
+#: frontend/apps/filemanager/filemanagercollection.lua:529
 #, fuzzy
 msgid "Apply selection"
 msgstr "حذف المقالة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:500
-#: frontend/apps/filemanager/filemanagercollection.lua:607
+#: frontend/apps/filemanager/filemanagercollection.lua:543
+#: frontend/apps/filemanager/filemanagercollection.lua:650
 #, fuzzy
 msgid "Arrange collections"
 msgstr "إزالة من المجموعة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:510
+#: frontend/apps/filemanager/filemanagercollection.lua:553
 #: frontend/dispatcher.lua:60
 #, fuzzy
 msgid "Collections search"
 msgstr "إزالة من المجموعة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:528
+#: frontend/apps/filemanager/filemanagercollection.lua:571
 #, fuzzy
 msgid "Enter collection name"
 msgstr "أدخل اسم ملف التعريف"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:546
+#: frontend/apps/filemanager/filemanagercollection.lua:589
 #, fuzzy
 msgid "Collection already exists: %1"
 msgstr "الملفُّ %1 موجودٌ من قبل."
 
-#: frontend/apps/filemanager/filemanagercollection.lua:593
+#: frontend/apps/filemanager/filemanagercollection.lua:636
 #, fuzzy
 msgid "Remove collection?"
 msgstr "إزالة من المجموعة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:594
+#: frontend/apps/filemanager/filemanagercollection.lua:637
 #: frontend/apps/reader/modules/readerbookmark.lua:826
 #: frontend/apps/reader/modules/readerbookmark.lua:831
 #: frontend/apps/reader/modules/readerbookmark.lua:1158
@@ -1575,13 +1600,13 @@ msgstr "إزالة من المجموعة"
 msgid "Remove"
 msgstr "إزالة"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:620
+#: frontend/apps/filemanager/filemanagercollection.lua:663
 #: frontend/apps/reader/modules/readersearch.lua:263
 #: frontend/ui/widget/inputdialog.lua:936 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
 msgstr "أدخل نصًّا للبحث عنه"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:632
+#: frontend/apps/filemanager/filemanagercollection.lua:675
 #: frontend/apps/filemanager/filemanagerhistory.lua:388
 #: frontend/apps/reader/modules/readerbookmark.lua:1404
 #: frontend/apps/reader/modules/readerhighlight.lua:153
@@ -1595,7 +1620,7 @@ msgstr "أدخل نصًّا للبحث عنه"
 msgid "Search"
 msgstr "بحث"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:650
+#: frontend/apps/filemanager/filemanagercollection.lua:693
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:85
 #: frontend/apps/filemanager/filemanagerhistory.lua:411
 #: frontend/apps/reader/modules/readerbookmark.lua:1441
@@ -1604,24 +1629,24 @@ msgstr "بحث"
 msgid "Case sensitive"
 msgstr "يتأثر بحالة الحرف"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:676
+#: frontend/apps/filemanager/filemanagercollection.lua:719
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:115
 #: frontend/apps/reader/modules/readersearch.lua:601
 #, fuzzy
 msgid "Searching… (tap to cancel)"
 msgstr "جارٍ تحميلُ الصورةٍ المكبّرة (المس هنا لتلغي هذا)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:709
+#: frontend/apps/filemanager/filemanagercollection.lua:752
 #, fuzzy
 msgid "No results for: %1"
 msgstr "لا نتائج لِ '%1'."
 
-#: frontend/apps/filemanager/filemanagercollection.lua:718
+#: frontend/apps/filemanager/filemanagercollection.lua:761
 #, fuzzy
 msgid "Search results: %1"
 msgstr "نتائج البحث (%1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:736
+#: frontend/apps/filemanager/filemanagercollection.lua:779
 #, fuzzy
 msgid "Collections…"
 msgstr "إزالة من المجموعة"
@@ -15743,25 +15768,25 @@ msgstr "اُُلغيت المهمّة. جارٍ التنظيف …"
 msgid "Packing EPUB…"
 msgstr "حَزْمُ ملف EPUB…"
 
-#: frontend/util.lua:1070
+#: frontend/util.lua:1071
 #, fuzzy
 msgctxt "Data storage size"
 msgid "%1 GB"
 msgstr "%1 غيغابايت"
 
-#: frontend/util.lua:1073
+#: frontend/util.lua:1074
 #, fuzzy
 msgctxt "Data storage size"
 msgid "%1 MB"
 msgstr "%1 ميغا بايت"
 
-#: frontend/util.lua:1076
+#: frontend/util.lua:1077
 #, fuzzy
 msgctxt "Data storage size"
 msgid "%1 kB"
 msgstr "%1 كيلو بايت"
 
-#: frontend/util.lua:1078
+#: frontend/util.lua:1079
 #, fuzzy
 msgctxt "Data storage size"
 msgid "%1 B"

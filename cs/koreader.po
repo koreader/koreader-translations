@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-12 21:26+0000\n"
+"POT-Creation-Date: 2024-12-15 16:24+0000\n"
 "PO-Revision-Date: 2024-09-11 05:09+0000\n"
 "Last-Translator: Marek <marek@pavelka.xyz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -158,8 +158,8 @@ msgstr "Zadejte název souboru"
 #: frontend/apps/filemanager/filemanager.lua:1503
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:517
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:663
-#: frontend/apps/filemanager/filemanagercollection.lua:533
-#: frontend/apps/filemanager/filemanagercollection.lua:625
+#: frontend/apps/filemanager/filemanagercollection.lua:576
+#: frontend/apps/filemanager/filemanagercollection.lua:668
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:381
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:76
@@ -293,7 +293,7 @@ msgstr "Upravit"
 #: frontend/apps/filemanager/filemanager.lua:603
 #: frontend/apps/filemanager/filemanager.lua:608
 #: frontend/apps/filemanager/filemanager.lua:1103
-#: frontend/apps/filemanager/filemanagercollection.lua:170
+#: frontend/apps/filemanager/filemanagercollection.lua:171
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:343
 #: frontend/apps/filemanager/filemanagerhistory.lua:192
 #: frontend/apps/reader/modules/readerbookmark.lua:802
@@ -540,7 +540,7 @@ msgstr "Složka na Dropboxu (/ pro kořenovou složku)"
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:524
-#: frontend/apps/filemanager/filemanagercollection.lua:540
+#: frontend/apps/filemanager/filemanagercollection.lua:583
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
 #: frontend/apps/reader/modules/readerbookmark.lua:1346
@@ -832,7 +832,7 @@ msgid "Move"
 msgstr "Přesunout"
 
 #: frontend/apps/filemanager/filemanager.lua:592
-#: frontend/apps/filemanager/filemanagercollection.lua:464
+#: frontend/apps/filemanager/filemanagercollection.lua:507
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:427
 #: frontend/apps/reader/modules/readerbookmark.lua:782
 msgid "Deselect all"
@@ -1412,93 +1412,115 @@ msgstr[0] "1 dokument s metadaty založenými na hash"
 msgstr[1] "%1 dokumenty s metadaty založenými na hash"
 msgstr[2] "%1 dokumentů s metadaty založenými na hash"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:20
-#: frontend/apps/filemanager/filemanagercollection.lua:227
+#: frontend/apps/filemanager/filemanagercollection.lua:21
+#: frontend/apps/filemanager/filemanagercollection.lua:228
 #: frontend/dispatcher.lua:59
 msgid "Collections"
 msgstr "Sbírky"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:21
+#: frontend/apps/filemanager/filemanagercollection.lua:22
 #: frontend/dispatcher.lua:58
 msgid "Favorites"
 msgstr "Oblíbené"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:178
+#: frontend/apps/filemanager/filemanagercollection.lua:179
 msgid "Remove from collection"
 msgstr "Odstranit ze sbírky"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:236
-#: frontend/apps/filemanager/filemanagercollection.lua:290
+#: frontend/apps/filemanager/filemanagercollection.lua:237
+#: frontend/apps/filemanager/filemanagercollection.lua:307
 msgid "Arrange books in collection"
 msgstr "Uspořádat knihy ve sbírce"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:243
+#: frontend/apps/filemanager/filemanagercollection.lua:245
+#, fuzzy
+msgid "Add all books from a folder"
+msgstr "Přidat knihu do sbírky"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:252
+msgid "Add all books from a folder and its subfolders"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagercollection.lua:260
 msgid "Add a book to collection"
 msgstr "Přidat knihu do sbírky"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:267
+#: frontend/apps/filemanager/filemanagercollection.lua:284
 msgid "Remove current book from collection"
 msgstr "Odebrat aktuální knihu ze sbírky"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:267
+#: frontend/apps/filemanager/filemanagercollection.lua:284
 msgid "Add current book to collection"
 msgstr "Přidat aktuální knihu do sbírky"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:371
+#: frontend/apps/filemanager/filemanagercollection.lua:331
+#, fuzzy
+msgid "No books added to collection"
+msgstr "Přidat knihu do sbírky"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:333
+#, fuzzy
+msgid "1 book added to collection"
+msgid_plural "%1 books added to collection"
+msgstr[0] "Přidat knihu do sbírky"
+msgstr[1] "Přidat knihu do sbírky"
+msgstr[2] "Přidat knihu do sbírky"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:414
 msgid "Collections (%1)"
 msgstr "Sbírky (%1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:375
+#: frontend/apps/filemanager/filemanagercollection.lua:418
 #: frontend/apps/reader/modules/readerbookmark.lua:1001
 msgid "Selected: %1"
 msgstr "Vybrané: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:417
+#: frontend/apps/filemanager/filemanagercollection.lua:460
 msgid "Remove collection"
 msgstr "Odebrat sbírku"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:424
+#: frontend/apps/filemanager/filemanagercollection.lua:467
 msgid "Rename collection"
 msgstr "Přejmenovat sbírku"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:451
+#: frontend/apps/filemanager/filemanagercollection.lua:494
 msgid "New collection"
 msgstr "Nová sbírka"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:474
+#: frontend/apps/filemanager/filemanagercollection.lua:517
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:441
 #: frontend/apps/reader/modules/readerbookmark.lua:751
 msgid "Select all"
 msgstr "Vybrat vše"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:486
+#: frontend/apps/filemanager/filemanagercollection.lua:529
 msgid "Apply selection"
 msgstr "Použít výběr"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:500
-#: frontend/apps/filemanager/filemanagercollection.lua:607
+#: frontend/apps/filemanager/filemanagercollection.lua:543
+#: frontend/apps/filemanager/filemanagercollection.lua:650
 msgid "Arrange collections"
 msgstr "Uspořádat sbírky"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:510
+#: frontend/apps/filemanager/filemanagercollection.lua:553
 #: frontend/dispatcher.lua:60
 #, fuzzy
 msgid "Collections search"
 msgstr "Sbírky"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:528
+#: frontend/apps/filemanager/filemanagercollection.lua:571
 msgid "Enter collection name"
 msgstr "Zadejte název sbírky"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:546
+#: frontend/apps/filemanager/filemanagercollection.lua:589
 msgid "Collection already exists: %1"
 msgstr "Sbírka již existuje: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:593
+#: frontend/apps/filemanager/filemanagercollection.lua:636
 msgid "Remove collection?"
 msgstr "Odebrat sbírku?"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:594
+#: frontend/apps/filemanager/filemanagercollection.lua:637
 #: frontend/apps/reader/modules/readerbookmark.lua:826
 #: frontend/apps/reader/modules/readerbookmark.lua:831
 #: frontend/apps/reader/modules/readerbookmark.lua:1158
@@ -1510,13 +1532,13 @@ msgstr "Odebrat sbírku?"
 msgid "Remove"
 msgstr "Odebrat"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:620
+#: frontend/apps/filemanager/filemanagercollection.lua:663
 #: frontend/apps/reader/modules/readersearch.lua:263
 #: frontend/ui/widget/inputdialog.lua:936 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
 msgstr "Vložte text, který chcete najít"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:632
+#: frontend/apps/filemanager/filemanagercollection.lua:675
 #: frontend/apps/filemanager/filemanagerhistory.lua:388
 #: frontend/apps/reader/modules/readerbookmark.lua:1404
 #: frontend/apps/reader/modules/readerhighlight.lua:153
@@ -1530,7 +1552,7 @@ msgstr "Vložte text, který chcete najít"
 msgid "Search"
 msgstr "Hledat"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:650
+#: frontend/apps/filemanager/filemanagercollection.lua:693
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:85
 #: frontend/apps/filemanager/filemanagerhistory.lua:411
 #: frontend/apps/reader/modules/readerbookmark.lua:1441
@@ -1539,23 +1561,23 @@ msgstr "Hledat"
 msgid "Case sensitive"
 msgstr "Rozlišovat velikost písmen"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:676
+#: frontend/apps/filemanager/filemanagercollection.lua:719
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:115
 #: frontend/apps/reader/modules/readersearch.lua:601
 msgid "Searching… (tap to cancel)"
 msgstr "Vyhledávání… (zrušit ťuknutím)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:709
+#: frontend/apps/filemanager/filemanagercollection.lua:752
 #, fuzzy
 msgid "No results for: %1"
 msgstr "Žádné výsledky pro „%1“."
 
-#: frontend/apps/filemanager/filemanagercollection.lua:718
+#: frontend/apps/filemanager/filemanagercollection.lua:761
 #, fuzzy
 msgid "Search results: %1"
 msgstr "Výsledky vyhledávání (%1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:736
+#: frontend/apps/filemanager/filemanagercollection.lua:779
 msgid "Collections…"
 msgstr "Sbírky…"
 
@@ -15472,22 +15494,22 @@ msgstr "Zrušeno. Pročišťování…"
 msgid "Packing EPUB…"
 msgstr "Balení EPUBu…"
 
-#: frontend/util.lua:1070
+#: frontend/util.lua:1071
 msgctxt "Data storage size"
 msgid "%1 GB"
 msgstr "%1 GB"
 
-#: frontend/util.lua:1073
+#: frontend/util.lua:1074
 msgctxt "Data storage size"
 msgid "%1 MB"
 msgstr "%1 MB"
 
-#: frontend/util.lua:1076
+#: frontend/util.lua:1077
 msgctxt "Data storage size"
 msgid "%1 kB"
 msgstr "%1 kB"
 
-#: frontend/util.lua:1078
+#: frontend/util.lua:1079
 msgctxt "Data storage size"
 msgid "%1 B"
 msgstr "%1 B"
