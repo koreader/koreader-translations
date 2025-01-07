@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-05 17:01+0000\n"
+"POT-Creation-Date: 2025-01-07 05:47+0000\n"
 "PO-Revision-Date: 2024-08-30 10:09+0000\n"
 "Last-Translator: Mikko Peltonen <mikkopee9@gmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/koreader/"
@@ -159,8 +159,8 @@ msgstr "Syötä tiedostonimi"
 #: frontend/apps/filemanager/filemanager.lua:1503
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:525
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:671
-#: frontend/apps/filemanager/filemanagercollection.lua:576
-#: frontend/apps/filemanager/filemanagercollection.lua:668
+#: frontend/apps/filemanager/filemanagercollection.lua:679
+#: frontend/apps/filemanager/filemanagercollection.lua:771
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:375
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:76
@@ -295,7 +295,7 @@ msgstr "Muokkaa"
 #: frontend/apps/filemanager/filemanager.lua:603
 #: frontend/apps/filemanager/filemanager.lua:608
 #: frontend/apps/filemanager/filemanager.lua:1103
-#: frontend/apps/filemanager/filemanagercollection.lua:171
+#: frontend/apps/filemanager/filemanagercollection.lua:203
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:340
 #: frontend/apps/filemanager/filemanagerhistory.lua:186
 #: frontend/apps/reader/modules/readerbookmark.lua:802
@@ -540,7 +540,7 @@ msgstr "Dropbox-kansio (/ juurihakemistolle)"
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:532
-#: frontend/apps/filemanager/filemanagercollection.lua:583
+#: frontend/apps/filemanager/filemanagercollection.lua:686
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
 #: frontend/apps/reader/modules/readerbookmark.lua:1346
@@ -831,7 +831,7 @@ msgid "Move"
 msgstr "Siirry"
 
 #: frontend/apps/filemanager/filemanager.lua:592
-#: frontend/apps/filemanager/filemanagercollection.lua:507
+#: frontend/apps/filemanager/filemanagercollection.lua:610
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:424
 #: frontend/apps/reader/modules/readerbookmark.lua:782
 msgid "Deselect all"
@@ -1186,6 +1186,7 @@ msgstr "Napauta nähdäksesi"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:184
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:929
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:930
+#: frontend/apps/filemanager/filemanagercollection.lua:25
 #: frontend/apps/reader/modules/readerfooter.lua:1998
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/screensaver.lua:97
@@ -1400,114 +1401,139 @@ msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "1 asiakirja, jossa on hash-pohjaisia metatietoja"
 msgstr[1] "%1 asiakirjaa, joissa on hash-pohjaisia metatietoja"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:21
-#: frontend/apps/filemanager/filemanagercollection.lua:228
+#: frontend/apps/filemanager/filemanagercollection.lua:22
+#: frontend/apps/filemanager/filemanagercollection.lua:282
 #: frontend/dispatcher.lua:59
 msgid "Collections"
 msgstr "Kokoelmat"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:22
+#: frontend/apps/filemanager/filemanagercollection.lua:23
 #: frontend/dispatcher.lua:58
 msgid "Favorites"
 msgstr "Suosikit"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:179
+#: frontend/apps/filemanager/filemanagercollection.lua:211
 msgid "Remove from collection"
 msgstr "Poista kokoelmasta"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:237
-#: frontend/apps/filemanager/filemanagercollection.lua:307
+#: frontend/apps/filemanager/filemanagercollection.lua:291
+#, fuzzy
+msgid "Filter by authors"
+msgstr "kirja"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:292
+#, fuzzy
+msgid "Filter by series"
+msgstr "Hakutulokset"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:295
+#, fuzzy
+msgid "Filter by language"
+msgstr "Muut kielitunnisteet:"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:296
+#, fuzzy
+msgid "Filter by keywords"
+msgstr "Suodata kokoelmien mukaan"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:299
+#, fuzzy
+msgid "Reset all filters"
+msgstr "Kaikki (nollaa suodattimet)"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:309
+#: frontend/apps/filemanager/filemanagercollection.lua:410
 msgid "Arrange books in collection"
 msgstr "Järjestä kirjat kokoelmaan"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:245
+#: frontend/apps/filemanager/filemanagercollection.lua:317
 #, fuzzy
 msgid "Add all books from a folder"
 msgstr "Lisää kirja kokoelmaan"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:252
+#: frontend/apps/filemanager/filemanagercollection.lua:324
 msgid "Add all books from a folder and its subfolders"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagercollection.lua:260
+#: frontend/apps/filemanager/filemanagercollection.lua:331
 msgid "Add a book to collection"
 msgstr "Lisää kirja kokoelmaan"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:284
+#: frontend/apps/filemanager/filemanagercollection.lua:355
 msgid "Remove current book from collection"
 msgstr "Poista nykyinen kirja kokoelmasta"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:284
+#: frontend/apps/filemanager/filemanagercollection.lua:355
 msgid "Add current book to collection"
 msgstr "Lisää nykyinen kirja kokoelmaan"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:331
+#: frontend/apps/filemanager/filemanagercollection.lua:434
 #, fuzzy
 msgid "No books added to collection"
 msgstr "Lisää kirja kokoelmaan"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:333
+#: frontend/apps/filemanager/filemanagercollection.lua:436
 #, fuzzy
 msgid "1 book added to collection"
 msgid_plural "%1 books added to collection"
 msgstr[0] "Lisää kirja kokoelmaan"
 msgstr[1] "Lisää kirja kokoelmaan"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:414
+#: frontend/apps/filemanager/filemanagercollection.lua:517
 msgid "Collections (%1)"
 msgstr "Kokoelmat (%1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:418
+#: frontend/apps/filemanager/filemanagercollection.lua:521
 #: frontend/apps/reader/modules/readerbookmark.lua:1001
 msgid "Selected: %1"
 msgstr "Valittu: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:460
+#: frontend/apps/filemanager/filemanagercollection.lua:563
 msgid "Remove collection"
 msgstr "Poista kokoelma"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:467
+#: frontend/apps/filemanager/filemanagercollection.lua:570
 msgid "Rename collection"
 msgstr "Uudelleennimeä kokoelma"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:494
+#: frontend/apps/filemanager/filemanagercollection.lua:597
 msgid "New collection"
 msgstr "Uusi kokoelma"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:517
+#: frontend/apps/filemanager/filemanagercollection.lua:620
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:438
 #: frontend/apps/reader/modules/readerbookmark.lua:751
 msgid "Select all"
 msgstr "Valitse kaikki"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:529
+#: frontend/apps/filemanager/filemanagercollection.lua:632
 msgid "Apply selection"
 msgstr "Käytä valintaa"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:543
-#: frontend/apps/filemanager/filemanagercollection.lua:650
+#: frontend/apps/filemanager/filemanagercollection.lua:646
+#: frontend/apps/filemanager/filemanagercollection.lua:753
 msgid "Arrange collections"
 msgstr "Järjestä kokoelmat"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:553
+#: frontend/apps/filemanager/filemanagercollection.lua:656
 #: frontend/dispatcher.lua:60
 #, fuzzy
 msgid "Collections search"
 msgstr "Kokoelmat"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:571
+#: frontend/apps/filemanager/filemanagercollection.lua:674
 msgid "Enter collection name"
 msgstr "Syötä kokoelman nimi"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:589
+#: frontend/apps/filemanager/filemanagercollection.lua:692
 msgid "Collection already exists: %1"
 msgstr "Kokoelma on jo olemassa: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:636
+#: frontend/apps/filemanager/filemanagercollection.lua:739
 msgid "Remove collection?"
 msgstr "Poistetaanko kokoelma?"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:637
+#: frontend/apps/filemanager/filemanagercollection.lua:740
 #: frontend/apps/reader/modules/readerbookmark.lua:826
 #: frontend/apps/reader/modules/readerbookmark.lua:831
 #: frontend/apps/reader/modules/readerbookmark.lua:1158
@@ -1519,13 +1545,13 @@ msgstr "Poistetaanko kokoelma?"
 msgid "Remove"
 msgstr "Poista"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:663
+#: frontend/apps/filemanager/filemanagercollection.lua:766
 #: frontend/apps/reader/modules/readersearch.lua:263
 #: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
 msgstr "Kirjoita etsittävä teksti"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:675
+#: frontend/apps/filemanager/filemanagercollection.lua:778
 #: frontend/apps/filemanager/filemanagerhistory.lua:382
 #: frontend/apps/reader/modules/readerbookmark.lua:1404
 #: frontend/apps/reader/modules/readerhighlight.lua:153
@@ -1539,7 +1565,7 @@ msgstr "Kirjoita etsittävä teksti"
 msgid "Search"
 msgstr "Etsi"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:693
+#: frontend/apps/filemanager/filemanagercollection.lua:796
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:85
 #: frontend/apps/filemanager/filemanagerhistory.lua:405
 #: frontend/apps/reader/modules/readerbookmark.lua:1441
@@ -1548,23 +1574,23 @@ msgstr "Etsi"
 msgid "Case sensitive"
 msgstr "Merkkikokoriippuvainen"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:718
+#: frontend/apps/filemanager/filemanagercollection.lua:821
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:115
 #: frontend/apps/reader/modules/readersearch.lua:601
 msgid "Searching… (tap to cancel)"
 msgstr "Haetaan… (peruuta napauttamalla)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:751
+#: frontend/apps/filemanager/filemanagercollection.lua:854
 #, fuzzy
 msgid "No results for: %1"
 msgstr "Ei tuloksia haulle '%1'."
 
-#: frontend/apps/filemanager/filemanagercollection.lua:760
+#: frontend/apps/filemanager/filemanagercollection.lua:863
 #, fuzzy
 msgid "Search results: %1"
 msgstr "Hakutulokset (%1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:778
+#: frontend/apps/filemanager/filemanagercollection.lua:881
 msgid "Collections…"
 msgstr "Kokoelmat…"
 

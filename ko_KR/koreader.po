@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-05 17:01+0000\n"
+"POT-Creation-Date: 2025-01-07 05:47+0000\n"
 "PO-Revision-Date: 2025-01-05 10:36+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -166,8 +166,8 @@ msgstr "파일이름 입력"
 #: frontend/apps/filemanager/filemanager.lua:1503
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:525
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:671
-#: frontend/apps/filemanager/filemanagercollection.lua:576
-#: frontend/apps/filemanager/filemanagercollection.lua:668
+#: frontend/apps/filemanager/filemanagercollection.lua:679
+#: frontend/apps/filemanager/filemanagercollection.lua:771
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/apps/filemanager/filemanagerhistory.lua:375
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:76
@@ -302,7 +302,7 @@ msgstr "수정"
 #: frontend/apps/filemanager/filemanager.lua:603
 #: frontend/apps/filemanager/filemanager.lua:608
 #: frontend/apps/filemanager/filemanager.lua:1103
-#: frontend/apps/filemanager/filemanagercollection.lua:171
+#: frontend/apps/filemanager/filemanagercollection.lua:203
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:340
 #: frontend/apps/filemanager/filemanagerhistory.lua:186
 #: frontend/apps/reader/modules/readerbookmark.lua:802
@@ -545,7 +545,7 @@ msgstr "Dropbox 폴더(루트 폴더면 /)"
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:532
-#: frontend/apps/filemanager/filemanagercollection.lua:583
+#: frontend/apps/filemanager/filemanagercollection.lua:686
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1286
 #: frontend/apps/reader/modules/readerbookmark.lua:1346
@@ -835,7 +835,7 @@ msgid "Move"
 msgstr "옮기기"
 
 #: frontend/apps/filemanager/filemanager.lua:592
-#: frontend/apps/filemanager/filemanagercollection.lua:507
+#: frontend/apps/filemanager/filemanagercollection.lua:610
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:424
 #: frontend/apps/reader/modules/readerbookmark.lua:782
 msgid "Deselect all"
@@ -1187,6 +1187,7 @@ msgstr "탭하여 표시하기"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:184
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:929
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:930
+#: frontend/apps/filemanager/filemanagercollection.lua:25
 #: frontend/apps/reader/modules/readerfooter.lua:1998
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/screensaver.lua:97
@@ -1388,109 +1389,134 @@ msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "해시 기반 메타데이터가 있는 %1 개 문서"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:21
-#: frontend/apps/filemanager/filemanagercollection.lua:228
+#: frontend/apps/filemanager/filemanagercollection.lua:22
+#: frontend/apps/filemanager/filemanagercollection.lua:282
 #: frontend/dispatcher.lua:59
 msgid "Collections"
 msgstr "콜렉션"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:22
+#: frontend/apps/filemanager/filemanagercollection.lua:23
 #: frontend/dispatcher.lua:58
 msgid "Favorites"
 msgstr "즐겨찾기"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:179
+#: frontend/apps/filemanager/filemanagercollection.lua:211
 msgid "Remove from collection"
 msgstr "콜렉션에서 제거"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:237
-#: frontend/apps/filemanager/filemanagercollection.lua:307
+#: frontend/apps/filemanager/filemanagercollection.lua:291
+#, fuzzy
+msgid "Filter by authors"
+msgstr "저자로 검색"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:292
+#, fuzzy
+msgid "Filter by series"
+msgstr "시리즈로 검색"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:295
+#, fuzzy
+msgid "Filter by language"
+msgstr "다른 언어 태그:"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:296
+#, fuzzy
+msgid "Filter by keywords"
+msgstr "콜렉션으로 필터링"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:299
+#, fuzzy
+msgid "Reset all filters"
+msgstr "모든 진행 상황 재설정"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:309
+#: frontend/apps/filemanager/filemanagercollection.lua:410
 msgid "Arrange books in collection"
 msgstr "콜렉션에 있는 책 정돈하기"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:245
+#: frontend/apps/filemanager/filemanagercollection.lua:317
 msgid "Add all books from a folder"
 msgstr "폴더에서 모든 책 추가"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:252
+#: frontend/apps/filemanager/filemanagercollection.lua:324
 msgid "Add all books from a folder and its subfolders"
 msgstr "폴더와 그 하위 폴더의 모든 책 추가"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:260
+#: frontend/apps/filemanager/filemanagercollection.lua:331
 msgid "Add a book to collection"
 msgstr "콜렉션에 책 추가하기"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:284
+#: frontend/apps/filemanager/filemanagercollection.lua:355
 msgid "Remove current book from collection"
 msgstr "콜렉션에서 현재 책 제거"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:284
+#: frontend/apps/filemanager/filemanagercollection.lua:355
 msgid "Add current book to collection"
 msgstr "콜렉션에 현재 책 추가"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:331
+#: frontend/apps/filemanager/filemanagercollection.lua:434
 msgid "No books added to collection"
 msgstr "컬렉션에 추가된 책이 없습니다"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:333
+#: frontend/apps/filemanager/filemanagercollection.lua:436
 msgid "1 book added to collection"
 msgid_plural "%1 books added to collection"
 msgstr[0] "%1 책이 컬렉션에 추가되었습니다"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:414
+#: frontend/apps/filemanager/filemanagercollection.lua:517
 msgid "Collections (%1)"
 msgstr "콜렉션 (%1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:418
+#: frontend/apps/filemanager/filemanagercollection.lua:521
 #: frontend/apps/reader/modules/readerbookmark.lua:1001
 msgid "Selected: %1"
 msgstr "선택됨: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:460
+#: frontend/apps/filemanager/filemanagercollection.lua:563
 msgid "Remove collection"
 msgstr "콜렉션에서 제거"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:467
+#: frontend/apps/filemanager/filemanagercollection.lua:570
 msgid "Rename collection"
 msgstr "콜렉션 이름 바꾸기"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:494
+#: frontend/apps/filemanager/filemanagercollection.lua:597
 msgid "New collection"
 msgstr "새 콜렉션"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:517
+#: frontend/apps/filemanager/filemanagercollection.lua:620
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:438
 #: frontend/apps/reader/modules/readerbookmark.lua:751
 msgid "Select all"
 msgstr "모두 선택"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:529
+#: frontend/apps/filemanager/filemanagercollection.lua:632
 msgid "Apply selection"
 msgstr "선택 항목 적용"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:543
-#: frontend/apps/filemanager/filemanagercollection.lua:650
+#: frontend/apps/filemanager/filemanagercollection.lua:646
+#: frontend/apps/filemanager/filemanagercollection.lua:753
 msgid "Arrange collections"
 msgstr "콜렉션 정돈하기"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:553
+#: frontend/apps/filemanager/filemanagercollection.lua:656
 #: frontend/dispatcher.lua:60
 msgid "Collections search"
 msgstr "컬렉션 검색"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:571
+#: frontend/apps/filemanager/filemanagercollection.lua:674
 msgid "Enter collection name"
 msgstr "콜렉션 이름을 입력하세요"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:589
+#: frontend/apps/filemanager/filemanagercollection.lua:692
 msgid "Collection already exists: %1"
 msgstr "콜렉션이 이미 있습니다: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:636
+#: frontend/apps/filemanager/filemanagercollection.lua:739
 msgid "Remove collection?"
 msgstr "콜렉션을 제거할까요?"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:637
+#: frontend/apps/filemanager/filemanagercollection.lua:740
 #: frontend/apps/reader/modules/readerbookmark.lua:826
 #: frontend/apps/reader/modules/readerbookmark.lua:831
 #: frontend/apps/reader/modules/readerbookmark.lua:1158
@@ -1502,13 +1528,13 @@ msgstr "콜렉션을 제거할까요?"
 msgid "Remove"
 msgstr "제거"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:663
+#: frontend/apps/filemanager/filemanagercollection.lua:766
 #: frontend/apps/reader/modules/readersearch.lua:263
 #: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
 msgstr "검색할 내용 입력"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:675
+#: frontend/apps/filemanager/filemanagercollection.lua:778
 #: frontend/apps/filemanager/filemanagerhistory.lua:382
 #: frontend/apps/reader/modules/readerbookmark.lua:1404
 #: frontend/apps/reader/modules/readerhighlight.lua:153
@@ -1522,7 +1548,7 @@ msgstr "검색할 내용 입력"
 msgid "Search"
 msgstr "검색"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:693
+#: frontend/apps/filemanager/filemanagercollection.lua:796
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:85
 #: frontend/apps/filemanager/filemanagerhistory.lua:405
 #: frontend/apps/reader/modules/readerbookmark.lua:1441
@@ -1531,21 +1557,21 @@ msgstr "검색"
 msgid "Case sensitive"
 msgstr "대소문자 구분"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:718
+#: frontend/apps/filemanager/filemanagercollection.lua:821
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:115
 #: frontend/apps/reader/modules/readersearch.lua:601
 msgid "Searching… (tap to cancel)"
 msgstr "검색 중... (탭하여 취소)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:751
+#: frontend/apps/filemanager/filemanagercollection.lua:854
 msgid "No results for: %1"
 msgstr "다음에 대한 결과가 없습니다: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:760
+#: frontend/apps/filemanager/filemanagercollection.lua:863
 msgid "Search results: %1"
 msgstr "검색 결과: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:778
+#: frontend/apps/filemanager/filemanagercollection.lua:881
 msgid "Collections…"
 msgstr "콜렉션…"
 
