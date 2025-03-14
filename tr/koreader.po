@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-13 06:18+0000\n"
-"PO-Revision-Date: 2025-03-04 03:54+0000\n"
+"PO-Revision-Date: 2025-03-14 00:38+0000\n"
 "Last-Translator: Kaya Zeren <kayazeren@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/koreader/"
 "koreader/tr/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: reader.lua:194
 msgid ""
@@ -146,7 +146,6 @@ msgid "N/A"
 msgstr "Kullanılamaz"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:234
-#, fuzzy
 msgid ""
 "Filename:\n"
 "%1\n"
@@ -163,11 +162,14 @@ msgstr ""
 "Dosya adı:\n"
 "%1\n"
 "\n"
-"İndirilen dosya adı:\n"
+"Dosya boyutu:\n"
 "%2\n"
 "\n"
+"İndirilen dosya adı:\n"
+"%3\n"
+"\n"
 "İndirilen klasör:\n"
-"%3"
+"%4"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:247
 #: frontend/apps/filemanager/filemanagerutil.lua:322
@@ -1218,7 +1220,7 @@ msgstr "Görüntülemek için dokunun"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 msgid "number of lines and words not available"
-msgstr "satır ve kelime sayısı mevcut değil"
+msgstr "satır ve sözcük sayısı kullanılamıyor"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:173
 msgid "1 line"
@@ -1229,8 +1231,8 @@ msgstr[1] "%1 satır"
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:173
 msgid "1 word"
 msgid_plural "%1 words"
-msgstr[0] "1 kelime"
-msgstr[1] "%1 kelime"
+msgstr[0] "1 sözcük"
+msgstr[1] "%1 sözcük"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:174
 msgid "Current page:"
@@ -1957,9 +1959,8 @@ msgid "Show collection mark"
 msgstr "Derleme imi görüntülensin"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:399
-#, fuzzy
 msgid "Info lists items per page: %1 / %2"
-msgstr "Bilgi listeleri için her sayfadaki öge sayısı: %1"
+msgstr "Bilgi listelerinde bir sayfadaki öge sayısı: %1 / %2"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:401
 msgid ""
@@ -2451,9 +2452,8 @@ msgid "Export annotations on book closing"
 msgstr "Bu kitaptaki tüm notları ver"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:257
-#, fuzzy
 msgid "Export / import folder: %1"
-msgstr "Geçerli dışa aktarma klasörü:"
+msgstr "Klasörü dışa / içe aktar: %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:258
 #, fuzzy
@@ -4691,7 +4691,6 @@ msgid "Details"
 msgstr ""
 
 #: frontend/apps/reader/modules/readerhighlight.lua:1884
-#, fuzzy
 msgid ""
 "No OCR results or no language data.\n"
 "\n"
@@ -4705,17 +4704,18 @@ msgid ""
 "Copy the language data files (e.g., eng.traineddata for English and spa."
 "traineddata for Spanish) into koreader/data/tessdata"
 msgstr ""
-"OCR sonucu yok veya dil verisi yok.\n"
+"Karakter tanıma sonucu yok veya dil verileri yok.\n"
 "\n"
-"KOReader, taranmış PDF ve DjVu belgelerindeki kelimeleri tanımak için "
-"yerleşik bir OCR motoruna sahiptir. Taranan sayfalarda OCR'yi kullanmak için "
-"belge dilinize yönelik tesseract eğitimli verileri yüklemeniz gerekir.\n"
+"KOReader içinde taranmış PDF ve DjVu belgelerindeki sözcükleri tanımak için "
+"bir karakter tanıma işleyici bulunur. Taranan sayfalarda karakter tanıma "
+"özelliğini kullanmak için belgenizin dilindeki tesseract eğitim verilerini "
+"kurmanız gerekir.\n"
 "\n"
-"Tesseract sürüm 5.3.4 için dil veri dosyalarını https://tesseract-ocr.github."
-"io/tessdoc/Data-Files adresinden indirebilirsiniz.\n"
+"Tesseract 5.3.4 sürümü için dil veri dosyalarını https://tesseract-"
+"ocr.github.io/tessdoc/Data-Files adresinden indirebilirsiniz.\n"
 "\n"
 "Dil veri dosyalarını (örneğin, İngilizce için eng.traineddata ve İspanyolca "
-"için spa.traineddata) koreader/data/tessdata'ya kopyalayın"
+"için spa.traineddata) koreader/data/tessdata klasörüne kopyalayın"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:2084
 msgid "Default highlight action changed to '%1'."
@@ -18680,13 +18680,13 @@ msgid ""
 "dictionary."
 msgstr ""
 "Japonca metni sözlük biçimine dönüştürmeye çalışırken uygulanacak metin "
-"dönüştürmelerini yapılandırın. Bunlar öncelikle, kurulmuş sözlüklerinize "
-"farklı kana kullanılarak yazılan bir kelimenin hala bakılabildiğinden emin "
-"olmak için farklı kana türleri arasındaki dönüşümleri içerir.\n"
+"dönüştürmelerini yapılandırın. Bunlarda öncelikle, kurulmuş sözlüklerinize "
+"farklı kana kullanılarak yazılan bir sözcüğün hala görülebildiğinden emin "
+"olmak için farklı kana türleri arasındaki dönüşümler bulunur.\n"
 "\n"
-"Her dönüşüm aynı anda uygulanmaz. Bunun yerine, sözlükte kullanılan formla "
+"Her dönüşüm aynı anda uygulanmaz. Bunun yerine, sözlükte kullanılan biçimle "
 "eşleşen en az bir dönüştürme olasılığını en üst düzeye çıkarmak için "
-"etkinleştirilmiş dönüştürmelerin tüm olası birleşimleri denenecektir."
+"etkinleştirilmiş dönüştürmelerin tüm olası birleşimleri denenir."
 
 #. @translators A deinflector is a program which converts a word into its dictionary form, similar to deconjugation in European languages. See <https://en.wikipedia.org/wiki/Japanese_verb_conjugation> for more detail.
 #: plugins/japanese.koplugin/deinflector.lua:413
@@ -19715,9 +19715,8 @@ msgid "Execute within time interval"
 msgstr "Keitai dokunma aralığı"
 
 #: plugins/profiles.koplugin/main.lua:173
-#, fuzzy
 msgid "start: "
-msgstr "Uygulamayı yeniden başlat"
+msgstr "başlangıç: "
 
 #: plugins/profiles.koplugin/main.lua:173
 msgid "end: "
