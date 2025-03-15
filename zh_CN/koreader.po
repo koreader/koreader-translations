@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-14 13:11+0000\n"
-"PO-Revision-Date: 2025-03-10 06:19+0000\n"
-"Last-Translator: AronnaxM <120616834+AronnaxM@users.noreply.github.com>\n"
+"PO-Revision-Date: 2025-03-15 09:42+0000\n"
+"Last-Translator: cyanjiang <cyanjiang@163.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/koreader/koreader/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10.3-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: reader.lua:194
 msgid ""
@@ -147,7 +147,6 @@ msgid "N/A"
 msgstr "N/A"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:234
-#, fuzzy
 msgid ""
 "Filename:\n"
 "%1\n"
@@ -164,11 +163,14 @@ msgstr ""
 "文件名：\n"
 "%1\n"
 "\n"
-"下载文件名：\n"
+"文件大小：\n"
 "%2\n"
 "\n"
+"下载文件名：\n"
+"%3\n"
+"\n"
 "下载文件夹：\n"
-"%3"
+"%4"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:247
 #: frontend/apps/filemanager/filemanagerutil.lua:322
@@ -2312,9 +2314,8 @@ msgid "not set"
 msgstr "未设置"
 
 #: frontend/apps/reader/modules/readerannotation.lua:273
-#, fuzzy
 msgid "Annotations exported"
-msgstr "注释"
+msgstr "已导出注笔记"
 
 #. @translators In which chapter title (%1) a note is found.
 #: frontend/apps/reader/modules/readerannotation.lua:375
@@ -2412,24 +2413,20 @@ msgid "Show separator between items"
 msgstr "在目录条目之间显示分隔符"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:247
-#, fuzzy
 msgid "Export annotations on book closing"
-msgstr "导出本书笔记"
+msgstr "关闭书籍时导出笔记"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:257
-#, fuzzy
 msgid "Export / import folder: %1"
-msgstr "当前导出文件夹："
+msgstr "导出/导出文件夹：%1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:258
-#, fuzzy
 msgid "book metadata folder"
-msgstr "未找到元数据"
+msgstr "书籍元书籍文件夹"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:262
-#, fuzzy
 msgid "Current annotations export folder:"
-msgstr "当前导出文件夹："
+msgstr "当前笔记导出文件夹："
 
 #: frontend/apps/reader/modules/readerbookmark.lua:279
 #: frontend/dispatcher.lua:185
@@ -2518,9 +2515,8 @@ msgstr "按标注样式过滤"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:939
 #: frontend/dispatcher.lua:207
-#, fuzzy
 msgid "Export annotations"
-msgstr "注释"
+msgstr "导出笔记"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:949
 #: frontend/apps/reader/modules/readercoptlistener.lua:419
@@ -5094,17 +5090,14 @@ msgid "Page labels font size"
 msgstr "页面标签字体大小"
 
 #: frontend/apps/reader/modules/readerrolling.lua:313
-#, fuzzy
 msgid ""
 "Note that this change in styles may render your bookmarks or highlights "
 "invalid.\n"
 "If some of them no longer appear, you can simply revert the change you just "
 "made to show them again."
 msgstr ""
-"\n"
 "需要注意的是，这项样式的改动可能使书签和标注样式失效。\n"
-"如果它们显示不正常，你可以回退刚刚所作的更改。\n"
-"\n"
+"如果它们显示不正常，你可以回退刚刚所作的更改。"
 
 #: frontend/apps/reader/modules/readerrolling.lua:320
 msgid ""
@@ -6132,7 +6125,7 @@ msgstr "你是否想使用从文档标题生成的替代目录？"
 #: frontend/apps/reader/modules/readertoc.lua:1093
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
-msgstr[0] "%1 个条目位于第 %2 级目录"
+msgstr[0] "第 %2 级目录共有 %1 个条目"
 
 #: frontend/apps/reader/modules/readertoc.lua:1115
 msgid "Progress bars: 1 tick"
@@ -6332,9 +6325,8 @@ msgid "Obsolete (%1)"
 msgstr "过时的（%1）"
 
 #: frontend/apps/reader/modules/readertypeset.lua:325
-#, fuzzy
 msgid "Auto-detect TXT files layout"
-msgstr "自动检测源语言"
+msgstr "自动检测文本文件布局"
 
 #: frontend/apps/reader/modules/readertypeset.lua:459
 msgid "Set default style for FB2 documents to %1?"
@@ -18967,7 +18959,7 @@ msgstr "正在下载…（点按以取消）"
 #: plugins/opds.koplugin/opdsbrowser.lua:1120
 msgid "1 book downloaded"
 msgid_plural "%1 books downloaded"
-msgstr[0] "下载了 %1 本书。"
+msgstr[0] "下载了 %1 本书"
 
 #: plugins/opds.koplugin/opdspse.lua:188
 msgid "Stream"
@@ -19047,28 +19039,24 @@ msgid "Ask to execute"
 msgstr "询问并执行"
 
 #: plugins/profiles.koplugin/main.lua:165
-#, fuzzy
 msgid "Execute within time interval"
-msgstr "“手机”模式按键间隔"
+msgstr "执行时间间隔"
 
 #: plugins/profiles.koplugin/main.lua:173
-#, fuzzy
 msgid "start: "
-msgstr "重启"
+msgstr "开始： "
 
 #: plugins/profiles.koplugin/main.lua:173
 msgid "end: "
-msgstr ""
+msgstr "结束： "
 
 #: plugins/profiles.koplugin/main.lua:174
-#, fuzzy
 msgid "Set start time"
-msgstr "设置阅读定时器"
+msgstr "设置开始时间"
 
 #: plugins/profiles.koplugin/main.lua:174
-#, fuzzy
 msgid "Set end time"
-msgstr "设置时间"
+msgstr "设置结束时间"
 
 #: plugins/profiles.koplugin/main.lua:213
 msgid "on KOReader start"
