@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 06:06+0000\n"
+"POT-Creation-Date: 2025-03-18 05:54+0000\n"
 "PO-Revision-Date: 2025-03-04 11:50+0000\n"
 "Last-Translator: Trond Kjetil Bremnes <tk@bremnes.email>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
@@ -1136,6 +1136,16 @@ msgstr ""
 msgid "Classic (filename only)"
 msgstr ""
 
+#: frontend/apps/filemanager/filemanager.lua:1626
+#, fuzzy
+msgid "Last book is the first file in the folder. No previous file to open."
+msgstr "Dette er siste fil i nåværende mappe. Ingen påfølgende fil å åpne."
+
+#: frontend/apps/filemanager/filemanager.lua:1627
+#, fuzzy
+msgid "Last book is the last file in the folder. No next file to open."
+msgstr "Dette er siste fil i nåværende mappe. Ingen påfølgende fil å åpne."
+
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:30
 #: frontend/apps/filemanager/filemanagerutil.lua:233
 #: frontend/dispatcher.lua:189 plugins/opds.koplugin/opdsbrowser.lua:739
@@ -1477,7 +1487,7 @@ msgstr "Nåværende bok"
 #: frontend/apps/filemanager/filemanagercollection.lua:551
 #: frontend/apps/filemanager/filemanagermenu.lua:456
 #: frontend/apps/reader/modules/readerbookmark.lua:235
-#: frontend/dispatcher.lua:132
+#: frontend/dispatcher.lua:134
 msgid "Reverse sorting"
 msgstr "Omvendt sortering"
 
@@ -1487,7 +1497,7 @@ msgid "Manual sorting"
 msgstr "Sorter etter filnavn"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:579
-#: frontend/dispatcher.lua:131
+#: frontend/dispatcher.lua:133
 #, fuzzy
 msgid "Sort by"
 msgstr "Sorter etter: %1"
@@ -1689,7 +1699,7 @@ msgstr "Konverter"
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:45
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:261
-#: frontend/dispatcher.lua:139
+#: frontend/dispatcher.lua:141
 msgid "File search"
 msgstr "Filsøk"
 
@@ -1706,7 +1716,7 @@ msgid ""
 msgstr ""
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
-#: frontend/dispatcher.lua:140
+#: frontend/dispatcher.lua:142
 #, fuzzy
 msgid "Last file search results"
 msgstr "Fulltekst-søk"
@@ -2006,7 +2016,7 @@ msgid "Landscape"
 msgstr "landskap"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:466
-#: frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:135
 msgid "Folders and files mixed"
 msgstr ""
 
@@ -2253,7 +2263,7 @@ msgstr ""
 "Er du sikker på at du vil fortsette?"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:12
-#: frontend/dispatcher.lua:138 frontend/ui/widget/pathchooser.lua:159
+#: frontend/dispatcher.lua:140 frontend/ui/widget/pathchooser.lua:159
 msgid "Folder shortcuts"
 msgstr "Mappesnarveier"
 
@@ -4122,7 +4132,7 @@ msgid "Right"
 msgstr "Høyrejustert"
 
 #: frontend/apps/reader/modules/readergoto.lua:17
-#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:143
+#: frontend/apps/reader/modules/readergoto.lua:76 frontend/dispatcher.lua:145
 #: frontend/dispatcher.lua:160 frontend/ui/widget/keyvaluepage.lua:413
 #: frontend/ui/widget/menu.lua:800 frontend/ui/widget/sortwidget.lua:256
 #: plugins/statistics.koplugin/calendarview.lua:620
@@ -4394,9 +4404,9 @@ msgstr "Framheving"
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:559
 #: frontend/apps/reader/modules/readerstyletweak.lua:452
-#: frontend/dispatcher.lua:115 frontend/dispatcher.lua:121
-#: frontend/dispatcher.lua:123 frontend/dispatcher.lua:125
-#: frontend/dispatcher.lua:132 frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:117 frontend/dispatcher.lua:123
+#: frontend/dispatcher.lua:125 frontend/dispatcher.lua:127
+#: frontend/dispatcher.lua:134 frontend/dispatcher.lua:135
 #: frontend/dispatcher.lua:195 frontend/ui/data/creoptions.lua:105
 #: frontend/ui/data/creoptions.lua:181 frontend/ui/data/creoptions.lua:670
 #: frontend/ui/data/creoptions.lua:683 frontend/ui/data/creoptions.lua:695
@@ -4412,9 +4422,9 @@ msgstr "på"
 #: frontend/apps/reader/modules/readerhighlight.lua:347
 #: frontend/apps/reader/modules/readerhighlight.lua:559
 #: frontend/apps/reader/modules/readerstyletweak.lua:452
-#: frontend/dispatcher.lua:115 frontend/dispatcher.lua:121
-#: frontend/dispatcher.lua:123 frontend/dispatcher.lua:125
-#: frontend/dispatcher.lua:132 frontend/dispatcher.lua:133
+#: frontend/dispatcher.lua:117 frontend/dispatcher.lua:123
+#: frontend/dispatcher.lua:125 frontend/dispatcher.lua:127
+#: frontend/dispatcher.lua:134 frontend/dispatcher.lua:135
 #: frontend/dispatcher.lua:195 frontend/ui/data/creoptions.lua:105
 #: frontend/ui/data/creoptions.lua:181 frontend/ui/data/creoptions.lua:339
 #: frontend/ui/data/creoptions.lua:356 frontend/ui/data/creoptions.lua:647
@@ -5726,8 +5736,14 @@ msgstr ""
 "Du har nådd slutten på dokumentet.\n"
 "Nåværende bok er markert som lest."
 
-#: frontend/apps/reader/modules/readerstatus.lua:185
-msgid "This is the last file in the current folder. No next file to open."
+#: frontend/apps/reader/modules/readerstatus.lua:187
+#, fuzzy
+msgid "This is the first file in the folder. No previous file to open."
+msgstr "Dette er siste fil i nåværende mappe. Ingen påfølgende fil å åpne."
+
+#: frontend/apps/reader/modules/readerstatus.lua:188
+#, fuzzy
+msgid "This is the last file in the folder. No next file to open."
 msgstr "Dette er siste fil i nåværende mappe. Ingen påfølgende fil å åpne."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:113
@@ -7909,7 +7925,7 @@ msgstr "Omstart"
 msgid "Are you sure you want to power off the device?"
 msgstr "Vil du skru av enheten?"
 
-#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:76
+#: frontend/device/generic/device.lua:1092 frontend/dispatcher.lua:78
 #: frontend/ui/elements/common_exit_menu_table.lua:51
 msgid "Power off"
 msgstr "Slå av"
@@ -7955,254 +7971,258 @@ msgstr "Filsøk"
 
 #: frontend/dispatcher.lua:66
 #, fuzzy
+msgid "Open next file in last book folder"
+msgstr "Åpne siste dokument"
+
+#: frontend/dispatcher.lua:67
+msgid "Open previous file in last book folder"
+msgstr ""
+
+#: frontend/dispatcher.lua:68
+#, fuzzy
 msgid "Notebook file"
 msgstr "Velg lokal mappe"
 
-#: frontend/dispatcher.lua:67
+#: frontend/dispatcher.lua:69
 #, fuzzy
 msgid "Screenshot"
 msgstr "Skjerm"
 
-#: frontend/dispatcher.lua:71
+#: frontend/dispatcher.lua:73
 #, fuzzy
 msgid "Exit sleep screen"
 msgstr "Skjermsparer"
 
-#: frontend/dispatcher.lua:72 frontend/ui/elements/mass_storage.lua:43
+#: frontend/dispatcher.lua:74 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
 msgstr ""
 
-#: frontend/dispatcher.lua:73
+#: frontend/dispatcher.lua:75
 #: frontend/ui/elements/common_exit_menu_table.lua:34
 msgid "Sleep"
 msgstr ""
 
-#: frontend/dispatcher.lua:74
+#: frontend/dispatcher.lua:76
 #: frontend/ui/elements/common_exit_menu_table.lua:22
 msgid "Restart KOReader"
 msgstr "Start KOReader på ny"
 
-#: frontend/dispatcher.lua:75
+#: frontend/dispatcher.lua:77
 #: frontend/ui/elements/common_exit_menu_table.lua:42
 msgid "Reboot the device"
 msgstr "Utfør omstart av enheten"
 
-#: frontend/dispatcher.lua:77
+#: frontend/dispatcher.lua:79
 msgid "Exit KOReader"
 msgstr "Avslutt KOReader"
 
-#: frontend/dispatcher.lua:79
+#: frontend/dispatcher.lua:81
 #, fuzzy
 msgid "Toggle long-press on corners"
 msgstr "Trykk lenge for å velge denne mappen"
 
-#: frontend/dispatcher.lua:80
+#: frontend/dispatcher.lua:82
 #, fuzzy
 msgid "Enable touch input"
 msgstr "Sideretning"
 
-#: frontend/dispatcher.lua:81
+#: frontend/dispatcher.lua:83
 #, fuzzy
 msgid "Disable touch input"
 msgstr "Sideretning"
 
-#: frontend/dispatcher.lua:82
+#: frontend/dispatcher.lua:84
 #, fuzzy
 msgid "Toggle touch input"
 msgstr "Sideretning"
 
-#: frontend/dispatcher.lua:84 frontend/ui/elements/physical_buttons.lua:28
+#: frontend/dispatcher.lua:86 frontend/ui/elements/physical_buttons.lua:28
 msgid "Invert left-side page-turn buttons"
 msgstr ""
 
-#: frontend/dispatcher.lua:85 frontend/ui/elements/physical_buttons.lua:40
+#: frontend/dispatcher.lua:87 frontend/ui/elements/physical_buttons.lua:40
 msgid "Invert right-side page-turn buttons"
 msgstr ""
 
-#: frontend/dispatcher.lua:86 frontend/ui/elements/physical_buttons.lua:11
+#: frontend/dispatcher.lua:88 frontend/ui/elements/physical_buttons.lua:11
 #, fuzzy
 msgid "Invert page-turn buttons"
 msgstr "Ingen rotering"
 
-#: frontend/dispatcher.lua:88
+#: frontend/dispatcher.lua:90
 #, fuzzy
 msgid "Toggle key repeat"
 msgstr "Sideretning"
 
-#: frontend/dispatcher.lua:89
+#: frontend/dispatcher.lua:91
 msgid "Toggle accelerometer"
 msgstr ""
 
-#: frontend/dispatcher.lua:90
+#: frontend/dispatcher.lua:92
 msgid "Enable accelerometer for 5 seconds"
 msgstr ""
 
-#: frontend/dispatcher.lua:91
+#: frontend/dispatcher.lua:93
 #: frontend/ui/elements/screen_rotation_menu_table.lua:46
 msgid "Lock auto rotation to current orientation"
 msgstr ""
 
-#: frontend/dispatcher.lua:93
+#: frontend/dispatcher.lua:95
 #, fuzzy
 msgid "Toggle orientation"
 msgstr "Sideretning"
 
-#: frontend/dispatcher.lua:94
+#: frontend/dispatcher.lua:96
 #, fuzzy
 msgid "Invert rotation"
 msgstr "Ingen rotering"
 
-#: frontend/dispatcher.lua:95
+#: frontend/dispatcher.lua:97
 msgid "Rotate by 90° CW"
 msgstr ""
 
-#: frontend/dispatcher.lua:96
+#: frontend/dispatcher.lua:98
 msgid "Rotate by 90° CCW"
 msgstr ""
 
-#: frontend/dispatcher.lua:98
+#: frontend/dispatcher.lua:100
 msgid "Turn on Wi-Fi"
 msgstr "Skru på Wi-Fi"
 
-#: frontend/dispatcher.lua:99
+#: frontend/dispatcher.lua:101
 msgid "Turn off Wi-Fi"
 msgstr "Skru av Wi-Fi"
 
-#: frontend/dispatcher.lua:100
+#: frontend/dispatcher.lua:102
 #, fuzzy
 msgid "Toggle Wi-Fi"
 msgstr "Veksle"
 
-#: frontend/dispatcher.lua:101
+#: frontend/dispatcher.lua:103
 #, fuzzy
 msgid "Toggle Fullscreen"
 msgstr "Fullskjermsvisning"
 
-#: frontend/dispatcher.lua:102
+#: frontend/dispatcher.lua:104
 #, fuzzy
 msgid "Show network info"
 msgstr "Nettverksinfo"
 
-#: frontend/dispatcher.lua:106
+#: frontend/dispatcher.lua:108
 msgid "Show frontlight dialog"
 msgstr "Vis frontlys-dialog"
 
-#: frontend/dispatcher.lua:107
+#: frontend/dispatcher.lua:109
 msgid "Toggle frontlight"
 msgstr "Skru av/på frontlys"
 
-#: frontend/dispatcher.lua:108
+#: frontend/dispatcher.lua:110
 #, fuzzy
 msgid "Set frontlight brightness"
 msgstr "Nattmodus"
 
-#: frontend/dispatcher.lua:109
+#: frontend/dispatcher.lua:111
 #, fuzzy
 msgid "Increase frontlight brightness"
 msgstr "Øk frontlys-lysstyrke med %1"
 
-#: frontend/dispatcher.lua:110
+#: frontend/dispatcher.lua:112
 #, fuzzy
 msgid "Decrease frontlight brightness"
 msgstr "Mink frontlys-lysstyrke med %1"
 
-#: frontend/dispatcher.lua:111
+#: frontend/dispatcher.lua:113
 #, fuzzy
 msgid "Set frontlight warmth"
 msgstr "Nattmodus"
 
-#: frontend/dispatcher.lua:112
+#: frontend/dispatcher.lua:114
 #, fuzzy
 msgid "Increase frontlight warmth"
 msgstr "Nattmodus"
 
-#: frontend/dispatcher.lua:113
+#: frontend/dispatcher.lua:115
 #, fuzzy
 msgid "Decrease frontlight warmth"
 msgstr "Nattmodus"
 
-#: frontend/dispatcher.lua:114
+#: frontend/dispatcher.lua:116
 #, fuzzy
 msgid "Toggle night mode"
 msgstr "Veksle modus"
 
-#: frontend/dispatcher.lua:115
+#: frontend/dispatcher.lua:117
 #, fuzzy
 msgid "Set night mode"
 msgstr "Nattmodus"
 
-#: frontend/dispatcher.lua:117
+#: frontend/dispatcher.lua:119
 msgid "Full screen refresh"
 msgstr ""
 
-#: frontend/dispatcher.lua:118
+#: frontend/dispatcher.lua:120
 msgid "Full refresh rate (always)"
 msgstr ""
 
-#: frontend/dispatcher.lua:119
+#: frontend/dispatcher.lua:121
 msgid "Full refresh rate (not in night mode)"
 msgstr ""
 
-#: frontend/dispatcher.lua:120
+#: frontend/dispatcher.lua:122
 #, fuzzy
 msgid "Full refresh rate (in night mode)"
 msgstr "Nattmodus"
 
-#: frontend/dispatcher.lua:121 frontend/ui/elements/refresh_menu_table.lua:109
+#: frontend/dispatcher.lua:123 frontend/ui/elements/refresh_menu_table.lua:109
 msgid "Always flash on chapter boundaries"
 msgstr ""
 
-#: frontend/dispatcher.lua:122
+#: frontend/dispatcher.lua:124
 msgid "Toggle flashing on chapter boundaries"
 msgstr ""
 
-#: frontend/dispatcher.lua:123
+#: frontend/dispatcher.lua:125
 msgid "Never flash on chapter's 2nd page"
 msgstr ""
 
-#: frontend/dispatcher.lua:124
+#: frontend/dispatcher.lua:126
 msgid "Toggle flashing on chapter's 2nd page"
 msgstr ""
 
-#: frontend/dispatcher.lua:125 frontend/ui/elements/refresh_menu_table.lua:120
+#: frontend/dispatcher.lua:127 frontend/ui/elements/refresh_menu_table.lua:120
 msgid "Always flash on pages with images"
 msgstr ""
 
-#: frontend/dispatcher.lua:126
+#: frontend/dispatcher.lua:128
 msgid "Toggle flashing on pages with images"
 msgstr ""
 
-#: frontend/dispatcher.lua:130
+#: frontend/dispatcher.lua:132
 #, fuzzy
 msgid "Set display mode"
 msgstr "Visningsnavn for tjener"
 
-#: frontend/dispatcher.lua:135
+#: frontend/dispatcher.lua:137
 msgid "Show plus menu"
 msgstr "Vis pluss-meny"
 
-#: frontend/dispatcher.lua:136
+#: frontend/dispatcher.lua:138
 #, fuzzy
 msgid "Toggle select mode"
 msgstr "Bytte modus"
 
-#: frontend/dispatcher.lua:137
+#: frontend/dispatcher.lua:139
 #, fuzzy
 msgid "Refresh content"
 msgstr "Innholdsfortegnelse"
 
-#: frontend/dispatcher.lua:142
+#: frontend/dispatcher.lua:144
 msgid "Folder up"
 msgstr ""
 
-#: frontend/dispatcher.lua:144 frontend/dispatcher.lua:168
+#: frontend/dispatcher.lua:146 frontend/dispatcher.lua:168
 msgid "Back"
 msgstr "Tilbake"
-
-#: frontend/dispatcher.lua:148
-#, fuzzy
-msgid "Open next document in folder"
-msgstr "Åpne siste dokument"
 
 #: frontend/dispatcher.lua:150
 msgid "Show bottom menu"
