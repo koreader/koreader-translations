@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-07 09:59+0000\n"
-"PO-Revision-Date: 2025-04-07 09:59+0000\n"
-"Last-Translator: Horus68 <horus68@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2025-04-08 04:35+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese (Portugal) <https://hosted.weblate.org/projects/"
 "koreader/koreader/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -139,7 +139,6 @@ msgid "N/A"
 msgstr "N/a"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:234
-#, fuzzy
 msgid ""
 "Filename:\n"
 "%1\n"
@@ -156,11 +155,14 @@ msgstr ""
 "Nome do ficheiro: \n"
 "%1 \n"
 " \n"
-"Nome do ficheiro descarregado: \n"
+"Tamanho do ficheiro: \n"
 "%2 \n"
-" \n"
-"Pasta de transferências: \n"
-"%3"
+"\n"
+"Nome do ficheiro descarregado:\n"
+"%3\n"
+"\n"
+"Pasta de descargas: \n"
+"%4"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:247
 #: frontend/apps/filemanager/filemanagerutil.lua:377
@@ -2292,7 +2294,7 @@ msgstr "Início"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:151
 msgid "Set selected documents status?"
-msgstr ""
+msgstr "Definir estado dos documentos selecionados?"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:152
 #: frontend/apps/reader/modules/readerfooter.lua:643
@@ -2328,9 +2330,8 @@ msgid "custom book metadata"
 msgstr "metadados personalizados do livro"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:248
-#, fuzzy
 msgid "Reset selected documents?"
-msgstr "Redefinir este documento?"
+msgstr "Redefinir documentos selecionados?"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:269
 msgid "Show folder"
@@ -3411,7 +3412,6 @@ msgid "Adjust fallback font sizes"
 msgstr "Ajustar tamanhos de fontes de contingência"
 
 #: frontend/apps/reader/modules/readerfont.lua:752
-#, fuzzy
 msgid ""
 "Adjust the size of each fallback font so they all get the same x-height, and "
 "lowercase characters picked in them look similarly sized as those from the "
@@ -3420,13 +3420,13 @@ msgid ""
 "have all the Greek characters), but may make Chinese or Indic characters "
 "smaller when picked from fallback fonts."
 msgstr ""
-"Ajuste o tamanho de cada fonte de contingência para que todas tenham a mesma "
-"Altura-x e os caracteres minúsculos escolhidos nelas pareçam de tamanho "
-"semelhante aos da fonte padrão.\n"
-"Isto pode ajudar com palavras gregas no texto latino (já que as fontes "
-"latinas geralmente não têm todos os caracteres gregos), mas pode tornar os "
-"caracteres Chineses ou Índicos menores quando escolhidos a partir de fontes "
-"de contingência."
+"Ajuste o tamanho de cada fonte de alternativa para que todas tenham a mesma "
+"altura x e os caracteres minúsculos escolhidos nelas tenham o mesmo tamanho "
+"que os da fonte padrão.\n"
+"Isto pode ajudar com palavras gregas em textos em latim (já que as fontes "
+"latinas geralmente não têm todos os caracteres gregos), mas pode fazer com "
+"que os caracteres chineses ou indianos fiquem menores quando escolhidos nas "
+"fontes alternativas."
 
 #: frontend/apps/reader/modules/readerfont.lua:761
 msgid "Monospace fonts scaling: %1 %"
@@ -3799,6 +3799,10 @@ msgid ""
 "(i.e page refresh). For example, the time item will update every minute "
 "regardless of user input."
 msgstr ""
+"Esta opção permite que certos elementos se atualizem sem necessidade de "
+"interação do utilizador (isto é, recarregar a página). Por exemplo, o "
+"elemento de tempo vai se atualizar a cada minuto independentemente de "
+"entrada do utilizador."
 
 #: frontend/apps/reader/modules/readerfooter.lua:1434
 msgid "Hide inactive items"
@@ -3810,6 +3814,9 @@ msgid ""
 "example, if the frontlight is 'off' (i.e 0 brightness), no symbols or values "
 "will be displayed until the brightness is set to a value >= 1."
 msgstr ""
+"Esta opção vai esconder elementos inativos da barra de estado. Por exemplo, "
+"se a iluminação está desativada (isto é, iluminação 0), nenhum símbolo ou "
+"valor será exibido até que a iluminação seja definida para um valor >=1."
 
 #: frontend/apps/reader/modules/readerfooter.lua:1448
 msgid "Include current page in pages left"
@@ -4600,6 +4607,11 @@ msgid ""
 "Except when in two columns mode, where this is limited to showing only the "
 "previous or next column."
 msgstr ""
+"Rolar automaticamente para mostrar parte da página anterior quando a sua "
+"seleção de texto atingir o canto superior esquerdo ou da próxima página "
+"quando atingir o canto inferior direito.\n"
+"Exceto no modo de duas colunas, em que isto se limita a mostrar apenas a "
+"coluna anterior ou a próxima."
 
 #: frontend/apps/reader/modules/readerhighlight.lua:804
 msgid "Crosshairs speed (reader/dict): %1 / %2"
@@ -4621,16 +4633,21 @@ msgid ""
 "inversely correlated, meaning a smaller font size requires a larger value "
 "and vice versa."
 msgstr ""
+"Selecione um valor decimal de 0,25 a 5. Um valor menor aumenta a distância "
+"percorrida pelo cursor a cada pressionamento de tecla. O tamanho da fonte e "
+"este valor são inversamente correlacionados, ou seja, um tamanho de fonte "
+"menor exige um valor maior e vice-versa."
 
 #: frontend/apps/reader/modules/readerhighlight.lua:838
 msgid "Increase crosshairs speed on consecutive keystrokes"
 msgstr ""
+"Aumentar a velocidade da cursor ao pressionar consecutivamente o teclado"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:852
 msgid "Interval for crosshairs speed increase: 1 second"
 msgid_plural "Interval for crosshairs speed increase: %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Intervalo para aumento da velocidade do cursor: 1 segundo"
+msgstr[1] "Intervalo para aumento da velocidade do cursor: %1 segundos"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:866
 msgid "Time interval"
@@ -5868,6 +5885,22 @@ msgid ""
 "Tap on the item to insert it: you can then edit it and combine it with "
 "others."
 msgstr ""
+"Este menu fornece uma lista não completa de sintaxe e propriedades de CSS. "
+"Ele também mostra algumas características não padrão de CSS, específicas do "
+"KOReader, que podem ser úteis com livros eletrônicos.\n"
+"\n"
+"A maioria destes elementos já são utilizados pelos ‘Ajustes de estilo’ "
+"categorizados (achados no menu superior). Pressione e segure em qualquer "
+"opção de ajuste de estilo para ver o seu código e os seus resultados "
+"esperados. Se eles não forem suficientes para obter a aparência desejada, "
+"pode precisar ajustá-los um pouco: toque uma vez na caixa de código CSS para "
+"copiar o código para a área de transferência, colá-lo aqui e editá-lo.\n"
+"\n"
+"Pressione e segure em qualquer elemento nesta janela para obter mais "
+"informações sobre o que ele faz e o que ele pode ajudar a resolver.\n"
+"\n"
+"Toque no elemento para inseri-lo: pode então editá-lo e combiná-lo com "
+"outros."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:808
 msgid "Matching elements"
@@ -5881,6 +5914,11 @@ msgid ""
 "\n"
 "p:not([class]) matches a <p> without any class= attribute."
 msgstr ""
+"p.className corresponde a um <p> com class='className'.\n"
+"\n"
+"*.className corresponde a qualquer elemento com class='className'.\n"
+"\n"
+"p:not([class]) corresponde a um <p> sem nenhum atributo class=."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:815
 msgid ""
@@ -5889,6 +5927,10 @@ msgid ""
 "aside p (without any intermediate symbol) matches a <p> descendant of an "
 "<aside> element."
 msgstr ""
+"aside > p corresponde a um <p> filho de um elemento <aside>.\n"
+"\n"
+"aside p (sem nenhum símbolo intermediário) corresponde a um <p> descendente "
+"de um elemento <aside>."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:819
 msgid ""
@@ -5896,6 +5938,11 @@ msgid ""
 "\n"
 "p ~ img matches a <img> if any of its previous siblings is a <p>."
 msgstr ""
+"p + img corresponde a um <img> se o seu irmão imediatamente anterior é um "
+"<p>.\n"
+"\n"
+"p ~ img corresponde a um <img> se qualquer um dos seus irmãos anteriores é "
+"um <p>."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:824
 msgid ""
@@ -5907,6 +5954,13 @@ msgid ""
 "[name~=\"what\"] matches if the value of the attribute 'name' contains "
 "'what' as a word (among other words separated by spaces)."
 msgstr ""
+"[name=\"what\"] corresponde se um o elemento tem um atributo 'nome' e o seu "
+"valor é exatamente 'what'.\n"
+"\n"
+"[name] corresponde se o atributo 'name' está presente.\n"
+"\n"
+"[name~=\"what\"] corresponde se o valor do atributo 'name' contém 'what' "
+"como uma palavra (entre outras palavras separados por espaços)."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:831
 msgid ""
@@ -5917,6 +5971,12 @@ msgid ""
 "\n"
 "[name$=\"what\"] matches if the attribute value ends with 'what'."
 msgstr ""
+"[name*=\"what\" i] corresponde a qualquer elemento que tenha o atributo "
+"'name' com um valor que contém 'what', insensível a caixa alta/baixa.\n"
+"\n"
+"[name^=\"what\"] corresponde se o valor do atributo começa com 'what'.\n"
+"\n"
+"[name$=\"what\"] corresponde se o valor do atributo termina com 'what'."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:838
 msgid ""
@@ -5931,6 +5991,16 @@ msgid ""
 "\n"
 "p[_~=\"what\"] matches any <p> that contains the word 'what'."
 msgstr ""
+"Similar na sintaxe de correspondência de atributos, mas corresponde ao texto "
+"interior de um elemento.\n"
+"\n"
+"p[_=\"what\"] corresponde a qualquer <p> cujo texto é exatamente 'what'.\n"
+"\n"
+"p[_] corresponde a qualquer <p> não vazio.\n"
+"\n"
+"p:not([_]) corresponde a qualquer <p> vazio.\n"
+"\n"
+"p[_~=\"what\"] corresponde a qualquer <p> que contém a palavra 'what'."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:849
 msgid ""
@@ -5945,6 +6015,17 @@ msgid ""
 "\n"
 "p[_$=\"what\"] matches any <p> whose text ends with 'what'."
 msgstr ""
+"Similar na sintaxe de correspondência de atributos, mas corresponde ao texto "
+"interior de um elemento.\n"
+"\n"
+"p[_*=\"what\" i] corresponde a qualquer <p> que contém 'what', insinsível a "
+"caixa alta/baixa.\n"
+"\n"
+"p[_^=\"what\"] corresponde a qualquer <p> cujo texto começa com 'what'.\n"
+"(Isto pode ser usado para corresponder \"Ato\" ou \"Cena\", ou nomes de "
+"personagens em peças e destacá-los.)\n"
+"\n"
+"p[_$=\"what\"] corresponde a qualquer <p> cujo texto termina com 'what'."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:859
 msgid ""
@@ -5954,6 +6035,11 @@ msgid ""
 "\n"
 "p:nth-child(odd) matches any other <p> in a series of sibling <p>."
 msgstr ""
+"p:first-child corresponde a um <p> que é o primeiro filho do seu pai.\n"
+"\n"
+"p:last-child corresponde a um <p> que é o último filho do seu pai.\n"
+"\n"
+"p:nth-child(odd) corresponde a qualquer outro <p> numa séries de <p> irmãos."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:866
 msgid ""
@@ -5963,6 +6049,12 @@ msgid ""
 "matching the element: tap on one of them to copy it to the clipboard.\n"
 "You can then paste it here with long-press in the text box."
 msgstr ""
+"Numa página de livro, selecione algum texto em torno (antes ou depois) do "
+"elemento no qual está interessado e use 'Ver HTML'.\n"
+"No visualizador de HTML, pressione e segure em etiquetas ou texto para obter "
+"uma lista de seletores correspondendo ao elemento: toque num deles para "
+"copiá-lo para a área de transferência.\n"
+"Pode então colá-lo aqui com um toque longo na caixa de texto."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:873
 msgid "Common classic properties"
@@ -6003,6 +6095,9 @@ msgid ""
 "Limit an element width to 50% of your screen width (use 'max-height: 50vh' "
 "for 50% of the screen height). Can be useful with <img> to limit their size."
 msgstr ""
+"Limitar a largura de um elemento a 50% da sua largura de ecrã (use 'max-"
+"height: 50vh' para 50% da altura de ecrã). Pode ser usado com <img> para "
+"limitar o seu tamanho."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:884
 msgid "Private CSS properties"
@@ -6055,12 +6150,18 @@ msgid ""
 "footnote popup, in case KOReader wrongly detect this target is not a "
 "footnote."
 msgstr ""
+"Pode ser definido no destino de ligações (<div id='..'>) para que sejam "
+"ativadas como nota de rodapé na janela, caso o KoReader erroneamente detete "
+"que ele não é uma nota de rodapé."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:891
 msgid ""
 "Can be set on links (<a href='#..'>) to have them trigger as footnote "
 "popups, in case KOReader wrongly detect the links is not to a footnote."
 msgstr ""
+"Pode ser definido em ligações (<a href='#..'>) para que sejam ativadas como "
+"nota de rodapé em janela, caso o KoReader erroneamente detete que não são "
+"uma nota de rodapé."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:892
 msgid ""
@@ -6071,6 +6172,12 @@ msgid ""
 "this with:\n"
 "DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 msgstr ""
+"Pode ser definido em ligações (<a href='#..'>) para que eles não acionem pop-"
+"ups de nota de rodapé nem notas de rodapé dentro da página.\n"
+"Se um DocFragment apresentar um índice de nomes com referências cruzadas, "
+"resultando em notas de rodapé ocupando metade dessas páginas, pode evitar "
+"isto com:\n"
+"DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:898
 msgid "Useful 'content:' values"
@@ -6091,6 +6198,14 @@ msgid ""
 "\n"
 "If used as-is, they will act on ALL elements!"
 msgstr ""
+"Tenha cuidado com estes: fixe-os a um seletor de discriminação apropriado, "
+"como:\n"
+"\n"
+"span.specificClassName\n"
+"\n"
+"p[_*=\"keyword\" i]\n"
+"\n"
+"Se usados como estão, eles atuarão sobre TODOS os elementos!"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:907
 msgid "Insert a visible space before an element."
@@ -6109,12 +6224,16 @@ msgid ""
 "U+2060 WORD JOINER may act as a glue (like an invisible non-breakable space) "
 "before an element, so it sticks to what's before."
 msgstr ""
+"U+2060 ELO DE PALAVRAS pode agir como uma cola (como um espaço rígido "
+"invisível) antes de um elemento, para que ele se grude ao que vem antes."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:910
 msgid ""
 "U+200B ZERO WIDTH SPACE may allow a linebreak before an element, in case the "
 "absence of any space prevents that."
 msgstr ""
+"U+200B ESPAÇO DE LARGURA ZERO pode permitir uma quebra de linha antes de um "
+"elemento, caso a ausência de qualquer espaço o previna."
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:911
 msgid ""
@@ -6357,6 +6476,10 @@ msgid ""
 "stylesheet to style everything (which publishers probably don't).\n"
 "This is mostly only interesting for testing."
 msgstr ""
+"Isto define uma folha de estilo User-Agent vazia, e espera que a folha de "
+"estilo do documento defina o estilo de tudo (o que as editoras provavelmente "
+"não fazem).\n"
+"Em geral, isto só é interessante para testes."
 
 #: frontend/apps/reader/modules/readertypeset.lua:235
 #: plugins/kosync.koplugin/main.lua:112
@@ -6367,6 +6490,7 @@ msgstr "Automático"
 msgid ""
 "This selects the default and preferred stylesheet for the document type."
 msgstr ""
+"Isto seleciona a folha de estilo padrão e preferida para o tipo de documento."
 
 #: frontend/apps/reader/modules/readertypeset.lua:251
 msgid "Traditional book look (epub.css)"
@@ -6385,6 +6509,17 @@ msgid ""
 "to have our added styles at play and need to reset them; try switching to "
 "html5.css when you notice such issues."
 msgstr ""
+"Esta é a nossa folha de estilo semelhante a um livro: ela estende a folha de "
+"estilo padrão de HTML com estilos destinados a fazer o conteúdo HTML se "
+"parecer mais com um livro de papel (com texto justificado e recuo em "
+"parágrafos) do que com uma página de rede.\n"
+"Ela é perfeita para livros não estilizados e pode fazer com que livros "
+"estilizados fiquem mais legíveis.\n"
+"Ela pode causar alguns pequenos problemas em alguns livros (títulos, "
+"cabeçalhos ou separadores descentralizados, ou recuo inesperado de texto), "
+"já que as editoras não esperam ter os nossos estilos adicionais ativados e "
+"precisam redefini-los; tente mudar para o html5.css quando notar tais "
+"problemas."
 
 #: frontend/apps/reader/modules/readertypeset.lua:263
 msgid "HTML Standard rendering (html5.css)"
@@ -6401,6 +6536,15 @@ msgid ""
 "aligned paragraphs without indentation and with spacing between them); try "
 "switching to epub.css when that happens."
 msgstr ""
+"Esta folha de estilo obedece às sugestões de renderização do padrão HTML ("
+"com algumas limitações), similar ao que a maioria dos navegadores de rede "
+"usam.\n"
+"Como a maioria das editoras atualmente fazem e testam os seus livros com "
+"ferramentas baseadas em motores de navegadores de rede, ela é a folha de "
+"estilo a ser usada para visualizar um livro como estas editoras pretendiam.\n"
+"Em livros não estilizados, no entanto, ela pode dar uma aparência de página "
+"de rede (parágrafos alinhados à esquerda sem recuo e com espaçamento entre "
+"eles); tente mudar para epub.css quando isso acontecer."
 
 #: frontend/apps/reader/modules/readertypeset.lua:275
 msgid "FictionBook (fb2.css)"
@@ -6413,12 +6557,19 @@ msgid ""
 "(FictionBook 2 & 3 are open XML-based e-book formats which originated and "
 "gained popularity in Russia.)"
 msgstr ""
+"Esta folha de estilo deve ser usada somente com documentos FB2 e FB3, que "
+"não são HTML clássico e necessitam estilização específica.\n"
+"(FictionBook 2 & 3 são formatos abertos de livro eletrônico baseados em XML "
+"que se originaram e ganharam popularidade na Rússia.)"
 
 #: frontend/apps/reader/modules/readertypeset.lua:290
 msgid ""
 "This stylesheet is obsolete: don't use it. It is kept solely to be able to "
 "open documents last read years ago and to migrate their highlights."
 msgstr ""
+"Esta folha de estilo está obsoleta: não use ela! Ela é mantida somente para "
+"ser possível abrir documentos lidos pela última vez anos atrás e para migrar "
+"os seus destaques."
 
 #: frontend/apps/reader/modules/readertypeset.lua:301
 msgid "This is a user added stylesheet."
@@ -8078,7 +8229,7 @@ msgstr "Abrir o próximo ficheiro na pasta do último livro"
 
 #: frontend/dispatcher.lua:67
 msgid "Open previous file in last book folder"
-msgstr ""
+msgstr "Abrir o ficheiro anterior na pasta do último livro"
 
 #: frontend/dispatcher.lua:68
 msgid "Notebook file"
@@ -8516,7 +8667,7 @@ msgstr "Ignorar"
 
 #: frontend/dispatcher.lua:782 frontend/dispatcher.lua:1038
 msgid "Arrange actions and QuickMenu separators"
-msgstr ""
+msgstr "Organizar ações e separadores do Menu Rápido"
 
 #: frontend/dispatcher.lua:782 frontend/dispatcher.lua:1038
 msgid "Arrange actions"
@@ -8530,8 +8681,8 @@ msgstr "Usar distância do gesto"
 msgctxt "Dispatcher"
 msgid "1 action will be removed."
 msgid_plural "%1 actions will be removed."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 ação será removida."
+msgstr[1] "%1 ações serão removidas."
 
 #: frontend/dispatcher.lua:997 plugins/httpinspector.koplugin/main.lua:1049
 msgid "General"
@@ -8607,11 +8758,11 @@ msgstr ""
 
 #: frontend/pluginloader.lua:9
 msgid "This plugin is unmaintained and will be removed soon."
-msgstr ""
+msgstr "Este plugin não tem manutenção e será removido em breve."
 
 #: frontend/pluginloader.lua:10
 msgid "The following features are unmaintained and will be removed soon:"
-msgstr ""
+msgstr "Os recursos a seguir não são mantidos e serão removidos em breve:"
 
 #: frontend/pluginloader.lua:50
 msgid "outdated"
@@ -9606,6 +9757,8 @@ msgid ""
 "Ignore HTML attributes that contribute to styles on the elements <body> "
 "(bgcolor, text…) and <font> (face, size, color…)."
 msgstr ""
+"Ignorar atibutos de HTML que contribuem para o estilo de elementos <body> ("
+"bgcolor, text…) e <font> (face, size, color…)."
 
 #: frontend/ui/data/css_tweaks.lua:431
 msgid "Ignore publisher font families"
@@ -9677,7 +9830,7 @@ msgstr "Impede que sobrescritos e subscritos alterem a altura da linha."
 
 #: frontend/ui/data/css_tweaks.lua:483
 msgid "Override font-based normal line height"
-msgstr ""
+msgstr "Substituir a altura normal da linha com base na fonte"
 
 #: frontend/ui/data/css_tweaks.lua:489
 msgid "Normal line height: %1"
@@ -9818,6 +9971,9 @@ msgid ""
 "its sub-elements (ie. align, valign, frame, rules, border, cellpadding, "
 "cellspacing…)."
 msgstr ""
+"Ignorar atributos de HTML que contribuem para o estilo de elementos <table> "
+"e os seus subelementos (isto é, align, valign, frame, rules, border, "
+"cellpadding, cellspacing…)."
 
 #: frontend/ui/data/css_tweaks.lua:603
 msgid "Full-width tables"
@@ -10200,16 +10356,15 @@ msgid "Regularize text size on inline elements"
 msgstr "Regularizar o tamanho do texto em elementos embutidos"
 
 #: frontend/ui/data/css_tweaks.lua:1143
-#, fuzzy
 msgid ""
 "If the footnote text uses variable or absolute font sizes, line height or "
 "vertical alignments, which would make it too irregular, you can reset all of "
 "them to get a leaner text (to the expense of losing superscripts)."
 msgstr ""
-"Se o texto da nota de rodapé usa tamanhos de fonte variáveis ou absolutos, "
-"altura de linha ou alinhamentos verticais, o que o tornaria muito irregular, "
-"pode redefinir todos eles para obter um texto mais enxuto (às custas de "
-"perder sobrescritos)."
+"Se o texto da nota de rodapé usar tamanhos de fonte, altura de linha ou "
+"alinhamentos verticais variáveis ou absolutos, o que o tornaria muito "
+"irregular, poderá redefinir todos eles para obter um texto mais enxuto (às "
+"custas da perda de sobrescritos)."
 
 #: frontend/ui/data/css_tweaks.lua:1158
 msgid "Combine footnotes in a non-linear flow"
@@ -10224,6 +10379,13 @@ msgid ""
 "flow: they will be skipped when turning pages and not considered in the "
 "various book & chapter progress and time to read features."
 msgstr ""
+"Isto marcará cada secção de notas de rodapé consecutivas (no seu local "
+"original no livro) como não linear.\n"
+"A caixa de seleção do menu \"Esconder fragmentos não lineares\" estará "
+"disponível depois que o documento for reaberto, permitindo ocultar estas "
+"secções do fluxo regular: elas serão ignoradas ao virar as páginas e não "
+"serão consideradas nos vários recursos de progresso do livro e do capítulo e "
+"de tempo de leitura."
 
 #: frontend/ui/data/dictionaries.lua:10
 msgid "Public Domain"
@@ -10322,7 +10484,7 @@ msgstr "Divehi"
 
 #: frontend/ui/data/isolanguage.lua:29
 msgid "Dzongkha"
-msgstr ""
+msgstr "Dzonga"
 
 #: frontend/ui/data/isolanguage.lua:30
 msgid "Modern Greek"
@@ -10488,7 +10650,7 @@ msgstr "Bokmål norueguês"
 
 #: frontend/ui/data/isolanguage.lua:92
 msgid "Oriya"
-msgstr ""
+msgstr "Oriá"
 
 #: frontend/ui/data/isolanguage.lua:93 frontend/ui/translator.lua:118
 msgid "Oromo"
@@ -10516,7 +10678,7 @@ msgstr "Sanskrit"
 
 #: frontend/ui/data/isolanguage.lua:104
 msgid "Sinhala"
-msgstr ""
+msgstr "Cingalês"
 
 #: frontend/ui/data/isolanguage.lua:107 frontend/ui/translator.lua:134
 msgid "Sindhi"
@@ -10919,11 +11081,11 @@ msgstr "Chinês - Tradicional"
 
 #: frontend/ui/data/isolanguage.lua:226
 msgid "Danish - Fraktur"
-msgstr ""
+msgstr "Dinamarquês - Fraktur"
 
 #: frontend/ui/data/isolanguage.lua:227
 msgid "German - Fraktur"
-msgstr ""
+msgstr "Alemão - Fraktur"
 
 #: frontend/ui/data/isolanguage.lua:228
 msgid "Math equation"
@@ -10939,7 +11101,7 @@ msgstr "Georgiano antigo"
 
 #: frontend/ui/data/isolanguage.lua:231
 msgid "Slovak - Fraktur"
-msgstr ""
+msgstr "Eslovaco - Fraktur"
 
 #: frontend/ui/data/isolanguage.lua:232
 msgid "Old Spanish"
@@ -10951,7 +11113,7 @@ msgstr "Sérvio - Latino"
 
 #: frontend/ui/data/isolanguage.lua:234
 msgid "Uzbek -Cyrillic"
-msgstr ""
+msgstr "Usbeque - Cirílico"
 
 #. @translators Keitai input is a kind of Japanese keyboard input mode (similar to T9 keypad input). See <https://en.wikipedia.org/wiki/Japanese_input_method#Mobile_phones> for more information.
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:131
@@ -11633,6 +11795,9 @@ msgid ""
 "Verbose logs will make our investigations easier. If possible, try to "
 "reproduce the issue while it's enabled, and attach %1 to your bug report."
 msgstr ""
+"Os registos detalhados facilitarão as nossas investigações. Se possível, "
+"tente reproduzir o problema enquanto ele estiver ativado e anexe %1 ao seu "
+"relatório de bug."
 
 #: frontend/ui/elements/common_info_menu_table.lua:79
 msgid "Disable verbose logging"
@@ -12354,18 +12519,26 @@ msgid ""
 "input field. When a field is selected (in focus), you can temporarily toggle "
 "the keyboard on/off by pressing 'Shift' (or 'ScreenKB') + 'Home'."
 msgstr ""
+"Ative esta configuração para sempre exibir o teclado virtual dentro de um "
+"campo de entrada de texto. Quando um campo está selecionado (em foco), pode "
+"alternar temporariamente entre teclado ligado/desligado pressionando 'Shift' "
+"(ou 'ScreenKB') + 'Início'."
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:243
 msgid ""
 "When a text field is selected (in focus), you can temporarily bring up the "
 "virtual keyboard by pressing 'ScreenKB' + 'Home'."
 msgstr ""
+"Quando um campo de texto está selecionado (em foco), pode chamar "
+"temporariamente o teclado virtual pressionando 'ScreenKB' + 'Início'."
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:245
 msgid ""
 "When a text field is selected (in focus), you can temporarily bring up the "
 "virtual keyboard by pressing 'Shift' + 'Home'."
 msgstr ""
+"Quando um campo de texto está selecionado (em foco), pode chamar "
+"temporariamente o teclado virtual pressionando 'Shift' + 'Início'."
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:257
 msgid "Swipe to input additional characters"
@@ -12919,13 +13092,16 @@ msgstr ""
 
 #: frontend/ui/elements/screensaver_menu.lua:54
 msgid "For books on hold"
-msgstr ""
+msgstr "Para livros em espera"
 
 #: frontend/ui/elements/screensaver_menu.lua:55
 msgid ""
 "When the device is locked and the current book has been marked as on hold, "
 "both the cover and sleep screen message of the book will not be shown."
 msgstr ""
+"Quando o dispositivo estiver bloqueado e o livro atual tiver sido marcado "
+"como em espera, tanto a capa quanto a mensagem no ecrã de descanso do livro "
+"não serão exibidas."
 
 #: frontend/ui/elements/screensaver_menu.lua:64
 msgid "For finished books"
@@ -12936,6 +13112,9 @@ msgid ""
 "When the device is locked and the current book has been marked as finished, "
 "both the cover and sleep screen message of the book will not be shown."
 msgstr ""
+"Quando o dispositivo estiver bloqueado e o livro atual tiver sido marcado "
+"como concluído, tanto a capa quanto a mensagem no ecrã de descanso do livro "
+"não serão exibidas."
 
 #: frontend/ui/elements/screensaver_menu.lua:74
 msgid "When in file browser"
@@ -12946,6 +13125,9 @@ msgid ""
 "When the device is locked from the file browser, both the cover and sleep "
 "screen message of the last opened book will not be shown."
 msgstr ""
+"Quando o dispositivo é bloqueado pelo gestor de ficheiros, tanto a capa "
+"quanto a mensagem no ecrã de descanso do último livro aberto não serão "
+"exibidas."
 
 #: frontend/ui/elements/screensaver_menu.lua:87
 msgid "Border fill, rotation, and fit"
@@ -13023,13 +13205,15 @@ msgstr "Selecionar pasta aleatória de imagens"
 
 #: frontend/ui/elements/screensaver_menu.lua:165
 msgid "Cycle through images in order"
-msgstr ""
+msgstr "Exibir imagens em sequência"
 
 #: frontend/ui/elements/screensaver_menu.lua:166
 msgid ""
 "When enabled, all images (up to 128) will be displayed at least once on the "
 "sleep screen in sequence before repeating the cycle."
 msgstr ""
+"Quando ativado, todas as imagens (até 128) serão exibidas pelo menos uma vez "
+"no ecrã de descanso em sequência, antes de repetir o ciclo."
 
 #: frontend/ui/elements/screensaver_menu.lua:182
 #: frontend/ui/screensaver.lua:358
@@ -13053,6 +13237,8 @@ msgid ""
 "This option will only become available, if you have selected 'Leave screen "
 "as-is' as wallpaper and have 'Sleep screen message' on."
 msgstr ""
+"Esta opção só estará disponível se selecionou 'Manter o ecrã como está' como "
+"papel de parede e tiver 'Mensagem do ecrã de descanso' ativada."
 
 #: frontend/ui/elements/screensaver_menu.lua:217
 msgid "Message position"
@@ -13101,9 +13287,8 @@ msgid "Allow system settings override"
 msgstr "Permitir a substituição das configurações do sistema"
 
 #: frontend/ui/elements/timeout_android.lua:130
-#, fuzzy
 msgid "Screen timeout"
-msgstr "Tempo de espera do ecrã"
+msgstr "Tempo limite da ecrã"
 
 #: frontend/ui/elements/waveform_level.lua:11
 msgid "Level 0: high quality, slowest"
@@ -13155,6 +13340,8 @@ msgstr "Pode agora tentar novamente a ação que exigia acesso à rede"
 msgid ""
 "A previous connection attempt is still ongoing, this one will be ignored!"
 msgstr ""
+"Uma tentativa de conexão prévia ainda está em andamento, esta vai ser "
+"ignorada!"
 
 #: frontend/ui/network/manager.lua:399
 #: frontend/ui/network/networklistener.lua:25
@@ -13199,6 +13386,8 @@ msgid ""
 "KOReader is currently waiting for connectivity. This may take up to 45s, so "
 "you may just want to try again later."
 msgstr ""
+"O KOReader está a aguardar conexão. Isto pode levar até 45 segundos, então "
+"talvez seja melhor tentar novamente mais tarde."
 
 #: frontend/ui/network/manager.lua:464
 msgid "How would you like to proceed?"
@@ -13402,6 +13591,8 @@ msgstr "Não foi possível deteminar o modelo OTA."
 #: frontend/ui/otamanager.lua:181
 msgid "Unable to contact OTA server. Try again later, or try another mirror."
 msgstr ""
+"Não foi possível entrar em contato com o servidor OTA. Tente novamente mais "
+"tarde ou com outro servidor."
 
 #: frontend/ui/otamanager.lua:184
 msgid ""
@@ -13578,7 +13769,6 @@ msgstr ""
 "(https://github.com/koreader/koreader).\n"
 
 #: frontend/ui/quickstart.lua:96
-#, fuzzy
 msgid ""
 "## User interface <a id=\"ui\"></a>\n"
 "\n"
@@ -13592,18 +13782,15 @@ msgid ""
 msgstr ""
 "## Interface de utilizador <a id=\"ui\"></a>\n"
 "\n"
-"<div class=\"img-block\">![Zonas de toque](resources/quickstart/touchzones."
-"png)</div>\n"
+"<div class=\"img-block\">![Zonas de toque](resources/quickstart/"
+"kindle4.png)</div>\n"
 "\n"
-"- Para mostrar o **MENU SUPERIOR** ou o **MENU INFERIOR** pode clicar nas "
-"zonas indicadas. Pode clicar ou deslizar para baixo na zona superior para "
-"mostrar o **MENU SUPERIOR**.\n"
-"- A zona da **BARRA DE ESTADO** pode ser usada para alternar entre os itens "
-"da BARRA DE ESTADO se um item estiver visível. Isso também vai esconder ou "
-"mostrar a BARRA DE ESTADO se tocar o bastante.\n"
+"- Para exibir o **MENU SUPERIOR** ou **MENU INFERIOR**, pressione as teclas "
+"**Menu** ou **Press**, respectivamente.\n"
+"- A **BARRA DE ESTADO** pode ser configurada para mostrar uma variedade de "
+"informações sobre o progresso da leitura ou o estado do dispositivo.\n"
 
 #: frontend/ui/quickstart.lua:106
-#, fuzzy
 msgid ""
 "## User interface <a id=\"ui\"></a>\n"
 "\n"
@@ -13617,15 +13804,13 @@ msgid ""
 msgstr ""
 "## Interface de utilizador <a id=\"ui\"></a>\n"
 "\n"
-"<div class=\"img-block\">![Zonas de toque](resources/quickstart/touchzones."
-"png)</div>\n"
+"<div class=\"img-block\">![Zonas de toque](resources/quickstart/"
+"kindle3.png)</div>\n"
 "\n"
-"- Para mostrar o **MENU SUPERIOR** ou o **MENU INFERIOR** pode clicar nas "
-"zonas indicadas. Pode clicar ou deslizar para baixo na zona superior para "
-"mostrar o **MENU SUPERIOR**.\n"
-"- A zona da **BARRA DE ESTADO** pode ser usada para alternar entre os itens "
-"da BARRA DE ESTADO se um item estiver visível. Isso também vai esconder ou "
-"mostrar a BARRA DE ESTADO se tocar o bastante.\n"
+"Para exibir o **MENU SUPERIOR** ou **MENU INFERIOR**, pressione as teclas "
+"**Menu** ou **Aa**, respectivamente.\n"
+"- A **BARRA DE ESTADO** pode ser configurada para mostrar uma variedade de "
+"informações sobre o progresso da leitura ou o estado do dispositivo.\n"
 
 #: frontend/ui/quickstart.lua:115
 msgid ""
@@ -13653,7 +13838,6 @@ msgstr ""
 "mostrar a BARRA DE ESTADO se tocar o bastante.\n"
 
 #: frontend/ui/quickstart.lua:127
-#, fuzzy
 msgid ""
 "## User interface tips <a id=\"uitips\"></a>\n"
 "\n"
@@ -13698,57 +13882,54 @@ msgid ""
 "> **Menu ➔ ![Typesettings](resources/icons/mdlight/appbar.typeset.svg) ➔ "
 "Selection on text**\n"
 msgstr ""
-"## Dicas de interface de utilizador <a id=\"uitips\"></a>\n"
+"## Dicas de interface do utilizador <a id=“uitips”></a>\n"
 "\n"
 "- Pode alterar o idioma da interface usando:\n"
 "\n"
-"> **MENU SUPERIOR ➔ ![Configurações](resources/icons/mdlight/appbar.settings."
-"svg) ➔ Idioma**\n"
+"> **Menu ➔ ![Configurações](resources/icons/mdlight/appbar.settings.svg) ➔ "
+"Idioma**\n"
 "\n"
-"- Se tocar e segurar numa opção ou item de menu (peso de fonte, espaçamento "
-"de linhas etc.), poderá definir o valor como **PADRÃO**. O novo valor vai "
-"ser aplicado somente a documentos abertos a partir de então. Documentos "
-"previamente abertos vão manter as suas configurações. Pode identificar "
-"valores padrão com uma ESTRELA no menu ou com uma borda preta em torno de "
-"indicadores como abaixo:\n"
+"- Se pressionar **ScreenKB** + **Press** numa opção ou elemento de menu ("
+"espessura da fonte, espaçamento entre linhas etc.), poderá definir o seu "
+"valor como **PADRÃO**. O novo valor só será aplicado aos documentos abertos "
+"a partir de agora. Os documentos abertos anteriormente manterão as suas "
+"configurações. Pode identificar os valores padrão como uma ESTRELA no menu "
+"ou como uma borda preta ao redor dos indicadores, conforme mostrado abaixo:\n"
 "\n"
-"<div class=\"img-block break-before-avoid\">![Configuração padrão 1]"
-"(resources/quickstart/defaultsetting1.png)</div>\n"
-"<div class=\"img-block break-before-avoid\">![Configuração padrão 2]"
-"(resources/quickstart/defaultsetting2.png)</div>\n"
+"<div class=\"img-block break-before-avoid\">![Configuração padrão 1]("
+"resources/quickstart/defaultsetting1.png)</div>\n"
+"<div class=\"img-block break-before-avoid\">![Configuração padrão 2]("
+"resources/quickstart/defaultsetting2.png)</div>\n"
 "\n"
-"- Pode ver explicações de todos itens do **MENU INFERIOR** ao tocar e "
-"segurar o nome da opção. Isso também está disponível para a maioria dos "
-"itens do **MENU SUPERIOR**.\n"
-"- Pode **FECHAR** janelas de ecrã inteiro (Histórico, Índice, Marcadores, "
-"Estatísticas de leitura etc.) delizando para baixo\n"
-"- **CAPTURAS DE TELA** podem ser tiradas tocando cantos diagonalmente "
-"opostos do ecrã ao mesmo tempo ou deslizando longamente na diagonal\n"
+"- É possível ver as explicações de alguns elementos no **MENU SUPERIOR** "
+"pressionando **ScreenKB** + **Press** no nome da opção.\n"
+"- É possível **FECHAR** as caixas de diálogo de ecrã cheio (Histórico, "
+"Índice, Marcadores, Estatísticas de leitura etc.) pressionando a tecla "
+"**Voltar**.\n"
+"- **CAPTURAS DE TELA** podem ser tiradas pressionando as teclas **ScreenKB** "
+"+ **Menu**\n"
 "\n"
-"<div class=\"img-block break-after-avoid\">![Selecionador de números]"
-"(resources/quickstart/numberpicker.png)</div>\n"
+"<div class=\"img-block break-after-avoid\">![Selecionador de números]("
+"resources/quickstart/numberpicker.png)</div>\n"
 "\n"
-"- Em janelas que contêm botões de flecha para ajustes, como a acima, pode "
-"tocar e segurar os botões de flecha para aumentar/diminuir o valor em "
-"incrementos maiores\n"
-"- Pode **FECHAR** esse tipo de janela (não ecrã inteiro) tocando fora da "
-"janela. Pode **MOVER** esse tipo de janela segurando o título da janela e "
-"arrastando\n"
-"- Pode tornar esse tipo de janela **SEMITRANSPARENTE** (para ver o texto "
-"embaixo dela enquanto se ajusta um valor) tocando e segurando o título da "
-"janela\n"
-"- Tocar e segurar uma palavra exibe uma janela que permite buscar o "
-"selecionado para achar mais ocorrências no documento ou pesquisar na "
-"Wikipédia\n"
-"- Pode destacar seções tocando e segurando uma palavra e arrastando seu "
-"dedo\n"
-"- Pode folhear o documento usando a janela de **FOLHEAR DOCUMENTO**:\n"
+"- Nas caixas de diálogo que contêm botões de seta de ajuste, como a caixa "
+"acima, pode usar as teclas direcionais para se movimentar. Se os widgets "
+"tiverem menus, pressione a tecla **Menu** para abri-los.\n"
+"- Pode alternar o modo de seleção de conteúdo pressionando as teclas **Up** "
+"ou **Down**. A ferramenta de seleção fica disponível para que possa "
+"selecionar uma ou várias palavras, seja para pesquisa no dicionário, na "
+"Wikipédia ou no texto.\n"
+"- Pode destacar blocos de texto selecionando várias palavras com a "
+"ferramenta de seleção de conteúdo.\n"
+"- Pode percorrer o documento com as teclas de cursor **Left** ou **Right**, "
+"que devem levá-lo ao capítulo anterior ou seguinte, respectivamente.\n"
+"- A sensibilidade da ferramenta de seleção de conteúdo pode ser ajustada no "
+"**MENU SUPERIOR**.\n"
 "\n"
-"> **MENU SUPERIOR➔ ![Navegeção](resources/icons/mdlight/appbar.navigation."
-"svg) ➔ Folhear documento**\n"
+"> **Menu ➔ ![Configurações tipográficas](resources/icons/mdlight/"
+"appbar.typeset.svg) ➔ Seleção no texto**\n"
 
 #: frontend/ui/quickstart.lua:154
-#, fuzzy
 msgid ""
 "## User interface tips <a id=\"uitips\"></a>\n"
 "\n"
@@ -13794,54 +13975,53 @@ msgid ""
 "> **Menu ➔ ![Typesettings](resources/icons/mdlight/appbar.typeset.svg) ➔ "
 "Selection on text**\n"
 msgstr ""
-"## Dicas de interface de utilizador <a id=\"uitips\"></a>\n"
+"## Dicas de interface do utilizador <a id=\"uitips\"></a>\n"
 "\n"
 "- Pode alterar o idioma da interface usando:\n"
 "\n"
-"> **MENU SUPERIOR ➔ ![Configurações](resources/icons/mdlight/appbar.settings."
-"svg) ➔ Idioma**\n"
+"> **Menu ➔ ![Configurações](resources/icons/mdlight/appbar.settings.svg) ➔ "
+"Idioma**\n"
 "\n"
-"- Se tocar e segurar numa opção ou item de menu (peso de fonte, espaçamento "
-"de linhas etc.), poderá definir o valor como **PADRÃO**. O novo valor vai "
-"ser aplicado somente a documentos abertos a partir de então. Documentos "
-"previamente abertos vão manter as suas configurações. Pode identificar "
-"valores padrão com uma ESTRELA no menu ou com uma borda preta em torno de "
-"indicadores como abaixo:\n"
+"- Se pressionar **Shift** + **Press** numa opção ou elemento de menu ("
+"espessura da fonte, espaçamento entre linhas etc.), poderá definir o seu "
+"valor como **PADRÃO**.  O novo valor será aplicado somente aos documentos "
+"abertos a partir de agora. Os documentos abertos anteriormente manterão as "
+"suas configurações. Pode identificar os valores padrão como uma ESTRELA no "
+"menu ou como uma borda preta ao redor dos indicadores, conforme mostrado "
+"abaixo:\n"
 "\n"
-"<div class=\"img-block break-before-avoid\">![Configuração padrão 1]"
-"(resources/quickstart/defaultsetting1.png)</div>\n"
-"<div class=\"img-block break-before-avoid\">![Configuração padrão 2]"
-"(resources/quickstart/defaultsetting2.png)</div>\n"
+"<div class=\"img-block break-before-avoid\">![Configuração padrão 1]("
+"resources/quickstart/defaultsetting1.png)</div>\n"
+"<div class=\"img-block break-before-avoid\">![Configuração padrão 2]("
+"resources/quickstart/defaultsetting2.png)</div>\n"
 "\n"
-"- Pode ver explicações de todos itens do **MENU INFERIOR** ao tocar e "
-"segurar o nome da opção. Isso também está disponível para a maioria dos "
-"itens do **MENU SUPERIOR**.\n"
-"- Pode **FECHAR** janelas de ecrã inteiro (Histórico, Índice, Marcadores, "
-"Estatísticas de leitura etc.) delizando para baixo\n"
-"- **CAPTURAS DE TELA** podem ser tiradas tocando cantos diagonalmente "
-"opostos do ecrã ao mesmo tempo ou deslizando longamente na diagonal\n"
+"- Pode ver as explicações de alguns elementos no **MENU SUPERIOR** "
+"pressionando **Shift** + **Press** no nome da opção.\n"
+"- É possível **FECHAR** as caixas de diálogo de ecrã cheio (Histórico, "
+"Índice, Marcadores, Estatísticas de leitura etc.) pressionando a tecla "
+"**Voltar**.\n"
+"- **CAPTURAS DE TELA** podem ser tiradas pressionando as teclas **Alt** + "
+"**Shift** + **G**\n"
 "\n"
-"<div class=\"img-block break-after-avoid\">![Selecionador de números]"
-"(resources/quickstart/numberpicker.png)</div>\n"
+"<div class=\"img-block break-after-avoid\">![Selecionador de números]("
+"resources/quickstart/numberpicker.png)</div>\n"
 "\n"
-"- Em janelas que contêm botões de flecha para ajustes, como a acima, pode "
-"tocar e segurar os botões de flecha para aumentar/diminuir o valor em "
-"incrementos maiores\n"
-"- Pode **FECHAR** esse tipo de janela (não ecrã inteiro) tocando fora da "
-"janela. Pode **MOVER** esse tipo de janela segurando o título da janela e "
-"arrastando\n"
-"- Pode tornar esse tipo de janela **SEMITRANSPARENTE** (para ver o texto "
-"embaixo dela enquanto se ajusta um valor) tocando e segurando o título da "
-"janela\n"
-"- Tocar e segurar uma palavra exibe uma janela que permite buscar o "
-"selecionado para achar mais ocorrências no documento ou pesquisar na "
-"Wikipédia\n"
-"- Pode destacar seções tocando e segurando uma palavra e arrastando seu "
-"dedo\n"
-"- Pode folhear o documento usando a janela de **FOLHEAR DOCUMENTO**:\n"
+"- Nas caixas de diálogo que contêm botões de seta de ajuste, como a caixa "
+"acima, pode usar as teclas direcionais para se movimentar. Se os widgets "
+"tiverem menus, pressione a tecla **Menu** para abri-los.\n"
+"- Pode alternar o modo de seleção de conteúdo pressionando as teclas **Up** "
+"ou **Down**. A ferramenta de seleção fica disponível para que possa "
+"selecionar uma ou várias palavras, seja para pesquisa no dicionário, na "
+"Wikipédia ou no texto.\n"
+"- Pode destacar blocos de texto selecionando várias palavras com a "
+"ferramenta de seleção de conteúdo.\n"
+"- Pode percorrer o documento com as teclas de cursor **Left** ou **Right**, "
+"que devem levá-lo ao capítulo anterior ou seguinte, respectivamente.\n"
+"- A sensibilidade da ferramenta de seleção de conteúdo pode ser ajustada no "
+"**MENU SUPERIOR**.\n"
 "\n"
-"> **MENU SUPERIOR➔ ![Navegeção](resources/icons/mdlight/appbar.navigation."
-"svg) ➔ Folhear documento**\n"
+"> **Menu ➔ ![Configurações tipográficas](resources/icons/mdlight/"
+"appbar.typeset.svg) ➔ Seleção no texto**\n"
 
 #: frontend/ui/quickstart.lua:181
 msgid ""
@@ -13942,7 +14122,6 @@ msgstr ""
 "svg) ➔ Folhear documento**\n"
 
 #: frontend/ui/quickstart.lua:213
-#, fuzzy
 msgid ""
 "## Accessing files <a id=\"afiles\"></a>\n"
 "\n"
@@ -13957,22 +14136,20 @@ msgid ""
 "> **Menu (in File Browser) ➔ ![Filebrowser](resources/icons/mdlight/appbar."
 "filebrowser.svg) ➔ Start with**\n"
 msgstr ""
-"## A aceder a ficheiros <a id=\"afiles\"></a>\n"
+"## Aceder ficheiros <a id=\"afiles\"></a>\n"
 "\n"
-"Os seguintes métodos estão disponíveis para aceder aos seus livros e "
-"artigos:\n"
+"Os seguintes métodos estão disponíveis para aceder os seus livros e artigos:"
 "\n"
-"* Navegador de ficheiros\n"
+"\n"
+"* Navegador de Ficheiros\n"
 "* Favoritos\n"
 "* Histórico\n"
 "\n"
-"Pode atribuir gestos para acesso rápido a cada um desses diálogos.\n"
+"Também pode configurar o KOReader para abrir com qualquer um desses diálogos "
+"ao iniciar através de:\n"
 "\n"
-"Também pode definir o KOReader para abrir em qualquer um desses diálogos ao "
-"inicializar, via:\n"
-"\n"
-"> **MENU SUPERIOR (no navegador de ficheiros) ➔ ![Navegador de ficheiros]"
-"(resources/icons/mdlight/appbar.filebrowser.svg) ➔ Iniciar com**\n"
+"> **MENU SUPERIOR (no Navegador de Ficheiros) ➔ ![Navegador de ficheiros]("
+"resources/icons/mdlight/appbar.filebrowser.svg) ➔ Iniciar com**\n"
 
 #: frontend/ui/quickstart.lua:227
 msgid ""
@@ -14060,6 +14237,29 @@ msgid ""
 "- **ScreenKB** + **Home**: Toggle virtual keyboard on/off\n"
 "- **ScreenKB** + **Back**: Delete char\n"
 msgstr ""
+"## Atalhos <a id=\"short\"></a>\n"
+"\n"
+"A seguir, uma lista não exaustiva de atalhos disponíveis.\n"
+"\n"
+"No módulo de leitura:\n"
+"\n"
+"- **ScreenKB** + **Cima**: Índice\n"
+"- **ScreenKB** + **Direita**: Adicionar um marcador\n"
+"- **ScreenKB** + **Baixo**: Mapa do livro\n"
+"- **ScreenKB** + **Esquerda**: Marcadores, notas e destaques\n"
+"- **ScreenKB** + **Pressionar**: Gravar a página atual no histórico de "
+"localização\n"
+"- **ScreenKB** + **Início**: Alternar o Wi-Fi\n"
+"- **ScreenKB** + **Voltar**: Alternar para o último livro aberto\n"
+"\n"
+"Ao usar um teclado virtual:\n"
+"\n"
+"- **ScreenKB** + **Direita**: Mover o cursor para o caractere à direita\n"
+"- **ScreenKB** + **Esquerda**: Mover o cursor para o caractere à esquerda\n"
+"- **ScreenKB** + **Pressionar**: Mostrar caracteres especiais nas teclas do "
+"teclado virtual\n"
+"- **ScreenKB** + **Início**: Ativar/desativar o teclado virtual\n"
+"- **ScreenKB** + **Voltar**: Apagar caractere\n"
 
 #: frontend/ui/quickstart.lua:284
 msgid ""
@@ -14088,6 +14288,32 @@ msgid ""
 "- **Shift** + **Back**: Delete whole line\n"
 "- **Sym** + **Alphabet keys**: symbols, numbers and special characters\n"
 msgstr ""
+"## Atalhos <a id=\"short\"></a>\n"
+"\n"
+"A seguir, uma lista não exaustiva de atalhos disponíveis.\n"
+"\n"
+"No módulo de leitura:\n"
+"\n"
+"- **T** ou **Shift** + **Cima**: Índice\n"
+"- **Shift** + **Direita**: Adicionar um marcador\n"
+"- **Shift** + **Baixo**: Mapa do livro\n"
+"- **B** ou **Shift** + **Esquerda**: Marcadores, notas e destaques\n"
+"- **Shift** + **Pressionar**: Gravar a página atual no histórico de "
+"localização\n"
+"- **Shift** + **Início**: Alternar o Wi-Fi\n"
+"- **Shift** + **Voltar**: Alternar para o último livro aberto\n"
+"\n"
+"Ao usar um teclado virtual:\n"
+"\n"
+"- **Shift** + **Direita**: Mover o cursor para o caractere à direita\n"
+"- **Shift** + **Esquerda**: Mover o cursor para o caractere à esquerda\n"
+"- **Shift** + **Pressionar**: Mostrar caracteres especiais nas teclas do "
+"teclado virtual\n"
+"- **Shift** + **Início**: Ativar/desativar o teclado virtual\n"
+"- **Shift** + **Del**: Apagar palavra\n"
+"- **Shift** + **Voltar**: Apagar linha inteira\n"
+"- **Sym** + **Teclas alfabéticas**: símbolos, números e caracteres "
+"especiais\n"
 
 #: frontend/ui/quickstart.lua:310
 msgid ""
@@ -14517,6 +14743,8 @@ msgid ""
 "Displays source language text in Latin characters. This is useful for "
 "reading languages with non-Latin scripts."
 msgstr ""
+"Exibe o texto do idioma de origem em caracteres latinos. Isto é útil para "
+"ler idiomas com scripts não latinos."
 
 #: frontend/ui/translator.lua:293
 msgid "Translate from: %1"
@@ -14714,55 +14942,46 @@ msgid "Keywords"
 msgstr "Palavras-chave"
 
 #: frontend/ui/widget/booklist.lua:347
-#, fuzzy
 msgctxt "Status of group of books"
 msgid "All"
 msgstr "Todos"
 
 #: frontend/ui/widget/booklist.lua:348
-#, fuzzy
 msgctxt "Status of group of books"
 msgid "Deleted"
-msgstr "Eliminados"
+msgstr "Apagados"
 
 #: frontend/ui/widget/booklist.lua:349
-#, fuzzy
 msgctxt "Status of group of books"
 msgid "New"
-msgstr "Novo"
+msgstr "Novos"
 
 #: frontend/ui/widget/booklist.lua:350
-#, fuzzy
 msgctxt "Status of group of books"
 msgid "Reading"
-msgstr "Em leitura"
+msgstr "A ler"
 
 #: frontend/ui/widget/booklist.lua:351
-#, fuzzy
 msgctxt "Status of group of books"
 msgid "On hold"
 msgstr "Em espera"
 
 #: frontend/ui/widget/booklist.lua:352
-#, fuzzy
 msgctxt "Status of group of books"
 msgid "Finished"
-msgstr "Concluído"
+msgstr "Concluídos"
 
 #: frontend/ui/widget/booklist.lua:356
-#, fuzzy
 msgctxt "Status of single book"
 msgid "Reading"
-msgstr "Em leitura"
+msgstr "A ler"
 
 #: frontend/ui/widget/booklist.lua:357
-#, fuzzy
 msgctxt "Status of single book"
 msgid "On hold"
 msgstr "Em espera"
 
 #: frontend/ui/widget/booklist.lua:358
-#, fuzzy
 msgctxt "Status of single book"
 msgid "Finished"
 msgstr "Concluído"
@@ -14871,6 +15090,14 @@ msgid ""
 "\n"
 "Press back to exit the book map."
 msgstr ""
+"Use as configurações neste menu para alterar o nível dos capítulos a serem "
+"incluídos no mapa do livro, o tipo de visualização (grade ou plano) e a "
+"largura das faixas das páginas.\n"
+"\n"
+"Use ScreenKB/Shift\" + \"Cima/Baixo\" para rolar ou use os botões de troca "
+"de página para mover a uma taxa mais rápida.\n"
+"\n"
+"Pressione voltar para sair do mapa do livro."
 
 #: frontend/ui/widget/bookmapwidget.lua:1388
 msgid ""
@@ -15284,9 +15511,8 @@ msgid "Go to letter"
 msgstr "Ir à letra"
 
 #: frontend/ui/widget/menu.lua:821
-#, fuzzy
 msgid "Enter text, letter or page number"
-msgstr "Digitar letra ou número da página"
+msgstr "Digitar texto, letra ou número da página"
 
 #. @translators First group is the standard range for alphabetic searches, second group is a page number range
 #: frontend/ui/widget/menu.lua:824
@@ -17912,15 +18138,15 @@ msgstr "- A sua nota na página %1 | Adicionado %2"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:26
 msgid "Setup Nextcloud Notes plugin"
-msgstr ""
+msgstr "Configurar o plugin Nextcloud Notes"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:28
 msgid "Nextcloud Notes"
-msgstr ""
+msgstr "Nextcloud Notes"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:40
 msgid "Nextcloud URL"
-msgstr ""
+msgstr "URL do Nextcloud"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:52
 msgid "App password"
@@ -17928,7 +18154,7 @@ msgstr "Senha da aplicação"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:53
 msgid "Security → Devices & sessions"
-msgstr ""
+msgstr "Segurança → Dispositivos e sessões"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:96
 msgid "Export to Nextcloud Notes"
@@ -18391,12 +18617,14 @@ msgstr "Olá, mundo do plugin"
 
 #: plugins/hotkeys.koplugin/_meta.lua:4
 msgid "Hotkeys"
-msgstr ""
+msgstr "Teclas de atalho"
 
 #: plugins/hotkeys.koplugin/_meta.lua:5
 msgid ""
 "This plugin provides custom shortcut support for devices with physical keys."
 msgstr ""
+"Este plugin oferece suporte a atalhos personalizados para dispositivos com "
+"teclas físicas."
 
 #: plugins/hotkeys.koplugin/main.lua:42
 msgid "Press"
@@ -18404,7 +18632,7 @@ msgstr "Premir"
 
 #: plugins/hotkeys.koplugin/main.lua:45
 msgid "Shift + Menu"
-msgstr ""
+msgstr "Shift + Menu"
 
 #: plugins/hotkeys.koplugin/main.lua:184 plugins/hotkeys.koplugin/main.lua:192
 #: plugins/hotkeys.koplugin/main.lua:211
@@ -18429,7 +18657,7 @@ msgstr "Atalhos de teclado"
 
 #: plugins/hotkeys.koplugin/main.lua:372
 msgid "Cursor keys"
-msgstr ""
+msgstr "Teclas do cursor"
 
 #: plugins/hotkeys.koplugin/main.lua:376
 msgid "Page-turn buttons"
@@ -18437,11 +18665,11 @@ msgstr "Botões de virar página"
 
 #: plugins/hotkeys.koplugin/main.lua:383
 msgid "Function keys"
-msgstr ""
+msgstr "Teclas de função"
 
 #: plugins/hotkeys.koplugin/main.lua:391
 msgid "Alphabet keys"
-msgstr ""
+msgstr "Teclas do alfabeto"
 
 #: plugins/httpinspector.koplugin/_meta.lua:4
 msgid "HTTP KOReader Inspector"
@@ -18453,6 +18681,9 @@ msgid ""
 "developers, and may pose some security risks. Only enable this on networks "
 "you can trust."
 msgstr ""
+"Permite a navegação em objetos internos do KOReader por HTTP. Esta opção é "
+"destinada a programadores e pode apresentar alguns riscos de segurança. "
+"Ative esta opção somente em redes nas quais possa confiar."
 
 #: plugins/httpinspector.koplugin/main.lua:112
 msgid "Failed to start HTTP inspector on port %1."
@@ -19321,9 +19552,8 @@ msgid "Read now"
 msgstr "Ler agora"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:79
-#, fuzzy
 msgid "Downloads"
-msgstr "Descarregar"
+msgstr "Descargas"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:93
 msgid "Catalog name"
@@ -19463,18 +19693,16 @@ msgstr "Fluir da página"
 
 #. @translators "Stream" here refers to being able to read documents from an OPDS server without downloading them completely, on a page by page basis.
 #: plugins/opds.koplugin/opdsbrowser.lua:612
-#, fuzzy
 msgid "Resume stream from page"
-msgstr "Fluir da página"
+msgstr "Retomar transmissão da página"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:622
 msgid "Borrow"
 msgstr "Emprestar"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:652
-#, fuzzy
 msgid "Book added to download list"
-msgstr "Ir aos descarregados"
+msgstr "Livro adicionado à lista de descargas"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:797
 #: plugins/opds.koplugin/opdspse.lua:47 plugins/opds.koplugin/opdspse.lua:75
@@ -19509,24 +19737,24 @@ msgid "Downloads (%1)"
 msgstr "Descarregamentos (%1)"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1028
-#, fuzzy
 msgid "Remove all"
-msgstr "Remover"
+msgstr "Remover tudo"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1032
 msgid "Remove all downloads?"
 msgstr "Eliminar todos os itens descarregados?"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1046
-#, fuzzy
 msgid "Download all"
-msgstr "Transferir ficheiro"
+msgstr "Descarregar tudo"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1050
 msgid ""
 "Download all books?\n"
 "Existing files will be overwritten."
 msgstr ""
+"Descarregar todos os livros?\n"
+"Os ficheiros existentes serão substituídos."
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1068
 #: plugins/wallabag.koplugin/main.lua:484
@@ -19542,9 +19770,8 @@ msgid "Description"
 msgstr "Descrição"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1087
-#, fuzzy
 msgid "Downloading… (tap to cancel)"
-msgstr "A pesquisar… (toque para cancelar)"
+msgstr "A descarregar... (toque para cancelar)"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1124
 msgid "1 book downloaded"
@@ -19639,9 +19866,8 @@ msgid "Ask to execute"
 msgstr "Pedir para executar"
 
 #: plugins/profiles.koplugin/main.lua:165
-#, fuzzy
 msgid "Execute within time interval"
-msgstr "Intervalo de toque 'keitai'"
+msgstr "Executar dentro do intervalo de tempo"
 
 #: plugins/profiles.koplugin/main.lua:173
 msgid "start: "
@@ -19649,17 +19875,15 @@ msgstr "Reiniciar: "
 
 #: plugins/profiles.koplugin/main.lua:173
 msgid "end: "
-msgstr ""
+msgstr "terminar: "
 
 #: plugins/profiles.koplugin/main.lua:174
-#, fuzzy
 msgid "Set start time"
-msgstr "Definir temporizador de leitura"
+msgstr "Definir horário de início"
 
 #: plugins/profiles.koplugin/main.lua:174
-#, fuzzy
 msgid "Set end time"
-msgstr "Definir hora"
+msgstr "Definir horário de término"
 
 #: plugins/profiles.koplugin/main.lua:213
 msgid "on KOReader start"
@@ -19670,9 +19894,8 @@ msgid "on wake-up"
 msgstr "ao acordar"
 
 #: plugins/profiles.koplugin/main.lua:215
-#, fuzzy
 msgid "on exiting sleep screen"
-msgstr "Sair do ecrã de suspensão"
+msgstr "ao sair do ecrã de descanso"
 
 #: plugins/profiles.koplugin/main.lua:216
 msgid "on rotation"
@@ -19724,7 +19947,7 @@ msgstr "se o caminho da pasta contiver"
 
 #: plugins/profiles.koplugin/main.lua:598
 msgid "if folder path does not contain"
-msgstr ""
+msgstr "se o caminho da pasta não contiver"
 
 #: plugins/profiles.koplugin/main.lua:647
 msgid "Enter text contained in folder path"
@@ -19740,7 +19963,7 @@ msgstr "se os metadados do livro contiverem"
 
 #: plugins/profiles.koplugin/main.lua:677
 msgid "if book file path contains"
-msgstr ""
+msgstr "se o caminho do ficheiro do livro contiver"
 
 #: plugins/profiles.koplugin/main.lua:678
 msgid "if book is in collections"
@@ -19780,7 +20003,7 @@ msgstr ""
 
 #: plugins/qrclipboard.koplugin/main.lua:31
 msgid "Generate QR code"
-msgstr ""
+msgstr "Gerar código QR"
 
 #: plugins/readtimer.koplugin/_meta.lua:4
 #: plugins/readtimer.koplugin/main.lua:240
@@ -21278,7 +21501,7 @@ msgstr "Carregar para o servidor fila de artigos adicionados localmente"
 
 #: plugins/wallabag.koplugin/main.lua:169
 msgid "Upload article statuses to server"
-msgstr ""
+msgstr "Upload dos estado dos artigos para o servidor"
 
 #: plugins/wallabag.koplugin/main.lua:178
 msgid "Go to download folder"
@@ -21330,7 +21553,7 @@ msgstr "Preferir documento não HTML original"
 
 #: plugins/wallabag.koplugin/main.lua:272
 msgid "Remote mark-as-read settings"
-msgstr ""
+msgstr "Configurações remotas de \"marcar como lido\""
 
 #: plugins/wallabag.koplugin/main.lua:275
 msgid "Mark finished articles as read"
@@ -21506,7 +21729,7 @@ msgstr "A autenticar no servidor do Wallabag…"
 
 #: plugins/wallabag.koplugin/main.lua:876
 msgid "Getting list of newest articles on Wallabag…"
-msgstr ""
+msgstr "A obter a lista dos artigos mais recentes no Wallabag…"
 
 #: plugins/wallabag.koplugin/main.lua:885
 msgid "Received a list of 1 article."
@@ -21524,13 +21747,15 @@ msgstr "Sincronização concluída:"
 
 #: plugins/wallabag.koplugin/main.lua:932
 msgid "- added from queue: %1"
-msgstr ""
+msgstr "- adicionado da fila: %1"
 
 #: plugins/wallabag.koplugin/main.lua:937
 msgid ""
 "- downloaded: %1\n"
 "- skipped: %2"
 msgstr ""
+"- descarregado: %1\n"
+"- ignorado: %2"
 
 #: plugins/wallabag.koplugin/main.lua:941
 msgid "- failed: %1"
@@ -21686,6 +21911,10 @@ msgid ""
 "can be reflowed. Special flow directions for reading double column PDFs and "
 "manga."
 msgstr ""
+"Suporta tanto a formatos de página fixa (PDF, DjVu, CBT, CBZ) quanto a "
+"formatos refluíveis de livro eletrônico (EPUB, FB2, Mobi, DOC, CHM, TXT, "
+"HTML). Documentos digitalizados em formato PDF/DjVu podem ser refluídos. "
+"Direções de fluxo especiais para leitura de PDFs com duas colunas e mangás."
 
 #: tools/update-metadata.lua:34
 msgid ""
@@ -21693,6 +21922,9 @@ msgid ""
 "customizable reader view with complete typesetting options. Multi-lingual "
 "hyphenation dictionaries are bundled in."
 msgstr ""
+"Interface de utilizador multilíngue otimizada para ecrã de tinta eletrônica. "
+"Leitor altamente personalizável com opções completas de tipografia. "
+"Dicionários de hifenização multilíngue já estão incluídos."
 
 #: tools/update-metadata.lua:35
 msgid ""
@@ -21705,11 +21937,15 @@ msgstr ""
 #: tools/update-metadata.lua:36
 msgid "Unique Book Map and Page Browser features to navigate your book."
 msgstr ""
+"Recursos únicos de Mapa do Livro e no Navegador de Páginas para navegar pelo "
+"seu livro."
 
 #: tools/update-metadata.lua:37
 msgid ""
 "Special multi-page highlight mode with many local and online export options."
 msgstr ""
+"Modo especial de destaque de múltiplas páginas com várias opções para "
+"exportar localmente e online."
 
 #: tools/update-metadata.lua:38
 msgid ""
