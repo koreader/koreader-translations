@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-18 16:24+0000\n"
+"POT-Creation-Date: 2025-04-21 15:23+0000\n"
 "PO-Revision-Date: 2025-04-16 13:05+0000\n"
 "Last-Translator: Juan Comesaña Fernández <xan.comesana@gmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/koreader/"
@@ -197,8 +197,8 @@ msgstr "Introduce nome de ficheiro"
 #: frontend/apps/filemanager/filemanager.lua:1501
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:526
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:672
-#: frontend/apps/filemanager/filemanagercollection.lua:980
-#: frontend/apps/filemanager/filemanagercollection.lua:1074
+#: frontend/apps/filemanager/filemanagercollection.lua:1169
+#: frontend/apps/filemanager/filemanagercollection.lua:1263
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:380
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:76
@@ -333,7 +333,7 @@ msgstr "Editar"
 #: frontend/apps/filemanager/filemanager.lua:545
 #: frontend/apps/filemanager/filemanager.lua:550
 #: frontend/apps/filemanager/filemanager.lua:1108
-#: frontend/apps/filemanager/filemanagercollection.lua:242
+#: frontend/apps/filemanager/filemanagercollection.lua:264
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:431
 #: frontend/apps/filemanager/filemanagerhistory.lua:238
 #: frontend/apps/reader/modules/readerbookmark.lua:836
@@ -581,7 +581,7 @@ msgstr "Cartafol de Dropbox (/ para o raíz)"
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:533
-#: frontend/apps/filemanager/filemanagercollection.lua:987
+#: frontend/apps/filemanager/filemanagercollection.lua:1176
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1330
 #: frontend/apps/reader/modules/readerbookmark.lua:1390
@@ -793,6 +793,7 @@ msgid "Paste"
 msgstr "Pegar"
 
 #: frontend/apps/filemanager/filemanager.lua:208
+#: frontend/apps/filemanager/filemanagercollection.lua:547
 #: frontend/apps/reader/modules/readerhighlight.lua:72
 #: frontend/ui/widget/inputtext.lua:253
 msgid "Select"
@@ -874,7 +875,8 @@ msgid "Export highlights"
 msgstr "Exportar os textos destacados"
 
 #: frontend/apps/filemanager/filemanager.lua:597
-#: frontend/apps/filemanager/filemanagercollection.lua:911
+#: frontend/apps/filemanager/filemanagercollection.lua:401
+#: frontend/apps/filemanager/filemanagercollection.lua:1100
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:510
 #: frontend/apps/reader/modules/readerbookmark.lua:816
 msgid "Deselect all"
@@ -885,6 +887,7 @@ msgid "Select all files in folder"
 msgstr "Seleccionar todos os ficheiros do cartafol"
 
 #: frontend/apps/filemanager/filemanager.lua:617
+#: frontend/apps/filemanager/filemanagercollection.lua:428
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:539
 #: frontend/apps/reader/modules/readerbookmark.lua:853
 #: frontend/apps/reader/modules/readerhighlight.lua:978
@@ -1429,7 +1432,7 @@ msgstr[0] "1 documento con metadatos baseados en hash"
 msgstr[1] "%1 documentos con metadatos baseados en hash"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:24
-#: frontend/apps/filemanager/filemanagercollection.lua:334
+#: frontend/apps/filemanager/filemanagercollection.lua:511
 #: frontend/dispatcher.lua:58
 msgid "Collections"
 msgstr "Coleccións"
@@ -1439,160 +1442,30 @@ msgstr "Coleccións"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:250
+#: frontend/apps/filemanager/filemanagercollection.lua:272
+#: frontend/apps/filemanager/filemanagercollection.lua:341
 msgid "Remove from collection"
 msgstr "Eliminar da colección"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:351
-msgid "Filter by authors"
-msgstr "Filtrar por autores"
+#: frontend/apps/filemanager/filemanagercollection.lua:335
+#, fuzzy
+msgid "1 book selected"
+msgid_plural "%1 books selected"
+msgstr[0] "1 marcador seleccionado"
+msgstr[1] "%1 marcadores seleccionados"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:352
-msgid "Filter by series"
-msgstr "Filtrar por serie"
+#: frontend/apps/filemanager/filemanagercollection.lua:336
+#, fuzzy
+msgid "No books selected"
+msgstr "Non hai marcadores seleccionados"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:355
-msgid "Filter by language"
-msgstr "Filtrar por idioma"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:356
-msgid "Filter by keywords"
-msgstr "Filtrar por palabras clave"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:359
-msgid "Reset all filters"
-msgstr "Quitar todos os filtros"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:369
-msgid "Book search"
-msgstr "Busca de libros"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:377
-#: frontend/apps/filemanager/filemanagercollection.lua:559
-msgid "Arrange books in collection"
-msgstr "Organizar libros na colección"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:386
-msgid "Add all books from a folder"
-msgstr "Engadir todos os libros dun cartafol"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:393
-msgid "Add all books from a folder and its subfolders"
-msgstr "Engadir todos os libros dun cartafol e os seus subcartafoles"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:400
-msgid "Add a book to collection"
-msgstr "Engadir libro á colección"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:425
-msgid "Remove current book from collection"
+#: frontend/apps/filemanager/filemanagercollection.lua:345
+#, fuzzy
+msgid "Remove selected books from collection?"
 msgstr "Eliminar o libro actual da colección"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:425
-msgid "Add current book to collection"
-msgstr "Engadir o libro actual á colección"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:544
-#: frontend/apps/filemanager/filemanagermenu.lua:458
-#: frontend/apps/reader/modules/readerbookmark.lua:235
-#: frontend/dispatcher.lua:134
-msgid "Reverse sorting"
-msgstr "Ordenación inversa"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:555
-msgid "Manual sorting"
-msgstr "Ordenación manual"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:572
-#: frontend/dispatcher.lua:133
-msgid "Sort by"
-msgstr "Ordenar por"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:592
-msgid "No books added to collection"
-msgstr "Non se engadiron libros á colección"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:595
-msgid "1 book added to collection"
-msgid_plural "%1 books added to collection"
-msgstr[0] "engadiuse 1 libro á colección"
-msgstr[1] "engadíronse %1 libros á colección"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:685
-msgid "Collections (%1)"
-msgstr "Coleccións (%1)"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:689
-#: frontend/apps/reader/modules/readerbookmark.lua:1045
-msgid "Selected: %1"
-msgstr "Seleccionados: %1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:729
-msgid "Connect folders"
-msgstr "Conectar cartafoles"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:738
-msgid "Remove collection"
-msgstr "Eliminar a colección"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:745
-msgid "Rename collection"
-msgstr "Cambiar nome da colección"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:810
-msgid "Connected folders: %1"
-msgstr "Cartafoles conectados: %1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:834
-msgid "Disconnect folder"
-msgstr "Desconectar o cartafol"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:846
-msgid "Exclude subfolders"
-msgstr "Excluír cartafoles fillos"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:846
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
-msgid "Include subfolders"
-msgstr "Incluír cartafoles fillos"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:898
-msgid "New collection"
-msgstr "Nova colección"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:921
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:524
-#: frontend/apps/reader/modules/readerbookmark.lua:785
-msgid "Select all"
-msgstr "Seleccionar todo"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:933
-msgid "Apply selection"
-msgstr "Aplicar a selección"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:947
-#: frontend/apps/filemanager/filemanagercollection.lua:1056
-msgid "Arrange collections"
-msgstr "Organizar coleccións"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:957
-#: frontend/dispatcher.lua:59
-msgid "Collections search"
-msgstr "Procura de coleccións"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:975
-msgid "Enter collection name"
-msgstr "Insire o nome da colección"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:993
-msgid "Collection already exists: %1"
-msgstr "A colección xa existe: %1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:1042
-msgid "Remove collection?"
-msgstr "Eliminar a colección?"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:1043
+#: frontend/apps/filemanager/filemanagercollection.lua:346
+#: frontend/apps/filemanager/filemanagercollection.lua:1232
 #: frontend/apps/reader/modules/readerbookmark.lua:860
 #: frontend/apps/reader/modules/readerbookmark.lua:865
 #: frontend/apps/reader/modules/readerbookmark.lua:1202
@@ -1606,13 +1479,50 @@ msgstr "Eliminar a colección?"
 msgid "Remove"
 msgstr "Borrar"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1069
-#: frontend/apps/reader/modules/readersearch.lua:263
-#: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
-msgid "Enter text to search for"
-msgstr "Insire o texto para buscar"
+#: frontend/apps/filemanager/filemanagercollection.lua:362
+#, fuzzy
+msgid "Move to collection"
+msgstr "Engadir á colección"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1081
+#: frontend/apps/filemanager/filemanagercollection.lua:382
+#, fuzzy
+msgid "Copy to collection"
+msgstr "Engadir á colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:415
+#: frontend/apps/filemanager/filemanagercollection.lua:1110
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:524
+#: frontend/apps/reader/modules/readerbookmark.lua:785
+msgid "Select all"
+msgstr "Seleccionar todo"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:435
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
+msgid "Select in file browser"
+msgstr "Seleccionar no explorador de ficheiros"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:528
+msgid "Filter by authors"
+msgstr "Filtrar por autores"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:529
+msgid "Filter by series"
+msgstr "Filtrar por serie"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:532
+msgid "Filter by language"
+msgstr "Filtrar por idioma"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:533
+msgid "Filter by keywords"
+msgstr "Filtrar por palabras clave"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:536
+msgid "Reset all filters"
+msgstr "Quitar todos os filtros"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:555
+#: frontend/apps/filemanager/filemanagercollection.lua:1270
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1448
 #: frontend/apps/reader/modules/readerhighlight.lua:154
@@ -1626,7 +1536,132 @@ msgstr "Insire o texto para buscar"
 msgid "Search"
 msgstr "Procurar"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1100
+#: frontend/apps/filemanager/filemanagercollection.lua:564
+#: frontend/apps/filemanager/filemanagercollection.lua:746
+msgid "Arrange books in collection"
+msgstr "Organizar libros na colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:573
+msgid "Add all books from a folder"
+msgstr "Engadir todos os libros dun cartafol"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:580
+msgid "Add all books from a folder and its subfolders"
+msgstr "Engadir todos os libros dun cartafol e os seus subcartafoles"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:587
+msgid "Add a book to collection"
+msgstr "Engadir libro á colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:612
+msgid "Remove current book from collection"
+msgstr "Eliminar o libro actual da colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:612
+msgid "Add current book to collection"
+msgstr "Engadir o libro actual á colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:731
+#: frontend/apps/filemanager/filemanagermenu.lua:458
+#: frontend/apps/reader/modules/readerbookmark.lua:235
+#: frontend/dispatcher.lua:134
+msgid "Reverse sorting"
+msgstr "Ordenación inversa"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:742
+msgid "Manual sorting"
+msgstr "Ordenación manual"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:759
+#: frontend/dispatcher.lua:133
+msgid "Sort by"
+msgstr "Ordenar por"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:781
+msgid "No books added to collection"
+msgstr "Non se engadiron libros á colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:784
+msgid "1 book added to collection"
+msgid_plural "%1 books added to collection"
+msgstr[0] "engadiuse 1 libro á colección"
+msgstr[1] "engadíronse %1 libros á colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:874
+msgid "Collections (%1)"
+msgstr "Coleccións (%1)"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:878
+#: frontend/apps/reader/modules/readerbookmark.lua:1045
+msgid "Selected: %1"
+msgstr "Seleccionados: %1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:918
+msgid "Connect folders"
+msgstr "Conectar cartafoles"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:927
+msgid "Remove collection"
+msgstr "Eliminar a colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:934
+msgid "Rename collection"
+msgstr "Cambiar nome da colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:999
+msgid "Connected folders: %1"
+msgstr "Cartafoles conectados: %1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1023
+msgid "Disconnect folder"
+msgstr "Desconectar o cartafol"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1035
+msgid "Exclude subfolders"
+msgstr "Excluír cartafoles fillos"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1035
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
+msgid "Include subfolders"
+msgstr "Incluír cartafoles fillos"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1087
+msgid "New collection"
+msgstr "Nova colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1122
+msgid "Apply selection"
+msgstr "Aplicar a selección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1136
+#: frontend/apps/filemanager/filemanagercollection.lua:1245
+msgid "Arrange collections"
+msgstr "Organizar coleccións"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1146
+#: frontend/dispatcher.lua:59
+msgid "Collections search"
+msgstr "Procura de coleccións"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1164
+msgid "Enter collection name"
+msgstr "Insire o nome da colección"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1182
+msgid "Collection already exists: %1"
+msgstr "A colección xa existe: %1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1231
+msgid "Remove collection?"
+msgstr "Eliminar a colección?"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1258
+#: frontend/apps/reader/modules/readersearch.lua:263
+#: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
+msgid "Enter text to search for"
+msgstr "Insire o texto para buscar"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1289
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:113
 #: frontend/apps/filemanager/filemanagerhistory.lua:410
 #: frontend/apps/reader/modules/readerbookmark.lua:1485
@@ -1635,29 +1670,29 @@ msgstr "Procurar"
 msgid "Case sensitive"
 msgstr "Distinguir maiúsculas e minúsculas"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1106
+#: frontend/apps/filemanager/filemanagercollection.lua:1295
 msgid "Also search in book content (slow)"
 msgstr "Buscar tamén no contido do libro (lento)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1172
+#: frontend/apps/filemanager/filemanagercollection.lua:1361
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:143
 #: frontend/apps/reader/modules/readersearch.lua:601
 msgid "Searching… (tap to cancel)"
 msgstr "A buscar... (toca para cancelar)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1209
+#: frontend/apps/filemanager/filemanagercollection.lua:1398
 msgid "No results for: %1"
 msgstr "Non hai resultados para: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1221
+#: frontend/apps/filemanager/filemanagercollection.lua:1410
 msgid "Search results: %1"
 msgstr "Resultados da procura: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1223
+#: frontend/apps/filemanager/filemanagercollection.lua:1412
 msgid "(in %1)"
 msgstr "(en %1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1250
+#: frontend/apps/filemanager/filemanagercollection.lua:1439
 msgid "Collections…"
 msgstr "Coleccións…"
 
@@ -1772,10 +1807,6 @@ msgstr "Consulta: %1"
 #: frontend/apps/reader/modules/readersearch.lua:712
 msgid "Search results (%1)"
 msgstr "Resultados da procura (%1)"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
-msgid "Select in file browser"
-msgstr "Seleccionar no explorador de ficheiros"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:17
 #: frontend/dispatcher.lua:55
@@ -21976,6 +22007,9 @@ msgstr "wallabag"
 msgid "annotations"
 msgstr "anotacións"
 
+#~ msgid "Book search"
+#~ msgstr "Busca de libros"
+
 #~ msgid "Show finished books"
 #~ msgstr "Mostrar libros rematados"
 
@@ -22654,9 +22688,6 @@ msgstr "anotacións"
 
 #~ msgid "Export all notes in your library"
 #~ msgstr "Exportar todas as notas na túa biblioteca"
-
-#~ msgid "Add to collection"
-#~ msgstr "Engadir á colección"
 
 #~ msgid "Border fill"
 #~ msgstr "Encher bordo"

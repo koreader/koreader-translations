@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-18 16:24+0000\n"
+"POT-Creation-Date: 2025-04-21 15:23+0000\n"
 "PO-Revision-Date: 2025-04-18 06:03+0000\n"
 "Last-Translator: cyanjiang <cyanjiang@163.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -202,8 +202,8 @@ msgstr "输入文件名"
 #: frontend/apps/filemanager/filemanager.lua:1501
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:526
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:672
-#: frontend/apps/filemanager/filemanagercollection.lua:980
-#: frontend/apps/filemanager/filemanagercollection.lua:1074
+#: frontend/apps/filemanager/filemanagercollection.lua:1169
+#: frontend/apps/filemanager/filemanagercollection.lua:1263
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:380
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:76
@@ -338,7 +338,7 @@ msgstr "编辑"
 #: frontend/apps/filemanager/filemanager.lua:545
 #: frontend/apps/filemanager/filemanager.lua:550
 #: frontend/apps/filemanager/filemanager.lua:1108
-#: frontend/apps/filemanager/filemanagercollection.lua:242
+#: frontend/apps/filemanager/filemanagercollection.lua:264
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:431
 #: frontend/apps/filemanager/filemanagerhistory.lua:238
 #: frontend/apps/reader/modules/readerbookmark.lua:836
@@ -580,7 +580,7 @@ msgstr "Dropbox 文件夹 (/ 表示根目录)"
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:533
-#: frontend/apps/filemanager/filemanagercollection.lua:987
+#: frontend/apps/filemanager/filemanagercollection.lua:1176
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1330
 #: frontend/apps/reader/modules/readerbookmark.lua:1390
@@ -790,6 +790,7 @@ msgid "Paste"
 msgstr "粘贴"
 
 #: frontend/apps/filemanager/filemanager.lua:208
+#: frontend/apps/filemanager/filemanagercollection.lua:547
 #: frontend/apps/reader/modules/readerhighlight.lua:72
 #: frontend/ui/widget/inputtext.lua:253
 msgid "Select"
@@ -870,7 +871,8 @@ msgid "Export highlights"
 msgstr "导出标注"
 
 #: frontend/apps/filemanager/filemanager.lua:597
-#: frontend/apps/filemanager/filemanagercollection.lua:911
+#: frontend/apps/filemanager/filemanagercollection.lua:401
+#: frontend/apps/filemanager/filemanagercollection.lua:1100
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:510
 #: frontend/apps/reader/modules/readerbookmark.lua:816
 msgid "Deselect all"
@@ -881,6 +883,7 @@ msgid "Select all files in folder"
 msgstr "选择文件夹内所有文件"
 
 #: frontend/apps/filemanager/filemanager.lua:617
+#: frontend/apps/filemanager/filemanagercollection.lua:428
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:539
 #: frontend/apps/reader/modules/readerbookmark.lua:853
 #: frontend/apps/reader/modules/readerhighlight.lua:978
@@ -1402,7 +1405,7 @@ msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "%1 本书籍使用了基于哈希的元数据存储"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:24
-#: frontend/apps/filemanager/filemanagercollection.lua:334
+#: frontend/apps/filemanager/filemanagercollection.lua:511
 #: frontend/dispatcher.lua:58
 msgid "Collections"
 msgstr "分组"
@@ -1412,159 +1415,29 @@ msgstr "分组"
 msgid "Favorites"
 msgstr "收藏"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:250
+#: frontend/apps/filemanager/filemanagercollection.lua:272
+#: frontend/apps/filemanager/filemanagercollection.lua:341
 msgid "Remove from collection"
 msgstr "从分组中移除"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:351
-msgid "Filter by authors"
-msgstr "按作者筛选"
+#: frontend/apps/filemanager/filemanagercollection.lua:335
+#, fuzzy
+msgid "1 book selected"
+msgid_plural "%1 books selected"
+msgstr[0] "已选中 %1 个书签"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:352
-msgid "Filter by series"
-msgstr "按丛书筛选"
+#: frontend/apps/filemanager/filemanagercollection.lua:336
+#, fuzzy
+msgid "No books selected"
+msgstr "未选中书签"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:355
-msgid "Filter by language"
-msgstr "按语言筛选"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:356
-msgid "Filter by keywords"
-msgstr "按关键字筛选"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:359
-msgid "Reset all filters"
-msgstr "重置所有筛选"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:369
-msgid "Book search"
-msgstr "书籍搜索"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:377
-#: frontend/apps/filemanager/filemanagercollection.lua:559
-msgid "Arrange books in collection"
-msgstr "整理分组中的书籍"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:386
-msgid "Add all books from a folder"
-msgstr "添加文件夹中所有书籍"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:393
-msgid "Add all books from a folder and its subfolders"
-msgstr "添加文件夹及其子文件夹中的所有书籍"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:400
-msgid "Add a book to collection"
-msgstr "添加书籍至分组"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:425
-msgid "Remove current book from collection"
+#: frontend/apps/filemanager/filemanagercollection.lua:345
+#, fuzzy
+msgid "Remove selected books from collection?"
 msgstr "从分组中移除当前书籍"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:425
-msgid "Add current book to collection"
-msgstr "将当前书籍添加至分组"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:544
-#: frontend/apps/filemanager/filemanagermenu.lua:458
-#: frontend/apps/reader/modules/readerbookmark.lua:235
-#: frontend/dispatcher.lua:134
-msgid "Reverse sorting"
-msgstr "反向排序"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:555
-msgid "Manual sorting"
-msgstr "手动排序"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:572
-#: frontend/dispatcher.lua:133
-msgid "Sort by"
-msgstr "排列依据"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:592
-msgid "No books added to collection"
-msgstr "没有书籍被添加到集合"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:595
-msgid "1 book added to collection"
-msgid_plural "%1 books added to collection"
-msgstr[0] "%1 本书籍被添加到集合"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:685
-msgid "Collections (%1)"
-msgstr "分组 (%1)"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:689
-#: frontend/apps/reader/modules/readerbookmark.lua:1045
-msgid "Selected: %1"
-msgstr "选中：%1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:729
-msgid "Connect folders"
-msgstr "关联文件夹"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:738
-msgid "Remove collection"
-msgstr "移除分组"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:745
-msgid "Rename collection"
-msgstr "重命名分组"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:810
-msgid "Connected folders: %1"
-msgstr "已关联文件夹：%1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:834
-msgid "Disconnect folder"
-msgstr "断开文件夹关联"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:846
-msgid "Exclude subfolders"
-msgstr "排除子文件夹"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:846
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
-msgid "Include subfolders"
-msgstr "包含子文件夹"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:898
-msgid "New collection"
-msgstr "新建分组"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:921
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:524
-#: frontend/apps/reader/modules/readerbookmark.lua:785
-msgid "Select all"
-msgstr "全选"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:933
-msgid "Apply selection"
-msgstr "应用当前选择"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:947
-#: frontend/apps/filemanager/filemanagercollection.lua:1056
-msgid "Arrange collections"
-msgstr "排列分组"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:957
-#: frontend/dispatcher.lua:59
-msgid "Collections search"
-msgstr "集合搜索"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:975
-msgid "Enter collection name"
-msgstr "输入分组名"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:993
-msgid "Collection already exists: %1"
-msgstr "分组 %1 已存在"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:1042
-msgid "Remove collection?"
-msgstr "移除分组？"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:1043
+#: frontend/apps/filemanager/filemanagercollection.lua:346
+#: frontend/apps/filemanager/filemanagercollection.lua:1232
 #: frontend/apps/reader/modules/readerbookmark.lua:860
 #: frontend/apps/reader/modules/readerbookmark.lua:865
 #: frontend/apps/reader/modules/readerbookmark.lua:1202
@@ -1578,13 +1451,50 @@ msgstr "移除分组？"
 msgid "Remove"
 msgstr "移除"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1069
-#: frontend/apps/reader/modules/readersearch.lua:263
-#: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
-msgid "Enter text to search for"
-msgstr "输入需要搜索的文字"
+#: frontend/apps/filemanager/filemanagercollection.lua:362
+#, fuzzy
+msgid "Move to collection"
+msgstr "添加到分组"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1081
+#: frontend/apps/filemanager/filemanagercollection.lua:382
+#, fuzzy
+msgid "Copy to collection"
+msgstr "添加到分组"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:415
+#: frontend/apps/filemanager/filemanagercollection.lua:1110
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:524
+#: frontend/apps/reader/modules/readerbookmark.lua:785
+msgid "Select all"
+msgstr "全选"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:435
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
+msgid "Select in file browser"
+msgstr "在文件浏览器选择"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:528
+msgid "Filter by authors"
+msgstr "按作者筛选"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:529
+msgid "Filter by series"
+msgstr "按丛书筛选"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:532
+msgid "Filter by language"
+msgstr "按语言筛选"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:533
+msgid "Filter by keywords"
+msgstr "按关键字筛选"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:536
+msgid "Reset all filters"
+msgstr "重置所有筛选"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:555
+#: frontend/apps/filemanager/filemanagercollection.lua:1270
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1448
 #: frontend/apps/reader/modules/readerhighlight.lua:154
@@ -1598,7 +1508,131 @@ msgstr "输入需要搜索的文字"
 msgid "Search"
 msgstr "搜索"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1100
+#: frontend/apps/filemanager/filemanagercollection.lua:564
+#: frontend/apps/filemanager/filemanagercollection.lua:746
+msgid "Arrange books in collection"
+msgstr "整理分组中的书籍"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:573
+msgid "Add all books from a folder"
+msgstr "添加文件夹中所有书籍"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:580
+msgid "Add all books from a folder and its subfolders"
+msgstr "添加文件夹及其子文件夹中的所有书籍"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:587
+msgid "Add a book to collection"
+msgstr "添加书籍至分组"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:612
+msgid "Remove current book from collection"
+msgstr "从分组中移除当前书籍"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:612
+msgid "Add current book to collection"
+msgstr "将当前书籍添加至分组"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:731
+#: frontend/apps/filemanager/filemanagermenu.lua:458
+#: frontend/apps/reader/modules/readerbookmark.lua:235
+#: frontend/dispatcher.lua:134
+msgid "Reverse sorting"
+msgstr "反向排序"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:742
+msgid "Manual sorting"
+msgstr "手动排序"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:759
+#: frontend/dispatcher.lua:133
+msgid "Sort by"
+msgstr "排列依据"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:781
+msgid "No books added to collection"
+msgstr "没有书籍被添加到集合"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:784
+msgid "1 book added to collection"
+msgid_plural "%1 books added to collection"
+msgstr[0] "%1 本书籍被添加到集合"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:874
+msgid "Collections (%1)"
+msgstr "分组 (%1)"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:878
+#: frontend/apps/reader/modules/readerbookmark.lua:1045
+msgid "Selected: %1"
+msgstr "选中：%1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:918
+msgid "Connect folders"
+msgstr "关联文件夹"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:927
+msgid "Remove collection"
+msgstr "移除分组"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:934
+msgid "Rename collection"
+msgstr "重命名分组"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:999
+msgid "Connected folders: %1"
+msgstr "已关联文件夹：%1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1023
+msgid "Disconnect folder"
+msgstr "断开文件夹关联"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1035
+msgid "Exclude subfolders"
+msgstr "排除子文件夹"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1035
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
+msgid "Include subfolders"
+msgstr "包含子文件夹"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1087
+msgid "New collection"
+msgstr "新建分组"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1122
+msgid "Apply selection"
+msgstr "应用当前选择"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1136
+#: frontend/apps/filemanager/filemanagercollection.lua:1245
+msgid "Arrange collections"
+msgstr "排列分组"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1146
+#: frontend/dispatcher.lua:59
+msgid "Collections search"
+msgstr "集合搜索"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1164
+msgid "Enter collection name"
+msgstr "输入分组名"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1182
+msgid "Collection already exists: %1"
+msgstr "分组 %1 已存在"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1231
+msgid "Remove collection?"
+msgstr "移除分组？"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1258
+#: frontend/apps/reader/modules/readersearch.lua:263
+#: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
+msgid "Enter text to search for"
+msgstr "输入需要搜索的文字"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1289
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:113
 #: frontend/apps/filemanager/filemanagerhistory.lua:410
 #: frontend/apps/reader/modules/readerbookmark.lua:1485
@@ -1607,29 +1641,29 @@ msgstr "搜索"
 msgid "Case sensitive"
 msgstr "区分大小写"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1106
+#: frontend/apps/filemanager/filemanagercollection.lua:1295
 msgid "Also search in book content (slow)"
 msgstr "同时在书籍内容中搜索（较慢）"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1172
+#: frontend/apps/filemanager/filemanagercollection.lua:1361
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:143
 #: frontend/apps/reader/modules/readersearch.lua:601
 msgid "Searching… (tap to cancel)"
 msgstr "正在搜索…（点按以取消）"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1209
+#: frontend/apps/filemanager/filemanagercollection.lua:1398
 msgid "No results for: %1"
 msgstr "搜索 '%1' 无结果"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1221
+#: frontend/apps/filemanager/filemanagercollection.lua:1410
 msgid "Search results: %1"
 msgstr "搜索结果:（%1）"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1223
+#: frontend/apps/filemanager/filemanagercollection.lua:1412
 msgid "(in %1)"
 msgstr "(在 %1 章节中)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1250
+#: frontend/apps/filemanager/filemanagercollection.lua:1439
 msgid "Collections…"
 msgstr "分组…"
 
@@ -1742,10 +1776,6 @@ msgstr "搜索：%1"
 #: frontend/apps/reader/modules/readersearch.lua:712
 msgid "Search results (%1)"
 msgstr "搜索结果（%1）"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
-msgid "Select in file browser"
-msgstr "在文件浏览器选择"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:17
 #: frontend/dispatcher.lua:55
@@ -21198,6 +21228,9 @@ msgstr "Wallabag"
 msgid "annotations"
 msgstr "注释"
 
+#~ msgid "Book search"
+#~ msgstr "书籍搜索"
+
 #~ msgid "Show finished books"
 #~ msgstr "显示已读完的书籍"
 
@@ -21583,9 +21616,6 @@ msgstr "注释"
 
 #~ msgid "Export all notes in your library"
 #~ msgstr "导出所有笔记"
-
-#~ msgid "Add to collection"
-#~ msgstr "添加到分组"
 
 #~ msgid "Border fill"
 #~ msgstr "边框填充"

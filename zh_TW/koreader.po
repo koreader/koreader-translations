@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-18 16:24+0000\n"
+"POT-Creation-Date: 2025-04-21 15:23+0000\n"
 "PO-Revision-Date: 2024-08-06 11:26+0000\n"
 "Last-Translator: Ricky From Hong Kong <lamricky11@hotmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -191,8 +191,8 @@ msgstr "輸入檔名"
 #: frontend/apps/filemanager/filemanager.lua:1501
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:526
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:672
-#: frontend/apps/filemanager/filemanagercollection.lua:980
-#: frontend/apps/filemanager/filemanagercollection.lua:1074
+#: frontend/apps/filemanager/filemanagercollection.lua:1169
+#: frontend/apps/filemanager/filemanagercollection.lua:1263
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:380
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:76
@@ -328,7 +328,7 @@ msgstr "編輯"
 #: frontend/apps/filemanager/filemanager.lua:545
 #: frontend/apps/filemanager/filemanager.lua:550
 #: frontend/apps/filemanager/filemanager.lua:1108
-#: frontend/apps/filemanager/filemanagercollection.lua:242
+#: frontend/apps/filemanager/filemanagercollection.lua:264
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:431
 #: frontend/apps/filemanager/filemanagerhistory.lua:238
 #: frontend/apps/reader/modules/readerbookmark.lua:836
@@ -566,7 +566,7 @@ msgstr ""
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:533
-#: frontend/apps/filemanager/filemanagercollection.lua:987
+#: frontend/apps/filemanager/filemanagercollection.lua:1176
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1330
 #: frontend/apps/reader/modules/readerbookmark.lua:1390
@@ -780,6 +780,7 @@ msgid "Paste"
 msgstr "貼上"
 
 #: frontend/apps/filemanager/filemanager.lua:208
+#: frontend/apps/filemanager/filemanagercollection.lua:547
 #: frontend/apps/reader/modules/readerhighlight.lua:72
 #: frontend/ui/widget/inputtext.lua:253
 msgid "Select"
@@ -862,7 +863,8 @@ msgid "Export highlights"
 msgstr "匯出標注"
 
 #: frontend/apps/filemanager/filemanager.lua:597
-#: frontend/apps/filemanager/filemanagercollection.lua:911
+#: frontend/apps/filemanager/filemanagercollection.lua:401
+#: frontend/apps/filemanager/filemanagercollection.lua:1100
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:510
 #: frontend/apps/reader/modules/readerbookmark.lua:816
 msgid "Deselect all"
@@ -874,6 +876,7 @@ msgid "Select all files in folder"
 msgstr "選擇開啟一個檔案"
 
 #: frontend/apps/filemanager/filemanager.lua:617
+#: frontend/apps/filemanager/filemanagercollection.lua:428
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:539
 #: frontend/apps/reader/modules/readerbookmark.lua:853
 #: frontend/apps/reader/modules/readerhighlight.lua:978
@@ -1420,7 +1423,7 @@ msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] ""
 
 #: frontend/apps/filemanager/filemanagercollection.lua:24
-#: frontend/apps/filemanager/filemanagercollection.lua:334
+#: frontend/apps/filemanager/filemanagercollection.lua:511
 #: frontend/dispatcher.lua:58
 #, fuzzy
 msgid "Collections"
@@ -1431,192 +1434,29 @@ msgstr "從收藏中移除"
 msgid "Favorites"
 msgstr "最愛"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:250
+#: frontend/apps/filemanager/filemanagercollection.lua:272
+#: frontend/apps/filemanager/filemanagercollection.lua:341
 msgid "Remove from collection"
 msgstr "從收藏中移除"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:351
+#: frontend/apps/filemanager/filemanagercollection.lua:335
 #, fuzzy
-msgid "Filter by authors"
-msgstr "用作者搜尋"
+msgid "1 book selected"
+msgid_plural "%1 books selected"
+msgstr[0] "未選取書籤"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:352
+#: frontend/apps/filemanager/filemanagercollection.lua:336
 #, fuzzy
-msgid "Filter by series"
-msgstr "用標題搜尋"
+msgid "No books selected"
+msgstr "未選取書籤"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:355
+#: frontend/apps/filemanager/filemanagercollection.lua:345
 #, fuzzy
-msgid "Filter by language"
-msgstr "其他語言標籤："
-
-#: frontend/apps/filemanager/filemanagercollection.lua:356
-#, fuzzy
-msgid "Filter by keywords"
-msgstr "從收藏中移除"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:359
-#, fuzzy
-msgid "Reset all filters"
-msgstr "一週進度"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:369
-#, fuzzy
-msgid "Book search"
-msgstr "書籤搜尋"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:377
-#: frontend/apps/filemanager/filemanagercollection.lua:559
-#, fuzzy
-msgid "Arrange books in collection"
-msgstr "變更縮放係數"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:386
-#, fuzzy
-msgid "Add all books from a folder"
-msgstr "加到最愛"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:393
-msgid "Add all books from a folder and its subfolders"
-msgstr ""
-
-#: frontend/apps/filemanager/filemanagercollection.lua:400
-#, fuzzy
-msgid "Add a book to collection"
-msgstr "加到最愛"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:425
-#, fuzzy
-msgid "Remove current book from collection"
+msgid "Remove selected books from collection?"
 msgstr "從最愛中移除"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:425
-#, fuzzy
-msgid "Add current book to collection"
-msgstr "移動目前的書籍到封存"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:544
-#: frontend/apps/filemanager/filemanagermenu.lua:458
-#: frontend/apps/reader/modules/readerbookmark.lua:235
-#: frontend/dispatcher.lua:134
-msgid "Reverse sorting"
-msgstr "反向排序"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:555
-#, fuzzy
-msgid "Manual sorting"
-msgstr "照檔名排序（自然排序）"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:572
-#: frontend/dispatcher.lua:133
-#, fuzzy
-msgid "Sort by"
-msgstr "排序依據：%1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:592
-#, fuzzy
-msgid "No books added to collection"
-msgstr "加到最愛"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:595
-#, fuzzy
-msgid "1 book added to collection"
-msgid_plural "%1 books added to collection"
-msgstr[0] "加到最愛"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:685
-#, fuzzy
-msgid "Collections (%1)"
-msgstr "圖示 (%1)"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:689
-#: frontend/apps/reader/modules/readerbookmark.lua:1045
-#, fuzzy
-msgid "Selected: %1"
-msgstr "刪除檔案：%1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:729
-#, fuzzy
-msgid "Connect folders"
-msgstr "選擇資料夾"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:738
-#, fuzzy
-msgid "Remove collection"
-msgstr "從收藏中移除"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:745
-#, fuzzy
-msgid "Rename collection"
-msgstr "從收藏中移除"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:810
-#, fuzzy
-msgid "Connected folders: %1"
-msgstr ""
-"已建立資料夾：\n"
-"%1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:834
-#, fuzzy
-msgid "Disconnect folder"
-msgstr "中斷連線"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:846
-#, fuzzy
-msgid "Exclude subfolders"
-msgstr "包含圖片"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:846
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
-#, fuzzy
-msgid "Include subfolders"
-msgstr "包含圖片"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:898
-#, fuzzy
-msgid "New collection"
-msgstr "從收藏中移除"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:921
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:524
-#: frontend/apps/reader/modules/readerbookmark.lua:785
-msgid "Select all"
-msgstr "全選"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:933
-#, fuzzy
-msgid "Apply selection"
-msgstr "文章刪除"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:947
-#: frontend/apps/filemanager/filemanagercollection.lua:1056
-#, fuzzy
-msgid "Arrange collections"
-msgstr "從收藏中移除"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:957
-#: frontend/dispatcher.lua:59
-#, fuzzy
-msgid "Collections search"
-msgstr "從收藏中移除"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:975
-#, fuzzy
-msgid "Enter collection name"
-msgstr "輸入設定檔名稱"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:993
-#, fuzzy
-msgid "Collection already exists: %1"
-msgstr "檔案 %1 已經存在。"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:1042
-#, fuzzy
-msgid "Remove collection?"
-msgstr "從收藏中移除"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:1043
+#: frontend/apps/filemanager/filemanagercollection.lua:346
+#: frontend/apps/filemanager/filemanagercollection.lua:1232
 #: frontend/apps/reader/modules/readerbookmark.lua:860
 #: frontend/apps/reader/modules/readerbookmark.lua:865
 #: frontend/apps/reader/modules/readerbookmark.lua:1202
@@ -1630,13 +1470,56 @@ msgstr "從收藏中移除"
 msgid "Remove"
 msgstr "移除"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1069
-#: frontend/apps/reader/modules/readersearch.lua:263
-#: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
-msgid "Enter text to search for"
-msgstr "輸入要尋找的文字"
+#: frontend/apps/filemanager/filemanagercollection.lua:362
+#, fuzzy
+msgid "Move to collection"
+msgstr "從收藏中移除"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1081
+#: frontend/apps/filemanager/filemanagercollection.lua:382
+#, fuzzy
+msgid "Copy to collection"
+msgstr "從收藏中移除"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:415
+#: frontend/apps/filemanager/filemanagercollection.lua:1110
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:524
+#: frontend/apps/reader/modules/readerbookmark.lua:785
+msgid "Select all"
+msgstr "全選"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:435
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
+#, fuzzy
+msgid "Select in file browser"
+msgstr "在檔案瀏覽器中按返回鍵：%1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:528
+#, fuzzy
+msgid "Filter by authors"
+msgstr "用作者搜尋"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:529
+#, fuzzy
+msgid "Filter by series"
+msgstr "用標題搜尋"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:532
+#, fuzzy
+msgid "Filter by language"
+msgstr "其他語言標籤："
+
+#: frontend/apps/filemanager/filemanagercollection.lua:533
+#, fuzzy
+msgid "Filter by keywords"
+msgstr "從收藏中移除"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:536
+#, fuzzy
+msgid "Reset all filters"
+msgstr "一週進度"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:555
+#: frontend/apps/filemanager/filemanagercollection.lua:1270
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1448
 #: frontend/apps/reader/modules/readerhighlight.lua:154
@@ -1650,7 +1533,158 @@ msgstr "輸入要尋找的文字"
 msgid "Search"
 msgstr "搜尋"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1100
+#: frontend/apps/filemanager/filemanagercollection.lua:564
+#: frontend/apps/filemanager/filemanagercollection.lua:746
+#, fuzzy
+msgid "Arrange books in collection"
+msgstr "變更縮放係數"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:573
+#, fuzzy
+msgid "Add all books from a folder"
+msgstr "加到最愛"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:580
+msgid "Add all books from a folder and its subfolders"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagercollection.lua:587
+#, fuzzy
+msgid "Add a book to collection"
+msgstr "加到最愛"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:612
+#, fuzzy
+msgid "Remove current book from collection"
+msgstr "從最愛中移除"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:612
+#, fuzzy
+msgid "Add current book to collection"
+msgstr "移動目前的書籍到封存"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:731
+#: frontend/apps/filemanager/filemanagermenu.lua:458
+#: frontend/apps/reader/modules/readerbookmark.lua:235
+#: frontend/dispatcher.lua:134
+msgid "Reverse sorting"
+msgstr "反向排序"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:742
+#, fuzzy
+msgid "Manual sorting"
+msgstr "照檔名排序（自然排序）"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:759
+#: frontend/dispatcher.lua:133
+#, fuzzy
+msgid "Sort by"
+msgstr "排序依據：%1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:781
+#, fuzzy
+msgid "No books added to collection"
+msgstr "加到最愛"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:784
+#, fuzzy
+msgid "1 book added to collection"
+msgid_plural "%1 books added to collection"
+msgstr[0] "加到最愛"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:874
+#, fuzzy
+msgid "Collections (%1)"
+msgstr "圖示 (%1)"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:878
+#: frontend/apps/reader/modules/readerbookmark.lua:1045
+#, fuzzy
+msgid "Selected: %1"
+msgstr "刪除檔案：%1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:918
+#, fuzzy
+msgid "Connect folders"
+msgstr "選擇資料夾"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:927
+#, fuzzy
+msgid "Remove collection"
+msgstr "從收藏中移除"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:934
+#, fuzzy
+msgid "Rename collection"
+msgstr "從收藏中移除"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:999
+#, fuzzy
+msgid "Connected folders: %1"
+msgstr ""
+"已建立資料夾：\n"
+"%1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1023
+#, fuzzy
+msgid "Disconnect folder"
+msgstr "中斷連線"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1035
+#, fuzzy
+msgid "Exclude subfolders"
+msgstr "包含圖片"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1035
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
+#, fuzzy
+msgid "Include subfolders"
+msgstr "包含圖片"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1087
+#, fuzzy
+msgid "New collection"
+msgstr "從收藏中移除"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1122
+#, fuzzy
+msgid "Apply selection"
+msgstr "文章刪除"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1136
+#: frontend/apps/filemanager/filemanagercollection.lua:1245
+#, fuzzy
+msgid "Arrange collections"
+msgstr "從收藏中移除"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1146
+#: frontend/dispatcher.lua:59
+#, fuzzy
+msgid "Collections search"
+msgstr "從收藏中移除"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1164
+#, fuzzy
+msgid "Enter collection name"
+msgstr "輸入設定檔名稱"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1182
+#, fuzzy
+msgid "Collection already exists: %1"
+msgstr "檔案 %1 已經存在。"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1231
+#, fuzzy
+msgid "Remove collection?"
+msgstr "從收藏中移除"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1258
+#: frontend/apps/reader/modules/readersearch.lua:263
+#: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
+msgid "Enter text to search for"
+msgstr "輸入要尋找的文字"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1289
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:113
 #: frontend/apps/filemanager/filemanagerhistory.lua:410
 #: frontend/apps/reader/modules/readerbookmark.lua:1485
@@ -1659,34 +1693,34 @@ msgstr "搜尋"
 msgid "Case sensitive"
 msgstr "區分大小寫"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1106
+#: frontend/apps/filemanager/filemanagercollection.lua:1295
 #, fuzzy
 msgid "Also search in book content (slow)"
 msgstr "在 calibre 詮釋資料中搜尋"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1172
+#: frontend/apps/filemanager/filemanagercollection.lua:1361
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:143
 #: frontend/apps/reader/modules/readersearch.lua:601
 #, fuzzy
 msgid "Searching… (tap to cancel)"
 msgstr "讀取高解析度圖片……（點擊取消）"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1209
+#: frontend/apps/filemanager/filemanagercollection.lua:1398
 #, fuzzy
 msgid "No results for: %1"
 msgstr "「%1」沒有結果。"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1221
+#: frontend/apps/filemanager/filemanagercollection.lua:1410
 #, fuzzy
 msgid "Search results: %1"
 msgstr "搜尋結果"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1223
+#: frontend/apps/filemanager/filemanagercollection.lua:1412
 #, fuzzy
 msgid "(in %1)"
 msgstr "在 %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1250
+#: frontend/apps/filemanager/filemanagercollection.lua:1439
 #, fuzzy
 msgid "Collections…"
 msgstr "從收藏中移除"
@@ -1806,11 +1840,6 @@ msgstr "（查詢： %1）"
 #, fuzzy
 msgid "Search results (%1)"
 msgstr "搜尋結果"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
-#, fuzzy
-msgid "Select in file browser"
-msgstr "在檔案瀏覽器中按返回鍵：%1"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:17
 #: frontend/dispatcher.lua:55
@@ -21451,6 +21480,10 @@ msgid "annotations"
 msgstr "旋轉"
 
 #, fuzzy
+#~ msgid "Book search"
+#~ msgstr "書籤搜尋"
+
+#, fuzzy
 #~ msgid "Show finished books"
 #~ msgstr "尋找書籍"
 
@@ -21832,10 +21865,6 @@ msgstr "旋轉"
 
 #~ msgid "Export all notes in your library"
 #~ msgstr "匯出您書庫中的全部筆記"
-
-#, fuzzy
-#~ msgid "Add to collection"
-#~ msgstr "從收藏中移除"
 
 #~ msgid "Suspend"
 #~ msgstr "休眠"

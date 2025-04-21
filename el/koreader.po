@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-18 16:24+0000\n"
+"POT-Creation-Date: 2025-04-21 15:23+0000\n"
 "PO-Revision-Date: 2025-04-18 06:03+0000\n"
 "Last-Translator: Ichnilatis <sophronios.sp@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -200,8 +200,8 @@ msgstr "Εισαγάγετε το όνομα του αρχείου"
 #: frontend/apps/filemanager/filemanager.lua:1501
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:526
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:672
-#: frontend/apps/filemanager/filemanagercollection.lua:980
-#: frontend/apps/filemanager/filemanagercollection.lua:1074
+#: frontend/apps/filemanager/filemanagercollection.lua:1169
+#: frontend/apps/filemanager/filemanagercollection.lua:1263
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:380
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:76
@@ -336,7 +336,7 @@ msgstr "Επεξεργασία"
 #: frontend/apps/filemanager/filemanager.lua:545
 #: frontend/apps/filemanager/filemanager.lua:550
 #: frontend/apps/filemanager/filemanager.lua:1108
-#: frontend/apps/filemanager/filemanagercollection.lua:242
+#: frontend/apps/filemanager/filemanagercollection.lua:264
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:431
 #: frontend/apps/filemanager/filemanagerhistory.lua:238
 #: frontend/apps/reader/modules/readerbookmark.lua:836
@@ -583,7 +583,7 @@ msgstr "Φάκελος Dropbox (/ για root)"
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:533
-#: frontend/apps/filemanager/filemanagercollection.lua:987
+#: frontend/apps/filemanager/filemanagercollection.lua:1176
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1330
 #: frontend/apps/reader/modules/readerbookmark.lua:1390
@@ -796,6 +796,7 @@ msgid "Paste"
 msgstr "Επικόλληση"
 
 #: frontend/apps/filemanager/filemanager.lua:208
+#: frontend/apps/filemanager/filemanagercollection.lua:547
 #: frontend/apps/reader/modules/readerhighlight.lua:72
 #: frontend/ui/widget/inputtext.lua:253
 msgid "Select"
@@ -877,7 +878,8 @@ msgid "Export highlights"
 msgstr "Εξαγωγή επισημάνσεων"
 
 #: frontend/apps/filemanager/filemanager.lua:597
-#: frontend/apps/filemanager/filemanagercollection.lua:911
+#: frontend/apps/filemanager/filemanagercollection.lua:401
+#: frontend/apps/filemanager/filemanagercollection.lua:1100
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:510
 #: frontend/apps/reader/modules/readerbookmark.lua:816
 msgid "Deselect all"
@@ -888,6 +890,7 @@ msgid "Select all files in folder"
 msgstr "Επιλογή όλων των αρχείων του φακέλου"
 
 #: frontend/apps/filemanager/filemanager.lua:617
+#: frontend/apps/filemanager/filemanagercollection.lua:428
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:539
 #: frontend/apps/reader/modules/readerbookmark.lua:853
 #: frontend/apps/reader/modules/readerhighlight.lua:978
@@ -1435,7 +1438,7 @@ msgstr[0] "1 έγγραφο με μεταδεδομένα βασισμένα σ�
 msgstr[1] "%1 έγγραφα με μεταδεδομένα βασισμένα σε κατακερματισμό"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:24
-#: frontend/apps/filemanager/filemanagercollection.lua:334
+#: frontend/apps/filemanager/filemanagercollection.lua:511
 #: frontend/dispatcher.lua:58
 msgid "Collections"
 msgstr "Συλλογές"
@@ -1445,160 +1448,30 @@ msgstr "Συλλογές"
 msgid "Favorites"
 msgstr "Αγαπημένα"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:250
+#: frontend/apps/filemanager/filemanagercollection.lua:272
+#: frontend/apps/filemanager/filemanagercollection.lua:341
 msgid "Remove from collection"
 msgstr "Αφαίρεση από τη συλλογή"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:351
-msgid "Filter by authors"
-msgstr "Φιλτράρισμα κατά συγγραφέα"
+#: frontend/apps/filemanager/filemanagercollection.lua:335
+#, fuzzy
+msgid "1 book selected"
+msgid_plural "%1 books selected"
+msgstr[0] "Επιλέχθηκε 1 επισημείωση"
+msgstr[1] "Επιλέχθηκαν %1 επισημειώσεις"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:352
-msgid "Filter by series"
-msgstr "Φιλτράρισμα κατά σειρά"
+#: frontend/apps/filemanager/filemanagercollection.lua:336
+#, fuzzy
+msgid "No books selected"
+msgstr "Δεν έχουν επιλεγεί επισημειώσεις"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:355
-msgid "Filter by language"
-msgstr "Φιλτράρισμα κατά γλώσσα"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:356
-msgid "Filter by keywords"
-msgstr "Φιλτράρισμα με λέξεις-κλειδιά"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:359
-msgid "Reset all filters"
-msgstr "Ακύρωση όλων των φίλτρων"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:369
-msgid "Book search"
-msgstr "Αναζήτηση βιβλίου"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:377
-#: frontend/apps/filemanager/filemanagercollection.lua:559
-msgid "Arrange books in collection"
-msgstr "Τακτοποίηση των βιβλίων στη συλλογή"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:386
-msgid "Add all books from a folder"
-msgstr "Προσθήκη όλων των βιβλίων από ένα φάκελο"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:393
-msgid "Add all books from a folder and its subfolders"
-msgstr "Προσθήκη όλων των βιβλίων από έναν φάκελο και τους υποφακέλους του"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:400
-msgid "Add a book to collection"
-msgstr "Προσθήκη βιβλίου στη συλλογή"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:425
-msgid "Remove current book from collection"
+#: frontend/apps/filemanager/filemanagercollection.lua:345
+#, fuzzy
+msgid "Remove selected books from collection?"
 msgstr "Αφαίρεση τρέχοντος βιβλίου από συλλογή"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:425
-msgid "Add current book to collection"
-msgstr "Προσθήκη τρέχοντος βιβλίου στη συλλογή"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:544
-#: frontend/apps/filemanager/filemanagermenu.lua:458
-#: frontend/apps/reader/modules/readerbookmark.lua:235
-#: frontend/dispatcher.lua:134
-msgid "Reverse sorting"
-msgstr "Αντίστροφη ταξινόμηση"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:555
-msgid "Manual sorting"
-msgstr "Χειροκίνητη ταξινόμηση"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:572
-#: frontend/dispatcher.lua:133
-msgid "Sort by"
-msgstr "Ταξινόμηση κατά"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:592
-msgid "No books added to collection"
-msgstr "Δεν προστέθηκαν βιβλία στη συλλογή"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:595
-msgid "1 book added to collection"
-msgid_plural "%1 books added to collection"
-msgstr[0] "Προστέθηκε 1 βιβλίο στη συλλογή"
-msgstr[1] "Προστέθηκαν %1 βιβλία στη συλλογή"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:685
-msgid "Collections (%1)"
-msgstr "Συλλογές (%1)"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:689
-#: frontend/apps/reader/modules/readerbookmark.lua:1045
-msgid "Selected: %1"
-msgstr "Επιλεγμένα: %1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:729
-msgid "Connect folders"
-msgstr "Σύνδεση φακέλων"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:738
-msgid "Remove collection"
-msgstr "Διαγραφή συλλογής"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:745
-msgid "Rename collection"
-msgstr "Μετονομασία συλλογής"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:810
-msgid "Connected folders: %1"
-msgstr "Συνδεδεμένοι φάκελοι: %1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:834
-msgid "Disconnect folder"
-msgstr "Αποσύνδεση φακέλου"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:846
-msgid "Exclude subfolders"
-msgstr "Εξαίρεση υποφακέλων"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:846
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
-msgid "Include subfolders"
-msgstr "Συμπερίληψη υποφακέλων"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:898
-msgid "New collection"
-msgstr "Νέα συλλογή"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:921
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:524
-#: frontend/apps/reader/modules/readerbookmark.lua:785
-msgid "Select all"
-msgstr "Επιλογή όλων"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:933
-msgid "Apply selection"
-msgstr "Εφαρμογή επιλογής"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:947
-#: frontend/apps/filemanager/filemanagercollection.lua:1056
-msgid "Arrange collections"
-msgstr "Τακτοποίηση συλλογών"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:957
-#: frontend/dispatcher.lua:59
-msgid "Collections search"
-msgstr "Αναζήτηση στις συλλογές"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:975
-msgid "Enter collection name"
-msgstr "Εισαγάγετε το όνομα της συλλογής"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:993
-msgid "Collection already exists: %1"
-msgstr "Η συλλογή υπάρχει ήδη: %1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:1042
-msgid "Remove collection?"
-msgstr "Να διαγραφεί η συλλογή;"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:1043
+#: frontend/apps/filemanager/filemanagercollection.lua:346
+#: frontend/apps/filemanager/filemanagercollection.lua:1232
 #: frontend/apps/reader/modules/readerbookmark.lua:860
 #: frontend/apps/reader/modules/readerbookmark.lua:865
 #: frontend/apps/reader/modules/readerbookmark.lua:1202
@@ -1612,13 +1485,50 @@ msgstr "Να διαγραφεί η συλλογή;"
 msgid "Remove"
 msgstr "Διαγραφή"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1069
-#: frontend/apps/reader/modules/readersearch.lua:263
-#: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
-msgid "Enter text to search for"
-msgstr "Εισαγάγετε κείμενο για αναζήτηση"
+#: frontend/apps/filemanager/filemanagercollection.lua:362
+#, fuzzy
+msgid "Move to collection"
+msgstr "Προσθήκη σε συλλογή"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1081
+#: frontend/apps/filemanager/filemanagercollection.lua:382
+#, fuzzy
+msgid "Copy to collection"
+msgstr "Προσθήκη σε συλλογή"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:415
+#: frontend/apps/filemanager/filemanagercollection.lua:1110
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:524
+#: frontend/apps/reader/modules/readerbookmark.lua:785
+msgid "Select all"
+msgstr "Επιλογή όλων"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:435
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
+msgid "Select in file browser"
+msgstr "Επιλογή στον περιηγητή αρχείων"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:528
+msgid "Filter by authors"
+msgstr "Φιλτράρισμα κατά συγγραφέα"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:529
+msgid "Filter by series"
+msgstr "Φιλτράρισμα κατά σειρά"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:532
+msgid "Filter by language"
+msgstr "Φιλτράρισμα κατά γλώσσα"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:533
+msgid "Filter by keywords"
+msgstr "Φιλτράρισμα με λέξεις-κλειδιά"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:536
+msgid "Reset all filters"
+msgstr "Ακύρωση όλων των φίλτρων"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:555
+#: frontend/apps/filemanager/filemanagercollection.lua:1270
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1448
 #: frontend/apps/reader/modules/readerhighlight.lua:154
@@ -1632,7 +1542,132 @@ msgstr "Εισαγάγετε κείμενο για αναζήτηση"
 msgid "Search"
 msgstr "Αναζήτηση"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1100
+#: frontend/apps/filemanager/filemanagercollection.lua:564
+#: frontend/apps/filemanager/filemanagercollection.lua:746
+msgid "Arrange books in collection"
+msgstr "Τακτοποίηση των βιβλίων στη συλλογή"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:573
+msgid "Add all books from a folder"
+msgstr "Προσθήκη όλων των βιβλίων από ένα φάκελο"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:580
+msgid "Add all books from a folder and its subfolders"
+msgstr "Προσθήκη όλων των βιβλίων από έναν φάκελο και τους υποφακέλους του"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:587
+msgid "Add a book to collection"
+msgstr "Προσθήκη βιβλίου στη συλλογή"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:612
+msgid "Remove current book from collection"
+msgstr "Αφαίρεση τρέχοντος βιβλίου από συλλογή"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:612
+msgid "Add current book to collection"
+msgstr "Προσθήκη τρέχοντος βιβλίου στη συλλογή"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:731
+#: frontend/apps/filemanager/filemanagermenu.lua:458
+#: frontend/apps/reader/modules/readerbookmark.lua:235
+#: frontend/dispatcher.lua:134
+msgid "Reverse sorting"
+msgstr "Αντίστροφη ταξινόμηση"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:742
+msgid "Manual sorting"
+msgstr "Χειροκίνητη ταξινόμηση"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:759
+#: frontend/dispatcher.lua:133
+msgid "Sort by"
+msgstr "Ταξινόμηση κατά"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:781
+msgid "No books added to collection"
+msgstr "Δεν προστέθηκαν βιβλία στη συλλογή"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:784
+msgid "1 book added to collection"
+msgid_plural "%1 books added to collection"
+msgstr[0] "Προστέθηκε 1 βιβλίο στη συλλογή"
+msgstr[1] "Προστέθηκαν %1 βιβλία στη συλλογή"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:874
+msgid "Collections (%1)"
+msgstr "Συλλογές (%1)"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:878
+#: frontend/apps/reader/modules/readerbookmark.lua:1045
+msgid "Selected: %1"
+msgstr "Επιλεγμένα: %1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:918
+msgid "Connect folders"
+msgstr "Σύνδεση φακέλων"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:927
+msgid "Remove collection"
+msgstr "Διαγραφή συλλογής"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:934
+msgid "Rename collection"
+msgstr "Μετονομασία συλλογής"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:999
+msgid "Connected folders: %1"
+msgstr "Συνδεδεμένοι φάκελοι: %1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1023
+msgid "Disconnect folder"
+msgstr "Αποσύνδεση φακέλου"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1035
+msgid "Exclude subfolders"
+msgstr "Εξαίρεση υποφακέλων"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1035
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
+msgid "Include subfolders"
+msgstr "Συμπερίληψη υποφακέλων"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1087
+msgid "New collection"
+msgstr "Νέα συλλογή"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1122
+msgid "Apply selection"
+msgstr "Εφαρμογή επιλογής"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1136
+#: frontend/apps/filemanager/filemanagercollection.lua:1245
+msgid "Arrange collections"
+msgstr "Τακτοποίηση συλλογών"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1146
+#: frontend/dispatcher.lua:59
+msgid "Collections search"
+msgstr "Αναζήτηση στις συλλογές"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1164
+msgid "Enter collection name"
+msgstr "Εισαγάγετε το όνομα της συλλογής"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1182
+msgid "Collection already exists: %1"
+msgstr "Η συλλογή υπάρχει ήδη: %1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1231
+msgid "Remove collection?"
+msgstr "Να διαγραφεί η συλλογή;"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1258
+#: frontend/apps/reader/modules/readersearch.lua:263
+#: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
+msgid "Enter text to search for"
+msgstr "Εισαγάγετε κείμενο για αναζήτηση"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1289
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:113
 #: frontend/apps/filemanager/filemanagerhistory.lua:410
 #: frontend/apps/reader/modules/readerbookmark.lua:1485
@@ -1641,29 +1676,29 @@ msgstr "Αναζήτηση"
 msgid "Case sensitive"
 msgstr "Διάκριση πεζών-κεφαλαίων"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1106
+#: frontend/apps/filemanager/filemanagercollection.lua:1295
 msgid "Also search in book content (slow)"
 msgstr "Αναζήτηση επίσης στο περιεχόμενο του βιβλίου (αργή)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1172
+#: frontend/apps/filemanager/filemanagercollection.lua:1361
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:143
 #: frontend/apps/reader/modules/readersearch.lua:601
 msgid "Searching… (tap to cancel)"
 msgstr "Αναζήτηση... (πατήστε για ακύρωση)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1209
+#: frontend/apps/filemanager/filemanagercollection.lua:1398
 msgid "No results for: %1"
 msgstr "Δεν υπάρχουν αποτελέσματα για: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1221
+#: frontend/apps/filemanager/filemanagercollection.lua:1410
 msgid "Search results: %1"
 msgstr "Αποτελέσματα αναζήτησης: %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1223
+#: frontend/apps/filemanager/filemanagercollection.lua:1412
 msgid "(in %1)"
 msgstr "(στο %1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1250
+#: frontend/apps/filemanager/filemanagercollection.lua:1439
 msgid "Collections…"
 msgstr "Συλλογές…"
 
@@ -1779,10 +1814,6 @@ msgstr "Αναζήτηση για: %1"
 #: frontend/apps/reader/modules/readersearch.lua:712
 msgid "Search results (%1)"
 msgstr "Αποτελέσματα αναζήτησης (%1)"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
-msgid "Select in file browser"
-msgstr "Επιλογή στον περιηγητή αρχείων"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:17
 #: frontend/dispatcher.lua:55
@@ -22296,6 +22327,9 @@ msgstr "wallabag"
 msgid "annotations"
 msgstr "επισημειώσεις"
 
+#~ msgid "Book search"
+#~ msgstr "Αναζήτηση βιβλίου"
+
 #~ msgid "Show finished books"
 #~ msgstr "Εμφάνιση τελειωμένων βιβλίων"
 
@@ -22980,9 +23014,6 @@ msgstr "επισημειώσεις"
 
 #~ msgid "Export all notes in your library"
 #~ msgstr "Εξαγωγή όλων των σημειώσεων από τη βιβλιοθήκη σας"
-
-#~ msgid "Add to collection"
-#~ msgstr "Προσθήκη σε συλλογή"
 
 #~ msgid "Border fill"
 #~ msgstr "Γέμισμα περιθωρίου"

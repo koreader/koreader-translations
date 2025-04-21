@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-18 16:24+0000\n"
+"POT-Creation-Date: 2025-04-21 15:23+0000\n"
 "PO-Revision-Date: 2025-03-04 11:50+0000\n"
 "Last-Translator: Trond Kjetil Bremnes <tk@bremnes.email>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
@@ -190,8 +190,8 @@ msgstr "Skriv inn filnavn"
 #: frontend/apps/filemanager/filemanager.lua:1501
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:526
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:672
-#: frontend/apps/filemanager/filemanagercollection.lua:980
-#: frontend/apps/filemanager/filemanagercollection.lua:1074
+#: frontend/apps/filemanager/filemanagercollection.lua:1169
+#: frontend/apps/filemanager/filemanagercollection.lua:1263
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:87
 #: frontend/apps/filemanager/filemanagerhistory.lua:380
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:76
@@ -326,7 +326,7 @@ msgstr "Rediger"
 #: frontend/apps/filemanager/filemanager.lua:545
 #: frontend/apps/filemanager/filemanager.lua:550
 #: frontend/apps/filemanager/filemanager.lua:1108
-#: frontend/apps/filemanager/filemanagercollection.lua:242
+#: frontend/apps/filemanager/filemanagercollection.lua:264
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:431
 #: frontend/apps/filemanager/filemanagerhistory.lua:238
 #: frontend/apps/reader/modules/readerbookmark.lua:836
@@ -564,7 +564,7 @@ msgstr "Dropbox-mappe (/ for rot)"
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:140
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:533
-#: frontend/apps/filemanager/filemanagercollection.lua:987
+#: frontend/apps/filemanager/filemanagercollection.lua:1176
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
 #: frontend/apps/reader/modules/readerbookmark.lua:1330
 #: frontend/apps/reader/modules/readerbookmark.lua:1390
@@ -776,6 +776,7 @@ msgid "Paste"
 msgstr "Lim inn"
 
 #: frontend/apps/filemanager/filemanager.lua:208
+#: frontend/apps/filemanager/filemanagercollection.lua:547
 #: frontend/apps/reader/modules/readerhighlight.lua:72
 #: frontend/ui/widget/inputtext.lua:253
 msgid "Select"
@@ -857,7 +858,8 @@ msgid "Export highlights"
 msgstr "Eksporter høydepunkter"
 
 #: frontend/apps/filemanager/filemanager.lua:597
-#: frontend/apps/filemanager/filemanagercollection.lua:911
+#: frontend/apps/filemanager/filemanagercollection.lua:401
+#: frontend/apps/filemanager/filemanagercollection.lua:1100
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:510
 #: frontend/apps/reader/modules/readerbookmark.lua:816
 msgid "Deselect all"
@@ -868,6 +870,7 @@ msgid "Select all files in folder"
 msgstr "Velg alle filer i mappe"
 
 #: frontend/apps/filemanager/filemanager.lua:617
+#: frontend/apps/filemanager/filemanagercollection.lua:428
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:539
 #: frontend/apps/reader/modules/readerbookmark.lua:853
 #: frontend/apps/reader/modules/readerhighlight.lua:978
@@ -1412,7 +1415,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: frontend/apps/filemanager/filemanagercollection.lua:24
-#: frontend/apps/filemanager/filemanagercollection.lua:334
+#: frontend/apps/filemanager/filemanagercollection.lua:511
 #: frontend/dispatcher.lua:58
 #, fuzzy
 msgid "Collections"
@@ -1423,186 +1426,30 @@ msgstr "Fjern fra samling"
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:250
+#: frontend/apps/filemanager/filemanagercollection.lua:272
+#: frontend/apps/filemanager/filemanagercollection.lua:341
 msgid "Remove from collection"
 msgstr "Fjern fra samling"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:351
+#: frontend/apps/filemanager/filemanagercollection.lua:335
 #, fuzzy
-msgid "Filter by authors"
-msgstr "Søk etter bok basert på forfatter"
+msgid "1 book selected"
+msgid_plural "%1 books selected"
+msgstr[0] "1 bokmerke valgt"
+msgstr[1] "%1 bokmerker valgt"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:352
+#: frontend/apps/filemanager/filemanagercollection.lua:336
 #, fuzzy
-msgid "Filter by series"
-msgstr "Søk etter bok basert på tittel"
+msgid "No books selected"
+msgstr "Ingen bokmerker valgt"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:355
+#: frontend/apps/filemanager/filemanagercollection.lua:345
 #, fuzzy
-msgid "Filter by language"
-msgstr "Andre språk-etiketter:"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:356
-#, fuzzy
-msgid "Filter by keywords"
-msgstr "Fjern fra samling"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:359
-#, fuzzy
-msgid "Reset all filters"
-msgstr "Ukesfremdrift"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:369
-#, fuzzy
-msgid "Book search"
-msgstr "Bokmerker"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:377
-#: frontend/apps/filemanager/filemanagercollection.lua:559
-msgid "Arrange books in collection"
-msgstr ""
-
-#: frontend/apps/filemanager/filemanagercollection.lua:386
-#, fuzzy
-msgid "Add all books from a folder"
-msgstr "Legg til favoritter"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:393
-msgid "Add all books from a folder and its subfolders"
-msgstr ""
-
-#: frontend/apps/filemanager/filemanagercollection.lua:400
-#, fuzzy
-msgid "Add a book to collection"
-msgstr "Legg til favoritter"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:425
-#, fuzzy
-msgid "Remove current book from collection"
+msgid "Remove selected books from collection?"
 msgstr "Fjern fra favoritter"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:425
-#, fuzzy
-msgid "Add current book to collection"
-msgstr "Nåværende bok"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:544
-#: frontend/apps/filemanager/filemanagermenu.lua:458
-#: frontend/apps/reader/modules/readerbookmark.lua:235
-#: frontend/dispatcher.lua:134
-msgid "Reverse sorting"
-msgstr "Omvendt sortering"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:555
-#, fuzzy
-msgid "Manual sorting"
-msgstr "Sorter etter filnavn"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:572
-#: frontend/dispatcher.lua:133
-#, fuzzy
-msgid "Sort by"
-msgstr "Sorter etter: %1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:592
-#, fuzzy
-msgid "No books added to collection"
-msgstr "Legg til favoritter"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:595
-msgid "1 book added to collection"
-msgid_plural "%1 books added to collection"
-msgstr[0] "1 bok lagt til i samling"
-msgstr[1] "%1 bøker lagt til i samling"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:685
-#, fuzzy
-msgid "Collections (%1)"
-msgstr "Ikoner (%1)"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:689
-#: frontend/apps/reader/modules/readerbookmark.lua:1045
-msgid "Selected: %1"
-msgstr "Valgt: %1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:729
-#, fuzzy
-msgid "Connect folders"
-msgstr "Velg mappe"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:738
-#, fuzzy
-msgid "Remove collection"
-msgstr "Fjern fra samling"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:745
-#, fuzzy
-msgid "Rename collection"
-msgstr "Fjern fra samling"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:810
-#, fuzzy
-msgid "Connected folders: %1"
-msgstr "Opprett ny mappe"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:834
-#, fuzzy
-msgid "Disconnect folder"
-msgstr "Koble fra"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:846
-#, fuzzy
-msgid "Exclude subfolders"
-msgstr "Inkluder under-mapper"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:846
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
-msgid "Include subfolders"
-msgstr "Inkluder under-mapper"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:898
-#, fuzzy
-msgid "New collection"
-msgstr "Fjern fra samling"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:921
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:524
-#: frontend/apps/reader/modules/readerbookmark.lua:785
-#, fuzzy
-msgid "Select all"
-msgstr "Velg"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:933
-#, fuzzy
-msgid "Apply selection"
-msgstr "Legg til"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:947
-#: frontend/apps/filemanager/filemanagercollection.lua:1056
-#, fuzzy
-msgid "Arrange collections"
-msgstr "Fjern fra samling"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:957
-#: frontend/dispatcher.lua:59
-#, fuzzy
-msgid "Collections search"
-msgstr "Fjern fra samling"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:975
-#, fuzzy
-msgid "Enter collection name"
-msgstr "Skriv inn mellomtjener-adresse"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:993
-msgid "Collection already exists: %1"
-msgstr "Samling finnes allerede: %1"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:1042
-msgid "Remove collection?"
-msgstr "Slett samling?"
-
-#: frontend/apps/filemanager/filemanagercollection.lua:1043
+#: frontend/apps/filemanager/filemanagercollection.lua:346
+#: frontend/apps/filemanager/filemanagercollection.lua:1232
 #: frontend/apps/reader/modules/readerbookmark.lua:860
 #: frontend/apps/reader/modules/readerbookmark.lua:865
 #: frontend/apps/reader/modules/readerbookmark.lua:1202
@@ -1616,13 +1463,57 @@ msgstr "Slett samling?"
 msgid "Remove"
 msgstr "Fjern"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1069
-#: frontend/apps/reader/modules/readersearch.lua:263
-#: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
-msgid "Enter text to search for"
-msgstr ""
+#: frontend/apps/filemanager/filemanagercollection.lua:362
+#, fuzzy
+msgid "Move to collection"
+msgstr "Fjern fra samling"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1081
+#: frontend/apps/filemanager/filemanagercollection.lua:382
+#, fuzzy
+msgid "Copy to collection"
+msgstr "Fjern fra samling"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:415
+#: frontend/apps/filemanager/filemanagercollection.lua:1110
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:524
+#: frontend/apps/reader/modules/readerbookmark.lua:785
+#, fuzzy
+msgid "Select all"
+msgstr "Velg"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:435
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
+#, fuzzy
+msgid "Select in file browser"
+msgstr "(Klassisk modus)"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:528
+#, fuzzy
+msgid "Filter by authors"
+msgstr "Søk etter bok basert på forfatter"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:529
+#, fuzzy
+msgid "Filter by series"
+msgstr "Søk etter bok basert på tittel"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:532
+#, fuzzy
+msgid "Filter by language"
+msgstr "Andre språk-etiketter:"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:533
+#, fuzzy
+msgid "Filter by keywords"
+msgstr "Fjern fra samling"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:536
+#, fuzzy
+msgid "Reset all filters"
+msgstr "Ukesfremdrift"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:555
+#: frontend/apps/filemanager/filemanagercollection.lua:1270
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1448
 #: frontend/apps/reader/modules/readerhighlight.lua:154
@@ -1636,7 +1527,151 @@ msgstr ""
 msgid "Search"
 msgstr "Søk"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1100
+#: frontend/apps/filemanager/filemanagercollection.lua:564
+#: frontend/apps/filemanager/filemanagercollection.lua:746
+msgid "Arrange books in collection"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagercollection.lua:573
+#, fuzzy
+msgid "Add all books from a folder"
+msgstr "Legg til favoritter"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:580
+msgid "Add all books from a folder and its subfolders"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagercollection.lua:587
+#, fuzzy
+msgid "Add a book to collection"
+msgstr "Legg til favoritter"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:612
+#, fuzzy
+msgid "Remove current book from collection"
+msgstr "Fjern fra favoritter"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:612
+#, fuzzy
+msgid "Add current book to collection"
+msgstr "Nåværende bok"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:731
+#: frontend/apps/filemanager/filemanagermenu.lua:458
+#: frontend/apps/reader/modules/readerbookmark.lua:235
+#: frontend/dispatcher.lua:134
+msgid "Reverse sorting"
+msgstr "Omvendt sortering"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:742
+#, fuzzy
+msgid "Manual sorting"
+msgstr "Sorter etter filnavn"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:759
+#: frontend/dispatcher.lua:133
+#, fuzzy
+msgid "Sort by"
+msgstr "Sorter etter: %1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:781
+#, fuzzy
+msgid "No books added to collection"
+msgstr "Legg til favoritter"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:784
+msgid "1 book added to collection"
+msgid_plural "%1 books added to collection"
+msgstr[0] "1 bok lagt til i samling"
+msgstr[1] "%1 bøker lagt til i samling"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:874
+#, fuzzy
+msgid "Collections (%1)"
+msgstr "Ikoner (%1)"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:878
+#: frontend/apps/reader/modules/readerbookmark.lua:1045
+msgid "Selected: %1"
+msgstr "Valgt: %1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:918
+#, fuzzy
+msgid "Connect folders"
+msgstr "Velg mappe"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:927
+#, fuzzy
+msgid "Remove collection"
+msgstr "Fjern fra samling"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:934
+#, fuzzy
+msgid "Rename collection"
+msgstr "Fjern fra samling"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:999
+#, fuzzy
+msgid "Connected folders: %1"
+msgstr "Opprett ny mappe"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1023
+#, fuzzy
+msgid "Disconnect folder"
+msgstr "Koble fra"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1035
+#, fuzzy
+msgid "Exclude subfolders"
+msgstr "Inkluder under-mapper"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1035
+#: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
+msgid "Include subfolders"
+msgstr "Inkluder under-mapper"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1087
+#, fuzzy
+msgid "New collection"
+msgstr "Fjern fra samling"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1122
+#, fuzzy
+msgid "Apply selection"
+msgstr "Legg til"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1136
+#: frontend/apps/filemanager/filemanagercollection.lua:1245
+#, fuzzy
+msgid "Arrange collections"
+msgstr "Fjern fra samling"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1146
+#: frontend/dispatcher.lua:59
+#, fuzzy
+msgid "Collections search"
+msgstr "Fjern fra samling"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1164
+#, fuzzy
+msgid "Enter collection name"
+msgstr "Skriv inn mellomtjener-adresse"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1182
+msgid "Collection already exists: %1"
+msgstr "Samling finnes allerede: %1"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1231
+msgid "Remove collection?"
+msgstr "Slett samling?"
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1258
+#: frontend/apps/reader/modules/readersearch.lua:263
+#: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
+msgid "Enter text to search for"
+msgstr ""
+
+#: frontend/apps/filemanager/filemanagercollection.lua:1289
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:113
 #: frontend/apps/filemanager/filemanagerhistory.lua:410
 #: frontend/apps/reader/modules/readerbookmark.lua:1485
@@ -1645,33 +1680,33 @@ msgstr "Søk"
 msgid "Case sensitive"
 msgstr "Forskjell på små og store bokstaver"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1106
+#: frontend/apps/filemanager/filemanagercollection.lua:1295
 #, fuzzy
 msgid "Also search in book content (slow)"
 msgstr "Søk også i bokmetadata"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1172
+#: frontend/apps/filemanager/filemanagercollection.lua:1361
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:143
 #: frontend/apps/reader/modules/readersearch.lua:601
 msgid "Searching… (tap to cancel)"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1209
+#: frontend/apps/filemanager/filemanagercollection.lua:1398
 #, fuzzy
 msgid "No results for: %1"
 msgstr "Ingen treff for '%1'."
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1221
+#: frontend/apps/filemanager/filemanagercollection.lua:1410
 #, fuzzy
 msgid "Search results: %1"
 msgstr "Søkeresultater (%1)"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1223
+#: frontend/apps/filemanager/filemanagercollection.lua:1412
 #, fuzzy
 msgid "(in %1)"
 msgstr "i %1"
 
-#: frontend/apps/filemanager/filemanagercollection.lua:1250
+#: frontend/apps/filemanager/filemanagercollection.lua:1439
 #, fuzzy
 msgid "Collections…"
 msgstr "Fjern fra samling"
@@ -1780,11 +1815,6 @@ msgstr "(spørring : %1)"
 #: frontend/apps/reader/modules/readersearch.lua:712
 msgid "Search results (%1)"
 msgstr "Søkeresultater (%1)"
-
-#: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
-#, fuzzy
-msgid "Select in file browser"
-msgstr "(Klassisk modus)"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:17
 #: frontend/dispatcher.lua:55
@@ -20869,6 +20899,10 @@ msgid "annotations"
 msgstr "Plassering"
 
 #, fuzzy
+#~ msgid "Book search"
+#~ msgstr "Bokmerker"
+
+#, fuzzy
 #~ msgid "Show finished books"
 #~ msgstr "Finn bøker"
 
@@ -21068,10 +21102,6 @@ msgstr "Plassering"
 
 #~ msgid "Export all notes in your library"
 #~ msgstr "Eksporter alle notiser til ditt bibliotek"
-
-#, fuzzy
-#~ msgid "Add to collection"
-#~ msgstr "Fjern fra samling"
 
 #~ msgid "Suspend"
 #~ msgstr "Hvilemodus"
