@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-20 11:56+0000\n"
+"POT-Creation-Date: 2025-05-21 17:19+0000\n"
 "PO-Revision-Date: 2025-05-05 03:57+0000\n"
 "Last-Translator: mittei <mittei3902403.anon@radpigeon.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
@@ -47,7 +47,7 @@ msgid "Ignore"
 msgstr "無視"
 
 #: reader.lua:207 frontend/apps/reader/modules/readerbookmark.lua:131
-#: frontend/apps/reader/modules/readerdictionary.lua:1303
+#: frontend/apps/reader/modules/readerdictionary.lua:1438
 #: frontend/apps/reader/modules/readerfooter.lua:1695
 #: frontend/apps/reader/modules/readerrolling.lua:487
 #: frontend/apps/reader/modules/readersearch.lua:151
@@ -204,7 +204,7 @@ msgstr "ファイル名を入力"
 #: frontend/apps/reader/modules/readerbookmark.lua:1392
 #: frontend/apps/reader/modules/readerbookmark.lua:1450
 #: frontend/apps/reader/modules/readercropping.lua:60
-#: frontend/apps/reader/modules/readerdictionary.lua:747
+#: frontend/apps/reader/modules/readerdictionary.lua:868
 #: frontend/apps/reader/modules/readerfooter.lua:688
 #: frontend/apps/reader/modules/readerfooter.lua:1983
 #: frontend/apps/reader/modules/readergoto.lua:69
@@ -214,7 +214,7 @@ msgstr "ファイル名を入力"
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:57
 #: frontend/apps/reader/modules/readerwikipedia.lua:178
-#: frontend/apps/reader/readerui.lua:743 frontend/device/android/device.lua:520
+#: frontend/apps/reader/readerui.lua:743 frontend/device/android/device.lua:521
 #: frontend/ui/elements/common_settings_menu_table.lua:377
 #: frontend/ui/elements/timeout_android.lua:55 frontend/ui/screensaver.lua:368
 #: frontend/ui/widget/bookstatuswidget.lua:556
@@ -282,7 +282,7 @@ msgid "Set filename"
 msgstr "ファイル名を設定"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:304
-#: frontend/apps/reader/modules/readerdictionary.lua:1150
+#: frontend/apps/reader/modules/readerdictionary.lua:1282
 #: frontend/ui/otamanager.lua:196 plugins/opds.koplugin/opdsbrowser.lua:1023
 #: plugins/opds.koplugin/opdsbrowser.lua:1061
 msgid "Download"
@@ -970,7 +970,7 @@ msgstr "プロフィールは既にあります: %1"
 #: frontend/apps/filemanager/filemanager.lua:964
 #: frontend/apps/filemanager/filemanager.lua:1252
 #: frontend/apps/filemanager/filemanagerconverter.lua:95
-#: frontend/apps/reader/modules/readerdictionary.lua:1117
+#: frontend/apps/reader/modules/readerdictionary.lua:1249
 #: plugins/opds.koplugin/opdsbrowser.lua:799
 #: plugins/vocabbuilder.koplugin/main.lua:575
 msgid "Overwrite"
@@ -1309,6 +1309,7 @@ msgstr "書籍のメタデータを移動"
 #: frontend/apps/filemanager/filemanagerutil.lua:198
 #: frontend/apps/filemanager/filemanagerutil.lua:244
 #: frontend/apps/filemanager/filemanagerutil.lua:250
+#: frontend/apps/reader/modules/readerdictionary.lua:539
 #: frontend/apps/reader/modules/readermenu.lua:202
 #: frontend/ui/widget/inputdialog.lua:804
 #: plugins/statistics.koplugin/main.lua:2533
@@ -1914,7 +1915,7 @@ msgid "Cannot open last document"
 msgstr "最後に開いた文書を開くことができません"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:160
-#: frontend/apps/reader/modules/readerdictionary.lua:220
+#: frontend/apps/reader/modules/readerdictionary.lua:222
 #: frontend/apps/reader/modules/readertoc.lua:1024
 #: frontend/ui/otamanager.lua:437 plugins/newsdownloader.koplugin/main.lua:124
 #: plugins/perceptionexpander.koplugin/main.lua:176
@@ -2227,7 +2228,7 @@ msgstr "最後に開いた文書 %1 を開きますか？"
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:163
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:206
 #: frontend/apps/reader/modules/readermenu.lua:322
-#: frontend/apps/reader/readerui.lua:751 frontend/device/android/device.lua:520
+#: frontend/apps/reader/readerui.lua:751 frontend/device/android/device.lua:521
 #: frontend/ui/elements/common_settings_menu_table.lua:377
 #: frontend/ui/widget/confirmbox.lua:48
 #: frontend/ui/widget/container/inputcontainer.lua:379
@@ -2880,7 +2881,7 @@ msgid "Battery percentage"
 msgstr "バッテリー使用比率"
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:518
-#: frontend/apps/reader/modules/readerdictionary.lua:362
+#: frontend/apps/reader/modules/readerdictionary.lua:364
 #: frontend/ui/widget/textviewer.lua:610 plugins/terminal.koplugin/main.lua:588
 msgid "Font size: %1"
 msgstr "フォントサイズ: %1"
@@ -3031,7 +3032,7 @@ msgstr "メモリ使用量警告の閾値"
 msgid "Automatic restart"
 msgstr "自動再起動"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:66
+#: frontend/apps/reader/modules/readerdictionary.lua:67
 msgid ""
 "Searching dictionary for:\n"
 "%1"
@@ -3039,92 +3040,109 @@ msgstr ""
 "辞書を検索中:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:223
-#: frontend/apps/reader/modules/readerdictionary.lua:961
+#: frontend/apps/reader/modules/readerdictionary.lua:225
+#: frontend/apps/reader/modules/readerdictionary.lua:1082
 #: frontend/dispatcher.lua:62 plugins/vocabbuilder.koplugin/main.lua:2062
 msgid "Dictionary lookup"
 msgstr "辞書検索"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:229
-#: frontend/apps/reader/modules/readerdictionary.lua:253
+#: frontend/apps/reader/modules/readerdictionary.lua:231
+#: frontend/apps/reader/modules/readerdictionary.lua:255
 msgid "Dictionary lookup history"
 msgstr "辞書検索履歴"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:260
+#: frontend/apps/reader/modules/readerdictionary.lua:262
 msgid "Dictionary settings"
 msgstr "辞書設定"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:270
+#: frontend/apps/reader/modules/readerdictionary.lua:272
 msgid "Manage dictionaries: %1"
 msgstr "インストール済辞書の管理: %1"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:282
+#: frontend/apps/reader/modules/readerdictionary.lua:284
 msgid "Download dictionaries"
 msgstr "辞書のダウンロード"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:287
+#: frontend/apps/reader/modules/readerdictionary.lua:289
 msgid "Enable fuzzy search"
 msgstr "あいまい検索を有効"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:313
+#: frontend/apps/reader/modules/readerdictionary.lua:315
 msgid "Enable dictionary lookup history"
 msgstr "辞書検索履歴を有効"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:323
+#: frontend/apps/reader/modules/readerdictionary.lua:325
 msgid "Clean dictionary lookup history"
 msgstr "辞書検索履歴を消去"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:330
+#: frontend/apps/reader/modules/readerdictionary.lua:332
 msgid "Clean dictionary lookup history?"
 msgstr "辞書検索履歴を消去しますか?"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:331
+#: frontend/apps/reader/modules/readerdictionary.lua:333
 #: frontend/apps/reader/modules/readerwikipedia.lua:281
 #: plugins/texteditor.koplugin/main.lua:219
 #: plugins/vocabbuilder.koplugin/main.lua:202
 msgid "Clean"
 msgstr "消去"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:342
+#: frontend/apps/reader/modules/readerdictionary.lua:344
 msgid "Large window"
 msgstr "全画面で辞書検索を表示"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:351
+#: frontend/apps/reader/modules/readerdictionary.lua:353
 msgid "Justify text"
 msgstr "テキスト両端揃え"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:372
+#: frontend/apps/reader/modules/readerdictionary.lua:374
 msgid "Dictionary font size"
 msgstr "辞書のフォントサイズ"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:407
+#: frontend/apps/reader/modules/readerdictionary.lua:389
+msgid "Set dictionary priority for this book"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerdictionary.lua:390
+msgid ""
+"This feature enables you to specify dictionary priorities on a per-book "
+"basis. Results from higher-priority dictionaries will be displayed first "
+"when looking up words. Only dictionaries that are currently active can be "
+"selected and prioritized."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerdictionary.lua:423
 msgid "Use external dictionary"
 msgstr "外部辞書を使用"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:417
+#: frontend/apps/reader/modules/readerdictionary.lua:433
 msgid "none"
 msgstr "なし"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:425
+#: frontend/apps/reader/modules/readerdictionary.lua:441
 msgid "Dictionary: %1"
 msgstr "辞書: %1"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:590
+#: frontend/apps/reader/modules/readerdictionary.lua:549
+#, fuzzy
+msgid "Select preferred dictionaries"
+msgstr "辞書のダウンロード"
+
+#: frontend/apps/reader/modules/readerdictionary.lua:711
 msgid "Manage installed dictionaries"
 msgstr "インストール済辞書の管理"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:741
+#: frontend/apps/reader/modules/readerdictionary.lua:862
 #: frontend/apps/reader/modules/readerwikipedia.lua:51
 #: frontend/ui/widget/dictquicklookup.lua:1354
 msgid "Enter a word or phrase to look up"
 msgstr "検索する文字を入力"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:754
+#: frontend/apps/reader/modules/readerdictionary.lua:875
 #: frontend/ui/widget/dictquicklookup.lua:1391
 msgid "Search dictionary"
 msgstr "辞書で検索"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:914
+#: frontend/apps/reader/modules/readerdictionary.lua:1035
 msgid ""
 "No dictionaries installed. Please search for \"Dictionary support\" in the "
 "KOReader Wiki to get more information about installing new dictionaries."
@@ -3132,22 +3150,22 @@ msgstr ""
 "辞書がインストールされていません。 KOReader Wiki で \"辞書サポート\" を検索し"
 "て、新しい辞書のインストールに関する詳細情報を入手してください。"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:940
-#: frontend/apps/reader/modules/readerdictionary.lua:994
+#: frontend/apps/reader/modules/readerdictionary.lua:1061
+#: frontend/apps/reader/modules/readerdictionary.lua:1126
 #: plugins/kosync.koplugin/main.lua:97
 msgid "Not available"
 msgstr "使用できません"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:942
+#: frontend/apps/reader/modules/readerdictionary.lua:1063
 msgid "Dictionary lookup interrupted."
 msgstr "辞書検索がキャンセルされました。"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:942
+#: frontend/apps/reader/modules/readerdictionary.lua:1063
 #: frontend/apps/reader/modules/readerwikipedia.lua:418
 msgid "No results."
 msgstr "検索に当たる結果がない。"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:996
+#: frontend/apps/reader/modules/readerdictionary.lua:1128
 msgid ""
 "There are no enabled dictionaries.\n"
 "Please check the 'Dictionary settings' menu."
@@ -3155,56 +3173,56 @@ msgstr ""
 "有効な辞書はありません。\n"
 "「辞書設定」メニューを確認してください。"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1100
+#: frontend/apps/reader/modules/readerdictionary.lua:1232
 msgid "License"
 msgstr "ライセンス"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1101
+#: frontend/apps/reader/modules/readerdictionary.lua:1233
 msgid "Entries"
 msgstr "項目"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1104
+#: frontend/apps/reader/modules/readerdictionary.lua:1236
 msgid "Tap dictionary name to download"
 msgstr "辞書名をタップしてダウンロード"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1116
+#: frontend/apps/reader/modules/readerdictionary.lua:1248
 msgid "File already exists. Overwrite?"
 msgstr "ファイルはすでに存在します。 上書きしますか？"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1149
+#: frontend/apps/reader/modules/readerdictionary.lua:1281
 msgid "Dictionary filesize is %1 (%2 bytes). Continue with download?"
 msgstr "辞書ファイルのサイズは %1 (%2 バイト)です。 ダウンロードしますか？"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1160
+#: frontend/apps/reader/modules/readerdictionary.lua:1292
 msgid "Failed to fetch dictionary. Are you online?"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1168
+#: frontend/apps/reader/modules/readerdictionary.lua:1300
 #: plugins/opds.koplugin/opdsbrowser.lua:792
 msgid "Downloading…"
 msgstr "ダウンロード中…"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1186
+#: frontend/apps/reader/modules/readerdictionary.lua:1318
 msgid "Could not save file to:\n"
 msgstr "ファイルを保存できません:\n"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1204
+#: frontend/apps/reader/modules/readerdictionary.lua:1336
 msgid "Dictionary downloaded:\n"
 msgstr "下記の辞書をダウンロードしました:\n"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1209
+#: frontend/apps/reader/modules/readerdictionary.lua:1341
 msgid "Dictionary failed to download:\n"
 msgstr "辞書のダウンロードに失敗しました:\n"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1276
+#: frontend/apps/reader/modules/readerdictionary.lua:1411
 msgid "%1 is no longer a preferred dictionary for this document."
 msgstr "%1 は既にこの文書に対する優先辞書ではありません。"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1277
+#: frontend/apps/reader/modules/readerdictionary.lua:1412
 msgid "%1 is now the preferred dictionary for this document."
 msgstr "%1 はこの文書に対する優先辞書になります。"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1289
+#: frontend/apps/reader/modules/readerdictionary.lua:1424
 msgid ""
 "Would you like to enable or disable fuzzy search by default?\n"
 "\n"
@@ -3224,7 +3242,7 @@ msgstr ""
 "\n"
 "現在のデフォルト(★)は無効になっています。"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1295
+#: frontend/apps/reader/modules/readerdictionary.lua:1430
 msgid ""
 "Would you like to enable or disable fuzzy search by default?\n"
 "\n"
@@ -3244,7 +3262,7 @@ msgstr ""
 "\n"
 "現在のデフォルト(★)は有効になっています。"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1303
+#: frontend/apps/reader/modules/readerdictionary.lua:1438
 #: frontend/apps/reader/modules/readerrolling.lua:487
 #: frontend/apps/reader/modules/readertypography.lua:332
 #: frontend/apps/reader/modules/readertypography.lua:421
@@ -3254,7 +3272,7 @@ msgstr ""
 msgid "Disable (★)"
 msgstr "無効(★)"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1310
+#: frontend/apps/reader/modules/readerdictionary.lua:1445
 #: frontend/apps/reader/modules/readerrolling.lua:493
 #: frontend/apps/reader/modules/readertypography.lua:338
 #: frontend/apps/reader/modules/readertypography.lua:427
@@ -3266,7 +3284,7 @@ msgstr "無効(★)"
 msgid "Enable"
 msgstr "有効"
 
-#: frontend/apps/reader/modules/readerdictionary.lua:1310
+#: frontend/apps/reader/modules/readerdictionary.lua:1445
 #: frontend/apps/reader/modules/readerrolling.lua:493
 #: frontend/apps/reader/modules/readertypography.lua:338
 #: frontend/apps/reader/modules/readertypography.lua:427
@@ -7680,7 +7698,7 @@ msgstr "ファイル '%1' が存在しません。"
 msgid "File '%1' is not supported."
 msgstr "ファイル '%1' は未対応です。"
 
-#: frontend/apps/reader/readerui.lua:657 frontend/device/android/device.lua:195
+#: frontend/apps/reader/readerui.lua:657 frontend/device/android/device.lua:196
 msgid "Opening file '%1'."
 msgstr "'%1' ファイルを開いています。"
 
@@ -7962,23 +7980,23 @@ msgctxt "Date string"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: frontend/device/android/device.lua:345
+#: frontend/device/android/device.lua:346
 msgid "Not connected"
 msgstr "未接続"
 
-#: frontend/device/android/device.lua:348
+#: frontend/device/android/device.lua:349
 msgid "Connected to Wi-Fi"
 msgstr "WiFiに接続済"
 
-#: frontend/device/android/device.lua:350
+#: frontend/device/android/device.lua:351
 msgid "Connected to mobile data network"
 msgstr "携帯データ通信に接続済"
 
-#: frontend/device/android/device.lua:352
+#: frontend/device/android/device.lua:353
 msgid "Connected to Ethernet"
 msgstr "イーサネットに接続済"
 
-#: frontend/device/android/device.lua:451
+#: frontend/device/android/device.lua:452
 msgid ""
 "%1\n"
 "\n"
@@ -7990,11 +8008,11 @@ msgstr ""
 "OS: Android %2, api %3 on %4\n"
 "Build flavor: %5\n"
 
-#: frontend/device/android/device.lua:456
+#: frontend/device/android/device.lua:457
 msgid "Device type: %1"
 msgstr "デバイスタイプ: %1"
 
-#: frontend/device/android/device.lua:461
+#: frontend/device/android/device.lua:462
 msgid ""
 "E-ink display supported.\n"
 "Platform: %1"
@@ -8002,7 +8020,7 @@ msgstr ""
 "E-inkディスプレイ対応。\n"
 "プラットフォーム: %1"
 
-#: frontend/device/android/device.lua:466
+#: frontend/device/android/device.lua:467
 msgid ""
 "This device needs CPU, screen and touchscreen always on.\n"
 "Screen timeout will be ignored while the app is in the foreground!"
@@ -8010,25 +8028,25 @@ msgstr ""
 "このデバイスはCPU,画面表示,タッチパネルが常に使われ続けます。\n"
 "またこのアプリが表示されている間、画面の自動オフ設定は無視されます！"
 
-#: frontend/device/android/device.lua:519
+#: frontend/device/android/device.lua:520
 msgid "Frontlight settings"
 msgstr "フロントライト設定"
 
-#: frontend/device/android/device.lua:519
+#: frontend/device/android/device.lua:520
 msgid "Light settings"
 msgstr "ライトの設定"
 
-#: frontend/device/android/device.lua:520
+#: frontend/device/android/device.lua:521
 #: frontend/ui/widget/frontlightwidget.lua:148
 msgid "Brightness"
 msgstr "輝度"
 
-#: frontend/device/android/device.lua:520
+#: frontend/device/android/device.lua:521
 #: frontend/ui/widget/frontlightwidget.lua:269
 msgid "Warmth"
 msgstr "色調"
 
-#: frontend/device/android/device.lua:564
+#: frontend/device/android/device.lua:565
 msgid ""
 "Your device seems to be unable to download packages.\n"
 "Retry using the browser?"
@@ -8036,16 +8054,16 @@ msgstr ""
 "お使いの端末ではパッケージのダウンロードができないようです。\n"
 "ブラウザで再試行しますか？"
 
-#: frontend/device/android/device.lua:565 frontend/ui/otamanager.lua:246
+#: frontend/device/android/device.lua:566 frontend/ui/otamanager.lua:246
 msgid "Retry"
 msgstr "再試行"
 
-#: frontend/device/android/device.lua:574
+#: frontend/device/android/device.lua:575
 #: frontend/device/generic/device.lua:443
 msgid "Update is ready. Install it now?"
 msgstr "アップデートの準備が整いました。今すぐインストールしますか？"
 
-#: frontend/device/android/device.lua:575
+#: frontend/device/android/device.lua:576
 #: frontend/device/generic/device.lua:444
 msgid "Install"
 msgstr "インストール"
