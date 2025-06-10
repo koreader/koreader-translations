@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 06:07+0000\n"
+"POT-Creation-Date: 2025-06-10 06:02+0000\n"
 "PO-Revision-Date: 2025-06-10 06:02+0000\n"
 "Last-Translator: eevan78 <ivan.pesic@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/koreader/"
@@ -209,6 +209,7 @@ msgstr "Унесите име фајла"
 #: frontend/apps/reader/modules/readerhandmade.lua:518
 #: frontend/apps/reader/modules/readerlink.lua:224
 #: frontend/apps/reader/modules/readersearch.lua:270
+#: frontend/apps/reader/modules/readertoc.lua:970
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:57
 #: frontend/apps/reader/modules/readerwikipedia.lua:178
@@ -1526,6 +1527,7 @@ msgstr "Ресетуј све филтере"
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1457
 #: frontend/apps/reader/modules/readerhighlight.lua:155
+#: frontend/apps/reader/modules/readertoc.lua:977
 #: frontend/ui/widget/dictquicklookup.lua:519 frontend/ui/widget/menu.lua:770
 #: frontend/ui/widget/touchmenu.lua:1362
 #: plugins/opds.koplugin/opdsbrowser.lua:373
@@ -1666,6 +1668,7 @@ msgstr "Да уклоним збирку?"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1313
 #: frontend/apps/reader/modules/readersearch.lua:264
+#: frontend/apps/reader/modules/readertoc.lua:967
 #: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
 msgstr "Унесите текст који тражите"
@@ -1809,6 +1812,7 @@ msgstr "Издвоји"
 #: frontend/apps/filemanager/filemanagerhistory.lua:148
 #: frontend/apps/reader/modules/readerbookmark.lua:1062
 #: frontend/apps/reader/modules/readersearch.lua:661
+#: frontend/apps/reader/modules/readertoc.lua:839
 #: frontend/ui/widget/touchmenu.lua:1312
 msgid "Query: %1"
 msgstr "Упит: %1"
@@ -1883,7 +1887,7 @@ msgstr "Последњи документ не може да се отвори"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:160
 #: frontend/apps/reader/modules/readerdictionary.lua:223
-#: frontend/apps/reader/modules/readertoc.lua:1024
+#: frontend/apps/reader/modules/readertoc.lua:1101
 #: frontend/ui/otamanager.lua:437 plugins/newsdownloader.koplugin/main.lua:170
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:1103
@@ -6429,15 +6433,20 @@ msgstr "Мапа књиге"
 msgid "Page browser"
 msgstr "Прегледач страница"
 
-#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:186
+#: frontend/apps/reader/modules/readertoc.lua:73 frontend/dispatcher.lua:186
 msgid "Table of contents"
 msgstr "Садржај"
 
-#: frontend/apps/reader/modules/readertoc.lua:1029
+#: frontend/apps/reader/modules/readertoc.lua:1007
+#, fuzzy
+msgid "No results in table of contents"
+msgstr "У документу нема резултата"
+
+#: frontend/apps/reader/modules/readertoc.lua:1106
 msgid "Alternative table of contents"
 msgstr "Алтернативни садржај"
 
-#: frontend/apps/reader/modules/readertoc.lua:1031
+#: frontend/apps/reader/modules/readertoc.lua:1108
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -6460,14 +6469,14 @@ msgstr ""
 "могу да се користе као ставке садржаја.\n"
 "Погледајте Прилагођавања стила → Разно → Наговештаји за алтернативни садржај."
 
-#: frontend/apps/reader/modules/readertoc.lua:1038
+#: frontend/apps/reader/modules/readertoc.lua:1115
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
 "Да бисте користили алтернативни садржај, најпре искључите ваш произвољни "
 "садржај."
 
-#: frontend/apps/reader/modules/readertoc.lua:1051
+#: frontend/apps/reader/modules/readertoc.lua:1128
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -6478,7 +6487,7 @@ msgstr ""
 "документу.\n"
 "Да ли желите да се врати оригинални садржај? (Књига ће се поново учитати.)"
 
-#: frontend/apps/reader/modules/readertoc.lua:1066
+#: frontend/apps/reader/modules/readertoc.lua:1143
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
@@ -6486,21 +6495,21 @@ msgstr ""
 "Да ли желите да користите алтернативни садржај изграђен из наслова у "
 "документу?"
 
-#: frontend/apps/reader/modules/readertoc.lua:1093
+#: frontend/apps/reader/modules/readertoc.lua:1170
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
 msgstr[0] "1 ставка садржаја на дубини %2"
 msgstr[1] "%1 ставке садржаја на дубини %2"
 msgstr[2] "%1 ставки садржаја на дубини %2"
 
-#: frontend/apps/reader/modules/readertoc.lua:1115
+#: frontend/apps/reader/modules/readertoc.lua:1192
 msgid "Progress bars: 1 tick"
 msgid_plural "Progress bars: %1 ticks"
 msgstr[0] "Траке напретка: 1 ознака"
 msgstr[1] "Траке напретка: %1 ознаке"
 msgstr[2] "Траке напретка: %1 ознака"
 
-#: frontend/apps/reader/modules/readertoc.lua:1117
+#: frontend/apps/reader/modules/readertoc.lua:1194
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
@@ -6509,11 +6518,11 @@ msgstr ""
 "Када је садржај сложен, траке напретка у подножју и дијалогу прелетања могу "
 "да постану претрпане. Ово вам омогућава да ограничите број ознака."
 
-#: frontend/apps/reader/modules/readertoc.lua:1138
+#: frontend/apps/reader/modules/readertoc.lua:1215
 msgid "Bind chapter navigation to ticks"
 msgstr "Вежи навигацију по поглављима за ознаке"
 
-#: frontend/apps/reader/modules/readertoc.lua:1139
+#: frontend/apps/reader/modules/readertoc.lua:1216
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for chapter navigation and 'page/time left until next chapter' in the "
@@ -6526,11 +6535,11 @@ msgstr ""
 "Укључивање ове опције ће ограничити навигацију по поглављима само на ознаке "
 "у траци напретка."
 
-#: frontend/apps/reader/modules/readertoc.lua:1154
+#: frontend/apps/reader/modules/readertoc.lua:1231
 msgid "Chapter titles from ticks only"
 msgstr "Наслови поглавља само из ознака"
 
-#: frontend/apps/reader/modules/readertoc.lua:1155
+#: frontend/apps/reader/modules/readertoc.lua:1232
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for displaying the title of the current chapter in the footer and in "
@@ -6543,21 +6552,21 @@ msgstr ""
 "Укључивање ове опције ће ограничити приказ на наслове поглавља које "
 "представљају ознаке у траци напретка."
 
-#: frontend/apps/reader/modules/readertoc.lua:1172
-#: frontend/apps/reader/modules/readertoc.lua:1182
+#: frontend/apps/reader/modules/readertoc.lua:1249
+#: frontend/apps/reader/modules/readertoc.lua:1259
 msgid "ToC entries per page"
 msgstr "Број ставки садржаја по страници"
 
-#: frontend/apps/reader/modules/readertoc.lua:1195
-#: frontend/apps/reader/modules/readertoc.lua:1207
+#: frontend/apps/reader/modules/readertoc.lua:1272
+#: frontend/apps/reader/modules/readertoc.lua:1284
 msgid "ToC entry font size"
 msgstr "Величина фонта ставке садржаја"
 
-#: frontend/apps/reader/modules/readertoc.lua:1216
+#: frontend/apps/reader/modules/readertoc.lua:1293
 msgid "Show chapter length"
 msgstr "Прикажи дужину поглавља"
 
-#: frontend/apps/reader/modules/readertoc.lua:1227
+#: frontend/apps/reader/modules/readertoc.lua:1304
 msgid "Dot leaders"
 msgstr "Тачкасте вођице"
 
@@ -10449,8 +10458,8 @@ msgid ""
 "recommended instead."
 msgstr ""
 "Умањује величину фуснота унутар странице. Ово можда неће имати ефекта ако се "
-"препише стиловима издавача. Уместо овога се препоручују дотеривања стила „"
-"величина фонта фусноте”."
+"препише стиловима издавача. Уместо овога се препоручују дотеривања стила "
+"„величина фонта фусноте”."
 
 #: frontend/ui/data/css_tweaks.lua:1044
 msgid "Footnote font size: %1 %"

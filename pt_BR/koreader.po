@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 06:07+0000\n"
+"POT-Creation-Date: 2025-06-10 06:02+0000\n"
 "PO-Revision-Date: 2025-06-03 16:14+0000\n"
 "Last-Translator: Denilson Sousa <deni.sousa09@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
@@ -219,6 +219,7 @@ msgstr "Digitar o nome do arquivo"
 #: frontend/apps/reader/modules/readerhandmade.lua:518
 #: frontend/apps/reader/modules/readerlink.lua:224
 #: frontend/apps/reader/modules/readersearch.lua:270
+#: frontend/apps/reader/modules/readertoc.lua:970
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:57
 #: frontend/apps/reader/modules/readerwikipedia.lua:178
@@ -1527,6 +1528,7 @@ msgstr "Redefinir todos os filtros"
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1457
 #: frontend/apps/reader/modules/readerhighlight.lua:155
+#: frontend/apps/reader/modules/readertoc.lua:977
 #: frontend/ui/widget/dictquicklookup.lua:519 frontend/ui/widget/menu.lua:770
 #: frontend/ui/widget/touchmenu.lua:1362
 #: plugins/opds.koplugin/opdsbrowser.lua:373
@@ -1666,6 +1668,7 @@ msgstr "Remover coleção?"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1313
 #: frontend/apps/reader/modules/readersearch.lua:264
+#: frontend/apps/reader/modules/readertoc.lua:967
 #: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
 msgstr "Digite o texto para buscar"
@@ -1809,6 +1812,7 @@ msgstr "Extrair"
 #: frontend/apps/filemanager/filemanagerhistory.lua:148
 #: frontend/apps/reader/modules/readerbookmark.lua:1062
 #: frontend/apps/reader/modules/readersearch.lua:661
+#: frontend/apps/reader/modules/readertoc.lua:839
 #: frontend/ui/widget/touchmenu.lua:1312
 msgid "Query: %1"
 msgstr "Consulta: %1"
@@ -1883,7 +1887,7 @@ msgstr "Não é possível abrir o último documento"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:160
 #: frontend/apps/reader/modules/readerdictionary.lua:223
-#: frontend/apps/reader/modules/readertoc.lua:1024
+#: frontend/apps/reader/modules/readertoc.lua:1101
 #: frontend/ui/otamanager.lua:437 plugins/newsdownloader.koplugin/main.lua:170
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:1103
@@ -6440,15 +6444,20 @@ msgstr "Mapa do livro"
 msgid "Page browser"
 msgstr "Navegador de páginas"
 
-#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:186
+#: frontend/apps/reader/modules/readertoc.lua:73 frontend/dispatcher.lua:186
 msgid "Table of contents"
 msgstr "Índice"
 
-#: frontend/apps/reader/modules/readertoc.lua:1029
+#: frontend/apps/reader/modules/readertoc.lua:1007
+#, fuzzy
+msgid "No results in table of contents"
+msgstr "Nenhum resultado no documento"
+
+#: frontend/apps/reader/modules/readertoc.lua:1106
 msgid "Alternative table of contents"
 msgstr "Índice alternativo"
 
-#: frontend/apps/reader/modules/readertoc.lua:1031
+#: frontend/apps/reader/modules/readertoc.lua:1108
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -6471,13 +6480,13 @@ msgstr ""
 "que possam ser usados como itens do índice.\n"
 "Veja Ajustes de estilo → Diversos → Dicas do índice alternativo."
 
-#: frontend/apps/reader/modules/readertoc.lua:1038
+#: frontend/apps/reader/modules/readertoc.lua:1115
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
 "Para usar o índice alternativo, desative seu índice personalizado primeiro."
 
-#: frontend/apps/reader/modules/readertoc.lua:1051
+#: frontend/apps/reader/modules/readertoc.lua:1128
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -6488,26 +6497,26 @@ msgstr ""
 "títulos dos documentos.\n"
 "Deseja recuperar o índice original? (O livro será recarregado.)"
 
-#: frontend/apps/reader/modules/readertoc.lua:1066
+#: frontend/apps/reader/modules/readertoc.lua:1143
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
 msgstr ""
 "Deseja usar um índice alternativo criado a partir dos títulos do documento?"
 
-#: frontend/apps/reader/modules/readertoc.lua:1093
+#: frontend/apps/reader/modules/readertoc.lua:1170
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
 msgstr[0] "1 entrada no nível %2 do índice"
 msgstr[1] "%1 entradas no nível %2 do índice"
 
-#: frontend/apps/reader/modules/readertoc.lua:1115
+#: frontend/apps/reader/modules/readertoc.lua:1192
 msgid "Progress bars: 1 tick"
 msgid_plural "Progress bars: %1 ticks"
 msgstr[0] "Barras de progresso: 1 marca"
 msgstr[1] "Barras de progresso: %1 marcas"
 
-#: frontend/apps/reader/modules/readertoc.lua:1117
+#: frontend/apps/reader/modules/readertoc.lua:1194
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
@@ -6517,11 +6526,11 @@ msgstr ""
 "apertadas quando o índice é complexo. Isso permite que você restrinja o "
 "número de marcas."
 
-#: frontend/apps/reader/modules/readertoc.lua:1138
+#: frontend/apps/reader/modules/readertoc.lua:1215
 msgid "Bind chapter navigation to ticks"
 msgstr "Vincular a navegação de capítulos às marcas"
 
-#: frontend/apps/reader/modules/readertoc.lua:1139
+#: frontend/apps/reader/modules/readertoc.lua:1216
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for chapter navigation and 'page/time left until next chapter' in the "
@@ -6534,11 +6543,11 @@ msgstr ""
 "Ativar esta opção vai restringir a navegação de capítulos às marcas na barra "
 "de progresso."
 
-#: frontend/apps/reader/modules/readertoc.lua:1154
+#: frontend/apps/reader/modules/readertoc.lua:1231
 msgid "Chapter titles from ticks only"
 msgstr "Títulos de capítulos somente a partir das marcas"
 
-#: frontend/apps/reader/modules/readertoc.lua:1155
+#: frontend/apps/reader/modules/readertoc.lua:1232
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for displaying the title of the current chapter in the footer and in "
@@ -6552,21 +6561,21 @@ msgstr ""
 "Ativar essa opção vai restringir a exibição aos títulos de capítulo das "
 "marcas da barra de progresso."
 
-#: frontend/apps/reader/modules/readertoc.lua:1172
-#: frontend/apps/reader/modules/readertoc.lua:1182
+#: frontend/apps/reader/modules/readertoc.lua:1249
+#: frontend/apps/reader/modules/readertoc.lua:1259
 msgid "ToC entries per page"
 msgstr "Entradas do índice por página"
 
-#: frontend/apps/reader/modules/readertoc.lua:1195
-#: frontend/apps/reader/modules/readertoc.lua:1207
+#: frontend/apps/reader/modules/readertoc.lua:1272
+#: frontend/apps/reader/modules/readertoc.lua:1284
 msgid "ToC entry font size"
 msgstr "Tamanho da fonte das entradas do índice"
 
-#: frontend/apps/reader/modules/readertoc.lua:1216
+#: frontend/apps/reader/modules/readertoc.lua:1293
 msgid "Show chapter length"
 msgstr "Mostrar comprimento do capítulo"
 
-#: frontend/apps/reader/modules/readertoc.lua:1227
+#: frontend/apps/reader/modules/readertoc.lua:1304
 msgid "Dot leaders"
 msgstr "Linha pontilhada"
 

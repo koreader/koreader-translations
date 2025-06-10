@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 06:07+0000\n"
+"POT-Creation-Date: 2025-06-10 06:02+0000\n"
 "PO-Revision-Date: 2025-06-01 11:03+0000\n"
 "Last-Translator: Ichnilatis <sophronios.sp@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -217,6 +217,7 @@ msgstr "Εισαγάγετε το όνομα του αρχείου"
 #: frontend/apps/reader/modules/readerhandmade.lua:518
 #: frontend/apps/reader/modules/readerlink.lua:224
 #: frontend/apps/reader/modules/readersearch.lua:270
+#: frontend/apps/reader/modules/readertoc.lua:970
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:57
 #: frontend/apps/reader/modules/readerwikipedia.lua:178
@@ -1533,6 +1534,7 @@ msgstr "Ακύρωση όλων των φίλτρων"
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1457
 #: frontend/apps/reader/modules/readerhighlight.lua:155
+#: frontend/apps/reader/modules/readertoc.lua:977
 #: frontend/ui/widget/dictquicklookup.lua:519 frontend/ui/widget/menu.lua:770
 #: frontend/ui/widget/touchmenu.lua:1362
 #: plugins/opds.koplugin/opdsbrowser.lua:373
@@ -1672,6 +1674,7 @@ msgstr "Να διαγραφεί η συλλογή;"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1313
 #: frontend/apps/reader/modules/readersearch.lua:264
+#: frontend/apps/reader/modules/readertoc.lua:967
 #: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
 msgstr "Εισαγάγετε κείμενο για αναζήτηση"
@@ -1815,6 +1818,7 @@ msgstr "Εξαγωγή"
 #: frontend/apps/filemanager/filemanagerhistory.lua:148
 #: frontend/apps/reader/modules/readerbookmark.lua:1062
 #: frontend/apps/reader/modules/readersearch.lua:661
+#: frontend/apps/reader/modules/readertoc.lua:839
 #: frontend/ui/widget/touchmenu.lua:1312
 msgid "Query: %1"
 msgstr "Αναζήτηση για: %1"
@@ -1889,7 +1893,7 @@ msgstr "Αδυναμία ανοίγματος τελευταίου αρχείο�
 
 #: frontend/apps/filemanager/filemanagermenu.lua:160
 #: frontend/apps/reader/modules/readerdictionary.lua:223
-#: frontend/apps/reader/modules/readertoc.lua:1024
+#: frontend/apps/reader/modules/readertoc.lua:1101
 #: frontend/ui/otamanager.lua:437 plugins/newsdownloader.koplugin/main.lua:170
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:1103
@@ -6527,15 +6531,20 @@ msgstr "Χάρτης βιβλίου"
 msgid "Page browser"
 msgstr "Περιήγηση σελίδων"
 
-#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:186
+#: frontend/apps/reader/modules/readertoc.lua:73 frontend/dispatcher.lua:186
 msgid "Table of contents"
 msgstr "Πίνακας περιεχομένων"
 
-#: frontend/apps/reader/modules/readertoc.lua:1029
+#: frontend/apps/reader/modules/readertoc.lua:1007
+#, fuzzy
+msgid "No results in table of contents"
+msgstr "Δεν υπάρχουν αποτελέσματα στο έγγραφο"
+
+#: frontend/apps/reader/modules/readertoc.lua:1106
 msgid "Alternative table of contents"
 msgstr "Εναλλακτικός πίνακας περιεχομένων"
 
-#: frontend/apps/reader/modules/readertoc.lua:1031
+#: frontend/apps/reader/modules/readertoc.lua:1108
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -6560,14 +6569,14 @@ msgstr ""
 "Ανατρέξτε στην ενότητα Τροποποιήσεις στυλ → Διάφορα → Εναλλακτικές ενδείξεις "
 "Πίνακα Περιεχομένων."
 
-#: frontend/apps/reader/modules/readertoc.lua:1038
+#: frontend/apps/reader/modules/readertoc.lua:1115
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
 "Για να χρησιμοποιήσετε τον εναλλακτικό Πίνακα περιεχομένων, απενεργοποιήστε "
 "πρώτα τον προσαρμοσμένο σας πίνακα περιεχομένων."
 
-#: frontend/apps/reader/modules/readertoc.lua:1051
+#: frontend/apps/reader/modules/readertoc.lua:1128
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -6579,7 +6588,7 @@ msgstr ""
 "Θέλετε να επιστρέψετε στον αρχικό πίνακα περιεχομένων; (Το βιβλίο θα "
 "φορτωθεί ξανά.)"
 
-#: frontend/apps/reader/modules/readertoc.lua:1066
+#: frontend/apps/reader/modules/readertoc.lua:1143
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
@@ -6587,19 +6596,19 @@ msgstr ""
 "Θέλετε να χρησιμοποιήσετε έναν εναλλακτικό πίνακα περιεχομένων δημιουργημένο "
 "από τις επικεφαλίδες του εγγράφου;"
 
-#: frontend/apps/reader/modules/readertoc.lua:1093
+#: frontend/apps/reader/modules/readertoc.lua:1170
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
 msgstr[0] "1 καταχώρηση στο %2ο επίπεδο του Πίνακα Περιεχομένων"
 msgstr[1] "%1 καταχωρήσεις στο %2ο επίπεδο του Πίνακα Περιεχομένων"
 
-#: frontend/apps/reader/modules/readertoc.lua:1115
+#: frontend/apps/reader/modules/readertoc.lua:1192
 msgid "Progress bars: 1 tick"
 msgid_plural "Progress bars: %1 ticks"
 msgstr[0] "Γραμμές προόδου: 1 δείκτης"
 msgstr[1] "Γραμμές προόδου: %1 δείκτες"
 
-#: frontend/apps/reader/modules/readertoc.lua:1117
+#: frontend/apps/reader/modules/readertoc.lua:1194
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
@@ -6610,11 +6619,11 @@ msgstr ""
 "περιεχομένων είναι περίπλοκος. Με την ρύθμιση αυτή μπορείτε να περιορίσετε "
 "τον αριθμό των δεικτών."
 
-#: frontend/apps/reader/modules/readertoc.lua:1138
+#: frontend/apps/reader/modules/readertoc.lua:1215
 msgid "Bind chapter navigation to ticks"
 msgstr "Σύνδεση της περιήγησης ανά κεφάλαιο στους δείκτες"
 
-#: frontend/apps/reader/modules/readertoc.lua:1139
+#: frontend/apps/reader/modules/readertoc.lua:1216
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for chapter navigation and 'page/time left until next chapter' in the "
@@ -6628,11 +6637,11 @@ msgstr ""
 "Η ενεργοποίηση αυτής της επιλογής θα περιορίσει την περιήγηση στα κεφάλαια "
 "στους δείκτες της γραμμής προόδου."
 
-#: frontend/apps/reader/modules/readertoc.lua:1154
+#: frontend/apps/reader/modules/readertoc.lua:1231
 msgid "Chapter titles from ticks only"
 msgstr "Τίτλοι κεφαλαίων μόνο από τους δείκτες"
 
-#: frontend/apps/reader/modules/readertoc.lua:1155
+#: frontend/apps/reader/modules/readertoc.lua:1232
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for displaying the title of the current chapter in the footer and in "
@@ -6647,21 +6656,21 @@ msgstr ""
 "Η ενεργοποίηση αυτής της επιλογής θα περιορίσει την εμφάνιση στους τίτλους "
 "των κεφαλαίων των δεικτών της γραμμής προόδου."
 
-#: frontend/apps/reader/modules/readertoc.lua:1172
-#: frontend/apps/reader/modules/readertoc.lua:1182
+#: frontend/apps/reader/modules/readertoc.lua:1249
+#: frontend/apps/reader/modules/readertoc.lua:1259
 msgid "ToC entries per page"
 msgstr "Στοιχεία Πίνακα Περιεχομένων ανά σελίδα"
 
-#: frontend/apps/reader/modules/readertoc.lua:1195
-#: frontend/apps/reader/modules/readertoc.lua:1207
+#: frontend/apps/reader/modules/readertoc.lua:1272
+#: frontend/apps/reader/modules/readertoc.lua:1284
 msgid "ToC entry font size"
 msgstr "Μέγεθος γραμματοσειράς Πίνακα Περιεχομένων"
 
-#: frontend/apps/reader/modules/readertoc.lua:1216
+#: frontend/apps/reader/modules/readertoc.lua:1293
 msgid "Show chapter length"
 msgstr "Εμφάνιση μεγέθους κεφαλαίου"
 
-#: frontend/apps/reader/modules/readertoc.lua:1227
+#: frontend/apps/reader/modules/readertoc.lua:1304
 msgid "Dot leaders"
 msgstr "Οδηγός με τελείες"
 

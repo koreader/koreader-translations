@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 06:07+0000\n"
+"POT-Creation-Date: 2025-06-10 06:02+0000\n"
 "PO-Revision-Date: 2025-06-04 05:18+0000\n"
 "Last-Translator: Mihai Vasiliu <mihai.vasiliu.93@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/koreader/"
@@ -209,6 +209,7 @@ msgstr "Introdu nume fișier"
 #: frontend/apps/reader/modules/readerhandmade.lua:518
 #: frontend/apps/reader/modules/readerlink.lua:224
 #: frontend/apps/reader/modules/readersearch.lua:270
+#: frontend/apps/reader/modules/readertoc.lua:970
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:57
 #: frontend/apps/reader/modules/readerwikipedia.lua:178
@@ -1529,6 +1530,7 @@ msgstr "Resetează toate filtrele"
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1457
 #: frontend/apps/reader/modules/readerhighlight.lua:155
+#: frontend/apps/reader/modules/readertoc.lua:977
 #: frontend/ui/widget/dictquicklookup.lua:519 frontend/ui/widget/menu.lua:770
 #: frontend/ui/widget/touchmenu.lua:1362
 #: plugins/opds.koplugin/opdsbrowser.lua:373
@@ -1669,6 +1671,7 @@ msgstr "Elimini colecția?"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1313
 #: frontend/apps/reader/modules/readersearch.lua:264
+#: frontend/apps/reader/modules/readertoc.lua:967
 #: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
 msgstr "Introdu textul de căutat"
@@ -1813,6 +1816,7 @@ msgstr "Extrage"
 #: frontend/apps/filemanager/filemanagerhistory.lua:148
 #: frontend/apps/reader/modules/readerbookmark.lua:1062
 #: frontend/apps/reader/modules/readersearch.lua:661
+#: frontend/apps/reader/modules/readertoc.lua:839
 #: frontend/ui/widget/touchmenu.lua:1312
 msgid "Query: %1"
 msgstr "Interogare: %1"
@@ -1887,7 +1891,7 @@ msgstr "Nu se poate deschide ultimul document"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:160
 #: frontend/apps/reader/modules/readerdictionary.lua:223
-#: frontend/apps/reader/modules/readertoc.lua:1024
+#: frontend/apps/reader/modules/readertoc.lua:1101
 #: frontend/ui/otamanager.lua:437 plugins/newsdownloader.koplugin/main.lua:170
 #: plugins/perceptionexpander.koplugin/main.lua:176
 #: plugins/statistics.koplugin/main.lua:1103
@@ -6441,15 +6445,20 @@ msgstr "Harta cărții"
 msgid "Page browser"
 msgstr "Navigator pagini"
 
-#: frontend/apps/reader/modules/readertoc.lua:71 frontend/dispatcher.lua:186
+#: frontend/apps/reader/modules/readertoc.lua:73 frontend/dispatcher.lua:186
 msgid "Table of contents"
 msgstr "Cuprins"
 
-#: frontend/apps/reader/modules/readertoc.lua:1029
+#: frontend/apps/reader/modules/readertoc.lua:1007
+#, fuzzy
+msgid "No results in table of contents"
+msgstr "Nu există rezultate în document"
+
+#: frontend/apps/reader/modules/readertoc.lua:1106
 msgid "Alternative table of contents"
 msgstr "Cuprins alternativ"
 
-#: frontend/apps/reader/modules/readertoc.lua:1031
+#: frontend/apps/reader/modules/readertoc.lua:1108
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -6471,13 +6480,13 @@ msgstr ""
 "folosite ca elemente în Cuprins.\n"
 "Vezi Reglaje de stil → Diverse → Indici pentru Cuprins alternativ."
 
-#: frontend/apps/reader/modules/readertoc.lua:1038
+#: frontend/apps/reader/modules/readertoc.lua:1115
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
 "Pentru a folosi cuprinsul alternativ, dezactivează cuprinsul personalizat."
 
-#: frontend/apps/reader/modules/readertoc.lua:1051
+#: frontend/apps/reader/modules/readertoc.lua:1128
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -6488,7 +6497,7 @@ msgstr ""
 "capitol ale documentului.\n"
 "Dorești să revii la cuprinsul original? (Cartea va fi reîncarcată.)"
 
-#: frontend/apps/reader/modules/readertoc.lua:1066
+#: frontend/apps/reader/modules/readertoc.lua:1143
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
@@ -6496,21 +6505,21 @@ msgstr ""
 "Dorești să folosești un cuprins alternativ construit din titlurile "
 "capitolelor din document?"
 
-#: frontend/apps/reader/modules/readertoc.lua:1093
+#: frontend/apps/reader/modules/readertoc.lua:1170
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
 msgstr[0] "1 intrare pe nivelul %2 al cuprinsului"
 msgstr[1] "%1 intrări pe nivelul %2 al cuprinsului"
 msgstr[2] "%1 de intrări pe nivelul %2 al cuprinsului"
 
-#: frontend/apps/reader/modules/readertoc.lua:1115
+#: frontend/apps/reader/modules/readertoc.lua:1192
 msgid "Progress bars: 1 tick"
 msgid_plural "Progress bars: %1 ticks"
 msgstr[0] "Bare progres: 1 punct"
 msgstr[1] "Bare progres: %1 puncte"
 msgstr[2] "Bare progres: %1 de puncte"
 
-#: frontend/apps/reader/modules/readertoc.lua:1117
+#: frontend/apps/reader/modules/readertoc.lua:1194
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
@@ -6520,11 +6529,11 @@ msgstr ""
 "atunci când cuprinsul este complex. Aceasta permite să se restricționeze "
 "numărul de puncte vizibile."
 
-#: frontend/apps/reader/modules/readertoc.lua:1138
+#: frontend/apps/reader/modules/readertoc.lua:1215
 msgid "Bind chapter navigation to ticks"
 msgstr "Leagă navigarea capitolelor de bife"
 
-#: frontend/apps/reader/modules/readertoc.lua:1139
+#: frontend/apps/reader/modules/readertoc.lua:1216
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for chapter navigation and 'page/time left until next chapter' in the "
@@ -6537,11 +6546,11 @@ msgstr ""
 "Activând această opțiune va restricționa navigarea între capitole la "
 "marcajele din bara de progres."
 
-#: frontend/apps/reader/modules/readertoc.lua:1154
+#: frontend/apps/reader/modules/readertoc.lua:1231
 msgid "Chapter titles from ticks only"
 msgstr "Titlurile de capitole doar din bife"
 
-#: frontend/apps/reader/modules/readertoc.lua:1155
+#: frontend/apps/reader/modules/readertoc.lua:1232
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for displaying the title of the current chapter in the footer and in "
@@ -6555,21 +6564,21 @@ msgstr ""
 "Activând această opțiune va restricționa afișarea numelor capitolelor la "
 "marcajele din bara de progres."
 
-#: frontend/apps/reader/modules/readertoc.lua:1172
-#: frontend/apps/reader/modules/readertoc.lua:1182
+#: frontend/apps/reader/modules/readertoc.lua:1249
+#: frontend/apps/reader/modules/readertoc.lua:1259
 msgid "ToC entries per page"
 msgstr "Numărul de întrări în cuprins per pagină"
 
-#: frontend/apps/reader/modules/readertoc.lua:1195
-#: frontend/apps/reader/modules/readertoc.lua:1207
+#: frontend/apps/reader/modules/readertoc.lua:1272
+#: frontend/apps/reader/modules/readertoc.lua:1284
 msgid "ToC entry font size"
 msgstr "Dimensiune font intrare din Cuprins"
 
-#: frontend/apps/reader/modules/readertoc.lua:1216
+#: frontend/apps/reader/modules/readertoc.lua:1293
 msgid "Show chapter length"
 msgstr "Arată lungime capitol"
 
-#: frontend/apps/reader/modules/readertoc.lua:1227
+#: frontend/apps/reader/modules/readertoc.lua:1304
 msgid "Dot leaders"
 msgstr "Marcatori inițiali cu puncte"
 
