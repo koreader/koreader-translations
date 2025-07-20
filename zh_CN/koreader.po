@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-18 10:15+0000\n"
+"POT-Creation-Date: 2025-07-20 10:47+0000\n"
 "PO-Revision-Date: 2025-07-18 06:02+0000\n"
 "Last-Translator: cyanjiang <cyanjiang@163.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -70,7 +70,7 @@ msgstr "忽略"
 #: plugins/autosuspend.koplugin/main.lua:488
 #: plugins/autoturn.koplugin/main.lua:150
 #: plugins/autowarmth.koplugin/main.lua:700
-#: plugins/kosync.koplugin/main.lua:114
+#: plugins/kosync.koplugin/main.lua:115
 msgid "Disable"
 msgstr "禁用"
 
@@ -255,7 +255,7 @@ msgstr "输入文件名"
 #: plugins/exporter.koplugin/target/xmnote.lua:34
 #: plugins/gestures.koplugin/main.lua:469
 #: plugins/httpinspector.koplugin/main.lua:205
-#: plugins/kosync.koplugin/main.lua:440
+#: plugins/kosync.koplugin/main.lua:429
 #: plugins/newsdownloader.koplugin/main.lua:196
 #: plugins/newsdownloader.koplugin/main.lua:938
 #: plugins/opds.koplugin/opdsbrowser.lua:208
@@ -2318,7 +2318,7 @@ msgstr "是否设置所选择的文档状态？"
 #: plugins/autowarmth.koplugin/main.lua:854
 #: plugins/autowarmth.koplugin/main.lua:1025
 #: plugins/coverimage.koplugin/main.lua:440
-#: plugins/kosync.koplugin/main.lua:265
+#: plugins/kosync.koplugin/main.lua:254
 #: plugins/statistics.koplugin/main.lua:1195
 msgid "Set"
 msgstr "设置"
@@ -3058,7 +3058,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1141
 #: frontend/apps/reader/modules/readerdictionary.lua:1206
-#: plugins/kosync.koplugin/main.lua:97
+#: plugins/kosync.koplugin/main.lua:98
 msgid "Not available"
 msgstr "不可用"
 
@@ -4336,6 +4336,7 @@ msgstr "将标注保存到 PDF: %1"
 #: frontend/ui/data/koptoptions.lua:470 frontend/ui/data/koptoptions.lua:507
 #: frontend/ui/data/koptoptions.lua:517 frontend/ui/data/koptoptions.lua:530
 #: frontend/ui/data/koptoptions.lua:573 frontend/ui/data/koptoptions.lua:616
+#: plugins/kosync.koplugin/main.lua:170
 #: plugins/vocabbuilder.koplugin/main.lua:129
 #: plugins/vocabbuilder.koplugin/main.lua:146
 msgid "on"
@@ -4360,6 +4361,7 @@ msgstr "开启"
 #: plugins/coverimage.koplugin/main.lua:495
 #: plugins/coverimage.koplugin/main.lua:518
 #: plugins/coverimage.koplugin/main.lua:655
+#: plugins/kosync.koplugin/main.lua:170
 #: plugins/vocabbuilder.koplugin/main.lua:129
 #: plugins/vocabbuilder.koplugin/main.lua:146
 msgid "off"
@@ -6407,7 +6409,7 @@ msgstr ""
 "这主要只对测试是有兴趣的。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:235
-#: plugins/kosync.koplugin/main.lua:112
+#: plugins/kosync.koplugin/main.lua:113
 msgid "Auto"
 msgstr "自动"
 
@@ -11820,8 +11822,8 @@ msgstr "导航"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:387
 #: frontend/ui/network/manager.lua:957 frontend/ui/network/manager.lua:998
-#: plugins/kosync.koplugin/main.lua:110 plugins/kosync.koplugin/main.lua:296
-#: plugins/kosync.koplugin/main.lua:330
+#: plugins/kosync.koplugin/main.lua:111 plugins/kosync.koplugin/main.lua:285
+#: plugins/kosync.koplugin/main.lua:319
 msgid "Prompt"
 msgstr "提示"
 
@@ -12539,8 +12541,8 @@ msgstr "完全刷新频率"
 
 #: frontend/ui/elements/refresh_menu_table.lua:58
 #: frontend/ui/elements/screensaver_menu.lua:137
-#: plugins/kosync.koplugin/main.lua:104 plugins/kosync.koplugin/main.lua:305
-#: plugins/kosync.koplugin/main.lua:339
+#: plugins/kosync.koplugin/main.lua:105 plugins/kosync.koplugin/main.lua:294
+#: plugins/kosync.koplugin/main.lua:328
 msgid "Never"
 msgstr "从不"
 
@@ -16887,7 +16889,7 @@ msgstr "握手超时"
 
 #. @translators calibre connection error
 #: plugins/calibre.koplugin/wireless.lua:77
-#: plugins/kosync.koplugin/main.lua:156
+#: plugins/kosync.koplugin/main.lua:157
 msgid "invalid password"
 msgstr "密码无效"
 
@@ -18662,7 +18664,7 @@ msgstr "这是“禁用”功能的虚拟实现。"
 msgid "This is a dummy implementation of 'enable' function."
 msgstr "这是“启用”功能的虚拟实现。"
 
-#: plugins/kosync.koplugin/_meta.lua:4 plugins/kosync.koplugin/main.lua:188
+#: plugins/kosync.koplugin/_meta.lua:4 plugins/kosync.koplugin/main.lua:193
 msgid "Progress sync"
 msgstr "进度同步"
 
@@ -18671,67 +18673,77 @@ msgid ""
 "Synchronizes your reading progress to a server across your KOReader devices."
 msgstr "通过 KOReader 设备向服务器同步阅读进度。"
 
-#: plugins/kosync.koplugin/main.lua:26
+#: plugins/kosync.koplugin/main.lua:27
 msgid "Register/login to KOReader server"
 msgstr "注册/同步到 KOReader 服务器"
 
-#: plugins/kosync.koplugin/main.lua:120
+#: plugins/kosync.koplugin/main.lua:121
 msgid "Progress has been synchronized."
 msgstr "进度已同步。"
 
-#: plugins/kosync.koplugin/main.lua:127
+#: plugins/kosync.koplugin/main.lua:128
 msgid ""
 "Please register or login before using the progress synchronization feature."
 msgstr "请登录后再开启进度同步功能。"
 
-#: plugins/kosync.koplugin/main.lua:134
+#: plugins/kosync.koplugin/main.lua:135
 msgid ""
 "Something went wrong when syncing progress, please check your network "
 "connection and try again later."
 msgstr "同步中发生错误，请检查您的网络连接稍候重试。"
 
-#: plugins/kosync.koplugin/main.lua:152
+#: plugins/kosync.koplugin/main.lua:153
 msgid "invalid username and password"
 msgstr "用户名和密码无效"
 
-#: plugins/kosync.koplugin/main.lua:154
+#: plugins/kosync.koplugin/main.lua:155
 msgid "invalid username"
 msgstr "用户名无效"
 
-#: plugins/kosync.koplugin/main.lua:167
+#: plugins/kosync.koplugin/main.lua:169
+#, fuzzy
+msgid "Set auto progress sync"
+msgstr "进度同步"
+
+#: plugins/kosync.koplugin/main.lua:171
+#, fuzzy
+msgid "Toggle auto progress sync"
+msgstr "打开/关闭章节进度条"
+
+#: plugins/kosync.koplugin/main.lua:172
 msgid "Push progress from this device"
 msgstr "同步本设备的进度"
 
-#: plugins/kosync.koplugin/main.lua:168
+#: plugins/kosync.koplugin/main.lua:173
 msgid "Pull progress from other devices"
 msgstr "从其他设备拉取进度"
 
-#: plugins/kosync.koplugin/main.lua:191
+#: plugins/kosync.koplugin/main.lua:196
 msgid "Custom sync server"
 msgstr "自定义同步服务器"
 
 #. @translators Server address defined by user for progress sync.
-#: plugins/kosync.koplugin/main.lua:196
+#: plugins/kosync.koplugin/main.lua:201
 msgid "Custom progress sync server address"
 msgstr "自定义进度同步服务器地址"
 
-#: plugins/kosync.koplugin/main.lua:206
+#: plugins/kosync.koplugin/main.lua:211
 msgid "Logout"
 msgstr "注销"
 
-#: plugins/kosync.koplugin/main.lua:207 plugins/kosync.koplugin/main.lua:470
+#: plugins/kosync.koplugin/main.lua:212 plugins/kosync.koplugin/main.lua:459
 msgid "Register"
 msgstr "注册"
 
-#: plugins/kosync.koplugin/main.lua:207 plugins/kosync.koplugin/main.lua:447
+#: plugins/kosync.koplugin/main.lua:212 plugins/kosync.koplugin/main.lua:436
 msgid "Login"
 msgstr "登录"
 
-#: plugins/kosync.koplugin/main.lua:224
+#: plugins/kosync.koplugin/main.lua:229
 msgid "Automatically keep documents in sync"
 msgstr "自动同步文档"
 
-#: plugins/kosync.koplugin/main.lua:226
+#: plugins/kosync.koplugin/main.lua:231
 msgid ""
 "This may lead to nagging about toggling WiFi on document close and suspend/"
 "resume, depending on the device's connectivity."
@@ -18739,17 +18751,11 @@ msgstr ""
 "启用此选项后，若设备没有连接WiFi，则会在文档关闭和设备休眠前后询问是否要启用"
 "WiFi功能以便同步信息。"
 
-#: plugins/kosync.koplugin/main.lua:230
-msgid ""
-"You will have to switch the 'Action when Wi-Fi is off' Network setting to "
-"'turn on' to be able to enable this feature!"
-msgstr "你需要将“Wi-Fi 关闭时的动作”设置修改为“打开”来启用这个功能！"
-
-#: plugins/kosync.koplugin/main.lua:249
+#: plugins/kosync.koplugin/main.lua:238
 msgid "Periodically sync every # pages (%1)"
 msgstr "每 # 页进行同步（%1）"
 
-#: plugins/kosync.koplugin/main.lua:253
+#: plugins/kosync.koplugin/main.lua:242
 msgid ""
 "Unlike the automatic sync above, this will *not* attempt to setup a network "
 "connection, but instead relies on it being already up, and may trigger "
@@ -18758,7 +18764,7 @@ msgstr ""
 "与上方的自动同步不同，此选项将*不会*尝试启用网络连接。此方法会使用已有的网络"
 "连接，并尝试维持一些网络活动保证WiFi不会被自动关闭！"
 
-#: plugins/kosync.koplugin/main.lua:258
+#: plugins/kosync.koplugin/main.lua:247
 msgid ""
 "This value determines how many page turns it takes to update book progress.\n"
 "If set to 0, updating progress based on page turns will be disabled."
@@ -18766,113 +18772,129 @@ msgstr ""
 "这个值决定了更新图书进度需要翻多少页。\n"
 "如果设置为0，将禁用基于翻页的进度更新。"
 
-#: plugins/kosync.koplugin/main.lua:266
+#: plugins/kosync.koplugin/main.lua:255
 msgid "Number of pages before update"
 msgstr "更新前的页数"
 
-#: plugins/kosync.koplugin/main.lua:278
+#: plugins/kosync.koplugin/main.lua:267
 msgid "Sync behavior"
 msgstr "同步行为"
 
-#: plugins/kosync.koplugin/main.lua:283
+#: plugins/kosync.koplugin/main.lua:272
 msgid "Sync to a newer state (%1)"
 msgstr "同步至最新的记录(%1)"
 
-#: plugins/kosync.koplugin/main.lua:287 plugins/kosync.koplugin/main.lua:321
+#: plugins/kosync.koplugin/main.lua:276 plugins/kosync.koplugin/main.lua:310
 msgid "Silently"
 msgstr "不提示"
 
-#: plugins/kosync.koplugin/main.lua:317
+#: plugins/kosync.koplugin/main.lua:306
 msgid "Sync to an older state (%1)"
 msgstr "同步至更旧的记录(%1)"
 
-#: plugins/kosync.koplugin/main.lua:353
+#: plugins/kosync.koplugin/main.lua:342
 msgid "Push progress from this device now"
 msgstr "立即上传本设备的进度"
 
-#: plugins/kosync.koplugin/main.lua:362
+#: plugins/kosync.koplugin/main.lua:351
 msgid "Pull progress from other devices now"
 msgstr "立即从其他设备拉取进度"
 
-#: plugins/kosync.koplugin/main.lua:372
+#: plugins/kosync.koplugin/main.lua:361
 msgid "Document matching method"
 msgstr "文档匹配方法"
 
-#: plugins/kosync.koplugin/main.lua:375
+#: plugins/kosync.koplugin/main.lua:364
 msgid "Binary. Only identical files will be kept in sync."
 msgstr "二进制。 只有相同的文件才会同步进度。"
 
-#: plugins/kosync.koplugin/main.lua:384
+#: plugins/kosync.koplugin/main.lua:373
 msgid "Filename. Files with matching names will be kept in sync."
 msgstr "文件名。 同名文件将同步进度。"
 
-#: plugins/kosync.koplugin/main.lua:454
+#: plugins/kosync.koplugin/main.lua:443
 msgid "Cannot login: %1"
 msgstr "无法登录: %1"
 
-#: plugins/kosync.koplugin/main.lua:463
+#: plugins/kosync.koplugin/main.lua:452
 msgid "Logging in. Please wait…"
 msgstr "正在登录，请稍等……"
 
-#: plugins/kosync.koplugin/main.lua:477
+#: plugins/kosync.koplugin/main.lua:466
 msgid "Cannot register: %1"
 msgstr "无法注册: %1"
 
-#: plugins/kosync.koplugin/main.lua:486
+#: plugins/kosync.koplugin/main.lua:475
 msgid "Registering. Please wait…"
 msgstr "正在注册，请稍等……"
 
-#: plugins/kosync.koplugin/main.lua:512
+#: plugins/kosync.koplugin/main.lua:501
 msgid "An error occurred while registering:"
 msgstr "注册时发生错误："
 
-#: plugins/kosync.koplugin/main.lua:517
+#: plugins/kosync.koplugin/main.lua:506
 msgid "An unknown error occurred while registering."
 msgstr "注册时发生未知错误。"
 
-#: plugins/kosync.koplugin/main.lua:527
+#: plugins/kosync.koplugin/main.lua:516
 msgid "Registered to KOReader server."
 msgstr "成功注册到 KOReader 服务器。"
 
-#: plugins/kosync.koplugin/main.lua:531 plugins/kosync.koplugin/main.lua:570
+#: plugins/kosync.koplugin/main.lua:520 plugins/kosync.koplugin/main.lua:559
 msgid "Unknown server error"
 msgstr "未知服务器错误"
 
-#: plugins/kosync.koplugin/main.lua:549
+#: plugins/kosync.koplugin/main.lua:538
 msgid "An error occurred while logging in:"
 msgstr "登录时发生错误："
 
-#: plugins/kosync.koplugin/main.lua:554
+#: plugins/kosync.koplugin/main.lua:543
 msgid "An unknown error occurred while logging in."
 msgstr "登录时发生未知错误。"
 
-#: plugins/kosync.koplugin/main.lua:566
+#: plugins/kosync.koplugin/main.lua:555
 msgid "Logged in to KOReader server."
 msgstr "成功连接到 KOReader 同步服务器。"
 
-#: plugins/kosync.koplugin/main.lua:672
+#: plugins/kosync.koplugin/main.lua:661
 msgid "Progress has been pushed."
 msgstr "进度已同步到服务器。"
 
-#: plugins/kosync.koplugin/main.lua:752
+#: plugins/kosync.koplugin/main.lua:741
 msgid "No progress found for this document."
 msgstr "未找到此文档的进度信息。"
 
-#: plugins/kosync.koplugin/main.lua:763
+#: plugins/kosync.koplugin/main.lua:752
 msgid "Latest progress is coming from this device."
 msgstr "最新进度来自本设备。"
 
-#: plugins/kosync.koplugin/main.lua:779
+#: plugins/kosync.koplugin/main.lua:768
 msgid "The progress has already been synchronized."
 msgstr "进度已同步。"
 
-#: plugins/kosync.koplugin/main.lua:808
+#: plugins/kosync.koplugin/main.lua:797
 msgid "Sync to latest location %1% from device '%2'?"
 msgstr "是否同步到设备“%2”上的最新位置 %1%？"
 
-#: plugins/kosync.koplugin/main.lua:822
+#: plugins/kosync.koplugin/main.lua:811
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "是否同步到设备“%2”上的先前位置 %1%？"
+
+#: plugins/kosync.koplugin/main.lua:920
+msgid ""
+"You will have to switch the 'Action when Wi-Fi is off' Network setting to "
+"'turn on' to be able to enable this feature!"
+msgstr "你需要将“Wi-Fi 关闭时的动作”设置修改为“打开”来启用这个功能！"
+
+#: plugins/kosync.koplugin/main.lua:937
+#, fuzzy
+msgid "Auto progress sync: on"
+msgstr "进度同步"
+
+#: plugins/kosync.koplugin/main.lua:937
+#, fuzzy
+msgid "Auto progress sync: off"
+msgstr "进度同步"
 
 #: plugins/movetoarchive.koplugin/_meta.lua:4
 #: plugins/movetoarchive.koplugin/main.lua:34
