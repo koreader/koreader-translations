@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-23 21:35+0000\n"
+"POT-Creation-Date: 2025-08-26 06:44+0000\n"
 "PO-Revision-Date: 2025-08-23 21:36+0000\n"
 "Last-Translator: elvvis <elvvis@hotmail.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -143,6 +143,7 @@ msgstr "Herunterladen…"
 #: frontend/ui/widget/bookstatuswidget.lua:124
 #: frontend/ui/widget/notification.lua:58
 #: plugins/batterystat.koplugin/main.lua:76
+#: plugins/exporter.koplugin/clip.lua:67
 #: plugins/exporter.koplugin/template/md.lua:42
 #: plugins/statistics.koplugin/main.lua:1635
 #: plugins/statistics.koplugin/main.lua:1654
@@ -250,6 +251,7 @@ msgstr "Dateinamen eingeben"
 #: plugins/calibre.koplugin/wireless.lua:521
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:801
 #: plugins/coverimage.koplugin/main.lua:381
+#: plugins/exporter.koplugin/main.lua:419
 #: plugins/exporter.koplugin/target/joplin.lua:189
 #: plugins/exporter.koplugin/target/joplin.lua:228
 #: plugins/exporter.koplugin/target/nextcloud.lua:67
@@ -326,7 +328,8 @@ msgstr "Wählen"
 #: frontend/apps/cloudstorage/ftp.lua:140
 #: frontend/apps/cloudstorage/webdav.lua:141
 #: frontend/apps/reader/modules/readerfooter.lua:690
-#: frontend/ui/screensaver.lua:225 plugins/vocabbuilder.koplugin/main.lua:1591
+#: frontend/ui/screensaver.lua:225 plugins/exporter.koplugin/main.lua:406
+#: plugins/vocabbuilder.koplugin/main.lua:1591
 #: plugins/wallabag.koplugin/main.lua:520
 #: plugins/wallabag.koplugin/main.lua:1482
 msgid "Info"
@@ -885,7 +888,7 @@ msgid "Copy"
 msgstr "Kopieren"
 
 #: frontend/apps/filemanager/filemanager.lua:581
-#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:283
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:315
 msgid "Export highlights"
 msgstr "Hervorhebungen exportieren"
 
@@ -2313,6 +2316,7 @@ msgstr "Dateimanager-Menü"
 #: frontend/ui/elements/page_turns.lua:9
 #: plugins/autowarmth.koplugin/main.lua:879
 #: plugins/coverimage.koplugin/main.lua:588
+#: plugins/exporter.koplugin/main.lua:410
 #: plugins/terminal.koplugin/main.lua:656
 msgid "Default"
 msgstr "Standard"
@@ -2401,7 +2405,7 @@ msgstr "Status der ausgewählten Dokumente festlegen?"
 #: plugins/autowarmth.koplugin/main.lua:872
 #: plugins/autowarmth.koplugin/main.lua:1043
 #: plugins/coverimage.koplugin/main.lua:440
-#: plugins/kosync.koplugin/main.lua:254
+#: plugins/exporter.koplugin/main.lua:426 plugins/kosync.koplugin/main.lua:254
 #: plugins/statistics.koplugin/main.lua:1151
 msgid "Set"
 msgstr "Setzen"
@@ -2630,7 +2634,7 @@ msgid "date, reverse"
 msgstr "Datum, Rückseite"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:653
-#: plugins/exporter.koplugin/clip.lua:263
+#: plugins/exporter.koplugin/clip.lua:256
 msgid "Page %1 %2 @ %3"
 msgstr "Seite %1 %2 @ %3"
 
@@ -12818,7 +12822,7 @@ msgid "Share storage via USB?"
 msgstr "Speicher über USB gemeinsam nutzen?"
 
 #: frontend/ui/elements/mass_storage.lua:68
-#: plugins/exporter.koplugin/base.lua:167
+#: plugins/exporter.koplugin/base.lua:146
 msgid "Share"
 msgstr "Teilen"
 
@@ -18587,66 +18591,87 @@ msgstr "Standardeinstellungen leer"
 msgid "Exports highlights and notes."
 msgstr "Exportiert Hervorhebungen und Notizen."
 
-#: plugins/exporter.koplugin/clip.lua:124
+#: plugins/exporter.koplugin/clip.lua:117
 msgid "Unknown Book"
 msgstr "Unbekanntes Buch"
 
-#: plugins/exporter.koplugin/clip.lua:125
+#: plugins/exporter.koplugin/clip.lua:118
 #: plugins/opds.koplugin/opdsbrowser.lua:674
 msgid "Unknown Author"
 msgstr "Unbekannter Autor"
 
-#: plugins/exporter.koplugin/main.lua:118
-#: plugins/exporter.koplugin/main.lua:286
+#: plugins/exporter.koplugin/main.lua:124
+#: plugins/exporter.koplugin/main.lua:318
 msgid "Export all notes in current book"
 msgstr "Alle Notizen im aktuellen Buch exportieren"
 
-#: plugins/exporter.koplugin/main.lua:120
-#: plugins/exporter.koplugin/main.lua:295
+#: plugins/exporter.koplugin/main.lua:126
+#: plugins/exporter.koplugin/main.lua:327
 msgid "Export all notes in all books in history"
 msgstr "Alle Notizen in allen Büchern im Verlauf exportieren"
 
-#: plugins/exporter.koplugin/main.lua:209
+#: plugins/exporter.koplugin/main.lua:210
+#, fuzzy
+msgid "No highlights to export"
+msgstr "hervorgehobener Text"
+
+#: plugins/exporter.koplugin/main.lua:242
 msgid "%1: Exported successfully."
 msgstr "%1: Erfolgreich exportiert."
 
-#: plugins/exporter.koplugin/main.lua:211
+#: plugins/exporter.koplugin/main.lua:244
 msgid "%1: Exported to %2."
 msgstr "%1: Exportiert nach %2."
 
-#: plugins/exporter.koplugin/main.lua:214
+#: plugins/exporter.koplugin/main.lua:247
 msgid "%1: Failed to export."
 msgstr "%1: Der Export ist fehlgeschlagen."
 
-#: plugins/exporter.koplugin/main.lua:226
+#: plugins/exporter.koplugin/main.lua:258
 msgid "Exporting may take several seconds…"
 msgstr "Exportieren kann ein paar Sekunden dauern…"
 
-#: plugins/exporter.koplugin/main.lua:244
+#: plugins/exporter.koplugin/main.lua:276
 msgid "Share as %1"
 msgstr "Teilen als %1"
 
-#: plugins/exporter.koplugin/main.lua:305
+#: plugins/exporter.koplugin/main.lua:337
 msgid "Choose formats and services"
 msgstr "Wähle Formate und Dienste"
 
-#: plugins/exporter.koplugin/main.lua:309
+#: plugins/exporter.koplugin/main.lua:341
 msgid "Choose highlight styles"
 msgstr "Hervorhebungsstile auswählen"
 
-#: plugins/exporter.koplugin/main.lua:314
+#: plugins/exporter.koplugin/main.lua:346
+#: plugins/exporter.koplugin/main.lua:390
+#, fuzzy
+msgid "Set export filename"
+msgstr "Dateinamen festlegen"
+
+#: plugins/exporter.koplugin/main.lua:353
 msgid "Choose export folder"
 msgstr "Exportordner wählen"
 
-#: plugins/exporter.koplugin/main.lua:321
+#: plugins/exporter.koplugin/main.lua:360
 msgid "Use book folder for single export"
 msgstr "Buchordner für einmaligen Export verwenden"
 
-#: plugins/exporter.koplugin/main.lua:336
+#: plugins/exporter.koplugin/main.lua:375
 msgid "Share all notes in this book"
 msgstr "Alle Notizen in diesem Buch teilen"
 
-#: plugins/exporter.koplugin/main.lua:349
+#: plugins/exporter.koplugin/main.lua:395
+#, fuzzy
+msgid "Single book"
+msgstr "Bücher filtern"
+
+#: plugins/exporter.koplugin/main.lua:400
+#, fuzzy
+msgid "Multiple books"
+msgstr "Alle Bücher"
+
+#: plugins/exporter.koplugin/main.lua:448
 msgid "Current export folder:"
 msgstr "Aktuelles Export-Verzeichnis:"
 

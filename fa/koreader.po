@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-23 21:35+0000\n"
+"POT-Creation-Date: 2025-08-26 06:44+0000\n"
 "PO-Revision-Date: 2025-03-27 17:50+0000\n"
 "Last-Translator: jafar <qxc6699@gmail.com>\n"
 "Language-Team: Persian <https://hosted.weblate.org/projects/koreader/"
@@ -129,6 +129,7 @@ msgstr "در حال دانلود…"
 #: frontend/ui/widget/bookstatuswidget.lua:124
 #: frontend/ui/widget/notification.lua:58
 #: plugins/batterystat.koplugin/main.lua:76
+#: plugins/exporter.koplugin/clip.lua:67
 #: plugins/exporter.koplugin/template/md.lua:42
 #: plugins/statistics.koplugin/main.lua:1635
 #: plugins/statistics.koplugin/main.lua:1654
@@ -236,6 +237,7 @@ msgstr "نام پرونده را وارد کنید"
 #: plugins/calibre.koplugin/wireless.lua:521
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:801
 #: plugins/coverimage.koplugin/main.lua:381
+#: plugins/exporter.koplugin/main.lua:419
 #: plugins/exporter.koplugin/target/joplin.lua:189
 #: plugins/exporter.koplugin/target/joplin.lua:228
 #: plugins/exporter.koplugin/target/nextcloud.lua:67
@@ -312,7 +314,8 @@ msgstr "انتخاب"
 #: frontend/apps/cloudstorage/ftp.lua:140
 #: frontend/apps/cloudstorage/webdav.lua:141
 #: frontend/apps/reader/modules/readerfooter.lua:690
-#: frontend/ui/screensaver.lua:225 plugins/vocabbuilder.koplugin/main.lua:1591
+#: frontend/ui/screensaver.lua:225 plugins/exporter.koplugin/main.lua:406
+#: plugins/vocabbuilder.koplugin/main.lua:1591
 #: plugins/wallabag.koplugin/main.lua:520
 #: plugins/wallabag.koplugin/main.lua:1482
 msgid "Info"
@@ -871,7 +874,7 @@ msgid "Copy"
 msgstr "رونوشت"
 
 #: frontend/apps/filemanager/filemanager.lua:581
-#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:283
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:315
 msgid "Export highlights"
 msgstr "خروجی گرفتن از هایلایت‌ها"
 
@@ -2309,6 +2312,7 @@ msgstr "منوی مدیر پرونده"
 #: frontend/ui/elements/page_turns.lua:9
 #: plugins/autowarmth.koplugin/main.lua:879
 #: plugins/coverimage.koplugin/main.lua:588
+#: plugins/exporter.koplugin/main.lua:410
 #: plugins/terminal.koplugin/main.lua:656
 msgid "Default"
 msgstr "پیش‌فرض"
@@ -2395,7 +2399,7 @@ msgstr ""
 #: plugins/autowarmth.koplugin/main.lua:872
 #: plugins/autowarmth.koplugin/main.lua:1043
 #: plugins/coverimage.koplugin/main.lua:440
-#: plugins/kosync.koplugin/main.lua:254
+#: plugins/exporter.koplugin/main.lua:426 plugins/kosync.koplugin/main.lua:254
 #: plugins/statistics.koplugin/main.lua:1151
 msgid "Set"
 msgstr "تعیین"
@@ -2638,7 +2642,7 @@ msgid "date, reverse"
 msgstr "سرور بروزرسانی"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:653
-#: plugins/exporter.koplugin/clip.lua:263
+#: plugins/exporter.koplugin/clip.lua:256
 msgid "Page %1 %2 @ %3"
 msgstr "صفحه‌ی %1 %2 @ %3"
 
@@ -12052,7 +12056,7 @@ msgid "Share storage via USB?"
 msgstr ""
 
 #: frontend/ui/elements/mass_storage.lua:68
-#: plugins/exporter.koplugin/base.lua:167
+#: plugins/exporter.koplugin/base.lua:146
 msgid "Share"
 msgstr "اشتراک"
 
@@ -17657,70 +17661,91 @@ msgstr "پیشفرض خالی است"
 msgid "Exports highlights and notes."
 msgstr "هایلایت‌ها و یاداداشت‌ها را خروجی بگیر."
 
-#: plugins/exporter.koplugin/clip.lua:124
+#: plugins/exporter.koplugin/clip.lua:117
 msgid "Unknown Book"
 msgstr "کتاب ناشناخته"
 
-#: plugins/exporter.koplugin/clip.lua:125
+#: plugins/exporter.koplugin/clip.lua:118
 #: plugins/opds.koplugin/opdsbrowser.lua:674
 msgid "Unknown Author"
 msgstr "نویسنده ناشناخته"
 
-#: plugins/exporter.koplugin/main.lua:118
-#: plugins/exporter.koplugin/main.lua:286
+#: plugins/exporter.koplugin/main.lua:124
+#: plugins/exporter.koplugin/main.lua:318
 #, fuzzy
 msgid "Export all notes in current book"
 msgstr "خروجی گرفتن از همه یاداداشت‌های داخل این کتاب"
 
-#: plugins/exporter.koplugin/main.lua:120
-#: plugins/exporter.koplugin/main.lua:295
+#: plugins/exporter.koplugin/main.lua:126
+#: plugins/exporter.koplugin/main.lua:327
 #, fuzzy
 msgid "Export all notes in all books in history"
 msgstr "خروجی گرفتن از همه یاداداشت‌های داخل این کتاب"
 
-#: plugins/exporter.koplugin/main.lua:209
+#: plugins/exporter.koplugin/main.lua:210
+#, fuzzy
+msgid "No highlights to export"
+msgstr "ویرایش متن هایلایت شده"
+
+#: plugins/exporter.koplugin/main.lua:242
 msgid "%1: Exported successfully."
 msgstr "%1: باموفقیت خروجی گرفته شد."
 
-#: plugins/exporter.koplugin/main.lua:211
+#: plugins/exporter.koplugin/main.lua:244
 msgid "%1: Exported to %2."
 msgstr "%1: خروجی گرفته شد در %2."
 
-#: plugins/exporter.koplugin/main.lua:214
+#: plugins/exporter.koplugin/main.lua:247
 msgid "%1: Failed to export."
 msgstr "%1:ناموفق در خروجی گرفتن."
 
-#: plugins/exporter.koplugin/main.lua:226
+#: plugins/exporter.koplugin/main.lua:258
 msgid "Exporting may take several seconds…"
 msgstr "گرفتن خروجی ممکن است چند ثانیه طول بکشد…"
 
-#: plugins/exporter.koplugin/main.lua:244
+#: plugins/exporter.koplugin/main.lua:276
 #, fuzzy
 msgid "Share as %1"
 msgstr "اشتراک گذاری به عنوان %1."
 
-#: plugins/exporter.koplugin/main.lua:305
+#: plugins/exporter.koplugin/main.lua:337
 msgid "Choose formats and services"
 msgstr "انتخاب فرمت و سرویس‌ دهنده"
 
-#: plugins/exporter.koplugin/main.lua:309
+#: plugins/exporter.koplugin/main.lua:341
 #, fuzzy
 msgid "Choose highlight styles"
 msgstr "سبک هایلایت"
 
-#: plugins/exporter.koplugin/main.lua:314
+#: plugins/exporter.koplugin/main.lua:346
+#: plugins/exporter.koplugin/main.lua:390
+#, fuzzy
+msgid "Set export filename"
+msgstr "تنظیم نام پرونده"
+
+#: plugins/exporter.koplugin/main.lua:353
 msgid "Choose export folder"
 msgstr "انتخاب پوشه خروجی"
 
-#: plugins/exporter.koplugin/main.lua:321
+#: plugins/exporter.koplugin/main.lua:360
 msgid "Use book folder for single export"
 msgstr ""
 
-#: plugins/exporter.koplugin/main.lua:336
+#: plugins/exporter.koplugin/main.lua:375
 msgid "Share all notes in this book"
 msgstr "به اشتراک گذاری همه یادداشت‌ها در این کتاب"
 
-#: plugins/exporter.koplugin/main.lua:349
+#: plugins/exporter.koplugin/main.lua:395
+#, fuzzy
+msgid "Single book"
+msgstr "فیلتر کتاب‌ها"
+
+#: plugins/exporter.koplugin/main.lua:400
+#, fuzzy
+msgid "Multiple books"
+msgstr "همه کتاب‌ها"
+
+#: plugins/exporter.koplugin/main.lua:448
 msgid "Current export folder:"
 msgstr "پوشه‌ خروجی فعلی:"
 

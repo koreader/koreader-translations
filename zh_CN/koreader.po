@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-23 21:35+0000\n"
+"POT-Creation-Date: 2025-08-26 06:44+0000\n"
 "PO-Revision-Date: 2025-08-26 06:44+0000\n"
 "Last-Translator: StellaMeow <jiatian.tao@outlook.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -140,6 +140,7 @@ msgstr "下载中……"
 #: frontend/ui/widget/bookstatuswidget.lua:124
 #: frontend/ui/widget/notification.lua:58
 #: plugins/batterystat.koplugin/main.lua:76
+#: plugins/exporter.koplugin/clip.lua:67
 #: plugins/exporter.koplugin/template/md.lua:42
 #: plugins/statistics.koplugin/main.lua:1635
 #: plugins/statistics.koplugin/main.lua:1654
@@ -247,6 +248,7 @@ msgstr "输入文件名"
 #: plugins/calibre.koplugin/wireless.lua:521
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:801
 #: plugins/coverimage.koplugin/main.lua:381
+#: plugins/exporter.koplugin/main.lua:419
 #: plugins/exporter.koplugin/target/joplin.lua:189
 #: plugins/exporter.koplugin/target/joplin.lua:228
 #: plugins/exporter.koplugin/target/nextcloud.lua:67
@@ -323,7 +325,8 @@ msgstr "选择"
 #: frontend/apps/cloudstorage/ftp.lua:140
 #: frontend/apps/cloudstorage/webdav.lua:141
 #: frontend/apps/reader/modules/readerfooter.lua:690
-#: frontend/ui/screensaver.lua:225 plugins/vocabbuilder.koplugin/main.lua:1591
+#: frontend/ui/screensaver.lua:225 plugins/exporter.koplugin/main.lua:406
+#: plugins/vocabbuilder.koplugin/main.lua:1591
 #: plugins/wallabag.koplugin/main.lua:520
 #: plugins/wallabag.koplugin/main.lua:1482
 msgid "Info"
@@ -875,7 +878,7 @@ msgid "Copy"
 msgstr "复制"
 
 #: frontend/apps/filemanager/filemanager.lua:581
-#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:283
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:315
 msgid "Export highlights"
 msgstr "导出标注"
 
@@ -2273,6 +2276,7 @@ msgstr "文件管理器菜单"
 #: frontend/ui/elements/page_turns.lua:9
 #: plugins/autowarmth.koplugin/main.lua:879
 #: plugins/coverimage.koplugin/main.lua:588
+#: plugins/exporter.koplugin/main.lua:410
 #: plugins/terminal.koplugin/main.lua:656
 msgid "Default"
 msgstr "默认"
@@ -2358,7 +2362,7 @@ msgstr "是否设置所选择的文档状态？"
 #: plugins/autowarmth.koplugin/main.lua:872
 #: plugins/autowarmth.koplugin/main.lua:1043
 #: plugins/coverimage.koplugin/main.lua:440
-#: plugins/kosync.koplugin/main.lua:254
+#: plugins/exporter.koplugin/main.lua:426 plugins/kosync.koplugin/main.lua:254
 #: plugins/statistics.koplugin/main.lua:1151
 msgid "Set"
 msgstr "设置"
@@ -2585,7 +2589,7 @@ msgid "date, reverse"
 msgstr "日期，逆序"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:653
-#: plugins/exporter.koplugin/clip.lua:263
+#: plugins/exporter.koplugin/clip.lua:256
 msgid "Page %1 %2 @ %3"
 msgstr "页码 %1 %2 @ %3"
 
@@ -12238,7 +12242,7 @@ msgid "Share storage via USB?"
 msgstr "要启动 USB 存储设备功能吗？"
 
 #: frontend/ui/elements/mass_storage.lua:68
-#: plugins/exporter.koplugin/base.lua:167
+#: plugins/exporter.koplugin/base.lua:146
 msgid "Share"
 msgstr "启动"
 
@@ -17733,66 +17737,87 @@ msgstr "默认值为空"
 msgid "Exports highlights and notes."
 msgstr "导出标注和笔记。"
 
-#: plugins/exporter.koplugin/clip.lua:124
+#: plugins/exporter.koplugin/clip.lua:117
 msgid "Unknown Book"
 msgstr "未知书籍"
 
-#: plugins/exporter.koplugin/clip.lua:125
+#: plugins/exporter.koplugin/clip.lua:118
 #: plugins/opds.koplugin/opdsbrowser.lua:674
 msgid "Unknown Author"
 msgstr "未知作者"
 
-#: plugins/exporter.koplugin/main.lua:118
-#: plugins/exporter.koplugin/main.lua:286
+#: plugins/exporter.koplugin/main.lua:124
+#: plugins/exporter.koplugin/main.lua:318
 msgid "Export all notes in current book"
 msgstr "导出本书所有笔记"
 
-#: plugins/exporter.koplugin/main.lua:120
-#: plugins/exporter.koplugin/main.lua:295
+#: plugins/exporter.koplugin/main.lua:126
+#: plugins/exporter.koplugin/main.lua:327
 msgid "Export all notes in all books in history"
 msgstr "导出历史中所有书籍中的所有笔记"
 
-#: plugins/exporter.koplugin/main.lua:209
+#: plugins/exporter.koplugin/main.lua:210
+#, fuzzy
+msgid "No highlights to export"
+msgstr "高亮文本"
+
+#: plugins/exporter.koplugin/main.lua:242
 msgid "%1: Exported successfully."
 msgstr "%1：成功导出。"
 
-#: plugins/exporter.koplugin/main.lua:211
+#: plugins/exporter.koplugin/main.lua:244
 msgid "%1: Exported to %2."
 msgstr "%1：导出至%2。"
 
-#: plugins/exporter.koplugin/main.lua:214
+#: plugins/exporter.koplugin/main.lua:247
 msgid "%1: Failed to export."
 msgstr "%1：导出失败。"
 
-#: plugins/exporter.koplugin/main.lua:226
+#: plugins/exporter.koplugin/main.lua:258
 msgid "Exporting may take several seconds…"
 msgstr "导出大约需要几秒钟……"
 
-#: plugins/exporter.koplugin/main.lua:244
+#: plugins/exporter.koplugin/main.lua:276
 msgid "Share as %1"
 msgstr "共享为 %1"
 
-#: plugins/exporter.koplugin/main.lua:305
+#: plugins/exporter.koplugin/main.lua:337
 msgid "Choose formats and services"
 msgstr "选择格式和服务"
 
-#: plugins/exporter.koplugin/main.lua:309
+#: plugins/exporter.koplugin/main.lua:341
 msgid "Choose highlight styles"
 msgstr "选择标注样式"
 
-#: plugins/exporter.koplugin/main.lua:314
+#: plugins/exporter.koplugin/main.lua:346
+#: plugins/exporter.koplugin/main.lua:390
+#, fuzzy
+msgid "Set export filename"
+msgstr "设置文件名"
+
+#: plugins/exporter.koplugin/main.lua:353
 msgid "Choose export folder"
 msgstr "选择导出文件夹"
 
-#: plugins/exporter.koplugin/main.lua:321
+#: plugins/exporter.koplugin/main.lua:360
 msgid "Use book folder for single export"
 msgstr "使用图书文件夹进行单次导出"
 
-#: plugins/exporter.koplugin/main.lua:336
+#: plugins/exporter.koplugin/main.lua:375
 msgid "Share all notes in this book"
 msgstr "分享此书籍中的所有笔记"
 
-#: plugins/exporter.koplugin/main.lua:349
+#: plugins/exporter.koplugin/main.lua:395
+#, fuzzy
+msgid "Single book"
+msgstr "过滤书籍"
+
+#: plugins/exporter.koplugin/main.lua:400
+#, fuzzy
+msgid "Multiple books"
+msgstr "统计所有书籍"
+
+#: plugins/exporter.koplugin/main.lua:448
 msgid "Current export folder:"
 msgstr "当前导出文件夹："
 

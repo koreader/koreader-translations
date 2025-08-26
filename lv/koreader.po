@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-23 21:35+0000\n"
+"POT-Creation-Date: 2025-08-26 06:44+0000\n"
 "PO-Revision-Date: 2023-04-24 07:37+0000\n"
 "Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
 "Language-Team: Latvian <https://hosted.weblate.org/projects/koreader/"
@@ -128,6 +128,7 @@ msgstr "Lejupielādēju…"
 #: frontend/ui/widget/bookstatuswidget.lua:124
 #: frontend/ui/widget/notification.lua:58
 #: plugins/batterystat.koplugin/main.lua:76
+#: plugins/exporter.koplugin/clip.lua:67
 #: plugins/exporter.koplugin/template/md.lua:42
 #: plugins/statistics.koplugin/main.lua:1635
 #: plugins/statistics.koplugin/main.lua:1654
@@ -233,6 +234,7 @@ msgstr "Ievadiet faila nosaukumu"
 #: plugins/calibre.koplugin/wireless.lua:521
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:801
 #: plugins/coverimage.koplugin/main.lua:381
+#: plugins/exporter.koplugin/main.lua:419
 #: plugins/exporter.koplugin/target/joplin.lua:189
 #: plugins/exporter.koplugin/target/joplin.lua:228
 #: plugins/exporter.koplugin/target/nextcloud.lua:67
@@ -309,7 +311,8 @@ msgstr "Izvēlieties"
 #: frontend/apps/cloudstorage/ftp.lua:140
 #: frontend/apps/cloudstorage/webdav.lua:141
 #: frontend/apps/reader/modules/readerfooter.lua:690
-#: frontend/ui/screensaver.lua:225 plugins/vocabbuilder.koplugin/main.lua:1591
+#: frontend/ui/screensaver.lua:225 plugins/exporter.koplugin/main.lua:406
+#: plugins/vocabbuilder.koplugin/main.lua:1591
 #: plugins/wallabag.koplugin/main.lua:520
 #: plugins/wallabag.koplugin/main.lua:1482
 msgid "Info"
@@ -870,7 +873,7 @@ msgid "Copy"
 msgstr "Kopēt"
 
 #: frontend/apps/filemanager/filemanager.lua:581
-#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:283
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:315
 msgid "Export highlights"
 msgstr "Eksportēt izcēlumus"
 
@@ -2360,6 +2363,7 @@ msgstr "Failu pārvaldnieka izvēlne"
 #: frontend/ui/elements/page_turns.lua:9
 #: plugins/autowarmth.koplugin/main.lua:879
 #: plugins/coverimage.koplugin/main.lua:588
+#: plugins/exporter.koplugin/main.lua:410
 #: plugins/terminal.koplugin/main.lua:656
 msgid "Default"
 msgstr "Noklusējums"
@@ -2455,7 +2459,7 @@ msgstr ""
 #: plugins/autowarmth.koplugin/main.lua:872
 #: plugins/autowarmth.koplugin/main.lua:1043
 #: plugins/coverimage.koplugin/main.lua:440
-#: plugins/kosync.koplugin/main.lua:254
+#: plugins/exporter.koplugin/main.lua:426 plugins/kosync.koplugin/main.lua:254
 #: plugins/statistics.koplugin/main.lua:1151
 msgid "Set"
 msgstr "Uzstādīt"
@@ -2703,7 +2707,7 @@ msgid "date, reverse"
 msgstr "Atjauninājumu serveris"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:653
-#: plugins/exporter.koplugin/clip.lua:263
+#: plugins/exporter.koplugin/clip.lua:256
 msgid "Page %1 %2 @ %3"
 msgstr "Lapa %1 %2 @ %3"
 
@@ -12773,7 +12777,7 @@ msgid "Share storage via USB?"
 msgstr "Dalīties ar krātuvi caur USB?"
 
 #: frontend/ui/elements/mass_storage.lua:68
-#: plugins/exporter.koplugin/base.lua:167
+#: plugins/exporter.koplugin/base.lua:146
 msgid "Share"
 msgstr "Dalīties"
 
@@ -18253,78 +18257,99 @@ msgstr "Noklusējuma iestatījumi tukši"
 msgid "Exports highlights and notes."
 msgstr "Eksportē izcēlumus un piezīmes."
 
-#: plugins/exporter.koplugin/clip.lua:124
+#: plugins/exporter.koplugin/clip.lua:117
 #, fuzzy
 msgid "Unknown Book"
 msgstr "Nezināms priekšmets"
 
-#: plugins/exporter.koplugin/clip.lua:125
+#: plugins/exporter.koplugin/clip.lua:118
 #: plugins/opds.koplugin/opdsbrowser.lua:674
 #, fuzzy
 msgid "Unknown Author"
 msgstr "Nezināms priekšmets"
 
-#: plugins/exporter.koplugin/main.lua:118
-#: plugins/exporter.koplugin/main.lua:286
+#: plugins/exporter.koplugin/main.lua:124
+#: plugins/exporter.koplugin/main.lua:318
 #, fuzzy
 msgid "Export all notes in current book"
 msgstr "Eksportēt grāmatas visas piezīmes"
 
-#: plugins/exporter.koplugin/main.lua:120
-#: plugins/exporter.koplugin/main.lua:295
+#: plugins/exporter.koplugin/main.lua:126
+#: plugins/exporter.koplugin/main.lua:327
 #, fuzzy
 msgid "Export all notes in all books in history"
 msgstr "Eksportēt grāmatas visas piezīmes"
 
-#: plugins/exporter.koplugin/main.lua:209
+#: plugins/exporter.koplugin/main.lua:210
+#, fuzzy
+msgid "No highlights to export"
+msgstr "Iezīmēti"
+
+#: plugins/exporter.koplugin/main.lua:242
 #, fuzzy
 msgid "%1: Exported successfully."
 msgstr "Neviens ekstrakēts."
 
-#: plugins/exporter.koplugin/main.lua:211
+#: plugins/exporter.koplugin/main.lua:244
 #, fuzzy
 msgid "%1: Exported to %2."
 msgstr "Eksportēt uz Joplin"
 
-#: plugins/exporter.koplugin/main.lua:214
+#: plugins/exporter.koplugin/main.lua:247
 #, fuzzy
 msgid "%1: Failed to export."
 msgstr "Neizdevās izdzēst failu: %1"
 
-#: plugins/exporter.koplugin/main.lua:226
+#: plugins/exporter.koplugin/main.lua:258
 msgid "Exporting may take several seconds…"
 msgstr "Eksportēšana var aizņemt pāris sekundes…"
 
-#: plugins/exporter.koplugin/main.lua:244
+#: plugins/exporter.koplugin/main.lua:276
 #, fuzzy
 msgid "Share as %1"
 msgstr "Dalīties"
 
-#: plugins/exporter.koplugin/main.lua:305
+#: plugins/exporter.koplugin/main.lua:337
 #, fuzzy
 msgid "Choose formats and services"
 msgstr "Izvēlieties ierīces mapi"
 
-#: plugins/exporter.koplugin/main.lua:309
+#: plugins/exporter.koplugin/main.lua:341
 #, fuzzy
 msgid "Choose highlight styles"
 msgstr "Ciklot izcelšanas stilu"
 
-#: plugins/exporter.koplugin/main.lua:314
+#: plugins/exporter.koplugin/main.lua:346
+#: plugins/exporter.koplugin/main.lua:390
+#, fuzzy
+msgid "Set export filename"
+msgstr "Iestatīt faila nosaukumu"
+
+#: plugins/exporter.koplugin/main.lua:353
 #, fuzzy
 msgid "Choose export folder"
 msgstr "Izvēlieties ierīces mapi"
 
-#: plugins/exporter.koplugin/main.lua:321
+#: plugins/exporter.koplugin/main.lua:360
 msgid "Use book folder for single export"
 msgstr ""
 
-#: plugins/exporter.koplugin/main.lua:336
+#: plugins/exporter.koplugin/main.lua:375
 #, fuzzy
 msgid "Share all notes in this book"
 msgstr "Eksportēt grāmatas visas piezīmes"
 
-#: plugins/exporter.koplugin/main.lua:349
+#: plugins/exporter.koplugin/main.lua:395
+#, fuzzy
+msgid "Single book"
+msgstr "Pārslēgt grāmatzīmes"
+
+#: plugins/exporter.koplugin/main.lua:400
+#, fuzzy
+msgid "Multiple books"
+msgstr "Visas grāmatas"
+
+#: plugins/exporter.koplugin/main.lua:448
 #, fuzzy
 msgid "Current export folder:"
 msgstr "Konkrētā mape"

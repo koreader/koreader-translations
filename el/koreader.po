@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-23 21:35+0000\n"
+"POT-Creation-Date: 2025-08-26 06:44+0000\n"
 "PO-Revision-Date: 2025-08-24 23:01+0000\n"
 "Last-Translator: Ichnilatis <sophronios.sp@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -138,6 +138,7 @@ msgstr "Γίνεται λήψη…"
 #: frontend/ui/widget/bookstatuswidget.lua:124
 #: frontend/ui/widget/notification.lua:58
 #: plugins/batterystat.koplugin/main.lua:76
+#: plugins/exporter.koplugin/clip.lua:67
 #: plugins/exporter.koplugin/template/md.lua:42
 #: plugins/statistics.koplugin/main.lua:1635
 #: plugins/statistics.koplugin/main.lua:1654
@@ -245,6 +246,7 @@ msgstr "Εισαγάγετε το όνομα του αρχείου"
 #: plugins/calibre.koplugin/wireless.lua:521
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:801
 #: plugins/coverimage.koplugin/main.lua:381
+#: plugins/exporter.koplugin/main.lua:419
 #: plugins/exporter.koplugin/target/joplin.lua:189
 #: plugins/exporter.koplugin/target/joplin.lua:228
 #: plugins/exporter.koplugin/target/nextcloud.lua:67
@@ -321,7 +323,8 @@ msgstr "Επιλογή"
 #: frontend/apps/cloudstorage/ftp.lua:140
 #: frontend/apps/cloudstorage/webdav.lua:141
 #: frontend/apps/reader/modules/readerfooter.lua:690
-#: frontend/ui/screensaver.lua:225 plugins/vocabbuilder.koplugin/main.lua:1591
+#: frontend/ui/screensaver.lua:225 plugins/exporter.koplugin/main.lua:406
+#: plugins/vocabbuilder.koplugin/main.lua:1591
 #: plugins/wallabag.koplugin/main.lua:520
 #: plugins/wallabag.koplugin/main.lua:1482
 msgid "Info"
@@ -882,7 +885,7 @@ msgid "Copy"
 msgstr "Αντιγραφή"
 
 #: frontend/apps/filemanager/filemanager.lua:581
-#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:283
+#: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:315
 msgid "Export highlights"
 msgstr "Εξαγωγή επισημάνσεων"
 
@@ -2302,6 +2305,7 @@ msgstr "Μενού Διαχειριστή αρχείων"
 #: frontend/ui/elements/page_turns.lua:9
 #: plugins/autowarmth.koplugin/main.lua:879
 #: plugins/coverimage.koplugin/main.lua:588
+#: plugins/exporter.koplugin/main.lua:410
 #: plugins/terminal.koplugin/main.lua:656
 msgid "Default"
 msgstr "Προεπιλογή"
@@ -2391,7 +2395,7 @@ msgstr "Ορισμός κατάστασης επιλεγμένων εγγράφ�
 #: plugins/autowarmth.koplugin/main.lua:872
 #: plugins/autowarmth.koplugin/main.lua:1043
 #: plugins/coverimage.koplugin/main.lua:440
-#: plugins/kosync.koplugin/main.lua:254
+#: plugins/exporter.koplugin/main.lua:426 plugins/kosync.koplugin/main.lua:254
 #: plugins/statistics.koplugin/main.lua:1151
 msgid "Set"
 msgstr "Ορισμός"
@@ -2622,7 +2626,7 @@ msgid "date, reverse"
 msgstr "ημερομηνία, αντίστροφα"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:653
-#: plugins/exporter.koplugin/clip.lua:263
+#: plugins/exporter.koplugin/clip.lua:256
 msgid "Page %1 %2 @ %3"
 msgstr "Σελίδα %1 %2 @ %3"
 
@@ -6122,9 +6126,9 @@ msgstr ""
 "χαρακτηριστικά CSS που μπορεί να είναι χρήσιμα με τα ηλεκτρονικά βιβλία.\n"
 "\n"
 "Τα περισσότερα από αυτά τα κομμάτια χρησιμοποιούνται ήδη από τις "
-"κατηγοριοποιημένες «Τροποποιήσεις των στυλ» (που βρίσκονται στο επάνω μενού)"
-". Πατήστε παρατεταμένα σε οποιαδήποτε επιλογή τροποποίησης στυλ για να δείτε "
-"τον κώδικά της και τα αναμενόμενα αποτελέσματά της. Εάν αυτά δεν είναι "
+"κατηγοριοποιημένες «Τροποποιήσεις των στυλ» (που βρίσκονται στο επάνω "
+"μενού). Πατήστε παρατεταμένα σε οποιαδήποτε επιλογή τροποποίησης στυλ για να "
+"δείτε τον κώδικά της και τα αναμενόμενα αποτελέσματά της. Εάν αυτά δεν είναι "
 "αρκετά για να επιτύχετε την επιθυμητή εμφάνιση, ίσως χρειαστεί να τα "
 "προσαρμόσετε ελαφρώς: πατήστε μία φορά στο πλαίσιο κώδικα CSS για να "
 "αντιγράψετε τον κώδικα στο πρόχειρο, να τον επικολλήσετε εδώ και να τον "
@@ -12882,7 +12886,7 @@ msgid "Share storage via USB?"
 msgstr "Κοινή χρήση αποθηκευτικού χώρου μέσω USB;"
 
 #: frontend/ui/elements/mass_storage.lua:68
-#: plugins/exporter.koplugin/base.lua:167
+#: plugins/exporter.koplugin/base.lua:146
 msgid "Share"
 msgstr "Κοινή χρήση"
 
@@ -18687,66 +18691,87 @@ msgstr "Κενές προεπιλογές"
 msgid "Exports highlights and notes."
 msgstr "Εξάγει επισημάνσεις και σημειώσεις."
 
-#: plugins/exporter.koplugin/clip.lua:124
+#: plugins/exporter.koplugin/clip.lua:117
 msgid "Unknown Book"
 msgstr "Άγνωστο Βιβλίο"
 
-#: plugins/exporter.koplugin/clip.lua:125
+#: plugins/exporter.koplugin/clip.lua:118
 #: plugins/opds.koplugin/opdsbrowser.lua:674
 msgid "Unknown Author"
 msgstr "Άγνωστος Συγγραφέας"
 
-#: plugins/exporter.koplugin/main.lua:118
-#: plugins/exporter.koplugin/main.lua:286
+#: plugins/exporter.koplugin/main.lua:124
+#: plugins/exporter.koplugin/main.lua:318
 msgid "Export all notes in current book"
 msgstr "Εξαγωγή όλων των σημειώσεων του τρέχοντος βιβλίου"
 
-#: plugins/exporter.koplugin/main.lua:120
-#: plugins/exporter.koplugin/main.lua:295
+#: plugins/exporter.koplugin/main.lua:126
+#: plugins/exporter.koplugin/main.lua:327
 msgid "Export all notes in all books in history"
 msgstr "Εξαγωγή όλων των σημειώσεων από όλα τα βιβλία του ιστορικού"
 
-#: plugins/exporter.koplugin/main.lua:209
+#: plugins/exporter.koplugin/main.lua:210
+#, fuzzy
+msgid "No highlights to export"
+msgstr "επισημασμένο κείμενο"
+
+#: plugins/exporter.koplugin/main.lua:242
 msgid "%1: Exported successfully."
 msgstr "%1: Εξήχθη με επιτυχία."
 
-#: plugins/exporter.koplugin/main.lua:211
+#: plugins/exporter.koplugin/main.lua:244
 msgid "%1: Exported to %2."
 msgstr "%1: Εξήχθη στο %2."
 
-#: plugins/exporter.koplugin/main.lua:214
+#: plugins/exporter.koplugin/main.lua:247
 msgid "%1: Failed to export."
 msgstr "%1: Απέτυχε η εξαγωγή."
 
-#: plugins/exporter.koplugin/main.lua:226
+#: plugins/exporter.koplugin/main.lua:258
 msgid "Exporting may take several seconds…"
 msgstr "Εξαγωγή, μπορεί να διαρκέσει μερικά δευτερόλεπτα…"
 
-#: plugins/exporter.koplugin/main.lua:244
+#: plugins/exporter.koplugin/main.lua:276
 msgid "Share as %1"
 msgstr "Κοινή χρήση ως %1"
 
-#: plugins/exporter.koplugin/main.lua:305
+#: plugins/exporter.koplugin/main.lua:337
 msgid "Choose formats and services"
 msgstr "Επιλογή μορφών και υπηρεσιών"
 
-#: plugins/exporter.koplugin/main.lua:309
+#: plugins/exporter.koplugin/main.lua:341
 msgid "Choose highlight styles"
 msgstr "Επιλογή στυλ επισήμανσης"
 
-#: plugins/exporter.koplugin/main.lua:314
+#: plugins/exporter.koplugin/main.lua:346
+#: plugins/exporter.koplugin/main.lua:390
+#, fuzzy
+msgid "Set export filename"
+msgstr "Ορισμός ονόματος αρχείου"
+
+#: plugins/exporter.koplugin/main.lua:353
 msgid "Choose export folder"
 msgstr "Επιλογή φακέλου εξαγωγής"
 
-#: plugins/exporter.koplugin/main.lua:321
+#: plugins/exporter.koplugin/main.lua:360
 msgid "Use book folder for single export"
 msgstr "Χρήση φακέλου βιβλίου για μεμονωμένη εξαγωγή"
 
-#: plugins/exporter.koplugin/main.lua:336
+#: plugins/exporter.koplugin/main.lua:375
 msgid "Share all notes in this book"
 msgstr "Κοινή χρήση όλων των σημειώσεων σε αυτό το βιβλίο"
 
-#: plugins/exporter.koplugin/main.lua:349
+#: plugins/exporter.koplugin/main.lua:395
+#, fuzzy
+msgid "Single book"
+msgstr "Φιλτράρισμα βιβλίων"
+
+#: plugins/exporter.koplugin/main.lua:400
+#, fuzzy
+msgid "Multiple books"
+msgstr "Όλα τα βιβλία"
+
+#: plugins/exporter.koplugin/main.lua:448
 msgid "Current export folder:"
 msgstr "Τρέχων φάκελος εξαγωγής:"
 
