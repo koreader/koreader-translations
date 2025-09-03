@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-03 05:30+0000\n"
-"PO-Revision-Date: 2025-09-03 03:46+0000\n"
+"PO-Revision-Date: 2025-09-04 07:02+0000\n"
 "Last-Translator: \"Shelly Chen (星寂)\" <alonstar@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/koreader/koreader/zh_Hant/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.13.1-dev\n"
+"X-Generator: Weblate 5.13.1-rc\n"
 
 #: reader.lua:194
 msgid ""
@@ -3140,7 +3140,7 @@ msgstr "字典檔容量是 %1 (%2 bytes). 要繼續下載嗎？"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1375
 msgid "Failed to fetch dictionary. Are you online?"
-msgstr "無法取得字典，請確認網路連線狀態。"
+msgstr "無法取得字典，請確認您的連線狀態？"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1401
 msgid "Could not save file to:\n"
@@ -4789,14 +4789,14 @@ msgid ""
 msgstr ""
 "未偵測到 OCR 結果或語言資料。\n"
 "\n"
-"KOReader 內建 OCR 引擎，可辨識掃描 PDF 與 DjVu 文件中的文字。若要在掃描頁面中"
-"使用 OCR，請安裝對應語言的 Tesseract 語言資料。\n"
+"KOReader 內建 OCR 引擎，可辨識掃描 PDF 與 DjVu 文件中的文字。"
+"若要在掃描頁面中使用 OCR，請安裝對應語言的 Tesseract 語言資料。\n"
 "\n"
 "你可以從 https://tesseract-ocr.github.io/tessdoc/Data-Files 下載 Tesseract "
 "5.3.4 的語言資料檔案。\n"
 "\n"
-"請將語言資料檔（例如英文的 eng.traineddata、西班牙文的 spa.traineddata）複製"
-"到 koreader/data/tessdata 資料夾中。"
+"請將語言資料檔（例如英文的 eng.traineddata、西班牙文的 spa.traineddata）"
+"複製到 koreader/data/tessdata 資料夾中"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:2129
 msgid "Default highlight action changed to '%1'."
@@ -5131,7 +5131,7 @@ msgstr "是否將目前文件設定存為預設值？"
 
 #: frontend/apps/reader/modules/readermenu.lua:225
 msgid "Default settings updated"
-msgstr "已儲存為預設設定。"
+msgstr "已儲存為預設設定"
 
 #: frontend/apps/reader/modules/readermenu.lua:239
 #: frontend/ui/elements/page_turns.lua:156
@@ -5918,6 +5918,17 @@ msgid ""
 "Tap on the item to insert it: you can then edit it and combine it with "
 "others."
 msgstr ""
+"此選單提供一份非完整的 CSS 語法與屬性列表。 它也展示了一些 KOReader "
+"特有的非標準 CSS 功能，這些功能在電子書中可能相當有用。\n"
+"\n"
+"這些項目大多已被分類至「樣式微調」中（可在頂部選單找到）。 "
+"長按任一樣式微調選項可查看其程式碼與預期效果。 "
+"若這些選項無法完全達成你想要的外觀，你可以稍作調整： 點一下 CSS "
+"程式碼框即可複製程式碼到剪貼簿，然後貼到此處進行編輯。\n"
+"\n"
+"長按此彈出視窗中的任一項目，可獲得更多關於其功能與用途的資訊。\n"
+"\n"
+"點一下項目即可插入：你可以編輯它，並與其他項目組合使用。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:804
 msgid "Matching elements"
@@ -5931,6 +5942,11 @@ msgid ""
 "\n"
 "p:not([class]) matches a <p> without any class= attribute."
 msgstr ""
+"p.className 會匹配具有 class='className' 的 <p> 元素。\n"
+"\n"
+"*.className 會匹配任何具有 class='className' 的元素。\n"
+"\n"
+"p:not([class]) 會匹配沒有任何 class= 屬性的 <p> 元素。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:811
 msgid ""
@@ -5939,6 +5955,9 @@ msgid ""
 "aside p (without any intermediate symbol) matches a <p> descendant of an "
 "<aside> element."
 msgstr ""
+"aside > p 會匹配屬於 <aside> 元素的子元素的 <p>。\n"
+"\n"
+"aside p（中間沒有任何符號）會匹配屬於 <aside> 元素的任意後代元素的 <p>。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:815
 msgid ""
@@ -5946,6 +5965,9 @@ msgid ""
 "\n"
 "p ~ img matches a <img> if any of its previous siblings is a <p>."
 msgstr ""
+"p + img 會匹配 <img> 元素，條件是它的前一個相鄰兄弟元素是 <p>。\n"
+"\n"
+"p ~ img 會匹配 <img> 元素，條件是它的任一前方兄弟元素是 <p>。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:820
 msgid ""
@@ -5957,6 +5979,12 @@ msgid ""
 "[name~=\"what\"] matches if the value of the attribute 'name' contains "
 "'what' as a word (among other words separated by spaces)."
 msgstr ""
+"[name=\"what\"] 會匹配具有 name 屬性，且其值正好為 \"what\" 的元素。\n"
+"\n"
+"[name] 會匹配具有 name 屬性的元素（不論其值為何）。\n"
+"\n"
+"[name~=\"what\"] 會匹配 name 屬性值中包含 \"what\" "
+"這個詞的元素（詞與詞之間以空格分隔）。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:827
 msgid ""
@@ -5967,6 +5995,12 @@ msgid ""
 "\n"
 "[name$=\"what\"] matches if the attribute value ends with 'what'."
 msgstr ""
+"[name=\"what\"] 會匹配具有 name 屬性，且其值正好為 \"what\" 的元素。\n"
+"\n"
+"[name] 會匹配具有 name 屬性的元素（不論其值為何）。\n"
+"\n"
+"[name~=\"what\"] 會匹配 name 屬性值中包含 \"what\" "
+"這個詞的元素（詞與詞之間以空格分隔）。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:834
 msgid ""
@@ -5981,6 +6015,15 @@ msgid ""
 "\n"
 "p[_~=\"what\"] matches any <p> that contains the word 'what'."
 msgstr ""
+"語法類似屬性匹配，但用於匹配元素的內部文字。\n"
+"\n"
+"p[_=\"what\"] 會匹配文字內容正好為 \"what\" 的 <p> 元素。\n"
+"\n"
+"p[_] 會匹配任何非空的 <p> 元素。\n"
+"\n"
+"p:not([_]) 會匹配任何空的 <p> 元素。\n"
+"\n"
+"p[_~=\"what\"] 會匹配任何包含 \"what\" 這個詞的 <p> 元素。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:845
 msgid ""
@@ -5995,6 +6038,14 @@ msgid ""
 "\n"
 "p[_$=\"what\"] matches any <p> whose text ends with 'what'."
 msgstr ""
+"語法上與屬性匹配類似，但匹配的是元素的內部文字。\n"
+"\n"
+"p[_*=\"what\" i] 會匹配任何包含 \"what\" 的 <p> 元素，且不區分大小寫。\n"
+"\n"
+"p[_^=\"what\"] 會匹配文字開頭為 \"what\" 的 <p> 元素。 \n"
+"（這可用來匹配「Act」、「Scene」或劇本中的角色名稱，讓它們更醒目。）\n"
+"\n"
+"p[_$=\"what\"] 會匹配文字結尾為 \"what\" 的 <p> 元素。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:855
 msgid ""
@@ -6004,6 +6055,11 @@ msgid ""
 "\n"
 "p:nth-child(odd) matches any other <p> in a series of sibling <p>."
 msgstr ""
+"p:first-child 會匹配作為其父元素第一個子元素的 <p>。\n"
+"\n"
+"p:last-child 會匹配作為其父元素最後一個子元素的 <p>。\n"
+"\n"
+"p:nth-child(odd) 會匹配在一系列兄弟 <p> 中的奇數位置 <p> 元素。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:862
 msgid ""
@@ -6013,6 +6069,10 @@ msgid ""
 "matching the element: tap on one of them to copy it to the clipboard.\n"
 "You can then paste it here with long-press in the text box."
 msgstr ""
+"在書頁中，選取一些文字，範圍涵蓋你感興趣的元素前後，然後使用「檢視 HTML」。\n"
+"在 HTML 檢視器中，長按標籤或文字即可取得符合該元素的選擇器列表： "
+"點一下其中一個選擇器即可將其複製到剪貼簿。\n"
+"接著你可以在文字框中長按貼上。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:869
 msgid "Common classic properties"
@@ -6020,37 +6080,39 @@ msgstr "常用經典屬性"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:870
 msgid "1rem will enforce your main font size."
-msgstr ""
+msgstr "1rem 會強制使用你的主字型大小。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:871
 msgid "Remove bold. Use 'bold' to get bold."
-msgstr ""
+msgstr "移除粗體。使用 'bold' 可套用粗體。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:872
 msgid "Disables hyphenation inside the targeted elements."
-msgstr ""
+msgstr "停用目標元素中的斷字功能。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:873
 msgid "1.2em is our default text indentation."
-msgstr ""
+msgstr "1.2em 是我們的預設文字縮排。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:874
 msgid "Start a new page with this element. Use 'avoid' to avoid a new page."
-msgstr ""
+msgstr "使用此元素可開始新頁面。 使用 'avoid' 可避免換頁。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:875
 msgid "Force text to be black."
-msgstr ""
+msgstr "強制文字為黑色。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:876
 msgid "Remove any background color."
-msgstr "移除所有背景顏色。"
+msgstr "移除所有的背景顏色。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:877
 msgid ""
 "Limit an element width to 50% of your screen width (use 'max-height: 50vh' "
 "for 50% of the screen height). Can be useful with <img> to limit their size."
 msgstr ""
+"將元素寬度限制為螢幕寬度的 50%（若要限制高度為螢幕高度的 50%，請使用 'max-"
+"height: 50vh'）。 這對限制 <img> 圖片大小特別有用。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:880
 msgid "Private CSS properties"
@@ -6060,7 +6122,7 @@ msgstr "私有 CSS 屬性"
 msgid ""
 "When set on a block element containing the target id of a href, this block "
 "element will be shown as an in-page footnote."
-msgstr ""
+msgstr "當設定於包含目標 a href 的區塊元素時，該區塊元素將顯示為頁面內註解。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:882
 msgid ""
@@ -6069,30 +6131,35 @@ msgid ""
 "the previous element. Can be chained across multiple elements following an "
 "in-page footnote."
 msgstr ""
+"當設定於緊接在標記為 footnote-inpage 的區塊元素之後的區塊元素時， "
+"該區塊將顯示為與前一元素相同的頁面內註解的一部分。可連續套用於多個緊跟在頁面"
+"內註解之後的元素。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:883
 msgid ""
 "Can be set on some specific DocFragments (e.g. DocFragment[id$=_16]) to "
 "ignore them in the linear pages flow."
-msgstr ""
+msgstr "可設定於某些特定的 DocFragment（例如 DocFragment[id$=_16]）， "
+"以在頁面線性流程中忽略它們。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:884
 msgid ""
 "Can be set on contiguous footnote blocks to ignore them in the linear pages "
 "flow."
-msgstr ""
+msgstr "可設定於連續的註解區塊上， 以在頁面線性流程中忽略它們。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:885
 msgid ""
 "When set on an element, its text can be used to build the alternative table "
 "of contents. toc-level2 to toc-level6 can be used for nested chapters."
-msgstr ""
+msgstr "當設定於某個元素時，其文字可用來建立替代目錄。 可使用 toc-level2 到 toc-"
+"level6 來表示巢狀章節。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:886
 msgid ""
 "When set on an element, it will be ignored when building the alternative "
 "table of contents."
-msgstr ""
+msgstr "當設定於某個元素時，該元素在建立替代目錄時將被忽略。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:887
 msgid ""
@@ -6100,12 +6167,16 @@ msgid ""
 "footnote popup, in case KOReader wrongly detect this target is not a "
 "footnote."
 msgstr ""
+"可設定於連結的目標元素（例如 <div id='..'>）， 以便讓該連結觸發註解彈出視窗，"
+" 當 KOReader 錯誤判斷該目標不是註解時特別有用。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:888
 msgid ""
 "Can be set on links (<a href='#..'>) to have them trigger as footnote "
 "popups, in case KOReader wrongly detect the links is not to a footnote."
 msgstr ""
+"可設定於連結元素（例如 <a href='#..'>）， 以便讓該連結觸發註解彈出視窗， 當 "
+"KOReader 錯誤判斷該連結不是指向註解時特別有用。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:889
 msgid ""
@@ -6116,14 +6187,19 @@ msgid ""
 "this with:\n"
 "DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 msgstr ""
+"可設定於連結元素（例如 <a href='#..'>）， "
+"以避免觸發註解彈出視窗與頁面內註解。\n"
+"若某些 DocFragment 呈現的是帶有交叉參照的姓名索引， "
+"導致頁面內註解佔據了半頁版面， 你可以使用以下方式來避免這種情況： \n"
+"DocFragment[id$=_16] a { -cr-hint: noteref-ignore }"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:895
 msgid "Useful 'content:' values"
-msgstr ""
+msgstr "實用的 'content:' 屬性值"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:896
 msgid "Caution ⚠"
-msgstr ""
+msgstr "注意 ⚠"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:896
 msgid ""
@@ -6136,39 +6212,48 @@ msgid ""
 "\n"
 "If used as-is, they will act on ALL elements!"
 msgstr ""
+"使用這些時請小心：請綁定到適當的具辨識性的選擇器，例如：\n"
+"\n"
+"span.specificClassName\n"
+"\n"
+"p[_*=\"keyword\" i]\n"
+"\n"
+"如果直接使用而未加限制，它們將作用於所有元素！"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:904
 msgid "Insert a visible space before an element."
-msgstr ""
+msgstr "在元素前插入一個可見空格。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:905
 msgid ""
 "Insert a visible non-breakable space before an element, so it sticks to "
 "what's before."
-msgstr ""
+msgstr "在元素前插入一個可見的不可斷行空格，使其緊貼前方內容。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:906
 msgid ""
 "U+2060 WORD JOINER may act as a glue (like an invisible non-breakable space) "
 "before an element, so it sticks to what's before."
-msgstr ""
+msgstr "U+2060 WORD JOINER 可作為黏著劑（類似不可斷行的隱形空格）， "
+"插入於元素前方，使其緊貼前方內容。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:907
 msgid ""
 "U+200B ZERO WIDTH SPACE may allow a linebreak before an element, in case the "
 "absence of any space prevents that."
-msgstr ""
+msgstr "U+200B 零寬空格 (ZERO WIDTH SPACE) "
+"可能允許在某個元素之前斷行，以避免因為完全沒有空格而無法換行的情況。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:908
 msgid ""
 "Insert the value of the attribute 'title' at start of an element content."
-msgstr ""
+msgstr "在元素內容開頭插入其屬性 'title' 的值。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:909
 #: frontend/apps/reader/modules/readerstyletweak.lua:910
 #: frontend/apps/reader/modules/readerstyletweak.lua:911
 msgid "Prepend a visible marker."
-msgstr ""
+msgstr "在元素前加上可見標記。"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:920
 msgid "Use sample"
@@ -6264,7 +6349,7 @@ msgstr ""
 #: frontend/apps/reader/modules/readertoc.lua:1115
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
-msgstr ""
+msgstr "若要使用替代目錄，請先停用自訂目錄。"
 
 #: frontend/apps/reader/modules/readertoc.lua:1129
 msgid ""
@@ -6302,7 +6387,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readertoc.lua:1216
 msgid "Bind chapter navigation to ticks"
-msgstr "將章節導航繫結到刻度"
+msgstr "將章節導覽綁定至進度條刻度"
 
 #: frontend/apps/reader/modules/readertoc.lua:1217
 msgid ""
@@ -6311,10 +6396,13 @@ msgid ""
 "footer.\n"
 "Enabling this option will restrict chapter navigation to progress bar ticks."
 msgstr ""
+"進度條中被忽略的目錄層級項目， "
+"仍會用於章節導覽與頁尾的「距離下一章的頁數／時間」顯示。\n"
+"啟用此選項後，章節導覽將僅依據進度條的刻度進行。"
 
 #: frontend/apps/reader/modules/readertoc.lua:1232
 msgid "Chapter titles from ticks only"
-msgstr "僅來自刻度的章節標題"
+msgstr "僅使用進度條刻度作為章節標題來源"
 
 #: frontend/apps/reader/modules/readertoc.lua:1233
 msgid ""
@@ -6324,6 +6412,9 @@ msgid ""
 "Enabling this option will restrict display to the chapter titles of progress "
 "bar ticks."
 msgstr ""
+"在進度條中被忽略的目錄層級項目， "
+"仍會用於頁尾顯示目前章節標題，以及書籤中的章節名稱。\n"
+"啟用此選項後，顯示將僅限於進度條刻度所對應的章節標題。"
 
 #: frontend/apps/reader/modules/readertoc.lua:1250
 #: frontend/apps/reader/modules/readertoc.lua:1260
@@ -6383,6 +6474,9 @@ msgid ""
 "stylesheet to style everything (which publishers probably don't).\n"
 "This is mostly only interesting for testing."
 msgstr ""
+"這會設定一個空的 User-Agent 樣式表， "
+"並假設文件樣式表會負責所有樣式設定（但出版者通常不會這麼做）。\n"
+"這主要只對測試用途有意義。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:235
 #: plugins/kosync.koplugin/main.lua:113
@@ -6392,12 +6486,11 @@ msgstr "自動"
 #: frontend/apps/reader/modules/readertypeset.lua:237
 msgid ""
 "This selects the default and preferred stylesheet for the document type."
-msgstr ""
+msgstr "這會選取該文件類型的預設與偏好樣式表。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:251
-#, fuzzy
 msgid "Traditional book look (epub.css)"
-msgstr "FictionBook (fb2.css)"
+msgstr "傳統書籍風格（epub.css）"
 
 #: frontend/apps/reader/modules/readertypeset.lua:253
 msgid ""
@@ -6412,11 +6505,17 @@ msgid ""
 "to have our added styles at play and need to reset them; try switching to "
 "html5.css when you notice such issues."
 msgstr ""
+"這是我們模擬書籍風格的樣式表： 它在 HTML 標準樣式表的基礎上擴充， 使 HTML "
+"內容看起來更像紙本書（例如段落左右對齊與縮排）， 而不是像網頁。\n"
+"非常適合未設計樣式的書籍， 也可能讓已有樣式的書籍更易閱讀。\n"
+"不過，它可能會在某些書籍中造成些微問題 "
+"（例如標題、分隔線未置中，或文字縮排異常）， "
+"因為出版者通常不會預期我們額外加入的樣式， "
+"因此需要自行重設。當你發現這類問題時，請嘗試切換至 html5.css。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:263
-#, fuzzy
 msgid "HTML Standard rendering (html5.css)"
-msgstr "HTML5 (html5.css)"
+msgstr "HTML 標準渲染（html5.css）"
 
 #: frontend/apps/reader/modules/readertypeset.lua:265
 msgid ""
@@ -6429,10 +6528,17 @@ msgid ""
 "aligned paragraphs without indentation and with spacing between them); try "
 "switching to epub.css when that happens."
 msgstr ""
+"這份樣式表遵循 HTML 標準的渲染建議（但有些限制）， "
+"類似於大多數網頁瀏覽器所使用的樣式。\n"
+"由於現今多數出版者使用基於瀏覽器引擎的工具來製作與測試書籍， "
+"這是用來呈現書籍原始排版意圖的最佳樣式表。\n"
+"但對於未設計樣式的書籍，它可能會呈現出網頁的外觀 "
+"（例如段落左對齊、無縮排、段落間有間距）； 當出現這種情況時，請嘗試切換至 "
+"epub.css。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:275
 msgid "FictionBook (fb2.css)"
-msgstr "FictionBook (fb2.css)"
+msgstr "FictionBook（fb2.css）"
 
 #: frontend/apps/reader/modules/readertypeset.lua:277
 msgid ""
@@ -6441,16 +6547,20 @@ msgid ""
 "(FictionBook 2 & 3 are open XML-based e-book formats which originated and "
 "gained popularity in Russia.)"
 msgstr ""
+"這份樣式表僅適用於 FB2 與 FB3 文件， 它們並非典型的 HTML 格式， "
+"因此需要特定的樣式處理。\n"
+"（FictionBook 2 與 3 是開放的 XML 電子書格式， 起源並流行於俄羅斯。）"
 
 #: frontend/apps/reader/modules/readertypeset.lua:290
 msgid ""
 "This stylesheet is obsolete: don't use it. It is kept solely to be able to "
 "open documents last read years ago and to migrate their highlights."
-msgstr ""
+msgstr "這份樣式表已經過時：請勿使用。 "
+"保留它的唯一目的，是為了能開啟多年前閱讀過的文件， 並遷移其中的標註內容。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:301
 msgid "This is a user added stylesheet."
-msgstr ""
+msgstr "這是使用者自行新增的樣式表。"
 
 #: frontend/apps/reader/modules/readertypeset.lua:307
 msgid "Obsolete"
@@ -6461,14 +6571,12 @@ msgid "Obsolete (%1)"
 msgstr "過時 (%1)"
 
 #: frontend/apps/reader/modules/readertypeset.lua:325
-#, fuzzy
 msgid "Auto-detect TXT files layout"
-msgstr "自動偵測原文語言"
+msgstr "自動偵測 TXT 檔案的版面配置"
 
 #: frontend/apps/reader/modules/readertypeset.lua:459
-#, fuzzy
 msgid "Set default style for FB2 documents to %1?"
-msgstr "要將預設樣式表設為 %1 嗎？"
+msgstr "將 FB2 文件的預設樣式設為 %1？"
 
 #: frontend/apps/reader/modules/readertypeset.lua:460
 msgid "Set default style to %1?"
@@ -6905,18 +7013,16 @@ msgstr ""
 
 #. @translators to RTL language translators: %1/left is the min length of the start of a hyphenated word, %2/right is the min length of the end of a hyphenated word (note that there is yet no support for hyphenation with RTL languages, so this will mostly apply to LTR documents)
 #: frontend/apps/reader/modules/readertypography.lua:356
-#, fuzzy
 msgid "Left/right minimal sizes: %1 / %2"
-msgstr "左 / 右側最小大小：%1 - %2"
+msgstr "左右最小尺寸：%1 / %2"
 
 #: frontend/apps/reader/modules/readertypography.lua:360
 msgid "Left/right minimal sizes: language defaults"
 msgstr "左 / 右側最小大小：語言預設值"
 
 #: frontend/apps/reader/modules/readertypography.lua:383
-#, fuzzy
 msgid "Language defaults: %1 / %2"
-msgstr "語言預設值"
+msgstr "語言預設值：%1 / %2"
 
 #: frontend/apps/reader/modules/readertypography.lua:384
 msgid "Hyphenation limits"
@@ -7056,7 +7162,6 @@ msgid "Changed language for typography rules to book language: %1."
 msgstr "已變更排版規則使用的語言為書籍語言：%1。"
 
 #: frontend/apps/reader/modules/readeruserhyph.lua:46
-#, fuzzy
 msgid ""
 "The user dictionary\n"
 "%1\n"
@@ -7064,11 +7169,11 @@ msgid ""
 "\n"
 "It will be disabled now."
 msgstr ""
-"使用者字典\n"
-"%1\n"
-"沒有依字母順序排序。\n"
+"使用者字典 \n"
+"%1 \n"
+"未依字母順序排序。\n"
 "\n"
-"已停用該字典。"
+"現在將停用此字典。"
 
 #: frontend/apps/reader/modules/readeruserhyph.lua:56
 msgid ""
@@ -7092,7 +7197,7 @@ msgstr "自訂斷字規則"
 msgid ""
 "The hyphenation of a word can be changed from its default by long pressing "
 "for 3 seconds and selecting 'Hyphenate'."
-msgstr ""
+msgstr "可透過長按 3 秒並選擇「斷字」來變更單字的預設斷字方式。"
 
 #: frontend/apps/reader/modules/readeruserhyph.lua:278
 msgid "Hyphenate: %1"
@@ -7100,7 +7205,7 @@ msgstr "斷字：%1"
 
 #: frontend/apps/reader/modules/readeruserhyph.lua:279
 msgid "Add hyphenation positions with hyphens ('-') or spaces (' ')."
-msgstr ""
+msgstr "使用連字號（'-'）或空格（' '）來新增斷字位置。"
 
 #: frontend/apps/reader/modules/readeruserhyph.lua:316
 msgid "Invalid hyphenation!"
@@ -7125,19 +7230,16 @@ msgstr ""
 "時導致未預期的移位。"
 
 #: frontend/apps/reader/modules/readerview.lua:1107
-#, fuzzy
 msgid "Contrast set to: %1."
-msgstr "字型大小已設定為：%1。"
+msgstr "對比度設定為：%1。"
 
 #: frontend/apps/reader/modules/readerview.lua:1130
-#, fuzzy
 msgid "Hardware dithering set to: %1."
-msgstr "啟用硬體遞色。"
+msgstr "硬體抖動設定為：%1。"
 
 #: frontend/apps/reader/modules/readerview.lua:1135
-#, fuzzy
 msgid "Software dithering set to: %1."
-msgstr "Font hinting 已設為：%1"
+msgstr "軟體抖動設定為：%1。"
 
 #: frontend/apps/reader/modules/readerview.lua:1141
 msgid "Font zoom set to: %1."
@@ -7262,7 +7364,7 @@ msgstr "在目前的書籍資料夾儲存維基百科 EPUB"
 #: frontend/apps/reader/modules/readerwikipedia.lua:228
 #: frontend/apps/reader/modules/readerwikipedia.lua:244
 msgid "ask"
-msgstr ""
+msgstr "未設定"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:230
 #: frontend/ui/elements/common_settings_menu_table.lua:400
@@ -7281,7 +7383,7 @@ msgstr "包含 EPUB 中的圖片：%1"
 #: frontend/apps/reader/modules/readerwikipedia.lua:237
 #: frontend/apps/reader/modules/readerwikipedia.lua:256
 msgid "Ask"
-msgstr ""
+msgstr "依使用者選擇"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:238
 #: plugins/newsdownloader.koplugin/feed_view.lua:106
@@ -7293,18 +7395,16 @@ msgid "Don't include images"
 msgstr "不包含圖片"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:246
-#, fuzzy
 msgid "higher"
-msgstr "高"
+msgstr "較高畫質"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:248
 msgid "standard"
-msgstr ""
+msgstr "標準畫質"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:250
-#, fuzzy
 msgid "Images quality in EPUB: %1"
-msgstr "圖片縮放已設為：%1%"
+msgstr "EPUB 中的圖片品質：%1"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:257
 #: frontend/ui/wikipedia.lua:818
@@ -7369,9 +7469,8 @@ msgid "Failed searching Wikipedia."
 msgstr "搜尋維基百科失敗了。"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:462
-#, fuzzy
 msgid "No introduction."
-msgstr "不旋轉"
+msgstr "無引言。"
 
 #: frontend/apps/reader/modules/readerwikipedia.lua:469
 msgid "(full article : %1 kB, = %2 x this intro length)"
@@ -7532,9 +7631,8 @@ msgid "Input document password"
 msgstr "請輸入文件密碼"
 
 #: frontend/apps/reader/readerui.lua:801
-#, fuzzy
 msgid "Book metadata saved."
-msgstr "自動儲存書籍詮釋資料：%1"
+msgstr "書籍資料已儲存。"
 
 #: frontend/apps/reader/readerui.lua:860
 msgid ""
@@ -7893,9 +7991,8 @@ msgid "Frontlight intensity set to %1."
 msgstr "前光亮度已設為 %1。"
 
 #: frontend/device/devicelistener.lua:50
-#, fuzzy
 msgid "Warmth set to %1."
-msgstr "暖度被設為 %1。"
+msgstr "暖光色度設定為 %1。"
 
 #: frontend/device/devicelistener.lua:178
 msgid "Frontlight enabled."
@@ -8062,23 +8159,20 @@ msgid "Scanning for Wi-Fi networks timed out"
 msgstr "掃描 Wi-Fi 網路逾時"
 
 #: frontend/dispatcher.lua:55 plugins/gestures.koplugin/main.lua:913
-#, fuzzy
 msgid "Gesture overview"
-msgstr "手勢間隔"
+msgstr "手勢總覽"
 
 #: frontend/dispatcher.lua:59
-#, fuzzy
 msgid "History search"
-msgstr "歷史記錄設定"
+msgstr "歷史搜尋"
 
 #: frontend/dispatcher.lua:65
-#, fuzzy
 msgid "Load dictionary preset"
-msgstr "下載字典"
+msgstr "載入字典預設方案"
 
 #: frontend/dispatcher.lua:66
 msgid "Cycle through dictionary presets"
-msgstr ""
+msgstr "循環切換字典方案"
 
 #: frontend/dispatcher.lua:69
 msgid "Show menu"
@@ -8086,32 +8180,28 @@ msgstr "顯示選單"
 
 #: frontend/dispatcher.lua:70
 #: frontend/ui/elements/common_info_menu_table.lua:39
-#, fuzzy
 msgid "Menu search"
-msgstr "檔案搜尋"
+msgstr "選單搜尋"
 
 #: frontend/dispatcher.lua:71
-#, fuzzy
 msgid "Open next file in last book folder"
-msgstr "開啟字型資料夾"
+msgstr "開啟上一本書所在資料夾中的下一個檔案"
 
 #: frontend/dispatcher.lua:72
 msgid "Open previous file in last book folder"
-msgstr ""
+msgstr "開啟上一本書所在資料夾中的上一個檔案"
 
 #: frontend/dispatcher.lua:73
-#, fuzzy
 msgid "Notebook file"
-msgstr "選擇資料夾"
+msgstr "筆記檔案"
 
 #: frontend/dispatcher.lua:74
 msgid "Screenshot"
 msgstr "螢幕擷圖"
 
 #: frontend/dispatcher.lua:78
-#, fuzzy
 msgid "Exit sleep screen"
-msgstr "用點擊來離開螢幕保護"
+msgstr "解除休眠"
 
 #: frontend/dispatcher.lua:79 frontend/ui/elements/mass_storage.lua:43
 msgid "Start USB storage"
@@ -8137,76 +8227,64 @@ msgid "Exit KOReader"
 msgstr "退出KOReader"
 
 #: frontend/dispatcher.lua:86
-#, fuzzy
 msgid "Toggle long-press on corners"
-msgstr "忽略長按角落"
+msgstr "切換角落長按功能"
 
 #: frontend/dispatcher.lua:87
-#, fuzzy
 msgid "Enable touch input"
-msgstr "切換方向"
+msgstr "啟用觸控輸入"
 
 #: frontend/dispatcher.lua:88
-#, fuzzy
 msgid "Disable touch input"
-msgstr "切換方向"
+msgstr "停用觸控輸入"
 
 #: frontend/dispatcher.lua:89
-#, fuzzy
 msgid "Toggle touch input"
-msgstr "切換方向"
+msgstr "切換觸控輸入"
 
 #: frontend/dispatcher.lua:91 frontend/ui/elements/physical_buttons.lua:28
-#, fuzzy
 msgid "Invert left-side page-turn buttons"
-msgstr "對調翻頁按鍵"
+msgstr "反轉左側翻頁按鈕功能"
 
 #: frontend/dispatcher.lua:92 frontend/ui/elements/physical_buttons.lua:40
-#, fuzzy
 msgid "Invert right-side page-turn buttons"
-msgstr "對調翻頁按鍵"
+msgstr "反轉右側翻頁按鈕功能"
 
 #: frontend/dispatcher.lua:93 frontend/ui/elements/physical_buttons.lua:11
-#, fuzzy
 msgid "Invert page-turn buttons"
-msgstr "對調翻頁按鍵"
+msgstr "反轉翻頁按鈕功能"
 
 #: frontend/dispatcher.lua:94
-#, fuzzy
 msgid "Set page-turn button inversion"
-msgstr "對調翻頁按鍵"
+msgstr "設定翻頁按鈕反轉"
 
 #: frontend/dispatcher.lua:96
-#, fuzzy
 msgid "Toggle key repeat"
-msgstr "切換方向"
+msgstr "切換按鍵重複功能"
 
 #: frontend/dispatcher.lua:97
 msgid "Toggle accelerometer"
 msgstr "切換加速度計自動旋轉功能"
 
 #: frontend/dispatcher.lua:98
-#, fuzzy
 msgid "Enable accelerometer for 5 seconds"
-msgstr "忽略加速度計自動旋轉事件"
+msgstr "啟用加速度計 5 秒鐘"
 
 #: frontend/dispatcher.lua:99
-#, fuzzy
 msgid "Toggle lock auto rotation to current orientation"
-msgstr "鎖定自動旋轉到目前方向"
+msgstr "切換鎖定目前螢幕方向的自動旋轉功能"
 
 #: frontend/dispatcher.lua:100
-#, fuzzy
 msgid "Set lock auto rotation to current orientation"
-msgstr "鎖定自動旋轉到目前方向"
+msgstr "設定鎖定目前螢幕方向的自動旋轉"
 
 #: frontend/dispatcher.lua:100
 msgid "true"
-msgstr ""
+msgstr "是"
 
 #: frontend/dispatcher.lua:100
 msgid "false"
-msgstr ""
+msgstr "否"
 
 #: frontend/dispatcher.lua:102
 msgid "Toggle orientation"
@@ -8221,9 +8299,8 @@ msgid "Rotate by 90° CW"
 msgstr "順時針旋轉 90°"
 
 #: frontend/dispatcher.lua:105
-#, fuzzy
 msgid "Rotate by 90° CCW"
-msgstr "順時針旋轉 90°"
+msgstr "逆時針旋轉 90°"
 
 #: frontend/dispatcher.lua:107
 msgid "Turn on Wi-Fi"
@@ -8238,52 +8315,44 @@ msgid "Toggle Wi-Fi"
 msgstr "切換 Wi-Fi"
 
 #: frontend/dispatcher.lua:110
-#, fuzzy
 msgid "Toggle Fullscreen"
-msgstr "全螢幕"
+msgstr "切換全螢幕模式"
 
 #: frontend/dispatcher.lua:111
-#, fuzzy
 msgid "Show network info"
-msgstr "網路訊息"
+msgstr "顯示網路訊息"
 
 #: frontend/dispatcher.lua:115
 msgid "Show frontlight dialog"
-msgstr "顯示前光對話視窗"
+msgstr "顯示前光設定對話框"
 
 #: frontend/dispatcher.lua:116
 msgid "Toggle frontlight"
-msgstr "切換前光"
+msgstr "切換前光功能"
 
 #: frontend/dispatcher.lua:117
-#, fuzzy
 msgid "Set frontlight brightness"
-msgstr "設定前光亮度為 %1"
+msgstr "設定前光亮度"
 
 #: frontend/dispatcher.lua:118
-#, fuzzy
 msgid "Increase frontlight brightness"
-msgstr "增加前光亮度 %1"
+msgstr "提高前光亮度"
 
 #: frontend/dispatcher.lua:119
-#, fuzzy
 msgid "Decrease frontlight brightness"
-msgstr "降低前光亮度 %1"
+msgstr "降低前光亮度"
 
 #: frontend/dispatcher.lua:120
-#, fuzzy
 msgid "Set frontlight warmth"
-msgstr "設定前光暖度為 %1"
+msgstr "設定暖光強度"
 
 #: frontend/dispatcher.lua:121
-#, fuzzy
 msgid "Increase frontlight warmth"
-msgstr "增加前光暖度 %1"
+msgstr "增加前光暖度"
 
 #: frontend/dispatcher.lua:122
-#, fuzzy
 msgid "Decrease frontlight warmth"
-msgstr "降低前光暖度 %1"
+msgstr "降低前光暖度"
 
 #: frontend/dispatcher.lua:123
 msgid "Toggle night mode"
@@ -8295,22 +8364,19 @@ msgstr "設定夜間模式"
 
 #: frontend/dispatcher.lua:126
 msgid "Full screen refresh"
-msgstr "全螢幕重新整理"
+msgstr "全螢幕重繪"
 
 #: frontend/dispatcher.lua:127
-#, fuzzy
 msgid "Full refresh rate (always)"
-msgstr "完整重新整理頻率"
+msgstr "全螢幕重繪頻率（永遠）"
 
 #: frontend/dispatcher.lua:128
-#, fuzzy
 msgid "Full refresh rate (not in night mode)"
-msgstr "每 %1 頁閃爍（夜間模式下無效）"
+msgstr "夜間模式下停用全螢幕重繪"
 
 #: frontend/dispatcher.lua:129
-#, fuzzy
 msgid "Full refresh rate (in night mode)"
-msgstr "每 %1 頁閃爍（在夜間模式）"
+msgstr "夜間模式下執行全螢幕重繪"
 
 #: frontend/dispatcher.lua:130 frontend/ui/elements/refresh_menu_table.lua:109
 msgid "Always flash on chapter boundaries"
@@ -8329,36 +8395,32 @@ msgid "Toggle flashing on chapter's 2nd page"
 msgstr "切換在章節第二頁閃爍"
 
 #: frontend/dispatcher.lua:134 frontend/ui/elements/refresh_menu_table.lua:120
-#, fuzzy
 msgid "Always flash on pages with images"
-msgstr "總是在章節分界閃爍"
+msgstr "含圖片的頁面一律執行全螢幕重繪"
 
 #: frontend/dispatcher.lua:135
-#, fuzzy
 msgid "Toggle flashing on pages with images"
-msgstr "切換在章節第二頁閃爍"
+msgstr "切換圖片頁面重繪功能"
 
 #: frontend/dispatcher.lua:139
-#, fuzzy
 msgid "Set display mode"
-msgstr "顯示模式"
+msgstr "設定顯示模式"
 
 #: frontend/dispatcher.lua:144
 msgid "Show plus menu"
 msgstr "顯示更多選單項目"
 
 #: frontend/dispatcher.lua:145
-#, fuzzy
 msgid "Toggle select mode"
-msgstr "切換模式"
+msgstr "切換選取模式"
 
 #: frontend/dispatcher.lua:146
 msgid "Refresh content"
-msgstr "重新整理內容"
+msgstr "重新整理"
 
 #: frontend/dispatcher.lua:151
 msgid "Folder up"
-msgstr "上一層資料夾"
+msgstr "上一層"
 
 #: frontend/dispatcher.lua:153 frontend/dispatcher.lua:177
 msgid "Back"
@@ -8370,17 +8432,15 @@ msgstr "顯示頁底選單"
 
 #: frontend/dispatcher.lua:159
 msgid "Toggle status bar"
-msgstr "顯示/隱藏狀態列"
+msgstr "顯示 / 隱藏狀態列"
 
 #: frontend/dispatcher.lua:160
-#, fuzzy
 msgid "Toggle chapter progress bar"
-msgstr "顯示進度列"
+msgstr "顯示／隱藏章節進度條"
 
 #: frontend/dispatcher.lua:161
-#, fuzzy
 msgid "Load status bar preset"
-msgstr "狀態列"
+msgstr "載入狀態列預設方案"
 
 #: frontend/dispatcher.lua:163
 msgid "Previous chapter"
@@ -8399,14 +8459,12 @@ msgid "Last page"
 msgstr "最後一頁"
 
 #: frontend/dispatcher.lua:167
-#, fuzzy
 msgid "Random page"
-msgstr "閱讀頁數"
+msgstr "隨機跳轉頁面"
 
 #: frontend/dispatcher.lua:168
-#, fuzzy
 msgid "Turn pages"
-msgstr "目前頁數"
+msgstr "翻頁"
 
 #: frontend/dispatcher.lua:171
 msgid "Previous bookmark"
@@ -8417,23 +8475,20 @@ msgid "Next bookmark"
 msgstr "下一個書籤"
 
 #: frontend/dispatcher.lua:173
-#, fuzzy
 msgid "First bookmark"
-msgstr "下一個書籤"
+msgstr "第一個書籤"
 
 #: frontend/dispatcher.lua:174
-#, fuzzy
 msgid "Last bookmark"
-msgstr "下一個書籤"
+msgstr "最後一個書籤"
 
 #: frontend/dispatcher.lua:178
 msgid "Back to previous location"
 msgstr "返回到前一個位置"
 
 #: frontend/dispatcher.lua:179
-#, fuzzy
 msgid "Forward to next location"
-msgstr "前往之前的位置"
+msgstr "跳轉至下一個位置"
 
 #: frontend/dispatcher.lua:180
 msgid "Follow nearest link"
@@ -11376,14 +11431,12 @@ msgid "Dithering"
 msgstr "色深散佈法"
 
 #: frontend/ui/data/koptoptions.lua:525
-#, fuzzy
 msgid "Enable hardware dithering."
-msgstr "啟用硬體遞色。"
+msgstr "啟用硬體抖動處理。"
 
 #: frontend/ui/data/koptoptions.lua:538
-#, fuzzy
 msgid "Enable software dithering."
-msgstr "啟用硬體遞色。"
+msgstr "啟用軟體抖動處理。"
 
 #: frontend/ui/data/koptoptions.lua:542
 msgctxt "Quality"
@@ -11638,7 +11691,7 @@ msgstr "回報錯誤"
 
 #: frontend/ui/elements/common_info_menu_table.lua:49
 msgid "(verbose logging is enabled)"
-msgstr ""
+msgstr "（詳細記錄功能已啟用）"
 
 #: frontend/ui/elements/common_info_menu_table.lua:57
 msgid ""
@@ -11664,27 +11717,24 @@ msgstr ""
 msgid ""
 "Verbose logs will make our investigations easier. If possible, try to "
 "reproduce the issue while it's enabled, and attach %1 to your bug report."
-msgstr ""
+msgstr "詳細記錄有助於我們進行問題調查。若有可能，請在啟用詳細記錄的狀態下重現問題，"
+"並將 %1 附加至錯誤回報中。"
 
 #: frontend/ui/elements/common_info_menu_table.lua:79
-#, fuzzy
 msgid "Disable verbose logging"
-msgstr "啟用詳細除錯記錄"
+msgstr "停用詳細記錄功能"
 
 #: frontend/ui/elements/common_info_menu_table.lua:79
-#, fuzzy
 msgid "Enable verbose logging"
-msgstr "啟用詳細除錯記錄"
+msgstr "啟用詳細記錄功能"
 
 #: frontend/ui/elements/common_info_menu_table.lua:88
-#, fuzzy
 msgid "Verbose logging disabled"
-msgstr "前光已停用。"
+msgstr "詳細記錄功能已停用"
 
 #: frontend/ui/elements/common_info_menu_table.lua:94
-#, fuzzy
 msgid "Verbose logging enabled"
-msgstr "前光已啟用。"
+msgstr "詳細記錄功能已啟用"
 
 #: frontend/ui/elements/common_info_menu_table.lua:107
 msgid "Version: %1"
@@ -13023,7 +13073,7 @@ msgstr "依排序循環顯示圖片"
 msgid ""
 "When enabled, all images (up to 128) will be displayed at least once on the "
 "sleep screen in sequence before repeating the cycle."
-msgstr ""
+msgstr "啟用後，所有圖片（最多 128 張）將依序在休眠畫面上顯示一次，然後再重複循環。"
 
 #: frontend/ui/elements/screensaver_menu.lua:185
 #: frontend/ui/screensaver.lua:212
@@ -13143,7 +13193,7 @@ msgstr "您現在可以重試需要網路連線的動作"
 #: frontend/ui/network/manager.lua:360
 msgid ""
 "A previous connection attempt is still ongoing, this one will be ignored!"
-msgstr "目前仍在嘗試連線，請稍候。"
+msgstr "目前仍在嘗試連線，請稍候！"
 
 #: frontend/ui/network/manager.lua:399
 #: frontend/ui/network/networklistener.lua:25
@@ -13521,7 +13571,7 @@ msgstr "確定要以目前設定覆寫設定方案「%1」嗎？"
 
 #: frontend/ui/presets.lua:214
 msgid "Preset '%1' was updated with current settings"
-msgstr "已使用目前設定更新設定方案「%1」。"
+msgstr "已使用目前設定更新設定方案「%1」"
 
 #: frontend/ui/presets.lua:227
 msgid "Are you sure you want to delete preset '%1'?"
@@ -16981,7 +17031,7 @@ msgstr[0] "%1 頁"
 #: plugins/coverbrowser.koplugin/listmenu.lua:453
 #: plugins/coverbrowser.koplugin/mosaicmenu.lua:143
 msgid "%1 et al."
-msgstr "%1 等其他"
+msgstr "%1 等其他。"
 
 #: plugins/coverbrowser.koplugin/listmenu.lua:488
 msgid "(no book information: %1)"
@@ -20713,7 +20763,7 @@ msgid ""
 "Enable this if you are mostly editing code, HTML, CSS…"
 msgstr ""
 "強制所有文字從左到右 (LTR) 顯示並靠左對齊。\n"
-"如果您主要在編輯代碼、HTML、CSS…，請啟用此選項。"
+"請啟用此選項如果您主要在編輯代碼、HTML、CSS…"
 
 #: plugins/texteditor.koplugin/main.lua:190
 msgid "Show keyboard on start"
