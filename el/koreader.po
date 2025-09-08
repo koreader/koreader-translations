@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-05 15:24+0000\n"
+"POT-Creation-Date: 2025-09-08 15:43+0000\n"
 "PO-Revision-Date: 2025-08-31 12:01+0000\n"
 "Last-Translator: Ichnilatis <sophronios.sp@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -217,7 +217,7 @@ msgstr "Εισαγάγετε το όνομα του αρχείου"
 #: frontend/apps/reader/modules/readergoto.lua:69
 #: frontend/apps/reader/modules/readerhandmade.lua:518
 #: frontend/apps/reader/modules/readerlink.lua:223
-#: frontend/apps/reader/modules/readersearch.lua:270
+#: frontend/apps/reader/modules/readersearch.lua:281
 #: frontend/apps/reader/modules/readertoc.lua:970
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:57
@@ -1721,7 +1721,7 @@ msgid "Remove collection?"
 msgstr "Να διαγραφεί η συλλογή;"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1339
-#: frontend/apps/reader/modules/readersearch.lua:264
+#: frontend/apps/reader/modules/readersearch.lua:275
 #: frontend/apps/reader/modules/readertoc.lua:967
 #: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
@@ -1731,7 +1731,7 @@ msgstr "Εισαγάγετε κείμενο για αναζήτηση"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:113
 #: frontend/apps/filemanager/filemanagerhistory.lua:410
 #: frontend/apps/reader/modules/readerbookmark.lua:1495
-#: frontend/apps/reader/modules/readersearch.lua:301
+#: frontend/apps/reader/modules/readersearch.lua:312
 #: frontend/ui/widget/inputdialog.lua:966 frontend/ui/widget/textviewer.lua:506
 msgid "Case sensitive"
 msgstr "Διάκριση πεζών-κεφαλαίων"
@@ -1742,7 +1742,7 @@ msgstr "Αναζήτηση επίσης στο περιεχόμενο του β�
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1442
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:143
-#: frontend/apps/reader/modules/readersearch.lua:602
+#: frontend/apps/reader/modules/readersearch.lua:623
 msgid "Searching… (tap to cancel)"
 msgstr "Αναζήτηση... (πατήστε για ακύρωση)"
 
@@ -1865,14 +1865,14 @@ msgstr "Εξαγωγή"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:301
 #: frontend/apps/filemanager/filemanagerhistory.lua:148
 #: frontend/apps/reader/modules/readerbookmark.lua:1063
-#: frontend/apps/reader/modules/readersearch.lua:661
+#: frontend/apps/reader/modules/readersearch.lua:682
 #: frontend/apps/reader/modules/readertoc.lua:839
 #: frontend/ui/widget/touchmenu.lua:1246
 msgid "Query: %1"
 msgstr "Αναζήτηση για: %1"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:333
-#: frontend/apps/reader/modules/readersearch.lua:713
+#: frontend/apps/reader/modules/readersearch.lua:722
 msgid "Search results (%1)"
 msgstr "Αποτελέσματα αναζήτησης (%1)"
 
@@ -2733,7 +2733,7 @@ msgid "Bookmark type:"
 msgstr "Τύπος επισημείωσης:"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1122
-#: frontend/apps/reader/modules/readersearch.lua:688
+#: frontend/apps/reader/modules/readersearch.lua:697
 msgid "Page: %1"
 msgstr "Σελίδα: %1"
 
@@ -4598,7 +4598,7 @@ msgid "Select and highlight"
 msgstr "Επιλογή και επισήμανση"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:377
-#: frontend/apps/reader/modules/readersearch.lua:190
+#: frontend/apps/reader/modules/readersearch.lua:201
 #: frontend/dispatcher.lua:188
 msgid "Fulltext search"
 msgstr "Αναζήτηση πλήρους κειμένου"
@@ -5912,12 +5912,21 @@ msgstr "Αποτελέσματα ανά σελίδα: %1"
 msgid "Results per page"
 msgstr "Αποτελέσματα ανά σελίδα"
 
-#: frontend/apps/reader/modules/readersearch.lua:196
+#: frontend/apps/reader/modules/readersearch.lua:189
+#, fuzzy
+msgid "Zoom fixed layout documents to full page"
+msgstr "Έγγραφα σταθερής διάταξης (pdf, djvu, φωτογραφίες…)"
+
+#: frontend/apps/reader/modules/readersearch.lua:190
+msgid "On searching, temporarily zoom the document to full page."
+msgstr ""
+
+#: frontend/apps/reader/modules/readersearch.lua:207
 #: frontend/dispatcher.lua:189
 msgid "Last fulltext search results"
 msgstr "Τελευταία αποτελέσματα αναζήτησης πλήρους κειμένου"
 
-#: frontend/apps/reader/modules/readersearch.lua:238
+#: frontend/apps/reader/modules/readersearch.lua:249
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -5925,53 +5934,53 @@ msgstr ""
 "Μη έγκυρη κανονική έκφραση:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:240
+#: frontend/apps/reader/modules/readersearch.lua:251
 msgid "Invalid regular expression."
 msgstr "Μη έγκυρη κανονική έκφραση."
 
 #. @translators Find all results in entire document, button displayed on the search bar, should be short.
-#: frontend/apps/reader/modules/readersearch.lua:278
+#: frontend/apps/reader/modules/readersearch.lua:289
 msgctxt "Search text"
 msgid "All"
 msgstr "Όλα"
 
-#: frontend/apps/reader/modules/readersearch.lua:307
+#: frontend/apps/reader/modules/readersearch.lua:318
 msgid "Regular expression (long-press for help)"
 msgstr "Κανονική έκφραση (πατήστε παρατεταμένα για βοήθεια)"
 
-#: frontend/apps/reader/modules/readersearch.lua:434
+#: frontend/apps/reader/modules/readersearch.lua:453
 msgid "No results on preceding pages"
 msgstr "Δεν υπάρχουν αποτελέσματα στις προηγούμενες σελίδες"
 
-#: frontend/apps/reader/modules/readersearch.lua:436
+#: frontend/apps/reader/modules/readersearch.lua:454
 msgid "No results on following pages"
 msgstr "Δεν υπάρχουν αποτελέσματα στις επόμενες σελίδες"
 
-#: frontend/apps/reader/modules/readersearch.lua:558
+#: frontend/apps/reader/modules/readersearch.lua:579
 msgid "Unspecified error"
 msgstr "Απροσδιόριστο σφάλμα"
 
-#: frontend/apps/reader/modules/readersearch.lua:566
+#: frontend/apps/reader/modules/readersearch.lua:587
 msgid "Too many hits"
 msgstr "Πάρα πολλά αποτελέσματα"
 
-#: frontend/apps/reader/modules/readersearch.lua:618
+#: frontend/apps/reader/modules/readersearch.lua:639
 msgid "No results in the document"
 msgstr "Δεν υπάρχουν αποτελέσματα στο έγγραφο"
 
-#: frontend/apps/reader/modules/readersearch.lua:723
+#: frontend/apps/reader/modules/readersearch.lua:732
 msgid "All results"
 msgstr "Όλα τα αποτελέσματα"
 
-#: frontend/apps/reader/modules/readersearch.lua:732
+#: frontend/apps/reader/modules/readersearch.lua:741
 msgid "Results in current chapter"
 msgstr "Αποτελέσματα στο τρέχον κεφάλαιο"
 
-#: frontend/apps/reader/modules/readersearch.lua:757
+#: frontend/apps/reader/modules/readersearch.lua:766
 msgid "Current page: %1"
 msgstr "Τρέχουσα σελίδα: %1"
 
-#: frontend/apps/reader/modules/readersearch.lua:782
+#: frontend/apps/reader/modules/readersearch.lua:791
 msgid "Go back to original page: %1"
 msgstr "Επιστροφή στην αρχική σελίδα: %1"
 

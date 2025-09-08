@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-05 15:24+0000\n"
+"POT-Creation-Date: 2025-09-08 15:43+0000\n"
 "PO-Revision-Date: 2025-09-01 14:44+0000\n"
 "Last-Translator: Balázs Attila <g.gumicsizma@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
@@ -211,7 +211,7 @@ msgstr "Fájlnév"
 #: frontend/apps/reader/modules/readergoto.lua:69
 #: frontend/apps/reader/modules/readerhandmade.lua:518
 #: frontend/apps/reader/modules/readerlink.lua:223
-#: frontend/apps/reader/modules/readersearch.lua:270
+#: frontend/apps/reader/modules/readersearch.lua:281
 #: frontend/apps/reader/modules/readertoc.lua:970
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:57
@@ -1697,7 +1697,7 @@ msgid "Remove collection?"
 msgstr "Gyűjtemény eltávolítása?"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1339
-#: frontend/apps/reader/modules/readersearch.lua:264
+#: frontend/apps/reader/modules/readersearch.lua:275
 #: frontend/apps/reader/modules/readertoc.lua:967
 #: frontend/ui/widget/inputdialog.lua:935 frontend/ui/widget/textviewer.lua:476
 msgid "Enter text to search for"
@@ -1707,7 +1707,7 @@ msgstr "Keresett szöveg"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:113
 #: frontend/apps/filemanager/filemanagerhistory.lua:410
 #: frontend/apps/reader/modules/readerbookmark.lua:1495
-#: frontend/apps/reader/modules/readersearch.lua:301
+#: frontend/apps/reader/modules/readersearch.lua:312
 #: frontend/ui/widget/inputdialog.lua:966 frontend/ui/widget/textviewer.lua:506
 msgid "Case sensitive"
 msgstr "Kis-nagybetű érzékeny"
@@ -1719,7 +1719,7 @@ msgstr "Keresés a könyv metaadataiban is"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1442
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:143
-#: frontend/apps/reader/modules/readersearch.lua:602
+#: frontend/apps/reader/modules/readersearch.lua:623
 msgid "Searching… (tap to cancel)"
 msgstr "Keresés... (megszakítás érintésre)"
 
@@ -1843,14 +1843,14 @@ msgstr "Kivonat"
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:301
 #: frontend/apps/filemanager/filemanagerhistory.lua:148
 #: frontend/apps/reader/modules/readerbookmark.lua:1063
-#: frontend/apps/reader/modules/readersearch.lua:661
+#: frontend/apps/reader/modules/readersearch.lua:682
 #: frontend/apps/reader/modules/readertoc.lua:839
 #: frontend/ui/widget/touchmenu.lua:1246
 msgid "Query: %1"
 msgstr "Lekérdezés: %1"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:333
-#: frontend/apps/reader/modules/readersearch.lua:713
+#: frontend/apps/reader/modules/readersearch.lua:722
 msgid "Search results (%1)"
 msgstr "Keresési eredmény (%1)"
 
@@ -2714,7 +2714,7 @@ msgid "Bookmark type:"
 msgstr "Könyvjelző típus:"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1122
-#: frontend/apps/reader/modules/readersearch.lua:688
+#: frontend/apps/reader/modules/readersearch.lua:697
 msgid "Page: %1"
 msgstr "Oldal: %1"
 
@@ -4589,7 +4589,7 @@ msgid "Select and highlight"
 msgstr "Kiválasztás és kiemelés"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:377
-#: frontend/apps/reader/modules/readersearch.lua:190
+#: frontend/apps/reader/modules/readersearch.lua:201
 #: frontend/dispatcher.lua:188
 msgid "Fulltext search"
 msgstr "Teljes-szöveges keresés"
@@ -5877,12 +5877,21 @@ msgstr "Eredmény oldalanként: %1"
 msgid "Results per page"
 msgstr "Eredmény oldalanként"
 
-#: frontend/apps/reader/modules/readersearch.lua:196
+#: frontend/apps/reader/modules/readersearch.lua:189
+#, fuzzy
+msgid "Zoom fixed layout documents to full page"
+msgstr "Fix megjelenésű dokumentumok (pdf, djvu, pics...)"
+
+#: frontend/apps/reader/modules/readersearch.lua:190
+msgid "On searching, temporarily zoom the document to full page."
+msgstr ""
+
+#: frontend/apps/reader/modules/readersearch.lua:207
 #: frontend/dispatcher.lua:189
 msgid "Last fulltext search results"
 msgstr "Utolsó teljesszöveges keresési eredmények"
 
-#: frontend/apps/reader/modules/readersearch.lua:238
+#: frontend/apps/reader/modules/readersearch.lua:249
 msgid ""
 "Invalid regular expression:\n"
 "%1"
@@ -5890,54 +5899,54 @@ msgstr ""
 "Hibás reguláris kifejezés:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readersearch.lua:240
+#: frontend/apps/reader/modules/readersearch.lua:251
 msgid "Invalid regular expression."
 msgstr "Érvénytelen reguláris kifejezés."
 
 #. @translators Find all results in entire document, button displayed on the search bar, should be short.
-#: frontend/apps/reader/modules/readersearch.lua:278
+#: frontend/apps/reader/modules/readersearch.lua:289
 msgctxt "Search text"
 msgid "All"
 msgstr "Összes"
 
-#: frontend/apps/reader/modules/readersearch.lua:307
+#: frontend/apps/reader/modules/readersearch.lua:318
 msgid "Regular expression (long-press for help)"
 msgstr "Reguláris kifejezés (nyomva tartva Segítség)"
 
-#: frontend/apps/reader/modules/readersearch.lua:434
+#: frontend/apps/reader/modules/readersearch.lua:453
 msgid "No results on preceding pages"
 msgstr "Nincs találat az előző oldalakon"
 
-#: frontend/apps/reader/modules/readersearch.lua:436
+#: frontend/apps/reader/modules/readersearch.lua:454
 msgid "No results on following pages"
 msgstr "Nincs találat a következő oldalakon"
 
-#: frontend/apps/reader/modules/readersearch.lua:558
+#: frontend/apps/reader/modules/readersearch.lua:579
 msgid "Unspecified error"
 msgstr "Nem meghatározható hiba"
 
-#: frontend/apps/reader/modules/readersearch.lua:566
+#: frontend/apps/reader/modules/readersearch.lua:587
 msgid "Too many hits"
 msgstr "Túl sok találat"
 
-#: frontend/apps/reader/modules/readersearch.lua:618
+#: frontend/apps/reader/modules/readersearch.lua:639
 msgid "No results in the document"
 msgstr "Nincs találat a dokumentumban"
 
-#: frontend/apps/reader/modules/readersearch.lua:723
+#: frontend/apps/reader/modules/readersearch.lua:732
 msgid "All results"
 msgstr "Összes eredmény"
 
-#: frontend/apps/reader/modules/readersearch.lua:732
+#: frontend/apps/reader/modules/readersearch.lua:741
 #, fuzzy
 msgid "Results in current chapter"
 msgstr "Aktuális fejezet címe"
 
-#: frontend/apps/reader/modules/readersearch.lua:757
+#: frontend/apps/reader/modules/readersearch.lua:766
 msgid "Current page: %1"
 msgstr "Aktuális oldalszám: %1"
 
-#: frontend/apps/reader/modules/readersearch.lua:782
+#: frontend/apps/reader/modules/readersearch.lua:791
 msgid "Go back to original page: %1"
 msgstr ""
 
