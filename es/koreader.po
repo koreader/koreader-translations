@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-15 17:52+0000\n"
-"PO-Revision-Date: 2025-09-13 04:01+0000\n"
-"Last-Translator: No name <CertainBot@users.noreply.hosted.weblate.org>\n"
+"PO-Revision-Date: 2025-09-17 06:02+0000\n"
+"Last-Translator: No name <usiraset@dnmx.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/koreader/"
 "koreader/es/>\n"
 "Language: es\n"
@@ -1447,7 +1447,6 @@ msgstr[0] "1 documento con metadatos basados en hash"
 msgstr[1] "%1 documentos con metadatos basados en hash"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:948
-#, fuzzy
 msgid ""
 "%T title\n"
 "%A author\n"
@@ -1475,6 +1474,7 @@ msgstr ""
 "%S serie\n"
 "%t páginas totales\n"
 "%c página actual\n"
+"%l páginas restantes del capítulo\n"
 "%p porcentaje leído del libro\n"
 "%H tiempo restante del libro\n"
 "%C título del capítulo\n"
@@ -1484,6 +1484,7 @@ msgstr ""
 "%f nombre del archivo\n"
 "%b nivel de batería\n"
 "%B símbolo de batería\n"
+"%r separador\n"
 "%D fecha actual (aaaa-mm-dd)\n"
 "%d fecha actual (mm-dd)\n"
 "%m hora actual (hh:mm)\n"
@@ -11558,9 +11559,8 @@ msgid "Show character candidates"
 msgstr "Mostrar caracteres candidatos"
 
 #: frontend/ui/data/koptoptions.lua:27
-#, fuzzy
 msgid "No OCR languages"
-msgstr "Otras etiquetas de idioma:"
+msgstr "Sin idiomas OCR"
 
 #: frontend/ui/data/koptoptions.lua:100
 msgid "Page Crop"
@@ -18143,7 +18143,7 @@ msgstr "Mostrar el número de páginas leídas en lugar del porcentaje leído"
 
 #: plugins/coverbrowser.koplugin/main.lua:381
 msgid "Show number of pages left to read"
-msgstr "Mostrar el número de páginas que quedan por leer"
+msgstr "Mostrar el número de páginas restantes por leer"
 
 #: plugins/coverbrowser.koplugin/main.lua:392
 msgid "Display hints"
@@ -19974,15 +19974,13 @@ msgstr "Filtrar elemento"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:148
 #: plugins/newsdownloader.koplugin/main.lua:951
-#, fuzzy
 msgid "HTTP auth username"
-msgstr "Nombre de usuario FTP"
+msgstr "Nombre de usuario HTTP"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:159
 #: plugins/newsdownloader.koplugin/main.lua:954
-#, fuzzy
 msgid "HTTP auth password"
-msgstr "Contraseña FTP"
+msgstr "Contraseña HTTP"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:182
 msgid "Delete feed"
@@ -20706,9 +20704,8 @@ msgid "on exiting sleep screen"
 msgstr "al salir de la pantalla de reposo"
 
 #: plugins/profiles.koplugin/main.lua:229
-#, fuzzy
 msgid "on read timer expiry"
-msgstr "Parar temporizador de lectura"
+msgstr "Temporizador de lectura finalizado"
 
 #: plugins/profiles.koplugin/main.lua:230
 msgid "on rotation"
@@ -20836,17 +20833,14 @@ msgid "Shows an alarm after a specified amount of time."
 msgstr "Muestra una alarma después del período de tiempo especificado."
 
 #: plugins/readtimer.koplugin/main.lua:28
-#, fuzzy
 msgid "Set read timer alarm"
-msgstr "Configurar alarma de lectura"
+msgstr "Configurar alarma temporizador de lectura"
 
 #: plugins/readtimer.koplugin/main.lua:30
-#, fuzzy
 msgid "Set read timer interval"
-msgstr "Configurar temporizador de lectura"
+msgstr "Configurar intervalo temporizador de lectura"
 
 #: plugins/readtimer.koplugin/main.lua:32
-#, fuzzy
 msgid "Stop read timer"
 msgstr "Parar temporizador de lectura"
 
@@ -20863,9 +20857,8 @@ msgid "Done"
 msgstr "Hecho"
 
 #: plugins/readtimer.koplugin/main.lua:247
-#, fuzzy
 msgid "Auto-reschedule"
-msgstr "Horario de uso de temperatura de color automática"
+msgstr "Auto reprogramar"
 
 #: plugins/readtimer.koplugin/main.lua:256
 msgid "Show timer in alt status bar"
@@ -20876,19 +20869,16 @@ msgid "Show timer in status bar"
 msgstr "Mostrar temporizador en la barra de estado"
 
 #: plugins/readtimer.koplugin/main.lua:285
-#, fuzzy
 msgid "message"
-msgstr "Configurar texto"
+msgstr "mensaje"
 
 #: plugins/readtimer.koplugin/main.lua:286
-#, fuzzy
 msgid "notification"
-msgstr "Notificaciones"
+msgstr "notificación"
 
 #: plugins/readtimer.koplugin/main.lua:287
-#, fuzzy
 msgid "nothing"
-msgstr "Nada"
+msgstr "nada"
 
 #: plugins/readtimer.koplugin/main.lua:294
 msgid "Read timer (%1)"
@@ -20904,13 +20894,12 @@ msgid "Stop timer"
 msgstr "Detener temporizador"
 
 #: plugins/readtimer.koplugin/main.lua:336
-#, fuzzy
 msgid "Show on timer expiry: %1"
-msgstr "Mostrar en los artículos: %1"
+msgstr "Mostrar finalización del temporizador: %1"
 
 #: plugins/readtimer.koplugin/main.lua:403
 msgid "Alarm"
-msgstr ""
+msgstr "Alarma"
 
 #: plugins/readtimer.koplugin/main.lua:404
 #: plugins/readtimer.koplugin/main.lua:452
@@ -20929,14 +20918,12 @@ msgstr ""
 "Es decir, %3 a partir del momento actual."
 
 #: plugins/readtimer.koplugin/main.lua:450
-#, fuzzy
 msgid "Start timer"
-msgstr "Hora inicio"
+msgstr "Iniciar temporizador"
 
 #: plugins/readtimer.koplugin/main.lua:451
-#, fuzzy
 msgid "Interval"
-msgstr "Ajustar intervalo"
+msgstr "Intervalo"
 
 #. @translators This is a duration
 #: plugins/readtimer.koplugin/main.lua:476
