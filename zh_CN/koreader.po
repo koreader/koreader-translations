@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-15 17:52+0000\n"
-"PO-Revision-Date: 2025-09-06 16:02+0000\n"
-"Last-Translator: Boyuan Xu <xbywhiteboat@gmail.com>\n"
+"PO-Revision-Date: 2025-09-17 06:02+0000\n"
+"Last-Translator: cyanjiang <cyanjiang@163.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/koreader/koreader/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -1419,7 +1419,6 @@ msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "%1 本书籍使用了基于哈希的元数据存储"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:948
-#, fuzzy
 msgid ""
 "%T title\n"
 "%A author\n"
@@ -1444,11 +1443,12 @@ msgid ""
 msgstr ""
 "%T 标题\n"
 "%A 作者\n"
-"%S 系类\n"
+"%S 系列\n"
 "%t 总页数\n"
 "%c 当前页\n"
-"%p 已读比例\n"
-"%H 剩余时间\n"
+"%l 章节剩余页数r\n"
+"%p 全书已读比例\n"
+"%H 全书剩余时间\n"
 "%C 章节标题\n"
 "%P 章节已读比例\n"
 "%h 章节剩余时间\n"
@@ -1456,10 +1456,11 @@ msgstr ""
 "%f 文件名称\n"
 "%b 剩余电量\n"
 "%B 电池符号\n"
-"%D 日期 (yyyy-mm-dd)\n"
-"%d 日期 (mm-dd)\n"
-"%m 时间 (hh:mm)\n"
-"%M 时间 (hh-mm-ss)"
+"%r 分隔符\n"
+"%D 当前日期 (yyyy-mm-dd)\n"
+"%d 当前日期 (mm-dd)\n"
+"%m 当前时间 (hh:mm)\n"
+"%M 当前时间 (hh-mm-ss)"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:24
 #: frontend/apps/filemanager/filemanagercollection.lua:512
@@ -5174,13 +5175,12 @@ msgstr "无需反转"
 
 #: frontend/apps/reader/modules/readermenu.lua:273
 #: frontend/ui/elements/page_turns.lua:190
-#, fuzzy
 msgid ""
 "When enabled the UI direction for the Table of Contents, Book Map, and Page "
 "Browser dialogs will mirror the default UI direction.\n"
 "Useful when used alongside 'Invert page turn taps and swipes'."
 msgstr ""
-"启用后，目录、书籍地图及页面浏览对话框的界面方向将与默认界面方向保持一致。\n"
+"启用后，目录、书籍地图及页面浏览对话框的界面方向将与默认界面方向相反。\n"
 "此功能适用于配合\"反转翻页点击与滑动手势\"使用。"
 
 #: frontend/apps/reader/modules/readermenu.lua:304
@@ -5668,13 +5668,12 @@ msgid "Results per page"
 msgstr "每页结果数"
 
 #: frontend/apps/reader/modules/readersearch.lua:189
-#, fuzzy
 msgid "Zoom fixed layout documents to full page"
-msgstr "固定排版文档 （pdf, djvu, pics…）"
+msgstr "将固定布局文档缩放至整页"
 
 #: frontend/apps/reader/modules/readersearch.lua:190
 msgid "On searching, temporarily zoom the document to full page."
-msgstr ""
+msgstr "搜索时，暂时将文档缩放到整页。"
 
 #: frontend/apps/reader/modules/readersearch.lua:207
 #: frontend/dispatcher.lua:189
@@ -11071,9 +11070,8 @@ msgid "Show character candidates"
 msgstr "显示候选字"
 
 #: frontend/ui/data/koptoptions.lua:27
-#, fuzzy
 msgid "No OCR languages"
-msgstr "其他语言标签："
+msgstr "无OCR语言"
 
 #: frontend/ui/data/koptoptions.lua:100
 msgid "Page Crop"
@@ -14766,9 +14764,8 @@ msgid "Page browser on tap"
 msgstr "轻按显示页面浏览"
 
 #: frontend/ui/widget/bookmapwidget.lua:1334
-#, fuzzy
 msgid "Page browser on key press"
-msgstr "轻按显示页面浏览"
+msgstr "按键时打开浏览器页面"
 
 #: frontend/ui/widget/bookmapwidget.lua:1352
 msgid "Alternative theme"
@@ -18063,9 +18060,8 @@ msgstr ""
 "输入到KOReader中即可完成配置。"
 
 #: plugins/exporter.koplugin/template/md.lua:61
-#, fuzzy
 msgid "View in book"
-msgstr "筛选新加书籍"
+msgstr "在书中查看"
 
 #: plugins/externalkeyboard.koplugin/_meta.lua:4
 msgid "External keyboard"
@@ -19099,15 +19095,13 @@ msgstr "过滤元素"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:148
 #: plugins/newsdownloader.koplugin/main.lua:951
-#, fuzzy
 msgid "HTTP auth username"
-msgstr "FTP 用户名"
+msgstr "HTTP 授权用户名"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:159
 #: plugins/newsdownloader.koplugin/main.lua:954
-#, fuzzy
 msgid "HTTP auth password"
-msgstr "FTP 密码"
+msgstr "HTTP 授权密码"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:182
 msgid "Delete feed"
@@ -19804,9 +19798,8 @@ msgid "on exiting sleep screen"
 msgstr "点击解锁"
 
 #: plugins/profiles.koplugin/main.lua:229
-#, fuzzy
 msgid "on read timer expiry"
-msgstr "停止阅读定时器"
+msgstr "阅读定时器到期时"
 
 #: plugins/profiles.koplugin/main.lua:230
 msgid "on rotation"
@@ -19933,17 +19926,14 @@ msgid "Shows an alarm after a specified amount of time."
 msgstr "在指定时间后显示警告消息。"
 
 #: plugins/readtimer.koplugin/main.lua:28
-#, fuzzy
 msgid "Set read timer alarm"
-msgstr "设置阅读警报"
+msgstr "设置阅读定时器警报"
 
 #: plugins/readtimer.koplugin/main.lua:30
-#, fuzzy
 msgid "Set read timer interval"
-msgstr "设置阅读定时器"
+msgstr "设置阅读定时器间隔"
 
 #: plugins/readtimer.koplugin/main.lua:32
-#, fuzzy
 msgid "Stop read timer"
 msgstr "停止阅读定时器"
 
@@ -19960,9 +19950,8 @@ msgid "Done"
 msgstr "完成"
 
 #: plugins/readtimer.koplugin/main.lua:247
-#, fuzzy
 msgid "Auto-reschedule"
-msgstr "根据时间表自动调整色温"
+msgstr "自动重新计划"
 
 #: plugins/readtimer.koplugin/main.lua:256
 msgid "Show timer in alt status bar"
@@ -19973,17 +19962,14 @@ msgid "Show timer in status bar"
 msgstr "在状态栏中显示计时器"
 
 #: plugins/readtimer.koplugin/main.lua:285
-#, fuzzy
 msgid "message"
-msgstr "设定消息"
+msgstr "消息"
 
 #: plugins/readtimer.koplugin/main.lua:286
-#, fuzzy
 msgid "notification"
 msgstr "通知"
 
 #: plugins/readtimer.koplugin/main.lua:287
-#, fuzzy
 msgid "nothing"
 msgstr "无"
 
@@ -20001,13 +19987,12 @@ msgid "Stop timer"
 msgstr "停止定时器"
 
 #: plugins/readtimer.koplugin/main.lua:336
-#, fuzzy
 msgid "Show on timer expiry: %1"
-msgstr "在项目中显示: %1"
+msgstr "计时器到期时显示: %1"
 
 #: plugins/readtimer.koplugin/main.lua:403
 msgid "Alarm"
-msgstr ""
+msgstr "警报"
 
 #: plugins/readtimer.koplugin/main.lua:404
 #: plugins/readtimer.koplugin/main.lua:452
@@ -20026,14 +20011,12 @@ msgstr ""
 "现在算起还有 %3。"
 
 #: plugins/readtimer.koplugin/main.lua:450
-#, fuzzy
 msgid "Start timer"
-msgstr "设置开始时间"
+msgstr "开始时间"
 
 #: plugins/readtimer.koplugin/main.lua:451
-#, fuzzy
 msgid "Interval"
-msgstr "设置时间间隔"
+msgstr "间隔"
 
 #. @translators This is a duration
 #: plugins/readtimer.koplugin/main.lua:476
@@ -20339,7 +20322,7 @@ msgstr "以当前每页 %1 的速度，将花费 %2 的阅读时间。"
 #: plugins/statistics.koplugin/main.lua:1645
 msgid "At the current rate of %1 per day, that will take 1 day."
 msgid_plural "At the current rate of %1 per day, that will take %2 days."
-msgstr[0] "以当前每天 %1 的速度，将花费 %2 天。"
+msgstr[0] "以当前每天 %1 的速度，将需要 %2 天。"
 
 #: plugins/statistics.koplugin/main.lua:1653
 #: plugins/statistics.koplugin/main.lua:1656
