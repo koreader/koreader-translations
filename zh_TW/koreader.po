@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-15 17:52+0000\n"
-"PO-Revision-Date: 2025-09-15 14:06+0000\n"
+"PO-Revision-Date: 2025-09-17 06:02+0000\n"
 "Last-Translator: \"Shelly Chen (星寂)\" <alonstar@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/koreader/koreader/zh_Hant/>\n"
@@ -1414,7 +1414,6 @@ msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "%1 個文件使用雜湊方式資料屬性"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:948
-#, fuzzy
 msgid ""
 "%T title\n"
 "%A author\n"
@@ -1439,19 +1438,20 @@ msgid ""
 msgstr ""
 "%T 書名\n"
 "%A 作者\n"
-"%S 書系\n"
+"%S 系列\n"
 "%t 總頁數\n"
-"%c 目前頁碼\n"
+"%c 目前頁數\n"
 "%l 本章剩餘頁數\n"
-"%p 閱讀百分比\n"
+"%p 全書閱讀百分比\n"
 "%H 全書剩餘時間\n"
 "%C 章節標題\n"
 "%P 本章閱讀百分比\n"
 "%h 本章剩餘時間\n"
 "%F 檔案路徑\n"
-"%f 檔案名稱\n"
-"%b 電量\n"
-"%B 電池符號\n"
+"%f 檔名\n"
+"%b 電池電量\n"
+"%B 電池圖示\n"
+"%r 分隔符號\n"
 "%D 當前日期 (yyyy-mm-dd)\n"
 "%d 當前日期 (mm-dd)\n"
 "%m 當前時間 (hh:mm)\n"
@@ -3353,8 +3353,8 @@ msgstr ""
 "在 EPUB 等 HTML/CSS 文件中，樣式表可能會指定使用字型類型（例如 serif、sans-"
 "serif），而非特定字型名稱。 \n"
 "除了等寬字型與數學字型外，KOReader 會將所有字型類型對應至您的預設字型。\n"
-"如果您希望區分不同字型類型，可以手動為每種類型指定特定字型。 長按字型名稱可將"
-"該指定設為全域（★），套用至所有書籍——這是建議的做法。 \n"
+"如果您希望區分不同字型類型，可以手動為每種類型指定特定字型。 \n"
+"長按字型名稱可將該指定設為全域（★），套用至所有書籍——這是建議的做法。 \n"
 "輕觸則僅套用於目前這本書。\n"
 "若您遇到某些書籍過度使用字型類型，導致預設字型幾乎未被使用，您可以取消該類型"
 "的字型指定，以停用其在本書中的效果。"
@@ -8088,7 +8088,7 @@ msgstr "SSID: \"%1\""
 
 #: frontend/device/generic/device.lua:920
 msgid "SSID: off/any"
-msgstr "SSID: off/any"
+msgstr "SSID：關閉/任意"
 
 #: frontend/device/generic/device.lua:927
 msgid "IP: %1"
@@ -9191,13 +9191,14 @@ msgstr ""
 "\n"
 "關閉（off）：不進行字距調整。\n"
 "快速（fast）：使用 FreeType 的字距調整實作（不支援合字 ligatures）。\n"
-"良好（good）：使用 HarfBuzz 的輕量字距調整實作（比「最佳」快，但不支援合字，"
-"且對非西文字母的支援有限）。\n"
-"最佳（best）：使用 HarfBuzz 的完整字距調整實作（速度較慢，但部分字型可支援合"
-"字；也能正確顯示連寫阿拉伯字型以及其他部分文字）。\n"
+"良好（good）：使用 HarfBuzz "
+"的輕量字距調整實作（比「最佳」快，但不支援合字，且對非西文字母的支援有限）\n"
+"最佳（best）：使用 HarfBuzz "
+"的完整字距調整實作（速度較慢，但部分字型可支援合字；也能正確顯示連寫阿拉伯字"
+"型以及其他部分文字）。\n"
 "\n"
-"注意：為達到最佳效果，可能需要同時進行字體微調（Font Hinting），以搭配選擇的"
-"字距調整方式。"
+"注意：為達到最佳效果，可能需要同時進行字體微調（Font "
+"Hinting），以搭配選擇的字距調整方式。"
 
 #: frontend/ui/data/creoptions.lua:669
 msgid "Alt Status Bar"
@@ -11074,9 +11075,8 @@ msgid "Show character candidates"
 msgstr "顯示候選字"
 
 #: frontend/ui/data/koptoptions.lua:27
-#, fuzzy
 msgid "No OCR languages"
-msgstr "其他語言標籤："
+msgstr "沒有 OCR 語言"
 
 #: frontend/ui/data/koptoptions.lua:100
 msgid "Page Crop"
@@ -13124,7 +13124,7 @@ msgstr "語言"
 
 #: frontend/ui/menusorter.lua:15
 msgid "NEW: "
-msgstr "新："
+msgstr "新： "
 
 #: frontend/ui/message/simpletcpserver.lua:30
 msgid "Failed to bind socket: %1"
@@ -13567,6 +13567,22 @@ msgid ""
 "You can access the complete user manual from [our GitHub page](https://"
 "github.com/koreader/koreader).\n"
 msgstr ""
+"<div class=\"logo\">![KOReader](resources/koreader.svg)</div>\n"
+"\n"
+"# 快速入門指南\n"
+"\n"
+"* [使用者介面](#ui)\n"
+"* [使用技巧](#uitips)\n"
+"* [存取檔案](#afiles)\n"
+"* [傳輸檔案](#tfiles)\n"
+"* [快捷鍵](#short)\n"
+"* [閱讀中](#reading)\n"
+"* [安裝字典](#dicts)\n"
+"* [更多資訊](#more)\n"
+"\n"
+"---\n"
+"您可以從 [我們的 GitHub 頁面](https://github.com/koreader/koreader) "
+"取得完整的使用手冊。\n"
 
 #: frontend/ui/quickstart.lua:73
 msgid ""
@@ -13587,6 +13603,22 @@ msgid ""
 "You can access the complete user manual from [our GitHub page](https://"
 "github.com/koreader/koreader).\n"
 msgstr ""
+"<div class=\"logo\">![KOReader](resources/koreader.svg)</div>\n"
+"\n"
+"# 快速入門指南\n"
+"\n"
+"* [使用者介面](#ui)\n"
+"* [使用技巧](#uitips)\n"
+"* [存取檔案](#afiles)\n"
+"* [傳輸檔案](#tfiles)\n"
+"* [前光／背光](#flight)\n"
+"* [閱讀中](#reading)\n"
+"* [安裝字典](#dicts)\n"
+"* [更多資訊](#more)\n"
+"\n"
+"---\n"
+"您可以從 [我們的 GitHub 頁面](https://github.com/koreader/koreader) "
+"取得完整的使用手冊。\n"
 
 #: frontend/ui/quickstart.lua:96
 msgid ""
@@ -13600,6 +13632,13 @@ msgid ""
 "- The **STATUS BAR** can be set to show a multitude of information regarding "
 "your reading progress or device state.\n"
 msgstr ""
+"## 使用者介面 <a id=\"ui\"></a>\n"
+"\n"
+"<div class=\"img-block\">![觸控區域](resources/quickstart/kindle4.png)</div>"
+"\n"
+"\n"
+"- 要顯示 **頂部選單** 或 **底部選單**，分別按下 **Menu** 或 **Press** 鍵。\n"
+"- **狀態列** 可以設定為顯示各種關於閱讀進度或裝置狀態的資訊。\n"
 
 #: frontend/ui/quickstart.lua:106
 msgid ""
@@ -13613,6 +13652,13 @@ msgid ""
 "- The **STATUS BAR** can be set to show a multitude of information regarding "
 "your reading progress or device state.\n"
 msgstr ""
+"## 使用者介面 <a id=\"ui\"></a>\n"
+"\n"
+"<div class=\"img-block\">![觸控區域](resources/quickstart/kindle3.png)</div>"
+"\n"
+"\n"
+"- 要顯示 **頂部選單** 或 **底部選單**，分別按下 **Menu** 或 **Aa** 鍵。 \n"
+"- **狀態列** 可以設定為顯示各種關於閱讀進度或裝置狀態的資訊。\n"
 
 #: frontend/ui/quickstart.lua:115
 msgid ""
@@ -13627,6 +13673,16 @@ msgid ""
 "one item is visible. This will also hide and show the STATUS BAR if you tap "
 "enough times.\n"
 msgstr ""
+"## 使用者介面 <a id=\"ui\"></a>\n"
+"\n"
+"<div class=\"img-block\">![觸控區域](resources/quickstart/"
+"touchzones.png)</div>\n"
+"\n"
+"- 要顯示 **頂部選單** 或 **底部選單**，可以點擊指定區域。"
+"你也可以點擊或向下滑動上方區域來顯示 **頂部選單**。 \n"
+"- **狀態列** "
+"區域在僅顯示一項內容時，可以用來循環切換不同的狀態列項目。若連續點擊多次，"
+"也能切換隱藏或顯示 **狀態列**。\n"
 
 #: frontend/ui/quickstart.lua:127
 msgid ""
@@ -13673,6 +13729,44 @@ msgid ""
 "> **Menu ➔ ![Typesettings](resources/icons/mdlight/appbar.typeset.svg) ➔ "
 "Selection on text**\n"
 msgstr ""
+"## 使用者介面提示 <a id=\"uitips\"></a>\n"
+"\n"
+"- 你可以透過以下路徑更改介面語言：\n"
+"\n"
+"> **Menu ➔ ![設定](resources/icons/mdlight/appbar.settings.svg) ➔ 語言**\n"
+"\n"
+"- 在某些選項或功能（字重、行距等）上同時按下 **ScreenKB** + **Press**，"
+"可以將其值設為 **預設值**。 "
+"新的預設值僅會套用到之後開啟的文件，先前開啟的文件會保留原設定。 "
+"預設值可透過選單上的星號或指示器外框變黑來辨識，如下圖所示：\n"
+"\n"
+"<div class=\"img-block break-before-avoid\">![預設設定 1](resources/"
+"quickstart/defaultsetting1.png)</div>\n"
+"<div class=\"img-block break-before-avoid\">![預設設定 2](resources/"
+"quickstart/defaultsetting2.png)</div>\n"
+"\n"
+"- 在 **頂部選單** 的某些項目上同時按下 **ScreenKB** + "
+"**Press**，可以查看該選項的說明。\n"
+"- 你可以按下 **Back** "
+"鍵來**關閉**全螢幕對話視窗（例如歷史紀錄、目錄、書籤、閱讀統計等）。\n"
+"- **螢幕截圖** 可以透過同時按下 **ScreenKB** + **Menu** 來取得。\n"
+"\n"
+"<div class=\"img-block break-after-avoid\">![數值選擇器](resources/"
+"quickstart/numberpicker.png)</div>\n"
+"\n"
+"- "
+"在包含調整箭頭按鈕的對話框中（如上圖），你可以用方向鍵來移動。如果元件帶有選"
+"單，按下 **Menu** 鍵即可開啟。\n"
+"- 你可以透過按下 **Up** 或 **Down** "
+"鍵來切換內容選取模式。此時會出現選取工具，讓你能選取一個或多個單字，用於字典"
+"、維基百科或文字查詢。\n"
+"- 透過選取工具選擇多個單字，可以標註整段文字。\n"
+"- 你可以使用 **Left** 或 **Right** "
+"游標鍵在文件中移動，分別跳至上一章或下一章。\n"
+"- 可以在 **頂部選單** 中調整內容選取工具的靈敏度。\n"
+"\n"
+"> **Menu ➔ ![排版設定](resources/icons/mdlight/appbar.typeset.svg) ➔ "
+"文字選取**\n"
 
 #: frontend/ui/quickstart.lua:154
 msgid ""
@@ -13720,6 +13814,44 @@ msgid ""
 "> **Menu ➔ ![Typesettings](resources/icons/mdlight/appbar.typeset.svg) ➔ "
 "Selection on text**\n"
 msgstr ""
+"## 使用者介面提示 <a id=\"uitips\"></a>\n"
+"\n"
+"- 你可以透過以下路徑更改介面語言：\n"
+"\n"
+"> **Menu ➔ ![設定](resources/icons/mdlight/appbar.settings.svg) ➔ 語言**\n"
+"\n"
+"- 在某些選項或功能（字重、行距等）上同時按下 **Shift** + **Press**，"
+"可以將其值設為 **預設值**。 "
+"新的預設值僅會套用到之後開啟的文件，先前開啟的文件會保留原設定。 "
+"預設值可透過選單上的星號或指示器外框變黑來辨識，如下圖所示：\n"
+"\n"
+"<div class=\"img-block break-before-avoid\">![預設設定 1](resources/"
+"quickstart/defaultsetting1.png)</div>\n"
+"<div class=\"img-block break-before-avoid\">![預設設定 2](resources/"
+"quickstart/defaultsetting2.png)</div>\n"
+"\n"
+"- 在 **頂部選單** 的某些項目上同時按下 **Shift** + "
+"**Press**，可以查看該選項的說明。\n"
+"- 你可以按下 **Back** "
+"鍵來**關閉**全螢幕對話視窗（例如歷史紀錄、目錄、書籤、閱讀統計等）。\n"
+"- **螢幕截圖** 可以透過同時按下 **Alt** + **Shift** + **G** 來取得。\n"
+"\n"
+"<div class=\"img-block break-after-avoid\">![數值選擇器](resources/"
+"quickstart/numberpicker.png)</div>\n"
+"\n"
+"- "
+"在包含調整箭頭按鈕的對話框中（如上圖），你可以用方向鍵來移動。如果元件帶有選"
+"單，按下 **Menu** 鍵即可開啟。\n"
+"- 你可以透過按下 **Up** 或 **Down** "
+"鍵來切換內容選取模式。此時會出現選取工具，讓你能選取一個或多個單字，用於字典"
+"、維基百科或文字查詢。\n"
+"- 透過選取工具選擇多個單字，可以標註整段文字。\n"
+"- 你可以使用 **Left** 或 **Right** "
+"游標鍵在文件中移動，分別跳至上一章或下一章。\n"
+"- 可以在 **頂部選單** 中調整內容選取工具的靈敏度。\n"
+"\n"
+"> **Menu ➔ ![排版設定](resources/icons/mdlight/appbar.typeset.svg) ➔ "
+"文字選取**\n"
 
 #: frontend/ui/quickstart.lua:181
 msgid ""
@@ -13770,6 +13902,44 @@ msgid ""
 "> **TOP MENU ➔ ![Navigation](resources/icons/mdlight/appbar.navigation.svg) "
 "➔ Skim document**\n"
 msgstr ""
+"## 使用者介面提示 <a id=\"uitips\"></a>\n"
+"\n"
+"- 你可以透過以下方式變更介面語言：\n"
+"\n"
+"> **頂端選單 ➔ ![設定](resources/icons/mdlight/appbar.settings.svg) ➔ 語言**"
+"\n"
+"\n"
+"- 如果你長按某個選項或功能（字重、行距等），即可將其值設為 "
+"**預設值**。新的值只會套用到之後開啟的文件，先前開啟的文件會保留原有設定。你"
+"可以在選單中看到「星號」或指示器外框的黑色邊線來辨識預設值，如下圖所示：\n"
+"\n"
+"<div class=\"img-block break-before-avoid\">![Default setting 1](resources/"
+"quickstart/defaultsetting1.png)</div>\n"
+"<div class=\"img-block break-before-avoid\">![Default setting 2](resources/"
+"quickstart/defaultsetting2.png)</div>\n"
+"\n"
+"- 你可以在 **底部選單** 中長按選項名稱來查看所有項目的說明。大多數 "
+"**頂端選單** 項目也支援此操作。\n"
+"- 你可以透過下滑來 **關閉** 全螢幕對話框（歷史、目錄、書籤、閱讀統計等）。\n"
+"- **截圖** 可以透過同時觸碰螢幕對角，或進行長距離的對角線滑動來完成。\n"
+"\n"
+"<div class=\"img-block break-after-avoid\">![Number picker](resources/"
+"quickstart/numberpicker.png)</div>\n"
+"\n"
+"- "
+"在包含調整箭頭按鈕的對話框（如上圖）中，你可以長按箭頭按鈕以較大的步進增加或"
+"減少數值。\n"
+"- 你可以點擊視窗外部來 **關閉** 這類（非全螢幕）對話框。"
+"你也可以按住標題列並拖曳來 **移動** 對話框。\n"
+"- 你可以長按標題列讓對話框變為 **半透明**（便於在調整數值時看到下方文字）。\n"
+"- "
+"長按單字會跳出對話框，允許你搜尋該字以在文件中找到更多出現處，或在維基百科查"
+"詢。\n"
+"- 你可以長按單字並拖曳手指來標註文字區段。\n"
+"- 你可以透過 **快速瀏覽文件** 對話框在文件中移動：\n"
+"\n"
+"> **頂端選單 ➔ ![導覽](resources/icons/mdlight/appbar.navigation.svg) ➔ "
+"快速瀏覽文件**\n"
 
 #: frontend/ui/quickstart.lua:213
 msgid ""
@@ -13786,6 +13956,18 @@ msgid ""
 "> **Menu (in File Browser) ➔ ![Filebrowser](resources/icons/mdlight/appbar."
 "filebrowser.svg) ➔ Start with**\n"
 msgstr ""
+"## 存取檔案 <a id=\"afiles\"></a>\n"
+"\n"
+"以下方式可用來存取你的書籍與文章：\n"
+"\n"
+"* 檔案瀏覽器\n"
+"* 我的最愛\n"
+"* 歷史紀錄\n"
+"\n"
+"你也可以設定 KOReader 在啟動時開啟其中任一對話框：\n"
+"\n"
+"> **選單（於檔案瀏覽器中）➔ ![檔案瀏覽器](resources/icons/mdlight/"
+"appbar.filebrowser.svg) ➔ 啟動時開啟**\n"
 
 #: frontend/ui/quickstart.lua:227
 msgid ""
@@ -13804,6 +13986,20 @@ msgid ""
 "> **TOP MENU (in File Browser) ➔ ![Filebrowser](resources/icons/mdlight/"
 "appbar.filebrowser.svg) ➔ Start with**\n"
 msgstr ""
+"## 存取檔案 <a id=\"afiles\"></a>\n"
+"\n"
+"以下方式可用來存取你的書籍與文章：\n"
+"\n"
+"* 檔案瀏覽器\n"
+"* 我的最愛\n"
+"* 歷史紀錄\n"
+"\n"
+"你可以指派手勢來快速開啟這些對話框。\n"
+"\n"
+"你也可以設定 KOReader 在啟動時開啟其中任一對話框：\n"
+"\n"
+"> **頂端選單（於檔案瀏覽器中）➔ ![檔案瀏覽器](resources/icons/mdlight/"
+"appbar.filebrowser.svg) ➔ 啟動時開啟**\n"
 
 #: frontend/ui/quickstart.lua:245
 msgid ""
@@ -13819,6 +14015,16 @@ msgid ""
 "5. News downloader\n"
 "6. Wallabag\n"
 msgstr ""
+"## 傳輸檔案 <a id=\"tfiles\"></a>\n"
+"\n"
+"除了可以像內建閱讀器應用程式一樣傳輸檔案外，還可依照你的裝置使用其他方式：\n"
+"\n"
+"1. KOReader 的 USB 大容量儲存模式\n"
+"2. 雲端儲存（Dropbox/FTP/Webdav）\n"
+"3. SSH/SFTP 存取\n"
+"4. Calibre 傳輸\n"
+"5. 新聞下載器\n"
+"6. Wallabag\n"
 
 #: frontend/ui/quickstart.lua:260
 msgid ""
@@ -13845,6 +14051,27 @@ msgid ""
 "- **ScreenKB** + **Home**: Toggle virtual keyboard on/off\n"
 "- **ScreenKB** + **Back**: Delete char\n"
 msgstr ""
+"## 快捷鍵 <a id=\"short\"></a>\n"
+"\n"
+"以下是可用快捷鍵的部分清單。\n"
+"\n"
+"在閱讀模組中：\n"
+"\n"
+"- **螢幕鍵盤** + **上**：目錄\n"
+"- **螢幕鍵盤** + **右**：新增書籤\n"
+"- **螢幕鍵盤** + **下**：書籍地圖\n"
+"- **螢幕鍵盤** + **左**：書籤、筆記與劃記\n"
+"- **螢幕鍵盤** + **按下**：將目前頁面存入位置紀錄\n"
+"- **螢幕鍵盤** + **首頁**：切換 Wi-Fi 開關\n"
+"- **螢幕鍵盤** + **返回**：切換到先前開啟的書籍\n"
+"\n"
+"在使用虛擬鍵盤時：\n"
+"\n"
+"- **螢幕鍵盤** + **右**：游標移動到右一個字元\n"
+"- **螢幕鍵盤** + **左**：游標移動到左一個字元\n"
+"- **螢幕鍵盤** + **按下**：顯示虛擬鍵盤按鍵後的特殊字元\n"
+"- **螢幕鍵盤** + **首頁**：切換虛擬鍵盤開關\n"
+"- **螢幕鍵盤** + **返回**：刪除字元\n"
 
 #: frontend/ui/quickstart.lua:284
 msgid ""
@@ -13873,6 +14100,29 @@ msgid ""
 "- **Shift** + **Back**: Delete whole line\n"
 "- **Sym** + **Alphabet keys**: symbols, numbers and special characters\n"
 msgstr ""
+"## 快捷鍵 <a id=\"short\"></a>\n"
+"\n"
+"以下是可用快捷鍵的部分清單。\n"
+"\n"
+"在閱讀模組中：\n"
+"\n"
+"- **T** 或 **Shift** + **上**：目錄\n"
+"- **Shift** + **右**：新增書籤\n"
+"- **Shift** + **下**：書籍地圖\n"
+"- **B** 或 **Shift** + **左**：書籤、筆記與劃記\n"
+"- **Shift** + **按下**：將目前頁面存入位置紀錄\n"
+"- **Shift** + **首頁**：切換 Wi-Fi 開關\n"
+"- **Shift** + **返回**：切換到先前開啟的書籍\n"
+"\n"
+"在使用虛擬鍵盤時：\n"
+"\n"
+"- **Shift** + **右**：游標移動到右一個字元\n"
+"- **Shift** + **左**：游標移動到左一個字元\n"
+"- **Shift** + **按下**：顯示虛擬鍵盤按鍵後的特殊字元\n"
+"- **Shift** + **首頁**：切換虛擬鍵盤開關\n"
+"- **Shift** + **Del**：刪除單字\n"
+"- **Shift** + **返回**：刪除整行\n"
+"- **Sym** + **字母鍵**：符號、數字與特殊字元\n"
 
 #: frontend/ui/quickstart.lua:310
 msgid ""
@@ -13885,6 +14135,13 @@ msgid ""
 "> **TOP MENU ➔ ![Settings](resources/icons/mdlight/appbar.settings.svg) ➔ "
 "Frontlight**\n"
 msgstr ""
+"## 前光/背光 <a id=\"flight\"></a>\n"
+"\n"
+"你可以透過此選單控制螢幕燈光。若你的裝置支援暖光（一般白色 LED + 橘色 "
+"LED），你可以在此對話框中分開控制：\n"
+"\n"
+"> **頂端選單 ➔ ![設定](resources/icons/mdlight/appbar.settings.svg) ➔ 前光**"
+"\n"
 
 #: frontend/ui/quickstart.lua:320
 msgid ""
@@ -13925,6 +14182,42 @@ msgid ""
 "\n"
 "</div></div>\n"
 msgstr ""
+"## 閱讀中 <a id=\"reading\"></a>\n"
+"\n"
+"<div class=\"table\"><div>\n"
+"\n"
+"你可以變更字型\n"
+"\n"
+"**頂端選單 ➔ ![排版設定](resources/icons/mdlight/appbar.typeset.svg) ➔ 字型**"
+"\n"
+"\n"
+"</div><div>\n"
+"\n"
+"放大字體\n"
+"\n"
+"**底部選單 ➔ ![文字大小](resources/icons/mdlight/appbar.textsize.svg)**\n"
+"\n"
+"</div><div>\n"
+"\n"
+"加粗字體\n"
+"\n"
+"**底部選單 ➔ ![對比度](resources/icons/mdlight/appbar.contrast.svg)**\n"
+"\n"
+"</div><div>\n"
+"\n"
+"反轉顏色（黑底白字）\n"
+"\n"
+"**頂端選單 ➔ ![設定](resources/icons/mdlight/appbar.settings.svg) ➔ "
+"夜間模式**\n"
+"\n"
+"</div><div>\n"
+"\n"
+"變更多種格式選項\n"
+"\n"
+"**頂端選單 ➔ ![排版設定](resources/icons/mdlight/appbar.typeset.svg) ➔ "
+"風格調整**\n"
+"\n"
+"</div></div>\n"
 
 #: frontend/ui/quickstart.lua:357
 msgid ""
@@ -13941,6 +14234,16 @@ msgid ""
 "**TOP MENU ➔ ![Search](resources/icons/mdlight/appbar.search.svg) ➔ "
 "Dictionary Settings > Download dictionaries**\n"
 msgstr ""
+"## 安裝字典 <a id=\"dicts\"></a>\n"
+"\n"
+"KOReader 支援在 EPUB，甚至是掃描的 PDF/DJVU "
+"文件中查詢字典。要查看單字的定義或翻譯，請長按該單字。\n"
+"\n"
+"若要使用字典查詢功能，你需要先安裝一個或多個 StarDict 格式的字典。KOReader "
+"內建字典安裝系統：\n"
+"\n"
+"**頂端選單 ➔ ![搜尋](resources/icons/mdlight/appbar.search.svg) ➔ 字典設定 > "
+"下載字典**\n"
 
 #: frontend/ui/quickstart.lua:368
 msgid ""
@@ -13959,6 +14262,20 @@ msgid ""
 "---\n"
 "<div class=\"generated\">Generated by KOReader %1.</div>\n"
 msgstr ""
+"## 更多資訊 <a id=\"more\"></a>\n"
+"\n"
+"你可以在我們的 GitHub 頁面找到更多資訊\n"
+"\n"
+"[https://github.com/koreader/koreader](https://github.com/koreader/koreader)"
+"\n"
+"\n"
+"你也可以在 MobileRead 論壇找到其他 KOReader 使用者\n"
+"\n"
+"[https://www.mobileread.com/forums/forumdisplay.php?f=276](https://"
+"www.mobileread.com/forums/forumdisplay.php?f=276)\n"
+"\n"
+"---\n"
+"<div class=\"generated\">由 KOReader %1 生成。</div>\n"
 
 #: frontend/ui/quickstart.lua:421
 msgid "KOReader Quickstart Guide"
@@ -14233,7 +14550,7 @@ msgstr "定義："
 
 #: frontend/ui/translator.lua:646
 msgid "Save main translation to note"
-msgstr ""
+msgstr "將主要翻譯儲存到筆記"
 
 #: frontend/ui/translator.lua:659
 msgid "Save all to note"
@@ -14241,7 +14558,7 @@ msgstr "全部儲存到筆記"
 
 #: frontend/ui/translator.lua:683
 msgid "Copy main translation"
-msgstr ""
+msgstr "複製主要翻譯"
 
 #: frontend/ui/translator.lua:689 frontend/ui/widget/inputtext.lua:211
 msgid "Copy all"
@@ -14313,11 +14630,11 @@ msgstr "已附加到剪貼簿。"
 
 #: frontend/ui/viewhtml.lua:354
 msgid "Show matched stylesheets rules (element only)"
-msgstr ""
+msgstr "顯示符合的樣式表規則（僅此元素）"
 
 #: frontend/ui/viewhtml.lua:364
 msgid "Show matched stylesheets rules (all ancestors)"
-msgstr ""
+msgstr "顯示符合的樣式表規則（所有上層元素）"
 
 #: frontend/ui/viewhtml.lua:376
 msgid "Copy to clipboard:"
@@ -14325,15 +14642,15 @@ msgstr "複製到剪貼簿："
 
 #: frontend/ui/viewhtml.lua:412
 msgid "Matching rulesets (all ancestors)"
-msgstr ""
+msgstr "符合的規則集（所有上層元素）"
 
 #: frontend/ui/viewhtml.lua:413
 msgid "Matching rulesets (element only)"
-msgstr ""
+msgstr "符合的規則集（僅此元素）"
 
 #: frontend/ui/viewhtml.lua:418
 msgid "No matching rulesets"
-msgstr ""
+msgstr "沒有符合的規則集"
 
 #: frontend/ui/widget/booklist.lua:21
 msgid "name"
@@ -14503,20 +14820,32 @@ msgid ""
 " bookmarked page\n"
 "▢ focused page when coming from Pages browser"
 msgstr ""
+"書籍地圖提供書本內容的摘要，以視覺方式顯示章節和頁面。若啟用統計，黑色長條代"
+"表已讀頁面（灰色代表本次閱讀中已讀的頁面），長條高度依閱讀時間而異。\n"
+"\n"
+"圖例：\n"
+"▲ 目前頁面\n"
+"❶ ❷ … 之前的位置\n"
+"▒ 已標註文字\n"
+" 含有筆記的標註文字\n"
+" 已加書籤的頁面\n"
+"▢ 從頁面瀏覽器進入時的焦點頁面"
 
 #: frontend/ui/widget/bookmapwidget.lua:1506
 msgid ""
 "When in overview mode, the book map is always displayed in grid mode to fit "
 "on one screen. The chapter levels can be easily adjusted for the most "
 "convenient overview experience."
-msgstr ""
+msgstr "在總覽模式下，書籍地圖一律以網格模式顯示，以便呈現在單一螢幕上。章節層級可輕"
+"鬆調整，以獲得最便利的瀏覽體驗。"
 
 #: frontend/ui/widget/bookmapwidget.lua:1509
 msgid ""
 "When you first open a book, the book map will begin in grid mode, displaying "
 "all chapter levels on one screen for a comprehensive overview of the book's "
 "content."
-msgstr ""
+msgstr "首次開啟書籍時，書籍地圖會以網格模式啟動，在單一螢幕上顯示所有章節層級，以提"
+"供完整的內容總覽。"
 
 #: frontend/ui/widget/bookmapwidget.lua:1518
 msgid ""
@@ -14528,6 +14857,12 @@ msgid ""
 "\n"
 "Press back to exit the book map."
 msgstr ""
+"可透過本選單的設定來變更書籍地圖中包含的章節層級、檢視類型（網格或平面）、以"
+"及頁面槽的寬度。\n"
+"\n"
+"使用「ScreenKB/Shift」+「上/下」來捲動，或使用翻頁鍵以更快速度移動。\n"
+"\n"
+"按下返回即可退出書籍地圖。"
 
 #: frontend/ui/widget/bookmapwidget.lua:1525
 msgid ""
@@ -14538,6 +14873,11 @@ msgid ""
 "\n"
 "Any multiswipe will close the book map."
 msgstr ""
+"點擊書中的任意位置可瀏覽該處的頁面縮圖。\n"
+"\n"
+"沿著螢幕左側邊緣滑動可變更書籍地圖中包含的章節層級。\n"
+"\n"
+"任何多指滑動都會關閉書籍地圖。"
 
 #: frontend/ui/widget/bookmapwidget.lua:1532
 msgid ""
@@ -14555,6 +14895,18 @@ msgid ""
 "\n"
 "Any multiswipe will close the book map."
 msgstr ""
+"點擊書中的任意位置可瀏覽該處的頁面縮圖。\n"
+"\n"
+"沿著螢幕左側邊緣滑動可變更書籍地圖中包含的章節層級，跨越層級 0 "
+"時可切換地圖類型（網格或平面）。\n"
+"\n"
+"沿著螢幕底部邊緣滑動可變更頁面槽的寬度。\n"
+"\n"
+"在內容上垂直滑動或拖曳可進行捲動。\n"
+"\n"
+"長按 ≡ 可在目前檢視與初始檢視間切換。\n"
+"\n"
+"任何多指滑動都會關閉書籍地圖。"
 
 #: frontend/ui/widget/bookstatuswidget.lua:139
 msgid "Statistics"
@@ -14921,9 +15273,8 @@ msgid "Go to letter"
 msgstr "前往字母"
 
 #: frontend/ui/widget/menu.lua:821
-#, fuzzy
 msgid "Enter text, letter or page number"
-msgstr "輸入字母或頁碼"
+msgstr "輸入文字、字母或頁碼"
 
 #. @translators First group is the standard range for alphabetic searches, second group is a page number range
 #: frontend/ui/widget/menu.lua:824
@@ -15010,6 +15361,10 @@ msgid ""
 "This value should be in the range of %1 - %2.\n"
 "Undefined behavior may occur."
 msgstr ""
+"注意：\n"
+"在輸入前加上『:』將停用檢查！\n"
+"此值應介於 %1 到 %2 之間。\n"
+"否則可能會發生未定義行為。"
 
 #: frontend/ui/widget/numberpickerwidget.lua:200
 msgid "This value should be %1 or more."
@@ -15032,32 +15387,28 @@ msgid "Always use this engine for file type"
 msgstr "總是用這個引擎來處理此檔案類型"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:973
-#, fuzzy
 msgid "About page browser"
-msgstr "檔案瀏覽器"
+msgstr "關於頁面瀏覽器"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:987
 msgid "Preload next/prev thumbnails"
-msgstr ""
+msgstr "預先載入前後縮圖"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1001
-#, fuzzy
 msgid "Thumbnail columns"
-msgstr "文件欄數"
+msgstr "縮圖欄數"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1038
 msgid "Thumbnail rows"
-msgstr ""
+msgstr "縮圖列數"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1075
-#, fuzzy
 msgid "Thumbnail page numbers"
-msgstr "輸入頁碼"
+msgstr "縮圖頁碼"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1102
-#, fuzzy
 msgid "Chapters in bottom ribbon"
-msgstr "容器下邊距"
+msgstr "底部顯示章節"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1142
 msgid ""
@@ -15077,6 +15428,19 @@ msgid ""
 " highlighted text with notes\n"
 " bookmarked page"
 msgstr ""
+"頁面瀏覽器會顯示書籍各頁的縮圖。\n"
+"\n"
+"底部顯示區會呈現書籍地圖中與目前頁面相關的片段：\n"
+"\n"
+"若啟用統計，黑色長條代表已讀頁面（灰色代表本次閱讀中已讀的頁面）。長條高度依"
+"各頁的閱讀時間而異。\n"
+"章節會標示在其所涵蓋頁面的上方。\n"
+"在頁面下方，可能會出現以下指示符號：\n"
+"▲ 目前頁面\n"
+"❶ ❷ … 之前的位置\n"
+"▒ 已標註文字\n"
+" 含有筆記的標註文字\n"
+" 已加書籤的頁面"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1161
 msgid ""
@@ -15096,6 +15460,19 @@ msgid ""
 "\n"
 "Any multiswipe will close the page browser."
 msgstr ""
+"沿著螢幕頂端或左側邊緣滑動可變更縮圖的欄數或列數。\n"
+"\n"
+"垂直滑動可移動一列，水平滑動可移動一個螢幕。\n"
+"\n"
+"在底部功能帶上水平滑動可移動整條帶狀內容。\n"
+"\n"
+"在底部功能帶點擊某頁，可將縮圖焦點定位在該頁。\n"
+"\n"
+"點擊縮圖即可閱讀該頁。\n"
+"\n"
+"長按 ≡ 可減少或重設底部功能帶中顯示的章節層級。\n"
+"\n"
+"任何多指滑動都會關閉頁面瀏覽器。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1177
 #: frontend/ui/widget/pagebrowserwidget.lua:1187
@@ -15103,110 +15480,102 @@ msgid ""
 "The settings (in this menu) can be used to change the number of rows and "
 "columns, whether to display page numbers, and to display different chapter-"
 "levels in the bottom ribbon."
-msgstr ""
+msgstr "可透過本選單的設定來變更縮圖的列數與欄數、是否顯示頁碼，以及底部功能帶中要顯"
+"示的章節層級。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1178
 msgid ""
 "Press Shift+Up to move up by one row, or either previous-page-turn-button to "
 "move one screen."
-msgstr ""
+msgstr "按下 Shift+上 可向上移動一列，或使用上一頁翻頁鍵移動一個螢幕。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1179
 msgid ""
 "Press Shift+Down to move down by one row, or either next-page-turn-button to "
 "move one screen."
-msgstr ""
+msgstr "按下 Shift+下 可向下移動一列，或使用下一頁翻頁鍵移動一個螢幕。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1180
 msgid "Press Shift+Press on a thumbnail, to open more options."
-msgstr ""
+msgstr "在縮圖上按下 Shift+點擊，可開啟更多選項。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1181
 msgid "Press Shift+Back closes all instances of Page Browser and Book Map."
-msgstr ""
+msgstr "按下 Shift+返回 可關閉所有頁面瀏覽器與書籍地圖。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1182
 #: frontend/ui/widget/pagebrowserwidget.lua:1192
 msgid "Select a thumbnail to read that page."
-msgstr ""
+msgstr "選取縮圖即可閱讀該頁。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1188
 msgid ""
 "Press ScreenKB+Up to move up by one row, or either previous-page-turn-button "
 "to move one screen."
-msgstr ""
+msgstr "按下 ScreenKB+上 可向上移動一列，或使用上一頁翻頁鍵移動一個螢幕。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1189
 msgid ""
 "Press ScreenKB+Down to move down by one row, or either next-page-turn-button "
 "to move one screen."
-msgstr ""
+msgstr "按下 ScreenKB+下 可向下移動一列，或使用下一頁翻頁鍵移動一個螢幕。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1190
 msgid "Press ScreenKB+Press on a thumbnail, to open more options."
-msgstr ""
+msgstr "在縮圖上按下 ScreenKB+點擊，可開啟更多選項。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1191
 msgid "Press ScreenKB+Back closes all instances of Page Browser and Book Map."
-msgstr ""
+msgstr "按下 ScreenKB+返回 可關閉所有頁面瀏覽器與書籍地圖。"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1723
-#, fuzzy
 msgid "Toggle page bookmark"
-msgstr "切換書籤"
+msgstr "切換頁面書籤"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1734
-#, fuzzy
 msgid "Go to book map"
-msgstr "前往最後標記的標籤"
+msgstr "前往書籍地圖"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1748
 msgid "Edit or remove TOC chapter"
-msgstr ""
+msgstr "編輯或移除目錄章節"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1749
 msgid "Start TOC chapter here"
-msgstr ""
+msgstr "從此處開始目錄章節"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1764
-#, fuzzy
 msgid "Restart regular flow here"
-msgstr "稍後閱讀"
+msgstr "從此處恢復正常流程"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1765
-#, fuzzy
 msgid "Start hidden flow here"
-msgstr "啟動時開啟檔案瀏覽器"
+msgstr "從此處開始隱藏流程"
 
 #: frontend/ui/widget/pathchooser.lua:29
-#, fuzzy
 msgid "Long-press folder's name to choose it"
-msgstr "長按以選擇"
+msgstr "長按資料夾名稱以選擇"
 
 #: frontend/ui/widget/pathchooser.lua:31
-#, fuzzy
 msgid "Long-press file's name to choose it"
-msgstr "長按以選擇"
+msgstr "長按檔案名稱以選擇"
 
 #: frontend/ui/widget/pathchooser.lua:33
-#, fuzzy
 msgid "Long-press item's name to choose it"
-msgstr "長按以選擇"
+msgstr "長按項目名稱以選擇"
 
 #: frontend/ui/widget/pathchooser.lua:115
 msgid "Choose this file?"
 msgstr "選擇這個檔案嗎？"
 
 #: frontend/ui/widget/pathchooser.lua:119
-#, fuzzy
 msgid "File size: 1 byte"
 msgid_plural "File size: %1 bytes"
-msgstr[0] "字型大小：%1"
+msgstr[0] "檔案大小：%1 位元組"
 
 #: frontend/ui/widget/pathchooser.lua:120
-#, fuzzy
 msgid "Last modified: %1"
-msgstr "修改時間"
+msgstr "最後修改時間：%1"
 
 #: frontend/ui/widget/pathchooser.lua:123
 msgid "Choose this folder?"
@@ -15221,23 +15590,20 @@ msgid "... (truncated...)"
 msgstr "... (已截斷...)"
 
 #: frontend/ui/widget/screensaverlockwidget.lua:99
-#, fuzzy
 msgid "Waiting for specific gesture to exit screensaver."
-msgstr "用點擊來離開螢幕保護"
+msgstr "等待特定手勢以退出螢幕保護。"
 
 #: frontend/ui/widget/screensaverlockwidget.lua:100
 msgid "No exit screensaver gesture configured. Tap to exit."
-msgstr ""
+msgstr "未設定退出螢幕保護的手勢。點擊即可退出。"
 
 #: frontend/ui/widget/screenshoter.lua:76
-#, fuzzy
 msgid "Set as book cover"
-msgstr "儲存書籍封面"
+msgstr "設為書籍封面"
 
 #: frontend/ui/widget/screenshoter.lua:103
-#, fuzzy
 msgid "Set as wallpaper"
-msgstr "設定鬧鐘"
+msgstr "設為桌布"
 
 #: frontend/ui/widget/screenshoter.lua:112
 msgid "Screenshot saved to:"
@@ -15248,46 +15614,39 @@ msgid "Current screenshot folder:"
 msgstr "目前的螢幕擷圖資料夾："
 
 #: frontend/ui/widget/sortwidget.lua:455
-#, fuzzy
 msgctxt "Pagination"
 msgid "%1 / %2"
 msgstr "%1 / %2"
 
 #: frontend/ui/widget/sortwidget.lua:524
-#, fuzzy
 msgid "Sort A to Z"
-msgstr "照類別排序"
+msgstr "從 A 到 Z 排序"
 
 #: frontend/ui/widget/sortwidget.lua:532
-#, fuzzy
 msgid "Sort Z to A"
-msgstr "照類別排序"
+msgstr "從 Z 到 A 排序"
 
 #: frontend/ui/widget/sortwidget.lua:540
 msgid "Sort A to Z (natural)"
-msgstr ""
+msgstr "從 A 到 Z 排序（自然順序）"
 
 #: frontend/ui/widget/sortwidget.lua:548
 msgid "Sort Z to A (natural)"
-msgstr ""
+msgstr "從 Z 到 A 排序（自然順序）"
 
 #: frontend/ui/widget/spinwidget.lua:167
-#, fuzzy
 msgid "Default value: %1%2"
-msgstr "預設值：%1"
+msgstr "預設值：%1%2"
 
 #: frontend/ui/widget/textviewer.lua:541
-#, fuzzy
 msgid "Found, screen line %1."
-msgstr "在第 %1 行找到。"
+msgstr "已找到，螢幕第 %1 行。"
 
 #: frontend/ui/widget/textviewer.lua:632
-#, fuzzy
 msgid "Monospace font"
-msgstr "使用等寬字型"
+msgstr "等寬字型"
 
 #: frontend/ui/widget/textviewer.lua:643
-#, fuzzy
 msgid "Justify"
 msgstr "左右對齊"
 
@@ -15306,21 +15665,21 @@ msgid ""
 "\n"
 "Opening big files may take some time."
 msgstr ""
-"這個檔案是 %2 ：\n"
+"這個檔案是 %2：\n"
 "\n"
 "%1\n"
 "\n"
-"您確定您想要打開它嗎？\n"
+"您確定要開啟它嗎？\n"
 "\n"
-"打開大檔案可能會花上一段時間。"
+"開啟大檔案可能會花上一段時間。"
 
 #: frontend/ui/widget/touchmenu.lua:1155
 msgid "Walking you there…"
-msgstr ""
+msgstr "正在帶您前往……"
 
 #: frontend/ui/widget/touchmenu.lua:1218
 msgid "Walk me there"
-msgstr ""
+msgstr "帶我過去"
 
 #: frontend/ui/widget/touchmenu.lua:1245
 #: plugins/calibre.koplugin/search.lua:491
@@ -15330,17 +15689,16 @@ msgstr "搜尋結果"
 
 #: frontend/ui/widget/touchmenu.lua:1276
 msgid "No menus containing '%1' found."
-msgstr ""
+msgstr "找不到包含「%1」的選單。"
 
 #: frontend/ui/widget/touchmenu.lua:1283
-#, fuzzy
 msgid "Search menu entry"
-msgstr "搜尋結果"
+msgstr "搜尋選單項目"
 
 #: frontend/ui/widget/touchmenu.lua:1284
 msgid ""
 "Search for a menu entry containing the following text (case insensitive)."
-msgstr ""
+msgstr "搜尋包含以下文字的選單項目（不分大小寫）。"
 
 #: frontend/ui/wikipedia.lua:390
 msgid "Loading high-res image… (tap to cancel)"
@@ -15356,7 +15714,7 @@ msgid ""
 "Would you like to download and include them in the generated EPUB file?"
 msgstr ""
 "這篇文章包含 %1 張圖片。\n"
-"您想要下載這些圖片，並將它們包含在建立的 EPUB 檔案中嗎？"
+"您想要下載並將它們包含在建立的 EPUB 檔案中嗎？"
 
 #: frontend/ui/wikipedia.lua:814
 msgid "Don't include"
@@ -15370,11 +15728,11 @@ msgstr "包含"
 msgid ""
 "Would you like to use slightly higher quality images? This will result in a "
 "bigger file size."
-msgstr "想要使用更高一點解析度的圖片嗎？這將會帶來更大的檔案大小。"
+msgstr "要不要使用稍高品質的圖片？這會使檔案大小變大。"
 
 #: frontend/ui/wikipedia.lua:822
 msgid "This article does not contain any images."
-msgstr "這篇文章中不包含任何圖片。"
+msgstr "這篇文章不包含任何圖片。"
 
 #: frontend/ui/wikipedia.lua:835
 msgid "Building EPUB…"
@@ -15390,7 +15748,7 @@ msgstr "線上版本"
 
 #: frontend/ui/wikipedia.lua:1479
 msgid "See %1 for up-to-date content"
-msgstr "更即時的訊息請參考 %1"
+msgstr "即時內容請參考 %1"
 
 #: frontend/ui/wikipedia.lua:1519 frontend/ui/wikipedia.lua:1525
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:604
@@ -15401,7 +15759,7 @@ msgstr "正在取回圖片 %1 / %2 ……"
 #: frontend/ui/wikipedia.lua:1547
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:632
 msgid "Downloading image %1 failed. Continue anyway?"
-msgstr "下載圖片 %1 失敗了。仍要繼續嗎？"
+msgstr "下載圖片 %1 失敗。要繼續嗎？"
 
 #: frontend/ui/wikipedia.lua:1547
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:632
@@ -15432,28 +15790,24 @@ msgid "Packing EPUB…"
 msgstr "正在打包 EPUB ……"
 
 #: frontend/util.lua:1075
-#, fuzzy
 msgctxt "Data storage size"
 msgid "%1 GB"
 msgstr "%1 GB"
 
 #: frontend/util.lua:1078
-#, fuzzy
 msgctxt "Data storage size"
 msgid "%1 MB"
 msgstr "%1 MB"
 
 #: frontend/util.lua:1081
-#, fuzzy
 msgctxt "Data storage size"
 msgid "%1 kB"
-msgstr "%1 kB"
+msgstr "%1 KB"
 
 #: frontend/util.lua:1083
-#, fuzzy
 msgctxt "Data storage size"
 msgid "%1 B"
-msgstr "%1 B"
+msgstr "%1 byte"
 
 #: plugins/SSH.koplugin/_meta.lua:4
 msgid "SSH"
@@ -15510,11 +15864,11 @@ msgstr ""
 
 #: plugins/SSH.koplugin/main.lua:206
 msgid "Login without password (DANGEROUS)"
-msgstr "無須密碼登入（危險）"
+msgstr "無密碼登入（危險）"
 
 #: plugins/SSH.koplugin/main.lua:215
 msgid "Start SSH server with KOReader"
-msgstr ""
+msgstr "啟動 SSH 伺服器"
 
 #: plugins/SSH.koplugin/main.lua:228
 msgid "Toggle SSH server"
@@ -15527,66 +15881,59 @@ msgstr "壓縮檔檢視器"
 
 #: plugins/archiveviewer.koplugin/_meta.lua:5
 msgid "Enables exploring the content of zip archives."
-msgstr ""
+msgstr "啟用後可瀏覽 zip 壓縮檔內容。"
 
 #: plugins/archiveviewer.koplugin/main.lua:202
 msgid "On extraction, if the file already exists, it will be overwritten."
 msgstr "擷取時，若檔案已存在，將會被覆蓋。"
 
 #: plugins/autodim.koplugin/_meta.lua:4 plugins/autodim.koplugin/main.lua:56
-#, fuzzy
 msgid "Automatic dimmer"
-msgstr "自動重新啟動"
+msgstr "自動調光"
 
 #: plugins/autodim.koplugin/_meta.lua:5
-#, fuzzy
 msgid "This plugin allows dimming the frontlight after a period of inactivity."
-msgstr "這個外掛可以自動設定前光暖度。"
+msgstr "此外掛可在一段時間未操作後，自動調暗前光。"
 
 #: plugins/autodim.koplugin/main.lua:61
 msgid "Idle time for dimmer"
-msgstr ""
+msgstr "調光閒置時間"
 
 #: plugins/autodim.koplugin/main.lua:62
-#, fuzzy
 msgid "Idle time for dimmer: %1"
-msgstr "刪除檔案：%1"
+msgstr "調光閒置時間：%1"
 
 #: plugins/autodim.koplugin/main.lua:68
-#, fuzzy
 msgid "Automatic dimmer idle time"
-msgstr "自動重新啟動"
+msgstr "自動調光閒置時間"
 
 #: plugins/autodim.koplugin/main.lua:69
 msgid "Start the dimmer after the designated period of inactivity."
-msgstr ""
+msgstr "在經過指定的閒置時間後啟動調光。"
 
 #: plugins/autodim.koplugin/main.lua:101
-#, fuzzy
 msgid "Dimmer duration: %1"
-msgstr "資料夾動作：%1"
+msgstr "調光持續時間：%1"
 
 #: plugins/autodim.koplugin/main.lua:107
-#, fuzzy
 msgid "Automatic dimmer duration"
-msgstr "自動重新啟動"
+msgstr "自動調光持續時間"
 
 #: plugins/autodim.koplugin/main.lua:108
 msgid "Delay to reach the lowest brightness."
-msgstr ""
+msgstr "降至最低亮度所需的延遲時間。"
 
 #: plugins/autodim.koplugin/main.lua:132
 msgid "Dim to %1 % of the regular brightness"
-msgstr ""
+msgstr "調暗至一般亮度的 %1%"
 
 #: plugins/autodim.koplugin/main.lua:137
-#, fuzzy
 msgid "Dim to percentage"
-msgstr "百分比"
+msgstr "調光百分比"
 
 #: plugins/autodim.koplugin/main.lua:138
 msgid "The lowest brightness as a percentage of the regular brightness."
-msgstr ""
+msgstr "最低亮度，佔一般亮度的百分比。"
 
 #: plugins/autostandby.koplugin/_meta.lua:4
 msgid "Auto Standby"
@@ -15621,16 +15968,14 @@ msgid "Always standby if battery below"
 msgstr "總是待機，如果電量低於"
 
 #: plugins/autosuspend.koplugin/_meta.lua:4
-#, fuzzy
 msgid "Auto power save"
-msgstr "不儲存"
+msgstr "自動省電"
 
 #: plugins/autosuspend.koplugin/_meta.lua:5
-#, fuzzy
 msgid ""
 "Puts the device into standby, suspend or power off after specified periods "
 "of inactivity."
-msgstr "一段時間未活動後令裝置休眠。"
+msgstr "在經過指定的閒置時間後，將裝置進入待機、休眠或關機狀態。"
 
 #: plugins/autosuspend.koplugin/main.lua:445
 #: plugins/autoturn.koplugin/main.lua:149
@@ -15692,34 +16037,37 @@ msgid ""
 "Generally, the newer the device, the less noticeable this delay will be, but "
 "it can be fairly aggravating on slower devices."
 msgstr ""
+"待機會讓裝置進入一種省電狀態，此時螢幕保持開啟，仍可進行使用者輸入。\n"
+"\n"
+"若 Wi-Fi 開啟，則無法進入待機。\n"
+"\n"
+"在有使用者輸入時，裝置需要一些時間才能喚醒。一般來說，裝置越新，延遲越不明顯"
+"；但在較慢的裝置上，這個延遲可能會讓人覺得困擾。"
 
 #: plugins/autosuspend.koplugin/main.lua:574
 msgid ""
 "Your device is known to be extremely unreliable, as such, failure to enter a "
 "power-saving state *may* hang the kernel, resulting in a full device hang or "
 "a device restart."
-msgstr ""
+msgstr "已知您的裝置非常不穩定，因此若進入省電狀態失敗，*可能*會導致核心當機，進而造"
+"成整個裝置死當或重新啟動。"
 
 #: plugins/autosuspend.koplugin/main.lua:586
-#, fuzzy
 msgid "Autostandby timeout: %1"
-msgstr "自動休眠逾時：%1"
+msgstr "自動待機逾時：%1"
 
 #: plugins/autosuspend.koplugin/main.lua:588
-#, fuzzy
 msgid "Autostandby timeout"
-msgstr "自動休眠逾時"
+msgstr "自動待機逾時"
 
 #: plugins/autosuspend.koplugin/main.lua:599
-#, fuzzy
 msgid "Timeout for autostandby"
-msgstr "自動休眠逾時"
+msgstr "自動待機逾時"
 
 #: plugins/autosuspend.koplugin/main.lua:599
 #: plugins/autoturn.koplugin/main.lua:142
-#, fuzzy
 msgid "Enter time in minutes and seconds."
-msgstr "以天數和小時為單位輸入時間。"
+msgstr "以分鐘和秒為單位輸入時間。"
 
 #: plugins/autoturn.koplugin/_meta.lua:4 plugins/autoturn.koplugin/main.lua:131
 msgid "Autoturn"
@@ -15736,9 +16084,8 @@ msgstr ""
 "按住以設定捲動距離。"
 
 #: plugins/autoturn.koplugin/main.lua:71
-#, fuzzy
 msgid "Autoturn is now active and will automatically turn the page every %1."
-msgstr "自動翻頁已啟用，將會每 %1 秒自動翻頁。"
+msgstr "自動翻頁已啟用，將會每 %1 自動翻頁。"
 
 #: plugins/autoturn.koplugin/main.lua:73
 msgid ""
@@ -15747,14 +16094,12 @@ msgid ""
 msgstr "自動翻頁已啟用，將會每 %2 秒自動捲動頁面的 %1 %。"
 
 #: plugins/autoturn.koplugin/main.lua:131
-#, fuzzy
 msgid "Autoturn: %1"
-msgstr "自動翻頁：%1 秒"
+msgstr "自動翻頁：%1"
 
 #: plugins/autoturn.koplugin/main.lua:141
-#, fuzzy
 msgid "Autoturn time"
-msgstr "自動翻頁"
+msgstr "自動翻頁時間"
 
 #: plugins/autoturn.koplugin/main.lua:182
 msgid "Set distance"
@@ -15775,15 +16120,13 @@ msgid "Auto night mode"
 msgstr "自動夜間模式"
 
 #: plugins/autowarmth.koplugin/_meta.lua:5
-#, fuzzy
 msgid ""
 "This plugin allows to set the frontlight warmth and night mode automagically."
-msgstr "這個外掛可以自動設定前光暖度。"
+msgstr "此外掛可自動設定前光暖度與夜間模式。"
 
 #: plugins/autowarmth.koplugin/_meta.lua:5
-#, fuzzy
 msgid "This plugin allows to enable night mode automagically."
-msgstr "這個外掛可以自動設定前光暖度。"
+msgstr "此外掛可自動啟用夜間模式。"
 
 #: plugins/autowarmth.koplugin/main.lua:120
 msgid "Show ephemeris"
@@ -15804,18 +16147,16 @@ msgid "Auto warmth use schedule"
 msgstr "使用時間表自動設定暖度"
 
 #: plugins/autowarmth.koplugin/main.lua:128
-#, fuzzy
 msgid "Auto warmth use closer midnight"
-msgstr "接近午夜時分自動設定暖度"
+msgstr "自動色溫以較接近午夜者為準"
 
 #: plugins/autowarmth.koplugin/main.lua:130
-#, fuzzy
 msgid "Auto warmth use closer noon"
-msgstr "接近正午時分自動設定暖度"
+msgstr "自動色溫以較接近正午者為準"
 
 #: plugins/autowarmth.koplugin/main.lua:133
 msgid "Auto warmth cycle through modes"
-msgstr ""
+msgstr "自動暖度循環模式"
 
 #: plugins/autowarmth.koplugin/main.lua:137
 msgid "Information about the sun in"
@@ -15835,29 +16176,27 @@ msgstr "接近正午時分自動設定暖度"
 
 #: plugins/autowarmth.koplugin/main.lua:216
 msgid "Show this warning again"
-msgstr ""
+msgstr "再次顯示此警告"
 
 #: plugins/autowarmth.koplugin/main.lua:220
 msgid "Hide the warning until the next book is opened"
-msgstr ""
+msgstr "隱藏此警告直到下一本書開啟"
 
 #: plugins/autowarmth.koplugin/main.lua:226
-#, fuzzy
 msgid "Hide this warning permanently"
-msgstr "如果您刪除一個檔案，它將永久性地消失。"
+msgstr "永久隱藏此警告"
 
 #: plugins/autowarmth.koplugin/main.lua:233
 msgid "Disable AutoWarmth's nightmode control"
-msgstr ""
+msgstr "停用 AutoWarmth 的夜間模式控制"
 
 #: plugins/autowarmth.koplugin/main.lua:242
-#, fuzzy
 msgid "Night mode changed"
-msgstr "夜間模式"
+msgstr "夜間模式已更改"
 
 #: plugins/autowarmth.koplugin/main.lua:243
 msgid "The AutoWarmth plugin might change it again."
-msgstr ""
+msgstr "AutoWarmth 外掛可能會再次修改此設定。"
 
 #: plugins/autowarmth.koplugin/main.lua:581
 msgid ""
@@ -15877,6 +16216,18 @@ msgid ""
 "To use the sun's position, a geographical location must be entered. The "
 "calculations are very precise, with a deviation less than minute and a half."
 msgstr ""
+"可依據時間表或太陽位置，自動設定前光暖度（若可用）與夜間模式。\n"
+"\n"
+"曙暮光分為三種：\n"
+"\n"
+"• 民用：可看報紙的亮度\n"
+"• 航海：可見到第一顆星星\n"
+"• 天文：真正的黑暗\n"
+"\n"
+"可為不同種類的曙暮光、日出、正午、日落與午夜，分別設定自訂的暖度值。\n"
+"螢幕暖度會持續依照當前時間調整。\n"
+"\n"
+"若要依太陽位置計算，必須輸入地理位置。計算結果非常精確，誤差小於 1 分半鐘。"
 
 #: plugins/autowarmth.koplugin/main.lua:596
 msgid "About auto warmth and night mode"
@@ -15898,7 +16249,7 @@ msgstr "專家模式"
 msgid ""
 "In the expert mode, different types of twilight can be used in addition to "
 "civil twilight."
-msgstr ""
+msgstr "在專家模式中，除了民用曙暮光之外，也可以使用其他種類的曙暮光。"
 
 #: plugins/autowarmth.koplugin/main.lua:638
 msgid "Location settings"
@@ -15917,37 +16268,32 @@ msgid "Night mode settings"
 msgstr "夜間模式設定"
 
 #: plugins/autowarmth.koplugin/main.lua:657
-#, fuzzy
 msgid "Enable night mode warning"
-msgstr "設定夜間模式："
+msgstr "啟用夜間模式警告"
 
 #: plugins/autowarmth.koplugin/main.lua:667
 msgid "Currently active parameters"
 msgstr "目前使用中的參數"
 
 #: plugins/autowarmth.koplugin/main.lua:668
-#, fuzzy
 msgid "Sun position information for"
-msgstr "太陽位置資訊"
+msgstr "太陽位置資訊（於）"
 
 #: plugins/autowarmth.koplugin/main.lua:669
 msgid "Fixed schedule information"
 msgstr "固定排程資訊"
 
 #: plugins/autowarmth.koplugin/main.lua:680
-#, fuzzy
 msgid "Frontlight off during day: %1 min offset"
-msgstr "前光關閉。"
+msgstr "白天關閉前光：偏移 %1 分鐘"
 
 #: plugins/autowarmth.koplugin/main.lua:682
-#, fuzzy
 msgid "Frontlight off during day"
-msgstr "前光關閉。"
+msgstr "白天關閉前光"
 
 #: plugins/autowarmth.koplugin/main.lua:695
-#, fuzzy
 msgid "Offset for frontlight off"
-msgstr "自動前光"
+msgstr "前光關閉偏移量"
 
 #: plugins/autowarmth.koplugin/main.lua:696
 msgid ""
@@ -15955,6 +16301,9 @@ msgid ""
 "  • off after sunrise and\n"
 "  • on before sunset."
 msgstr ""
+"在此時間設定下，前光將會：\n"
+"  • 日出後關閉\n"
+"  • 日落前開啟。"
 
 #: plugins/autowarmth.koplugin/main.lua:736
 msgid ""
@@ -15966,6 +16315,13 @@ msgid ""
 "\n"
 "For cloudy autumn days, the switch-on/off time can be shifted by an offset."
 msgstr ""
+"此功能會依據本外掛的「目前使用中的參數」，在日落時開啟前光，日出時關閉前光。"
+"\n"
+"\n"
+"您可以手動開關前光來覆寫此設定。在下次日出/日落時，AutoWarmth "
+"仍會依需要再次切換。\n"
+"\n"
+"在多雲的秋日，開關時間可透過偏移量進行調整。"
 
 #: plugins/autowarmth.koplugin/main.lua:763
 msgid "According to the sun's position"
@@ -15985,21 +16341,21 @@ msgstr "僅使用固定排程的時間。"
 
 #: plugins/autowarmth.koplugin/main.lua:769
 msgid "Whatever is closer to noon"
-msgstr ""
+msgstr "取較接近中午的時間"
 
 #: plugins/autowarmth.koplugin/main.lua:770
 msgid ""
 "Use the times from the sun position or schedule that are closer to noon."
-msgstr ""
+msgstr "使用太陽位置或時間表中，較接近中午的時間。"
 
 #: plugins/autowarmth.koplugin/main.lua:772
 msgid "Whatever is closer to midnight"
-msgstr ""
+msgstr "取較接近午夜的時間"
 
 #: plugins/autowarmth.koplugin/main.lua:773
 msgid ""
 "Use the times from the sun position or schedule that are closer to midnight."
-msgstr ""
+msgstr "使用太陽位置或時間表中，較接近午夜的時間。"
 
 #: plugins/autowarmth.koplugin/main.lua:782
 msgid "Location: %1"
@@ -16007,16 +16363,15 @@ msgstr "位置：%1"
 
 #: plugins/autowarmth.koplugin/main.lua:784
 msgid "Location"
-msgstr "定位"
+msgstr "位置"
 
 #: plugins/autowarmth.koplugin/main.lua:790
 msgid "Location name"
 msgstr "位置名稱"
 
 #: plugins/autowarmth.koplugin/main.lua:821
-#, fuzzy
 msgid "Coordinates: (%1°, %2°)"
-msgstr "座標： (%1, %2)"
+msgstr "座標：(%1°, %2°)"
 
 #: plugins/autowarmth.koplugin/main.lua:825
 msgid "Set location"
@@ -16024,7 +16379,7 @@ msgstr "設定位置"
 
 #: plugins/autowarmth.koplugin/main.lua:826
 msgid "Enter decimal degrees, northern hemisphere and eastern length are '+'."
-msgstr ""
+msgstr "請輸入十進位度數，北半球與東經為「+」。"
 
 #: plugins/autowarmth.koplugin/main.lua:827
 msgid "Latitude"
@@ -16035,7 +16390,6 @@ msgid "Longitude"
 msgstr "經度"
 
 #: plugins/autowarmth.koplugin/main.lua:859
-#, fuzzy
 msgid "Altitude: %1 m"
 msgstr "海拔：%1 公尺"
 
@@ -16045,13 +16399,12 @@ msgstr "海拔"
 
 #: plugins/autowarmth.koplugin/main.lua:864
 msgid "Enter the altitude in meters above sea level."
-msgstr ""
+msgstr "請輸入高於海平面的海拔高度（單位：公尺）。"
 
 #: plugins/autowarmth.koplugin/main.lua:871
-#, fuzzy
 msgctxt "Length"
 msgid "m"
-msgstr "分"
+msgstr "公尺"
 
 #: plugins/autowarmth.koplugin/main.lua:940
 msgid ""
@@ -16074,21 +16427,20 @@ msgid "Invalidate"
 msgstr "停用"
 
 #: plugins/autowarmth.koplugin/main.lua:985
-#, fuzzy
 msgid "Solar midnight (previous day)"
-msgstr "午夜"
+msgstr "太陽午夜（前一天）"
 
 #: plugins/autowarmth.koplugin/main.lua:986
 msgid "Astronomical dawn"
-msgstr "天文黎明"
+msgstr "天文黎明（幾乎全黑時天將亮）"
 
 #: plugins/autowarmth.koplugin/main.lua:987
 msgid "Nautical dawn"
-msgstr "航海黎明"
+msgstr "航海黎明（可見星辰時天將亮）"
 
 #: plugins/autowarmth.koplugin/main.lua:988
 msgid "Civil dawn"
-msgstr "民用黎明"
+msgstr "民用黎明（天色微亮時天將亮）"
 
 #: plugins/autowarmth.koplugin/main.lua:989
 msgid "Sunrise"
@@ -16105,15 +16457,15 @@ msgstr "日落"
 
 #: plugins/autowarmth.koplugin/main.lua:992
 msgid "Civil dusk"
-msgstr "民用薄暮"
+msgstr "民用薄暮（天色微暗）"
 
 #: plugins/autowarmth.koplugin/main.lua:993
 msgid "Nautical dusk"
-msgstr "航海薄暮"
+msgstr "航海薄暮（可見星辰）"
 
 #: plugins/autowarmth.koplugin/main.lua:994
 msgid "Astronomical dusk"
-msgstr "天文薄暮"
+msgstr "天文薄暮（幾乎全黑）"
 
 #: plugins/autowarmth.koplugin/main.lua:995
 #: plugins/autowarmth.koplugin/main.lua:1174
@@ -16139,47 +16491,43 @@ msgid "%1: ☾"
 msgstr "%1: ☾"
 
 #: plugins/autowarmth.koplugin/main.lua:1035
-#, fuzzy
 msgid "Enter percentage of warmth."
-msgstr "電池百分比"
+msgstr "輸入暖色百分比。"
 
 #: plugins/autowarmth.koplugin/main.lua:1111
-#, fuzzy
 msgid "Control: %1%2%3"
-msgstr "字型：%1%2"
+msgstr "控制：%1%2%3"
 
 #: plugins/autowarmth.koplugin/main.lua:1111
-#, fuzzy
 msgid "warmth"
-msgstr "暖度"
+msgstr "暖色"
 
 #: plugins/autowarmth.koplugin/main.lua:1112
 msgid "and"
 msgstr "和"
 
 #: plugins/autowarmth.koplugin/main.lua:1113
-#, fuzzy
 msgid "night mode"
 msgstr "夜間模式"
 
 #: plugins/autowarmth.koplugin/main.lua:1115
-#, fuzzy
 msgid "Control: night mode"
-msgstr "自動夜間模式"
+msgstr "控制：夜間模式"
 
 #: plugins/autowarmth.koplugin/main.lua:1128
 msgid ""
 "Tapping here chooses between the different AutoWarmth modes: 'warmth only', "
 "'warmth and night mode', 'night mode only'."
-msgstr ""
+msgstr "點擊此處可在不同的 AutoWarmth "
+"模式間切換：「僅暖度」、「暖度與夜間模式」、「僅夜間模式」。"
 
 #: plugins/autowarmth.koplugin/main.lua:1132
 msgid "Your device supports 'night mode' control only."
-msgstr ""
+msgstr "您的裝置僅支援「夜間模式」控制。"
 
 #: plugins/autowarmth.koplugin/main.lua:1166
 msgid "Set warmth and night mode for:"
-msgstr "設定夜間模式："
+msgstr "設定暖度與夜間模式："
 
 #: plugins/autowarmth.koplugin/main.lua:1166
 msgid "Set night mode for:"
@@ -16204,7 +16552,7 @@ msgstr "天文薄暮的最暗時間"
 #: plugins/autowarmth.koplugin/main.lua:1270
 #: plugins/autowarmth.koplugin/main.lua:1288
 msgid "Solar midnight:"
-msgstr "午夜："
+msgstr "太陽午夜："
 
 #: plugins/autowarmth.koplugin/main.lua:1271
 #: plugins/autowarmth.koplugin/main.lua:1276
@@ -16249,13 +16597,12 @@ msgid "Dusk"
 msgstr "薄暮"
 
 #: plugins/autowarmth.koplugin/main.lua:1291
-#, fuzzy
 msgid "Toggle frontlight off between"
-msgstr "切換前光"
+msgstr "在此時間區間關閉前光"
 
 #: plugins/autowarmth.koplugin/main.lua:1292
 msgid "%1 and %2"
-msgstr ""
+msgstr "%1 到 %2"
 
 #: plugins/batterystat.koplugin/_meta.lua:4
 #: plugins/batterystat.koplugin/main.lua:215
@@ -16293,9 +16640,8 @@ msgid "Are you sure that you want to clear battery statistics?"
 msgstr "你確定要清除電池統計嗎？"
 
 #: plugins/batterystat.koplugin/main.lua:207
-#, fuzzy
 msgid "Tap to reset the data"
-msgstr "點按重設資料。"
+msgstr "點擊以重設資料"
 
 #: plugins/batterystat.koplugin/main.lua:249
 msgid "Awake since last charge"
@@ -16303,11 +16649,11 @@ msgstr "上次充電以來的喚醒時間"
 
 #: plugins/batterystat.koplugin/main.lua:252
 msgid "Sleeping since last charge"
-msgstr "上次充電以來的總休眠時間"
+msgstr "上次充電以來的休眠時間"
 
 #: plugins/batterystat.koplugin/main.lua:255
 msgid "During last charge"
-msgstr "在上次充電期間中"
+msgstr "上次充電期間"
 
 #: plugins/batterystat.koplugin/main.lua:256
 msgid "Charged:"
@@ -16315,7 +16661,7 @@ msgstr "已充電："
 
 #: plugins/batterystat.koplugin/main.lua:258
 msgid "Since last charge"
-msgstr "從上次充電起"
+msgstr "自上次充電起"
 
 #: plugins/bookshortcuts.koplugin/_meta.lua:4
 #: plugins/bookshortcuts.koplugin/main.lua:77
@@ -16324,13 +16670,12 @@ msgstr "書籍捷徑"
 
 #: plugins/bookshortcuts.koplugin/_meta.lua:5
 msgid "This plugin allows adding a book shortcut to a gesture."
-msgstr "此外掛將書可以將書籍捷徑加到手勢。"
+msgstr "此外掛可將書籍捷徑綁定到手勢。"
 
 #: plugins/bookshortcuts.koplugin/main.lua:27
-#, fuzzy
 msgctxt "File"
 msgid "Open %1"
-msgstr "開啟"
+msgstr "開啟 %1"
 
 #: plugins/bookshortcuts.koplugin/main.lua:87
 msgid "last book"
@@ -16341,13 +16686,12 @@ msgid "New shortcut"
 msgstr "新增捷徑"
 
 #: plugins/bookshortcuts.koplugin/main.lua:107
-#, fuzzy
 msgid "Folder action: %1"
 msgstr "資料夾動作：%1"
 
 #: plugins/bookshortcuts.koplugin/main.lua:124
 msgid "Recursively search folders"
-msgstr ""
+msgstr "遞迴搜尋資料夾"
 
 #: plugins/bookshortcuts.koplugin/main.lua:142
 msgid "Do you want to delete this shortcut?"
@@ -16361,8 +16705,7 @@ msgstr "Calibre"
 msgid ""
 "Integration with calibre. Send documents from calibre library via Wi-Fi and "
 "search calibre metadata."
-msgstr ""
-"與 calibre 整合。透過 Wi-Fi 從 calibre 書櫃傳送文件並搜尋 calibre 詮釋資料。"
+msgstr "與 calibre 整合。可透過 Wi-Fi 從 calibre 書櫃傳送文件並搜尋詮釋資料。"
 
 #: plugins/calibre.koplugin/main.lua:64 plugins/calibre.koplugin/main.lua:118
 #: plugins/calibre.koplugin/search.lua:193
@@ -16378,24 +16721,20 @@ msgid "Browse all calibre series"
 msgstr "瀏覽所有 calibre 系列"
 
 #: plugins/calibre.koplugin/main.lua:67
-#, fuzzy
 msgid "Browse all calibre authors"
-msgstr "瀏覽所有 calibre 標籤"
+msgstr "瀏覽所有 calibre 作者"
 
 #: plugins/calibre.koplugin/main.lua:68
-#, fuzzy
 msgid "Browse all calibre titles"
-msgstr "瀏覽所有 calibre 系列"
+msgstr "瀏覽所有 calibre 書名"
 
 #: plugins/calibre.koplugin/main.lua:69
-#, fuzzy
 msgid "Calibre wireless connect"
-msgstr "Calibre 無線裝置連線"
+msgstr "Calibre 無線連線"
 
 #: plugins/calibre.koplugin/main.lua:70
-#, fuzzy
 msgid "Calibre wireless disconnect"
-msgstr "Calibre 無線裝置連線"
+msgstr "Calibre 無線斷線"
 
 #: plugins/calibre.koplugin/main.lua:87
 msgid "Disconnect"
@@ -16443,14 +16782,12 @@ msgid "Search by authors"
 msgstr "用作者搜尋"
 
 #: plugins/calibre.koplugin/main.lua:217
-#, fuzzy
 msgid "Search by series"
-msgstr "用標題搜尋"
+msgstr "用系列搜尋"
 
 #: plugins/calibre.koplugin/main.lua:226
-#, fuzzy
 msgid "Search by tag"
-msgstr "用路徑搜尋書籍"
+msgstr "用標籤搜尋"
 
 #: plugins/calibre.koplugin/main.lua:235
 msgid "Search by path"
@@ -16478,13 +16815,11 @@ msgid "Server address (%1)"
 msgstr "伺服器地址 (%1)"
 
 #: plugins/calibre.koplugin/main.lua:293
-#, fuzzy
 msgctxt "Configuration type"
 msgid "Automatic"
 msgstr "自動"
 
 #: plugins/calibre.koplugin/main.lua:302
-#, fuzzy
 msgctxt "Configuration type"
 msgid "Manual"
 msgstr "手動"
@@ -16537,14 +16872,12 @@ msgid "Browse tags"
 msgstr "瀏覽標籤"
 
 #: plugins/calibre.koplugin/search.lua:218
-#, fuzzy
 msgid "Browse authors"
-msgstr "瀏覽標籤"
+msgstr "瀏覽作者"
 
 #: plugins/calibre.koplugin/search.lua:227
-#, fuzzy
 msgid "Browse titles"
-msgstr "瀏覽系列"
+msgstr "瀏覽書名"
 
 #. @translators Search for books in calibre Library, via on-device metadata (as setup by Calibre's 'Send To Device').
 #: plugins/calibre.koplugin/search.lua:248
@@ -16556,9 +16889,8 @@ msgid "No results in metadata"
 msgstr "詮釋資料中沒有結果"
 
 #: plugins/calibre.koplugin/search.lua:426
-#, fuzzy
 msgid "Books"
-msgstr "書籤"
+msgstr "書籍"
 
 #: plugins/calibre.koplugin/search.lua:431
 msgid "Browse by tags"
@@ -16569,19 +16901,17 @@ msgid "Browse by series"
 msgstr "依系列瀏覽"
 
 #: plugins/calibre.koplugin/search.lua:437
-#, fuzzy
 msgid "Browse by authors"
-msgstr "依標籤瀏覽"
+msgstr "依作者瀏覽"
 
 #: plugins/calibre.koplugin/search.lua:440
-#, fuzzy
 msgid "Browse by titles"
-msgstr "依系列瀏覽"
+msgstr "依書名瀏覽"
 
 #: plugins/calibre.koplugin/search.lua:508
 msgid ""
 "Scanning libraries can take time. All storage media under %1 will be analyzed"
-msgstr "掃描書櫃需要一些時間。 將分析 %1 下的所有儲存媒體"
+msgstr "掃描書櫃需要一些時間。將分析 %1 下的所有儲存媒體"
 
 #: plugins/calibre.koplugin/search.lua:535
 msgid "SD card"
@@ -16601,51 +16931,43 @@ msgstr ""
 
 #. @translators tcp socket error on host:port
 #: plugins/calibre.koplugin/wireless.lua:61
-#, fuzzy
 msgid "no route to host"
-msgstr "更多工具"
+msgstr "沒有到主機的路由"
 
 #. @translators tcp socket error on host:port
 #: plugins/calibre.koplugin/wireless.lua:63
-#, fuzzy
 msgid "host not found"
-msgstr "找不到檔案"
+msgstr "找不到主機"
 
 #. @translators tcp socket error on host:port
 #: plugins/calibre.koplugin/wireless.lua:65
-#, fuzzy
 msgid "connection refused"
-msgstr "連線失敗"
+msgstr "連線被拒絕"
 
 #. @translators tcp socket error on host:port
 #: plugins/calibre.koplugin/wireless.lua:67
-#, fuzzy
 msgid "timeout"
-msgstr "設定逾時"
+msgstr "逾時"
 
 #. @translators tcp socket error on host:port
 #: plugins/calibre.koplugin/wireless.lua:69
-#, fuzzy
 msgid "closed"
-msgstr "關閉"
+msgstr "已關閉"
 
 #. @translators calibre server address type
 #: plugins/calibre.koplugin/wireless.lua:71
-#, fuzzy
 msgid "discovered"
-msgstr "中斷連線"
+msgstr "已發現"
 
 #. @translators calibre server address type
 #: plugins/calibre.koplugin/wireless.lua:73
-#, fuzzy
 msgid "specified"
-msgstr "未指明的錯誤"
+msgstr "已指定"
 
 #. @translators calibre connection error
 #: plugins/calibre.koplugin/wireless.lua:75
-#, fuzzy
 msgid "handshake timeout"
-msgstr "設定逾時"
+msgstr "握手逾時"
 
 #. @translators calibre connection error
 #: plugins/calibre.koplugin/wireless.lua:77
@@ -16664,39 +16986,35 @@ msgid ""
 msgstr ""
 "此資料夾已被初始化為 %1。\n"
 "\n"
-"除非您知道自己在做什麼，否則不建議混合多個 calibre 書櫃。\n"
+"除非您很清楚自己在做什麼，否則不建議混合多個 calibre 書櫃。\n"
 "\n"
-"你要繼續嗎？ "
+"要繼續嗎？ "
 
 #: plugins/calibre.koplugin/wireless.lua:261
-#, fuzzy
 msgid "Searching for a calibre server… (tap to cancel)"
-msgstr "讀取高解析度圖片……（點擊取消）"
+msgstr "正在搜尋 calibre 伺服器……（點擊取消）"
 
 #: plugins/calibre.koplugin/wireless.lua:268
 msgid "Couldn't discover a calibre instance on the local network"
-msgstr ""
+msgstr "在區域網路中找不到 calibre 伺服器"
 
 #. @translators %1: address (host:port), %2: address type (discovered, specified, unavailable)
 #: plugins/calibre.koplugin/wireless.lua:291
-#, fuzzy
 msgid "Connecting to calibre server at %1 (%2, tap to cancel)"
-msgstr "無法連線到 Calibre 伺服器。"
+msgstr "正在連線到 calibre 伺服器 %1（%2，點擊取消）"
 
 #. @translators %1: address (host:port), %2: error
 #: plugins/calibre.koplugin/wireless.lua:329
-#, fuzzy
 msgid "Cannot connect to calibre server at %1 (%2)"
-msgstr "無法連線到 Calibre 伺服器。"
+msgstr "無法連線到 calibre 伺服器 %1（%2）"
 
 #: plugins/calibre.koplugin/wireless.lua:346
 msgid "Disconnected by calibre"
-msgstr "與 calibre 連線中斷"
+msgstr "被 calibre 中斷連線"
 
 #: plugins/calibre.koplugin/wireless.lua:349
-#, fuzzy
 msgid "Disconnected from calibre (no activity)"
-msgstr "與 calibre 連線中斷"
+msgstr "與 calibre 斷線（因無活動）"
 
 #: plugins/calibre.koplugin/wireless.lua:517
 msgid "Set a password for calibre wireless server"
@@ -16840,11 +17158,11 @@ msgstr ""
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:822
 msgid "Don't prune"
-msgstr "不要清理"
+msgstr "不要刪除"
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:822
 msgid "Prune"
-msgstr "清理"
+msgstr "刪除"
 
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:827
 msgid "Do you want to abort extraction?"
@@ -16923,14 +17241,13 @@ msgid_plural "On hold – %1 pages"
 msgstr[0] "等候中 – %1 頁"
 
 #: plugins/coverbrowser.koplugin/listmenu.lua:344
-#, fuzzy
 msgid "%1 % of 1 page"
 msgid_plural "%1 % of %2 pages"
-msgstr[0] "%1 %，共 %2 頁"
+msgstr[0] "%1 / %2 頁"
 
 #: plugins/coverbrowser.koplugin/listmenu.lua:347
 msgid "%1, %2 to read"
-msgstr "%1, %2 未閱讀"
+msgstr "%1，尚有 %2 頁未讀"
 
 #: plugins/coverbrowser.koplugin/listmenu.lua:354
 msgid "1 page"
@@ -16974,16 +17291,15 @@ msgstr "有封面圖片與檔名的詳細清單"
 
 #: plugins/coverbrowser.koplugin/main.lua:140
 msgid "Use this mode everywhere"
-msgstr ""
+msgstr "在所有地方使用此模式"
 
 #: plugins/coverbrowser.koplugin/main.lua:152
 msgid "History display mode"
 msgstr "閱讀歷史顯示模式"
 
 #: plugins/coverbrowser.koplugin/main.lua:159
-#, fuzzy
 msgid "Collections display mode"
-msgstr "最愛顯示模式"
+msgstr "收藏顯示模式"
 
 #: plugins/coverbrowser.koplugin/main.lua:166
 msgid "Display mode"
@@ -16995,112 +17311,103 @@ msgstr "馬賽克和詳細的清單設定"
 
 #: plugins/coverbrowser.koplugin/main.lua:197
 msgid "Items per page in portrait mosaic mode: %1 × %2"
-msgstr ""
+msgstr "直向拼貼模式每頁項目數：%1 × %2"
 
 #: plugins/coverbrowser.koplugin/main.lua:205
-#, fuzzy
 msgid "Portrait mosaic mode"
-msgstr "顯示進度列"
+msgstr "直向拼貼模式"
 
 #: plugins/coverbrowser.koplugin/main.lua:246
 msgid "Items per page in landscape mosaic mode: %1 × %2"
-msgstr ""
+msgstr "橫向拼貼模式每頁項目數：%1 × %2"
 
 #: plugins/coverbrowser.koplugin/main.lua:253
 msgid "Landscape mosaic mode"
-msgstr ""
+msgstr "橫向拼貼模式"
 
 #: plugins/coverbrowser.koplugin/main.lua:297
 msgid "Items per page in portrait list mode: %1"
-msgstr ""
+msgstr "直向清單模式每頁項目數：%1"
 
 #: plugins/coverbrowser.koplugin/main.lua:303
-#, fuzzy
 msgid "Portrait list mode"
-msgstr "關於自動夜間模式"
+msgstr "直向清單模式"
 
 #: plugins/coverbrowser.koplugin/main.lua:341
-#, fuzzy
 msgid "Show file properties"
-msgstr "顯示星曆"
+msgstr "顯示檔案屬性"
 
 #: plugins/coverbrowser.koplugin/main.lua:352
-#, fuzzy
 msgid "Progress"
-msgstr "進度列"
+msgstr "進度"
 
 #: plugins/coverbrowser.koplugin/main.lua:355
-#, fuzzy
 msgid "Show progress in mosaic mode"
-msgstr "顯示進度列"
+msgstr "在拼貼模式中顯示進度"
 
 #: plugins/coverbrowser.koplugin/main.lua:364
-#, fuzzy
 msgid "Show progress in detailed list mode"
-msgstr "顯示進度列"
+msgstr "在詳細清單模式中顯示進度"
 
 #: plugins/coverbrowser.koplugin/main.lua:372
 msgid "Show number of pages read instead of progress %"
-msgstr "顯示已讀頁數而非進度 %"
+msgstr "顯示已讀頁數而非進度百分比"
 
 #: plugins/coverbrowser.koplugin/main.lua:381
 msgid "Show number of pages left to read"
-msgstr "顯示尚有多少頁數未讀"
+msgstr "顯示剩餘未讀頁數"
 
 #: plugins/coverbrowser.koplugin/main.lua:392
 msgid "Display hints"
-msgstr "顯示小記號"
+msgstr "顯示提示"
 
 #: plugins/coverbrowser.koplugin/main.lua:395
 msgid "Show hint for books with description"
-msgstr "給有描述的書籍標上小記號"
+msgstr "為有描述的書籍顯示提示"
 
 #: plugins/coverbrowser.koplugin/main.lua:404
-#, fuzzy
 msgid "Show hint for book status in history"
-msgstr "閱讀歷史清單中，替開啟過的書籍標上小記號"
+msgstr "在閱讀歷史中顯示書籍狀態提示"
 
 #: plugins/coverbrowser.koplugin/main.lua:412
-#, fuzzy
 msgid "Show hint for book status in collections"
-msgstr "替在最愛中開啟的書籍標上小記號"
+msgstr "在收藏中顯示書籍狀態提示"
 
 #: plugins/coverbrowser.koplugin/main.lua:424
-#, fuzzy
 msgid "Do not show series metadata"
-msgstr "忽略詮釋資料"
+msgstr "不顯示系列詮釋資料"
 
 #: plugins/coverbrowser.koplugin/main.lua:425
 msgid "Show series metadata in separate line"
-msgstr "單獨一列顯示系列詮釋資料"
+msgstr "在單獨一列顯示系列詮釋資料"
 
 #: plugins/coverbrowser.koplugin/main.lua:426
 msgid "Append series metadata to title"
-msgstr "加入系列書籍資訊到標題後面"
+msgstr "將系列詮釋資料附加在標題後"
 
 #: plugins/coverbrowser.koplugin/main.lua:427
 msgid "Append series metadata to authors"
-msgstr "加入系列書籍資訊到作者後面"
+msgstr "將系列詮釋資料附加在作者後"
 
 #: plugins/coverbrowser.koplugin/main.lua:432
 msgid "Book info cache management"
-msgstr "書籍資料快取管理"
+msgstr "書籍資訊快取管理"
 
 #: plugins/coverbrowser.koplugin/main.lua:437
 msgid "Current cache size: "
-msgstr "目前的快取大小： "
+msgstr "目前快取大小： "
 
 #: plugins/coverbrowser.koplugin/main.lua:443
 msgid "Prune cache of removed books"
-msgstr "清理被已移除書籍所佔用的快取"
+msgstr "清理已移除書籍的快取"
 
 #: plugins/coverbrowser.koplugin/main.lua:449
 msgid ""
 "Are you sure that you want to prune cache of removed books?\n"
 "(This may take a while.)"
 msgstr ""
-"您確定要清理已被移除書籍的快取嗎？\n"
-"（這會花一些時間。）"
+"確定要清理已移除書籍的快取嗎？\n"
+"（這可能需要一些時間。）"
 
 #: plugins/coverbrowser.koplugin/main.lua:450
 msgid "Prune cache"
@@ -17116,7 +17423,7 @@ msgid ""
 "(This may take a while.)"
 msgstr ""
 "確定要壓縮快取資料庫嗎？\n"
-"（這會花一些時間。）"
+"（這可能需要一些時間。）"
 
 #: plugins/coverbrowser.koplugin/main.lua:471
 msgid "Compact database"
@@ -17135,8 +17442,8 @@ msgid ""
 "Are you sure that you want to delete cover and metadata cache?\n"
 "(This will also reset your display mode settings.)"
 msgstr ""
-"確定刪除封面與詮釋資料快取嗎？\n"
-"（這也將重設您的顯示模式設定。）"
+"確定要刪除封面與詮釋資料快取嗎？\n"
+"（這也會重設您的顯示模式設定。）"
 
 #: plugins/coverbrowser.koplugin/main.lua:492
 msgid "Purge"
@@ -17144,16 +17451,16 @@ msgstr "清除"
 
 #: plugins/coverbrowser.koplugin/main.lua:508
 msgid "Extract and cache book information"
-msgstr "取出並快取書籍訊息"
+msgstr "提取並快取書籍資訊"
 
 #: plugins/coverbrowser.koplugin/main.lua:524
 #: plugins/coverbrowser.koplugin/main.lua:588
 msgid "Refresh cached book information"
-msgstr "重新整理已快取的書籍資訊"
+msgstr "重新整理快取的書籍資訊"
 
 #: plugins/coverbrowser.koplugin/main.lua:556
 msgid "Unignore cover"
-msgstr "停止忽略封面"
+msgstr "取消忽略封面"
 
 #: plugins/coverbrowser.koplugin/main.lua:556
 msgid "Ignore cover"
@@ -17161,7 +17468,7 @@ msgstr "忽略封面"
 
 #: plugins/coverbrowser.koplugin/main.lua:569
 msgid "Unignore metadata"
-msgstr "不忽略詮釋資料"
+msgstr "取消忽略詮釋資料"
 
 #: plugins/coverbrowser.koplugin/main.lua:569
 msgid "Ignore metadata"
@@ -17189,7 +17496,7 @@ msgstr ""
 #: plugins/coverimage.koplugin/main.lua:148
 #: plugins/coverimage.koplugin/main.lua:193
 msgid "Error writing file"
-msgstr "寫入檔案發生錯誤"
+msgstr "寫入檔案時發生錯誤"
 
 #: plugins/coverimage.koplugin/main.lua:377
 msgid "Append filename"
@@ -17213,6 +17520,18 @@ msgid ""
 "If fallback is disabled, the screensaver image will stay in place after "
 "closing a book."
 msgstr ""
+"這個外掛會把書籍封面存成一個檔案。該檔案可在某些裝置上作為螢幕保護程式使用。"
+"\n"
+"\n"
+"啟用時：開啟書籍時，當前書籍的封面圖片會存放到指定路徑。必要時可以排除特定書"
+"籍。\n"
+"\n"
+"停用時：封面檔案會被刪除。\n"
+"\n"
+"若啟用後備：關閉書籍時，後備檔案會被複製成螢幕保護檔案。\n"
+"若檔名為空或檔案不存在，封面檔案會被刪除。\n"
+"\n"
+"若停用後備：關閉書籍後，螢幕保護圖片將保持不變。"
 
 #: plugins/coverimage.koplugin/main.lua:467
 msgid ""
@@ -17261,7 +17580,7 @@ msgstr ""
 
 #: plugins/coverimage.koplugin/main.lua:501
 msgid "Each screen orientation requires its own cache file."
-msgstr ""
+msgstr "每個螢幕方向都需要各自的快取檔案。"
 
 #: plugins/coverimage.koplugin/main.lua:507
 msgid "Number of covers"
@@ -17297,7 +17616,7 @@ msgstr ""
 
 #: plugins/coverimage.koplugin/main.lua:532
 msgid "Choose a cache folder. The contents of the old folder will be migrated."
-msgstr ""
+msgstr "選擇一個快取資料夾。舊資料夾中的內容將會被移轉。"
 
 #: plugins/coverimage.koplugin/main.lua:535
 msgid "Clear cached covers"
@@ -17324,16 +17643,14 @@ msgid "Aspect ratio stretch threshold: %1"
 msgstr "寬高比拉伸閾值：%1"
 
 #: plugins/coverimage.koplugin/main.lua:659
-#, fuzzy
 msgid ""
 "If the image and the screen have a similar aspect ratio (±%1 %), stretch the "
 "image instead of keeping its aspect ratio."
-msgstr "如果圖片和螢幕有相似的寬高比 (±%1%)，則拉伸圖片，而不是維持寬高比。"
+msgstr "如果圖片與螢幕的長寬比相近（±%1 %），則拉伸圖片而非保持其原始長寬比。"
 
 #: plugins/coverimage.koplugin/main.lua:665
-#, fuzzy
 msgid "Set stretch threshold"
-msgstr "設定拉伸閾值"
+msgstr "設定拉伸臨界值"
 
 #: plugins/coverimage.koplugin/main.lua:668
 msgid "black"
@@ -17348,9 +17665,8 @@ msgid "gray"
 msgstr "灰色"
 
 #: plugins/coverimage.koplugin/main.lua:672
-#, fuzzy
 msgid "Rotate image"
-msgstr "封面圖片"
+msgstr "旋轉圖片"
 
 #: plugins/coverimage.koplugin/main.lua:675
 msgid ""
@@ -17358,7 +17674,8 @@ msgid ""
 "when the native system does not rotate the background image to follow system "
 "orientation. Disable this if your device correctly handles screen saver "
 "rotation."
-msgstr ""
+msgstr "將產生的圖片旋轉以符合裝置方向。若系統本身不會依螢幕方向自動旋轉背景圖片，請"
+"啟用此選項。若您的裝置能正確處理螢幕保護程式的旋轉，請停用此選項。"
 
 #: plugins/coverimage.koplugin/main.lua:689
 msgid "Original image"
@@ -17448,9 +17765,8 @@ msgid "Directory Defaults: %1"
 msgstr "資料夾預設：%1"
 
 #: plugins/docsettingtweak.koplugin/main.lua:76
-#, fuzzy
 msgid "Missing defaults file"
-msgstr "使用預設值"
+msgstr "缺少預設檔案"
 
 #: plugins/docsettingtweak.koplugin/main.lua:79
 msgid "Defaults saved"
@@ -17470,96 +17786,80 @@ msgid "Exports highlights and notes."
 msgstr "匯出標注與筆記。"
 
 #: plugins/exporter.koplugin/clip.lua:117
-#, fuzzy
 msgid "Unknown Book"
-msgstr "未知"
+msgstr "未知書籍"
 
 #: plugins/exporter.koplugin/clip.lua:118
 #: plugins/opds.koplugin/opdsbrowser.lua:687
-#, fuzzy
 msgid "Unknown Author"
-msgstr "未知項目"
+msgstr "未知作者"
 
 #: plugins/exporter.koplugin/main.lua:124
 #: plugins/exporter.koplugin/main.lua:319
-#, fuzzy
 msgid "Export all notes in current book"
-msgstr "匯出此書中的全部筆記"
+msgstr "匯出目前書籍中的全部筆記"
 
 #: plugins/exporter.koplugin/main.lua:126
 #: plugins/exporter.koplugin/main.lua:328
-#, fuzzy
 msgid "Export all notes in all books in history"
-msgstr "匯出此書中的全部筆記"
+msgstr "匯出歷史紀錄中所有書籍的全部筆記"
 
 #: plugins/exporter.koplugin/main.lua:210
-#, fuzzy
 msgid "No highlights to export"
-msgstr "匯出標注"
+msgstr "沒有可匯出的標注"
 
 #: plugins/exporter.koplugin/main.lua:243
-#, fuzzy
 msgid "%1: Exported successfully."
-msgstr "成功提取 %1 個。"
+msgstr "%1：匯出成功。"
 
 #: plugins/exporter.koplugin/main.lua:245
-#, fuzzy
 msgid "%1: Exported to %2."
-msgstr "匯出到 Joplin"
+msgstr "%1：已匯出到 %2。"
 
 #: plugins/exporter.koplugin/main.lua:248
-#, fuzzy
 msgid "%1: Failed to export."
-msgstr "指令執行失敗了。"
+msgstr "%1：匯出失敗。"
 
 #: plugins/exporter.koplugin/main.lua:259
 msgid "Exporting may take several seconds…"
-msgstr "會出可能會花上幾秒鐘……"
+msgstr "匯出可能會花上幾秒鐘……"
 
 #: plugins/exporter.koplugin/main.lua:277
-#, fuzzy
 msgid "Share as %1"
-msgstr "分享"
+msgstr "分享為 %1"
 
 #: plugins/exporter.koplugin/main.lua:338
-#, fuzzy
 msgid "Choose formats and services"
-msgstr "選擇資料夾"
+msgstr "選擇格式與服務"
 
 #: plugins/exporter.koplugin/main.lua:342
-#, fuzzy
 msgid "Choose highlight styles"
-msgstr "循環標注樣式"
+msgstr "選擇標注樣式"
 
 #: plugins/exporter.koplugin/main.lua:347
 #: plugins/exporter.koplugin/main.lua:391
-#, fuzzy
 msgid "Set export filename"
-msgstr "檔名"
+msgstr "設定匯出檔名"
 
 #: plugins/exporter.koplugin/main.lua:354
-#, fuzzy
 msgid "Choose export folder"
-msgstr "選擇其他資料夾"
+msgstr "選擇匯出資料夾"
 
 #: plugins/exporter.koplugin/main.lua:361
 msgid "Use book folder for single export"
-msgstr ""
+msgstr "單本匯出時使用書籍所在資料夾"
 
 #: plugins/exporter.koplugin/main.lua:376
-#, fuzzy
 msgid "Share all notes in this book"
-msgstr "匯出此書中的全部筆記"
+msgstr "分享此書中的全部筆記"
 
 #: plugins/exporter.koplugin/main.lua:396
-#, fuzzy
 msgid "Single book"
-msgstr "過濾書籤"
+msgstr "單一本書"
 
 #: plugins/exporter.koplugin/main.lua:401
-#, fuzzy
 msgid "Multiple books"
-msgstr "全部書籍"
+msgstr "多本書籍"
 
 #: plugins/exporter.koplugin/main.lua:449
 msgid "Current export folder:"
@@ -17606,19 +17906,22 @@ msgid ""
 "Markdown formatting can be configured in:\n"
 "Export highlights > Choose formats and services > Markdown."
 msgstr ""
+"Joplin 的設定說明請參見 %1\n"
+"\n"
+"Markdown 格式化可在以下位置設定：\n"
+"匯出標注 > 選擇格式與服務 > Markdown。"
 
 #: plugins/exporter.koplugin/target/json.lua:17
 msgid "Json"
 msgstr "Json"
 
 #: plugins/exporter.koplugin/target/json.lua:21
-#, fuzzy
 msgid "Export to Json"
-msgstr "匯出到 Joplin"
+msgstr "匯出到 Json"
 
 #: plugins/exporter.koplugin/target/json.lua:26
 msgid "Include book checksum in export"
-msgstr ""
+msgstr "在匯出中包含書籍校驗碼"
 
 #: plugins/exporter.koplugin/target/markdown.lua:31
 #: plugins/exporter.koplugin/template/md.lua:11
@@ -17638,32 +17941,28 @@ msgstr "斜體"
 #: plugins/exporter.koplugin/target/markdown.lua:36
 #: plugins/exporter.koplugin/template/md.lua:27
 msgid "Underline (Markdownit style, with ++)"
-msgstr ""
+msgstr "底線（Markdownit 樣式，使用 ++）"
 
 #: plugins/exporter.koplugin/target/markdown.lua:37
 #: plugins/exporter.koplugin/template/md.lua:31
 msgid "Underline (with <u></u> tags)"
-msgstr ""
+msgstr "底線（使用 <u></u> 標籤）"
 
 #: plugins/exporter.koplugin/target/markdown.lua:52
-#, fuzzy
 msgid "Formatting style for %1"
-msgstr "Font hinting 已設為：%1"
+msgstr "%1 的格式化樣式"
 
 #: plugins/exporter.koplugin/target/markdown.lua:68
-#, fuzzy
 msgid "Export to Markdown"
-msgstr "匯出到 Joplin"
+msgstr "匯出到 Markdown"
 
 #: plugins/exporter.koplugin/target/markdown.lua:73
-#, fuzzy
 msgid "Export backlinks"
-msgstr "匯出註解"
+msgstr "匯出反向連結"
 
 #: plugins/exporter.koplugin/target/markdown.lua:78
-#, fuzzy
 msgid "Format highlights based on style"
-msgstr "匯出標注與筆記。"
+msgstr "依標注樣式格式化匯出"
 
 #: plugins/exporter.koplugin/target/my_clippings.lua:21
 msgid "- Your highlight on page %1 | Added on %2"
@@ -17675,37 +17974,35 @@ msgstr "- 第 %1 頁的筆記 | 建立於 %2"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:26
 msgid "Setup Nextcloud Notes plugin"
-msgstr ""
+msgstr "設定 Nextcloud Notes 外掛"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:28
 msgid "Nextcloud Notes"
-msgstr ""
+msgstr "Nextcloud Notes"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:40
 msgid "Nextcloud URL"
-msgstr ""
+msgstr "Nextcloud 網址"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:52
-#, fuzzy
 msgid "App password"
-msgstr "FTP 密碼"
+msgstr "應用程式密碼"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:53
 msgid "Security → Devices & sessions"
-msgstr ""
+msgstr "安全性 → 裝置與工作階段"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:58
 msgid "Category"
-msgstr ""
+msgstr "分類"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:59
 msgid "Category applied to the note"
-msgstr ""
+msgstr "套用到筆記的分類"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:107
-#, fuzzy
 msgid "Export to Nextcloud Notes"
-msgstr "匯出到 Joplin"
+msgstr "匯出到 Nextcloud Notes"
 
 #: plugins/exporter.koplugin/target/nextcloud.lua:116
 msgid ""
@@ -17714,21 +18011,22 @@ msgid ""
 "Markdown formatting can be configured in:\n"
 "Export highlights > Choose formats and services > Markdown."
 msgstr ""
+"Nextcloud Notes 的設定說明請參見 %1\n"
+"\n"
+"Markdown 格式化可在以下位置設定：\n"
+"匯出標注 > 選擇格式與服務 > Markdown。"
 
 #: plugins/exporter.koplugin/target/readwise.lua:19
-#, fuzzy
 msgid "Readwise"
-msgstr "閱讀器"
+msgstr "Readwise"
 
 #: plugins/exporter.koplugin/target/readwise.lua:28
-#, fuzzy
 msgid "Set authorization token for Readwise"
-msgstr "設定 Joplin 的授權 token"
+msgstr "設定 Readwise 的授權 token"
 
 #: plugins/exporter.koplugin/target/readwise.lua:54
-#, fuzzy
 msgid "Export to Readwise"
-msgstr "匯出到 Joplin"
+msgstr "匯出到 Readwise"
 
 #: plugins/exporter.koplugin/target/text.lua:28
 msgid "-- Page: %1, added on %2\n"
@@ -17739,24 +18037,21 @@ msgid "<An image>"
 msgstr "<圖片>"
 
 #: plugins/exporter.koplugin/target/xmnote.lua:20
-#, fuzzy
 msgid "XMNote"
-msgstr "筆記"
+msgstr "XMNote"
 
 #: plugins/exporter.koplugin/target/xmnote.lua:24
 #: plugins/exporter.koplugin/target/xmnote.lua:29
 msgid "Set XMNote IP"
-msgstr ""
+msgstr "設定 XMNote IP"
 
 #: plugins/exporter.koplugin/target/xmnote.lua:40
-#, fuzzy
 msgid "Set IP"
-msgstr "設定 DPI"
+msgstr "設定 IP"
 
 #: plugins/exporter.koplugin/target/xmnote.lua:56
-#, fuzzy
 msgid "Export to XMNote"
-msgstr "匯出到 Joplin"
+msgstr "匯出到 XMNote"
 
 #: plugins/exporter.koplugin/target/xmnote.lua:65
 msgid ""
@@ -17766,11 +18061,13 @@ msgid ""
 "interface, you will find the IP address of your mobile device. Enter this IP "
 "address into KOReader to complete the configuration."
 msgstr ""
+"在開始匯出前，請確保您的手機與 KOReader 連接到同一個區域網路。打開 "
+"XMNote，進入「我的」-「匯入標注」-「透過 API 匯入」。在介面底部，"
+"您將找到手機裝置的 IP 位址。將此 IP 位址輸入到 KOReader 中即可完成設定。"
 
 #: plugins/exporter.koplugin/template/md.lua:61
-#, fuzzy
 msgid "View in book"
-msgstr "只顯示新書"
+msgstr "在書中檢視"
 
 #: plugins/externalkeyboard.koplugin/_meta.lua:4
 msgid "External keyboard"
@@ -17778,7 +18075,7 @@ msgstr "外部鍵盤"
 
 #: plugins/externalkeyboard.koplugin/_meta.lua:5
 msgid "Manages USB OTG and configures keyboard."
-msgstr ""
+msgstr "管理 USB OTG 並設定鍵盤。"
 
 #: plugins/externalkeyboard.koplugin/main.lua:135
 msgid "External Keyboard"
@@ -17786,27 +18083,25 @@ msgstr "外部鍵盤"
 
 #: plugins/externalkeyboard.koplugin/main.lua:138
 msgid "Enable OTG mode to connect peripherals"
-msgstr ""
+msgstr "啟用 OTG 模式以連接週邊裝置"
 
 #: plugins/externalkeyboard.koplugin/main.lua:149
 msgid "Always enable OTG mode"
-msgstr ""
+msgstr "始終啟用 OTG 模式"
 
 #: plugins/externalkeyboard.koplugin/main.lua:269
-#, fuzzy
 msgid "Keyboard disconnected"
-msgstr "已連線。"
+msgstr "鍵盤已斷線"
 
 #: plugins/externalkeyboard.koplugin/main.lua:410
-#, fuzzy
 msgid "Keyboard connected"
-msgstr "已連線。"
+msgstr "鍵盤已連線"
 
 #: plugins/externalkeyboard.koplugin/main.lua:424
 msgid ""
 "Note that in OTG mode the device will not be recognized as a USB drive by a "
 "computer."
-msgstr ""
+msgstr "請注意，在 OTG 模式下，裝置不會被電腦識別為 USB 隨身碟。"
 
 #: plugins/gestures.koplugin/_meta.lua:4
 msgid "Gestures"
@@ -17826,7 +18121,7 @@ msgstr "長按角落"
 
 #: plugins/gestures.koplugin/main.lua:44
 msgid "One-finger swipe"
-msgstr "用一根手指滑動"
+msgstr "單指滑動"
 
 #: plugins/gestures.koplugin/main.lua:45
 msgid "Double tap"
@@ -17834,28 +18129,27 @@ msgstr "雙擊"
 
 #: plugins/gestures.koplugin/main.lua:46
 msgid "Two-finger tap corner"
-msgstr "用兩根手指點擊角落"
+msgstr "雙指點擊角落"
 
 #: plugins/gestures.koplugin/main.lua:47
 msgid "Two-finger swipe"
-msgstr "用兩根手指滑動"
+msgstr "雙指滑動"
 
 #: plugins/gestures.koplugin/main.lua:48
 msgid "Spread and pinch"
-msgstr "擴張和捏合"
+msgstr "擴張與捏合"
 
 #: plugins/gestures.koplugin/main.lua:49
-#, fuzzy
 msgid "Two-finger rotation"
-msgstr "兩根手指點擊間隔"
+msgstr "雙指旋轉"
 
 #: plugins/gestures.koplugin/main.lua:50
 msgid "Multiswipes"
-msgstr "轉向滑動手勢"
+msgstr "多方向滑動"
 
 #: plugins/gestures.koplugin/main.lua:51
 msgid "Custom multiswipes"
-msgstr "自訂轉向滑動手勢"
+msgstr "自訂多方向滑動"
 
 #: plugins/gestures.koplugin/main.lua:113
 #: plugins/gestures.koplugin/main.lua:117
@@ -17927,7 +18221,7 @@ msgstr "右側"
 
 #: plugins/gestures.koplugin/main.lua:139
 msgid "Short diagonal swipe"
-msgstr "短斜線滑動"
+msgstr "短斜向滑動"
 
 #: plugins/gestures.koplugin/main.lua:148
 msgid "Spread"
@@ -17938,14 +18232,12 @@ msgid "Pinch"
 msgstr "捏合"
 
 #: plugins/gestures.koplugin/main.lua:150
-#, fuzzy
 msgid "Rotate clockwise ⤸ 90°"
-msgstr "順時針旋轉 90°"
+msgstr "順時針旋轉 ⤸ 90°"
 
 #: plugins/gestures.koplugin/main.lua:151
-#, fuzzy
 msgid "Rotate counterclockwise ⤹ 90°"
-msgstr "順時針旋轉 90°"
+msgstr "逆時針旋轉 ⤹ 90°"
 
 #: plugins/gestures.koplugin/main.lua:190
 msgid ""
@@ -17968,49 +18260,44 @@ msgid "%1 (default)"
 msgstr "%1 (預設)"
 
 #: plugins/gestures.koplugin/main.lua:331
-#, fuzzy
 msgid "Anchor QuickMenu to gesture position"
-msgstr "根據太陽的位置"
+msgstr "將快速選單固定在手勢位置"
 
 #: plugins/gestures.koplugin/main.lua:351
-#, fuzzy
 msgid "Always active"
-msgstr "總是"
+msgstr "始終啟用"
 
 #: plugins/gestures.koplugin/main.lua:464
 #: plugins/gestures.koplugin/main.lua:535
 msgid "Multiswipe recorder"
-msgstr "轉向滑動記錄器"
+msgstr "多方向滑動記錄器"
 
 #: plugins/gestures.koplugin/main.lua:465
 msgid "Make a multiswipe gesture"
-msgstr "執行一個轉向滑動手勢"
+msgstr "執行一個多方向滑動手勢"
 
 #: plugins/gestures.koplugin/main.lua:485
 msgid "Recorded multiswipe already exists."
-msgstr "轉向滑動記錄已存在。"
+msgstr "該多方向滑動記錄已存在。"
 
 #: plugins/gestures.koplugin/main.lua:540
 msgid ""
 "The number of possible multiswipe gestures is theoretically infinite. With "
 "the multiswipe recorder you can easily record your own."
-msgstr ""
-"轉向滑動手勢可轉的方向理論上是無限的。您能用轉向滑動記錄器，輕易地錄下您自己"
-"的手勢。"
+msgstr "多方向滑動手勢的可能數量理論上是無限的。您可以使用多方向滑動記錄器輕鬆錄製您"
+"自己的手勢。"
 
 #: plugins/gestures.koplugin/main.lua:546
 msgid "Remove custom multiswipe %1?"
-msgstr "移除預設的轉向滑動 %1?"
+msgstr "要移除自訂多方向滑動 %1 嗎？"
 
 #: plugins/gestures.koplugin/main.lua:641
-#, fuzzy
 msgid "Gestures in file browser"
-msgstr "在檔案瀏覽器中按返回鍵：%1"
+msgstr "檔案瀏覽器中的手勢"
 
 #: plugins/gestures.koplugin/main.lua:641
-#, fuzzy
 msgid "Gestures in reader"
-msgstr "手勢管理員"
+msgstr "閱讀器中的手勢"
 
 #: plugins/gestures.koplugin/main.lua:649
 msgid "Gesture intervals"
@@ -18027,17 +18314,17 @@ msgid ""
 "text.\n"
 "Higher values mean faster screen updates, but also use more CPU."
 msgstr ""
-"該速度是在選擇文字時螢幕每隔幾秒重新整理一次。\n"
-"更高的值意味著更快的螢幕更新，但也使用更多的 CPU。"
+"此數值決定在選擇文字時，螢幕每秒重新整理的頻率。\n"
+"數值越高，更新越快，但也會消耗更多 CPU。"
 
 #: plugins/gestures.koplugin/main.lua:668
 msgctxt "Frequency"
 msgid "Hz"
-msgstr ""
+msgstr "Hz"
 
 #: plugins/gestures.koplugin/main.lua:669
 msgid "Set rate"
-msgstr "設定速度"
+msgstr "設定頻率"
 
 #: plugins/gestures.koplugin/main.lua:681
 #: plugins/gestures.koplugin/main.lua:685
@@ -18046,7 +18333,6 @@ msgstr "點擊間隔"
 
 #: plugins/gestures.koplugin/main.lua:686
 #: plugins/gestures.koplugin/main.lua:713
-#, fuzzy
 msgid ""
 "Any other taps made within this interval after a first tap will be "
 "considered accidental and ignored.\n"
@@ -18054,9 +18340,9 @@ msgid ""
 "The interval value is in milliseconds and can range from 0 (0 seconds) to "
 "2000 (2 seconds)."
 msgstr ""
-"設定雙擊間隔，以毫秒為單位。\n"
-"間隔值的範圍可以從 100（0.1 秒）到 2000（2 秒）。\n"
-"預設值：%1"
+"在首次點擊後，此間隔內的任何其他點擊都將視為誤觸並被忽略。\n"
+"\n"
+"間隔值以毫秒為單位，範圍可從 0（0 秒）到 2000（2 秒）。"
 
 #: plugins/gestures.koplugin/main.lua:708
 #: plugins/gestures.koplugin/main.lua:712
@@ -18069,7 +18355,6 @@ msgid "Double tap interval"
 msgstr "雙擊間隔"
 
 #: plugins/gestures.koplugin/main.lua:739
-#, fuzzy
 msgid ""
 "When double tap is enabled, this sets the time to wait for the second tap. A "
 "single tap will take at least this long to be detected.\n"
@@ -18077,17 +18362,17 @@ msgid ""
 "The interval value is in milliseconds and can range from 100 (0.1 seconds) "
 "to 2000 (2 seconds)."
 msgstr ""
-"設定雙擊間隔，以毫秒為單位。\n"
-"間隔值的範圍可以從 100（0.1 秒）到 2000（2 秒）。\n"
-"預設值：%1"
+"啟用雙擊後，此選項設定等待第二次點擊的時間。單擊至少需要經過此時間才會被偵測"
+"。\n"
+"\n"
+"間隔值以毫秒為單位，範圍可從 100（0.1 秒）到 2000（2 秒）。"
 
 #: plugins/gestures.koplugin/main.lua:761
 #: plugins/gestures.koplugin/main.lua:765
 msgid "Two finger tap duration"
-msgstr "兩根手指點擊間隔"
+msgstr "雙指點擊持續時間"
 
 #: plugins/gestures.koplugin/main.lua:766
-#, fuzzy
 msgid ""
 "This sets the allowed duration of any of the two fingers touch/release for "
 "the combined event to be considered a two finger tap.\n"
@@ -18095,9 +18380,9 @@ msgid ""
 "The duration value is in milliseconds and can range from 100 (0.1 seconds) "
 "to 2000 (2 seconds)."
 msgstr ""
-"設定兩根手指點擊間隔，以毫秒為單位。\n"
-"間隔值的範圍可以從 100（0.1 秒）到 2000（2 秒）。\n"
-"預設值：%1"
+"此選項設定雙指觸碰/釋放的允許持續時間，才會被視為一次雙指點擊。\n"
+"\n"
+"持續時間以毫秒為單位，範圍可從 100（0.1 秒）到 2000（2 秒）。"
 
 #: plugins/gestures.koplugin/main.lua:777
 msgid "Set duration"
@@ -18109,7 +18394,6 @@ msgid "Long-press interval"
 msgstr "長按間隔"
 
 #: plugins/gestures.koplugin/main.lua:793
-#, fuzzy
 msgid ""
 "If a touch is not released in this interval, it is considered a long-press. "
 "On document text, single word selection will then be triggered.\n"
@@ -18117,9 +18401,9 @@ msgid ""
 "The interval value is in milliseconds and can range from 100 (0.1 seconds) "
 "to the very-long-press interval."
 msgstr ""
-"設定平移延遲間隔，以毫秒為單位。\n"
-"間隔值的範圍可以從 100（0.1 秒）到 2000（2 秒）。\n"
-"預設值：%1"
+"若在此間隔內未鬆開觸控，則會視為長按。在文件文字上，會觸發單字選取。\n"
+"\n"
+"間隔值以毫秒為單位，範圍可從 100（0.1 秒）到極長按間隔。"
 
 #: plugins/gestures.koplugin/main.lua:816
 #: plugins/gestures.koplugin/main.lua:820
@@ -18127,7 +18411,6 @@ msgid "Swipe interval"
 msgstr "滑動間隔"
 
 #: plugins/gestures.koplugin/main.lua:821
-#, fuzzy
 msgid ""
 "This sets the maximum delay between the start and the end of a swipe for it "
 "to be considered a swipe. Above this interval, it's considered panning.\n"
@@ -18135,9 +18418,9 @@ msgid ""
 "The interval value is in milliseconds and can range from 100 (0.1 seconds) "
 "to 2000 (2 seconds)."
 msgstr ""
-"設定平移延遲間隔，以毫秒為單位。\n"
-"間隔值的範圍可以從 100（0.1 秒）到 2000（2 秒）。\n"
-"預設值：%1"
+"此選項設定從滑動開始到結束的最大延遲，超過此間隔則會被視為平移操作。\n"
+"\n"
+"間隔值以毫秒為單位，範圍可從 100（0.1 秒）到 2000（2 秒）。"
 
 #: plugins/gestures.koplugin/main.lua:848
 msgid "Gesture manager"
@@ -18145,7 +18428,7 @@ msgstr "手勢管理員"
 
 #: plugins/gestures.koplugin/main.lua:852
 msgid "Turn on multiswipes"
-msgstr "啟用轉向滑動手勢"
+msgstr "啟用多方向滑動手勢"
 
 #: plugins/gestures.koplugin/main.lua:1309
 msgid ""
@@ -18155,17 +18438,15 @@ msgstr "手勢已經升級。您現在可以為每個手勢設定多個動作。
 
 #: plugins/gestures.koplugin/main.lua:1333
 msgid "You have just performed your first multiswipe gesture."
-msgstr "您剛剛第一次做出了轉向滑動手勢。"
+msgstr "您剛剛執行了第一次多方向滑動手勢。"
 
 #: plugins/gestures.koplugin/main.lua:1365
-#, fuzzy
 msgid "Ignore long-press on corners: on"
-msgstr "忽略長按角落"
+msgstr "忽略角落長按：開啟"
 
 #: plugins/gestures.koplugin/main.lua:1367
-#, fuzzy
 msgid "Ignore long-press on corners: off"
-msgstr "忽略長按角落"
+msgstr "忽略角落長按：關閉"
 
 #: plugins/hello.koplugin/_meta.lua:4
 msgid "Hello"
@@ -18173,7 +18454,7 @@ msgstr "您好"
 
 #: plugins/hello.koplugin/_meta.lua:5
 msgid "This is a debugging plugin."
-msgstr "這是個除錯外掛。"
+msgstr "這是一個除錯外掛。"
 
 #: plugins/hello.koplugin/main.lua:24 plugins/hello.koplugin/main.lua:34
 #: plugins/hello.koplugin/main.lua:48
@@ -18186,12 +18467,12 @@ msgstr "您好，外掛世界"
 
 #: plugins/hotkeys.koplugin/_meta.lua:4
 msgid "Hotkeys"
-msgstr ""
+msgstr "快速鍵"
 
 #: plugins/hotkeys.koplugin/_meta.lua:5
 msgid ""
 "This plugin provides custom shortcut support for devices with physical keys."
-msgstr ""
+msgstr "此外掛為具有實體按鍵的裝置提供自訂快捷鍵支援。"
 
 #: plugins/hotkeys.koplugin/main.lua:42
 msgid "Press"
@@ -18199,109 +18480,97 @@ msgstr "按下"
 
 #: plugins/hotkeys.koplugin/main.lua:45
 msgid "Shift + Menu"
-msgstr ""
+msgstr "Shift + 功能表"
 
 #: plugins/hotkeys.koplugin/main.lua:184 plugins/hotkeys.koplugin/main.lua:192
 #: plugins/hotkeys.koplugin/main.lua:210
-#, fuzzy
 msgid "No action"
-msgstr "不旋轉"
+msgstr "無動作"
 
 #: plugins/hotkeys.koplugin/main.lua:185
-#, fuzzy
 msgid "%1: (%2)"
-msgstr "%1 (%2)"
+msgstr "%1：（%2）"
 
 #: plugins/hotkeys.koplugin/main.lua:335
-#, fuzzy
 msgid "Type to launch full text search"
-msgstr "全文搜尋"
+msgstr "輸入以啟動全文搜尋"
 
 #: plugins/hotkeys.koplugin/main.lua:352
-#, fuzzy
 msgid "Use the press key for shortcuts"
-msgstr "快捷資料夾"
+msgstr "使用按鍵作為快捷鍵"
 
 #: plugins/hotkeys.koplugin/main.lua:367
-#, fuzzy
 msgid "Keyboard shortcuts"
-msgstr "鍵盤配置"
+msgstr "鍵盤快捷鍵"
 
 #: plugins/hotkeys.koplugin/main.lua:370
 msgid "Cursor keys"
-msgstr ""
+msgstr "方向鍵"
 
 #: plugins/hotkeys.koplugin/main.lua:374
-#, fuzzy
 msgid "Page-turn buttons"
-msgstr "對調翻頁按鍵"
+msgstr "翻頁按鍵"
 
 #: plugins/hotkeys.koplugin/main.lua:381
 msgid "Function keys"
-msgstr ""
+msgstr "功能鍵"
 
 #: plugins/hotkeys.koplugin/main.lua:389
 msgid "Alphabet keys"
-msgstr ""
+msgstr "字母鍵"
 
 #: plugins/httpinspector.koplugin/_meta.lua:4
 msgid "HTTP KOReader Inspector"
-msgstr ""
+msgstr "HTTP KOReader 檢視器"
 
 #: plugins/httpinspector.koplugin/_meta.lua:5
 msgid ""
 "Allow browsing KOReader internal objects over HTTP. This is aimed at "
 "developers, and may pose some security risks. Only enable this on networks "
 "you can trust."
-msgstr ""
+msgstr "允許透過 HTTP 瀏覽 KOReader "
+"內部物件。此功能主要提供給開發人員使用，可能會帶來安全風險。請僅在可信任的網"
+"路上啟用。"
 
 #: plugins/httpinspector.koplugin/main.lua:112
-#, fuzzy
 msgid "Failed to start HTTP inspector on port %1."
-msgstr "無法啟動 SSH 伺服器。"
+msgstr "無法在連接埠 %1 啟動 HTTP 檢視器。"
 
 #: plugins/httpinspector.koplugin/main.lua:144
-#, fuzzy
 msgid "KOReader HTTP inspector"
-msgstr "KOReader 已經是最新版了。"
+msgstr "KOReader HTTP 檢視器"
 
 #: plugins/httpinspector.koplugin/main.lua:150
-#, fuzzy
 msgid "Stop HTTP server"
-msgstr "SSH 伺服器"
+msgstr "停止 HTTP 伺服器"
 
 #: plugins/httpinspector.koplugin/main.lua:152
-#, fuzzy
 msgid "Start HTTP server"
-msgstr "SSH 伺服器"
+msgstr "啟動 HTTP 伺服器"
 
 #: plugins/httpinspector.koplugin/main.lua:170
 msgid "Listening on port %1"
-msgstr ""
+msgstr "正在監聽連接埠 %1"
 
 #: plugins/httpinspector.koplugin/main.lua:172
-#, fuzzy
 msgid "Not running"
-msgstr "Font Kerning"
+msgstr "未執行"
 
 #: plugins/httpinspector.koplugin/main.lua:181
-#, fuzzy
 msgid "Auto start HTTP server"
-msgstr "無法啟動 SSH 伺服器。"
+msgstr "自動啟動 HTTP 伺服器"
 
 #: plugins/httpinspector.koplugin/main.lua:191
-#, fuzzy
 msgid "Port: %1"
-msgstr "字型：%1"
+msgstr "連接埠：%1"
 
 #: plugins/httpinspector.koplugin/main.lua:198
-#, fuzzy
 msgid "Set custom port"
-msgstr "自訂"
+msgstr "設定自訂連接埠"
 
 #: plugins/httpinspector.koplugin/main.lua:201
 msgid "Port number (default is 8080)"
-msgstr ""
+msgstr "連接埠號碼（預設為 8080）"
 
 #: plugins/japanese.koplugin/_meta.lua:4
 msgid "Japanese support"
@@ -18320,6 +18589,14 @@ msgid ""
 "You must have at least one Japanese dictionary installed in order for this "
 "plugin to work smoothly with Japanese text."
 msgstr ""
+"為 KOReader 提供日語支援，靈感源自 Yomichan。\n"
+"\n"
+"此外掛擴充 KOReader 內建的字典與選字系統，支援 Yomichan "
+"風格的去詞形變化與文字掃描，讓已變化的動詞、多字組詞與片語可一鍵查詢。因此，"
+"對於由 StarDict "
+"轉換而來的日文詞典，無需再使用以同義詞為基礎的去詞形變化規則。\n"
+"\n"
+"請至少安裝一部日文字典，才能在閱讀日文時獲得流暢體驗。"
 
 #: plugins/japanese.koplugin/deinflector.lua:278
 msgid "Halfwidth to fullwidth kana"
@@ -18341,7 +18618,7 @@ msgstr "平假名轉片假名"
 msgid ""
 "Convert hiragana to katakana (for instance, ひらがな will be converted to ヒ"
 "ラガナ)."
-msgstr "將平假名轉換為片假名 （例如將 ひらがな 轉換為 ヒラガナ）。"
+msgstr "將平假名轉換為片假名（例如將 ひらがな 轉換為 ヒラガナ）。"
 
 #: plugins/japanese.koplugin/deinflector.lua:292
 msgid "Katakana to hiragana"
@@ -18356,7 +18633,7 @@ msgstr "將片假名轉為平假名（例如將 カタカナ 轉換為 かたか
 
 #: plugins/japanese.koplugin/deinflector.lua:299
 msgid "Collapse emphatic sequences"
-msgstr ""
+msgstr "合併強調序列"
 
 #. @translators If possible, keep the example Japanese text.
 #: plugins/japanese.koplugin/deinflector.lua:301
@@ -18364,7 +18641,8 @@ msgid ""
 "Collapse any character sequences which are sometimes used as emphasis in "
 "speech (for instance, すっっごーーい will be converted to both すっごーい "
 "and すごい)."
-msgstr ""
+msgstr "將口語中用於強調的連續字元序列加以合併（例如「すっっごーーい」會同時轉換為「"
+"すっごーい」與「すごい」）。"
 
 #: plugins/japanese.koplugin/deinflector.lua:400
 msgid "Text conversions: none enabled"
@@ -18373,7 +18651,7 @@ msgstr "文字轉換：未啟用"
 #: plugins/japanese.koplugin/deinflector.lua:402
 msgid "Text conversions: %1 enabled"
 msgid_plural "Text conversions: %1 enabled"
-msgstr[0] ""
+msgstr[0] "文字轉換：已啟用 %1 項"
 
 #: plugins/japanese.koplugin/deinflector.lua:405
 msgid ""
@@ -18387,27 +18665,32 @@ msgid ""
 "the chance of at least one conversion matching the form used in the "
 "dictionary."
 msgstr ""
+"設定在對日文進行去詞形變化時要套用哪些文字轉換。這些轉換主要涵蓋不同類型假名"
+"之間的相互轉換，以確保即使書寫所用的假名類型與已安裝字典不一致，也能順利查詢"
+"。\n"
+"\n"
+"不會一次套用所有轉換；系統會嘗試所有已啟用轉換的可能組合，以最大化與字典詞形"
+"相符的機會。"
 
 #. @translators A deinflector is a program which converts a word into its dictionary form, similar to deconjugation in European languages. See <https://en.wikipedia.org/wiki/Japanese_verb_conjugation> for more detail.
 #: plugins/japanese.koplugin/deinflector.lua:413
-#, fuzzy
 msgid "Deinflector information"
-msgstr "儲存系統資訊"
+msgstr "詞形還原器資訊"
 
 #: plugins/japanese.koplugin/deinflector.lua:421
 msgid "%1 rule"
 msgid_plural "%1 rules"
-msgstr[0] ""
+msgstr[0] "%1 條規則"
 
 #: plugins/japanese.koplugin/deinflector.lua:422
 msgid "%1 variant"
 msgid_plural "%1 variants"
-msgstr[0] ""
+msgstr[0] "%1 個變體"
 
 #. @translators %1 is the "%1 rule(s)" string, %2 is the "%1 variant(s)" string.
 #: plugins/japanese.koplugin/deinflector.lua:425
 msgid "Deinflector has %1 and %2 loaded."
-msgstr ""
+msgstr "詞形還原器已載入 %1 與 %2。"
 
 #: plugins/japanese.koplugin/main.lua:206
 msgid "Text scan length: %1 character"
@@ -18418,7 +18701,7 @@ msgstr[0] "文字掃描長度：%1 個字元"
 msgid ""
 "Number of characters to look ahead when trying to expand tap-and-hold word "
 "selection in documents."
-msgstr ""
+msgstr "在文件中長按選字時，向前擴展所要預覽的字元數。"
 
 #: plugins/japanese.koplugin/main.lua:214
 msgid "Text scan length"
@@ -18433,6 +18716,10 @@ msgid ""
 "\n"
 "Default value: %1"
 msgstr ""
+"在文件中長按選字時，嘗試擴展選取範圍所能向前預覽的最大字元數。\n"
+"數值愈大，可自動選取的片語愈長，但選取速度可能變慢。\n"
+"\n"
+"預設值：%1"
 
 #: plugins/japanese.koplugin/main.lua:226
 msgid "Set scan length"
@@ -18458,11 +18745,12 @@ msgid ""
 msgstr ""
 "當這條訊息出現在螢幕上時，系統將不會休眠。\n"
 "\n"
-"如果您想要在關閉本訊息後，依然要讓機器持續保持清醒，請點按「維持清醒模式」。*"
-"這會持續消耗電力*。\n"
+"若希望在關閉此通知後仍保持裝置清醒，請點選「維持清醒模式」。*這會持續消耗電力"
+"*。\n"
 "\n"
-"如果 KOReader 在您按「關閉」前就中止執行，請啟動本「清醒模式」外掛，然後再次"
-"關閉它。這可以確保相關設定被正確重置。"
+"如果 KOReader "
+"在您按下「關閉」之前就結束，請重新啟動並關閉「清醒模式」外掛，以確保設定被重"
+"置。"
 
 #: plugins/keepalive.koplugin/main.lua:25
 msgid "Stay alive"
@@ -18481,10 +18769,9 @@ msgid "Progress sync"
 msgstr "進度同步"
 
 #: plugins/kosync.koplugin/_meta.lua:5
-#, fuzzy
 msgid ""
 "Synchronizes your reading progress to a server across your KOReader devices."
-msgstr "透過伺服器，讓您在多個 KOReader 裝置之間同步您的閱讀進度。"
+msgstr "在多部 KOReader 裝置間，透過伺服器同步您的閱讀進度。"
 
 #: plugins/kosync.koplugin/main.lua:27
 msgid "Register/login to KOReader server"
@@ -18492,36 +18779,34 @@ msgstr "註冊 / 登入到 KOReader 伺服器"
 
 #: plugins/kosync.koplugin/main.lua:121
 msgid "Progress has been synchronized."
-msgstr "進度已被同步。"
+msgstr "進度已同步。"
 
 #: plugins/kosync.koplugin/main.lua:128
 msgid ""
 "Please register or login before using the progress synchronization feature."
-msgstr "在使用進度同步功能之前，請先註冊或登入。"
+msgstr "使用進度同步功能前，請先註冊或登入。"
 
 #: plugins/kosync.koplugin/main.lua:135
 msgid ""
 "Something went wrong when syncing progress, please check your network "
 "connection and try again later."
-msgstr "在同步過程中某些東西出錯了，請檢查您的網路連線並於稍後再嘗試一次。"
+msgstr "同步進度時發生問題，請檢查網路連線後再試一次。"
 
 #: plugins/kosync.koplugin/main.lua:153
 msgid "invalid username and password"
-msgstr "無效的使用者名稱和密碼"
+msgstr "無效的使用者名稱與密碼"
 
 #: plugins/kosync.koplugin/main.lua:155
 msgid "invalid username"
 msgstr "無效的使用者名稱"
 
 #: plugins/kosync.koplugin/main.lua:169
-#, fuzzy
 msgid "Set auto progress sync"
-msgstr "進度同步"
+msgstr "設定自動進度同步"
 
 #: plugins/kosync.koplugin/main.lua:171
-#, fuzzy
 msgid "Toggle auto progress sync"
-msgstr "顯示進度列"
+msgstr "切換自動進度同步"
 
 #: plugins/kosync.koplugin/main.lua:172
 msgid "Push progress from this device"
@@ -18554,25 +18839,25 @@ msgstr "登入"
 
 #: plugins/kosync.koplugin/main.lua:229
 msgid "Automatically keep documents in sync"
-msgstr ""
+msgstr "自動保持文件同步"
 
 #: plugins/kosync.koplugin/main.lua:231
 msgid ""
 "This may lead to nagging about toggling WiFi on document close and suspend/"
 "resume, depending on the device's connectivity."
-msgstr ""
+msgstr "根據裝置的連線狀況，這可能會在關閉文件或裝置暫停/恢復時反覆提醒開啟 Wi-Fi。"
 
 #: plugins/kosync.koplugin/main.lua:238
-#, fuzzy
 msgid "Periodically sync every # pages (%1)"
-msgstr "每 # 頁同步"
+msgstr "每 # 頁定期同步（%1）"
 
 #: plugins/kosync.koplugin/main.lua:242
 msgid ""
 "Unlike the automatic sync above, this will *not* attempt to setup a network "
 "connection, but instead relies on it being already up, and may trigger "
 "enough network activity to passively keep WiFi enabled!"
-msgstr ""
+msgstr "與上述自動同步不同，本選項*不會*嘗試建立網路連線，而是假設網路已連線；"
+"但其觸發的網路活動可能足以被動維持 Wi-Fi 處於啟用狀態！"
 
 #: plugins/kosync.koplugin/main.lua:247
 msgid ""
@@ -18588,45 +18873,39 @@ msgstr "更新前的頁數"
 
 #: plugins/kosync.koplugin/main.lua:267
 msgid "Sync behavior"
-msgstr ""
+msgstr "同步行為"
 
 #: plugins/kosync.koplugin/main.lua:272
-#, fuzzy
 msgid "Sync to a newer state (%1)"
-msgstr "同步到最新的記錄 (%1)"
+msgstr "同步到較新的狀態（%1）"
 
 #: plugins/kosync.koplugin/main.lua:276 plugins/kosync.koplugin/main.lua:310
 msgid "Silently"
-msgstr ""
+msgstr "靜默執行"
 
 #: plugins/kosync.koplugin/main.lua:306
-#, fuzzy
 msgid "Sync to an older state (%1)"
-msgstr "同步到最新的記錄 (%1)"
+msgstr "同步到較舊的狀態（%1）"
 
 #: plugins/kosync.koplugin/main.lua:342
-#, fuzzy
 msgid "Push progress from this device now"
-msgstr "從這臺裝置推送閱讀進度"
+msgstr "立即從這臺裝置推送閱讀進度"
 
 #: plugins/kosync.koplugin/main.lua:351
-#, fuzzy
 msgid "Pull progress from other devices now"
-msgstr "從其他裝置拉取閱讀進度"
+msgstr "立即從其他裝置拉取閱讀進度"
 
 #: plugins/kosync.koplugin/main.lua:361
 msgid "Document matching method"
 msgstr "文件比對方式"
 
 #: plugins/kosync.koplugin/main.lua:364
-#, fuzzy
 msgid "Binary. Only identical files will be kept in sync."
-msgstr "二進位。 只有相同的檔案才會同步進度。"
+msgstr "二進位：僅相同檔案才會保持同步。"
 
 #: plugins/kosync.koplugin/main.lua:373
-#, fuzzy
 msgid "Filename. Files with matching names will be kept in sync."
-msgstr "檔案名稱。 相同名稱的檔案會同步進度。"
+msgstr "檔名：相同名稱的檔案會保持同步。"
 
 #: plugins/kosync.koplugin/main.lua:443
 msgid "Cannot login: %1"
@@ -18700,17 +18979,15 @@ msgstr "要從裝置「%2」同步早先之前的位置 %1% 嗎？"
 msgid ""
 "You will have to switch the 'Action when Wi-Fi is off' Network setting to "
 "'turn on' to be able to enable this feature!"
-msgstr ""
+msgstr "您必須將網路設定中的「Wi-Fi 關閉時的動作」切換為「開啟」，才能啟用此功能！"
 
 #: plugins/kosync.koplugin/main.lua:937
-#, fuzzy
 msgid "Auto progress sync: on"
-msgstr "進度同步"
+msgstr "自動進度同步：開啟"
 
 #: plugins/kosync.koplugin/main.lua:937
-#, fuzzy
 msgid "Auto progress sync: off"
-msgstr "進度同步"
+msgstr "自動進度同步：關閉"
 
 #: plugins/movetoarchive.koplugin/_meta.lua:4
 #: plugins/movetoarchive.koplugin/main.lua:34
@@ -18718,9 +18995,8 @@ msgid "Move to archive"
 msgstr "移動到封存"
 
 #: plugins/movetoarchive.koplugin/_meta.lua:5
-#, fuzzy
 msgid "Moves or copies the current book to the archive folder."
-msgstr "移動/複製目前的書籍到封存資料夾"
+msgstr "將目前的書籍移動或複製到封存資料夾。"
 
 #: plugins/movetoarchive.koplugin/main.lua:17
 msgid "Move current book to archive"
@@ -18821,15 +19097,13 @@ msgstr "過濾元素"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:148
 #: plugins/newsdownloader.koplugin/main.lua:951
-#, fuzzy
 msgid "HTTP auth username"
-msgstr "FTP 使用者名稱"
+msgstr "HTTP 驗證使用者名稱"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:159
 #: plugins/newsdownloader.koplugin/main.lua:954
-#, fuzzy
 msgid "HTTP auth password"
-msgstr "FTP 密碼"
+msgstr "HTTP 驗證密碼"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:182
 msgid "Delete feed"
@@ -18919,15 +19193,14 @@ msgid "Downloading news finished with errors."
 msgstr "下載新聞完畢，但遇到了一些錯誤。"
 
 #: plugins/newsdownloader.koplugin/main.lua:347
-#, fuzzy
 msgid ""
 "Could not process some feeds.\n"
 "Unsupported format in: %1. Please\n"
 "review your feed configuration file."
 msgstr ""
-"無法處理某些資訊來源。\n"
-"不支援下列項目中的格式：%1。\n"
-"請檢查你的資訊來源設定檔案。"
+"無法處理部分訂閱源。\n"
+"在：%1 中的格式不受支援。\n"
+"請檢查您的訂閱設定檔。"
 
 #: plugins/newsdownloader.koplugin/main.lua:364
 msgid "Go to download folder?"
@@ -18944,7 +19217,7 @@ msgstr "（原因：內容下載失敗）"
 
 #: plugins/newsdownloader.koplugin/main.lua:501
 msgid "(Reason: Error during feed deserialization)"
-msgstr ""
+msgstr "（原因：反序列化訂閱源時發生錯誤）"
 
 #: plugins/newsdownloader.koplugin/main.lua:583
 msgid "(Reason: Couldn't process RSS)"
@@ -18974,13 +19247,11 @@ msgstr ""
 "%2"
 
 #: plugins/newsdownloader.koplugin/main.lua:761
-#, fuzzy
 msgid ""
 "If this is only a summary, the full article can be downloaded by going to "
 "the News Downloader settings and changing 'Download full article' to 'true'."
-msgstr ""
-"這只是本新聞的說明。想要下載完整文章，請前往新聞下載器的設定，並將"
-"「download_full_article」設定變更為「true」。"
+msgstr "如果這只是摘要，可以前往新聞下載器設定，將「下載完整文章」改為「true」，即可"
+"下載全文。"
 
 #: plugins/newsdownloader.koplugin/main.lua:814
 msgid "All downloaded news feed items deleted."
@@ -19110,17 +19381,15 @@ msgstr "同步全部 OPDS 編目"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:102
 msgid "Force sync all catalogs"
-msgstr ""
+msgstr "強制同步所有目錄"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:113
-#, fuzzy
 msgid "Set max number of files to sync"
-msgstr "設定一天顯示的最大書籍數量"
+msgstr "設定同步檔案的最大數量"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:120
-#, fuzzy
 msgid "Set sync folder"
-msgstr "設定收件資料夾"
+msgstr "設定同步資料夾"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:127
 msgid "Set file types to sync"
@@ -19210,18 +19479,16 @@ msgid "Cannot get catalog. Server refuses to serve uncompressed content."
 msgstr "無法取得編目。伺服器拒絕提供未壓縮的內容。"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:429
-#, fuzzy
 msgid "Cannot get catalog. Server response status: %1."
-msgstr "無法取得編目。伺服器回應代碼為 %1。"
+msgstr "無法取得編目。伺服器回應狀態：%1。"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:521
 msgid "Cannot get catalog info from %1"
 msgstr "無法從 %1 取得編目資訊"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:571
-#, fuzzy
 msgid "Filters"
-msgstr "過濾書籤"
+msgstr "篩選"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:762
 msgid "Search OPDS catalog"
@@ -19256,37 +19523,31 @@ msgstr ""
 "下載檔案類型："
 
 #: plugins/opds.koplugin/opdsbrowser.lua:800
-#, fuzzy
 msgid "<server filename>"
-msgstr "輸入檔名"
+msgstr "<伺服器檔名>"
 
 #. @translators "Stream" here refers to being able to read documents from an OPDS server without downloading them completely, on a page by page basis.
 #: plugins/opds.koplugin/opdsbrowser.lua:812
-#, fuzzy
 msgid "Page stream"
-msgstr "閱讀頁數"
+msgstr "頁面串流"
 
 #. @translators "Stream" here refers to being able to read documents from an OPDS server without downloading them completely, on a page by page basis.
 #: plugins/opds.koplugin/opdsbrowser.lua:820
-#, fuzzy
 msgid "Stream from page"
-msgstr "每頁包含的項目個數"
+msgstr "從指定頁面串流"
 
 #. @translators "Stream" here refers to being able to read documents from an OPDS server without downloading them completely, on a page by page basis.
 #: plugins/opds.koplugin/opdsbrowser.lua:833
-#, fuzzy
 msgid "Resume stream from page"
-msgstr "每頁包含的項目個數"
+msgstr "從指定頁面繼續串流"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:843
-#, fuzzy
 msgid "Borrow"
-msgstr "箭頭"
+msgstr "借閱"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:868
-#, fuzzy
 msgid "Book added to download list"
-msgstr "前往下載資料夾"
+msgstr "書籍已加入下載清單"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1017
 msgid "The file %1 already exists. Do you want to overwrite it?"
@@ -19299,7 +19560,7 @@ msgid ""
 "Invalid protocol:\n"
 "%1"
 msgstr ""
-"無效的協定:\n"
+"無效的協定：\n"
 "%1"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1066
@@ -19336,7 +19597,7 @@ msgstr "移除全部"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1272
 msgid "Downloads (%1)"
-msgstr "下載 (%1)"
+msgstr "下載（%1）"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1278
 msgid ""
@@ -19376,16 +19637,15 @@ msgstr[0] "已下載 %1 本書"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1458
 msgid "File types to sync"
-msgstr ""
+msgstr "要同步的檔案類型"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1459
-#, fuzzy
 msgid "A comma separated list of desired filetypes"
-msgstr "輸入要忽略的標籤清單，以逗號分隔。"
+msgstr "以逗號分隔的檔案類型清單"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1460
 msgid "epub, mobi"
-msgstr ""
+msgstr "epub, mobi"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1510
 msgid "Synchronizing lists…"
@@ -19397,16 +19657,15 @@ msgstr "已是最新版本！"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1536
 msgid "Please choose a folder for sync downloads first"
-msgstr ""
+msgstr "請先選擇同步下載用的資料夾"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1740
 msgid "These files are already on the device:"
-msgstr ""
+msgstr "以下檔案已存在於裝置："
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1746
-#, fuzzy
 msgid "Duplicate files"
-msgstr "刪除檔案"
+msgstr "重複的檔案"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1770
 msgid "Download copies"
@@ -19414,11 +19673,11 @@ msgstr "下載副本"
 
 #: plugins/opds.koplugin/opdspse.lua:188
 msgid "Stream"
-msgstr ""
+msgstr "串流"
 
 #: plugins/perceptionexpander.koplugin/_meta.lua:4
 msgid "Perception expander"
-msgstr "Perception expander"
+msgstr "感知擴展器"
 
 #: plugins/perceptionexpander.koplugin/_meta.lua:5
 msgid ""
@@ -19468,18 +19727,16 @@ msgid ""
 msgstr "該外掛允許混合多個設定以建立可切換的「設定檔」。"
 
 #: plugins/profiles.koplugin/main.lua:66
-#, fuzzy
 msgid "Profile %1"
-msgstr "設定檔"
+msgstr "設定檔 %1"
 
 #: plugins/profiles.koplugin/main.lua:95
 msgid "New"
 msgstr "新增"
 
 #: plugins/profiles.koplugin/main.lua:109
-#, fuzzy
 msgid "New with current book settings"
-msgstr "調整文件設定"
+msgstr "以目前書籍設定建立"
 
 #: plugins/profiles.koplugin/main.lua:129
 #: plugins/profiles.koplugin/main.lua:1070
@@ -19488,19 +19745,16 @@ msgid "Execute"
 msgstr "執行"
 
 #: plugins/profiles.koplugin/main.lua:143
-#, fuzzy
 msgid "Auto-execute"
-msgstr "執行"
+msgstr "自動執行"
 
 #: plugins/profiles.koplugin/main.lua:154
-#, fuzzy
 msgid "Ask to execute"
-msgstr "執行"
+msgstr "詢問是否執行"
 
 #: plugins/profiles.koplugin/main.lua:164
-#, fuzzy
 msgid "Execute promptly"
-msgstr "執行 %1 腳本"
+msgstr "立即執行"
 
 #: plugins/profiles.koplugin/main.lua:165
 msgid ""
@@ -19509,11 +19763,12 @@ msgid ""
 "For example, with a trigger \"on document closing\" the profile will be "
 "executed before the document is closed."
 msgstr ""
+"啟用此選項可在事件觸發的其他操作之前先執行設定檔。\n"
+"例如，觸發條件為「文件關閉時」，則會在文件關閉前執行設定檔。"
 
 #: plugins/profiles.koplugin/main.lua:178
-#, fuzzy
 msgid "Execute within time interval"
-msgstr "雙擊間隔"
+msgstr "在時間區間內執行"
 
 #: plugins/profiles.koplugin/main.lua:186
 msgid "start: "
@@ -19521,22 +19776,19 @@ msgstr "開始時間： "
 
 #: plugins/profiles.koplugin/main.lua:186
 msgid "end: "
-msgstr ""
+msgstr "結束時間： "
 
 #: plugins/profiles.koplugin/main.lua:187
-#, fuzzy
 msgid "Set start time"
-msgstr "設定閱讀計時器"
+msgstr "設定開始時間"
 
 #: plugins/profiles.koplugin/main.lua:187
-#, fuzzy
 msgid "Set end time"
-msgstr "設定時間"
+msgstr "設定結束時間"
 
 #: plugins/profiles.koplugin/main.lua:226
-#, fuzzy
 msgid "on KOReader start"
-msgstr "KOReader 啟動自"
+msgstr "KOReader 啟動時"
 
 #: plugins/profiles.koplugin/main.lua:227
 msgid "on wake-up"
@@ -19544,51 +19796,43 @@ msgstr "裝置喚醒時"
 
 #: plugins/profiles.koplugin/main.lua:228
 msgid "on exiting sleep screen"
-msgstr "在退出休眠畫面時"
+msgstr "退出休眠畫面時"
 
 #: plugins/profiles.koplugin/main.lua:229
-#, fuzzy
 msgid "on read timer expiry"
-msgstr "設定閱讀計時器"
+msgstr "閱讀計時器結束時"
 
 #: plugins/profiles.koplugin/main.lua:230
-#, fuzzy
 msgid "on rotation"
-msgstr "不旋轉"
+msgstr "螢幕旋轉時"
 
 #: plugins/profiles.koplugin/main.lua:231
-#, fuzzy
 msgid "on showing folder"
-msgstr "顯示資料夾"
+msgstr "顯示資料夾時"
 
 #: plugins/profiles.koplugin/main.lua:233
-#, fuzzy
 msgid "on book opening"
-msgstr "調整文件設定"
+msgstr "開啟書籍時"
 
 #: plugins/profiles.koplugin/main.lua:234
-#, fuzzy
 msgid "on book closing"
-msgstr "到達文件結尾的動作"
+msgstr "關閉書籍時"
 
 #: plugins/profiles.koplugin/main.lua:248
-#, fuzzy
 msgid "Show notification on executing"
-msgstr "不旋轉"
+msgstr "執行時顯示通知"
 
 #: plugins/profiles.koplugin/main.lua:278
-#, fuzzy
 msgid "Edit actions: (%1)"
-msgstr "編輯資訊來源清單"
+msgstr "編輯動作：（%1）"
 
 #: plugins/profiles.koplugin/main.lua:288
-#, fuzzy
 msgid "Rename: %1"
-msgstr "重新命名"
+msgstr "重新命名：%1"
 
 #: plugins/profiles.koplugin/main.lua:311
 msgid "Duplicate"
-msgstr ""
+msgstr "複製"
 
 #: plugins/profiles.koplugin/main.lua:333
 msgid "Do you want to delete this profile?"
@@ -19599,57 +19843,48 @@ msgid "Enter profile name"
 msgstr "輸入設定檔名稱"
 
 #: plugins/profiles.koplugin/main.lua:392
-#, fuzzy
 msgid "Profile already exists: %1"
-msgstr "檔案 %1 已經存在。"
+msgstr "設定檔已存在：%1"
 
 #: plugins/profiles.koplugin/main.lua:632
-#, fuzzy
 msgid "if folder path contains"
-msgstr "自動儲存書籍詮釋資料：%1"
+msgstr "如果資料夾路徑包含"
 
 #: plugins/profiles.koplugin/main.lua:633
 msgid "if folder path does not contain"
-msgstr ""
+msgstr "如果資料夾路徑不包含"
 
 #: plugins/profiles.koplugin/main.lua:634
-#, fuzzy
 msgid "if folder path is equal"
-msgstr "自動儲存書籍詮釋資料：%1"
+msgstr "如果資料夾路徑等於"
 
 #: plugins/profiles.koplugin/main.lua:635
-#, fuzzy
 msgid "if folder path is not equal"
-msgstr "自動儲存書籍詮釋資料：%1"
+msgstr "如果資料夾路徑不等於"
 
 #: plugins/profiles.koplugin/main.lua:684
-#, fuzzy
 msgid "Enter text contained in folder path"
-msgstr "輸入要尋找的文字"
+msgstr "輸入資料夾路徑中包含的文字"
 
 #: plugins/profiles.koplugin/main.lua:716
-#, fuzzy
 msgid "if device orientation is"
-msgstr "切換方向"
+msgstr "如果裝置方向是"
 
 #: plugins/profiles.koplugin/main.lua:717
-#, fuzzy
 msgid "if book metadata contains"
-msgstr "自動儲存書籍詮釋資料：%1"
+msgstr "如果書籍詮釋資料包含"
 
 #: plugins/profiles.koplugin/main.lua:718
 msgid "if book file path contains"
-msgstr ""
+msgstr "如果書籍檔案路徑包含"
 
 #: plugins/profiles.koplugin/main.lua:719
-#, fuzzy
 msgid "if book is in collections"
-msgstr "變更縮放係數"
+msgstr "如果書籍屬於某個收藏"
 
 #: plugins/profiles.koplugin/main.lua:720
-#, fuzzy
 msgid "and if book is new"
-msgstr "選擇資料夾"
+msgstr "以及書籍是新書"
 
 #: plugins/profiles.koplugin/main.lua:785
 #: plugins/profiles.koplugin/main.lua:856
@@ -19659,17 +19894,15 @@ msgstr "目前的書籍"
 
 #: plugins/profiles.koplugin/main.lua:818
 msgid "Enter text contained in:"
-msgstr "輸入要包含的文字："
+msgstr "輸入包含的文字："
 
 #: plugins/profiles.koplugin/main.lua:885
-#, fuzzy
 msgid "Enter text contained in file path"
-msgstr "輸入要尋找的文字"
+msgstr "輸入檔案路徑中包含的文字"
 
 #: plugins/profiles.koplugin/main.lua:1069
-#, fuzzy
 msgid "Do you want to execute profile?"
-msgstr "你要刪除這個設定檔嗎？"
+msgstr "你要執行這個設定檔嗎？"
 
 #: plugins/qrclipboard.koplugin/_meta.lua:4
 #: plugins/qrclipboard.koplugin/main.lua:48
@@ -19682,7 +19915,7 @@ msgstr "這個外掛從剪貼簿內容產生 QR code。"
 
 #: plugins/qrclipboard.koplugin/main.lua:31
 msgid "Generate QR code"
-msgstr ""
+msgstr "產生 QR code"
 
 #: plugins/readtimer.koplugin/_meta.lua:4
 #: plugins/readtimer.koplugin/main.lua:297
@@ -19694,62 +19927,52 @@ msgid "Shows an alarm after a specified amount of time."
 msgstr "在一段時間後顯示警告訊息。"
 
 #: plugins/readtimer.koplugin/main.lua:28
-#, fuzzy
 msgid "Set read timer alarm"
-msgstr "設定閱讀計時器"
+msgstr "設定閱讀計時鬧鐘"
 
 #: plugins/readtimer.koplugin/main.lua:30
-#, fuzzy
 msgid "Set read timer interval"
-msgstr "設定閱讀計時器"
+msgstr "設定閱讀計時區間"
 
 #: plugins/readtimer.koplugin/main.lua:32
-#, fuzzy
 msgid "Stop read timer"
-msgstr "設定閱讀計時器"
+msgstr "停止閱讀計時器"
 
 #: plugins/readtimer.koplugin/main.lua:57
-#, fuzzy
 msgid "Time is up"
-msgstr "逾時，以秒為單位"
+msgstr "時間到"
 
 #: plugins/readtimer.koplugin/main.lua:72
 msgid "Repeat"
-msgstr ""
+msgstr "重複"
 
 #: plugins/readtimer.koplugin/main.lua:78
 msgid "Done"
-msgstr ""
+msgstr "完成"
 
 #: plugins/readtimer.koplugin/main.lua:247
-#, fuzzy
 msgid "Auto-reschedule"
-msgstr "使用時間表自動設定暖度"
+msgstr "自動重新排程"
 
 #: plugins/readtimer.koplugin/main.lua:256
-#, fuzzy
 msgid "Show timer in alt status bar"
-msgstr "關於替代狀態列"
+msgstr "在替代狀態列顯示計時器"
 
 #: plugins/readtimer.koplugin/main.lua:269
-#, fuzzy
 msgid "Show timer in status bar"
-msgstr "替代狀態列"
+msgstr "在狀態列顯示計時器"
 
 #: plugins/readtimer.koplugin/main.lua:285
-#, fuzzy
 msgid "message"
-msgstr "設定文字訊息"
+msgstr "訊息"
 
 #: plugins/readtimer.koplugin/main.lua:286
-#, fuzzy
 msgid "notification"
 msgstr "通知"
 
 #: plugins/readtimer.koplugin/main.lua:287
-#, fuzzy
 msgid "nothing"
-msgstr "沒有"
+msgstr "無動作"
 
 #: plugins/readtimer.koplugin/main.lua:294
 msgid "Read timer (%1)"
@@ -19765,13 +19988,12 @@ msgid "Stop timer"
 msgstr "停止計時器"
 
 #: plugins/readtimer.koplugin/main.lua:336
-#, fuzzy
 msgid "Show on timer expiry: %1"
-msgstr "在項目中顯示：%1"
+msgstr "計時結束時顯示：%1"
 
 #: plugins/readtimer.koplugin/main.lua:403
 msgid "Alarm"
-msgstr ""
+msgstr "鬧鐘"
 
 #: plugins/readtimer.koplugin/main.lua:404
 #: plugins/readtimer.koplugin/main.lua:452
@@ -19787,27 +20009,24 @@ msgid ""
 msgstr ""
 "計時器已設為：%1:%2。\n"
 "\n"
-"從現在算起的 %3 後。"
+"從現在算起 %3 後。"
 
 #: plugins/readtimer.koplugin/main.lua:450
-#, fuzzy
 msgid "Start timer"
-msgstr "設定閱讀計時器"
+msgstr "開始計時"
 
 #: plugins/readtimer.koplugin/main.lua:451
-#, fuzzy
 msgid "Interval"
-msgstr "設定間隔"
+msgstr "間隔"
 
 #. @translators This is a duration
 #: plugins/readtimer.koplugin/main.lua:476
 msgid "Timer will expire in %1."
-msgstr "計時器將在 %1 內到期。"
+msgstr "計時器將在 %1 後到期。"
 
 #: plugins/readtimer.koplugin/main.lua:494
-#, fuzzy
 msgid "Timer stopped"
-msgstr "剩餘閱讀時數"
+msgstr "計時器已停止"
 
 #: plugins/statistics.koplugin/_meta.lua:4
 #: plugins/statistics.koplugin/main.lua:95
@@ -19825,46 +20044,39 @@ msgstr "輸入月分"
 
 #: plugins/statistics.koplugin/calendarview.lua:1196
 msgid "Invalid year-month string (YYYY-MM)"
-msgstr "無效的年-月字串 (YYYY-MM)"
+msgstr "無效的年月字串 (YYYY-MM)"
 
 #: plugins/statistics.koplugin/main.lua:96
 msgid "enable"
 msgstr "啟用"
 
 #: plugins/statistics.koplugin/main.lua:98
-#, fuzzy
 msgid "Reading statistics: toggle"
-msgstr "閱讀統計"
+msgstr "閱讀統計：切換"
 
 #: plugins/statistics.koplugin/main.lua:100
-#, fuzzy
 msgid "Reading statistics: show progress"
-msgstr "閱讀統計"
+msgstr "閱讀統計：顯示進度"
 
 #: plugins/statistics.koplugin/main.lua:102
-#, fuzzy
 msgid "Reading statistics: show time range"
-msgstr "閱讀統計"
+msgstr "閱讀統計：顯示時間範圍"
 
 #: plugins/statistics.koplugin/main.lua:104
-#, fuzzy
 msgid "Reading statistics: show calendar view"
-msgstr "統計資料日曆檢視"
+msgstr "閱讀統計：顯示日曆檢視"
 
 #: plugins/statistics.koplugin/main.lua:106
-#, fuzzy
 msgid "Reading statistics: show today's timeline"
-msgstr "統計設定"
+msgstr "閱讀統計：顯示今日時間軸"
 
 #: plugins/statistics.koplugin/main.lua:108
-#, fuzzy
 msgid "Reading statistics: synchronize"
-msgstr "閱讀統計"
+msgstr "閱讀統計：同步"
 
 #: plugins/statistics.koplugin/main.lua:110
-#, fuzzy
 msgid "Reading statistics: current book"
-msgstr "重設目前書籍的統計資料"
+msgstr "閱讀統計：目前書籍"
 
 #: plugins/statistics.koplugin/main.lua:290
 msgid ""
@@ -19874,11 +20086,11 @@ msgid ""
 msgstr ""
 "無法開啟位於 %1 的資料庫。\n"
 "此資料庫可能已被移動或刪除。\n"
-"您想要建立一個空的資料庫嗎？\n"
+"您要建立一個空的資料庫嗎？\n"
 
 #: plugins/statistics.koplugin/main.lua:305
 msgid "A new empty database has been created."
-msgstr "已建立一個全新的空白資料庫。"
+msgstr "已建立新的空白資料庫。"
 
 #: plugins/statistics.koplugin/main.lua:350
 msgid "Statistics database updated."
@@ -19893,8 +20105,8 @@ msgid ""
 msgstr ""
 "偵測到新版統計外掛。\n"
 "現有統計資料必須轉換為新的資料庫格式。\n"
-"這可能會花上幾分鐘的時間。\n"
-"請等待……\n"
+"這可能會花上幾分鐘。\n"
+"請稍候……\n"
 
 #: plugins/statistics.koplugin/main.lua:391
 msgid ""
@@ -19906,28 +20118,25 @@ msgid_plural ""
 "Imported %1 books to the database.\n"
 "Tap to continue."
 msgstr[0] ""
-"轉換已完成。\n"
-"已將 %1 本書匯入到資料庫。\n"
+"轉換完成。\n"
+"已將 %1 本書匯入資料庫。\n"
 "點擊以繼續。"
 
 #: plugins/statistics.koplugin/main.lua:1041
-#, fuzzy
 msgid "Statistics enabled"
-msgstr "統計資料日曆檢視"
+msgstr "統計已啟用"
 
 #: plugins/statistics.koplugin/main.lua:1041
-#, fuzzy
 msgid "Statistics disabled"
-msgstr "統計資料日曆檢視"
+msgstr "統計已停用"
 
 #: plugins/statistics.koplugin/main.lua:1050
 msgid "Enabled"
 msgstr "已啟用"
 
 #: plugins/statistics.koplugin/main.lua:1063
-#, fuzzy
 msgid "Read page duration limits: %1 s – %2 s"
-msgstr "閱讀頁面持續時間限制：%1 s / %2 s"
+msgstr "閱讀頁面持續時間限制：%1 秒 – %2 秒"
 
 #: plugins/statistics.koplugin/main.lua:1087
 msgid "Read page duration limits"
@@ -19948,9 +20157,8 @@ msgstr ""
 "超過指定的最大值。"
 
 #: plugins/statistics.koplugin/main.lua:1103
-#, fuzzy
 msgid "Freeze statistics of finished books"
-msgstr "重設書籍統計資料"
+msgstr "凍結已完成書籍的統計資料"
 
 #: plugins/statistics.koplugin/main.lua:1114
 msgid "Calendar weeks start on %1"
@@ -19979,11 +20187,11 @@ msgstr "允許瀏覽之後的月分"
 #. @translators %1 is the time in the format 00:00
 #: plugins/statistics.koplugin/main.lua:1180
 msgid "Daily timeline starts at %1"
-msgstr ""
+msgstr "每日時間軸開始於 %1"
 
 #: plugins/statistics.koplugin/main.lua:1194
 msgid "Daily timeline starts at"
-msgstr ""
+msgstr "每日時間軸開始時間"
 
 #: plugins/statistics.koplugin/main.lua:1195
 msgid ""
@@ -19995,17 +20203,21 @@ msgid ""
 "\n"
 "Time is in hours and minutes."
 msgstr ""
+"設定每日時間軸的開始時間。\n"
+"\n"
+"如果您在午夜後仍持續閱讀，並希望這段閱讀時間能與前一晚的閱讀一同顯示，"
+"可以將開始時間設為 04:00 之類的數值。\n"
+"\n"
+"時間以小時和分鐘表示。"
 
 #: plugins/statistics.koplugin/main.lua:1212
-#, fuzzy
 msgid "Also use in calendar view"
-msgstr "統計資料日曆檢視"
+msgstr "在日曆檢視中也使用"
 
 #: plugins/statistics.koplugin/main.lua:1220
 #: plugins/vocabbuilder.koplugin/main.lua:284
-#, fuzzy
 msgid "Cloud sync"
-msgstr "雲端儲存"
+msgstr "雲端同步"
 
 #: plugins/statistics.koplugin/main.lua:1249
 msgid "Delete server info?"
@@ -20022,6 +20234,13 @@ msgid ""
 "\n"
 "Set up the same cloud folder on each device to sync across your devices."
 msgstr ""
+"雲端儲存：\n"
+"%1\n"
+"\n"
+"資料夾路徑：\n"
+"%2\n"
+"\n"
+"請在每個裝置上設定相同的雲端資料夾，以便在裝置間同步。"
 
 #: plugins/statistics.koplugin/main.lua:1292
 msgid "Reset statistics"
@@ -20045,9 +20264,8 @@ msgid "Calendar view"
 msgstr "日曆檢視"
 
 #: plugins/statistics.koplugin/main.lua:1343
-#, fuzzy
 msgid "Today's timeline"
-msgstr "統計設定"
+msgstr "今日時間軸"
 
 #: plugins/statistics.koplugin/main.lua:1355
 msgid "Time range statistics"
@@ -20076,17 +20294,17 @@ msgstr "上週"
 #: plugins/statistics.koplugin/main.lua:1428
 #: plugins/statistics.koplugin/main.lua:1433
 msgid "Last month by day"
-msgstr "上個月的每日"
+msgstr "上個月每日"
 
 #: plugins/statistics.koplugin/main.lua:1445
 #: plugins/statistics.koplugin/main.lua:1450
 msgid "Last year by day"
-msgstr "去年的每日"
+msgstr "去年每日"
 
 #: plugins/statistics.koplugin/main.lua:1462
 #: plugins/statistics.koplugin/main.lua:1467
 msgid "Last year by week"
-msgstr "去年的每週"
+msgstr "去年每週"
 
 #: plugins/statistics.koplugin/main.lua:1479
 #: plugins/statistics.koplugin/main.lua:1484
@@ -20094,67 +20312,60 @@ msgid "All stats by month"
 msgstr "逐月數據"
 
 #: plugins/statistics.koplugin/main.lua:1643
-#, fuzzy
 msgid "There is 1 page (%2%) left to read."
 msgid_plural "There are %1 pages (%2%) left to read."
-msgstr[0] "顯示尚有多少頁數未讀"
+msgstr[0] "剩餘 %1 頁（%2%）未讀。"
 
 #: plugins/statistics.koplugin/main.lua:1644
 msgid "At the current rate of %1 per page, that will take %2 of reading time."
-msgstr ""
+msgstr "以目前每頁 %1 的速度，尚需 %2 的閱讀時間。"
 
 #: plugins/statistics.koplugin/main.lua:1645
 msgid "At the current rate of %1 per day, that will take 1 day."
 msgid_plural "At the current rate of %1 per day, that will take %2 days."
-msgstr[0] ""
+msgstr[0] "以目前每日 %1 的速度，尚需 %2 天。"
 
 #: plugins/statistics.koplugin/main.lua:1653
 #: plugins/statistics.koplugin/main.lua:1656
-#, fuzzy
 msgid "Estimated reading time left"
-msgstr "估計剩餘時數："
+msgstr "估計剩餘閱讀時間"
 
 #: plugins/statistics.koplugin/main.lua:1654
-#, fuzzy
 msgid "Estimated finish date"
-msgstr "估計閱讀完成於"
+msgstr "預計完成日期"
 
 #: plugins/statistics.koplugin/main.lua:1654
-#, fuzzy
 msgid "(in 1 day) %2"
 msgid_plural "(in %1 days) %2"
-msgstr[0] "%1 (%2 天)"
+msgstr[0] "（%1 天後）%2"
 
 #: plugins/statistics.koplugin/main.lua:1656
-#, fuzzy
 msgid "finished"
 msgstr "已完成"
 
 #: plugins/statistics.koplugin/main.lua:1658
-#, fuzzy
 msgid "Book marked as finished"
-msgstr "標示為已閱讀"
+msgstr "書籍已標記為完成"
 
 #: plugins/statistics.koplugin/main.lua:1667
 msgid "Time spent reading this session"
-msgstr "這個工作階段的閱讀時間"
+msgstr "本次閱讀所花時間"
 
 #: plugins/statistics.koplugin/main.lua:1668
 msgid "Pages read this session"
-msgstr "這個工作階段的閱讀頁數"
+msgstr "本次閱讀的頁數"
 
 #: plugins/statistics.koplugin/main.lua:1671
 msgid "Time spent reading today"
-msgstr "今天的閱讀時間"
+msgstr "今日閱讀時間"
 
 #: plugins/statistics.koplugin/main.lua:1675
-#, fuzzy
 msgid "Today (%1)"
-msgstr "現代 (%1)"
+msgstr "今日（%1）"
 
 #: plugins/statistics.koplugin/main.lua:1680
 msgid "Pages read today"
-msgstr "今天的閱讀頁數"
+msgstr "今日閱讀頁數"
 
 #: plugins/statistics.koplugin/main.lua:1685
 #: plugins/statistics.koplugin/main.lua:1804
@@ -20163,9 +20374,8 @@ msgstr "閱讀這本書的時間"
 
 #: plugins/statistics.koplugin/main.lua:1687
 #: plugins/statistics.koplugin/main.lua:1805
-#, fuzzy
 msgid "Time spent reading"
-msgstr "今天的閱讀時間"
+msgstr "閱讀所花時間"
 
 #: plugins/statistics.koplugin/main.lua:1692
 #: plugins/statistics.koplugin/main.lua:1808
@@ -20185,16 +20395,15 @@ msgstr "每日平均時間"
 
 #: plugins/statistics.koplugin/main.lua:1712
 #: plugins/statistics.koplugin/main.lua:1828
-#, fuzzy
 msgid "Book start date"
-msgstr "書籍閱讀狀態"
+msgstr "書籍開始日期"
 
 #: plugins/statistics.koplugin/main.lua:1712
 #: plugins/statistics.koplugin/main.lua:1828
 #: plugins/statistics.koplugin/main.lua:1829
 msgid "(1 day ago) %2"
 msgid_plural "(%1 days ago) %2"
-msgstr[0] ""
+msgstr[0] "（%1 天前）%2"
 
 #: plugins/statistics.koplugin/main.lua:1716
 msgid "Current page/Total pages"
@@ -20212,25 +20421,21 @@ msgstr "每頁平均時間"
 
 #: plugins/statistics.koplugin/main.lua:1721
 #: plugins/statistics.koplugin/main.lua:1837
-#, fuzzy
 msgid "Book highlights"
-msgstr "標注"
+msgstr "書籍標注"
 
 #: plugins/statistics.koplugin/main.lua:1722
 #: plugins/statistics.koplugin/main.lua:1838
-#, fuzzy
 msgid "Book notes"
-msgstr "書籍資訊"
+msgstr "書籍筆記"
 
 #: plugins/statistics.koplugin/main.lua:1801
-#, fuzzy
 msgid "Author(s)"
-msgstr "作者："
+msgstr "作者"
 
 #: plugins/statistics.koplugin/main.lua:1829
-#, fuzzy
 msgid "Last read date"
-msgstr "上次閱讀"
+msgstr "上次閱讀日期"
 
 #: plugins/statistics.koplugin/main.lua:1832
 msgid "Last read page/Total pages"
@@ -20239,11 +20444,11 @@ msgstr "上次閱讀頁數 / 總頁數"
 #: plugins/statistics.koplugin/main.lua:1907
 #: plugins/statistics.koplugin/main.lua:1936
 msgid "Books read in %1"
-msgstr "%1 閱讀書籍"
+msgstr "在 %1 閱讀的書籍"
 
 #: plugins/statistics.koplugin/main.lua:2019
 msgid "%1 Week %2"
-msgstr "%1 年第 %2 週"
+msgstr "%1 第 %2 週"
 
 #: plugins/statistics.koplugin/main.lua:2041
 #: plugins/statistics.koplugin/main.lua:2055
@@ -20251,36 +20456,32 @@ msgstr "%1 年第 %2 週"
 #: plugins/statistics.koplugin/main.lua:2107
 #: plugins/statistics.koplugin/main.lua:2151
 #: plugins/statistics.koplugin/main.lua:2260
-#, fuzzy
 msgid "%1 (1 page)"
 msgid_plural "%1 (%2 pages)"
-msgstr[0] "%1 (%2)"
+msgstr[0] "%1（%2 頁）"
 
 #: plugins/statistics.koplugin/main.lua:2112
 msgid "Books read %1"
-msgstr "%1 閱讀書籍"
+msgstr "%1 閱讀的書籍"
 
 #: plugins/statistics.koplugin/main.lua:2277
 msgid "Do you want to reset statistics for day %1 for this book?"
 msgstr "是否要重置本書第 %1 天的統計資料？"
 
 #: plugins/statistics.koplugin/main.lua:2278
-#, fuzzy
 msgctxt "Reset statistics for day for book"
 msgid "Reset"
 msgstr "重設"
 
 #: plugins/statistics.koplugin/main.lua:2290
-#, fuzzy
 msgid ""
 "Do you want to reset statistics for this period for book:\n"
 "%1"
 msgstr ""
-"您想要重設這本書的統計訊息嗎：\n"
+"您是否要重置下列書籍在此期間的統計資料：\n"
 "%1"
 
 #: plugins/statistics.koplugin/main.lua:2291
-#, fuzzy
 msgctxt "Reset statistics for period for book"
 msgid "Reset"
 msgstr "重設"
@@ -20339,9 +20540,8 @@ msgstr ""
 "上禮拜沒有任何資料。"
 
 #: plugins/statistics.koplugin/main.lua:3087
-#, fuzzy
 msgid "Syncing book statistics. This may take a while."
-msgstr "時間同步中。這可能會花上幾分鐘。"
+msgstr "正在同步書籍統計資料。這可能需要一段時間。"
 
 #: plugins/statistics.koplugin/readerprogress.lua:108
 msgid "Week progress"
@@ -20349,7 +20549,7 @@ msgstr "一週進度"
 
 #: plugins/statistics.koplugin/readerprogress.lua:110
 msgid "Session"
-msgstr ""
+msgstr "工作階段"
 
 #: plugins/statistics.koplugin/readerprogress.lua:110
 msgid "Today"
@@ -20364,13 +20564,17 @@ msgstr "頁數"
 msgid ""
 "Total\n"
 "pages"
-msgstr "總頁數"
+msgstr ""
+"總\n"
+"頁數"
 
 #: plugins/statistics.koplugin/readerprogress.lua:401
 msgid ""
 "Total\n"
 "time"
-msgstr "總時間"
+msgstr ""
+"總\n"
+"時間"
 
 #: plugins/statistics.koplugin/readerprogress.lua:410
 msgid ""
@@ -20412,24 +20616,20 @@ msgid "Last resume time"
 msgstr "最近一次的喚醒時間"
 
 #: plugins/systemstat.koplugin/main.lua:81
-#, fuzzy
 msgid "Up time"
-msgstr "停止計時器"
+msgstr "運行時間"
 
 #: plugins/systemstat.koplugin/main.lua:85
-#, fuzzy
 msgid "Time spent awake"
-msgstr "今天的閱讀時間"
+msgstr "清醒時間"
 
 #: plugins/systemstat.koplugin/main.lua:90
-#, fuzzy
 msgid "Time in suspend"
-msgstr "逾時，以秒為單位"
+msgstr "暫停時間"
 
 #: plugins/systemstat.koplugin/main.lua:95
-#, fuzzy
 msgid "Time in standby"
-msgstr "逾時，以秒為單位"
+msgstr "待機時間"
 
 #: plugins/systemstat.koplugin/main.lua:99
 msgid "Counters"
@@ -20538,29 +20738,25 @@ msgid "Terminal emulator"
 msgstr "終端機模擬器"
 
 #: plugins/terminal.koplugin/_meta.lua:5
-#, fuzzy
 msgid "KOReader's terminal emulator."
-msgstr "終端機模擬器"
+msgstr "KOReader 的終端機模擬器。"
 
 #: plugins/terminal.koplugin/aliases.lua:63
 #: plugins/terminal.koplugin/aliases.lua:142
 msgid "Create a new alias"
-msgstr ""
+msgstr "建立新別名"
 
 #: plugins/terminal.koplugin/aliases.lua:71
-#, fuzzy
 msgid "Terminal emulator: error saving: %1"
-msgstr "終端機模擬器"
+msgstr "終端機模擬器：儲存時發生錯誤：%1"
 
 #: plugins/terminal.koplugin/aliases.lua:86
-#, fuzzy
 msgid "Edit alias"
-msgstr "編輯資訊來源清單"
+msgstr "編輯別名"
 
 #: plugins/terminal.koplugin/aliases.lua:89
-#, fuzzy
 msgid "Alias name:"
-msgstr "檔名："
+msgstr "別名："
 
 #: plugins/terminal.koplugin/aliases.lua:93
 msgid "Alias command:"
@@ -20569,37 +20765,36 @@ msgstr "指令別名："
 #: plugins/terminal.koplugin/main.lua:201
 #: plugins/terminal.koplugin/main.lua:681
 msgid "Shell is not executable"
-msgstr ""
+msgstr "Shell 無法執行"
 
 #. @translators This is the ESC-key on the keyboard.
 #: plugins/terminal.koplugin/main.lua:393
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
 #. @translators This is the CTRL-key on the keyboard.
 #: plugins/terminal.koplugin/main.lua:400
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #. @translators This is the CTRL-C key combination.
 #: plugins/terminal.koplugin/main.lua:407
 msgid "Ctrl-C"
-msgstr ""
+msgstr "Ctrl-C"
 
 #: plugins/terminal.koplugin/main.lua:452
 msgid ""
 "You can close the terminal, but leave the shell open for further commands or "
 "quit it now."
-msgstr ""
+msgstr "您可以關閉終端機但保留 shell 以便繼續輸入指令，或立即結束。"
 
 #: plugins/terminal.koplugin/main.lua:468
 msgid "Quit"
-msgstr ""
+msgstr "結束"
 
 #: plugins/terminal.koplugin/main.lua:547
-#, fuzzy
 msgid "About terminal emulator"
-msgstr "終端機模擬器"
+msgstr "關於終端機模擬器"
 
 #: plugins/terminal.koplugin/main.lua:549
 msgid ""
@@ -20614,61 +20809,68 @@ msgid ""
 "Aliases (shortcuts) to frequently used commands can be placed in:\n"
 "'$TERMINAL_DATA/scripts/aliases'."
 msgstr ""
+"終端機模擬器可以啟動一個 shell（命令提示字元）。\n"
+"\n"
+"環境變數 TERMINAL_HOME 與 TERMINAL_DATA 分別包含安裝路徑與資料資料夾。\n"
+"\n"
+"啟動時要執行的指令可以放在：\n"
+"'$TERMINAL_DATA/scripts/profile.user'。\n"
+"\n"
+"常用指令的別名（捷徑）可以放在：\n"
+"'$TERMINAL_DATA/scripts/aliases'。"
 
 #: plugins/terminal.koplugin/main.lua:559
 msgid "You can use 'shfm' as a file manager, '?' shows shfm’s help message."
-msgstr ""
+msgstr "您可以使用 'shfm' 作為檔案管理器，輸入 '?' 可顯示 shfm 的說明訊息。"
 
 #: plugins/terminal.koplugin/main.lua:571
 msgid "running"
-msgstr ""
+msgstr "執行中"
 
 #: plugins/terminal.koplugin/main.lua:571
-#, fuzzy
 msgid "not running"
-msgstr "Font Kerning"
+msgstr "未執行"
 
 #: plugins/terminal.koplugin/main.lua:572
 msgid "Open terminal session (%1)"
-msgstr ""
+msgstr "開啟終端機工作階段（%1）"
 
 #: plugins/terminal.koplugin/main.lua:580
 msgid "End terminal session"
-msgstr ""
+msgstr "結束終端機工作階段"
 
 #: plugins/terminal.koplugin/main.lua:604
-#, fuzzy
 msgid "Terminal emulator font size"
-msgstr "終端機模擬器"
+msgstr "終端機模擬器字型大小"
 
 #: plugins/terminal.koplugin/main.lua:616
 msgid "Buffer size: %1 kB"
-msgstr ""
+msgstr "緩衝區大小：%1 kB"
 
 #: plugins/terminal.koplugin/main.lua:627
 msgctxt "Data storage size"
 msgid "kB"
-msgstr ""
+msgstr "kB"
 
 #: plugins/terminal.koplugin/main.lua:628
-#, fuzzy
 msgid "Terminal emulator buffer size (kB)"
-msgstr "終端機模擬器"
+msgstr "終端機模擬器緩衝區大小（kB）"
 
 #: plugins/terminal.koplugin/main.lua:640
 msgid "Shell executable: %1"
-msgstr ""
+msgstr "Shell 執行檔：%1"
 
 #: plugins/terminal.koplugin/main.lua:644
-#, fuzzy
 msgid "Shell to use"
-msgstr "顯示全部"
+msgstr "要使用的 Shell"
 
 #: plugins/terminal.koplugin/main.lua:645
 msgid ""
 "Here you can select the startup shell.\n"
 "Default: %1"
 msgstr ""
+"您可以在此選擇啟動時使用的 shell。\n"
+"預設值：%1"
 
 #: plugins/texteditor.koplugin/_meta.lua:4
 #: plugins/texteditor.koplugin/main.lua:27
@@ -20786,7 +20988,6 @@ msgstr ""
 "從純文字編輯器的歷史記錄中移除嗎？"
 
 #: plugins/texteditor.koplugin/main.lua:409
-#, fuzzy
 msgid ""
 "This file does not exist:\n"
 "\n"
@@ -20794,11 +20995,11 @@ msgid ""
 "\n"
 "Do you want to create it and start editing it?"
 msgstr ""
-"這個檔案已經消失了：\n"
+"此檔案不存在：\n"
 "\n"
 "%1\n"
 "\n"
-"您想要建立並開始編輯它嗎？"
+"您要建立它並開始編輯嗎？"
 
 #: plugins/texteditor.koplugin/main.lua:426
 msgid ""
@@ -20956,161 +21157,144 @@ msgstr "時間同步"
 #: plugins/vocabbuilder.koplugin/main.lua:2041
 #: plugins/vocabbuilder.koplugin/main.lua:2097
 msgid "Vocabulary builder"
-msgstr ""
+msgstr "背單詞"
 
 #: plugins/vocabbuilder.koplugin/_meta.lua:5
 msgid ""
 "This plugin processes dictionary word lookups and uses spaced repetition to "
 "help you remember new words."
-msgstr ""
+msgstr "這個外掛會處理字典查詢，並透過間隔重複幫助您記住新單字。"
 
 #: plugins/vocabbuilder.koplugin/main.lua:110
 #: plugins/vocabbuilder.koplugin/main.lua:325
-#, fuzzy
 msgid "Auto add new words"
-msgstr "加入新的資訊來源"
+msgstr "自動加入新單字"
 
 #: plugins/vocabbuilder.koplugin/main.lua:114
 #: plugins/vocabbuilder.koplugin/main.lua:338
-#, fuzzy
 msgid "Save context"
-msgstr "選擇字型大小"
+msgstr "儲存上下文"
 
 #: plugins/vocabbuilder.koplugin/main.lua:157
-#, fuzzy
 msgid "Filter books"
-msgstr "過濾書籤"
+msgstr "篩選書籍"
 
 #: plugins/vocabbuilder.koplugin/main.lua:165
-#, fuzzy
 msgid "Reverse order"
 msgstr "反向排序"
 
 #: plugins/vocabbuilder.koplugin/main.lua:165
 msgid "Reverse order and show only reviewable"
-msgstr ""
+msgstr "反向排序並僅顯示可複習的項目"
 
 #: plugins/vocabbuilder.koplugin/main.lua:175
 msgid "Resume"
 msgstr "恢復"
 
 #: plugins/vocabbuilder.koplugin/main.lua:175
-#, fuzzy
 msgid "Quick deletion"
-msgstr "文章刪除"
+msgstr "快速刪除"
 
 #: plugins/vocabbuilder.koplugin/main.lua:183
-#, fuzzy
 msgid "Reset all progress"
-msgstr "一週進度"
+msgstr "重設所有進度"
 
 #: plugins/vocabbuilder.koplugin/main.lua:186
 msgid "Reset progress of all words?"
-msgstr ""
+msgstr "要重設所有單字的進度嗎？"
 
 #: plugins/vocabbuilder.koplugin/main.lua:198
 msgid "Clean all words"
-msgstr ""
+msgstr "清除所有單字"
 
 #: plugins/vocabbuilder.koplugin/main.lua:201
 msgid "Clean all words including progress?"
-msgstr ""
+msgstr "要清除所有單字及其進度嗎？"
 
 #: plugins/vocabbuilder.koplugin/main.lua:367
-#, fuzzy
 msgid "Change book title"
-msgstr "變更縮放係數"
+msgstr "變更書名"
 
 #: plugins/vocabbuilder.koplugin/main.lua:375
-#, fuzzy
 msgid "Select only this book"
-msgstr "這本書不要"
+msgstr "只選取這本書"
 
 #: plugins/vocabbuilder.koplugin/main.lua:391
-#, fuzzy
 msgid "Select all books"
-msgstr "搜尋全部書籍"
+msgstr "選取全部書籍"
 
 #: plugins/vocabbuilder.koplugin/main.lua:403
 msgid "Select all books on this page"
-msgstr ""
+msgstr "選取本頁全部書籍"
 
 #: plugins/vocabbuilder.koplugin/main.lua:415
 msgid "Deselect all books on this page"
-msgstr ""
+msgstr "取消選取本頁全部書籍"
 
 #: plugins/vocabbuilder.koplugin/main.lua:555
-#, fuzzy
 msgid "Reset progress"
-msgstr "一週進度"
+msgstr "重設進度"
 
 #: plugins/vocabbuilder.koplugin/main.lua:562
-#, fuzzy
 msgid "Remove word"
-msgstr "移除新聞"
+msgstr "移除單字"
 
 #: plugins/vocabbuilder.koplugin/main.lua:586
-#, fuzzy
 msgid "Undo study status"
-msgstr "電池狀態 (%1)"
+msgstr "復原學習狀態"
 
 #: plugins/vocabbuilder.koplugin/main.lua:840
 #: plugins/vocabbuilder.koplugin/main.lua:1284
 #: plugins/vocabbuilder.koplugin/main.lua:1387
-#, fuzzy
 msgid "Forgot"
-msgstr "遺忘"
+msgstr "忘記"
 
 #: plugins/vocabbuilder.koplugin/main.lua:850
 #: plugins/vocabbuilder.koplugin/main.lua:1270
 #: plugins/vocabbuilder.koplugin/main.lua:1383
-#, fuzzy
 msgid "Got it"
-msgstr "排序項目"
+msgstr "記住了"
 
 #: plugins/vocabbuilder.koplugin/main.lua:925
 msgid "From"
-msgstr ""
+msgstr "來源"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1007
-#, fuzzy
 msgctxt "Time"
 msgid "%1h"
-msgstr "%1h%2"
+msgstr "%1小時"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1009
-#, fuzzy, lua-format
+#, lua-format
 msgctxt "Time"
 msgid "%1d"
-msgstr "%1m"
+msgstr "%1天"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1011
 msgctxt "Time"
 msgid "%1 mo."
-msgstr ""
+msgstr "%1 個月。"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1013
 msgctxt "Time"
 msgid "%1 yr."
-msgstr ""
+msgstr "%1 年。"
 
 #. @translators Used in vocabbuilder: %1 date
 #: plugins/vocabbuilder.koplugin/main.lua:1062
 #: plugins/vocabbuilder.koplugin/main.lua:2129
-#, fuzzy
 msgid "Added on %1"
-msgstr "嵌入的字型"
+msgstr "新增於 %1"
 
 #. @translators Used in vocabbuilder: %1 time
 #: plugins/vocabbuilder.koplugin/main.lua:1064
 #: plugins/vocabbuilder.koplugin/main.lua:2130
-#, fuzzy
 msgid "Review scheduled at %1"
-msgstr "時間已同步。"
+msgstr "複習排程於 %1"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1184
 msgid "Add virtual book"
-msgstr ""
+msgstr "新增虛擬書籍"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1189
 msgid "Enter book title:"
@@ -21118,22 +21302,20 @@ msgstr "書名："
 
 #: plugins/vocabbuilder.koplugin/main.lua:1225
 #: plugins/vocabbuilder.koplugin/main.lua:1900
-#, fuzzy
 msgid "Book title already in use."
-msgstr "%1 閱讀書籍"
+msgstr "書名已被使用。"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1240
 msgid "Move \"%1\" to book:"
-msgstr ""
+msgstr "將「%1」移至書籍："
 
 #: plugins/vocabbuilder.koplugin/main.lua:1578
-#, fuzzy
 msgid "Search words"
-msgstr "搜尋書籍"
+msgstr "搜尋單字"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1580
 msgid "Search empty content to exit"
-msgstr ""
+msgstr "輸入空白內容以退出搜尋"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1593
 msgid ""
@@ -21145,38 +21327,38 @@ msgid ""
 "If no wildcard is used, the searched text will be enclosed with two %'s by "
 "default."
 msgstr ""
+"搜尋時可以使用兩種萬用字元：百分比符號 (%) 和底線 (_)。\n"
+"% 代表零個或多個任意字元，_ 代表單一字元。\n"
+"\n"
+"若未使用萬用字元，搜尋文字會自動以兩側的 % 包起來。"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1715
-#, fuzzy
 msgid "Search in effect"
-msgstr "過濾元素"
+msgstr "搜尋中"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1718
-#, fuzzy
 msgid "Filter in effect"
-msgstr "過濾元素"
+msgstr "篩選中"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1719
-#, fuzzy
 msgid "No reviewable items"
-msgstr "在項目上面"
+msgstr "沒有可複習的項目"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1840
 msgid "Filter words from books"
-msgstr ""
+msgstr "從書籍過濾單字"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1870
 msgid "Change book title to:"
-msgstr "變更書名："
+msgstr "變更書名為："
 
 #: plugins/vocabbuilder.koplugin/main.lua:1882
-#, fuzzy
 msgid "Change title"
-msgstr "輸入檔名"
+msgstr "變更標題"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1967
 msgid "Words reloaded"
-msgstr ""
+msgstr "單字已重新載入"
 
 #: plugins/vocabbuilder.koplugin/main.lua:2059
 #: plugins/vocabbuilder.koplugin/main.lua:2079
@@ -21184,23 +21366,20 @@ msgid "Add to vocabulary builder"
 msgstr "新增至背單詞"
 
 #: plugins/vocabbuilder.koplugin/main.lua:2068
-#, fuzzy
 msgid "Remove from vocabulary builder"
-msgstr "新增至背單詞"
+msgstr "從背單詞中移除"
 
 #: plugins/vocabbuilder.koplugin/main.lua:2074
 msgid "Remove word \"%1\" from vocabulary builder?"
-msgstr "是否從詞彙庫中移除單字 '%1'？"
+msgstr "是否從詞彙庫中移除單字「%1」？"
 
 #: plugins/vocabbuilder.koplugin/main.lua:2092
-#, fuzzy
 msgid "Open vocabulary builder"
-msgstr "新增至背單詞"
+msgstr "開啟背單詞"
 
 #: plugins/vocabbuilder.koplugin/main.lua:2132
-#, fuzzy
 msgid "Vocabulary exists:"
-msgstr "這個快捷資料夾已經設定過了。"
+msgstr "詞彙已存在："
 
 #: plugins/wallabag.koplugin/_meta.lua:4 plugins/wallabag.koplugin/main.lua:155
 msgid "Wallabag"
@@ -21208,43 +21387,39 @@ msgstr "Wallabag"
 
 #: plugins/wallabag.koplugin/_meta.lua:5
 msgid "Synchronises articles with a Wallabag server."
-msgstr "透過 Wallabag 伺服器同步文件。"
+msgstr "透過 Wallabag 伺服器同步文章。"
 
 #: plugins/wallabag.koplugin/main.lua:58
 msgid "Wallabag retrieval"
-msgstr "Wallabag 資料提取"
+msgstr "Wallabag 擷取"
 
 #: plugins/wallabag.koplugin/main.lua:64
-#, fuzzy
 msgid "Wallabag queue upload"
-msgstr "Wallabag 資料提取"
+msgstr "上傳 Wallabag 佇列"
 
 #: plugins/wallabag.koplugin/main.lua:70
-#, fuzzy
 msgid "Wallabag statuses upload"
-msgstr "Wallabag 設定"
+msgstr "上傳 Wallabag 狀態"
 
 #: plugins/wallabag.koplugin/main.lua:142
 msgid "Add to Wallabag"
 msgstr "加到 Wallabag"
 
 #: plugins/wallabag.koplugin/main.lua:160
-#, fuzzy
 msgid "Synchronize articles with server"
-msgstr "透過 Wallabag 伺服器同步文件。"
+msgstr "與伺服器同步文章"
 
 #: plugins/wallabag.koplugin/main.lua:162
-#, fuzzy
 msgid "Download new articles from server"
-msgstr "下載並從伺服器上移除"
+msgstr "從伺服器下載新文章"
 
 #: plugins/wallabag.koplugin/main.lua:170
 msgid "Upload queue of locally added articles to server"
-msgstr ""
+msgstr "將本地新增文章的佇列上傳至伺服器"
 
 #: plugins/wallabag.koplugin/main.lua:179
 msgid "Upload article statuses to server"
-msgstr ""
+msgstr "將文章狀態上傳至伺服器"
 
 #: plugins/wallabag.koplugin/main.lua:188
 msgid "Go to download folder"
@@ -21255,118 +21430,100 @@ msgid "Configure Wallabag server"
 msgstr "設定 Wallabag 伺服器"
 
 #: plugins/wallabag.koplugin/main.lua:208
-#, fuzzy
 msgid "Download settings"
-msgstr "字型設定"
+msgstr "下載設定"
 
 #: plugins/wallabag.koplugin/main.lua:218
-#, fuzzy
 msgid "Download folder: %1"
-msgstr "設定下載資料夾"
+msgstr "下載資料夾：%1"
 
 #: plugins/wallabag.koplugin/main.lua:227
-#, fuzzy
 msgid "Number of articles to keep locally: %1"
-msgstr "每次同步要下載的文章數量"
+msgstr "本地保留文章數量：%1"
 
 #: plugins/wallabag.koplugin/main.lua:236
-#, fuzzy
 msgid "Only download articles with tag: %1"
-msgstr "使用標籤 (tag) 來過濾文章 (%1)"
+msgstr "僅下載含有標籤的文章：%1"
 
 #: plugins/wallabag.koplugin/main.lua:242
-#, fuzzy
 msgid "Tag to include"
-msgstr "要忽略的標籤"
+msgstr "要包含的標籤"
 
 #: plugins/wallabag.koplugin/main.lua:243
-#, fuzzy
 msgid "Enter a single tag to filter articles on"
-msgstr "指定單一標籤以用來過濾文章"
+msgstr "輸入單一標籤以篩選文章"
 
 #: plugins/wallabag.koplugin/main.lua:253
 msgid "Do not download articles with tags: %1"
-msgstr ""
+msgstr "不要下載包含以下標籤的文章：%1"
 
 #: plugins/wallabag.koplugin/main.lua:259
 msgid "Tags to ignore"
 msgstr "要忽略的標籤"
 
 #: plugins/wallabag.koplugin/main.lua:260
-#, fuzzy
 msgid "Enter a comma-separated list of tags to ignore"
-msgstr "輸入要忽略的標籤清單，以逗號分隔。"
+msgstr "輸入要忽略的標籤清單，以逗號分隔"
 
 #: plugins/wallabag.koplugin/main.lua:269
-#, fuzzy
 msgid "Only download starred articles"
-msgstr "使用標籤 (tag) 來過濾文章 (%1)"
+msgstr "僅下載已加星號的文章"
 
 #: plugins/wallabag.koplugin/main.lua:280
 msgid "Prefer original non-HTML document"
-msgstr ""
+msgstr "優先使用原始非 HTML 文件"
 
 #: plugins/wallabag.koplugin/main.lua:293
 msgid "Remote mark-as-read settings"
-msgstr ""
+msgstr "遠端標記為已讀設定"
 
 #: plugins/wallabag.koplugin/main.lua:296
-#, fuzzy
 msgid "Mark finished articles as read"
-msgstr "遠端刪除已閱讀完畢的文章"
+msgstr "將已完成的文章標示為已讀"
 
 #: plugins/wallabag.koplugin/main.lua:304
-#, fuzzy
 msgid "Mark 100% read articles as read"
-msgstr "從記錄中刪除閱讀進度已達 100% 的文章"
+msgstr "將閱讀進度達 100% 的文章標示為已讀"
 
 #: plugins/wallabag.koplugin/main.lua:312
-#, fuzzy
 msgid "Mark articles on hold as read"
-msgstr "將書籍標示為已閱讀"
+msgstr "將擱置的文章標示為已讀"
 
 #: plugins/wallabag.koplugin/main.lua:321
-#, fuzzy
 msgid "Auto-upload article statuses when downloading"
-msgstr "在下載時進行刪除"
+msgstr "下載時自動上傳文章狀態"
 
 #: plugins/wallabag.koplugin/main.lua:329
-#, fuzzy
 msgid "Delete instead of marking as read"
-msgstr "遠端刪除已閱讀完畢的文章"
+msgstr "刪除而不是標記為已讀"
 
 #: plugins/wallabag.koplugin/main.lua:339
-#, fuzzy
 msgid "Local file removal settings"
-msgstr "位置設定"
+msgstr "本地檔案移除設定"
 
 #: plugins/wallabag.koplugin/main.lua:342
-#, fuzzy
 msgid "Delete remotely archived and deleted articles locally"
-msgstr "遠端移除被標記閱讀完成的文章"
+msgstr "在本地刪除遠端已封存和已刪除的文章"
 
 #: plugins/wallabag.koplugin/main.lua:350
-#, fuzzy
 msgid "Move to archive folder instead of deleting"
-msgstr "標示為已讀而不是刪除"
+msgstr "移動到封存資料夾而不是刪除"
 
 #: plugins/wallabag.koplugin/main.lua:365
-#, fuzzy
 msgid "Archive folder: %1"
-msgstr "設定封存資料夾"
+msgstr "封存資料夾：%1"
 
 #: plugins/wallabag.koplugin/main.lua:378
-#, fuzzy
 msgid "Network timeout settings"
-msgstr "夜間模式設定"
+msgstr "網路逾時設定"
 
 #: plugins/wallabag.koplugin/main.lua:382
 msgid "Article download connection timeout: %1 s"
-msgstr ""
+msgstr "文章下載連線逾時：%1 秒"
 
 #: plugins/wallabag.koplugin/main.lua:388
 msgid "Article download connection timeout (seconds)"
-msgstr ""
+msgstr "文章下載連線逾時（秒）"
 
 #: plugins/wallabag.koplugin/main.lua:396
 msgid "Article download total timeout: %1 s"
@@ -21374,68 +21531,61 @@ msgstr "文章下載總逾時：%1 秒"
 
 #: plugins/wallabag.koplugin/main.lua:402
 msgid "Article download total timeout (seconds)"
-msgstr ""
+msgstr "文章下載總逾時（秒）"
 
 #: plugins/wallabag.koplugin/main.lua:410
-#, fuzzy
 msgid "API request connection timeout: %1 s"
-msgstr "自動關機逾時：%1"
+msgstr "API 請求連線逾時：%1 秒"
 
 #: plugins/wallabag.koplugin/main.lua:416
 msgid "API request connection timeout (seconds)"
-msgstr ""
+msgstr "API 請求連線逾時（秒）"
 
 #: plugins/wallabag.koplugin/main.lua:424
-#, fuzzy
 msgid "API request total timeout: %1 s"
-msgstr "自動休眠逾時：%1"
+msgstr "API 請求總逾時：%1 秒"
 
 #: plugins/wallabag.koplugin/main.lua:430
 msgid "API request total timeout (seconds)"
-msgstr ""
+msgstr "API 請求總逾時（秒）"
 
 #: plugins/wallabag.koplugin/main.lua:442
 msgid "Remove finished articles from history"
-msgstr "從記錄中刪除被標記閱讀完成的文章"
+msgstr "從記錄中移除已完成的文章"
 
 #: plugins/wallabag.koplugin/main.lua:453
 msgid "Remove 100% read articles from history"
-msgstr "從記錄中刪除閱讀進度已達 100% 的文章"
+msgstr "從記錄中移除閱讀進度達 100% 的文章"
 
 #: plugins/wallabag.koplugin/main.lua:464
-#, fuzzy
 msgid "Remove articles on hold from history"
-msgstr "從記錄中刪除被標記閱讀完成的文章"
+msgstr "從記錄中移除擱置的文章"
 
 #: plugins/wallabag.koplugin/main.lua:480
 msgid "Tags to add to new articles: %1"
-msgstr ""
+msgstr "新增到新文章的標籤：%1"
 
 #: plugins/wallabag.koplugin/main.lua:486
-#, fuzzy
 msgid "Tags to add to new articles"
-msgstr "移除所有已讀（已開啟過）的文章"
+msgstr "新增到新文章的標籤"
 
 #: plugins/wallabag.koplugin/main.lua:487
-#, fuzzy
 msgid ""
 "Enter a comma-separated list of tags to add when submitting a new article to "
 "Wallabag."
-msgstr "輸入要忽略的標籤清單，以逗號分隔。"
+msgstr "提交新文章至 Wallabag 時，輸入要新增的標籤（以逗號分隔）。"
 
 #: plugins/wallabag.koplugin/main.lua:496
-#, fuzzy
 msgid "Send review as tags"
-msgstr "儲存評論"
+msgstr "將評論作為標籤發送"
 
 #: plugins/wallabag.koplugin/main.lua:497
 msgid ""
 "This allows you to write tags in the review field, separated by commas, "
 "which will be applied to the article on Wallabag."
-msgstr ""
+msgstr "這允許您在評論欄中輸入標籤（以逗號分隔），並將其套用到 Wallabag 上的文章。"
 
 #: plugins/wallabag.koplugin/main.lua:513
-#, fuzzy
 msgid ""
 "Download folder: use a folder that is exclusively used by the Wallabag "
 "plugin. Existing files in this folder risk being deleted.\n"
@@ -21447,16 +21597,17 @@ msgid ""
 "The 'Delete remotely archived and deleted articles locally' option will "
 "allow deletion of local files that are archived or deleted on the server."
 msgstr ""
-"下載資料夾：使用一個專供 Wallabag 外掛使用的資料夾。在這個資料夾中的檔案有被"
-"刪除的風險。\n"
+"下載資料夾：請使用專供 Wallabag "
+"外掛使用的資料夾。該資料夾中的現有檔案可能會被刪除。\n"
 "\n"
-"被標記為完成，或達到 100% 閱讀進度的文章，可以被從伺服器刪除。這些文章也會因"
-"為「在下載時進行刪除」選項被啟用，而在下載新文件時被自動刪除。\n"
+"在伺服器上，被標記為完成、擱置或已達 100% "
+"閱讀進度的文章，可以被標示為已讀（或刪除）。當啟用「下載時自動上傳文章狀態」"
+"設定並擷取新文章時，此操作會自動執行。\n"
 "\n"
-"「同步刪除遠端被刪除的檔案」選項，將會刪除那些伺服器中已不存在的本地檔案。"
+"「在本地刪除遠端已封存和已刪除的文章」選項將允許刪除那些在伺服器上已被封存或"
+"刪除的本地檔案。"
 
 #: plugins/wallabag.koplugin/main.lua:528
-#, fuzzy
 msgid ""
 "Wallabag is an open source read-it-later service. This plugin synchronizes "
 "with a Wallabag server.\n"
@@ -21465,12 +21616,11 @@ msgid ""
 "\n"
 "Downloads to folder: %1"
 msgstr ""
-"Wallabag 是一個開源的容後詳讀(read-it-later)服務程式。這個外掛與 Wallabag 伺"
-"服器同步\n"
+"Wallabag 是一個開源的稍後閱讀服務。此外掛可與 Wallabag 伺服器同步。\n"
 "\n"
-"更多資訊請見: https://wallabag.org\n"
+"更多資訊： https://wallabag.org\n"
 "\n"
-"下載到資料夾: %1"
+"下載到資料夾：%1"
 
 #: plugins/wallabag.koplugin/main.lua:553
 msgid "Please configure the server settings and set a download folder."
@@ -21489,13 +21639,12 @@ msgid "Folder (★)"
 msgstr "資料夾 (★)"
 
 #: plugins/wallabag.koplugin/main.lua:579
-#, fuzzy
 msgid ""
 "The download folder is not valid.\n"
 "Please configure it in the settings."
 msgstr ""
-"這個下載資料夾是無效的。\n"
-"請在設定中設定它。"
+"下載資料夾無效。\n"
+"請在設定中進行配置。"
 
 #: plugins/wallabag.koplugin/main.lua:618
 msgid "Could not login to Wallabag server."
@@ -21516,11 +21665,11 @@ msgstr "請求文章列表未返回任何結果。"
 #: plugins/wallabag.koplugin/main.lua:895
 #: plugins/wallabag.koplugin/main.lua:899
 msgid "Server response is not valid."
-msgstr "伺服器的回應是無效的。"
+msgstr "伺服器的回應無效。"
 
 #: plugins/wallabag.koplugin/main.lua:908
 msgid "Communication with server failed."
-msgstr "與伺服器通訊失敗了。"
+msgstr "與伺服器通訊失敗。"
 
 #: plugins/wallabag.koplugin/main.lua:931
 msgid "Connecting to Wallabag server…"
@@ -21528,63 +21677,60 @@ msgstr "正在連線到 Wallabag 伺服器…"
 
 #: plugins/wallabag.koplugin/main.lua:962
 msgid "Getting list of newest articles on Wallabag…"
-msgstr ""
+msgstr "正在取得 Wallabag 上的最新文章列表…"
 
 #: plugins/wallabag.koplugin/main.lua:971
-#, fuzzy
 msgid "Received a list of 1 article."
 msgid_plural "Received a list of %1 articles."
-msgstr[0] "收到檔案："
+msgstr[0] "已接收 %1 篇文章列表。"
 
 #: plugins/wallabag.koplugin/main.lua:988
-#, fuzzy
 msgid "Downloaded article %1 of %2…"
-msgstr "下載文章中……"
+msgstr "正在下載文章 %1（共 %2）…"
 
 #: plugins/wallabag.koplugin/main.lua:1014
 msgid "Sync finished:"
-msgstr "已完成："
+msgstr "同步完成："
 
 #: plugins/wallabag.koplugin/main.lua:1018
 msgid "- added from queue: %1"
-msgstr ""
+msgstr "- 已從佇列新增：%1"
 
 #: plugins/wallabag.koplugin/main.lua:1023
 msgid ""
 "- downloaded: %1\n"
 "- skipped: %2"
 msgstr ""
+"- 已下載：%1\n"
+"- 已跳過：%2"
 
 #: plugins/wallabag.koplugin/main.lua:1027
-#, fuzzy
 msgid "- failed: %1"
-msgstr "標題："
+msgstr "- 失敗：%1"
 
 #: plugins/wallabag.koplugin/main.lua:1033
 #: plugins/wallabag.koplugin/main.lua:1221
-#, fuzzy
 msgid "- archived in KOReader: %1"
-msgstr "在閱讀器中按返回鍵：%1"
+msgstr "- 已在 KOReader 中封存：%1"
 
 #: plugins/wallabag.koplugin/main.lua:1035
 #: plugins/wallabag.koplugin/main.lua:1223
 msgid "- deleted from KOReader: %1"
-msgstr "已從 KOReader 刪除：%1"
+msgstr "- 已從 KOReader 刪除：%1"
 
 #: plugins/wallabag.koplugin/main.lua:1042
 #: plugins/wallabag.koplugin/main.lua:1215
 msgid "- deleted from Wallabag: %1"
-msgstr "已從 Wallabag 刪除：%1"
+msgstr "- 已從 Wallabag 刪除：%1"
 
 #: plugins/wallabag.koplugin/main.lua:1044
 msgid "- archived in Wallabag: %1"
-msgstr "已加入 Wallabag ：%1"
+msgstr "- 已在 Wallabag 中封存：%1"
 
 #: plugins/wallabag.koplugin/main.lua:1067
-#, fuzzy
 msgid "Adding 1 article from queue…"
 msgid_plural "Adding %1 articles from queue…"
-msgstr[0] "正在從佇列中加入文章……"
+msgstr[0] "正在從佇列新增 %1 篇文章…"
 
 #: plugins/wallabag.koplugin/main.lua:1084
 msgid "Added 1 article from queue to Wallabag"
@@ -21592,14 +21738,12 @@ msgid_plural "Added %1 articles from queue to Wallabag"
 msgstr[0] "已將 %1 篇文章從佇列新增到 Wallabag"
 
 #: plugins/wallabag.koplugin/main.lua:1100
-#, fuzzy
 msgid "Synchronizing remote archivals and deletions…"
-msgstr "正在同步遠端的刪除……"
+msgstr "正在同步遠端的封存與刪除…"
 
 #: plugins/wallabag.koplugin/main.lua:1148
-#, fuzzy
 msgid "Syncing local article statuses…"
-msgstr "正在處理本地檔案……"
+msgstr "正在同步本地文章狀態…"
 
 #: plugins/wallabag.koplugin/main.lua:1212
 msgid "Upload finished:"
@@ -21607,19 +21751,17 @@ msgstr "上傳完成："
 
 #: plugins/wallabag.koplugin/main.lua:1217
 msgid "- archived on Wallabag: %1"
-msgstr "已加入 Wallabag：%1"
+msgstr "- 已在 Wallabag 上封存：%1"
 
 #: plugins/wallabag.koplugin/main.lua:1345
-#, fuzzy
 msgid ""
 "The archive folder is not valid.\n"
 "Please configure it in the settings."
 msgstr ""
-"這個下載資料夾是無效的。\n"
-"請在設定中設定它。"
+"封存資料夾無效。\n"
+"請在設定中進行配置。"
 
 #: plugins/wallabag.koplugin/main.lua:1445
-#, fuzzy
 msgid ""
 "Enter the details of your Wallabag server and account.\n"
 "\n"
@@ -21632,8 +21774,8 @@ msgid ""
 msgstr ""
 "輸入您 Wallabag 伺服器和帳號的詳細資料。\n"
 "\n"
-"Client ID 和 client secret 是長的字串，所以您可以選擇留空，然後直接編輯您的安"
-"裝資料夾中的設定檔：\n"
+"Client ID 和 Client secret "
+"是長字串，所以您可以選擇留空，然後直接編輯安裝資料夾中的設定檔：\n"
 "%1/wallabag.lua\n"
 "\n"
 "編輯設定檔後，請重新啟動 KOReader。"
@@ -21648,29 +21790,26 @@ msgstr "伺服器 URL"
 
 #: plugins/wallabag.koplugin/main.lua:1464
 msgid "Client ID"
-msgstr "客戶端 ID"
+msgstr "Client ID"
 
 #: plugins/wallabag.koplugin/main.lua:1468
 msgid "Client secret"
-msgstr "客戶端 secret"
+msgstr "Client secret"
 
 #: plugins/wallabag.koplugin/main.lua:1519
-#, fuzzy
 msgid "Number of articles to keep locally"
-msgstr "每次同步要下載的文章數量"
+msgstr "本地保留的文章數量"
 
 #: plugins/wallabag.koplugin/main.lua:1600
-#, fuzzy
 msgid "Invalid input. Please enter a positive number greater than 0."
-msgstr "無效的值。請輸入有效的值。"
+msgstr "輸入無效。請輸入大於 0 的正整數。"
 
 #: plugins/wallabag.koplugin/main.lua:1662
-#, fuzzy
 msgid ""
 "Article will be added to Wallabag in the next sync:\n"
 "%1"
 msgstr ""
-"文章已加到 Wallabag：\n"
+"文章將在下次同步時新增到 Wallabag：\n"
 "%1"
 
 #: plugins/wallabag.koplugin/main.lua:1670
@@ -21698,19 +21837,20 @@ msgid "Tap the upper right corner"
 msgstr "點擊右上角"
 
 #: tools/update-metadata.lua:26
-#, fuzzy
 msgid "Ebook reader"
-msgstr "選擇資料夾"
+msgstr "電子書閱讀器"
 
 #: tools/update-metadata.lua:29
 msgid ""
 "KOReader is an ebook reader optimized for e-ink screens. It can open many "
 "formats and provides advanced text adjustments."
-msgstr ""
+msgstr "KOReader "
+"是一款為電子紙螢幕最佳化的電子書閱讀器。它能開啟多種格式，並提供進階的文字調"
+"整功能。"
 
 #: tools/update-metadata.lua:30
 msgid "See below for a selection of its many features:"
-msgstr ""
+msgstr "以下列出部分功能特色："
 
 #: tools/update-metadata.lua:33
 msgid ""
@@ -21719,45 +21859,49 @@ msgid ""
 "can be reflowed. Special flow directions for reading double column PDFs and "
 "manga."
 msgstr ""
+"支援固定頁面格式（PDF、DjVu、CBT、CBZ）與可重新排版的電子書格式（EPUB、FB2、M"
+"obi、DOC、CHM、TXT、HTML）。掃描的 PDF/DjVu 文件也可重新排版。並針對雙欄 PDF "
+"與漫畫提供特殊的閱讀排版模式。"
 
 #: tools/update-metadata.lua:34
 msgid ""
 "Multi-lingual user interface optimized for e-ink screens. Highly "
 "customizable reader view with complete typesetting options. Multi-lingual "
 "hyphenation dictionaries are bundled in."
-msgstr ""
+msgstr "多語系使用者介面，針對電子紙螢幕進行最佳化。閱讀視圖高度可自訂，並提供完整的"
+"排版選項。內建多語言斷詞字典。"
 
 #: tools/update-metadata.lua:35
 msgid ""
 "Non-Latin script support for books, including the Hebrew, Arabic, Persian, "
 "Russian, Chinese, Japanese and Korean languages."
-msgstr ""
+msgstr "支援非拉丁文字的書籍，包括希伯來文、阿拉伯文、波斯文、俄文、中文、日文與韓文"
+"。"
 
 #: tools/update-metadata.lua:36
 msgid "Unique Book Map and Page Browser features to navigate your book."
-msgstr ""
+msgstr "獨特的書籍地圖與頁面瀏覽器功能，方便導覽書籍。"
 
 #: tools/update-metadata.lua:37
 msgid ""
 "Special multi-page highlight mode with many local and online export options."
-msgstr ""
+msgstr "提供特殊的多頁高亮模式，並支援多種本機與線上匯出選項。"
 
 #: tools/update-metadata.lua:38
-#, fuzzy
 msgid ""
 "Can synchronize your reading progress across all your KOReader running "
 "devices."
-msgstr "透過伺服器，讓您在多個 KOReader 裝置之間同步您的閱讀進度。"
+msgstr "可在所有執行 KOReader 的裝置之間同步您的閱讀進度。"
 
 #: tools/update-metadata.lua:39
 msgid ""
 "Integrated with Calibre, Wallabag, Wikipedia, Google Translate and other "
 "content providers."
-msgstr ""
+msgstr "整合 Calibre、Wallabag、維基百科、Google 翻譯及其他內容提供者。"
 
 #: tools/update-metadata.lua:43
 msgid "Release notes available on the link below"
-msgstr ""
+msgstr "可透過下方連結查看發行說明"
 
 #: tools/update-metadata.lua:55
 msgid "reader"
@@ -21768,24 +21912,20 @@ msgid "viewer"
 msgstr "檢視器"
 
 #: tools/update-metadata.lua:57
-#, fuzzy
 msgid "dictionary"
 msgstr "字典"
 
 #: tools/update-metadata.lua:58
-#, fuzzy
 msgid "wikipedia"
 msgstr "維基百科"
 
 #: tools/update-metadata.lua:59
-#, fuzzy
 msgid "wallabag"
 msgstr "Wallabag"
 
 #: tools/update-metadata.lua:60
-#, fuzzy
 msgid "annotations"
-msgstr "旋轉"
+msgstr "註解"
 
 #~ msgid "New alarm"
 #~ msgstr "新鬧鐘"
