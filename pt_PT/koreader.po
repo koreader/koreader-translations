@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-04 08:03+0000\n"
-"PO-Revision-Date: 2025-09-01 14:44+0000\n"
+"PO-Revision-Date: 2025-10-07 11:02+0000\n"
 "Last-Translator: Horus68 <horus68@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Portuguese (Portugal) <https://hosted.weblate.org/projects/"
 "koreader/koreader/pt_PT/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13.1-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: reader.lua:194
 msgid ""
@@ -1438,7 +1438,6 @@ msgstr[0] "1 documento com metadados baseados em hash"
 msgstr[1] "%1 documentos com metadados baseados em hash"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:950
-#, fuzzy
 msgid ""
 "%T title\n"
 "%A author\n"
@@ -1466,6 +1465,7 @@ msgstr ""
 "%S série\n"
 "%t total de páginas\n"
 "%c página atual\n"
+"%l páginas por ler no capítulo\n"
 "%p percentagem do livro lido\n"
 "%H tempo restante no livro\n"
 "%C título do capítulo\n"
@@ -1475,6 +1475,7 @@ msgstr ""
 "%f nome do ficheiro\n"
 "%b nível da bateria\n"
 "%B símbolo da bateria\n"
+"%r separador\n"
 "%D data atual (aaaa-mm-dd)\n"
 "%d data atual (mm-dd)\n"
 "%m hora atual (hh:mm)\n"
@@ -3167,24 +3168,20 @@ msgstr ""
 "Verifique no menu \"Configurações do dicionário\"."
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1330
-#, fuzzy
 msgid "Would you like to use fuzzy search?"
-msgstr "Como deseja continuar?"
+msgstr "Pretende utilizar uma pesquisa difusa?"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1332
-#, fuzzy
 msgid "Fuzzy search"
-msgstr "Ativar pesquisa difusa"
+msgstr "Pesquisa difusa"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1343
-#, fuzzy
 msgid "Would you like to search with a preset?"
-msgstr "O que gostaria de fazer com a predefinição '%1'?"
+msgstr "Pretende pesquisar com uma predefinição?"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1366
-#, fuzzy
 msgid "No results found"
-msgstr "Sem resultados para '%1'"
+msgstr "Sem resultados"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1406
 msgid "License"
@@ -3196,7 +3193,7 @@ msgstr "Verbetes"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1410
 msgid "Tap dictionary name to download"
-msgstr "Toque no nome do dicionário para baixar"
+msgstr "Toque no nome do dicionário para descarregar"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1422
 msgid "File already exists. Overwrite?"
@@ -6630,8 +6627,8 @@ msgstr ""
 #: frontend/apps/reader/modules/readertoc.lua:1273
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
-msgstr[0] "1 entrada no nível %2 do Índice"
-msgstr[1] "%1 entradas no nível %2 do Índice"
+msgstr[0] "1 entrada no nível %2 do índice"
+msgstr[1] "%1 entradas no nível %2 do índice"
 
 #: frontend/apps/reader/modules/readertoc.lua:1295
 msgid "Progress bars: 1 tick"
@@ -7479,9 +7476,9 @@ msgid ""
 msgstr ""
 "O dicionário de utilizador\n"
 "%1\n"
-"tem entradas corrompidas.\n"
+"tem verbetes corrompidos.\n"
 "\n"
-"Apenas serão usadas entradas válidas."
+"Apenas serão usados verbetes válidos."
 
 #: frontend/apps/reader/modules/readeruserhyph.lua:92
 msgid "Custom hyphenation rules"
@@ -11296,7 +11293,7 @@ msgstr "Hunsrik"
 
 #: frontend/ui/data/isolanguage.lua:191
 msgid "Ingrian"
-msgstr "Ingrian"
+msgstr "Izhoriano"
 
 #: frontend/ui/data/isolanguage.lua:192
 msgid "Jejueo"
@@ -11503,9 +11500,8 @@ msgid "Show character candidates"
 msgstr "Exibir caracteres disponíveis"
 
 #: frontend/ui/data/koptoptions.lua:27
-#, fuzzy
 msgid "No OCR languages"
-msgstr "Outras etiquetas de idioma:"
+msgstr "Sem idiomas para ROC"
 
 #: frontend/ui/data/koptoptions.lua:100
 msgid "Page Crop"
@@ -12730,7 +12726,7 @@ msgid ""
 "bold nor italic, not Serif) will be available in this menu. However, bold "
 "fonts will be used if their corresponding regular fonts exist."
 msgstr ""
-"Se alguns títulos de livros, entradas de dicionários e outros não forem bem "
+"Se alguns títulos de livros, verbetes de dicionários e outros não forem bem "
 "exibidos, mas mostrados como %1 ou %2 , pode ser necessário descarregar as "
 "fontes necessárias para esses idiomas. Podem então ser ativadas como fontes "
 "de contingência da interface do utilizador. \n"
@@ -12738,9 +12734,9 @@ msgstr ""
 "\n"
 "https://fonts.google.com/noto\n"
 "\n"
-"Apenas fontes com o nome \"Noto Sans xyz\" ou \"Noto Sans xyz UI\" (regular, "
-"sem negrito, itálico e sem serifa) estarão disponíveis neste menu. No "
-"entanto, fontes em negrito serão usadas se existirem as suas fontes "
+"Apenas fontes com o nome \"Noto Sans xyz\" ou \"Noto Sans xyz UI\" "
+"(regular, sem negrito, itálico e sem serifa) estarão disponíveis neste menu. "
+"No entanto, fontes em negrito serão usadas se existirem as suas fontes "
 "regulares correspondentes."
 
 #: frontend/ui/elements/font_ui_fallbacks.lua:104
@@ -12862,9 +12858,9 @@ msgid ""
 "input field. When a field is selected (in focus), you can temporarily toggle "
 "the keyboard on/off by pressing 'Shift' (or 'ScreenKB') + 'Home'."
 msgstr ""
-"Ative esta configuração para sempre exibir o teclado virtual dentro de um "
-"campo de entrada de texto. Quando um campo está selecionado (em foco), pode "
-"alternar temporariamente entre teclado ligado/desligado pressionando "
+"Ative esta configuração para exibir sempre o teclado virtual dentro de um "
+"campo de entrada de texto. Quando um campo estiver selecionado (em foco), "
+"pode alternar temporariamente entre teclado ligado/desligado pressionando "
 "'Shift' (ou 'ScreenKB') + 'Início'."
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:243
@@ -13562,52 +13558,45 @@ msgid "Edit sleep screen message"
 msgstr "Editar mensagem do ecrã de suspensão"
 
 #: frontend/ui/elements/screensaver_menu.lua:208
-#, fuzzy
 msgid "Container and position"
-msgstr "Margem inferior do contentor"
+msgstr "Contentor e posição"
 
 #: frontend/ui/elements/screensaver_menu.lua:213
 msgid "Banner"
-msgstr ""
+msgstr "Faixa"
 
 #: frontend/ui/elements/screensaver_menu.lua:214
 msgid "Box"
-msgstr ""
+msgstr "Caixa"
 
 #: frontend/ui/elements/screensaver_menu.lua:220
-#, fuzzy
 msgid "top"
-msgstr "Parar"
+msgstr "superior"
 
 #: frontend/ui/elements/screensaver_menu.lua:222
-#, fuzzy
 msgid "middle"
-msgstr "Meio"
+msgstr "meio"
 
 #: frontend/ui/elements/screensaver_menu.lua:224
-#, fuzzy
 msgid "bottom"
-msgstr "Inferior"
+msgstr "inferior"
 
 #: frontend/ui/elements/screensaver_menu.lua:228
-#, fuzzy
 msgid "Vertical position: %1"
-msgstr "Posição do diálogo de folhear: %1"
+msgstr "Posição vertical: %1"
 
 #: frontend/ui/elements/screensaver_menu.lua:230
 msgid "Set a custom vertical position for the sleep screen message."
 msgstr ""
 
 #: frontend/ui/elements/screensaver_menu.lua:239
-#, fuzzy
 msgid "Message opacity: %1"
-msgstr "Posição da mensagem"
+msgstr "Opacidade da mensagem: %1"
 
 #: frontend/ui/elements/screensaver_menu.lua:241
 #: frontend/ui/screensaver.lua:298
-#, fuzzy
 msgid "Set the opacity level of the sleep screen message."
-msgstr "Editar mensagem do ecrã de suspensão"
+msgstr "Define o nível de opacidade da mensagem do ecrã de suspensão."
 
 #: frontend/ui/elements/screensaver_menu.lua:250
 msgid "Background fill"
@@ -14944,9 +14933,8 @@ msgid "Full stretch"
 msgstr "Esticamento completo"
 
 #: frontend/ui/screensaver.lua:277
-#, fuzzy
 msgid "Adjust message position"
-msgstr "Posição da mensagem"
+msgstr "Ajustar posição da mensagem"
 
 #: frontend/ui/screensaver.lua:278
 msgid ""
@@ -14958,19 +14946,16 @@ msgid ""
 msgstr ""
 
 #: frontend/ui/screensaver.lua:287
-#, fuzzy
 msgid "Set position"
-msgstr "Posição do gesto"
+msgstr "Definir posição"
 
 #: frontend/ui/screensaver.lua:297
-#, fuzzy
 msgid "Container opacity"
-msgstr "Margem inferior do contentor"
+msgstr "Opacidade do contentor"
 
 #: frontend/ui/screensaver.lua:306
-#, fuzzy
 msgid "Set opacity"
-msgstr "Definir data"
+msgstr "Definir opacidade"
 
 #. @translators Many of the names for languages can be conveniently found pre-translated in the relevant language of this Wikipedia article: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 #: frontend/ui/translator.lua:29
@@ -14978,9 +14963,8 @@ msgid "Abkhaz"
 msgstr ""
 
 #: frontend/ui/translator.lua:30
-#, fuzzy
 msgid "Acehnese"
-msgstr "Chinese"
+msgstr "Acehnês"
 
 #: frontend/ui/translator.lua:31
 msgid "Acholi"
@@ -15003,9 +14987,8 @@ msgid "Aymara"
 msgstr "Aymara"
 
 #: frontend/ui/translator.lua:44
-#, fuzzy
 msgid "Balinese"
-msgstr "Chinese"
+msgstr "Balinês"
 
 #: frontend/ui/translator.lua:45
 msgid "Baluchi"
@@ -15048,9 +15031,8 @@ msgid "Buryat"
 msgstr ""
 
 #: frontend/ui/translator.lua:63
-#, fuzzy
 msgid "Cantonese"
-msgstr "Chinese"
+msgstr "Cantonês"
 
 #: frontend/ui/translator.lua:66
 msgid "Chamorro"
@@ -15061,7 +15043,6 @@ msgid "Chechen"
 msgstr ""
 
 #: frontend/ui/translator.lua:68
-#, fuzzy
 msgid "Chichewa"
 msgstr "Nyanja (Chichewa)"
 
@@ -15074,14 +15055,12 @@ msgid "Chuvash"
 msgstr ""
 
 #: frontend/ui/translator.lua:75
-#, fuzzy
 msgid "Crimean Tatar (Cyrillic)"
-msgstr "Crimean Tatar"
+msgstr "Tártaro da Crimeia (Cirílico)"
 
 #: frontend/ui/translator.lua:76
-#, fuzzy
 msgid "Crimean Tatar (Latin)"
-msgstr "Crimean Tatar"
+msgstr "Tártaro da Crimeia (Latino)"
 
 #: frontend/ui/translator.lua:80
 msgid "Dari"
@@ -15112,9 +15091,8 @@ msgid "Fijian"
 msgstr ""
 
 #: frontend/ui/translator.lua:96
-#, fuzzy
 msgid "Fon"
-msgstr "Fonte"
+msgstr ""
 
 #: frontend/ui/translator.lua:98
 msgid "French (Canada)"
@@ -15129,9 +15107,8 @@ msgid "Fulani"
 msgstr ""
 
 #: frontend/ui/translator.lua:102
-#, fuzzy
 msgid "Ga"
-msgstr "Cinzento"
+msgstr ""
 
 #: frontend/ui/translator.lua:107
 msgid "Guarani"
@@ -15223,9 +15200,8 @@ msgid "Krio"
 msgstr "Krio"
 
 #: frontend/ui/translator.lua:149
-#, fuzzy
 msgid "Kurdish (Kurmanji)"
-msgstr "Curdo (Sorani)"
+msgstr "Curdo (Curmânji)"
 
 #: frontend/ui/translator.lua:150
 msgid "Kurdish (Sorani)"
@@ -15237,19 +15213,16 @@ msgid "Kyrgyz"
 msgstr "Quirguiz"
 
 #: frontend/ui/translator.lua:154
-#, fuzzy
 msgid "Latgalian"
-msgstr "Italiano"
+msgstr "Lategálio"
 
 #: frontend/ui/translator.lua:157
-#, fuzzy
 msgid "Ligurian"
-msgstr "Ingrian"
+msgstr "Lígure"
 
 #: frontend/ui/translator.lua:158
-#, fuzzy
 msgid "Limburgish"
-msgstr "Luxemburguês"
+msgstr "Limburguês"
 
 #: frontend/ui/translator.lua:159
 msgid "Lingala"
@@ -15264,9 +15237,8 @@ msgid "Luganda"
 msgstr "Luganda"
 
 #: frontend/ui/translator.lua:163
-#, fuzzy
 msgid "Luo"
-msgstr "Baixo"
+msgstr ""
 
 #: frontend/ui/translator.lua:166
 msgid "Madurese"
@@ -15285,18 +15257,16 @@ msgid "Malay (Jawi)"
 msgstr ""
 
 #: frontend/ui/translator.lua:174
-#, fuzzy
 msgid "Mam"
-msgstr "Mar"
+msgstr ""
 
 #: frontend/ui/translator.lua:179
 msgid "Marwadi"
 msgstr ""
 
 #: frontend/ui/translator.lua:180
-#, fuzzy
 msgid "Mauritian Creole"
-msgstr "Crioulo haitiano"
+msgstr "Crioulo mauriciano"
 
 #: frontend/ui/translator.lua:181
 msgid "Meadow Mari"
@@ -15319,9 +15289,8 @@ msgid "Myanmar (Burmese)"
 msgstr "Myanmar (Birmanês)"
 
 #: frontend/ui/translator.lua:187
-#, fuzzy
 msgid "NKo"
-msgstr "Não"
+msgstr "N’Ko"
 
 #: frontend/ui/translator.lua:188
 msgid "Nahuatl (Eastern Huasteca)"
@@ -15353,9 +15322,8 @@ msgid "Odia (Oriya)"
 msgstr "Odia (Oriya)"
 
 #: frontend/ui/translator.lua:199
-#, fuzzy
 msgid "Ossetian"
-msgstr "Venetian"
+msgstr "Osseta"
 
 #: frontend/ui/translator.lua:200
 msgid "Pangasinan"
@@ -15370,14 +15338,12 @@ msgid "Pashto"
 msgstr "Pashto"
 
 #: frontend/ui/translator.lua:205
-#, fuzzy
 msgid "Portuguese (Brazil)"
-msgstr "Português (BR)"
+msgstr "Português (Brasil)"
 
 #: frontend/ui/translator.lua:206
-#, fuzzy
 msgid "Portuguese (Portugal)"
-msgstr "Português (BR)"
+msgstr "Português (Portugal)"
 
 #: frontend/ui/translator.lua:207
 msgid "Punjabi (Gurmukhi)"
@@ -15392,9 +15358,8 @@ msgid "Qʼeqchiʼ"
 msgstr ""
 
 #: frontend/ui/translator.lua:211
-#, fuzzy
 msgid "Romani"
-msgstr "Romeno"
+msgstr "Romani"
 
 #: frontend/ui/translator.lua:213
 msgid "Rundi"
@@ -15413,9 +15378,8 @@ msgid "Sango"
 msgstr ""
 
 #: frontend/ui/translator.lua:219
-#, fuzzy
 msgid "Santali (Latin)"
-msgstr "Sérvio - Latino"
+msgstr "Santale (Latino)"
 
 #: frontend/ui/translator.lua:220
 msgid "Santali (Ol Chiki)"
@@ -15442,9 +15406,8 @@ msgid "Shona"
 msgstr "Xona"
 
 #: frontend/ui/translator.lua:229
-#, fuzzy
 msgid "Silesian"
-msgstr "Persa"
+msgstr "Silesiano"
 
 #: frontend/ui/translator.lua:235
 msgid "Somali"
@@ -15455,7 +15418,6 @@ msgid "Susu"
 msgstr ""
 
 #: frontend/ui/translator.lua:242
-#, fuzzy
 msgid "Tahitian"
 msgstr "Haitiano"
 
@@ -15476,9 +15438,8 @@ msgid "Tiv"
 msgstr ""
 
 #: frontend/ui/translator.lua:255
-#, fuzzy
 msgid "Tongan"
-msgstr "Tsonga"
+msgstr "Tonganês"
 
 #: frontend/ui/translator.lua:256
 msgid "Tshiluba"
@@ -15860,9 +15821,8 @@ msgid "Page browser on tap"
 msgstr "Navegador de páginas ao tocar"
 
 #: frontend/ui/widget/bookmapwidget.lua:1334
-#, fuzzy
 msgid "Page browser on key press"
-msgstr "Navegador de páginas ao tocar"
+msgstr "Navegador de páginas ao tocar teclas"
 
 #: frontend/ui/widget/bookmapwidget.lua:1352
 msgid "Alternative theme"
@@ -16957,9 +16917,8 @@ msgid "Failed to start SSH server."
 msgstr "Falha em iniciar o servidor SSH."
 
 #: plugins/SSH.koplugin/main.lua:170
-#, fuzzy
 msgid "Failed to stop SSH server."
-msgstr "Falha em iniciar o servidor SSH."
+msgstr "Falha ao parar o servidor SSH."
 
 #: plugins/SSH.koplugin/main.lua:176
 msgid "SSH server stopped."
@@ -17170,13 +17129,13 @@ msgid ""
 "it can be fairly aggravating on slower devices."
 msgstr ""
 "O modo de espera coloca o aparelho num estado de economia de energia no qual "
-"o ecrã está ligada e a entrada do utilizador pode ser executada.\n"
+"o ecrã está ligado e pode ser executada uma entrada feita pelo utilizador.\n"
 "\n"
 "O modo de espera não pode ser inserido se o Wi-Fi estiver ligado.\n"
 "\n"
-"Após a entrada do utilizador, o aparelho precisa de um certo tempo para "
-"acordar. Geralmente, quanto mais novo o aparelho , menos perceptível esse "
-"atraso será, mas pode ser bastante agravante em aparelhos mais lentos."
+"Após uma entrada feita pelo utilizador, o aparelho precisa de um certo tempo "
+"para acordar. Geralmente, quanto mais novo o aparelho menos percetível esse "
+"atraso será, mas pode ser bastante percetível em aparelhos mais lentos."
 
 #: plugins/autosuspend.koplugin/main.lua:574
 msgid ""
@@ -19145,9 +19104,8 @@ msgid "Export to Markdown"
 msgstr "Exportar para Markdown"
 
 #: plugins/exporter.koplugin/target/markdown.lua:73
-#, fuzzy
 msgid "Export backlinks"
-msgstr "Exportar anotações"
+msgstr "Exportar referências"
 
 #: plugins/exporter.koplugin/target/markdown.lua:78
 msgid "Format highlights based on style"
@@ -19257,9 +19215,8 @@ msgstr ""
 "Digite esse endereço IP no KOReader para concluir a configuração."
 
 #: plugins/exporter.koplugin/template/md.lua:61
-#, fuzzy
 msgid "View in book"
-msgstr "Filtrar livros novos"
+msgstr "Ver no livro"
 
 #: plugins/externalkeyboard.koplugin/_meta.lua:4
 msgid "External keyboard"
@@ -20351,21 +20308,18 @@ msgid "Filter element"
 msgstr "Filtrar elemento"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:148
-#, fuzzy
 msgid "Block element"
-msgstr "Filtrar elemento"
+msgstr "Bloquear elemento"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:161
 #: plugins/newsdownloader.koplugin/main.lua:962
-#, fuzzy
 msgid "HTTP auth username"
-msgstr "Utilizador FTP"
+msgstr "Nome utilizador de autenticação HTTP"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:172
 #: plugins/newsdownloader.koplugin/main.lua:965
-#, fuzzy
 msgid "HTTP auth password"
-msgstr "Senha FTP"
+msgstr "Senha de autenticação HTTP"
 
 #: plugins/newsdownloader.koplugin/feed_view.lua:195
 msgid "Delete feed"
@@ -20573,16 +20527,16 @@ msgid "Filter based on the given CSS selector. E.g.: name_of_css.element.class"
 msgstr "Filtro baseado no seletor de CSS dado. Ex: nome_do_css.element.class"
 
 #: plugins/newsdownloader.koplugin/main.lua:958
-#, fuzzy
 msgid "Edit block element."
-msgstr "Editar elemento de filtro."
+msgstr "Editar elemento de bloco."
 
 #: plugins/newsdownloader.koplugin/main.lua:959
-#, fuzzy
 msgid ""
 "Block element based on the given CSS selector. E.g.: name_of_css.element."
 "class"
-msgstr "Filtro baseado no seletor de CSS dado. Ex: nome_do_css.element.class"
+msgstr ""
+"Bloquear elemento baseado no seletor CSS fornecido. Ex: "
+"nome_do_css.element.class"
 
 #: plugins/newsdownloader.koplugin/main.lua:1004
 msgid "Download full article?"
@@ -20792,7 +20746,7 @@ msgstr "Alexandre Dumas"
 #: plugins/opds.koplugin/opdsbrowser.lua:765
 #, lua-format
 msgid "%s in url will be replaced by your input"
-msgstr "%s na url será substituído pela sua entrada"
+msgstr "%s na url será substituído pela sua instrução"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:799
 msgid ""
@@ -21097,9 +21051,8 @@ msgid "on exiting sleep screen"
 msgstr "ao sair do ecrã de descanso"
 
 #: plugins/profiles.koplugin/main.lua:229
-#, fuzzy
 msgid "on read timer expiry"
-msgstr "Parar temporizador de leitura"
+msgstr "ao expirar o temporizador de leitura"
 
 #: plugins/profiles.koplugin/main.lua:230
 msgid "on rotation"
@@ -21227,17 +21180,14 @@ msgid "Shows an alarm after a specified amount of time."
 msgstr "Mostra um alarme após um período de tempo especificado."
 
 #: plugins/readtimer.koplugin/main.lua:28
-#, fuzzy
 msgid "Set read timer alarm"
-msgstr "Definir alarme de leitura"
+msgstr "Definir alarme do temporizador de leitura"
 
 #: plugins/readtimer.koplugin/main.lua:30
-#, fuzzy
 msgid "Set read timer interval"
-msgstr "Definir temporizador de leitura"
+msgstr "Definir intervalo do temporizador de leitura"
 
 #: plugins/readtimer.koplugin/main.lua:32
-#, fuzzy
 msgid "Stop read timer"
 msgstr "Parar temporizador de leitura"
 
@@ -21254,9 +21204,8 @@ msgid "Done"
 msgstr "Concluído"
 
 #: plugins/readtimer.koplugin/main.lua:247
-#, fuzzy
 msgid "Auto-reschedule"
-msgstr "Usar cronograma para temperatura de cor automática"
+msgstr "Reagendar automaticamente"
 
 #: plugins/readtimer.koplugin/main.lua:256
 msgid "Show timer in alt status bar"
@@ -21267,19 +21216,16 @@ msgid "Show timer in status bar"
 msgstr "Mostrar temporizador na barra de estado"
 
 #: plugins/readtimer.koplugin/main.lua:285
-#, fuzzy
 msgid "message"
-msgstr "Definir mensagem"
+msgstr "mensagem"
 
 #: plugins/readtimer.koplugin/main.lua:286
-#, fuzzy
 msgid "notification"
-msgstr "Notificações"
+msgstr "notificação"
 
 #: plugins/readtimer.koplugin/main.lua:287
-#, fuzzy
 msgid "nothing"
-msgstr "Nada"
+msgstr "nada"
 
 #: plugins/readtimer.koplugin/main.lua:294
 msgid "Read timer (%1)"
@@ -21295,9 +21241,8 @@ msgid "Stop timer"
 msgstr "Parar temporizador"
 
 #: plugins/readtimer.koplugin/main.lua:336
-#, fuzzy
 msgid "Show on timer expiry: %1"
-msgstr "Mostrar nos itens: %1"
+msgstr "Mostrar ao expirar o temporizador: %1"
 
 #: plugins/readtimer.koplugin/main.lua:403
 msgid "Alarm"
@@ -21320,14 +21265,12 @@ msgstr ""
 "Isto é %3 a partir de agora."
 
 #: plugins/readtimer.koplugin/main.lua:450
-#, fuzzy
 msgid "Start timer"
-msgstr "Definir horário de início"
+msgstr "Iniciar temporizador"
 
 #: plugins/readtimer.koplugin/main.lua:451
-#, fuzzy
 msgid "Interval"
-msgstr "Definir intervalo"
+msgstr "Intervalo"
 
 #. @translators This is a duration
 #: plugins/readtimer.koplugin/main.lua:476
@@ -23166,7 +23109,7 @@ msgstr "Quantidade de artigos a serem mantidos localmente"
 
 #: plugins/wallabag.koplugin/main.lua:1600
 msgid "Invalid input. Please enter a positive number greater than 0."
-msgstr "Entrada inválida. Insira um número positivo superior a 0."
+msgstr "Indicação inválida. Insira um número positivo superior a 0."
 
 #: plugins/wallabag.koplugin/main.lua:1662
 msgid ""
