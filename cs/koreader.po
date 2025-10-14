@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-14 12:10+0000\n"
+"POT-Creation-Date: 2025-10-14 19:39+0000\n"
 "PO-Revision-Date: 2025-10-12 10:08+0000\n"
 "Last-Translator: Adam Havránek <adamhavra@seznam.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -45,6 +45,7 @@ msgstr "Ignorovat"
 #: reader.lua:207 frontend/apps/reader/modules/readerbookmark.lua:132
 #: frontend/apps/reader/modules/readerdictionary.lua:1612
 #: frontend/apps/reader/modules/readerfooter.lua:1695
+#: frontend/apps/reader/modules/readerpagemap.lua:556
 #: frontend/apps/reader/modules/readerrolling.lua:487
 #: frontend/apps/reader/modules/readersearch.lua:151
 #: frontend/apps/reader/modules/readertypography.lua:332
@@ -119,6 +120,7 @@ msgstr "Stahování…"
 #: frontend/apps/filemanager/filemanagercollection.lua:27
 #: frontend/apps/reader/modules/readerfooter.lua:324
 #: frontend/apps/reader/modules/readerfooter.lua:331
+#: frontend/apps/reader/modules/readerpagemap.lua:88
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/translator.lua:370
 #: frontend/ui/widget/bookstatuswidget.lua:107
@@ -414,7 +416,7 @@ msgstr "Vyberte místní složku"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:581
 #: frontend/apps/reader/modules/readerbookmark.lua:1274
-#: frontend/apps/reader/modules/readerhighlight.lua:1004
+#: frontend/apps/reader/modules/readerhighlight.lua:1007
 #: frontend/apps/reader/modules/readerstyletweak.lua:139
 #: frontend/ui/elements/menu_keyboard_layout.lua:179
 #: frontend/ui/widget/datetimewidget.lua:81
@@ -893,7 +895,7 @@ msgstr "Vybrat všechny soubory ve složce"
 #: frontend/apps/filemanager/filemanagercollection.lua:429
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:539
 #: frontend/apps/reader/modules/readerbookmark.lua:863
-#: frontend/apps/reader/modules/readerhighlight.lua:1003
+#: frontend/apps/reader/modules/readerhighlight.lua:1006
 msgid "Exit select mode"
 msgstr "Ukončit režim vybírání"
 
@@ -1575,7 +1577,7 @@ msgstr "Obnovit všechny filtry"
 #: frontend/apps/filemanager/filemanagercollection.lua:1351
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1458
-#: frontend/apps/reader/modules/readerhighlight.lua:158
+#: frontend/apps/reader/modules/readerhighlight.lua:161
 #: frontend/apps/reader/modules/readertoc.lua:1079
 #: frontend/ui/widget/dictquicklookup.lua:520 frontend/ui/widget/menu.lua:770
 #: frontend/ui/widget/touchmenu.lua:1296
@@ -2524,6 +2526,8 @@ msgid "Max lines per bookmark: %1"
 msgstr "Max. řádků na záložku: %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:114
+#: frontend/apps/reader/modules/readerpagemap.lua:430
+#: frontend/apps/reader/modules/readerpagemap.lua:540
 #: frontend/apps/reader/modules/readerrolling.lua:434
 #: frontend/apps/reader/modules/readersearch.lua:132
 #: frontend/apps/reader/modules/readertypography.lua:542
@@ -2652,7 +2656,7 @@ msgid "Select page"
 msgstr "Vybrat stránku"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:841
-#: frontend/apps/reader/modules/readerhighlight.lua:1334
+#: frontend/apps/reader/modules/readerhighlight.lua:1337
 msgid "Delete note"
 msgstr "Odstranit poznámku"
 
@@ -2743,13 +2747,13 @@ msgstr "Odebrat tuto záložku?"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1255
 #: frontend/apps/reader/modules/readerbookmark.lua:1313
-#: frontend/apps/reader/modules/readerhighlight.lua:1348
+#: frontend/apps/reader/modules/readerhighlight.lua:1351
 msgid "Edit note"
 msgstr "Upravit poznámku"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1255
-#: frontend/apps/reader/modules/readerhighlight.lua:109
-#: frontend/apps/reader/modules/readerhighlight.lua:373
+#: frontend/apps/reader/modules/readerhighlight.lua:112
+#: frontend/apps/reader/modules/readerhighlight.lua:376
 msgid "Add note"
 msgstr "Přidat poznámku"
 
@@ -4165,7 +4169,7 @@ msgid "Left"
 msgstr "Vlevo"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1915
-#: frontend/apps/reader/modules/readerhighlight.lua:382
+#: frontend/apps/reader/modules/readerhighlight.lua:385
 #: frontend/ui/elements/common_settings_menu_table.lua:513
 msgid "Center"
 msgstr "Na střed"
@@ -4410,7 +4414,7 @@ msgid "Extend"
 msgstr "Rozšířit"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:86
-#: frontend/apps/reader/modules/readerhighlight.lua:371
+#: frontend/apps/reader/modules/readerhighlight.lua:374
 #: frontend/ui/widget/dictquicklookup.lua:470
 #: frontend/ui/widget/dictquicklookup.lua:476
 #: plugins/exporter.koplugin/target/markdown.lua:33
@@ -4429,48 +4433,48 @@ msgstr "Kopírovat"
 msgid "Selection copied to clipboard."
 msgstr "Výběr byl zkopírován do schránky."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:121
-#: frontend/apps/reader/modules/readerhighlight.lua:375
+#: frontend/apps/reader/modules/readerhighlight.lua:124
+#: frontend/apps/reader/modules/readerhighlight.lua:378
 #: frontend/ui/widget/dictquicklookup.lua:503
 msgid "Wikipedia"
 msgstr "Wikipedie"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:134
-#: frontend/apps/reader/modules/readerhighlight.lua:376
-#: frontend/apps/reader/modules/readerhighlight.lua:822
+#: frontend/apps/reader/modules/readerhighlight.lua:137
+#: frontend/apps/reader/modules/readerhighlight.lua:379
+#: frontend/apps/reader/modules/readerhighlight.lua:825
 msgid "Dictionary"
 msgstr "Slovník"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:143
-#: frontend/apps/reader/modules/readerhighlight.lua:374
+#: frontend/apps/reader/modules/readerhighlight.lua:146
+#: frontend/apps/reader/modules/readerhighlight.lua:377
 #: frontend/ui/widget/dictquicklookup.lua:1416
 msgid "Translate"
 msgstr "Přeložit"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:171
+#: frontend/apps/reader/modules/readerhighlight.lua:174
 msgid "Share Text"
 msgstr "Sdílet text"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:189
+#: frontend/apps/reader/modules/readerhighlight.lua:192
 msgid "View HTML"
 msgstr "Zobrazit HTML"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:200
+#: frontend/apps/reader/modules/readerhighlight.lua:203
 msgid "Hyphenate"
 msgstr "Dělit slova"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:215
+#: frontend/apps/reader/modules/readerhighlight.lua:218
 #: frontend/ui/widget/dictquicklookup.lua:564
 msgid "Follow Link"
 msgstr "Přejít na odkaz"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:349
-#: frontend/apps/reader/modules/readerhighlight.lua:565
+#: frontend/apps/reader/modules/readerhighlight.lua:352
+#: frontend/apps/reader/modules/readerhighlight.lua:568
 msgid "Write highlights into PDF: %1"
 msgstr "Zapište zvýrazněné body do PDF: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:349
-#: frontend/apps/reader/modules/readerhighlight.lua:561
+#: frontend/apps/reader/modules/readerhighlight.lua:352
+#: frontend/apps/reader/modules/readerhighlight.lua:564
 #: frontend/apps/reader/modules/readerlink.lua:745
 #: frontend/apps/reader/modules/readerstyletweak.lua:452
 #: frontend/dispatcher.lua:94 frontend/dispatcher.lua:124
@@ -4489,8 +4493,8 @@ msgstr "Zapište zvýrazněné body do PDF: %1"
 msgid "on"
 msgstr "zap"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:349
-#: frontend/apps/reader/modules/readerhighlight.lua:561
+#: frontend/apps/reader/modules/readerhighlight.lua:352
+#: frontend/apps/reader/modules/readerhighlight.lua:564
 #: frontend/apps/reader/modules/readerlink.lua:745
 #: frontend/apps/reader/modules/readerstyletweak.lua:452
 #: frontend/dispatcher.lua:94 frontend/dispatcher.lua:124
@@ -4514,139 +4518,139 @@ msgstr "zap"
 msgid "off"
 msgstr "vyp"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:355
+#: frontend/apps/reader/modules/readerhighlight.lua:358
 msgid "Lighten"
 msgstr "Zesvětlit"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:356
-#: frontend/apps/reader/modules/readerhighlight.lua:363
+#: frontend/apps/reader/modules/readerhighlight.lua:359
+#: frontend/apps/reader/modules/readerhighlight.lua:366
 msgid "Underline"
 msgstr "Podtrhnout"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:357
+#: frontend/apps/reader/modules/readerhighlight.lua:360
 #: plugins/exporter.koplugin/target/markdown.lua:35
 #: plugins/exporter.koplugin/template/md.lua:35
 msgid "Strikethrough"
 msgstr "Přeškrtnout"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:358
+#: frontend/apps/reader/modules/readerhighlight.lua:361
 #: frontend/apps/reader/modules/readermenu.lua:265
 #: frontend/ui/elements/page_turns.lua:182
 msgid "Invert"
 msgstr "Invertovat"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:362
+#: frontend/apps/reader/modules/readerhighlight.lua:365
 #: frontend/apps/reader/modules/readertypeset.lua:230
 #: plugins/exporter.koplugin/target/markdown.lua:30
 #: plugins/exporter.koplugin/template/md.lua:7
 msgid "None"
 msgstr "Žádné"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:364
+#: frontend/apps/reader/modules/readerhighlight.lua:367
 msgid "Side line"
 msgstr "Postranní čára"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:365
+#: frontend/apps/reader/modules/readerhighlight.lua:368
 msgid "Side mark"
 msgstr "Postranní značka"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:369
+#: frontend/apps/reader/modules/readerhighlight.lua:372
 #: frontend/ui/elements/common_settings_menu_table.lua:702
 msgid "Ask with popup dialog"
 msgstr "Zeptat se ve vyskakujícím okně"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:370
+#: frontend/apps/reader/modules/readerhighlight.lua:373
 #: frontend/ui/elements/common_settings_menu_table.lua:703
 #: plugins/opds.koplugin/opdsbrowser.lua:1752
 msgid "Do nothing"
 msgstr "Nedělat nic"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:372
+#: frontend/apps/reader/modules/readerhighlight.lua:375
 msgid "Select and highlight"
 msgstr "Vybrat a zvýraznit"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:377
+#: frontend/apps/reader/modules/readerhighlight.lua:380
 #: frontend/apps/reader/modules/readersearch.lua:201
 #: frontend/dispatcher.lua:188
 msgid "Fulltext search"
 msgstr "Fulltextové vyhledávání"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:381
+#: frontend/apps/reader/modules/readerhighlight.lua:384
 #: frontend/ui/data/creoptions.lua:235 frontend/ui/data/creoptions.lua:287
 #: frontend/ui/elements/common_settings_menu_table.lua:512
 msgid "Top"
 msgstr "Nahoře"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:383
+#: frontend/apps/reader/modules/readerhighlight.lua:386
 #: frontend/ui/data/creoptions.lua:240 frontend/ui/data/creoptions.lua:292
 #: frontend/ui/elements/common_settings_menu_table.lua:514
 msgid "Bottom"
 msgstr "Dole"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:384
+#: frontend/apps/reader/modules/readerhighlight.lua:387
 msgid "Highlight position"
 msgstr "Pozice zvýraznění"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:391
+#: frontend/apps/reader/modules/readerhighlight.lua:394
 msgid "Start content selection"
 msgstr "Spustit výběr obsahu"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:402
+#: frontend/apps/reader/modules/readerhighlight.lua:405
 msgid "Highlights"
 msgstr "Počet zvýraznění"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:441
+#: frontend/apps/reader/modules/readerhighlight.lua:444
 msgid "Highlight color: %1"
 msgstr "Barva zvýraznění: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:461
+#: frontend/apps/reader/modules/readerhighlight.lua:464
 msgid "Gray highlight opacity: %1"
 msgstr "Neprůhlednost šedého zvýraznění: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:476
+#: frontend/apps/reader/modules/readerhighlight.lua:479
 msgid "Gray highlight opacity"
 msgstr "Neprůhlednost šedého zvýraznění"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:477
+#: frontend/apps/reader/modules/readerhighlight.lua:480
 msgid "The higher the value, the darker the gray."
 msgstr "Čím vyšší je hodnota, tím tmavší je šedá."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:490
+#: frontend/apps/reader/modules/readerhighlight.lua:493
 msgid "Highlight line height: %1 %"
 msgstr "Výška zvýrazněného řádku: %1 %"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:505
+#: frontend/apps/reader/modules/readerhighlight.lua:508
 msgid "Highlight line height"
 msgstr "Výška zvýrazňovací čáry"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:506
+#: frontend/apps/reader/modules/readerhighlight.lua:509
 msgid "Percentage of the text line height."
 msgstr "Procento výšky řádku textu."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:522
+#: frontend/apps/reader/modules/readerhighlight.lua:525
 msgid "Note marker: %1"
 msgstr "Označení poznámek: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:532
+#: frontend/apps/reader/modules/readerhighlight.lua:535
 msgid "Apply current style and color to all highlights"
 msgstr "Použít aktuální styl a barvu na všechny zvýrazněné prvky"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:535
+#: frontend/apps/reader/modules/readerhighlight.lua:538
 msgid "Are you sure you want to update all highlights?"
 msgstr "Jste si jisti, že chcete aktualizovat všechna zvýraznění?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:549
+#: frontend/apps/reader/modules/readerhighlight.lua:552
 msgid "Applied style and color to 1 highlight"
 msgid_plural "Applied style and color to %1 highlights"
 msgstr[0] "Použitý styl a barva na 1 zvýraznění"
 msgstr[1] "Použití stylu a barvy na %1 zvýraznění"
 msgstr[2] "Použití stylu a barvy na %1 zvýraznění"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:570
+#: frontend/apps/reader/modules/readerhighlight.lua:573
 msgid "On"
 msgstr "Zapnout"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:582
+#: frontend/apps/reader/modules/readerhighlight.lua:585
 msgid ""
 "Warning: Book metadata location is set to hash-based storage. Writing "
 "highlights into a PDF modifies the file which may change the partial hash, "
@@ -4658,7 +4662,7 @@ msgstr ""
 "částečný hash, v důsledku čehož se jeho metadata (např. zvýraznění a průběh) "
 "odpojí a ztratí."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:588
+#: frontend/apps/reader/modules/readerhighlight.lua:591
 msgid ""
 "Highlights in this document will be saved in the settings file, but they "
 "won't be written in the document itself because the file is in a read-only "
@@ -4674,71 +4678,71 @@ msgstr ""
 "Pokud chcete zvýraznění uložit do dokumentu, stačí ho nejprve přesunout do "
 "zapisovatelného adresáře."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:602
+#: frontend/apps/reader/modules/readerhighlight.lua:605
 msgid "Off"
 msgstr "Vypnout"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:618
+#: frontend/apps/reader/modules/readerhighlight.lua:621
 msgid "Show reminder on book opening"
 msgstr "Zobrazit připomenutí při otevření knihy"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:628
+#: frontend/apps/reader/modules/readerhighlight.lua:631
 msgid "Write all highlights into PDF file"
 msgstr "Zapište všechna zvýraznění do souboru PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:634
+#: frontend/apps/reader/modules/readerhighlight.lua:637
 msgid "Are you sure you want to write all KOReader highlights into PDF file?"
 msgstr ""
 "Jste si jisti, že chcete zapsat všechna zvýraznění KOReaderu do souboru PDF?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:649
+#: frontend/apps/reader/modules/readerhighlight.lua:652
 msgid "1 highlight written into PDF file"
 msgid_plural "%1 highlights written into PDF file"
 msgstr[0] "1 zvýraznění zapsané do souboru PDF"
 msgstr[1] "%1 zvýraznění zapsané do souboru PDF"
 msgstr[2] "%1 zvýraznění zapsaných do souboru PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:657
+#: frontend/apps/reader/modules/readerhighlight.lua:660
 msgid "Delete all highlights from PDF file"
 msgstr "Odstranění všech zvýraznění ze souboru PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:663
+#: frontend/apps/reader/modules/readerhighlight.lua:666
 msgid "Are you sure you want to delete all KOReader highlights from PDF file?"
 msgstr ""
 "Určitě chcete odstranit všechny zvýrazněné prvky KOReader ze souboru PDF?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:674
+#: frontend/apps/reader/modules/readerhighlight.lua:677
 msgid "1 highlight deleted from PDF file"
 msgid_plural "%1 highlights deleted from PDF file"
 msgstr[0] "1 zvýraznění odstraněno ze souboru PDF"
 msgstr[1] "%1 zvýraznění odstraněno ze souboru PDF"
 msgstr[2] "%1 zvýraznění odstraněno ze souboru PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:687
+#: frontend/apps/reader/modules/readerhighlight.lua:690
 msgid "Panel zoom (manga/comic)"
 msgstr "Zvětšení panelu (manga/komiks)"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:694
+#: frontend/apps/reader/modules/readerhighlight.lua:697
 msgid "Long-press on text"
 msgstr "Dlouhé stisknutí na textu"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:697
+#: frontend/apps/reader/modules/readerhighlight.lua:700
 msgid "Dictionary on single word selection"
 msgstr "Slovník při výběru jednoho slova"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:742
+#: frontend/apps/reader/modules/readerhighlight.lua:745
 msgid "Highlight dialog position: %1"
 msgstr "Umístění dialogového okna pro zvýraznění: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:752
+#: frontend/apps/reader/modules/readerhighlight.lua:755
 msgid "Highlight very-long-press interval: %1 s"
 msgstr "Interval velmi dlouhého stisknutí pro zvýraznění: %1 s"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:758
+#: frontend/apps/reader/modules/readerhighlight.lua:761
 msgid "Highlight very-long-press interval"
 msgstr "Interval velmi dlouhého stisknutí pro zvýraznění"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:759
+#: frontend/apps/reader/modules/readerhighlight.lua:762
 msgid ""
 "If a long-press is not released in this interval, it is considered a very-"
 "long-press. On document text, single word selection will not be triggered."
@@ -4747,7 +4751,7 @@ msgstr ""
 "dlouhý stisk. U textu dokumentu se nespustí výběr jednoho slova."
 
 #. @translators This is the time unit for seconds.
-#: frontend/apps/reader/modules/readerhighlight.lua:767
+#: frontend/apps/reader/modules/readerhighlight.lua:770
 #: frontend/datetime.lua:184
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:154
 #: plugins/autodim.koplugin/main.lua:116
@@ -4756,7 +4760,7 @@ msgctxt "Time"
 msgid "s"
 msgstr "s"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:769
+#: frontend/apps/reader/modules/readerhighlight.lua:772
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:155
 #: plugins/gestures.koplugin/main.lua:697
 #: plugins/gestures.koplugin/main.lua:724
@@ -4767,11 +4771,11 @@ msgstr "s"
 msgid "Set interval"
 msgstr "Nastavit interval"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:783
+#: frontend/apps/reader/modules/readerhighlight.lua:786
 msgid "Auto-scroll when selection reaches a corner"
 msgstr "Automatické posouvání, když výběr dosáhne rohu"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:784
+#: frontend/apps/reader/modules/readerhighlight.lua:787
 msgid ""
 "Auto-scroll to show part of the previous page when your text selection "
 "reaches the top left corner, or of the next page when it reaches the bottom "
@@ -4785,20 +4789,20 @@ msgstr ""
 "S výjimkou režimu dvou sloupců, kdy je tato funkce omezena na zobrazení "
 "pouze předchozího nebo následujícího sloupce."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:808
+#: frontend/apps/reader/modules/readerhighlight.lua:811
 msgid "Crosshairs speed (reader/dict): %1 / %2"
 msgstr "Rychlost kříže (čtečka/slovník): %1 / %2"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:814
+#: frontend/apps/reader/modules/readerhighlight.lua:817
 #: frontend/dispatcher.lua:1021 plugins/httpinspector.koplugin/main.lua:1053
 msgid "Reader"
 msgstr "Čtečka"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:830
+#: frontend/apps/reader/modules/readerhighlight.lua:833
 msgid "Crosshairs speed"
 msgstr "Rychlost kříže"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:831
+#: frontend/apps/reader/modules/readerhighlight.lua:834
 msgid ""
 "Select a decimal value from 0.25 to 5. A smaller value increases the travel "
 "distance of the crosshairs per keystroke. Font size and this value are "
@@ -4810,22 +4814,22 @@ msgstr ""
 "v nepřímé úměře, což znamená, že menší velikost písma vyžaduje větší hodnotu "
 "a naopak."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:842
+#: frontend/apps/reader/modules/readerhighlight.lua:845
 msgid "Increase crosshairs speed on consecutive keystrokes"
 msgstr "Zvýšení rychlosti kříže při po sobě jdoucích stisknutích kláves"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:856
+#: frontend/apps/reader/modules/readerhighlight.lua:859
 msgid "Interval for crosshairs speed increase: 1 second"
 msgid_plural "Interval for crosshairs speed increase: %1 seconds"
 msgstr[0] "Interval pro zvýšení rychlosti kříže: 1 sekunda"
 msgstr[1] "Interval pro zvýšení rychlosti kříže: %1 sekundy"
 msgstr[2] "Interval pro zvýšení rychlosti kříže: %1 sekund"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:871
+#: frontend/apps/reader/modules/readerhighlight.lua:874
 msgid "Time interval"
 msgstr "Časový interval"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:872
+#: frontend/apps/reader/modules/readerhighlight.lua:875
 msgid ""
 "Select a decimal value up to 1 second. This defines the time period within "
 "which multiple keystrokes will trigger an increase in the crosshairs speed."
@@ -4833,28 +4837,28 @@ msgstr ""
 "Zvolte desetinnou hodnotu až do 1 sekundy. Tím se definuje časový úsek, "
 "během kterého se při vícenásobném stisknutí kláves zvýší rychlost kříže."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:885
+#: frontend/apps/reader/modules/readerhighlight.lua:888
 msgid "Text selection tools"
 msgstr "Nástroje pro výběr textu"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:893
+#: frontend/apps/reader/modules/readerhighlight.lua:896
 msgid "Multi-word selection: %1"
 msgstr "Víceslovný výběr: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:912
+#: frontend/apps/reader/modules/readerhighlight.lua:915
 #: frontend/dispatcher.lua:204
 msgid "Translate current page"
 msgstr "Přeložit aktuální stránku"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:922
+#: frontend/apps/reader/modules/readerhighlight.lua:925
 msgid "Allow panel zoom"
 msgstr "Povolit zvětšení panelu"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:937
+#: frontend/apps/reader/modules/readerhighlight.lua:940
 msgid "Fall back to text selection"
 msgstr "Návrat k výběru textu"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1001
+#: frontend/apps/reader/modules/readerhighlight.lua:1004
 msgid ""
 "You are currently in SELECT mode.\n"
 "To finish highlighting, long press where the highlight should end and press "
@@ -4866,35 +4870,35 @@ msgstr ""
 "a stiskněte tlačítko ZVÝRAZNIT.\n"
 "Režim výběru můžete ukončit také klepnutím na začátek zvýraznění."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1323
-#: frontend/apps/reader/modules/readerhighlight.lua:1415
+#: frontend/apps/reader/modules/readerhighlight.lua:1326
+#: frontend/apps/reader/modules/readerhighlight.lua:1418
 msgid "Note"
 msgstr "Poznámka"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1357
+#: frontend/apps/reader/modules/readerhighlight.lua:1360
 msgid "Delete highlight"
 msgstr "Odstranit zvýraznění"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1364
-#: frontend/apps/reader/modules/readerhighlight.lua:2379
+#: frontend/apps/reader/modules/readerhighlight.lua:1367
+#: frontend/apps/reader/modules/readerhighlight.lua:2382
 msgid "Highlight menu"
 msgstr "Zvýraznit nabídku"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1400
+#: frontend/apps/reader/modules/readerhighlight.lua:1403
 msgctxt "Highlight"
 msgid "Style"
 msgstr "Styl"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1407
+#: frontend/apps/reader/modules/readerhighlight.lua:1410
 msgctxt "Highlight"
 msgid "Color"
 msgstr "Barva"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1422
+#: frontend/apps/reader/modules/readerhighlight.lua:1425
 msgid "Details"
 msgstr "Podrobnosti"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1929
+#: frontend/apps/reader/modules/readerhighlight.lua:1932
 msgid ""
 "No OCR results or no language data.\n"
 "\n"
@@ -4920,15 +4924,15 @@ msgstr ""
 "Zkopírujte soubory jazykových dat (např. eng.traineddata pro angličtinu a "
 "spa.traineddata pro španělštinu) do koreader/data/tessdata"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2129
+#: frontend/apps/reader/modules/readerhighlight.lua:2132
 msgid "Default highlight action changed to '%1'."
 msgstr "Výchozí akce zvýraznění změněna na „%1“."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2177
+#: frontend/apps/reader/modules/readerhighlight.lua:2180
 msgid "Default highlight style changed to '%1'."
 msgstr "Výchozí styl zvýrazňování byl změněn na „%1“."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2416
+#: frontend/apps/reader/modules/readerhighlight.lua:2419
 msgid "Highlight color"
 msgstr "Barva zvýraznění"
 
@@ -5349,24 +5353,107 @@ msgstr "Chcete otevřít předchozí dokument: %1?"
 msgid "Document menu"
 msgstr "Nabídka dokumentu"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:221
-#: frontend/apps/reader/modules/readerpagemap.lua:351
-msgid "Reference page numbers list"
+#: frontend/apps/reader/modules/readerpagemap.lua:90
+msgid ""
+"This book has stable page numbers by the publisher (℗).\n"
+"Page numbers source:\n"
+"%1\n"
+"\n"
+"Do you want to use them?"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerpagemap.lua:277
+#: frontend/apps/reader/modules/readerpagemap.lua:511
+#, fuzzy
+msgid "Stable page number list"
 msgstr "Seznam čísel referenčních stránek"
 
 #. @translators This and the other related ones refer to alternate page numbers provided in some EPUB books, that usually reference page numbers in a specific hardcopy edition of the book.
-#: frontend/apps/reader/modules/readerpagemap.lua:333
-msgid "Reference pages"
-msgstr "Referenční stránky"
+#: frontend/apps/reader/modules/readerpagemap.lua:388
+#, fuzzy
+msgid "Stable page numbers"
+msgstr "Vložte číslo stránky"
+
+#. @translators characters per page
+#: frontend/apps/reader/modules/readerpagemap.lua:393
+#, fuzzy
+msgid "1 char per page"
+msgid_plural "%1 chars per page"
+msgstr[0] "Záložek na stránku"
+msgstr[1] "Záložek na stránku"
+msgstr[2] "Záložek na stránku"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:409
+#, fuzzy
+msgid "About stable page numbers"
+msgstr "Seřadit podle největšího čísla stránky"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:413
+msgid ""
+"By default, one screen equals one page. Any change in the book's formatting "
+"will therefore result in renumbering: new total pages, different chapter "
+"lengths, new locations in TOC and bookmarks, etc.\n"
+"\n"
+"Select stable page numbers if you prefer page numbers that are independent "
+"of layout settings and consistent across devices:\n"
+"1. Publisher page numbers (℗): normally equivalent to a specific physical "
+"edition. Only available if supplied by the publisher.\n"
+"2. Characters per page: a page will be counted for this amount of characters "
+"(sometimes called logical or synthetic page numbers). Use this if no "
+"publisher page numbers are available or if you prefer to have consistent "
+"page lengths for all books.\n"
+"\n"
+"Since stable page numbers can start anywhere on the screen, you can choose "
+"to display them in the margin, regardless of other settings.\n"
+"\n"
+"'Stable page number list' shows a table of all stable page numbers and their "
+"corresponding screen page numbers."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerpagemap.lua:430
+#: frontend/apps/reader/modules/readerpagemap.lua:540
+#, fuzzy
+msgid "Characters per page: %1"
+msgstr "Položek na stránku: %1"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:435
+#: frontend/apps/reader/modules/readerpagemap.lua:545
+#, fuzzy
+msgid "Characters per page"
+msgstr "Položek na stránku"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:459
+#, fuzzy
+msgid "Use publisher page numbers"
+msgstr "Použít čísla referenční stránek"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:462
+msgid ""
+"Use publisher page numbers?\n"
+"The document will be reloaded."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerpagemap.lua:478
+#: frontend/apps/reader/modules/readerpagemap.lua:579
+#, fuzzy
+msgid "Use stable page numbers"
+msgstr "Použít čísla referenční stránek"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:494
+#, fuzzy
+msgid "Show stable page numbers in margin"
+msgstr "Zobrazit štítky referenčních stránek na okraji"
 
 #. @translators This shows the <dc:source> in the EPUB that usually tells which hardcopy edition the reference page numbers refers to.
-#: frontend/apps/reader/modules/readerpagemap.lua:337
-msgid "Reference source info"
+#: frontend/apps/reader/modules/readerpagemap.lua:521
+#, fuzzy
+msgid "Publisher page numbers source info"
 msgstr "Informace o referenčním zdroji"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:340
+#: frontend/apps/reader/modules/readerpagemap.lua:528
+#, fuzzy
 msgid ""
-"Source (book hardcopy edition) of reference page numbers:\n"
+"Source (print edition) of publisher page numbers:\n"
 "\n"
 "%1"
 msgstr ""
@@ -5374,106 +5461,29 @@ msgstr ""
 "\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:357
-msgid "Use reference page numbers"
-msgstr "Použít čísla referenční stránek"
+#: frontend/apps/reader/modules/readerpagemap.lua:535
+#, fuzzy
+msgid "Default settings for new books"
+msgstr "Výchozí nastavení uloženo."
 
-#: frontend/apps/reader/modules/readerpagemap.lua:373
-msgid ""
-"The default (★) for newly opened books that have a reference page numbers "
-"map is to use these reference page numbers instead of the renderer page "
-"numbers.\n"
-"\n"
-"Would you like to change it?"
-msgstr ""
-"Výchozí nastavení (★) pro nově otevřené knihy, které mají mapu čísel "
-"referenčních stránek, je používat tato čísla referenční stránek namísto "
-"čísel stránek vykreslovače.\n"
-"\n"
-"Chcete to změnit?"
+#: frontend/apps/reader/modules/readerpagemap.lua:565
+#, fuzzy
+msgid "Override publisher page numbers"
+msgstr "Vyhnout se vydavatelovým koncům stránek"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:374
-msgid ""
-"The default (★) for newly opened books that have a reference page numbers "
-"map is to not use these reference page numbers and keep using the renderer "
-"page numbers.\n"
-"\n"
-"Would you like to change it?"
-msgstr ""
-"Výchozí nastavení (★) pro nově otevřené knihy, které mají mapu čísel "
-"referenčních stránek, je nepoužívat tato čísla referenční stránek, ale dál "
-"požívat čísla stránek vykreslovače.\n"
-"\n"
-"Chcete to změnit?"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:376
-msgid "Renderer"
-msgstr "Vykreslovač"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:376
-msgid "Renderer (★)"
-msgstr "Vykreslovač (★)"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:383
-msgid "Reference (★)"
-msgstr "Referenční (★)"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:383
-msgid "Reference"
-msgstr "Referenční"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:394
-msgid "Show reference page labels in margin"
+#: frontend/apps/reader/modules/readerpagemap.lua:588
+#, fuzzy
+msgid "Show stable page labels in margin"
 msgstr "Zobrazit štítky referenčních stránek na okraji"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:406
-msgid ""
-"The default (★) for newly opened books that have a reference page numbers "
-"map is to show reference page number labels in the margin.\n"
-"\n"
-"Would you like to change it?"
-msgstr ""
-"Výchozí nastavení (★) pro nově otevřené knihy, které mají mapu čísel "
-"referenčních stránek, je zobrazit štítky čísel referenčních stránek na "
-"okraji.\n"
-"\n"
-"Chcete to změnit?"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:407
-msgid ""
-"The default (★) for newly opened books that have a reference page numbers "
-"map is to not show reference page number labels in the margin.\n"
-"\n"
-"Would you like to change it?"
-msgstr ""
-"Výchozí nastavení (★) pro nově otevřené knihy, které mají mapu čísel "
-"referenčních stránek, je nezobrazovat štítky čísel referenčních stránek na "
-"okraji.\n"
-"\n"
-"Chcete to změnit?"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:409
-msgid "Hide"
-msgstr "Skrýt"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:409
-msgid "Hide (★)"
-msgstr "Skrýt (★)"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:416
-msgid "Show (★)"
-msgstr "Zobrazit (★)"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:416
-msgid "Show"
-msgstr "Zobrazit"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:427
-msgid "Page labels font size: %1"
+#: frontend/apps/reader/modules/readerpagemap.lua:598
+#, fuzzy
+msgid "Page numbers font size: %1"
 msgstr "Velikost písma štítků stránek: %1"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:437
-msgid "Page labels font size"
+#: frontend/apps/reader/modules/readerpagemap.lua:603
+#, fuzzy
+msgid "Page numbers font size"
 msgstr "Velikost písma štítků stránek"
 
 #: frontend/apps/reader/modules/readerrolling.lua:315
@@ -6550,11 +6560,11 @@ msgstr "Obsah knihy"
 msgid "No results in table of contents"
 msgstr "Žádné výsledky v obsahu"
 
-#: frontend/apps/reader/modules/readertoc.lua:1208
+#: frontend/apps/reader/modules/readertoc.lua:1209
 msgid "Alternative table of contents"
 msgstr "Alternativní obsah knihy"
 
-#: frontend/apps/reader/modules/readertoc.lua:1210
+#: frontend/apps/reader/modules/readertoc.lua:1211
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -6578,12 +6588,12 @@ msgstr ""
 "„Hinty“ mohou být v každé knize jiné, proto se podívejte na „Úpravy stylu“ → "
 "„Další nastavení“ → „Hinty“ pro alternativní obsah knihy“."
 
-#: frontend/apps/reader/modules/readertoc.lua:1217
+#: frontend/apps/reader/modules/readertoc.lua:1218
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr "Pro použití alternativního obsahu, zakažte nejdříve vlastní obsah."
 
-#: frontend/apps/reader/modules/readertoc.lua:1231
+#: frontend/apps/reader/modules/readertoc.lua:1232
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -6594,28 +6604,28 @@ msgstr ""
 "nadpisů v dokumentu.\n"
 "Chcete se vrátit zpět na originální obsah knihy? (Kniha bude znovu načtena.)"
 
-#: frontend/apps/reader/modules/readertoc.lua:1246
+#: frontend/apps/reader/modules/readertoc.lua:1247
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
 msgstr ""
 "Chcete použít alternativní obsah knihy vytvořený z nadpisů v dokumentu?"
 
-#: frontend/apps/reader/modules/readertoc.lua:1273
+#: frontend/apps/reader/modules/readertoc.lua:1274
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
 msgstr[0] "1 záznam v hloubce ToC %2"
 msgstr[1] "%1 záznamy v hloubce ToC %2"
 msgstr[2] "%1 záznamů v hloubce ToC %2"
 
-#: frontend/apps/reader/modules/readertoc.lua:1295
+#: frontend/apps/reader/modules/readertoc.lua:1296
 msgid "Progress bars: 1 tick"
 msgid_plural "Progress bars: %1 ticks"
 msgstr[0] "Lišta s postupem čtení: 1 značka"
 msgstr[1] "Lišta s postupem čtení: %1 značky"
 msgstr[2] "Lišta s postupem čtení: %1 značek"
 
-#: frontend/apps/reader/modules/readertoc.lua:1297
+#: frontend/apps/reader/modules/readertoc.lua:1298
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
@@ -6625,11 +6635,11 @@ msgstr ""
 "počtu položek v obsahu knihy nepřehledné. Pomocí tohoto nastavení můžete "
 "počet značek (kapitol) omezit."
 
-#: frontend/apps/reader/modules/readertoc.lua:1318
+#: frontend/apps/reader/modules/readertoc.lua:1319
 msgid "Bind chapter navigation to ticks"
 msgstr "Propojit navigaci mezi kapitolami se značkami"
 
-#: frontend/apps/reader/modules/readertoc.lua:1319
+#: frontend/apps/reader/modules/readertoc.lua:1320
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for chapter navigation and 'page/time left until next chapter' in the "
@@ -6643,11 +6653,11 @@ msgstr ""
 "Po zatržení této možnosti bude navigování mezi kapitolami omezeno pouze na "
 "značky na „liště s postupem čtení“."
 
-#: frontend/apps/reader/modules/readertoc.lua:1334
+#: frontend/apps/reader/modules/readertoc.lua:1335
 msgid "Chapter titles from ticks only"
 msgstr "Názvy kapitol pouze ze značek"
 
-#: frontend/apps/reader/modules/readertoc.lua:1335
+#: frontend/apps/reader/modules/readertoc.lua:1336
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for displaying the title of the current chapter in the footer and in "
@@ -6661,21 +6671,21 @@ msgstr ""
 "Po zatržení této možnosti budou zobrazeny pouze názvy těch kapitol, které "
 "mají značku na „liště s postupem čtení“."
 
-#: frontend/apps/reader/modules/readertoc.lua:1352
-#: frontend/apps/reader/modules/readertoc.lua:1362
+#: frontend/apps/reader/modules/readertoc.lua:1353
+#: frontend/apps/reader/modules/readertoc.lua:1363
 msgid "ToC entries per page"
 msgstr "Počet položek obsahu knihy na stránku"
 
-#: frontend/apps/reader/modules/readertoc.lua:1375
-#: frontend/apps/reader/modules/readertoc.lua:1387
+#: frontend/apps/reader/modules/readertoc.lua:1376
+#: frontend/apps/reader/modules/readertoc.lua:1388
 msgid "ToC entry font size"
 msgstr "Velikost písma položek obsahu knihy"
 
-#: frontend/apps/reader/modules/readertoc.lua:1396
+#: frontend/apps/reader/modules/readertoc.lua:1397
 msgid "Show chapter length"
 msgstr "Zobrazit délku kapitoly"
 
-#: frontend/apps/reader/modules/readertoc.lua:1407
+#: frontend/apps/reader/modules/readertoc.lua:1408
 msgid "Dot leaders"
 msgstr "Bodoví lídři"
 
@@ -21093,7 +21103,7 @@ msgid "Do you want to execute profile?"
 msgstr "Chcete spustit profil?"
 
 #: plugins/qrclipboard.koplugin/_meta.lua:4
-#: plugins/qrclipboard.koplugin/main.lua:48
+#: plugins/qrclipboard.koplugin/main.lua:55
 msgid "QR from clipboard"
 msgstr "QR ze schránky"
 
@@ -23183,6 +23193,83 @@ msgstr "wallabag"
 msgid "annotations"
 msgstr "anotace"
 
+#~ msgid "Reference pages"
+#~ msgstr "Referenční stránky"
+
+#~ msgid ""
+#~ "The default (★) for newly opened books that have a reference page numbers "
+#~ "map is to use these reference page numbers instead of the renderer page "
+#~ "numbers.\n"
+#~ "\n"
+#~ "Would you like to change it?"
+#~ msgstr ""
+#~ "Výchozí nastavení (★) pro nově otevřené knihy, které mají mapu čísel "
+#~ "referenčních stránek, je používat tato čísla referenční stránek namísto "
+#~ "čísel stránek vykreslovače.\n"
+#~ "\n"
+#~ "Chcete to změnit?"
+
+#~ msgid ""
+#~ "The default (★) for newly opened books that have a reference page numbers "
+#~ "map is to not use these reference page numbers and keep using the "
+#~ "renderer page numbers.\n"
+#~ "\n"
+#~ "Would you like to change it?"
+#~ msgstr ""
+#~ "Výchozí nastavení (★) pro nově otevřené knihy, které mají mapu čísel "
+#~ "referenčních stránek, je nepoužívat tato čísla referenční stránek, ale "
+#~ "dál požívat čísla stránek vykreslovače.\n"
+#~ "\n"
+#~ "Chcete to změnit?"
+
+#~ msgid "Renderer"
+#~ msgstr "Vykreslovač"
+
+#~ msgid "Renderer (★)"
+#~ msgstr "Vykreslovač (★)"
+
+#~ msgid "Reference (★)"
+#~ msgstr "Referenční (★)"
+
+#~ msgid "Reference"
+#~ msgstr "Referenční"
+
+#~ msgid ""
+#~ "The default (★) for newly opened books that have a reference page numbers "
+#~ "map is to show reference page number labels in the margin.\n"
+#~ "\n"
+#~ "Would you like to change it?"
+#~ msgstr ""
+#~ "Výchozí nastavení (★) pro nově otevřené knihy, které mají mapu čísel "
+#~ "referenčních stránek, je zobrazit štítky čísel referenčních stránek na "
+#~ "okraji.\n"
+#~ "\n"
+#~ "Chcete to změnit?"
+
+#~ msgid ""
+#~ "The default (★) for newly opened books that have a reference page numbers "
+#~ "map is to not show reference page number labels in the margin.\n"
+#~ "\n"
+#~ "Would you like to change it?"
+#~ msgstr ""
+#~ "Výchozí nastavení (★) pro nově otevřené knihy, které mají mapu čísel "
+#~ "referenčních stránek, je nezobrazovat štítky čísel referenčních stránek "
+#~ "na okraji.\n"
+#~ "\n"
+#~ "Chcete to změnit?"
+
+#~ msgid "Hide"
+#~ msgstr "Skrýt"
+
+#~ msgid "Hide (★)"
+#~ msgstr "Skrýt (★)"
+
+#~ msgid "Show (★)"
+#~ msgstr "Zobrazit (★)"
+
+#~ msgid "Show"
+#~ msgstr "Zobrazit"
+
 #~ msgid "Filipino (Tagalog)"
 #~ msgstr "filipínština (tagalog)"
 
@@ -23847,9 +23934,6 @@ msgstr "anotace"
 
 #~ msgid "Number"
 #~ msgstr "Číslo"
-
-#~ msgid "Sort by largest page number"
-#~ msgstr "Seřadit podle největšího čísla stránky"
 
 #, fuzzy
 #~ msgid "Minimum progress bar width: %1u{202F}%"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-14 12:10+0000\n"
+"POT-Creation-Date: 2025-10-14 19:39+0000\n"
 "PO-Revision-Date: 2025-10-14 12:10+0000\n"
 "Last-Translator: 109247019824 <109247019824@users.noreply.hosted.weblate."
 "org>\n"
@@ -49,6 +49,7 @@ msgstr "Пренебрегване"
 #: reader.lua:207 frontend/apps/reader/modules/readerbookmark.lua:132
 #: frontend/apps/reader/modules/readerdictionary.lua:1612
 #: frontend/apps/reader/modules/readerfooter.lua:1695
+#: frontend/apps/reader/modules/readerpagemap.lua:556
 #: frontend/apps/reader/modules/readerrolling.lua:487
 #: frontend/apps/reader/modules/readersearch.lua:151
 #: frontend/apps/reader/modules/readertypography.lua:332
@@ -122,6 +123,7 @@ msgstr "Изтегляне…"
 #: frontend/apps/filemanager/filemanagercollection.lua:27
 #: frontend/apps/reader/modules/readerfooter.lua:324
 #: frontend/apps/reader/modules/readerfooter.lua:331
+#: frontend/apps/reader/modules/readerpagemap.lua:88
 #: frontend/apps/reader/modules/readertypography.lua:787
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/translator.lua:370
 #: frontend/ui/widget/bookstatuswidget.lua:107
@@ -415,7 +417,7 @@ msgstr "Местна папка"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:581
 #: frontend/apps/reader/modules/readerbookmark.lua:1274
-#: frontend/apps/reader/modules/readerhighlight.lua:1004
+#: frontend/apps/reader/modules/readerhighlight.lua:1007
 #: frontend/apps/reader/modules/readerstyletweak.lua:139
 #: frontend/ui/elements/menu_keyboard_layout.lua:179
 #: frontend/ui/widget/datetimewidget.lua:81
@@ -892,7 +894,7 @@ msgstr "Избиране на всички файлове в папката"
 #: frontend/apps/filemanager/filemanagercollection.lua:429
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:539
 #: frontend/apps/reader/modules/readerbookmark.lua:863
-#: frontend/apps/reader/modules/readerhighlight.lua:1003
+#: frontend/apps/reader/modules/readerhighlight.lua:1006
 msgid "Exit select mode"
 msgstr "Изход от режима за избиране"
 
@@ -1567,7 +1569,7 @@ msgstr "Нулиране на филтрите"
 #: frontend/apps/filemanager/filemanagercollection.lua:1351
 #: frontend/apps/filemanager/filemanagerhistory.lua:387
 #: frontend/apps/reader/modules/readerbookmark.lua:1458
-#: frontend/apps/reader/modules/readerhighlight.lua:158
+#: frontend/apps/reader/modules/readerhighlight.lua:161
 #: frontend/apps/reader/modules/readertoc.lua:1079
 #: frontend/ui/widget/dictquicklookup.lua:520 frontend/ui/widget/menu.lua:770
 #: frontend/ui/widget/touchmenu.lua:1296
@@ -2518,6 +2520,8 @@ msgid "Max lines per bookmark: %1"
 msgstr "Максимум редове в отметка: %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:114
+#: frontend/apps/reader/modules/readerpagemap.lua:430
+#: frontend/apps/reader/modules/readerpagemap.lua:540
 #: frontend/apps/reader/modules/readerrolling.lua:434
 #: frontend/apps/reader/modules/readersearch.lua:132
 #: frontend/apps/reader/modules/readertypography.lua:542
@@ -2646,7 +2650,7 @@ msgid "Select page"
 msgstr "Избиране на страница"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:841
-#: frontend/apps/reader/modules/readerhighlight.lua:1334
+#: frontend/apps/reader/modules/readerhighlight.lua:1337
 msgid "Delete note"
 msgstr "Премахване на бележка"
 
@@ -2737,13 +2741,13 @@ msgstr "Премахване на отметката?"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1255
 #: frontend/apps/reader/modules/readerbookmark.lua:1313
-#: frontend/apps/reader/modules/readerhighlight.lua:1348
+#: frontend/apps/reader/modules/readerhighlight.lua:1351
 msgid "Edit note"
 msgstr "Промяна на бележката"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:1255
-#: frontend/apps/reader/modules/readerhighlight.lua:109
-#: frontend/apps/reader/modules/readerhighlight.lua:373
+#: frontend/apps/reader/modules/readerhighlight.lua:112
+#: frontend/apps/reader/modules/readerhighlight.lua:376
 msgid "Add note"
 msgstr "Добавяне на бележка"
 
@@ -4161,7 +4165,7 @@ msgid "Left"
 msgstr "Ляво"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1915
-#: frontend/apps/reader/modules/readerhighlight.lua:382
+#: frontend/apps/reader/modules/readerhighlight.lua:385
 #: frontend/ui/elements/common_settings_menu_table.lua:513
 msgid "Center"
 msgstr "Центрирано"
@@ -4408,7 +4412,7 @@ msgid "Extend"
 msgstr "Разширяване"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:86
-#: frontend/apps/reader/modules/readerhighlight.lua:371
+#: frontend/apps/reader/modules/readerhighlight.lua:374
 #: frontend/ui/widget/dictquicklookup.lua:470
 #: frontend/ui/widget/dictquicklookup.lua:476
 #: plugins/exporter.koplugin/target/markdown.lua:33
@@ -4427,48 +4431,48 @@ msgstr "Копиране"
 msgid "Selection copied to clipboard."
 msgstr "Избраното е копирано."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:121
-#: frontend/apps/reader/modules/readerhighlight.lua:375
+#: frontend/apps/reader/modules/readerhighlight.lua:124
+#: frontend/apps/reader/modules/readerhighlight.lua:378
 #: frontend/ui/widget/dictquicklookup.lua:503
 msgid "Wikipedia"
 msgstr "Уикипедия"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:134
-#: frontend/apps/reader/modules/readerhighlight.lua:376
-#: frontend/apps/reader/modules/readerhighlight.lua:822
+#: frontend/apps/reader/modules/readerhighlight.lua:137
+#: frontend/apps/reader/modules/readerhighlight.lua:379
+#: frontend/apps/reader/modules/readerhighlight.lua:825
 msgid "Dictionary"
 msgstr "Речник"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:143
-#: frontend/apps/reader/modules/readerhighlight.lua:374
+#: frontend/apps/reader/modules/readerhighlight.lua:146
+#: frontend/apps/reader/modules/readerhighlight.lua:377
 #: frontend/ui/widget/dictquicklookup.lua:1416
 msgid "Translate"
 msgstr "Превеждане"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:171
+#: frontend/apps/reader/modules/readerhighlight.lua:174
 msgid "Share Text"
 msgstr "Споделяне на текст"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:189
+#: frontend/apps/reader/modules/readerhighlight.lua:192
 msgid "View HTML"
 msgstr "Преглед на HTML"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:200
+#: frontend/apps/reader/modules/readerhighlight.lua:203
 msgid "Hyphenate"
 msgstr "Сричкопренасяне"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:215
+#: frontend/apps/reader/modules/readerhighlight.lua:218
 #: frontend/ui/widget/dictquicklookup.lua:564
 msgid "Follow Link"
 msgstr "Отваряне на препратка"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:349
-#: frontend/apps/reader/modules/readerhighlight.lua:565
+#: frontend/apps/reader/modules/readerhighlight.lua:352
+#: frontend/apps/reader/modules/readerhighlight.lua:568
 msgid "Write highlights into PDF: %1"
 msgstr "Запазване на подчертаното в PDF: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:349
-#: frontend/apps/reader/modules/readerhighlight.lua:561
+#: frontend/apps/reader/modules/readerhighlight.lua:352
+#: frontend/apps/reader/modules/readerhighlight.lua:564
 #: frontend/apps/reader/modules/readerlink.lua:745
 #: frontend/apps/reader/modules/readerstyletweak.lua:452
 #: frontend/dispatcher.lua:94 frontend/dispatcher.lua:124
@@ -4487,8 +4491,8 @@ msgstr "Запазване на подчертаното в PDF: %1"
 msgid "on"
 msgstr "вкл."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:349
-#: frontend/apps/reader/modules/readerhighlight.lua:561
+#: frontend/apps/reader/modules/readerhighlight.lua:352
+#: frontend/apps/reader/modules/readerhighlight.lua:564
 #: frontend/apps/reader/modules/readerlink.lua:745
 #: frontend/apps/reader/modules/readerstyletweak.lua:452
 #: frontend/dispatcher.lua:94 frontend/dispatcher.lua:124
@@ -4512,138 +4516,138 @@ msgstr "вкл."
 msgid "off"
 msgstr "изкл."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:355
+#: frontend/apps/reader/modules/readerhighlight.lua:358
 msgid "Lighten"
 msgstr "Изсветлен"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:356
-#: frontend/apps/reader/modules/readerhighlight.lua:363
+#: frontend/apps/reader/modules/readerhighlight.lua:359
+#: frontend/apps/reader/modules/readerhighlight.lua:366
 msgid "Underline"
 msgstr "Подчертан"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:357
+#: frontend/apps/reader/modules/readerhighlight.lua:360
 #: plugins/exporter.koplugin/target/markdown.lua:35
 #: plugins/exporter.koplugin/template/md.lua:35
 msgid "Strikethrough"
 msgstr "Зачертан"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:358
+#: frontend/apps/reader/modules/readerhighlight.lua:361
 #: frontend/apps/reader/modules/readermenu.lua:265
 #: frontend/ui/elements/page_turns.lua:182
 msgid "Invert"
 msgstr "Негатив"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:362
+#: frontend/apps/reader/modules/readerhighlight.lua:365
 #: frontend/apps/reader/modules/readertypeset.lua:230
 #: plugins/exporter.koplugin/target/markdown.lua:30
 #: plugins/exporter.koplugin/template/md.lua:7
 msgid "None"
 msgstr "Без"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:364
+#: frontend/apps/reader/modules/readerhighlight.lua:367
 msgid "Side line"
 msgstr "Вертикални черти"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:365
+#: frontend/apps/reader/modules/readerhighlight.lua:368
 msgid "Side mark"
 msgstr "Знак отстрани"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:369
+#: frontend/apps/reader/modules/readerhighlight.lua:372
 #: frontend/ui/elements/common_settings_menu_table.lua:702
 msgid "Ask with popup dialog"
 msgstr "Питане в изскачащ прозорец"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:370
+#: frontend/apps/reader/modules/readerhighlight.lua:373
 #: frontend/ui/elements/common_settings_menu_table.lua:703
 #: plugins/opds.koplugin/opdsbrowser.lua:1752
 msgid "Do nothing"
 msgstr "Без действие"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:372
+#: frontend/apps/reader/modules/readerhighlight.lua:375
 msgid "Select and highlight"
 msgstr "Избиране и подчертаване"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:377
+#: frontend/apps/reader/modules/readerhighlight.lua:380
 #: frontend/apps/reader/modules/readersearch.lua:201
 #: frontend/dispatcher.lua:188
 msgid "Fulltext search"
 msgstr "Пълнотекстово търсене"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:381
+#: frontend/apps/reader/modules/readerhighlight.lua:384
 #: frontend/ui/data/creoptions.lua:235 frontend/ui/data/creoptions.lua:287
 #: frontend/ui/elements/common_settings_menu_table.lua:512
 msgid "Top"
 msgstr "Горе"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:383
+#: frontend/apps/reader/modules/readerhighlight.lua:386
 #: frontend/ui/data/creoptions.lua:240 frontend/ui/data/creoptions.lua:292
 #: frontend/ui/elements/common_settings_menu_table.lua:514
 msgid "Bottom"
 msgstr "Долу"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:384
+#: frontend/apps/reader/modules/readerhighlight.lua:387
 msgid "Highlight position"
 msgstr "Осветяване на позицията"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:391
+#: frontend/apps/reader/modules/readerhighlight.lua:394
 msgid "Start content selection"
 msgstr "Начало на избиране на текст"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:402
+#: frontend/apps/reader/modules/readerhighlight.lua:405
 msgid "Highlights"
 msgstr "Подчертано"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:441
+#: frontend/apps/reader/modules/readerhighlight.lua:444
 msgid "Highlight color: %1"
 msgstr "Цвят на подчертаването: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:461
+#: frontend/apps/reader/modules/readerhighlight.lua:464
 msgid "Gray highlight opacity: %1"
 msgstr "Прозрачност на подчертаното в сиво: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:476
+#: frontend/apps/reader/modules/readerhighlight.lua:479
 msgid "Gray highlight opacity"
 msgstr "Прозрачност на подчертаното в сиво"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:477
+#: frontend/apps/reader/modules/readerhighlight.lua:480
 msgid "The higher the value, the darker the gray."
 msgstr "При по-висока стойност сивото е по-тъмно."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:490
+#: frontend/apps/reader/modules/readerhighlight.lua:493
 msgid "Highlight line height: %1 %"
 msgstr "Височина на подчертаното: %1 %"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:505
+#: frontend/apps/reader/modules/readerhighlight.lua:508
 msgid "Highlight line height"
 msgstr "Височина на реда на подчертаното"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:506
+#: frontend/apps/reader/modules/readerhighlight.lua:509
 msgid "Percentage of the text line height."
 msgstr "Процент от височината на реда."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:522
+#: frontend/apps/reader/modules/readerhighlight.lua:525
 msgid "Note marker: %1"
 msgstr "Отбелязване на бележки: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:532
+#: frontend/apps/reader/modules/readerhighlight.lua:535
 msgid "Apply current style and color to all highlights"
 msgstr "Задаване на текущия стил на всичко подчертано"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:535
+#: frontend/apps/reader/modules/readerhighlight.lua:538
 msgid "Are you sure you want to update all highlights?"
 msgstr "Желаете всички подчертани елементи да бъдат променени?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:549
+#: frontend/apps/reader/modules/readerhighlight.lua:552
 msgid "Applied style and color to 1 highlight"
 msgid_plural "Applied style and color to %1 highlights"
 msgstr[0] "Зададен е стил и цвят на %1 подчертан елемент"
 msgstr[1] "Зададен е стил и цвят на %1 подчертани елемента"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:570
+#: frontend/apps/reader/modules/readerhighlight.lua:573
 msgid "On"
 msgstr "Включен"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:582
+#: frontend/apps/reader/modules/readerhighlight.lua:585
 msgid ""
 "Warning: Book metadata location is set to hash-based storage. Writing "
 "highlights into a PDF modifies the file which may change the partial hash, "
@@ -4655,7 +4659,7 @@ msgstr ""
 "да промени и частичния отпечатък, в резултат на което връзката между файла и "
 "описателните данни (напр. подчертано, отметки и напредък) се губи."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:588
+#: frontend/apps/reader/modules/readerhighlight.lua:591
 msgid ""
 "Highlights in this document will be saved in the settings file, but they "
 "won't be written in the document itself because the file is in a read-only "
@@ -4670,68 +4674,68 @@ msgstr ""
 "Ако желаете подчертаното да бъде запазено в документа, трябва първо го "
 "преместете в папка, с права за четене."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:602
+#: frontend/apps/reader/modules/readerhighlight.lua:605
 msgid "Off"
 msgstr "Изключен"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:618
+#: frontend/apps/reader/modules/readerhighlight.lua:621
 msgid "Show reminder on book opening"
 msgstr "Напомняне при отваряне на книга"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:628
+#: frontend/apps/reader/modules/readerhighlight.lua:631
 msgid "Write all highlights into PDF file"
 msgstr "Запазване на всичко подчертано в PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:634
+#: frontend/apps/reader/modules/readerhighlight.lua:637
 msgid "Are you sure you want to write all KOReader highlights into PDF file?"
 msgstr "Желаете всички подчертани в KOReader елементи да бъдат запазени в PDF?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:649
+#: frontend/apps/reader/modules/readerhighlight.lua:652
 msgid "1 highlight written into PDF file"
 msgid_plural "%1 highlights written into PDF file"
 msgstr[0] "1 подчертан елемент е запазен в PDF"
 msgstr[1] "%1 подчертани елемента са запазени в PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:657
+#: frontend/apps/reader/modules/readerhighlight.lua:660
 msgid "Delete all highlights from PDF file"
 msgstr "Премахване на всичко подчертано от PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:663
+#: frontend/apps/reader/modules/readerhighlight.lua:666
 msgid "Are you sure you want to delete all KOReader highlights from PDF file?"
 msgstr ""
 "Желаете всички подчертани в KOReader елементи да бъдат премахнати от PDF?"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:674
+#: frontend/apps/reader/modules/readerhighlight.lua:677
 msgid "1 highlight deleted from PDF file"
 msgid_plural "%1 highlights deleted from PDF file"
 msgstr[0] "1 подчертан елемент е премахнат от PDF"
 msgstr[1] "%1 подчертани елемента са премахнати от PDF"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:687
+#: frontend/apps/reader/modules/readerhighlight.lua:690
 msgid "Panel zoom (manga/comic)"
 msgstr "Панел за мащабиране (манга/комикси)"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:694
+#: frontend/apps/reader/modules/readerhighlight.lua:697
 msgid "Long-press on text"
 msgstr "Задържане върху текста"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:697
+#: frontend/apps/reader/modules/readerhighlight.lua:700
 msgid "Dictionary on single word selection"
 msgstr "Речник при избране на една дума"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:742
+#: frontend/apps/reader/modules/readerhighlight.lua:745
 msgid "Highlight dialog position: %1"
 msgstr "Място на диалога за подчертаване: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:752
+#: frontend/apps/reader/modules/readerhighlight.lua:755
 msgid "Highlight very-long-press interval: %1 s"
 msgstr "Интервал на дълго задържане: %1 с"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:758
+#: frontend/apps/reader/modules/readerhighlight.lua:761
 msgid "Highlight very-long-press interval"
 msgstr "Интервал на дълго задържане"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:759
+#: frontend/apps/reader/modules/readerhighlight.lua:762
 msgid ""
 "If a long-press is not released in this interval, it is considered a very-"
 "long-press. On document text, single word selection will not be triggered."
@@ -4741,7 +4745,7 @@ msgstr ""
 "дума."
 
 #. @translators This is the time unit for seconds.
-#: frontend/apps/reader/modules/readerhighlight.lua:767
+#: frontend/apps/reader/modules/readerhighlight.lua:770
 #: frontend/datetime.lua:184
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:154
 #: plugins/autodim.koplugin/main.lua:116
@@ -4750,7 +4754,7 @@ msgctxt "Time"
 msgid "s"
 msgstr "с"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:769
+#: frontend/apps/reader/modules/readerhighlight.lua:772
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:155
 #: plugins/gestures.koplugin/main.lua:697
 #: plugins/gestures.koplugin/main.lua:724
@@ -4761,11 +4765,11 @@ msgstr "с"
 msgid "Set interval"
 msgstr "Запазване"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:783
+#: frontend/apps/reader/modules/readerhighlight.lua:786
 msgid "Auto-scroll when selection reaches a corner"
 msgstr "Плъзване ако избраното достигне ъгъл"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:784
+#: frontend/apps/reader/modules/readerhighlight.lua:787
 msgid ""
 "Auto-scroll to show part of the previous page when your text selection "
 "reaches the top left corner, or of the next page when it reaches the bottom "
@@ -4779,20 +4783,20 @@ msgstr ""
 "С изключение на режим в две колони, при който това е ограничено до показване "
 "само на предишната или следващата колона."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:808
+#: frontend/apps/reader/modules/readerhighlight.lua:811
 msgid "Crosshairs speed (reader/dict): %1 / %2"
 msgstr "Скорост на показалеца (четене/речник): %1 / %2"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:814
+#: frontend/apps/reader/modules/readerhighlight.lua:817
 #: frontend/dispatcher.lua:1021 plugins/httpinspector.koplugin/main.lua:1053
 msgid "Reader"
 msgstr "Приложение за четене"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:830
+#: frontend/apps/reader/modules/readerhighlight.lua:833
 msgid "Crosshairs speed"
 msgstr "Скорост на показалците"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:831
+#: frontend/apps/reader/modules/readerhighlight.lua:834
 msgid ""
 "Select a decimal value from 0.25 to 5. A smaller value increases the travel "
 "distance of the crosshairs per keystroke. Font size and this value are "
@@ -4805,22 +4809,22 @@ msgstr ""
 "означава, че по-малък размер на шрифта изисква по-голяма стойност и "
 "обратното."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:842
+#: frontend/apps/reader/modules/readerhighlight.lua:845
 msgid "Increase crosshairs speed on consecutive keystrokes"
 msgstr ""
 "Увеличаване скоростта на показалците при последователни натискания на бутона"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:856
+#: frontend/apps/reader/modules/readerhighlight.lua:859
 msgid "Interval for crosshairs speed increase: 1 second"
 msgid_plural "Interval for crosshairs speed increase: %1 seconds"
 msgstr[0] "Интервал на забързване на показалците: 1 секунда"
 msgstr[1] "Интервал на забързване на показалците: %1 секунди"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:871
+#: frontend/apps/reader/modules/readerhighlight.lua:874
 msgid "Time interval"
 msgstr "Интервал"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:872
+#: frontend/apps/reader/modules/readerhighlight.lua:875
 msgid ""
 "Select a decimal value up to 1 second. This defines the time period within "
 "which multiple keystrokes will trigger an increase in the crosshairs speed."
@@ -4828,28 +4832,28 @@ msgstr ""
 "Изберете десетична стойност до 1 секунда. Това е времето, в което "
 "многократното натискане на бутоните ще увеличат скоростта на движение."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:885
+#: frontend/apps/reader/modules/readerhighlight.lua:888
 msgid "Text selection tools"
 msgstr "Инструменти за избор на текст"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:893
+#: frontend/apps/reader/modules/readerhighlight.lua:896
 msgid "Multi-word selection: %1"
 msgstr "Избор на няколко думи: %1"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:912
+#: frontend/apps/reader/modules/readerhighlight.lua:915
 #: frontend/dispatcher.lua:204
 msgid "Translate current page"
 msgstr "Превеждане на текущата страница"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:922
+#: frontend/apps/reader/modules/readerhighlight.lua:925
 msgid "Allow panel zoom"
 msgstr "Разрешаване увеличението на панела"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:937
+#: frontend/apps/reader/modules/readerhighlight.lua:940
 msgid "Fall back to text selection"
 msgstr "Връщане към избор на текст"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1001
+#: frontend/apps/reader/modules/readerhighlight.lua:1004
 msgid ""
 "You are currently in SELECT mode.\n"
 "To finish highlighting, long press where the highlight should end and press "
@@ -4862,35 +4866,35 @@ msgstr ""
 "Можете също така да излезете от този режим, като докоснете началото на "
 "подчертаното."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1323
-#: frontend/apps/reader/modules/readerhighlight.lua:1415
+#: frontend/apps/reader/modules/readerhighlight.lua:1326
+#: frontend/apps/reader/modules/readerhighlight.lua:1418
 msgid "Note"
 msgstr "Бележка"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1357
+#: frontend/apps/reader/modules/readerhighlight.lua:1360
 msgid "Delete highlight"
 msgstr "Премахване на подчертно"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1364
-#: frontend/apps/reader/modules/readerhighlight.lua:2379
+#: frontend/apps/reader/modules/readerhighlight.lua:1367
+#: frontend/apps/reader/modules/readerhighlight.lua:2382
 msgid "Highlight menu"
 msgstr "Подчертаване"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1400
+#: frontend/apps/reader/modules/readerhighlight.lua:1403
 msgctxt "Highlight"
 msgid "Style"
 msgstr "Стил"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1407
+#: frontend/apps/reader/modules/readerhighlight.lua:1410
 msgctxt "Highlight"
 msgid "Color"
 msgstr "Цвят"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1422
+#: frontend/apps/reader/modules/readerhighlight.lua:1425
 msgid "Details"
 msgstr "Подробно"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:1929
+#: frontend/apps/reader/modules/readerhighlight.lua:1932
 msgid ""
 "No OCR results or no language data.\n"
 "\n"
@@ -4917,15 +4921,15 @@ msgstr ""
 "за английски език и spa.traineddata за испански език) в koreader/data/"
 "tessdata"
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2129
+#: frontend/apps/reader/modules/readerhighlight.lua:2132
 msgid "Default highlight action changed to '%1'."
 msgstr "Подразбираното действие при подчертаване е променено на „%1“."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2177
+#: frontend/apps/reader/modules/readerhighlight.lua:2180
 msgid "Default highlight style changed to '%1'."
 msgstr "Подразбираният стил на подчертаване е променен на „%1“."
 
-#: frontend/apps/reader/modules/readerhighlight.lua:2416
+#: frontend/apps/reader/modules/readerhighlight.lua:2419
 msgid "Highlight color"
 msgstr "Цвят на подчертаване"
 
@@ -5345,24 +5349,106 @@ msgstr "Желаете ли предишния документ да бъде о
 msgid "Document menu"
 msgstr "Меню на документа"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:221
-#: frontend/apps/reader/modules/readerpagemap.lua:351
-msgid "Reference page numbers list"
+#: frontend/apps/reader/modules/readerpagemap.lua:90
+msgid ""
+"This book has stable page numbers by the publisher (℗).\n"
+"Page numbers source:\n"
+"%1\n"
+"\n"
+"Do you want to use them?"
+msgstr ""
+
+#: frontend/apps/reader/modules/readerpagemap.lua:277
+#: frontend/apps/reader/modules/readerpagemap.lua:511
+#, fuzzy
+msgid "Stable page number list"
 msgstr "Списък с номера на справочни страници"
 
 #. @translators This and the other related ones refer to alternate page numbers provided in some EPUB books, that usually reference page numbers in a specific hardcopy edition of the book.
-#: frontend/apps/reader/modules/readerpagemap.lua:333
-msgid "Reference pages"
-msgstr "Справочни страници"
+#: frontend/apps/reader/modules/readerpagemap.lua:388
+#, fuzzy
+msgid "Stable page numbers"
+msgstr "Въведете номер на страница"
+
+#. @translators characters per page
+#: frontend/apps/reader/modules/readerpagemap.lua:393
+#, fuzzy
+msgid "1 char per page"
+msgid_plural "%1 chars per page"
+msgstr[0] "Отметки на страница"
+msgstr[1] "Отметки на страница"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:409
+#, fuzzy
+msgid "About stable page numbers"
+msgstr "Сортиране по най-голям номер на страница"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:413
+msgid ""
+"By default, one screen equals one page. Any change in the book's formatting "
+"will therefore result in renumbering: new total pages, different chapter "
+"lengths, new locations in TOC and bookmarks, etc.\n"
+"\n"
+"Select stable page numbers if you prefer page numbers that are independent "
+"of layout settings and consistent across devices:\n"
+"1. Publisher page numbers (℗): normally equivalent to a specific physical "
+"edition. Only available if supplied by the publisher.\n"
+"2. Characters per page: a page will be counted for this amount of characters "
+"(sometimes called logical or synthetic page numbers). Use this if no "
+"publisher page numbers are available or if you prefer to have consistent "
+"page lengths for all books.\n"
+"\n"
+"Since stable page numbers can start anywhere on the screen, you can choose "
+"to display them in the margin, regardless of other settings.\n"
+"\n"
+"'Stable page number list' shows a table of all stable page numbers and their "
+"corresponding screen page numbers."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerpagemap.lua:430
+#: frontend/apps/reader/modules/readerpagemap.lua:540
+#, fuzzy
+msgid "Characters per page: %1"
+msgstr "Елементи на страница: %1"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:435
+#: frontend/apps/reader/modules/readerpagemap.lua:545
+#, fuzzy
+msgid "Characters per page"
+msgstr "Елементи на страница"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:459
+#, fuzzy
+msgid "Use publisher page numbers"
+msgstr "Използване номерата на справочни страници"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:462
+msgid ""
+"Use publisher page numbers?\n"
+"The document will be reloaded."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerpagemap.lua:478
+#: frontend/apps/reader/modules/readerpagemap.lua:579
+#, fuzzy
+msgid "Use stable page numbers"
+msgstr "Използване номерата на справочни страници"
+
+#: frontend/apps/reader/modules/readerpagemap.lua:494
+#, fuzzy
+msgid "Show stable page numbers in margin"
+msgstr "Етикети на справочните страници в полето"
 
 #. @translators This shows the <dc:source> in the EPUB that usually tells which hardcopy edition the reference page numbers refers to.
-#: frontend/apps/reader/modules/readerpagemap.lua:337
-msgid "Reference source info"
+#: frontend/apps/reader/modules/readerpagemap.lua:521
+#, fuzzy
+msgid "Publisher page numbers source info"
 msgstr "Информация за източника на справка"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:340
+#: frontend/apps/reader/modules/readerpagemap.lua:528
+#, fuzzy
 msgid ""
-"Source (book hardcopy edition) of reference page numbers:\n"
+"Source (print edition) of publisher page numbers:\n"
 "\n"
 "%1"
 msgstr ""
@@ -5371,104 +5457,29 @@ msgstr ""
 "\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:357
-msgid "Use reference page numbers"
-msgstr "Използване номерата на справочни страници"
+#: frontend/apps/reader/modules/readerpagemap.lua:535
+#, fuzzy
+msgid "Default settings for new books"
+msgstr "Настройките по подразбиране са запазени."
 
-#: frontend/apps/reader/modules/readerpagemap.lua:373
-msgid ""
-"The default (★) for newly opened books that have a reference page numbers "
-"map is to use these reference page numbers instead of the renderer page "
-"numbers.\n"
-"\n"
-"Would you like to change it?"
-msgstr ""
-"По подразбиране (★) за новоотворените книги, които имат карта с номера на "
-"справочни страници се използват тези номера вместо номера на страниците, "
-"както са на устройството.\n"
-"\n"
-"Желаете ли да го промените?"
+#: frontend/apps/reader/modules/readerpagemap.lua:565
+#, fuzzy
+msgid "Override publisher page numbers"
+msgstr "Пренебрегване на новите стр. от издателя"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:374
-msgid ""
-"The default (★) for newly opened books that have a reference page numbers "
-"map is to not use these reference page numbers and keep using the renderer "
-"page numbers.\n"
-"\n"
-"Would you like to change it?"
-msgstr ""
-"По подразбиране (★) за новоотворените книги, които имат карта с номера на "
-"справочни страници се използват не тези номера, а номерата на страниците, "
-"както са на устройството.\n"
-"\n"
-"Желаете ли да го промените?"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:376
-msgid "Renderer"
-msgstr "От устройството"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:376
-msgid "Renderer (★)"
-msgstr "От устройството (★)"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:383
-msgid "Reference (★)"
-msgstr "Справочни страници (★)"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:383
-msgid "Reference"
-msgstr "Справочни страници"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:394
-msgid "Show reference page labels in margin"
+#: frontend/apps/reader/modules/readerpagemap.lua:588
+#, fuzzy
+msgid "Show stable page labels in margin"
 msgstr "Етикети на справочните страници в полето"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:406
-msgid ""
-"The default (★) for newly opened books that have a reference page numbers "
-"map is to show reference page number labels in the margin.\n"
-"\n"
-"Would you like to change it?"
-msgstr ""
-"По подразбиране (★) за новоотворените книги, които имат карта с номера на "
-"справочни страници се показват тези номера в полето.\n"
-"\n"
-"Желаете ли да го промените?"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:407
-msgid ""
-"The default (★) for newly opened books that have a reference page numbers "
-"map is to not show reference page number labels in the margin.\n"
-"\n"
-"Would you like to change it?"
-msgstr ""
-"По подразбиране (★) за новоотворените книги, които имат карта с номера на "
-"справочни страници не се показват тези номера в полето.\n"
-"\n"
-"Желаете ли да го промените?"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:409
-msgid "Hide"
-msgstr "Скриване"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:409
-msgid "Hide (★)"
-msgstr "Скриване (★)"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:416
-msgid "Show (★)"
-msgstr "Показване (★)"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:416
-msgid "Show"
-msgstr "Показване"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:427
-msgid "Page labels font size: %1"
+#: frontend/apps/reader/modules/readerpagemap.lua:598
+#, fuzzy
+msgid "Page numbers font size: %1"
 msgstr "Размер шрифт на етикетите на стр.: (%1)"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:437
-msgid "Page labels font size"
+#: frontend/apps/reader/modules/readerpagemap.lua:603
+#, fuzzy
+msgid "Page numbers font size"
 msgstr "Размер на шрифт на етикети на страница"
 
 #: frontend/apps/reader/modules/readerrolling.lua:315
@@ -6565,11 +6576,11 @@ msgstr "Съдържание"
 msgid "No results in table of contents"
 msgstr "Няма резултати в съдържанието"
 
-#: frontend/apps/reader/modules/readertoc.lua:1208
+#: frontend/apps/reader/modules/readertoc.lua:1209
 msgid "Alternative table of contents"
 msgstr "Алтернативно съдържание"
 
-#: frontend/apps/reader/modules/readertoc.lua:1210
+#: frontend/apps/reader/modules/readertoc.lua:1211
 msgid ""
 "An alternative table of contents can be built from document headings <H1> to "
 "<H6>.\n"
@@ -6593,14 +6604,14 @@ msgstr ""
 "ToC.\n"
 "Вижте Промени в стиловете → Други → Подсказки на алтернативното съдържание."
 
-#: frontend/apps/reader/modules/readertoc.lua:1217
+#: frontend/apps/reader/modules/readertoc.lua:1218
 msgid ""
 "To use the alternative ToC, disable your custom table of contents first."
 msgstr ""
 "За да използвате алтернативно съдържание е необходимо да изключите "
 "потребителското съдържание."
 
-#: frontend/apps/reader/modules/readertoc.lua:1231
+#: frontend/apps/reader/modules/readertoc.lua:1232
 msgid ""
 "The table of contents for this book is currently an alternative one built "
 "from the document headings.\n"
@@ -6612,7 +6623,7 @@ msgstr ""
 "Желаете ли да върнете оригиналното съдържание? (Книгата ще бъде заредена "
 "отново.)"
 
-#: frontend/apps/reader/modules/readertoc.lua:1246
+#: frontend/apps/reader/modules/readertoc.lua:1247
 msgid ""
 "Do you want to use an alternative table of contents built from the document "
 "headings?"
@@ -6620,19 +6631,19 @@ msgstr ""
 "Желаете ли да бъде използвано алтернативно съдържание, съставено от "
 "заглавията на документа?"
 
-#: frontend/apps/reader/modules/readertoc.lua:1273
+#: frontend/apps/reader/modules/readertoc.lua:1274
 msgid "1 entry at ToC depth %2"
 msgid_plural "%1 entries at ToC depth %2"
 msgstr[0] "%1 елемент от съдържанието на дълбочина %2"
 msgstr[1] "%1 елемента от съдържанието на дълбочина %2"
 
-#: frontend/apps/reader/modules/readertoc.lua:1295
+#: frontend/apps/reader/modules/readertoc.lua:1296
 msgid "Progress bars: 1 tick"
 msgid_plural "Progress bars: %1 ticks"
 msgstr[0] "Ленти за напредък: 1 деление"
 msgstr[1] "Ленти за напредък: %1 деления"
 
-#: frontend/apps/reader/modules/readertoc.lua:1297
+#: frontend/apps/reader/modules/readertoc.lua:1298
 msgid ""
 "The progress bars in the footer and the skim dialog can become cramped when "
 "the table of contents is complex. This allows you to restrict the number of "
@@ -6642,11 +6653,11 @@ msgstr ""
 "прозореца за бърз преглед могат да се препълнят. Тази настройка ви дава "
 "възможност да ограничите броя на деленията."
 
-#: frontend/apps/reader/modules/readertoc.lua:1318
+#: frontend/apps/reader/modules/readertoc.lua:1319
 msgid "Bind chapter navigation to ticks"
 msgstr "Обвързване на придвижването по глави с деления"
 
-#: frontend/apps/reader/modules/readertoc.lua:1319
+#: frontend/apps/reader/modules/readertoc.lua:1320
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for chapter navigation and 'page/time left until next chapter' in the "
@@ -6659,11 +6670,11 @@ msgstr ""
 "Включването на настройката ще ограничи придвижването по главите единствено "
 "до деленията на лентата за напредък."
 
-#: frontend/apps/reader/modules/readertoc.lua:1334
+#: frontend/apps/reader/modules/readertoc.lua:1335
 msgid "Chapter titles from ticks only"
 msgstr "Заглавия на главите от деленията"
 
-#: frontend/apps/reader/modules/readertoc.lua:1335
+#: frontend/apps/reader/modules/readertoc.lua:1336
 msgid ""
 "Entries from ToC levels that are ignored in the progress bars will still be "
 "used for displaying the title of the current chapter in the footer and in "
@@ -6677,21 +6688,21 @@ msgstr ""
 "Включването на настройката ще ограничи заглавията на главите единствено до "
 "присъстващите като деления на лентата за напредък."
 
-#: frontend/apps/reader/modules/readertoc.lua:1352
-#: frontend/apps/reader/modules/readertoc.lua:1362
+#: frontend/apps/reader/modules/readertoc.lua:1353
+#: frontend/apps/reader/modules/readertoc.lua:1363
 msgid "ToC entries per page"
 msgstr "Брой елементи от съдържанието на страница"
 
-#: frontend/apps/reader/modules/readertoc.lua:1375
-#: frontend/apps/reader/modules/readertoc.lua:1387
+#: frontend/apps/reader/modules/readertoc.lua:1376
+#: frontend/apps/reader/modules/readertoc.lua:1388
 msgid "ToC entry font size"
 msgstr "Размер на шрифт на съдържанието"
 
-#: frontend/apps/reader/modules/readertoc.lua:1396
+#: frontend/apps/reader/modules/readertoc.lua:1397
 msgid "Show chapter length"
 msgstr "Показване дължината на главите"
 
-#: frontend/apps/reader/modules/readertoc.lua:1407
+#: frontend/apps/reader/modules/readertoc.lua:1408
 msgid "Dot leaders"
 msgstr "Водещи точки"
 
@@ -21209,7 +21220,7 @@ msgid "Do you want to execute profile?"
 msgstr "Желаете ли профилът да бъде изпълнен?"
 
 #: plugins/qrclipboard.koplugin/_meta.lua:4
-#: plugins/qrclipboard.koplugin/main.lua:48
+#: plugins/qrclipboard.koplugin/main.lua:55
 msgid "QR from clipboard"
 msgstr "QR от копираното"
 
@@ -23297,6 +23308,81 @@ msgstr "wallabag"
 msgid "annotations"
 msgstr "записки"
 
+#~ msgid "Reference pages"
+#~ msgstr "Справочни страници"
+
+#~ msgid ""
+#~ "The default (★) for newly opened books that have a reference page numbers "
+#~ "map is to use these reference page numbers instead of the renderer page "
+#~ "numbers.\n"
+#~ "\n"
+#~ "Would you like to change it?"
+#~ msgstr ""
+#~ "По подразбиране (★) за новоотворените книги, които имат карта с номера на "
+#~ "справочни страници се използват тези номера вместо номера на страниците, "
+#~ "както са на устройството.\n"
+#~ "\n"
+#~ "Желаете ли да го промените?"
+
+#~ msgid ""
+#~ "The default (★) for newly opened books that have a reference page numbers "
+#~ "map is to not use these reference page numbers and keep using the "
+#~ "renderer page numbers.\n"
+#~ "\n"
+#~ "Would you like to change it?"
+#~ msgstr ""
+#~ "По подразбиране (★) за новоотворените книги, които имат карта с номера на "
+#~ "справочни страници се използват не тези номера, а номерата на страниците, "
+#~ "както са на устройството.\n"
+#~ "\n"
+#~ "Желаете ли да го промените?"
+
+#~ msgid "Renderer"
+#~ msgstr "От устройството"
+
+#~ msgid "Renderer (★)"
+#~ msgstr "От устройството (★)"
+
+#~ msgid "Reference (★)"
+#~ msgstr "Справочни страници (★)"
+
+#~ msgid "Reference"
+#~ msgstr "Справочни страници"
+
+#~ msgid ""
+#~ "The default (★) for newly opened books that have a reference page numbers "
+#~ "map is to show reference page number labels in the margin.\n"
+#~ "\n"
+#~ "Would you like to change it?"
+#~ msgstr ""
+#~ "По подразбиране (★) за новоотворените книги, които имат карта с номера на "
+#~ "справочни страници се показват тези номера в полето.\n"
+#~ "\n"
+#~ "Желаете ли да го промените?"
+
+#~ msgid ""
+#~ "The default (★) for newly opened books that have a reference page numbers "
+#~ "map is to not show reference page number labels in the margin.\n"
+#~ "\n"
+#~ "Would you like to change it?"
+#~ msgstr ""
+#~ "По подразбиране (★) за новоотворените книги, които имат карта с номера на "
+#~ "справочни страници не се показват тези номера в полето.\n"
+#~ "\n"
+#~ "Желаете ли да го промените?"
+
+#~ msgid "Hide"
+#~ msgstr "Скриване"
+
+#~ msgid "Hide (★)"
+#~ msgstr "Скриване (★)"
+
+#~ msgid "Show (★)"
+#~ msgstr "Показване (★)"
+
+#~ msgid "Show"
+#~ msgstr "Показване"
+
 #~ msgid "Filipino (Tagalog)"
 #~ msgstr "Филипински (тагалог)"
 
@@ -24114,9 +24200,6 @@ msgstr "записки"
 
 #~ msgid "Number"
 #~ msgstr "Брой"
-
-#~ msgid "Sort by largest page number"
-#~ msgstr "Сортиране по най-голям номер на страница"
 
 #, fuzzy
 #~ msgid "Minimum progress bar width: %1u{202F}%"
