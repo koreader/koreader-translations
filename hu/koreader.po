@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-17 06:46+0000\n"
+"POT-Creation-Date: 2025-10-20 16:04+0000\n"
 "PO-Revision-Date: 2025-10-20 04:51+0000\n"
 "Last-Translator: Sari Gabor <sarigaborj@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/koreader/"
@@ -50,7 +50,7 @@ msgstr "Mellőzés"
 #: reader.lua:207 frontend/apps/reader/modules/readerbookmark.lua:132
 #: frontend/apps/reader/modules/readerdictionary.lua:1612
 #: frontend/apps/reader/modules/readerfooter.lua:1697
-#: frontend/apps/reader/modules/readerpagemap.lua:556
+#: frontend/apps/reader/modules/readerpagemap.lua:570
 #: frontend/apps/reader/modules/readerrolling.lua:487
 #: frontend/apps/reader/modules/readersearch.lua:151
 #: frontend/apps/reader/modules/readertypography.lua:330
@@ -118,13 +118,13 @@ msgstr "Letöltés folyamatban…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:122
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:934
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:935
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:980
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:964
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:965
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:1010
 #: frontend/apps/filemanager/filemanagercollection.lua:27
 #: frontend/apps/reader/modules/readerfooter.lua:324
 #: frontend/apps/reader/modules/readerfooter.lua:331
-#: frontend/apps/reader/modules/readerpagemap.lua:88
+#: frontend/apps/reader/modules/readerpagemap.lua:390
 #: frontend/apps/reader/modules/readertypography.lua:811
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/translator.lua:371
 #: frontend/ui/widget/bookstatuswidget.lua:107
@@ -193,8 +193,8 @@ msgstr "Fájlnév"
 #: frontend/apps/filemanager/filemanager.lua:1065
 #: frontend/apps/filemanager/filemanager.lua:1195
 #: frontend/apps/filemanager/filemanager.lua:1503
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:530
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:676
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:560
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:706
 #: frontend/apps/filemanager/filemanagercollection.lua:981
 #: frontend/apps/filemanager/filemanagercollection.lua:1248
 #: frontend/apps/filemanager/filemanagercollection.lua:1344
@@ -308,7 +308,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:376
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:789
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:819
 #: frontend/ui/widget/pathchooser.lua:139
 msgid "Choose"
 msgstr "Kiválasztás"
@@ -326,7 +326,7 @@ msgid "Info"
 msgstr "Infó"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:402
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:821
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:851
 #: plugins/opds.koplugin/opdsbrowser.lua:1154
 #: plugins/statistics.koplugin/main.lua:1276
 #: plugins/texteditor.koplugin/main.lua:372
@@ -466,7 +466,7 @@ msgstr "Feltöltés folyamatban…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:679
 #: frontend/apps/filemanager/filemanager.lua:1072
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:802
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:832
 #: frontend/apps/reader/modules/readerhandmade.lua:525
 #: frontend/ui/presets.lua:136 frontend/ui/wikipedia.lua:1559
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:701
@@ -583,7 +583,7 @@ msgstr "Dropbox mappa (/ a főkönyvtár)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:147
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:537
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:567
 #: frontend/apps/filemanager/filemanagercollection.lua:988
 #: frontend/apps/filemanager/filemanagercollection.lua:1255
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
@@ -866,7 +866,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanager.lua:553
 #: frontend/apps/filemanager/filemanager.lua:988
 #: frontend/apps/filemanager/filemanager.lua:1259
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:907
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:937
 msgid "Move"
 msgstr "Mozgatás"
 
@@ -1240,63 +1240,71 @@ msgstr "Mappa:"
 msgid "Tap to display"
 msgstr "Megjelenítés koppintásra"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:176
+#. @translators characters per page
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:178
+#: frontend/apps/reader/modules/readerpagemap.lua:408
+msgid "1 char per page"
+msgid_plural "%1 chars per page"
+msgstr[0] "1 karakter oldalanként"
+msgstr[1] "%1 karakter oldalanként"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:206
 msgid "number of lines and words not available"
 msgstr "a sorok és szavak száma nem elérhető"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:177
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:207
 msgid "1 line"
 msgid_plural "%1 lines"
 msgstr[0] "1 sor"
 msgstr[1] "%1 sor"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:177
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:207
 msgid "1 word"
 msgid_plural "%1 words"
 msgstr[0] "1 szó"
 msgstr[1] "%1 szó"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:178
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:208
 msgid "Current page:"
 msgstr "Aktuális oldal:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:187
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:217
 msgid "Rating:"
 msgstr "Értékelés:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:189
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:219
 msgid "Review:"
 msgstr "Ismertető:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:197
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:227
 msgid "Notebook file:"
 msgstr "Jegyzetfájl:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:365
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:395
 msgid "No book description available."
 msgstr "Nincs elérhető könyvleírás."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:382
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:412
 msgid "No cover image available."
 msgstr "Nincs elérhető borítókép."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:523
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:553
 msgid "Edit book metadata:"
 msgstr "Könyv metaadatok szerkesztése:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:575
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:605
 msgid "Copy original"
 msgstr "Eredeti másolása"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:583
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:613
 msgid "View original"
 msgstr "Eredeti megtekintése"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:596
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:626
 msgid "Reset custom"
 msgstr "Egyedi reset"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:600
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:630
 msgid ""
 "Reset custom cover?\n"
 "Image file will be deleted."
@@ -1304,11 +1312,11 @@ msgstr ""
 "Egyedi borítókép alapállapotba?\n"
 "A képfájl törlésre kerül."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:601
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:631
 msgid "Reset custom book metadata field?"
 msgstr "Egyedi metaadat mezők resetelése?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:602
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:632
 #: frontend/apps/filemanager/filemanagerutil.lua:190
 #: frontend/apps/filemanager/filemanagerutil.lua:198
 #: frontend/apps/filemanager/filemanagerutil.lua:244
@@ -1322,41 +1330,41 @@ msgstr "Egyedi metaadat mezők resetelése?"
 msgid "Reset"
 msgstr "Alapállapotba állítás"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:616
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:646
 msgid "Set custom"
 msgstr "Egyedi beállítás"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:630
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:660
 msgid "Book metadata:"
 msgstr "Könyv metaadat:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:668
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:698
 msgid "Edit book review"
 msgstr "Könyv ismertető szerkesztése"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:683
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:713
 #: frontend/ui/widget/bookstatuswidget.lua:559
 msgid "Save review"
 msgstr "Ismertető mentése"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:751
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:781
 #: frontend/apps/filemanager/filemanagerutil.lua:407
 msgid "Use default"
 msgstr "Alapértelmezés"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:759
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:789
 msgid "Reset default"
 msgstr "Alapértelmezésre visszaállítás"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:764
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:794
 msgid "Notebook file default location reset"
 msgstr "Jegyzetfájl alapértelmezett helyének visszaállítása"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:770
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:800
 msgid "Use local"
 msgstr "Helyi használat"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:778
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:808
 #: frontend/ui/widget/configdialog.lua:1240
 #: frontend/ui/widget/configdialog.lua:1251
 #: frontend/ui/widget/configdialog.lua:1336
@@ -1366,35 +1374,35 @@ msgstr "Helyi használat"
 msgid "Set as default"
 msgstr "Beállítás alapértelmezettként"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:783
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:813
 msgid "Notebook file default location saved"
 msgstr "Jegyzetfájl alapértelmezett hely elmentve"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:813
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:843
 #: frontend/ui/widget/screenshoter.lua:87
 #: plugins/archiveviewer.koplugin/main.lua:193
 msgid "View"
 msgstr "Nézet"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:892
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:922
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr ""
 "Az aktuális mappában és az almappákban lévő könyvek beolvasása a "
 "metaadatokra vonatkozóan?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:893
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:923
 #: plugins/calibre.koplugin/search.lua:514
 msgid "Scan"
 msgstr "Beolvasás (Scan)"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:899
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:929
 msgid "No books with metadata not in your preferred location found."
 msgstr ""
 "Nem találtunk olyan könyveket, amelyek metaadatai nem az Ön által preferált "
 "helyen vannak."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:903
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:933
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
@@ -1404,11 +1412,11 @@ msgstr[1] ""
 "%1 olyan könyv van, amelyek metaadatai nem az Ön által preferált helyen "
 "találhatók."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:906
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:936
 msgid "Move book metadata to your preferred location?"
 msgstr "Áthelyezi a könyv metaadatait a kívánt helyre?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:922
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:952
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
 "based storage may slow down file browser navigation in large directories. "
@@ -1424,7 +1432,7 @@ msgstr ""
 "áthelyezze a metaadatokat az előnyben részesített tárolási helyre, vagy "
 "törölje %1, amely felgyorsítja a fájlböngészővel történő navigációt."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:936
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:966
 msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
@@ -1432,13 +1440,13 @@ msgstr ""
 "%1. Cím: %2; Szerző: %3\n"
 "DOkumentum: %4"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:941
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:971
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "1 dokumentum hash-alapú metaadatokkal"
 msgstr[1] "%1 dokumentumok hash-alapú metaadatokkal"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:950
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:980
 msgid ""
 "%T title\n"
 "%A author\n"
@@ -2527,8 +2535,8 @@ msgid "Max lines per bookmark: %1"
 msgstr "Maximális sor / könyvjelző: %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:114
-#: frontend/apps/reader/modules/readerpagemap.lua:430
-#: frontend/apps/reader/modules/readerpagemap.lua:540
+#: frontend/apps/reader/modules/readerpagemap.lua:445
+#: frontend/apps/reader/modules/readerpagemap.lua:553
 #: frontend/apps/reader/modules/readerrolling.lua:434
 #: frontend/apps/reader/modules/readersearch.lua:132
 #: frontend/apps/reader/modules/readertypography.lua:543
@@ -5377,36 +5385,33 @@ msgid "Document menu"
 msgstr "Dokumentum menü"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:90
-msgid ""
-"This book has stable page numbers by the publisher (℗).\n"
-"Page numbers source:\n"
-"%1\n"
-"\n"
-"Do you want to use them?"
-msgstr ""
+#, fuzzy
+msgid "Do you want to use them?"
+msgstr "Szeretné letiltani?"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:277
-#: frontend/apps/reader/modules/readerpagemap.lua:511
+#: frontend/apps/reader/modules/readerpagemap.lua:275
+#: frontend/apps/reader/modules/readerpagemap.lua:527
 msgid "Stable page number list"
 msgstr "Fix oldalszámlista"
 
+#: frontend/apps/reader/modules/readerpagemap.lua:383
+msgid ""
+"Publisher page numbers available.\n"
+"Page numbers: %1 - %2\n"
+"Source (print edition):\n"
+"%3"
+msgstr ""
+
 #. @translators This and the other related ones refer to alternate page numbers provided in some EPUB books, that usually reference page numbers in a specific hardcopy edition of the book.
-#: frontend/apps/reader/modules/readerpagemap.lua:388
+#: frontend/apps/reader/modules/readerpagemap.lua:403
 msgid "Stable page numbers"
 msgstr "Fix oldalszámok"
 
-#. @translators characters per page
-#: frontend/apps/reader/modules/readerpagemap.lua:393
-msgid "1 char per page"
-msgid_plural "%1 chars per page"
-msgstr[0] "1 karakter oldalanként"
-msgstr[1] "%1 karakter oldalanként"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:409
+#: frontend/apps/reader/modules/readerpagemap.lua:424
 msgid "About stable page numbers"
 msgstr "A fix oldalszámokról"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:413
+#: frontend/apps/reader/modules/readerpagemap.lua:428
 msgid ""
 "By default, one screen equals one page. Any change in the book's formatting "
 "will therefore result in renumbering: new total pages, different chapter "
@@ -5428,21 +5433,21 @@ msgid ""
 "corresponding screen page numbers."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerpagemap.lua:430
-#: frontend/apps/reader/modules/readerpagemap.lua:540
+#: frontend/apps/reader/modules/readerpagemap.lua:445
+#: frontend/apps/reader/modules/readerpagemap.lua:553
 msgid "Characters per page: %1"
 msgstr "Karakter oldalanként: %1"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:435
-#: frontend/apps/reader/modules/readerpagemap.lua:545
+#: frontend/apps/reader/modules/readerpagemap.lua:450
+#: frontend/apps/reader/modules/readerpagemap.lua:558
 msgid "Characters per page"
 msgstr "Karakter oldalanként"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:459
+#: frontend/apps/reader/modules/readerpagemap.lua:475
 msgid "Use publisher page numbers"
 msgstr "Kiadói oldalszámozás használata"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:462
+#: frontend/apps/reader/modules/readerpagemap.lua:478
 msgid ""
 "Use publisher page numbers?\n"
 "The document will be reloaded."
@@ -5450,47 +5455,39 @@ msgstr ""
 "Használja a kiadói oldalszámokat?\n"
 "A dokumentum újratöltődik."
 
-#: frontend/apps/reader/modules/readerpagemap.lua:478
-#: frontend/apps/reader/modules/readerpagemap.lua:579
+#: frontend/apps/reader/modules/readerpagemap.lua:494
+#: frontend/apps/reader/modules/readerpagemap.lua:602
 msgid "Use stable page numbers"
 msgstr "Fix oldalszámok használata"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:494
+#: frontend/apps/reader/modules/readerpagemap.lua:510
+#: frontend/apps/reader/modules/readerpagemap.lua:611
 msgid "Show stable page numbers in margin"
 msgstr "Fix oldalszámok megjelenítése a margón"
 
 #. @translators This shows the <dc:source> in the EPUB that usually tells which hardcopy edition the reference page numbers refers to.
-#: frontend/apps/reader/modules/readerpagemap.lua:521
+#: frontend/apps/reader/modules/readerpagemap.lua:537
 msgid "Publisher page numbers source info"
 msgstr "Kiadói oldalszámok forrás infója"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:528
-msgid ""
-"Source (print edition) of publisher page numbers:\n"
-"\n"
-"%1"
-msgstr ""
-"A kiadói oldalszámok forrása (nyomtatott kiadás):\n"
-"\n"
-"%1"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:535
+#: frontend/apps/reader/modules/readerpagemap.lua:548
 msgid "Default settings for new books"
 msgstr "Alapértelmezett beállítások új könyvekre"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:565
+#: frontend/apps/reader/modules/readerpagemap.lua:579
 msgid "Override publisher page numbers"
 msgstr "Kiadói oldalszámok felülírása"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:588
-msgid "Show stable page labels in margin"
-msgstr "Fix oldalcímkék megjelenítése a margón"
+#: frontend/apps/reader/modules/readerpagemap.lua:592
+#, fuzzy
+msgid "Prompt when publisher page numbers available"
+msgstr "Kiadói oldalszámozás használata"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:598
+#: frontend/apps/reader/modules/readerpagemap.lua:621
 msgid "Page numbers font size: %1"
 msgstr "Oldalszámok betűmérete: %1"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:603
+#: frontend/apps/reader/modules/readerpagemap.lua:626
 msgid "Page numbers font size"
 msgstr "Oldalcímkék betűmérete"
 
@@ -23231,6 +23228,18 @@ msgstr "wallabag"
 #: tools/update-metadata.lua:60
 msgid "annotations"
 msgstr "megjegyzések"
+
+#~ msgid ""
+#~ "Source (print edition) of publisher page numbers:\n"
+#~ "\n"
+#~ "%1"
+#~ msgstr ""
+#~ "A kiadói oldalszámok forrása (nyomtatott kiadás):\n"
+#~ "\n"
+#~ "%1"
+
+#~ msgid "Show stable page labels in margin"
+#~ msgstr "Fix oldalcímkék megjelenítése a margón"
 
 #~ msgid "Reference pages"
 #~ msgstr "Referencia oldalak"

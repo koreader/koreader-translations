@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-17 06:46+0000\n"
+"POT-Creation-Date: 2025-10-20 16:04+0000\n"
 "PO-Revision-Date: 2025-10-20 16:04+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -54,7 +54,7 @@ msgstr "무시"
 #: reader.lua:207 frontend/apps/reader/modules/readerbookmark.lua:132
 #: frontend/apps/reader/modules/readerdictionary.lua:1612
 #: frontend/apps/reader/modules/readerfooter.lua:1697
-#: frontend/apps/reader/modules/readerpagemap.lua:556
+#: frontend/apps/reader/modules/readerpagemap.lua:570
 #: frontend/apps/reader/modules/readerrolling.lua:487
 #: frontend/apps/reader/modules/readersearch.lua:151
 #: frontend/apps/reader/modules/readertypography.lua:330
@@ -123,13 +123,13 @@ msgstr "다운로드 중…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:122
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:934
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:935
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:980
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:964
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:965
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:1010
 #: frontend/apps/filemanager/filemanagercollection.lua:27
 #: frontend/apps/reader/modules/readerfooter.lua:324
 #: frontend/apps/reader/modules/readerfooter.lua:331
-#: frontend/apps/reader/modules/readerpagemap.lua:88
+#: frontend/apps/reader/modules/readerpagemap.lua:390
 #: frontend/apps/reader/modules/readertypography.lua:811
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/translator.lua:371
 #: frontend/ui/widget/bookstatuswidget.lua:107
@@ -198,8 +198,8 @@ msgstr "파일이름 입력"
 #: frontend/apps/filemanager/filemanager.lua:1065
 #: frontend/apps/filemanager/filemanager.lua:1195
 #: frontend/apps/filemanager/filemanager.lua:1503
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:530
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:676
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:560
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:706
 #: frontend/apps/filemanager/filemanagercollection.lua:981
 #: frontend/apps/filemanager/filemanagercollection.lua:1248
 #: frontend/apps/filemanager/filemanagercollection.lua:1344
@@ -313,7 +313,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:376
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:789
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:819
 #: frontend/ui/widget/pathchooser.lua:139
 msgid "Choose"
 msgstr "고르기"
@@ -331,7 +331,7 @@ msgid "Info"
 msgstr "정보"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:402
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:821
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:851
 #: plugins/opds.koplugin/opdsbrowser.lua:1154
 #: plugins/statistics.koplugin/main.lua:1276
 #: plugins/texteditor.koplugin/main.lua:372
@@ -469,7 +469,7 @@ msgstr "업로드 중…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:679
 #: frontend/apps/filemanager/filemanager.lua:1072
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:802
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:832
 #: frontend/apps/reader/modules/readerhandmade.lua:525
 #: frontend/ui/presets.lua:136 frontend/ui/wikipedia.lua:1559
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:701
@@ -586,7 +586,7 @@ msgstr "Dropbox 폴더(루트 폴더면 /)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:147
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:537
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:567
 #: frontend/apps/filemanager/filemanagercollection.lua:988
 #: frontend/apps/filemanager/filemanagercollection.lua:1255
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
@@ -867,7 +867,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanager.lua:553
 #: frontend/apps/filemanager/filemanager.lua:988
 #: frontend/apps/filemanager/filemanager.lua:1259
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:907
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:937
 msgid "Move"
 msgstr "옮기기"
 
@@ -1235,61 +1235,68 @@ msgstr "폴더:"
 msgid "Tap to display"
 msgstr "탭하여 표시하기"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:176
+#. @translators characters per page
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:178
+#: frontend/apps/reader/modules/readerpagemap.lua:408
+msgid "1 char per page"
+msgid_plural "%1 chars per page"
+msgstr[0] "페이지당 %1 글자"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:206
 msgid "number of lines and words not available"
 msgstr "사용할 수 없는 줄과 단어 수"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:177
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:207
 msgid "1 line"
 msgid_plural "%1 lines"
 msgstr[0] "%1 줄"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:177
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:207
 msgid "1 word"
 msgid_plural "%1 words"
 msgstr[0] "%1 낱말"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:178
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:208
 msgid "Current page:"
 msgstr "현재 페이지:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:187
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:217
 msgid "Rating:"
 msgstr "평점:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:189
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:219
 msgid "Review:"
 msgstr "서평:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:197
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:227
 msgid "Notebook file:"
 msgstr "노트북 파일:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:365
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:395
 msgid "No book description available."
 msgstr "쓸 수 있는 책 설명이 없음."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:382
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:412
 msgid "No cover image available."
 msgstr "쓸 수 있는 표지 그림이 없습니다."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:523
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:553
 msgid "Edit book metadata:"
 msgstr "책 메타데이터 편집:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:575
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:605
 msgid "Copy original"
 msgstr "원본 복사"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:583
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:613
 msgid "View original"
 msgstr "원본 보기"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:596
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:626
 msgid "Reset custom"
 msgstr "사용자 설정 초기화"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:600
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:630
 msgid ""
 "Reset custom cover?\n"
 "Image file will be deleted."
@@ -1297,11 +1304,11 @@ msgstr ""
 "사용자 표지를 초기화할까요?\n"
 "이미지 파일이 삭제됩니다."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:601
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:631
 msgid "Reset custom book metadata field?"
 msgstr "사용자 지정 책 메타데이터 필드를 재설정할까요?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:602
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:632
 #: frontend/apps/filemanager/filemanagerutil.lua:190
 #: frontend/apps/filemanager/filemanagerutil.lua:198
 #: frontend/apps/filemanager/filemanagerutil.lua:244
@@ -1315,41 +1322,41 @@ msgstr "사용자 지정 책 메타데이터 필드를 재설정할까요?"
 msgid "Reset"
 msgstr "초기화"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:616
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:646
 msgid "Set custom"
 msgstr "사용자 지정 설정"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:630
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:660
 msgid "Book metadata:"
 msgstr "책 메타데이터:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:668
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:698
 msgid "Edit book review"
 msgstr "서평 수정"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:683
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:713
 #: frontend/ui/widget/bookstatuswidget.lua:559
 msgid "Save review"
 msgstr "서평 저장"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:751
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:781
 #: frontend/apps/filemanager/filemanagerutil.lua:407
 msgid "Use default"
 msgstr "기본값 사용"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:759
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:789
 msgid "Reset default"
 msgstr "기본값 재설정"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:764
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:794
 msgid "Notebook file default location reset"
 msgstr "노트북 파일 기본 위치 재설정"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:770
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:800
 msgid "Use local"
 msgstr "로컬 사용"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:778
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:808
 #: frontend/ui/widget/configdialog.lua:1240
 #: frontend/ui/widget/configdialog.lua:1251
 #: frontend/ui/widget/configdialog.lua:1336
@@ -1359,40 +1366,40 @@ msgstr "로컬 사용"
 msgid "Set as default"
 msgstr "기본값으로 설정"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:783
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:813
 msgid "Notebook file default location saved"
 msgstr "노트북 파일 기본 위치 저장"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:813
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:843
 #: frontend/ui/widget/screenshoter.lua:87
 #: plugins/archiveviewer.koplugin/main.lua:193
 msgid "View"
 msgstr "보기"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:892
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:922
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr "현재 폴더와 하위 폴더의 책에서 메타데이터 위치를 검색할까요?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:893
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:923
 #: plugins/calibre.koplugin/search.lua:514
 msgid "Scan"
 msgstr "스캔"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:899
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:929
 msgid "No books with metadata not in your preferred location found."
 msgstr "원하는 위치에 없는 메타데이터가 있는 책을 찾을 수 없습니다."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:903
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:933
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] "원하는 위치에 메타데이터가 없는 %1 책을 찾았습니다."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:906
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:936
 msgid "Move book metadata to your preferred location?"
 msgstr "도서 메타데이터를 원하는 위치로 옮길까요?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:922
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:952
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
 "based storage may slow down file browser navigation in large directories. "
@@ -1407,7 +1414,7 @@ msgstr ""
 "어 메타데이터를 기본 저장 위치로 자동 마이그레이션하거나 파일 탐색기의 탐색 "
 "속도를 높일 수 있는 %1를 삭제하는 것이 좋습니다."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:936
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:966
 msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
@@ -1415,12 +1422,12 @@ msgstr ""
 "%1. 제목: %2; 지은이: %3\n"
 "문서: %4"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:941
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:971
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "해시 기반 메타데이터가 있는 %1 개 문서"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:950
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:980
 msgid ""
 "%T title\n"
 "%A author\n"
@@ -2496,8 +2503,8 @@ msgid "Max lines per bookmark: %1"
 msgstr "책갈피당 최대 줄 수: %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:114
-#: frontend/apps/reader/modules/readerpagemap.lua:430
-#: frontend/apps/reader/modules/readerpagemap.lua:540
+#: frontend/apps/reader/modules/readerpagemap.lua:445
+#: frontend/apps/reader/modules/readerpagemap.lua:553
 #: frontend/apps/reader/modules/readerrolling.lua:434
 #: frontend/apps/reader/modules/readersearch.lua:132
 #: frontend/apps/reader/modules/readertypography.lua:543
@@ -5268,40 +5275,33 @@ msgid "Document menu"
 msgstr "문서 메뉴"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:90
-msgid ""
-"This book has stable page numbers by the publisher (℗).\n"
-"Page numbers source:\n"
-"%1\n"
-"\n"
-"Do you want to use them?"
-msgstr ""
-"이 책은 발행인(℗)이 지정한 고정 페이지 번호가 있습니다.\n"
-"페이지 번호 출처:\n"
-"%1\n"
-"\n"
-"이 번호를 사용할까요?"
+#, fuzzy
+msgid "Do you want to use them?"
+msgstr "사용 않음으로 바꿀까요?"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:277
-#: frontend/apps/reader/modules/readerpagemap.lua:511
+#: frontend/apps/reader/modules/readerpagemap.lua:275
+#: frontend/apps/reader/modules/readerpagemap.lua:527
 msgid "Stable page number list"
 msgstr "고정된 페이지 번호 목록"
 
+#: frontend/apps/reader/modules/readerpagemap.lua:383
+msgid ""
+"Publisher page numbers available.\n"
+"Page numbers: %1 - %2\n"
+"Source (print edition):\n"
+"%3"
+msgstr ""
+
 #. @translators This and the other related ones refer to alternate page numbers provided in some EPUB books, that usually reference page numbers in a specific hardcopy edition of the book.
-#: frontend/apps/reader/modules/readerpagemap.lua:388
+#: frontend/apps/reader/modules/readerpagemap.lua:403
 msgid "Stable page numbers"
 msgstr "고정 페이지 번호"
 
-#. @translators characters per page
-#: frontend/apps/reader/modules/readerpagemap.lua:393
-msgid "1 char per page"
-msgid_plural "%1 chars per page"
-msgstr[0] "페이지당 %1 글자"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:409
+#: frontend/apps/reader/modules/readerpagemap.lua:424
 msgid "About stable page numbers"
 msgstr "고정 페이지 번호에 관하여"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:413
+#: frontend/apps/reader/modules/readerpagemap.lua:428
 msgid ""
 "By default, one screen equals one page. Any change in the book's formatting "
 "will therefore result in renumbering: new total pages, different chapter "
@@ -5340,21 +5340,21 @@ msgstr ""
 "'고정 페이지 번호 목록'은 모든 고정 페이지 번호와 해당 화면 페이지 번호를 표"
 "로 보여줍니다."
 
-#: frontend/apps/reader/modules/readerpagemap.lua:430
-#: frontend/apps/reader/modules/readerpagemap.lua:540
+#: frontend/apps/reader/modules/readerpagemap.lua:445
+#: frontend/apps/reader/modules/readerpagemap.lua:553
 msgid "Characters per page: %1"
 msgstr "페이지당 글자 수: %1"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:435
-#: frontend/apps/reader/modules/readerpagemap.lua:545
+#: frontend/apps/reader/modules/readerpagemap.lua:450
+#: frontend/apps/reader/modules/readerpagemap.lua:558
 msgid "Characters per page"
 msgstr "페이지당 글자 수"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:459
+#: frontend/apps/reader/modules/readerpagemap.lua:475
 msgid "Use publisher page numbers"
 msgstr "발행인 페이지 번호 사용"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:462
+#: frontend/apps/reader/modules/readerpagemap.lua:478
 msgid ""
 "Use publisher page numbers?\n"
 "The document will be reloaded."
@@ -5362,47 +5362,39 @@ msgstr ""
 "발행인 페이지 번호를 사용할까요?\n"
 "문서를 다시 엽니다."
 
-#: frontend/apps/reader/modules/readerpagemap.lua:478
-#: frontend/apps/reader/modules/readerpagemap.lua:579
+#: frontend/apps/reader/modules/readerpagemap.lua:494
+#: frontend/apps/reader/modules/readerpagemap.lua:602
 msgid "Use stable page numbers"
 msgstr "고정 페이지 번호 사용"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:494
+#: frontend/apps/reader/modules/readerpagemap.lua:510
+#: frontend/apps/reader/modules/readerpagemap.lua:611
 msgid "Show stable page numbers in margin"
 msgstr "여백에 고정 페이지 번호 표시"
 
 #. @translators This shows the <dc:source> in the EPUB that usually tells which hardcopy edition the reference page numbers refers to.
-#: frontend/apps/reader/modules/readerpagemap.lua:521
+#: frontend/apps/reader/modules/readerpagemap.lua:537
 msgid "Publisher page numbers source info"
 msgstr "발행인 페이지 번호 출처 정보"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:528
-msgid ""
-"Source (print edition) of publisher page numbers:\n"
-"\n"
-"%1"
-msgstr ""
-"발행인 페이지 번호 출처(인쇄판):\n"
-"\n"
-"%1"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:535
+#: frontend/apps/reader/modules/readerpagemap.lua:548
 msgid "Default settings for new books"
 msgstr "새 책의 기본 설정"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:565
+#: frontend/apps/reader/modules/readerpagemap.lua:579
 msgid "Override publisher page numbers"
 msgstr "발행인 페이지 번호 덮어쓰기"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:588
-msgid "Show stable page labels in margin"
-msgstr "여백에 고정 페이지 레이블 표시"
+#: frontend/apps/reader/modules/readerpagemap.lua:592
+#, fuzzy
+msgid "Prompt when publisher page numbers available"
+msgstr "발행인 페이지 번호 사용"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:598
+#: frontend/apps/reader/modules/readerpagemap.lua:621
 msgid "Page numbers font size: %1"
 msgstr "페이지 번호 글꼴 크기: %1"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:603
+#: frontend/apps/reader/modules/readerpagemap.lua:626
 msgid "Page numbers font size"
 msgstr "페이지 번호 글자 크기"
 
@@ -22753,6 +22745,31 @@ msgstr "왈라백"
 #: tools/update-metadata.lua:60
 msgid "annotations"
 msgstr "주석"
+
+#~ msgid ""
+#~ "This book has stable page numbers by the publisher (℗).\n"
+#~ "Page numbers source:\n"
+#~ "%1\n"
+#~ "\n"
+#~ "Do you want to use them?"
+#~ msgstr ""
+#~ "이 책은 발행인(℗)이 지정한 고정 페이지 번호가 있습니다.\n"
+#~ "페이지 번호 출처:\n"
+#~ "%1\n"
+#~ "\n"
+#~ "이 번호를 사용할까요?"
+
+#~ msgid ""
+#~ "Source (print edition) of publisher page numbers:\n"
+#~ "\n"
+#~ "%1"
+#~ msgstr ""
+#~ "발행인 페이지 번호 출처(인쇄판):\n"
+#~ "\n"
+#~ "%1"
+
+#~ msgid "Show stable page labels in margin"
+#~ msgstr "여백에 고정 페이지 레이블 표시"
 
 #~ msgid "Reference pages"
 #~ msgstr "참조 페이지"

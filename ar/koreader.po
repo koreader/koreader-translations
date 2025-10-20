@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-17 06:46+0000\n"
+"POT-Creation-Date: 2025-10-20 16:04+0000\n"
 "PO-Revision-Date: 2025-09-17 06:02+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -48,7 +48,7 @@ msgstr "تجاهل"
 #: reader.lua:207 frontend/apps/reader/modules/readerbookmark.lua:132
 #: frontend/apps/reader/modules/readerdictionary.lua:1612
 #: frontend/apps/reader/modules/readerfooter.lua:1697
-#: frontend/apps/reader/modules/readerpagemap.lua:556
+#: frontend/apps/reader/modules/readerpagemap.lua:570
 #: frontend/apps/reader/modules/readerrolling.lua:487
 #: frontend/apps/reader/modules/readersearch.lua:151
 #: frontend/apps/reader/modules/readertypography.lua:330
@@ -116,13 +116,13 @@ msgstr "جارٍ التحميل…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:122
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:934
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:935
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:980
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:964
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:965
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:1010
 #: frontend/apps/filemanager/filemanagercollection.lua:27
 #: frontend/apps/reader/modules/readerfooter.lua:324
 #: frontend/apps/reader/modules/readerfooter.lua:331
-#: frontend/apps/reader/modules/readerpagemap.lua:88
+#: frontend/apps/reader/modules/readerpagemap.lua:390
 #: frontend/apps/reader/modules/readertypography.lua:811
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/translator.lua:371
 #: frontend/ui/widget/bookstatuswidget.lua:107
@@ -189,8 +189,8 @@ msgstr "أدخل اسم ملف"
 #: frontend/apps/filemanager/filemanager.lua:1065
 #: frontend/apps/filemanager/filemanager.lua:1195
 #: frontend/apps/filemanager/filemanager.lua:1503
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:530
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:676
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:560
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:706
 #: frontend/apps/filemanager/filemanagercollection.lua:981
 #: frontend/apps/filemanager/filemanagercollection.lua:1248
 #: frontend/apps/filemanager/filemanagercollection.lua:1344
@@ -304,7 +304,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:376
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:789
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:819
 #: frontend/ui/widget/pathchooser.lua:139
 msgid "Choose"
 msgstr "اختر"
@@ -322,7 +322,7 @@ msgid "Info"
 msgstr "معلومات"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:402
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:821
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:851
 #: plugins/opds.koplugin/opdsbrowser.lua:1154
 #: plugins/statistics.koplugin/main.lua:1276
 #: plugins/texteditor.koplugin/main.lua:372
@@ -470,7 +470,7 @@ msgstr "جارٍ التحميل…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:679
 #: frontend/apps/filemanager/filemanager.lua:1072
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:802
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:832
 #: frontend/apps/reader/modules/readerhandmade.lua:525
 #: frontend/ui/presets.lua:136 frontend/ui/wikipedia.lua:1559
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:701
@@ -588,7 +588,7 @@ msgstr "مجلد Dropbox (للمدير /)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:147
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:537
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:567
 #: frontend/apps/filemanager/filemanagercollection.lua:988
 #: frontend/apps/filemanager/filemanagercollection.lua:1255
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
@@ -878,7 +878,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanager.lua:553
 #: frontend/apps/filemanager/filemanager.lua:988
 #: frontend/apps/filemanager/filemanager.lua:1259
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:907
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:937
 msgid "Move"
 msgstr "نقل"
 
@@ -1271,11 +1271,24 @@ msgstr "مجلّدٌ:"
 msgid "Tap to display"
 msgstr "المس للعرض"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:176
+#. @translators characters per page
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:178
+#: frontend/apps/reader/modules/readerpagemap.lua:408
+#, fuzzy
+msgid "1 char per page"
+msgid_plural "%1 chars per page"
+msgstr[0] "الإشارات المرجعية لكل صفحة"
+msgstr[1] "الإشارات المرجعية لكل صفحة"
+msgstr[2] "الإشارات المرجعية لكل صفحة"
+msgstr[3] "الإشارات المرجعية لكل صفحة"
+msgstr[4] "الإشارات المرجعية لكل صفحة"
+msgstr[5] "الإشارات المرجعية لكل صفحة"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:206
 msgid "number of lines and words not available"
 msgstr ""
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:177
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:207
 #, fuzzy
 msgid "1 line"
 msgid_plural "%1 lines"
@@ -1286,7 +1299,7 @@ msgstr[3] "تسطير"
 msgstr[4] "تسطير"
 msgstr[5] "تسطير"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:177
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:207
 #, fuzzy
 msgid "1 word"
 msgid_plural "%1 words"
@@ -1297,55 +1310,55 @@ msgstr[3] "نسخ الكلمة"
 msgstr[4] "نسخ الكلمة"
 msgstr[5] "نسخ الكلمة"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:178
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:208
 #, fuzzy
 msgid "Current page:"
 msgstr "الصفحة الحالية"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:187
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:217
 #, fuzzy
 msgid "Rating:"
 msgstr "التقييم: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:189
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:219
 #, fuzzy
 msgid "Review:"
 msgstr "مراجعة"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:197
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:227
 #, fuzzy
 msgid "Notebook file:"
 msgstr "عنوان الكتاب"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:365
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:395
 msgid "No book description available."
 msgstr "لا يوجد وصف متوفر للكتاب."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:382
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:412
 msgid "No cover image available."
 msgstr "لا تتوفّر صورة غلاف."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:523
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:553
 #, fuzzy
 msgid "Edit book metadata:"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:575
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:605
 #, fuzzy
 msgid "Copy original"
 msgstr "نسخ الكل"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:583
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:613
 #, fuzzy
 msgid "View original"
 msgstr "عرض الملف"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:596
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:626
 #, fuzzy
 msgid "Reset custom"
 msgstr "مخصّص"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:600
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:630
 msgid ""
 "Reset custom cover?\n"
 "Image file will be deleted."
@@ -1353,12 +1366,12 @@ msgstr ""
 "تراجع عن تخصيص الغلاف؟\n"
 "ستُمْحى الصورة."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:601
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:631
 #, fuzzy
 msgid "Reset custom book metadata field?"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:602
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:632
 #: frontend/apps/filemanager/filemanagerutil.lua:190
 #: frontend/apps/filemanager/filemanagerutil.lua:198
 #: frontend/apps/filemanager/filemanagerutil.lua:244
@@ -1372,47 +1385,47 @@ msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1
 msgid "Reset"
 msgstr "إرجاع"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:616
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:646
 #, fuzzy
 msgid "Set custom"
 msgstr "مخصّص"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:630
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:660
 #, fuzzy
 msgid "Book metadata:"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:668
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:698
 #, fuzzy
 msgid "Edit book review"
 msgstr "اختر مجلد"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:683
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:713
 #: frontend/ui/widget/bookstatuswidget.lua:559
 msgid "Save review"
 msgstr "حفظُ التقييم"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:751
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:781
 #: frontend/apps/filemanager/filemanagerutil.lua:407
 msgid "Use default"
 msgstr "استخدم الافتراضيّ"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:759
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:789
 #, fuzzy
 msgid "Reset default"
 msgstr "استخدم الافتراضيّ"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:764
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:794
 #, fuzzy
 msgid "Notebook file default location reset"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:770
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:800
 #, fuzzy
 msgid "Use local"
 msgstr "استخدام نموذج"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:778
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:808
 #: frontend/ui/widget/configdialog.lua:1240
 #: frontend/ui/widget/configdialog.lua:1251
 #: frontend/ui/widget/configdialog.lua:1336
@@ -1422,32 +1435,32 @@ msgstr "استخدام نموذج"
 msgid "Set as default"
 msgstr "تعيين كافتراضي"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:783
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:813
 #, fuzzy
 msgid "Notebook file default location saved"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:813
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:843
 #: frontend/ui/widget/screenshoter.lua:87
 #: plugins/archiveviewer.koplugin/main.lua:193
 msgid "View"
 msgstr "عرض"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:892
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:922
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr "افحص المجلد الحالي وما يحويه من مجلدات بحثا عن بيانات مواقعهم؟"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:893
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:923
 #: plugins/calibre.koplugin/search.lua:514
 msgid "Scan"
 msgstr "افحص"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:899
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:929
 msgid "No books with metadata not in your preferred location found."
 msgstr "لا كتب ذات بيانات تعريفية خارج موقعك المفضل."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:903
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:933
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] "لا كتب ذات بيانات تعريفية خارج موقعك المفضل."
@@ -1457,12 +1470,12 @@ msgstr[3] "هناك %1 كتب ذات بيانات تعريفية خارج موق
 msgstr[4] "هناك %1 كتابا ذَوِي بيانات تعريفية خارج موقعك المفضل."
 msgstr[5] "هناك %1 كتاب ذَوِي بيانات تعريفية خارج موقعك المفضل."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:906
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:936
 #, fuzzy
 msgid "Move book metadata to your preferred location?"
 msgstr "احفظ البيانات الوصفية ذاتيًّا للكتاب: %1"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:922
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:952
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
 "based storage may slow down file browser navigation in large directories. "
@@ -1477,7 +1490,7 @@ msgstr ""
 "بك أن تفتح الملفات المرتبطة بها في كوريدر KOReader لتُنقَل تلقائيا إلى موقعك "
 "المفضل، أو يمكنك مسح %1، لتسريع تصفحك للملفات."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:936
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:966
 msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
@@ -1485,7 +1498,7 @@ msgstr ""
 "%1. العنوان: %2; الكاتب: %3\n"
 "الملف: %4"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:941
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:971
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "لا ملفات ذات بيانات تعريفية مبنية على التشفير"
@@ -1495,7 +1508,7 @@ msgstr[3] "%1 ملفات ذات بيانات تعريفية مبنية على ا
 msgstr[4] "%1 ملفا ذوي بيانات تعريفية مبنية على التشفير"
 msgstr[5] "%1 ملف ذو بيانات تعريفية مبنية على التشفير"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:950
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:980
 msgid ""
 "%T title\n"
 "%A author\n"
@@ -2650,8 +2663,8 @@ msgid "Max lines per bookmark: %1"
 msgstr "تبديل العلامة المرجعية"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:114
-#: frontend/apps/reader/modules/readerpagemap.lua:430
-#: frontend/apps/reader/modules/readerpagemap.lua:540
+#: frontend/apps/reader/modules/readerpagemap.lua:445
+#: frontend/apps/reader/modules/readerpagemap.lua:553
 #: frontend/apps/reader/modules/readerrolling.lua:434
 #: frontend/apps/reader/modules/readersearch.lua:132
 #: frontend/apps/reader/modules/readertypography.lua:543
@@ -5550,44 +5563,36 @@ msgid "Document menu"
 msgstr "قائمة المستند"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:90
-msgid ""
-"This book has stable page numbers by the publisher (℗).\n"
-"Page numbers source:\n"
-"%1\n"
-"\n"
-"Do you want to use them?"
-msgstr ""
+#, fuzzy
+msgid "Do you want to use them?"
+msgstr "هل تريد إيقاف هذا؟"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:277
-#: frontend/apps/reader/modules/readerpagemap.lua:511
+#: frontend/apps/reader/modules/readerpagemap.lua:275
+#: frontend/apps/reader/modules/readerpagemap.lua:527
 #, fuzzy
 msgid "Stable page number list"
 msgstr "قائمة أرقام الصفحات المرجعية"
 
+#: frontend/apps/reader/modules/readerpagemap.lua:383
+msgid ""
+"Publisher page numbers available.\n"
+"Page numbers: %1 - %2\n"
+"Source (print edition):\n"
+"%3"
+msgstr ""
+
 #. @translators This and the other related ones refer to alternate page numbers provided in some EPUB books, that usually reference page numbers in a specific hardcopy edition of the book.
-#: frontend/apps/reader/modules/readerpagemap.lua:388
+#: frontend/apps/reader/modules/readerpagemap.lua:403
 #, fuzzy
 msgid "Stable page numbers"
 msgstr "أدخل رقم الصفحة"
 
-#. @translators characters per page
-#: frontend/apps/reader/modules/readerpagemap.lua:393
-#, fuzzy
-msgid "1 char per page"
-msgid_plural "%1 chars per page"
-msgstr[0] "الإشارات المرجعية لكل صفحة"
-msgstr[1] "الإشارات المرجعية لكل صفحة"
-msgstr[2] "الإشارات المرجعية لكل صفحة"
-msgstr[3] "الإشارات المرجعية لكل صفحة"
-msgstr[4] "الإشارات المرجعية لكل صفحة"
-msgstr[5] "الإشارات المرجعية لكل صفحة"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:409
+#: frontend/apps/reader/modules/readerpagemap.lua:424
 #, fuzzy
 msgid "About stable page numbers"
 msgstr "فرز حسب رقم الصفحة الأكبر"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:413
+#: frontend/apps/reader/modules/readerpagemap.lua:428
 msgid ""
 "By default, one screen equals one page. Any change in the book's formatting "
 "will therefore result in renumbering: new total pages, different chapter "
@@ -5609,78 +5614,68 @@ msgid ""
 "corresponding screen page numbers."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerpagemap.lua:430
-#: frontend/apps/reader/modules/readerpagemap.lua:540
+#: frontend/apps/reader/modules/readerpagemap.lua:445
+#: frontend/apps/reader/modules/readerpagemap.lua:553
 #, fuzzy
 msgid "Characters per page: %1"
 msgstr "عدد العناصر لكل صفحة"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:435
-#: frontend/apps/reader/modules/readerpagemap.lua:545
+#: frontend/apps/reader/modules/readerpagemap.lua:450
+#: frontend/apps/reader/modules/readerpagemap.lua:558
 #, fuzzy
 msgid "Characters per page"
 msgstr "عدد العناصر لكل صفحة"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:459
+#: frontend/apps/reader/modules/readerpagemap.lua:475
 #, fuzzy
 msgid "Use publisher page numbers"
 msgstr "استخدم أرقام الصفحات المرجعية"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:462
+#: frontend/apps/reader/modules/readerpagemap.lua:478
 msgid ""
 "Use publisher page numbers?\n"
 "The document will be reloaded."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerpagemap.lua:478
-#: frontend/apps/reader/modules/readerpagemap.lua:579
+#: frontend/apps/reader/modules/readerpagemap.lua:494
+#: frontend/apps/reader/modules/readerpagemap.lua:602
 #, fuzzy
 msgid "Use stable page numbers"
 msgstr "استخدم أرقام الصفحات المرجعية"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:494
+#: frontend/apps/reader/modules/readerpagemap.lua:510
+#: frontend/apps/reader/modules/readerpagemap.lua:611
 #, fuzzy
 msgid "Show stable page numbers in margin"
 msgstr "إظهار تسميات الصفحة المرجعية في الهامش"
 
 #. @translators This shows the <dc:source> in the EPUB that usually tells which hardcopy edition the reference page numbers refers to.
-#: frontend/apps/reader/modules/readerpagemap.lua:521
+#: frontend/apps/reader/modules/readerpagemap.lua:537
 #, fuzzy
 msgid "Publisher page numbers source info"
 msgstr "معلومات المصدر المرجعي"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:528
-#, fuzzy
-msgid ""
-"Source (print edition) of publisher page numbers:\n"
-"\n"
-"%1"
-msgstr ""
-"مصدر (نسخة مطبوعة للكتاب) لأرقام الصفحات المرجعية:\n"
-"\n"
-"%1"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:535
+#: frontend/apps/reader/modules/readerpagemap.lua:548
 #, fuzzy
 msgid "Default settings for new books"
 msgstr "تمّ حفظ الإعدادات الأوّليّة."
 
-#: frontend/apps/reader/modules/readerpagemap.lua:565
+#: frontend/apps/reader/modules/readerpagemap.lua:579
 #, fuzzy
 msgid "Override publisher page numbers"
 msgstr "تجنّب فواصل الصفحات التي وضعها ناشر الملف"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:588
+#: frontend/apps/reader/modules/readerpagemap.lua:592
 #, fuzzy
-msgid "Show stable page labels in margin"
-msgstr "إظهار تسميات الصفحة المرجعية في الهامش"
+msgid "Prompt when publisher page numbers available"
+msgstr "استخدم أرقام الصفحات المرجعية"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:598
+#: frontend/apps/reader/modules/readerpagemap.lua:621
 #, fuzzy
 msgid "Page numbers font size: %1"
 msgstr "حجم خط تسميات الصفحة (%1)"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:603
+#: frontend/apps/reader/modules/readerpagemap.lua:626
 #, fuzzy
 msgid "Page numbers font size"
 msgstr "حجم خط تسميات الصفحة"
@@ -23425,6 +23420,20 @@ msgstr "والا باغ"
 #, fuzzy
 msgid "annotations"
 msgstr "دوران"
+
+#, fuzzy
+#~ msgid ""
+#~ "Source (print edition) of publisher page numbers:\n"
+#~ "\n"
+#~ "%1"
+#~ msgstr ""
+#~ "مصدر (نسخة مطبوعة للكتاب) لأرقام الصفحات المرجعية:\n"
+#~ "\n"
+#~ "%1"
+
+#, fuzzy
+#~ msgid "Show stable page labels in margin"
+#~ msgstr "إظهار تسميات الصفحة المرجعية في الهامش"
 
 #~ msgid "Reference pages"
 #~ msgstr "صفحات مرجعية"

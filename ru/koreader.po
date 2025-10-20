@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-17 06:46+0000\n"
+"POT-Creation-Date: 2025-10-20 16:04+0000\n"
 "PO-Revision-Date: 2025-10-13 12:07+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
@@ -67,7 +67,7 @@ msgstr "Игнорировать"
 #: reader.lua:207 frontend/apps/reader/modules/readerbookmark.lua:132
 #: frontend/apps/reader/modules/readerdictionary.lua:1612
 #: frontend/apps/reader/modules/readerfooter.lua:1697
-#: frontend/apps/reader/modules/readerpagemap.lua:556
+#: frontend/apps/reader/modules/readerpagemap.lua:570
 #: frontend/apps/reader/modules/readerrolling.lua:487
 #: frontend/apps/reader/modules/readersearch.lua:151
 #: frontend/apps/reader/modules/readertypography.lua:330
@@ -135,13 +135,13 @@ msgstr "Загружается…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:243
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:122
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:934
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:935
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:980
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:964
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:965
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:1010
 #: frontend/apps/filemanager/filemanagercollection.lua:27
 #: frontend/apps/reader/modules/readerfooter.lua:324
 #: frontend/apps/reader/modules/readerfooter.lua:331
-#: frontend/apps/reader/modules/readerpagemap.lua:88
+#: frontend/apps/reader/modules/readerpagemap.lua:390
 #: frontend/apps/reader/modules/readertypography.lua:811
 #: frontend/device/pocketbook/device.lua:290 frontend/ui/translator.lua:371
 #: frontend/ui/widget/bookstatuswidget.lua:107
@@ -210,8 +210,8 @@ msgstr "Введите имя файла"
 #: frontend/apps/filemanager/filemanager.lua:1065
 #: frontend/apps/filemanager/filemanager.lua:1195
 #: frontend/apps/filemanager/filemanager.lua:1503
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:530
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:676
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:560
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:706
 #: frontend/apps/filemanager/filemanagercollection.lua:981
 #: frontend/apps/filemanager/filemanagercollection.lua:1248
 #: frontend/apps/filemanager/filemanagercollection.lua:1344
@@ -325,7 +325,7 @@ msgstr ""
 "%1"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:376
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:789
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:819
 #: frontend/ui/widget/pathchooser.lua:139
 msgid "Choose"
 msgstr "Выбрать"
@@ -343,7 +343,7 @@ msgid "Info"
 msgstr "Информация"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:402
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:821
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:851
 #: plugins/opds.koplugin/opdsbrowser.lua:1154
 #: plugins/statistics.koplugin/main.lua:1276
 #: plugins/texteditor.koplugin/main.lua:372
@@ -487,7 +487,7 @@ msgstr "Выгрузка…"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:679
 #: frontend/apps/filemanager/filemanager.lua:1072
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:802
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:832
 #: frontend/apps/reader/modules/readerhandmade.lua:525
 #: frontend/ui/presets.lua:136 frontend/ui/wikipedia.lua:1559
 #: plugins/newsdownloader.koplugin/epubdownloadbackend.lua:701
@@ -605,7 +605,7 @@ msgstr "Папка Dropbox (/ для корневой)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:147
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:537
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:567
 #: frontend/apps/filemanager/filemanagercollection.lua:988
 #: frontend/apps/filemanager/filemanagercollection.lua:1255
 #: frontend/apps/filemanager/filemanagershortcuts.lua:113
@@ -889,7 +889,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanager.lua:553
 #: frontend/apps/filemanager/filemanager.lua:988
 #: frontend/apps/filemanager/filemanager.lua:1259
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:907
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:937
 msgid "Move"
 msgstr "Переместить"
 
@@ -1270,11 +1270,22 @@ msgstr "Папка:"
 msgid "Tap to display"
 msgstr "Коснитесь для показа"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:176
+#. @translators characters per page
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:178
+#: frontend/apps/reader/modules/readerpagemap.lua:408
+#, fuzzy
+msgid "1 char per page"
+msgid_plural "%1 chars per page"
+msgstr[0] "Закладок на странице"
+msgstr[1] "Закладок на странице"
+msgstr[2] "Закладок на странице"
+msgstr[3] "Закладок на странице"
+
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:206
 msgid "number of lines and words not available"
 msgstr "количество строк и слов недоступно"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:177
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:207
 msgid "1 line"
 msgid_plural "%1 lines"
 msgstr[0] "%1 строка"
@@ -1282,7 +1293,7 @@ msgstr[1] "%1 строки"
 msgstr[2] "%1 строк"
 msgstr[3] "%1 строк"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:177
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:207
 msgid "1 word"
 msgid_plural "%1 words"
 msgstr[0] "%1 слово"
@@ -1290,47 +1301,47 @@ msgstr[1] "%1 слова"
 msgstr[2] "%1 слов"
 msgstr[3] "%1 слов"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:178
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:208
 msgid "Current page:"
 msgstr "Текущая страница:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:187
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:217
 msgid "Rating:"
 msgstr "Рейтинг:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:189
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:219
 msgid "Review:"
 msgstr "Обзор:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:197
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:227
 msgid "Notebook file:"
 msgstr "Файл заметок:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:365
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:395
 msgid "No book description available."
 msgstr "Описание книги отсутствует."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:382
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:412
 msgid "No cover image available."
 msgstr "Изображение обложки отсутствует."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:523
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:553
 msgid "Edit book metadata:"
 msgstr "Редактировать метаданные книги:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:575
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:605
 msgid "Copy original"
 msgstr "Копия оригинала"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:583
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:613
 msgid "View original"
 msgstr "Просмотр оригинала"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:596
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:626
 msgid "Reset custom"
 msgstr "Сбросить свои свойства"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:600
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:630
 msgid ""
 "Reset custom cover?\n"
 "Image file will be deleted."
@@ -1338,11 +1349,11 @@ msgstr ""
 "Сбросить пользовательскую обложку?\n"
 "Файл изображения при этом удаляется."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:601
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:631
 msgid "Reset custom book metadata field?"
 msgstr "Сбросить пользовательские метаданные книги?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:602
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:632
 #: frontend/apps/filemanager/filemanagerutil.lua:190
 #: frontend/apps/filemanager/filemanagerutil.lua:198
 #: frontend/apps/filemanager/filemanagerutil.lua:244
@@ -1356,41 +1367,41 @@ msgstr "Сбросить пользовательские метаданные �
 msgid "Reset"
 msgstr "Сбросить"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:616
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:646
 msgid "Set custom"
 msgstr "Задать свои свойства"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:630
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:660
 msgid "Book metadata:"
 msgstr "Метаданные книги:"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:668
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:698
 msgid "Edit book review"
 msgstr "Редактировать обзор книги"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:683
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:713
 #: frontend/ui/widget/bookstatuswidget.lua:559
 msgid "Save review"
 msgstr "Сохранить обзор"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:751
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:781
 #: frontend/apps/filemanager/filemanagerutil.lua:407
 msgid "Use default"
 msgstr "По умолчанию"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:759
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:789
 msgid "Reset default"
 msgstr "Сброс на умолчания"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:764
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:794
 msgid "Notebook file default location reset"
 msgstr "Сброшено расположение файла заметок по умолчанию"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:770
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:800
 msgid "Use local"
 msgstr "Локально"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:778
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:808
 #: frontend/ui/widget/configdialog.lua:1240
 #: frontend/ui/widget/configdialog.lua:1251
 #: frontend/ui/widget/configdialog.lua:1336
@@ -1400,32 +1411,32 @@ msgstr "Локально"
 msgid "Set as default"
 msgstr "Сделать значением по умолчанию"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:783
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:813
 msgid "Notebook file default location saved"
 msgstr "Сохранено расположение файла заметок по умолчанию"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:813
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:843
 #: frontend/ui/widget/screenshoter.lua:87
 #: plugins/archiveviewer.koplugin/main.lua:193
 msgid "View"
 msgstr "Просмотр"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:892
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:922
 msgid ""
 "Scan books in current folder and subfolders for their metadata location?"
 msgstr ""
 "Сканировать книги в текущей папке и её подпапках на наличие метаданных?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:893
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:923
 #: plugins/calibre.koplugin/search.lua:514
 msgid "Scan"
 msgstr "Сканировать"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:899
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:929
 msgid "No books with metadata not in your preferred location found."
 msgstr "Книг с метаданными вне предпочитаемого вами местоположения не найдено."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:903
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:933
 msgid "1 book with metadata not in your preferred location found."
 msgid_plural "%1 books with metadata not in your preferred location found."
 msgstr[0] ""
@@ -1437,11 +1448,11 @@ msgstr[2] ""
 msgstr[3] ""
 "Найдено %1 книг с метаданными вне предпочитаемого вами местоположения."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:906
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:936
 msgid "Move book metadata to your preferred location?"
 msgstr "Переместить метаданные книги в предпочитаемое вами местоположение?"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:922
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:952
 msgid ""
 "Hash-based metadata has been saved in %1 for the following documents. Hash-"
 "based storage may slow down file browser navigation in large directories. "
@@ -1456,7 +1467,7 @@ msgstr ""
 "связанные документы в KOReader для автопереноса их метаданных в "
 "предпочитаемое вами хранилище или удалить %1, что ускорит файловую навигацию."
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:936
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:966
 msgid ""
 "%1. Title: %2; Author: %3\n"
 "Document: %4"
@@ -1464,7 +1475,7 @@ msgstr ""
 "%1. Название: %2; Автор: %3\n"
 "Документ: %4"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:941
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:971
 msgid "1 document with hash-based metadata"
 msgid_plural "%1 documents with hash-based metadata"
 msgstr[0] "%1 документ с метаданными на основе хэша"
@@ -1472,7 +1483,7 @@ msgstr[1] "%1 документа с метаданными на основе х�
 msgstr[2] "%1 документов с метаданными на основе хэша"
 msgstr[3] "%1 документов с метаданными на основе хэша"
 
-#: frontend/apps/filemanager/filemanagerbookinfo.lua:950
+#: frontend/apps/filemanager/filemanagerbookinfo.lua:980
 msgid ""
 "%T title\n"
 "%A author\n"
@@ -2561,8 +2572,8 @@ msgid "Max lines per bookmark: %1"
 msgstr "Максимум строк в закладке: %1"
 
 #: frontend/apps/reader/modules/readerbookmark.lua:114
-#: frontend/apps/reader/modules/readerpagemap.lua:430
-#: frontend/apps/reader/modules/readerpagemap.lua:540
+#: frontend/apps/reader/modules/readerpagemap.lua:445
+#: frontend/apps/reader/modules/readerpagemap.lua:553
 #: frontend/apps/reader/modules/readerrolling.lua:434
 #: frontend/apps/reader/modules/readersearch.lua:132
 #: frontend/apps/reader/modules/readertypography.lua:543
@@ -5400,42 +5411,36 @@ msgid "Document menu"
 msgstr "Меню документа"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:90
-msgid ""
-"This book has stable page numbers by the publisher (℗).\n"
-"Page numbers source:\n"
-"%1\n"
-"\n"
-"Do you want to use them?"
-msgstr ""
+#, fuzzy
+msgid "Do you want to use them?"
+msgstr "Хотите отключить?"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:277
-#: frontend/apps/reader/modules/readerpagemap.lua:511
+#: frontend/apps/reader/modules/readerpagemap.lua:275
+#: frontend/apps/reader/modules/readerpagemap.lua:527
 #, fuzzy
 msgid "Stable page number list"
 msgstr "Список ссылок на номера страниц"
 
+#: frontend/apps/reader/modules/readerpagemap.lua:383
+msgid ""
+"Publisher page numbers available.\n"
+"Page numbers: %1 - %2\n"
+"Source (print edition):\n"
+"%3"
+msgstr ""
+
 #. @translators This and the other related ones refer to alternate page numbers provided in some EPUB books, that usually reference page numbers in a specific hardcopy edition of the book.
-#: frontend/apps/reader/modules/readerpagemap.lua:388
+#: frontend/apps/reader/modules/readerpagemap.lua:403
 #, fuzzy
 msgid "Stable page numbers"
 msgstr "Введите номер страницы"
 
-#. @translators characters per page
-#: frontend/apps/reader/modules/readerpagemap.lua:393
-#, fuzzy
-msgid "1 char per page"
-msgid_plural "%1 chars per page"
-msgstr[0] "Закладок на странице"
-msgstr[1] "Закладок на странице"
-msgstr[2] "Закладок на странице"
-msgstr[3] "Закладок на странице"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:409
+#: frontend/apps/reader/modules/readerpagemap.lua:424
 #, fuzzy
 msgid "About stable page numbers"
 msgstr "Сортировать по наибольшему номеру страницы"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:413
+#: frontend/apps/reader/modules/readerpagemap.lua:428
 msgid ""
 "By default, one screen equals one page. Any change in the book's formatting "
 "will therefore result in renumbering: new total pages, different chapter "
@@ -5457,78 +5462,68 @@ msgid ""
 "corresponding screen page numbers."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerpagemap.lua:430
-#: frontend/apps/reader/modules/readerpagemap.lua:540
+#: frontend/apps/reader/modules/readerpagemap.lua:445
+#: frontend/apps/reader/modules/readerpagemap.lua:553
 #, fuzzy
 msgid "Characters per page: %1"
 msgstr "Элементов на странице: %1"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:435
-#: frontend/apps/reader/modules/readerpagemap.lua:545
+#: frontend/apps/reader/modules/readerpagemap.lua:450
+#: frontend/apps/reader/modules/readerpagemap.lua:558
 #, fuzzy
 msgid "Characters per page"
 msgstr "Элементов на странице"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:459
+#: frontend/apps/reader/modules/readerpagemap.lua:475
 #, fuzzy
 msgid "Use publisher page numbers"
 msgstr "Использовать номера страниц в источнике"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:462
+#: frontend/apps/reader/modules/readerpagemap.lua:478
 msgid ""
 "Use publisher page numbers?\n"
 "The document will be reloaded."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerpagemap.lua:478
-#: frontend/apps/reader/modules/readerpagemap.lua:579
+#: frontend/apps/reader/modules/readerpagemap.lua:494
+#: frontend/apps/reader/modules/readerpagemap.lua:602
 #, fuzzy
 msgid "Use stable page numbers"
 msgstr "Использовать номера страниц в источнике"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:494
+#: frontend/apps/reader/modules/readerpagemap.lua:510
+#: frontend/apps/reader/modules/readerpagemap.lua:611
 #, fuzzy
 msgid "Show stable page numbers in margin"
 msgstr "Показывать метки ссылок на страницы на полях"
 
 #. @translators This shows the <dc:source> in the EPUB that usually tells which hardcopy edition the reference page numbers refers to.
-#: frontend/apps/reader/modules/readerpagemap.lua:521
+#: frontend/apps/reader/modules/readerpagemap.lua:537
 #, fuzzy
 msgid "Publisher page numbers source info"
 msgstr "Информация об источнике"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:528
-#, fuzzy
-msgid ""
-"Source (print edition) of publisher page numbers:\n"
-"\n"
-"%1"
-msgstr ""
-"Первоисточник (печатное издание книги) ссылок на номера страниц:\n"
-"\n"
-"%1"
-
-#: frontend/apps/reader/modules/readerpagemap.lua:535
+#: frontend/apps/reader/modules/readerpagemap.lua:548
 #, fuzzy
 msgid "Default settings for new books"
 msgstr "Настройки по умолчанию сохранены."
 
-#: frontend/apps/reader/modules/readerpagemap.lua:565
+#: frontend/apps/reader/modules/readerpagemap.lua:579
 #, fuzzy
 msgid "Override publisher page numbers"
 msgstr "Избегать издательских разрывов страниц"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:588
+#: frontend/apps/reader/modules/readerpagemap.lua:592
 #, fuzzy
-msgid "Show stable page labels in margin"
-msgstr "Показывать метки ссылок на страницы на полях"
+msgid "Prompt when publisher page numbers available"
+msgstr "Использовать номера страниц в источнике"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:598
+#: frontend/apps/reader/modules/readerpagemap.lua:621
 #, fuzzy
 msgid "Page numbers font size: %1"
 msgstr "Размер шрифта меток страниц: %1"
 
-#: frontend/apps/reader/modules/readerpagemap.lua:603
+#: frontend/apps/reader/modules/readerpagemap.lua:626
 #, fuzzy
 msgid "Page numbers font size"
 msgstr "Размер шрифта меток страниц"
@@ -23362,6 +23357,20 @@ msgstr "Wallabag"
 #: tools/update-metadata.lua:60
 msgid "annotations"
 msgstr "аннотации"
+
+#, fuzzy
+#~ msgid ""
+#~ "Source (print edition) of publisher page numbers:\n"
+#~ "\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Первоисточник (печатное издание книги) ссылок на номера страниц:\n"
+#~ "\n"
+#~ "%1"
+
+#, fuzzy
+#~ msgid "Show stable page labels in margin"
+#~ msgstr "Показывать метки ссылок на страницы на полях"
 
 #~ msgid "Reference pages"
 #~ msgstr "Страницы в источнике"
