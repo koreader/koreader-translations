@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-31 16:16+0000\n"
-"PO-Revision-Date: 2025-07-15 13:44+0000\n"
-"Last-Translator: L-M-H <lars.magnus@herland.priv.no>\n"
+"PO-Revision-Date: 2025-11-02 22:51+0000\n"
+"Last-Translator: Fredrik <weblate.org@greebles.eu>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "koreader/koreader/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13-dev\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 
 #: reader.lua:194
 msgid ""
@@ -402,11 +402,8 @@ msgid ""
 "%2"
 msgstr ""
 "Dropbox mappe:\n"
-"\n"
 "%1\n"
-"\n"
 "Lokal mappe:\n"
-"\n"
 "%2"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:550
@@ -548,6 +545,11 @@ msgid ""
 "\n"
 "Some of the previously generated long-lived tokens are still valid."
 msgstr ""
+"Dropbox-tilgangstokener er kortvarige (4 timer).\n"
+"For å generere et nytt tilgangstoken, bruk Dropbox-oppdateringstokenet og "
+"strengen <APP_KEY>:<APP_SECRET>.\n"
+"\n"
+"Noen av de tidligere genererte tokenene med lang levetid er fortsatt gyldige."
 
 #: frontend/apps/cloudstorage/dropbox.lua:108
 msgid "Dropbox cloud storage"
@@ -562,12 +564,16 @@ msgid ""
 "Dropbox refresh token\n"
 "or long-lived token (deprecated)"
 msgstr ""
+"Dropbox-oppdateringstoken\n"
+"eller token med lang levetid (utdatert)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:120
 msgid ""
 "Dropbox <APP_KEY>:<APP_SECRET>\n"
 "(leave blank for long-lived token)"
 msgstr ""
+"Dropbox <APP_KEY>:<APP_SECRET>\n"
+"(la stå tomt for token med lang levetid)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:124
 msgid "Dropbox folder (/ for root)"
@@ -1151,9 +1157,8 @@ msgid "Classic (filename only)"
 msgstr "Klassisk (kun filnavn)"
 
 #: frontend/apps/filemanager/filemanager.lua:1643
-#, fuzzy
 msgid "Last book is the first file in the folder. No previous file to open."
-msgstr "Dette er siste fil i nåværende mappe. Ingen påfølgende fil å åpne."
+msgstr "Siste bok er den første filen i mappen. Ingen tidligere fil å åpne."
 
 #: frontend/apps/filemanager/filemanager.lua:1644
 msgid "Last book is the last file in the folder. No next file to open."
@@ -1230,35 +1235,32 @@ msgid "Tap to display"
 msgstr "Trykk for å vise"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:172
-#, fuzzy
 msgid "Screen pages"
-msgstr "Nåværende side (%1)"
+msgstr "Skjermsider"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:174
-#, fuzzy
 msgid "(including hidden flows)"
-msgstr "Vis skjulte filer"
+msgstr "(inkludert skjulte strømmer)"
 
 #. @translators characters per page
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:184
 #: frontend/apps/reader/modules/readerpagemap.lua:408
-#, fuzzy
 msgid "1 char per page"
 msgid_plural "%1 chars per page"
-msgstr[0] "Lag bokmerke til denne sida"
-msgstr[1] "Lag bokmerke til denne sida"
+msgstr[0] "1 tegn per side"
+msgstr[1] "%1 tegn per side"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:187
-#, fuzzy
 msgid "Synthetic pages"
-msgstr "Velg"
+msgstr "Syntetiske sider"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:196
-#, fuzzy
 msgid ""
 "Publisher pages (℗):\n"
 "available"
-msgstr "Skriv inn sidenummer"
+msgstr ""
+"Utgiversider (℗):\n"
+"tilgjengelig"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:206
 msgid ""
@@ -1267,6 +1269,10 @@ msgid ""
 "Source (print edition):\n"
 "%4"
 msgstr ""
+"Utgiversider (℗):\n"
+"%1 (%2 - %3)\n"
+"Kilde (trykt utgave):\n"
+"%4"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:234
 msgid "number of lines and words not available"
@@ -1437,6 +1443,12 @@ msgid ""
 "to the preferred storage location, or to delete %1, which will speed up file "
 "browser navigation."
 msgstr ""
+"Hashbaserte metadata er lagret i %1 for følgende dokumenter. Hashbasert "
+"lagring kan redusere hastigheten på navigasjonen i filhåndtereren i store "
+"mapper. Hvis du ikke bruker hashbasert metadatalagring, anbefales det derfor "
+"å åpne de tilknyttede dokumentene i KOReader for automatisk å migrere "
+"metadataene deres til ønsket lagringssted, eller å slette %1, noe som vil "
+"øke hastigheten på navigasjonen i filhåndtereren."
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:994
 msgid ""
@@ -1475,6 +1487,26 @@ msgid ""
 "%m current time (hh:mm)\n"
 "%M current time (hh-mm-ss)"
 msgstr ""
+"%T tittel\n"
+"%A forfatter\n"
+"%S serie\n"
+"%t totalt antall sider\n"
+"%c gjeldende side\n"
+"%l sider igjen i kapittelet\n"
+"%p bokprosent lest\n"
+"%H tid igjen i boken\n"
+"%C kapitteltittel\n"
+"%P kapittelprosent lest\n"
+"%h tid igjen i kapittelet\n"
+"%F filsti\n"
+"%f filnavn\n"
+"%b batterinivå\n"
+"%B batterisymbol\n"
+"%r skilletegn\n"
+"%D gjeldende dato (åååå-mm-dd)\n"
+"%d gjeldende dato (mm-dd)\n"
+"%m gjeldende tid (tt:mm)\n"
+"%M gjeldende tid (tt-mm-ss)"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:24
 #: frontend/apps/filemanager/filemanagercollection.lua:512
@@ -1539,9 +1571,8 @@ msgstr "Velg alle"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:436
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:553
-#, fuzzy
 msgid "Select in file browser"
-msgstr "(Klassisk modus)"
+msgstr "Velg i filhåndtereren"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:529
 msgid "Filter by authors"
@@ -1584,23 +1615,20 @@ msgid "Arrange books in collection"
 msgstr "Ordne bøker i samlingen"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:574
-#, fuzzy
 msgid "Add all books from a folder"
-msgstr "Legg til favoritter"
+msgstr "Legg til alle bøkene fra en mappe"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:581
 msgid "Add all books from a folder and its subfolders"
 msgstr "Legg til alle bøker fra en mappe og dens undermapper"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:588
-#, fuzzy
 msgid "Add a book to collection"
-msgstr "Legg til favoritter"
+msgstr "Legg til en bok i samlingen"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:613
-#, fuzzy
 msgid "Remove current book from collection"
-msgstr "Fjern fra favoritter"
+msgstr "Ta bort nåværende bok fra samlingen"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:613
 msgid "Add current book to collection"
@@ -1646,9 +1674,8 @@ msgid "Filter new books"
 msgstr "Filtrer på nye bøker"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:938
-#, fuzzy
 msgid "Connect folders"
-msgstr "Velg mappe"
+msgstr "Koble til mapper"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:947
 msgid "Remove collection"
@@ -1663,19 +1690,16 @@ msgid "Enter file type for new books"
 msgstr "Angi filtype for nye bøker"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1060
-#, fuzzy
 msgid "Connected folders: %1"
-msgstr "Opprett ny mappe"
+msgstr "Tilkoblede mapper: %1"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1084
-#, fuzzy
 msgid "Disconnect folder"
-msgstr "Koble fra"
+msgstr "Koble fra mappe"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1099
-#, fuzzy
 msgid "Scan folder on showing collection"
-msgstr "Ordne bøker i samlingen"
+msgstr "Skann mappen når samlingen vises"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1112
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:119
@@ -1687,9 +1711,8 @@ msgid "New collection"
 msgstr "Ny samling"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1201
-#, fuzzy
 msgid "Apply selection"
-msgstr "Legg til"
+msgstr "Bruk valget"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1215
 #: frontend/apps/filemanager/filemanagercollection.lua:1325
@@ -1730,9 +1753,8 @@ msgid "Case sensitive"
 msgstr "Forskjell på små og store bokstaver"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1376
-#, fuzzy
 msgid "Also search in book content (slow)"
-msgstr "Søk også i bokmetadata"
+msgstr "Søk også i bokinnhold (treg)"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1439
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:143
@@ -1796,12 +1818,20 @@ msgid ""
 "\n"
 "Tap a book in the search results to open it."
 msgstr ""
+"Søk etter en bok etter filnavn i gjeldende mappe eller hjemmemappe og "
+"undermappene.\n"
+"\n"
+"Jokertegn for ett '?' eller flere '*'-tegn kan brukes.\n"
+"Et søk etter '*' vil vise alle filer.\n"
+"\n"
+"Sorteringsrekkefølgen er den samme som i filbehandleren.\n"
+"\n"
+"Trykk på en bok i søkeresultatene for å åpne den."
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:59
 #: frontend/dispatcher.lua:150
-#, fuzzy
 msgid "Last file search results"
-msgstr "Fulltekst-søk"
+msgstr "Siste søkeresultat for fil"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:82
 msgid "Enter text to search for in filename"
@@ -1889,9 +1919,8 @@ msgid "Filter by collections"
 msgstr "Filtrer på samlinger"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:337
-#, fuzzy
 msgid "Search in filename and book metadata"
-msgstr "Søk også i bokmetadata"
+msgstr "Søk i filnavn og bokmetadata"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:348
 #: frontend/apps/filemanager/filemanagermenu.lua:303
@@ -1918,9 +1947,8 @@ msgid "Filter by book status"
 msgstr "Filtrere etter status på bok"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:375
-#, fuzzy
 msgid "Enter text to search history for"
-msgstr "Skriv inn tekst for å søke etter i filnavn"
+msgstr "Angi tekst å søke etter i historikken"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:138
 msgid "Cannot open last document"
@@ -1950,9 +1978,8 @@ msgid "Classic mode settings"
 msgstr "Instillinger for \"klassisk\" visningsmodus"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:178
-#, fuzzy
 msgid "Items per page: %1"
-msgstr "Elementer per side"
+msgstr "Elementer per side: %1"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:181
 msgid ""
@@ -1974,9 +2001,8 @@ msgstr "Elementer per side"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:209
 #: frontend/apps/reader/modules/readerfooter.lua:1539
-#, fuzzy
 msgid "Item font size: %1"
-msgstr "Skriftstørrelse på element"
+msgstr "Skriftstørrelse for element: %1"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:216
 #: frontend/apps/reader/modules/readerfooter.lua:1543
@@ -2026,9 +2052,8 @@ msgid "Set home folder"
 msgstr "Sett hjemme-mappe"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:341
-#, fuzzy
 msgid "Current home folder:"
-msgstr "Nåværende mappe"
+msgstr "Nåværende hjemme-mappe:"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:352
 msgid "Shorten home folder"
@@ -2046,20 +2071,27 @@ msgid ""
 "To:\n"
 "`Manga/Cells at Work`."
 msgstr ""
+"«Forkort hjemmemappen» vil vise selve hjemmemappen som «Hjem» i stedet for "
+"hele banen.\n"
+"\n"
+"Forutsatt at hjemmemappen er:\n"
+"`/mnt/onboard/.books`\n"
+"En undermappe vil bli forkortet fra:\n"
+"`/mnt/onboard/.books/Manga/Cells at Work`\n"
+"Til:\n"
+"`Manga/Cells at Work`."
 
 #: frontend/apps/filemanager/filemanagermenu.lua:371
 msgid "Lock home folder"
 msgstr "Lås hjemme-mappen"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:387
-#, fuzzy
 msgid "Show collection mark"
-msgstr "Fjern fra samling"
+msgstr "Vis samlingsmerke"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:400
-#, fuzzy
 msgid "Info lists items per page: %1 / %2"
-msgstr "Elementer per side"
+msgstr "Info viser elementer per side: %1 / %2"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:402
 msgid ""
@@ -2076,19 +2108,16 @@ msgstr ""
 "- Noen få andre plugins"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:413
-#, fuzzy
 msgid "Info lists items per page"
-msgstr "Elementer per side"
+msgstr "Info viser elementer per side"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:415
-#, fuzzy
 msgid "Portrait"
-msgstr "portrett"
+msgstr "Portrett"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:420
-#, fuzzy
 msgid "Landscape"
-msgstr "landskap"
+msgstr "Landskap"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:468
 #: frontend/dispatcher.lua:143
@@ -2207,7 +2236,7 @@ msgstr "Skru på CRE bruksmellomlager"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:792
 msgid "Dump the fontlist cache"
-msgstr ""
+msgstr "Dump skriftliste-hurtigbufferen"
 
 #. @translators This is a debug option to help determine cases when standby failed to initiate properly. PM = power management.
 #: frontend/apps/filemanager/filemanagermenu.lua:801
@@ -2351,39 +2380,32 @@ msgid "Folder shortcuts"
 msgstr "Mappesnarveier"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:55
-#, fuzzy
 msgid "Remove shortcut"
-msgstr "Mappesnarveier"
+msgstr "Slett snarvei"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:62
-#, fuzzy
 msgid "Rename shortcut"
-msgstr "Mappesnarveier"
+msgstr "Bytt navn på snarvei"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:71
-#, fuzzy
 msgid "Paste to folder"
-msgstr "Lim inn fil"
+msgstr "Klistre inn fil i mappe"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:101
-#, fuzzy
 msgid "Enter folder shortcut name"
-msgstr "Legg til ny mappesnarvei"
+msgstr "Angi navn for mappesnarvei"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:148
-#, fuzzy
 msgid "Shortcut already exists."
-msgstr "En snarvei til denne mappa finnes allered."
+msgstr "Snarvei finnes allerede."
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:171
-#, fuzzy
 msgid "Remove from folder shortcuts"
-msgstr "mappesnarveier"
+msgstr "Ta bort fra mappesnarveier"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:180
-#, fuzzy
 msgid "Add to folder shortcuts"
-msgstr "Legg til ny mappesnarvei"
+msgstr "Legg til i mappesnarveier"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:30
 msgid "Home"
@@ -2411,18 +2433,16 @@ msgstr "Tilbakestille dette dokumentet?"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:196
 #: frontend/apps/filemanager/filemanagerutil.lua:249
-#, fuzzy
 msgid "Information will be permanently lost."
-msgstr "Slette fil for godt?"
+msgstr "Informasjonen vil bli tapt permanent."
 
 #: frontend/apps/filemanager/filemanagerutil.lua:217
 msgid "document settings, progress, bookmarks, highlights, notes"
 msgstr "dokumentinnstillinger, fremdrift, bokmerker, høydepunkter, notater"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:224
-#, fuzzy
 msgid "custom cover image"
-msgstr "Omslagsbilde:"
+msgstr "egendefinert omslagsbilde"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:231
 #, fuzzy
@@ -2837,6 +2857,13 @@ msgid ""
 "\n"
 "The alternative status bar can be configured here."
 msgstr ""
+"I CRE-dokumenter kan en alternativ statuslinje vises øverst på skjermen, med "
+"eller uten den vanlige statuslinjen nederst.\n"
+"\n"
+"Aktivering av denne alternative statuslinjen, per dokument eller som "
+"standard, kan gjøres i bunnmenyen.\n"
+"\n"
+"Den alternative statuslinjen kan konfigureres her."
 
 #: frontend/apps/reader/modules/readercoptlistener.lua:363
 #, fuzzy
@@ -3067,10 +3094,9 @@ msgstr "Terskel (%1 MB)"
 
 #: frontend/apps/reader/modules/readerdevicestatus.lua:280
 #: plugins/coverimage.koplugin/main.lua:528
-#, fuzzy
 msgctxt "Data storage size"
 msgid "MB"
-msgstr "M:"
+msgstr "MB"
 
 #: frontend/apps/reader/modules/readerdevicestatus.lua:283
 #, fuzzy
@@ -3123,6 +3149,11 @@ msgid ""
 "\n"
 "Note: presets only store dictionaries, no other settings."
 msgstr ""
+"Denne funksjonen lar deg organisere ordbøker i forhåndsinnstillinger "
+"(for eksempel etter språk). Du kan raskt bytte mellom disse "
+"forhåndsinnstillingene for å endre hvilke ordbøker som brukes til oppslag.\n"
+"\n"
+"Merk: forhåndsinnstillingene lagrer bare ordbøker, ingen andre innstillinger."
 
 #: frontend/apps/reader/modules/readerdictionary.lua:300
 #, fuzzy
@@ -3179,6 +3210,9 @@ msgid ""
 "when looking up words. Only dictionaries that are currently active can be "
 "selected and prioritized."
 msgstr ""
+"Denne funksjonen lar deg angi ordbokprioriteter per bok. Resultater fra "
+"ordbøker med høyere prioritet vises først når du slår opp ord. Bare ordbøker "
+"som er aktive for øyeblikket kan velges og prioriteres."
 
 #: frontend/apps/reader/modules/readerdictionary.lua:453
 msgid "Use external dictionary"
@@ -3527,12 +3561,23 @@ msgid ""
 "your default font is hardly used, you can quickly disable a family font for "
 "this book by unchecking the association."
 msgstr ""
+"I HTML/CSS-baserte dokumenter som EPUB-er kan stilark spesifisere bruk av "
+"fonter etter familie i stedet for et bestemt skriftnavn.\n"
+"Med unntak av monospace og matematikk bruker KOReader standardfonten din for "
+"alle familienavn.\n"
+"Du kan knytte en bestemt skrifttype til hver familie hvis du er opptatt av "
+"skillet.\n"
+"Et langt trykk på et skriftnavn vil gjøre assosiasjonen global (★), slik at "
+"den gjelder for alle bøkene dine. Dette er den foretrukne tilnærmingen.\n"
+"Et trykk vil bare påvirke gjeldende bok.\n"
+"Hvis du støter på en bok der slike familier misbrukes i en slik grad at "
+"standardfonten din knapt brukes, kan du raskt deaktivere en familiefont for "
+"denne boken ved å fjerne merket for tilknytningen."
 
 #. @translators These are typography font family names as used in CSS, they can be kept untranslated if they are used more commonly than their translation
 #: frontend/apps/reader/modules/readerfont.lua:418
-#, fuzzy
 msgid "Serif"
-msgstr "Serie:"
+msgstr "Serif"
 
 #: frontend/apps/reader/modules/readerfont.lua:419
 msgid "Sans-serif"
@@ -3579,6 +3624,11 @@ msgid ""
 "Enabling this will ignore such font names and make sure your preferred "
 "family fonts are used."
 msgstr ""
+"I en CSS-fontfamiliedeklarasjon kan utgivere sette ett eller flere fontnavn "
+"foran et familienavn, som skal brukes hvis de finnes blant innebygde fonter "
+"eller dine egne fonter.\n"
+"Hvis du aktiverer dette, ignoreres slike fontnavn, og du sørger for at dine "
+"foretrukne familiefonter brukes."
 
 #: frontend/apps/reader/modules/readerfont.lua:492
 msgid "(main font)"
@@ -5254,7 +5304,7 @@ msgstr "Trykk for å følge lenker"
 
 #: frontend/apps/reader/modules/readerlink.lua:519
 msgid "Tap on links to follow them."
-msgstr "Trykk på lenker for å følge dem"
+msgstr "Trykk på lenker for å følge dem."
 
 #: frontend/apps/reader/modules/readerlink.lua:522
 msgid "Ignore external links on tap"
@@ -7301,9 +7351,8 @@ msgid "Add hyphenation positions with hyphens ('-') or spaces (' ')."
 msgstr ""
 
 #: frontend/apps/reader/modules/readeruserhyph.lua:316
-#, fuzzy
 msgid "Invalid hyphenation!"
-msgstr "Orddelingstegn"
+msgstr "Ugyldig bindestrek!"
 
 #: frontend/apps/reader/modules/readerview.lua:932
 #, fuzzy
@@ -11447,11 +11496,11 @@ msgstr "Bildebearbeiding"
 
 #: frontend/ui/data/koptoptions.lua:530
 msgid "Enable hardware dithering."
-msgstr "Aktiver maskinvarestyrt bildebearbeiding"
+msgstr "Aktiver maskinvare-dithering."
 
 #: frontend/ui/data/koptoptions.lua:543
 msgid "Enable software dithering."
-msgstr "Aktiver programvarestyrt bildebearbeiding"
+msgstr "Aktiver programvare-dithering."
 
 #: frontend/ui/data/koptoptions.lua:547
 #, fuzzy
@@ -15155,7 +15204,7 @@ msgstr ""
 #: frontend/ui/widget/configdialog.lua:1412
 #: frontend/ui/widget/configdialog.lua:1450
 msgid "Set default %1 to %2?"
-msgstr "Sett forvalg 1% til %2?"
+msgstr "Sett forvalg %1 til %2?"
 
 #: frontend/ui/widget/configdialog.lua:1293
 msgid "Set value"
@@ -19926,9 +19975,8 @@ msgid "Synchronizing lists…"
 msgstr "Synkroniser innstillinger"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1531
-#, fuzzy
 msgid "Up to date!"
-msgstr "Oppdater status"
+msgstr "Oppdatert!"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1537
 msgid "Please choose a folder for sync downloads first"
@@ -21987,8 +22035,8 @@ msgstr "Henter en list over de nyeste artiklene fra Wallabag…"
 #: plugins/wallabag.koplugin/main.lua:971
 msgid "Received a list of 1 article."
 msgid_plural "Received a list of %1 articles."
-msgstr[0] "Mottok en liste med 1 artikkel"
-msgstr[1] "Mottok en liste med %1 artikler"
+msgstr[0] "Mottok en liste med 1 artikkel."
+msgstr[1] "Mottok en liste med %1 artikler."
 
 #: plugins/wallabag.koplugin/main.lua:988
 msgid "Downloaded article %1 of %2…"
