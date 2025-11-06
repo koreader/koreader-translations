@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-05 05:51+0000\n"
-"PO-Revision-Date: 2025-11-05 05:50+0000\n"
+"PO-Revision-Date: 2025-11-06 07:51+0000\n"
 "Last-Translator: rerbin <rerbin@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/koreader/koreader/zh_Hans/>\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.14.1-dev\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: reader.lua:194
 msgid ""
@@ -3346,7 +3346,7 @@ msgstr "字体微调设为: %1"
 
 #: frontend/apps/reader/modules/readerfont.lua:256
 msgid "Font kerning set to: %1"
-msgstr "英文字距已设为: %1"
+msgstr "字距微调已设为: %1"
 
 #: frontend/apps/reader/modules/readerfont.lua:264
 msgid "Word spacing set to: %1%, %2%"
@@ -4746,9 +4746,9 @@ msgid ""
 "Except when in two columns mode, where this is limited to showing only the "
 "previous or next column."
 msgstr ""
-"当文本选择到达左上角时，自动滚动显示上一页的部分内容；当文本选择到达右下角"
-"时，自动滚动显示下一页的部分内容。\n"
-"在双栏模式下，只能显示上一栏或下一栏。"
+"当文本选择到达左上角时，自动滚动显示上一页的部分内容；当文本选择到达右下角时"
+"，自动滚动显示下一页的部分内容。\n"
+"但在双栏模式下除外，此功能仅限于显示上一栏或下一栏的内容。"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:812
 msgid "Crosshairs speed (reader/dict): %1 / %2"
@@ -5746,7 +5746,7 @@ msgstr "每页结果数"
 
 #: frontend/apps/reader/modules/readersearch.lua:189
 msgid "Zoom fixed layout documents to full page"
-msgstr "将固定排版文档缩放至整页"
+msgstr "将固定版式文档缩放至整页"
 
 #: frontend/apps/reader/modules/readersearch.lua:190
 msgid "On searching, temporarily zoom the document to full page."
@@ -7330,8 +7330,8 @@ msgstr ""
 "连续视图（滚动模式）在页面缩放模式设置为适应页面宽度、适应内容宽度或适应行数"
 "时效果最好。\n"
 "\n"
-"在与缩放为适应页面、页面高度、内容高度或列数相结合的情况下，连续视图可能会在"
-"翻页时出现意料不到的偏移。"
+"在与缩放为适应页面、适应页面高度、适应内容高度、适应内容或适应分栏相结合的情"
+"况下，连续视图可能会在翻页时出现意料不到的偏移。"
 
 #: frontend/apps/reader/modules/readerview.lua:1107
 msgid "Contrast set to: %1."
@@ -7625,12 +7625,12 @@ msgstr "内容"
 #: frontend/apps/reader/modules/readerzooming.lua:36
 #: frontend/ui/data/koptoptions.lua:295
 msgid "columns"
-msgstr "列数"
+msgstr "分栏"
 
 #: frontend/apps/reader/modules/readerzooming.lua:37
 #: frontend/ui/data/koptoptions.lua:295
 msgid "rows"
-msgstr "行数"
+msgstr "分行"
 
 #: frontend/apps/reader/modules/readerzooming.lua:38
 #: frontend/ui/data/koptoptions.lua:295
@@ -7655,7 +7655,7 @@ msgstr "适应内容缩放在分页模式下效果最佳。"
 
 #: frontend/apps/reader/modules/readerzooming.lua:92
 msgid "Zoom to fit columns works best with page view."
-msgstr "适应列数缩放在页面视图下效果最佳。"
+msgstr "“适应分栏缩放”在分页视图下效果最佳。"
 
 #: frontend/apps/reader/modules/readerzooming.lua:359
 msgid "Set horizontal overlap"
@@ -7702,9 +7702,9 @@ msgid ""
 "\n"
 "Please enable page view instead of continuous view (scroll mode)."
 msgstr ""
-"手动缩放最适合页面视图。\n"
+"手动缩放最适合分页视图。\n"
 "\n"
-"请启用页面视图而不是连续视图 (滚动模式)。"
+"请启用分页视图而不是连续视图 (滚动模式)。"
 
 #: frontend/apps/reader/modules/readerzooming.lua:715
 msgid "Set Zoom factor"
@@ -8793,7 +8793,7 @@ msgstr "可重排文档 （epub, fb2, txt…）"
 
 #: frontend/dispatcher.lua:1035 plugins/httpinspector.koplugin/main.lua:1055
 msgid "Fixed layout documents (pdf, djvu, pics…)"
-msgstr "固定排版文档 （pdf, djvu, pics…）"
+msgstr "固定版式文档 （pdf, djvu, pics…）"
 
 #: frontend/dispatcher.lua:1082 plugins/profiles.koplugin/main.lua:137
 msgid "Show as QuickMenu"
@@ -8920,9 +8920,9 @@ msgid ""
 "This is disabled in scroll mode. Switching from page mode with two columns "
 "to scroll mode will cause the document to be re-rendered."
 msgstr ""
-"以一半的屏幕宽度显示文档并在一页中一次性显示两个页面。这使得它看起来像两"
-"栏。\n"
-"此行为在滚动模式会被禁用，从两栏的页面模式切换到滚动模式将会重新渲染文档。"
+"将文档渲染为半屏宽度，并同时显示两页，共享一个页码。这使得文档看起来像是双栏"
+"排版。\n"
+"此行为在滚动模式会被禁用，从双栏的页面模式切换到滚动模式将会重新渲染文档。"
 
 #: frontend/ui/data/creoptions.lua:135
 msgid "L/R Margins"
@@ -9251,7 +9251,7 @@ msgstr ""
 
 #: frontend/ui/data/creoptions.lua:646
 msgid "Font Kerning"
-msgstr "英文字距"
+msgstr "字距微调"
 
 #: frontend/ui/data/creoptions.lua:647 frontend/ui/data/creoptions.lua:722
 msgid "fast"
@@ -9281,17 +9281,16 @@ msgid ""
 "(Font Hinting may need to be adjusted for the best result with either "
 "kerning implementation.)"
 msgstr ""
-"英文字距（英文字符间距调整）是调整(英文)单独字符间距的过程，用于实现令人愉悦"
-"的视觉结果。\n"
+"字距微调是指调整特定字母组合之间的间距，以获得更悦目的视觉效果。\n"
 "\n"
-"- 关闭 (off)：不进行英文字符间距调整。\n"
-"- 快速 (fast)：使用 FreeType 的调整实现（没有合字）。\n"
-"- 良好 (good)：使用 Harfbuzz 轻量调整实现（比“最好”快，但没有合字且对非西文脚"
-"本的支持有限）。\n"
-"- 最佳 (best)：使用 Harfbuzz 完整调整实现（较慢，但可能支持部分字体的合字；也"
-"是正确显示连笔阿拉伯字形及其他一些文字所必需的）。\n"
+"- 关闭 (off)：不调整。\n"
+"- 快速 (fast)：使用 FreeType 的微调实现（不支持连字）。\n"
+"- 良好 (good)：使用 HarfBuzz 的轻度微调实现（比“最佳”更快，但不支持连字，对非"
+"西方文字的支持有限）。\n"
+"- 最佳 (best)：使用 HarfBuzz 的完整微调实现（速度较慢，但可能支持某些字体的连"
+"字；也是正确显示阿拉伯语连字等复杂文字所必需的）。\n"
 "\n"
-"（上述任一字距调整实现方法可能都需要调整字体微调(Hinting)。）"
+"（为达到最佳效果，在使用任意微调实现时，可能都需要相应调整 字体微调设置）"
 
 #: frontend/ui/data/creoptions.lua:669
 msgid "Alt Status Bar"
@@ -9665,7 +9664,7 @@ msgstr "文档方向 从左至右"
 
 #: frontend/ui/data/css_tweaks.lua:345
 msgid "Hyphenation, ligatures, ruby"
-msgstr "断字、合字与注音"
+msgstr "断字、连字与注音"
 
 #: frontend/ui/data/css_tweaks.lua:348
 msgid "Allow hyphenation on all text"
@@ -9695,13 +9694,13 @@ msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:365
 msgid "Disable common ligatures"
-msgstr "禁用通用/标准合字"
+msgstr "禁用标准连字"
 
 #: frontend/ui/data/css_tweaks.lua:366
 msgid ""
 "Disable common ligatures, which are enabled by default in 'best' kerning "
 "mode."
-msgstr "禁用标准合字，它们默认在“最佳”英文字距调整模式下启用。"
+msgstr "禁用标准合字，它们默认在“最佳”字距调整模式下启用。"
 
 #: frontend/ui/data/css_tweaks.lua:375
 msgid "Ruby"
@@ -11256,7 +11255,7 @@ msgstr "水平重叠"
 
 #: frontend/ui/data/koptoptions.lua:179
 msgid "Set horizontal zoom overlap (between columns)."
-msgstr "设置水平缩放重叠 (列之间)。"
+msgstr "设置水平缩放重叠量（分栏之间）。"
 
 #: frontend/ui/data/koptoptions.lua:183
 msgid "Vertical overlap"
@@ -11278,17 +11277,17 @@ msgstr "设置如何调整页面大小以适合屏幕。"
 #: plugins/coverbrowser.koplugin/main.lua:216
 #: plugins/coverbrowser.koplugin/main.lua:264
 msgid "Rows"
-msgstr "列"
+msgstr "行数"
 
 #: frontend/ui/data/koptoptions.lua:223
 #: plugins/coverbrowser.koplugin/main.lua:210
 #: plugins/coverbrowser.koplugin/main.lua:258
 msgid "Columns"
-msgstr "分栏数"
+msgstr "列数"
 
 #: frontend/ui/data/koptoptions.lua:249
 msgid "Set the number of columns or rows into which to split the page."
-msgstr "设置要把页面分隔成的列或行数。"
+msgstr "设置页面分割的列数/行数。"
 
 #: frontend/ui/data/koptoptions.lua:253
 msgid "Zoom factor"
@@ -11586,7 +11585,7 @@ msgstr "缩进"
 
 #: frontend/ui/data/koptoptions.lua:635
 msgid "Document Columns"
-msgstr "文档列数"
+msgstr "文档分栏数"
 
 #: frontend/ui/data/koptoptions.lua:647
 msgid ""
@@ -11595,7 +11594,7 @@ msgid ""
 "You might need to set it to 1 column if, in a full width document, text is "
 "incorrectly detected as multiple columns because of unlucky word spacing."
 msgstr ""
-"在重排模式下，设置检测原始文档中列数的最大值。\n"
+"在重排模式下，设置检测原始文档中分栏数的最大值。\n"
 "如果在一个本应是单栏的文档中，由于不佳的文字间距导致文本被错误地检测为多栏，"
 "您可能需要将此值设为 1。"
 
@@ -15996,7 +15995,7 @@ msgid ""
 "\n"
 "Any multiswipe will close the page browser."
 msgstr ""
-"沿屏幕的顶部或左边滑动可以更改缩略图的列或行数。\n"
+"沿屏幕的顶部或左边滑动可以更改缩略图的列数或行数。\n"
 "\n"
 "垂直滑动可以移动一行，水平滑动可以移动一页。\n"
 "\n"
@@ -21391,10 +21390,10 @@ msgstr ""
 "\n"
 "环境变量 TERMINAL_HOME 包含了安装路径，而 TERMINAL_DATA 包含了数据路径。\n"
 "\n"
-"终端启动时执行的命令可以放置于：\n"
+"终端启动时执行的命令可以放在：\n"
 "'$TERMINAL_DATA/scripts/profile.user'。\n"
 "\n"
-"常用命令的别名（捷径）可以放置于：\n"
+"常用命令的别名（快捷方式）可以放在：\n"
 "'$TERMINAL_DATA/scripts/aliases'。"
 
 #: plugins/terminal.koplugin/main.lua:559
@@ -22440,9 +22439,9 @@ msgid ""
 "can be reflowed. Special flow directions for reading double column PDFs and "
 "manga."
 msgstr ""
-"支持固定页面格式（PDF、DjVu、CBT、CBZ）和可重排电子书格式（EPUB、FB2、Mobi、"
-"DOC、CHM、TXT、HTML）。扫描的 PDF/DjVu 文档可以重排。用于阅读双栏 PDF 和漫画"
-"的特殊排版。"
+"支持固定版式格式（PDF、DjVu、CBT、CBZ）和可重排电子书格式（EPUB、FB2、Mobi、"
+"DOC、CHM、TXT、HTML）。扫描版的 PDF/DjVu 文档也可以进行重排。对于双栏 PDF 和"
+"漫画，还提供特殊的阅读方向模式。"
 
 #: tools/update-metadata.lua:34
 msgid ""
