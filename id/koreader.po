@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-05 05:51+0000\n"
-"PO-Revision-Date: 2025-08-22 04:27+0000\n"
-"Last-Translator: Locid <btq83grk@duck.com>\n"
+"PO-Revision-Date: 2025-11-07 06:22+0000\n"
+"Last-Translator: Doy Bachtiar <blbblb669@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/koreader/"
 "koreader/id/>\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.13\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 #: reader.lua:194
 msgid ""
@@ -137,7 +137,6 @@ msgid "N/A"
 msgstr "Tidak ada"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:245
-#, fuzzy
 msgid ""
 "Filename:\n"
 "%1\n"
@@ -154,11 +153,14 @@ msgstr ""
 "Nama file:\n"
 "%1\n"
 "\n"
-"Unduh nama file:\n"
+"Ukuran:\n"
 "%2\n"
 "\n"
+"Unduh nama file:\n"
+"%3\n"
+"\n"
 "Unduh folder:\n"
-"%3"
+"%4"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:258
 #: frontend/apps/filemanager/filemanagerutil.lua:377
@@ -365,17 +367,17 @@ msgstr "Sinkronkan pengaturan"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:459
 msgid "No files to download from Dropbox."
-msgstr "Tidak ada file untuk diunduh dari Dropbox."
+msgstr "Tidak ada berkas untuk diunduh dari Dropbox."
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:461
 msgid "Successfully downloaded 1 file from Dropbox to local storage."
 msgid_plural "Successfully downloaded %1 files from Dropbox to local storage."
-msgstr[0] "Berhasil mengunduh %1 file dari Dropbox ke penyimpanan lokal."
+msgstr[0] "Berhasil mengunduh %1 berkas dari Dropbox ke penyimpanan lokal."
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:463
 msgid "Failed to download 1 file."
 msgid_plural "Failed to download %1 files."
-msgstr[0] "Gagal mengunduh %1 file."
+msgstr[0] "Gagal mengunduh %1 berkas."
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:473
 msgid ""
@@ -540,21 +542,28 @@ msgid ""
 "\n"
 "Some of the previously generated long-lived tokens are still valid."
 msgstr ""
+"Token akses Dropbox berjangka pendek (4 jam).\n"
+"Untuk membuat token akses baru, gunakan Dropbox refresh token dan string "
+"<APP_KEY>:<APP_SECRET>.\n"
+"\n"
+"Beberapa token berjangka panjang sebelumnya masih valid."
 
 #: frontend/apps/cloudstorage/dropbox.lua:108
 msgid "Dropbox cloud storage"
 msgstr "Penyimpanan Awan DropBox"
 
 #: frontend/apps/cloudstorage/dropbox.lua:112
-#, fuzzy
 msgid "Cloud storage displayed name"
-msgstr "Penyimpanan Cloud"
+msgstr "Nama penyimpanan Cloud"
 
 #: frontend/apps/cloudstorage/dropbox.lua:116
+#, fuzzy
 msgid ""
 "Dropbox refresh token\n"
 "or long-lived token (deprecated)"
 msgstr ""
+"token pembaruan Dropbox\n"
+"atau token jangka panjang (deprecated)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:120
 msgid ""
@@ -566,7 +575,7 @@ msgstr ""
 
 #: frontend/apps/cloudstorage/dropbox.lua:124
 msgid "Dropbox folder (/ for root)"
-msgstr ""
+msgstr "Folder Dropbox (/ untuk root)"
 
 #: frontend/apps/cloudstorage/dropbox.lua:144
 #: frontend/apps/cloudstorage/webdav.lua:147
@@ -618,7 +627,7 @@ msgstr ""
 #: frontend/apps/cloudstorage/dropboxapi.lua:218
 #: frontend/apps/cloudstorage/webdavapi.lua:156
 msgid "Long-press to choose current folder"
-msgstr "Tahan untuk memilih folder ini."
+msgstr "Tekan lama untuk memilih folder ini"
 
 #: frontend/apps/cloudstorage/ftp.lua:30
 msgid ""
@@ -711,7 +720,7 @@ msgstr "Pengaturan penyimpanan awan"
 #: frontend/apps/cloudstorage/syncservice.lua:67
 #, fuzzy
 msgid "Choose cloud service:"
-msgstr "Pilih penyedia cloud:"
+msgstr "Pilih penyedia layanan cloud:"
 
 #: frontend/apps/cloudstorage/syncservice.lua:72
 #, fuzzy
@@ -719,13 +728,10 @@ msgid "Add service"
 msgstr "Tambahkan penyedia"
 
 #: frontend/apps/cloudstorage/syncservice.lua:140
-#, fuzzy
 msgid ""
 "Something went wrong when syncing, please check your network connection and "
 "try again later."
-msgstr ""
-"Sesuatu terjadi ketika menghubungkan data, mohon cek kembali koneksi "
-"jaringan dan coba lagi nanti."
+msgstr "Sinkronisasi error, cek koneksi jaringan dan coba lagi nanti."
 
 #: frontend/apps/cloudstorage/syncservice.lua:149
 msgid "Wrong server type."
@@ -736,90 +742,95 @@ msgid "Successfully synchronized."
 msgstr "Berhasil dihubungkan."
 
 #: frontend/apps/cloudstorage/webdav.lua:90
+#, fuzzy
 msgid ""
 "Server address must be of the form http(s)://domain.name/path\n"
 "This can point to a sub-directory of the WebDAV server.\n"
 "The start folder is appended to the server path."
 msgstr ""
+"Alamat server harus berformat http(s)://domain.nama/path\n"
+"Bisa terhubung ke sub-directory di server WebDAV.\n"
+"Folder awal akan tertambah ke path server."
 
 #: frontend/apps/cloudstorage/webdav.lua:96
 msgid "Edit WebDAV account"
-msgstr ""
+msgstr "Ubah akun WebDAV"
 
 #: frontend/apps/cloudstorage/webdav.lua:103
 msgid "Add WebDAV account"
-msgstr ""
+msgstr "Tambah akun WebDAV"
 
 #: frontend/apps/cloudstorage/webdav.lua:110
 msgid "Server display name"
-msgstr ""
+msgstr "Nama tampilan server"
 
 #: frontend/apps/cloudstorage/webdav.lua:114
 msgid "WebDAV address, for example https://example.com/dav"
-msgstr ""
+msgstr "Alamat WebDAV, misal https://example.com/dav"
 
 #: frontend/apps/cloudstorage/webdav.lua:118
 #: plugins/exporter.koplugin/target/nextcloud.lua:46
 #: plugins/exporter.koplugin/target/nextcloud.lua:47
 #: plugins/wallabag.koplugin/main.lua:1473
 msgid "Username"
-msgstr ""
+msgstr "Nama pengguna"
 
 #: frontend/apps/cloudstorage/webdav.lua:123
 #: plugins/wallabag.koplugin/main.lua:1478
 msgid "Password"
-msgstr ""
+msgstr "Sandi"
 
 #: frontend/apps/cloudstorage/webdav.lua:127
 msgid "Start folder, for example /books"
-msgstr ""
+msgstr "Folder awal, misal /pustaka"
 
 #: frontend/apps/filemanager/filemanager.lua:48
 #: plugins/exporter.koplugin/target/nextcloud.lua:13
 msgid "KOReader"
-msgstr ""
+msgstr "KOReader"
 
 #: frontend/apps/filemanager/filemanager.lua:200
 msgctxt "File"
 msgid "Paste"
-msgstr ""
+msgstr "Tempel"
 
 #: frontend/apps/filemanager/filemanager.lua:208
 #: frontend/apps/filemanager/filemanagercollection.lua:548
 #: frontend/apps/reader/modules/readerhighlight.lua:73
 #: frontend/ui/widget/inputtext.lua:253
 msgid "Select"
-msgstr ""
+msgstr "Pilih"
 
 #: frontend/apps/filemanager/filemanager.lua:220
 #: frontend/apps/filemanager/filemanager.lua:1202 frontend/ui/presets.lua:246
 #: frontend/ui/presets.lua:251
 msgid "Rename"
-msgstr ""
+msgstr "Ubah nama"
 
 #: frontend/apps/filemanager/filemanager.lua:238
 msgid "Cut"
-msgstr ""
+msgstr "Potong"
 
 #: frontend/apps/filemanager/filemanager.lua:246
 msgctxt "File"
 msgid "Copy"
-msgstr ""
+msgstr "Salin"
 
 #: frontend/apps/filemanager/filemanager.lua:291
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:444
 msgid "Open with…"
-msgstr ""
+msgstr "Buka dengan…"
 
 #: frontend/apps/filemanager/filemanager.lua:309
 #: frontend/apps/filemanager/filemanager.lua:682
+#, fuzzy
 msgid "Set as HOME folder"
-msgstr ""
+msgstr "Atur sebagai folder HOME"
 
 #: frontend/apps/filemanager/filemanager.lua:447
 #: frontend/apps/reader/modules/readerback.lua:179
 msgid "Exit KOReader?"
-msgstr ""
+msgstr "Keluar KOReader?"
 
 #: frontend/apps/filemanager/filemanager.lua:448
 #: frontend/apps/reader/modules/readerback.lua:180
@@ -827,37 +838,39 @@ msgstr ""
 #: frontend/ui/elements/common_exit_menu_table.lua:9
 #: frontend/ui/elements/common_exit_menu_table.lua:16
 msgid "Exit"
-msgstr ""
+msgstr "Keluar"
 
 #: frontend/apps/filemanager/filemanager.lua:534
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:504
 msgid "1 file selected"
 msgid_plural "%1 files selected"
-msgstr[0] ""
+msgstr[0] "%1 berkas terpilih"
 
 #: frontend/apps/filemanager/filemanager.lua:535
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:505
 msgid "No files selected"
-msgstr ""
+msgstr "Tidak ada berkas terpilih"
 
 #: frontend/apps/filemanager/filemanager.lua:543
 msgid ""
 "Delete selected files?\n"
 "If you delete a file, it is permanently lost."
 msgstr ""
+"Hapus berkas terpilih?\n"
+"Jika berkas dihapus, maka akan hilang selamanya."
 
 #: frontend/apps/filemanager/filemanager.lua:553
 #: frontend/apps/filemanager/filemanager.lua:988
 #: frontend/apps/filemanager/filemanager.lua:1259
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:965
 msgid "Move"
-msgstr ""
+msgstr "Pindah"
 
 #: frontend/apps/filemanager/filemanager.lua:561
 #: frontend/apps/filemanager/filemanager.lua:991
 #: frontend/apps/reader/modules/readerlink.lua:146
 msgid "Copy"
-msgstr ""
+msgstr "Salin"
 
 #: frontend/apps/filemanager/filemanager.lua:581
 #: plugins/exporter.koplugin/_meta.lua:4 plugins/exporter.koplugin/main.lua:316
@@ -870,11 +883,11 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:510
 #: frontend/apps/reader/modules/readerbookmark.lua:826
 msgid "Deselect all"
-msgstr ""
+msgstr "Batal pilih semuanya"
 
 #: frontend/apps/filemanager/filemanager.lua:602
 msgid "Select all files in folder"
-msgstr ""
+msgstr "Pilih semua berkas dalam folder"
 
 #: frontend/apps/filemanager/filemanager.lua:611
 #: frontend/apps/filemanager/filemanagercollection.lua:429
@@ -886,17 +899,17 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanager.lua:618
 msgid "Show selected files list"
-msgstr ""
+msgstr "Tampilkan daftar berkas terpilih"
 
 #: frontend/apps/filemanager/filemanager.lua:654
 msgid "Select files"
-msgstr ""
+msgstr "Pilih berkas"
 
 #: frontend/apps/filemanager/filemanager.lua:672
 #: frontend/apps/reader/modules/readerbookmark.lua:1334
 #: frontend/ui/widget/inputtext.lua:264
 msgid "Paste"
-msgstr ""
+msgstr "Tempel"
 
 #: frontend/apps/filemanager/filemanager.lua:691
 msgid "Go to HOME folder"
@@ -908,15 +921,15 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanager.lua:726
 msgid "Switch to SDCard"
-msgstr ""
+msgstr "Ganti ke SDCard"
 
 #: frontend/apps/filemanager/filemanager.lua:726
 msgid "Switch to internal storage"
-msgstr ""
+msgstr "Ganti ke penyimpanan internal"
 
 #: frontend/apps/filemanager/filemanager.lua:746
 msgid "Import files here"
-msgstr ""
+msgstr "Impor berkas ke sini"
 
 #: frontend/apps/filemanager/filemanager.lua:864
 msgid "Set '%1' as HOME folder?"
@@ -924,39 +937,43 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanager.lua:865
 msgid "Set as HOME"
-msgstr ""
+msgstr "Jadikan HOME"
 
 #: frontend/apps/filemanager/filemanager.lua:887
 msgid "Do you want to open %1?"
-msgstr ""
+msgstr "Apakah Anda ingin buka %1?"
 
 #: frontend/apps/filemanager/filemanager.lua:888
 #: frontend/apps/filemanager/filemanager.lua:1510
 #: frontend/ui/widget/textviewer.lua:699 frontend/ui/widget/touchmenu.lua:1213
 #: plugins/texteditor.koplugin/main.lua:445
 msgid "Open"
-msgstr ""
+msgstr "Buka"
 
 #. @translators Another file. This is a button on the open random file dialog. It presents a file with the choices Open/Another.
 #: frontend/apps/filemanager/filemanager.lua:894
 msgid "Another"
-msgstr ""
+msgstr "Lainnya"
 
 #: frontend/apps/filemanager/filemanager.lua:901
 msgid "File not found"
-msgstr ""
+msgstr "Berkas tidak ditemukan"
 
 #: frontend/apps/filemanager/filemanager.lua:963
 msgid ""
 "File already exists:\n"
 "%1"
 msgstr ""
+"Berkas sudah ada:\n"
+"%1"
 
 #: frontend/apps/filemanager/filemanager.lua:964
 msgid ""
 "Folder already exists:\n"
 "%1"
 msgstr ""
+"Folder sudah ada:\n"
+"%1"
 
 #: frontend/apps/filemanager/filemanager.lua:968
 #: frontend/apps/filemanager/filemanager.lua:1256
@@ -966,15 +983,15 @@ msgstr ""
 #: plugins/opds.koplugin/opdsbrowser.lua:1758
 #: plugins/vocabbuilder.koplugin/main.lua:576
 msgid "Overwrite"
-msgstr ""
+msgstr "Timpa"
 
 #: frontend/apps/filemanager/filemanager.lua:987
 msgid "Move selected files to the current folder?"
-msgstr ""
+msgstr "Pindah berkas dipilih ke folder ini?"
 
 #: frontend/apps/filemanager/filemanager.lua:990
 msgid "Copy selected files to the current folder?"
-msgstr ""
+msgstr "Salin berkas terpilih ke folder ini?"
 
 #: frontend/apps/filemanager/filemanager.lua:1003
 #, fuzzy
@@ -984,7 +1001,7 @@ msgstr "Mengambil file…"
 #: frontend/apps/filemanager/filemanager.lua:1047
 msgid "1 file was not moved"
 msgid_plural "%1 files were not moved"
-msgstr[0] ""
+msgstr[0] "%1 berkas tidak terpindah"
 
 #: frontend/apps/filemanager/filemanager.lua:1048
 msgid "1 file was not copied"
@@ -996,30 +1013,36 @@ msgid ""
 "Failed to create folder:\n"
 "%1"
 msgstr ""
+"Gagal membuat folder:\n"
+"%1"
 
 #: frontend/apps/filemanager/filemanager.lua:1110
 msgid ""
 "File not found:\n"
 "%1"
 msgstr ""
+"Berkas tidak ditemukan:\n"
+"%1"
 
 #: frontend/apps/filemanager/filemanager.lua:1116
 msgid "Delete file permanently?"
-msgstr ""
+msgstr "Hapus permanen berkas ini?"
 
 #: frontend/apps/filemanager/filemanager.lua:1116
 msgid "Delete folder permanently?"
-msgstr ""
+msgstr "Hapus permanen folder ini?"
 
 #: frontend/apps/filemanager/filemanager.lua:1118
 msgid "Book settings, highlights and notes will be deleted."
-msgstr ""
+msgstr "Pengaturan buku, sorotan dan catatan akan terhapus."
 
 #: frontend/apps/filemanager/filemanager.lua:1153
 msgid ""
 "Failed to delete:\n"
 "%1"
 msgstr ""
+"Gagal terhapus:\n"
+"%1"
 
 #: frontend/apps/filemanager/filemanager.lua:1180
 #, fuzzy
@@ -1029,11 +1052,11 @@ msgstr[0] "Gagal mengunduh %1 file."
 
 #: frontend/apps/filemanager/filemanager.lua:1191
 msgid "Rename file"
-msgstr ""
+msgstr "Rubah nama berkas"
 
 #: frontend/apps/filemanager/filemanager.lua:1191
 msgid "Rename folder"
-msgstr ""
+msgstr "Rubah nama folder"
 
 #: frontend/apps/filemanager/filemanager.lua:1234
 msgid ""
@@ -1042,6 +1065,10 @@ msgid ""
 "to:\n"
 "%2"
 msgstr ""
+"Gagal merubah nama:\n"
+"%1\n"
+"menjadi:\n"
+"%2"
 
 #: frontend/apps/filemanager/filemanager.lua:1245
 msgid ""
@@ -1049,6 +1076,9 @@ msgid ""
 "%1\n"
 "File cannot be renamed."
 msgstr ""
+"Folder sudah ada:\n"
+"%1\n"
+"Tidak bisa merubah nama berkas."
 
 #: frontend/apps/filemanager/filemanager.lua:1247
 msgid ""
@@ -1056,6 +1086,9 @@ msgid ""
 "%1\n"
 "Folder cannot be renamed."
 msgstr ""
+"File sudah ada:\n"
+"%1\n"
+"Tidak bisa merubah nama folder."
 
 #: frontend/apps/filemanager/filemanager.lua:1255
 msgid ""
@@ -1063,6 +1096,9 @@ msgid ""
 "%1\n"
 "Overwrite file?"
 msgstr ""
+"Berkas sudah ada:\n"
+"%1\n"
+"Timpa berkas?"
 
 #: frontend/apps/filemanager/filemanager.lua:1258
 msgid ""
@@ -1070,10 +1106,13 @@ msgid ""
 "%1\n"
 "Move the folder inside it?"
 msgstr ""
+"Folder sudah ada:\n"
+"%1\n"
+"Pindah folder ke dalamnya?"
 
 #: frontend/apps/filemanager/filemanager.lua:1397
 msgid "Selected files (%1)"
-msgstr ""
+msgstr "Berkas terpilih (%1)"
 
 #. @translators %1 is the provider name, such as Cool Reader Engine or MuPDF.
 #: frontend/apps/filemanager/filemanager.lua:1419
@@ -1100,7 +1139,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanager.lua:1527
 #: frontend/ui/elements/common_settings_menu_table.lua:400
 msgid "Always"
-msgstr ""
+msgstr "Selalu"
 
 #: frontend/apps/filemanager/filemanager.lua:1526
 msgid "Always open %2 files with %1?"
@@ -1108,12 +1147,12 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanager.lua:1544
 msgid "Open %1 with:"
-msgstr ""
+msgstr "Buka %1 dengan:"
 
 #: frontend/apps/filemanager/filemanager.lua:1575
 #: plugins/coverbrowser.koplugin/main.lua:67
 msgid "Classic (filename only)"
-msgstr ""
+msgstr "Klasik (Hanya nama berkas)"
 
 #: frontend/apps/filemanager/filemanager.lua:1643
 msgid "Last book is the first file in the folder. No previous file to open."
@@ -1127,26 +1166,26 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagerutil.lua:288
 #: frontend/dispatcher.lua:204 plugins/opds.koplugin/opdsbrowser.lua:956
 msgid "Book information"
-msgstr ""
+msgstr "Informasi buku"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:43
 msgid "Cover image:"
-msgstr ""
+msgstr "Gambar sampul:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:44
 #: plugins/calibre.koplugin/search.lua:144
 msgid "Title:"
-msgstr ""
+msgstr "Judul:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:45
 #: plugins/calibre.koplugin/search.lua:145
 msgid "Author(s):"
-msgstr ""
+msgstr "Penulis:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:46
 #: plugins/calibre.koplugin/search.lua:153
 msgid "Series:"
-msgstr ""
+msgstr "Serial:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:47
 msgid "Series index:"
@@ -1154,44 +1193,44 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:48
 msgid "Language:"
-msgstr ""
+msgstr "Bahasa:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:49
 msgid "Keywords:"
-msgstr ""
+msgstr "Kata kunci:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:50
 msgid "Description:"
-msgstr ""
+msgstr "Deskripsi:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:51
 msgid "Pages:"
-msgstr ""
+msgstr "Halaman:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:95
 msgid "Filename:"
-msgstr ""
+msgstr "Nama berkas:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:96
 msgid "Format:"
-msgstr ""
+msgstr "Format:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:97
 #: plugins/calibre.koplugin/search.lua:146
 msgid "Size:"
-msgstr ""
+msgstr "Ukuran:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:98
 msgid "File date:"
-msgstr ""
+msgstr "Tanggal berkas:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:99
 msgid "Folder:"
-msgstr ""
+msgstr "Folder:"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:112
 msgid "Tap to display"
-msgstr ""
+msgstr "Sentuh untuk tampilkan"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:172
 #, fuzzy
@@ -1261,11 +1300,11 @@ msgstr "Pilih folder"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:423
 msgid "No book description available."
-msgstr ""
+msgstr "Deskripsi buku tidak tersedia."
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:440
 msgid "No cover image available."
-msgstr ""
+msgstr "Gambar sampul tidak tersedia."
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:581
 #, fuzzy
@@ -1443,7 +1482,7 @@ msgstr "Penghapusan artikel"
 #: frontend/apps/filemanager/filemanagercollection.lua:25
 #: frontend/dispatcher.lua:61
 msgid "Favorites"
-msgstr ""
+msgstr "Favorit"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:273
 #: frontend/apps/filemanager/filemanagercollection.lua:342
@@ -1463,9 +1502,8 @@ msgid "No books selected"
 msgstr "Penghapusan artikel"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:346
-#, fuzzy
 msgid "Remove selected books from collection?"
-msgstr "Penghapusan artikel"
+msgstr "Hapus buku-buku terpilih dari koleksi?"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:347
 #: frontend/apps/filemanager/filemanagercollection.lua:1311
@@ -1687,9 +1725,8 @@ msgid "Collection already exists: %1"
 msgstr ""
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1310
-#, fuzzy
 msgid "Remove collection?"
-msgstr "Penghapusan artikel"
+msgstr "Hapus koleksi?"
 
 #: frontend/apps/filemanager/filemanagercollection.lua:1339
 #: frontend/apps/reader/modules/readersearch.lua:275
@@ -1739,23 +1776,23 @@ msgstr "Penghapusan artikel"
 #: frontend/apps/filemanager/filemanagerconverter.lua:18
 #: plugins/exporter.koplugin/target/markdown.lua:64
 msgid "Markdown"
-msgstr ""
+msgstr "Markdown"
 
 #: frontend/apps/filemanager/filemanagerconverter.lua:83
 msgid "Convert %1 to:"
-msgstr ""
+msgstr "Konversi %1 ke:"
 
 #: frontend/apps/filemanager/filemanagerconverter.lua:87
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: frontend/apps/filemanager/filemanagerconverter.lua:94
 msgid "Overwrite existing HTML file?"
-msgstr ""
+msgstr "Timpa berkas HTML yang sudah ada?"
 
 #: frontend/apps/filemanager/filemanagerconverter.lua:126
 msgid "Convert"
-msgstr ""
+msgstr "Konversi"
 
 #. @translators Search for files by name.
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:45
@@ -1788,12 +1825,12 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:94
 msgid "Home folder"
-msgstr ""
+msgstr "Folder beranda"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:102
 #: plugins/profiles.koplugin/main.lua:728
 msgid "Current folder"
-msgstr ""
+msgstr "folder sekarang"
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:102
 #, fuzzy
@@ -1806,7 +1843,7 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:256
 msgid "No results for '%1'."
-msgstr ""
+msgstr "Tidak ada hasil untuk '%1'."
 
 #: frontend/apps/filemanager/filemanagerfilesearcher.lua:267
 msgid "1 book has been skipped."
@@ -1841,7 +1878,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagerhistory.lua:17
 #: frontend/dispatcher.lua:59
 msgid "History"
-msgstr ""
+msgstr "Riwayat"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:145
 #, fuzzy
@@ -1855,7 +1892,7 @@ msgstr "Abaikan tag (%1)"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:246
 msgid "Remove from history"
-msgstr ""
+msgstr "Hapus dari riwayat"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:300
 #: frontend/apps/reader/modules/readerbookmark.lua:903
@@ -1875,12 +1912,12 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagerhistory.lua:348
 #: frontend/apps/filemanager/filemanagermenu.lua:303
 msgid "Clear history of deleted files"
-msgstr ""
+msgstr "Bersihkan riwayat berkas terhapus"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:351
 #: frontend/apps/filemanager/filemanagermenu.lua:306
 msgid "Clear history of deleted files?"
-msgstr ""
+msgstr "Bersihkan riwayat berkas yang sudah terhapus?"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:352
 #: frontend/apps/filemanager/filemanagermenu.lua:307
@@ -1890,7 +1927,7 @@ msgstr ""
 #: plugins/batterystat.koplugin/main.lua:196
 #: plugins/coverimage.koplugin/main.lua:544
 msgid "Clear"
-msgstr ""
+msgstr "Bersihkan"
 
 #: frontend/apps/filemanager/filemanagerhistory.lua:365
 msgid "Filter by book status"
@@ -2212,7 +2249,7 @@ msgstr "Mulai ulang KOReader"
 #: frontend/apps/filemanager/filemanagermenu.lua:961
 #: frontend/apps/reader/modules/readerbookmark.lua:229
 msgid "Sort by: %1"
-msgstr ""
+msgstr "Urutkan dengan: %1"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:969
 #: frontend/ui/elements/common_settings_menu_table.lua:462
@@ -2222,15 +2259,15 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanagermenu.lua:970
 msgid "history"
-msgstr ""
+msgstr "riwayat"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:971
 msgid "favorites"
-msgstr ""
+msgstr "favorit"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:972
 msgid "folder shortcuts"
-msgstr ""
+msgstr "pintasan berkas"
 
 #: frontend/apps/filemanager/filemanagermenu.lua:973
 msgid "last file"
@@ -2304,7 +2341,7 @@ msgstr ""
 #: frontend/apps/filemanager/filemanagershortcuts.lua:12
 #: frontend/dispatcher.lua:148 frontend/ui/widget/pathchooser.lua:161
 msgid "Folder shortcuts"
-msgstr ""
+msgstr "Pintasan folder"
 
 #: frontend/apps/filemanager/filemanagershortcuts.lua:55
 msgid "Remove shortcut"
@@ -2384,7 +2421,7 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanagerutil.lua:269
 msgid "Show folder"
-msgstr ""
+msgstr "Tampilkan folder"
 
 #: frontend/apps/filemanager/filemanagerutil.lua:301
 #: frontend/dispatcher.lua:206 plugins/opds.koplugin/opdsbrowser.lua:949
@@ -2399,7 +2436,7 @@ msgstr ""
 #. @translators This is the script's programming language (e.g., shell or python)
 #: frontend/apps/filemanager/filemanagerutil.lua:329
 msgid "Execute %1 script"
-msgstr ""
+msgstr "Jalankan %1 script"
 
 #. @translators %1 is the script's programming language (e.g., shell or python), %2 is the filename
 #: frontend/apps/filemanager/filemanagerutil.lua:343
@@ -2408,7 +2445,7 @@ msgstr ""
 
 #: frontend/apps/filemanager/filemanagerutil.lua:358
 msgid "The script exited successfully."
-msgstr ""
+msgstr "Script berhasil keluar."
 
 #: frontend/apps/filemanager/filemanagerutil.lua:363
 msgid "The script returned a non-zero status code: %1!"
@@ -13988,15 +14025,15 @@ msgstr ""
 
 #: frontend/ui/widget/booklist.lua:56
 msgid "date modified"
-msgstr ""
+msgstr "tanggal diubah"
 
 #: frontend/ui/widget/booklist.lua:69
 msgid "size"
-msgstr ""
+msgstr "ukuran"
 
 #: frontend/ui/widget/booklist.lua:79
 msgid "type"
-msgstr ""
+msgstr "tipe"
 
 #: frontend/ui/widget/booklist.lua:95
 msgid "percent - unopened first"
@@ -14827,12 +14864,8 @@ msgid "Long-press item's name to choose it"
 msgstr "Tahan untuk memilih folder ini."
 
 #: frontend/ui/widget/pathchooser.lua:115
-#, fuzzy
 msgid "Choose this file?"
-msgstr ""
-"Pilih folder ini?\n"
-"\n"
-"%1"
+msgstr "Pilih folder ini?"
 
 #: frontend/ui/widget/pathchooser.lua:119
 msgid "File size: 1 byte"
@@ -14844,20 +14877,12 @@ msgid "Last modified: %1"
 msgstr ""
 
 #: frontend/ui/widget/pathchooser.lua:123
-#, fuzzy
 msgid "Choose this folder?"
-msgstr ""
-"Pilih folder ini?\n"
-"\n"
-"%1"
+msgstr "Pilih folder ini?"
 
 #: frontend/ui/widget/pathchooser.lua:125
-#, fuzzy
 msgid "Choose this path?"
-msgstr ""
-"Pilih folder ini?\n"
-"\n"
-"%1"
+msgstr "Pilih folder ini?"
 
 #: frontend/ui/widget/qrwidget.lua:20
 msgid "... (truncated...)"
@@ -14952,7 +14977,7 @@ msgstr ""
 #: plugins/calibre.koplugin/search.lua:491
 #: plugins/opds.koplugin/opdsbrowser.lua:780
 msgid "Search results"
-msgstr ""
+msgstr "Hasil pencarian"
 
 #: frontend/ui/widget/touchmenu.lua:1278
 msgid "No menus containing '%1' found."
@@ -15146,9 +15171,8 @@ msgid "Enables exploring the content of zip archives."
 msgstr ""
 
 #: plugins/archiveviewer.koplugin/main.lua:202
-#, fuzzy
 msgid "On extraction, if the file already exists, it will be overwritten."
-msgstr "Berkas sudah ada. Apakah Anda ingin menimpanya?"
+msgstr "Jika saat ekstraksi berkas sudah ada, maka akan ditimpa ulang."
 
 #: plugins/autodim.koplugin/_meta.lua:4 plugins/autodim.koplugin/main.lua:56
 msgid "Automatic dimmer"
@@ -18691,9 +18715,8 @@ msgid ""
 msgstr ""
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1293
-#, fuzzy
 msgid "Remove all downloads?"
-msgstr "Penghapusan artikel"
+msgstr "Hapus semua unduhan?"
 
 #: plugins/opds.koplugin/opdsbrowser.lua:1359
 #: plugins/wallabag.koplugin/main.lua:566
@@ -18871,9 +18894,8 @@ msgid "Execute within time interval"
 msgstr ""
 
 #: plugins/profiles.koplugin/main.lua:262
-#, fuzzy
 msgid "start: "
-msgstr "Mulai ulang KOReader"
+msgstr "mulai: "
 
 #: plugins/profiles.koplugin/main.lua:262
 msgid "end: "
@@ -19944,7 +19966,7 @@ msgstr ""
 #: plugins/texteditor.koplugin/_meta.lua:4
 #: plugins/texteditor.koplugin/main.lua:27
 msgid "Text editor"
-msgstr ""
+msgstr "Penyunting teks"
 
 #: plugins/texteditor.koplugin/_meta.lua:5
 msgid "A basic text editor for making small changes to plain text files."
@@ -20283,9 +20305,8 @@ msgid "Got it"
 msgstr "Oke"
 
 #: plugins/vocabbuilder.koplugin/main.lua:925
-#, fuzzy
 msgid "From"
-msgstr "Dari "
+msgstr "Dari"
 
 #: plugins/vocabbuilder.koplugin/main.lua:1007
 msgctxt "Time"
