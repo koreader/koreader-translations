@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-23 06:50+0000\n"
-"PO-Revision-Date: 2025-11-21 10:52+0000\n"
+"PO-Revision-Date: 2025-11-27 09:00+0000\n"
 "Last-Translator: Jean Pierre <jpv69005@gmx.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/koreader/koreader/"
 "fr/>\n"
@@ -1259,35 +1259,32 @@ msgid "Tap to display"
 msgstr "Toucher ici pour afficher"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:173
-#, fuzzy
 msgid "Screen pages"
-msgstr "Page en cours"
+msgstr "Pages d'écran"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:175
-#, fuzzy
 msgid "(including hidden flows)"
-msgstr "Flux cachés personnalisés"
+msgstr "(y compris les flux cachés)"
 
 #. @translators characters per page
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:185
 #: frontend/apps/reader/modules/readerpagemap.lua:414
-#, fuzzy
 msgid "1 char per page"
 msgid_plural "%1 chars per page"
-msgstr[0] "Signets par page"
-msgstr[1] "Signets par page"
+msgstr[0] "1 car. par page"
+msgstr[1] "%1 car. par page"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:188
-#, fuzzy
 msgid "Synthetic pages"
-msgstr "Sélectionner la page"
+msgstr "Pages synthétiques"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:197
-#, fuzzy
 msgid ""
 "Publisher pages (℗):\n"
 "available"
-msgstr "Utiliser les numéros de page de référence"
+msgstr ""
+"Pages de l'éditeur (℗) :\n"
+"disponibles"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:207
 msgid ""
@@ -1296,6 +1293,10 @@ msgid ""
 "Source (print edition):\n"
 "%4"
 msgstr ""
+"Pages de l'éditeur (℗) :\n"
+"%1 (%2 - %3)\n"
+"Source (édition imprimée) :\n"
+"%4"
 
 #: frontend/apps/filemanager/filemanagerbookinfo.lua:235
 msgid "number of lines and words not available"
@@ -3931,9 +3932,8 @@ msgid "Dynamic filler"
 msgstr "Remplissage dynamique"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1069
-#, fuzzy
 msgid "External content"
-msgstr "Actualiser le contenu"
+msgstr "Contenu externe"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1077
 msgid "Status bar"
@@ -4300,19 +4300,16 @@ msgstr ""
 "[X]Y pour un numéro de page dans le fragment non linéaire Y"
 
 #: frontend/apps/reader/modules/readergoto.lua:57 frontend/dispatcher.lua:172
-#, fuzzy
 msgid "Pin current page"
-msgstr "Page en cours"
+msgstr "Épingler la page actuelle"
 
 #: frontend/apps/reader/modules/readergoto.lua:66
-#, fuzzy
 msgid "Remove pinned page?"
-msgstr "Aller à la page"
+msgstr "Supprimer la page épinglée ?"
 
 #: frontend/apps/reader/modules/readergoto.lua:77 frontend/dispatcher.lua:173
-#, fuzzy
 msgid "Go to pinned page"
-msgstr "Aller à la page"
+msgstr "Aller à la page épinglée"
 
 #: frontend/apps/reader/modules/readergoto.lua:89
 msgid "Skim"
@@ -4324,12 +4321,11 @@ msgstr "Aller à %"
 
 #: frontend/apps/reader/modules/readergoto.lua:292
 msgid "Pinned page removed"
-msgstr ""
+msgstr "Page épinglée supprimée"
 
 #: frontend/apps/reader/modules/readergoto.lua:294
-#, fuzzy
 msgid "Page pinned"
-msgstr "Pages lues"
+msgstr "Page épinglée"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:131
 msgid "Custom table of contents"
@@ -5484,15 +5480,13 @@ msgid "Document menu"
 msgstr "Menu des documents"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:91
-#, fuzzy
 msgid "Do you want to use them?"
-msgstr "Le désactiver ?"
+msgstr "Voulez-vous les utiliser ?"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:281
 #: frontend/apps/reader/modules/readerpagemap.lua:534
-#, fuzzy
 msgid "Stable page number list"
-msgstr "Liste des numéros de pages de référence"
+msgstr "Liste stable des numéros de page"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:389
 msgid ""
@@ -5501,17 +5495,19 @@ msgid ""
 "Source (print edition):\n"
 "%3"
 msgstr ""
+"Numéros de page de l'éditeur disponibles.\n"
+"Numéros de page : %1 - %2\n"
+"Source (édition imprimée) :\n"
+"%3"
 
 #. @translators This and the other related ones refer to alternate page numbers provided in some EPUB books, that usually reference page numbers in a specific hardcopy edition of the book.
 #: frontend/apps/reader/modules/readerpagemap.lua:409
-#, fuzzy
 msgid "Stable page numbers"
-msgstr "Saisir le numéro de page"
+msgstr "Numéros de page stables"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:430
-#, fuzzy
 msgid "About stable page numbers"
-msgstr "Trier par le plus grand nombre de pages"
+msgstr "À propos des numéros de page stables"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:434
 msgid ""
@@ -5534,72 +5530,85 @@ msgid ""
 "'Stable page number list' shows a table of all stable page numbers and their "
 "corresponding screen page numbers."
 msgstr ""
+"Par défaut, un écran équivaut à une page. Toute modification de la mise en "
+"page du livre entraînera donc une renumérotation : nouveau nombre total de "
+"pages, longueur différente des chapitres, nouveaux emplacements dans la "
+"table des matières et les signets, etc.\n"
+"\n"
+"Sélectionnez des numéros de page stables si vous préférez des numéros de "
+"page indépendants des paramètres de mise en page et cohérents sur tous les "
+"appareils :\n"
+"1. Numéros de page de l'éditeur (℗) : correspondent généralement à une "
+"édition physique spécifique. Disponibles uniquement s'ils sont fournis par "
+"l'éditeur.\n"
+"2. Caractères par page : une page sera comptée pour ce nombre de caractères "
+"(parfois appelé numéros de page logiques ou synthétiques). Utilisez cette "
+"option si aucun numéro de page de l'éditeur n'est disponible ou si vous "
+"préférez avoir des longueurs de page cohérentes pour tous les livres.\n"
+"\n"
+"Étant donné que les numéros de page stables peuvent commencer n'importe où "
+"sur l'écran, vous pouvez choisir de les afficher dans la marge, quels que "
+"soient les autres paramètres.\n"
+"\n"
+"La « liste des numéros de page stables » affiche un tableau de tous les "
+"numéros de page stables et leurs numéros de page d'écran correspondants."
 
 #: frontend/apps/reader/modules/readerpagemap.lua:451
 #: frontend/apps/reader/modules/readerpagemap.lua:560
-#, fuzzy
 msgid "Characters per page: %1"
-msgstr "Éléments par page : %1"
+msgstr "Caractères par page : %1"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:456
 #: frontend/apps/reader/modules/readerpagemap.lua:565
-#, fuzzy
 msgid "Characters per page"
-msgstr "Éléments par page"
+msgstr "Caractères par page"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:482
-#, fuzzy
 msgid "Use publisher page numbers"
-msgstr "Utiliser les numéros de page de référence"
+msgstr "Utilisez les numéros de page de l'éditeur"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:485
 msgid ""
 "Use publisher page numbers?\n"
 "The document will be reloaded."
 msgstr ""
+"Utiliser les numéros de page de l'éditeur ?\n"
+"Le document sera rechargé."
 
 #: frontend/apps/reader/modules/readerpagemap.lua:501
 #: frontend/apps/reader/modules/readerpagemap.lua:609
-#, fuzzy
 msgid "Use stable page numbers"
-msgstr "Utiliser les numéros de page de référence"
+msgstr "Utilisez des numéros de page stables"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:517
 #: frontend/apps/reader/modules/readerpagemap.lua:618
-#, fuzzy
 msgid "Show stable page numbers in margin"
-msgstr "Afficher les étiquettes des pages de référence dans la marge"
+msgstr "Afficher les numéros de page stables dans la marge"
 
 #. @translators This shows the <dc:source> in the EPUB that usually tells which hardcopy edition the reference page numbers refers to.
 #: frontend/apps/reader/modules/readerpagemap.lua:544
-#, fuzzy
 msgid "Publisher page numbers source info"
-msgstr "Source des informations de référence"
+msgstr "Source des numéros de page de l'éditeur"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:555
-#, fuzzy
 msgid "Default settings for new books"
-msgstr "Les réglages par défaut ont été sauvegardés."
+msgstr "Paramètres par défaut pour les nouveaux livres"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:586
-#, fuzzy
 msgid "Override publisher page numbers"
-msgstr "Éviter les sauts de page de l’éditeur"
+msgstr "Remplacer les numéros de page de l'éditeur"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:599
-#, fuzzy
 msgid "Prompt when publisher page numbers available"
-msgstr "Utiliser les numéros de page de référence"
+msgstr "Demander lorsque les numéros de page de l'éditeur sont disponibles"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:628
-#, fuzzy
 msgid "Page numbers font size: %1"
-msgstr "Taille de la police des étiquettes de page (%1)"
+msgstr "Taille de la police des numéros de page : %1"
 
 #: frontend/apps/reader/modules/readerpagemap.lua:633
-#, fuzzy
 msgid "Page numbers font size"
-msgstr "Taille de la police des étiquettes de page"
+msgstr "Taille de police des numéros de page"
 
 #: frontend/apps/reader/modules/readerrolling.lua:315
 msgid ""
@@ -7585,9 +7594,8 @@ msgid "Hanging punctuation"
 msgstr "Ponctuation hors justification"
 
 #: frontend/apps/reader/modules/readertypography.lua:597
-#, fuzzy
 msgid "book language"
-msgstr "Langue du livre : %1"
+msgstr "langue du livre"
 
 #: frontend/apps/reader/modules/readertypography.lua:620
 msgid ""
@@ -9051,9 +9059,8 @@ msgid "Save book metadata"
 msgstr "Enregistrer les métadonnées du livre"
 
 #: frontend/dispatcher.lua:225
-#, fuzzy
 msgid "Set typography language"
-msgstr "À propos des règles typographiques"
+msgstr "Définir la langue de typographie"
 
 #: frontend/dispatcher.lua:226
 msgid "Font face"
@@ -13755,14 +13762,13 @@ msgid "Cycle through images in order"
 msgstr "Parcourir les images dans l’ordre"
 
 #: frontend/ui/elements/screensaver_menu.lua:171
-#, fuzzy
 msgid ""
 "When enabled, all images (up to 256) will be displayed at least once on the "
 "sleep screen in sequence before repeating the cycle."
 msgstr ""
-"Lorsqu'elles sont activées, toutes les images (jusqu'à 128) seront affichées "
-"au moins une fois sur l'écran de veille, en séquence, avant de recommencer "
-"le cycle."
+"Lorsque cette option est activée, toutes les images (jusqu'à 256) "
+"s'affichent au moins une fois à la suite sur l'écran de veille avant que le "
+"cycle ne recommence."
 
 #: frontend/ui/elements/screensaver_menu.lua:185
 #: frontend/ui/screensaver.lua:215
@@ -16100,7 +16106,6 @@ msgid "10-page markers"
 msgstr "10 marque-pages"
 
 #: frontend/ui/widget/bookmapwidget.lua:1504
-#, fuzzy
 msgid ""
 "Book map provides a summary of a book's content, showing chapters and pages "
 "visually. If statistics are enabled, black bars represent pages already read "
@@ -16117,18 +16122,21 @@ msgid ""
 " pinned page\n"
 "▢ focused page when coming from Pages browser"
 msgstr ""
-"Le plan du livre affiche un aperçu du contenu du livre. Si les statistiques "
-"sont activées, des barres noires sont affichées pour les pages déjà lues "
-"(grises pour les pages lues dans la session de lecture en cours). Leurs "
-"hauteurs varient en fonction du temps passé à lire la page.\n"
+"La carte du livre fournit un résumé du contenu d'un livre, en affichant "
+"visuellement les chapitres et les pages. Si les statistiques sont activées, "
+"les barres noires représentent les pages déjà lues "
+"(grises pour les pages lues lors de la session en cours), avec des hauteurs "
+"variables en fonction du temps de lecture.\n"
 "\n"
-"Sous les pages, ces indicateurs peuvent apparaître :\n"
+"Légende de la carte :\n"
 "▲ page actuelle\n"
 "❶ ❷ … emplacements précédents\n"
+"① ② … emplacements suivants\n"
 "▒ texte surligné\n"
-" texte annoté\n"
-" page avec un marque-page\n"
-"▢ page focalisée en provenance du navigateur Pages"
+" texte surligné avec des notes\n"
+" page marquée d'un signet\n"
+" page épinglée\n"
+"▢ page sélectionnée lorsque vous venez du navigateur Pages"
 
 #: frontend/ui/widget/bookmapwidget.lua:1518
 msgid ""
@@ -16730,7 +16738,6 @@ msgid "Chapters in bottom ribbon"
 msgstr "Chapitres dans la bande inférieure"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1147
-#, fuzzy
 msgid ""
 "Page browser shows thumbnails of a book's pages.\n"
 "\n"
@@ -16750,22 +16757,24 @@ msgid ""
 " bookmarked page\n"
 " pinned page"
 msgstr ""
-"Le navigateur de pages affiche les vignettes des pages d'un livre.\n"
+"Le navigateur de pages affiche les miniatures des pages d'un livre.\n"
 "\n"
 "Le ruban inférieur affiche un extrait de la carte du livre autour des pages "
 "affichées :\n"
 "\n"
-"Si les statistiques sont activées, les barres noires indiquent les pages "
-"déjà lues (les barres grises indiquent les pages lues lors de la session en "
-"cours). La hauteur de ces barres varie en fonction du temps passé à lire "
-"chaque page.\n"
+"Si les statistiques sont activées, les barres noires indiquent les pages qui "
+"ont déjà été lues "
+"(les barres grises indiquent les pages lues lors de la session en cours). La "
+"hauteur de ces barres varie en fonction du temps passé à lire chaque page.\n"
 "Les chapitres sont indiqués au-dessus des pages qu'ils couvrent.\n"
 "Sous les pages, les indicateurs suivants peuvent apparaître :\n"
 "▲ page actuelle\n"
 "❶ ❷ … emplacements précédents\n"
+"① ② … emplacements suivants\n"
 "▒ texte surligné\n"
 " texte surligné avec des notes\n"
-" page marquée d'un signet"
+" page marquée d'un signet\n"
+" page épinglée"
 
 #: frontend/ui/widget/pagebrowserwidget.lua:1168
 msgid ""
@@ -17205,9 +17214,8 @@ msgid "SSH server"
 msgstr "Serveur SSH"
 
 #: plugins/SSH.koplugin/main.lua:249
-#, fuzzy
 msgid "SSH port: %1"
-msgstr "Port SSH (%1)"
+msgstr "Port SSH : (%1)"
 
 #: plugins/SSH.koplugin/main.lua:258
 msgid "SSH public key"
@@ -21310,20 +21318,17 @@ msgstr "Demander à exécuter"
 
 #: plugins/profiles.koplugin/main.lua:168
 #: plugins/profiles.koplugin/main.lua:182
-#, fuzzy
 msgid "promptly"
-msgstr "demander"
+msgstr "rapidement"
 
 #: plugins/profiles.koplugin/main.lua:172
 #: plugins/profiles.koplugin/main.lua:199
-#, fuzzy
 msgid "default"
 msgstr "défaut"
 
 #: plugins/profiles.koplugin/main.lua:174
-#, fuzzy
 msgid "Executing delay: %1"
-msgstr "Exécution du profil : %1"
+msgstr "Délai d'exécution : %1"
 
 #: plugins/profiles.koplugin/main.lua:184
 msgid ""
@@ -21338,14 +21343,12 @@ msgstr ""
 "sera exécuté avant la fermeture du document."
 
 #: plugins/profiles.koplugin/main.lua:225
-#, fuzzy
 msgid "Executing delay"
-msgstr "Exécution…"
+msgstr "Délai d'exécution"
 
 #: plugins/profiles.koplugin/main.lua:254
-#, fuzzy
 msgid "Only within time interval"
-msgstr "Exécuter dans l'intervalle de temps"
+msgstr "Uniquement dans l'intervalle de temps"
 
 #: plugins/profiles.koplugin/main.lua:262
 msgid "start: "
