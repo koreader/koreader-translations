@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-28 18:36+0000\n"
-"PO-Revision-Date: 2025-12-01 15:15+0000\n"
+"PO-Revision-Date: 2025-12-02 17:01+0000\n"
 "Last-Translator: tran <tronghieu512@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/koreader/"
 "koreader/vi/>\n"
@@ -27,19 +27,18 @@ msgid ""
 "If your device is grayscale, you can disable color rendering in the screen "
 "sub-menu for reduced memory usage."
 msgstr ""
-"Tài liệu sẽ được kết xuất (render) bằng màu trên thiết bị này. \n"
-"Nếu thiết bị của bạn là màn hình trắng đen (grayscale), bạn có thể tắt tính "
-"năng kết xuất màu trong menu phụ Màn hình để giảm mức sử dụng bộ nhớ."
+"Tài liệu sẽ được hiển thị bằng màu trên thiết bị này. \n"
+"Nếu thiết bị của bạn chỉ hỗ trợ thang xám, bạn có thể tắt chế độ hiển thị "
+"màu trong menu phụ của màn hình để giảm mức sử dụng bộ nhớ."
 
 #: reader.lua:202
 msgid ""
 "Color rendering is mistakenly enabled on your grayscale device.\n"
 "This will subtly break some features, and adversely affect performance."
 msgstr ""
-"Tính năng kết xuất màu đang bị bật nhầm trên thiết bị trắng đen (grayscale) "
-"của bạn. \n"
-"Điều này sẽ làm một số tính năng bị lỗi một cách tinh vi, và ảnh hưởng xấu "
-"đến hiệu suất."
+"Chế độ hiển thị màu đã bị bật nhầm trên thiết bị thang xám của bạn. \n"
+"Điều này sẽ làm hỏng một số tính năng ở mức độ nhỏ và ảnh hưởng xấu đến hiệu "
+"suất."
 
 #: reader.lua:203 frontend/apps/reader/modules/readertypography.lua:297
 #: frontend/ui/network/manager.lua:960
@@ -73,8 +72,9 @@ msgid ""
 "being mounted.\n"
 "Do you want to retry?"
 msgstr ""
-"Không thể mở tệp tin vừa đọc.\n"
-"Có thể tệp đã bị xóa hoặc bộ nhớ ngoài vẫn đang được gắn kết (mount).\n"
+"Không thể mở tệp cuối cùng. \n"
+"Điều này có thể do tệp đã bị xóa hoặc do bộ nhớ ngoài vẫn đang được gắn kết. "
+"\n"
 "Bạn có muốn thử lại không?"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:30
@@ -152,16 +152,16 @@ msgid ""
 "Download folder:\n"
 "%4"
 msgstr ""
-"Tên tệp:\n"
-"%1\n"
+"Tên tệp: \n"
+"%1 \n"
 "\n"
-"Kích cỡ tệp:\n"
-"%2\n"
+"Kích thước tệp: \n"
+"%2 \n"
 "\n"
-"Tên tệp khi tải về:\n"
-"%3\n"
+"Tên tệp tải xuống: \n"
+"%3 \n"
 "\n"
-"Thư mục để tải về:\n"
+"Thư mục tải xuống: \n"
 "%4"
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:258
@@ -375,7 +375,7 @@ msgstr "Không có tệp nào được tải xuống từ Dropbox."
 #: frontend/apps/cloudstorage/cloudstorage.lua:461
 msgid "Successfully downloaded 1 file from Dropbox to local storage."
 msgid_plural "Successfully downloaded %1 files from Dropbox to local storage."
-msgstr[0] "Đã tải xuống thành công tệp %1 từ Dropbox vào bộ nhớ trong."
+msgstr[0] "Đã tải xuống thành công %1 tệp từ Dropbox vào bộ nhớ cục bộ."
 
 #: frontend/apps/cloudstorage/cloudstorage.lua:463
 msgid "Failed to download 1 file."
@@ -10090,12 +10090,11 @@ msgstr "Ngăn chỉ số phụ và chỉ số trên ảnh hưởng đến chiề
 
 #: frontend/ui/data/css_tweaks.lua:484
 msgid "Override font-based normal line height"
-msgstr ""
+msgstr "Ghi đè chiều cao dòng bình thường dựa trên phông chữ"
 
 #: frontend/ui/data/css_tweaks.lua:490
-#, fuzzy
 msgid "Normal line height: %1"
-msgstr "Độ cao chân: %1."
+msgstr "Chiều cao dòng bình thường: %1"
 
 #: frontend/ui/data/css_tweaks.lua:505
 msgid "Paragraphs"
@@ -10213,16 +10212,15 @@ msgstr ""
 
 #: frontend/ui/data/css_tweaks.lua:592
 msgid "Tables, links, images"
-msgstr ""
+msgstr "Bảng, liên kết, hình ảnh"
 
 #: frontend/ui/data/css_tweaks.lua:594
 msgid "Tables"
 msgstr "Bảng"
 
 #: frontend/ui/data/css_tweaks.lua:597
-#, fuzzy
 msgid "Ignore tables related HTML presentational hints"
-msgstr "Bỏ qua xoay hồi chuyển"
+msgstr "Bỏ qua gợi ý trình bày HTML liên quan đến bảng"
 
 #: frontend/ui/data/css_tweaks.lua:598
 msgid ""
@@ -10230,6 +10228,9 @@ msgid ""
 "its sub-elements (ie. align, valign, frame, rules, border, cellpadding, "
 "cellspacing…)."
 msgstr ""
+"Bỏ qua các thuộc tính HTML góp phần tạo kiểu cho phần tử <table> và các phần "
+"tử con của nó (ví dụ: align, valign, frame, rules, border, cellpadding, "
+"cellspacing…)."
 
 #: frontend/ui/data/css_tweaks.lua:604
 msgid "Full-width tables"
@@ -10439,17 +10440,19 @@ msgstr "Bắt buộc đánh số danh sách có thứ tự"
 
 #: frontend/ui/data/css_tweaks.lua:808
 msgid "Disable before/after pseudo elements"
-msgstr ""
+msgstr "Tắt các phần tử giả before/after"
 
 #: frontend/ui/data/css_tweaks.lua:809
 msgid ""
 "Disable generated text from ::before and ::after pseudo elements, usually "
 "used to add cosmetic text around some content."
 msgstr ""
+"Tắt văn bản được tạo từ phần tử giả ::before và ::after, thường dùng để thêm "
+"văn bản trang trí quanh nội dung."
 
 #: frontend/ui/data/css_tweaks.lua:818
 msgid "Pure black and white"
-msgstr "Chỉ thuần trắng đen"
+msgstr "Đen trắng thuần túy"
 
 #: frontend/ui/data/css_tweaks.lua:819
 msgid "Enforce black text and borders, and remove backgrounds."
@@ -10516,7 +10519,7 @@ msgstr "Hiển thị chú thích ở cuối trang trong Wikipedia EPUB."
 
 #: frontend/ui/data/css_tweaks.lua:948
 msgid "In-page classic classname footnotes"
-msgstr "Chú thích cuối trang của tên lớp cổ điển trong trang"
+msgstr "Chú thích trong trang theo lớp CSS cổ điển"
 
 #: frontend/ui/data/css_tweaks.lua:949
 msgid ""
@@ -10524,15 +10527,17 @@ msgid ""
 "This tweak can be duplicated as a user style tweak when books contain "
 "footnotes wrapped with other class names."
 msgstr ""
+"Hiển thị chú thích có lớp CSS cổ điển ở cuối trang.\n"
+"Có thể sao chép tùy chỉnh này thành một tùy chỉnh kiểu người dùng khi sách "
+"chứa các chú thích được bao bọc bởi các tên lớp khác."
 
 #: frontend/ui/data/css_tweaks.lua:969
-#, fuzzy
 msgid "In-page footnote extension"
-msgstr "Chú thích cuối trang trong trang"
+msgstr "Mở rộng xử lý chú thích trong trang"
 
 #: frontend/ui/data/css_tweaks.lua:973
 msgid "Extend footnote content until next entry"
-msgstr ""
+msgstr "Kéo dài nội dung chú thích đến mục tiếp theo"
 
 #: frontend/ui/data/css_tweaks.lua:974
 msgid ""
@@ -10541,10 +10546,14 @@ msgid ""
 "This might be needed when books don't correctly mark all text that belongs "
 "to the footnote."
 msgstr ""
+"Mở rộng chú thích trong trang hiển thị ở cuối trang để bao gồm văn bản cho "
+"đến chú thích tiếp theo.\n"
+"Điều này có thể cần thiết khi sách không đánh dấu chính xác toàn bộ văn bản "
+"thuộc về phần chú thích."
 
 #: frontend/ui/data/css_tweaks.lua:992
 msgid "Extend footnote content until next header"
-msgstr ""
+msgstr "Kéo dài nội dung chú thích đến tiêu đề tiếp theo"
 
 #: frontend/ui/data/css_tweaks.lua:993
 msgid ""
@@ -10555,15 +10564,21 @@ msgid ""
 "This tweak can be duplicated as a user style tweak when a book contains "
 "other elements between footnotes that should not be shown in-page."
 msgstr ""
+"Mở rộng chú thích trong trang hiển thị ở cuối trang để bao gồm văn bản cho "
+"đến chú thích hoặc tiêu đề tiếp theo.\n"
+"Điều này có thể cần thiết khi sách không đánh dấu chính xác toàn bộ văn bản "
+"thuộc về phần chú thích.\n"
+"Có thể sao chép tùy chỉnh này thành một tùy chỉnh kiểu người dùng khi một "
+"cuốn sách chứa các thành phần khác giữa các chú thích mà không nên hiển thị "
+"trong trang."
 
 #: frontend/ui/data/css_tweaks.lua:1023
-#, fuzzy
 msgid "In-page footnote font size"
-msgstr "Chú thích cuối trang trong trang"
+msgstr "Cỡ chữ chú thích trong trang"
 
 #: frontend/ui/data/css_tweaks.lua:1027
 msgid "Smaller footnotes (80%, legacy)"
-msgstr ""
+msgstr "Chú thích nhỏ hơn (80%, kiểu cũ)"
 
 #: frontend/ui/data/css_tweaks.lua:1028
 msgid ""
@@ -10571,48 +10586,47 @@ msgid ""
 "overwritten by publisher styles. The \"footnote font size\" style tweaks are "
 "recommended instead."
 msgstr ""
+"Giảm cỡ chữ chú thích trong trang. Tùy chọn này có thể không có tác dụng nếu "
+"bị ghi đè bởi định dạng của nhà xuất bản. Thay vào đó, bạn nên dùng tùy "
+"chỉnh \"Cỡ chữ chú thích\"."
 
 #: frontend/ui/data/css_tweaks.lua:1045
-#, fuzzy
 msgid "Footnote font size: %1 %"
-msgstr "Kích thước phông chữ chân trang"
+msgstr "Cỡ chữ chú thích: %1 %"
 
 #: frontend/ui/data/css_tweaks.lua:1058
-#, fuzzy
 msgid "In-page footnote fix-up"
-msgstr "Chú thích cuối trang trong trang"
+msgstr "Sửa lỗi chú thích trong trang"
 
 #: frontend/ui/data/css_tweaks.lua:1061
-#, fuzzy
 msgid "No footnote indentation"
-msgstr "Thụt lề dòng đầu tiên của đoạn văn"
+msgstr "Không thụt lề chú thích"
 
 #: frontend/ui/data/css_tweaks.lua:1072
-#, fuzzy
 msgid "Justify footnote text"
-msgstr "Căn đều phần lớn văn bản"
+msgstr "Căn đều văn bản chú thích"
 
 #: frontend/ui/data/css_tweaks.lua:1083
-#, fuzzy
 msgid "Remove block margins"
-msgstr "Xóa Đánh dấu"
+msgstr "Xóa lề khối văn bản"
 
 #: frontend/ui/data/css_tweaks.lua:1084
 msgid "Remove block margin and padding inside inpage footnotes."
-msgstr ""
+msgstr "Xóa lề ngoài và lề trong của khối văn bản trong chú thích trong trang."
 
 #: frontend/ui/data/css_tweaks.lua:1097
 msgid "Remove cosmetic spacing"
-msgstr ""
+msgstr "Xóa khoảng cách không cần thiết"
 
 #: frontend/ui/data/css_tweaks.lua:1098
 msgid "Remove inline margin and padding inside inpage footnotes."
 msgstr ""
+"Xóa lề ngoài và lề trong của thành phần nội tuyến trong chú thích trong "
+"trang."
 
 #: frontend/ui/data/css_tweaks.lua:1111
-#, fuzzy
 msgid "Inline all footnote content"
-msgstr "Xem %1 để biết nội dung cập nhật"
+msgstr "Hiển thị nội tuyến toàn bộ nội dung chú thích"
 
 #: frontend/ui/data/css_tweaks.lua:1112
 msgid ""
@@ -10621,10 +10635,15 @@ msgid ""
 "all the footnote content become a single paragraph.\n"
 "This will break any complex footnote containing quotes or lists."
 msgstr ""
+"Nếu số chú thích nằm trên một dòng và nội dung chú thích nằm ở dòng tiếp "
+"theo, hoặc nếu có các mức thụt lề khác nhau, tùy chỉnh này có thể gộp toàn "
+"bộ nội dung chú thích thành một đoạn văn duy nhất.\n"
+"Điều này sẽ làm hỏng bất kỳ chú thích phức tạp nào chứa các đoạn trích dẫn "
+"hoặc danh sách."
 
 #: frontend/ui/data/css_tweaks.lua:1133
 msgid "Regularize text size on inline elements"
-msgstr ""
+msgstr "Chuẩn hóa cỡ chữ trên các thành phần nội tuyến"
 
 #: frontend/ui/data/css_tweaks.lua:1134
 msgid ""
@@ -10632,10 +10651,14 @@ msgid ""
 "vertical alignments, which would make it too irregular, you can reset all of "
 "them to get a leaner text (to the expense of losing superscripts)."
 msgstr ""
+"Nếu văn bản chú thích sử dụng cỡ chữ, chiều cao dòng hoặc căn chỉnh dọc "
+"không đồng đều hoặc tuyệt đối, khiến định dạng trở nên quá lộn xộn, bạn có "
+"thể đặt lại tất cả chúng để có một văn bản gọn gàng hơn (điều này sẽ làm mất "
+"định dạng chữ số mũ/chỉ số trên)."
 
 #: frontend/ui/data/css_tweaks.lua:1149
 msgid "Combine footnotes in a non-linear flow"
-msgstr ""
+msgstr "Kết hợp chú thích theo luồng phi tuyến tính"
 
 #: frontend/ui/data/css_tweaks.lua:1150
 msgid ""
@@ -10646,10 +10669,16 @@ msgid ""
 "flow: they will be skipped when turning pages and not considered in the "
 "various book & chapter progress and time to read features."
 msgstr ""
+"Tùy chọn này sẽ đánh dấu mỗi đoạn chú thích liên tiếp (tại vị trí gốc trong "
+"sách) là phi tuyến tính.\n"
+"Hộp kiểm trong menu \"Ẩn các đoạn phi tuyến tính\" sẽ khả dụng sau khi mở "
+"lại tài liệu, cho phép ẩn các đoạn này khỏi luồng đọc thông thường: chúng sẽ "
+"bị bỏ qua khi lật trang và không được tính vào các tính năng thống kê tiến "
+"độ sách & chương và thời gian đọc."
 
 #: frontend/ui/data/dictionaries.lua:10
 msgid "Public Domain"
-msgstr "Tên miền công cộng"
+msgstr "Phạm vi công cộng"
 
 #: frontend/ui/data/dictionaries.lua:58
 msgid "Public Domain (copyright expired, published 1935)"
@@ -10679,509 +10708,456 @@ msgstr "GNU/FDL"
 #. @translators Most of these language name have already been translated at <https://hosted.weblate.org/projects/iso-codes/iso-639-2/>. Click "Automatic suggestions" to see them below the textfield.
 #: frontend/ui/data/isolanguage.lua:7 frontend/ui/translator.lua:32
 msgid "Afar"
-msgstr ""
+msgstr "Tiếng Afar"
 
 #: frontend/ui/data/isolanguage.lua:8 frontend/ui/translator.lua:33
 msgid "Afrikaans"
-msgstr "Afrikaans"
+msgstr "Tiếng Afrikaans"
 
 #: frontend/ui/data/isolanguage.lua:9 frontend/ui/translator.lua:36
 msgid "Amharic"
-msgstr "Amharic"
+msgstr "Tiếng Amhara"
 
 #: frontend/ui/data/isolanguage.lua:10 frontend/ui/translator.lua:37
 msgid "Arabic"
-msgstr "Arabic"
+msgstr "Tiếng Ả Rập"
 
 #: frontend/ui/data/isolanguage.lua:11 frontend/ui/translator.lua:39
-#, fuzzy
 msgid "Assamese"
 msgstr "Tiếng Assam"
 
 #: frontend/ui/data/isolanguage.lua:12 frontend/ui/translator.lua:43
 msgid "Azerbaijani"
-msgstr "Azerbaijani"
+msgstr "Tiếng Azerbaijan"
 
 #: frontend/ui/data/isolanguage.lua:13 frontend/ui/translator.lua:48
-#, fuzzy
 msgid "Bashkir"
 msgstr "Tiếng Bashkir"
 
 #: frontend/ui/data/isolanguage.lua:14 frontend/ui/translator.lua:53
 msgid "Belarusian"
-msgstr "Belarusian"
+msgstr "Tiếng Belarus"
 
 #: frontend/ui/data/isolanguage.lua:15 frontend/ui/translator.lua:55
 msgid "Bengali"
-msgstr "Bengali"
+msgstr "Tiếng Bengal"
 
 #: frontend/ui/data/isolanguage.lua:16 frontend/ui/translator.lua:251
-#, fuzzy
 msgid "Tibetan"
 msgstr "Tiếng Tây Tạng"
 
 #: frontend/ui/data/isolanguage.lua:17 frontend/ui/translator.lua:59
 msgid "Bosnian"
-msgstr "Bosnian"
+msgstr "Tiếng Bosnia"
 
 #: frontend/ui/data/isolanguage.lua:18 frontend/ui/translator.lua:60
-#, fuzzy
 msgid "Breton"
 msgstr "Tiếng Breton"
 
 #: frontend/ui/data/isolanguage.lua:22
 msgid "Church Slavic"
-msgstr ""
+msgstr "Tiếng Slav Giáo hội"
 
 #: frontend/ui/data/isolanguage.lua:23
-#, fuzzy
 msgid "Cornish"
-msgstr "Danish"
+msgstr "Tiếng Cornish"
 
 #: frontend/ui/data/isolanguage.lua:24 frontend/ui/translator.lua:74
 msgid "Corsican"
-msgstr "Corsican"
+msgstr "Tiếng Corse"
 
 #: frontend/ui/data/isolanguage.lua:28 frontend/ui/translator.lua:81
-#, fuzzy
 msgid "Dhivehi"
-msgstr "Dhivehi"
+msgstr "Tiếng Dhivehi"
 
 #: frontend/ui/data/isolanguage.lua:29 frontend/ui/translator.lua:87
 msgid "Dzongkha"
-msgstr ""
+msgstr "Tiếng Dzongkha"
 
 #: frontend/ui/data/isolanguage.lua:30
-#, fuzzy
 msgid "Modern Greek"
-msgstr "Hiện đại"
+msgstr "Tiếng Hy Lạp hiện đại"
 
 #: frontend/ui/data/isolanguage.lua:31 frontend/ui/translator.lua:88
 msgid "English"
 msgstr "Tiếng Anh"
 
 #: frontend/ui/data/isolanguage.lua:35 frontend/ui/translator.lua:92
-#, fuzzy
 msgid "Faroese"
 msgstr "Tiếng Faroe"
 
 #: frontend/ui/data/isolanguage.lua:36 frontend/ui/translator.lua:203
 msgid "Persian"
-msgstr "Persian"
+msgstr "Tiếng Ba Tư"
 
 #: frontend/ui/data/isolanguage.lua:37 frontend/ui/translator.lua:94
-#, fuzzy
 msgid "Filipino"
-msgstr "Tagalog (Filipino)"
+msgstr "Tiếng Philippines"
 
 #: frontend/ui/data/isolanguage.lua:40
-#, fuzzy
 msgid "Western Frisian"
-msgstr "Frisian"
+msgstr "Tiếng Tây Frisia"
 
 #: frontend/ui/data/isolanguage.lua:41
-#, fuzzy
 msgid "Scottish Gaelic"
-msgstr "Scots Gaelic"
+msgstr "Tiếng Gael Scotland"
 
 #: frontend/ui/data/isolanguage.lua:44 frontend/ui/translator.lua:175
-#, fuzzy
 msgid "Manx"
 msgstr "Tiếng Manx"
 
 #: frontend/ui/data/isolanguage.lua:45 frontend/ui/translator.lua:108
 msgid "Gujarati"
-msgstr "Gujarati"
+msgstr "Tiếng Gujarati"
 
 #: frontend/ui/data/isolanguage.lua:46
-#, fuzzy
 msgid "Haitian"
-msgstr "Haitian Creole"
+msgstr "Tiếng Haiti"
 
 #: frontend/ui/data/isolanguage.lua:47 frontend/ui/translator.lua:112
 msgid "Hausa"
-msgstr "Hausa"
+msgstr "Tiếng Hausa"
 
 #: frontend/ui/data/isolanguage.lua:48
-#, fuzzy
 msgid "Serbo-Croatian"
-msgstr "Croatian"
+msgstr "Tiếng Serbia-Croatia"
 
 #: frontend/ui/data/isolanguage.lua:49 frontend/ui/translator.lua:114
 msgid "Hebrew"
-msgstr "Hebrew"
+msgstr "Tiếng Do Thái"
 
 #: frontend/ui/data/isolanguage.lua:50 frontend/ui/translator.lua:116
 msgid "Hindi"
-msgstr "Hindi"
+msgstr "Tiếng Hindi"
 
 #: frontend/ui/data/isolanguage.lua:54
 msgid "Ido"
 msgstr "Tiếng Ido"
 
 #: frontend/ui/data/isolanguage.lua:55
-#, fuzzy
 msgid "Interlingua"
-msgstr "Gạch chân"
+msgstr "Tiếng Interlingua"
 
 #: frontend/ui/data/isolanguage.lua:56 frontend/ui/translator.lua:124
 msgid "Indonesian"
-msgstr "Indonesian"
+msgstr "Tiếng Indonesia"
 
 #: frontend/ui/data/isolanguage.lua:59 frontend/ui/translator.lua:131
 msgid "Javanese"
-msgstr "Javanese"
+msgstr "Tiếng Java"
 
 #: frontend/ui/data/isolanguage.lua:61 frontend/ui/translator.lua:133
-#, fuzzy
 msgid "Kalaallisut"
-msgstr "Kalaallisut"
+msgstr "Tiếng Kalaallisut"
 
 #: frontend/ui/data/isolanguage.lua:62 frontend/ui/translator.lua:134
 msgid "Kannada"
-msgstr "Kannada"
+msgstr "Tiếng Kannada"
 
 #: frontend/ui/data/isolanguage.lua:63
-#, fuzzy
 msgid "Kashmiri"
 msgstr "Tiếng Kashmir"
 
 #: frontend/ui/data/isolanguage.lua:65 frontend/ui/translator.lua:137
 msgid "Kazakh"
-msgstr "Kazakh"
+msgstr "Tiếng Kazakh"
 
 #: frontend/ui/data/isolanguage.lua:66 frontend/ui/translator.lua:139
 msgid "Khmer"
-msgstr "Khmer"
+msgstr "Tiếng Khmer"
 
 #: frontend/ui/data/isolanguage.lua:67
-#, fuzzy
 msgid "Kikuyu"
-msgstr "Kikuyu"
+msgstr "Tiếng Kikuyu"
 
 #: frontend/ui/data/isolanguage.lua:68
-#, fuzzy
 msgid "Kirghiz"
-msgstr "Kirghiz"
+msgstr "Tiếng Kyrgyz"
 
 #: frontend/ui/data/isolanguage.lua:70
 msgid "Kurdish"
-msgstr "Kurdish"
+msgstr "Tiếng Kurd"
 
 #: frontend/ui/data/isolanguage.lua:71 frontend/ui/translator.lua:153
 msgid "Lao"
-msgstr "Lao"
+msgstr "Tiếng Lào"
 
 #: frontend/ui/data/isolanguage.lua:75 frontend/ui/translator.lua:164
 msgid "Luxembourgish"
-msgstr "Luxembourgish"
+msgstr "Tiếng Luxembourg"
 
 #: frontend/ui/data/isolanguage.lua:76 frontend/ui/translator.lua:178
-#, fuzzy
 msgid "Marshallese"
-msgstr "Marshallese"
+msgstr "Tiếng Marshall"
 
 #: frontend/ui/data/isolanguage.lua:77 frontend/ui/translator.lua:172
 msgid "Malayalam"
-msgstr "Malayalam"
+msgstr "Tiếng Malayalam"
 
 #: frontend/ui/data/isolanguage.lua:78 frontend/ui/translator.lua:177
 msgid "Marathi"
-msgstr "Marathi"
+msgstr "Tiếng Marathi"
 
 #: frontend/ui/data/isolanguage.lua:80 frontend/ui/translator.lua:169
 msgid "Malagasy"
-msgstr "Malagasy"
+msgstr "Tiếng Malagasy"
 
 #: frontend/ui/data/isolanguage.lua:81 frontend/ui/translator.lua:173
 msgid "Maltese"
-msgstr "Maltese"
+msgstr "Tiếng Malta"
 
 #: frontend/ui/data/isolanguage.lua:82 frontend/ui/translator.lua:185
 msgid "Mongolian"
-msgstr "Mongolian"
+msgstr "Tiếng Mông Cổ"
 
 #: frontend/ui/data/isolanguage.lua:83 frontend/ui/translator.lua:176
 msgid "Maori"
-msgstr "Maori"
+msgstr "Tiếng Maori"
 
 #: frontend/ui/data/isolanguage.lua:84 frontend/ui/translator.lua:170
 msgid "Malay"
-msgstr "Malay"
+msgstr "Tiếng Mã Lai"
 
 #: frontend/ui/data/isolanguage.lua:85
-#, fuzzy
 msgid "Burmese"
-msgstr "Burmese"
+msgstr "Tiếng Miến Điện"
 
 #: frontend/ui/data/isolanguage.lua:86
-#, fuzzy
 msgid "Navajo"
-msgstr "Navajo"
+msgstr "Tiếng Navajo"
 
 #: frontend/ui/data/isolanguage.lua:88
-#, fuzzy
 msgid "Norwegian Nynorsk"
-msgstr "Norwegian"
+msgstr "Tiếng Na Uy"
 
 #: frontend/ui/data/isolanguage.lua:89
-#, fuzzy
 msgid "Norwegian Bokmål"
-msgstr "Norwegian"
+msgstr "Tiếng Na Uy (Bokmål)"
 
 #: frontend/ui/data/isolanguage.lua:92
 msgid "Oriya"
-msgstr ""
+msgstr "Tiếng Oriya"
 
 #: frontend/ui/data/isolanguage.lua:93 frontend/ui/translator.lua:198
-#, fuzzy
 msgid "Oromo"
-msgstr "Oromo"
+msgstr "Tiếng Oromo"
 
 #: frontend/ui/data/isolanguage.lua:94
-#, fuzzy
 msgid "Panjabi"
-msgstr "Punjabi"
+msgstr "Tiếng Punjab"
 
 #: frontend/ui/data/isolanguage.lua:95
-#, fuzzy
 msgid "Pali"
-msgstr "Pali"
+msgstr "Tiếng Pali"
 
 #: frontend/ui/data/isolanguage.lua:98
-#, fuzzy
 msgid "Pushto"
-msgstr "Pashto"
+msgstr "Tiếng Pashto"
 
 #: frontend/ui/data/isolanguage.lua:99 frontend/ui/translator.lua:209
-#, fuzzy
 msgid "Quechua"
-msgstr "Quechua"
+msgstr "Tiếng Quechua"
 
 #: frontend/ui/data/isolanguage.lua:103 frontend/ui/translator.lua:218
-#, fuzzy
 msgid "Sanskrit"
 msgstr "Tiếng Phạn"
 
 #: frontend/ui/data/isolanguage.lua:104 frontend/ui/translator.lua:231
 msgid "Sinhala"
-msgstr ""
+msgstr "Tiếng Sinhala"
 
 #: frontend/ui/data/isolanguage.lua:107 frontend/ui/translator.lua:230
 msgid "Sindhi"
-msgstr "Sindhi"
+msgstr "Tiếng Sindhi"
 
 #: frontend/ui/data/isolanguage.lua:109 frontend/ui/translator.lua:34
 msgid "Albanian"
-msgstr "Albanian"
+msgstr "Tiếng Albania"
 
 #: frontend/ui/data/isolanguage.lua:111 frontend/ui/translator.lua:240
-#, fuzzy
 msgid "Swati"
-msgstr "Swati"
+msgstr "Tiếng Swati"
 
 #: frontend/ui/data/isolanguage.lua:112 frontend/ui/translator.lua:237
 msgid "Sundanese"
-msgstr "Sundanese"
+msgstr "Tiếng Sunda"
 
 #: frontend/ui/data/isolanguage.lua:113 frontend/ui/translator.lua:239
 msgid "Swahili"
-msgstr "Swahili"
+msgstr "Tiếng Swahili"
 
 #: frontend/ui/data/isolanguage.lua:115
 msgid "Syriac"
-msgstr ""
+msgstr "Tiếng Syriac"
 
 #: frontend/ui/data/isolanguage.lua:116 frontend/ui/translator.lua:246
 msgid "Tamil"
-msgstr "Tamil"
+msgstr "Tiếng Tamil"
 
 #: frontend/ui/data/isolanguage.lua:117 frontend/ui/translator.lua:247
-#, fuzzy
 msgid "Tatar"
-msgstr "Tatar"
+msgstr "Tiếng Tatar"
 
 #: frontend/ui/data/isolanguage.lua:118 frontend/ui/translator.lua:248
 msgid "Telugu"
-msgstr "Telugu"
+msgstr "Tiếng Telugu"
 
 #: frontend/ui/data/isolanguage.lua:119 frontend/ui/translator.lua:243
 msgid "Tajik"
-msgstr "Tajik"
+msgstr "Tiếng Tajik"
 
 #: frontend/ui/data/isolanguage.lua:120
-#, fuzzy
 msgid "Tagalog"
-msgstr "Tagalog"
+msgstr "Tiếng Tagalog"
 
 #: frontend/ui/data/isolanguage.lua:121 frontend/ui/translator.lua:250
 msgid "Thai"
-msgstr "Thai"
+msgstr "Tiếng Thái"
 
 #: frontend/ui/data/isolanguage.lua:122 frontend/ui/translator.lua:252
 msgid "Tigrinya"
-msgstr ""
+msgstr "Tiếng Tigrinya"
 
 #: frontend/ui/data/isolanguage.lua:123
 msgid "Tonga"
-msgstr ""
+msgstr "Tiếng Tonga"
 
 #: frontend/ui/data/isolanguage.lua:125
-#, fuzzy
 msgid "Uighur"
-msgstr "Uighur"
+msgstr "Tiếng Uighur"
 
 #: frontend/ui/data/isolanguage.lua:127 frontend/ui/translator.lua:267
 msgid "Urdu"
-msgstr "Urdu"
+msgstr "Tiếng Urdu"
 
 #: frontend/ui/data/isolanguage.lua:128 frontend/ui/translator.lua:269
 msgid "Uzbek"
-msgstr "Uzbek"
+msgstr "Tiếng Uzbek"
 
 #: frontend/ui/data/isolanguage.lua:129 frontend/ui/translator.lua:272
 msgid "Vietnamese"
 msgstr "Tiếng Việt"
 
 #: frontend/ui/data/isolanguage.lua:130
-#, fuzzy
 msgid "Volapük"
-msgstr "Volapük"
+msgstr "Tiếng Volapük"
 
 #: frontend/ui/data/isolanguage.lua:131
-#, fuzzy
 msgid "Walloon"
-msgstr "Walloon"
+msgstr "Tiếng Walloon"
 
 #: frontend/ui/data/isolanguage.lua:132 frontend/ui/translator.lua:277
 msgid "Xhosa"
-msgstr "Xhosa"
+msgstr "Tiếng Xhosa"
 
 #: frontend/ui/data/isolanguage.lua:133 frontend/ui/translator.lua:279
 msgid "Yiddish"
-msgstr "Yiddish"
+msgstr "Tiếng Yiddish"
 
 #: frontend/ui/data/isolanguage.lua:134 frontend/ui/translator.lua:280
 msgid "Yoruba"
-msgstr "Yoruba"
+msgstr "Tiếng Yoruba"
 
 #: frontend/ui/data/isolanguage.lua:135
-#, fuzzy
 msgid "Zhuang"
-msgstr "Zhuang"
+msgstr "Tiếng Zhuang"
 
 #: frontend/ui/data/isolanguage.lua:136
-#, fuzzy
 msgid "Chinese"
-msgstr "Trung Quốc"
+msgstr "Tiếng Trung"
 
 #. @translators Most of these language name have already been translated at <https://hosted.weblate.org/projects/iso-codes/iso-639-2/>. Click "Automatic suggestions" to see them below the textfield.
 #: frontend/ui/data/isolanguage.lua:142
-#, fuzzy
 msgid "Adyghe"
-msgstr "Adyghe"
+msgstr "Tiếng Adyghe"
 
 #: frontend/ui/data/isolanguage.lua:143
 msgid "Southern Altai"
-msgstr ""
+msgstr "Tiếng Altai Nam"
 
 #: frontend/ui/data/isolanguage.lua:144
-#, fuzzy
 msgid "Old English"
-msgstr "Tiếng Anh"
+msgstr "Tiếng Anh cổ"
 
 #: frontend/ui/data/isolanguage.lua:145
 msgid "Official Aramaic"
-msgstr ""
+msgstr "Tiếng Aramaic chính thức"
 
 #: frontend/ui/data/isolanguage.lua:146
-#, fuzzy
 msgid "Asturian"
-msgstr "Asturian"
+msgstr "Tiếng Asturian"
 
 #: frontend/ui/data/isolanguage.lua:147 frontend/ui/translator.lua:58
-#, fuzzy
 msgid "Bikol"
-msgstr "Bikol"
+msgstr "Tiếng Bikol"
 
 #: frontend/ui/data/isolanguage.lua:148 frontend/ui/translator.lua:65
 msgid "Cebuano"
-msgstr "Cebuano"
+msgstr "Tiếng Cebuano"
 
 #: frontend/ui/data/isolanguage.lua:149
-#, fuzzy
 msgid "Cherokee"
-msgstr "Cherokee"
+msgstr "Tiếng Cherokee"
 
 #: frontend/ui/data/isolanguage.lua:150
-#, fuzzy
 msgid "Coptic"
-msgstr "Coptic"
+msgstr "Tiếng Coptic"
 
 #: frontend/ui/data/isolanguage.lua:151
 msgid "Crimean Tatar"
-msgstr ""
+msgstr "Tiếng Tatar Krym"
 
 #: frontend/ui/data/isolanguage.lua:152
-#, fuzzy
 msgid "Lower Sorbian"
-msgstr "Serbian"
+msgstr "Tiếng Sorbia Hạ"
 
 #: frontend/ui/data/isolanguage.lua:153
 msgid "Middle Dutch"
-msgstr ""
+msgstr "Tiếng Hà Lan Trung Cổ"
 
 #: frontend/ui/data/isolanguage.lua:154
-#, fuzzy
 msgid "Middle English"
-msgstr "Tiếng Anh"
+msgstr "Tiếng Anh Trung Cổ"
 
 #: frontend/ui/data/isolanguage.lua:155
-#, fuzzy
 msgid "Middle French"
-msgstr "Tiếng Pháp"
+msgstr "Tiếng Pháp Trung Cổ"
 
 #: frontend/ui/data/isolanguage.lua:156
-#, fuzzy
 msgid "Old French"
-msgstr "Tiếng Pháp"
+msgstr "Tiếng Pháp Cổ"
 
 #: frontend/ui/data/isolanguage.lua:158
 msgid "Old High German"
-msgstr ""
+msgstr "Tiếng Đức Thượng Cổ"
 
 #: frontend/ui/data/isolanguage.lua:159
-#, fuzzy
 msgid "Gothic"
-msgstr "dày"
+msgstr "Tiếng Goth"
 
 #: frontend/ui/data/isolanguage.lua:160
 msgid "Ancient Greek"
-msgstr ""
+msgstr "Tiếng Hy Lạp cổ"
 
 #: frontend/ui/data/isolanguage.lua:161
-#, fuzzy
 msgid "Swiss German"
-msgstr "Tiếng Đức"
+msgstr "Tiếng Đức Thụy Sĩ"
 
 #: frontend/ui/data/isolanguage.lua:162 frontend/ui/translator.lua:113
 msgid "Hawaiian"
-msgstr "Hawaiian"
+msgstr "Tiếng Hawaii"
 
 #: frontend/ui/data/isolanguage.lua:163 frontend/ui/translator.lua:115
-#, fuzzy
 msgid "Hiligaynon"
-msgstr "Hiligaynon"
+msgstr "Tiếng Hiligaynon"
 
 #: frontend/ui/data/isolanguage.lua:164
-#, fuzzy
 msgid "Kumyk"
-msgstr "Kumyk"
+msgstr "Tiếng Kumyk"
 
 #: frontend/ui/data/isolanguage.lua:165
-#, fuzzy
 msgid "Ladino"
-msgstr "Đang đọc"
+msgstr "Tiếng Ladino"
 
 #: frontend/ui/data/isolanguage.lua:166
 #, fuzzy
@@ -11471,12 +11447,12 @@ msgstr ""
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:131
 msgid "Keitai tap interval: %1 second"
 msgid_plural "Keitai tap interval: %1 seconds"
-msgstr[0] ""
+msgstr[0] "Khoảng thời gian nhấn Keitai: %1 giây"
 
 #. @translators Flick and keitai are kinds of Japanese keyboard input modes. See <https://en.wikipedia.org/wiki/Japanese_input_method#Mobile_phones> for more information.
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:134
 msgid "Keitai input: disabled (flick-only input)"
-msgstr ""
+msgstr "Nhập Keitai: Đã tắt (chỉ nhập bằng vuốt)"
 
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:137
 msgid ""
@@ -11485,11 +11461,14 @@ msgid ""
 "key will loop through candidates for the current character being input. Any "
 "other input will cause you to leave keitai mode."
 msgstr ""
+"Thời gian chờ lần nhấn tiếp theo khi ở chế độ nhập keitai trước khi xác nhận "
+"ký tự hiện tại. Trong khoảng thời gian chờ này, việc nhấn vào một phím sẽ "
+"lặp qua các ký tự ứng cử viên cho ký tự đang được nhập. Bất kỳ thao tác nhập "
+"nào khác sẽ khiến bạn thoát khỏi chế độ keitai."
 
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:144
-#, fuzzy
 msgid "Keitai tap interval"
-msgstr "Chạm vào góc"
+msgstr "Khoảng thời gian nhấn Keitai"
 
 #: frontend/ui/data/keyboardlayouts/ja_keyboard.lua:145
 msgid ""
@@ -11501,42 +11480,43 @@ msgid ""
 "If set to 0, keitai input is disabled entirely and only flick input can be "
 "used."
 msgstr ""
+"Thời gian chờ (tính bằng giây) cho lần nhấn tiếp theo khi ở chế độ nhập "
+"keitai trước khi xác nhận ký tự hiện tại. Trong khoảng thời gian chờ này, "
+"việc nhấn vào một phím sẽ lặp qua các ký tự ứng cử viên cho ký tự đang được "
+"nhập. Bất kỳ thao tác nhập nào khác sẽ khiến bạn thoát khỏi chế độ keitai.\n"
+"\n"
+"Nếu cài đặt này được đặt thành 0, chế độ nhập keitai sẽ bị vô hiệu hóa hoàn "
+"toàn và chỉ có thể sử dụng chế độ nhập flick (vuốt)."
 
 #: frontend/ui/data/keyboardlayouts/zh_CN_keyboard.lua:71
 #: frontend/ui/data/keyboardlayouts/zh_keyboard.lua:65
-#, fuzzy
 msgid "Show character candidates"
-msgstr "Hiển thị đánh dấu chương"
+msgstr "Hiển thị các ký tự ứng cử viên"
 
 #: frontend/ui/data/koptoptions.lua:27
-#, fuzzy
 msgid "No OCR languages"
-msgstr "Thẻ ngôn ngữ khác:"
+msgstr "Không có ngôn ngữ OCR nào"
 
 #: frontend/ui/data/koptoptions.lua:100
 msgid "Page Crop"
 msgstr "Cắt trang"
 
 #: frontend/ui/data/koptoptions.lua:103
-#, fuzzy
 msgctxt "Page crop"
 msgid "none"
 msgstr "Không"
 
 #: frontend/ui/data/koptoptions.lua:103
-#, fuzzy
 msgctxt "Page crop"
 msgid "auto"
 msgstr "tự động"
 
 #: frontend/ui/data/koptoptions.lua:103
-#, fuzzy
 msgctxt "Page crop"
 msgid "semi-auto"
 msgstr "bán tự động"
 
 #: frontend/ui/data/koptoptions.lua:103
-#, fuzzy
 msgctxt "Page crop"
 msgid "manual"
 msgstr "thủ công"
@@ -11556,6 +11536,20 @@ msgid ""
 "odd page number, and once on an even page number (these areas will then be "
 "used for all odd, or even, page numbers)."
 msgstr ""
+"Cho phép cắt lề trang trắng trong tài liệu gốc.\n"
+"Việc này có thể cần thiết đối với các tài liệu được quét (scan) mà lề trang "
+"có thể có các đốm hoặc dấu vân tay, để có thể sử dụng tính năng phóng to "
+"(zoom) sao cho vừa với chiều rộng nội dung.\n"
+"'none' (Không): không cắt lề tài liệu gốc.\n"
+"'auto' (Tự động): tự động tìm kiếm khu vực chứa nội dung.\n"
+"'semi-auto' (Bán tự động): tự động tìm kiếm khu vực chứa nội dung, nằm bên "
+"trong một khu vực lớn hơn được xác định thủ công.\n"
+"'manual' (Thủ công): sử dụng khu vực đã được xác định thủ công như nguyên "
+"trạng.\n"
+"\n"
+"Ở chế độ 'semi-auto' và 'manual', bạn có thể cần xác định khu vực một lần "
+"trên trang số lẻ, và một lần trên trang số chẵn (các khu vực này sau đó sẽ "
+"được sử dụng cho tất cả các trang số lẻ, hoặc số chẵn)."
 
 #: frontend/ui/data/koptoptions.lua:124
 msgid "Margin"
@@ -11564,33 +11558,29 @@ msgstr "Lề"
 #: frontend/ui/data/koptoptions.lua:131
 msgid "Set margins to be applied after page-crop and zoom modes are applied."
 msgstr ""
+"Đặt lề sẽ được áp dụng sau khi các chế độ cắt trang và phóng to được áp dụng."
 
 #: frontend/ui/data/koptoptions.lua:141
 msgid "Auto Straighten"
 msgstr "Tự động làm thẳng"
 
 #: frontend/ui/data/koptoptions.lua:142
-#, fuzzy
 msgid "0°"
 msgstr "0°"
 
 #: frontend/ui/data/koptoptions.lua:142
-#, fuzzy
 msgid "5°"
 msgstr "5°"
 
 #: frontend/ui/data/koptoptions.lua:142
-#, fuzzy
 msgid "10°"
 msgstr "10°"
 
 #: frontend/ui/data/koptoptions.lua:142
-#, fuzzy
 msgid "15°"
 msgstr "15°"
 
 #: frontend/ui/data/koptoptions.lua:142
-#, fuzzy
 msgid "25°"
 msgstr "25°"
 
@@ -11599,60 +11589,56 @@ msgid ""
 "Attempt to automatically straighten tilted source pages.\n"
 "Will rotate up to specified value."
 msgstr ""
+"Cố gắng tự động làm thẳng các trang nguồn bị nghiêng.\n"
+"Sẽ xoay tối đa đến giá trị đã chỉ định."
 
 #: frontend/ui/data/koptoptions.lua:162
 msgid "Horizontal overlap"
-msgstr ""
+msgstr "Độ chồng chéo ngang"
 
 #: frontend/ui/data/koptoptions.lua:179
 msgid "Set horizontal zoom overlap (between columns)."
-msgstr ""
+msgstr "Đặt độ chồng chéo ngang khi phóng to (giữa các cột)."
 
 #: frontend/ui/data/koptoptions.lua:183
-#, fuzzy
 msgid "Vertical overlap"
-msgstr "Đường thẳng đứng (|)"
+msgstr "Độ chồng chéo dọc"
 
 #: frontend/ui/data/koptoptions.lua:200
 msgid "Set vertical zoom overlap (between lines)."
-msgstr ""
+msgstr "Đặt độ chồng chéo dọc khi phóng to (giữa các dòng)."
 
 #: frontend/ui/data/koptoptions.lua:204
-#, fuzzy
 msgid "Fit"
-msgstr "Phù hợp"
+msgstr "Vừa vặn"
 
 #: frontend/ui/data/koptoptions.lua:218
 msgid "Set how the page should be resized to fit the screen."
-msgstr ""
+msgstr "Đặt cách trang sẽ được đổi kích thước để vừa với màn hình."
 
 #: frontend/ui/data/koptoptions.lua:223
 #: plugins/coverbrowser.koplugin/main.lua:216
 #: plugins/coverbrowser.koplugin/main.lua:264
-#, fuzzy
 msgid "Rows"
 msgstr "Hàng"
 
 #: frontend/ui/data/koptoptions.lua:223
 #: plugins/coverbrowser.koplugin/main.lua:210
 #: plugins/coverbrowser.koplugin/main.lua:258
-#, fuzzy
 msgid "Columns"
 msgstr "Cột"
 
 #: frontend/ui/data/koptoptions.lua:249
 msgid "Set the number of columns or rows into which to split the page."
-msgstr ""
+msgstr "Đặt số lượng cột hoặc hàng mà trang sẽ được chia thành."
 
 #: frontend/ui/data/koptoptions.lua:253
-#, fuzzy
 msgid "Zoom factor"
-msgstr "Thu phóng để vừa trang"
+msgstr "Hệ số phóng to"
 
 #: frontend/ui/data/koptoptions.lua:281
-#, fuzzy
 msgid "Zoom to"
-msgstr "Thu phóng để vừa trang"
+msgstr "Thu phóng tới"
 
 #: frontend/ui/data/koptoptions.lua:303
 msgid "Direction"
@@ -11660,41 +11646,44 @@ msgstr "Đường dẫn"
 
 #: frontend/ui/data/koptoptions.lua:320
 msgid "Left to Right, Top to Bottom"
-msgstr ""
+msgstr "Từ Trái sang Phải, Từ Trên xuống Dưới"
 
 #: frontend/ui/data/koptoptions.lua:321
 msgid "Top to Bottom, Left to Right"
-msgstr ""
+msgstr "Từ Trên xuống Dưới, Từ Trái sang Phải"
 
 #: frontend/ui/data/koptoptions.lua:322
 msgid "Left to Right, Bottom to Top"
-msgstr ""
+msgstr "Từ Trái sang Phải, Từ Dưới lên Trên"
 
 #: frontend/ui/data/koptoptions.lua:323
 msgid "Bottom to Top, Left to Right"
-msgstr ""
+msgstr "Từ Dưới lên Trên, Từ Trái sang Phải"
 
 #: frontend/ui/data/koptoptions.lua:324
 msgid "Bottom to Top, Right to Left"
-msgstr ""
+msgstr "Từ Dưới lên Trên, Từ Phải sang Trái"
 
 #: frontend/ui/data/koptoptions.lua:325
 msgid "Right to Left, Bottom to Top"
-msgstr ""
+msgstr "Từ Phải sang Trái, Từ Dưới lên Trên"
 
 #: frontend/ui/data/koptoptions.lua:326
 msgid "Top to Bottom, Right to Left"
-msgstr ""
+msgstr "Từ Trên xuống Dưới, Từ Phải sang Trái"
 
 #: frontend/ui/data/koptoptions.lua:327
 msgid "Right to Left, Top to Bottom"
-msgstr ""
+msgstr "Từ Phải sang Trái, Từ Trên xuống Dưới"
 
 #: frontend/ui/data/koptoptions.lua:334
 msgid ""
 "Set how paging and swiping forward should move the view on the page:\n"
 "left to right or reverse, top to bottom or reverse."
 msgstr ""
+"Đặt cách thức lật trang và vuốt tiến lên sẽ di chuyển chế độ xem trên "
+"trang:\n"
+"từ trái sang phải hoặc ngược lại, từ trên xuống dưới hoặc ngược lại."
 
 #: frontend/ui/data/koptoptions.lua:351
 msgid ""
@@ -11702,38 +11691,40 @@ msgid ""
 "- 'continuous' mode allows you to scroll the pages like you would in a web "
 "browser."
 msgstr ""
+"- 'page' (Trang): chế độ chỉ hiển thị một trang tài liệu tại một thời điểm.\n"
+"- 'continuous' (Liên tục): chế độ cho phép bạn cuộn các trang như khi duyệt "
+"web."
 
 #: frontend/ui/data/koptoptions.lua:356
 msgid "Page Gap"
-msgstr ""
+msgstr "Khoảng cách Trang"
 
 #: frontend/ui/data/koptoptions.lua:368
 msgid ""
 "In continuous view mode, sets the thickness of the separator between "
 "document pages."
 msgstr ""
+"Trong chế độ xem liên tục, đặt độ dày của đường phân cách giữa các trang tài "
+"liệu."
 
 #: frontend/ui/data/koptoptions.lua:379
-#, fuzzy
 msgctxt "Line spacing"
 msgid "small"
 msgstr "nhỏ"
 
 #: frontend/ui/data/koptoptions.lua:379
-#, fuzzy
 msgctxt "Line spacing"
 msgid "medium"
 msgstr "vừa"
 
 #: frontend/ui/data/koptoptions.lua:379
-#, fuzzy
 msgctxt "Line spacing"
 msgid "large"
 msgstr "rộng"
 
 #: frontend/ui/data/koptoptions.lua:388
 msgid "In reflow mode, sets the spacing between lines."
-msgstr ""
+msgstr "Trong chế độ sắp xếp lại (reflow), đặt khoảng cách giữa các dòng."
 
 #. @translators Text alignment. Options given as icons: left, right, center, justify.
 #: frontend/ui/data/koptoptions.lua:393
@@ -11741,34 +11732,29 @@ msgid "Alignment"
 msgstr "Căn chỉnh"
 
 #: frontend/ui/data/koptoptions.lua:408
-#, fuzzy
 msgctxt "Alignment"
 msgid "auto"
 msgstr "tự động"
 
 #: frontend/ui/data/koptoptions.lua:409
-#, fuzzy
 msgctxt "Alignment"
 msgid "left"
-msgstr "Góc trên bên trái"
+msgstr "Trái"
 
 #: frontend/ui/data/koptoptions.lua:410
-#, fuzzy
 msgctxt "Alignment"
 msgid "center"
 msgstr "Giữa"
 
 #: frontend/ui/data/koptoptions.lua:411
-#, fuzzy
 msgctxt "Alignment"
 msgid "right"
 msgstr "Phải"
 
 #: frontend/ui/data/koptoptions.lua:412
-#, fuzzy
 msgctxt "Alignment"
 msgid "justify"
-msgstr "Điều chỉnh văn bản"
+msgstr "Căn đều"
 
 #: frontend/ui/data/koptoptions.lua:415
 msgid ""
@@ -11776,43 +11762,45 @@ msgid ""
 "The first option (\"auto\") tries to automatically align reflowed text as it "
 "is in the original document."
 msgstr ""
+"Trong chế độ sắp xếp lại (reflow), đặt căn chỉnh văn bản.\n"
+"Tùy chọn đầu tiên (\"auto\" - Tự động) cố gắng tự động căn chỉnh văn bản đã "
+"được sắp xếp lại theo cách nó xuất hiện trong tài liệu gốc."
 
 #: frontend/ui/data/koptoptions.lua:454
 msgid ""
 "In reflow mode, sets a font scaling factor that is applied to the original "
 "document font sizes."
 msgstr ""
+"Trong chế độ sắp xếp lại (reflow), đặt hệ số chia tỷ lệ phông chữ được áp "
+"dụng cho kích thước phông chữ gốc của tài liệu."
 
 #: frontend/ui/data/koptoptions.lua:461
 msgid "Word Gap"
 msgstr "Khoảng cách chữ"
 
 #: frontend/ui/data/koptoptions.lua:462
-#, fuzzy
 msgctxt "Word gap"
 msgid "small"
 msgstr "nhỏ"
 
 #: frontend/ui/data/koptoptions.lua:462
-#, fuzzy
 msgctxt "Word gap"
 msgid "auto"
 msgstr "tự động"
 
 #: frontend/ui/data/koptoptions.lua:462
-#, fuzzy
 msgctxt "Word gap"
 msgid "large"
 msgstr "rộng"
 
 #: frontend/ui/data/koptoptions.lua:469
 msgid "In reflow mode, sets the spacing between words."
-msgstr ""
+msgstr "Trong chế độ sắp xếp lại (reflow), đặt khoảng cách giữa các từ."
 
 #. @translators Reflow text.
 #: frontend/ui/data/koptoptions.lua:474
 msgid "Reflow"
-msgstr "Quét chữ (Reflow)"
+msgstr "Sắp xếp lại"
 
 #: frontend/ui/data/koptoptions.lua:480
 msgid ""
@@ -11821,6 +11809,9 @@ msgid ""
 "reading.\n"
 "Some of the other settings are only available when reflow mode is enabled."
 msgstr ""
+"Chế độ Sắp xếp lại (Reflow) trích xuất văn bản và hình ảnh từ tài liệu gốc, "
+"có thể bỏ qua một số định dạng, và sắp xếp lại trên màn hình để dễ đọc hơn.\n"
+"Một số cài đặt khác chỉ có sẵn khi chế độ Sắp xếp lại được bật."
 
 #: frontend/ui/data/koptoptions.lua:511
 msgid "Dewatermark"
@@ -11852,22 +11843,19 @@ msgstr "Bật rung phần mềm."
 #: frontend/ui/data/koptoptions.lua:547
 msgctxt "Quality"
 msgid "Render Quality"
-msgstr ""
+msgstr "Chất lượng Hiển thị"
 
 #: frontend/ui/data/koptoptions.lua:548
-#, fuzzy
 msgctxt "Quality"
 msgid "low"
 msgstr "thấp"
 
 #: frontend/ui/data/koptoptions.lua:548
-#, fuzzy
 msgctxt "Quality"
 msgid "default"
 msgstr "Mặc định"
 
 #: frontend/ui/data/koptoptions.lua:548
-#, fuzzy
 msgctxt "Quality"
 msgid "high"
 msgstr "cao"
@@ -11877,25 +11865,28 @@ msgid ""
 "In reflow mode, sets the quality of the text and image extraction processing "
 "and output."
 msgstr ""
+"Trong chế độ sắp xếp lại (reflow), đặt chất lượng của quá trình xử lý và đầu "
+"ra trích xuất văn bản và hình ảnh."
 
 #: frontend/ui/data/koptoptions.lua:565
 msgid "Document Language"
-msgstr "Ngôn ngữ tài liệu"
+msgstr "Ngôn ngữ Tài liệu"
 
 #: frontend/ui/data/koptoptions.lua:575
 msgid "Set the language to be used by the OCR engine."
-msgstr ""
+msgstr "Đặt ngôn ngữ được sử dụng bởi bộ xử lý OCR."
 
 #. @translators If OCR is unclear, please see https://en.wikipedia.org/wiki/Optical_character_recognition
 #: frontend/ui/data/koptoptions.lua:580
 msgid "Forced OCR"
-msgstr "Ép OCR"
+msgstr "Buộc OCR"
 
 #: frontend/ui/data/koptoptions.lua:586
 msgid ""
 "Force the use of OCR for text selection, even if the document has a text "
 "layer."
 msgstr ""
+"Buộc sử dụng OCR để chọn văn bản, ngay cả khi tài liệu có sẵn lớp văn bản."
 
 #: frontend/ui/data/koptoptions.lua:590
 msgid "Writing Direction"
@@ -11921,6 +11912,9 @@ msgid ""
 "In reflow mode, sets the original text direction. This needs to be set to "
 "RTL to correctly extract and reflow RTL languages like Arabic or Hebrew."
 msgstr ""
+"Trong chế độ sắp xếp lại (reflow), đặt hướng viết của văn bản gốc. Cài đặt "
+"này cần được đặt thành RTL để trích xuất và sắp xếp lại chính xác các ngôn "
+"ngữ viết từ phải sang trái (RTL) như tiếng Ả Rập hoặc tiếng Do Thái."
 
 #. @translators The maximum size of a dust or ink speckle to be ignored instead of being considered a character.
 #: frontend/ui/data/koptoptions.lua:610
@@ -11945,7 +11939,7 @@ msgstr "Thụt lề"
 
 #: frontend/ui/data/koptoptions.lua:635
 msgid "Document Columns"
-msgstr ""
+msgstr "Số Cột Tài liệu"
 
 #: frontend/ui/data/koptoptions.lua:647
 msgid ""
@@ -11954,10 +11948,15 @@ msgid ""
 "You might need to set it to 1 column if, in a full width document, text is "
 "incorrectly detected as multiple columns because of unlucky word spacing."
 msgstr ""
+"Trong chế độ sắp xếp lại (reflow), đặt số lượng cột tối đa mà phần mềm sẽ cố "
+"gắng phát hiện trong tài liệu gốc.\n"
+"Bạn có thể cần đặt giá trị này thành 1 cột nếu trong tài liệu có chiều rộng "
+"đầy đủ, văn bản bị phát hiện không chính xác là nhiều cột do khoảng cách từ "
+"không đều."
 
 #: frontend/ui/data/onetime_migration.lua:553
 msgid "Local calibre library"
-msgstr ""
+msgstr "Thư viện calibre nội bộ"
 
 #: frontend/ui/data/optionsutil.lua:16
 msgctxt "Rotation"
@@ -11980,31 +11979,27 @@ msgid "↓ 180°"
 msgstr "↓ 180°"
 
 #: frontend/ui/data/optionsutil.lua:73
-#, fuzzy
 msgctxt "Font size"
 msgid "pt"
 msgstr "pt"
 
 #: frontend/ui/data/optionsutil.lua:75
-#, fuzzy
 msgctxt "Length"
 msgid "mm"
 msgstr "mm"
 
 #: frontend/ui/data/optionsutil.lua:77
-#, fuzzy
 msgctxt "Length"
 msgid "in"
-msgstr "tối thiểu"
+msgstr "in"
 
 #: frontend/ui/data/optionsutil.lua:79 frontend/ui/data/optionsutil.lua:85
 msgctxt "Pixels"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: frontend/ui/data/optionsutil.lua:129 frontend/ui/data/optionsutil.lua:139
 #: plugins/profiles.koplugin/main.lua:216
-#, fuzzy
 msgid "custom"
 msgstr "tùy biến"
 
@@ -12015,6 +12010,10 @@ msgid ""
 "Current value: %3\n"
 "Default value: %4"
 msgstr ""
+"%1\n"
+"%2\n"
+"Giá trị hiện tại: %3\n"
+"Giá trị mặc định: %4"
 
 #: frontend/ui/data/optionsutil.lua:199
 msgid ""
@@ -12023,6 +12022,10 @@ msgid ""
 "Current value: %3 (%4)\n"
 "Default value: %5 (%6)"
 msgstr ""
+"%1\n"
+"%2\n"
+"Giá trị hiện tại: %3 (%4)\n"
+"Giá trị mặc định: %5 (%6)"
 
 #: frontend/ui/data/optionsutil.lua:203
 msgid ""
@@ -12031,9 +12034,12 @@ msgid ""
 "Current value: %3 (%4)\n"
 "Default value: %5"
 msgstr ""
+"%1\n"
+"%2\n"
+"Giá trị hiện tại: %3 (%4)\n"
+"Giá trị mặc định: %5"
 
 #: frontend/ui/data/optionsutil.lua:221
-#, fuzzy
 msgid ""
 "Current margins:\n"
 "  left: %1\n"
@@ -12046,7 +12052,6 @@ msgstr ""
 "Lề mặc định: chưa đặt"
 
 #: frontend/ui/data/optionsutil.lua:231
-#, fuzzy
 msgid ""
 "Current margins:\n"
 "  left: %1\n"
@@ -12065,11 +12070,11 @@ msgstr ""
 #: frontend/ui/elements/avoid_flashing_ui.lua:4
 #: frontend/ui/elements/screen_eink_opt_menu_table.lua:19
 msgid "Avoid mandatory black flashes in UI"
-msgstr "Ngăn (giảm) làm mới trang trong chế độ tối"
+msgstr "Tránh nhấp nháy đen bắt buộc trong giao diện người dùng"
 
 #: frontend/ui/elements/common_info_menu_table.lua:18
 msgid "More tools"
-msgstr ""
+msgstr "Công cụ khác"
 
 #: frontend/ui/elements/common_info_menu_table.lua:28
 #: frontend/ui/widget/touchmenu.lua:1291
@@ -12091,7 +12096,7 @@ msgstr "Báo lỗi"
 
 #: frontend/ui/elements/common_info_menu_table.lua:49
 msgid "(verbose logging is enabled)"
-msgstr ""
+msgstr "(đã bật ghi nhật ký chi tiết)"
 
 #: frontend/ui/elements/common_info_menu_table.lua:57
 msgid ""
@@ -12118,31 +12123,29 @@ msgid ""
 "Verbose logs will make our investigations easier. If possible, try to "
 "reproduce the issue while it's enabled, and attach %1 to your bug report."
 msgstr ""
+"Nhật ký chi tiết sẽ giúp việc điều tra của chúng tôi dễ dàng hơn. Nếu có "
+"thể, hãy cố gắng tái hiện lại lỗi khi tính năng này được bật, và đính kèm %1 "
+"vào báo cáo lỗi của bạn."
 
 #: frontend/ui/elements/common_info_menu_table.lua:79
-#, fuzzy
 msgid "Disable verbose logging"
-msgstr "Bật thông tin gỡ lỗi chi tiết"
+msgstr "Tắt ghi nhật ký chi tiết"
 
 #: frontend/ui/elements/common_info_menu_table.lua:79
-#, fuzzy
 msgid "Enable verbose logging"
 msgstr "Bật thông tin gỡ lỗi chi tiết"
 
 #: frontend/ui/elements/common_info_menu_table.lua:88
-#, fuzzy
 msgid "Verbose logging disabled"
-msgstr "Đèn trước bị vô hiệu hóa."
+msgstr "Đã tắt ghi nhật ký chi tiết"
 
 #: frontend/ui/elements/common_info_menu_table.lua:94
-#, fuzzy
 msgid "Verbose logging enabled"
-msgstr "Đèn trước được bật."
+msgstr "Đã bật ghi nhật ký chi tiết"
 
 #: frontend/ui/elements/common_info_menu_table.lua:107
-#, fuzzy
 msgid "Version: %1"
-msgstr "Vị trí: %1"
+msgstr "Phiên bản: %1"
 
 #: frontend/ui/elements/common_info_menu_table.lua:116
 #: plugins/newsdownloader.koplugin/main.lua:214
@@ -12160,15 +12163,23 @@ msgid ""
 "\n"
 "http://koreader.rocks"
 msgstr ""
+"KOReader %1\n"
+"\n"
+"Trình xem tài liệu dành cho các thiết bị E Ink.\n"
+"\n"
+"Được cấp phép theo Affero GPL v3. Tất cả các phần phụ thuộc đều là phần mềm "
+"miễn phí.\n"
+"\n"
+"http://koreader.rocks"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:23
 msgid "Start %1 reader app"
-msgstr "Khơi động %1 ứng dụng đọc"
+msgstr "Khởi động ứng dụng đọc %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:33
 #: frontend/ui/widget/frontlightwidget.lua:381
 msgid "Frontlight"
-msgstr "Độ sáng"
+msgstr "Đèn nền"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:45
 msgid "USB mass storage"
@@ -12176,11 +12187,11 @@ msgstr "Bộ nhớ USB"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:56
 msgid "Turn on the power LED when charging"
-msgstr ""
+msgstr "Bật đèn LED nguồn khi sạc"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:69
 msgid "Associate file extensions"
-msgstr ""
+msgstr "Liên kết phần mở rộng tập tin"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:76
 msgid "Time and date"
@@ -12188,22 +12199,19 @@ msgstr "Ngày và giờ"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:79
 msgid "12-hour clock"
-msgstr ""
+msgstr "Định dạng 12 giờ"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:92
-#, fuzzy
 msgctxt "Time"
 msgid "Classic"
 msgstr "Cổ điển"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:94
-#, fuzzy
 msgctxt "Time"
 msgid "Modern"
 msgstr "Hiện đại"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:96
-#, fuzzy
 msgctxt "Time"
 msgid "Letters"
 msgstr "Chữ cái"
@@ -12213,19 +12221,16 @@ msgid "Duration format: %1"
 msgstr "Định dạng thời lượng: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:106
-#, fuzzy
 msgctxt "Time"
 msgid "Classic (%1)"
 msgstr "Cổ điển (%1)"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:121
-#, fuzzy
 msgctxt "Time"
 msgid "Modern (%1)"
 msgstr "Hiện đại (%1)"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:136
-#, fuzzy
 msgctxt "Time"
 msgid "Letters (%1)"
 msgstr "Chữ cái (%1)"
@@ -12242,7 +12247,7 @@ msgstr "Đặt giờ"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:163
 msgid "Time is in hours and minutes."
-msgstr ""
+msgstr "Thời gian tính bằng giờ và phút."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:168
 msgid "Current time: %1:%2"
@@ -12260,7 +12265,7 @@ msgstr "Đặt ngày"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:195
 msgid "The date format is year, month, day."
-msgstr ""
+msgstr "Định dạng ngày là năm, tháng, ngày."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:201
 msgid "Current date: %1-%2-%3"
@@ -12279,14 +12284,12 @@ msgid "Ignore sleepcover wakeup events"
 msgstr "Bỏ qua bật màn hình bằng ốp bảo vệ"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:243
-#, fuzzy
 msgid "Wake up on page-turn button press"
-msgstr "Ngăn chuyển trang bằng phím cứng"
+msgstr "Đánh thức khi nhấn nút lật trang"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:256
-#, fuzzy
 msgid "Disable cover events"
-msgstr "Bỏ qua khóa màn hình bằng ốp bảo vệ"
+msgstr "Tắt sự kiện bìa"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:257
 msgid ""
@@ -12295,6 +12298,11 @@ msgid ""
 "sleep and wake the device. If there is no cover present the sensor may cause "
 "spurious wakeups when located next to a magnetic source."
 msgstr ""
+"Bật/tắt cảm biến Hall.\n"
+"Cảm biến này được sử dụng để phát hiện bìa (cover) có đóng hay không, từ đó "
+"tự động đưa thiết bị vào trạng thái ngủ và đánh thức thiết bị. Nếu không có "
+"bìa, cảm biến có thể gây ra hiện tượng đánh thức ngoài ý muốn khi thiết bị "
+"nằm gần một nguồn từ tính."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:266
 #: plugins/autowarmth.koplugin/main.lua:1065
@@ -12315,9 +12323,8 @@ msgid "Taps and gestures"
 msgstr "Chạm và cử chỉ"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:290
-#, fuzzy
 msgid "Ignore long-press on corners"
-msgstr "Nhấn giữ để chọn đường dẫn hiện tại"
+msgstr "Bỏ qua nhấn giữ ở góc"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:299
 msgid "Disable double tap"
@@ -12329,7 +12336,7 @@ msgstr "Toàn màn hình"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:347
 msgid "Force haptic feedback"
-msgstr ""
+msgstr "Buộc phản hồi xúc giác"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:357
 msgid "Volume key page turning"
@@ -12337,7 +12344,7 @@ msgstr "Chuyển trang bằng nút âm lượng"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:367
 msgid "Ignore back button completely"
-msgstr ""
+msgstr "Bỏ qua hoàn toàn nút quay lại"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:379
 msgid "Battery optimizations"
@@ -12351,6 +12358,11 @@ msgid ""
 "\n"
 "Please don't change any settings unless you know what you're doing."
 msgstr ""
+"Chuyển đến cài đặt tối ưu hóa pin Android?\n"
+"\n"
+"Bạn sẽ được nhắc đến màn hình quản lý quyền.\n"
+"\n"
+"Vui lòng không thay đổi bất kỳ cài đặt nào trừ khi bạn biết mình đang làm gì."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:396
 msgid "Navigation"
@@ -12374,23 +12386,21 @@ msgid "disable"
 msgstr "tắt"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:418
-#, fuzzy
 msgid "Back to exit: %1"
-msgstr "Tiêu đề sách (%1%)"
+msgstr "Quay lại để thoát: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:431
 #: frontend/ui/elements/common_settings_menu_table.lua:460
 msgid "back to exit"
-msgstr ""
+msgstr "Quay lại để thoát"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:433
-#, fuzzy
 msgid "parent folder"
-msgstr "Thư mục hiện tại"
+msgstr "Thư mục cha"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:435
 msgid "Back in file browser: %1"
-msgstr "Quay lại duyệt file: %1"
+msgstr "Quay lại trong trình duyệt tập tin: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:441
 #: frontend/ui/elements/common_settings_menu_table.lua:474
@@ -12402,47 +12412,40 @@ msgid "Go to parent folder"
 msgstr "Đi đến thư mục mẹ"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:464
-#, fuzzy
 msgid "previous location"
-msgstr "Quay lại vị trí trước đó"
+msgstr "Vị trí trước"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:466
-#, fuzzy
 msgid "previous read page"
-msgstr "Trang trước"
+msgstr "Trang đã đọc trước"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:468
 msgid "Back in reader: %1"
 msgstr "Quay lại chế độ đọc: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:484
-#, fuzzy
 msgid "Go to file browser"
-msgstr "trình duyệt tập tin"
+msgstr "Đi đến trình duyệt tập tin"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:485
-#, fuzzy
 msgid "Go to previous location"
-msgstr "Quay lại vị trí trước đó"
+msgstr "Đi đến vị trí trước"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:486
-#, fuzzy
 msgid "Go to previous read page"
-msgstr "Trang trước"
+msgstr "Đi đến trang đã đọc trước"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:492
 msgid "Backspace works as back button"
-msgstr ""
+msgstr "Phím Backspace hoạt động như nút quay lại"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:504
-#, fuzzy
 msgid "Add opening page to location history"
-msgstr "Xóa lịch sử vị trí"
+msgstr "Thêm trang mở đầu vào lịch sử vị trí"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:521
-#, fuzzy
 msgid "Skim dialog position: %1"
-msgstr "Làm mờ đánh dấu: %1"
+msgstr "Vị trí hộp thoại lướt nhanh: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:536
 msgid ""
@@ -12457,6 +12460,17 @@ msgid ""
 "data after a software crash, but will cause more I/O writes the lower the "
 "interval is, and may slowly wear out your storage media in the long run."
 msgstr ""
+"Cài đặt này xác định tần suất ghi lại vào đĩa các cài đặt chung và siêu dữ "
+"liệu sách, bao gồm vị trí hiện tại của bạn cùng mọi đánh dấu và ghi chú đã "
+"tạo, trong khi bạn đang đọc tài liệu.\n"
+"\n"
+"Hành vi thông thường là chỉ lưu những dữ liệu này khi tài liệu được đóng, "
+"thiết bị của bạn bị tạm dừng (suspended), hoặc khi thoát KOReader.\n"
+"\n"
+"Đặt nó thành một khoảng thời gian nhất định có thể giúp ngăn ngừa mất các "
+"cài đặt/dữ liệu mới sau sự cố phần mềm, nhưng sẽ gây ra nhiều hoạt động ghi/"
+"đọc (I/O) hơn nếu khoảng thời gian này càng thấp, và về lâu dài có thể làm "
+"giảm tuổi thọ của bộ nhớ thiết bị."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:547
 msgid ""
@@ -12464,24 +12478,26 @@ msgid ""
 "the potential for filesystem corruption and complete data loss after a "
 "hardware crash."
 msgstr ""
+"Xin lưu ý rằng trên thiết bị này, việc đặt khoảng thời gian thấp (để lưu dữ "
+"liệu) có thể làm tăng khả năng hỏng hệ thống tập tin và mất dữ liệu hoàn "
+"toàn sau sự cố phần cứng."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:555
 msgid "Only on close and suspend"
-msgstr ""
+msgstr "Chỉ khi đóng và tạm dừng"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:557
 msgid "Every minute"
 msgid_plural "Every %1 minutes"
-msgstr[0] ""
+msgstr[0] "Mỗi %1 phút"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:573
 msgid "Document"
 msgstr "Văn bản"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:578
-#, fuzzy
 msgid "book folder"
-msgstr "Chọn thư mục"
+msgstr "Thư mục sách"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:584
 msgid ""
@@ -12489,11 +12505,17 @@ msgid ""
 "(collectively known as metadata) are stored in a separate folder named <book-"
 "filename>.sdr (\".sdr\" meaning \"sidecar\")."
 msgstr ""
+"Các cài đặt hiển thị sách, tiến độ đọc, đánh dấu, dấu trang và ghi chú (gọi "
+"chung là siêu dữ liệu) được lưu trữ trong một thư mục riêng biệt được đặt "
+"tên là <tên-tập-tin-sách>.sdr (với \".sdr\" là viết tắt của \"sidecar\" - đi "
+"kèm)."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:586
 msgid ""
 "You can decide between three locations/methods where these will be saved:"
 msgstr ""
+"Bạn có thể quyết định giữa ba vị trí/phương pháp nơi những dữ liệu này sẽ "
+"được lưu:"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:587
 msgid ""
@@ -12505,6 +12527,12 @@ msgid ""
 "perform directory synchronization or backups, your settings will be part of "
 "them."
 msgstr ""
+" - Cạnh tập tin sách (mặc định từ lâu): Các thư mục sdr sẽ hiển thị khi bạn "
+"duyệt thư mục thư viện của mình bằng trình duyệt tập tin khác hoặc từ máy "
+"tính, điều này có thể làm thư viện trông lộn xộn hơn. Nhưng điều này cho "
+"phép bạn di chuyển chúng cùng với sách khi bạn tổ chức lại thư viện, và cũng "
+"giữ nguyên nếu đổi tên thư mục cha. Ngoài ra, nếu bạn thực hiện đồng bộ hóa "
+"thư mục hoặc sao lưu, các cài đặt của bạn cũng sẽ được bao gồm."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:588
 msgid ""
@@ -12515,6 +12543,13 @@ msgid ""
 "finding your previous settings for these books. These settings won't be part "
 "of any synchronization or backups of your library."
 msgstr ""
+" - Tất cả trong %1: Các thư mục sdr sẽ chỉ hiển thị và được sử dụng bởi "
+"KOReader, và sẽ không làm lộn xộn các thư mục thư viện khi bạn duyệt bằng "
+"trình duyệt tập tin khác hoặc từ máy tính. Tuy nhiên, bất kỳ việc tổ chức "
+"lại thư viện nào (di chuyển hoặc đổi tên thư mục hay tên tập tin) có thể "
+"khiến KOReader không tìm thấy các cài đặt trước đó của bạn cho những cuốn "
+"sách này. Các cài đặt này sẽ không được bao gồm trong bất kỳ hoạt động đồng "
+"bộ hóa hoặc sao lưu thư viện nào của bạn."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:589
 msgid ""
@@ -12527,6 +12562,16 @@ msgid ""
 "file browser navigation. This option may suit users with multiple copies of "
 "documents across different devices and directories."
 msgstr ""
+" - Tất cả bên trong %1 dưới dạng hàm băm (hashes): Các thư mục sdr được nhận "
+"dạng không phải bằng đường dẫn/tên tập tin mà bằng hàm băm MD5 một phần, cho "
+"phép bạn đổi tên, di chuyển và sao chép tài liệu bên ngoài KOReader mà không "
+"làm lộn xộn với thư mục sdr, đồng thời vẫn giữ chúng liên kết với siêu dữ "
+"liệu tương ứng. Tuy nhiên, bất kỳ sửa đổi tập tin nào, chẳng hạn như ghi "
+"đánh dấu vào PDF hoặc tải xuống từ calibre, có thể làm thay đổi hàm băm, và "
+"do đó làm mất liên kết siêu dữ liệu của chúng. Việc tính toán hàm băm tập "
+"tin cũng có thể làm chậm quá trình duyệt tập tin. Tùy chọn này có thể phù "
+"hợp với người dùng có nhiều bản sao tài liệu trên các thiết bị và thư mục "
+"khác nhau."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:593
 msgid ""
@@ -12537,6 +12582,13 @@ msgid ""
 "progress data. Embedding PDF annotations can be set at menu Typeset → "
 "Highlights → Write highlights into PDF."
 msgstr ""
+"%1 yêu cầu tính toán hàm băm tập tin một phần của tài liệu, điều này có thể "
+"làm chậm quá trình duyệt tập tin. Bất kỳ sửa đổi tập tin nào (chẳng hạn như "
+"nhúng chú thích vào các tập tin PDF hoặc tải xuống từ calibre) có thể làm "
+"thay đổi hàm băm một phần, do đó làm mất dấu vết của bất kỳ đánh dấu, dấu "
+"trang và dữ liệu tiến trình nào. Việc nhúng chú thích PDF có thể được cài "
+"đặt tại menu Kiểu chữ (Typeset) → Đánh dấu (Highlights) → Ghi đánh dấu vào "
+"PDF (Write highlights into PDF)."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:594
 msgid ""
@@ -12544,103 +12596,98 @@ msgid ""
 "metadata is moved by opening those documents, or deleted, file browser "
 "navigation may remain slower."
 msgstr ""
+"Cảnh báo: Hiện tại bạn đang có các tài liệu với siêu dữ liệu dựa trên hàm "
+"băm. Cho đến khi siêu dữ liệu này được di chuyển bằng cách mở các tài liệu "
+"đó, hoặc bị xóa, quá trình duyệt tập tin vẫn có thể bị chậm hơn."
 
 #: frontend/ui/elements/common_settings_menu_table.lua:625
-#, fuzzy
 msgid "Book metadata location: %1"
-msgstr "Tiêu đề sách: %1%"
+msgstr "Vị trí siêu dữ liệu sách: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:630
 msgid "About book metadata location"
-msgstr ""
+msgstr "Giới thiệu về vị trí siêu dữ liệu sách"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:642
 msgid "Show documents with hash-based metadata"
-msgstr ""
+msgstr "Hiển thị tài liệu có siêu dữ liệu dựa trên Hash"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:643
 msgid "No documents with hash-based metadata"
-msgstr ""
+msgstr "Không có tài liệu nào có siêu dữ liệu dựa trên Hash"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:668
 msgid "only on close and suspend"
-msgstr ""
+msgstr "chỉ khi đóng và tạm dừng"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:670
 msgid "every 1 m"
 msgid_plural "every %1 m"
-msgstr[0] ""
+msgstr[0] "mỗi %1 phút"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:672
 msgid "Save book metadata: %1"
-msgstr ""
+msgstr "Lưu siêu dữ liệu sách: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:682
 msgid "Important info about this auto-save option"
-msgstr ""
+msgstr "Thông tin quan trọng về tùy chọn tự động lưu này"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:693
 msgid "End of document action"
 msgstr "Kết thúc hành động văn bản"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:696
-#, fuzzy
 msgid "Always mark as finished"
-msgstr "Luôn hủy bỏ khi gặp sự cố"
+msgstr "Luôn đánh dấu là đã hoàn thành"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:724
 msgid "Return to file browser"
 msgstr "Trở về duyệt tệp"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:725
-#, fuzzy
 msgid "Mark book as finished"
-msgstr "Đánh dấu là đã đọc"
+msgstr "Đánh dấu sách là đã hoàn thành"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:726
 msgid "Book status and return to file browser"
 msgstr "Lưu trạng thái sách và trở về duyệt tệp"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:737
-#, fuzzy
 msgid "Keyboard"
 msgstr "Bàn phím"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:746
-#, fuzzy
 msgid "Dimension units: %1"
-msgstr "Vị trí: %1"
+msgstr "Đơn vị kích thước: %1"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:750
 msgid "Also show values in pixels"
-msgstr ""
+msgstr "Cũng hiển thị giá trị bằng pixel"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:762
 msgid "Metric system"
-msgstr ""
+msgstr "Hệ mét"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:763
 msgid "Imperial system"
-msgstr ""
+msgstr "Hệ đo lường Anh"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:764
 msgid "Pixels"
-msgstr ""
+msgstr "Pixels"
 
 #: frontend/ui/elements/common_settings_menu_table.lua:770
-#, fuzzy
 msgid "Screenshot folder"
-msgstr "Màn hình chờ"
+msgstr "Thư mục Ảnh chụp màn hình"
 
 #: frontend/ui/elements/file_ext_assoc.lua:40
-#, fuzzy
 msgid "Enable all"
-msgstr "Bật"
+msgstr "Bật tất cả"
 
 #: frontend/ui/elements/file_ext_assoc.lua:48
-#, fuzzy
 msgid "Disable all"
-msgstr "Vô hiệu hóa"
+msgstr "Tắt tất cả"
 
 #: frontend/ui/elements/flash_keyboard.lua:4
 msgid "Flash keyboard"
@@ -12671,22 +12718,34 @@ msgid ""
 "bold nor italic, not Serif) will be available in this menu. However, bold "
 "fonts will be used if their corresponding regular fonts exist."
 msgstr ""
+"Nếu một số tên sách, mục từ điển và các nội dung tương tự không được hiển "
+"thị chính xác mà thay vào đó là %1 hoặc %2, bạn có thể cần tải xuống phông "
+"chữ cần thiết cho các ngôn ngữ đó. Sau đó, chúng có thể được kích hoạt làm "
+"phông chữ dự phòng giao diện người dùng (UI fallback fonts) bổ sung.\n"
+"Bạn có thể tải xuống phông chữ cho nhiều ngôn ngữ tại:\n"
+"\n"
+"https://fonts.google.com/noto\n"
+"\n"
+"Chỉ những phông chữ có tên \"Noto Sans xyz\" hoặc \"Noto Sans xyz UI\" (kiểu "
+"thường, không phải in đậm hay in nghiêng, không phải Serif) mới khả dụng "
+"trong menu này. Tuy nhiên, các phông chữ in đậm sẽ được sử dụng nếu phông "
+"chữ thường tương ứng của chúng tồn tại."
 
 #: frontend/ui/elements/font_ui_fallbacks.lua:104
-#, fuzzy
 msgid "About additional UI fallback fonts"
-msgstr "Sử dụng phông chữ dự phòng bổ sung"
+msgstr "Về Phông chữ dự phòng giao diện người dùng bổ sung"
 
 #: frontend/ui/elements/font_ui_fallbacks.lua:144
 msgid ""
 "The number of allowed additional fallback fonts is limited to %1.\n"
 "Uncheck some of them if you want to add this one."
 msgstr ""
+"Số lượng phông chữ dự phòng bổ sung được phép bị giới hạn là %1.\n"
+"Bỏ chọn một số phông chữ nếu bạn muốn thêm phông chữ này."
 
 #: frontend/ui/elements/font_ui_fallbacks.lua:158
-#, fuzzy
 msgid "Additional UI fallback fonts"
-msgstr "Sử dụng phông chữ dự phòng bổ sung"
+msgstr "Phông chữ dự phòng giao diện người dùng bổ sung"
 
 #: frontend/ui/elements/mass_storage.lua:22
 msgid "Disable confirmation popup"
@@ -12694,21 +12753,23 @@ msgstr "Tắt thông báo xác nhận"
 
 #: frontend/ui/elements/mass_storage.lua:23
 msgid "This will ONLY affect what happens when you plug in the device!"
-msgstr ""
+msgstr "Điều này CHỈ ảnh hưởng đến những gì xảy ra khi bạn cắm thiết bị!"
 
 #: frontend/ui/elements/mass_storage.lua:30
 msgid "Disable mass storage functionality"
-msgstr ""
+msgstr "Tắt chức năng bộ nhớ dung lượng lớn"
 
 #: frontend/ui/elements/mass_storage.lua:31
 msgid ""
 "In case your device uses an unsupported setup where you know it won't work "
 "properly."
 msgstr ""
+"Trong trường hợp thiết bị của bạn sử dụng một thiết lập không được hỗ trợ mà "
+"bạn biết nó sẽ không hoạt động đúng cách."
 
 #: frontend/ui/elements/mass_storage.lua:67
 msgid "Share storage via USB?"
-msgstr ""
+msgstr "Chia sẻ bộ nhớ qua USB?"
 
 #: frontend/ui/elements/mass_storage.lua:68
 #: plugins/exporter.koplugin/base.lua:146
@@ -12733,15 +12794,15 @@ msgstr "Tự động hiện menu dưới"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:73
 msgid "Up to four layouts can be enabled."
-msgstr ""
+msgstr "Có thể bật tối đa bốn bố cục."
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:106
 msgid "Not implemented"
-msgstr ""
+msgstr "Chưa triển khai"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:117
 msgid "Not available for any of your active layouts"
-msgstr ""
+msgstr "Không khả dụng cho bất kỳ bố cục nào đang hoạt động của bạn"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:128
 msgid "Keyboard layouts: %1"
@@ -12753,39 +12814,35 @@ msgstr "Bố cục bàn phím (%1)"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:149
 msgid "Layout-specific keyboard settings"
-msgstr ""
+msgstr "Cài đặt bàn phím riêng cho từng bố cục"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:154
 msgid "Remember last layout"
-msgstr ""
+msgstr "Nhớ bố cục cuối cùng"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:164
-#, fuzzy
 msgid "Keyboard appearance settings"
-msgstr "Cài đặt"
+msgstr "Cài đặt hiển thị bàn phím"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:172
-#, fuzzy
 msgid "Keyboard font size"
-msgstr "Kích thước phông chữ chân trang"
+msgstr "Cỡ chữ bàn phím"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:207
 msgid "in bold"
-msgstr ""
+msgstr "in đậm"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:213
 msgid "with border"
-msgstr ""
+msgstr "có viền"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:219
-#, fuzzy
 msgid "compact"
-msgstr "thu gọn"
+msgstr "Gọn nhẹ"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:233
-#, fuzzy
 msgid "Show virtual keyboard"
-msgstr "Chạm vào góc"
+msgstr "Hiển thị bàn phím ảo"
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:234
 msgid ""
@@ -12793,40 +12850,46 @@ msgid ""
 "input field. When a field is selected (in focus), you can temporarily toggle "
 "the keyboard on/off by pressing 'Shift' (or 'ScreenKB') + 'Home'."
 msgstr ""
+"Bật cài đặt này để luôn hiển thị bàn phím ảo bên trong một trường nhập văn "
+"bản. Khi một trường được chọn (đang tập trung), bạn có thể tạm thời bật/tắt "
+"bàn phím bằng cách nhấn tổ hợp phím 'Shift' (hoặc 'ScreenKB') + 'Home'."
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:243
 msgid ""
 "When a text field is selected (in focus), you can temporarily bring up the "
 "virtual keyboard by pressing 'ScreenKB' + 'Home'."
 msgstr ""
+"Khi một trường văn bản được chọn (đang tập trung), bạn có thể tạm thời hiển "
+"thị bàn phím ảo bằng cách nhấn tổ hợp phím 'ScreenKB' + 'Home'."
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:245
 msgid ""
 "When a text field is selected (in focus), you can temporarily bring up the "
 "virtual keyboard by pressing 'Shift' + 'Home'."
 msgstr ""
+"Khi một trường văn bản được chọn (đang tập trung), bạn có thể tạm thời hiển "
+"thị bàn phím ảo bằng cách nhấn tổ hợp phím 'Shift' + 'Home'."
 
 #: frontend/ui/elements/menu_keyboard_layout.lua:257
 msgid "Swipe to input additional characters"
-msgstr ""
+msgstr "Vuốt để nhập các ký tự bổ sung"
 
 #: frontend/ui/elements/page_overlap.lua:8
 #: frontend/ui/elements/page_overlap.lua:12
 msgid "Page overlap"
-msgstr "Chồng chéo trang"
+msgstr "Trang chồng lấn"
 
 #: frontend/ui/elements/page_overlap.lua:30
 msgid "Page overlap cannot be enabled in the current view mode."
-msgstr ""
+msgstr "Không thể bật Trang chồng lấn trong chế độ xem hiện tại."
 
 #: frontend/ui/elements/page_overlap.lua:46
 msgid "Number of lines: %1"
 msgstr "Số dòng: %1"
 
 #: frontend/ui/elements/page_overlap.lua:55
-#, fuzzy
 msgid "Number of overlapped lines"
-msgstr "Mục lục"
+msgstr "Số dòng bị chồng"
 
 #: frontend/ui/elements/page_overlap.lua:56
 msgid ""
@@ -12847,64 +12910,52 @@ msgid "Gray out"
 msgstr "Làm xám"
 
 #: frontend/ui/elements/page_overlap.lua:76
-#, fuzzy
 msgid "Solid line"
-msgstr "Gạch chân"
+msgstr "Đường liền nét"
 
 #: frontend/ui/elements/page_overlap.lua:77
-#, fuzzy
 msgid "Dashed line"
-msgstr "Đọc online"
+msgstr "Đường nét đứt"
 
 #: frontend/ui/elements/page_turns.lua:11
-#, fuzzy
 msgid "Left / right"
-msgstr "Phải"
+msgstr "Trái / Phải"
 
 #: frontend/ui/elements/page_turns.lua:12
-#, fuzzy
 msgid "Top / bottom"
-msgstr "Góc dưới bên phải"
+msgstr "Trên / Dưới"
 
 #: frontend/ui/elements/page_turns.lua:13
-#, fuzzy
 msgid "Bottom / top"
-msgstr "Góc dưới bên trái"
+msgstr "Dưới / Trên"
 
 #: frontend/ui/elements/page_turns.lua:48
-#, fuzzy
 msgid "Backward / forward tap zone size: %1 % / %2 %"
-msgstr "Tăng kích thước vùng chạm: %1%"
+msgstr "Kích thước vùng chạm lùi / tiến: %1 % / %2 %"
 
 #: frontend/ui/elements/page_turns.lua:58
-#, fuzzy
 msgid "Tap zone width"
-msgstr "Vùng chạm: %1"
+msgstr "Chiều rộng vùng chạm"
 
 #: frontend/ui/elements/page_turns.lua:58
-#, fuzzy
 msgid "Tap zone height"
-msgstr "Đặt độ cao"
+msgstr "Chiều cao vùng chạm"
 
 #: frontend/ui/elements/page_turns.lua:59
-#, fuzzy
 msgid "Percentage of screen width"
-msgstr "Định dạng phần trăm tiến độ"
+msgstr "Phần trăm chiều rộng màn hình"
 
 #: frontend/ui/elements/page_turns.lua:59
-#, fuzzy
 msgid "Percentage of screen height"
-msgstr "Định dạng phần trăm tiến độ"
+msgstr "Phần trăm chiều cao màn hình"
 
 #: frontend/ui/elements/page_turns.lua:60
-#, fuzzy
 msgid "Backward"
-msgstr "Quay lại"
+msgstr "Lùi lại"
 
 #: frontend/ui/elements/page_turns.lua:66
-#, fuzzy
 msgid "Forward"
-msgstr "Về phía trước 10 trang"
+msgstr "Chuyển tiếp"
 
 #: frontend/ui/elements/page_turns.lua:87
 msgid "Page turns"
@@ -12928,6 +12979,10 @@ msgid ""
 "\n"
 "Would you like to change it?"
 msgstr ""
+"Mặc định (★) cho các sách mới mở là chế độ lật trang từ phải sang trái (RTL)"
+".\n"
+"\n"
+"Bạn có muốn thay đổi không?"
 
 #: frontend/ui/elements/page_turns.lua:137
 msgid ""
@@ -12935,45 +12990,50 @@ msgid ""
 "\n"
 "Would you like to change it?"
 msgstr ""
+"Mặc định (★) cho các sách mới mở là chế độ lật trang từ trái sang phải (LTR)"
+".\n"
+"\n"
+"Bạn có muốn thay đổi không?"
 
 #: frontend/ui/elements/page_turns.lua:139
 msgid "LTR (★)"
-msgstr ""
+msgstr "LTR (★)"
 
 #: frontend/ui/elements/page_turns.lua:146
 msgid "RTL (★)"
-msgstr ""
+msgstr "RTL (★)"
 
 #: frontend/ui/elements/page_turns.lua:197
-#, fuzzy
 msgid "Page turn animations"
-msgstr "Chuyển trang"
+msgstr "Hiệu ứng chuyển trang"
 
 #: frontend/ui/elements/patch_management.lua:17
 msgid "On startup, only after update"
-msgstr ""
+msgstr "Khi khởi động, chỉ sau khi cập nhật"
 
 #: frontend/ui/elements/patch_management.lua:18
 msgid "On startup"
-msgstr ""
+msgstr "Khi khởi động"
 
 #: frontend/ui/elements/patch_management.lua:19
 msgid "After setup"
-msgstr ""
+msgstr "Sau khi thiết lập"
 
 #: frontend/ui/elements/patch_management.lua:20
 msgid "Before exit"
-msgstr ""
+msgstr "Trước khi thoát"
 
 #: frontend/ui/elements/patch_management.lua:21
 msgid "On exit"
-msgstr ""
+msgstr "Khi thoát"
 
 #: frontend/ui/elements/patch_management.lua:49
 msgid ""
 "Patches might have changed. Current set of patches will be applied on next "
 "restart."
 msgstr ""
+"Các bản vá có thể đã thay đổi. Bộ bản vá hiện tại sẽ được áp dụng trong lần "
+"khởi động lại tiếp theo."
 
 #: frontend/ui/elements/patch_management.lua:93
 msgid ""
@@ -12988,54 +13048,60 @@ msgid ""
 "\n"
 "Patches are an advanced feature, so be careful what you do!"
 msgstr ""
+"Quản lý bản vá cho phép bật, tắt hoặc chỉnh sửa các bản vá do người dùng "
+"cung cấp.\n"
+"\n"
+"Mức độ chạy (runlevel) và độ ưu tiên (priority) của một bản vá không thể "
+"được sửa đổi tại đây. Điều này phải được thực hiện thủ công bằng cách đổi "
+"tên tiền tố của bản vá.\n"
+"\n"
+"Để biết thêm thông tin về các bản vá của người dùng, vui lòng xem:\n"
+"https://github.com/koreader/koreader/wiki/User-patches\n"
+"\n"
+"Bản vá là một tính năng nâng cao, vì vậy hãy cẩn thận với những gì bạn làm!"
 
 #: frontend/ui/elements/patch_management.lua:103
-#, fuzzy
 msgid "Patch management"
-msgstr "Quản lý tiện ích mở rộng"
+msgstr "Quản lý bản vá"
 
 #: frontend/ui/elements/patch_management.lua:107
-#, fuzzy
 msgid "About patch management"
-msgstr "Quản lý bộ nhớ cache thông tin sách"
+msgstr "Giới thiệu về quản lý bản vá"
 
 #: frontend/ui/elements/patch_management.lua:122
-#, fuzzy
 msgid "Patches executed: %1"
-msgstr "Đã chọn: %1"
+msgstr "Các bản vá đã thực thi: %1"
 
 #: frontend/ui/elements/physical_buttons.lua:8
 msgid "Physical buttons"
-msgstr ""
+msgstr "Các nút vật lý"
 
 #: frontend/ui/elements/physical_buttons.lua:53
-#, fuzzy
 msgid "Use left and right keys for page turning"
-msgstr "Chuyển trang bằng nút âm lượng"
+msgstr "Sử dụng phím trái và phải để lật trang"
 
 #: frontend/ui/elements/physical_buttons.lua:66
-#, fuzzy
 msgid "Disable key repeat"
-msgstr "Vô hiệu hóa"
+msgstr "Tắt lặp lại phím"
 
 #: frontend/ui/elements/physical_buttons.lua:67
 msgid ""
 "Useful if you don't like the behavior or if your device has faulty switches"
 msgstr ""
+"Hữu ích nếu bạn không thích hành vi này hoặc nếu thiết bị của bạn có công "
+"tắc bị lỗi"
 
 #: frontend/ui/elements/refresh_menu_table.lua:27
 msgid "For every chapter set -1"
-msgstr ""
+msgstr "Đặt -1 cho mỗi chương"
 
 #: frontend/ui/elements/refresh_menu_table.lua:33
-#, fuzzy
 msgid "Regular"
 msgstr "Bình thường"
 
 #: frontend/ui/elements/refresh_menu_table.lua:39
-#, fuzzy
 msgid "Night"
-msgstr "Phải"
+msgstr "Ban đêm"
 
 #: frontend/ui/elements/refresh_menu_table.lua:40
 msgid "Set refresh"
@@ -13066,15 +13132,15 @@ msgstr "Mỗi 6 trang"
 
 #: frontend/ui/elements/refresh_menu_table.lua:74
 msgid "Custom 1: %1:%2 pages"
-msgstr ""
+msgstr "Tùy chỉnh 1: %1:%2 trang"
 
 #: frontend/ui/elements/refresh_menu_table.lua:84
 msgid "Custom 2: %1:%2 pages"
-msgstr ""
+msgstr "Tùy chỉnh 2: %1:%2 trang"
 
 #: frontend/ui/elements/refresh_menu_table.lua:94
 msgid "Custom 3: %1:%2 pages"
-msgstr ""
+msgstr "Tùy chỉnh 3: %1:%2 trang"
 
 #: frontend/ui/elements/refresh_menu_table.lua:103
 msgid "Every chapter"
@@ -13082,7 +13148,7 @@ msgstr "Mỗi chương"
 
 #: frontend/ui/elements/refresh_menu_table.lua:114
 msgid "except on the second page of a new chapter"
-msgstr ""
+msgstr "ngoại trừ trang thứ hai của chương mới"
 
 #: frontend/ui/elements/screen_color_menu_table.lua:10
 msgid "Color rendering"
@@ -13169,7 +13235,6 @@ msgid "Use smaller panning rate"
 msgstr "Giảm tần suất làm mới màn hình khi cuộn"
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:45
-#, fuzzy
 msgid "Notifications"
 msgstr "Thông báo"
 
@@ -13178,54 +13243,49 @@ msgid ""
 "Notification popups may be shown at the top of screen on various occasions.\n"
 "This allows selecting which to show or hide."
 msgstr ""
+"Các cửa sổ thông báo bật lên có thể được hiển thị ở phía trên màn hình trong "
+"nhiều trường hợp.\n"
+"Tùy chọn này cho phép bạn chọn cái nào sẽ hiển thị hoặc ẩn đi."
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:53
-#, fuzzy
 msgid "From bottom menu icons"
-msgstr "Hiển thị menu dưới"
+msgstr "Từ các biểu tượng trình đơn dưới cùng"
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:54
-#, fuzzy
 msgid "From bottom menu toggles"
-msgstr "Hiển thị menu dưới"
+msgstr "Từ các nút chuyển đổi trình đơn dưới cùng"
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:55
-#, fuzzy
 msgid "From bottom menu ± buttons"
-msgstr "Hiển thị menu dưới"
+msgstr "Từ các nút ± trình đơn dưới cùng"
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:56
-#, fuzzy
 msgid "From bottom menu ⋮ buttons"
-msgstr "Hiển thị menu dưới"
+msgstr "Từ các nút ⋮ trình đơn dưới cùng"
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:57
 msgid "From bottom menu progress bars"
-msgstr ""
+msgstr "Từ các thanh tiến độ trình đơn dưới cùng"
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:58
-#, fuzzy
 msgid "From gestures and profiles"
-msgstr "Các tùy chọn phông"
+msgstr "Từ cử chỉ và hồ sơ"
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:59
 msgid "From all other sources"
-msgstr ""
+msgstr "Từ tất cả các nguồn khác"
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:61
-#, fuzzy
 msgid "Show past notifications"
-msgstr "Chuyển đổi xoay"
+msgstr "Hiển thị thông báo trước đó"
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:66
-#, fuzzy
 msgid "No notifications available."
-msgstr "Không có thông tin"
+msgstr "Không có thông báo nào khả dụng."
 
 #: frontend/ui/elements/screen_notification_menu_table.lua:73
-#, fuzzy
 msgid "Past notifications"
-msgstr "Chuyển đổi xoay"
+msgstr "Thông báo trước đó"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:36
 msgid "Ignore accelerometer rotation events"
@@ -13234,10 +13294,12 @@ msgstr "Bỏ qua xoay hồi chuyển"
 #: frontend/ui/elements/screen_rotation_menu_table.lua:37
 msgid "This will inhibit automatic rotations triggered by your device's gyro."
 msgstr ""
+"Điều này sẽ ngăn chặn việc xoay tự động do con quay hồi chuyển của thiết bị "
+"kích hoạt."
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:47
 msgid "Lock auto rotation to current orientation"
-msgstr ""
+msgstr "Khóa xoay tự động theo hướng hiện tại"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:48
 msgid ""
@@ -13248,10 +13310,17 @@ msgid ""
 "inhibited.\n"
 "If you need to do so, you'll have to use the UI toggles."
 msgstr ""
+"Khi được chọn, con quay hồi chuyển (gyro) sẽ chỉ được chấp nhận khi chuyển "
+"đổi giữa hai biến thể đảo ngược của hướng xoay hiện tại của bạn, \n"
+"tức là: Dọc <-> Dọc đảo ngược HOẶC Ngang <-> Ngang đảo ngược.\n"
+"Việc chuyển đổi giữa hướng Dọc (đảo ngược) và Ngang (đảo ngược) sẽ bị ngăn "
+"chặn.\n"
+"Nếu bạn cần thực hiện điều đó, bạn sẽ phải sử dụng các nút chuyển đổi trên "
+"giao diện người dùng."
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:66
 msgid "Keep current rotation across views"
-msgstr ""
+msgstr "Giữ hướng xoay hiện tại giữa các chế độ xem"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:67
 msgid ""
@@ -13265,97 +13334,106 @@ msgid ""
 "saved reader rotation will not affect each other (i.e., they will be "
 "honored), and may very well be different."
 msgstr ""
+"Khi được chọn, hướng xoay hiện tại sẽ được giữ nguyên khi chuyển đổi giữa "
+"trình duyệt tập tin và trình đọc, theo cả hai chiều, và không bị ảnh hưởng "
+"bởi hướng xoay đã lưu của tài liệu, hay hướng xoay mặc định của trình đọc/"
+"trình duyệt tập tin.\n"
+"Điều này có nghĩa là sẽ không có bất kỳ thay đổi hướng xoay nào diễn ra "
+"ngoài ý muốn của bạn, bạn chọn hướng xoay cho thiết bị và nó sẽ giữ nguyên "
+"như vậy.\n"
+"Khi bỏ chọn, hướng xoay mặc định của trình duyệt tập tin và hướng xoay mặc "
+"định/đã lưu của trình đọc sẽ không ảnh hưởng lẫn nhau (tức là chúng sẽ được "
+"ưu tiên sử dụng) và có thể rất khác nhau."
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:89
-#, fuzzy
 msgid "Image viewer rotation"
-msgstr "Trình xem văn bản"
+msgstr "Xoay trình xem ảnh"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:92
 msgid "Invert default rotation in portrait mode"
-msgstr ""
+msgstr "Đảo ngược xoay mặc định ở chế độ dọc"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:101
 msgid "Invert default rotation in landscape mode"
-msgstr ""
+msgstr "Đảo ngược xoay mặc định ở chế độ ngang"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:111
 msgid "Auto-rotate for best fit"
-msgstr ""
+msgstr "Tự động xoay để vừa vặn nhất"
 
 #: frontend/ui/elements/screen_rotation_menu_table.lua:112
 msgid ""
 "Auto-rotate the image to best match screen and image aspect ratios on image "
 "viewer launch (ie. if in portrait mode, a landscape image will be rotated)."
 msgstr ""
+"Tự động xoay hình ảnh để phù hợp nhất với tỉ lệ khung hình của màn hình và "
+"hình ảnh khi khởi chạy trình xem ảnh (tức là nếu ở chế độ dọc, hình ảnh "
+"ngang sẽ được xoay)."
 
 #: frontend/ui/elements/screensaver_menu.lua:44
 msgid "Wallpaper"
-msgstr ""
+msgstr "Hình nền"
 
 #: frontend/ui/elements/screensaver_menu.lua:46
 msgid "Show book cover on sleep screen"
-msgstr ""
+msgstr "Hiển thị bìa sách trên màn hình chờ"
 
 #: frontend/ui/elements/screensaver_menu.lua:47
 msgid "Show custom image or cover on sleep screen"
-msgstr ""
+msgstr "Hiển thị ảnh tùy chỉnh hoặc bìa sách trên màn hình chờ"
 
 #: frontend/ui/elements/screensaver_menu.lua:48
-#, fuzzy
 msgid "Show random image from folder on sleep screen"
-msgstr "Đặt ảnh bất kì trong thư mục làm màn hình khóa"
+msgstr "Hiển thị ảnh ngẫu nhiên từ thư mục trên màn hình chờ"
 
 #: frontend/ui/elements/screensaver_menu.lua:49
-#, fuzzy
 msgid "Show reading progress on sleep screen"
-msgstr "Đặt tiến độ đọc làm màn hình khóa"
+msgstr "Hiển thị tiến độ đọc trên màn hình chờ"
 
 #: frontend/ui/elements/screensaver_menu.lua:50
-#, fuzzy
 msgid "Show book status on sleep screen"
-msgstr "Đặt trạng thái sách làm màn hình khóa"
+msgstr "Hiển thị trạng thái sách trên màn hình chờ"
 
 #: frontend/ui/elements/screensaver_menu.lua:51
-#, fuzzy
 msgid "Leave screen as-is"
-msgstr "Không đặt gì"
+msgstr "Giữ nguyên màn hình"
 
 #: frontend/ui/elements/screensaver_menu.lua:54
-#, fuzzy
 msgid "Ignore book cover"
-msgstr "Bỏ qua bìa"
+msgstr "Bỏ qua bìa sách"
 
 #: frontend/ui/elements/screensaver_menu.lua:55
-#, fuzzy
 msgid "Choose when to ignore showing book covers on the sleep screen."
-msgstr "Không hiển thị bìa cuốn sách này trên màn hình ngủ"
+msgstr "Chọn thời điểm bỏ qua hiển thị bìa sách trên màn hình chờ."
 
 #: frontend/ui/elements/screensaver_menu.lua:66
 msgid "For books on hold"
-msgstr ""
+msgstr "Đối với sách đang chờ"
 
 #: frontend/ui/elements/screensaver_menu.lua:67
 msgid ""
 "When the device is locked and the current book has been marked as on hold, "
 "both the cover and sleep screen message of the book will not be shown."
 msgstr ""
+"Khi thiết bị khóa và sách hiện tại đã được đánh dấu là đang chờ, cả bìa sách "
+"và thông báo màn hình chờ của sách sẽ không được hiển thị."
 
 #: frontend/ui/elements/screensaver_menu.lua:76
-#, fuzzy
 msgid "For finished books"
-msgstr "Hiển thị các sách đã đọc xong"
+msgstr "Đối với sách đã hoàn thành"
 
 #: frontend/ui/elements/screensaver_menu.lua:77
 msgid ""
 "When the device is locked and the current book has been marked as finished, "
 "both the cover and sleep screen message of the book will not be shown."
 msgstr ""
+"Khi thiết bị khóa và cuốn sách hiện tại đã được đánh dấu là hoàn thành, cả "
+"bìa sách và thông báo màn hình chờ (sleep screen message) của cuốn sách sẽ "
+"không được hiển thị."
 
 #: frontend/ui/elements/screensaver_menu.lua:86
-#, fuzzy
 msgid "When in file browser"
-msgstr "Chọn trong trình duyệt file"
+msgstr "Khi ở trình duyệt tập tin"
 
 #: frontend/ui/elements/screensaver_menu.lua:87
 msgid ""
@@ -14163,6 +14241,51 @@ msgid ""
 "> **Menu ➔ ![Typesettings](resources/icons/mdlight/appbar.typeset.svg) ➔ "
 "Selection on text**\n"
 msgstr ""
+"##Mẹo về giao diện người dùng <a id=\"uitips\"></a>\n"
+"\n"
+"- Bạn có thể thay đổi ngôn ngữ giao diện bằng cách:\n"
+"\n"
+">**Menu ➔ ![Settings](resources/icons/mdlight/appbar.settings.svg) ➔ Ngôn "
+"ngữ (Language)\n"
+"\n"
+"- Nếu bạn nhấn tổ hợp ScreenKB + Nhấn (Press) vào một tùy chọn hoặc mục menu "
+"(như độ đậm phông chữ, khoảng cách dòng, v.v.), bạn có thể đặt giá trị của "
+"nó làm MẶC ĐỊNH (DEFAULT).   Giá trị mới sẽ chỉ được áp dụng cho các tài "
+"liệu được mở từ bây giờ. Các tài liệu đã mở trước đó sẽ giữ nguyên cài đặt "
+"của chúng. Bạn có thể nhận biết các giá trị mặc định bằng một NGÔI SAO "
+"(STAR) trong menu hoặc một viền đen xung quanh các chỉ báo như hình dưới "
+"đây:\n"
+"\n"
+"<div class=\"img-block break-before-avoid\">![Default setting 1](resources/"
+"quickstart/defaultsetting1.png)</div>\n"
+"<div class=\"img-block break-before-avoid\">![Default setting 2](resources/"
+"quickstart/defaultsetting2.png)</div>\n"
+"\n"
+"- Bạn có thể xem giải thích cho một số mục trong MENU TRÊN CÙNG bằng cách "
+"nhấn tổ hợp ScreenKB + Nhấn (Press) vào tên của tùy chọn đó.\n"
+"- Bạn có thể ĐÓNG các hộp thoại toàn màn hình (Lịch sử, Mục lục, Dấu trang, "
+"Thống kê đọc, v.v.) bằng cách nhấn phím Quay lại (Back).\n"
+"- Có thể chụp ẢNH CHỤP MÀN HÌNH (SCREENSHOTS) bằng cách nhấn tổ hợp phím "
+"ScreenKB + Menu.\n"
+"\n"
+"<div class=\"img-block break-after-avoid\"></div>\n"
+"\n"
+"- Trong các hộp thoại có chứa nút điều chỉnh bằng mũi tên như hình trên, bạn "
+"có thể sử dụng các phím điều hướng để di chuyển. Nếu các widget có menu, "
+"việc nhấn phím Menu sẽ mở chúng.\n"
+"- Bạn có thể bật/tắt chế độ chọn nội dung bằng cách nhấn phím Lên (Up) hoặc "
+"Xuống (Down). Công cụ chọn sẽ xuất hiện để bạn có thể chọn một hoặc nhiều "
+"từ, dùng cho việc tra từ điển, wikipedia, hoặc tìm kiếm văn bản.\n"
+"- Bạn có thể tô sáng các khối văn bản bằng cách chọn nhiều từ với công cụ "
+"chọn nội dung.\n"
+"- Bạn có thể di chuyển qua tài liệu của mình bằng các phím con trỏ Trái "
+"(Left) hoặc Phải (Right), chúng sẽ đưa bạn đến chương trước hoặc chương kế "
+"tiếp tương ứng.\n"
+" -Độ nhạy của công cụ chọn nội dung có thể được điều chỉnh trong MENU TRÊN "
+"CÙNG:\n"
+"\n"
+">**Menu ➔ ![Typesettings](resources/icons/mdlight/appbar.typeset.svg)➔ Chọn "
+"trên văn bản**\n"
 
 #: frontend/ui/quickstart.lua:154
 msgid ""
@@ -22704,45 +22827,36 @@ msgstr ""
 #: plugins/wallabag.koplugin/main.lua:1067
 msgid "Adding 1 article from queue…"
 msgid_plural "Adding %1 articles from queue…"
-msgstr[0] ""
+msgstr[0] "Đang thêm %1 bài viết từ hàng đợi…"
 
 #: plugins/wallabag.koplugin/main.lua:1084
-#, fuzzy
 msgid "Added 1 article from queue to Wallabag"
 msgid_plural "Added %1 articles from queue to Wallabag"
-msgstr[0] ""
-"Bài viết đã thêm vào Wallabag:\n"
-"%1"
+msgstr[0] "Đã thêm %1 bài viết từ hàng đợi vào Wallabag"
 
 #: plugins/wallabag.koplugin/main.lua:1100
-#, fuzzy
 msgid "Synchronizing remote archivals and deletions…"
-msgstr "Cài đặt đồng bộ"
+msgstr "Đang đồng bộ lưu trữ và xóa từ xa…"
 
 #: plugins/wallabag.koplugin/main.lua:1148
 msgid "Syncing local article statuses…"
-msgstr ""
+msgstr "Đang đồng bộ trạng thái bài viết cục bộ…"
 
 #: plugins/wallabag.koplugin/main.lua:1212
-#, fuzzy
 msgid "Upload finished:"
-msgstr "Tải tệp lên"
+msgstr "Tải lên hoàn tất:"
 
 #: plugins/wallabag.koplugin/main.lua:1217
-#, fuzzy
 msgid "- archived on Wallabag: %1"
-msgstr ""
-"Bài viết đã thêm vào Wallabag:\n"
-"%1"
+msgstr "- đã lưu trữ trên Wallabag: %1"
 
 #: plugins/wallabag.koplugin/main.lua:1345
-#, fuzzy
 msgid ""
 "The archive folder is not valid.\n"
 "Please configure it in the settings."
 msgstr ""
-"Thư mục tải xuống không hợp lệ.\n"
-"Đặt cấu hình thư mục này trong phần cài đặt."
+"Thư mục lưu trữ không hợp lệ.\n"
+"Vui lòng cấu hình thư mục này trong Cài đặt."
 
 #: plugins/wallabag.koplugin/main.lua:1445
 msgid ""
@@ -22755,6 +22869,14 @@ msgid ""
 "\n"
 "Restart KOReader after editing the config file."
 msgstr ""
+"Nhập chi tiết về máy chủ và tài khoản Wallabag của bạn.\n"
+"\n"
+"Client ID và client secret là các chuỗi dài, vì vậy bạn có thể muốn lưu cài "
+"đặt trống và chỉnh sửa tệp cấu hình trực tiếp trong thư mục cài đặt của "
+"bạn:\n"
+"%1/wallabag.lua\n"
+"\n"
+"Khởi động lại KOReader sau khi chỉnh sửa tệp cấu hình."
 
 #: plugins/wallabag.koplugin/main.lua:1454
 msgid "Wallabag settings"
@@ -22816,19 +22938,20 @@ msgid "Tap the upper right corner"
 msgstr "Nhấn vào góc trên bên phải"
 
 #: tools/update-metadata.lua:26
-#, fuzzy
 msgid "Ebook reader"
-msgstr "Chọn thư mục"
+msgstr "Trình đọc sách điện tử"
 
 #: tools/update-metadata.lua:29
 msgid ""
 "KOReader is an ebook reader optimized for e-ink screens. It can open many "
 "formats and provides advanced text adjustments."
 msgstr ""
+"KOReader là trình đọc sách điện tử được tối ưu hóa cho màn hình e-ink. Phần "
+"mềm có thể mở nhiều định dạng tệp và cung cấp các tùy chỉnh văn bản nâng cao."
 
 #: tools/update-metadata.lua:30
 msgid "See below for a selection of its many features:"
-msgstr ""
+msgstr "Xem bên dưới để biết một số tính năng nổi bật:"
 
 #: tools/update-metadata.lua:33
 msgid ""
@@ -22837,6 +22960,10 @@ msgid ""
 "can be reflowed. Special flow directions for reading double column PDFs and "
 "manga."
 msgstr ""
+"Hỗ trợ cả định dạng trang cố định (PDF, DjVu, CBT, CBZ) và định dạng sách "
+"điện tử tái bố cục (EPUB, FB2, Mobi, DOC, CHM, TXT, HTML). Các tài liệu PDF/"
+"DjVu đã quét có thể được tái bố cục. Có các hướng luồng đặc biệt để đọc PDF "
+"hai cột và manga."
 
 #: tools/update-metadata.lua:34
 msgid ""
@@ -22844,66 +22971,74 @@ msgid ""
 "customizable reader view with complete typesetting options. Multi-lingual "
 "hyphenation dictionaries are bundled in."
 msgstr ""
+"Giao diện người dùng đa ngôn ngữ được tối ưu hóa cho màn hình e-ink. Chế độ "
+"đọc có khả năng tùy chỉnh cao với các tùy chọn sắp chữ đầy đủ. Các từ điển "
+"ngắt âm (hyphenation) đa ngôn ngữ được tích hợp sẵn."
 
 #: tools/update-metadata.lua:35
 msgid ""
 "Non-Latin script support for books, including the Hebrew, Arabic, Persian, "
 "Russian, Chinese, Japanese and Korean languages."
 msgstr ""
+"Hỗ trợ các bộ ký tự phi Latinh cho sách, bao gồm tiếng Do Thái, Ả Rập, Ba "
+"Tư, Nga, Trung Quốc, Nhật Bản và Hàn Quốc."
 
 #: tools/update-metadata.lua:36
 msgid "Unique Book Map and Page Browser features to navigate your book."
 msgstr ""
+"Các tính năng Bản đồ sách (Book Map) và Trình duyệt trang (Page Browser) độc "
+"đáo để điều hướng cuốn sách của bạn."
 
 #: tools/update-metadata.lua:37
 msgid ""
 "Special multi-page highlight mode with many local and online export options."
 msgstr ""
+"Chế độ tô sáng đặc biệt đa trang với nhiều tùy chọn xuất ra cục bộ và trực "
+"tuyến."
 
 #: tools/update-metadata.lua:38
-#, fuzzy
 msgid ""
 "Can synchronize your reading progress across all your KOReader running "
 "devices."
-msgstr "Đồng bộ tiến độ đọc lên máy chủ giữa các thiết bị KOReader của bạn."
+msgstr ""
+"Có thể đồng bộ tiến độ đọc của bạn trên tất cả các thiết bị đang chạy "
+"KOReader."
 
 #: tools/update-metadata.lua:39
 msgid ""
 "Integrated with Calibre, Wallabag, Wikipedia, Google Translate and other "
 "content providers."
 msgstr ""
+"Tích hợp với Calibre, Wallabag, Wikipedia, Google Dịch và các nhà cung cấp "
+"nội dung khác."
 
 #: tools/update-metadata.lua:43
 msgid "Release notes available on the link below"
 msgstr "Ghi chú phát hành có sẵn ở liên kết dưới đây"
 
 #: tools/update-metadata.lua:55
-#, fuzzy
 msgid "reader"
-msgstr "Người đọc"
+msgstr "Trình đọc"
 
 #: tools/update-metadata.lua:56
-#, fuzzy
 msgid "viewer"
-msgstr "Trình xem văn bản"
+msgstr "Trình xem"
 
 #: tools/update-metadata.lua:57
-#, fuzzy
 msgid "dictionary"
 msgstr "Từ điển"
 
 #: tools/update-metadata.lua:58
-#, fuzzy
 msgid "wikipedia"
 msgstr "Wikipedia"
 
 #: tools/update-metadata.lua:59
 msgid "wallabag"
-msgstr "wallabag"
+msgstr "Wallabag"
 
 #: tools/update-metadata.lua:60
 msgid "annotations"
-msgstr "chú giải"
+msgstr "Chú thích"
 
 #, fuzzy
 #~ msgid "Execute promptly"
