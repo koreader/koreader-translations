@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-21 14:44+0000\n"
+"POT-Creation-Date: 2026-04-22 05:55+0000\n"
 "PO-Revision-Date: 2026-04-22 05:56+0000\n"
 "Last-Translator: sonix-github <sonix.internet@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -17,8 +17,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && "
-"n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n "
+">= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 "X-Generator: Weblate 5.17.1-dev\n"
 
 #: reader.lua:200
@@ -298,6 +298,7 @@ msgstr "Zadajte názov súboru"
 #: plugins/profiles.koplugin/main.lua:741
 #: plugins/profiles.koplugin/main.lua:875
 #: plugins/profiles.koplugin/main.lua:942
+#: plugins/readtimer.koplugin/main.lua:529
 #: plugins/statistics.koplugin/main.lua:2250
 #: plugins/statistics.koplugin/main.lua:2424
 #: plugins/statistics.koplugin/main.lua:2463
@@ -363,6 +364,7 @@ msgstr "Vybrať"
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:309
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:302
 #: plugins/exporter.koplugin/main.lua:441
+#: plugins/readtimer.koplugin/main.lua:536
 #: plugins/vocabbuilder.koplugin/main.lua:1565
 #: plugins/wallabag.koplugin/main.lua:524
 #: plugins/wallabag.koplugin/main.lua:1499
@@ -678,6 +680,7 @@ msgstr "Priečinok Dropbox (/ pre koreňový adresár)"
 #: plugins/profiles.koplugin/main.lua:748
 #: plugins/profiles.koplugin/main.lua:882
 #: plugins/profiles.koplugin/main.lua:949
+#: plugins/readtimer.koplugin/main.lua:549
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:666
 #: plugins/wallabag.koplugin/main.lua:1434
@@ -4283,6 +4286,7 @@ msgstr "Percentuálny formát priebehu čítania: %1"
 #: frontend/apps/reader/modules/readerfooter.lua:1611
 #: plugins/profiles.koplugin/main.lua:169
 #: plugins/profiles.koplugin/main.lua:196
+#: plugins/readtimer.koplugin/main.lua:383
 msgid "default"
 msgstr "predvolene"
 
@@ -5068,7 +5072,7 @@ msgstr "s"
 #: plugins/gestures.koplugin/main.lua:762
 #: plugins/gestures.koplugin/main.lua:817
 #: plugins/gestures.koplugin/main.lua:844
-#: plugins/readtimer.koplugin/main.lua:317
+#: plugins/readtimer.koplugin/main.lua:327
 msgid "Set interval"
 msgstr "Nastaviť interval"
 
@@ -12576,6 +12580,7 @@ msgstr "px"
 
 #: frontend/ui/data/optionsutil.lua:129 frontend/ui/data/optionsutil.lua:139
 #: plugins/profiles.koplugin/main.lua:213
+#: plugins/readtimer.koplugin/main.lua:383
 msgid "custom"
 msgstr "vlastné"
 
@@ -22148,7 +22153,7 @@ msgid "Generate QR code"
 msgstr "Vygenerovať QR kód"
 
 #: plugins/readtimer.koplugin/_meta.lua:3
-#: plugins/readtimer.koplugin/main.lua:297
+#: plugins/readtimer.koplugin/main.lua:307
 msgid "Read timer"
 msgstr "Časovač čítania"
 
@@ -22156,82 +22161,98 @@ msgstr "Časovač čítania"
 msgid "Shows an alarm after a specified amount of time."
 msgstr "Zobrazí výstrahu po uplynutí určeného času."
 
-#: plugins/readtimer.koplugin/main.lua:28
-msgid "Set read timer alarm"
-msgstr "Nastaviť alarm časovača čítania"
-
-#: plugins/readtimer.koplugin/main.lua:30
-msgid "Set read timer interval"
-msgstr "Nastaviť interval časovača čítania"
-
-#: plugins/readtimer.koplugin/main.lua:32
-msgid "Stop read timer"
-msgstr "Zastaviť časovač čítania"
-
-#: plugins/readtimer.koplugin/main.lua:57
+#: plugins/readtimer.koplugin/main.lua:23
 msgid "Time is up"
 msgstr "Čas vypršal"
 
-#: plugins/readtimer.koplugin/main.lua:72
+#: plugins/readtimer.koplugin/main.lua:32
+#, fuzzy
+msgid "Read timer: set alarm"
+msgstr "Nastaviť alarm časovača čítania"
+
+#: plugins/readtimer.koplugin/main.lua:34
+#, fuzzy
+msgid "Read timer: set interval"
+msgstr "Nastaviť interval časovača čítania"
+
+#: plugins/readtimer.koplugin/main.lua:36
+#, fuzzy
+msgid "Read timer: start"
+msgstr "Časovač čítania"
+
+#: plugins/readtimer.koplugin/main.lua:38
+msgid "Read timer: start if not running"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:40
+#, fuzzy
+msgid "Read timer: stop"
+msgstr "Časovač čítania"
+
+#: plugins/readtimer.koplugin/main.lua:78
 msgid "Repeat"
 msgstr "Opakovať"
 
-#: plugins/readtimer.koplugin/main.lua:78
+#: plugins/readtimer.koplugin/main.lua:84
 msgid "Done"
 msgstr "Hotovo"
 
-#: plugins/readtimer.koplugin/main.lua:247
+#: plugins/readtimer.koplugin/main.lua:257
 msgid "Auto-reschedule"
 msgstr "Automaticky preplánovať"
 
-#: plugins/readtimer.koplugin/main.lua:256
+#: plugins/readtimer.koplugin/main.lua:266
 msgid "Show timer in alt status bar"
 msgstr "Zobraziť časovač v alternatívnom stavovom riadku"
 
-#: plugins/readtimer.koplugin/main.lua:269
+#: plugins/readtimer.koplugin/main.lua:279
 msgid "Show timer in status bar"
 msgstr "Zobraziť časovač v stavovom riadku"
 
-#: plugins/readtimer.koplugin/main.lua:285
+#: plugins/readtimer.koplugin/main.lua:295
 msgid "message"
 msgstr "správa"
 
-#: plugins/readtimer.koplugin/main.lua:286
+#: plugins/readtimer.koplugin/main.lua:296
 msgid "notification"
 msgstr "oznámenie"
 
-#: plugins/readtimer.koplugin/main.lua:287
+#: plugins/readtimer.koplugin/main.lua:297
 msgid "nothing"
 msgstr "nič"
 
-#: plugins/readtimer.koplugin/main.lua:294
+#: plugins/readtimer.koplugin/main.lua:304
 msgid "Read timer (%1)"
 msgstr "Časovač čítania (%1)"
 
-#: plugins/readtimer.koplugin/main.lua:310
-#: plugins/readtimer.koplugin/main.lua:402
+#: plugins/readtimer.koplugin/main.lua:320
+#: plugins/readtimer.koplugin/main.lua:421
 msgid "Set alarm"
 msgstr "Nastaviť upozornenie"
 
-#: plugins/readtimer.koplugin/main.lua:324
+#: plugins/readtimer.koplugin/main.lua:334
 msgid "Stop timer"
 msgstr "Zastaviť časovač"
 
-#: plugins/readtimer.koplugin/main.lua:336
+#: plugins/readtimer.koplugin/main.lua:346
 msgid "Show on timer expiry: %1"
 msgstr "Zobraziť po uplynutí časovača: %1"
 
-#: plugins/readtimer.koplugin/main.lua:403
+#: plugins/readtimer.koplugin/main.lua:383
+msgid "Expiry message text: %1"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:422
 msgid "Alarm"
 msgstr "Alarm"
 
-#: plugins/readtimer.koplugin/main.lua:404
-#: plugins/readtimer.koplugin/main.lua:452
+#: plugins/readtimer.koplugin/main.lua:423
+#: plugins/readtimer.koplugin/main.lua:471
 msgid "Enter a time in hours and minutes."
 msgstr "Zadajte čas v hodinách a minútach."
 
 #. @translators %1:%2 is a clock time (HH:MM), %3 is a duration
-#: plugins/readtimer.koplugin/main.lua:433
+#: plugins/readtimer.koplugin/main.lua:452
 msgid ""
 "Timer set for %1:%2.\n"
 "\n"
@@ -22241,22 +22262,30 @@ msgstr ""
 "\n"
 "To je %3 odteraz."
 
-#: plugins/readtimer.koplugin/main.lua:450
+#: plugins/readtimer.koplugin/main.lua:469
 msgid "Start timer"
 msgstr "Spustiť časovač"
 
-#: plugins/readtimer.koplugin/main.lua:451
+#: plugins/readtimer.koplugin/main.lua:470
 msgid "Interval"
 msgstr "Interval"
 
 #. @translators This is a duration
-#: plugins/readtimer.koplugin/main.lua:476
+#: plugins/readtimer.koplugin/main.lua:497
 msgid "Timer will expire in %1."
 msgstr "Čas vyprší o %1."
 
-#: plugins/readtimer.koplugin/main.lua:494
+#: plugins/readtimer.koplugin/main.lua:512
 msgid "Timer stopped"
 msgstr "Časovač zastavený"
+
+#: plugins/readtimer.koplugin/main.lua:522
+msgid "Expiry message text"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:540
+msgid "Show"
+msgstr "Zobraziť"
 
 #: plugins/statistics.koplugin/_meta.lua:3
 #: plugins/statistics.koplugin/main.lua:95
@@ -24261,6 +24290,9 @@ msgstr "wallabag"
 msgid "annotations"
 msgstr "komentáre"
 
+#~ msgid "Stop read timer"
+#~ msgstr "Zastaviť časovač čítania"
+
 #~ msgid "Time: %1"
 #~ msgstr "Čas: %1"
 
@@ -24436,9 +24468,6 @@ msgstr "komentáre"
 
 #~ msgid "Show (★)"
 #~ msgstr "Zobraziť (★)"
-
-#~ msgid "Show"
-#~ msgstr "Zobraziť"
 
 #~ msgid "Filipino (Tagalog)"
 #~ msgstr "Filipínčina (tagalčina)"

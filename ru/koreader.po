@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-21 14:44+0000\n"
+"POT-Creation-Date: 2026-04-22 05:55+0000\n"
 "PO-Revision-Date: 2026-04-20 05:35+0000\n"
 "Last-Translator: Artem Kaznelson <nook.artem@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/koreader/"
@@ -315,6 +315,7 @@ msgstr "Введите имя файла"
 #: plugins/profiles.koplugin/main.lua:741
 #: plugins/profiles.koplugin/main.lua:875
 #: plugins/profiles.koplugin/main.lua:942
+#: plugins/readtimer.koplugin/main.lua:529
 #: plugins/statistics.koplugin/main.lua:2250
 #: plugins/statistics.koplugin/main.lua:2424
 #: plugins/statistics.koplugin/main.lua:2463
@@ -380,6 +381,7 @@ msgstr "Выбрать"
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:309
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:302
 #: plugins/exporter.koplugin/main.lua:441
+#: plugins/readtimer.koplugin/main.lua:536
 #: plugins/vocabbuilder.koplugin/main.lua:1565
 #: plugins/wallabag.koplugin/main.lua:524
 #: plugins/wallabag.koplugin/main.lua:1499
@@ -694,6 +696,7 @@ msgstr "Папка Dropbox (/ для корневой)"
 #: plugins/profiles.koplugin/main.lua:748
 #: plugins/profiles.koplugin/main.lua:882
 #: plugins/profiles.koplugin/main.lua:949
+#: plugins/readtimer.koplugin/main.lua:549
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:666
 #: plugins/wallabag.koplugin/main.lua:1434
@@ -4280,6 +4283,7 @@ msgstr "Формат прогресса в процентах: %1"
 #: frontend/apps/reader/modules/readerfooter.lua:1611
 #: plugins/profiles.koplugin/main.lua:169
 #: plugins/profiles.koplugin/main.lua:196
+#: plugins/readtimer.koplugin/main.lua:383
 msgid "default"
 msgstr "по умолчанию"
 
@@ -5060,7 +5064,7 @@ msgstr "с"
 #: plugins/gestures.koplugin/main.lua:762
 #: plugins/gestures.koplugin/main.lua:817
 #: plugins/gestures.koplugin/main.lua:844
-#: plugins/readtimer.koplugin/main.lua:317
+#: plugins/readtimer.koplugin/main.lua:327
 msgid "Set interval"
 msgstr "Задать интервал"
 
@@ -12565,6 +12569,7 @@ msgstr "px"
 
 #: frontend/ui/data/optionsutil.lua:129 frontend/ui/data/optionsutil.lua:139
 #: plugins/profiles.koplugin/main.lua:213
+#: plugins/readtimer.koplugin/main.lua:383
 msgid "custom"
 msgstr "свой"
 
@@ -22146,7 +22151,7 @@ msgid "Generate QR code"
 msgstr "Генерировать QR-код"
 
 #: plugins/readtimer.koplugin/_meta.lua:3
-#: plugins/readtimer.koplugin/main.lua:297
+#: plugins/readtimer.koplugin/main.lua:307
 msgid "Read timer"
 msgstr "Таймер чтения"
 
@@ -22154,82 +22159,98 @@ msgstr "Таймер чтения"
 msgid "Shows an alarm after a specified amount of time."
 msgstr "Данный плагин позволяет выдавать предупреждение через заданное время."
 
-#: plugins/readtimer.koplugin/main.lua:28
-msgid "Set read timer alarm"
-msgstr "Установить предупреждение таймера чтения"
-
-#: plugins/readtimer.koplugin/main.lua:30
-msgid "Set read timer interval"
-msgstr "Установить интервал таймера чтения"
-
-#: plugins/readtimer.koplugin/main.lua:32
-msgid "Stop read timer"
-msgstr "Остановить таймер чтения"
-
-#: plugins/readtimer.koplugin/main.lua:57
+#: plugins/readtimer.koplugin/main.lua:23
 msgid "Time is up"
 msgstr "Время истекло"
 
-#: plugins/readtimer.koplugin/main.lua:72
+#: plugins/readtimer.koplugin/main.lua:32
+#, fuzzy
+msgid "Read timer: set alarm"
+msgstr "Установить предупреждение таймера чтения"
+
+#: plugins/readtimer.koplugin/main.lua:34
+#, fuzzy
+msgid "Read timer: set interval"
+msgstr "Установить интервал таймера чтения"
+
+#: plugins/readtimer.koplugin/main.lua:36
+#, fuzzy
+msgid "Read timer: start"
+msgstr "Таймер чтения"
+
+#: plugins/readtimer.koplugin/main.lua:38
+msgid "Read timer: start if not running"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:40
+#, fuzzy
+msgid "Read timer: stop"
+msgstr "Таймер чтения"
+
+#: plugins/readtimer.koplugin/main.lua:78
 msgid "Repeat"
 msgstr "Повтор"
 
-#: plugins/readtimer.koplugin/main.lua:78
+#: plugins/readtimer.koplugin/main.lua:84
 msgid "Done"
 msgstr "Готово"
 
-#: plugins/readtimer.koplugin/main.lua:247
+#: plugins/readtimer.koplugin/main.lua:257
 msgid "Auto-reschedule"
 msgstr "Автоматическое перепланирование"
 
-#: plugins/readtimer.koplugin/main.lua:256
+#: plugins/readtimer.koplugin/main.lua:266
 msgid "Show timer in alt status bar"
 msgstr "Показывать таймер в альтернативной строке состояния"
 
-#: plugins/readtimer.koplugin/main.lua:269
+#: plugins/readtimer.koplugin/main.lua:279
 msgid "Show timer in status bar"
 msgstr "Показывать таймер в строке состояния"
 
-#: plugins/readtimer.koplugin/main.lua:285
+#: plugins/readtimer.koplugin/main.lua:295
 msgid "message"
 msgstr "сообщение"
 
-#: plugins/readtimer.koplugin/main.lua:286
+#: plugins/readtimer.koplugin/main.lua:296
 msgid "notification"
 msgstr "уведомление"
 
-#: plugins/readtimer.koplugin/main.lua:287
+#: plugins/readtimer.koplugin/main.lua:297
 msgid "nothing"
 msgstr "ничего"
 
-#: plugins/readtimer.koplugin/main.lua:294
+#: plugins/readtimer.koplugin/main.lua:304
 msgid "Read timer (%1)"
 msgstr "Таймер чтения (%1)"
 
-#: plugins/readtimer.koplugin/main.lua:310
-#: plugins/readtimer.koplugin/main.lua:402
+#: plugins/readtimer.koplugin/main.lua:320
+#: plugins/readtimer.koplugin/main.lua:421
 msgid "Set alarm"
 msgstr "Предупреждать"
 
-#: plugins/readtimer.koplugin/main.lua:324
+#: plugins/readtimer.koplugin/main.lua:334
 msgid "Stop timer"
 msgstr "Остановить таймер"
 
-#: plugins/readtimer.koplugin/main.lua:336
+#: plugins/readtimer.koplugin/main.lua:346
 msgid "Show on timer expiry: %1"
 msgstr "Показывать по истечении таймера: %1"
 
-#: plugins/readtimer.koplugin/main.lua:403
+#: plugins/readtimer.koplugin/main.lua:383
+msgid "Expiry message text: %1"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:422
 msgid "Alarm"
 msgstr "Предупреждение"
 
-#: plugins/readtimer.koplugin/main.lua:404
-#: plugins/readtimer.koplugin/main.lua:452
+#: plugins/readtimer.koplugin/main.lua:423
+#: plugins/readtimer.koplugin/main.lua:471
 msgid "Enter a time in hours and minutes."
 msgstr "Введите время в часах и минутах."
 
 #. @translators %1:%2 is a clock time (HH:MM), %3 is a duration
-#: plugins/readtimer.koplugin/main.lua:433
+#: plugins/readtimer.koplugin/main.lua:452
 msgid ""
 "Timer set for %1:%2.\n"
 "\n"
@@ -22239,22 +22260,30 @@ msgstr ""
 "\n"
 "Событие произойдёт через %3."
 
-#: plugins/readtimer.koplugin/main.lua:450
+#: plugins/readtimer.koplugin/main.lua:469
 msgid "Start timer"
 msgstr "Запуск таймера"
 
-#: plugins/readtimer.koplugin/main.lua:451
+#: plugins/readtimer.koplugin/main.lua:470
 msgid "Interval"
 msgstr "интервал"
 
 #. @translators This is a duration
-#: plugins/readtimer.koplugin/main.lua:476
+#: plugins/readtimer.koplugin/main.lua:497
 msgid "Timer will expire in %1."
 msgstr "Таймер истекает через %1."
 
-#: plugins/readtimer.koplugin/main.lua:494
+#: plugins/readtimer.koplugin/main.lua:512
 msgid "Timer stopped"
 msgstr "Таймер остановлен"
+
+#: plugins/readtimer.koplugin/main.lua:522
+msgid "Expiry message text"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:540
+msgid "Show"
+msgstr "Показывать"
 
 #: plugins/statistics.koplugin/_meta.lua:3
 #: plugins/statistics.koplugin/main.lua:95
@@ -24257,6 +24286,9 @@ msgstr "Wallabag"
 msgid "annotations"
 msgstr "аннотации"
 
+#~ msgid "Stop read timer"
+#~ msgstr "Остановить таймер чтения"
+
 #~ msgid "Time: %1"
 #~ msgstr "Время: %1"
 
@@ -24420,9 +24452,6 @@ msgstr "аннотации"
 
 #~ msgid "Show (★)"
 #~ msgstr "Показывать (★)"
-
-#~ msgid "Show"
-#~ msgstr "Показывать"
 
 #~ msgid "Filipino (Tagalog)"
 #~ msgstr "Филиппинский (тагальский)"

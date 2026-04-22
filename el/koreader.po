@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-21 14:44+0000\n"
+"POT-Creation-Date: 2026-04-22 05:55+0000\n"
 "PO-Revision-Date: 2026-04-19 20:41+0000\n"
 "Last-Translator: Ichnilatis <sophronios.sp@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -304,6 +304,7 @@ msgstr "Εισαγάγετε το όνομα του αρχείου"
 #: plugins/profiles.koplugin/main.lua:741
 #: plugins/profiles.koplugin/main.lua:875
 #: plugins/profiles.koplugin/main.lua:942
+#: plugins/readtimer.koplugin/main.lua:529
 #: plugins/statistics.koplugin/main.lua:2250
 #: plugins/statistics.koplugin/main.lua:2424
 #: plugins/statistics.koplugin/main.lua:2463
@@ -369,6 +370,7 @@ msgstr "Επιλογή"
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:309
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:302
 #: plugins/exporter.koplugin/main.lua:441
+#: plugins/readtimer.koplugin/main.lua:536
 #: plugins/vocabbuilder.koplugin/main.lua:1565
 #: plugins/wallabag.koplugin/main.lua:524
 #: plugins/wallabag.koplugin/main.lua:1499
@@ -681,6 +683,7 @@ msgstr "Φάκελος Dropbox (/ για root)"
 #: plugins/profiles.koplugin/main.lua:748
 #: plugins/profiles.koplugin/main.lua:882
 #: plugins/profiles.koplugin/main.lua:949
+#: plugins/readtimer.koplugin/main.lua:549
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:666
 #: plugins/wallabag.koplugin/main.lua:1434
@@ -4276,6 +4279,7 @@ msgstr "Μορφή ποσοστού προόδου: %1"
 #: frontend/apps/reader/modules/readerfooter.lua:1611
 #: plugins/profiles.koplugin/main.lua:169
 #: plugins/profiles.koplugin/main.lua:196
+#: plugins/readtimer.koplugin/main.lua:383
 msgid "default"
 msgstr "προκαθορισμένo"
 
@@ -5062,7 +5066,7 @@ msgstr "δ"
 #: plugins/gestures.koplugin/main.lua:762
 #: plugins/gestures.koplugin/main.lua:817
 #: plugins/gestures.koplugin/main.lua:844
-#: plugins/readtimer.koplugin/main.lua:317
+#: plugins/readtimer.koplugin/main.lua:327
 msgid "Set interval"
 msgstr "Ορισμός χρόνου"
 
@@ -12697,6 +12701,7 @@ msgstr "px"
 
 #: frontend/ui/data/optionsutil.lua:129 frontend/ui/data/optionsutil.lua:139
 #: plugins/profiles.koplugin/main.lua:213
+#: plugins/readtimer.koplugin/main.lua:383
 msgid "custom"
 msgstr "προσαρμοσμένα"
 
@@ -22410,7 +22415,7 @@ msgid "Generate QR code"
 msgstr "Δημιουργία κώδικα QR"
 
 #: plugins/readtimer.koplugin/_meta.lua:3
-#: plugins/readtimer.koplugin/main.lua:297
+#: plugins/readtimer.koplugin/main.lua:307
 msgid "Read timer"
 msgstr "Χρονόμετρο ανάγνωσης"
 
@@ -22418,82 +22423,98 @@ msgstr "Χρονόμετρο ανάγνωσης"
 msgid "Shows an alarm after a specified amount of time."
 msgstr "Εμφανίζει μια ειδοποίηση μετά από ένα καθορισμένο χρονικό διάστημα."
 
-#: plugins/readtimer.koplugin/main.lua:28
-msgid "Set read timer alarm"
-msgstr "Ρύθμιση ειδοποίησης χρονομέτρου ανάγνωσης"
-
-#: plugins/readtimer.koplugin/main.lua:30
-msgid "Set read timer interval"
-msgstr "Ρύθμιση διαστήματος χρονομέτρου ανάγνωσης"
-
-#: plugins/readtimer.koplugin/main.lua:32
-msgid "Stop read timer"
-msgstr "Διακοπή χρονομέτρου ανάγνωσης"
-
-#: plugins/readtimer.koplugin/main.lua:57
+#: plugins/readtimer.koplugin/main.lua:23
 msgid "Time is up"
 msgstr "Ο χρόνος τελείωσε"
 
-#: plugins/readtimer.koplugin/main.lua:72
+#: plugins/readtimer.koplugin/main.lua:32
+#, fuzzy
+msgid "Read timer: set alarm"
+msgstr "Ρύθμιση ειδοποίησης χρονομέτρου ανάγνωσης"
+
+#: plugins/readtimer.koplugin/main.lua:34
+#, fuzzy
+msgid "Read timer: set interval"
+msgstr "Ρύθμιση διαστήματος χρονομέτρου ανάγνωσης"
+
+#: plugins/readtimer.koplugin/main.lua:36
+#, fuzzy
+msgid "Read timer: start"
+msgstr "Χρονόμετρο ανάγνωσης"
+
+#: plugins/readtimer.koplugin/main.lua:38
+msgid "Read timer: start if not running"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:40
+#, fuzzy
+msgid "Read timer: stop"
+msgstr "Χρονόμετρο ανάγνωσης"
+
+#: plugins/readtimer.koplugin/main.lua:78
 msgid "Repeat"
 msgstr "Επανάληψη"
 
-#: plugins/readtimer.koplugin/main.lua:78
+#: plugins/readtimer.koplugin/main.lua:84
 msgid "Done"
 msgstr "Ολοκληρώθηκε"
 
-#: plugins/readtimer.koplugin/main.lua:247
+#: plugins/readtimer.koplugin/main.lua:257
 msgid "Auto-reschedule"
 msgstr "Αυτόματος επαναπρογραμματισμός"
 
-#: plugins/readtimer.koplugin/main.lua:256
+#: plugins/readtimer.koplugin/main.lua:266
 msgid "Show timer in alt status bar"
 msgstr "Εμφάνιση χρονομέτρου στην εναλλακτική γραμμή κατάστασης"
 
-#: plugins/readtimer.koplugin/main.lua:269
+#: plugins/readtimer.koplugin/main.lua:279
 msgid "Show timer in status bar"
 msgstr "Εμφάνιση χρονομέτρου στη γραμμή κατάστασης"
 
-#: plugins/readtimer.koplugin/main.lua:285
+#: plugins/readtimer.koplugin/main.lua:295
 msgid "message"
 msgstr "μήνυμα"
 
-#: plugins/readtimer.koplugin/main.lua:286
+#: plugins/readtimer.koplugin/main.lua:296
 msgid "notification"
 msgstr "ειδοποίηση"
 
-#: plugins/readtimer.koplugin/main.lua:287
+#: plugins/readtimer.koplugin/main.lua:297
 msgid "nothing"
 msgstr "τίποτα"
 
-#: plugins/readtimer.koplugin/main.lua:294
+#: plugins/readtimer.koplugin/main.lua:304
 msgid "Read timer (%1)"
 msgstr "Χρονόμετρο ανάγνωσης (%1)"
 
-#: plugins/readtimer.koplugin/main.lua:310
-#: plugins/readtimer.koplugin/main.lua:402
+#: plugins/readtimer.koplugin/main.lua:320
+#: plugins/readtimer.koplugin/main.lua:421
 msgid "Set alarm"
 msgstr "Ορισμός χρονοδιακόπτη"
 
-#: plugins/readtimer.koplugin/main.lua:324
+#: plugins/readtimer.koplugin/main.lua:334
 msgid "Stop timer"
 msgstr "Σταμάτημα χρονομέτρου"
 
-#: plugins/readtimer.koplugin/main.lua:336
+#: plugins/readtimer.koplugin/main.lua:346
 msgid "Show on timer expiry: %1"
 msgstr "Εμφάνιση κατά τη λήξη του χρονομέτρου: %1"
 
-#: plugins/readtimer.koplugin/main.lua:403
+#: plugins/readtimer.koplugin/main.lua:383
+msgid "Expiry message text: %1"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:422
 msgid "Alarm"
 msgstr "Χρονοδιακόπτης"
 
-#: plugins/readtimer.koplugin/main.lua:404
-#: plugins/readtimer.koplugin/main.lua:452
+#: plugins/readtimer.koplugin/main.lua:423
+#: plugins/readtimer.koplugin/main.lua:471
 msgid "Enter a time in hours and minutes."
 msgstr "Εισαγάγετε μια ώρα σε ώρες και λεπτά."
 
 #. @translators %1:%2 is a clock time (HH:MM), %3 is a duration
-#: plugins/readtimer.koplugin/main.lua:433
+#: plugins/readtimer.koplugin/main.lua:452
 msgid ""
 "Timer set for %1:%2.\n"
 "\n"
@@ -22503,22 +22524,30 @@ msgstr ""
 "\n"
 "Αυτό είναι %3 από τώρα."
 
-#: plugins/readtimer.koplugin/main.lua:450
+#: plugins/readtimer.koplugin/main.lua:469
 msgid "Start timer"
 msgstr "Έναρξη χρονομέτρου"
 
-#: plugins/readtimer.koplugin/main.lua:451
+#: plugins/readtimer.koplugin/main.lua:470
 msgid "Interval"
 msgstr "Διάστημα"
 
 #. @translators This is a duration
-#: plugins/readtimer.koplugin/main.lua:476
+#: plugins/readtimer.koplugin/main.lua:497
 msgid "Timer will expire in %1."
 msgstr "Το χρονόμετρο θα λήξει σε %1."
 
-#: plugins/readtimer.koplugin/main.lua:494
+#: plugins/readtimer.koplugin/main.lua:512
 msgid "Timer stopped"
 msgstr "Το χρονόμετρο σταμάτησε"
+
+#: plugins/readtimer.koplugin/main.lua:522
+msgid "Expiry message text"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:540
+msgid "Show"
+msgstr "Εμφάνιση"
 
 #: plugins/statistics.koplugin/_meta.lua:3
 #: plugins/statistics.koplugin/main.lua:95
@@ -24522,6 +24551,9 @@ msgstr "wallabag"
 msgid "annotations"
 msgstr "επισημειώσεις"
 
+#~ msgid "Stop read timer"
+#~ msgstr "Διακοπή χρονομέτρου ανάγνωσης"
+
 #~ msgid "Time: %1"
 #~ msgstr "Χρόνος: %1"
 
@@ -24708,9 +24740,6 @@ msgstr "επισημειώσεις"
 
 #~ msgid "Show (★)"
 #~ msgstr "Εμφάνιση (★)"
-
-#~ msgid "Show"
-#~ msgstr "Εμφάνιση"
 
 #~ msgid "Filipino (Tagalog)"
 #~ msgstr "Φιλιππινέζικα (Ταγκαλόγκ)"

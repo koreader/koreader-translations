@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-21 14:44+0000\n"
+"POT-Creation-Date: 2026-04-22 05:55+0000\n"
 "PO-Revision-Date: 2025-09-17 06:02+0000\n"
 "Last-Translator: \"Shelly Chen (星寂)\" <alonstar@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/koreader/"
@@ -298,6 +298,7 @@ msgstr "ファイル名を入力"
 #: plugins/profiles.koplugin/main.lua:741
 #: plugins/profiles.koplugin/main.lua:875
 #: plugins/profiles.koplugin/main.lua:942
+#: plugins/readtimer.koplugin/main.lua:529
 #: plugins/statistics.koplugin/main.lua:2250
 #: plugins/statistics.koplugin/main.lua:2424
 #: plugins/statistics.koplugin/main.lua:2463
@@ -363,6 +364,7 @@ msgstr "選択"
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:309
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:302
 #: plugins/exporter.koplugin/main.lua:441
+#: plugins/readtimer.koplugin/main.lua:536
 #: plugins/vocabbuilder.koplugin/main.lua:1565
 #: plugins/wallabag.koplugin/main.lua:524
 #: plugins/wallabag.koplugin/main.lua:1499
@@ -671,6 +673,7 @@ msgstr "Dropbox フォルダー(/ でルート)"
 #: plugins/profiles.koplugin/main.lua:748
 #: plugins/profiles.koplugin/main.lua:882
 #: plugins/profiles.koplugin/main.lua:949
+#: plugins/readtimer.koplugin/main.lua:549
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:666
 #: plugins/wallabag.koplugin/main.lua:1434
@@ -4321,6 +4324,7 @@ msgstr "進捗率の書式: %1"
 #: frontend/apps/reader/modules/readerfooter.lua:1611
 #: plugins/profiles.koplugin/main.lua:169
 #: plugins/profiles.koplugin/main.lua:196
+#: plugins/readtimer.koplugin/main.lua:383
 #, fuzzy
 msgid "default"
 msgstr "デフォルト"
@@ -5115,7 +5119,7 @@ msgstr "秒"
 #: plugins/gestures.koplugin/main.lua:762
 #: plugins/gestures.koplugin/main.lua:817
 #: plugins/gestures.koplugin/main.lua:844
-#: plugins/readtimer.koplugin/main.lua:317
+#: plugins/readtimer.koplugin/main.lua:327
 msgid "Set interval"
 msgstr "間隔設定"
 
@@ -12501,6 +12505,7 @@ msgstr ""
 
 #: frontend/ui/data/optionsutil.lua:129 frontend/ui/data/optionsutil.lua:139
 #: plugins/profiles.koplugin/main.lua:213
+#: plugins/readtimer.koplugin/main.lua:383
 msgid "custom"
 msgstr "カスタム"
 
@@ -22164,7 +22169,7 @@ msgid "Generate QR code"
 msgstr ""
 
 #: plugins/readtimer.koplugin/_meta.lua:3
-#: plugins/readtimer.koplugin/main.lua:297
+#: plugins/readtimer.koplugin/main.lua:307
 msgid "Read timer"
 msgstr "読書タイマー"
 
@@ -22172,92 +22177,105 @@ msgstr "読書タイマー"
 msgid "Shows an alarm after a specified amount of time."
 msgstr "指定した時間経過後にアラームを表示します。"
 
-#: plugins/readtimer.koplugin/main.lua:28
-#, fuzzy
-msgid "Set read timer alarm"
-msgstr "読書タイマー設定"
-
-#: plugins/readtimer.koplugin/main.lua:30
-#, fuzzy
-msgid "Set read timer interval"
-msgstr "読書タイマー設定"
-
-#: plugins/readtimer.koplugin/main.lua:32
-#, fuzzy
-msgid "Stop read timer"
-msgstr "読書タイマー設定"
-
-#: plugins/readtimer.koplugin/main.lua:57
+#: plugins/readtimer.koplugin/main.lua:23
 msgid "Time is up"
 msgstr "時間切れ"
 
-#: plugins/readtimer.koplugin/main.lua:72
+#: plugins/readtimer.koplugin/main.lua:32
+#, fuzzy
+msgid "Read timer: set alarm"
+msgstr "読書タイマー設定"
+
+#: plugins/readtimer.koplugin/main.lua:34
+#, fuzzy
+msgid "Read timer: set interval"
+msgstr "読書タイマー設定"
+
+#: plugins/readtimer.koplugin/main.lua:36
+#, fuzzy
+msgid "Read timer: start"
+msgstr "読書タイマー"
+
+#: plugins/readtimer.koplugin/main.lua:38
+msgid "Read timer: start if not running"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:40
+#, fuzzy
+msgid "Read timer: stop"
+msgstr "読書タイマー"
+
+#: plugins/readtimer.koplugin/main.lua:78
 msgid "Repeat"
 msgstr "繰り返し"
 
-#: plugins/readtimer.koplugin/main.lua:78
+#: plugins/readtimer.koplugin/main.lua:84
 msgid "Done"
 msgstr "完了"
 
-#: plugins/readtimer.koplugin/main.lua:247
+#: plugins/readtimer.koplugin/main.lua:257
 #, fuzzy
 msgid "Auto-reschedule"
 msgstr "スケジュールで自動色調調整"
 
-#: plugins/readtimer.koplugin/main.lua:256
+#: plugins/readtimer.koplugin/main.lua:266
 #, fuzzy
 msgid "Show timer in alt status bar"
 msgstr "代替ステータスバーについて"
 
-#: plugins/readtimer.koplugin/main.lua:269
+#: plugins/readtimer.koplugin/main.lua:279
 #, fuzzy
 msgid "Show timer in status bar"
 msgstr "代替ステータスバー"
 
-#: plugins/readtimer.koplugin/main.lua:285
+#: plugins/readtimer.koplugin/main.lua:295
 #, fuzzy
 msgid "message"
 msgstr "メッセージを設定"
 
-#: plugins/readtimer.koplugin/main.lua:286
+#: plugins/readtimer.koplugin/main.lua:296
 #, fuzzy
 msgid "notification"
 msgstr "通知"
 
-#: plugins/readtimer.koplugin/main.lua:287
+#: plugins/readtimer.koplugin/main.lua:297
 #, fuzzy
 msgid "nothing"
 msgstr "無し"
 
-#: plugins/readtimer.koplugin/main.lua:294
+#: plugins/readtimer.koplugin/main.lua:304
 msgid "Read timer (%1)"
 msgstr "読書タイマー (%1)"
 
-#: plugins/readtimer.koplugin/main.lua:310
-#: plugins/readtimer.koplugin/main.lua:402
+#: plugins/readtimer.koplugin/main.lua:320
+#: plugins/readtimer.koplugin/main.lua:421
 msgid "Set alarm"
 msgstr "アラームを設定"
 
-#: plugins/readtimer.koplugin/main.lua:324
+#: plugins/readtimer.koplugin/main.lua:334
 msgid "Stop timer"
 msgstr "タイマーを停止"
 
-#: plugins/readtimer.koplugin/main.lua:336
+#: plugins/readtimer.koplugin/main.lua:346
 #, fuzzy
 msgid "Show on timer expiry: %1"
 msgstr "隠しファイルを表示"
 
-#: plugins/readtimer.koplugin/main.lua:403
+#: plugins/readtimer.koplugin/main.lua:383
+msgid "Expiry message text: %1"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:422
 msgid "Alarm"
 msgstr ""
 
-#: plugins/readtimer.koplugin/main.lua:404
-#: plugins/readtimer.koplugin/main.lua:452
+#: plugins/readtimer.koplugin/main.lua:423
+#: plugins/readtimer.koplugin/main.lua:471
 msgid "Enter a time in hours and minutes."
 msgstr "時間を時と分で入力します。"
 
 #. @translators %1:%2 is a clock time (HH:MM), %3 is a duration
-#: plugins/readtimer.koplugin/main.lua:433
+#: plugins/readtimer.koplugin/main.lua:452
 msgid ""
 "Timer set for %1:%2.\n"
 "\n"
@@ -22267,25 +22285,33 @@ msgstr ""
 "\n"
 "%3 後です。"
 
-#: plugins/readtimer.koplugin/main.lua:450
+#: plugins/readtimer.koplugin/main.lua:469
 #, fuzzy
 msgid "Start timer"
 msgstr "読書タイマー設定"
 
-#: plugins/readtimer.koplugin/main.lua:451
+#: plugins/readtimer.koplugin/main.lua:470
 #, fuzzy
 msgid "Interval"
 msgstr "間隔設定"
 
 #. @translators This is a duration
-#: plugins/readtimer.koplugin/main.lua:476
+#: plugins/readtimer.koplugin/main.lua:497
 msgid "Timer will expire in %1."
 msgstr "タイマーは %1 で終了します。"
 
-#: plugins/readtimer.koplugin/main.lua:494
+#: plugins/readtimer.koplugin/main.lua:512
 #, fuzzy
 msgid "Timer stopped"
 msgstr "サスペンド時間"
+
+#: plugins/readtimer.koplugin/main.lua:522
+msgid "Expiry message text"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:540
+msgid "Show"
+msgstr "表示"
 
 #: plugins/statistics.koplugin/_meta.lua:3
 #: plugins/statistics.koplugin/main.lua:95
@@ -24300,6 +24326,10 @@ msgstr "Wallabag"
 msgid "annotations"
 msgstr "回転"
 
+#, fuzzy
+#~ msgid "Stop read timer"
+#~ msgstr "読書タイマー設定"
+
 #~ msgid "Time: %1"
 #~ msgstr "時間: %1"
 
@@ -24477,9 +24507,6 @@ msgstr "回転"
 
 #~ msgid "Show (★)"
 #~ msgstr "表示(★)"
-
-#~ msgid "Show"
-#~ msgstr "表示"
 
 #~ msgid "Punjabi"
 #~ msgstr "Punjabi"

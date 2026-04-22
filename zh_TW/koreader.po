@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-21 14:44+0000\n"
+"POT-Creation-Date: 2026-04-22 05:55+0000\n"
 "PO-Revision-Date: 2026-04-18 08:01+0000\n"
 "Last-Translator: Adam <podli27yahoo@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
@@ -298,6 +298,7 @@ msgstr "輸入檔名"
 #: plugins/profiles.koplugin/main.lua:741
 #: plugins/profiles.koplugin/main.lua:875
 #: plugins/profiles.koplugin/main.lua:942
+#: plugins/readtimer.koplugin/main.lua:529
 #: plugins/statistics.koplugin/main.lua:2250
 #: plugins/statistics.koplugin/main.lua:2424
 #: plugins/statistics.koplugin/main.lua:2463
@@ -363,6 +364,7 @@ msgstr "選擇"
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:309
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:302
 #: plugins/exporter.koplugin/main.lua:441
+#: plugins/readtimer.koplugin/main.lua:536
 #: plugins/vocabbuilder.koplugin/main.lua:1565
 #: plugins/wallabag.koplugin/main.lua:524
 #: plugins/wallabag.koplugin/main.lua:1499
@@ -670,6 +672,7 @@ msgstr "Dropbox 資料夾（根目錄使用 /）"
 #: plugins/profiles.koplugin/main.lua:748
 #: plugins/profiles.koplugin/main.lua:882
 #: plugins/profiles.koplugin/main.lua:949
+#: plugins/readtimer.koplugin/main.lua:549
 #: plugins/terminal.koplugin/aliases.lua:120
 #: plugins/terminal.koplugin/main.lua:666
 #: plugins/wallabag.koplugin/main.lua:1434
@@ -4175,6 +4178,7 @@ msgstr "進度百分比格式：%1"
 #: frontend/apps/reader/modules/readerfooter.lua:1611
 #: plugins/profiles.koplugin/main.lua:169
 #: plugins/profiles.koplugin/main.lua:196
+#: plugins/readtimer.koplugin/main.lua:383
 msgid "default"
 msgstr "預設"
 
@@ -4933,7 +4937,7 @@ msgstr "秒"
 #: plugins/gestures.koplugin/main.lua:762
 #: plugins/gestures.koplugin/main.lua:817
 #: plugins/gestures.koplugin/main.lua:844
-#: plugins/readtimer.koplugin/main.lua:317
+#: plugins/readtimer.koplugin/main.lua:327
 msgid "Set interval"
 msgstr "設定間隔"
 
@@ -12157,6 +12161,7 @@ msgstr "px"
 
 #: frontend/ui/data/optionsutil.lua:129 frontend/ui/data/optionsutil.lua:139
 #: plugins/profiles.koplugin/main.lua:213
+#: plugins/readtimer.koplugin/main.lua:383
 msgid "custom"
 msgstr "自訂"
 
@@ -21432,7 +21437,7 @@ msgid "Generate QR code"
 msgstr "產生 QR code"
 
 #: plugins/readtimer.koplugin/_meta.lua:3
-#: plugins/readtimer.koplugin/main.lua:297
+#: plugins/readtimer.koplugin/main.lua:307
 msgid "Read timer"
 msgstr "閱讀計時器"
 
@@ -21440,82 +21445,98 @@ msgstr "閱讀計時器"
 msgid "Shows an alarm after a specified amount of time."
 msgstr "在一段時間後顯示警告訊息。"
 
-#: plugins/readtimer.koplugin/main.lua:28
-msgid "Set read timer alarm"
-msgstr "設定閱讀計時鬧鐘"
-
-#: plugins/readtimer.koplugin/main.lua:30
-msgid "Set read timer interval"
-msgstr "設定閱讀計時區間"
-
-#: plugins/readtimer.koplugin/main.lua:32
-msgid "Stop read timer"
-msgstr "停止閱讀計時器"
-
-#: plugins/readtimer.koplugin/main.lua:57
+#: plugins/readtimer.koplugin/main.lua:23
 msgid "Time is up"
 msgstr "時間到"
 
-#: plugins/readtimer.koplugin/main.lua:72
+#: plugins/readtimer.koplugin/main.lua:32
+#, fuzzy
+msgid "Read timer: set alarm"
+msgstr "設定閱讀計時鬧鐘"
+
+#: plugins/readtimer.koplugin/main.lua:34
+#, fuzzy
+msgid "Read timer: set interval"
+msgstr "設定閱讀計時區間"
+
+#: plugins/readtimer.koplugin/main.lua:36
+#, fuzzy
+msgid "Read timer: start"
+msgstr "閱讀計時器"
+
+#: plugins/readtimer.koplugin/main.lua:38
+msgid "Read timer: start if not running"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:40
+#, fuzzy
+msgid "Read timer: stop"
+msgstr "閱讀計時器"
+
+#: plugins/readtimer.koplugin/main.lua:78
 msgid "Repeat"
 msgstr "重複"
 
-#: plugins/readtimer.koplugin/main.lua:78
+#: plugins/readtimer.koplugin/main.lua:84
 msgid "Done"
 msgstr "完成"
 
-#: plugins/readtimer.koplugin/main.lua:247
+#: plugins/readtimer.koplugin/main.lua:257
 msgid "Auto-reschedule"
 msgstr "自動重新排程"
 
-#: plugins/readtimer.koplugin/main.lua:256
+#: plugins/readtimer.koplugin/main.lua:266
 msgid "Show timer in alt status bar"
 msgstr "在替代狀態列顯示計時器"
 
-#: plugins/readtimer.koplugin/main.lua:269
+#: plugins/readtimer.koplugin/main.lua:279
 msgid "Show timer in status bar"
 msgstr "在狀態列顯示計時器"
 
-#: plugins/readtimer.koplugin/main.lua:285
+#: plugins/readtimer.koplugin/main.lua:295
 msgid "message"
 msgstr "訊息"
 
-#: plugins/readtimer.koplugin/main.lua:286
+#: plugins/readtimer.koplugin/main.lua:296
 msgid "notification"
 msgstr "通知"
 
-#: plugins/readtimer.koplugin/main.lua:287
+#: plugins/readtimer.koplugin/main.lua:297
 msgid "nothing"
 msgstr "無動作"
 
-#: plugins/readtimer.koplugin/main.lua:294
+#: plugins/readtimer.koplugin/main.lua:304
 msgid "Read timer (%1)"
 msgstr "閱讀計時器（%1）"
 
-#: plugins/readtimer.koplugin/main.lua:310
-#: plugins/readtimer.koplugin/main.lua:402
+#: plugins/readtimer.koplugin/main.lua:320
+#: plugins/readtimer.koplugin/main.lua:421
 msgid "Set alarm"
 msgstr "設定鬧鐘"
 
-#: plugins/readtimer.koplugin/main.lua:324
+#: plugins/readtimer.koplugin/main.lua:334
 msgid "Stop timer"
 msgstr "停止計時器"
 
-#: plugins/readtimer.koplugin/main.lua:336
+#: plugins/readtimer.koplugin/main.lua:346
 msgid "Show on timer expiry: %1"
 msgstr "計時結束時顯示：%1"
 
-#: plugins/readtimer.koplugin/main.lua:403
+#: plugins/readtimer.koplugin/main.lua:383
+msgid "Expiry message text: %1"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:422
 msgid "Alarm"
 msgstr "鬧鐘"
 
-#: plugins/readtimer.koplugin/main.lua:404
-#: plugins/readtimer.koplugin/main.lua:452
+#: plugins/readtimer.koplugin/main.lua:423
+#: plugins/readtimer.koplugin/main.lua:471
 msgid "Enter a time in hours and minutes."
 msgstr "以小時和分鐘為單位輸入時間。"
 
 #. @translators %1:%2 is a clock time (HH:MM), %3 is a duration
-#: plugins/readtimer.koplugin/main.lua:433
+#: plugins/readtimer.koplugin/main.lua:452
 msgid ""
 "Timer set for %1:%2.\n"
 "\n"
@@ -21525,22 +21546,30 @@ msgstr ""
 "\n"
 "從現在算起 %3 後。"
 
-#: plugins/readtimer.koplugin/main.lua:450
+#: plugins/readtimer.koplugin/main.lua:469
 msgid "Start timer"
 msgstr "開始計時"
 
-#: plugins/readtimer.koplugin/main.lua:451
+#: plugins/readtimer.koplugin/main.lua:470
 msgid "Interval"
 msgstr "間隔"
 
 #. @translators This is a duration
-#: plugins/readtimer.koplugin/main.lua:476
+#: plugins/readtimer.koplugin/main.lua:497
 msgid "Timer will expire in %1."
 msgstr "計時器將在 %1 後到期。"
 
-#: plugins/readtimer.koplugin/main.lua:494
+#: plugins/readtimer.koplugin/main.lua:512
 msgid "Timer stopped"
 msgstr "計時器已停止"
+
+#: plugins/readtimer.koplugin/main.lua:522
+msgid "Expiry message text"
+msgstr ""
+
+#: plugins/readtimer.koplugin/main.lua:540
+msgid "Show"
+msgstr "顯示"
 
 #: plugins/statistics.koplugin/_meta.lua:3
 #: plugins/statistics.koplugin/main.lua:95
@@ -23465,6 +23494,9 @@ msgstr "Wallabag"
 msgid "annotations"
 msgstr "註解"
 
+#~ msgid "Stop read timer"
+#~ msgstr "停止閱讀計時器"
+
 #~ msgid "Time: %1"
 #~ msgstr "時間：%1"
 
@@ -23629,9 +23661,6 @@ msgstr "註解"
 
 #~ msgid "Show (★)"
 #~ msgstr "顯示 (★)"
-
-#~ msgid "Show"
-#~ msgstr "顯示"
 
 #~ msgid "Filipino (Tagalog)"
 #~ msgstr "菲律賓語 (他加祿語)"
