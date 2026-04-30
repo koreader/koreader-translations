@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-29 16:36+0000\n"
+"POT-Creation-Date: 2026-04-30 17:19+0000\n"
 "PO-Revision-Date: 2026-04-30 17:19+0000\n"
 "Last-Translator: kr <harum@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -246,7 +246,7 @@ msgstr "파일이름 입력"
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
 #: frontend/apps/reader/modules/readerwikipedia.lua:54
 #: frontend/apps/reader/modules/readerwikipedia.lua:177
-#: frontend/apps/reader/readerui.lua:794 frontend/device/android/device.lua:530
+#: frontend/apps/reader/readerui.lua:797 frontend/device/android/device.lua:530
 #: frontend/ui/elements/common_settings_menu_table.lua:390
 #: frontend/ui/elements/timeout_android.lua:55 frontend/ui/presets.lua:129
 #: frontend/ui/screensaver.lua:231 frontend/ui/widget/bookmarkbrowser.lua:977
@@ -2370,7 +2370,7 @@ msgstr "마지막 문서를 열까요: %1?"
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:163
 #: frontend/apps/filemanager/filemanagersetdefaults.lua:206
 #: frontend/apps/reader/modules/readermenu.lua:363
-#: frontend/apps/reader/readerui.lua:802 frontend/device/android/device.lua:530
+#: frontend/apps/reader/readerui.lua:805 frontend/device/android/device.lua:530
 #: frontend/ui/elements/common_settings_menu_table.lua:390
 #: frontend/ui/widget/confirmbox.lua:48
 #: frontend/ui/widget/container/inputcontainer.lua:382
@@ -6665,6 +6665,7 @@ msgid "Edit book-specific style tweak"
 msgstr "책에 특정된 스타일 조정 편집하기"
 
 #: frontend/apps/reader/modules/readerstyletweak.lua:1179
+#: frontend/apps/reader/readerui.lua:649
 msgid "Restore"
 msgstr "복원"
 
@@ -8013,47 +8014,42 @@ msgstr "확대/축소 비율 설정"
 msgid "File '%1' does not exist."
 msgstr "'%1' 파일이 존재하지 않습니다."
 
-#: frontend/apps/reader/readerui.lua:645
-msgid ""
-"The book has been read on this device earlier.\n"
-"Do you want to use book metadata from the archive?"
-msgstr ""
-"이 기기에서 이 책을 이전에 읽은 적이 있습니다.\n"
-"보관함에 있는 책의 메타데이터를 사용할까요?"
-
 #: frontend/apps/reader/readerui.lua:646
-msgid "Use"
-msgstr "사용"
+msgid ""
+"This book was previously opened on this device.\n"
+"Would you like to restore its metadata from the archive?\n"
+"Discarded metadata will be removed from the archive."
+msgstr ""
 
-#: frontend/apps/reader/readerui.lua:651
-msgid "Don't use"
-msgstr "사용하지 마세요"
+#: frontend/apps/reader/readerui.lua:654 frontend/ui/widget/inputdialog.lua:890
+msgid "Discard"
+msgstr "버림"
 
-#: frontend/apps/reader/readerui.lua:662
+#: frontend/apps/reader/readerui.lua:665
 msgid "File '%1' is not supported."
 msgstr "'%1' 파일은 지원하지 않습니다."
 
-#: frontend/apps/reader/readerui.lua:705 frontend/device/android/device.lua:196
+#: frontend/apps/reader/readerui.lua:708 frontend/device/android/device.lua:196
 msgid "Opening file '%1'."
 msgstr "'%1' 파일을 엽니다."
 
-#: frontend/apps/reader/readerui.lua:724 frontend/apps/reader/readerui.lua:744
+#: frontend/apps/reader/readerui.lua:727 frontend/apps/reader/readerui.lua:747
 msgid "No reader engine for this file or invalid file."
 msgstr "이 파일을 위한 리딩엔진이 없거나 잘못된 파일입니다."
 
-#: frontend/apps/reader/readerui.lua:789
+#: frontend/apps/reader/readerui.lua:792
 msgid "Password is incorrect, try again?"
 msgstr "암호가 다릅니다, 다시 할까요?"
 
-#: frontend/apps/reader/readerui.lua:790
+#: frontend/apps/reader/readerui.lua:793
 msgid "Input document password"
 msgstr "문서 암호 입력"
 
-#: frontend/apps/reader/readerui.lua:847
+#: frontend/apps/reader/readerui.lua:850
 msgid "Book metadata saved."
 msgstr "책 메타데이터가 저장되었습니다."
 
-#: frontend/apps/reader/readerui.lua:907
+#: frontend/apps/reader/readerui.lua:910
 msgid ""
 "Failed recognizing or parsing this file: unsupported or invalid document.\n"
 "KOReader will exit now."
@@ -16591,10 +16587,6 @@ msgstr "저장됨"
 msgid "You have unsaved changes."
 msgstr "변경 사항이 저장되지 않았습니다."
 
-#: frontend/ui/widget/inputdialog.lua:890
-msgid "Discard"
-msgstr "버림"
-
 #: frontend/ui/widget/inputdialog.lua:895
 msgid "Changes discarded"
 msgstr "변경 사항이 무시됨"
@@ -23740,6 +23732,19 @@ msgstr "왈라백"
 #: tools/update-metadata.lua:63
 msgid "annotations"
 msgstr "주석"
+
+#~ msgid ""
+#~ "The book has been read on this device earlier.\n"
+#~ "Do you want to use book metadata from the archive?"
+#~ msgstr ""
+#~ "이 기기에서 이 책을 이전에 읽은 적이 있습니다.\n"
+#~ "보관함에 있는 책의 메타데이터를 사용할까요?"
+
+#~ msgid "Use"
+#~ msgstr "사용"
+
+#~ msgid "Don't use"
+#~ msgstr "사용하지 마세요"
 
 #~ msgid "Book settings, highlights and notes will be deleted."
 #~ msgstr "책 설정과 강조 표시, 메모가 삭제됩니다."
