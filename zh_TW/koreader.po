@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-17 18:26+0000\n"
+"POT-Creation-Date: 2026-06-20 12:19+0000\n"
 "PO-Revision-Date: 2026-05-06 06:26+0000\n"
 "Last-Translator: UDP <udp@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
@@ -243,6 +243,7 @@ msgstr "輸入檔名"
 #: frontend/apps/reader/modules/readerwikipedia.lua:54
 #: frontend/apps/reader/modules/readerwikipedia.lua:177
 #: frontend/apps/reader/readerui.lua:802 frontend/device/android/device.lua:530
+#: frontend/dispatcher.lua:1243
 #: frontend/ui/elements/common_settings_menu_table.lua:390
 #: frontend/ui/elements/timeout_android.lua:55 frontend/ui/presets.lua:129
 #: frontend/ui/screensaver.lua:231 frontend/ui/widget/bookmarkbrowser.lua:977
@@ -667,7 +668,7 @@ msgstr "Dropbox 資料夾（根目錄使用 /）"
 #: frontend/apps/reader/modules/readerstyletweak.lua:1004
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
 #: frontend/apps/reader/modules/readerwikipedia.lua:184
-#: frontend/ui/widget/inputdialog.lua:857
+#: frontend/dispatcher.lua:1256 frontend/ui/widget/inputdialog.lua:857
 #: frontend/ui/widget/inputdialog.lua:898 plugins/SSH.koplugin/main.lua:210
 #: plugins/cloudstorage.koplugin/providers/dropbox.lua:419
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:315
@@ -2463,7 +2464,7 @@ msgstr "檔案管理器選單"
 #: frontend/apps/reader/modules/readerfont.lua:305
 #: frontend/apps/reader/modules/readerfont.lua:324
 #: frontend/apps/reader/modules/readertypography.lua:259
-#: frontend/ui/elements/page_turns.lua:10
+#: frontend/dispatcher.lua:1250 frontend/ui/elements/page_turns.lua:10
 #: plugins/autowarmth.koplugin/main.lua:897
 #: plugins/coverimage.koplugin/main.lua:607
 #: plugins/exporter.koplugin/main.lua:455
@@ -5268,7 +5269,7 @@ msgid "Crosshairs speed (reader/dict): %1 / %2"
 msgstr "準星速度（閱讀器／字典）：%1 / %2"
 
 #: frontend/apps/reader/modules/readerkeyselection.lua:228
-#: frontend/dispatcher.lua:1079 plugins/httpinspector.koplugin/main.lua:1051
+#: frontend/dispatcher.lua:1080 plugins/httpinspector.koplugin/main.lua:1051
 msgid "Reader"
 msgstr "閱讀器"
 
@@ -6286,7 +6287,7 @@ msgid "Delete file"
 msgstr "刪除檔案"
 
 #: frontend/apps/reader/modules/readerstatus.lua:108 frontend/dispatcher.lua:60
-#: frontend/dispatcher.lua:1078 plugins/httpinspector.koplugin/main.lua:1050
+#: frontend/dispatcher.lua:1079 plugins/httpinspector.koplugin/main.lua:1050
 msgid "File browser"
 msgstr "檔案瀏覽器"
 
@@ -9305,83 +9306,98 @@ msgstr "未知項目"
 msgid "gesture distance"
 msgstr "手勢距離"
 
-#: frontend/dispatcher.lua:811 frontend/dispatcher.lua:1056
+#: frontend/dispatcher.lua:812 frontend/dispatcher.lua:1057
 msgid "Nothing"
 msgstr "沒有"
 
-#: frontend/dispatcher.lua:817
+#: frontend/dispatcher.lua:818
 msgctxt "Dispatcher"
 msgid "1 action"
 msgid_plural "%1 actions"
 msgstr[0] "%1 個動作"
 
-#: frontend/dispatcher.lua:819 plugins/gestures.koplugin/main.lua:328
+#: frontend/dispatcher.lua:820 plugins/gestures.koplugin/main.lua:328
 msgid "Pass through"
 msgstr "傳遞"
 
-#: frontend/dispatcher.lua:855 frontend/dispatcher.lua:1116
+#: frontend/dispatcher.lua:856 frontend/dispatcher.lua:1117
 msgid "Arrange actions and QuickMenu separators"
 msgstr "排列動作與分隔符"
 
-#: frontend/dispatcher.lua:855 frontend/dispatcher.lua:1116
+#: frontend/dispatcher.lua:856 frontend/dispatcher.lua:1117
 msgid "Arrange actions"
 msgstr "排列動作"
 
-#: frontend/dispatcher.lua:968
+#: frontend/dispatcher.lua:969
 msgid "Use gesture distance"
 msgstr "手勢距離"
 
-#: frontend/dispatcher.lua:1034
+#: frontend/dispatcher.lua:1035
 msgctxt "Dispatcher"
 msgid "1 action will be removed."
 msgid_plural "%1 actions will be removed."
 msgstr[0] "將移除 %1 個動作。"
 
-#: frontend/dispatcher.lua:1075 plugins/httpinspector.koplugin/main.lua:1047
+#: frontend/dispatcher.lua:1076 plugins/httpinspector.koplugin/main.lua:1047
 msgid "General"
 msgstr "一般"
 
-#: frontend/dispatcher.lua:1076
+#: frontend/dispatcher.lua:1077
 #: frontend/ui/elements/common_settings_menu_table.lua:806
 #: plugins/httpinspector.koplugin/main.lua:1048
 msgid "Device"
 msgstr "裝置"
 
-#: frontend/dispatcher.lua:1077 plugins/httpinspector.koplugin/main.lua:1049
+#: frontend/dispatcher.lua:1078 plugins/httpinspector.koplugin/main.lua:1049
 msgid "Screen and lights"
 msgstr "螢幕和燈光"
 
-#: frontend/dispatcher.lua:1080 plugins/httpinspector.koplugin/main.lua:1052
+#: frontend/dispatcher.lua:1081 plugins/httpinspector.koplugin/main.lua:1052
 msgid "Reflowable documents (epub, fb2, txt…)"
 msgstr "可重排文件 (epub, fb2, txt…)"
 
-#: frontend/dispatcher.lua:1081 plugins/httpinspector.koplugin/main.lua:1053
+#: frontend/dispatcher.lua:1082 plugins/httpinspector.koplugin/main.lua:1053
 msgid "Fixed layout documents (pdf, djvu, pics…)"
 msgstr "固定排版文件 (pdf, djvu, 圖片…)"
 
-#: frontend/dispatcher.lua:1128 plugins/profiles.koplugin/main.lua:145
+#: frontend/dispatcher.lua:1129 plugins/profiles.koplugin/main.lua:145
 #: plugins/profiles.koplugin/main.lua:1277
 #: plugins/terminal.koplugin/aliases.lua:151
 msgid "Execute"
 msgstr "執行"
 
-#: frontend/dispatcher.lua:1151
+#: frontend/dispatcher.lua:1152
 msgid "Execute one by one"
 msgstr ""
 
-#: frontend/dispatcher.lua:1172 plugins/profiles.koplugin/main.lua:152
+#: frontend/dispatcher.lua:1173 plugins/profiles.koplugin/main.lua:152
 msgid "Show as QuickMenu"
 msgstr "顯示為快速選單"
 
-#: frontend/dispatcher.lua:1188
+#: frontend/dispatcher.lua:1189
 msgid "Keep QuickMenu open"
 msgstr "保持選單開啟"
 
-#: frontend/dispatcher.lua:1233
+#: frontend/dispatcher.lua:1209
+#, fuzzy
+msgid "Rename QuickMenu actions"
+msgstr "保持選單開啟"
+
+#: frontend/dispatcher.lua:1238
+#, fuzzy
+msgid "Enter action name"
+msgstr "輸入收藏清單名稱"
+
+#: frontend/dispatcher.lua:1239
+#, fuzzy
+msgid "Action: %1"
+msgstr "位置：%1"
+
+#: frontend/dispatcher.lua:1310
 msgid "Execute all"
 msgstr "全部執行"
 
-#: frontend/dispatcher.lua:1300
+#: frontend/dispatcher.lua:1389
 msgid "Executing profile: %1"
 msgstr "正在套用設定檔：%1"
 
