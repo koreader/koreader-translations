@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-06 05:53+0000\n"
+"POT-Creation-Date: 2026-07-06 07:23+0000\n"
 "PO-Revision-Date: 2026-07-06 05:53+0000\n"
 "Last-Translator: Hosted Weblate user 54392 "
 "<hamburger2048@users.noreply.hosted.weblate.org>\n"
@@ -260,7 +260,7 @@ msgstr "输入文件名"
 #: frontend/ui/widget/dictquicklookup.lua:1875
 #: frontend/ui/widget/inputdialog.lua:891
 #: frontend/ui/widget/inputdialog.lua:971
-#: frontend/ui/widget/inputdialog.lua:1030
+#: frontend/ui/widget/inputdialog.lua:1030 frontend/ui/widget/inputtext.lua:483
 #: frontend/ui/widget/keyboardlayoutdialog.lua:72
 #: frontend/ui/widget/menu.lua:812 frontend/ui/widget/multiconfirmbox.lua:49
 #: frontend/ui/widget/networksetting.lua:297
@@ -406,7 +406,7 @@ msgstr "编辑"
 #: frontend/pluginloader.lua:450 frontend/ui/presets.lua:224
 #: frontend/ui/presets.lua:228 frontend/ui/widget/bookmetadataarchive.lua:105
 #: frontend/ui/widget/bookmetadataarchive.lua:109
-#: frontend/ui/widget/inputtext.lua:386 frontend/ui/widget/screenshoter.lua:69
+#: frontend/ui/widget/inputtext.lua:396 frontend/ui/widget/screenshoter.lua:69
 #: plugins/bookshortcuts.koplugin/main.lua:190
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:322
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:328
@@ -676,7 +676,8 @@ msgstr "Dropbox 文件夹 (/ 表示根目录)"
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
 #: frontend/apps/reader/modules/readerwikipedia.lua:184
 #: frontend/dispatcher.lua:1256 frontend/ui/widget/inputdialog.lua:859
-#: frontend/ui/widget/inputdialog.lua:900 plugins/SSH.koplugin/main.lua:210
+#: frontend/ui/widget/inputdialog.lua:900 frontend/ui/widget/inputtext.lua:502
+#: plugins/SSH.koplugin/main.lua:210
 #: plugins/cloudstorage.koplugin/providers/dropbox.lua:419
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:315
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:308
@@ -898,7 +899,7 @@ msgstr "粘贴"
 #: frontend/apps/filemanager/filemanager.lua:206
 #: frontend/apps/filemanager/filemanagercollection.lua:561
 #: frontend/apps/reader/modules/readerhighlight.lua:95
-#: frontend/ui/widget/inputtext.lua:325
+#: frontend/ui/widget/inputtext.lua:337
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:342
 msgid "Select"
 msgstr "选择"
@@ -972,7 +973,7 @@ msgstr "移动"
 #: frontend/apps/filemanager/filemanager.lua:577
 #: frontend/apps/filemanager/filemanager.lua:1005
 #: frontend/apps/reader/modules/readerlink.lua:145
-#: frontend/ui/widget/inputtext.lua:393
+#: frontend/ui/widget/inputtext.lua:403
 msgid "Copy"
 msgstr "复制"
 
@@ -1010,7 +1011,7 @@ msgstr "选择文件"
 
 #: frontend/apps/filemanager/filemanager.lua:683
 #: frontend/apps/reader/modules/readerbookmark.lua:1416
-#: frontend/ui/widget/inputtext.lua:336
+#: frontend/ui/widget/inputtext.lua:348
 msgid "Paste"
 msgstr "粘贴"
 
@@ -1664,7 +1665,7 @@ msgstr "从书单中移除选择的书籍？"
 #: frontend/apps/reader/modules/readergoto.lua:67
 #: frontend/apps/reader/modules/readerhandmade.lua:542
 #: frontend/apps/reader/modules/readeruserhyph.lua:293
-#: frontend/ui/widget/textviewer.lua:297
+#: frontend/ui/widget/inputtext.lua:490 frontend/ui/widget/textviewer.lua:297
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:465
 #: plugins/gestures.koplugin/main.lua:562
 #: plugins/opds.koplugin/opdsbrowser.lua:1298
@@ -4791,7 +4792,7 @@ msgid "Copy"
 msgstr "复制"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:123
-#: frontend/ui/viewhtml.lua:170 frontend/ui/widget/inputtext.lua:398
+#: frontend/ui/viewhtml.lua:170 frontend/ui/widget/inputtext.lua:408
 #: frontend/ui/widget/textviewer.lua:800
 msgid "Selection copied to clipboard."
 msgstr "已复制所选部分到剪贴板。"
@@ -15946,7 +15947,7 @@ msgstr "保存所有译文到笔记"
 msgid "Copy main translation"
 msgstr "复制主要译文"
 
-#: frontend/ui/translator.lua:811 frontend/ui/widget/inputtext.lua:283
+#: frontend/ui/translator.lua:811 frontend/ui/widget/inputtext.lua:303
 msgid "Copy all"
 msgstr "复制全部"
 
@@ -16732,60 +16733,79 @@ msgstr "在第 %1 行找到。"
 msgid "Not found."
 msgstr "未找到。"
 
-#: frontend/ui/widget/inputtext.lua:261
+#: frontend/ui/widget/inputtext.lua:263
 msgid "Set cursor to end of selection, then long-press in text box."
 msgstr "将光标设置到选择部分的结尾，然后按住不动。"
 
-#: frontend/ui/widget/inputtext.lua:271
+#: frontend/ui/widget/inputtext.lua:273
 msgid "Clipboard"
 msgstr "剪贴板"
 
-#: frontend/ui/widget/inputtext.lua:273
+#: frontend/ui/widget/inputtext.lua:275
 msgid "(empty)"
 msgstr "（空）"
 
-#: frontend/ui/widget/inputtext.lua:288
+#: frontend/ui/widget/inputtext.lua:285
+msgid "Delete all"
+msgstr "删除全部"
+
+#: frontend/ui/widget/inputtext.lua:293
+msgid "Undo last deletion"
+msgstr "撤回上一个删除"
+
+#: frontend/ui/widget/inputtext.lua:308
 msgid "All text copied to clipboard."
 msgstr "已复制所有文本到剪贴板。"
 
-#: frontend/ui/widget/inputtext.lua:293
+#: frontend/ui/widget/inputtext.lua:313
 msgid "Copy line"
 msgstr "复制行"
 
-#: frontend/ui/widget/inputtext.lua:299
+#: frontend/ui/widget/inputtext.lua:319
 msgid "Line copied to clipboard."
 msgstr "链接已复制到剪贴板。"
 
-#: frontend/ui/widget/inputtext.lua:304
+#: frontend/ui/widget/inputtext.lua:324
 msgid "Copy word"
 msgstr "复制文字"
 
-#: frontend/ui/widget/inputtext.lua:310 frontend/ui/widget/textviewer.lua:799
+#: frontend/ui/widget/inputtext.lua:330 frontend/ui/widget/textviewer.lua:799
 #: plugins/vocabbuilder.koplugin/main.lua:598
 msgid "Word copied to clipboard."
 msgstr "文字已复制到剪贴板。"
 
-#: frontend/ui/widget/inputtext.lua:317
-msgid "Delete all"
-msgstr "删除全部"
-
-#: frontend/ui/widget/inputtext.lua:329
+#: frontend/ui/widget/inputtext.lua:341
 msgid "Set cursor to start of selection, then long-press in text box."
 msgstr "将光标设置到选择部分开头，然后按住不动。"
 
-#: frontend/ui/widget/inputtext.lua:346
-msgid "Undo last deletion"
-msgstr "撤回上一个删除"
-
-#: frontend/ui/widget/inputtext.lua:375
+#: frontend/ui/widget/inputtext.lua:385
 msgid "Selection"
 msgstr "选择"
 
-#: frontend/ui/widget/inputtext.lua:429
+#: frontend/ui/widget/inputtext.lua:424 plugins/profiles.koplugin/main.lua:102
+msgid "New"
+msgstr "新建"
+
+#: frontend/ui/widget/inputtext.lua:467
+#, fuzzy
+msgid "Clipboard snippet"
+msgstr "剪贴板 (空)"
+
+#: frontend/ui/widget/inputtext.lua:471
+#, fuzzy
+msgid "text"
+msgstr "无文本"
+
+#: frontend/ui/widget/inputtext.lua:476
+#, fuzzy
+msgid "name (optional)"
+msgstr "用户名 (可选)"
+
+#: frontend/ui/widget/inputtext.lua:545
 msgid "Text may be binary content, and is not editable"
 msgstr "此文本可能为二进制格式，无法被编辑"
 
-#: frontend/ui/widget/inputtext.lua:478
+#: frontend/ui/widget/inputtext.lua:594
 msgid "Show password"
 msgstr "显示密码"
 
@@ -21687,10 +21707,6 @@ msgstr "该插件允许混合多个设置以创建可切换的“配置文件”
 msgid "Profile %1"
 msgstr "配置文件 %1"
 
-#: plugins/profiles.koplugin/main.lua:102
-msgid "New"
-msgstr "新建"
-
 #: plugins/profiles.koplugin/main.lua:116
 msgid "New with current book settings"
 msgstr "使用当前书籍设置新建"
@@ -26245,9 +26261,6 @@ msgstr "标注"
 
 #~ msgid "Timer set for %1%2."
 #~ msgstr "定时器已设为 %1%2。"
-
-#~ msgid "Clipboard (empty)"
-#~ msgstr "剪贴板 (空)"
 
 #~ msgid ""
 #~ "Saved screenshot to %1.\n"

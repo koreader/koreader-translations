@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-06 05:53+0000\n"
+"POT-Creation-Date: 2026-07-06 07:23+0000\n"
 "PO-Revision-Date: 2024-01-31 04:14+0000\n"
 "Last-Translator: Radoŝ Porka <animatorzPolski@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/koreader/"
@@ -249,7 +249,7 @@ msgstr "Entajpu dosiernomon"
 #: frontend/ui/widget/dictquicklookup.lua:1875
 #: frontend/ui/widget/inputdialog.lua:891
 #: frontend/ui/widget/inputdialog.lua:971
-#: frontend/ui/widget/inputdialog.lua:1030
+#: frontend/ui/widget/inputdialog.lua:1030 frontend/ui/widget/inputtext.lua:483
 #: frontend/ui/widget/keyboardlayoutdialog.lua:72
 #: frontend/ui/widget/menu.lua:812 frontend/ui/widget/multiconfirmbox.lua:49
 #: frontend/ui/widget/networksetting.lua:297
@@ -395,7 +395,7 @@ msgstr "Redakti"
 #: frontend/pluginloader.lua:450 frontend/ui/presets.lua:224
 #: frontend/ui/presets.lua:228 frontend/ui/widget/bookmetadataarchive.lua:105
 #: frontend/ui/widget/bookmetadataarchive.lua:109
-#: frontend/ui/widget/inputtext.lua:386 frontend/ui/widget/screenshoter.lua:69
+#: frontend/ui/widget/inputtext.lua:396 frontend/ui/widget/screenshoter.lua:69
 #: plugins/bookshortcuts.koplugin/main.lua:190
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:322
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:328
@@ -667,7 +667,8 @@ msgstr "Dropbox-dosierujo (/ por radiko)"
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
 #: frontend/apps/reader/modules/readerwikipedia.lua:184
 #: frontend/dispatcher.lua:1256 frontend/ui/widget/inputdialog.lua:859
-#: frontend/ui/widget/inputdialog.lua:900 plugins/SSH.koplugin/main.lua:210
+#: frontend/ui/widget/inputdialog.lua:900 frontend/ui/widget/inputtext.lua:502
+#: plugins/SSH.koplugin/main.lua:210
 #: plugins/cloudstorage.koplugin/providers/dropbox.lua:419
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:315
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:308
@@ -891,7 +892,7 @@ msgstr "Alglui"
 #: frontend/apps/filemanager/filemanager.lua:206
 #: frontend/apps/filemanager/filemanagercollection.lua:561
 #: frontend/apps/reader/modules/readerhighlight.lua:95
-#: frontend/ui/widget/inputtext.lua:325
+#: frontend/ui/widget/inputtext.lua:337
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:342
 msgid "Select"
 msgstr "Elekti"
@@ -966,7 +967,7 @@ msgstr "Movi"
 #: frontend/apps/filemanager/filemanager.lua:577
 #: frontend/apps/filemanager/filemanager.lua:1005
 #: frontend/apps/reader/modules/readerlink.lua:145
-#: frontend/ui/widget/inputtext.lua:393
+#: frontend/ui/widget/inputtext.lua:403
 msgid "Copy"
 msgstr "Kopii"
 
@@ -1004,7 +1005,7 @@ msgstr "Elekti dosierojn"
 
 #: frontend/apps/filemanager/filemanager.lua:683
 #: frontend/apps/reader/modules/readerbookmark.lua:1416
-#: frontend/ui/widget/inputtext.lua:336
+#: frontend/ui/widget/inputtext.lua:348
 msgid "Paste"
 msgstr "Alglui"
 
@@ -1676,7 +1677,7 @@ msgstr "Ĉu forigi elektitajn librojn el kolekto?"
 #: frontend/apps/reader/modules/readergoto.lua:67
 #: frontend/apps/reader/modules/readerhandmade.lua:542
 #: frontend/apps/reader/modules/readeruserhyph.lua:293
-#: frontend/ui/widget/textviewer.lua:297
+#: frontend/ui/widget/inputtext.lua:490 frontend/ui/widget/textviewer.lua:297
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:465
 #: plugins/gestures.koplugin/main.lua:562
 #: plugins/opds.koplugin/opdsbrowser.lua:1298
@@ -4849,7 +4850,7 @@ msgid "Copy"
 msgstr "Kopii"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:123
-#: frontend/ui/viewhtml.lua:170 frontend/ui/widget/inputtext.lua:398
+#: frontend/ui/viewhtml.lua:170 frontend/ui/widget/inputtext.lua:408
 #: frontend/ui/widget/textviewer.lua:800
 msgid "Selection copied to clipboard."
 msgstr "Elektaĵo kopiita al tondujo."
@@ -16325,7 +16326,7 @@ msgstr "Konservi ĉion al noto"
 msgid "Copy main translation"
 msgstr "Kopii ĉefan tradukon"
 
-#: frontend/ui/translator.lua:811 frontend/ui/widget/inputtext.lua:283
+#: frontend/ui/translator.lua:811 frontend/ui/widget/inputtext.lua:303
 msgid "Copy all"
 msgstr "Kopii ĉion"
 
@@ -17106,61 +17107,80 @@ msgstr "Trovita en linio %1."
 msgid "Not found."
 msgstr "Ne troviĝis."
 
-#: frontend/ui/widget/inputtext.lua:261
+#: frontend/ui/widget/inputtext.lua:263
 msgid "Set cursor to end of selection, then long-press in text box."
 msgstr "Agordi kursoron al fino de elekto, poste longe premu en teksto-kesto."
 
-#: frontend/ui/widget/inputtext.lua:271
+#: frontend/ui/widget/inputtext.lua:273
 msgid "Clipboard"
 msgstr "Tondujo"
 
-#: frontend/ui/widget/inputtext.lua:273
+#: frontend/ui/widget/inputtext.lua:275
 msgid "(empty)"
 msgstr "(malplena)"
 
-#: frontend/ui/widget/inputtext.lua:288
+#: frontend/ui/widget/inputtext.lua:285
+msgid "Delete all"
+msgstr "Forigi ĉion"
+
+#: frontend/ui/widget/inputtext.lua:293
+msgid "Undo last deletion"
+msgstr "Malfari lastan forigon"
+
+#: frontend/ui/widget/inputtext.lua:308
 msgid "All text copied to clipboard."
 msgstr "Tuta teksto kopiita al tondejo."
 
-#: frontend/ui/widget/inputtext.lua:293
+#: frontend/ui/widget/inputtext.lua:313
 msgid "Copy line"
 msgstr "Kopii linion"
 
-#: frontend/ui/widget/inputtext.lua:299
+#: frontend/ui/widget/inputtext.lua:319
 msgid "Line copied to clipboard."
 msgstr "Linio kopiita al tondejo."
 
-#: frontend/ui/widget/inputtext.lua:304
+#: frontend/ui/widget/inputtext.lua:324
 msgid "Copy word"
 msgstr "Kopii vorton"
 
-#: frontend/ui/widget/inputtext.lua:310 frontend/ui/widget/textviewer.lua:799
+#: frontend/ui/widget/inputtext.lua:330 frontend/ui/widget/textviewer.lua:799
 #: plugins/vocabbuilder.koplugin/main.lua:598
 msgid "Word copied to clipboard."
 msgstr "Vorto kopiita al tondejo."
 
-#: frontend/ui/widget/inputtext.lua:317
-msgid "Delete all"
-msgstr "Forigi ĉion"
-
-#: frontend/ui/widget/inputtext.lua:329
+#: frontend/ui/widget/inputtext.lua:341
 msgid "Set cursor to start of selection, then long-press in text box."
 msgstr ""
 "Agordi kursoron al komenco de elekto, poste longe premu en teksto-kesto."
 
-#: frontend/ui/widget/inputtext.lua:346
-msgid "Undo last deletion"
-msgstr "Malfari lastan forigon"
-
-#: frontend/ui/widget/inputtext.lua:375
+#: frontend/ui/widget/inputtext.lua:385
 msgid "Selection"
 msgstr "Elekto"
 
-#: frontend/ui/widget/inputtext.lua:429
+#: frontend/ui/widget/inputtext.lua:424 plugins/profiles.koplugin/main.lua:102
+msgid "New"
+msgstr "Nova"
+
+#: frontend/ui/widget/inputtext.lua:467
+#, fuzzy
+msgid "Clipboard snippet"
+msgstr "Tondujo"
+
+#: frontend/ui/widget/inputtext.lua:471
+#, fuzzy
+msgid "text"
+msgstr "neniu teksto"
+
+#: frontend/ui/widget/inputtext.lua:476
+#, fuzzy
+msgid "name (optional)"
+msgstr "Uzantnomo (nedeviga)"
+
+#: frontend/ui/widget/inputtext.lua:545
 msgid "Text may be binary content, and is not editable"
 msgstr "Teksto povas esti duuma enhavo, kaj ne estas redaktebla"
 
-#: frontend/ui/widget/inputtext.lua:478
+#: frontend/ui/widget/inputtext.lua:594
 msgid "Show password"
 msgstr "Montri pasvorton"
 
@@ -22193,10 +22213,6 @@ msgstr ""
 msgid "Profile %1"
 msgstr "Profilo %1"
 
-#: plugins/profiles.koplugin/main.lua:102
-msgid "New"
-msgstr "Nova"
-
 #: plugins/profiles.koplugin/main.lua:116
 msgid "New with current book settings"
 msgstr "Nova kun aktualaj agordoj de libro"
@@ -25170,10 +25186,6 @@ msgstr "komentaroj"
 
 #~ msgid "10 deg"
 #~ msgstr "10 gradoj"
-
-#, fuzzy
-#~ msgid "Clipboard (empty)"
-#~ msgstr "Tondujo"
 
 #~ msgid "Zsync"
 #~ msgstr "zsync"
