@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-07 14:37+0000\n"
+"POT-Creation-Date: 2026-07-08 18:51+0000\n"
 "PO-Revision-Date: 2026-05-06 06:26+0000\n"
 "Last-Translator: UDP <udp@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
@@ -262,7 +262,7 @@ msgstr "輸入檔名"
 #: frontend/ui/widget/pathchooser.lua:133
 #: frontend/ui/widget/progressbardialog.lua:219
 #: frontend/ui/widget/textviewer.lua:291 frontend/ui/widget/textviewer.lua:678
-#: frontend/ui/widget/touchmenu.lua:1312 plugins/SSH.koplugin/main.lua:203
+#: frontend/ui/widget/touchmenu.lua:1312 plugins/SSH.koplugin/main.lua:220
 #: plugins/archiveviewer.koplugin/main.lua:253
 #: plugins/autowarmth.koplugin/main.lua:813
 #: plugins/autowarmth.koplugin/main.lua:1115
@@ -670,7 +670,7 @@ msgstr "Dropbox 資料夾（根目錄使用 /）"
 #: frontend/apps/reader/modules/readerwikipedia.lua:184
 #: frontend/dispatcher.lua:1342 frontend/ui/widget/inputdialog.lua:859
 #: frontend/ui/widget/inputdialog.lua:900 frontend/ui/widget/inputtext.lua:502
-#: plugins/SSH.koplugin/main.lua:210
+#: plugins/SSH.koplugin/main.lua:227
 #: plugins/cloudstorage.koplugin/providers/dropbox.lua:419
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:315
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:308
@@ -14423,7 +14423,7 @@ msgstr "已經連線到網路 %1。"
 msgid "Already connected."
 msgstr "已連線。"
 
-#: frontend/ui/network/networklistener.lua:238 plugins/SSH.koplugin/main.lua:90
+#: frontend/ui/network/networklistener.lua:239 plugins/SSH.koplugin/main.lua:92
 msgid "Could not retrieve network info."
 msgstr "無法取得網路訊息。"
 
@@ -17546,7 +17546,7 @@ msgid "Connect and transfer files to the device using SSH."
 msgstr "透過 SSH 連線並傳輸檔案到此裝置。"
 
 #. @translators: %1 is the SSH port, %2 is the network info.
-#: plugins/SSH.koplugin/main.lua:88
+#: plugins/SSH.koplugin/main.lua:90
 msgid ""
 "SSH server started.\n"
 "\n"
@@ -17558,35 +17558,42 @@ msgstr ""
 "SSH 連接埠：%1\n"
 "%2"
 
-#: plugins/SSH.koplugin/main.lua:96
+#: plugins/SSH.koplugin/main.lua:98
 msgid "Failed to start SSH server."
 msgstr "無法啟動 SSH 伺服器。"
 
-#: plugins/SSH.koplugin/main.lua:174
-msgid "Failed to stop SSH server."
-msgstr "無法停止 SSH 伺服器。"
-
 #: plugins/SSH.koplugin/main.lua:180
+#, fuzzy
+msgid "SSH server forcefully stopped."
+msgstr "SSH 伺服器已停止。"
+
+#: plugins/SSH.koplugin/main.lua:189
+msgid ""
+"SSH server is still shutting down… Active connections may remain until they "
+"are closed."
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:197
 msgid "SSH server stopped."
 msgstr "SSH 伺服器已停止。"
 
-#: plugins/SSH.koplugin/main.lua:196
+#: plugins/SSH.koplugin/main.lua:213
 msgid "Choose SSH port"
 msgstr "選擇 SSH 連接埠"
 
-#: plugins/SSH.koplugin/main.lua:231 plugins/SSH.koplugin/main.lua:240
+#: plugins/SSH.koplugin/main.lua:248 plugins/SSH.koplugin/main.lua:257
 msgid "SSH server"
 msgstr "SSH 伺服器"
 
-#: plugins/SSH.koplugin/main.lua:253
+#: plugins/SSH.koplugin/main.lua:270
 msgid "SSH port: %1"
 msgstr "SSH 連接埠：%1"
 
-#: plugins/SSH.koplugin/main.lua:262
+#: plugins/SSH.koplugin/main.lua:279
 msgid "SSH public key"
 msgstr "SSH 公鑰"
 
-#: plugins/SSH.koplugin/main.lua:268
+#: plugins/SSH.koplugin/main.lua:285
 msgid ""
 "Put your public SSH keys in\n"
 "%1"
@@ -17594,19 +17601,30 @@ msgstr ""
 "將您的 SSH 公鑰放置到\n"
 "%1"
 
-#: plugins/SSH.koplugin/main.lua:275
+#: plugins/SSH.koplugin/main.lua:292
 msgid "Login with key only (SECURE, public key required)"
 msgstr ""
 
-#: plugins/SSH.koplugin/main.lua:289
+#: plugins/SSH.koplugin/main.lua:306
 msgid "Login without password (DANGEROUS)"
 msgstr "無密碼登入（危險）"
 
-#: plugins/SSH.koplugin/main.lua:302
+#: plugins/SSH.koplugin/main.lua:319
 msgid "Start SSH server with KOReader"
 msgstr "啟動 SSH 伺服器"
 
-#: plugins/SSH.koplugin/main.lua:315
+#: plugins/SSH.koplugin/main.lua:329
+msgid "Force close all connections on stop"
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:330
+msgid ""
+"When enabled, all active SSH sessions will be terminated immediately when "
+"stopping the server. When disabled, active sessions may remain open until "
+"they are closed by the client."
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:343
 msgid "Toggle SSH server"
 msgstr "切換 SSH 伺服器"
 
@@ -21052,42 +21070,42 @@ msgstr "登入時發生不明錯誤。"
 msgid "Logged in to KOReader server."
 msgstr "已登入 KOReader 伺服器。"
 
-#: plugins/kosync.koplugin/main.lua:755
+#: plugins/kosync.koplugin/main.lua:766
 msgid "Progress has been pushed."
 msgstr "進度已被推送。"
 
-#: plugins/kosync.koplugin/main.lua:835
+#: plugins/kosync.koplugin/main.lua:854
 msgid "No progress found for this document."
 msgstr "沒找到目前這份文件的閱讀進度。"
 
-#: plugins/kosync.koplugin/main.lua:846
+#: plugins/kosync.koplugin/main.lua:865
 msgid "Latest progress is coming from this device."
 msgstr "最新的閱讀進度正從此裝置匯入。"
 
-#: plugins/kosync.koplugin/main.lua:862
+#: plugins/kosync.koplugin/main.lua:881
 msgid "The progress has already been synchronized."
 msgstr "閱讀進度已經同步了。"
 
-#: plugins/kosync.koplugin/main.lua:891
+#: plugins/kosync.koplugin/main.lua:910
 msgid "Sync to latest location %1% from device '%2'?"
 msgstr "要從裝置「%2」同步最新的位置 %1%嗎？"
 
-#: plugins/kosync.koplugin/main.lua:905
+#: plugins/kosync.koplugin/main.lua:924
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "要從裝置「%2」同步早先之前的位置 %1% 嗎？"
 
-#: plugins/kosync.koplugin/main.lua:1014
+#: plugins/kosync.koplugin/main.lua:1071
 msgid ""
 "You will have to switch the 'Action when Wi-Fi is off' Network setting to "
 "'turn on' to be able to enable this feature!"
 msgstr ""
 "您必須將網路設定中的「Wi-Fi 關閉時的動作」切換為「開啟」，才能啟用此功能！"
 
-#: plugins/kosync.koplugin/main.lua:1032
+#: plugins/kosync.koplugin/main.lua:1089
 msgid "Auto progress sync: on"
 msgstr "自動進度同步：開啟"
 
-#: plugins/kosync.koplugin/main.lua:1032
+#: plugins/kosync.koplugin/main.lua:1089
 msgid "Auto progress sync: off"
 msgstr "自動進度同步：關閉"
 
@@ -24132,6 +24150,9 @@ msgstr "Wallabag"
 #: tools/update-metadata.lua:63
 msgid "annotations"
 msgstr "註解"
+
+#~ msgid "Failed to stop SSH server."
+#~ msgstr "無法停止 SSH 伺服器。"
 
 #~ msgid "File already exists. Overwrite?"
 #~ msgstr "檔案已經存在。要覆寫嗎？"

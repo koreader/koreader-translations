@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-07 14:37+0000\n"
+"POT-Creation-Date: 2026-07-08 18:51+0000\n"
 "PO-Revision-Date: 2026-07-07 14:37+0000\n"
 "Last-Translator: Frans de Jonge <fransdejonge@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -261,7 +261,7 @@ msgstr "Voer bestandsnaam in"
 #: frontend/ui/widget/pathchooser.lua:133
 #: frontend/ui/widget/progressbardialog.lua:219
 #: frontend/ui/widget/textviewer.lua:291 frontend/ui/widget/textviewer.lua:678
-#: frontend/ui/widget/touchmenu.lua:1312 plugins/SSH.koplugin/main.lua:203
+#: frontend/ui/widget/touchmenu.lua:1312 plugins/SSH.koplugin/main.lua:220
 #: plugins/archiveviewer.koplugin/main.lua:253
 #: plugins/autowarmth.koplugin/main.lua:813
 #: plugins/autowarmth.koplugin/main.lua:1115
@@ -671,7 +671,7 @@ msgstr "Dropbox-map (/ voor root)"
 #: frontend/apps/reader/modules/readerwikipedia.lua:184
 #: frontend/dispatcher.lua:1342 frontend/ui/widget/inputdialog.lua:859
 #: frontend/ui/widget/inputdialog.lua:900 frontend/ui/widget/inputtext.lua:502
-#: plugins/SSH.koplugin/main.lua:210
+#: plugins/SSH.koplugin/main.lua:227
 #: plugins/cloudstorage.koplugin/providers/dropbox.lua:419
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:315
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:308
@@ -14918,7 +14918,7 @@ msgstr "Al verbonden met netwerk %1."
 msgid "Already connected."
 msgstr "Al verbonden."
 
-#: frontend/ui/network/networklistener.lua:238 plugins/SSH.koplugin/main.lua:90
+#: frontend/ui/network/networklistener.lua:239 plugins/SSH.koplugin/main.lua:92
 msgid "Could not retrieve network info."
 msgstr "Kan geen netwerkinfo vinden."
 
@@ -18149,7 +18149,7 @@ msgid "Connect and transfer files to the device using SSH."
 msgstr "Maakt verbinding over SSH, bv. om bestanden op het apparaat te zetten."
 
 #. @translators: %1 is the SSH port, %2 is the network info.
-#: plugins/SSH.koplugin/main.lua:88
+#: plugins/SSH.koplugin/main.lua:90
 msgid ""
 "SSH server started.\n"
 "\n"
@@ -18161,35 +18161,42 @@ msgstr ""
 "SSH-poort: %1\n"
 "%2"
 
-#: plugins/SSH.koplugin/main.lua:96
+#: plugins/SSH.koplugin/main.lua:98
 msgid "Failed to start SSH server."
 msgstr "Kan SSH-server niet starten."
 
-#: plugins/SSH.koplugin/main.lua:174
-msgid "Failed to stop SSH server."
-msgstr "De SSH-server kon niet worden gestopt."
-
 #: plugins/SSH.koplugin/main.lua:180
+#, fuzzy
+msgid "SSH server forcefully stopped."
+msgstr "SSH-server is gestopt."
+
+#: plugins/SSH.koplugin/main.lua:189
+msgid ""
+"SSH server is still shutting down… Active connections may remain until they "
+"are closed."
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:197
 msgid "SSH server stopped."
 msgstr "SSH-server is gestopt."
 
-#: plugins/SSH.koplugin/main.lua:196
+#: plugins/SSH.koplugin/main.lua:213
 msgid "Choose SSH port"
 msgstr "SSH-poort kiezen"
 
-#: plugins/SSH.koplugin/main.lua:231 plugins/SSH.koplugin/main.lua:240
+#: plugins/SSH.koplugin/main.lua:248 plugins/SSH.koplugin/main.lua:257
 msgid "SSH server"
 msgstr "SSH-server"
 
-#: plugins/SSH.koplugin/main.lua:253
+#: plugins/SSH.koplugin/main.lua:270
 msgid "SSH port: %1"
 msgstr "SSH-poort: %1"
 
-#: plugins/SSH.koplugin/main.lua:262
+#: plugins/SSH.koplugin/main.lua:279
 msgid "SSH public key"
 msgstr "SSH publieke sleutel"
 
-#: plugins/SSH.koplugin/main.lua:268
+#: plugins/SSH.koplugin/main.lua:285
 msgid ""
 "Put your public SSH keys in\n"
 "%1"
@@ -18197,19 +18204,30 @@ msgstr ""
 "Plaats publieke SSH-sleutels in\n"
 "%1"
 
-#: plugins/SSH.koplugin/main.lua:275
+#: plugins/SSH.koplugin/main.lua:292
 msgid "Login with key only (SECURE, public key required)"
 msgstr "Inloggen alleen met sleutel (VEILIG, publieke sleutel vereist)"
 
-#: plugins/SSH.koplugin/main.lua:289
+#: plugins/SSH.koplugin/main.lua:306
 msgid "Login without password (DANGEROUS)"
 msgstr "Inloggen zonder wachtwoord (GEVAARLIJK)"
 
-#: plugins/SSH.koplugin/main.lua:302
+#: plugins/SSH.koplugin/main.lua:319
 msgid "Start SSH server with KOReader"
 msgstr "SSH-server starten samen met KOReader"
 
-#: plugins/SSH.koplugin/main.lua:315
+#: plugins/SSH.koplugin/main.lua:329
+msgid "Force close all connections on stop"
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:330
+msgid ""
+"When enabled, all active SSH sessions will be terminated immediately when "
+"stopping the server. When disabled, active sessions may remain open until "
+"they are closed by the client."
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:343
 msgid "Toggle SSH server"
 msgstr "SSH-server schakelen"
 
@@ -21798,31 +21816,31 @@ msgstr "Onbekende fout bij het inloggen."
 msgid "Logged in to KOReader server."
 msgstr "Ingelogd op de KOReaderserver."
 
-#: plugins/kosync.koplugin/main.lua:755
+#: plugins/kosync.koplugin/main.lua:766
 msgid "Progress has been pushed."
 msgstr "Voortgang doorgegeven."
 
-#: plugins/kosync.koplugin/main.lua:835
+#: plugins/kosync.koplugin/main.lua:854
 msgid "No progress found for this document."
 msgstr "Geen voortgang gevonden voor dit document."
 
-#: plugins/kosync.koplugin/main.lua:846
+#: plugins/kosync.koplugin/main.lua:865
 msgid "Latest progress is coming from this device."
 msgstr "Laatste voortgang komt van dit apparaat."
 
-#: plugins/kosync.koplugin/main.lua:862
+#: plugins/kosync.koplugin/main.lua:881
 msgid "The progress has already been synchronized."
 msgstr "De voortgang is al gesynchroniseerd."
 
-#: plugins/kosync.koplugin/main.lua:891
+#: plugins/kosync.koplugin/main.lua:910
 msgid "Sync to latest location %1% from device '%2'?"
 msgstr "Synchroniseren naar recentste plaats %1% van apparaat '%2'?"
 
-#: plugins/kosync.koplugin/main.lua:905
+#: plugins/kosync.koplugin/main.lua:924
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "Synchroniseren naar vorige plaats %1% van apparaat '%2'?"
 
-#: plugins/kosync.koplugin/main.lua:1014
+#: plugins/kosync.koplugin/main.lua:1071
 msgid ""
 "You will have to switch the 'Action when Wi-Fi is off' Network setting to "
 "'turn on' to be able to enable this feature!"
@@ -21830,11 +21848,11 @@ msgstr ""
 "De netwerkinstelling 'Actie wanneer wifi is uitgeschakeld' moet op 'zet aan' "
 "staan om deze functie in te schakelen!"
 
-#: plugins/kosync.koplugin/main.lua:1032
+#: plugins/kosync.koplugin/main.lua:1089
 msgid "Auto progress sync: on"
 msgstr "Automatische voortgangssynchronisatie: aan"
 
-#: plugins/kosync.koplugin/main.lua:1032
+#: plugins/kosync.koplugin/main.lua:1089
 msgid "Auto progress sync: off"
 msgstr "Automatische voortgangssynchronisatie: uit"
 
@@ -24963,6 +24981,9 @@ msgstr "wallabag"
 #: tools/update-metadata.lua:63
 msgid "annotations"
 msgstr "aantekeningen"
+
+#~ msgid "Failed to stop SSH server."
+#~ msgstr "De SSH-server kon niet worden gestopt."
 
 #~ msgid "File already exists. Overwrite?"
 #~ msgstr "Het bestand bestaat al. Overschrijven?"

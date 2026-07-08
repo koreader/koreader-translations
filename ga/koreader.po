@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-07 14:37+0000\n"
+"POT-Creation-Date: 2026-07-08 18:51+0000\n"
 "PO-Revision-Date: 2026-07-07 14:37+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@gmail.com>\n"
 "Language-Team: Irish <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -260,7 +260,7 @@ msgstr "Cuir isteach ainm comhaid"
 #: frontend/ui/widget/pathchooser.lua:133
 #: frontend/ui/widget/progressbardialog.lua:219
 #: frontend/ui/widget/textviewer.lua:291 frontend/ui/widget/textviewer.lua:678
-#: frontend/ui/widget/touchmenu.lua:1312 plugins/SSH.koplugin/main.lua:203
+#: frontend/ui/widget/touchmenu.lua:1312 plugins/SSH.koplugin/main.lua:220
 #: plugins/archiveviewer.koplugin/main.lua:253
 #: plugins/autowarmth.koplugin/main.lua:813
 #: plugins/autowarmth.koplugin/main.lua:1115
@@ -681,7 +681,7 @@ msgstr "Fillteán Dropbox (/ don fhréamh)"
 #: frontend/apps/reader/modules/readerwikipedia.lua:184
 #: frontend/dispatcher.lua:1342 frontend/ui/widget/inputdialog.lua:859
 #: frontend/ui/widget/inputdialog.lua:900 frontend/ui/widget/inputtext.lua:502
-#: plugins/SSH.koplugin/main.lua:210
+#: plugins/SSH.koplugin/main.lua:227
 #: plugins/cloudstorage.koplugin/providers/dropbox.lua:419
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:315
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:308
@@ -15063,7 +15063,7 @@ msgstr "Ceangailte le líonra %1 cheana féin."
 msgid "Already connected."
 msgstr "Ceangailte cheana féin."
 
-#: frontend/ui/network/networklistener.lua:238 plugins/SSH.koplugin/main.lua:90
+#: frontend/ui/network/networklistener.lua:239 plugins/SSH.koplugin/main.lua:92
 msgid "Could not retrieve network info."
 msgstr "Níorbh fhéidir faisnéis líonra a aisghabháil."
 
@@ -18308,7 +18308,7 @@ msgid "Connect and transfer files to the device using SSH."
 msgstr "Ceangail agus aistrigh comhaid chuig an ngléas ag baint úsáide as SSH."
 
 #. @translators: %1 is the SSH port, %2 is the network info.
-#: plugins/SSH.koplugin/main.lua:88
+#: plugins/SSH.koplugin/main.lua:90
 msgid ""
 "SSH server started.\n"
 "\n"
@@ -18320,35 +18320,42 @@ msgstr ""
 "Port SSH: %1\n"
 "%2"
 
-#: plugins/SSH.koplugin/main.lua:96
+#: plugins/SSH.koplugin/main.lua:98
 msgid "Failed to start SSH server."
 msgstr "Theip ar thosú an fhreastalaí SSH."
 
-#: plugins/SSH.koplugin/main.lua:174
-msgid "Failed to stop SSH server."
-msgstr "Theip ar an bhfreastalaí SSH a stopadh."
-
 #: plugins/SSH.koplugin/main.lua:180
+#, fuzzy
+msgid "SSH server forcefully stopped."
+msgstr "Stopadh an freastalaí SSH."
+
+#: plugins/SSH.koplugin/main.lua:189
+msgid ""
+"SSH server is still shutting down… Active connections may remain until they "
+"are closed."
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:197
 msgid "SSH server stopped."
 msgstr "Stopadh an freastalaí SSH."
 
-#: plugins/SSH.koplugin/main.lua:196
+#: plugins/SSH.koplugin/main.lua:213
 msgid "Choose SSH port"
 msgstr "Roghnaigh port SSH"
 
-#: plugins/SSH.koplugin/main.lua:231 plugins/SSH.koplugin/main.lua:240
+#: plugins/SSH.koplugin/main.lua:248 plugins/SSH.koplugin/main.lua:257
 msgid "SSH server"
 msgstr "freastalaí SSH"
 
-#: plugins/SSH.koplugin/main.lua:253
+#: plugins/SSH.koplugin/main.lua:270
 msgid "SSH port: %1"
 msgstr "Port SSH: %1"
 
-#: plugins/SSH.koplugin/main.lua:262
+#: plugins/SSH.koplugin/main.lua:279
 msgid "SSH public key"
 msgstr "Eochair phoiblí SSH"
 
-#: plugins/SSH.koplugin/main.lua:268
+#: plugins/SSH.koplugin/main.lua:285
 msgid ""
 "Put your public SSH keys in\n"
 "%1"
@@ -18356,19 +18363,30 @@ msgstr ""
 "Cuir d’eochracha SSH poiblí i\n"
 "%1"
 
-#: plugins/SSH.koplugin/main.lua:275
+#: plugins/SSH.koplugin/main.lua:292
 msgid "Login with key only (SECURE, public key required)"
 msgstr "Logáil isteach le heochair amháin (SLÁN, eochair phoiblí ag teastáil)"
 
-#: plugins/SSH.koplugin/main.lua:289
+#: plugins/SSH.koplugin/main.lua:306
 msgid "Login without password (DANGEROUS)"
 msgstr "Logáil isteach gan focal faire (CONTÚIRTEACH)"
 
-#: plugins/SSH.koplugin/main.lua:302
+#: plugins/SSH.koplugin/main.lua:319
 msgid "Start SSH server with KOReader"
 msgstr "Tosaigh freastalaí SSH le KOReader"
 
-#: plugins/SSH.koplugin/main.lua:315
+#: plugins/SSH.koplugin/main.lua:329
+msgid "Force close all connections on stop"
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:330
+msgid ""
+"When enabled, all active SSH sessions will be terminated immediately when "
+"stopping the server. When disabled, active sessions may remain open until "
+"they are closed by the client."
+msgstr ""
+
+#: plugins/SSH.koplugin/main.lua:343
 msgid "Toggle SSH server"
 msgstr "Scoránaigh freastalaí SSH"
 
@@ -21967,31 +21985,31 @@ msgstr "Tharla earráid anaithnid agus logáil isteach á dhéanamh."
 msgid "Logged in to KOReader server."
 msgstr "Logáilte isteach i bhfreastalaí KOReader."
 
-#: plugins/kosync.koplugin/main.lua:755
+#: plugins/kosync.koplugin/main.lua:766
 msgid "Progress has been pushed."
 msgstr "Tá dul chun cinn curtha chun cinn."
 
-#: plugins/kosync.koplugin/main.lua:835
+#: plugins/kosync.koplugin/main.lua:854
 msgid "No progress found for this document."
 msgstr "Níor aimsíodh aon dul chun cinn don doiciméad seo."
 
-#: plugins/kosync.koplugin/main.lua:846
+#: plugins/kosync.koplugin/main.lua:865
 msgid "Latest progress is coming from this device."
 msgstr "Tá an dul chun cinn is déanaí ag teacht ón ngléas seo."
 
-#: plugins/kosync.koplugin/main.lua:862
+#: plugins/kosync.koplugin/main.lua:881
 msgid "The progress has already been synchronized."
 msgstr "Tá an dul chun cinn sioncrónaithe cheana féin."
 
-#: plugins/kosync.koplugin/main.lua:891
+#: plugins/kosync.koplugin/main.lua:910
 msgid "Sync to latest location %1% from device '%2'?"
 msgstr "Sioncrónú leis an suíomh is déanaí %1% ón ngléas '%2'?"
 
-#: plugins/kosync.koplugin/main.lua:905
+#: plugins/kosync.koplugin/main.lua:924
 msgid "Sync to previous location %1% from device '%2'?"
 msgstr "Sioncrónú le suíomh roimhe %1% ón ngléas '%2'?"
 
-#: plugins/kosync.koplugin/main.lua:1014
+#: plugins/kosync.koplugin/main.lua:1071
 msgid ""
 "You will have to switch the 'Action when Wi-Fi is off' Network setting to "
 "'turn on' to be able to enable this feature!"
@@ -21999,11 +22017,11 @@ msgstr ""
 "Beidh ort an socrú líonra 'Gníomh nuair a bhíonn Wi-Fi múchta' a athrú go "
 "'cas air' le go mbeidh tú in ann an ghné seo a chumasú!"
 
-#: plugins/kosync.koplugin/main.lua:1032
+#: plugins/kosync.koplugin/main.lua:1089
 msgid "Auto progress sync: on"
 msgstr "Sioncrónú uathoibríoch dul chun cinn: ar siúl"
 
-#: plugins/kosync.koplugin/main.lua:1032
+#: plugins/kosync.koplugin/main.lua:1089
 msgid "Auto progress sync: off"
 msgstr "Sioncrónú uathoibríoch dul chun cinn: múchta"
 
@@ -25197,6 +25215,9 @@ msgstr "wallabag"
 #: tools/update-metadata.lua:63
 msgid "annotations"
 msgstr "anótála"
+
+#~ msgid "Failed to stop SSH server."
+#~ msgstr "Theip ar an bhfreastalaí SSH a stopadh."
 
 #~ msgid "File already exists. Overwrite?"
 #~ msgstr ""
