@@ -13,6 +13,10 @@ make po
 If your language is not listed on the Weblate project, please don't hesitate
 to send a language request [here][koreader-weblate].
 
+## Instructions for translators
+
+If you encounter an unfamiliar term, look it up or let it be. Don't blindly trust a machine translation which might be worse than none. They should always be thoroughly checked. Use "needs edit" judiciously if the translation is still lacking.
+
 ## Variables in translation
 
 Some strings contain variables that should remain unaltered in translation. These take the form of a `%` followed by a number from `1-99`, although you'll seldom see more than about 5 in practice. Please don't put any spaces between the `%` and its number. `%1` should always remain `%1`.
