@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-02 19:11+0000\n"
+"POT-Creation-Date: 2026-08-02 20:00+0000\n"
 "PO-Revision-Date: 2026-07-20 13:05+0000\n"
 "Last-Translator: Jean Pierre <jpv69005@gmx.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/koreader/koreader/"
@@ -343,7 +343,7 @@ msgstr "Définir le nom du fichier"
 #: frontend/apps/cloudstorage/cloudstorage.lua:315
 #: frontend/apps/reader/modules/readerdictionary.lua:1704
 #: frontend/apps/reader/modules/readerdictionary.lua:1827
-#: frontend/ui/otamanager.lua:197
+#: frontend/ui/otamanager.lua:247
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:384
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:790
 #: plugins/cloudstorage.koplugin/cloudstorage.lua:1010
@@ -2138,7 +2138,7 @@ msgstr "Impossible d’ouvrir le dernier document"
 #: frontend/apps/filemanager/filemanagermenu.lua:154
 #: frontend/apps/reader/modules/readerdictionary.lua:253
 #: frontend/apps/reader/modules/readertoc.lua:1196
-#: frontend/ui/otamanager.lua:442 plugins/newsdownloader.koplugin/main.lua:209
+#: frontend/ui/otamanager.lua:437 plugins/newsdownloader.koplugin/main.lua:209
 #: plugins/perceptionexpander.koplugin/main.lua:172
 #: plugins/statistics.koplugin/main.lua:1063
 #: plugins/texteditor.koplugin/main.lua:126
@@ -8945,7 +8945,7 @@ msgstr ""
 "Votre appareil semble incapable de télécharger des applications en paquet.\n"
 "Réessayer via le navigateur ?"
 
-#: frontend/device/android/device.lua:571 frontend/ui/otamanager.lua:247
+#: frontend/device/android/device.lua:571 frontend/ui/otamanager.lua:304
 msgid "Retry"
 msgstr "Réessayer"
 
@@ -15085,23 +15085,23 @@ msgstr "Échec de l’authentification"
 msgid "Timed out"
 msgstr "Expiration du délai"
 
-#: frontend/ui/otamanager.lua:49
+#: frontend/ui/otamanager.lua:48
 msgid "Stable"
 msgstr "Fiable"
 
-#: frontend/ui/otamanager.lua:50
+#: frontend/ui/otamanager.lua:49
 msgid "Development"
 msgstr "Développement"
 
-#: frontend/ui/otamanager.lua:161
+#: frontend/ui/otamanager.lua:182
 msgid "Download already scheduled. You'll be notified when it's ready."
 msgstr "Téléchargement déjà programmé. Vous serez averti quand il sera prêt."
 
-#: frontend/ui/otamanager.lua:170
+#: frontend/ui/otamanager.lua:214
 msgid "KOReader is up to date."
 msgstr "KOReader est à jour."
 
-#: frontend/ui/otamanager.lua:174
+#: frontend/ui/otamanager.lua:219
 msgid ""
 "Device no longer supported.\n"
 "\n"
@@ -15111,17 +15111,17 @@ msgstr ""
 "\n"
 "Veuillez cocher %1"
 
-#: frontend/ui/otamanager.lua:178
+#: frontend/ui/otamanager.lua:224
 msgid "Unable to determine OTA model."
 msgstr "Impossible de déterminer le modèle OTA."
 
-#: frontend/ui/otamanager.lua:182
+#: frontend/ui/otamanager.lua:230
 msgid "Unable to contact OTA server. Try again later, or try another mirror."
 msgstr ""
 "Impossible de contacter le serveur OTA. Réessayez ultérieurement ou essayez "
 "un autre miroir."
 
-#: frontend/ui/otamanager.lua:185
+#: frontend/ui/otamanager.lua:235
 msgid ""
 "Do you want to update?\n"
 "Installed version: %1\n"
@@ -15131,12 +15131,12 @@ msgstr ""
 "Version installée : %1\n"
 "Version disponible : %2"
 
-#: frontend/ui/otamanager.lua:188
+#: frontend/ui/otamanager.lua:238
 msgctxt "Application update | Button"
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: frontend/ui/otamanager.lua:194
+#: frontend/ui/otamanager.lua:244
 msgid ""
 "The currently installed version is newer than the available version.\n"
 "You'll need to uninstall the app before installing a previous version.\n"
@@ -15154,7 +15154,7 @@ msgstr ""
 "Version installée : %1\n"
 "Version disponible : %2"
 
-#: frontend/ui/otamanager.lua:204
+#: frontend/ui/otamanager.lua:254
 msgid ""
 "The currently installed version is newer than the available version.\n"
 "Would you still like to continue and downgrade?\n"
@@ -15167,21 +15167,24 @@ msgstr ""
 "Version installée : %1\n"
 "Version disponible : %2"
 
-#: frontend/ui/otamanager.lua:207
+#: frontend/ui/otamanager.lua:257
 msgid "Downgrade"
 msgstr "Rétrograder"
 
-#: frontend/ui/otamanager.lua:210 frontend/ui/otamanager.lua:250
+#: frontend/ui/otamanager.lua:266
 msgid "Downloading may take several minutes…"
 msgstr "Le téléchargement peut prendre quelques minutes…"
 
-#: frontend/ui/otamanager.lua:246
+#: frontend/ui/otamanager.lua:289
+msgid "Need to fetch %1 out of %2 files (%3), proceed?"
+msgstr ""
+
+#: frontend/ui/otamanager.lua:303
+#, fuzzy
 msgid ""
-"Failed to update KOReader.\n"
-"\n"
-"You can:\n"
+"Downloading update failed, you can:\n"
 "Cancel, keeping temporary files.\n"
-"Retry the update process with a full download.\n"
+"Retry the update process.\n"
 "Abort and cleanup all temporary files."
 msgstr ""
 "Échec de la mise à jour de KOReader.\n"
@@ -15191,31 +15194,40 @@ msgstr ""
 "Réessayer le processus de mise à jour avec un téléchargement complet.\n"
 "Abandonner et nettoyer tous les fichiers temporaires."
 
-#: frontend/ui/otamanager.lua:272
-msgid "Error updating KOReader. Would you like to delete temporary files?"
-msgstr ""
-"Erreur lors de la mise à jour de KOReader. Voulez-vous supprimer les "
-"fichiers temporaires ?"
-
-#: frontend/ui/otamanager.lua:280 frontend/ui/trapper.lua:165
+#: frontend/ui/otamanager.lua:304 frontend/ui/trapper.lua:165
 #: plugins/coverbrowser.koplugin/bookinfomanager.lua:827
 msgid "Abort"
 msgstr "Abandonner"
 
-#: frontend/ui/otamanager.lua:414
+#: frontend/ui/otamanager.lua:358
+#, fuzzy
+msgid "Analyzing local install…"
+msgstr "Synchronisation des statuts des articles locaux…"
+
+#: frontend/ui/otamanager.lua:358 frontend/ui/otamanager.lua:380
+#, fuzzy
+msgid "Abort?"
+msgstr "Abandonner"
+
+#: frontend/ui/otamanager.lua:380
+#, fuzzy
+msgid "Downloading update…"
+msgstr "Téléchargement…"
+
+#: frontend/ui/otamanager.lua:425
 msgctxt "Application update | Menu"
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: frontend/ui/otamanager.lua:423
+#: frontend/ui/otamanager.lua:431
 msgid "Check for updates"
 msgstr "Vérifier la présence de mise à jour"
 
-#: frontend/ui/otamanager.lua:445
+#: frontend/ui/otamanager.lua:440
 msgid "Update server"
 msgstr "Serveur de mise à jour"
 
-#: frontend/ui/otamanager.lua:449
+#: frontend/ui/otamanager.lua:444
 msgid "Update channel"
 msgstr "Canal de mise à jour"
 
@@ -25156,6 +25168,11 @@ msgstr "wallabag"
 #: tools/update-metadata.lua:63
 msgid "annotations"
 msgstr "annotations"
+
+#~ msgid "Error updating KOReader. Would you like to delete temporary files?"
+#~ msgstr ""
+#~ "Erreur lors de la mise à jour de KOReader. Voulez-vous supprimer les "
+#~ "fichiers temporaires ?"
 
 #~ msgid "Double flash sleep screen"
 #~ msgstr "Écran de veille à double clignotement"
