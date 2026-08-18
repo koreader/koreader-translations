@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-18 11:40+0000\n"
-"PO-Revision-Date: 2026-08-01 17:07+0000\n"
+"PO-Revision-Date: 2026-08-18 20:16+0000\n"
 "Last-Translator: Ashune <ashune@protonmail.com>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/koreader/"
 "koreader/hr/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #: reader.lua:200
 msgid ""
@@ -3633,6 +3633,9 @@ msgid ""
 "screen real estate (for your book) and will temporarily overlap the text "
 "when the status bar is shown."
 msgstr ""
+"Kada je statusna traka sakrivena, ova će postavka koristiti cijeli zaslon za "
+"tvoju knjigu. Kada je statusna traka prikazana ona će se privremeno "
+"preklapati s tekstom."
 
 #: frontend/apps/reader/modules/readerfooter.lua:1011
 msgid "Show all selected items at once"
@@ -3715,14 +3718,12 @@ msgid "Custom text (long-press to edit): '%1'%2"
 msgstr "Prilagođeni tekst (pritisni dugo za uređivanje): '%1'%2"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1037
-#, fuzzy
 msgid "Dynamic filler 1"
-msgstr "Dinamička ispuna"
+msgstr "Dinamička ispuna 1"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1038
-#, fuzzy
 msgid "Dynamic filler 2"
-msgstr "Dinamička ispuna"
+msgstr "Dinamička ispuna 2"
 
 #: frontend/apps/reader/modules/readerfooter.lua:1039
 msgid "External content"
@@ -3872,6 +3873,10 @@ msgid ""
 "example, if the frontlight is 'off' (i.e 0 brightness), no symbols or values "
 "will be displayed until the brightness is set to a value >= 1."
 msgstr ""
+"Ova opcija će sakriti neaktivne stavke iz statusne trake. Npr. ako je "
+"osvjetljenje isključeno (tj. 0 % svjetline zaslona), neće se prikazati "
+"simboli ili vrijednosti do kad ona nije postavljena na vrijednost koja je "
+"veća ili jednaka 1."
 
 #: frontend/apps/reader/modules/readerfooter.lua:1515
 msgid "Include current page in pages left"
@@ -4181,7 +4186,7 @@ msgstr "Sigurno želite očistiti svoj prilagođeni sadržaj?"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:214
 msgid "About custom hidden flows"
-msgstr ""
+msgstr "O prilagođenim skrivenim tokovima"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:217
 msgid ""
@@ -4206,10 +4211,32 @@ msgid ""
 "Hidden flows are shown with gray or hatched background in Book map and Page "
 "browser."
 msgstr ""
+"Prilagođeni skriveni tokovi mogu stvoriti u svrhu isključivanja pojedinih "
+"poglavlja knjige iz uobičajenog toka čitanja:\n"
+"- skriveni tokovi bit će automatski preskočeni pri listanju knjige unutar "
+"uobičajenog toka;\n"
+"- stranice uključene u skrivene tokove dobit će posebne brojeve stranica i "
+"neće se ubrajati u napredak čitanja knjige ili poglavlja, kao ni vrijeme "
+"potrebno za čitanje;\n"
+"- slijeđene izravnih poveznica na stranice u skrivenim tokovima će i dalje "
+"raditi, uključujući i iz sadržaja ili karte knjige.\n"
+"\n"
+"Ovo može biti korisno za preskakanje dugih poglavlja s fusnotama ili popisom "
+"literature.\n"
+"Može biti korisno i kada smo zainteresirani za čitanje samo određenog dijela "
+"knjige.\n"
+"\n"
+"U pregledniku stranica možete dugo pritisnuti sličicu za pokretanje "
+"skrivenog toka ili vraćanje na uobičajeni tok na toj stranici.\n"
+"(Kada ste gotovi sa stvaranjem i više ne želite vidjeti gumb, možete "
+"isključiti način uređivanja.)\n"
+"\n"
+"Skriveni tokovi prikazuju se sa sivom ili šrafiranom pozadinom u karti "
+"knjige i pregledniku stranica."
 
 #: frontend/apps/reader/modules/readerhandmade.lua:248
 msgid "Clear inactive marked pages (%1)"
-msgstr ""
+msgstr "Očisti neaktivne označene stranice (%1)"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:255
 msgid ""
@@ -4217,10 +4244,14 @@ msgid ""
 "restart regular flow, but that other marked pages made them have no effect.\n"
 "Are you sure you want to clear them?"
 msgstr ""
+"Neaktivne označene stranice su stranici koje ste označili kao početak "
+"skrivenog toka ili mjesto povratka na uobičajeni tok, ali koje nemaju "
+"utjecaj na tok čitanja jer se nalaze unutar većeg skrivenog toka.\n"
+"Jeste li sigurni da ih želite očistiti?"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:275
 msgid "Clear all marked pages"
-msgstr ""
+msgstr "Očisti sve označene stranice"
 
 #: frontend/apps/reader/modules/readerhandmade.lua:281
 msgid "Are you sure you want to clear all your custom hidden flows?"
@@ -4536,6 +4567,12 @@ msgid ""
 "If you wish your highlights to be saved in the document, just move it to a "
 "writable directory first."
 msgstr ""
+"Isticanja u ovom dokumentu bit će spremljena u datoteci s postavkama, ali se "
+"neće zapisati u samu datoteku jer se ona nalazi u lokaciji koja ne dopušta "
+"zapisivanje podataka.\n"
+"\n"
+"Ako želite da se isticanja spreme u dokument, morate ga prvo premjestiti u "
+"mapu koja dopušta zapisivanje podataka."
 
 #: frontend/apps/reader/modules/readerhighlight.lua:659
 msgid "Off"
@@ -4592,24 +4629,25 @@ msgid "Highlight dialog position: %1"
 msgstr "Pozicija dijaloškog okvira za isticanje: %1"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:825
-#, fuzzy
 msgid "Highlight prompt: %1"
-msgstr "Stil isticanja: %1"
+msgstr "Upit za isticanje: %1"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:835
 msgid "Highlight very-long-press interval: %1 s"
 msgstr "Istakni interval vrlo dugog pritiskanja: %1 s"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:841
-#, fuzzy
 msgid "Highlight very-long-press interval"
-msgstr "Neprozirnost isticanja"
+msgstr "Interval za jako dugi pritisak za isticanje"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:842
 msgid ""
 "If a long-press is not released in this interval, it is considered a very-"
 "long-press. On document text, single word selection will not be triggered."
 msgstr ""
+"Ako se dugi pritisak ne otpusti unutar ovog intervala, on će se smatrati „"
+"jako dugim pritiskom”. Na tekstu dokumenta se neće pokrenuti označavanje "
+"pojedine riječi."
 
 #. @translators This is the time unit for seconds.
 #: frontend/apps/reader/modules/readerhighlight.lua:850
@@ -4636,7 +4674,7 @@ msgstr "Postavi interval"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:865
 msgid "Auto-scroll when selection reaches a corner"
-msgstr ""
+msgstr "Automatski pomakni prikaz kad označavanje dosegne rub"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:866
 msgid ""
@@ -4646,6 +4684,11 @@ msgid ""
 "Except when in two columns mode, where this is limited to showing only the "
 "previous or next column."
 msgstr ""
+"Automatsko pomicanje kako bi se prikazala prethodna stranica kada "
+"označavanje teksta dosegne gornji lijevi kut ili sljedeća stranica kada "
+"dosegne donji desni kut.\n"
+"Kod prikaza u dva stupca ovo je ograničeno na prikaz prethodnog ili "
+"sljedećeg stupca."
 
 #: frontend/apps/reader/modules/readerhighlight.lua:887
 #: frontend/dispatcher.lua:214
@@ -4709,18 +4752,30 @@ msgid ""
 "Copy the language data files (e.g., eng.traineddata for English and "
 "spa.traineddata for Spanish) into koreader/data/tessdata"
 msgstr ""
+"Nema rezultata za OCR ili nema jezičnih podataka.\n"
+"\n"
+"KOReader ima ugrađeni pogon za OCR za prepoznavanje riječi u skeniranim PDF-"
+"ovima i DjVu dokumentima. Kako bi se OCR mogao koristiti na skeniranim "
+"stranicama, prvo morate instalirati Tesseractove istrenirane podatke za "
+"jezik Vašeg dokumenta.\n"
+"\n"
+"Možete preuzeti datoteke s jezičnim podacima za Tesseract verziju 5.3.4 na "
+"https://tesseract-ocr.github.io/tessdoc/Data-Files\n"
+"\n"
+"Kopirajte datoteke s jezičnim podacima (npr. hr.traineddata za hrvatski ili "
+"en.traineddata za engleski) u koreader/data/tessdata"
 
 #: frontend/apps/reader/modules/readerhighlight.lua:2129
 msgid "Default highlight action changed to '%1'."
-msgstr ""
+msgstr "Zadana radnja isticanja promijenjena je u „%1”."
 
 #: frontend/apps/reader/modules/readerhighlight.lua:2177
 msgid "Default highlight style changed to '%1'."
-msgstr ""
+msgstr "Zadani stil isticanja promijenjen je u „%1”."
 
 #: frontend/apps/reader/modules/readerhighlight.lua:2437
 msgid "Incorrect color code"
-msgstr ""
+msgstr "Nevažeći kôd boje"
 
 #: frontend/apps/reader/modules/readerkeyselection.lua:217
 msgid "Start text selection"
@@ -4746,17 +4801,21 @@ msgid ""
 "inversely correlated, meaning a smaller font size requires a larger value "
 "and vice versa."
 msgstr ""
+"Odaberite decimalnu vrijednost između 0,25 i 5. Manja vrijednost povećava "
+"duljinu puta koju pokazivač napravi pri pritisku tipke. Veličina fonta i ova "
+"vrijednost su u obrnutoj korelaciji, što znači da će manja veličina fonta "
+"zahtijevati veću vrijednosti i obrnuto."
 
 #: frontend/apps/reader/modules/readerkeyselection.lua:264
 msgid "Increase crosshairs speed on consecutive keystrokes"
-msgstr ""
+msgstr "Povećaj brzinu pokazivača pri naknadnim pritiscima tipke"
 
 #: frontend/apps/reader/modules/readerkeyselection.lua:279
 msgid "Interval for crosshairs speed increase: 1 second"
 msgid_plural "Interval for crosshairs speed increase: %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Interval za povećanje brzine pokazivača: %1 sekunda"
+msgstr[1] "Interval za povećanje brzine pokazivača: %1 sekunde"
+msgstr[2] "Interval za povećanje brzine pokazivača: %1 sekundi"
 
 #: frontend/apps/reader/modules/readerkeyselection.lua:294
 msgid "Time interval"
@@ -4767,6 +4826,9 @@ msgid ""
 "Select a decimal value up to 1 second. This defines the time period within "
 "which multiple keystrokes will trigger an increase in the crosshairs speed."
 msgstr ""
+"Odaberite decimalnu vrijednost do 1 sekunde. Ovo definira vremensko "
+"razdoblje unutar kojeg će naknadni pritisci tipke usput i povećati brzinu "
+"pokazivača."
 
 #: frontend/apps/reader/modules/readerkeyselection.lua:306
 msgid "Text selection tools"
@@ -4829,11 +4891,13 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerlink.lua:333
 msgid "Show more links as footnotes"
-msgstr ""
+msgstr "Prikaži više poveznica kao fusnote"
 
 #: frontend/apps/reader/modules/readerlink.lua:343
 msgid "Loosen footnote detection rules to show more links as footnotes."
 msgstr ""
+"Ublaži pravila detekcije fusnota da bi se više poveznica prikazalo kao "
+"fusnote."
 
 #: frontend/apps/reader/modules/readerlink.lua:347
 msgid "Use book font in popups"
@@ -4868,7 +4932,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerlink.lua:388
 msgid "Set a relative font size instead"
-msgstr ""
+msgstr "Umjesto toga postavi relativnu veličinu fonta"
 
 #: frontend/apps/reader/modules/readerlink.lua:404
 msgid ""
@@ -4883,7 +4947,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerlink.lua:413
 msgid "Set an absolute font size instead"
-msgstr ""
+msgstr "Umjesto toga postavi apsolutnu veličinu fonta"
 
 #: frontend/apps/reader/modules/readerlink.lua:427
 msgid ""
@@ -4915,12 +4979,11 @@ msgstr "Izbrisati povijest mjesta?"
 
 #: frontend/apps/reader/modules/readerlink.lua:488
 msgid "Go forward to next location"
-msgstr "Idi naprijed na sljedeće mjesto"
+msgstr "Idi naprijed na sljedeću lokaciju"
 
 #: frontend/apps/reader/modules/readerlink.lua:493
-#, fuzzy
 msgid "Clear forward location history?"
-msgstr "Izbrisati povijest mjesta?"
+msgstr "Očistiti povijest nadolazećih lokacija?"
 
 #: frontend/apps/reader/modules/readerlink.lua:507
 msgid "Footnotes and links"
@@ -4953,7 +5016,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerlink.lua:540
 msgid "Swipe to go back"
-msgstr ""
+msgstr "Pomicanje prstom za vraćanje natrag"
 
 #: frontend/apps/reader/modules/readerlink.lua:546
 msgid ""
@@ -4964,7 +5027,7 @@ msgstr ""
 
 #: frontend/apps/reader/modules/readerlink.lua:549
 msgid "Swipe to follow nearest link"
-msgstr ""
+msgstr "Pomicanje prstom za praćenje najbliže poveznice"
 
 #: frontend/apps/reader/modules/readerlink.lua:555
 msgid ""
@@ -13628,9 +13691,8 @@ msgid "Analyzing local install…"
 msgstr "Obrada lokalnih datoteka …"
 
 #: frontend/ui/otamanager.lua:362 frontend/ui/otamanager.lua:384
-#, fuzzy
 msgid "Abort?"
-msgstr "Prekini"
+msgstr "Prekinuti?"
 
 #: frontend/ui/otamanager.lua:384
 #, fuzzy
@@ -15554,9 +15616,8 @@ msgid "Configure"
 msgstr "Konfiguriraj"
 
 #: frontend/ui/widget/htmlboxwidget.lua:266
-#, fuzzy
 msgid "Failed to render this content."
-msgstr "Neuspjelo povezivanje na mrežni port"
+msgstr "Iscrtavanje ovog sadržaja nije uspjelo."
 
 #: frontend/ui/widget/imageviewer.lua:51
 msgid "Viewing image"
