@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-31 09:36+0000\n"
+"POT-Creation-Date: 2026-08-31 09:37+0000\n"
 "PO-Revision-Date: 2025-10-24 11:04+0000\n"
 "Last-Translator: Tumppi066 <tuomas@tumppi066.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/koreader/"
@@ -397,8 +397,8 @@ msgstr[1] "%1 tiedostoa ei kopioitu"
 #: frontend/apps/reader/modules/readersearch.lua:303
 #: frontend/apps/reader/modules/readertoc.lua:1110
 #: frontend/apps/reader/modules/readeruserhyph.lua:286
-#: frontend/apps/reader/modules/readerwikipedia.lua:54
-#: frontend/apps/reader/modules/readerwikipedia.lua:177
+#: frontend/apps/reader/modules/readerwikipedia.lua:63
+#: frontend/apps/reader/modules/readerwikipedia.lua:190
 #: frontend/apps/reader/readerui.lua:802 frontend/device/android/device.lua:530
 #: frontend/dispatcher.lua:1358
 #: frontend/ui/elements/common_settings_menu_table.lua:390
@@ -842,7 +842,7 @@ msgstr "Muokkaa kirjan metatietoja:"
 #: frontend/apps/reader/modules/readermenu.lua:211
 #: frontend/apps/reader/modules/readerstyletweak.lua:1004
 #: frontend/apps/reader/modules/readeruserhyph.lua:300
-#: frontend/apps/reader/modules/readerwikipedia.lua:184
+#: frontend/apps/reader/modules/readerwikipedia.lua:197
 #: frontend/dispatcher.lua:1371 frontend/ui/widget/inputdialog.lua:899
 #: frontend/ui/widget/inputdialog.lua:952 frontend/ui/widget/inputtext.lua:502
 #: plugins/SSH.koplugin/main.lua:230
@@ -2903,7 +2903,7 @@ msgid "Clean dictionary lookup history?"
 msgstr "Puhdistetaanko sanakirjan hakuhistoria?"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:379
-#: frontend/apps/reader/modules/readerwikipedia.lua:287
+#: frontend/apps/reader/modules/readerwikipedia.lua:313
 #: plugins/texteditor.koplugin/main.lua:219
 #: plugins/vocabbuilder.koplugin/main.lua:201
 msgid "Clean"
@@ -3057,7 +3057,7 @@ msgid "Search dictionary"
 msgstr "Etsi sanakirjaa"
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1190
-#: frontend/apps/reader/modules/readerwikipedia.lua:48
+#: frontend/apps/reader/modules/readerwikipedia.lua:57
 #: frontend/ui/widget/dictquicklookup.lua:1943
 msgid "Enter a word or phrase to look up"
 msgstr "Syötä etsittävä sana tai lause"
@@ -3081,7 +3081,7 @@ msgid "Dictionary lookup interrupted."
 msgstr "Sanakirjahaku keskeytetty."
 
 #: frontend/apps/reader/modules/readerdictionary.lua:1411
-#: frontend/apps/reader/modules/readerwikipedia.lua:427
+#: frontend/apps/reader/modules/readerwikipedia.lua:453
 msgid "No results."
 msgstr "Ei tuloksia."
 
@@ -7546,39 +7546,39 @@ msgstr "OV sivun kääntäminen."
 msgid "LTR page turning."
 msgstr "VO sivun kääntäminen."
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:61
+#: frontend/apps/reader/modules/readerwikipedia.lua:70
 #: frontend/ui/widget/dictquicklookup.lua:1871
 msgid "Search Wikipedia"
 msgstr "Hae Wikipediasta"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:79
-#: frontend/apps/reader/modules/readerwikipedia.lua:408
+#: frontend/apps/reader/modules/readerwikipedia.lua:92
+#: frontend/apps/reader/modules/readerwikipedia.lua:434
 #: frontend/dispatcher.lua:74
 msgid "Wikipedia lookup"
 msgstr "Wikipediahaku"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:83
-#: frontend/apps/reader/modules/readerwikipedia.lua:119
+#: frontend/apps/reader/modules/readerwikipedia.lua:96
+#: frontend/apps/reader/modules/readerwikipedia.lua:132
 msgid "Wikipedia history"
 msgstr "Wikipediahistoria"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:138
+#: frontend/apps/reader/modules/readerwikipedia.lua:151
 msgid "Wikipedia settings"
 msgstr "Wikipedia-asetukset"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:141
+#: frontend/apps/reader/modules/readerwikipedia.lua:154
 msgid "Set Wikipedia languages"
 msgstr "Aseta Wikipedian kielet"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:151
+#: frontend/apps/reader/modules/readerwikipedia.lua:164
 msgid "%1 does not look like a valid Wikipedia language."
 msgstr "%1 ei vaikuta pätevältä Wikipedian kieleltä."
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:169
+#: frontend/apps/reader/modules/readerwikipedia.lua:182
 msgid "Wikipedia languages"
 msgstr "Wikipedian kielet"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:173
+#: frontend/apps/reader/modules/readerwikipedia.lua:186
 msgid ""
 "Enter one or more Wikipedia language codes (the 2 or 3 letters "
 "before .wikipedia.org), in the order you wish to see them available, "
@@ -7594,11 +7594,20 @@ msgstr ""
 "\n"
 "Koko luettelo osoitteessa https://en.wikipedia.org/wiki/List_of_Wikipedias"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:197
+#: frontend/apps/reader/modules/readerwikipedia.lua:210
+msgid ""
+"When looking up a word or phrase, search in the Wikipedia edition matching "
+"the current keyboard layout language.\n"
+"\n"
+"This has no effect on lookups from text selection or from the Wikipedia "
+"history."
+msgstr ""
+
+#: frontend/apps/reader/modules/readerwikipedia.lua:223
 msgid "Set Wikipedia 'Save as EPUB' folder"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:199
+#: frontend/apps/reader/modules/readerwikipedia.lua:225
 msgid ""
 "Wikipedia articles can be saved as an EPUB for more comfortable reading.\n"
 "\n"
@@ -7606,99 +7615,99 @@ msgid ""
 "\"Wikipedia\" in your reader's home folder."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:204
+#: frontend/apps/reader/modules/readerwikipedia.lua:230
 msgid "Current Wikipedia 'Save as EPUB' folder:"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:218
+#: frontend/apps/reader/modules/readerwikipedia.lua:244
 msgid "Save Wikipedia EPUB in current book folder"
 msgstr "Tallenna Wikipedia EPUB nykyisen kirjan kansioon"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:228
-#: frontend/apps/reader/modules/readerwikipedia.lua:244
+#: frontend/apps/reader/modules/readerwikipedia.lua:254
+#: frontend/apps/reader/modules/readerwikipedia.lua:270
 msgid "ask"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:230
+#: frontend/apps/reader/modules/readerwikipedia.lua:256
 #: frontend/ui/elements/common_settings_menu_table.lua:401
 #: plugins/profiles.koplugin/main.lua:896
 msgid "always"
 msgstr "aina"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:232
+#: frontend/apps/reader/modules/readerwikipedia.lua:258
 #, fuzzy
 msgid "never"
 msgstr "Ei koskaan"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:234
+#: frontend/apps/reader/modules/readerwikipedia.lua:260
 msgid "Include images in EPUB: %1"
 msgstr "Sisällytä kuvat EPUB-tiedostoon: %1"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:237
-#: frontend/apps/reader/modules/readerwikipedia.lua:256
+#: frontend/apps/reader/modules/readerwikipedia.lua:263
+#: frontend/apps/reader/modules/readerwikipedia.lua:282
 msgid "Ask"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:238
+#: frontend/apps/reader/modules/readerwikipedia.lua:264
 #: plugins/newsdownloader.koplugin/feed_view.lua:126
 #, fuzzy
 msgid "Include images"
 msgstr "Sisällytä"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:239
+#: frontend/apps/reader/modules/readerwikipedia.lua:265
 #, fuzzy
 msgid "Don't include images"
 msgstr "Sisällytä"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:246
+#: frontend/apps/reader/modules/readerwikipedia.lua:272
 #, fuzzy
 msgid "higher"
 msgstr "Mitä suurempi arvo, sitä tummempi harmaa."
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:248
+#: frontend/apps/reader/modules/readerwikipedia.lua:274
 msgid "standard"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:250
+#: frontend/apps/reader/modules/readerwikipedia.lua:276
 msgid "Images quality in EPUB: %1"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:257
+#: frontend/apps/reader/modules/readerwikipedia.lua:283
 #: frontend/ui/wikipedia.lua:918
 msgid "Standard quality"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:258
+#: frontend/apps/reader/modules/readerwikipedia.lua:284
 #: frontend/ui/wikipedia.lua:918
 msgid "Higher quality"
 msgstr ""
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:263
+#: frontend/apps/reader/modules/readerwikipedia.lua:289
 #, fuzzy
 msgid "Wikipedia lookup history"
 msgstr "Wikipediahistoria"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:269
+#: frontend/apps/reader/modules/readerwikipedia.lua:295
 msgid "Enable Wikipedia history"
 msgstr "Aktivoi Wikipediahistoria"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:279
+#: frontend/apps/reader/modules/readerwikipedia.lua:305
 msgid "Clean Wikipedia history"
 msgstr "Tyhjennä Wikipediahistoria"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:286
+#: frontend/apps/reader/modules/readerwikipedia.lua:312
 msgid "Clean Wikipedia history?"
 msgstr "Tyhjennetäänkö Wikipediahistoria?"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:300
+#: frontend/apps/reader/modules/readerwikipedia.lua:326
 msgid "Show image in search results"
 msgstr "Näytä kuva hakutuloksissa"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:309
+#: frontend/apps/reader/modules/readerwikipedia.lua:335
 msgid "Show more images in full article"
 msgstr "Näytä lisää kuvia koko artikkelissa"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:421
+#: frontend/apps/reader/modules/readerwikipedia.lua:447
 msgid ""
 "Retrieving Wikipedia %2 article:\n"
 "%1"
@@ -7706,15 +7715,15 @@ msgstr ""
 "Haetaan Wikipediasta %2 artikkelia:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:422
+#: frontend/apps/reader/modules/readerwikipedia.lua:448
 msgid "Failed to retrieve Wikipedia article."
 msgstr "Wikipedia-artikkelin hakeminen epäonnistui."
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:423
+#: frontend/apps/reader/modules/readerwikipedia.lua:449
 msgid "Wikipedia article not found."
 msgstr "Wikipedia-sivua ei löytynyt."
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:425
+#: frontend/apps/reader/modules/readerwikipedia.lua:451
 msgid ""
 "Searching Wikipedia %2 for:\n"
 "%1"
@@ -7722,24 +7731,24 @@ msgstr ""
 "Haetaan Wikipediasta %2 hakusanalla:\n"
 "%1"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:426
+#: frontend/apps/reader/modules/readerwikipedia.lua:452
 msgid "Failed searching Wikipedia."
 msgstr "Wikipedia-haku epäonnistui."
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:463
+#: frontend/apps/reader/modules/readerwikipedia.lua:489
 msgid "No introduction."
 msgstr ""
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:470
+#: frontend/apps/reader/modules/readerwikipedia.lua:496
 msgid "(full article : %1 kB, = %2 x this intro length)"
 msgstr "(koko artikkeli: %1 kt, = %2 x tämä johdannon pituus)"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:473
-#: frontend/apps/reader/modules/readerwikipedia.lua:498
+#: frontend/apps/reader/modules/readerwikipedia.lua:499
+#: frontend/apps/reader/modules/readerwikipedia.lua:524
 msgid "Wikipedia %1"
 msgstr "Wikipedia %1"
 
-#: frontend/apps/reader/modules/readerwikipedia.lua:489
+#: frontend/apps/reader/modules/readerwikipedia.lua:515
 msgid "Wikipedia request interrupted."
 msgstr "Wikipedia-pyyntö keskeytetty."
 
