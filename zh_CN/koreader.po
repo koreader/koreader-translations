@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOReader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-02 06:53+0000\n"
+"POT-Creation-Date: 2026-11-02 18:00+0000\n"
 "PO-Revision-Date: 2026-11-02 18:01+0000\n"
 "Last-Translator: gswang <gswang@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
@@ -426,8 +426,9 @@ msgstr[0] "%1 个文件没有被复制"
 #: frontend/ui/widget/numberpickerwidget.lua:139
 #: frontend/ui/widget/pathchooser.lua:143
 #: frontend/ui/widget/progressbardialog.lua:227
-#: frontend/ui/widget/textviewer.lua:291 frontend/ui/widget/textviewer.lua:678
-#: frontend/ui/widget/touchmenu.lua:1402 plugins/SSH.koplugin/main.lua:244
+#: frontend/ui/widget/sortwidget.lua:582 frontend/ui/widget/textviewer.lua:291
+#: frontend/ui/widget/textviewer.lua:678 frontend/ui/widget/touchmenu.lua:1402
+#: plugins/SSH.koplugin/main.lua:244
 #: plugins/archiveviewer.koplugin/main.lua:251
 #: plugins/autowarmth.koplugin/main.lua:830
 #: plugins/autowarmth.koplugin/main.lua:1132
@@ -857,7 +858,7 @@ msgstr "编辑书籍元数据："
 #: frontend/apps/reader/modules/readerwikipedia.lua:197
 #: frontend/dispatcher.lua:1439 frontend/ui/widget/inputdialog.lua:899
 #: frontend/ui/widget/inputdialog.lua:952 frontend/ui/widget/inputtext.lua:502
-#: plugins/SSH.koplugin/main.lua:251
+#: frontend/ui/widget/sortwidget.lua:602 plugins/SSH.koplugin/main.lua:251
 #: plugins/cloudstorage.koplugin/providers/dropbox.lua:419
 #: plugins/cloudstorage.koplugin/providers/ftp.lua:315
 #: plugins/cloudstorage.koplugin/providers/webdav.lua:314
@@ -4215,7 +4216,7 @@ msgstr "右"
 #: frontend/apps/reader/modules/readergoto.lua:20
 #: frontend/apps/reader/modules/readergoto.lua:111 frontend/dispatcher.lua:169
 #: frontend/dispatcher.lua:184 frontend/ui/widget/keyvaluepage.lua:429
-#: frontend/ui/widget/menu.lua:829 frontend/ui/widget/sortwidget.lua:257
+#: frontend/ui/widget/menu.lua:829 frontend/ui/widget/sortwidget.lua:259
 #: plugins/statistics.koplugin/calendarview.lua:649
 #: plugins/vocabbuilder.koplugin/main.lua:1484
 msgid "Go to page"
@@ -7962,6 +7963,7 @@ msgstr ""
 "忽略的元数据将从存档中删除。"
 
 #: frontend/apps/reader/readerui.lua:659 frontend/ui/widget/inputdialog.lua:937
+#: frontend/ui/widget/sortwidget.lua:588
 msgid "Discard"
 msgstr "忽略"
 
@@ -13319,7 +13321,8 @@ msgstr "使用方向键作为操作键"
 msgid ""
 "When enabled, the cursor keys are used for: Up/Down calls text selection, "
 "Left/Right calls previous/next chapter."
-msgstr "启用后，方向键将用于：按上/下键选择文本，按左/右键跳转到上一章/下一章。"
+msgstr ""
+"启用后，方向键将用于：按上/下键选择文本，按左/右键跳转到上一章/下一章。"
 
 #: frontend/ui/elements/physical_buttons.lua:74
 msgid "Use left and right keys for page turning"
@@ -16518,7 +16521,7 @@ msgstr "保存失败。"
 msgid "Saved"
 msgstr "已保存"
 
-#: frontend/ui/widget/inputdialog.lua:930
+#: frontend/ui/widget/inputdialog.lua:930 frontend/ui/widget/sortwidget.lua:581
 msgid "You have unsaved changes."
 msgstr "含有未保存的变更。"
 
@@ -16646,7 +16649,7 @@ msgid "Switch to layout"
 msgstr "切换到布局"
 
 #: frontend/ui/widget/keyvaluepage.lua:418
-#: frontend/ui/widget/sortwidget.lua:246 plugins/opds.koplugin/opdspse.lua:175
+#: frontend/ui/widget/sortwidget.lua:248 plugins/opds.koplugin/opdspse.lua:175
 #: plugins/statistics.koplugin/calendarview.lua:638
 #: plugins/vocabbuilder.koplugin/main.lua:1473
 msgid "Enter page number"
@@ -17050,24 +17053,24 @@ msgstr "截图已保存至："
 msgid "Current screenshot folder:"
 msgstr "当前截图保存文件夹："
 
-#: frontend/ui/widget/sortwidget.lua:452
+#: frontend/ui/widget/sortwidget.lua:454
 msgctxt "Pagination"
 msgid "%1 / %2"
 msgstr "%1 / %2"
 
-#: frontend/ui/widget/sortwidget.lua:521
+#: frontend/ui/widget/sortwidget.lua:523
 msgid "Sort A to Z"
 msgstr "从 A 到 Z 排序"
 
-#: frontend/ui/widget/sortwidget.lua:529
+#: frontend/ui/widget/sortwidget.lua:531
 msgid "Sort Z to A"
 msgstr "从 Z 到 A 排序"
 
-#: frontend/ui/widget/sortwidget.lua:537
+#: frontend/ui/widget/sortwidget.lua:539
 msgid "Sort A to Z (natural)"
 msgstr "从 A 到 Z 排序（自然排序）"
 
-#: frontend/ui/widget/sortwidget.lua:545
+#: frontend/ui/widget/sortwidget.lua:547
 msgid "Sort Z to A (natural)"
 msgstr "从 Z 到 A 排序（自然排序）"
 
@@ -20508,8 +20511,8 @@ msgid ""
 "The duration value is in milliseconds and can range from 100 (0.1 seconds) "
 "to 2000 (2 seconds)."
 msgstr ""
-"这设置了组合事件被视为双指点击时，任一手指触摸/释放动作所允许的最大持续时间"
-"。\n"
+"这设置了组合事件被视为双指点击时，任一手指触摸/释放动作所允许的最大持续时"
+"间。\n"
 "\n"
 "持续时间值以毫秒为单位，范围从 100（0.1 秒）到 2000（2 秒）。"
 
@@ -20547,8 +20550,8 @@ msgid ""
 "The interval value is in milliseconds and can range from 100 (0.1 seconds) "
 "to 2000 (2 seconds)."
 msgstr ""
-"设置从滑动开始到滑动结束之间的最大延迟。超过这个区间，该动作将被认为是拖拽"
-"。\n"
+"设置从滑动开始到滑动结束之间的最大延迟。超过这个区间，该动作将被认为是拖"
+"拽。\n"
 "\n"
 "间隔值以毫秒为单位，范围从 100（0.1 秒）到 2000（2 秒）。"
 
